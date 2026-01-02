@@ -1,0 +1,33 @@
+{
+  "game_id": "2026-04-08-louisville-at-fresno",
+  "date": "2026-04-08",
+  "label": "Wednesday, April 8",
+  "away_team": "Louisville Mash",
+  "home_team": "Fresno Yield",
+  "away_score": 6,
+  "home_score": 3,
+  "recap": "The Louisville Mash defeated the Fresno Yield 6–3 on Wednesday, breaking a tie with a three-run sixth inning. Marcus Bell drove in three runs, and starter Eli Benton worked six innings to earn the win. Louisville improved to 1–0 with the victory.",
+  "milestone": null,
+  "batting": {
+    "away": [
+      { "player": "Bell", "ab": 4, "r": 1, "h": 2, "rbi": 3, "bb": 0, "k": 1, "hr": 1, "sb": 0 },
+      { "player": "Cole", "ab": 4, "r": 1, "h": 1, "rbi": 1, "bb": 1, "k": 2, "hr": 0, "sb": 1 },
+      { "player": "Ruiz", "ab": 3, "r": 1, "h": 1, "rbi": 1, "bb": 1, "k": 0, "hr": 0, "sb": 0 }
+    ],
+    "home": [
+      { "player": "Ortega", "ab": 4, "r": 1, "h": 2, "rbi": 1, "bb": 0, "k": 0, "hr": 1, "sb": 0 },
+      { "player": "Miles", "ab": 4, "r": 0, "h": 1, "rbi": 0, "bb": 0, "k": 1, "hr": 0, "sb": 0 }
+    ]
+  },
+  "pitching": {
+    "away": [
+      { "pitcher": "Benton", "ip": 6.0, "h": 4, "r": 2, "er": 2, "bb": 1, "k": 6, "hr": 1 },
+      { "pitcher": "Fowler", "ip": 3.0, "h": 2, "r": 1, "er": 1, "bb": 0, "k": 3, "hr": 0 }
+    ],
+    "home": [
+      { "pitcher": "Ramirez", "ip": 5.1, "h": 5, "r": 4, "er": 4, "bb": 2, "k": 4, "hr": 1 },
+      { "pitcher": "Chen", "ip": 2.2, "h": 3, "r": 2, "er": 2, "bb": 1, "k": 2, "hr": 0 }
+    ]
+  },
+  "decisions": { "wp": "Benton", "lp": "Ramirez", "sv": "Fowler" }
+}

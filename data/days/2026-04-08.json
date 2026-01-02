@@ -1,0 +1,31 @@
+{
+  "date": "2026-04-08",
+  "label": "Wednesday, April 8",
+  "status": "Finals",
+  "games": [
+    {
+      "id": "2026-04-08-louisville-at-fresno",
+      "away_team": "Louisville Mash",
+      "home_team": "Fresno Yield",
+      "away_score": 6,
+      "home_score": 3,
+      "boxscore_path": "/data/games/2026-04-08/louisville-at-fresno.json"
+    },
+    {
+      "id": "2026-04-08-durham-at-toledo",
+      "away_team": "Durham Catalysts",
+      "home_team": "Toledo Assembly",
+      "away_score": 5,
+      "home_score": 4,
+      "boxscore_path": "/data/games/2026-04-08/durham-at-toledo.json"
+    },
+    {
+      "id": "2026-04-08-osaka-at-taipei",
+      "away_team": "Osaka Spirits",
+      "home_team": "Taipei Neon",
+      "away_score": 4,
+      "home_score": 2,
+      "boxscore_path": "/data/games/2026-04-08/osaka-at-taipei.json"
+    }
+  ]
+}

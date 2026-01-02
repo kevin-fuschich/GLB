@@ -1,0 +1,40 @@
+{
+  "as_of": "2026-04-08",
+  "batting": {
+    "AVG": [
+      { "rank": 1, "player": "Marcus Bell", "team": "Louisville Mash", "value": 0.500 }
+    ],
+    "HR": [
+      { "rank": 1, "player": "Marcus Bell", "team": "Louisville Mash", "value": 1 }
+    ],
+    "RBI": [
+      { "rank": 1, "player": "Marcus Bell", "team": "Louisville Mash", "value": 3 }
+    ],
+    "OPS": [
+      { "rank": 1, "player": "Marcus Bell", "team": "Louisville Mash", "value": 1.750 }
+    ],
+    "R": [
+      { "rank": 1, "player": "Jackson Cole", "team": "Louisville Mash", "value": 1 }
+    ],
+    "SB": [
+      { "rank": 1, "player": "Jackson Cole", "team": "Louisville Mash", "value": 1 }
+    ]
+  },
+  "pitching": {
+    "ERA": [
+      { "rank": 1, "player": "Eli Benton", "team": "Louisville Mash", "value": 3.00 }
+    ],
+    "WHIP": [
+      { "rank": 1, "player": "Nate Fowler", "team": "Louisville Mash", "value": 0.67 }
+    ],
+    "K": [
+      { "rank": 1, "player": "Eli Benton", "team": "Louisville Mash", "value": 6 }
+    ],
+    "SV": [
+      { "rank": 1, "player": "Nate Fowler", "team": "Louisville Mash", "value": 1 }
+    ],
+    "W": [
+      { "rank": 1, "player": "Eli Benton", "team": "Louisville Mash", "value": 1 }
+    ]
+  }
+}

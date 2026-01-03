@@ -44,137 +44,148 @@
   <div id="err" class="error"></div>
 
   <script>
-    const DAY_PATH = "data/days/2026-04-08.json"; // later this becomes "yesterday" automatically
+   <script>
+  // IMPORTANT: match your repo folder names EXACTLY (case sensitive)
+  const DAY_PATH = "Data/Days/2026-04-08.json";
+  const STANDINGS_PATH = "Current/standings.json";
+  const LEADERS_PATH = "Current/leaders.json";
 
-    function el(tag, attrs = {}, children = []) {
-      const node = document.createElement(tag);
-      Object.entries(attrs).forEach(([k, v]) => node.setAttribute(k, v));
-      children.forEach(c => node.appendChild(typeof c === "string" ? document.createTextNode(c) : c));
-      return node;
+  // Ensure we always build URLs relative to the *directory* of the current page
+  function baseUrl() {
+    // If you're at .../glb (no trailing slash), treat it like .../glb/
+    const href = window.location.href.endsWith("/") ? window.location.href : window.location.href + "/";
+    return href;
+  }
+
+  function toAbs(relPath) {
+    return new URL(relPath, baseUrl()).toString();
+  }
+
+  function el(tag, attrs = {}, children = []) {
+    const node = document.createElement(tag);
+    Object.entries(attrs).forEach(([k, v]) => node.setAttribute(k, v));
+    children.forEach(c => node.appendChild(typeof c === "string" ? document.createTextNode(c) : c));
+    return node;
+  }
+
+  function fmtPct(p) {
+    if (typeof p !== "number") return "";
+    return p.toFixed(3);
+  }
+
+  async function loadJson(relPath) {
+    const url = toAbs(relPath);
+    const res = await fetch(url, { cache: "no-store" });
+    if (!res.ok) throw new Error(`Failed to fetch ${relPath} (HTTP ${res.status}) at ${url}`);
+    return res.json();
+  }
+
+  function renderScores(day) {
+    document.getElementById("scoresTitle").textContent =
+      `Daily Scores — ${day.label} (${day.status})`;
+
+    const list = document.getElementById("scores");
+    list.innerHTML = "";
+
+    day.games.forEach(g => {
+      const line = `${g.away_team} ${g.away_score}, ${g.home_team} ${g.home_score}`;
+      list.appendChild(el("li", {}, [line]));
+    });
+
+    if (!day.games.length) list.appendChild(el("li", {}, ["No games."]));
+  }
+
+  function standingsTable(title, rows) {
+    const table = el("table");
+    const thead = el("thead");
+    const headerRow = el("tr");
+    ["Team","W","L","PCT","GB","RS","RA","Diff"].forEach(h => headerRow.appendChild(el("th", {}, [h])));
+    thead.appendChild(headerRow);
+
+    const tbody = el("tbody");
+    rows.forEach(r => {
+      const tr = el("tr");
+      tr.appendChild(el("td", {}, [r.team]));
+      tr.appendChild(el("td", {}, [String(r.w)]));
+      tr.appendChild(el("td", {}, [String(r.l)]));
+      tr.appendChild(el("td", {}, [fmtPct(r.pct)]));
+      tr.appendChild(el("td", {}, [String(r.gb)]));
+      tr.appendChild(el("td", {}, [String(r.rs)]));
+      tr.appendChild(el("td", {}, [String(r.ra)]));
+      tr.appendChild(el("td", {}, [String(r.diff)]));
+      tbody.appendChild(tr);
+    });
+
+    table.appendChild(thead);
+    table.appendChild(tbody);
+    return el("div", {}, [el("h3", {}, [title]), table]);
+  }
+
+  function renderStandings(standings) {
+    const wrap = document.getElementById("standings");
+    wrap.innerHTML = "";
+
+    wrap.appendChild(el("div", { class: "muted" }, [`As of ${standings.as_of}`]));
+
+    const divs = standings.divisions || {};
+    Object.keys(divs).forEach(name => wrap.appendChild(standingsTable(name, divs[name])));
+  }
+
+  function leadersBlock(title, items) {
+    const box = el("div", {}, [el("h3", {}, [title])]);
+    const ol = el("ol");
+    (items || []).slice(0, 10).forEach(it => {
+      ol.appendChild(el("li", {}, [`${it.player}, ${it.team} — ${it.value}`]));
+    });
+    if (!items || !items.length) ol.appendChild(el("li", {}, ["—"]));
+    box.appendChild(ol);
+    return box;
+  }
+
+  function renderLeaders(leaders) {
+    const wrap = document.getElementById("leaders");
+    wrap.innerHTML = "";
+
+    wrap.appendChild(el("div", { class: "muted" }, [`As of ${leaders.as_of}`]));
+
+    const batting = leaders.batting || {};
+    const pitching = leaders.pitching || {};
+
+    const battingWrap = el("div", {}, [el("h3", {}, ["Batting"])]);
+    Object.keys(batting).forEach(cat => battingWrap.appendChild(leadersBlock(cat, batting[cat])));
+    wrap.appendChild(battingWrap);
+
+    const pitchingWrap = el("div", {}, [el("h3", {}, ["Pitching"])]);
+    Object.keys(pitching).forEach(cat => pitchingWrap.appendChild(leadersBlock(cat, pitching[cat])));
+    wrap.appendChild(pitchingWrap);
+  }
+
+  async function main() {
+    const status = document.getElementById("status");
+    const err = document.getElementById("err");
+    err.textContent = "";
+    status.textContent = "Loading…";
+
+    try {
+      const [day, standings, leaders] = await Promise.all([
+        loadJson(DAY_PATH),
+        loadJson(STANDINGS_PATH),
+        loadJson(LEADERS_PATH)
+      ]);
+
+      renderScores(day);
+      renderStandings(standings);
+      renderLeaders(leaders);
+
+      status.textContent = `Loaded ${day.label}.`;
+    } catch (e) {
+      status.textContent = "Load failed.";
+      err.textContent = String(e);
     }
+  }
 
-    function fmtPct(p) {
-      if (typeof p !== "number") return "";
-      return p.toFixed(3);
-    }
-
-    async function loadJson(path) {
-      const res = await fetch(path, { cache: "no-store" });
-      if (!res.ok) throw new Error(`Failed to fetch ${path} (${res.status})`);
-      return res.json();
-    }
-
-    function renderScores(day) {
-      document.getElementById("scoresTitle").textContent = `Daily Scores — ${day.label} (${day.status})`;
-
-      const list = document.getElementById("scores");
-      list.innerHTML = "";
-
-      day.games.forEach(g => {
-        const line = `${g.away_team} ${g.away_score}, ${g.home_team} ${g.home_score}`;
-        list.appendChild(el("li", {}, [line]));
-      });
-
-      if (!day.games.length) {
-        list.appendChild(el("li", {}, ["No games."]));
-      }
-    }
-
-    function standingsTable(title, rows) {
-      const table = el("table");
-      const thead = el("thead");
-      const headerRow = el("tr");
-      ["Team", "W", "L", "PCT", "GB", "RS", "RA", "Diff"].forEach(h => headerRow.appendChild(el("th", {}, [h])));
-      thead.appendChild(headerRow);
-
-      const tbody = el("tbody");
-      rows.forEach(r => {
-        const tr = el("tr");
-        tr.appendChild(el("td", {}, [r.team]));
-        tr.appendChild(el("td", {}, [String(r.w)]));
-        tr.appendChild(el("td", {}, [String(r.l)]));
-        tr.appendChild(el("td", {}, [fmtPct(r.pct)]));
-        tr.appendChild(el("td", {}, [String(r.gb)]));
-        tr.appendChild(el("td", {}, [String(r.rs)]));
-        tr.appendChild(el("td", {}, [String(r.ra)]));
-        tr.appendChild(el("td", {}, [String(r.diff)]));
-        tbody.appendChild(tr);
-      });
-
-      table.appendChild(thead);
-      table.appendChild(tbody);
-
-      return el("div", {}, [el("h3", {}, [title]), table]);
-    }
-
-    function renderStandings(standings) {
-      const wrap = document.getElementById("standings");
-      wrap.innerHTML = "";
-
-      const asOf = el("div", { class: "muted" }, [`As of ${standings.as_of}`]);
-      wrap.appendChild(asOf);
-
-      const divs = standings.divisions || {};
-      Object.keys(divs).forEach(name => {
-        wrap.appendChild(standingsTable(name, divs[name]));
-      });
-    }
-
-    function leadersBlock(title, items) {
-      const box = el("div", {}, [el("h3", {}, [title])]);
-      const ol = el("ol");
-      (items || []).slice(0, 10).forEach(it => {
-        const line = `${it.player}, ${it.team} — ${it.value}`;
-        ol.appendChild(el("li", {}, [line]));
-      });
-      if (!items || !items.length) ol.appendChild(el("li", {}, ["—"]));
-      box.appendChild(ol);
-      return box;
-    }
-
-    function renderLeaders(leaders) {
-      const wrap = document.getElementById("leaders");
-      wrap.innerHTML = "";
-
-      const asOf = el("div", { class: "muted" }, [`As of ${leaders.as_of}`]);
-      wrap.appendChild(asOf);
-
-      const batting = leaders.batting || {};
-      const pitching = leaders.pitching || {};
-
-      const battingWrap = el("div", {}, [el("h3", {}, ["Batting"])]);
-      Object.keys(batting).forEach(cat => battingWrap.appendChild(leadersBlock(cat, batting[cat])));
-      wrap.appendChild(battingWrap);
-
-      const pitchingWrap = el("div", {}, [el("h3", {}, ["Pitching"])]);
-      Object.keys(pitching).forEach(cat => pitchingWrap.appendChild(leadersBlock(cat, pitching[cat])));
-      wrap.appendChild(pitchingWrap);
-    }
-
-    async function main() {
-      const status = document.getElementById("status");
-      const err = document.getElementById("err");
-      err.textContent = "";
-
-      try {
-        const [day, standings, leaders] = await Promise.all([
-          loadJson(DAY_PATH),
-          loadJson("current/standings.json"),
-          loadJson("current/leaders.json")
-        ]);
-
-        renderScores(day);
-        renderStandings(standings);
-        renderLeaders(leaders);
-
-        status.textContent = `Loaded ${day.label}.`;
-      } catch (e) {
-        status.textContent = "Load failed.";
-        err.textContent = String(e);
-      }
-    }
-
-    main();
+  main();
+</script>
   </script>
 </body>
 </html>

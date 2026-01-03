@@ -1,1 +1,180 @@
 
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>GLB</title>
+  <style>
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; line-height: 1.35; max-width: 900px; margin: 40px auto; padding: 0 16px; }
+    h1, h2, h3 { margin: 0 0 10px; }
+    section { margin: 28px 0; }
+    .muted { color: #555; }
+    .scores li { margin: 6px 0; }
+    table { border-collapse: collapse; width: 100%; margin: 10px 0 0; }
+    th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+    th { background: #f7f7f7; }
+    .grid { display: grid; grid-template-columns: 1fr; gap: 24px; }
+    @media (min-width: 900px) { .grid { grid-template-columns: 1fr 1fr; } }
+    .error { color: #b00020; white-space: pre-wrap; }
+    code { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+  </style>
+</head>
+<body>
+  <h1>GLB</h1>
+  <div id="status" class="muted">Loading…</div>
+
+  <section>
+    <h2 id="scoresTitle">Daily Scores</h2>
+    <ol id="scores" class="scores"></ol>
+  </section>
+
+  <div class="grid">
+    <section>
+      <h2>Standings</h2>
+      <div id="standings"></div>
+    </section>
+
+    <section>
+      <h2>Leaders</h2>
+      <div id="leaders"></div>
+    </section>
+  </div>
+
+  <div id="err" class="error"></div>
+
+  <script>
+    const DAY_PATH = "data/days/2026-04-08.json"; // later this becomes "yesterday" automatically
+
+    function el(tag, attrs = {}, children = []) {
+      const node = document.createElement(tag);
+      Object.entries(attrs).forEach(([k, v]) => node.setAttribute(k, v));
+      children.forEach(c => node.appendChild(typeof c === "string" ? document.createTextNode(c) : c));
+      return node;
+    }
+
+    function fmtPct(p) {
+      if (typeof p !== "number") return "";
+      return p.toFixed(3);
+    }
+
+    async function loadJson(path) {
+      const res = await fetch(path, { cache: "no-store" });
+      if (!res.ok) throw new Error(`Failed to fetch ${path} (${res.status})`);
+      return res.json();
+    }
+
+    function renderScores(day) {
+      document.getElementById("scoresTitle").textContent = `Daily Scores — ${day.label} (${day.status})`;
+
+      const list = document.getElementById("scores");
+      list.innerHTML = "";
+
+      day.games.forEach(g => {
+        const line = `${g.away_team} ${g.away_score}, ${g.home_team} ${g.home_score}`;
+        list.appendChild(el("li", {}, [line]));
+      });
+
+      if (!day.games.length) {
+        list.appendChild(el("li", {}, ["No games."]));
+      }
+    }
+
+    function standingsTable(title, rows) {
+      const table = el("table");
+      const thead = el("thead");
+      const headerRow = el("tr");
+      ["Team", "W", "L", "PCT", "GB", "RS", "RA", "Diff"].forEach(h => headerRow.appendChild(el("th", {}, [h])));
+      thead.appendChild(headerRow);
+
+      const tbody = el("tbody");
+      rows.forEach(r => {
+        const tr = el("tr");
+        tr.appendChild(el("td", {}, [r.team]));
+        tr.appendChild(el("td", {}, [String(r.w)]));
+        tr.appendChild(el("td", {}, [String(r.l)]));
+        tr.appendChild(el("td", {}, [fmtPct(r.pct)]));
+        tr.appendChild(el("td", {}, [String(r.gb)]));
+        tr.appendChild(el("td", {}, [String(r.rs)]));
+        tr.appendChild(el("td", {}, [String(r.ra)]));
+        tr.appendChild(el("td", {}, [String(r.diff)]));
+        tbody.appendChild(tr);
+      });
+
+      table.appendChild(thead);
+      table.appendChild(tbody);
+
+      return el("div", {}, [el("h3", {}, [title]), table]);
+    }
+
+    function renderStandings(standings) {
+      const wrap = document.getElementById("standings");
+      wrap.innerHTML = "";
+
+      const asOf = el("div", { class: "muted" }, [`As of ${standings.as_of}`]);
+      wrap.appendChild(asOf);
+
+      const divs = standings.divisions || {};
+      Object.keys(divs).forEach(name => {
+        wrap.appendChild(standingsTable(name, divs[name]));
+      });
+    }
+
+    function leadersBlock(title, items) {
+      const box = el("div", {}, [el("h3", {}, [title])]);
+      const ol = el("ol");
+      (items || []).slice(0, 10).forEach(it => {
+        const line = `${it.player}, ${it.team} — ${it.value}`;
+        ol.appendChild(el("li", {}, [line]));
+      });
+      if (!items || !items.length) ol.appendChild(el("li", {}, ["—"]));
+      box.appendChild(ol);
+      return box;
+    }
+
+    function renderLeaders(leaders) {
+      const wrap = document.getElementById("leaders");
+      wrap.innerHTML = "";
+
+      const asOf = el("div", { class: "muted" }, [`As of ${leaders.as_of}`]);
+      wrap.appendChild(asOf);
+
+      const batting = leaders.batting || {};
+      const pitching = leaders.pitching || {};
+
+      const battingWrap = el("div", {}, [el("h3", {}, ["Batting"])]);
+      Object.keys(batting).forEach(cat => battingWrap.appendChild(leadersBlock(cat, batting[cat])));
+      wrap.appendChild(battingWrap);
+
+      const pitchingWrap = el("div", {}, [el("h3", {}, ["Pitching"])]);
+      Object.keys(pitching).forEach(cat => pitchingWrap.appendChild(leadersBlock(cat, pitching[cat])));
+      wrap.appendChild(pitchingWrap);
+    }
+
+    async function main() {
+      const status = document.getElementById("status");
+      const err = document.getElementById("err");
+      err.textContent = "";
+
+      try {
+        const [day, standings, leaders] = await Promise.all([
+          loadJson(DAY_PATH),
+          loadJson("current/standings.json"),
+          loadJson("current/leaders.json")
+        ]);
+
+        renderScores(day);
+        renderStandings(standings);
+        renderLeaders(leaders);
+
+        status.textContent = `Loaded ${day.label}.`;
+      } catch (e) {
+        status.textContent = "Load failed.";
+        err.textContent = String(e);
+      }
+    }
+
+    main();
+  </script>
+</body>
+</html>

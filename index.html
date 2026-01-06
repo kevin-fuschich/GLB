@@ -72,13 +72,15 @@
     if (typeof p !== "number") return "";
     return p.toFixed(3);
   }
-
-  async function loadJson(relPath) {
-    const url = toAbs(relPath);
-    const res = await fetch(url, { cache: "no-store" });
-    if (!res.ok) throw new Error(`Failed to fetch ${relPath} (HTTP ${res.status}) at ${url}`);
-    return res.json();
+async function loadJson(path) {
+  const url = path + "?v=" + Date.now();
+  const res = await fetch(url);
+  if (!res.ok) {
+    throw new Error("Failed to load " + path);
   }
+  return res.json();
+}
+
 
   function renderScores(day) {
     document.getElementById("scoresTitle").textContent =

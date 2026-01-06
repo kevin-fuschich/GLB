@@ -42,6 +42,7 @@
 
   const $ = (id) => document.getElementById(id);
   function log(line) { $("debug").textContent += line + "\n"; }
+  log("JS started ✅");
   function setStatus(text, ok=true) {
     $("statusText").textContent = text;
     $("status").className = "status " + (ok ? "ok" : "bad");

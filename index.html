@@ -1,193 +1,143 @@
-
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>GLB</title>
   <style>
-    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; line-height: 1.35; max-width: 900px; margin: 40px auto; padding: 0 16px; }
-    h1, h2, h3 { margin: 0 0 10px; }
-    section { margin: 28px 0; }
-    .muted { color: #555; }
-    .scores li { margin: 6px 0; }
-    table { border-collapse: collapse; width: 100%; margin: 10px 0 0; }
-    th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
-    th { background: #f7f7f7; }
-    .grid { display: grid; grid-template-columns: 1fr; gap: 24px; }
-    @media (min-width: 900px) { .grid { grid-template-columns: 1fr 1fr; } }
-    .error { color: #b00020; white-space: pre-wrap; }
-    code { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; margin: 24px; }
+    h1 { margin: 0 0 12px 0; }
+    .status { padding: 10px 12px; border: 1px solid #ddd; border-radius: 8px; margin: 12px 0 18px 0; }
+    .ok { background: #f3fff3; border-color: #bfe6bf; }
+    .bad { background: #fff3f3; border-color: #e6bfbf; }
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 13px; white-space: pre-wrap; }
+    table { border-collapse: collapse; width: 100%; margin: 10px 0 18px 0; }
+    th, td { border-bottom: 1px solid #eee; padding: 8px 6px; text-align: left; }
+    .small { color: #666; font-size: 13px; }
   </style>
 </head>
 <body>
   <h1>GLB</h1>
-  <div id="status" class="muted">Loading…</div>
 
-  <section>
-    <h2 id="scoresTitle">Daily Scores</h2>
-    <ol id="scores" class="scores"></ol>
-  </section>
-
-  <div class="grid">
-    <section>
-      <h2>Standings</h2>
-      <div id="standings"></div>
-    </section>
-
-    <section>
-      <h2>Leaders</h2>
-      <div id="leaders"></div>
-    </section>
+  <div id="status" class="status">
+    <div><strong>Status:</strong> <span id="statusText">Loading…</span></div>
+    <div class="small">This page will tell us exactly which file fails to load.</div>
   </div>
 
-  <div id="err" class="error"></div>
+  <div id="debug" class="mono"></div>
 
-  <script>
-   <script>
-  // IMPORTANT: match your repo folder names EXACTLY (case sensitive)
+  <h2>Daily Scores</h2>
+  <div id="scores"></div>
+
+  <h2>Standings</h2>
+  <div id="standings"></div>
+
+  <h2>Leaders</h2>
+  <div id="leaders"></div>
+
+<script>
   const DAY_PATH = "data/days/2026-04-08.json";
   const STANDINGS_PATH = "current/standings.json";
   const LEADERS_PATH = "current/leaders.json";
 
-  // Ensure we always build URLs relative to the *directory* of the current page
-  function baseUrl() {
-    // If you're at .../glb (no trailing slash), treat it like .../glb/
-    const href = window.location.href.endsWith("/") ? window.location.href : window.location.href + "/";
-    return href;
+  const $ = (id) => document.getElementById(id);
+  function log(line) { $("debug").textContent += line + "\n"; }
+  function setStatus(text, ok=true) {
+    $("statusText").textContent = text;
+    $("status").className = "status " + (ok ? "ok" : "bad");
   }
 
-  function toAbs(relPath) {
-    return new URL(relPath, baseUrl()).toString();
+  async function loadJson(path) {
+    const url = path + "?v=" + Date.now();
+    log("Fetching: " + url);
+    const res = await fetch(url, { cache: "no-store" });
+    log("→ HTTP " + res.status + " " + path);
+    if (!res.ok) throw new Error("Fetch failed (" + res.status + "): " + path);
+    return res.json();
   }
-
-  function el(tag, attrs = {}, children = []) {
-    const node = document.createElement(tag);
-    Object.entries(attrs).forEach(([k, v]) => node.setAttribute(k, v));
-    children.forEach(c => node.appendChild(typeof c === "string" ? document.createTextNode(c) : c));
-    return node;
-  }
-
-  function fmtPct(p) {
-    if (typeof p !== "number") return "";
-    return p.toFixed(3);
-  }
-async function loadJson(path) {
-  const url = path + "?v=" + Date.now();
-  const res = await fetch(url);
-  if (!res.ok) {
-    throw new Error("Failed to load " + path);
-  }
-  return res.json();
-}
-
 
   function renderScores(day) {
-    document.getElementById("scoresTitle").textContent =
-      `Daily Scores — ${day.label} (${day.status})`;
-
-    const list = document.getElementById("scores");
-    list.innerHTML = "";
-
-    day.games.forEach(g => {
-      const line = `${g.away_team} ${g.away_score}, ${g.home_team} ${g.home_score}`;
-      list.appendChild(el("li", {}, [line]));
-    });
-
-    if (!day.games.length) list.appendChild(el("li", {}, ["No games."]));
+    if (!day || !day.games) return "<div class='small'>No games.</div>";
+    const rows = day.games.map(g =>
+      `<tr>
+        <td>${g.away_team}</td><td>${g.away_score}</td>
+        <td>@</td>
+        <td>${g.home_team}</td><td>${g.home_score}</td>
+      </tr>`
+    ).join("");
+    return `
+      <div class="small">${day.label} — ${day.status}</div>
+      <table>
+        <thead><tr><th>Away</th><th></th><th></th><th>Home</th><th></th></tr></thead>
+        <tbody>${rows}</tbody>
+      </table>
+    `;
   }
 
-  function standingsTable(title, rows) {
-    const table = el("table");
-    const thead = el("thead");
-    const headerRow = el("tr");
-    ["Team","W","L","PCT","GB","RS","RA","Diff"].forEach(h => headerRow.appendChild(el("th", {}, [h])));
-    thead.appendChild(headerRow);
-
-    const tbody = el("tbody");
-    rows.forEach(r => {
-      const tr = el("tr");
-      tr.appendChild(el("td", {}, [r.team]));
-      tr.appendChild(el("td", {}, [String(r.w)]));
-      tr.appendChild(el("td", {}, [String(r.l)]));
-      tr.appendChild(el("td", {}, [fmtPct(r.pct)]));
-      tr.appendChild(el("td", {}, [String(r.gb)]));
-      tr.appendChild(el("td", {}, [String(r.rs)]));
-      tr.appendChild(el("td", {}, [String(r.ra)]));
-      tr.appendChild(el("td", {}, [String(r.diff)]));
-      tbody.appendChild(tr);
-    });
-
-    table.appendChild(thead);
-    table.appendChild(tbody);
-    return el("div", {}, [el("h3", {}, [title]), table]);
+  function renderStandings(s) {
+    if (!s || !s.divisions) return "<div class='small'>No standings.</div>";
+    const divHtml = Object.entries(s.divisions).map(([div, teams]) => {
+      const rows = (teams || []).map(t =>
+        `<tr>
+          <td>${t.team}</td><td>${t.w}-${t.l}</td><td>${t.pct}</td><td>${t.gb}</td><td>${t.diff}</td>
+        </tr>`
+      ).join("");
+      return `
+        <div class="small"><strong>${div}</strong> (as of ${s.as_of})</div>
+        <table>
+          <thead><tr><th>Team</th><th>W-L</th><th>PCT</th><th>GB</th><th>DIFF</th></tr></thead>
+          <tbody>${rows}</tbody>
+        </table>
+      `;
+    }).join("");
+    return divHtml;
   }
 
-  function renderStandings(standings) {
-    const wrap = document.getElementById("standings");
-    wrap.innerHTML = "";
+  function renderLeaders(l) {
+    if (!l) return "<div class='small'>No leaders.</div>";
+    const sections = [];
+    if (l.batting) sections.push(["Batting", l.batting]);
+    if (l.pitching) sections.push(["Pitching", l.pitching]);
 
-    wrap.appendChild(el("div", { class: "muted" }, [`As of ${standings.as_of}`]));
-
-    const divs = standings.divisions || {};
-    Object.keys(divs).forEach(name => wrap.appendChild(standingsTable(name, divs[name])));
+    const html = sections.map(([title, cats]) => {
+      const catHtml = Object.entries(cats).map(([cat, arr]) => {
+        const rows = (arr || []).map(x =>
+          `<tr><td>${x.player}</td><td>${x.team}</td><td>${x.value}</td></tr>`
+        ).join("");
+        return `
+          <div class="small"><strong>${cat}</strong></div>
+          <table>
+            <thead><tr><th>Player</th><th>Team</th><th>Value</th></tr></thead>
+            <tbody>${rows}</tbody>
+          </table>
+        `;
+      }).join("");
+      return `<h3>${title}</h3>${catHtml}`;
+    }).join("");
+    return `<div class="small">As of ${l.as_of}</div>` + html;
   }
 
-  function leadersBlock(title, items) {
-    const box = el("div", {}, [el("h3", {}, [title])]);
-    const ol = el("ol");
-    (items || []).slice(0, 10).forEach(it => {
-      ol.appendChild(el("li", {}, [`${it.player}, ${it.team} — ${it.value}`]));
-    });
-    if (!items || !items.length) ol.appendChild(el("li", {}, ["—"]));
-    box.appendChild(ol);
-    return box;
-  }
-
-  function renderLeaders(leaders) {
-    const wrap = document.getElementById("leaders");
-    wrap.innerHTML = "";
-
-    wrap.appendChild(el("div", { class: "muted" }, [`As of ${leaders.as_of}`]));
-
-    const batting = leaders.batting || {};
-    const pitching = leaders.pitching || {};
-
-    const battingWrap = el("div", {}, [el("h3", {}, ["Batting"])]);
-    Object.keys(batting).forEach(cat => battingWrap.appendChild(leadersBlock(cat, batting[cat])));
-    wrap.appendChild(battingWrap);
-
-    const pitchingWrap = el("div", {}, [el("h3", {}, ["Pitching"])]);
-    Object.keys(pitching).forEach(cat => pitchingWrap.appendChild(leadersBlock(cat, pitching[cat])));
-    wrap.appendChild(pitchingWrap);
-  }
-
-  async function main() {
-    const status = document.getElementById("status");
-    const err = document.getElementById("err");
-    err.textContent = "";
-    status.textContent = "Loading…";
-
+  (async function main() {
     try {
-      const [day, standings, leaders] = await Promise.all([
-        loadJson(DAY_PATH),
-        loadJson(STANDINGS_PATH),
-        loadJson(LEADERS_PATH)
-      ]);
+      setStatus("Loading day file…", true);
+      const day = await loadJson(DAY_PATH);
+      $("scores").innerHTML = renderScores(day);
 
-      renderScores(day);
-      renderStandings(standings);
-      renderLeaders(leaders);
+      setStatus("Loading standings…", true);
+      const standings = await loadJson(STANDINGS_PATH);
+      $("standings").innerHTML = renderStandings(standings);
 
-      status.textContent = `Loaded ${day.label}.`;
-    } catch (e) {
-      status.textContent = "Load failed.";
-      err.textContent = String(e);
+      setStatus("Loading leaders…", true);
+      const leaders = await loadJson(LEADERS_PATH);
+      $("leaders").innerHTML = renderLeaders(leaders);
+
+      setStatus("Loaded.", true);
+      log("DONE ✅");
+    } catch (err) {
+      setStatus("Load failed.", false);
+      log("ERROR ❌ " + (err && err.message ? err.message : err));
     }
-  }
-
-  main();
+  })();
 </script>
-  </script>
 </body>
 </html>

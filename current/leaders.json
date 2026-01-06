@@ -1,1 +1,35 @@
-
+{
+  "as_of": "2026-04-08",
+  "batting": {
+    "AVG": [
+      { "player": "J. Sato", "team": "Osaka Spirits", "value": ".500" },
+      { "player": "M. Rivera", "team": "Louisville Naturals", "value": ".444" },
+      { "player": "K. Huang", "team": "Taipei Neon", "value": ".400" }
+    ],
+    "HR": [
+      { "player": "M. Rivera", "team": "Louisville Naturals", "value": "1" },
+      { "player": "A. Torres", "team": "Toledo Assembly", "value": "1" }
+    ],
+    "RBI": [
+      { "player": "M. Rivera", "team": "Louisville Naturals", "value": "3" },
+      { "player": "A. Torres", "team": "Toledo Assembly", "value": "2" }
+    ],
+    "SB": [
+      { "player": "D. Kim", "team": "Taipei Neon", "value": "1" },
+      { "player": "R. Johnson", "team": "Durham Gold", "value": "1" }
+    ]
+  },
+  "pitching": {
+    "ERA": [
+      { "player": "T. Nakamura", "team": "Osaka Spirits", "value": "0.00" },
+      { "player": "C. Vega", "team": "Toledo Assembly", "value": "2.25" }
+    ],
+    "SO": [
+      { "player": "T. Nakamura", "team": "Osaka Spirits", "value": "7" },
+      { "player": "B. Carter", "team": "Louisville Naturals", "value": "6" }
+    ],
+    "SV": [
+      { "player": "E. Delgado", "team": "Louisville Naturals", "value": "1" }
+    ]
+  }
+}

@@ -1,1 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>GLB Health</title>
+</head>
+<body>
+  <pre id="out">Running…</pre>
 
+  <script>
+    async function check(path) {
+      const url = new URL(path, window.location.href).toString();
+      const res = await fetch(url, { cache: "no-store" });
+      const ct = res.headers.get("content-type") || "";
+      const text = await res.clone().text();
+      return {
+        path,
+        url,
+        ok: res.ok,
+        status: res.status,
+        contentType: ct,
+        preview: text.slice(0, 80).replace(/\s+/g, " ")
+      };
+    }
+
+    (async () => {
+      const tests = [
+        "current/standings.json",
+        "current/leaders.json",
+        "data/days/2026-04-08.json"
+      ];
+      const results = [];
+      for (const t of tests) results.push(await check(t));
+      document.getElementById("out").textContent =
+        JSON.stringify({ href: window.location.href, results }, null, 2);
+    })();
+  </script>
+</body>
+</html>

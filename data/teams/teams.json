@@ -1,73 +1,27 @@
 {
-  "league": "Global League Baseball",
+  "league": "GLB",
   "divisions": {
     "Americas": [
-      {
-        "slug": "spokane-alloys",
-        "name": "Spokane Alloys"
-      },
-      {
-        "slug": "albuquerque-aeros",
-        "name": "Albuquerque Aeros"
-      },
-      {
-        "slug": "fresno-yield",
-        "name": "Fresno Yield"
-      },
-      {
-        "slug": "st-paul-frost",
-        "name": "St. Paul Frost"
-      },
-      {
-        "slug": "birmingham-vulcans",
-        "name": "Birmingham Vulcans"
-      },
-      {
-        "slug": "toledo-assembly",
-        "name": "Toledo Assembly"
-      },
-      {
-        "slug": "durham-gold",
-        "name": "Durham Gold"
-      },
-      {
-        "slug": "louisville-naturals",
-        "name": "Louisville Naturals"
-      }
+      { "name": "Spokane Alloys", "slug": "spokane-alloys" },
+      { "name": "Albuquerque Aeros", "slug": "albuquerque-aeros" },
+      { "name": "Fresno Yield", "slug": "fresno-yield" },
+      { "name": "St. Paul Frost", "slug": "st-paul-frost" },
+      { "name": "Birmingham Vulcans", "slug": "birmingham-vulcans" },
+      { "name": "Toledo Assembly", "slug": "toledo-assembly" },
+      { "name": "Durham Gold", "slug": "durham-gold" },
+      { "name": "Louisville Naturals", "slug": "louisville-naturals" }
     ],
     "Pacific": [
-      {
-        "slug": "vancouver-current",
-        "name": "Vancouver Current"
-      },
-      {
-        "slug": "monterrey-cementeros",
-        "name": "Monterrey Cementeros"
-      },
-      {
-        "slug": "tijuana-tecnicos",
-        "name": "Tijuana Tecnicos"
-      },
-      {
-        "slug": "san-pedro-cocolos",
-        "name": "San Pedro Cocolos"
-      },
-      {
-        "slug": "santiago-caballeros",
-        "name": "Santiago Caballeros"
-      },
-      {
-        "slug": "mayaguez-sultans",
-        "name": "Mayaguez Sultans"
-      },
-      {
-        "slug": "taipei-neon",
-        "name": "Taipei Neon"
-      },
-      {
-        "slug": "osaka-spirits",
-        "name": "Osaka Spirits"
-      }
+      { "name": "Vancouver Current", "slug": "vancouver-current" },
+      { "name": "Monterrey Cementeros", "slug": "monterrey-cementeros" },
+      { "name": "Tijuana Tecnicos", "slug": "tijuana-tecnicos" },
+      { "name": "San Pedro Cocolos", "slug": "san-pedro-cocolos" },
+      { "name": "Santiago Caballeros", "slug": "santiago-caballeros" },
+      { "name": "Mayaguez Sultans", "slug": "mayaguez-sultans" },
+      { "name": "Taipei Neon", "slug": "taipei-neon" },
+      { "name": "Osaka Spirits", "slug": "osaka-spirits" }
     ]
+  }
+}
   }
 }

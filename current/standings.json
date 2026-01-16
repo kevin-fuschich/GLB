@@ -2,14 +2,24 @@
   "as_of": "2026-04-08",
   "divisions": {
     "Americas": [
-      { "team": "Louisville Naturals", "w": 1, "l": 0, "pct": 1.000, "gb": 0.0, "rs": 6, "ra": 3, "diff": 3 },
-      { "team": "Toledo Assembly", "w": 1, "l": 0, "pct": 1.000, "gb": 0.0, "rs": 4, "ra": 3, "diff": 1 },
-      { "team": "Durham Gold", "w": 0, "l": 1, "pct": 0.000, "gb": 1.0, "rs": 3, "ra": 4, "diff": -1 },
-      { "team": "Fresno Yield", "w": 0, "l": 1, "pct": 0.000, "gb": 1.0, "rs": 3, "ra": 6, "diff": -3 }
+      { "team": "Spokane Alloys", "slug": "spokane-alloys", "w": 0, "l": 0, "pct": ".000", "gb": "-", "diff": "0" },
+      { "team": "Albuquerque Aeros", "slug": "albuquerque-aeros", "w": 0, "l": 0, "pct": ".000", "gb": "-", "diff": "0" },
+      { "team": "Fresno Yield", "slug": "fresno-yield", "w": 0, "l": 0, "pct": ".000", "gb": "-", "diff": "0" },
+      { "team": "St. Paul Frost", "slug": "st-paul-frost", "w": 0, "l": 0, "pct": ".000", "gb": "-", "diff": "0" },
+      { "team": "Birmingham Vulcans", "slug": "birmingham-vulcans", "w": 0, "l": 0, "pct": ".000", "gb": "-", "diff": "0" },
+      { "team": "Toledo Assembly", "slug": "toledo-assembly", "w": 0, "l": 0, "pct": ".000", "gb": "-", "diff": "0" },
+      { "team": "Durham Gold", "slug": "durham-gold", "w": 0, "l": 0, "pct": ".000", "gb": "-", "diff": "0" },
+      { "team": "Louisville Naturals", "slug": "louisville-naturals", "w": 0, "l": 0, "pct": ".000", "gb": "-", "diff": "0" }
     ],
     "Pacific": [
-      { "team": "Osaka Spirits", "w": 1, "l": 0, "pct": 1.000, "gb": 0.0, "rs": 4, "ra": 2, "diff": 2 },
-      { "team": "Taipei Neon", "w": 0, "l": 1, "pct": 0.000, "gb": 1.0, "rs": 2, "ra": 4, "diff": -2 }
+      { "team": "Vancouver Current", "slug": "vancouver-current", "w": 0, "l": 0, "pct": ".000", "gb": "-", "diff": "0" },
+      { "team": "Monterrey Cementeros", "slug": "monterrey-cementeros", "w": 0, "l": 0, "pct": ".000", "gb": "-", "diff": "0" },
+      { "team": "Tijuana Tecnicos", "slug": "tijuana-tecnicos", "w": 0, "l": 0, "pct": ".000", "gb": "-", "diff": "0" },
+      { "team": "San Pedro Cocolos", "slug": "san-pedro-cocolos", "w": 0, "l": 0, "pct": ".000", "gb": "-", "diff": "0" },
+      { "team": "Santiago Caballeros", "slug": "santiago-caballeros", "w": 0, "l": 0, "pct": ".000", "gb": "-", "diff": "0" },
+      { "team": "Mayaguez Sultans", "slug": "mayaguez-sultans", "w": 0, "l": 0, "pct": ".000", "gb": "-", "diff": "0" },
+      { "team": "Taipei Neon", "slug": "taipei-neon", "w": 0, "l": 0, "pct": ".000", "gb": "-", "diff": "0" },
+      { "team": "Osaka Spirits", "slug": "osaka-spirits", "w": 0, "l": 0, "pct": ".000", "gb": "-", "diff": "0" }
     ]
   }
 }

@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>GLB — Game</title>
+  <style>
+    :root {
+      --bg: #0b0d10;
+      --panel: #12161c;
+      --text: #e7edf5;
+      --muted: #9aa6b2;
+      --line: #2a3440;
+      --accent: #e7edf5;
+    }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+    header {
+      padding: 20px 18px 12px;
+      border-bottom: 1px solid var(--line);
+      background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0));
+    }
+    .wrap {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .kicker {
+      color: var(--muted);
+      font-size: 13px;
+      letter-spacing: 0.02em;
+      margin-bottom: 8px;
+    }
+    h1 {
+      margin: 0;
+      font-size: 26px;
+      font-weight: 800;
+      letter-spacing: 0.01em;
+    }
+    .meta {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    main { padding: 18px; }
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 14px;
+      margin-bottom: 14px;
+    }
+    .card h2 {
+      margin: 0 0 10px 0;
+      font-size: 16px;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      color: var(--muted);
+      font-weight: 700;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+    th, td {
+      padding: 9px 8px;
+      border-top: 1px solid var(--line);
+      vertical-align: middle;
+      white-space: nowrap;
+    }
+    thead th {
+      border-top: none;
+      color: var(--muted);
+      font-weight: 700;
+      font-size: 12px;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+    }
+    td.left, th.left { text-align: left; white-space: normal; }
+    td.right, th.right { text-align: right; }
+    .subtle { color: var(--muted); }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+    }
+    @media (min-width: 900px) {
+      .grid { grid-template-columns: 1fr 1fr; }
+    }
+    .notes li { margin: 6px 0; color: var(--muted); }
+    .error {
+      background: #2a0f12;
+      border: 1px solid #6b1b23;
+      color: #ffd7db;
+      padding: 14px;
+      border-radius: 12px;
+      line-height: 1.4;
+    }
+    a { color: var(--accent); }
+    code { color: #d7e6ff; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <div class="kicker">GLOBAL LEAGUE BASEBALL</div>
+      <h1 id="title">Game</h1>
+      <div class="meta" id="meta"></div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div id="content"></div>
+  </main>
+
+<script>
+(function () {
+  const qs = new URLSearchParams(location.search);
+
+  // You can pass either:
+  // 1) ?g=data/games/2026-04-08/Louisville-at-Fresno.json
+  // 2) ?date=2026-04-08&game=louisville@fresno  (we'll build the path)
+  const g = qs.get("g");
+  const date = qs.get("date");
+  const game = qs.get("game");
+
+  let path = g;
+  if (!path && date && game) {
+    path = `data/games/${date}/${game}.json`;
+  }
+
+  const elTitle = document.getElementById("title");
+  const elMeta = document.getElementById("meta");
+  const elContent = document.getElementById("content");
+
+  function esc(s) {
+    return String(s ?? "").replace(/[&<>"']/g, m => ({
+      "&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"
+    }[m]));
+  }
+
+  function ipFromOuts(outs) {
+    if (outs == null) return "";
+    const o = Number(outs);
+    const whole = Math.floor(o / 3);
+    const rem = o % 3;
+    return `${whole}.${rem}`;
+  }
+
+  function renderLinescore(bs) {
+    const inn = bs.linescore?.innings ?? [];
+    const away = bs.away?.name ?? "Away";
+    const home = bs.home?.name ?? "Home";
+    const totA = bs.linescore?.totals?.away ?? {};
+    const totH = bs.linescore?.totals?.home ?? {};
+
+    const inningHeaders = inn.map(i => `<th class="right">${i.inning}</th>`).join("");
+    const awayCells = inn.map(i => `<td class="right">${i.away}</td>`).join("");
+    const homeCells = inn.map(i => `<td class="right">${i.home}</td>`).join("");
+
+    return `
+      <div class="card">
+        <h2>Linescore</h2>
+        <table>
+          <thead>
+            <tr>
+              <th class="left">Team</th>
+              ${inningHeaders}
+              <th class="right">R</th>
+              <th class="right">H</th>
+              <th class="right">E</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="left">${esc(away)}</td>
+              ${awayCells}
+              <td class="right">${esc(totA.R)}</td>
+              <td class="right">${esc(totA.H)}</td>
+              <td class="right">${esc(totA.E)}</td>
+            </tr>
+            <tr>
+              <td class="left">${esc(home)}</td>
+              ${homeCells}
+              <td class="right">${esc(totH.R)}</td>
+              <td class="right">${esc(totH.H)}</td>
+              <td class="right">${esc(totH.E)}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    `;
+  }
+
+  function renderBatting(teamName, rows) {
+    return `
+      <div class="card">
+        <h2>${esc(teamName)} Batting</h2>
+        <table>
+          <thead>
+            <tr>
+              <th class="left">Batter</th>
+              <th class="right">AB</th>
+              <th class="right">R</th>
+              <th class="right">H</th>
+              <th class="right">RBI</th>
+              <th class="right">BB</th>
+              <th class="right">SO</th>
+              <th class="right">2B</th>
+              <th class="right">3B</th>
+              <th class="right">HR</th>
+              <th class="right">SB</th>
+              <th class="right">CS</th>
+              <th class="right">HBP</th>
+              <th class="right">SF</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${rows.map(p => `
+              <tr>
+                <td class="left">
+                  ${esc(p.name)} <span class="subtle">(${esc(p.pos)} · ${esc(p.order)})</span>
+                </td>
+                <td class="right">${esc(p.AB)}</td>
+                <td class="right">${esc(p.R)}</td>
+                <td class="right">${esc(p.H)}</td>
+                <td class="right">${esc(p.RBI)}</td>
+                <td class="right">${esc(p.BB)}</td>
+                <td class="right">${esc(p.SO)}</td>
+                <td class="right">${esc(p["2B"])}</td>
+                <td class="right">${esc(p["3B"])}</td>
+                <td class="right">${esc(p.HR)}</td>
+                <td class="right">${esc(p.SB)}</td>
+                <td class="right">${esc(p.CS)}</td>
+                <td class="right">${esc(p.HBP)}</td>
+                <td class="right">${esc(p.SF)}</td>
+              </tr>
+            `).join("")}
+          </tbody>
+        </table>
+      </div>
+    `;
+  }
+
+  function renderPitching(teamName, rows) {
+    return `
+      <div class="card">
+        <h2>${esc(teamName)} Pitching</h2>
+        <table>
+          <thead>
+            <tr>
+              <th class="left">Pitcher</th>
+              <th class="right">IP</th>
+              <th class="right">H</th>
+              <th class="right">R</th>
+              <th class="right">ER</th>
+              <th class="right">BB</th>
+              <th class="right">SO</th>
+              <th class="right">HR</th>
+              <th class="right">P</th>
+              <th class="right">S</th>
+              <th class="right">DEC</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${rows.map(p => `
+              <tr>
+                <td class="left">${esc(p.name)}</td>
+                <td class="right">${esc(ipFromOuts(p.IP_outs))}</td>
+                <td class="right">${esc(p.H)}</td>
+                <td class="right">${esc(p.R)}</td>
+                <td class="right">${esc(p.ER)}</td>
+                <td class="right">${esc(p.BB)}</td>
+                <td class="right">${esc(p.SO)}</td>
+                <td class="right">${esc(p.HR)}</td>
+                <td class="right">${esc(p.P)}</td>
+                <td class="right">${esc(p.S)}</td>
+                <td class="right">${esc(p.decision ?? "")}</td>
+              </tr>
+            `).join("")}
+          </tbody>
+        </table>
+      </div>
+    `;
+  }
+
+  function renderNotes(notes) {
+    if (!notes || !notes.length) return "";
+    return `
+      <div class="card">
+        <h2>Notes</h2>
+        <ul class="notes">
+          ${notes.map(n => `<li>${esc(n)}</li>`).join("")}
+        </ul>
+      </div>
+    `;
+  }
+
+  async function main() {
+    if (!path) {
+      elContent.innerHTML = `
+        <div class="error">
+          Missing query string.<br><br>
+          Use either:<br>
+          <code>?g=data/games/YYYY-MM-DD/away@home.json</code><br>
+          or<br>
+          <code>?date=YYYY-MM-DD&game=away@home</code>
+        </div>
+      `;
+      return;
+    }
+
+    let bs;
+    try {
+      const res = await fetch(path, { cache: "no-store" });
+      if (!res.ok) throw new Error(`HTTP ${res.status} for ${path}`);
+      bs = await res.json();
+    } catch (err) {
+      elContent.innerHTML = `
+        <div class="error">
+          Could not load box score JSON.<br>
+          <div style="margin-top:8px">Path: <code>${esc(path)}</code></div>
+          <div style="margin-top:8px">Error: <code>${esc(err.message)}</code></div>
+        </div>
+      `;
+      return;
+    }
+
+    const awayName = bs.away?.name ?? "Away";
+    const homeName = bs.home?.name ?? "Home";
+    const totalsA = bs.linescore?.totals?.away ?? {};
+    const totalsH = bs.linescore?.totals?.home ?? {};
+
+    elTitle.textContent = `${awayName} @ ${homeName}`;
+
+    const metaBits = [
+      bs.date ? `Date: ${bs.date}` : null,
+      bs.scheduled_local ? `Scheduled: ${bs.scheduled_local}` : null,
+      bs.timezone ? `TZ: ${bs.timezone}` : null,
+      bs.venue?.name ? `Park: ${bs.venue.name}` : null,
+      (bs.attendance != null) ? `Attendance: ${Number(bs.attendance).toLocaleString()}` : null,
+      bs.status ? `Status: ${bs.status}` : null,
+      (totalsA.R != null && totalsH.R != null) ? `Final: ${totalsA.R}-${totalsH.R}` : null
+    ].filter(Boolean);
+
+    elMeta.innerHTML = metaBits.map(x => `<div>${esc(x)}</div>`).join("");
+
+    const battingAway = bs.batting?.away ?? [];
+    const battingHome = bs.batting?.home ?? [];
+    const pitchingAway = bs.pitching?.away ?? [];
+    const pitchingHome = bs.pitching?.home ?? [];
+
+    elContent.innerHTML = `
+      ${renderLinescore(bs)}
+      <div class="grid">
+        <div>
+          ${renderBatting(awayName, battingAway)}
+          ${renderPitching(awayName, pitchingAway)}
+        </div>
+        <div>
+          ${renderBatting(homeName, battingHome)}
+          ${renderPitching(homeName, pitchingHome)}
+        </div>
+      </div>
+      ${renderNotes(bs.notes)}
+    `;
+  }
+
+  main();
+})();
+</script>
+</body>
+</html>

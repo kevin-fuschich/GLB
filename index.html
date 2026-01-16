@@ -41,12 +41,22 @@
   const LEADERS_PATH = "current/leaders.json";
 
   const $ = (id) => document.getElementById(id);
-  function log(line) { $("debug").textContent += line + "\n"; }
-  log("JS started ✅");
-  function setStatus(text, ok=true) {
-    $("statusText").textContent = text;
-    $("status").className = "status " + (ok ? "ok" : "bad");
+
+  function log(line) {
+    const el = $("debug");
+    if (el) el.textContent += line + "\n";
+    console.log(line);
   }
+
+  function setStatus(text, ok = true) {
+    const t = $("statusText");
+    const s = $("status");
+    if (t) t.textContent = text;
+    if (s) s.className = "status " + (ok ? "ok" : "bad");
+    console.log("STATUS:", text);
+  }
+
+  log("JS started ✅");
 
   async function loadJson(path) {
     const url = path + "?v=" + Date.now();
@@ -57,7 +67,7 @@
     return res.json();
   }
 
-    function slugifyTeamName(name) {
+  function slugify(name) {
     return String(name || "")
       .trim()
       .toLowerCase()
@@ -67,22 +77,21 @@
   function renderScores(day) {
     if (!day || !day.games) return "<div class='small'>No games.</div>";
 
-    // Link the day label to day.html
     const dayLink = `day.html?date=${encodeURIComponent(day.date)}`;
 
     const rows = day.games.map(g => {
-      // Build game key from team names (matches your file naming rule: away@home)
-      const awaySlug = g.away_slug || slugifyTeamName(g.away_team);
-      const homeSlug = g.home_slug || slugifyTeamName(g.home_team);
+      const awaySlug = g.away_slug || slugify(g.away_team);
+      const homeSlug = g.home_slug || slugify(g.home_team);
       const gameKey = `${awaySlug}@${homeSlug}`;
-
       const gameLink = `game.html?date=${encodeURIComponent(day.date)}&game=${encodeURIComponent(gameKey)}`;
 
       return `
         <tr>
-          <td><a href="${gameLink}">${g.away_team}</a></td><td>${g.away_score}</td>
+          <td><a href="${gameLink}">${g.away_team}</a></td>
+          <td>${g.away_score}</td>
           <td>@</td>
-          <td><a href="${gameLink}">${g.home_team}</a></td><td>${g.home_score}</td>
+          <td><a href="${gameLink}">${g.home_team}</a></td>
+          <td>${g.home_score}</td>
         </tr>
       `;
     }).join("");
@@ -92,44 +101,57 @@
         <a href="${dayLink}">${day.label}</a> — ${day.status}
       </div>
       <table>
-        <thead><tr><th>Away</th><th></th><th></th><th>Home</th><th></th></tr></thead>
+        <thead>
+          <tr>
+            <th>Away</th><th></th><th></th><th>Home</th><th></th>
+          </tr>
+        </thead>
         <tbody>${rows}</tbody>
       </table>
-    `;
-  }
     `;
   }
 
   function renderStandings(s) {
     if (!s || !s.divisions) return "<div class='small'>No standings.</div>";
-    const divHtml = Object.entries(s.divisions).map(([div, teams]) => {
-      const rows = (teams || []).map(t =>
-        `<tr>
-          <td>${t.team}</td><td>${t.w}-${t.l}</td><td>${t.pct}</td><td>${t.gb}</td><td>${t.diff}</td>
-        </tr>`
-      ).join("");
+
+    return Object.entries(s.divisions).map(([div, teams]) => {
+      const rows = teams.map(t => `
+        <tr>
+          <td>${t.team}</td>
+          <td>${t.w}-${t.l}</td>
+          <td>${t.pct}</td>
+          <td>${t.gb}</td>
+          <td>${t.diff}</td>
+        </tr>
+      `).join("");
+
       return `
         <div class="small"><strong>${div}</strong> (as of ${s.as_of})</div>
         <table>
-          <thead><tr><th>Team</th><th>W-L</th><th>PCT</th><th>GB</th><th>DIFF</th></tr></thead>
+          <thead>
+            <tr>
+              <th>Team</th><th>W-L</th><th>PCT</th><th>GB</th><th>DIFF</th>
+            </tr>
+          </thead>
           <tbody>${rows}</tbody>
         </table>
       `;
     }).join("");
-    return divHtml;
   }
 
   function renderLeaders(l) {
     if (!l) return "<div class='small'>No leaders.</div>";
+
     const sections = [];
     if (l.batting) sections.push(["Batting", l.batting]);
     if (l.pitching) sections.push(["Pitching", l.pitching]);
 
-    const html = sections.map(([title, cats]) => {
+    return `<div class="small">As of ${l.as_of}</div>` + sections.map(([title, cats]) => {
       const catHtml = Object.entries(cats).map(([cat, arr]) => {
-        const rows = (arr || []).map(x =>
+        const rows = arr.map(x =>
           `<tr><td>${x.player}</td><td>${x.team}</td><td>${x.value}</td></tr>`
         ).join("");
+
         return `
           <div class="small"><strong>${cat}</strong></div>
           <table>
@@ -138,9 +160,9 @@
           </table>
         `;
       }).join("");
+
       return `<h3>${title}</h3>${catHtml}`;
     }).join("");
-    return `<div class="small">As of ${l.as_of}</div>` + html;
   }
 
   (async function main() {

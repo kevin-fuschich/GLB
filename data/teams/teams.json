@@ -1,86 +1,73 @@
 {
-  "schema": "glb.teams.v1",
-  "teams": [
-    {
-      "slug": "louisville",
-      "name": "Louisville Naturals",
-      "division": "Americas"
-    },
-    {
-      "slug": "durham",
-      "name": "Durham Gold",
-      "division": "Americas"
-    },
-    {
-      "slug": "fresno",
-      "name": "Fresno Yield",
-      "division": "Americas"
-    },
-    {
-      "slug": "albuquerque",
-      "name": "Albuquerque Aeros",
-      "division": "Americas"
-    },
-    {
-      "slug": "st-paul",
-      "name": "St. Paul Frost",
-      "division": "Americas"
-    },
-    {
-      "slug": "birmingham",
-      "name": "Birmingham Vulcans",
-      "division": "Americas"
-    },
-    {
-      "slug": "toledo",
-      "name": "Toledo Assembly",
-      "division": "Americas"
-    },
-    {
-      "slug": "spokane",
-      "name": "Spokane — Alloys",
-      "division": "Americas"
-    },
-
-    {
-      "slug": "vancouver",
-      "name": "Vancouver Current",
-      "division": "Pacific"
-    },
-    {
-      "slug": "monterrey",
-      "name": "Monterrey — Cementeros",
-      "division": "Pacific"
-    },
-    {
-      "slug": "tijuana",
-      "name": "Tijuana Tecnicos",
-      "division": "Pacific"
-    },
-    {
-      "slug": "san-pedro",
-      "name": "San Pedro — Cocolos",
-      "division": "Pacific"
-    },
-    {
-      "slug": "taipei",
-      "name": "Taipei Neon",
-      "division": "Pacific"
-    },
-    {
-      "slug": "hiroshima",
-      "name": "HIROSHIMA — OFFICIAL NAME HERE",
-      "division": "Pacific"
-    },
-    {
-      "slug": "brisbane",
-      "name": "BRISBANE — OFFICIAL NAME HERE",
-      "division": "Pacific"
-    },
-    {
-      "slug": "auckland",
-      "name": "AUCKLAND — OFFICIAL NAME HERE",
-      "division": "Pacific"
-    }
-  ]
+  "league": "Global League Baseball",
+  "divisions": {
+    "Americas": [
+      {
+        "slug": "spokane-alloys",
+        "name": "Spokane Alloys"
+      },
+      {
+        "slug": "albuquerque-aeros",
+        "name": "Albuquerque Aeros"
+      },
+      {
+        "slug": "fresno-yield",
+        "name": "Fresno Yield"
+      },
+      {
+        "slug": "st-paul-frost",
+        "name": "St. Paul Frost"
+      },
+      {
+        "slug": "birmingham-vulcans",
+        "name": "Birmingham Vulcans"
+      },
+      {
+        "slug": "toledo-assembly",
+        "name": "Toledo Assembly"
+      },
+      {
+        "slug": "durham-gold",
+        "name": "Durham Gold"
+      },
+      {
+        "slug": "louisville-naturals",
+        "name": "Louisville Naturals"
+      }
+    ],
+    "Pacific": [
+      {
+        "slug": "vancouver-current",
+        "name": "Vancouver Current"
+      },
+      {
+        "slug": "monterrey-cementeros",
+        "name": "Monterrey Cementeros"
+      },
+      {
+        "slug": "tijuana-tecnicos",
+        "name": "Tijuana Tecnicos"
+      },
+      {
+        "slug": "san-pedro-cocolos",
+        "name": "San Pedro Cocolos"
+      },
+      {
+        "slug": "santiago-caballeros",
+        "name": "Santiago Caballeros"
+      },
+      {
+        "slug": "mayaguez-sultans",
+        "name": "Mayaguez Sultans"
+      },
+      {
+        "slug": "taipei-neon",
+        "name": "Taipei Neon"
+      },
+      {
+        "slug": "osaka-spirits",
+        "name": "Osaka Spirits"
+      }
+    ]
+  }
 }

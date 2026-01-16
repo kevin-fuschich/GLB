@@ -1,0 +1,86 @@
+{
+  "schema": "glb.teams.v1",
+  "teams": [
+    {
+      "slug": "louisville",
+      "name": "Louisville Naturals",
+      "division": "Americas"
+    },
+    {
+      "slug": "durham",
+      "name": "Durham Gold",
+      "division": "Americas"
+    },
+    {
+      "slug": "fresno",
+      "name": "Fresno Yield",
+      "division": "Americas"
+    },
+    {
+      "slug": "albuquerque",
+      "name": "Albuquerque Aeros",
+      "division": "Americas"
+    },
+    {
+      "slug": "st-paul",
+      "name": "St. Paul Frost",
+      "division": "Americas"
+    },
+    {
+      "slug": "birmingham",
+      "name": "Birmingham Vulcans",
+      "division": "Americas"
+    },
+    {
+      "slug": "toledo",
+      "name": "Toledo Assembly",
+      "division": "Americas"
+    },
+    {
+      "slug": "spokane",
+      "name": "Spokane — Alloys",
+      "division": "Americas"
+    },
+
+    {
+      "slug": "vancouver",
+      "name": "Vancouver Current",
+      "division": "Pacific"
+    },
+    {
+      "slug": "monterrey",
+      "name": "Monterrey — Cementeros",
+      "division": "Pacific"
+    },
+    {
+      "slug": "tijuana",
+      "name": "Tijuana Tecnicos",
+      "division": "Pacific"
+    },
+    {
+      "slug": "san-pedro",
+      "name": "San Pedro — Cocolos",
+      "division": "Pacific"
+    },
+    {
+      "slug": "taipei",
+      "name": "Taipei Neon",
+      "division": "Pacific"
+    },
+    {
+      "slug": "hiroshima",
+      "name": "HIROSHIMA — OFFICIAL NAME HERE",
+      "division": "Pacific"
+    },
+    {
+      "slug": "brisbane",
+      "name": "BRISBANE — OFFICIAL NAME HERE",
+      "division": "Pacific"
+    },
+    {
+      "slug": "auckland",
+      "name": "AUCKLAND — OFFICIAL NAME HERE",
+      "division": "Pacific"
+    }
+  ]
+}

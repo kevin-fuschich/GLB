@@ -127,13 +127,15 @@
   // You can pass either:
   // 1) ?g=data/games/2026-04-08/Louisville-at-Fresno.json
   // 2) ?date=2026-04-08&game=louisville@fresno  (we'll build the path)
-  const g = qs.get("g");
+   const g = qs.get("g");
   const date = qs.get("date");
   const game = qs.get("game");
 
   let path = g;
   if (!path && date && game) {
-    path = `data/games/${date}/${game}.json`;
+    // Encode @ and any other special characters safely
+    const safeGame = encodeURIComponent(game);
+    path = `data/games/${date}/${safeGame}.json`;
   }
 
   const elTitle = document.getElementById("title");

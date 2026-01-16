@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>GLB — Day</title>
+  <style>
+    :root {
+      --bg: #0b0d10;
+      --panel: #12161c;
+      --text: #e7edf5;
+      --muted: #9aa6b2;
+      --line: #2a3440;
+      --accent: #e7edf5;
+    }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+    header {
+      padding: 20px 18px 12px;
+      border-bottom: 1px solid var(--line);
+      background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0));
+    }
+    .wrap { max-width: 1100px; margin: 0 auto; }
+    .kicker { color: var(--muted); font-size: 13px; letter-spacing: 0.02em; margin-bottom: 8px; }
+    h1 { margin: 0; font-size: 26px; font-weight: 800; letter-spacing: 0.01em; }
+    .meta { display:flex; gap:18px; flex-wrap:wrap; margin-top:10px; color:var(--muted); font-size:13px; }
+    main { padding: 18px; }
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 14px;
+      margin-bottom: 14px;
+    }
+    table { width: 100%; border-collapse: collapse; font-size: 14px; }
+    th, td { padding: 10px 8px; border-top: 1px solid var(--line); vertical-align: middle; }
+    thead th { border-top: none; color: var(--muted); font-weight: 700; font-size: 12px; letter-spacing: 0.03em; text-transform: uppercase; }
+    td.left, th.left { text-align: left; }
+    td.right, th.right { text-align: right; white-space: nowrap; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .pill {
+      display:inline-block;
+      padding: 3px 8px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--muted);
+      font-size: 12px;
+      margin-left: 8px;
+    }
+    .error {
+      background: #2a0f12;
+      border: 1px solid #6b1b23;
+      color: #ffd7db;
+      padding: 14px;
+      border-radius: 12px;
+      line-height: 1.4;
+    }
+    code { color: #d7e6ff; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <div class="kicker">GLOBAL LEAGUE BASEBALL</div>
+      <h1 id="title">Daily Scores</h1>
+      <div class="meta" id="meta"></div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div id="content"></div>
+  </main>
+
+<script>
+(function () {
+  const qs = new URLSearchParams(location.search);
+  const date = qs.get("date");
+
+  const elTitle = document.getElementById("title");
+  const elMeta = document.getElementById("meta");
+  const elContent = document.getElementById("content");
+
+  function esc(s) {
+    return String(s ?? "").replace(/[&<>"']/g, m => ({
+      "&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"
+    }[m]));
+  }
+
+  function fmtNum(n) {
+    if (n == null) return "";
+    const x = Number(n);
+    return Number.isFinite(x) ? x.toLocaleString() : String(n);
+  }
+
+  function buildGameKey(gameObj) {
+    // Supports either:
+    // - explicit key already present (preferred): gameObj.key = "away@home"
+    // - or derive from slugs/names: away_slug/home_slug or away/home
+    if (gameObj.key) return gameObj.key;
+
+    const away = gameObj.away_slug || gameObj.away || gameObj.awayTeam || gameObj.away_team;
+    const home = gameObj.home_slug || gameObj.home || gameObj.homeTeam || gameObj.home_team;
+
+    if (!away || !home) return null;
+
+    // normalize to lowercase "slug-ish"
+    const slug = (v) => String(v).trim().toLowerCase().replace(/\s+/g, "-");
+    return `${slug(away)}@${slug(home)}`;
+  }
+
+  function renderTable(day) {
+    const games = day.games || day.matchups || day.schedule || [];
+    if (!games.length) {
+      return `<div class="card">No games found for this date.</div>`;
+    }
+
+    return `
+      <div class="card">
+        <table>
+          <thead>
+            <tr>
+              <th class="left">Matchup</th>
+              <th class="right">Final</th>
+              <th class="right">Attendance</th>
+              <th class="right">Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${games.map(g => {
+              const away = g.away_name || g.away || g.awayTeam || g.away_team || "Away";
+              const home = g.home_name || g.home || g.homeTeam || g.home_team || "Home";
+              const status = g.status || day.status || "Final";
+
+              // Score may be stored in different shapes; support common ones
+              const awayScore = (g.away_score ?? g.awayScore ?? g.score?.away ?? g.runs?.away);
+              const homeScore = (g.home_score ?? g.homeScore ?? g.score?.home ?? g.runs?.home);
+              const final = (awayScore != null && homeScore != null) ? `${awayScore}–${homeScore}` : "";
+
+              const att = g.attendance ?? g.att ?? "";
+
+              const key = buildGameKey(g);
+              const href = key ? `game.html?date=${encodeURIComponent(day.date || date)}&game=${encodeURIComponent(key)}` : null;
+
+              const matchup = href
+                ? `<a href="${href}">${esc(away)} @ ${esc(home)}</a>`
+                : `${esc(away)} @ ${esc(home)}`;
+
+              return `
+                <tr>
+                  <td class="left">${matchup}</td>
+                  <td class="right">${esc(final)}</td>
+                  <td class="right">${esc(fmtNum(att))}</td>
+                  <td class="right"><span class="pill">${esc(status)}</span></td>
+                </tr>
+              `;
+            }).join("")}
+          </tbody>
+        </table>
+      </div>
+    `;
+  }
+
+  async function main() {
+    if (!date) {
+      elContent.innerHTML = `
+        <div class="error">
+          Missing query string.<br><br>
+          Use:<br>
+          <code>?date=YYYY-MM-DD</code>
+        </div>
+      `;
+      return;
+    }
+
+    const path = `data/days/${date}.json`;
+
+    let day;
+    try {
+      const res = await fetch(path, { cache: "no-store" });
+      if (!res.ok) throw new Error(`HTTP ${res.status} for ${path}`);
+      day = await res.json();
+    } catch (err) {
+      elContent.innerHTML = `
+        <div class="error">
+          Could not load day JSON.<br>
+          <div style="margin-top:8px">Path: <code>${esc(path)}</code></div>
+          <div style="margin-top:8px">Error: <code>${esc(err.message)}</code></div>
+        </div>
+      `;
+      return;
+    }
+
+    const label = day.label || day.date || date;
+    elTitle.textContent = `Daily Scores — ${label}`;
+
+    const metaBits = [
+      day.date ? `Date: ${day.date}` : null,
+      day.status ? `Day status: ${day.status}` : null
+    ].filter(Boolean);
+
+    elMeta.innerHTML = metaBits.map(x => `<div>${esc(x)}</div>`).join("");
+
+    elContent.innerHTML = renderTable(day);
+  }
+
+  main();
+})();
+</script>
+</body>
+</html>

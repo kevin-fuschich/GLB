@@ -57,21 +57,46 @@
     return res.json();
   }
 
+    function slugifyTeamName(name) {
+    return String(name || "")
+      .trim()
+      .toLowerCase()
+      .replace(/\s+/g, "-");
+  }
+
   function renderScores(day) {
     if (!day || !day.games) return "<div class='small'>No games.</div>";
-    const rows = day.games.map(g =>
-      `<tr>
-        <td>${g.away_team}</td><td>${g.away_score}</td>
-        <td>@</td>
-        <td>${g.home_team}</td><td>${g.home_score}</td>
-      </tr>`
-    ).join("");
+
+    // Link the day label to day.html
+    const dayLink = `day.html?date=${encodeURIComponent(day.date)}`;
+
+    const rows = day.games.map(g => {
+      // Build game key from team names (matches your file naming rule: away@home)
+      const awaySlug = g.away_slug || slugifyTeamName(g.away_team);
+      const homeSlug = g.home_slug || slugifyTeamName(g.home_team);
+      const gameKey = `${awaySlug}@${homeSlug}`;
+
+      const gameLink = `game.html?date=${encodeURIComponent(day.date)}&game=${encodeURIComponent(gameKey)}`;
+
+      return `
+        <tr>
+          <td><a href="${gameLink}">${g.away_team}</a></td><td>${g.away_score}</td>
+          <td>@</td>
+          <td><a href="${gameLink}">${g.home_team}</a></td><td>${g.home_score}</td>
+        </tr>
+      `;
+    }).join("");
+
     return `
-      <div class="small">${day.label} — ${day.status}</div>
+      <div class="small">
+        <a href="${dayLink}">${day.label}</a> — ${day.status}
+      </div>
       <table>
         <thead><tr><th>Away</th><th></th><th></th><th>Home</th><th></th></tr></thead>
         <tbody>${rows}</tbody>
       </table>
+    `;
+  }
     `;
   }
 

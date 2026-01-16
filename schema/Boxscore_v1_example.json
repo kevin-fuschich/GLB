@@ -1,0 +1,61 @@
+{
+  "schema": "glb.boxscore.v1",
+  "game_id": "YYYY-MM-DD_away@home",
+  "date": "YYYY-MM-DD",
+  "scheduled_local": "YYYY-MM-DD HH:MM",
+  "timezone": "America/New_York",
+
+  "away": {
+    "slug": "away",
+    "name": "Away Team Name"
+  },
+  "home": {
+    "slug": "home",
+    "name": "Home Team Name"
+  },
+
+  "venue": {
+    "name": "Ballpark Name",
+    "city": "City",
+    "country": "Country"
+  },
+
+  "status": "Final",
+  "attendance": 00000,
+
+  "linescore": {
+    "innings": [
+      { "inning": 1, "away": 0, "home": 0 },
+      { "inning": 2, "away": 0, "home": 0 },
+      { "inning": 3, "away": 0, "home": 0 },
+      { "inning": 4, "away": 0, "home": 0 },
+      { "inning": 5, "away": 0, "home": 0 },
+      { "inning": 6, "away": 0, "home": 0 },
+      { "inning": 7, "away": 0, "home": 0 },
+      { "inning": 8, "away": 0, "home": 0 },
+      { "inning": 9, "away": 0, "home": 0 }
+    ],
+    "totals": {
+      "away": { "R": 0, "H": 0, "E": 0 },
+      "home": { "R": 0, "H": 0, "E": 0 }
+    }
+  },
+
+  "batting": {
+    "away": [],
+    "home": []
+  },
+
+  "pitching": {
+    "away": [],
+    "home": []
+  },
+
+  "decisions": {
+    "W": null,
+    "L": null,
+    "SV": null
+  },
+
+  "notes": []
+}

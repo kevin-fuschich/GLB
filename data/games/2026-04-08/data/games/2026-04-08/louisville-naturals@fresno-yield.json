@@ -1,0 +1,14 @@
+{
+  "schema": "glb.boxscore.v1",
+  "date": "2026-04-08",
+  "away": { "name": "Louisville Naturals", "slug": "louisville-naturals" },
+  "home": { "name": "Fresno Yield", "slug": "fresno-yield" },
+  "status": "Final",
+  "attendance": 18240,
+  "linescore": {
+    "away": [0, 1, 0, 0, 2, 0, 0, 1, 0],
+    "home": [0, 0, 0, 1, 0, 1, 0, 0, 0]
+  },
+  "final": { "away": 4, "home": 2 },
+  "notes": []
+}

@@ -3,254 +3,302 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GLB Official Record - Dark Mode</title>
+<title>GLB Official Standings</title>
 <style>
     :root {
-        --bg-dark: #121212;
-        --card-dark: #1e1e1e;
-        --text-light: #ffffff;
-        --text-dim: #a0a0a0;
-        --gold: #D4AF37;
-        --pacific-cyan: #00e5ff;
-        --americas-orange: #ff6b00;
-        --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        --field-white: #ffffff;
+        --ink-navy: #002244; /* Classic Baseball Navy */
+        --grass-green: #2e7d32;
+        --clay-red: #c62828;
+        --line-grey: #e0e0e0;
+        --font-header: "Georgia", serif; /* Newspaper style */
+        --font-body: "Helvetica Neue", sans-serif;
     }
 
     body {
-        background-color: var(--bg-dark);
-        font-family: var(--font-sans);
-        color: var(--text-light);
+        background-color: #f5f5f5; /* Light grey backdrop */
+        font-family: var(--font-body);
+        color: var(--ink-navy);
         display: flex;
         justify-content: center;
         padding: 20px;
         margin: 0;
     }
 
-    .record-container {
+    .standings-sheet {
+        background-color: var(--field-white);
         width: 100%;
-        max-width: 450px;
-        background-color: var(--bg-dark);
+        max-width: 500px;
+        padding: 30px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        border-top: 5px solid var(--ink-navy); /* Authority bar */
     }
 
-    /* HEADER WITH REAL LOGO */
+    /* HEADER */
     header {
         text-align: center;
         margin-bottom: 30px;
-        border-bottom: 1px solid #333;
-        padding-bottom: 25px;
+        border-bottom: 2px solid var(--ink-navy);
+        padding-bottom: 20px;
     }
 
-    /* UPDATED: Links to 'GLB_white.png' */
     .official-logo {
-        width: 140px; /* Slightly larger to show off the patch detail */
+        width: 100px;
         height: auto;
         display: block;
-        margin: 0 auto 15px auto;
-        filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.1)); /* Subtle white glow */
+        margin: 0 auto 10px auto;
     }
 
     h1 {
-        font-size: 14px;
-        letter-spacing: 3px;
-        text-transform: uppercase;
-        margin: 0;
-        color: var(--gold);
-        font-weight: 800;
-    }
-
-    .date-block {
-        text-align: center;
-        margin-bottom: 40px;
-        margin-top: 20px;
-    }
-
-    .date-main {
-        font-size: 18px;
-        font-weight: 700;
-        display: block;
-        margin-bottom: 5px;
-    }
-
-    .date-sub {
-        font-size: 12px;
-        text-transform: uppercase;
-        letter-spacing: 1.5px;
-        color: var(--text-dim);
-        background-color: #333;
-        padding: 4px 12px;
-        border-radius: 12px;
-        display: inline-block;
-    }
-
-    /* DIVISION HEADERS */
-    .division-header {
-        font-size: 11px;
+        font-family: var(--font-header);
+        font-size: 24px;
         font-weight: 900;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        margin: 30px 0 15px 0;
-        display: flex;
-        align-items: center;
-    }
-
-    .pac-header { color: var(--pacific-cyan); }
-    .ame-header { color: var(--americas-orange); }
-    
-    .division-line {
-        flex-grow: 1;
-        height: 1px;
-        margin-left: 15px;
-        opacity: 0.5;
-    }
-    .pac-line { background-color: var(--pacific-cyan); box-shadow: 0 0 5px var(--pacific-cyan); }
-    .ame-line { background-color: var(--americas-orange); box-shadow: 0 0 5px var(--americas-orange); }
-
-
-    /* GAME CARDS */
-    .game-card {
-        background-color: var(--card-dark);
-        padding: 16px;
-        border-radius: 8px;
-        margin-bottom: 12px;
-        border-left: 3px solid #333;
-    }
-
-    .pac-card { border-left-color: var(--pacific-cyan); }
-    .ame-card { border-left-color: var(--americas-orange); }
-
-    .team-row {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 8px;
-        font-size: 16px;
-    }
-
-    .team-name { font-weight: 500; }
-    .winner-name { font-weight: 700; color: var(--text-light); }
-    .loser-name { font-weight: 400; color: var(--text-dim); }
-
-    .score {
-        font-family: "Courier New", monospace;
-        font-weight: 700;
-        font-size: 18px;
-        padding: 2px 8px;
-        border-radius: 4px;
-    }
-    
-    .winner-score-pac { color: var(--bg-dark); background-color: var(--pacific-cyan); box-shadow: 0 0 10px rgba(0, 229, 255, 0.5); }
-    .winner-score-ame { color: var(--bg-dark); background-color: var(--americas-orange); box-shadow: 0 0 10px rgba(255, 107, 0, 0.5); }
-    .loser-score { color: var(--text-dim); }
-
-    .meta-data {
-        margin-top: 12px;
-        padding-top: 8px;
-        border-top: 1px solid #333;
-        font-size: 10px;
-        color: var(--text-dim);
-        display: flex;
-        justify-content: space-between;
+        margin: 0;
         text-transform: uppercase;
         letter-spacing: 1px;
     }
 
+    .update-time {
+        font-size: 11px;
+        color: #666;
+        margin-top: 5px;
+        font-style: italic;
+    }
+
+    /* TABLES */
+    .division-header {
+        background-color: var(--ink-navy);
+        color: white;
+        padding: 8px 12px;
+        font-size: 12px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-top: 30px;
+        margin-bottom: 0;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 14px;
+    }
+
+    th {
+        text-align: center;
+        padding: 10px 4px;
+        font-size: 10px;
+        color: #888;
+        border-bottom: 1px solid var(--line-grey);
+        text-transform: uppercase;
+    }
+    
+    th.th-left { text-align: left; padding-left: 10px; }
+
+    td {
+        padding: 12px 4px;
+        border-bottom: 1px solid #f0f0f0;
+        text-align: center;
+    }
+
+    td.team-name {
+        text-align: left;
+        padding-left: 10px;
+        font-weight: 600;
+        color: var(--ink-navy);
+    }
+
+    .pct-col {
+        font-weight: 700;
+        color: var(--grass-green); /* Highlights the winning record */
+    }
+
+    .streak-win { color: var(--grass-green); font-size: 11px; font-weight: bold; }
+    .streak-loss { color: var(--clay-red); font-size: 11px; font-weight: bold; }
+
     /* FOOTER */
     footer {
-        margin-top: 50px;
+        margin-top: 40px;
         text-align: center;
         font-size: 10px;
+        color: #999;
         text-transform: uppercase;
         letter-spacing: 2px;
-        color: var(--gold);
-        opacity: 0.7;
     }
+
 </style>
 </head>
 <body>
 
-<div class="record-container">
+<div class="standings-sheet">
     <header>
-        <img src="GLB_white.png" alt="GLB Official Logo" class="official-logo">
-        <h1>Global League Baseball</h1>
+        <img src="GLB_white.png" alt="GLB Logo" class="official-logo">
+        <h1>League Standings</h1>
+        <div class="update-time">Through Games of April 8, 2026</div>
     </header>
 
-    <div class="date-block">
-        <span class="date-main">Wednesday, April 8, 2026</span>
-        <span class="date-sub">Opening Day Protocol</span>
-    </div>
+    <div class="division-header">Pacific Division</div>
+    <table>
+        <thead>
+            <tr>
+                <th class="th-left">Team</th>
+                <th>W</th>
+                <th>L</th>
+                <th>PCT</th>
+                <th>DIFF</th>
+                <th>STRK</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="team-name">San Pedro Cocolos</td>
+                <td>1</td>
+                <td>0</td>
+                <td class="pct-col">1.000</td>
+                <td>+6</td>
+                <td class="streak-win">W1</td>
+            </tr>
+            <tr>
+                <td class="team-name">Taipei Neon</td>
+                <td>1</td>
+                <td>0</td>
+                <td class="pct-col">1.000</td>
+                <td>+2</td>
+                <td class="streak-win">W1</td>
+            </tr>
+            <tr>
+                <td class="team-name">Tijuana Tecnicos</td>
+                <td>1</td>
+                <td>0</td>
+                <td class="pct-col">1.000</td>
+                <td>+2</td>
+                <td class="streak-win">W1</td>
+            </tr>
+            <tr>
+                <td class="team-name">Santiago Caballeros</td>
+                <td>1</td>
+                <td>0</td>
+                <td class="pct-col">1.000</td>
+                <td>+1</td>
+                <td class="streak-win">W1</td>
+            </tr>
+            <tr>
+                <td class="team-name">Mayaguez Sultans</td>
+                <td>0</td>
+                <td>1</td>
+                <td>.000</td>
+                <td>-1</td>
+                <td class="streak-loss">L1</td>
+            </tr>
+            <tr>
+                <td class="team-name">Osaka Spirits</td>
+                <td>0</td>
+                <td>1</td>
+                <td>.000</td>
+                <td>-2</td>
+                <td class="streak-loss">L1</td>
+            </tr>
+            <tr>
+                <td class="team-name">Vancouver Current</td>
+                <td>0</td>
+                <td>1</td>
+                <td>.000</td>
+                <td>-2</td>
+                <td class="streak-loss">L1</td>
+            </tr>
+            <tr>
+                <td class="team-name">Monterrey Cementeros</td>
+                <td>0</td>
+                <td>1</td>
+                <td>.000</td>
+                <td>-6</td>
+                <td class="streak-loss">L1</td>
+            </tr>
+        </tbody>
+    </table>
 
-    <div class="division-header pac-header">
-        Pacific Division
-        <div class="division-line pac-line"></div>
-    </div>
-    
-    <div class="game-card pac-card">
-        <div class="team-row">
-            <span class="team-name winner-name">Taipei Neon</span>
-            <span class="score winner-score-pac">4</span>
-        </div>
-        <div class="team-row">
-            <span class="team-name loser-name">Osaka Spirits</span>
-            <span class="score loser-score">2</span>
-        </div>
-        <div class="meta-data">
-            <span>Tokyo Dome</span>
-            <span>Att: 42,105 (Sellout)</span>
-        </div>
-    </div>
-
-    <div class="game-card pac-card">
-        <div class="team-row">
-            <span class="team-name loser-name">Monterrey Cementeros</span>
-            <span class="score loser-score">1</span>
-        </div>
-        <div class="team-row">
-            <span class="team-name winner-name">San Pedro Cocolos</span>
-            <span class="score winner-score-pac">7</span>
-        </div>
-        <div class="meta-data">
-            <span>Estadio Tetelo Vargas</span>
-            <span>Att: 31,250</span>
-        </div>
-    </div>
-
-    <div class="division-header ame-header">
-        Americas Division
-        <div class="division-line ame-line"></div>
-    </div>
-
-    <div class="game-card ame-card">
-        <div class="team-row">
-            <span class="team-name loser-name">Albuquerque Aeros</span>
-            <span class="score loser-score">8</span>
-        </div>
-        <div class="team-row">
-            <span class="team-name winner-name">Birmingham Vulcans</span>
-            <span class="score winner-score-ame">9</span>
-        </div>
-        <div class="meta-data">
-            <span>Rickwood Field</span>
-            <span>Att: 35,600 (Slugfest)</span>
-        </div>
-    </div>
-
-    <div class="game-card ame-card">
-        <div class="team-row">
-            <span class="team-name winner-name">Spokane Alloys</span>
-            <span class="score winner-score-ame">2</span>
-        </div>
-        <div class="team-row">
-            <span class="team-name loser-name">Fresno Yield</span>
-            <span class="score loser-score">0</span>
-        </div>
-        <div class="meta-data">
-            <span>Avista Stadium</span>
-            <span>Att: 22,100 (Shutout)</span>
-        </div>
-    </div>
+    <div class="division-header">Americas Division</div>
+    <table>
+        <thead>
+            <tr>
+                <th class="th-left">Team</th>
+                <th>W</th>
+                <th>L</th>
+                <th>PCT</th>
+                <th>DIFF</th>
+                <th>STRK</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="team-name">Louisville Naturals</td>
+                <td>1</td>
+                <td>0</td>
+                <td class="pct-col">1.000</td>
+                <td>+5</td>
+                <td class="streak-win">W1</td>
+            </tr>
+            <tr>
+                <td class="team-name">Spokane Alloys</td>
+                <td>1</td>
+                <td>0</td>
+                <td class="pct-col">1.000</td>
+                <td>+2</td>
+                <td class="streak-win">W1</td>
+            </tr>
+            <tr>
+                <td class="team-name">Birmingham Vulcans</td>
+                <td>1</td>
+                <td>0</td>
+                <td class="pct-col">1.000</td>
+                <td>+1</td>
+                <td class="streak-win">W1</td>
+            </tr>
+            <tr>
+                <td class="team-name">Toledo Assembly</td>
+                <td>1</td>
+                <td>0</td>
+                <td class="pct-col">1.000</td>
+                <td>+1</td>
+                <td class="streak-win">W1</td>
+            </tr>
+            <tr>
+                <td class="team-name">Albuquerque Aeros</td>
+                <td>0</td>
+                <td>1</td>
+                <td>.000</td>
+                <td>-1</td>
+                <td class="streak-loss">L1</td>
+            </tr>
+            <tr>
+                <td class="team-name">St. Paul Frost</td>
+                <td>0</td>
+                <td>1</td>
+                <td>.000</td>
+                <td>-1</td>
+                <td class="streak-loss">L1</td>
+            </tr>
+            <tr>
+                <td class="team-name">Fresno Yield</td>
+                <td>0</td>
+                <td>1</td>
+                <td>.000</td>
+                <td>-2</td>
+                <td class="streak-loss">L1</td>
+            </tr>
+            <tr>
+                <td class="team-name">Durham Gold</td>
+                <td>0</td>
+                <td>1</td>
+                <td>.000</td>
+                <td>-5</td>
+                <td class="streak-loss">L1</td>
+            </tr>
+        </tbody>
+    </table>
 
     <footer>
-        Official Archive Record // Final
+        Official GLB Record Data
     </footer>
 </div>
 

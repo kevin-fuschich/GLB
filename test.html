@@ -32,27 +32,21 @@
         background-color: var(--bg-dark);
     }
 
-    /* HEADER WITH FLAIR */
+    /* HEADER WITH REAL LOGO */
     header {
         text-align: center;
         margin-bottom: 30px;
         border-bottom: 1px solid #333;
-        padding-bottom: 20px;
+        padding-bottom: 25px;
     }
 
-    .simulated-logo {
-        width: 40px;
-        height: 40px;
+    /* UPDATED: Links to 'GLB_white.png' */
+    .official-logo {
+        width: 140px; /* Slightly larger to show off the patch detail */
+        height: auto;
+        display: block;
         margin: 0 auto 15px auto;
-        background: linear-gradient(45deg, var(--gold), #8C7853);
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: var(--bg-dark);
-        font-weight: 900;
-        font-size: 14px;
-        box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+        filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.1)); /* Subtle white glow */
     }
 
     h1 {
@@ -67,6 +61,7 @@
     .date-block {
         text-align: center;
         margin-bottom: 40px;
+        margin-top: 20px;
     }
 
     .date-main {
@@ -175,7 +170,7 @@
 
 <div class="record-container">
     <header>
-        <div class="simulated-logo">GLB</div>
+        <img src="GLB_white.png" alt="GLB Official Logo" class="official-logo">
         <h1>Global League Baseball</h1>
     </header>
 

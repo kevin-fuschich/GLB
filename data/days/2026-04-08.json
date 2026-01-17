@@ -28,34 +28,5 @@
       "home_score": 5
     }
   ]
-}{
-  "date": "2026-04-08",
-  "label": "Opening Day",
-  "status": "Final",
-  "games": [
-    {
-      "away_team": "Louisville Naturals",
-      "away_slug": "louisville-naturals",
-      "home_team": "Fresno Yield",
-      "home_slug": "fresno-yield",
-      "away_score": 4,
-      "home_score": 2
-    },
-    {
-      "away_team": "Spokane Alloys",
-      "away_slug": "spokane-alloys",
-      "home_team": "Albuquerque Aeros",
-      "home_slug": "albuquerque-aeros",
-      "away_score": 3,
-      "home_score": 6
-    },
-    {
-      "away_team": "Durham Gold",
-      "away_slug": "durham-gold",
-      "home_team": "Birmingham Vulcans",
-      "home_slug": "birmingham-vulcans",
-      "away_score": 1,
-      "home_score": 5
-    }
-  ]
+}
 }

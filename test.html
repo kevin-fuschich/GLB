@@ -1,255 +1,261 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GLB Official Record - Dark Mode</title>
 <style>
     :root {
-        --ink: #111111;
-        --paper: #fcfcfc;
-        --line: #e0e0e0;
-        --font-serif: "Georgia", "Times New Roman", serif;
-        --font-sans: "Helvetica Neue", "Arial", sans-serif;
+        --bg-dark: #121212;
+        --card-dark: #1e1e1e;
+        --text-light: #ffffff;
+        --text-dim: #a0a0a0;
+        --gold: #D4AF37;
+        --pacific-cyan: #00e5ff;
+        --americas-orange: #ff6b00;
+        --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
     }
 
     body {
-        background-color: #f0f0f0;
+        background-color: var(--bg-dark);
         font-family: var(--font-sans);
-        color: var(--ink);
+        color: var(--text-light);
         display: flex;
         justify-content: center;
-        padding: 40px 20px;
+        padding: 20px;
         margin: 0;
     }
 
-    .record-sheet {
-        background-color: var(--paper);
+    .record-container {
         width: 100%;
-        max-width: 500px;
-        padding: 60px 40px;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-        border: 1px solid #dcdcdc;
+        max-width: 450px;
+        background-color: var(--bg-dark);
     }
 
-    /* HEADER */
+    /* HEADER WITH FLAIR */
     header {
         text-align: center;
-        margin-bottom: 40px;
+        margin-bottom: 30px;
+        border-bottom: 1px solid #333;
         padding-bottom: 20px;
-        border-bottom: 2px solid var(--ink);
     }
 
-    .logo-mark {
+    .simulated-logo {
         width: 40px;
         height: 40px;
-        background-color: var(--ink);
-        border-radius: 50%;
         margin: 0 auto 15px auto;
+        background: linear-gradient(45deg, var(--gold), #8C7853);
+        border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
-        color: white;
-        font-weight: bold;
-        font-size: 10px;
-        font-family: var(--font-serif);
+        color: var(--bg-dark);
+        font-weight: 900;
+        font-size: 14px;
+        box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
     }
 
     h1 {
         font-size: 14px;
-        letter-spacing: 2px;
+        letter-spacing: 3px;
         text-transform: uppercase;
         margin: 0;
-        font-weight: 700;
+        color: var(--gold);
+        font-weight: 800;
     }
 
-    /* DATE BLOCK */
     .date-block {
         text-align: center;
-        margin-bottom: 50px;
+        margin-bottom: 40px;
     }
 
-    .date {
-        font-family: var(--font-serif);
-        font-size: 24px;
-        font-weight: bold;
+    .date-main {
+        font-size: 18px;
+        font-weight: 700;
         display: block;
-        margin-bottom: 8px;
+        margin-bottom: 5px;
     }
 
-    .designation {
+    .date-sub {
         font-size: 12px;
         text-transform: uppercase;
-        letter-spacing: 1px;
-        color: #666;
+        letter-spacing: 1.5px;
+        color: var(--text-dim);
+        background-color: #333;
+        padding: 4px 12px;
+        border-radius: 12px;
+        display: inline-block;
     }
 
-    /* GAME BLOCKS */
-    .game-block {
-        padding: 24px 0;
-        border-bottom: 1px solid var(--line);
+    /* DIVISION HEADERS */
+    .division-header {
+        font-size: 11px;
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin: 30px 0 15px 0;
+        display: flex;
+        align-items: center;
     }
 
-    .game-block:last-of-type {
-        border-bottom: none;
+    .pac-header { color: var(--pacific-cyan); }
+    .ame-header { color: var(--americas-orange); }
+    
+    .division-line {
+        flex-grow: 1;
+        height: 1px;
+        margin-left: 15px;
+        opacity: 0.5;
     }
+    .pac-line { background-color: var(--pacific-cyan); box-shadow: 0 0 5px var(--pacific-cyan); }
+    .ame-line { background-color: var(--americas-orange); box-shadow: 0 0 5px var(--americas-orange); }
+
+
+    /* GAME CARDS */
+    .game-card {
+        background-color: var(--card-dark);
+        padding: 16px;
+        border-radius: 8px;
+        margin-bottom: 12px;
+        border-left: 3px solid #333;
+    }
+
+    .pac-card { border-left-color: var(--pacific-cyan); }
+    .ame-card { border-left-color: var(--americas-orange); }
 
     .team-row {
         display: flex;
         justify-content: space-between;
-        margin-bottom: 6px;
+        align-items: center;
+        margin-bottom: 8px;
         font-size: 16px;
     }
 
-    .team-name {
-        font-weight: 500;
-    }
+    .team-name { font-weight: 500; }
+    .winner-name { font-weight: 700; color: var(--text-light); }
+    .loser-name { font-weight: 400; color: var(--text-dim); }
 
     .score {
-        font-family: var(--font-mono);
+        font-family: "Courier New", monospace;
         font-weight: 700;
+        font-size: 18px;
+        padding: 2px 8px;
+        border-radius: 4px;
     }
+    
+    .winner-score-pac { color: var(--bg-dark); background-color: var(--pacific-cyan); box-shadow: 0 0 10px rgba(0, 229, 255, 0.5); }
+    .winner-score-ame { color: var(--bg-dark); background-color: var(--americas-orange); box-shadow: 0 0 10px rgba(255, 107, 0, 0.5); }
+    .loser-score { color: var(--text-dim); }
 
-    .score-win {
-        color: var(--ink);
-    }
-
-    .score-loss {
-        color: #888;
-    }
-
-    .attendance {
+    .meta-data {
         margin-top: 12px;
-        font-size: 11px;
-        color: #888;
-        font-style: italic;
-        font-family: var(--font-serif);
+        padding-top: 8px;
+        border-top: 1px solid #333;
+        font-size: 10px;
+        color: var(--text-dim);
+        display: flex;
+        justify-content: space-between;
+        text-transform: uppercase;
+        letter-spacing: 1px;
     }
 
     /* FOOTER */
     footer {
-        margin-top: 60px;
-        padding-top: 20px;
-        border-top: 1px solid var(--ink);
-        display: flex;
-        justify-content: space-between;
+        margin-top: 50px;
+        text-align: center;
         font-size: 10px;
         text-transform: uppercase;
-        letter-spacing: 1px;
-        color: #444;
+        letter-spacing: 2px;
+        color: var(--gold);
+        opacity: 0.7;
     }
 </style>
 </head>
 <body>
 
-<div class="record-sheet">
+<div class="record-container">
     <header>
-        <div class="logo-mark">GLB</div>
+        <div class="simulated-logo">GLB</div>
         <h1>Global League Baseball</h1>
     </header>
 
     <div class="date-block">
-        <span class="date">Wednesday, April 8, 2026</span>
-        <span class="designation">Opening Day</span>
+        <span class="date-main">Wednesday, April 8, 2026</span>
+        <span class="date-sub">Opening Day Protocol</span>
     </div>
 
-    <div class="game-block">
+    <div class="division-header pac-header">
+        Pacific Division
+        <div class="division-line pac-line"></div>
+    </div>
+    
+    <div class="game-card pac-card">
         <div class="team-row">
-            <span class="team-name">Taipei Neon</span>
-            <span class="score score-win">4</span>
+            <span class="team-name winner-name">Taipei Neon</span>
+            <span class="score winner-score-pac">4</span>
         </div>
         <div class="team-row">
-            <span class="team-name">Osaka Spirits</span>
-            <span class="score score-loss">2</span>
+            <span class="team-name loser-name">Osaka Spirits</span>
+            <span class="score loser-score">2</span>
         </div>
-        <div class="attendance">Attendance: 42,105</div>
+        <div class="meta-data">
+            <span>Tokyo Dome</span>
+            <span>Att: 42,105 (Sellout)</span>
+        </div>
     </div>
 
-    <div class="game-block">
+    <div class="game-card pac-card">
         <div class="team-row">
-            <span class="team-name">Vancouver Current</span>
-            <span class="score score-loss">3</span>
+            <span class="team-name loser-name">Monterrey Cementeros</span>
+            <span class="score loser-score">1</span>
         </div>
         <div class="team-row">
-            <span class="team-name">Tijuana Tecnicos</span>
-            <span class="score score-win">5</span>
+            <span class="team-name winner-name">San Pedro Cocolos</span>
+            <span class="score winner-score-pac">7</span>
         </div>
-        <div class="attendance">Attendance: 28,400</div>
+        <div class="meta-data">
+            <span>Estadio Tetelo Vargas</span>
+            <span>Att: 31,250</span>
+        </div>
     </div>
 
-    <div class="game-block">
-        <div class="team-row">
-            <span class="team-name">Monterrey Cementeros</span>
-            <span class="score score-loss">1</span>
-        </div>
-        <div class="team-row">
-            <span class="team-name">San Pedro Cocolos</span>
-            <span class="score score-win">7</span>
-        </div>
-        <div class="attendance">Attendance: 31,250</div>
+    <div class="division-header ame-header">
+        Americas Division
+        <div class="division-line ame-line"></div>
     </div>
 
-    <div class="game-block">
+    <div class="game-card ame-card">
         <div class="team-row">
-            <span class="team-name">Santiago Caballeros</span>
-            <span class="score score-win">6</span>
+            <span class="team-name loser-name">Albuquerque Aeros</span>
+            <span class="score loser-score">8</span>
         </div>
         <div class="team-row">
-            <span class="team-name">Mayaguez Sultans</span>
-            <span class="score score-loss">5</span>
+            <span class="team-name winner-name">Birmingham Vulcans</span>
+            <span class="score winner-score-ame">9</span>
         </div>
-        <div class="attendance">Attendance: 18,900</div>
+        <div class="meta-data">
+            <span>Rickwood Field</span>
+            <span>Att: 35,600 (Slugfest)</span>
+        </div>
     </div>
 
-    <div class="game-block">
+    <div class="game-card ame-card">
         <div class="team-row">
-            <span class="team-name">Spokane Alloys</span>
-            <span class="score score-win">2</span>
+            <span class="team-name winner-name">Spokane Alloys</span>
+            <span class="score winner-score-ame">2</span>
         </div>
         <div class="team-row">
-            <span class="team-name">Fresno Yield</span>
-            <span class="score score-loss">0</span>
+            <span class="team-name loser-name">Fresno Yield</span>
+            <span class="score loser-score">0</span>
         </div>
-        <div class="attendance">Attendance: 22,100</div>
-    </div>
-
-    <div class="game-block">
-        <div class="team-row">
-            <span class="team-name">Albuquerque Aeros</span>
-            <span class="score score-loss">8</span>
+        <div class="meta-data">
+            <span>Avista Stadium</span>
+            <span>Att: 22,100 (Shutout)</span>
         </div>
-        <div class="team-row">
-            <span class="team-name">Birmingham Vulcans</span>
-            <span class="score score-win">9</span>
-        </div>
-        <div class="attendance">Attendance: 35,600</div>
-    </div>
-
-    <div class="game-block">
-        <div class="team-row">
-            <span class="team-name">St. Paul Frost</span>
-            <span class="score score-loss">3</span>
-        </div>
-        <div class="team-row">
-            <span class="team-name">Toledo Assembly</span>
-            <span class="score score-win">4</span>
-        </div>
-        <div class="attendance">Attendance: 26,750</div>
-    </div>
-
-    <div class="game-block">
-        <div class="team-row">
-            <span class="team-name">Durham Gold</span>
-            <span class="score score-loss">1</span>
-        </div>
-        <div class="team-row">
-            <span class="team-name">Louisville Naturals</span>
-            <span class="score score-win">6</span>
-        </div>
-        <div class="attendance">Attendance: 29,300</div>
     </div>
 
     <footer>
-        <span>Official League Record</span>
-        <span>Status: Final</span>
+        Official Archive Record // Final
     </footer>
 </div>
 

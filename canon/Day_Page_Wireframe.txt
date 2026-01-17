@@ -1,0 +1,44 @@
+GLOBAL LEAGUE BASEBALL — DAY PAGE WIREFRAME
+(Artifact / Record Model)
+
+HEADER
+- GLB logo centered (small–medium, seal-like)
+- GLOBAL LEAGUE BASEBALL (all caps, primary authority line)
+
+DATE BLOCK
+- Wednesday, April 8, 2026
+- Opening Day
+
+BODY (REPEATED GAME BLOCKS)
+Each game block uses identical structure:
+
+[ Away Team Name ]        [ Away Score ]
+[ Home Team Name ]        [ Home Score ]
+
+Attendance: [ number ]
+
+- Teams left-aligned
+- Scores right-aligned
+- Attendance in smaller, secondary text
+- No inning detail on day page
+
+DIVIDERS
+- Thin horizontal rule between games
+- Light, understated (not a hard border)
+
+FOOTER
+- Official League Record
+- Status: Final
+
+INTENTIONALLY EXCLUDED
+- No navigation
+- No standings
+- No leaders
+- No live indicators
+- No disclaimers or legal language
+- No explanatory copy
+
+PURPOSE
+This page is a historical record.
+It states what happened.
+It does not narrate, update, or simulate.

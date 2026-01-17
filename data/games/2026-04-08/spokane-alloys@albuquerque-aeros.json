@@ -1,1 +1,14 @@
-
+{
+  "schema": "glb.boxscore.v1",
+  "date": "2026-04-08",
+  "away": { "name": "Spokane Alloys", "slug": "spokane-alloys" },
+  "home": { "name": "Albuquerque Aeros", "slug": "albuquerque-aeros" },
+  "status": "Final",
+  "attendance": 21405,
+  "linescore": {
+    "away": [0, 0, 1, 0, 0, 1, 0, 0, 1],
+    "home": [1, 0, 0, 2, 0, 1, 1, 1, 0]
+  },
+  "final": { "away": 3, "home": 6 },
+  "notes": []
+}

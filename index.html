@@ -40,6 +40,9 @@
   const STANDINGS_PATH = "current/standings.json";
   const LEADERS_PATH = "current/leaders.json";
 
+  // Canon date derived from the path so we don't depend on day.date (Safari issue)
+  const CANON_DATE = (DAY_PATH.match(/(\d{4}-\d{2}-\d{2})/) || [null, "2026-04-08"])[1];
+
   const $ = (id) => document.getElementById(id);
 
   function log(line) {
@@ -60,16 +63,6 @@
     return (v == null) ? "" : String(v);
   }
 
-  // Ensure YYYY-MM-DD is ASCII hyphen format; fixes Safari "expected pattern" DOMException
-  function sanitizeDate(d) {
-    const raw = safeStr(d).trim();
-    // Convert common unicode dashes to ASCII hyphen
-    const normalized = raw.replace(/[‐-‒–—−]/g, "-");
-    // If it's not YYYY-MM-DD after normalization, still return something safe-ish
-    if (!/^\d{4}-\d{2}-\d{2}$/.test(normalized)) return normalized;
-    return normalized;
-  }
-
   function slugify(name) {
     return safeStr(name)
       .trim()
@@ -78,6 +71,7 @@
   }
 
   log("JS started ✅");
+  log("CANON_DATE = " + CANON_DATE);
 
   async function loadJson(path) {
     const url = path + "?v=" + Date.now();
@@ -91,19 +85,15 @@
   function renderScores(day) {
     if (!day || !day.games) return "<div class='small'>No games.</div>";
 
-    const date = sanitizeDate(day.date);
-    const dayLink = `day.html?date=${encodeURIComponent(date)}`;
+    const dayLink = `day.html?date=${encodeURIComponent(CANON_DATE)}`;
 
     const rows = day.games.map(g => {
       const awaySlug = g.away_slug || slugify(g.away_team);
       const homeSlug = g.home_slug || slugify(g.home_team);
-
-      // Important: gameKey is a plain string like away@home
       const gameKey = `${awaySlug}@${homeSlug}`;
 
-      // Encode only the query parts
       const gameLink =
-        `game.html?date=${encodeURIComponent(date)}&game=${encodeURIComponent(gameKey)}`;
+        `game.html?date=${encodeURIComponent(CANON_DATE)}&game=${encodeURIComponent(gameKey)}`;
 
       return `
         <tr>
@@ -121,9 +111,7 @@
         <a href="${dayLink}">${safeStr(day.label)}</a> — ${safeStr(day.status)}
       </div>
       <table>
-        <thead>
-          <tr><th>Away</th><th></th><th></th><th>Home</th><th></th></tr>
-        </thead>
+        <thead><tr><th>Away</th><th></th><th></th><th>Home</th><th></th></tr></thead>
         <tbody>${rows}</tbody>
       </table>
     `;
@@ -183,24 +171,15 @@
     try {
       setStatus("Loading day file…", true);
       const day = await loadJson(DAY_PATH);
-
-      const scoresEl = $("scores");
-      if (!scoresEl) throw new Error('Missing element: id="scores"');
-      scoresEl.innerHTML = renderScores(day);
+      $("scores").innerHTML = renderScores(day);
 
       setStatus("Loading standings…", true);
       const standings = await loadJson(STANDINGS_PATH);
-
-      const standingsEl = $("standings");
-      if (!standingsEl) throw new Error('Missing element: id="standings"');
-      standingsEl.innerHTML = renderStandings(standings);
+      $("standings").innerHTML = renderStandings(standings);
 
       setStatus("Loading leaders…", true);
       const leaders = await loadJson(LEADERS_PATH);
-
-      const leadersEl = $("leaders");
-      if (!leadersEl) throw new Error('Missing element: id="leaders"');
-      leadersEl.innerHTML = renderLeaders(leaders);
+      $("leaders").innerHTML = renderLeaders(leaders);
 
       setStatus("Loaded.", true);
       log("DONE ✅");

@@ -56,6 +56,27 @@
     console.log("STATUS:", text);
   }
 
+  function safeStr(v) {
+    return (v == null) ? "" : String(v);
+  }
+
+  // Ensure YYYY-MM-DD is ASCII hyphen format; fixes Safari "expected pattern" DOMException
+  function sanitizeDate(d) {
+    const raw = safeStr(d).trim();
+    // Convert common unicode dashes to ASCII hyphen
+    const normalized = raw.replace(/[‐-‒–—−]/g, "-");
+    // If it's not YYYY-MM-DD after normalization, still return something safe-ish
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(normalized)) return normalized;
+    return normalized;
+  }
+
+  function slugify(name) {
+    return safeStr(name)
+      .trim()
+      .toLowerCase()
+      .replace(/\s+/g, "-");
+  }
+
   log("JS started ✅");
 
   async function loadJson(path) {
@@ -67,44 +88,41 @@
     return res.json();
   }
 
-  function slugify(name) {
-    return String(name || "")
-      .trim()
-      .toLowerCase()
-      .replace(/\s+/g, "-");
-  }
-
   function renderScores(day) {
     if (!day || !day.games) return "<div class='small'>No games.</div>";
 
-    const dayLink = `day.html?date=${encodeURIComponent(day.date)}`;
+    const date = sanitizeDate(day.date);
+    const dayLink = `day.html?date=${encodeURIComponent(date)}`;
 
     const rows = day.games.map(g => {
       const awaySlug = g.away_slug || slugify(g.away_team);
       const homeSlug = g.home_slug || slugify(g.home_team);
+
+      // Important: gameKey is a plain string like away@home
       const gameKey = `${awaySlug}@${homeSlug}`;
-      const gameLink = `game.html?date=${encodeURIComponent(day.date)}&game=${encodeURIComponent(gameKey)}`;
+
+      // Encode only the query parts
+      const gameLink =
+        `game.html?date=${encodeURIComponent(date)}&game=${encodeURIComponent(gameKey)}`;
 
       return `
         <tr>
-          <td><a href="${gameLink}">${g.away_team}</a></td>
-          <td>${g.away_score}</td>
+          <td><a href="${gameLink}">${safeStr(g.away_team)}</a></td>
+          <td>${safeStr(g.away_score)}</td>
           <td>@</td>
-          <td><a href="${gameLink}">${g.home_team}</a></td>
-          <td>${g.home_score}</td>
+          <td><a href="${gameLink}">${safeStr(g.home_team)}</a></td>
+          <td>${safeStr(g.home_score)}</td>
         </tr>
       `;
     }).join("");
 
     return `
       <div class="small">
-        <a href="${dayLink}">${day.label}</a> — ${day.status}
+        <a href="${dayLink}">${safeStr(day.label)}</a> — ${safeStr(day.status)}
       </div>
       <table>
         <thead>
-          <tr>
-            <th>Away</th><th></th><th></th><th>Home</th><th></th>
-          </tr>
+          <tr><th>Away</th><th></th><th></th><th>Home</th><th></th></tr>
         </thead>
         <tbody>${rows}</tbody>
       </table>
@@ -115,24 +133,20 @@
     if (!s || !s.divisions) return "<div class='small'>No standings.</div>";
 
     return Object.entries(s.divisions).map(([div, teams]) => {
-      const rows = teams.map(t => `
+      const rows = (teams || []).map(t => `
         <tr>
-          <td>${t.team}</td>
-          <td>${t.w}-${t.l}</td>
-          <td>${t.pct}</td>
-          <td>${t.gb}</td>
-          <td>${t.diff}</td>
+          <td>${safeStr(t.team)}</td>
+          <td>${safeStr(t.w)}-${safeStr(t.l)}</td>
+          <td>${safeStr(t.pct)}</td>
+          <td>${safeStr(t.gb)}</td>
+          <td>${safeStr(t.diff)}</td>
         </tr>
       `).join("");
 
       return `
-        <div class="small"><strong>${div}</strong> (as of ${s.as_of})</div>
+        <div class="small"><strong>${safeStr(div)}</strong> (as of ${safeStr(s.as_of)})</div>
         <table>
-          <thead>
-            <tr>
-              <th>Team</th><th>W-L</th><th>PCT</th><th>GB</th><th>DIFF</th>
-            </tr>
-          </thead>
+          <thead><tr><th>Team</th><th>W-L</th><th>PCT</th><th>GB</th><th>DIFF</th></tr></thead>
           <tbody>${rows}</tbody>
         </table>
       `;
@@ -146,14 +160,14 @@
     if (l.batting) sections.push(["Batting", l.batting]);
     if (l.pitching) sections.push(["Pitching", l.pitching]);
 
-    return `<div class="small">As of ${l.as_of}</div>` + sections.map(([title, cats]) => {
+    return `<div class="small">As of ${safeStr(l.as_of)}</div>` + sections.map(([title, cats]) => {
       const catHtml = Object.entries(cats).map(([cat, arr]) => {
-        const rows = arr.map(x =>
-          `<tr><td>${x.player}</td><td>${x.team}</td><td>${x.value}</td></tr>`
+        const rows = (arr || []).map(x =>
+          `<tr><td>${safeStr(x.player)}</td><td>${safeStr(x.team)}</td><td>${safeStr(x.value)}</td></tr>`
         ).join("");
 
         return `
-          <div class="small"><strong>${cat}</strong></div>
+          <div class="small"><strong>${safeStr(cat)}</strong></div>
           <table>
             <thead><tr><th>Player</th><th>Team</th><th>Value</th></tr></thead>
             <tbody>${rows}</tbody>
@@ -161,7 +175,7 @@
         `;
       }).join("");
 
-      return `<h3>${title}</h3>${catHtml}`;
+      return `<h3>${safeStr(title)}</h3>${catHtml}`;
     }).join("");
   }
 
@@ -169,21 +183,31 @@
     try {
       setStatus("Loading day file…", true);
       const day = await loadJson(DAY_PATH);
-      $("scores").innerHTML = renderScores(day);
+
+      const scoresEl = $("scores");
+      if (!scoresEl) throw new Error('Missing element: id="scores"');
+      scoresEl.innerHTML = renderScores(day);
 
       setStatus("Loading standings…", true);
       const standings = await loadJson(STANDINGS_PATH);
-      $("standings").innerHTML = renderStandings(standings);
+
+      const standingsEl = $("standings");
+      if (!standingsEl) throw new Error('Missing element: id="standings"');
+      standingsEl.innerHTML = renderStandings(standings);
 
       setStatus("Loading leaders…", true);
       const leaders = await loadJson(LEADERS_PATH);
-      $("leaders").innerHTML = renderLeaders(leaders);
+
+      const leadersEl = $("leaders");
+      if (!leadersEl) throw new Error('Missing element: id="leaders"');
+      leadersEl.innerHTML = renderLeaders(leaders);
 
       setStatus("Loaded.", true);
       log("DONE ✅");
     } catch (err) {
       setStatus("Load failed.", false);
       log("ERROR ❌ " + (err && err.message ? err.message : err));
+      if (err && err.stack) log(err.stack);
     }
   })();
 </script>

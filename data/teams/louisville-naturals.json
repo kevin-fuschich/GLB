@@ -1,1 +1,142 @@
+{
+  "team": "Louisville Naturals",
+  "city": "Louisville",
+  "abbreviation": "LOU",
+  "founded": 2026,
 
+  "coaches": {
+    "manager": {
+      "name": "Paul Whitaker",
+      "born": "1968-09-14",
+      "birthplace": "Bowling Green, Kentucky, USA"
+    },
+    "pitching_coach": {
+      "name": "Rafael Quiñones",
+      "born": "1972-03-22",
+      "birthplace": "Mayagüez, Puerto Rico"
+    },
+    "hitting_coach": {
+      "name": "Steve Mallory",
+      "born": "1975-11-05",
+      "birthplace": "Evansville, Indiana, USA"
+    }
+  },
+
+  "players": [
+    {
+      "name": "Caleb Renwick",
+      "position": "C",
+      "bats": "R",
+      "throws": "R",
+      "born": "1993-03-12",
+      "birthplace": "Lexington, Kentucky, USA"
+    },
+    {
+      "name": "Rafael Montoya",
+      "position": "1B",
+      "bats": "R",
+      "throws": "R",
+      "born": "1994-08-04",
+      "birthplace": "San Pedro de Macorís, Dominican Republic"
+    },
+    {
+      "name": "Daniel Kwon",
+      "position": "2B",
+      "bats": "L",
+      "throws": "R",
+      "born": "1996-02-19",
+      "birthplace": "Incheon, South Korea"
+    },
+    {
+      "name": "Mateo Calderón",
+      "position": "3B",
+      "bats": "R",
+      "throws": "R",
+      "born": "1992-06-27",
+      "birthplace": "Ponce, Puerto Rico"
+    },
+    {
+      "name": "Luis Benítez",
+      "position": "SS",
+      "bats": "S",
+      "throws": "R",
+      "born": "1995-09-03",
+      "birthplace": "Maracaibo, Venezuela"
+    },
+    {
+      "name": "Travis Holt",
+      "position": "LF",
+      "bats": "L",
+      "throws": "L",
+      "born": "1994-05-14",
+      "birthplace": "Columbus, Ohio, USA"
+    },
+    {
+      "name": "Javier Rosales",
+      "position": "CF",
+      "bats": "R",
+      "throws": "R",
+      "born": "1997-01-08",
+      "birthplace": "Monterrey, Nuevo León, Mexico"
+    },
+    {
+      "name": "Keita Nakamura",
+      "position": "RF",
+      "bats": "L",
+      "throws": "R",
+      "born": "1995-11-22",
+      "birthplace": "Yokohama, Kanagawa, Japan"
+    },
+    {
+      "name": "Andrew Lyle",
+      "position": "DH",
+      "bats": "R",
+      "throws": "R",
+      "born": "1989-07-30",
+      "birthplace": "Chattanooga, Tennessee, USA"
+    },
+
+    {
+      "name": "Grant Holloway",
+      "position": "SP",
+      "throws": "R",
+      "born": "1991-04-06",
+      "birthplace": "Louisville, Kentucky, USA"
+    },
+    {
+      "name": "Tomás Rincón",
+      "position": "SP",
+      "throws": "L",
+      "born": "1993-12-18",
+      "birthplace": "Valencia, Venezuela"
+    },
+    {
+      "name": "Masato Fujii",
+      "position": "SP",
+      "throws": "R",
+      "born": "1994-05-09",
+      "birthplace": "Nagoya, Aichi, Japan"
+    },
+    {
+      "name": "Víctor Salcedo",
+      "position": "RP",
+      "throws": "R",
+      "born": "1995-10-11",
+      "birthplace": "Santiago de los Caballeros, Dominican Republic"
+    },
+    {
+      "name": "Luke Marrow",
+      "position": "RP",
+      "throws": "L",
+      "born": "1992-02-02",
+      "birthplace": "Des Moines, Iowa, USA"
+    },
+    {
+      "name": "Esteban Carrillo",
+      "position": "CL",
+      "throws": "R",
+      "born": "1994-08-16",
+      "birthplace": "Hermosillo, Sonora, Mexico"
+    }
+  ]
+}

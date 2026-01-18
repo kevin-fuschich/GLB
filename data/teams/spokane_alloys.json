@@ -1,1 +1,143 @@
 
+{
+  "team": "Spokane Alloys",
+  "city": "Spokane",
+  "abbreviation": "SPK",
+  "founded": 2026,
+
+  "coaches": {
+    "manager": {
+      "name": "David Rourke",
+      "born": "1967-05-18",
+      "birthplace": "Spokane, Washington, USA"
+    },
+    "pitching_coach": {
+      "name": "Ernesto Valdés",
+      "born": "1971-09-07",
+      "birthplace": "Matanzas, Cuba"
+    },
+    "hitting_coach": {
+      "name": "Kyle Petersen",
+      "born": "1976-02-14",
+      "birthplace": "Missoula, Montana, USA"
+    }
+  },
+
+  "players": [
+    {
+      "name": "Logan Pierce",
+      "position": "C",
+      "bats": "R",
+      "throws": "R",
+      "born": "1993-08-11",
+      "birthplace": "Coeur d’Alene, Idaho, USA"
+    },
+    {
+      "name": "Iván Mercado",
+      "position": "1B",
+      "bats": "R",
+      "throws": "R",
+      "born": "1994-04-26",
+      "birthplace": "Santo Domingo, Dominican Republic"
+    },
+    {
+      "name": "Min-jae Choi",
+      "position": "2B",
+      "bats": "L",
+      "throws": "R",
+      "born": "1996-01-29",
+      "birthplace": "Daegu, South Korea"
+    },
+    {
+      "name": "Carlos Bencomo",
+      "position": "3B",
+      "bats": "R",
+      "throws": "R",
+      "born": "1992-10-03",
+      "birthplace": "Maracay, Venezuela"
+    },
+    {
+      "name": "Ángel Torres",
+      "position": "SS",
+      "bats": "S",
+      "throws": "R",
+      "born": "1995-06-17",
+      "birthplace": "Bayamón, Puerto Rico"
+    },
+    {
+      "name": "Evan Callahan",
+      "position": "LF",
+      "bats": "L",
+      "throws": "L",
+      "born": "1994-05-09",
+      "birthplace": "Yakima, Washington, USA"
+    },
+    {
+      "name": "Rogelio Núñez",
+      "position": "CF",
+      "bats": "R",
+      "throws": "R",
+      "born": "1997-02-12",
+      "birthplace": "Hermosillo, Sonora, Mexico"
+    },
+    {
+      "name": "Daichi Okamoto",
+      "position": "RF",
+      "bats": "L",
+      "throws": "R",
+      "born": "1995-11-21",
+      "birthplace": "Kobe, Hyōgo, Japan"
+    },
+    {
+      "name": "Matthew Cole",
+      "position": "DH",
+      "bats": "R",
+      "throws": "R",
+      "born": "1989-09-04",
+      "birthplace": "Boise, Idaho, USA"
+    },
+
+    {
+      "name": "Tyler McKenna",
+      "position": "SP",
+      "throws": "R",
+      "born": "1991-03-14",
+      "birthplace": "Spokane Valley, Washington, USA"
+    },
+    {
+      "name": "José Briceño",
+      "position": "SP",
+      "throws": "R",
+      "born": "1993-12-01",
+      "birthplace": "Valencia, Venezuela"
+    },
+    {
+      "name": "Kenta Mori",
+      "position": "SP",
+      "throws": "R",
+      "born": "1994-07-08",
+      "birthplace": "Sapporo, Hokkaido, Japan"
+    },
+    {
+      "name": "Luis Cabrera",
+      "position": "RP",
+      "throws": "R",
+      "born": "1995-10-19",
+      "birthplace": "San Pedro de Macorís, Dominican Republic"
+    },
+    {
+      "name": "Noah Whitfield",
+      "position": "RP",
+      "throws": "L",
+      "born": "1992-06-05",
+      "birthplace": "Pullman, Washington, USA"
+    },
+    {
+      "name": "Martín Escobar",
+      "position": "CL",
+      "throws": "R",
+      "born": "1994-03-27",
+      "birthplace": "Guadalajara, Jalisco, Mexico"
+    }
+  ]
+}

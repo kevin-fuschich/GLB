@@ -1,1 +1,41 @@
+{
+  "team": "Vancouver Current",
+  "city": "Vancouver",
+  "abbreviation": "VAN",
+  "founded": 2026,
+  "coaches": {
+    "manager": {
+      "name": "Devon Hale",
+      "born": "1969-02-12",
+      "birthplace": "Vancouver, British Columbia, Canada"
+    },
+    "pitching_coach": {
+      "name": "Rafael Ibarra",
+      "born": "1973-06-03",
+      "birthplace": "Mexicali, Baja California, Mexico"
+    },
+    "hitting_coach": {
+      "name": "Jordan Price",
+      "born": "1977-10-28",
+      "birthplace": "Tacoma, Washington, USA"
+    }
+  },
+  "players": [
+    { "name": "Noah Kingston", "position": "C", "bats": "R", "throws": "R", "born": "1992-04-16", "birthplace": "Surrey, British Columbia, Canada" },
+    { "name": "Ethan Mercer", "position": "1B", "bats": "L", "throws": "R", "born": "1993-12-01", "birthplace": "Victoria, British Columbia, Canada" },
+    { "name": "Mateo Rojas", "position": "2B", "bats": "R", "throws": "R", "born": "1995-01-23", "birthplace": "Caracas, Venezuela" },
+    { "name": "Carter Hayes", "position": "3B", "bats": "R", "throws": "R", "born": "1991-08-19", "birthplace": "Kelowna, British Columbia, Canada" },
+    { "name": "Kenji Watanabe", "position": "SS", "bats": "S", "throws": "R", "born": "1996-06-11", "birthplace": "Yokohama, Japan" },
+    { "name": "Lucas Bennett", "position": "LF", "bats": "L", "throws": "L", "born": "1994-11-05", "birthplace": "Portland, Oregon, USA" },
+    { "name": "Diego Alvarez", "position": "CF", "bats": "R", "throws": "R", "born": "1995-09-14", "birthplace": "Monterrey, Nuevo León, Mexico" },
+    { "name": "Hiro Tanaka", "position": "RF", "bats": "L", "throws": "R", "born": "1996-03-28", "birthplace": "Saitama, Japan" },
+    { "name": "Andre Dupuis", "position": "DH", "bats": "R", "throws": "R", "born": "1990-07-07", "birthplace": "Montreal, Quebec, Canada" },
 
+    { "name": "Cole Hargrove", "position": "SP", "throws": "R", "born": "1992-02-10", "birthplace": "Abbotsford, British Columbia, Canada" },
+    { "name": "Sergio Morales", "position": "SP", "throws": "R", "born": "1994-05-22", "birthplace": "Santo Domingo, Dominican Republic" },
+    { "name": "Yuto Sakamoto", "position": "SP", "throws": "R", "born": "1993-12-16", "birthplace": "Osaka, Japan" },
+    { "name": "Tyler Shaw", "position": "RP", "throws": "R", "born": "1995-01-09", "birthplace": "Bellingham, Washington, USA" },
+    { "name": "Luis Herrera", "position": "RP", "throws": "L", "born": "1991-06-18", "birthplace": "Guadalajara, Jalisco, Mexico" },
+    { "name": "Nico Valdez", "position": "CL", "throws": "R", "born": "1994-10-30", "birthplace": "Tijuana, Baja California, Mexico" }
+  ]
+}

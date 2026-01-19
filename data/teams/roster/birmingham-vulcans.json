@@ -1,1 +1,142 @@
+{
+  "team": "Birmingham Vulcans",
+  "city": "Birmingham",
+  "abbreviation": "BIR",
+  "founded": 2026,
 
+  "coaches": {
+    "manager": {
+      "name": "Derrick Coleman",
+      "born": "1967-05-18",
+      "birthplace": "Birmingham, Alabama, USA"
+    },
+    "pitching_coach": {
+      "name": "Luis Cordero",
+      "born": "1972-09-04",
+      "birthplace": "Caracas, Venezuela"
+    },
+    "hitting_coach": {
+      "name": "Marcus Reed",
+      "born": "1976-01-27",
+      "birthplace": "Montgomery, Alabama, USA"
+    }
+  },
+
+  "players": [
+    {
+      "name": "Calvin Brooks",
+      "position": "C",
+      "bats": "R",
+      "throws": "R",
+      "born": "1992-03-09",
+      "birthplace": "Hoover, Alabama, USA"
+    },
+    {
+      "name": "Julio Santana",
+      "position": "1B",
+      "bats": "L",
+      "throws": "R",
+      "born": "1993-11-21",
+      "birthplace": "Santiago, Dominican Republic"
+    },
+    {
+      "name": "Trevor Mills",
+      "position": "2B",
+      "bats": "R",
+      "throws": "R",
+      "born": "1995-01-17",
+      "birthplace": "Decatur, Alabama, USA"
+    },
+    {
+      "name": "Andrés Calderón",
+      "position": "3B",
+      "bats": "R",
+      "throws": "R",
+      "born": "1991-08-30",
+      "birthplace": "Maracaibo, Venezuela"
+    },
+    {
+      "name": "Luis Méndez",
+      "position": "SS",
+      "bats": "S",
+      "throws": "R",
+      "born": "1996-04-12",
+      "birthplace": "San Pedro de Macorís, Dominican Republic"
+    },
+    {
+      "name": "Jordan Hayes",
+      "position": "LF",
+      "bats": "L",
+      "throws": "L",
+      "born": "1994-12-05",
+      "birthplace": "Huntsville, Alabama, USA"
+    },
+    {
+      "name": "Ricardo Peña",
+      "position": "CF",
+      "bats": "R",
+      "throws": "R",
+      "born": "1995-09-07",
+      "birthplace": "La Romana, Dominican Republic"
+    },
+    {
+      "name": "Kenta Fujii",
+      "position": "RF",
+      "bats": "L",
+      "throws": "R",
+      "born": "1996-05-26",
+      "birthplace": "Osaka, Japan"
+    },
+    {
+      "name": "Marcus Williams",
+      "position": "DH",
+      "bats": "R",
+      "throws": "R",
+      "born": "1990-02-14",
+      "birthplace": "Tuscaloosa, Alabama, USA"
+    },
+
+    {
+      "name": "Tyrell Johnson",
+      "position": "SP",
+      "throws": "R",
+      "born": "1992-10-19",
+      "birthplace": "Bessemer, Alabama, USA"
+    },
+    {
+      "name": "Wilmer Rivas",
+      "position": "SP",
+      "throws": "R",
+      "born": "1994-03-06",
+      "birthplace": "Valencia, Venezuela"
+    },
+    {
+      "name": "Shota Kameda",
+      "position": "SP",
+      "throws": "R",
+      "born": "1993-08-24",
+      "birthplace": "Sapporo, Japan"
+    },
+    {
+      "name": "Fernando Ruiz",
+      "position": "RP",
+      "throws": "R",
+      "born": "1995-01-11",
+      "birthplace": "Maracay, Venezuela"
+    },
+    {
+      "name": "Cole Matthews",
+      "position": "RP",
+      "throws": "L",
+      "born": "1991-06-02",
+      "birthplace": "Florence, Alabama, USA"
+    },
+    {
+      "name": "Diego Morales",
+      "position": "CL",
+      "throws": "R",
+      "born": "1994-12-28",
+      "birthplace": "Hermosillo, Sonora, Mexico"
+    }
+  ]
+}

@@ -1,142 +1,107 @@
 {
-  "team": "Tijuana Técnicos",
-  "city": "Tijuana",
-  "abbreviation": "TIJ",
+  "team": "Taipei Neon",
+  "city": "Taipei",
+  "abbreviation": "TPE",
   "founded": 2026,
 
   "coaches": {
     "manager": {
-      "name": "Roberto Salinas",
-      "born": "1968-09-17",
-      "birthplace": "Tijuana, Baja California, Mexico"
+      "name": "Chen Wei-lun",
+      "born": "1969-06-04",
+      "birthplace": "Taipei, Taiwan"
     },
     "pitching_coach": {
-      "name": "Eduardo Zárate",
-      "born": "1972-02-06",
-      "birthplace": "Mexicali, Baja California, Mexico"
+      "name": "Huang Chih-kai",
+      "born": "1973-02-18",
+      "birthplace": "Taichung, Taiwan"
     },
     "hitting_coach": {
-      "name": "Miguel Ávila",
-      "born": "1976-07-28",
-      "birthplace": "Ensenada, Baja California, Mexico"
+      "name": "Michael Grant",
+      "born": "1977-10-09",
+      "birthplace": "San Jose, California, USA"
     }
   },
 
   "players": [
     {
-      "name": "Óscar Beltrán",
+      "name": "Lin Chih-hao",
       "position": "C",
       "bats": "R",
       "throws": "R",
-      "born": "1992-03-25",
-      "birthplace": "Tijuana, Baja California, Mexico"
+      "born": "1992-05-12",
+      "birthplace": "New Taipei City, Taiwan"
     },
     {
-      "name": "Luis Navarro",
+      "name": "Wang Jun-wei",
       "position": "1B",
       "bats": "L",
       "throws": "R",
-      "born": "1993-10-11",
-      "birthplace": "Culiacán, Sinaloa, Mexico"
+      "born": "1993-11-27",
+      "birthplace": "Kaohsiung, Taiwan"
     },
     {
-      "name": "Andrés Mejía",
+      "name": "Tsai Ming-hao",
       "position": "2B",
       "bats": "R",
       "throws": "R",
-      "born": "1995-01-19",
-      "birthplace": "Guadalajara, Jalisco, Mexico"
+      "born": "1995-01-06",
+      "birthplace": "Tainan, Taiwan"
     },
     {
-      "name": "Jorge Fuentes",
+      "name": "Kang Min-jun",
       "position": "3B",
       "bats": "R",
       "throws": "R",
-      "born": "1991-08-02",
-      "birthplace": "Hermosillo, Sonora, Mexico"
+      "born": "1991-09-15",
+      "birthplace": "Busan, South Korea"
     },
     {
-      "name": "Carlos Peña",
+      "name": "Liu Yi-chen",
       "position": "SS",
       "bats": "S",
       "throws": "R",
-      "born": "1996-06-14",
-      "birthplace": "Caracas, Venezuela"
+      "born": "1996-04-22",
+      "birthplace": "Taoyuan, Taiwan"
     },
     {
-      "name": "Daniel Ortega",
+      "name": "Daniel Brooks",
       "position": "LF",
       "bats": "L",
       "throws": "L",
-      "born": "1994-12-05",
-      "birthplace": "San Diego, California, USA"
+      "born": "1994-08-30",
+      "birthplace": "Sacramento, California, USA"
     },
     {
-      "name": "Iván López",
+      "name": "Chen Po-hsuan",
       "position": "CF",
       "bats": "R",
       "throws": "R",
-      "born": "1995-09-09",
-      "birthplace": "Tepic, Nayarit, Mexico"
+      "born": "1995-12-11",
+      "birthplace": "Hsinchu, Taiwan"
     },
     {
-      "name": "Kenji Sakamoto",
+      "name": "Ryohei Kato",
       "position": "RF",
       "bats": "L",
       "throws": "R",
-      "born": "1996-04-21",
-      "birthplace": "Yokohama, Japan"
+      "born": "1996-03-19",
+      "birthplace": "Saitama, Japan"
     },
     {
-      "name": "Marco Díaz",
+      "name": "José Morales",
       "position": "DH",
       "bats": "R",
       "throws": "R",
-      "born": "1990-02-27",
-      "birthplace": "Tijuana, Baja California, Mexico"
+      "born": "1990-07-02",
+      "birthplace": "Maracay, Venezuela"
     },
 
     {
-      "name": "Ricardo Ponce",
+      "name": "Liang Yu-hao",
       "position": "SP",
       "throws": "R",
-      "born": "1992-11-03",
-      "birthplace": "Mazatlán, Sinaloa, Mexico"
+      "born": "1992-10-28",
+      "birthplace": "Taipei, Taiwan"
     },
     {
-      "name": "Jesús Almonte",
-      "position": "SP",
-      "throws": "R",
-      "born": "1994-05-16",
-      "birthplace": "San Pedro de Macorís, Dominican Republic"
-    },
-    {
-      "name": "Shun Takeda",
-      "position": "SP",
-      "throws": "R",
-      "born": "1993-09-01",
-      "birthplace": "Kumamoto, Japan"
-    },
-    {
-      "name": "Pablo Serrano",
-      "position": "RP",
-      "throws": "R",
-      "born": "1995-01-08",
-      "birthplace": "La Paz, Baja California Sur, Mexico"
-    },
-    {
-      "name": "Andrew Collins",
-      "position": "RP",
-      "throws": "L",
-      "born": "1991-07-22",
-      "birthplace": "Phoenix, Arizona, USA"
-    },
-    {
-      "name": "Víctor Romo",
-      "position": "CL",
-      "throws": "R",
-      "born": "1994-12-19",
-      "birthplace": "Monterrey, Nuevo León, Mexico"
-    }
-  ]
-}
+      "name": "Park

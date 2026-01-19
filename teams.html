@@ -89,12 +89,18 @@
   }
 
   function renderRows(list, targetId) {
-    $(targetId).innerHTML = (list || []).map(t => `
+  $(targetId).innerHTML = (list || []).map(t => {
+    const displayName = t.name || t.team || "";
+    const displayAbbr = t.abbrev || t.abbr || "";
+    const slug = t.slug || "";
+    return `
       <tr>
-        <td><a href="${teamLink(t)}">${esc(t.name)}</a></td>
-        <td class="right">${esc(t.abbrev)}</td>
+        <td><a href="team.html?team=${encodeURIComponent(slug)}">${esc(displayName)}</a></td>
+        <td class="right">${esc(displayAbbr)}</td>
       </tr>
-    `).join("");
+    `;
+  }).join("");
+}
   }
 
   (async function main(){

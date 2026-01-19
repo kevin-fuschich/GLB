@@ -1,1 +1,142 @@
+{
+  "team": "Santiago Caballeros",
+  "city": "Santiago de los Caballeros",
+  "abbreviation": "SAN",
+  "founded": 2026,
 
+  "coaches": {
+    "manager": {
+      "name": "Héctor Valenzuela",
+      "born": "1967-04-25",
+      "birthplace": "Santiago de los Caballeros, Dominican Republic"
+    },
+    "pitching_coach": {
+      "name": "Nelson Perdomo",
+      "born": "1972-11-08",
+      "birthplace": "La Vega, Dominican Republic"
+    },
+    "hitting_coach": {
+      "name": "Roberto Cruz",
+      "born": "1976-02-16",
+      "birthplace": "Moca, Dominican Republic"
+    }
+  },
+
+  "players": [
+    {
+      "name": "Adrián Castillo",
+      "position": "C",
+      "bats": "R",
+      "throws": "R",
+      "born": "1992-06-13",
+      "birthplace": "Santiago de los Caballeros, Dominican Republic"
+    },
+    {
+      "name": "Víctor Reynoso",
+      "position": "1B",
+      "bats": "L",
+      "throws": "R",
+      "born": "1993-12-02",
+      "birthplace": "La Vega, Dominican Republic"
+    },
+    {
+      "name": "José Miguel Peña",
+      "position": "2B",
+      "bats": "R",
+      "throws": "R",
+      "born": "1995-03-21",
+      "birthplace": "San Francisco de Macorís, Dominican Republic"
+    },
+    {
+      "name": "Ramón Polanco",
+      "position": "3B",
+      "bats": "R",
+      "throws": "R",
+      "born": "1991-10-09",
+      "birthplace": "Puerto Plata, Dominican Republic"
+    },
+    {
+      "name": "Cristopher Lora",
+      "position": "SS",
+      "bats": "S",
+      "throws": "R",
+      "born": "1996-07-27",
+      "birthplace": "Santiago, Dominican Republic"
+    },
+    {
+      "name": "Kevin Morales",
+      "position": "LF",
+      "bats": "L",
+      "throws": "L",
+      "born": "1994-01-15",
+      "birthplace": "Bonao, Dominican Republic"
+    },
+    {
+      "name": "Ángel de Jesús",
+      "position": "CF",
+      "bats": "R",
+      "throws": "R",
+      "born": "1995-09-05",
+      "birthplace": "San José de Ocoa, Dominican Republic"
+    },
+    {
+      "name": "Luis Eduardo Rivas",
+      "position": "RF",
+      "bats": "L",
+      "throws": "R",
+      "born": "1996-05-18",
+      "birthplace": "Valencia, Venezuela"
+    },
+    {
+      "name": "Miguel Ángel Soto",
+      "position": "DH",
+      "bats": "R",
+      "throws": "R",
+      "born": "1990-04-30",
+      "birthplace": "Santiago, Dominican Republic"
+    },
+
+    {
+      "name": "Juan Carlos Peña",
+      "position": "SP",
+      "throws": "R",
+      "born": "1992-08-11",
+      "birthplace": "San Cristóbal, Dominican Republic"
+    },
+    {
+      "name": "Ernesto Méndez",
+      "position": "SP",
+      "throws": "R",
+      "born": "1994-02-23",
+      "birthplace": "Barquisimeto, Venezuela"
+    },
+    {
+      "name": "Takashi Watanabe",
+      "position": "SP",
+      "throws": "R",
+      "born": "1993-11-19",
+      "birthplace": "Shizuoka, Japan"
+    },
+    {
+      "name": "Rafael Jiménez",
+      "position": "RP",
+      "throws": "R",
+      "born": "1995-01-28",
+      "birthplace": "Azua, Dominican Republic"
+    },
+    {
+      "name": "Samuel Torres",
+      "position": "RP",
+      "throws": "L",
+      "born": "1991-06-07",
+      "birthplace": "San Juan, Puerto Rico"
+    },
+    {
+      "name": "Luis Alberto Núñez",
+      "position": "CL",
+      "throws": "R",
+      "born": "1994-09-14",
+      "birthplace": "La Romana, Dominican Republic"
+    }
+  ]
+}

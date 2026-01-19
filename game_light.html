@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GLB — Game</title>
+
+  <style>
+    :root{
+      color-scheme: light;
+      --bg:#ffffff;
+      --card:#ffffff;
+      --ink:#111111;
+      --muted:#5b6573;
+      --line:rgba(17,17,17,.12);
+      --max:1100px;
+      --radius:18px;
+    }
+    *{ box-sizing:border-box; }
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--ink);
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      letter-spacing:.2px;
+    }
+    a{ color:inherit; text-decoration:none; }
+    a:hover{ text-decoration:underline; text-underline-offset:3px; }
+
+    .wrap{ max-width:var(--max); margin:0 auto; padding:28px 18px 56px; }
+
+    .top{
+      display:flex; align-items:center; justify-content:space-between;
+      gap:18px; margin-bottom:18px;
+    }
+    .brand{ display:flex; align-items:center; gap:12px; }
+    .logo{
+      width:38px; height:38px; border-radius:12px;
+      border:1px solid var(--line);
+      display:grid; place-items:center;
+      background:#f4f6f8;
+      font-weight:900; letter-spacing:.6px;
+    }
+    .brand h1{
+      font-size:14px; margin:0;
+      color:var(--muted);
+      font-weight:800;
+      letter-spacing:.08em;
+    }
+
+    .nav{ display:flex; gap:14px; color:var(--muted); font-size:13px; }
+    .nav a{ padding:8px 10px; border-radius:999px; border:1px solid transparent; }
+    .nav a:hover{ border-color:var(--line); color:var(--ink); text-decoration:none; }
+
+    .card{
+      border:1px solid var(--line);
+      background:var(--card);
+      border-radius:var(--radius);
+      padding:18px;
+      margin-bottom:14px;
+    }
+    .card h2{
+      margin:0 0 12px;
+      font-size:14px;
+      letter-spacing:.7px;
+      text-transform:uppercase;
+      color:var(--muted);
+    }
+
+    .headline{
+      font-size:28px;
+      font-weight:900;
+      margin-bottom:6px;
+    }
+    .sub{
+      color:var(--muted);
+      font-size:13px;
+      margin-bottom:12px;
+    }
+
+    table{
+      width:100%;
+      border-collapse:collapse;
+      font-size:13px;
+    }
+    th, td{
+      padding:9px 8px;
+      border-bottom:1px solid var(--line);
+      text-align:left;
+    }
+    th{
+      color:var(--muted);
+      font-weight:800;
+      font-size:11px;
+      text-transform:uppercase;
+      letter-spacing:.6px;
+    }
+    tr:last-child td{ border-bottom:none; }
+
+    .small{ color:var(--muted); font-size:12px; }
+
+    @media (max-width: 860px){
+      .headline{ font-size:22px; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+
+    <div class="top">
+      <div class="brand">
+        <div class="logo">GLB</div>
+        <h1>GLOBAL LEAGUE BASEBALL</h1>
+      </div>
+      <div class="nav">
+        <a href="./">Home</a>
+        <a href="day.html?date=2026-04-08">Daily Scores</a>
+        <a href="teams.html">Teams</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="headline" id="matchup">Loading…</div>
+      <div class="sub" id="metaLine"></div>
+    </div>
+
+    <div class="card">
+      <h2>Final Score</h2>
+      <table>
+        <thead>
+          <tr><th>Team</th><th>R</th></tr>
+        </thead>
+        <tbody id="scoreRows"></tbody>
+      </table>
+    </div>
+
+    <div class="card">
+      <h2>Box Score</h2>
+      <div class="small">(Full inning breakdown will live here.)</div>
+    </div>
+
+  </div>
+
+<script>
+  const $ = (id) => document.getElementById(id);
+
+  function qs(name){
+    return new URLSearchParams(location.search).get(name);
+  }
+
+  async function loadJson(path){
+    const res = await fetch(path + "?v=" + Date.now(), { cache: "no-store" });
+    if(!res.ok) throw new Error("HTTP " + res.status + " for " + path);
+    return res.json();
+  }
+
+  (async function main(){
+    try{
+      const date = qs("date");
+      const game = qs("game");
+      if(!date || !game){
+        $("matchup").textContent = "Missing query string";
+        $("metaLine").textContent = "Use: ?date=YYYY-MM-DD&game=away@home";
+        return;
+      }
+
+      const path = `data/games/${date}/${game}.json`;
+      const g = await loadJson(path);
+
+      $("matchup").textContent = `${g.away_team} @ ${g.home_team}`;
+      $("metaLine").textContent =
+        `${g.date} · Attendance ${g.attendance.toLocaleString()} · ${g.status}`;
+
+      $("scoreRows").innerHTML = `
+        <tr><td>${g.away_team}</td><td>${g.away_score}</td></tr>
+        <tr><td>${g.home_team}</td><td>${g.home_score}</td></tr>
+      `;
+
+      document.title = `GLB — ${g.away_team} @ ${g.home_team}`;
+
+    }catch(err){
+      $("matchup").textContent = "Load failed";
+      $("metaLine").textContent = err.message || String(err);
+      console.error(err);
+    }
+  })();
+</script>
+
+</body>
+</html>

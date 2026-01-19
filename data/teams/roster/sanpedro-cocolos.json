@@ -1,1 +1,142 @@
+{
+  "team": "San Pedro Cocolos",
+  "city": "San Pedro de Macorís",
+  "abbreviation": "SPD",
+  "founded": 2026,
 
+  "coaches": {
+    "manager": {
+      "name": "Ramón Tejada",
+      "born": "1966-08-02",
+      "birthplace": "San Pedro de Macorís, Dominican Republic"
+    },
+    "pitching_coach": {
+      "name": "Wilmer Acosta",
+      "born": "1971-03-19",
+      "birthplace": "La Romana, Dominican Republic"
+    },
+    "hitting_coach": {
+      "name": "Carlos Peña",
+      "born": "1975-12-11",
+      "birthplace": "Higüey, Dominican Republic"
+    }
+  },
+
+  "players": [
+    {
+      "name": "Luis de la Cruz",
+      "position": "C",
+      "bats": "R",
+      "throws": "R",
+      "born": "1992-05-14",
+      "birthplace": "San Pedro de Macorís, Dominican Republic"
+    },
+    {
+      "name": "Juan Peguero",
+      "position": "1B",
+      "bats": "L",
+      "throws": "R",
+      "born": "1993-09-28",
+      "birthplace": "La Romana, Dominican Republic"
+    },
+    {
+      "name": "Miguel Rojas",
+      "position": "2B",
+      "bats": "R",
+      "throws": "R",
+      "born": "1995-01-07",
+      "birthplace": "Santiago, Dominican Republic"
+    },
+    {
+      "name": "Robinson Valdez",
+      "position": "3B",
+      "bats": "R",
+      "throws": "R",
+      "born": "1991-11-22",
+      "birthplace": "Santo Domingo, Dominican Republic"
+    },
+    {
+      "name": "Elías Guzmán",
+      "position": "SS",
+      "bats": "S",
+      "throws": "R",
+      "born": "1996-04-18",
+      "birthplace": "Baní, Dominican Republic"
+    },
+    {
+      "name": "Kelvin Marte",
+      "position": "LF",
+      "bats": "L",
+      "throws": "L",
+      "born": "1994-07-03",
+      "birthplace": "Puerto Plata, Dominican Republic"
+    },
+    {
+      "name": "José Linares",
+      "position": "CF",
+      "bats": "R",
+      "throws": "R",
+      "born": "1995-12-26",
+      "birthplace": "San Francisco de Macorís, Dominican Republic"
+    },
+    {
+      "name": "Manuel Ortiz",
+      "position": "RF",
+      "bats": "L",
+      "throws": "R",
+      "born": "1996-02-15",
+      "birthplace": "Azua, Dominican Republic"
+    },
+    {
+      "name": "Rafael Montero",
+      "position": "DH",
+      "bats": "R",
+      "throws": "R",
+      "born": "1990-06-09",
+      "birthplace": "San Cristóbal, Dominican Republic"
+    },
+
+    {
+      "name": "Enrique Batista",
+      "position": "SP",
+      "throws": "R",
+      "born": "1992-10-31",
+      "birthplace": "La Vega, Dominican Republic"
+    },
+    {
+      "name": "Pedro Alcántara",
+      "position": "SP",
+      "throws": "R",
+      "born": "1994-03-08",
+      "birthplace": "San Juan de la Maguana, Dominican Republic"
+    },
+    {
+      "name": "Luis Fernando Gómez",
+      "position": "SP",
+      "throws": "R",
+      "born": "1993-08-20",
+      "birthplace": "Maracay, Venezuela"
+    },
+    {
+      "name": "Javier Núñez",
+      "position": "RP",
+      "throws": "R",
+      "born": "1995-01-27",
+      "birthplace": "Moca, Dominican Republic"
+    },
+    {
+      "name": "Ángel Peralta",
+      "position": "RP",
+      "throws": "L",
+      "born": "1991-05-16",
+      "birthplace": "Nagua, Dominican Republic"
+    },
+    {
+      "name": "Cristian López",
+      "position": "CL",
+      "throws": "R",
+      "born": "1994-09-05",
+      "birthplace": "Santo Domingo, Dominican Republic"
+    }
+  ]
+}

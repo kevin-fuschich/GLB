@@ -1,1 +1,142 @@
+{
+  "team": "Toledo Assembly",
+  "city": "Toledo",
+  "abbreviation": "TOL",
+  "founded": 2026,
 
+  "coaches": {
+    "manager": {
+      "name": "Mark Delaney",
+      "born": "1968-03-22",
+      "birthplace": "Toledo, Ohio, USA"
+    },
+    "pitching_coach": {
+      "name": "Carlos Mendoza",
+      "born": "1972-08-11",
+      "birthplace": "Maracay, Venezuela"
+    },
+    "hitting_coach": {
+      "name": "Brian Whitaker",
+      "born": "1976-01-05",
+      "birthplace": "Fort Wayne, Indiana, USA"
+    }
+  },
+
+  "players": [
+    {
+      "name": "Jake Holloway",
+      "position": "C",
+      "bats": "R",
+      "throws": "R",
+      "born": "1992-07-14",
+      "birthplace": "Lima, Ohio, USA"
+    },
+    {
+      "name": "Miguel Arroyo",
+      "position": "1B",
+      "bats": "L",
+      "throws": "R",
+      "born": "1993-11-02",
+      "birthplace": "Maracaibo, Venezuela"
+    },
+    {
+      "name": "Tyler Bennett",
+      "position": "2B",
+      "bats": "R",
+      "throws": "R",
+      "born": "1995-02-19",
+      "birthplace": "Bowling Green, Ohio, USA"
+    },
+    {
+      "name": "Andrés Fuentes",
+      "position": "3B",
+      "bats": "R",
+      "throws": "R",
+      "born": "1991-09-27",
+      "birthplace": "Caracas, Venezuela"
+    },
+    {
+      "name": "Luis Ramírez",
+      "position": "SS",
+      "bats": "S",
+      "throws": "R",
+      "born": "1996-05-10",
+      "birthplace": "Santiago, Dominican Republic"
+    },
+    {
+      "name": "Evan Marshall",
+      "position": "LF",
+      "bats": "L",
+      "throws": "L",
+      "born": "1994-12-03",
+      "birthplace": "Ann Arbor, Michigan, USA"
+    },
+    {
+      "name": "José Peralta",
+      "position": "CF",
+      "bats": "R",
+      "throws": "R",
+      "born": "1995-08-16",
+      "birthplace": "San Pedro de Macorís, Dominican Republic"
+    },
+    {
+      "name": "Kenta Mori",
+      "position": "RF",
+      "bats": "L",
+      "throws": "R",
+      "born": "1996-04-08",
+      "birthplace": "Nagoya, Japan"
+    },
+    {
+      "name": "Logan Pierce",
+      "position": "DH",
+      "bats": "R",
+      "throws": "R",
+      "born": "1990-06-21",
+      "birthplace": "Findlay, Ohio, USA"
+    },
+
+    {
+      "name": "Caleb Turner",
+      "position": "SP",
+      "throws": "R",
+      "born": "1992-01-30",
+      "birthplace": "Toledo, Ohio, USA"
+    },
+    {
+      "name": "Víctor Salazar",
+      "position": "SP",
+      "throws": "R",
+      "born": "1994-10-05",
+      "birthplace": "Valencia, Venezuela"
+    },
+    {
+      "name": "Shinya Kobayashi",
+      "position": "SP",
+      "throws": "R",
+      "born": "1993-03-17",
+      "birthplace": "Niigata, Japan"
+    },
+    {
+      "name": "Rafael Cruz",
+      "position": "RP",
+      "throws": "R",
+      "born": "1995-02-28",
+      "birthplace": "La Vega, Dominican Republic"
+    },
+    {
+      "name": "Matt Sullivan",
+      "position": "RP",
+      "throws": "L",
+      "born": "1991-07-09",
+      "birthplace": "Akron, Ohio, USA"
+    },
+    {
+      "name": "Eduardo Paredes",
+      "position": "CL",
+      "throws": "R",
+      "born": "1994-12-12",
+      "birthplace": "Mexicali, Baja California, Mexico"
+    }
+  ]
+}

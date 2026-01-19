@@ -5,7 +5,7 @@
   "founded": 2026,
   "coaches": {
     "manager": {
-      "name": "Chen Wei-Lun",
+      "name": "Chen Wei Lun",
       "born": "1967-05-18",
       "birthplace": "Taipei, Taiwan"
     },
@@ -21,21 +21,21 @@
     }
   },
   "players": [
-    { "name": "Lin Chia-Hao", "position": "C", "bats": "R", "throws": "R", "born": "1992-04-11", "birthplace": "Taoyuan, Taiwan" },
+    { "name": "Lin Chia Hao", "position": "C", "bats": "R", "throws": "R", "born": "1992-04-11", "birthplace": "Taoyuan, Taiwan" },
     { "name": "Marcus Reed", "position": "1B", "bats": "L", "throws": "R", "born": "1991-12-09", "birthplace": "Sacramento, California, USA" },
-    { "name": "Wang Po-Yu", "position": "2B", "bats": "R", "throws": "R", "born": "1995-02-03", "birthplace": "Taichung, Taiwan" },
+    { "name": "Wang Po Yu", "position": "2B", "bats": "R", "throws": "R", "born": "1995-02-03", "birthplace": "Taichung, Taiwan" },
     { "name": "Luis Mendoza", "position": "3B", "bats": "R", "throws": "R", "born": "1993-08-17", "birthplace": "Maracaibo, Venezuela" },
     { "name": "Sato Kenta", "position": "SS", "bats": "S", "throws": "R", "born": "1996-06-29", "birthplace": "Chiba, Japan" },
     { "name": "Eric Lawson", "position": "LF", "bats": "L", "throws": "L", "born": "1994-10-05", "birthplace": "Eugene, Oregon, USA" },
-    { "name": "Huang Yu-Ting", "position": "CF", "bats": "R", "throws": "R", "born": "1995-03-21", "birthplace": "Kaohsiung, Taiwan" },
+    { "name": "Huang Yu Ting", "position": "CF", "bats": "R", "throws": "R", "born": "1995-03-21", "birthplace": "Kaohsiung, Taiwan" },
     { "name": "Jose Ramirez", "position": "RF", "bats": "R", "throws": "R", "born": "1992-07-14", "birthplace": "Santiago, Dominican Republic" },
     { "name": "David Morales", "position": "DH", "bats": "R", "throws": "R", "born": "1990-11-30", "birthplace": "Miami, Florida, USA" },
 
-    { "name": "Tsai Ming-Hao", "position": "SP", "throws": "R", "born": "1993-01-26", "birthplace": "Tainan, Taiwan" },
+    { "name": "Tsai Ming Hao", "position": "SP", "throws": "R", "born": "1993-01-26", "birthplace": "Tainan, Taiwan" },
     { "name": "Kenji Takahashi", "position": "SP", "throws": "R", "born": "1994-09-12", "birthplace": "Sendai, Japan" },
     { "name": "Carlos Jimenez", "position": "SP", "throws": "L", "born": "1992-05-04", "birthplace": "Barquisimeto, Venezuela" },
-    { "name": "Ryan O'Connell", "position": "RP", "throws": "R", "born": "1995-02-19", "birthplace": "Dublin, Ohio, USA" },
+    { "name": "Ryan OConnell", "position": "RP", "throws": "R", "born": "1995-02-19", "birthplace": "Dublin, Ohio, USA" },
     { "name": "Miguel Santos", "position": "RP", "throws": "L", "born": "1991-06-08", "birthplace": "Lisbon, Portugal" },
-    { "name": "Kuo Tzu-Hao", "position": "CL", "throws": "R", "born": "1994-12-15", "birthplace": "Hsinchu, Taiwan" }
+    { "name": "Kuo Tzu Hao", "position": "CL", "throws": "R", "born": "1994-12-15", "birthplace": "Hsinchu, Taiwan" }
   ]
 }

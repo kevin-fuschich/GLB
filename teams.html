@@ -18,10 +18,10 @@
     th, td { padding: 10px 8px; border-bottom: 1px solid #eee; text-align:left; font-size: 14px; }
     th { font-size: 12px; color:#666; text-transform: uppercase; letter-spacing:.06em; }
     .right { text-align:right; }
-    .debug { white-space: pre-wrap; background:#f7f7f7; border:1px solid #eee; border-radius: 10px; padding: 10px; font-size: 12px; margin-top: 16px; display:none; }
     .status { padding: 8px 10px; border-radius: 10px; font-size: 12px; display:inline-block; }
     .ok { background:#e8f7ee; border:1px solid #bfe7cf; color:#1f6b3a; }
     .bad { background:#fdecec; border:1px solid #f5b5b5; color:#8a1f1f; }
+    .debug { white-space: pre-wrap; background:#f7f7f7; border:1px solid #eee; border-radius: 10px; padding: 10px; font-size: 12px; margin-top: 16px; }
   </style>
 </head>
 <body>
@@ -68,9 +68,7 @@
     $("status").className = "status " + (ok ? "ok" : "bad");
   }
   function log(line) {
-    const d = $("debug");
-    d.style.display = "block";
-    d.textContent += line + "\\n";
+    $("debug").textContent += line + "\n";
     console.log(line);
   }
   function esc(s){ return String(s||"").replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;"); }
@@ -84,23 +82,35 @@
     return res.json();
   }
 
-  function teamLink(team) {
-    return `team.html?team=${encodeURIComponent(team.slug)}`;
+  // Accept both schemas:
+  // - { name, abbrev, slug }  OR  { team, abbr, slug }
+  function normalizeTeam(t){
+    return {
+      name: t.name || t.team || "",
+      abbrev: t.abbrev || t.abbr || "",
+      slug: t.slug || ""
+    };
+  }
+
+  function teamLink(slug) {
+    return "team.html?team=" + encodeURIComponent(slug);
   }
 
   function renderRows(list, targetId) {
-  $(targetId).innerHTML = (list || []).map(t => {
-    const displayName = t.name || t.team || "";
-    const displayAbbr = t.abbrev || t.abbr || "";
-    const slug = t.slug || "";
-    return `
-      <tr>
-        <td><a href="team.html?team=${encodeURIComponent(slug)}">${esc(displayName)}</a></td>
-        <td class="right">${esc(displayAbbr)}</td>
-      </tr>
-    `;
-  }).join("");
-}
+    const rows = (list || []).map(raw => {
+      const t = normalizeTeam(raw);
+      return `
+        <tr>
+          <td><a href="${teamLink(t.slug)}">${esc(t.name)}</a></td>
+          <td class="right">${esc(t.abbrev)}</td>
+        </tr>
+      `;
+    }).join("");
+
+    $(targetId).innerHTML = rows;
+
+    // Helpful debug: show how many rendered
+    log("Rendered " + (list ? list.length : 0) + " rows into #" + targetId);
   }
 
   (async function main(){
@@ -108,14 +118,27 @@
       setStatus("Loading teams…", true);
       const data = await loadJson(TEAMS_PATH);
 
-      const pac = data.divisions?.Pacific || (data.teams || []).filter(x => x.division === "Pacific");
-      const ame = data.divisions?.Americas || (data.teams || []).filter(x => x.division === "Americas");
+      // Defensive reads
+      const divs = data.divisions || {};
+      const pac = divs.Pacific || divs.pacific || [];
+      const ame = divs.Americas || divs.America || divs.americas || [];
 
-      renderRows(pac, "pacificRows");
-      renderRows(ame, "americasRows");
+      // If divisions are missing, fall back to flat list
+      if ((!pac.length && !ame.length) && Array.isArray(data.teams)) {
+        log("Divisions empty — falling back to data.teams");
+        const pac2 = data.teams.filter(x => (x.division || x.Division) === "Pacific");
+        const ame2 = data.teams.filter(x => (x.division || x.Division) === "Americas");
+        renderRows(pac2, "pacificRows");
+        renderRows(ame2, "americasRows");
+      } else {
+        renderRows(pac, "pacificRows");
+        renderRows(ame, "americasRows");
+      }
 
       setStatus("Loaded.", true);
       log("DONE ✅");
+      log("Schema keys present: " + Object.keys(data).join(", "));
+      log("Division keys present: " + Object.keys(divs).join(", "));
     } catch (e) {
       setStatus("Load failed.", false);
       log("ERROR ❌ " + (e && e.message ? e.message : e));

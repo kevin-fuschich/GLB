@@ -1,0 +1,139 @@
+{
+  "team": "Osaka Spirits",
+  "city": "Osaka",
+  "abbreviation": "OSA",
+  "founded": 2026,
+  "coaches": {
+    "manager": {
+      "name": "Kenji Takahashi",
+      "born": "1965-03-08",
+      "birthplace": "Osaka, Japan"
+    },
+    "pitching_coach": {
+      "name": "Masato Fujimoto",
+      "born": "1971-09-14",
+      "birthplace": "Kobe, Hyōgo, Japan"
+    },
+    "hitting_coach": {
+      "name": "Daisuke Moriyama",
+      "born": "1976-01-26",
+      "birthplace": "Kyoto, Japan"
+    }
+  },
+  "players": [
+    {
+      "name": "Haruto Nishimura",
+      "position": "C",
+      "bats": "R",
+      "throws": "R",
+      "born": "1993-04-12",
+      "birthplace": "Sakai, Osaka, Japan"
+    },
+    {
+      "name": "Takeya Okamoto",
+      "position": "1B",
+      "bats": "L",
+      "throws": "R",
+      "born": "1992-10-03",
+      "birthplace": "Hirakata, Osaka, Japan"
+    },
+    {
+      "name": "Shunpei Aoyama",
+      "position": "2B",
+      "bats": "R",
+      "throws": "R",
+      "born": "1995-02-19",
+      "birthplace": "Toyonaka, Osaka, Japan"
+    },
+    {
+      "name": "Joon-ho Park",
+      "position": "3B",
+      "bats": "R",
+      "throws": "R",
+      "born": "1994-07-11",
+      "birthplace": "Incheon, South Korea"
+    },
+    {
+      "name": "Riku Yamamoto",
+      "position": "SS",
+      "bats": "S",
+      "throws": "R",
+      "born": "1996-09-08",
+      "birthplace": "Ibaraki, Osaka, Japan"
+    },
+    {
+      "name": "Ethan Brooks",
+      "position": "LF",
+      "bats": "L",
+      "throws": "L",
+      "born": "1994-11-19",
+      "birthplace": "Seattle, Washington, USA"
+    },
+    {
+      "name": "Hiroki Tanabe",
+      "position": "CF",
+      "bats": "R",
+      "throws": "R",
+      "born": "1995-12-02",
+      "birthplace": "Minoh, Osaka, Japan"
+    },
+    {
+      "name": "Ren Sato",
+      "position": "RF",
+      "bats": "L",
+      "throws": "R",
+      "born": "1996-05-21",
+      "birthplace": "Kishiwada, Osaka, Japan"
+    },
+    {
+      "name": "Luis Mateo",
+      "position": "DH",
+      "bats": "R",
+      "throws": "R",
+      "born": "1995-12-21",
+      "birthplace": "Santo Domingo, Dominican Republic"
+    },
+    {
+      "name": "Toru Nakamura",
+      "position": "SP",
+      "throws": "R",
+      "born": "1992-11-18",
+      "birthplace": "Takatsuki, Osaka, Japan"
+    },
+    {
+      "name": "Shogo Mizuno",
+      "position": "SP",
+      "throws": "R",
+      "born": "1994-04-07",
+      "birthplace": "Akashi, Hyōgo, Japan"
+    },
+    {
+      "name": "Fernando Soto",
+      "position": "SP",
+      "throws": "R",
+      "born": "1994-10-13",
+      "birthplace": "Maracay, Venezuela"
+    },
+    {
+      "name": "Naoki Fujita",
+      "position": "RP",
+      "throws": "R",
+      "born": "1995-02-11",
+      "birthplace": "Izumi, Osaka, Japan"
+    },
+    {
+      "name": "Ángel Rivera",
+      "position": "RP",
+      "throws": "L",
+      "born": "1991-06-28",
+      "birthplace": "Humacao, Puerto Rico"
+    },
+    {
+      "name": "Tomás Acevedo",
+      "position": "CL",
+      "throws": "R",
+      "born": "1994-04-15",
+      "birthplace": "Ponce, Puerto Rico"
+    }
+  ]
+}

@@ -143,71 +143,6 @@
   </div>
 
 <script>
-  const $ = (id) => document.getElementById(id);
-  const qs = (name) => new URLSearchParams(location.search).get(name);
-
-  async function loadJson(path){
-    const res = await fetch(path + "?v=" + Date.now(), { cache: "no-store" });
-    if(!res.ok) throw new Error("HTTP " + res.status + " for " + path);
-    return res.json();
-  }
-
-  function pick(obj, keys, fallback){
-    for(const k of keys){
-      if(obj && obj[k] !== undefined && obj[k] !== null) return obj[k];
-    }
-    return fallback;
-  }
-
-  function num(x){
-    const n = Number(x);
-    return Number.isFinite(n) ? n : null;
-  }
-
-  (async function main(){
-    try{
-      const date = qs("date");
-      const game = qs("game");
-      if(!date || !game){
-        $("matchup").textContent = "Missing query string";
-        $("metaLine").textContent = "Use: ?date=YYYY-MM-DD&game=away@home";
-        return;
-      }
-
-      const path = `data/games/${date}/${game}.json`;
-      const g = await loadJson(path);
-
-      // Support both naming conventions
-      const awayName = pick(g, ["away_team", "awayTeam", "away", "away_name"], "—");
-      const homeName = pick(g, ["home_team", "homeTeam", "home", "home_name"], "—");
-
-      const awayScore = pick(g, ["away_score", "awayScore"], "—");
-      const homeScore = pick(g, ["home_score", "homeScore"], "—");
-
-      const status = pick(g, ["status", "game_status"], "Final");
-      const attendanceRaw = pick(g, ["attendance"], null);
-      const attendanceNum = num(attendanceRaw);
-      const attendanceTxt = attendanceNum !== null ? attendanceNum.toLocaleString() : "—";
-
-      const gameDate = pick(g, ["date", "game_date"], date);
-
-      $("matchup").textContent = `${awayName} @ ${homeName}`;
-      $("metaLine").textContent = `${gameDate} · Attendance ${attendanceTxt} · ${status}`;
-
-      $("scoreRows").innerHTML = `
-        <tr><td>${awayName}</td><td>${awayScore}</td></tr>
-        <tr><td>${homeName}</td><td>${homeScore}</td></tr>
-      `;
-
-      document.title = `GLB — ${awayName} @ ${homeName}`;
-
-    }catch(err){
-      $("matchup").textContent = "Load failed";
-      $("metaLine").textContent = err.message || String(err);
-      console.error(err);
-    }
-  })();
-</script>
   <script>
   const $ = (id) => document.getElementById(id);
   const qs = (name) => new URLSearchParams(location.search).get(name);
@@ -218,22 +153,47 @@
     return res.json();
   }
 
+  function pick(obj, keys){
+    for(const k of keys){
+      if(obj && obj[k] !== undefined && obj[k] !== null) return obj[k];
+    }
+    return undefined;
+  }
+
   function pickPath(obj, path){
     try{
       return path.split(".").reduce((acc,k)=> (acc && acc[k] !== undefined) ? acc[k] : undefined, obj);
     }catch(e){ return undefined; }
   }
 
-  function firstDefined(...vals){
-    for(const v of vals){
-      if(v !== undefined && v !== null && v !== "") return v;
+  function asTextTeam(v){
+    // If it's already a string, great.
+    if(typeof v === "string") return v;
+
+    // If it's an object, try common name keys.
+    if(v && typeof v === "object"){
+      const name =
+        pick(v, ["name","team","full","display","label","short","city","nickname"]) ||
+        pickPath(v, "team.name") ||
+        pickPath(v, "display.name");
+      if(typeof name === "string") return name;
+
+      // If object is {city, nickname}, build it.
+      const city = pick(v, ["city"]);
+      const nick = pick(v, ["nickname","nick"]);
+      if(typeof city === "string" && typeof nick === "string") return `${city} ${nick}`;
+
+      // Last resort: stringify a little
+      return "[team]";
     }
-    return undefined;
+
+    return "—";
   }
 
-  function numOrDash(x){
-    const n = Number(x);
-    return Number.isFinite(n) ? n : null;
+  function asScore(x){
+    if(typeof x === "number") return x;
+    if(typeof x === "string" && x.trim() !== "" && !isNaN(Number(x))) return Number(x);
+    return "—";
   }
 
   (async function main(){
@@ -249,63 +209,52 @@
       const path = `data/games/${date}/${game}.json`;
       const g = await loadJson(path);
 
-      // Try a bunch of likely schemas (flat + nested)
-      const awayName = firstDefined(
-        g.away_team, g.awayTeam, g.away, g.away_name,
-        pickPath(g, "away.team"), pickPath(g, "away.name"),
-        pickPath(g, "teams.away.name"), pickPath(g, "teams.away.team"),
-        pickPath(g, "matchup.away"), pickPath(g, "game.away.team")
-      );
+      // Team values may be objects OR strings depending on your schema
+      const awayTeamVal =
+        pick(g, ["away_team","awayTeam","away"]) ||
+        pickPath(g, "teams.away") ||
+        pickPath(g, "game.away") ||
+        pickPath(g, "matchup.away");
 
-      const homeName = firstDefined(
-        g.home_team, g.homeTeam, g.home, g.home_name,
-        pickPath(g, "home.team"), pickPath(g, "home.name"),
-        pickPath(g, "teams.home.name"), pickPath(g, "teams.home.team"),
-        pickPath(g, "matchup.home"), pickPath(g, "game.home.team")
-      );
+      const homeTeamVal =
+        pick(g, ["home_team","homeTeam","home"]) ||
+        pickPath(g, "teams.home") ||
+        pickPath(g, "game.home") ||
+        pickPath(g, "matchup.home");
 
-      const awayScore = firstDefined(
-        g.away_score, g.awayScore,
-        pickPath(g, "away.score"),
-        pickPath(g, "teams.away.runs"),
-        pickPath(g, "linescore.away.r"),
-        pickPath(g, "score.away")
-      );
+      const awayName = asTextTeam(awayTeamVal);
+      const homeName = asTextTeam(homeTeamVal);
 
-      const homeScore = firstDefined(
-        g.home_score, g.homeScore,
-        pickPath(g, "home.score"),
-        pickPath(g, "teams.home.runs"),
-        pickPath(g, "linescore.home.r"),
-        pickPath(g, "score.home")
-      );
+      const awayScoreVal =
+        pick(g, ["away_score","awayScore"]) ||
+        pickPath(g, "away.score") ||
+        pickPath(g, "teams.away.runs") ||
+        pickPath(g, "linescore.away.r") ||
+        pickPath(g, "score.away");
 
-      const status = firstDefined(g.status, g.game_status, pickPath(g,"meta.status")) || "Final";
-      const attendanceRaw = firstDefined(g.attendance, pickPath(g,"meta.attendance"), pickPath(g,"game.attendance"));
-      const attendanceNum = numOrDash(attendanceRaw);
-      const attendanceTxt = attendanceNum !== null ? attendanceNum.toLocaleString() : "—";
-      const gameDate = firstDefined(g.date, pickPath(g,"meta.date")) || date;
+      const homeScoreVal =
+        pick(g, ["home_score","homeScore"]) ||
+        pickPath(g, "home.score") ||
+        pickPath(g, "teams.home.runs") ||
+        pickPath(g, "linescore.home.r") ||
+        pickPath(g, "score.home");
 
-      // If we still can't resolve names, show schema debug ON PAGE
-      if(!awayName || !homeName){
-        const keys = Object.keys(g || {}).join(", ");
-        $("matchup").textContent = "SCHEMA DEBUG — names not found";
-        $("metaLine").textContent = "Top-level keys: " + keys;
+      const awayScore = asScore(awayScoreVal);
+      const homeScore = asScore(homeScoreVal);
 
-        // Put a JSON preview into the scores table so you can copy it
-        const preview = JSON.stringify(g, null, 2);
-        $("scoreRows").innerHTML = `
-          <tr><td colspan="2"><pre style="white-space:pre-wrap;margin:0;font:12px ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', monospace;">${preview.replaceAll("<","&lt;")}</pre></td></tr>
-        `;
-        return;
-      }
+      const status = pick(g, ["status","game_status"]) || pickPath(g,"meta.status") || "Final";
+      const attendanceRaw = pick(g, ["attendance"]) || pickPath(g,"meta.attendance") || pickPath(g,"game.attendance");
+      const attendanceNum = Number(attendanceRaw);
+      const attendanceTxt = Number.isFinite(attendanceNum) ? attendanceNum.toLocaleString() : "—";
+
+      const gameDate = pick(g, ["date"]) || pickPath(g,"meta.date") || date;
 
       $("matchup").textContent = `${awayName} @ ${homeName}`;
       $("metaLine").textContent = `${gameDate} · Attendance ${attendanceTxt} · ${status}`;
 
       $("scoreRows").innerHTML = `
-        <tr><td>${awayName}</td><td>${awayScore ?? "—"}</td></tr>
-        <tr><td>${homeName}</td><td>${homeScore ?? "—"}</td></tr>
+        <tr><td>${awayName}</td><td>${awayScore}</td></tr>
+        <tr><td>${homeName}</td><td>${homeScore}</td></tr>
       `;
 
       document.title = `GLB — ${awayName} @ ${homeName}`;

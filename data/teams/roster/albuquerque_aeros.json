@@ -1,0 +1,142 @@
+{
+  "team": "Albuquerque Aeros",
+  "city": "Albuquerque",
+  "abbreviation": "ABQ",
+  "founded": 2026,
+
+  "coaches": {
+    "manager": {
+      "name": "Victor Sandoval",
+      "born": "1968-04-17",
+      "birthplace": "Albuquerque, New Mexico, USA"
+    },
+    "pitching_coach": {
+      "name": "Héctor Montalvo",
+      "born": "1972-09-11",
+      "birthplace": "Caguas, Puerto Rico"
+    },
+    "hitting_coach": {
+      "name": "Jason Mercer",
+      "born": "1976-01-28",
+      "birthplace": "Tucson, Arizona, USA"
+    }
+  },
+
+  "players": [
+    {
+      "name": "Troy Whitman",
+      "position": "C",
+      "bats": "R",
+      "throws": "R",
+      "born": "1993-06-22",
+      "birthplace": "Rio Rancho, New Mexico, USA"
+    },
+    {
+      "name": "Emilio Vargas",
+      "position": "1B",
+      "bats": "R",
+      "throws": "R",
+      "born": "1994-08-09",
+      "birthplace": "Santo Domingo, Dominican Republic"
+    },
+    {
+      "name": "Seong-ho Kim",
+      "position": "2B",
+      "bats": "L",
+      "throws": "R",
+      "born": "1996-02-03",
+      "birthplace": "Daejeon, South Korea"
+    },
+    {
+      "name": "Diego Serrano",
+      "position": "3B",
+      "bats": "R",
+      "throws": "R",
+      "born": "1992-11-14",
+      "birthplace": "Caracas, Venezuela"
+    },
+    {
+      "name": "Gabriel Ortiz",
+      "position": "SS",
+      "bats": "S",
+      "throws": "R",
+      "born": "1995-04-21",
+      "birthplace": "San Juan, Puerto Rico"
+    },
+    {
+      "name": "Caleb Mercer",
+      "position": "LF",
+      "bats": "L",
+      "throws": "L",
+      "born": "1994-07-05",
+      "birthplace": "Albuquerque, New Mexico, USA"
+    },
+    {
+      "name": "Luis Mendoza",
+      "position": "CF",
+      "bats": "R",
+      "throws": "R",
+      "born": "1997-01-18",
+      "birthplace": "Hermosillo, Sonora, Mexico"
+    },
+    {
+      "name": "Ryohei Matsuda",
+      "position": "RF",
+      "bats": "L",
+      "throws": "R",
+      "born": "1995-10-27",
+      "birthplace": "Yokohama, Kanagawa, Japan"
+    },
+    {
+      "name": "Evan Landry",
+      "position": "DH",
+      "bats": "R",
+      "throws": "R",
+      "born": "1989-05-12",
+      "birthplace": "El Paso, Texas, USA"
+    },
+
+    {
+      "name": "Cole Ramirez",
+      "position": "SP",
+      "throws": "R",
+      "born": "1991-03-29",
+      "birthplace": "Albuquerque, New Mexico, USA"
+    },
+    {
+      "name": "Miguel Perdomo",
+      "position": "SP",
+      "throws": "R",
+      "born": "1993-12-07",
+      "birthplace": "Maracaibo, Venezuela"
+    },
+    {
+      "name": "Takumi Ishikawa",
+      "position": "SP",
+      "throws": "R",
+      "born": "1994-06-16",
+      "birthplace": "Fukuoka, Japan"
+    },
+    {
+      "name": "Jorge Castillo",
+      "position": "RP",
+      "throws": "R",
+      "born": "1995-09-02",
+      "birthplace": "San Pedro de Macorís, Dominican Republic"
+    },
+    {
+      "name": "Nate Hollowell",
+      "position": "RP",
+      "throws": "L",
+      "born": "1992-02-26",
+      "birthplace": "Santa Fe, New Mexico, USA"
+    },
+    {
+      "name": "Arturo Salinas",
+      "position": "CL",
+      "throws": "R",
+      "born": "1994-04-08",
+      "birthplace": "Mexicali, Baja California, Mexico"
+    }
+  ]
+}

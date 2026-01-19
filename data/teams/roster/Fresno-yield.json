@@ -1,0 +1,142 @@
+{
+  "team": "Fresno Yield",
+  "city": "Fresno",
+  "abbreviation": "FRE",
+  "founded": 2026,
+
+  "coaches": {
+    "manager": {
+      "name": "Rafael Montoya",
+      "born": "1969-02-14",
+      "birthplace": "Fresno, California, USA"
+    },
+    "pitching_coach": {
+      "name": "Carlos Ibáñez",
+      "born": "1973-07-19",
+      "birthplace": "Culiacán, Sinaloa, Mexico"
+    },
+    "hitting_coach": {
+      "name": "Mark Ellison",
+      "born": "1975-11-03",
+      "birthplace": "Bakersfield, California, USA"
+    }
+  },
+
+  "players": [
+    {
+      "name": "Ethan Cole",
+      "position": "C",
+      "bats": "R",
+      "throws": "R",
+      "born": "1992-08-11",
+      "birthplace": "Visalia, California, USA"
+    },
+    {
+      "name": "Julio Fernández",
+      "position": "1B",
+      "bats": "L",
+      "throws": "R",
+      "born": "1994-03-07",
+      "birthplace": "Santiago, Dominican Republic"
+    },
+    {
+      "name": "Marco Villalobos",
+      "position": "2B",
+      "bats": "R",
+      "throws": "R",
+      "born": "1996-01-29",
+      "birthplace": "Guadalajara, Jalisco, Mexico"
+    },
+    {
+      "name": "Andrés Paredes",
+      "position": "3B",
+      "bats": "R",
+      "throws": "R",
+      "born": "1993-06-18",
+      "birthplace": "Valencia, Venezuela"
+    },
+    {
+      "name": "Luis Herrera",
+      "position": "SS",
+      "bats": "S",
+      "throws": "R",
+      "born": "1995-09-22",
+      "birthplace": "Maracay, Venezuela"
+    },
+    {
+      "name": "Connor Blake",
+      "position": "LF",
+      "bats": "L",
+      "throws": "L",
+      "born": "1994-04-10",
+      "birthplace": "Fresno, California, USA"
+    },
+    {
+      "name": "José Ramírez",
+      "position": "CF",
+      "bats": "R",
+      "throws": "R",
+      "born": "1996-12-01",
+      "birthplace": "Hermosillo, Sonora, Mexico"
+    },
+    {
+      "name": "Daichi Morimoto",
+      "position": "RF",
+      "bats": "L",
+      "throws": "R",
+      "born": "1995-05-26",
+      "birthplace": "Nagoya, Aichi, Japan"
+    },
+    {
+      "name": "Logan Pierce",
+      "position": "DH",
+      "bats": "R",
+      "throws": "R",
+      "born": "1991-10-09",
+      "birthplace": "Modesto, California, USA"
+    },
+
+    {
+      "name": "Tyler O'Neal",
+      "position": "SP",
+      "throws": "R",
+      "born": "1992-02-17",
+      "birthplace": "Clovis, California, USA"
+    },
+    {
+      "name": "Sebastián Cruz",
+      "position": "SP",
+      "throws": "R",
+      "born": "1994-07-30",
+      "birthplace": "Monterrey, Nuevo León, Mexico"
+    },
+    {
+      "name": "Hiroshi Tanaka",
+      "position": "SP",
+      "throws": "R",
+      "born": "1993-11-12",
+      "birthplace": "Kobe, Hyōgo, Japan"
+    },
+    {
+      "name": "Miguel Santos",
+      "position": "RP",
+      "throws": "R",
+      "born": "1995-03-05",
+      "birthplace": "San Cristóbal, Dominican Republic"
+    },
+    {
+      "name": "Aaron Whitfield",
+      "position": "RP",
+      "throws": "L",
+      "born": "1991-08-27",
+      "birthplace": "Stockton, California, USA"
+    },
+    {
+      "name": "Ricardo Molina",
+      "position": "CL",
+      "throws": "R",
+      "born": "1994-01-15",
+      "birthplace": "Mexicali, Baja California, Mexico"
+    }
+  ]
+}

@@ -1,1 +1,142 @@
+{
+  "team": "Mayagüez Sultans",
+  "city": "Mayagüez",
+  "abbreviation": "MAY",
+  "founded": 2026,
 
+  "coaches": {
+    "manager": {
+      "name": "Edwin Morales",
+      "born": "1966-10-03",
+      "birthplace": "Mayagüez, Puerto Rico"
+    },
+    "pitching_coach": {
+      "name": "Raúl Figueroa",
+      "born": "1971-06-12",
+      "birthplace": "Ponce, Puerto Rico"
+    },
+    "hitting_coach": {
+      "name": "Luis Benítez",
+      "born": "1975-02-27",
+      "birthplace": "Arecibo, Puerto Rico"
+    }
+  },
+
+  "players": [
+    {
+      "name": "Javier Cruz",
+      "position": "C",
+      "bats": "R",
+      "throws": "R",
+      "born": "1992-04-19",
+      "birthplace": "Cabo Rojo, Puerto Rico"
+    },
+    {
+      "name": "Carlos Medina",
+      "position": "1B",
+      "bats": "L",
+      "throws": "R",
+      "born": "1993-11-08",
+      "birthplace": "San Germán, Puerto Rico"
+    },
+    {
+      "name": "Miguel Rosario",
+      "position": "2B",
+      "bats": "R",
+      "throws": "R",
+      "born": "1995-01-14",
+      "birthplace": "Bayamón, Puerto Rico"
+    },
+    {
+      "name": "José Alvarado",
+      "position": "3B",
+      "bats": "R",
+      "throws": "R",
+      "born": "1991-09-30",
+      "birthplace": "Carolina, Puerto Rico"
+    },
+    {
+      "name": "Andrés Vélez",
+      "position": "SS",
+      "bats": "S",
+      "throws": "R",
+      "born": "1996-06-02",
+      "birthplace": "Caguas, Puerto Rico"
+    },
+    {
+      "name": "Rafael Torres",
+      "position": "LF",
+      "bats": "L",
+      "throws": "L",
+      "born": "1994-03-11",
+      "birthplace": "Aguadilla, Puerto Rico"
+    },
+    {
+      "name": "Luis Mateo",
+      "position": "CF",
+      "bats": "R",
+      "throws": "R",
+      "born": "1995-12-21",
+      "birthplace": "Santo Domingo, Dominican Republic"
+    },
+    {
+      "name": "Hiroto Sakamoto",
+      "position": "RF",
+      "bats": "L",
+      "throws": "R",
+      "born": "1996-07-17",
+      "birthplace": "Osaka, Japan"
+    },
+    {
+      "name": "Daniel Ríos",
+      "position": "DH",
+      "bats": "R",
+      "throws": "R",
+      "born": "1990-05-06",
+      "birthplace": "Mayagüez, Puerto Rico"
+    },
+
+    {
+      "name": "Iván Calderón",
+      "position": "SP",
+      "throws": "R",
+      "born": "1992-02-24",
+      "birthplace": "Guaynabo, Puerto Rico"
+    },
+    {
+      "name": "Fernando Soto",
+      "position": "SP",
+      "throws": "R",
+      "born": "1994-10-13",
+      "birthplace": "Maracay, Venezuela"
+    },
+    {
+      "name": "Keisuke Taniguchi",
+      "position": "SP",
+      "throws": "R",
+      "born": "1993-08-01",
+      "birthplace": "Hiroshima, Japan"
+    },
+    {
+      "name": "Pedro Molina",
+      "position": "RP",
+      "throws": "R",
+      "born": "1995-01-09",
+      "birthplace": "La Romana, Dominican Republic"
+    },
+    {
+      "name": "Ángel Rivera",
+      "position": "RP",
+      "throws": "L",
+      "born": "1991-06-28",
+      "birthplace": "Humacao, Puerto Rico"
+    },
+    {
+      "name": "Tomás Acevedo",
+      "position": "CL",
+      "throws": "R",
+      "born": "1994-04-15",
+      "birthplace": "Ponce, Puerto Rico"
+    }
+  ]
+}

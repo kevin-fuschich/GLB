@@ -208,7 +208,115 @@
     }
   })();
 </script>
+  <script>
+  const $ = (id) => document.getElementById(id);
+  const qs = (name) => new URLSearchParams(location.search).get(name);
+
+  async function loadJson(path){
+    const res = await fetch(path + "?v=" + Date.now(), { cache: "no-store" });
+    if(!res.ok) throw new Error("HTTP " + res.status + " for " + path);
+    return res.json();
+  }
+
+  function pickPath(obj, path){
+    try{
+      return path.split(".").reduce((acc,k)=> (acc && acc[k] !== undefined) ? acc[k] : undefined, obj);
+    }catch(e){ return undefined; }
+  }
+
+  function firstDefined(...vals){
+    for(const v of vals){
+      if(v !== undefined && v !== null && v !== "") return v;
+    }
+    return undefined;
+  }
+
+  function numOrDash(x){
+    const n = Number(x);
+    return Number.isFinite(n) ? n : null;
+  }
+
+  (async function main(){
+    try{
+      const date = qs("date");
+      const game = qs("game");
+      if(!date || !game){
+        $("matchup").textContent = "Missing query string";
+        $("metaLine").textContent = "Use: ?date=YYYY-MM-DD&game=away@home";
+        return;
+      }
+
+      const path = `data/games/${date}/${game}.json`;
+      const g = await loadJson(path);
+
+      // Try a bunch of likely schemas (flat + nested)
+      const awayName = firstDefined(
+        g.away_team, g.awayTeam, g.away, g.away_name,
+        pickPath(g, "away.team"), pickPath(g, "away.name"),
+        pickPath(g, "teams.away.name"), pickPath(g, "teams.away.team"),
+        pickPath(g, "matchup.away"), pickPath(g, "game.away.team")
+      );
+
+      const homeName = firstDefined(
+        g.home_team, g.homeTeam, g.home, g.home_name,
+        pickPath(g, "home.team"), pickPath(g, "home.name"),
+        pickPath(g, "teams.home.name"), pickPath(g, "teams.home.team"),
+        pickPath(g, "matchup.home"), pickPath(g, "game.home.team")
+      );
+
+      const awayScore = firstDefined(
+        g.away_score, g.awayScore,
+        pickPath(g, "away.score"),
+        pickPath(g, "teams.away.runs"),
+        pickPath(g, "linescore.away.r"),
+        pickPath(g, "score.away")
+      );
+
+      const homeScore = firstDefined(
+        g.home_score, g.homeScore,
+        pickPath(g, "home.score"),
+        pickPath(g, "teams.home.runs"),
+        pickPath(g, "linescore.home.r"),
+        pickPath(g, "score.home")
+      );
+
+      const status = firstDefined(g.status, g.game_status, pickPath(g,"meta.status")) || "Final";
+      const attendanceRaw = firstDefined(g.attendance, pickPath(g,"meta.attendance"), pickPath(g,"game.attendance"));
+      const attendanceNum = numOrDash(attendanceRaw);
+      const attendanceTxt = attendanceNum !== null ? attendanceNum.toLocaleString() : "—";
+      const gameDate = firstDefined(g.date, pickPath(g,"meta.date")) || date;
+
+      // If we still can't resolve names, show schema debug ON PAGE
+      if(!awayName || !homeName){
+        const keys = Object.keys(g || {}).join(", ");
+        $("matchup").textContent = "SCHEMA DEBUG — names not found";
+        $("metaLine").textContent = "Top-level keys: " + keys;
+
+        // Put a JSON preview into the scores table so you can copy it
+        const preview = JSON.stringify(g, null, 2);
+        $("scoreRows").innerHTML = `
+          <tr><td colspan="2"><pre style="white-space:pre-wrap;margin:0;font:12px ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', monospace;">${preview.replaceAll("<","&lt;")}</pre></td></tr>
+        `;
+        return;
+      }
+
+      $("matchup").textContent = `${awayName} @ ${homeName}`;
+      $("metaLine").textContent = `${gameDate} · Attendance ${attendanceTxt} · ${status}`;
+
+      $("scoreRows").innerHTML = `
+        <tr><td>${awayName}</td><td>${awayScore ?? "—"}</td></tr>
+        <tr><td>${homeName}</td><td>${homeScore ?? "—"}</td></tr>
+      `;
+
+      document.title = `GLB — ${awayName} @ ${homeName}`;
+
+    }catch(err){
+      $("matchup").textContent = "Load failed";
+      $("metaLine").textContent = err.message || String(err);
+      console.error(err);
+    }
   })();
+</script>
 </script>
 
 </body>

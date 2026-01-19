@@ -1,1 +1,30 @@
+{
+  "team": "Monterrey Cementeros",
+  "city": "Monterrey",
+  "abbreviation": "MTY",
+  "founded": 2026,
 
+  "coaches": {
+    "manager": {
+      "name": "Alejandro Cruz",
+      "born": "1968-05-14",
+      "birthplace": "Monterrey, Nuevo León, Mexico"
+    },
+    "pitching_coach": {
+      "name": "Víctor Salgado",
+      "born": "1972-09-02",
+      "birthplace": "Saltillo, Coahuila, Mexico"
+    },
+    "hitting_coach": {
+      "name": "Marco Esquivel",
+      "born": "1976-01-19",
+      "birthplace": "San Nicolás de los Garza, Mexico"
+    }
+  },
+
+  "players": [
+    { "name": "Raúl Ibarra", "position": "C", "bats": "R", "throws": "R", "born": "1992-03-11", "birthplace": "Monterrey, Mexico" },
+    { "name": "Luis Quintana", "position": "1B", "bats": "L", "throws": "R", "born": "1994-07-22", "birthplace": "Hermosillo, Sonora, Mexico" },
+    { "name": "Diego Morales", "position": "2B", "bats": "R", "throws": "R", "born": "1995-01-08", "birthplace": "Guadalajara, Jalisco, Mexico" },
+    { "name": "Esteban Ríos", "position": "3B", "bats": "R", "throws": "R", "born": "1993-09-17", "birthplace": "Torreón, Coahuila, Mexico" },
+    { "name": "Carlos Mejía", "position": "SS", "bats": "S", "throws": "R", "born": "1996-05-29", "

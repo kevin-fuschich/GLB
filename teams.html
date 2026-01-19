@@ -1,44 +1,120 @@
-{
-  "as_of": "2026-04-08",
-  "divisions": {
-    "Americas": [
-      { "name": "Spokane Alloys", "city": "Spokane", "nickname": "Alloys", "slug": "spokane-alloys", "abbrev": "SPO" },
-      { "name": "Albuquerque Aeros", "city": "Albuquerque", "nickname": "Aeros", "slug": "albuquerque-aeros", "abbrev": "ABQ" },
-      { "name": "Fresno Yield", "city": "Fresno", "nickname": "Yield", "slug": "fresno-yield", "abbrev": "FRE" },
-      { "name": "St. Paul Frost", "city": "St. Paul", "nickname": "Frost", "slug": "st-paul-frost", "abbrev": "STP" },
-      { "name": "Birmingham Vulcans", "city": "Birmingham", "nickname": "Vulcans", "slug": "birmingham-vulcans", "abbrev": "BHM" },
-      { "name": "Toledo Assembly", "city": "Toledo", "nickname": "Assembly", "slug": "toledo-assembly", "abbrev": "TOL" },
-      { "name": "Durham Gold", "city": "Durham", "nickname": "Gold", "slug": "durham-gold", "abbrev": "DUR" },
-      { "name": "Louisville Naturals", "city": "Louisville", "nickname": "Naturals", "slug": "louisville-naturals", "abbrev": "LOU" }
-    ],
-    "Pacific": [
-      { "name": "Vancouver Current", "city": "Vancouver", "nickname": "Current", "slug": "vancouver-current", "abbrev": "VAN" },
-      { "name": "Monterrey Cementeros", "city": "Monterrey", "nickname": "Cementeros", "slug": "monterrey-cementeros", "abbrev": "MTY" },
-      { "name": "Tijuana Tecnicos", "city": "Tijuana", "nickname": "Tecnicos", "slug": "tijuana-tecnicos", "abbrev": "TIJ" },
-      { "name": "San Pedro Cocolos", "city": "San Pedro", "nickname": "Cocolos", "slug": "san-pedro-cocolos", "abbrev": "SPD" },
-      { "name": "Santiago Caballeros", "city": "Santiago", "nickname": "Caballeros", "slug": "santiago-caballeros", "abbrev": "SCB" },
-      { "name": "Mayaguez Sultans", "city": "Mayaguez", "nickname": "Sultans", "slug": "mayaguez-sultans", "abbrev": "MAY" },
-      { "name": "Taipei Neon", "city": "Taipei", "nickname": "Neon", "slug": "taipei-neon", "abbrev": "TPE" },
-      { "name": "Osaka Spirits", "city": "Osaka", "nickname": "Spirits", "slug": "osaka-spirits", "abbrev": "OSA" }
-    ]
-  },
-  "teams": [
-    { "name": "Spokane Alloys", "division": "Americas", "slug": "spokane-alloys", "abbrev": "SPO" },
-    { "name": "Albuquerque Aeros", "division": "Americas", "slug": "albuquerque-aeros", "abbrev": "ABQ" },
-    { "name": "Fresno Yield", "division": "Americas", "slug": "fresno-yield", "abbrev": "FRE" },
-    { "name": "St. Paul Frost", "division": "Americas", "slug": "st-paul-frost", "abbrev": "STP" },
-    { "name": "Birmingham Vulcans", "division": "Americas", "slug": "birmingham-vulcans", "abbrev": "BHM" },
-    { "name": "Toledo Assembly", "division": "Americas", "slug": "toledo-assembly", "abbrev": "TOL" },
-    { "name": "Durham Gold", "division": "Americas", "slug": "durham-gold", "abbrev": "DUR" },
-    { "name": "Louisville Naturals", "division": "Americas", "slug": "louisville-naturals", "abbrev": "LOU" },
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>GLB — Teams</title>
+  <style>
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; margin: 24px; }
+    header { display:flex; align-items:center; justify-content:space-between; gap:16px; margin-bottom:18px; }
+    h1 { font-size: 20px; margin:0; letter-spacing: .04em; }
+    nav a { margin-right: 12px; text-decoration:none; }
+    .small { color:#666; font-size: 12px; margin: 8px 0 14px; }
+    .grid { display:grid; grid-template-columns: 1fr; gap: 18px; }
+    @media (min-width: 900px){ .grid { grid-template-columns: 1fr 1fr; } }
+    .card { border:1px solid #e5e5e5; border-radius: 12px; padding: 14px; }
+    .card h2 { margin: 0 0 10px; font-size: 14px; letter-spacing:.06em; text-transform: uppercase; }
+    table { width:100%; border-collapse: collapse; }
+    th, td { padding: 10px 8px; border-bottom: 1px solid #eee; text-align:left; font-size: 14px; }
+    th { font-size: 12px; color:#666; text-transform: uppercase; letter-spacing:.06em; }
+    .right { text-align:right; }
+    .debug { white-space: pre-wrap; background:#f7f7f7; border:1px solid #eee; border-radius: 10px; padding: 10px; font-size: 12px; margin-top: 16px; display:none; }
+    .status { padding: 8px 10px; border-radius: 10px; font-size: 12px; display:inline-block; }
+    .ok { background:#e8f7ee; border:1px solid #bfe7cf; color:#1f6b3a; }
+    .bad { background:#fdecec; border:1px solid #f5b5b5; color:#8a1f1f; }
+  </style>
+</head>
+<body>
+  <header>
+    <div>
+      <h1>GLOBAL LEAGUE BASEBALL</h1>
+      <div class="small">Teams</div>
+    </div>
+    <nav>
+      <a href="./">Home</a>
+      <a href="day.html?date=2026-04-08">Daily Scores</a>
+      <a href="teams.html">Teams</a>
+    </nav>
+  </header>
 
-    { "name": "Vancouver Current", "division": "Pacific", "slug": "vancouver-current", "abbrev": "VAN" },
-    { "name": "Monterrey Cementeros", "division": "Pacific", "slug": "monterrey-cementeros", "abbrev": "MTY" },
-    { "name": "Tijuana Tecnicos", "division": "Pacific", "slug": "tijuana-tecnicos", "abbrev": "TIJ" },
-    { "name": "San Pedro Cocolos", "division": "Pacific", "slug": "san-pedro-cocolos", "abbrev": "SPD" },
-    { "name": "Santiago Caballeros", "division": "Pacific", "slug": "santiago-caballeros", "abbrev": "SCB" },
-    { "name": "Mayaguez Sultans", "division": "Pacific", "slug": "mayaguez-sultans", "abbrev": "MAY" },
-    { "name": "Taipei Neon", "division": "Pacific", "slug": "taipei-neon", "abbrev": "TPE" },
-    { "name": "Osaka Spirits", "division": "Pacific", "slug": "osaka-spirits", "abbrev": "OSA" }
-  ]
-}
+  <div id="status" class="status ok"><span id="statusText">Loading…</span></div>
+
+  <div class="grid" style="margin-top:14px;">
+    <section class="card">
+      <h2>Pacific</h2>
+      <table>
+        <thead><tr><th>Team</th><th class="right">Abbrev</th></tr></thead>
+        <tbody id="pacificRows"></tbody>
+      </table>
+    </section>
+
+    <section class="card">
+      <h2>Americas</h2>
+      <table>
+        <thead><tr><th>Team</th><th class="right">Abbrev</th></tr></thead>
+        <tbody id="americasRows"></tbody>
+      </table>
+    </section>
+  </div>
+
+  <pre id="debug" class="debug"></pre>
+
+<script>
+  const TEAMS_PATH = "data/teams/teams.json";
+  const $ = (id) => document.getElementById(id);
+
+  function setStatus(text, ok=true) {
+    $("statusText").textContent = text;
+    $("status").className = "status " + (ok ? "ok" : "bad");
+  }
+  function log(line) {
+    const d = $("debug");
+    d.style.display = "block";
+    d.textContent += line + "\\n";
+    console.log(line);
+  }
+  function esc(s){ return String(s||"").replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;"); }
+
+  async function loadJson(path) {
+    const url = path + "?v=" + Date.now();
+    log("Fetching: " + url);
+    const res = await fetch(url, { cache: "no-store" });
+    log("→ HTTP " + res.status + " " + path);
+    if (!res.ok) throw new Error("HTTP " + res.status + " for " + path);
+    return res.json();
+  }
+
+  function teamLink(team) {
+    return `team.html?team=${encodeURIComponent(team.slug)}`;
+  }
+
+  function renderRows(list, targetId) {
+    $(targetId).innerHTML = (list || []).map(t => `
+      <tr>
+        <td><a href="${teamLink(t)}">${esc(t.name)}</a></td>
+        <td class="right">${esc(t.abbrev)}</td>
+      </tr>
+    `).join("");
+  }
+
+  (async function main(){
+    try {
+      setStatus("Loading teams…", true);
+      const data = await loadJson(TEAMS_PATH);
+
+      const pac = data.divisions?.Pacific || (data.teams || []).filter(x => x.division === "Pacific");
+      const ame = data.divisions?.Americas || (data.teams || []).filter(x => x.division === "Americas");
+
+      renderRows(pac, "pacificRows");
+      renderRows(ame, "americasRows");
+
+      setStatus("Loaded.", true);
+      log("DONE ✅");
+    } catch (e) {
+      setStatus("Load failed.", false);
+      log("ERROR ❌ " + (e && e.message ? e.message : e));
+    }
+  })();
+</script>
+</body>
+</html>

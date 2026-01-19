@@ -5,22 +5,16 @@
   "divisions": {
     "Americas": [
       {
+        "team": "Spokane Alloys",
+        "slug": "spokane-alloys",
+        "abbr": "SPK",
+        "roster_path": "data/teams/roster/spokane-alloys.json"
+      },
+      {
         "team": "Albuquerque Aeros",
         "slug": "albuquerque-aeros",
         "abbr": "ABQ",
         "roster_path": "data/teams/roster/albuquerque-aeros.json"
-      },
-      {
-        "team": "Birmingham Vulcans",
-        "slug": "birmingham-vulcans",
-        "abbr": "BIR",
-        "roster_path": "data/teams/roster/birmingham-vulcans.json"
-      },
-      {
-        "team": "Durham Gold",
-        "slug": "durham-gold",
-        "abbr": "DUR",
-        "roster_path": "data/teams/roster/durham-gold.json"
       },
       {
         "team": "Fresno Yield",
@@ -29,60 +23,16 @@
         "roster_path": "data/teams/roster/fresno-yield.json"
       },
       {
-        "team": "Louisville Naturals",
-        "slug": "louisville-naturals",
-        "abbr": "LOU",
-        "roster_path": "data/teams/roster/louisville-naturals.json"
-      },
-      {
-        "team": "Mayagüez Sultans",
-        "slug": "mayaguez-sultans",
-        "abbr": "MAY",
-        "roster_path": "data/teams/roster/mayaguez-sultans.json"
-      },
-      {
-        "team": "Spokane Alloys",
-        "slug": "spokane-alloys",
-        "abbr": "SPK",
-        "roster_path": "data/teams/roster/spokane-alloys.json"
-      },
-      {
         "team": "St. Paul Frost",
         "slug": "st-paul-frost",
         "abbr": "STP",
         "roster_path": "data/teams/roster/st-paul-frost.json"
-      }
-    ],
-    "Pacific": [
-      {
-        "team": "Monterrey",
-        "slug": "monterrey",
-        "abbr": "MTY",
-        "roster_path": "data/teams/roster/monterrey.json"
       },
       {
-        "team": "Osaka Spirits",
-        "slug": "osaka-spirits",
-        "abbr": "OSA",
-        "roster_path": "data/teams/roster/osaka-spirits.json"
-      },
-      {
-        "team": "San Pedro",
-        "slug": "san-pedro",
-        "abbr": "SPD",
-        "roster_path": "data/teams/roster/san-pedro.json"
-      },
-      {
-        "team": "Taipei Neon",
-        "slug": "taipei-neon",
-        "abbr": "TPE",
-        "roster_path": "data/teams/roster/taipei-neon.json"
-      },
-      {
-        "team": "Tijuana Tecnicos",
-        "slug": "tijuana-tecnicos",
-        "abbr": "TIJ",
-        "roster_path": "data/teams/roster/tijuana-tecnicos.json"
+        "team": "Birmingham Vulcans",
+        "slug": "birmingham-vulcans",
+        "abbr": "BIR",
+        "roster_path": "data/teams/roster/birmingham-vulcans.json"
       },
       {
         "team": "Toledo Assembly",
@@ -91,16 +41,66 @@
         "roster_path": "data/teams/roster/toledo-assembly.json"
       },
       {
+        "team": "Durham Gold",
+        "slug": "durham-gold",
+        "abbr": "DUR",
+        "roster_path": "data/teams/roster/durham-gold.json"
+      },
+      {
+        "team": "Louisville Naturals",
+        "slug": "louisville-naturals",
+        "abbr": "LOU",
+        "roster_path": "data/teams/roster/louisville-naturals.json"
+      }
+    ],
+    "Pacific": [
+      {
         "team": "Vancouver Current",
         "slug": "vancouver-current",
         "abbr": "VAN",
         "roster_path": "data/teams/roster/vancouver-current.json"
       },
       {
-        "team": "Mayaguez Sultans (Alt Slug Helper)",
+        "team": "Monterrey Cementeros",
+        "slug": "monterrey-cementeros",
+        "abbr": "MTY",
+        "roster_path": "data/teams/roster/monterrey-cementeros.json"
+      },
+      {
+        "team": "Tijuana Tecnicos",
+        "slug": "tijuana-tecnicos",
+        "abbr": "TIJ",
+        "roster_path": "data/teams/roster/tijuana-tecnicos.json"
+      },
+      {
+        "team": "San Pedro Cocolos",
+        "slug": "san-pedro-cocolos",
+        "abbr": "SPD",
+        "roster_path": "data/teams/roster/san-pedro-cocolos.json"
+      },
+      {
+        "team": "Santiago Caballeros",
+        "slug": "santiago-caballeros",
+        "abbr": "SAN",
+        "roster_path": "data/teams/roster/santiago-caballeros.json"
+      },
+      {
+        "team": "Mayagüez Sultans",
         "slug": "mayaguez-sultans",
         "abbr": "MAY",
         "roster_path": "data/teams/roster/mayaguez-sultans.json"
+      },
+      {
+        "team": "Taipei Neon",
+        "slug": "taipei-neon",
+        "abbr": "TPE",
+        "roster_path": "data/teams/roster/taipei-neon.json"
+      },
+      {
+        "team": "Osaka Spirits",
+        "slug": "osaka-spirits",
+        "abbr": "OSA",
+        "roster_path": "data/teams/roster/osaka-spirits.json"
       }
     ]
   }

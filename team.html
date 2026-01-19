@@ -11,7 +11,6 @@
       --ink:#e9eef6;
       --muted:#a9b4c3;
       --line:rgba(255,255,255,.10);
-      --accent:#ffffff;
       --max:1100px;
       --radius:18px;
     }
@@ -133,9 +132,6 @@
     th{ color:var(--muted); font-weight:700; font-size:11px; text-transform:uppercase; letter-spacing:.6px; }
     tr:last-child td{ border-bottom:none; }
 
-    .twoCol{
-      display:grid; grid-template-columns: 1fr 1fr; gap:12px;
-    }
     .coachLine{
       display:flex; justify-content:space-between; gap:12px;
       padding:10px 0;
@@ -321,7 +317,7 @@
 
       // meta pills
       const pills = [];
-      pills.push(`<div class="pill">${rec.city ? rec.city : (roster.city || "")}</div>`);
+      pills.push(`<div class="pill">${roster.city || ""}</div>`);
       pills.push(`<div class="pill">${rec.abbr}</div>`);
       pills.push(`<div class="pill">${rec.division} Division</div>`);
       $("metaRow").innerHTML = pills.join("");

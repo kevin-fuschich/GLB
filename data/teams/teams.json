@@ -1,27 +1,107 @@
 {
-  "league": "GLB",
+  "league": "Global League Baseball",
+  "abbreviation": "GLB",
+  "founded": 2026,
   "divisions": {
     "Americas": [
-      { "name": "Spokane Alloys", "slug": "spokane-alloys" },
-      { "name": "Albuquerque Aeros", "slug": "albuquerque-aeros" },
-      { "name": "Fresno Yield", "slug": "fresno-yield" },
-      { "name": "St. Paul Frost", "slug": "st-paul-frost" },
-      { "name": "Birmingham Vulcans", "slug": "birmingham-vulcans" },
-      { "name": "Toledo Assembly", "slug": "toledo-assembly" },
-      { "name": "Durham Gold", "slug": "durham-gold" },
-      { "name": "Louisville Naturals", "slug": "louisville-naturals" }
+      {
+        "team": "Albuquerque Aeros",
+        "slug": "albuquerque-aeros",
+        "abbr": "ABQ",
+        "roster_path": "data/teams/roster/albuquerque-aeros.json"
+      },
+      {
+        "team": "Birmingham Vulcans",
+        "slug": "birmingham-vulcans",
+        "abbr": "BIR",
+        "roster_path": "data/teams/roster/birmingham-vulcans.json"
+      },
+      {
+        "team": "Durham Gold",
+        "slug": "durham-gold",
+        "abbr": "DUR",
+        "roster_path": "data/teams/roster/durham-gold.json"
+      },
+      {
+        "team": "Fresno Yield",
+        "slug": "fresno-yield",
+        "abbr": "FRE",
+        "roster_path": "data/teams/roster/fresno-yield.json"
+      },
+      {
+        "team": "Louisville Naturals",
+        "slug": "louisville-naturals",
+        "abbr": "LOU",
+        "roster_path": "data/teams/roster/louisville-naturals.json"
+      },
+      {
+        "team": "Mayagüez Sultans",
+        "slug": "mayaguez-sultans",
+        "abbr": "MAY",
+        "roster_path": "data/teams/roster/mayaguez-sultans.json"
+      },
+      {
+        "team": "Spokane Alloys",
+        "slug": "spokane-alloys",
+        "abbr": "SPK",
+        "roster_path": "data/teams/roster/spokane-alloys.json"
+      },
+      {
+        "team": "St. Paul Frost",
+        "slug": "st-paul-frost",
+        "abbr": "STP",
+        "roster_path": "data/teams/roster/st-paul-frost.json"
+      }
     ],
     "Pacific": [
-      { "name": "Vancouver Current", "slug": "vancouver-current" },
-      { "name": "Monterrey Cementeros", "slug": "monterrey-cementeros" },
-      { "name": "Tijuana Tecnicos", "slug": "tijuana-tecnicos" },
-      { "name": "San Pedro Cocolos", "slug": "san-pedro-cocolos" },
-      { "name": "Santiago Caballeros", "slug": "santiago-caballeros" },
-      { "name": "Mayaguez Sultans", "slug": "mayaguez-sultans" },
-      { "name": "Taipei Neon", "slug": "taipei-neon" },
-      { "name": "Osaka Spirits", "slug": "osaka-spirits" }
+      {
+        "team": "Monterrey",
+        "slug": "monterrey",
+        "abbr": "MTY",
+        "roster_path": "data/teams/roster/monterrey.json"
+      },
+      {
+        "team": "Osaka Spirits",
+        "slug": "osaka-spirits",
+        "abbr": "OSA",
+        "roster_path": "data/teams/roster/osaka-spirits.json"
+      },
+      {
+        "team": "San Pedro",
+        "slug": "san-pedro",
+        "abbr": "SPD",
+        "roster_path": "data/teams/roster/san-pedro.json"
+      },
+      {
+        "team": "Taipei Neon",
+        "slug": "taipei-neon",
+        "abbr": "TPE",
+        "roster_path": "data/teams/roster/taipei-neon.json"
+      },
+      {
+        "team": "Tijuana Tecnicos",
+        "slug": "tijuana-tecnicos",
+        "abbr": "TIJ",
+        "roster_path": "data/teams/roster/tijuana-tecnicos.json"
+      },
+      {
+        "team": "Toledo Assembly",
+        "slug": "toledo-assembly",
+        "abbr": "TOL",
+        "roster_path": "data/teams/roster/toledo-assembly.json"
+      },
+      {
+        "team": "Vancouver Current",
+        "slug": "vancouver-current",
+        "abbr": "VAN",
+        "roster_path": "data/teams/roster/vancouver-current.json"
+      },
+      {
+        "team": "Mayaguez Sultans (Alt Slug Helper)",
+        "slug": "mayaguez-sultans",
+        "abbr": "MAY",
+        "roster_path": "data/teams/roster/mayaguez-sultans.json"
+      }
     ]
-  }
-}
   }
 }

@@ -1,1 +1,142 @@
+{
+  "team": "Tijuana Técnicos",
+  "city": "Tijuana",
+  "abbreviation": "TIJ",
+  "founded": 2026,
 
+  "coaches": {
+    "manager": {
+      "name": "Roberto Salinas",
+      "born": "1968-09-17",
+      "birthplace": "Tijuana, Baja California, Mexico"
+    },
+    "pitching_coach": {
+      "name": "Eduardo Zárate",
+      "born": "1972-02-06",
+      "birthplace": "Mexicali, Baja California, Mexico"
+    },
+    "hitting_coach": {
+      "name": "Miguel Ávila",
+      "born": "1976-07-28",
+      "birthplace": "Ensenada, Baja California, Mexico"
+    }
+  },
+
+  "players": [
+    {
+      "name": "Óscar Beltrán",
+      "position": "C",
+      "bats": "R",
+      "throws": "R",
+      "born": "1992-03-25",
+      "birthplace": "Tijuana, Baja California, Mexico"
+    },
+    {
+      "name": "Luis Navarro",
+      "position": "1B",
+      "bats": "L",
+      "throws": "R",
+      "born": "1993-10-11",
+      "birthplace": "Culiacán, Sinaloa, Mexico"
+    },
+    {
+      "name": "Andrés Mejía",
+      "position": "2B",
+      "bats": "R",
+      "throws": "R",
+      "born": "1995-01-19",
+      "birthplace": "Guadalajara, Jalisco, Mexico"
+    },
+    {
+      "name": "Jorge Fuentes",
+      "position": "3B",
+      "bats": "R",
+      "throws": "R",
+      "born": "1991-08-02",
+      "birthplace": "Hermosillo, Sonora, Mexico"
+    },
+    {
+      "name": "Carlos Peña",
+      "position": "SS",
+      "bats": "S",
+      "throws": "R",
+      "born": "1996-06-14",
+      "birthplace": "Caracas, Venezuela"
+    },
+    {
+      "name": "Daniel Ortega",
+      "position": "LF",
+      "bats": "L",
+      "throws": "L",
+      "born": "1994-12-05",
+      "birthplace": "San Diego, California, USA"
+    },
+    {
+      "name": "Iván López",
+      "position": "CF",
+      "bats": "R",
+      "throws": "R",
+      "born": "1995-09-09",
+      "birthplace": "Tepic, Nayarit, Mexico"
+    },
+    {
+      "name": "Kenji Sakamoto",
+      "position": "RF",
+      "bats": "L",
+      "throws": "R",
+      "born": "1996-04-21",
+      "birthplace": "Yokohama, Japan"
+    },
+    {
+      "name": "Marco Díaz",
+      "position": "DH",
+      "bats": "R",
+      "throws": "R",
+      "born": "1990-02-27",
+      "birthplace": "Tijuana, Baja California, Mexico"
+    },
+
+    {
+      "name": "Ricardo Ponce",
+      "position": "SP",
+      "throws": "R",
+      "born": "1992-11-03",
+      "birthplace": "Mazatlán, Sinaloa, Mexico"
+    },
+    {
+      "name": "Jesús Almonte",
+      "position": "SP",
+      "throws": "R",
+      "born": "1994-05-16",
+      "birthplace": "San Pedro de Macorís, Dominican Republic"
+    },
+    {
+      "name": "Shun Takeda",
+      "position": "SP",
+      "throws": "R",
+      "born": "1993-09-01",
+      "birthplace": "Kumamoto, Japan"
+    },
+    {
+      "name": "Pablo Serrano",
+      "position": "RP",
+      "throws": "R",
+      "born": "1995-01-08",
+      "birthplace": "La Paz, Baja California Sur, Mexico"
+    },
+    {
+      "name": "Andrew Collins",
+      "position": "RP",
+      "throws": "L",
+      "born": "1991-07-22",
+      "birthplace": "Phoenix, Arizona, USA"
+    },
+    {
+      "name": "Víctor Romo",
+      "position": "CL",
+      "throws": "R",
+      "born": "1994-12-19",
+      "birthplace": "Monterrey, Nuevo León, Mexico"
+    }
+  ]
+}

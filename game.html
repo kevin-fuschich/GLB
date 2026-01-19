@@ -144,15 +144,24 @@
 
 <script>
   const $ = (id) => document.getElementById(id);
-
-  function qs(name){
-    return new URLSearchParams(location.search).get(name);
-  }
+  const qs = (name) => new URLSearchParams(location.search).get(name);
 
   async function loadJson(path){
     const res = await fetch(path + "?v=" + Date.now(), { cache: "no-store" });
     if(!res.ok) throw new Error("HTTP " + res.status + " for " + path);
     return res.json();
+  }
+
+  function pick(obj, keys, fallback){
+    for(const k of keys){
+      if(obj && obj[k] !== undefined && obj[k] !== null) return obj[k];
+    }
+    return fallback;
+  }
+
+  function num(x){
+    const n = Number(x);
+    return Number.isFinite(n) ? n : null;
   }
 
   (async function main(){
@@ -168,22 +177,37 @@
       const path = `data/games/${date}/${game}.json`;
       const g = await loadJson(path);
 
-      $("matchup").textContent = `${g.away_team} @ ${g.home_team}`;
-      $("metaLine").textContent =
-        `${g.date} · Attendance ${g.attendance.toLocaleString()} · ${g.status}`;
+      // Support both naming conventions
+      const awayName = pick(g, ["away_team", "awayTeam", "away", "away_name"], "—");
+      const homeName = pick(g, ["home_team", "homeTeam", "home", "home_name"], "—");
+
+      const awayScore = pick(g, ["away_score", "awayScore"], "—");
+      const homeScore = pick(g, ["home_score", "homeScore"], "—");
+
+      const status = pick(g, ["status", "game_status"], "Final");
+      const attendanceRaw = pick(g, ["attendance"], null);
+      const attendanceNum = num(attendanceRaw);
+      const attendanceTxt = attendanceNum !== null ? attendanceNum.toLocaleString() : "—";
+
+      const gameDate = pick(g, ["date", "game_date"], date);
+
+      $("matchup").textContent = `${awayName} @ ${homeName}`;
+      $("metaLine").textContent = `${gameDate} · Attendance ${attendanceTxt} · ${status}`;
 
       $("scoreRows").innerHTML = `
-        <tr><td>${g.away_team}</td><td>${g.away_score}</td></tr>
-        <tr><td>${g.home_team}</td><td>${g.home_score}</td></tr>
+        <tr><td>${awayName}</td><td>${awayScore}</td></tr>
+        <tr><td>${homeName}</td><td>${homeScore}</td></tr>
       `;
 
-      document.title = `GLB — ${g.away_team} @ ${g.home_team}`;
+      document.title = `GLB — ${awayName} @ ${homeName}`;
 
     }catch(err){
       $("matchup").textContent = "Load failed";
       $("metaLine").textContent = err.message || String(err);
       console.error(err);
     }
+  })();
+</script>
   })();
 </script>
 

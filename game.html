@@ -46,6 +46,7 @@
       color:var(--muted);
       font-weight:800;
       letter-spacing:.08em;
+      text-transform:uppercase;
     }
 
     .nav{ display:flex; gap:14px; color:var(--muted); font-size:13px; }
@@ -75,7 +76,7 @@
     .sub{
       color:var(--muted);
       font-size:13px;
-      margin-bottom:0;
+      margin:0;
     }
 
     table{
@@ -98,6 +99,7 @@
     tr:last-child td{ border-bottom:none; }
 
     .small{ color:var(--muted); font-size:12px; }
+
     pre{
       background:#f7f9fb;
       border:1px solid var(--line);
@@ -106,6 +108,7 @@
       overflow:auto;
       font:12px ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
       color:#111;
+      margin:0;
     }
 
     @media (max-width: 860px){
@@ -120,7 +123,7 @@
     <div class="top">
       <div class="brand">
         <div class="logo">GLB</div>
-        <h1>GLOBAL LEAGUE BASEBALL</h1>
+        <h1>Global League Baseball</h1>
       </div>
       <div class="nav">
         <a href="./">Home</a>
@@ -162,8 +165,9 @@
   const qs = (name) => new URLSearchParams(location.search).get(name);
 
   async function loadJson(path){
-    const res = await fetch(path + "?v=" + Date.now(), { cache: "no-store" });
-    if(!res.ok) throw new Error("HTTP " + res.status + " for " + path);
+    const url = path + "?v=" + Date.now();
+    const res = await fetch(url, { cache: "no-store" });
+    if(!res.ok) throw new Error(`HTTP ${res.status} for ${path}`);
     return res.json();
   }
 
@@ -177,28 +181,21 @@
   function pickPath(obj, path){
     try{
       return path.split(".").reduce((acc,k)=> (acc && acc[k] !== undefined) ? acc[k] : undefined, obj);
-    }catch(e){ return undefined; }
+    }catch(e){
+      return undefined;
+    }
   }
 
-  function scoreVal(x){
+  function toIntOrDash(x){
     const n = Number(x);
     return Number.isFinite(n) ? n : "—";
   }
 
   function buildTeamsIndex(teamsJson){
-    const idx = {
-      bySlug: new Map(),
-      byAbbrev: new Map(),
-      byNameLower: new Map()
-    };
-
-    // teamsJson can be in either shape:
-    // A) { teams:[{name,slug,abbrev,division}], divisions:{Americas:[...],Pacific:[...]} }
-    // B) { divisions:{Americas:[...],Pacific:[...]} } with team objects inside divisions
-
+    const idx = { bySlug:new Map(), byAbbrev:new Map(), byNameLower:new Map() };
     const list = [];
-    if(teamsJson && Array.isArray(teamsJson.teams)) list.push(...teamsJson.teams);
 
+    if(teamsJson && Array.isArray(teamsJson.teams)) list.push(...teamsJson.teams);
     if(teamsJson && teamsJson.divisions){
       for(const arr of Object.values(teamsJson.divisions)){
         if(Array.isArray(arr)) list.push(...arr);
@@ -209,7 +206,6 @@
       const name = t.name || t.team || (t.city && t.nickname ? `${t.city} ${t.nickname}` : undefined);
       const slug = t.slug;
       const abbr = t.abbrev || t.abbr;
-
       if(name) idx.byNameLower.set(String(name).toLowerCase(), name);
       if(slug && name) idx.bySlug.set(slug, name);
       if(abbr && name) idx.byAbbrev.set(String(abbr).toUpperCase(), name);
@@ -217,49 +213,110 @@
     return idx;
   }
 
-  function teamNameFromValue(v, teamsIdx){
-    // v might be string or object
+  function teamNameFromValue(v, idx){
     if(typeof v === "string"){
-      // If it's already a full name, return it
-      const direct = teamsIdx.byNameLower.get(v.toLowerCase());
-      return direct || v;
+      return idx.byNameLower.get(v.toLowerCase()) || v;
     }
-
     if(v && typeof v === "object"){
-      // Try explicit name keys
-      const name = pick(v, ["name","team","full","display","label"]);
-      if(typeof name === "string") return teamsIdx.byNameLower.get(name.toLowerCase()) || name;
+      const directName = pick(v, ["name","team","full","display","label"]);
+      if(typeof directName === "string"){
+        return idx.byNameLower.get(directName.toLowerCase()) || directName;
+      }
 
-      // City + nickname combo
       const city = pick(v, ["city"]);
       const nick = pick(v, ["nickname","nick"]);
       if(typeof city === "string" && typeof nick === "string"){
         const built = `${city} ${nick}`;
-        return teamsIdx.byNameLower.get(built.toLowerCase()) || built;
+        return idx.byNameLower.get(built.toLowerCase()) || built;
       }
 
-      // Slug / abbrev resolution
       const slug = pick(v, ["slug"]);
-      if(typeof slug === "string" && teamsIdx.bySlug.has(slug)) return teamsIdx.bySlug.get(slug);
+      if(typeof slug === "string" && idx.bySlug.has(slug)) return idx.bySlug.get(slug);
 
       const abbr = pick(v, ["abbrev","abbr"]);
-      if(typeof abbr === "string" && teamsIdx.byAbbrev.has(abbr.toUpperCase())) return teamsIdx.byAbbrev.get(abbr.toUpperCase());
+      if(typeof abbr === "string" && idx.byAbbrev.has(abbr.toUpperCase())) return idx.byAbbrev.get(abbr.toUpperCase());
 
-      // Sometimes nested
       const nestedSlug = pickPath(v, "team.slug");
-      if(typeof nestedSlug === "string" && teamsIdx.bySlug.has(nestedSlug)) return teamsIdx.bySlug.get(nestedSlug);
+      if(typeof nestedSlug === "string" && idx.bySlug.has(nestedSlug)) return idx.bySlug.get(nestedSlug);
 
       const nestedAbbr = pickPath(v, "team.abbrev") || pickPath(v, "team.abbr");
-      if(typeof nestedAbbr === "string" && teamsIdx.byAbbrev.has(nestedAbbr.toUpperCase())) return teamsIdx.byAbbrev.get(nestedAbbr.toUpperCase());
+      if(typeof nestedAbbr === "string" && idx.byAbbrev.has(nestedAbbr.toUpperCase())) return idx.byAbbrev.get(nestedAbbr.toUpperCase());
     }
-
     return "—";
+  }
+
+  function resolveAwayHome(g){
+    const awayTeamVal =
+      pick(g, ["away_team","awayTeam","away"]) ||
+      pickPath(g, "teams.away") ||
+      pickPath(g, "game.away") ||
+      pickPath(g, "matchup.away") ||
+      pickPath(g, "boxscore.teams.away") ||
+      pickPath(g, "boxscore.away");
+
+    const homeTeamVal =
+      pick(g, ["home_team","homeTeam","home"]) ||
+      pickPath(g, "teams.home") ||
+      pickPath(g, "game.home") ||
+      pickPath(g, "matchup.home") ||
+      pickPath(g, "boxscore.teams.home") ||
+      pickPath(g, "boxscore.home");
+
+    return { awayTeamVal, homeTeamVal };
+  }
+
+  function resolveScores(g){
+    // We try MANY likely places for runs.
+    const away =
+      pick(g, ["away_score","awayScore","away_runs","awayRuns"]) ??
+      pickPath(g, "final.away") ??
+      pickPath(g, "final.away_score") ??
+      pickPath(g, "score.away") ??
+      pickPath(g, "score.away_score") ??
+      pickPath(g, "linescore.away.r") ??
+      pickPath(g, "linescore.away.R") ??
+      pickPath(g, "runs.away") ??
+      pickPath(g, "result.away.r") ??
+      pickPath(g, "result.away.runs") ??
+      pickPath(g, "teams.away.runs") ??
+      pickPath(g, "teams.away.R") ??
+      pickPath(g, "away.score") ??
+      pickPath(g, "boxscore.teams.away.runs") ??
+      pickPath(g, "boxscore.teams.away.R") ??
+      pickPath(g, "boxscore.linescore.away.r");
+
+    const home =
+      pick(g, ["home_score","homeScore","home_runs","homeRuns"]) ??
+      pickPath(g, "final.home") ??
+      pickPath(g, "final.home_score") ??
+      pickPath(g, "score.home") ??
+      pickPath(g, "score.home_score") ??
+      pickPath(g, "linescore.home.r") ??
+      pickPath(g, "linescore.home.R") ??
+      pickPath(g, "runs.home") ??
+      pickPath(g, "result.home.r") ??
+      pickPath(g, "result.home.runs") ??
+      pickPath(g, "teams.home.runs") ??
+      pickPath(g, "teams.home.R") ??
+      pickPath(g, "home.score") ??
+      pickPath(g, "boxscore.teams.home.runs") ??
+      pickPath(g, "boxscore.teams.home.R") ??
+      pickPath(g, "boxscore.linescore.home.r");
+
+    return { away, home };
+  }
+
+  function showDebug(line, obj){
+    $("debugCard").style.display = "block";
+    $("debugLine").textContent = line;
+    $("debugPre").textContent = JSON.stringify(obj, null, 2);
   }
 
   (async function main(){
     try{
       const date = qs("date");
       const game = qs("game");
+
       if(!date || !game){
         $("matchup").textContent = "Missing query string";
         $("metaLine").textContent = "Use: ?date=YYYY-MM-DD&game=away@home";
@@ -268,75 +325,59 @@
       }
 
       const gamePath = `data/games/${date}/${game}.json`;
+
       const [g, teamsJson] = await Promise.all([
         loadJson(gamePath),
         loadJson("data/teams/teams.json")
       ]);
 
-      const teamsIdx = buildTeamsIndex(teamsJson);
+      const idx = buildTeamsIndex(teamsJson);
 
-      // Pull team values from many possible schemas
-      const awayTeamVal =
-        pick(g, ["away_team","awayTeam","away"]) ||
-        pickPath(g, "teams.away") ||
-        pickPath(g, "game.away") ||
-        pickPath(g, "matchup.away");
+      const { awayTeamVal, homeTeamVal } = resolveAwayHome(g);
+      const awayName = teamNameFromValue(awayTeamVal, idx);
+      const homeName = teamNameFromValue(homeTeamVal, idx);
 
-      const homeTeamVal =
-        pick(g, ["home_team","homeTeam","home"]) ||
-        pickPath(g, "teams.home") ||
-        pickPath(g, "game.home") ||
-        pickPath(g, "matchup.home");
+      const { away, home } = resolveScores(g);
 
-      const awayName = teamNameFromValue(awayTeamVal, teamsIdx);
-      const homeName = teamNameFromValue(homeTeamVal, teamsIdx);
-
-const awayScoreRaw =
-  pick(g, ["away_score","awayScore"]) ||
-  pickPath(g, "final.away") ||
-  pickPath(g, "final.away_score") ||
-  pickPath(g, "score.away") ||
-  pickPath(g, "score.away_score") ||
-  pickPath(g, "linescore.away.r") ||
-  pickPath(g, "linescore.away.R") ||
-  pickPath(g, "boxscore.teams.away.runs") ||
-  pickPath(g, "teams.away.runs") ||
-  pickPath(g, "away.score");
-
-const homeScoreRaw =
-  pick(g, ["home_score","homeScore"]) ||
-  pickPath(g, "final.home") ||
-  pickPath(g, "final.home_score") ||
-  pickPath(g, "score.home") ||
-  pickPath(g, "score.home_score") ||
-  pickPath(g, "linescore.home.r") ||
-  pickPath(g, "linescore.home.R") ||
-  pickPath(g, "boxscore.teams.home.runs") ||
-  pickPath(g, "teams.home.runs") ||
-  pickPath(g, "home.score");
+      const status = pick(g, ["status","game_status"]) || pickPath(g,"meta.status") || "Final";
+      const attendanceRaw = pick(g, ["attendance"]) || pickPath(g,"meta.attendance") || pickPath(g,"game.attendance");
+      const attendanceNum = Number(attendanceRaw);
+      const attendanceTxt = Number.isFinite(attendanceNum) ? attendanceNum.toLocaleString() : "—";
+      const gameDate = pick(g, ["date"]) || pickPath(g,"meta.date") || date;
 
       $("matchup").textContent = `${awayName} @ ${homeName}`;
       $("metaLine").textContent = `${gameDate} · Attendance ${attendanceTxt} · ${status}`;
 
       $("scoreRows").innerHTML = `
-        <tr><td>${awayName}</td><td>${scoreVal(awayScoreRaw)}</td></tr>
-        <tr><td>${homeName}</td><td>${scoreVal(homeScoreRaw)}</td></tr>
+        <tr><td>${awayName}</td><td>${toIntOrDash(away)}</td></tr>
+        <tr><td>${homeName}</td><td>${toIntOrDash(home)}</td></tr>
       `;
 
       document.title = `GLB — ${awayName} @ ${homeName}`;
 
-      // If still unresolved, show debug once (so you can see exact shape)
-      if(awayName === "—" || homeName === "—"){
-        $("debugCard").style.display = "block";
-        $("debugLine").textContent = "Could not resolve team name from game JSON. Paste these objects to fix mapping:";
-        $("debugPre").textContent = JSON.stringify({ awayTeamVal, homeTeamVal }, null, 2);
+      // If scores still missing, show debug so we can map once and be done.
+      const awayOk = Number.isFinite(Number(away));
+      const homeOk = Number.isFinite(Number(home));
+      if(!awayOk || !homeOk){
+        showDebug(
+          "Runs not found. Your game JSON stores scores under different keys. Here are the values I’m reading:",
+          {
+            gamePath,
+            awayTeamVal,
+            homeTeamVal,
+            scoreCandidates: {
+              away,
+              home,
+              hint: "Open your game JSON and find where runs live; then we’ll add that path here once."
+            }
+          }
+        );
       }
 
     }catch(err){
       $("matchup").textContent = "Load failed";
       $("metaLine").textContent = err.message || String(err);
       $("scoreRows").innerHTML = "<tr><td colspan='2' class='small'>Could not load game JSON.</td></tr>";
-      console.error(err);
     }
   })();
 </script>

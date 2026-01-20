@@ -68,34 +68,12 @@
       color:var(--muted);
     }
 
-    .headline{
-      font-size:28px;
-      font-weight:900;
-      margin-bottom:6px;
-    }
-    .sub{
-      color:var(--muted);
-      font-size:13px;
-      margin:0;
-    }
+    .headline{ font-size:28px; font-weight:900; margin-bottom:6px; }
+    .sub{ color:var(--muted); font-size:13px; margin:0; }
 
-    table{
-      width:100%;
-      border-collapse:collapse;
-      font-size:13px;
-    }
-    th, td{
-      padding:9px 8px;
-      border-bottom:1px solid var(--line);
-      text-align:left;
-    }
-    th{
-      color:var(--muted);
-      font-weight:800;
-      font-size:11px;
-      text-transform:uppercase;
-      letter-spacing:.6px;
-    }
+    table{ width:100%; border-collapse:collapse; font-size:13px; }
+    th, td{ padding:9px 8px; border-bottom:1px solid var(--line); text-align:left; }
+    th{ color:var(--muted); font-weight:800; font-size:11px; text-transform:uppercase; letter-spacing:.6px; }
     tr:last-child td{ border-bottom:none; }
 
     .small{ color:var(--muted); font-size:12px; }
@@ -109,17 +87,14 @@
       font:12px ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
       color:#111;
       margin:0;
-    }
-
-    @media (max-width: 860px){
-      .headline{ font-size:22px; }
+      white-space:pre-wrap;
+      word-break:break-word;
     }
   </style>
 </head>
 
 <body>
   <div class="wrap">
-
     <div class="top">
       <div class="brand">
         <div class="logo">GLB</div>
@@ -140,11 +115,10 @@
     <div class="card">
       <h2>Final Score</h2>
       <table>
-        <thead>
-          <tr><th>Team</th><th>R</th></tr>
-        </thead>
+        <thead><tr><th>Team</th><th>R</th></tr></thead>
         <tbody id="scoreRows"></tbody>
       </table>
+      <div class="small" id="statusLine"></div>
     </div>
 
     <div class="card">
@@ -152,22 +126,38 @@
       <div class="small">(Full inning breakdown will live here.)</div>
     </div>
 
-    <div class="card" id="debugCard" style="display:none;">
+    <div class="card">
       <h2>Debug</h2>
-      <div class="small" id="debugLine"></div>
-      <pre id="debugPre"></pre>
+      <pre id="debug"></pre>
     </div>
-
   </div>
 
 <script>
+(function(){
   const $ = (id) => document.getElementById(id);
-  const qs = (name) => new URLSearchParams(location.search).get(name);
+  const log = (s) => { $("debug").textContent += s + "\n"; };
 
-  async function loadJson(path){
-    const url = path + "?v=" + Date.now();
+  function qs(name){
+    try { return new URLSearchParams(location.search).get(name); }
+    catch(e) { return null; }
+  }
+
+  function safeEncodePath(path){
+    // Encode only what breaks fetch, preserve slashes.
+    // (No decodeURIComponent anywhere — avoids “pattern” errors.)
+    return String(path || "")
+      .split("/")
+      .map(seg => encodeURIComponent(seg))
+      .join("/")
+      .replace(/%40/g, "@"); // keep @ readable in URLs
+  }
+
+  async function fetchJson(path){
+    const url = safeEncodePath(path) + "?v=" + Date.now();
+    log("Fetching: " + url);
     const res = await fetch(url, { cache: "no-store" });
-    if(!res.ok) throw new Error(`HTTP ${res.status} for ${path}`);
+    log("→ HTTP " + res.status + " " + path);
+    if(!res.ok) throw new Error("HTTP " + res.status + " for " + path);
     return res.json();
   }
 
@@ -177,13 +167,10 @@
     }
     return undefined;
   }
-
   function pickPath(obj, path){
     try{
       return path.split(".").reduce((acc,k)=> (acc && acc[k] !== undefined) ? acc[k] : undefined, obj);
-    }catch(e){
-      return undefined;
-    }
+    }catch(e){ return undefined; }
   }
 
   function toIntOrDash(x){
@@ -194,16 +181,14 @@
   function buildTeamsIndex(teamsJson){
     const idx = { bySlug:new Map(), byAbbrev:new Map(), byNameLower:new Map() };
     const list = [];
-
     if(teamsJson && Array.isArray(teamsJson.teams)) list.push(...teamsJson.teams);
     if(teamsJson && teamsJson.divisions){
       for(const arr of Object.values(teamsJson.divisions)){
         if(Array.isArray(arr)) list.push(...arr);
       }
     }
-
     for(const t of list){
-      const name = t.name || t.team || (t.city && t.nickname ? `${t.city} ${t.nickname}` : undefined);
+      const name = t.name || t.team || (t.city && t.nickname ? (t.city + " " + t.nickname) : undefined);
       const slug = t.slug;
       const abbr = t.abbrev || t.abbr;
       if(name) idx.byNameLower.set(String(name).toLowerCase(), name);
@@ -214,172 +199,130 @@
   }
 
   function teamNameFromValue(v, idx){
-    if(typeof v === "string"){
-      return idx.byNameLower.get(v.toLowerCase()) || v;
-    }
+    if(typeof v === "string") return idx.byNameLower.get(v.toLowerCase()) || v;
     if(v && typeof v === "object"){
-      const directName = pick(v, ["name","team","full","display","label"]);
-      if(typeof directName === "string"){
-        return idx.byNameLower.get(directName.toLowerCase()) || directName;
-      }
-
-      const city = pick(v, ["city"]);
-      const nick = pick(v, ["nickname","nick"]);
-      if(typeof city === "string" && typeof nick === "string"){
-        const built = `${city} ${nick}`;
-        return idx.byNameLower.get(built.toLowerCase()) || built;
-      }
-
+      const direct = pick(v, ["name","team","full","display","label"]);
+      if(typeof direct === "string") return idx.byNameLower.get(direct.toLowerCase()) || direct;
       const slug = pick(v, ["slug"]);
       if(typeof slug === "string" && idx.bySlug.has(slug)) return idx.bySlug.get(slug);
-
       const abbr = pick(v, ["abbrev","abbr"]);
       if(typeof abbr === "string" && idx.byAbbrev.has(abbr.toUpperCase())) return idx.byAbbrev.get(abbr.toUpperCase());
-
-      const nestedSlug = pickPath(v, "team.slug");
-      if(typeof nestedSlug === "string" && idx.bySlug.has(nestedSlug)) return idx.bySlug.get(nestedSlug);
-
-      const nestedAbbr = pickPath(v, "team.abbrev") || pickPath(v, "team.abbr");
-      if(typeof nestedAbbr === "string" && idx.byAbbrev.has(nestedAbbr.toUpperCase())) return idx.byAbbrev.get(nestedAbbr.toUpperCase());
     }
     return "—";
   }
 
-  function resolveAwayHome(g){
+  function resolveTeams(g){
     const awayTeamVal =
       pick(g, ["away_team","awayTeam","away"]) ||
       pickPath(g, "teams.away") ||
-      pickPath(g, "game.away") ||
       pickPath(g, "matchup.away") ||
-      pickPath(g, "boxscore.teams.away") ||
-      pickPath(g, "boxscore.away");
+      pickPath(g, "boxscore.teams.away");
 
     const homeTeamVal =
       pick(g, ["home_team","homeTeam","home"]) ||
       pickPath(g, "teams.home") ||
-      pickPath(g, "game.home") ||
       pickPath(g, "matchup.home") ||
-      pickPath(g, "boxscore.teams.home") ||
-      pickPath(g, "boxscore.home");
+      pickPath(g, "boxscore.teams.home");
 
     return { awayTeamVal, homeTeamVal };
   }
 
-  function resolveScores(g){
-    // We try MANY likely places for runs.
+  function resolveRuns(g){
     const away =
-      pick(g, ["away_score","awayScore","away_runs","awayRuns"]) ??
       pickPath(g, "final.away") ??
       pickPath(g, "final.away_score") ??
-      pickPath(g, "score.away") ??
-      pickPath(g, "score.away_score") ??
+      pick(g, ["away_score","awayScore","away_runs","awayRuns"]) ??
       pickPath(g, "linescore.away.r") ??
-      pickPath(g, "linescore.away.R") ??
-      pickPath(g, "runs.away") ??
-      pickPath(g, "result.away.r") ??
-      pickPath(g, "result.away.runs") ??
-      pickPath(g, "teams.away.runs") ??
-      pickPath(g, "teams.away.R") ??
-      pickPath(g, "away.score") ??
-      pickPath(g, "boxscore.teams.away.runs") ??
-      pickPath(g, "boxscore.teams.away.R") ??
-      pickPath(g, "boxscore.linescore.away.r");
+      pickPath(g, "score.away");
 
     const home =
-      pick(g, ["home_score","homeScore","home_runs","homeRuns"]) ??
       pickPath(g, "final.home") ??
       pickPath(g, "final.home_score") ??
-      pickPath(g, "score.home") ??
-      pickPath(g, "score.home_score") ??
+      pick(g, ["home_score","homeScore","home_runs","homeRuns"]) ??
       pickPath(g, "linescore.home.r") ??
-      pickPath(g, "linescore.home.R") ??
-      pickPath(g, "runs.home") ??
-      pickPath(g, "result.home.r") ??
-      pickPath(g, "result.home.runs") ??
-      pickPath(g, "teams.home.runs") ??
-      pickPath(g, "teams.home.R") ??
-      pickPath(g, "home.score") ??
-      pickPath(g, "boxscore.teams.home.runs") ??
-      pickPath(g, "boxscore.teams.home.R") ??
-      pickPath(g, "boxscore.linescore.home.r");
+      pickPath(g, "score.home");
 
     return { away, home };
   }
 
-  function showDebug(line, obj){
-    $("debugCard").style.display = "block";
-    $("debugLine").textContent = line;
-    $("debugPre").textContent = JSON.stringify(obj, null, 2);
+  async function loadGame(date, gameKey){
+    // Style A: ?g=data/games/YYYY-MM-DD/away@home.json  (bulletproof)
+    const gParam = qs("g");
+    if(gParam){
+      return { json: await fetchJson(gParam), pathUsed: gParam };
+    }
+
+    // Style B: ?date=YYYY-MM-DD&game=away@home
+    if(!date || !gameKey) throw new Error("Missing query string. Use: ?g=data/games/YYYY-MM-DD/away@home.json OR ?date=YYYY-MM-DD&game=away@home");
+
+    // Try exact "@"
+    const p1 = "data/games/" + date + "/" + gameKey + ".json";
+    // Try literal "%40" filename
+    const p2 = "data/games/" + date + "/" + gameKey.replace(/@/g, "%40") + ".json";
+
+    try{
+      return { json: await fetchJson(p1), pathUsed: p1 };
+    }catch(e1){
+      // only fallback on 404
+      if(String(e1.message || e1).indexOf("HTTP 404") >= 0){
+        return { json: await fetchJson(p2), pathUsed: p2 };
+      }
+      throw e1;
+    }
   }
 
-  (async function main(){
+  async function main(){
     try{
+      $("statusLine").textContent = "";
+      $("scoreRows").innerHTML = "<tr><td colspan='2' class='small'>Loading…</td></tr>";
+
       const date = qs("date");
-      const game = qs("game");
+      const gameKey = qs("game");
 
-      if(!date || !game){
-        $("matchup").textContent = "Missing query string";
-        $("metaLine").textContent = "Use: ?date=YYYY-MM-DD&game=away@home";
-        $("scoreRows").innerHTML = "<tr><td colspan='2' class='small'>No game selected.</td></tr>";
-        return;
-      }
-
-      const gamePath = `data/games/${date}/${game}.json`;
-
-      const [g, teamsJson] = await Promise.all([
-        loadJson(gamePath),
-        loadJson("data/teams/teams.json")
-      ]);
-
+      log("JS started ✅");
+      log("date=" + (date || "—") + " game=" + (gameKey || "—"));
+      const teamsJson = await fetchJson("data/teams/teams.json");
       const idx = buildTeamsIndex(teamsJson);
 
-      const { awayTeamVal, homeTeamVal } = resolveAwayHome(g);
+      const { json: g, pathUsed } = await loadGame(date, gameKey);
+      log("Loaded game JSON from: " + pathUsed);
+
+      const { awayTeamVal, homeTeamVal } = resolveTeams(g);
       const awayName = teamNameFromValue(awayTeamVal, idx);
       const homeName = teamNameFromValue(homeTeamVal, idx);
 
-      const { away, home } = resolveScores(g);
+      const status = pick(g, ["status"]) || "Final";
+      const attendance = pick(g, ["attendance"]) || "—";
+      const { away, home } = resolveRuns(g);
 
-      const status = pick(g, ["status","game_status"]) || pickPath(g,"meta.status") || "Final";
-      const attendanceRaw = pick(g, ["attendance"]) || pickPath(g,"meta.attendance") || pickPath(g,"game.attendance");
-      const attendanceNum = Number(attendanceRaw);
-      const attendanceTxt = Number.isFinite(attendanceNum) ? attendanceNum.toLocaleString() : "—";
-      const gameDate = pick(g, ["date"]) || pickPath(g,"meta.date") || date;
+      $("matchup").textContent = awayName + " @ " + homeName;
 
-      $("matchup").textContent = `${awayName} @ ${homeName}`;
-      $("metaLine").textContent = `${gameDate} · Attendance ${attendanceTxt} · ${status}`;
+      let attText = attendance;
+      const attNum = Number(attendance);
+      if(Number.isFinite(attNum)) attText = attNum.toLocaleString();
 
-      $("scoreRows").innerHTML = `
-        <tr><td>${awayName}</td><td>${toIntOrDash(away)}</td></tr>
-        <tr><td>${homeName}</td><td>${toIntOrDash(home)}</td></tr>
-      `;
+      $("metaLine").textContent = (g.date || date || "—") + " · Attendance " + attText + " · " + status;
 
-      document.title = `GLB — ${awayName} @ ${homeName}`;
+      $("scoreRows").innerHTML =
+        "<tr><td>" + awayName + "</td><td>" + toIntOrDash(away) + "</td></tr>" +
+        "<tr><td>" + homeName + "</td><td>" + toIntOrDash(home) + "</td></tr>";
 
-      // If scores still missing, show debug so we can map once and be done.
-      const awayOk = Number.isFinite(Number(away));
-      const homeOk = Number.isFinite(Number(home));
-      if(!awayOk || !homeOk){
-        showDebug(
-          "Runs not found. Your game JSON stores scores under different keys. Here are the values I’m reading:",
-          {
-            gamePath,
-            awayTeamVal,
-            homeTeamVal,
-            scoreCandidates: {
-              away,
-              home,
-              hint: "Open your game JSON and find where runs live; then we’ll add that path here once."
-            }
-          }
-        );
-      }
+      $("statusLine").textContent = "Loaded: " + pathUsed;
+
+      log("DONE ✅");
 
     }catch(err){
       $("matchup").textContent = "Load failed";
-      $("metaLine").textContent = err.message || String(err);
+      $("metaLine").textContent = err && err.message ? err.message : String(err);
       $("scoreRows").innerHTML = "<tr><td colspan='2' class='small'>Could not load game JSON.</td></tr>";
+      $("statusLine").textContent = "";
+      log("ERROR ❌ " + (err && err.message ? err.message : err));
+      console.error(err);
     }
-  })();
+  }
+
+  main();
+})();
 </script>
 
 </body>

@@ -1,0 +1,8 @@
+{
+  "date": "2026-04-08",
+  "status": "Final",
+  "attendance": 18432,
+  "away_team": { "slug": "louisville-naturals" },
+  "home_team": { "slug": "fresno-yield" },
+  "final": { "away": 4, "home": 2 }
+}

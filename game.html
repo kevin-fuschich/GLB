@@ -291,25 +291,29 @@
       const awayName = teamNameFromValue(awayTeamVal, teamsIdx);
       const homeName = teamNameFromValue(homeTeamVal, teamsIdx);
 
-      const awayScoreRaw =
-        pick(g, ["away_score","awayScore"]) ||
-        pickPath(g, "away.score") ||
-        pickPath(g, "teams.away.runs") ||
-        pickPath(g, "linescore.away.r") ||
-        pickPath(g, "score.away");
+const awayScoreRaw =
+  pick(g, ["away_score","awayScore"]) ||
+  pickPath(g, "final.away") ||
+  pickPath(g, "final.away_score") ||
+  pickPath(g, "score.away") ||
+  pickPath(g, "score.away_score") ||
+  pickPath(g, "linescore.away.r") ||
+  pickPath(g, "linescore.away.R") ||
+  pickPath(g, "boxscore.teams.away.runs") ||
+  pickPath(g, "teams.away.runs") ||
+  pickPath(g, "away.score");
 
-      const homeScoreRaw =
-        pick(g, ["home_score","homeScore"]) ||
-        pickPath(g, "home.score") ||
-        pickPath(g, "teams.home.runs") ||
-        pickPath(g, "linescore.home.r") ||
-        pickPath(g, "score.home");
-
-      const status = pick(g, ["status","game_status"]) || pickPath(g,"meta.status") || "Final";
-      const attendanceRaw = pick(g, ["attendance"]) || pickPath(g,"meta.attendance") || pickPath(g,"game.attendance");
-      const attendanceNum = Number(attendanceRaw);
-      const attendanceTxt = Number.isFinite(attendanceNum) ? attendanceNum.toLocaleString() : "—";
-      const gameDate = pick(g, ["date"]) || pickPath(g,"meta.date") || date;
+const homeScoreRaw =
+  pick(g, ["home_score","homeScore"]) ||
+  pickPath(g, "final.home") ||
+  pickPath(g, "final.home_score") ||
+  pickPath(g, "score.home") ||
+  pickPath(g, "score.home_score") ||
+  pickPath(g, "linescore.home.r") ||
+  pickPath(g, "linescore.home.R") ||
+  pickPath(g, "boxscore.teams.home.runs") ||
+  pickPath(g, "teams.home.runs") ||
+  pickPath(g, "home.score");
 
       $("matchup").textContent = `${awayName} @ ${homeName}`;
       $("metaLine").textContent = `${gameDate} · Attendance ${attendanceTxt} · ${status}`;

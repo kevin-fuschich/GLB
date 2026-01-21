@@ -3,291 +3,303 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GLB Official Schedule</title>
+<title>GLB — Official Standings</title>
+
 <style>
-    :root {
-        --field-white: #ffffff;
-        --ink-navy: #002244;
-        --meta-grey: #555555;
-        --line-grey: #e0e0e0;
-        --font-serif: "Georgia", "Times New Roman", serif;
-        --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    }
+  :root {
+    --field-white: #ffffff;
+    --ink-navy: #002244;
+    --meta-grey: #555555;
+    --line-grey: #d6d6d6;
+    --font-serif: "Georgia", "Times New Roman", serif;
+    --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
 
-    body {
-        background-color: #f4f4f4;
-        font-family: var(--font-sans);
-        color: var(--ink-navy);
-        display: flex;
-        justify-content: center;
-        padding: 50px 20px;
-        margin: 0;
-        -webkit-font-smoothing: antialiased;
-    }
+  body {
+    background-color: #f4f4f4;
+    font-family: var(--font-sans);
+    color: var(--ink-navy);
+    display: flex;
+    justify-content: center;
+    padding: 50px 20px;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+  }
 
-    .record-sheet {
-        background-color: var(--field-white);
-        width: 100%;
-        max-width: 580px;
-        padding: 40px;
-        box-shadow: 0 2px 15px rgba(0,0,0,0.06);
-        border-top: 5px solid var(--ink-navy);
-    }
+  .record-sheet {
+    background-color: var(--field-white);
+    width: 100%;
+    max-width: 580px;
+    padding: 40px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.06);
+    border-top: 5px solid var(--ink-navy);
+  }
 
-    /* HEADER */
-    header {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        margin-bottom: 40px;
-        border-bottom: 1px solid var(--ink-navy);
-        padding-bottom: 20px;
-    }
+  /* HEADER */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 40px;
+    border-bottom: 1px solid var(--ink-navy);
+    padding-bottom: 20px;
+  }
 
-    .meta-block {
-        font-family: var(--font-serif);
-        font-size: 14px;
-        line-height: 1.5;
-        color: var(--ink-navy);
-    }
-    
-    .page-title { 
-        font-weight: bold; 
-        color: var(--ink-navy); 
-        font-size: 16px; 
-        margin-bottom: 4px; 
-        display: block;
-    }
-    
-    .meta-detail { 
-        color: var(--meta-grey); 
-        font-style: italic;
-    }
+  .meta-block {
+    font-family: var(--font-serif);
+    font-size: 14px;
+    line-height: 1.5;
+  }
 
-    .stamp-logo {
-        width: 60px;
-        height: auto;
-        opacity: 0.9;
-    }
+  .page-title {
+    font-weight: 700;
+    font-size: 15px;
+    display: block;
+    margin-bottom: 4px;
+  }
 
-    /* SCHEDULE LIST */
-    .date-group {
-        margin-bottom: 25px;
-    }
+  .meta-detail {
+    color: var(--meta-grey);
+    font-style: italic;
+  }
 
-    .date-header {
-        font-family: var(--font-serif);
-        font-weight: bold;
-        font-size: 14px;
-        border-bottom: 1px solid var(--ink-navy);
-        margin-bottom: 0;
-        padding-bottom: 5px;
-        color: var(--ink-navy);
-        margin-top: 20px;
-    }
+  .stamp-logo {
+    width: 60px;
+    height: auto;
+    opacity: 0.95;
+  }
 
-    .date-group:first-of-type .date-header {
-        margin-top: 0;
-    }
+  /* DIVISIONS */
+  .division-header {
+    font-family: var(--font-serif);
+    font-weight: 700;
+    font-size: 14px;
+    border-bottom: 1px solid var(--ink-navy);
+    margin-top: 30px;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+  }
 
-    table {
-        width: 100%;
-        border-collapse: collapse;
-        font-size: 13px;
-        table-layout: fixed;
-    }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+    margin-bottom: 20px;
+  }
 
-    /* HEADINGS */
-    th {
-        text-align: left;
-        font-weight: 600; /* Increased weight for archival feel */
-        color: var(--meta-grey);
-        font-size: 10px;
-        padding: 4px 8px;
-        border-bottom: 1px solid var(--line-grey);
-        text-transform: uppercase;
-        letter-spacing: 0.2px; /* Tightened tracking */
-    }
+  th {
+    text-align: right;
+    font-weight: 600;
+    color: var(--meta-grey);
+    font-size: 10px;
+    padding: 6px 8px;
+    border-bottom: 1px solid var(--line-grey);
+    text-transform: uppercase;
+    letter-spacing: 0.2px;
+    vertical-align: bottom;
+  }
 
-    td {
-        padding: 10px 8px;
-        border-bottom: 1px solid #f0f0f0;
-        vertical-align: middle;
-        color: #111;
-    }
+  th.th-left {
+    text-align: left;
+    padding-left: 0;
+  }
 
-    /* COLUMN SPECIFICS */
-    .col-time { width: 70px; color: #555; font-variant-numeric: tabular-nums; }
-    .col-at { width: 25px; color: #999; text-align: center; font-size: 11px; }
-    .col-result { width: 60px; text-align: center; font-weight: 500; }
-    .col-link { width: 40px; text-align: right; }
-    
-    /* Team Columns */
-    .col-team { width: auto; } 
-    .col-team-away { text-align: right; }
+  td {
+    padding: 10px 8px;
+    text-align: right;
+    border-bottom: 1px solid #f0f0f0;
+    color: #111;
+  }
 
-    /* The "Box" Link */
-    a.box-link {
-        color: var(--ink-navy);
-        text-decoration: none;
-        font-size: 11px;
-        opacity: 0.7;
-        border-bottom: 1px solid transparent;
-    }
-    
-    a.box-link:hover {
-        opacity: 1;
-        border-bottom: 1px solid var(--ink-navy);
-    }
+  td.team-name {
+    text-align: left;
+    padding-left: 0;
+    font-weight: 500;
+    color: #000;
+  }
 
-    /* FOOTER */
-    footer {
-        margin-top: 50px;
-        border-top: 1px solid var(--line-grey);
-        padding-top: 15px;
-        font-size: 10px;
-        color: var(--meta-grey);
-    }
+  .col-secondary {
+    color: #666;
+  }
 
+  /* FOOTER */
+  footer {
+    margin-top: 40px;
+    border-top: 1px solid var(--line-grey);
+    padding-top: 15px;
+    font-size: 10px;
+    color: #777;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+  }
 </style>
 </head>
+
 <body>
 
 <div class="record-sheet">
-    
-    <header>
-        <div class="meta-block">
-            <span class="page-title">Official Schedule</span>
-            <div class="meta-detail">Week 1 &mdash; April 8–12, 2026</div>
-        </div>
-        <img src="GLB_white.png" alt="GLB Seal" class="stamp-logo">
-    </header>
 
-    <div class="date-group">
-        <div class="date-header">Wednesday, April 8, 2026</div>
-        <table>
-            <thead>
-                <tr>
-                    <th class="col-time">Time</th>
-                    <th class="col-team col-team-away">Away</th>
-                    <th class="col-at"></th>
-                    <th class="col-team">Home</th>
-                    <th class="col-result">Result</th>
-                    <th class="col-link">Box</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td class="col-time">1:05 PM</td>
-                    <td class="col-team col-team-away">Monterrey</td>
-                    <td class="col-at">@</td>
-                    <td class="col-team">San Pedro</td>
-                    <td class="col-result">1–7</td>
-                    <td class="col-link"><a href="boxscore.html" class="box-link">Box</a></td>
-                </tr>
-                <tr>
-                    <td class="col-time">4:05 PM</td>
-                    <td class="col-team col-team-away">Taipei</td>
-                    <td class="col-at">@</td>
-                    <td class="col-team">Osaka</td>
-                    <td class="col-result">4–2</td>
-                    <td class="col-link"></td>
-                </tr>
-                <tr>
-                    <td class="col-time">6:30 PM</td>
-                    <td class="col-team col-team-away">Vancouver</td>
-                    <td class="col-at">@</td>
-                    <td class="col-team">Tijuana</td>
-                    <td class="col-result">3–5</td>
-                    <td class="col-link"></td>
-                </tr>
-                <tr>
-                    <td class="col-time">7:05 PM</td>
-                    <td class="col-team col-team-away">Birmingham</td>
-                    <td class="col-at">@</td>
-                    <td class="col-team">Albuquerque</td>
-                    <td class="col-result">9–8</td>
-                    <td class="col-link"></td>
-                </tr>
-                <tr>
-                    <td class="col-time">7:05 PM</td>
-                    <td class="col-team col-team-away">Santiago</td>
-                    <td class="col-at">@</td>
-                    <td class="col-team">Mayaguez</td>
-                    <td class="col-result">6–5</td>
-                    <td class="col-link"></td>
-                </tr>
-            </tbody>
-        </table>
+  <header>
+    <div class="meta-block">
+      <span class="page-title">Official Standings</span>
+      <div class="meta-detail">Week 1 — As of April 8, 2026</div>
     </div>
+    <img src="GLB_white.png" alt="GLB Seal" class="stamp-logo">
+  </header>
 
-    <div class="date-group">
-        <div class="date-header">Thursday, April 9, 2026</div>
-        <table>
-            <tbody>
-                <tr>
-                    <td class="col-time">1:05 PM</td>
-                    <td class="col-team col-team-away">Spokane</td>
-                    <td class="col-at">@</td>
-                    <td class="col-team">Fresno</td>
-                    <td class="col-result"></td>
-                    <td class="col-link"></td>
-                </tr>
-                <tr>
-                    <td class="col-time">7:05 PM</td>
-                    <td class="col-team col-team-away">Durham</td>
-                    <td class="col-at">@</td>
-                    <td class="col-team">Louisville</td>
-                    <td class="col-result"></td>
-                    <td class="col-link"></td>
-                </tr>
-                <tr>
-                    <td class="col-time">7:15 PM</td>
-                    <td class="col-team col-team-away">St. Paul</td>
-                    <td class="col-at">@</td>
-                    <td class="col-team">Toledo</td>
-                    <td class="col-result"></td>
-                    <td class="col-link"></td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+  <!-- PACIFIC DIVISION -->
+  <div class="division-header">Pacific Division</div>
+  <table>
+    <thead>
+      <tr>
+        <th class="th-left">Team</th>
+        <th>W</th>
+        <th>L</th>
+        <th>PCT</th>
+        <th>GB</th>
+        <th class="col-secondary">Runs</th>
+        <th class="col-secondary">Runs<br>Allowed</th>
+        <th class="col-secondary">Diff</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="team-name">San Pedro Cocolos</td>
+        <td>1</td><td>0</td><td>1.000</td><td>—</td>
+        <td class="col-secondary">7</td>
+        <td class="col-secondary">1</td>
+        <td class="col-secondary">+6</td>
+      </tr>
+      <tr>
+        <td class="team-name">Taipei Neon</td>
+        <td>1</td><td>0</td><td>1.000</td><td>—</td>
+        <td class="col-secondary">4</td>
+        <td class="col-secondary">2</td>
+        <td class="col-secondary">+2</td>
+      </tr>
+      <tr>
+        <td class="team-name">Tijuana Tecnicos</td>
+        <td>1</td><td>0</td><td>1.000</td><td>—</td>
+        <td class="col-secondary">5</td>
+        <td class="col-secondary">3</td>
+        <td class="col-secondary">+2</td>
+      </tr>
+      <tr>
+        <td class="team-name">Santiago Caballeros</td>
+        <td>1</td><td>0</td><td>1.000</td><td>—</td>
+        <td class="col-secondary">6</td>
+        <td class="col-secondary">5</td>
+        <td class="col-secondary">+1</td>
+      </tr>
+      <tr>
+        <td class="team-name">Mayaguez Sultans</td>
+        <td>0</td><td>1</td><td>.000</td><td>1.0</td>
+        <td class="col-secondary">5</td>
+        <td class="col-secondary">6</td>
+        <td class="col-secondary">−1</td>
+      </tr>
+      <tr>
+        <td class="team-name">Osaka Spirits</td>
+        <td>0</td><td>1</td><td>.000</td><td>1.0</td>
+        <td class="col-secondary">2</td>
+        <td class="col-secondary">4</td>
+        <td class="col-secondary">−2</td>
+      </tr>
+      <tr>
+        <td class="team-name">Vancouver Current</td>
+        <td>0</td><td>1</td><td>.000</td><td>1.0</td>
+        <td class="col-secondary">3</td>
+        <td class="col-secondary">5</td>
+        <td class="col-secondary">−2</td>
+      </tr>
+      <tr>
+        <td class="team-name">Monterrey Cementeros</td>
+        <td>0</td><td>1</td><td>.000</td><td>1.0</td>
+        <td class="col-secondary">1</td>
+        <td class="col-secondary">7</td>
+        <td class="col-secondary">−6</td>
+      </tr>
+    </tbody>
+  </table>
 
-    <div class="date-group">
-        <div class="date-header">Friday, April 10, 2026</div>
-        <table>
-            <tbody>
-                <tr>
-                    <td class="col-time">6:35 PM</td>
-                    <td class="col-team col-team-away">Monterrey</td>
-                    <td class="col-at">@</td>
-                    <td class="col-team">San Pedro</td>
-                    <td class="col-result"></td>
-                    <td class="col-link"></td>
-                </tr>
-                <tr>
-                    <td class="col-time">7:05 PM</td>
-                    <td class="col-team col-team-away">Taipei</td>
-                    <td class="col-at">@</td>
-                    <td class="col-team">Osaka</td>
-                    <td class="col-result"></td>
-                    <td class="col-link"></td>
-                </tr>
-                <tr>
-                    <td class="col-time">8:00 PM</td>
-                    <td class="col-team col-team-away">Vancouver</td>
-                    <td class="col-at">@</td>
-                    <td class="col-team">Tijuana</td>
-                    <td class="col-result"></td>
-                    <td class="col-link"></td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+  <!-- AMERICAS DIVISION -->
+  <div class="division-header">Americas Division</div>
+  <table>
+    <thead>
+      <tr>
+        <th class="th-left">Team</th>
+        <th>W</th>
+        <th>L</th>
+        <th>PCT</th>
+        <th>GB</th>
+        <th class="col-secondary">Runs</th>
+        <th class="col-secondary">Runs<br>Allowed</th>
+        <th class="col-secondary">Diff</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="team-name">Louisville Naturals</td>
+        <td>1</td><td>0</td><td>1.000</td><td>—</td>
+        <td class="col-secondary">6</td>
+        <td class="col-secondary">1</td>
+        <td class="col-secondary">+5</td>
+      </tr>
+      <tr>
+        <td class="team-name">Spokane Alloys</td>
+        <td>1</td><td>0</td><td>1.000</td><td>—</td>
+        <td class="col-secondary">2</td>
+        <td class="col-secondary">0</td>
+        <td class="col-secondary">+2</td>
+      </tr>
+      <tr>
+        <td class="team-name">Birmingham Vulcans</td>
+        <td>1</td><td>0</td><td>1.000</td><td>—</td>
+        <td class="col-secondary">9</td>
+        <td class="col-secondary">8</td>
+        <td class="col-secondary">+1</td>
+      </tr>
+      <tr>
+        <td class="team-name">Toledo Assembly</td>
+        <td>1</td><td>0</td><td>1.000</td><td>—</td>
+        <td class="col-secondary">4</td>
+        <td class="col-secondary">3</td>
+        <td class="col-secondary">+1</td>
+      </tr>
+      <tr>
+        <td class="team-name">Albuquerque Aeros</td>
+        <td>0</td><td>1</td><td>.000</td><td>1.0</td>
+        <td class="col-secondary">8</td>
+        <td class="col-secondary">9</td>
+        <td class="col-secondary">−1</td>
+      </tr>
+      <tr>
+        <td class="team-name">St. Paul Frost</td>
+        <td>0</td><td>1</td><td>.000</td><td>1.0</td>
+        <td class="col-secondary">3</td>
+        <td class="col-secondary">4</td>
+        <td class="col-secondary">−1</td>
+      </tr>
+      <tr>
+        <td class="team-name">Fresno Yield</td>
+        <td>0</td><td>1</td><td>.000</td><td>1.0</td>
+        <td class="col-secondary">0</td>
+        <td class="col-secondary">2</td>
+        <td class="col-secondary">−2</td>
+      </tr>
+      <tr>
+        <td class="team-name">Durham Gold</td>
+        <td>0</td><td>1</td><td>.000</td><td>1.0</td>
+        <td class="col-secondary">1</td>
+        <td class="col-secondary">6</td>
+        <td class="col-secondary">−5</td>
+      </tr>
+    </tbody>
+  </table>
 
-    <footer>
-        Times listed in local ballpark time.
-    </footer>
+  <footer>
+    Updated nightly following official scoring review
+  </footer>
 
 </div>
 

@@ -1,194 +1,168 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>GLB</title>
-  <style>
-    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; margin: 24px; }
-    h1 { margin: 0 0 12px 0; }
-    .status { padding: 10px 12px; border: 1px solid #ddd; border-radius: 8px; margin: 12px 0 18px 0; }
-    .ok { background: #f3fff3; border-color: #bfe6bf; }
-    .bad { background: #fff3f3; border-color: #e6bfbf; }
-    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 13px; white-space: pre-wrap; }
-    table { border-collapse: collapse; width: 100%; margin: 10px 0 18px 0; }
-    th, td { border-bottom: 1px solid #eee; padding: 8px 6px; text-align: left; }
-    .small { color: #666; font-size: 13px; }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>GLB — Documents</title>
+<style>
+  :root{
+    --paper: #ffffff;
+    --ink: #002244;
+    --meta: #444444;
+    --rule: #d0d0d0;
+    --serif: "Georgia","Times New Roman",serif;
+    --sans: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  }
+
+  body{
+    margin:0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--serif);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .sheet{
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 48px 22px 70px;
+  }
+
+  header{
+    display:flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--rule);
+    margin-bottom: 18px;
+  }
+
+  h1{
+    margin:0;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+  }
+
+  .stamp{
+    width: 48px;
+    height: auto;
+    opacity: 0.92;
+  }
+
+  .list{
+    margin-top: 18px;
+  }
+
+  .row{
+    display: grid;
+    grid-template-columns: 170px 1fr;
+    gap: 16px;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    align-items: baseline;
+  }
+
+  .date{
+    font-family: var(--sans);
+    font-size: 11px;
+    color: var(--meta);
+    letter-spacing: 0.2px;
+    white-space: nowrap;
+  }
+
+  .item a{
+    color: var(--ink);
+    text-decoration: none;
+    font-size: 13px;
+    line-height: 1.35;
+  }
+
+  .item a:hover{
+    text-decoration: underline;
+  }
+
+  .sub{
+    font-family: var(--sans);
+    font-size: 11px;
+    color: var(--meta);
+    margin-top: 3px;
+  }
+
+  footer{
+    margin-top: 28px;
+    font-family: var(--sans);
+    font-size: 10px;
+    color: var(--meta);
+  }
+
+  @media (max-width: 520px){
+    .row{
+      grid-template-columns: 1fr;
+      gap: 6px;
+    }
+    .date{
+      order: 2;
+    }
+  }
+</style>
 </head>
 <body>
-  <h1>GLB</h1>
 
-  <div id="status" class="status">
-    <div><strong>Status:</strong> <span id="statusText">Loading…</span></div>
-    <div class="small">This page will tell us exactly which file fails to load.</div>
+<div class="sheet">
+  <header>
+    <h1>Documents</h1>
+    <!-- Optional. Remove this <img> if you want the index to be seal-free. -->
+    <img src="GLB_white.png" alt="GLB Seal" class="stamp" />
+  </header>
+
+  <div class="list" aria-label="Document list">
+    <div class="row">
+      <div class="date">June 18, 2026</div>
+      <div class="item">
+        <a href="boxscore_stresstest.html">Official Box Score — Monterrey at San Pedro — 14 innings</a>
+        <div class="sub">Final 12–10</div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="date">June 4, 2026</div>
+      <div class="item">
+        <a href="boxscore.html">Official Box Score — Monterrey at San Pedro</a>
+        <div class="sub">Final 7–1</div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="date">(undated)</div>
+      <div class="item">
+        <a href="health.html">Health</a>
+        <div class="sub">System check</div>
+      </div>
+    </div>
+
+    <!-- Templates (leave or delete) -->
+    <div class="row">
+      <div class="date">(pending)</div>
+      <div class="item">
+        <a href="#">Standings — Week 1</a>
+        <div class="sub">Not yet published</div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="date">(pending)</div>
+      <div class="item">
+        <a href="#">Schedule — Week 1</a>
+        <div class="sub">Not yet published</div>
+      </div>
+    </div>
   </div>
 
-  <div id="debug" class="mono"></div>
+  <footer>
+    GLB records.
+  </footer>
+</div>
 
-  <h2>Daily Scores</h2>
-  <div id="scores"></div>
-
-  <h2>Standings</h2>
-  <div id="standings"></div>
-
-  <h2>Leaders</h2>
-  <div id="leaders"></div>
-
-<script>
-  const DAY_PATH = "data/days/2026-04-08.json";
-  const STANDINGS_PATH = "current/standings.json";
-  const LEADERS_PATH = "current/leaders.json";
-
-  // Canon date derived from the path so we don't depend on day.date (Safari issue)
-  const CANON_DATE = (DAY_PATH.match(/(\d{4}-\d{2}-\d{2})/) || [null, "2026-04-08"])[1];
-
-  const $ = (id) => document.getElementById(id);
-
-  function log(line) {
-    const el = $("debug");
-    if (el) el.textContent += line + "\n";
-    console.log(line);
-  }
-
-  function setStatus(text, ok = true) {
-    const t = $("statusText");
-    const s = $("status");
-    if (t) t.textContent = text;
-    if (s) s.className = "status " + (ok ? "ok" : "bad");
-    console.log("STATUS:", text);
-  }
-
-  function safeStr(v) {
-    return (v == null) ? "" : String(v);
-  }
-
-  function slugify(name) {
-    return safeStr(name)
-      .trim()
-      .toLowerCase()
-      .replace(/\s+/g, "-");
-  }
-
-  log("JS started ✅");
-  log("CANON_DATE = " + CANON_DATE);
-
-  async function loadJson(path) {
-    const url = path + "?v=" + Date.now();
-    log("Fetching: " + url);
-    const res = await fetch(url, { cache: "no-store" });
-    log("→ HTTP " + res.status + " " + path);
-    if (!res.ok) throw new Error("Fetch failed (" + res.status + "): " + path);
-    return res.json();
-  }
-
-  function renderScores(day) {
-    if (!day || !day.games) return "<div class='small'>No games.</div>";
-
-    const dayLink = `day.html?date=${encodeURIComponent(CANON_DATE)}`;
-
-    const rows = day.games.map(g => {
-      const awaySlug = g.away_slug || slugify(g.away_team);
-      const homeSlug = g.home_slug || slugify(g.home_team);
-      const gameKey = `${awaySlug}@${homeSlug}`;
-
-      const gameLink =
-        `game.html?date=${encodeURIComponent(CANON_DATE)}&game=${encodeURIComponent(gameKey)}`;
-
-      return `
-        <tr>
-          <td><a href="${gameLink}">${safeStr(g.away_team)}</a></td>
-          <td>${safeStr(g.away_score)}</td>
-          <td>@</td>
-          <td><a href="${gameLink}">${safeStr(g.home_team)}</a></td>
-          <td>${safeStr(g.home_score)}</td>
-        </tr>
-      `;
-    }).join("");
-
-    return `
-      <div class="small">
-        <a href="${dayLink}">${safeStr(day.label)}</a> — ${safeStr(day.status)}
-      </div>
-      <table>
-        <thead><tr><th>Away</th><th></th><th></th><th>Home</th><th></th></tr></thead>
-        <tbody>${rows}</tbody>
-      </table>
-    `;
-  }
-
-  function renderStandings(s) {
-    if (!s || !s.divisions) return "<div class='small'>No standings.</div>";
-
-    return Object.entries(s.divisions).map(([div, teams]) => {
-      const rows = (teams || []).map(t => `
-        <tr>
-          <td>${safeStr(t.team)}</td>
-          <td>${safeStr(t.w)}-${safeStr(t.l)}</td>
-          <td>${safeStr(t.pct)}</td>
-          <td>${safeStr(t.gb)}</td>
-          <td>${safeStr(t.diff)}</td>
-        </tr>
-      `).join("");
-
-      return `
-        <div class="small"><strong>${safeStr(div)}</strong> (as of ${safeStr(s.as_of)})</div>
-        <table>
-          <thead><tr><th>Team</th><th>W-L</th><th>PCT</th><th>GB</th><th>DIFF</th></tr></thead>
-          <tbody>${rows}</tbody>
-        </table>
-      `;
-    }).join("");
-  }
-
-  function renderLeaders(l) {
-    if (!l) return "<div class='small'>No leaders.</div>";
-
-    const sections = [];
-    if (l.batting) sections.push(["Batting", l.batting]);
-    if (l.pitching) sections.push(["Pitching", l.pitching]);
-
-    return `<div class="small">As of ${safeStr(l.as_of)}</div>` + sections.map(([title, cats]) => {
-      const catHtml = Object.entries(cats).map(([cat, arr]) => {
-        const rows = (arr || []).map(x =>
-          `<tr><td>${safeStr(x.player)}</td><td>${safeStr(x.team)}</td><td>${safeStr(x.value)}</td></tr>`
-        ).join("");
-
-        return `
-          <div class="small"><strong>${safeStr(cat)}</strong></div>
-          <table>
-            <thead><tr><th>Player</th><th>Team</th><th>Value</th></tr></thead>
-            <tbody>${rows}</tbody>
-          </table>
-        `;
-      }).join("");
-
-      return `<h3>${safeStr(title)}</h3>${catHtml}`;
-    }).join("");
-  }
-
-  (async function main() {
-    try {
-      setStatus("Loading day file…", true);
-      const day = await loadJson(DAY_PATH);
-      $("scores").innerHTML = renderScores(day);
-
-      setStatus("Loading standings…", true);
-      const standings = await loadJson(STANDINGS_PATH);
-      $("standings").innerHTML = renderStandings(standings);
-
-      setStatus("Loading leaders…", true);
-      const leaders = await loadJson(LEADERS_PATH);
-      $("leaders").innerHTML = renderLeaders(leaders);
-
-      setStatus("Loaded.", true);
-      log("DONE ✅");
-    } catch (err) {
-      setStatus("Load failed.", false);
-      log("ERROR ❌ " + (err && err.message ? err.message : err));
-      if (err && err.stack) log(err.stack);
-    }
-  })();
-</script>
 </body>
 </html>

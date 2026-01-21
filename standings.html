@@ -93,10 +93,12 @@
     font-weight: 600;
     color: var(--meta-grey);
     font-size: 11px;
-    padding: 6px 8px;
+    padding: 6px 6px;
     border-bottom: 1px solid var(--line-grey);
     text-transform: uppercase;
     letter-spacing: 0.2px;
+    white-space: nowrap;
+    vertical-align: bottom;
   }
 
   th.th-left {
@@ -104,8 +106,16 @@
     padding-left: 0;
   }
 
+  th.stack {
+    line-height: 1.1;
+  }
+
+  th.stack span {
+    display: block;
+  }
+
   td {
-    padding: 10px 8px;
+    padding: 10px 6px;
     text-align: right;
     border-bottom: 1px solid #f0f0f0;
     color: #111;
@@ -156,9 +166,12 @@
         <th>L</th>
         <th>PCT</th>
         <th>GB</th>
-        <th class="col-secondary">RF</th>
-        <th class="col-secondary">RA</th>
-        <th class="col-secondary">DIFF</th>
+        <th class="col-secondary">Runs</th>
+        <th class="col-secondary stack">
+          <span>Runs</span>
+          <span>Allowed</span>
+        </th>
+        <th class="col-secondary">Diff</th>
       </tr>
     </thead>
     <tbody>
@@ -214,9 +227,12 @@
         <th>L</th>
         <th>PCT</th>
         <th>GB</th>
-        <th class="col-secondary">RF</th>
-        <th class="col-secondary">RA</th>
-        <th class="col-secondary">DIFF</th>
+        <th class="col-secondary">Runs</th>
+        <th class="col-secondary stack">
+          <span>Runs</span>
+          <span>Allowed</span>
+        </th>
+        <th class="col-secondary">Diff</th>
       </tr>
     </thead>
     <tbody>

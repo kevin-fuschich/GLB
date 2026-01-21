@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GLB Record: San Pedro Cocolos</title>
+<style>
+    :root {
+        --field-white: #ffffff;
+        --ink-navy: #002244;
+        --meta-grey: #555555;
+        --line-grey: #e0e0e0;
+        --font-serif: "Georgia", "Times New Roman", serif;
+        --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+
+    body {
+        background-color: #f4f4f4;
+        font-family: var(--font-sans);
+        color: var(--ink-navy);
+        display: flex;
+        justify-content: center;
+        padding: 50px 20px;
+        margin: 0;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    .dossier-sheet {
+        background-color: var(--field-white);
+        width: 100%;
+        max-width: 580px;
+        padding: 40px;
+        box-shadow: 0 2px 15px rgba(0,0,0,0.06);
+        border-top: 5px solid var(--ink-navy);
+    }
+
+    /* HEADER */
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 30px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid var(--ink-navy);
+    }
+
+    .header-text {
+        font-family: var(--font-serif);
+        color: var(--ink-navy);
+    }
+
+    h1 {
+        font-size: 20px;
+        font-weight: bold;
+        margin: 0 0 6px 0;
+        letter-spacing: -0.2px;
+    }
+
+    .team-meta {
+        font-size: 14px;
+        font-style: italic;
+        color: var(--meta-grey);
+    }
+
+    .stamp-logo {
+        width: 60px;
+        height: auto;
+        opacity: 0.9;
+    }
+
+    /* SECTION HEADERS */
+    h2 {
+        font-family: var(--font-serif);
+        font-size: 14px;
+        font-weight: bold;
+        color: var(--ink-navy);
+        text-transform: uppercase;
+        border-bottom: 1px solid var(--line-grey);
+        margin-top: 35px;
+        margin-bottom: 15px;
+        padding-bottom: 5px;
+        letter-spacing: 0.5px;
+    }
+
+    /* TABLES */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 13px;
+        table-layout: fixed;
+    }
+
+    th {
+        text-align: left;
+        font-weight: 600;
+        color: var(--meta-grey);
+        font-size: 10px;
+        padding: 4px 8px;
+        border-bottom: 1px solid var(--ink-navy);
+        text-transform: uppercase;
+        letter-spacing: 0.2px;
+    }
+
+    td {
+        padding: 8px 8px;
+        border-bottom: 1px solid #f0f0f0;
+        vertical-align: middle;
+        color: #111;
+    }
+
+    /* SNAPSHOT TABLE SPECIFICS */
+    .snapshot-table th { 
+        border-bottom: 1px solid var(--line-grey); 
+        text-transform: none; 
+        font-size: 11px;
+        letter-spacing: 0; /* Zeroed out to remove "header" vibe */
+    }
+    
+    .snapshot-table td { 
+        font-family: var(--font-sans); 
+        font-weight: 500; 
+        font-size: 14px; 
+    }
+    
+    /* ROSTER COLUMNS */
+    .col-player { width: 50%; }
+    .col-pos { width: 15%; }
+    .col-bt { width: 20%; text-align: center; }
+    .col-age { width: 15%; text-align: right; }
+    .align-center { text-align: center; }
+    .align-right { text-align: right; }
+
+    /* RECENT GAMES COLUMNS */
+    .col-date { width: 30%; }
+    .col-opp { width: 35%; }
+    .col-result { width: 20%; }
+    .col-link { width: 15%; text-align: right; }
+
+    /* TEAM NOTES LIST */
+    .notes-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        font-size: 12px;
+    }
+
+    .notes-list li {
+        margin-bottom: 6px;
+        display: flex;
+    }
+
+    .note-label {
+        width: 120px;
+        font-weight: 600;
+        color: var(--meta-grey);
+        text-transform: uppercase;
+        font-size: 10px;
+        letter-spacing: 0.5px;
+        padding-top: 1px;
+    }
+
+    .note-value {
+        color: #111;
+    }
+
+    /* LINKS */
+    a.box-link {
+        color: var(--ink-navy);
+        text-decoration: none;
+        font-size: 11px;
+        opacity: 0.7;
+        border-bottom: 1px solid transparent;
+    }
+    
+    a.box-link:hover {
+        opacity: 1;
+        border-bottom: 1px solid var(--ink-navy);
+    }
+
+    /* FOOTER */
+    footer {
+        margin-top: 50px;
+        border-top: 1px solid var(--line-grey);
+        padding-top: 15px;
+        font-size: 10px;
+        color: var(--meta-grey);
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+</style>
+</head>
+<body>
+
+<div class="dossier-sheet">
+    
+    <header>
+        <div class="header-text">
+            <h1>San Pedro Cocolos</h1>
+            <div class="team-meta">San Pedro de Macorís &mdash; Pacific Division</div>
+        </div>
+        <img src="GLB_white.png" alt="GLB Seal" class="stamp-logo">
+    </header>
+
+    <div class="section-snapshot">
+        <table class="snapshot-table">
+            <thead>
+                <tr>
+                    <th>Record</th>
+                    <th>Runs</th>
+                    <th>Allowed</th>
+                    <th>Diff</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1–0</td>
+                    <td>7</td>
+                    <td>1</td>
+                    <td>+6</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h2>Active Roster</h2>
+    <table>
+        <thead>
+            <tr>
+                <th class="col-player">Player</th>
+                <th class="col-pos">Pos</th>
+                <th class="col-bt align-center">B/T</th>
+                <th class="col-age align-right">Age</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>G. Sanchez</td>
+                <td>C</td>
+                <td class="align-center">R/R</td>
+                <td class="align-right">28</td>
+            </tr>
+            <tr>
+                <td>C. Santana</td>
+                <td>1B</td>
+                <td class="align-center">S/R</td>
+                <td class="align-right">30</td>
+            </tr>
+            <tr>
+                <td>L. Arraez</td>
+                <td>2B</td>
+                <td class="align-center">L/R</td>
+                <td class="align-right">27</td>
+            </tr>
+            <tr>
+                <td>M. Machado</td>
+                <td>3B</td>
+                <td class="align-center">R/R</td>
+                <td class="align-right">31</td>
+            </tr>
+            <tr>
+                <td>E. Nuñez</td>
+                <td>SS</td>
+                <td class="align-center">R/R</td>
+                <td class="align-right">24</td>
+            </tr>
+            <tr>
+                <td>Y. Despaigne</td>
+                <td>LF</td>
+                <td class="align-center">R/R</td>
+                <td class="align-right">32</td>
+            </tr>
+            <tr>
+                <td>J. Bautista</td>
+                <td>CF</td>
+                <td class="align-center">R/R</td>
+                <td class="align-right">29</td>
+            </tr>
+            <tr>
+                <td>F. Tatis</td>
+                <td>RF</td>
+                <td class="align-center">R/R</td>
+                <td class="align-right">25</td>
+            </tr>
+            <tr>
+                <td>R. Devers</td>
+                <td>DH</td>
+                <td class="align-center">L/R</td>
+                <td class="align-right">27</td>
+            </tr>
+            <tr>
+                <td>L. Severino</td>
+                <td>P</td>
+                <td class="align-center">R/R</td>
+                <td class="align-right">29</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Recent Games</h2>
+    <table>
+        <thead>
+            <tr>
+                <th class="col-date">Date</th>
+                <th class="col-opp">Opponent</th>
+                <th class="col-result">Result</th>
+                <th class="col-link">Box</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Apr 8</td>
+                <td>Monterrey</td>
+                <td>W 7–1</td>
+                <td class="col-link"><a href="boxscore.html" class="box-link">Box</a></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Club Notes</h2>
+    <ul class="notes-list">
+        <li>
+            <span class="note-label">Home Venue</span>
+            <span class="note-value">Estadio Tetelo Vargas</span>
+        </li>
+        <li>
+            <span class="note-label">Manager</span>
+            <span class="note-value">Fernando Tatis Sr.</span>
+        </li>
+        <li>
+            <span class="note-label">Established</span>
+            <span class="note-value">2024 (Charter Member)</span>
+        </li>
+    </ul>
+
+    <footer>
+        Records current through most recent official scoring. <br>
+        Roster data subject to change.
+    </footer>
+
+</div>
+
+</body>
+</html>

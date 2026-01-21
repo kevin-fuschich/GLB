@@ -1,107 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GLB Box Score: MTY vs SPD</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Official Box Score — Monterrey at San Pedro — June 4, 2026</title>
 <style>
-    :root {
-        --field-white: #ffffff;
-        --ink-navy: #002244;
-        --meta-grey: #444444; /* Darkened slightly for legibility */
-        --line-grey: #d0d0d0;
-        --font-serif: "Georgia", "Times New Roman", serif;
-        --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    }
+  :root {
+    --field-white: #ffffff;
+    --ink-navy: #002244;
+    --meta-grey: #444444;
+    --line-grey: #d0d0d0;
+    --font-serif: "Georgia", "Times New Roman", serif;
+    --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
 
-    body {
-        background-color: #f4f4f4;
-        font-family: var(--font-sans);
-        color: var(--ink-navy);
-        display: flex;
-        justify-content: center;
-        padding: 50px 20px;
-        margin: 0;
-        -webkit-font-smoothing: antialiased;
-    }
+  body {
+    background-color: #f4f4f4;
+    font-family: var(--font-sans);
+    color: var(--ink-navy);
+    display: flex;
+    justify-content: center;
+    padding: 50px 20px;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+  }
 
-    .box-sheet {
-        background-color: var(--field-white);
-        width: 100%;
-        max-width: 580px;
-        padding: 40px;
-        box-shadow: 0 2px 15px rgba(0,0,0,0.06);
-        border-top: 5px solid var(--ink-navy); /* The only "brand" heavy element */
-    }
+  .box-sheet {
+    background-color: var(--field-white);
+    width: 100%;
+    max-width: 580px;
+    padding: 40px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.06);
+    border-top: 5px solid var(--ink-navy);
+  }
 
-    /* ARCHIVAL HEADER - The "Filing Cabinet" Look */
-    header {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        margin-bottom: 35px;
-        border-bottom: 1px solid var(--ink-navy);
-        padding-bottom: 20px;
-    }
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 35px;
+    border-bottom: 1px solid var(--ink-navy);
+    padding-bottom: 20px;
+  }
 
-    .meta-block {
-        font-family: var(--font-serif);
-        font-size: 14px;
-        line-height: 1.6;
-        color: var(--ink-navy);
-    }
-    
-    .meta-label { font-weight: bold; color: #000; }
-    .meta-detail { color: #333; }
+  .meta-block {
+    font-family: var(--font-serif);
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--ink-navy);
+  }
 
-    .stamp-logo {
-        width: 60px; /* Small, unobtrusive */
-        height: auto;
-        opacity: 0.9;
-        mix-blend-mode: multiply; /* Blends into paper like ink */
-    }
+  .meta-label { font-weight: 700; color: var(--ink-navy); }
+  .meta-detail { color: var(--meta-grey); }
 
-    /* LINESCORE */
-    .linescore-container {
-        margin-bottom: 30px;
-        padding-bottom: 15px;
-        border-bottom: 1px solid var(--line-grey);
-    }
+  .stamp-logo {
+    width: 60px;
+    height: auto;
+    opacity: 0.95;
+  }
 
-    .linescore-table {
-        width: 100%;
-        border-collapse: collapse;
-        font-family: var(--font-serif);
-        font-size: 13px;
-    }
+  .linescore-container {
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--line-grey);
+  }
 
-    .linescore-table th, .linescore-table td {
-        padding: 5px;
-        text-align: center;
-    }
+  .linescore-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: var(--font-serif);
+    font-size: 13px;
+  }
 
-    .linescore-table .team-col {
-        text-align: left;
-        font-weight: 700;
-        width: 140px;
-        font-size: 14px;
-    }
+  .linescore-table th,
+  .linescore-table td {
+    padding: 5px;
+    text-align: center;
+  }
 
-    .linescore-table .summary-col {
-        font-weight: 700;
-        background-color: #f8f8f8;
-        border-left: 1px solid #ddd;
-    }
-    
-    .ls-header {
-        font-size: 10px;
-        color: #666;
-        border-bottom: 1px solid #ccc;
-    }
+  .linescore-table .team-col {
+    text-align: left;
+    font-weight: 700;
+    width: 140px;
+    font-size: 14px;
+  }
 
-    /* STAT BLOCKS */
-    .stat-header {
-        .stat-header {
+  .linescore-table .summary-col {
+    font-weight: 700;
+    background-color: #f8f8f8;
+    border-left: 1px solid #ddd;
+  }
+
+  .ls-header {
+    font-size: 10px;
+    color: #666;
+    border-bottom: 1px solid #ccc;
+  }
+
+  /* Section label for stat blocks (archival / printed feel) */
+  .stat-header {
     background: transparent;
     color: var(--ink-navy);
     padding: 8px 0 6px 0;
@@ -116,161 +113,198 @@
     border-top: 1px solid #000;
     border-bottom: 1px solid #000;
     font-family: var(--font-serif);
-}
+  }
 
-    .stat-table {
-        width: 100%;
-        border-collapse: collapse;
-        font-size: 11px;
-        margin-bottom: 10px;
-    }
+  .stat-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 11px;
+    margin-bottom: 10px;
+  }
 
-    .stat-table th {
-        text-align: right;
-        padding: 6px 4px;
-        color: #666;
-        border-bottom: 1px solid #000;
-        font-weight: 600;
-    }
-    
-    .stat-table th.th-name { text-align: left; padding-left: 0; }
+  .stat-table th {
+    text-align: right;
+    padding: 6px 4px;
+    color: #666;
+    border-bottom: 1px solid #000;
+    font-weight: 600;
+  }
 
-    .stat-table td {
-        text-align: right;
-        padding: 5px 4px;
-        border-bottom: 1px solid #eee;
-    }
+  .stat-table th.th-name {
+    text-align: left;
+    padding-left: 0;
+  }
 
-    .stat-table td.player-name {
-        text-align: left;
-        font-weight: 500;
-        padding-left: 0;
-        color: #000;
-    }
+  .stat-table td {
+    text-align: right;
+    padding: 5px 4px;
+    border-bottom: 1px solid #eee;
+  }
 
-    .stat-table td.sub-player {
-        padding-left: 15px;
-        font-style: italic;
-        color: #555;
-    }
-    
-    .totals-row td {
-        border-top: 1px solid #000;
-        font-weight: 700;
-        background-color: #fafafa;
-    }
+  .stat-table td.player-name {
+    text-align: left;
+    font-weight: 500;
+    padding-left: 0;
+    color: #000;
+  }
 
-    /* FOOTER NOTES */
-    .game-notes {
-        margin-top: 30px;
-        border-top: 1px solid #000;
-        padding-top: 10px;
-        font-size: 10px;
-        line-height: 1.4;
-        color: #222;
-        font-family: var(--font-sans);
-    }
+  .stat-table td.sub-player {
+    padding-left: 15px;
+    font-style: italic;
+    color: #555;
+  }
 
-    .note-label { font-weight: 700; text-transform: uppercase; font-size: 9px; letter-spacing: 0.5px; }
+  .totals-row td {
+    border-top: 1px solid #000;
+    font-weight: 700;
+    background-color: #fafafa;
+  }
 
+  .game-notes {
+    margin-top: 30px;
+    border-top: 1px solid #000;
+    padding-top: 10px;
+    font-size: 10px;
+    line-height: 1.4;
+    color: #222;
+    font-family: var(--font-sans);
+  }
+
+  .note-label {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 9px;
+    letter-spacing: 0.5px;
+  }
+
+  /* Accessible captions (invisible) */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
 </style>
 </head>
 <body>
 
 <div class="box-sheet">
-    <header>
-        <div class="meta-block">
-            <div class="meta-label">Official Box Score &mdash; Opening Day</div>
-            <div class="meta-detail">Monterrey Cementeros at San Pedro Cocolos</div>
-            <div class="meta-detail">Final &mdash; 7–1</div>
-        </div>
-        <img src="GLB_white.png" alt="GLB Seal" class="stamp-logo">
-    </header>
-
-    <div class="linescore-container">
-        <table class="linescore-table">
-            <tr class="ls-header">
-                <th class="team-col"></th>
-                <th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th>
-                <th class="summary-col">R</th><th class="summary-col">H</th><th class="summary-col">E</th>
-            </tr>
-            <tr>
-                <td class="team-col">Monterrey</td>
-                <td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
-                <td class="summary-col">1</td><td class="summary-col">4</td><td class="summary-col">1</td>
-            </tr>
-            <tr>
-                <td class="team-col">San Pedro</td>
-                <td>2</td><td>0</td><td>1</td><td>0</td><td>3</td><td>0</td><td>1</td><td>0</td><td>X</td>
-                <td class="summary-col">7</td><td class="summary-col">11</td><td class="summary-col">0</td>
-            </tr>
-        </table>
+  <header>
+    <div class="meta-block">
+      <div class="meta-label">Official Box Score</div>
+      <div class="meta-detail">Monterrey Cementeros at San Pedro Cocolos</div>
+      <div class="meta-detail">June 4, 2026</div>
+      <div class="meta-detail">Final &mdash; 7&ndash;1</div>
     </div>
+    <img src="GLB_white.png" alt="GLB Seal" class="stamp-logo" />
+  </header>
 
-    <div class="stat-header">
-        <span>Monterrey Cementeros</span>
-        <span>(0-1)</span>
-    </div>
-    <table class="stat-table">
-        <thead>
-            <tr>
-                <th class="th-name">Batters</th>
-                <th>AB</th><th>R</th><th>H</th><th>RBI</th><th>BB</th><th>SO</th><th>AVG</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr><td class="player-name">R. Salazar, CF</td><td>4</td><td>0</td><td>0</td><td>0</td><td>0</td><td>2</td><td>.000</td></tr>
-            <tr><td class="player-name">J. Mendez, SS</td><td>4</td><td>0</td><td>1</td><td>0</td><td>0</td><td>1</td><td>.250</td></tr>
-            <tr><td class="player-name">L. Castillo, 1B</td><td>3</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>.333</td></tr>
-            <tr><td class="player-name">D. Ortiz, RF</td><td>4</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>.000</td></tr>
-            <tr><td class="player-name">M. Vargas, DH</td><td>3</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>.333</td></tr>
-            <tr><td class="player-name">K. Tanaka, LF</td><td>3</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>.000</td></tr>
-            <tr><td class="player-name">P. Guzman, 3B</td><td>3</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>.333</td></tr>
-            <tr><td class="player-name">A. Vega, C</td><td>3</td><td>0</td><td>0</td><td>0</td><td>0</td><td>2</td><td>.000</td></tr>
-            <tr><td class="player-name">S. Rios, 2B</td><td>3</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>.000</td></tr>
-            <tr class="totals-row">
-                <td class="player-name">Totals</td>
-                <td>30</td><td>1</td><td>4</td><td>1</td><td>1</td><td>8</td><td>.133</td>
-            </tr>
-        </tbody>
+  <div class="linescore-container">
+    <table class="linescore-table">
+      <caption class="sr-only">Line score — Monterrey at San Pedro</caption>
+      <tr class="ls-header">
+        <th class="team-col" scope="col"></th>
+        <th scope="col">1</th><th scope="col">2</th><th scope="col">3</th><th scope="col">4</th><th scope="col">5</th><th scope="col">6</th><th scope="col">7</th><th scope="col">8</th><th scope="col">9</th>
+        <th class="summary-col" scope="col">R</th><th class="summary-col" scope="col">H</th><th class="summary-col" scope="col">E</th>
+      </tr>
+      <tr>
+        <th class="team-col" scope="row">Monterrey</th>
+        <td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+        <td class="summary-col">1</td><td class="summary-col">4</td><td class="summary-col">1</td>
+      </tr>
+      <tr>
+        <th class="team-col" scope="row">San Pedro</th>
+        <td>2</td><td>0</td><td>1</td><td>0</td><td>3</td><td>0</td><td>1</td><td>0</td><td>X</td>
+        <td class="summary-col">7</td><td class="summary-col">11</td><td class="summary-col">0</td>
+      </tr>
     </table>
+  </div>
 
-    <div class="stat-header">
-        <span>San Pedro Cocolos</span>
-        <span>(1-0)</span>
+  <div class="stat-header">
+    <span>Monterrey Cementeros</span>
+    <span>(0-1)</span>
+  </div>
+  <table class="stat-table">
+    <caption class="sr-only">Batting — Monterrey Cementeros</caption>
+    <thead>
+      <tr>
+        <th class="th-name" scope="col">Batters</th>
+        <th scope="col">AB</th><th scope="col">R</th><th scope="col">H</th><th scope="col">RBI</th><th scope="col">BB</th><th scope="col">SO</th><th scope="col">AVG</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td class="player-name">R. Salazar, CF</td><td>4</td><td>0</td><td>0</td><td>0</td><td>0</td><td>2</td><td>.000</td></tr>
+      <tr><td class="player-name">J. Mendez, SS</td><td>4</td><td>0</td><td>1</td><td>0</td><td>0</td><td>1</td><td>.250</td></tr>
+      <tr><td class="player-name">L. Castillo, 1B</td><td>3</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>.333</td></tr>
+      <tr><td class="player-name">D. Ortiz, RF</td><td>4</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>.000</td></tr>
+      <tr><td class="player-name">M. Vargas, DH</td><td>3</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>.333</td></tr>
+      <tr><td class="player-name">K. Tanaka, LF</td><td>3</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>.000</td></tr>
+      <tr><td class="player-name">P. Guzman, 3B</td><td>3</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>.333</td></tr>
+      <tr><td class="player-name">A. Vega, C</td><td>3</td><td>0</td><td>0</td><td>0</td><td>0</td><td>2</td><td>.000</td></tr>
+      <tr><td class="player-name">S. Rios, 2B</td><td>3</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>.000</td></tr>
+      <tr class="totals-row">
+        <td class="player-name">Totals</td>
+        <td>30</td><td>1</td><td>4</td><td>1</td><td>1</td><td>8</td><td>.133</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="stat-header">
+    <span>San Pedro Cocolos</span>
+    <span>(1-0)</span>
+  </div>
+  <table class="stat-table">
+    <caption class="sr-only">Batting — San Pedro Cocolos</caption>
+    <thead>
+      <tr>
+        <th class="th-name" scope="col">Batters</th>
+        <th scope="col">AB</th><th scope="col">R</th><th scope="col">H</th><th scope="col">RBI</th><th scope="col">BB</th><th scope="col">SO</th><th scope="col">AVG</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td class="player-name">E. Nuñez, SS</td><td>5</td><td>1</td><td>2</td><td>0</td><td>0</td><td>0</td><td>.400</td></tr>
+      <tr><td class="player-name">Y. Despaigne, LF</td><td>4</td><td>2</td><td>2</td><td>1</td><td>1</td><td>1</td><td>.500</td></tr>
+      <tr><td class="player-name">J. Bautista, CF</td><td>4</td><td>1</td><td>3</td><td>3</td><td>0</td><td>0</td><td>.750</td></tr>
+      <tr><td class="player-name">R. Devers, DH</td><td>3</td><td>1</td><td>1</td><td>2</td><td>1</td><td>1</td><td>.333</td></tr>
+      <tr><td class="player-name">C. Santana, 1B</td><td>4</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>.250</td></tr>
+      <tr><td class="player-name">F. Tatis, RF</td><td>4</td><td>1</td><td>1</td><td>0</td><td>0</td><td>2</td><td>.250</td></tr>
+      <tr><td class="player-name">M. Machado, 3B</td><td>4</td><td>1</td><td>1</td><td>1</td><td>0</td><td>0</td><td>.250</td></tr>
+      <tr><td class="player-name">G. Sanchez, C</td><td>3</td><td>0</td><td>0</td><td>0</td><td>1</td><td>1</td><td>.000</td></tr>
+      <tr><td class="player-name">L. Arraez, 2B</td><td>4</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>.000</td></tr>
+      <tr class="totals-row">
+        <td class="player-name">Totals</td>
+        <td>35</td><td>7</td><td>11</td><td>7</td><td>3</td><td>5</td><td>.314</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="game-notes">
+    <div>
+      <span class="note-label">BATTING &bull;</span>
+      <strong>2B:</strong> Nuñez (1), Bautista (1).
+      <strong>HR:</strong> Devers (1, 5th inning off Garcia, 1 on), Machado (1).
+      <strong>TB:</strong> Bautista 4, Devers 4, Nuñez 3.
+      <strong>RBI:</strong> Bautista 3, Devers 2, Machado 1, Despaigne 1.
     </div>
-    <table class="stat-table">
-        <thead>
-            <tr>
-                <th class="th-name">Batters</th>
-                <th>AB</th><th>R</th><th>H</th><th>RBI</th><th>BB</th><th>SO</th><th>AVG</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr><td class="player-name">E. Nuñez, SS</td><td>5</td><td>1</td><td>2</td><td>0</td><td>0</td><td>0</td><td>.400</td></tr>
-            <tr><td class="player-name">Y. Despaigne, LF</td><td>4</td><td>2</td><td>2</td><td>1</td><td>1</td><td>1</td><td>.500</td></tr>
-            <tr><td class="player-name">J. Bautista, CF</td><td>4</td><td>1</td><td>3</td><td>3</td><td>0</td><td>0</td><td>.750</td></tr>
-            <tr><td class="player-name">R. Devers, DH</td><td>3</td><td>1</td><td>1</td><td>2</td><td>1</td><td>1</td><td>.333</td></tr>
-            <tr><td class="player-name">C. Santana, 1B</td><td>4</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>.250</td></tr>
-            <tr><td class="player-name">F. Tatis, RF</td><td>4</td><td>1</td><td>1</td><td>0</td><td>0</td><td>2</td><td>.250</td></tr>
-            <tr><td class="player-name">M. Machado, 3B</td><td>4</td><td>1</td><td>1</td><td>1</td><td>0</td><td>0</td><td>.250</td></tr>
-            <tr><td class="player-name">G. Sanchez, C</td><td>3</td><td>0</td><td>0</td><td>0</td><td>1</td><td>1</td><td>.000</td></tr>
-            <tr><td class="player-name">L. Arraez, 2B</td><td>4</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>.000</td></tr>
-            <tr class="totals-row">
-                <td class="player-name">Totals</td>
-                <td>35</td><td>7</td><td>11</td><td>7</td><td>3</td><td>5</td><td>.314</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <div class="game-notes">
-        <div><span class="note-label">BATTING &bull;</span> <strong>2B:</strong> Nuñez (1), Bautista (1). <strong>HR:</strong> Devers (1, 5th inning off Garcia, 1 on), Machado (1). <strong>TB:</strong> Bautista 4, Devers 4, Nuñez 3. <strong>RBI:</strong> Bautista 3, Devers 2, Machado 1, Despaigne 1.</div>
-        <br>
-        <div><span class="note-label">PITCHING &bull;</span> <strong>W:</strong> L. Severino (1-0). <strong>L:</strong> M. Stroman (0-1).</div>
-        <br>
-        <div><span class="note-label">DETAILS &bull;</span> <strong>Time:</strong> 2:44. <strong>Att:</strong> 31,250. <strong>Umpires:</strong> HP: Diaz, 1B: Miller, 2B: Park, 3B: Washington.</div>
+    <br />
+    <div>
+      <span class="note-label">PITCHING &bull;</span>
+      <strong>W:</strong> L. Severino (1-0).
+      <strong>L:</strong> M. Stroman (0-1).
     </div>
-
+    <br />
+    <div>
+      <span class="note-label">DETAILS &bull;</span>
+      <strong>Time:</strong> 2:44.
+      <strong>Att:</strong> 31,250.
+      <strong>Umpires:</strong> HP: Diaz, 1B: Miller, 2B: Park, 3B: Washington.
+    </div>
+  </div>
 </div>
 
 </body>

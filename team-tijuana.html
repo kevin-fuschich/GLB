@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GLB Records</title>
+<style>
+    :root {
+        --field-white: #ffffff;
+        --ink-navy: #002244;
+        --meta-grey: #555555;
+        --line-grey: #e0e0e0;
+        --font-serif: "Georgia", "Times New Roman", serif;
+        --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+
+    body {
+        background-color: #f4f4f4;
+        font-family: var(--font-sans);
+        color: var(--ink-navy);
+        display: flex;
+        justify-content: center;
+        padding: 60px 20px;
+        margin: 0;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    .index-sheet {
+        background-color: var(--field-white);
+        width: 100%;
+        max-width: 620px;
+        padding: 40px;
+        box-shadow: 0 2px 15px rgba(0,0,0,0.06);
+        border-top: 5px solid var(--ink-navy);
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 30px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid var(--ink-navy);
+    }
+
+    .meta-block {
+        font-family: var(--font-serif);
+    }
+
+    .page-title {
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 6px;
+    }
+
+    .meta-detail {
+        font-size: 13px;
+        font-style: italic;
+        color: var(--meta-grey);
+    }
+
+    .stamp-logo {
+        width: 60px;
+        height: auto;
+        opacity: 0.9;
+    }
+
+    h2 {
+        font-family: var(--font-serif);
+        font-size: 13px;
+        text-transform: uppercase;
+        border-bottom: 1px solid var(--line-grey);
+        margin: 30px 0 10px;
+        padding-bottom: 5px;
+        letter-spacing: 0.5px;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        font-size: 13px;
+    }
+
+    li {
+        display: flex;
+        justify-content: space-between;
+        padding: 8px 0;
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+    li:last-child {
+        border-bottom: none;
+    }
+
+    a {
+        color: var(--ink-navy);
+        text-decoration: none;
+        border-bottom: 1px solid transparent;
+    }
+
+    a:hover {
+        border-bottom: 1px solid var(--ink-navy);
+    }
+
+    .meta {
+        color: var(--meta-grey);
+        font-size: 11px;
+        font-style: italic;
+    }
+
+    footer {
+        margin-top: 45px;
+        border-top: 1px solid var(--line-grey);
+        padding-top: 15px;
+        font-size: 10px;
+        color: var(--meta-grey);
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+</style>
+</head>
+<body>
+
+<div class="index-sheet">
+
+<header>
+    <div class="meta-block">
+        <div class="page-title">GLB Records</div>
+        <div class="meta-detail">Official league record index</div>
+    </div>
+    <img src="GLB_white.png" alt="GLB Seal" class="stamp-logo">
+</header>
+
+<h2>Team Records — Pacific Division</h2>
+<ul>
+    <li><a href="team-san-pedro.html">San Pedro Cocolos</a><span class="meta">Pacific Division</span></li>
+    <li><a href="team-monterrey.html">Monterrey Cementeros</a><span class="meta">Pacific Division</span></li>
+    <li><a href="team-taipei.html">Taipei Neon</a><span class="meta">Pacific Division</span></li>
+    <li><a href="team-osaka.html">Osaka Spirits</a><span class="meta">Pacific Division</span></li>
+    <li><a href="team-tijuana.html">Tijuana Tecnicos</a><span class="meta">Pacific Division</span></li>
+    <li><a href="team-santiago.html">Santiago Caballeros</a><span class="meta">Pacific Division</span></li>
+    <li><a href="team-mayaguez.html">Mayaguez Sultans</a><span class="meta">Pacific Division</span></li>
+    <li><a href="team-vancouver.html">Vancouver Current</a><span class="meta">Pacific Division</span></li>
+</ul>
+
+<h2>League Records</h2>
+<ul>
+    <li><a href="standings.html">Standings — Week 1</a><span class="meta">Official</span></li>
+    <li><a href="schedule.html">Schedule — Week 1</a><span class="meta">Official</span></li>
+</ul>
+
+<h2>System</h2>
+<ul>
+    <li><a href="SYSTEM.html">SYSTEM</a><span class="meta">Active</span></li>
+</ul>
+
+<footer>
+    GLB RECORD INDEX — ACTIVE
+</footer>
+
+</div>
+
+</body>
+</html>

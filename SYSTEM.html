@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GLB SYSTEM</title>
+<style>
+    :root {
+        --field-white: #ffffff;
+        --ink-navy: #002244;
+        --meta-grey: #555555;
+        --line-grey: #e0e0e0;
+        --font-serif: "Georgia", "Times New Roman", serif;
+        --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+
+    body {
+        background-color: #f4f4f4;
+        font-family: var(--font-sans);
+        color: var(--ink-navy);
+        display: flex;
+        justify-content: center;
+        padding: 60px 20px;
+        margin: 0;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    .record-sheet {
+        background-color: var(--field-white);
+        width: 100%;
+        max-width: 620px;
+        padding: 40px;
+        box-shadow: 0 2px 15px rgba(0,0,0,0.06);
+        border-top: 5px solid var(--ink-navy);
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        border-bottom: 1px solid var(--ink-navy);
+        padding-bottom: 20px;
+        margin-bottom: 25px;
+    }
+
+    .meta-block {
+        font-family: var(--font-serif);
+        color: var(--ink-navy);
+        line-height: 1.35;
+    }
+
+    .page-title {
+        font-size: 20px;
+        font-weight: bold;
+        margin: 0 0 6px 0;
+        letter-spacing: 0.5px;
+    }
+
+    .meta-detail {
+        font-size: 13px;
+        color: var(--meta-grey);
+        font-style: italic;
+    }
+
+    .stamp-logo {
+        width: 60px;
+        height: auto;
+        opacity: 0.9;
+    }
+
+    h2 {
+        font-family: var(--font-serif);
+        font-size: 13px;
+        font-weight: bold;
+        margin: 30px 0 12px 0;
+        padding-bottom: 6px;
+        border-bottom: 1px solid var(--line-grey);
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        color: var(--ink-navy);
+    }
+
+    .section:first-of-type h2 {
+        margin-top: 0;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        font-size: 13px;
+        color: #111;
+    }
+
+    li {
+        display: flex;
+        gap: 14px;
+        padding: 8px 0;
+        border-bottom: 1px solid #f0f0f0;
+        align-items: flex-start;
+    }
+
+    li:last-child {
+        border-bottom: none;
+    }
+
+    .tag {
+        width: 105px;
+        flex: 0 0 105px;
+        font-size: 10px;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        color: var(--meta-grey);
+        font-weight: 600;
+        padding-top: 2px;
+    }
+
+    .text {
+        flex: 1;
+        color: #111;
+        line-height: 1.35;
+    }
+
+    .mono {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+        font-size: 11px;
+        color: #222;
+        word-break: break-word;
+    }
+
+    .note {
+        font-size: 12px;
+        color: var(--meta-grey);
+        line-height: 1.45;
+        margin-top: 10px;
+    }
+
+    footer {
+        margin-top: 45px;
+        border-top: 1px solid var(--line-grey);
+        padding-top: 15px;
+        font-size: 10px;
+        color: var(--meta-grey);
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    a {
+        color: var(--ink-navy);
+        text-decoration: none;
+        border-bottom: 1px solid transparent;
+    }
+
+    a:hover {
+        border-bottom: 1px solid var(--ink-navy);
+    }
+</style>
+</head>
+<body>
+
+<div class="record-sheet">
+
+    <header>
+        <div class="meta-block">
+            <div class="page-title">SYSTEM</div>
+            <div class="meta-detail">League operating record</div>
+        </div>
+        <img src="GLB_white.png" alt="GLB Seal" class="stamp-logo">
+    </header>
+
+    <div class="section">
+        <h2>Scope</h2>
+        <ul>
+            <li><div class="tag">Purpose</div><div class="text">Define the publishing standards for GLB records.</div></li>
+            <li><div class="tag">Audience</div><div class="text">Internal use. Public visibility is incidental.</div></li>
+            <li><div class="tag">Tone</div><div class="text">No explanations. No marketing. No winks.</div></li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>File Types</h2>
+        <ul>
+            <li><div class="tag">League Record</div><div class="text">Standings, schedule, box scores, and system notices.</div></li>
+            <li><div class="tag">Team Record</div><div class="text">A team’s official record page (facts only).</div></li>
+            <li><div class="tag">Club File</div><div class="text">Identity material. Traditions. Artifacts. Separate from records. <span class="mono">(forthcoming)</span></div></li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Naming Standard</h2>
+        <ul>
+            <li>
+                <div class="tag">Index</div>
+                <div class="text"><span class="mono">index.html</span> — silent directory of published records.</div>
+            </li>
+            <li>
+                <div class="tag">Box Score</div>
+                <div class="text"><span class="mono">boxscore.html</span> or <span class="mono">boxscore_YYYY-MM-DD_TEAM_TEAM.html</span> (optional later).</div>
+            </li>
+            <li>
+                <div class="tag">Standings</div>
+                <div class="text"><span class="mono">standings.html</span> — one file per week unless otherwise stated.</div>
+            </li>
+            <li>
+                <div class="tag">Schedule</div>
+                <div class="text"><span class="mono">schedule.html</span> — one file per week unless otherwise stated.</div>
+            </li>
+            <li>
+                <div class="tag">Team Record</div>
+                <div class="text"><span class="mono">team-TEAMSLUG.html</span> (example: <span class="mono">team-san-pedro.html</span>).</div>
+            </li>
+            <li>
+                <div class="tag">Club File</div>
+                <div class="text"><span class="mono">clubs/TEAMSLUG.html</span> (reserved). Not required for launch.</div>
+            </li>
+        </ul>
+        <div class="note">
+            Team slugs are lowercase, hyphenated, no accents. Keep them stable once published.
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Visual Standard</h2>
+        <ul>
+            <li><div class="tag">Typography</div><div class="text">Georgia for headings / summaries. Helvetica for dense tables.</div></li>
+            <li><div class="tag">Color</div><div class="text">One ink: navy. Greys for metadata. No secondary palette.</div></li>
+            <li><div class="tag">Layout</div><div class="text">Whitespace and alignment over decoration. Records must read cleanly on one screen.</div></li>
+            <li><div class="tag">Seal</div><div class="text">GLB seal appears on all published record pages.</div></li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Team Record Requirements</h2>
+        <ul>
+            <li><div class="tag">Header</div><div class="text">Team name + division + <span class="mono">Team Record</span> line.</div></li>
+            <li><div class="tag">Snapshot</div><div class="text">Record, runs, allowed, differential in a single quiet table.</div></li>
+            <li><div class="tag">Roster</div><div class="text">Active roster table (placeholder allowed during build phase).</div></li>
+            <li><div class="tag">Recent Games</div><div class="text">List recent results and link box scores when available.</div></li>
+            <li><div class="tag">Club Ref</div><div class="text">Include the line: <span class="mono">Club file forthcoming.</span></div></li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Prohibitions</h2>
+        <ul>
+            <li><div class="tag">No lore</div><div class="text">Team Record pages do not contain narrative, history, or fan material.</div></li>
+            <li><div class="tag">No logos</div><div class="text">Team logos are reserved for Club Files (not Team Records).</div></li>
+            <li><div class="tag">No UI noise</div><div class="text">No icons, badges, gradients, or decorative widgets.</div></li>
+            <li><div class="tag">No claims</div><div class="text">No “about GLB” explanations. Records do not justify their existence.</div></li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Publishing</h2>
+        <ul>
+            <li><div class="tag">Indexing</div><div class="text">Only published files are listed on <span class="mono">index.html</span>.</div></li>
+            <li><div class="tag">Pending</div><div class="text">Use “not yet published” language instead of placeholders with fake detail.</div></li>
+            <li><div class="tag">Corrections</div><div class="text">When a record changes, update the file quietly. No changelog required.</div></li>
+        </ul>
+    </div>
+
+    <footer>
+        GLB SYSTEM FILE — ACTIVE
+    </footer>
+
+</div>
+
+</body>
+</html>

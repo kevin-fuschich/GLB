@@ -3,160 +3,278 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GLB Records</title>
+<title>GLB Team Record: Tijuana Toros</title>
+
 <style>
-    :root {
-        --field-white: #ffffff;
-        --ink-navy: #002244;
-        --meta-grey: #555555;
-        --line-grey: #e0e0e0;
-        --font-serif: "Georgia", "Times New Roman", serif;
-        --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    }
+:root {
+    --field-white: #ffffff;
+    --ink-navy: #002244;
+    --meta-grey: #555555;
+    --line-grey: #e0e0e0;
+    --font-serif: "Georgia", "Times New Roman", serif;
+    --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
 
-    body {
-        background-color: #f4f4f4;
-        font-family: var(--font-sans);
-        color: var(--ink-navy);
-        display: flex;
-        justify-content: center;
-        padding: 60px 20px;
-        margin: 0;
-        -webkit-font-smoothing: antialiased;
-    }
+body {
+    background-color: #f4f4f4;
+    font-family: var(--font-sans);
+    color: var(--ink-navy);
+    display: flex;
+    justify-content: center;
+    padding: 50px 20px;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+}
 
-    .index-sheet {
-        background-color: var(--field-white);
-        width: 100%;
-        max-width: 620px;
-        padding: 40px;
-        box-shadow: 0 2px 15px rgba(0,0,0,0.06);
-        border-top: 5px solid var(--ink-navy);
-    }
+.dossier-sheet {
+    background-color: var(--field-white);
+    width: 100%;
+    max-width: 580px;
+    padding: 40px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.06);
+    border-top: 5px solid var(--ink-navy);
+}
 
-    header {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        margin-bottom: 30px;
-        padding-bottom: 20px;
-        border-bottom: 1px solid var(--ink-navy);
-    }
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--ink-navy);
+}
 
-    .meta-block {
-        font-family: var(--font-serif);
-    }
+.header-text {
+    font-family: var(--font-serif);
+}
 
-    .page-title {
-        font-size: 20px;
-        font-weight: bold;
-        margin-bottom: 6px;
-    }
+h1 {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0 0 6px 0;
+}
 
-    .meta-detail {
-        font-size: 13px;
-        font-style: italic;
-        color: var(--meta-grey);
-    }
+.team-meta {
+    font-size: 14px;
+    font-style: italic;
+    color: var(--meta-grey);
+}
 
-    .stamp-logo {
-        width: 60px;
-        height: auto;
-        opacity: 0.9;
-    }
+.club-reference {
+    margin-top: 4px;
+    font-size: 11px;
+    color: var(--meta-grey);
+    font-style: italic;
+}
 
-    h2 {
-        font-family: var(--font-serif);
-        font-size: 13px;
-        text-transform: uppercase;
-        border-bottom: 1px solid var(--line-grey);
-        margin: 30px 0 10px;
-        padding-bottom: 5px;
-        letter-spacing: 0.5px;
-    }
+.stamp-logo {
+    width: 60px;
+    height: auto;
+    opacity: 0.9;
+}
 
-    ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        font-size: 13px;
-    }
+/* SECTION HEADERS */
+h2 {
+    font-family: var(--font-serif);
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--line-grey);
+    margin-top: 35px;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    letter-spacing: 0.5px;
+}
 
-    li {
-        display: flex;
-        justify-content: space-between;
-        padding: 8px 0;
-        border-bottom: 1px solid #f0f0f0;
-    }
+/* TABLES */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+    table-layout: fixed;
+}
 
-    li:last-child {
-        border-bottom: none;
-    }
+th {
+    text-align: left;
+    font-weight: 600;
+    color: var(--meta-grey);
+    font-size: 10px;
+    padding: 4px 8px;
+    border-bottom: 1px solid var(--ink-navy);
+    text-transform: uppercase;
+}
 
-    a {
-        color: var(--ink-navy);
-        text-decoration: none;
-        border-bottom: 1px solid transparent;
-    }
+td {
+    padding: 8px 8px;
+    border-bottom: 1px solid #f0f0f0;
+    color: #111;
+}
 
-    a:hover {
-        border-bottom: 1px solid var(--ink-navy);
-    }
+/* SNAPSHOT */
+.snapshot-table th {
+    border-bottom: 1px solid var(--line-grey);
+    text-transform: none;
+    font-size: 11px;
+}
 
-    .meta {
-        color: var(--meta-grey);
-        font-size: 11px;
-        font-style: italic;
-    }
+.snapshot-table td {
+    font-weight: 500;
+    font-size: 14px;
+}
 
-    footer {
-        margin-top: 45px;
-        border-top: 1px solid var(--line-grey);
-        padding-top: 15px;
-        font-size: 10px;
-        color: var(--meta-grey);
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-    }
+/* ROSTER */
+.col-player { width: 50%; }
+.col-pos { width: 15%; }
+.col-bt { width: 20%; text-align: center; }
+.col-age { width: 15%; text-align: right; }
+
+.align-center { text-align: center; }
+.align-right { text-align: right; }
+
+/* RECENT GAMES */
+.col-date { width: 30%; }
+.col-opp { width: 35%; }
+.col-result { width: 20%; }
+.col-link { width: 15%; text-align: right; }
+
+/* NOTES */
+.notes-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 12px;
+}
+
+.notes-list li {
+    display: flex;
+    margin-bottom: 6px;
+}
+
+.note-label {
+    width: 120px;
+    font-weight: 600;
+    color: var(--meta-grey);
+    text-transform: uppercase;
+    font-size: 10px;
+}
+
+.note-value {
+    color: #111;
+}
+
+/* LINKS */
+a.box-link {
+    color: var(--ink-navy);
+    text-decoration: none;
+    font-size: 11px;
+    opacity: 0.7;
+}
+
+a.box-link:hover {
+    opacity: 1;
+    border-bottom: 1px solid var(--ink-navy);
+}
+
+/* FOOTER */
+footer {
+    margin-top: 50px;
+    border-top: 1px solid var(--line-grey);
+    padding-top: 15px;
+    font-size: 10px;
+    color: var(--meta-grey);
+    text-transform: uppercase;
+}
 </style>
 </head>
+
 <body>
 
-<div class="index-sheet">
+<div class="dossier-sheet">
 
 <header>
-    <div class="meta-block">
-        <div class="page-title">GLB Records</div>
-        <div class="meta-detail">Official league record index</div>
+    <div class="header-text">
+        <h1>Tijuana Toros</h1>
+        <div class="team-meta">Tijuana — Pacific Division</div>
+        <div class="club-reference">Team record file.</div>
     </div>
     <img src="GLB_white.png" alt="GLB Seal" class="stamp-logo">
 </header>
 
-<h2>Team Records — Pacific Division</h2>
-<ul>
-    <li><a href="team-san-pedro.html">San Pedro Cocolos</a><span class="meta">Pacific Division</span></li>
-    <li><a href="team-monterrey.html">Monterrey Cementeros</a><span class="meta">Pacific Division</span></li>
-    <li><a href="team-taipei.html">Taipei Neon</a><span class="meta">Pacific Division</span></li>
-    <li><a href="team-osaka.html">Osaka Spirits</a><span class="meta">Pacific Division</span></li>
-    <li><a href="team-tijuana.html">Tijuana Tecnicos</a><span class="meta">Pacific Division</span></li>
-    <li><a href="team-santiago.html">Santiago Caballeros</a><span class="meta">Pacific Division</span></li>
-    <li><a href="team-mayaguez.html">Mayaguez Sultans</a><span class="meta">Pacific Division</span></li>
-    <li><a href="team-vancouver.html">Vancouver Current</a><span class="meta">Pacific Division</span></li>
-</ul>
+<!-- SNAPSHOT -->
+<table class="snapshot-table">
+    <thead>
+        <tr>
+            <th>Record</th>
+            <th>Runs</th>
+            <th>Allowed</th>
+            <th>Diff</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1–0</td>
+            <td>5</td>
+            <td>3</td>
+            <td>+2</td>
+        </tr>
+    </tbody>
+</table>
 
-<h2>League Records</h2>
-<ul>
-    <li><a href="standings.html">Standings — Week 1</a><span class="meta">Official</span></li>
-    <li><a href="schedule.html">Schedule — Week 1</a><span class="meta">Official</span></li>
-</ul>
+<h2>Active Roster</h2>
+<table>
+    <thead>
+        <tr>
+            <th class="col-player">Player</th>
+            <th class="col-pos">Pos</th>
+            <th class="col-bt align-center">B/T</th>
+            <th class="col-age align-right">Age</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr><td>A. Ramirez</td><td>C</td><td class="align-center">R/R</td><td class="align-right">27</td></tr>
+        <tr><td>M. Vargas</td><td>1B</td><td class="align-center">R/R</td><td class="align-right">29</td></tr>
+        <tr><td>D. Solis</td><td>2B</td><td class="align-center">L/R</td><td class="align-right">26</td></tr>
+        <tr><td>J. Mendez</td><td>3B</td><td class="align-center">R/R</td><td class="align-right">31</td></tr>
+        <tr><td>E. Cruz</td><td>SS</td><td class="align-center">R/R</td><td class="align-right">24</td></tr>
+        <tr><td>R. Navarro</td><td>LF</td><td class="align-center">L/L</td><td class="align-right">28</td></tr>
+        <tr><td>C. Flores</td><td>CF</td><td class="align-center">R/R</td><td class="align-right">30</td></tr>
+        <tr><td>J. Torres</td><td>RF</td><td class="align-center">R/R</td><td class="align-right">25</td></tr>
+        <tr><td>L. Castillo</td><td>DH</td><td class="align-center">L/R</td><td class="align-right">32</td></tr>
+        <tr><td>P. Hernandez</td><td>P</td><td class="align-center">R/R</td><td class="align-right">29</td></tr>
+    </tbody>
+</table>
 
-<h2>System</h2>
-<ul>
-    <li><a href="SYSTEM.html">SYSTEM</a><span class="meta">Active</span></li>
+<h2>Recent Games</h2>
+<table>
+    <thead>
+        <tr>
+            <th class="col-date">Date</th>
+            <th class="col-opp">Opponent</th>
+            <th class="col-result">Result</th>
+            <th class="col-link">Box</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Apr 8</td>
+            <td>Vancouver</td>
+            <td>W 5–3</td>
+            <td class="col-link"><a href="boxscore.html" class="box-link">Box</a></td>
+        </tr>
+    </tbody>
+</table>
+
+<h2>Club Notes</h2>
+<ul class="notes-list">
+    <li><span class="note-label">Home Venue</span><span class="note-value">Estadio Chevron</span></li>
+    <li><span class="note-label">Manager</span><span class="note-value">Carlos Mendoza</span></li>
+    <li><span class="note-label">Established</span><span class="note-value">2024 (Charter Member)</span></li>
 </ul>
 
 <footer>
-    GLB RECORD INDEX — ACTIVE
+    Records current through most recent official scoring.<br>
+    Roster data subject to change.
 </footer>
 
 </div>

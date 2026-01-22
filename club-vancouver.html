@@ -4,230 +4,233 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>GLB Club: Vancouver</title>
-
 <style>
-:root {
-    --field-white: #ffffff;
-    --ink-navy: #002244;
-    --meta-grey: #666666;
-    --line-grey: #e0e0e0;
+    :root {
+        --field-white: #ffffff;
+        --ink-navy: #002244;
+        --meta-grey: #666666;
+        --line-grey: #e0e0e0;
 
-    /* Club Accent: Pacific Slate */
-    --club-accent: #4a6f7c;
+        /* Club Accent: Harbor Steel Blue */
+        --club-accent: #4f6d7a;
 
-    --font-serif: "Georgia", "Times New Roman", serif;
-    --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
+        --font-serif: "Georgia", "Times New Roman", serif;
+        --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
 
-body {
-    background-color: #f4f4f4;
-    font-family: var(--font-serif);
-    color: #111;
-    display: flex;
-    justify-content: center;
-    padding: 50px 20px;
-    margin: 0;
-    -webkit-font-smoothing: antialiased;
-    line-height: 1.6;
-}
+    body {
+        background-color: #f4f4f4;
+        font-family: var(--font-serif);
+        color: #111;
+        display: flex;
+        justify-content: center;
+        padding: 50px 20px;
+        margin: 0;
+        -webkit-font-smoothing: antialiased;
+        line-height: 1.6;
+    }
 
-.placard-sheet {
-    background-color: var(--field-white);
-    width: 100%;
-    max-width: 580px;
-    padding: 50px 45px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.04);
-    border-top: 5px solid var(--ink-navy);
-}
+    .placard-sheet {
+        background-color: var(--field-white);
+        width: 100%;
+        max-width: 580px;
+        padding: 50px 45px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+        border-top: 5px solid var(--ink-navy);
+        position: relative;
+    }
 
-/* HEADER */
-header {
-    text-align: center;
-    margin-bottom: 60px;
-}
+    /* HEADER */
+    header {
+        text-align: center;
+        margin-bottom: 60px;
+    }
 
-/* OPTION B — ARCHIVE */
-.club-artifact {
-    width: 100px;
-    height: auto;
-    opacity: 0.95;
-    margin-bottom: 25px;
-    display: inline-block;
-}
+    /* OPTION B: ARCHIVE IMAGE */
+    .club-artifact {
+        width: 100px;
+        height: auto;
+        opacity: 0.95;
+        margin-bottom: 25px;
+        display: inline-block;
+        mix-blend-mode: multiply;
+    }
 
-/* TYPE */
-h1 {
-    font-size: 32px;
-    font-weight: normal;
-    margin: 0 0 10px 0;
-    color: var(--ink-navy);
-    letter-spacing: 0.5px;
-    text-rendering: optimizeLegibility;
-    font-kerning: normal;
-}
+    h1 {
+        font-size: 32px;
+        font-weight: normal;
+        margin: 0 0 10px 0;
+        color: var(--ink-navy);
+        letter-spacing: 0.5px;
+        text-rendering: optimizeLegibility;
+        font-kerning: normal;
+    }
 
-.club-established {
-    font-family: var(--font-sans);
-    font-size: 11px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: var(--meta-grey);
-    border-top: 1px solid var(--line-grey);
-    border-bottom: 1px solid var(--line-grey);
-    display: inline-block;
-    padding: 4px 12px;
-}
+    .club-established {
+        font-family: var(--font-sans);
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: var(--meta-grey);
+        border-top: 1px solid var(--line-grey);
+        border-bottom: 1px solid var(--line-grey);
+        display: inline-block;
+        padding: 4px 12px;
+    }
 
-/* SECTIONS */
-.narrative-block {
-    margin-bottom: 50px;
-}
+    /* SECTIONS */
+    .narrative-block {
+        margin-bottom: 50px;
+    }
 
-h2 {
-    font-family: var(--font-sans);
-    font-size: 10px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    color: var(--club-accent);
-    margin: 0 0 15px 0;
-}
+    h2 {
+        font-family: var(--font-sans);
+        font-size: 10px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        color: var(--club-accent);
+        margin: 0 0 15px 0;
+    }
 
-p {
-    font-size: 15px;
-    color: #222;
-    margin: 0 0 20px 0;
-    max-width: 95%;
-}
+    p {
+        font-size: 15px;
+        color: #222;
+        margin: 0 0 20px 0;
+        max-width: 95%;
+    }
 
-/* GROUNDS */
-.grounds-block {
-    border-left: 3px solid var(--line-grey);
-    padding-left: 20px;
-    margin-bottom: 50px;
-}
+    /* GROUNDS */
+    .grounds-block {
+        border-left: 3px solid var(--line-grey);
+        padding-left: 20px;
+        margin-bottom: 50px;
+    }
 
-.venue-name {
-    font-size: 18px;
-    font-weight: bold;
-    color: var(--ink-navy);
-    display: block;
-    margin-bottom: 5px;
-}
+    .venue-name {
+        font-size: 18px;
+        font-weight: bold;
+        color: var(--ink-navy);
+        display: block;
+        margin-bottom: 5px;
+    }
 
-.venue-loc {
-    font-family: var(--font-sans);
-    font-size: 12px;
-    color: var(--meta-grey);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
+    .venue-loc {
+        font-family: var(--font-sans);
+        font-size: 12px;
+        color: var(--meta-grey);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
 
-/* TIMELINE */
-.artifact-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
+    /* TIMELINE */
+    .artifact-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
 
-.artifact-list li {
-    margin-bottom: 15px;
-    display: grid;
-    grid-template-columns: 110px 1fr;
-    font-size: 14px;
-}
+    .artifact-list li {
+        margin-bottom: 15px;
+        display: grid;
+        grid-template-columns: 110px 1fr;
+        font-size: 14px;
+    }
 
-.artifact-year {
-    font-family: var(--font-sans);
-    color: var(--meta-grey);
-    font-size: 11px;
-    padding-top: 4px;
-    text-transform: uppercase;
-    white-space: nowrap;
-}
+    .artifact-year {
+        font-family: var(--font-sans);
+        color: var(--meta-grey);
+        font-size: 11px;
+        padding-top: 4px;
+        text-transform: uppercase;
+        white-space: nowrap;
+    }
 
-.artifact-detail strong {
-    font-weight: normal;
-    color: var(--ink-navy);
-    border-bottom: 1px solid #ddd;
-}
+    .artifact-detail strong {
+        font-weight: normal;
+        color: var(--ink-navy);
+        border-bottom: 1px solid #ddd;
+    }
 
-/* FOOTER */
-.record-ref {
-    margin-top: 60px;
-    padding-top: 20px;
-    border-top: 1px solid var(--line-grey);
-    text-align: center;
-}
+    /* FOOTER */
+    .record-ref {
+        margin-top: 60px;
+        padding-top: 20px;
+        border-top: 1px solid var(--line-grey);
+        text-align: center;
+    }
 
-.record-link {
-    font-family: var(--font-sans);
-    font-size: 10px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: var(--meta-grey);
-    text-decoration: none;
-}
+    .record-link {
+        font-family: var(--font-sans);
+        font-size: 10px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: var(--meta-grey);
+        text-decoration: none;
+    }
 
-.record-link:hover {
-    color: var(--ink-navy);
-}
+    .record-link:hover {
+        color: var(--ink-navy);
+    }
 </style>
 </head>
-
 <body>
 
 <div class="placard-sheet">
 
-<header>
-    <img src="club-vancouver-archive.jpg" alt="Vancouver Harbor, archival photograph" class="club-artifact">
-    <h1>Vancouver</h1>
-    <div class="club-established">Est. 2024 &bull; Canada</div>
-</header>
+    <header>
+        <img src="club-vancouver-archive.jpg"
+             alt="Vancouver Harbor"
+             class="club-artifact">
 
-<div class="narrative-block">
-    <h2>Identity</h2>
-    <p>Vancouver exists at the edge of the continent. The city was shaped less by conquest than by logistics—timber, shipping lanes, and the quiet movement of goods between ocean and rail.</p>
-    <p>The club identity follows that logic. It favors patience, range, and endurance. Nothing here is rushed; everything is moved.</p>
-</div>
+        <h1>Vancouver</h1>
+        <div class="club-established">Est. 2024 &bull; Canada</div>
+    </header>
 
-<div class="narrative-block">
-    <h2>Grounds</h2>
-    <div class="grounds-block">
-        <span class="venue-name">Harbor Park</span>
-        <span class="venue-loc">Vancouver, BC</span>
+    <div class="narrative-block">
+        <h2>Identity</h2>
+        <p>Vancouver exists at the edge of circulation. It is a terminal city—where land meets ocean, and where goods, people, and weather arrive before moving elsewhere.</p>
+        <p>The club’s identity is drawn from this constant exchange. Nothing here is static. Rosters change, conditions shift, and visibility is never guaranteed. The organization accepts uncertainty as a condition of play.</p>
     </div>
-    <p>The park sits low and close to the water. Air density and persistent moisture suppress carry, rewarding line drives and penalizing excess lift. Night games often dissolve into fog by the seventh inning.</p>
-</div>
 
-<div class="narrative-block">
-    <h2>Tradition</h2>
-    <p>The club reflects the port itself. Roles are specialized. Errors are remembered. Success is measured not by spectacle, but by throughput.</p>
-</div>
+    <div class="narrative-block">
+        <h2>Grounds</h2>
+        <div class="grounds-block">
+            <span class="venue-name">Harbor Park</span>
+            <span class="venue-loc">Vancouver, Canada</span>
+        </div>
+        <p>The park sits low to the water. Fog rolls in without warning, flattening depth perception and dampening carry. Night games often feel enclosed, as if played inside a cloud.</p>
+    </div>
 
-<div class="narrative-block">
-    <h2>Timeline</h2>
-    <ul class="artifact-list">
-        <li>
-            <span class="artifact-year">Late 19th Century</span>
-            <span class="artifact-detail">Vancouver emerges as a Pacific shipping terminal.</span>
-        </li>
-        <li>
-            <span class="artifact-year">20th Century</span>
-            <span class="artifact-detail">Expansion of rail and maritime trade defines the city.</span>
-        </li>
-        <li>
-            <span class="artifact-year">2024</span>
-            <span class="artifact-detail"><strong>Charter Member</strong> of Global League Baseball.</span>
-        </li>
-    </ul>
-</div>
+    <div class="narrative-block">
+        <h2>Tradition</h2>
+        <p>The club values restraint. Aggression is measured, not celebrated. Pitching is built around control and endurance; defense is trained for long intervals of attention without action.</p>
+        <p>Success here is quiet and often unnoticed.</p>
+    </div>
 
-<div class="record-ref">
-    <a href="team-vancouver.html" class="record-link">
-        Official Statistics &amp; Roster available in Team Record
-    </a>
-</div>
+    <div class="narrative-block">
+        <h2>Timeline</h2>
+        <ul class="artifact-list">
+            <li>
+                <span class="artifact-year">Late 19th Century</span>
+                <span class="artifact-detail">Development of the harbor as a Pacific trade gateway.</span>
+            </li>
+            <li>
+                <span class="artifact-year">20th Century</span>
+                <span class="artifact-detail">Expansion into one of North America’s primary port cities.</span>
+            </li>
+            <li>
+                <span class="artifact-year">2024</span>
+                <span class="artifact-detail"><strong>Charter Member</strong> of Global League Baseball.</span>
+            </li>
+        </ul>
+    </div>
+
+    <div class="record-ref">
+        <a href="team-vancouver.html" class="record-link">
+            Official Statistics &amp; Roster available in Team Record
+        </a>
+    </div>
 
 </div>
 

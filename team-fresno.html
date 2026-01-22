@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GLB Team Record: Fresno Yield</title>
+<style>
+:root{
+  --field-white:#ffffff;
+  --ink-navy:#002244;
+  --meta-grey:#555555;
+  --line-grey:#e0e0e0;
+  --font-serif:"Georgia","Times New Roman",serif;
+  --font-sans:"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+body{
+  background:#f4f4f4;
+  font-family:var(--font-sans);
+  color:var(--ink-navy);
+  display:flex;
+  justify-content:center;
+  padding:50px 20px;
+  margin:0;
+}
+.dossier-sheet{
+  background:var(--field-white);
+  width:100%;
+  max-width:580px;
+  padding:40px;
+  box-shadow:0 2px 15px rgba(0,0,0,.06);
+  border-top:5px solid var(--ink-navy);
+}
+header{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  margin-bottom:30px;
+  padding-bottom:20px;
+  border-bottom:1px solid var(--ink-navy);
+}
+.header-text{font-family:var(--font-serif)}
+h1{font-size:20px;margin:0 0 6px 0;font-weight:bold}
+.team-meta{font-size:14px;font-style:italic;color:var(--meta-grey);margin:0 0 2px 0}
+.club-reference{font-size:11px;color:var(--meta-grey);font-style:italic}
+.stamp-logo{width:60px;opacity:.9}
+h2{
+  font-family:var(--font-serif);
+  font-size:14px;
+  font-weight:bold;
+  text-transform:uppercase;
+  border-bottom:1px solid var(--line-grey);
+  margin-top:35px;
+  margin-bottom:15px;
+  padding-bottom:5px;
+  letter-spacing:.5px;
+}
+table{width:100%;border-collapse:collapse;font-size:13px;table-layout:fixed}
+th{
+  font-weight:600;
+  font-size:10px;
+  color:var(--meta-grey);
+  padding:4px 8px;
+  border-bottom:1px solid var(--ink-navy);
+  text-transform:uppercase;
+  letter-spacing:.2px;
+}
+td{
+  padding:8px 8px;
+  border-bottom:1px solid #f0f0f0;
+  color:#111;
+}
+.snapshot-table th{
+  border-bottom:1px solid var(--line-grey);
+  text-transform:none;
+  font-size:11px;
+  letter-spacing:0;
+}
+.snapshot-table td{font-weight:500;font-size:14px}
+.col-player{width:50%}
+.col-pos{width:15%}
+.col-bt{width:20%;text-align:center}
+.col-age{width:15%;text-align:right}
+.align-center{text-align:center}
+.align-right{text-align:right}
+.col-date{width:30%}
+.col-opp{width:35%}
+.col-result{width:20%}
+.col-link{width:15%;text-align:right}
+a.box-link{
+  color:var(--ink-navy);
+  text-decoration:none;
+  font-size:11px;
+  opacity:.7;
+}
+a.box-link:hover{opacity:1;text-decoration:underline}
+.notes-list{list-style:none;padding:0;margin:0;font-size:12px}
+.notes-list li{display:flex;margin-bottom:6px}
+.note-label{
+  width:120px;
+  font-weight:600;
+  color:var(--meta-grey);
+  text-transform:uppercase;
+  font-size:10px;
+  letter-spacing:.5px;
+  padding-top:1px;
+}
+.note-value{color:#111}
+footer{
+  margin-top:50px;
+  border-top:1px solid var(--line-grey);
+  padding-top:15px;
+  font-size:10px;
+  color:var(--meta-grey);
+  text-transform:uppercase;
+  letter-spacing:.5px;
+}
+</style>
+</head>
+<body>
+
+<div class="dossier-sheet">
+
+<header>
+  <div class="header-text">
+    <h1>Fresno Yield</h1>
+    <div class="team-meta">Fresno — Americas Division</div>
+    <div class="team-meta">Team Record</div>
+    <div class="club-reference">Club file forthcoming.</div>
+  </div>
+  <img src="GLB_white.png" alt="GLB Seal" class="stamp-logo">
+</header>
+
+<table class="snapshot-table">
+  <thead>
+    <tr>
+      <th>Record</th>
+      <th>Runs</th>
+      <th>Allowed</th>
+      <th>Diff</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0–1</td>
+      <td>0</td>
+      <td>2</td>
+      <td>-2</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Active Roster</h2>
+<table>
+  <thead>
+    <tr>
+      <th class="col-player">Player</th>
+      <th class="col-pos">Pos</th>
+      <th class="col-bt align-center">B/T</th>
+      <th class="col-age align-right">Age</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>R. Alvarez</td><td>C</td><td class="align-center">R/R</td><td class="align-right">27</td></tr>
+    <tr><td>M. Gutierrez</td><td>1B</td><td class="align-center">L/R</td><td class="align-right">31</td></tr>
+    <tr><td>D. Kim</td><td>2B</td><td class="align-center">R/R</td><td class="align-right">25</td></tr>
+    <tr><td>J. Morales</td><td>3B</td><td class="align-center">R/R</td><td class="align-right">29</td></tr>
+    <tr><td>A. Singh</td><td>SS</td><td class="align-center">S/R</td><td class="align-right">24</td></tr>
+    <tr><td>T. Nguyen</td><td>LF</td><td class="align-center">L/L</td><td class="align-right">28</td></tr>
+    <tr><td>B. Carter</td><td>CF</td><td class="align-center">R/R</td><td class="align-right">30</td></tr>
+    <tr><td>E. Rojas</td><td>RF</td><td class="align-center">R/R</td><td class="align-right">26</td></tr>
+    <tr><td>S. Patel</td><td>DH</td><td class="align-center">L/R</td><td class="align-right">32</td></tr>
+    <tr><td>K. Yamamoto</td><td>P</td><td class="align-center">R/R</td><td class="align-right">29</td></tr>
+  </tbody>
+</table>
+
+<h2>Recent Games</h2>
+<table>
+  <thead>
+    <tr>
+      <th class="col-date">Date</th>
+      <th class="col-opp">Opponent</th>
+      <th class="col-result">Result</th>
+      <th class="col-link">Box</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Apr 9</td>
+      <td>Spokane</td>
+      <td>L 0–2</td>
+      <td class="col-link"><a href="boxscore.html" class="box-link">Box</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Club Notes</h2>
+<ul class="notes-list">
+  <li><span class="note-label">Home Venue</span><span class="note-value">Central Valley Grounds</span></li>
+  <li><span class="note-label">Manager</span><span class="note-value">—</span></li>
+  <li><span class="note-label">Established</span><span class="note-value">2024 (Charter Member)</span></li>
+</ul>
+
+<footer>
+  Records current through most recent official scoring.<br>
+  Roster data subject to change.
+</footer>
+
+</div>
+
+</body>
+</html>

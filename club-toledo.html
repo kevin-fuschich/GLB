@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GLB Club: Toledo</title>
+<style>
+    :root {
+        --field-white: #ffffff;
+        --ink-navy: #002244;
+        --meta-grey: #666666;
+        --line-grey: #e0e0e0;
+        
+        /* Club Specific Accent: Furnace Rust */
+        --club-accent: #a85d32; 
+
+        --font-serif: "Georgia", "Times New Roman", serif;
+        --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+
+    body {
+        background-color: #f4f4f4;
+        font-family: var(--font-serif);
+        color: #111;
+        display: flex;
+        justify-content: center;
+        padding: 50px 20px;
+        margin: 0;
+        -webkit-font-smoothing: antialiased;
+        line-height: 1.6;
+    }
+
+    .placard-sheet {
+        background-color: var(--field-white);
+        width: 100%;
+        max-width: 580px;
+        padding: 50px 45px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+        border-top: 5px solid var(--ink-navy);
+        position: relative;
+    }
+
+    /* CLUB HEADER */
+    header {
+        text-align: center;
+        margin-bottom: 60px;
+        position: relative;
+    }
+
+    /* OPTION C: THE ARTIFACT (Material / Texture) */
+    .club-artifact {
+        width: 100px; 
+        height: auto;
+        opacity: 0.95;
+        margin-bottom: 25px;
+        display: inline-block;
+        /* mix-blend-mode: multiply; */
+    }
+
+    h1 {
+        font-size: 32px; 
+        font-weight: normal; 
+        margin: 0 0 10px 0;
+        color: var(--ink-navy);
+        letter-spacing: 0.5px;
+        text-rendering: optimizeLegibility;
+        font-kerning: normal;
+    }
+
+    .club-established {
+        font-family: var(--font-sans);
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: var(--meta-grey);
+        border-top: 1px solid var(--line-grey);
+        border-bottom: 1px solid var(--line-grey);
+        display: inline-block;
+        padding: 4px 12px;
+    }
+
+    /* NARRATIVE SECTIONS */
+    .narrative-block {
+        margin-bottom: 50px;
+    }
+
+    h2 {
+        font-family: var(--font-sans);
+        font-size: 10px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        color: var(--club-accent);
+        margin: 0 0 15px 0;
+    }
+
+    p {
+        font-size: 15px;
+        color: #222;
+        margin: 0 0 20px 0;
+        max-width: 95%;
+    }
+
+    /* GROUNDS SECTION */
+    .grounds-block {
+        border-left: 3px solid var(--line-grey);
+        padding-left: 20px;
+        margin-bottom: 50px;
+    }
+
+    .venue-name {
+        font-size: 18px;
+        font-weight: bold;
+        color: var(--ink-navy);
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .venue-loc {
+        font-family: var(--font-sans);
+        font-size: 12px;
+        color: var(--meta-grey);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    /* TIMELINE */
+    .artifact-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .artifact-list li {
+        margin-bottom: 15px;
+        display: grid;
+        grid-template-columns: 110px 1fr;
+        font-size: 14px;
+    }
+
+    .artifact-year {
+        font-family: var(--font-sans);
+        color: var(--meta-grey);
+        font-size: 11px;
+        padding-top: 4px;
+        text-transform: uppercase;
+        white-space: nowrap;
+    }
+
+    .artifact-detail strong {
+        font-weight: normal;
+        color: var(--ink-navy);
+        border-bottom: 1px solid #ddd;
+    }
+
+    /* FOOTER */
+    .record-ref {
+        margin-top: 60px;
+        padding-top: 20px;
+        border-top: 1px solid var(--line-grey);
+        text-align: center;
+    }
+
+    .record-link {
+        font-family: var(--font-sans);
+        font-size: 10px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: var(--meta-grey);
+        text-decoration: none;
+        transition: color 0.2s;
+    }
+
+    .record-link:hover {
+        color: var(--ink-navy);
+    }
+</style>
+</head>
+<body>
+
+<div class="placard-sheet">
+
+    <header>
+        <img src="club-toledo-artifact.jpg" alt="Industrial corrosion sample" class="club-artifact">
+        <h1>Toledo</h1>
+        <div class="club-established">Est. 2024 &bull; Ohio, USA</div>
+    </header>
+
+    <div class="narrative-block">
+        <h2>Identity</h2>
+        <p>Toledo is built on heat and sand. Known as the “Glass City,” it grew around furnaces, rail spurs, and the supply chains that fed the automotive century. The club inherits that logic: repeatable process, controlled failure, and work that holds under pressure.</p>
+    </div>
+
+    <div class="narrative-block">
+        <h2>Grounds</h2>
+        <div class="grounds-block">
+            <span class="venue-name">Furnace Field</span>
+            <span class="venue-loc">Toledo, Ohio</span>
+        </div>
+        <p>Set near the Maumee River with rail infrastructure in reach. The park is spare: exposed steel, reclaimed brick, and hard shadows that shift across the infield as the light fades. Wind off the water can flatten high contact and turn routine flies into work.</p>
+    </div>
+
+    <div class="narrative-block">
+        <h2>Tradition</h2>
+        <p>The club follows the assembly-line ethic. Outcomes matter more than moments. The preferred style is disciplined and repeatable: take the extra base, finish the play, return the ball. Flash is tolerated; reliability is rewarded.</p>
+    </div>
+
+    <div class="narrative-block">
+        <h2>Timeline</h2>
+        <ul class="artifact-list">
+            <li>
+                <span class="artifact-year">Late 19th Century</span>
+                <span class="artifact-detail">Rapid expansion of the glass manufacturing industry in the region.</span>
+            </li>
+            <li>
+                <span class="artifact-year">Mid-20th Century</span>
+                <span class="artifact-detail">Peak production period for automotive glass and parts.</span>
+            </li>
+            <li>
+                <span class="artifact-year">2024</span>
+                <span class="artifact-detail"><strong>Charter Member</strong> of Global League Baseball.</span>
+            </li>
+        </ul>
+    </div>
+
+    <div class="record-ref">
+        <a href="team-toledo.html" class="record-link">
+            Official Statistics &amp; Roster available in Team Record
+        </a>
+    </div>
+
+</div>
+
+</body>
+</html>

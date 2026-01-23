@@ -40,21 +40,19 @@
         position: relative;
     }
 
-    /* CLUB HEADER */
     header {
         text-align: center;
         margin-bottom: 60px;
         position: relative;
     }
 
-    /* OPTION C: THE ARTIFACT (Material/Texture) */
+    /* OPTION B/C: ARCHIVE or ARTIFACT */
     .club-artifact {
         width: 100px;
         height: auto;
         opacity: 0.95;
         margin-bottom: 25px;
         display: inline-block;
-        /* Artifact mode: integrate object/texture into the "paper" */
         mix-blend-mode: multiply;
     }
 
@@ -80,7 +78,6 @@
         padding: 4px 12px;
     }
 
-    /* NARRATIVE SECTIONS */
     .narrative-block {
         margin-bottom: 50px;
     }
@@ -102,7 +99,6 @@
         max-width: 95%;
     }
 
-    /* GROUNDS SECTION */
     .grounds-block {
         border-left: 3px solid var(--line-grey);
         padding-left: 20px;
@@ -125,7 +121,6 @@
         letter-spacing: 1px;
     }
 
-    /* TIMELINE */
     .artifact-list {
         list-style: none;
         padding: 0;
@@ -154,7 +149,6 @@
         border-bottom: 1px solid #ddd;
     }
 
-    /* FOOTER */
     .record-ref {
         margin-top: 60px;
         padding-top: 20px;
@@ -182,8 +176,8 @@
 <div class="placard-sheet">
 
     <header>
-        <!-- IMPORTANT: Put the image file in the same folder as this HTML -->
-        <img src="club-toledo-artifact.png" alt="Stamped industrial component marked Ohio" class="club-artifact">
+        <!-- Cache-bust added so GitHub Pages doesn’t show an old broken file -->
+        <img src="club-toledo-archive.jpg?v=1" alt="Toledo industrial archive image" class="club-artifact">
         <h1>Toledo</h1>
         <div class="club-established">Est. 2024 &bull; Ohio</div>
     </header>

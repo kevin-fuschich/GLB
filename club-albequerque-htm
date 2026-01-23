@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GLB Club: Albuquerque</title>
+<style>
+    :root {
+        --field-white: #ffffff;
+        --ink-navy: #002244;
+        --meta-grey: #666666;
+        --line-grey: #e0e0e0;
+
+        /* Club Specific Accent: High Desert Clay */
+        --club-accent: #9a6b3a;
+
+        --font-serif: "Georgia", "Times New Roman", serif;
+        --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+
+    body {
+        background-color: #f4f4f4;
+        font-family: var(--font-serif);
+        color: #111;
+        display: flex;
+        justify-content: center;
+        padding: 50px 20px;
+        margin: 0;
+        -webkit-font-smoothing: antialiased;
+        line-height: 1.6;
+    }
+
+    .placard-sheet {
+        background-color: var(--field-white);
+        width: 100%;
+        max-width: 580px;
+        padding: 50px 45px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+        border-top: 5px solid var(--ink-navy);
+        position: relative;
+    }
+
+    /* CLUB HEADER */
+    header {
+        text-align: center;
+        margin-bottom: 60px;
+        position: relative;
+    }
+
+    /* OPTION A: PREMIUM (The Mark) - system hook */
+    .club-mark {
+        width: 70px;
+        height: auto;
+        opacity: 1;
+        margin-bottom: 20px;
+        display: inline-block;
+    }
+
+    /* OPTION B/C: ARCHIVE or ARTIFACT - system hook */
+    .club-artifact {
+        width: 100px;
+        height: auto;
+        opacity: 0.95;
+        margin-bottom: 25px;
+        display: inline-block;
+    }
+
+    /* Option B: Archive treatment (quiet documentary) */
+    .club-artifact.archive {
+        filter: grayscale(15%) contrast(110%);
+    }
+
+    h1 {
+        font-size: 32px;
+        font-weight: normal;
+        margin: 0 0 10px 0;
+        color: var(--ink-navy);
+        letter-spacing: 0.5px;
+        text-rendering: optimizeLegibility;
+        font-kerning: normal;
+    }
+
+    .club-established {
+        font-family: var(--font-sans);
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: var(--meta-grey);
+        border-top: 1px solid var(--line-grey);
+        border-bottom: 1px solid var(--line-grey);
+        display: inline-block;
+        padding: 4px 12px;
+    }
+
+    /* NARRATIVE SECTIONS */
+    .narrative-block {
+        margin-bottom: 50px;
+    }
+
+    h2 {
+        font-family: var(--font-sans);
+        font-size: 10px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        color: var(--club-accent);
+        margin: 0 0 15px 0;
+    }
+
+    p {
+        font-size: 15px;
+        color: #222;
+        margin: 0 0 20px 0;
+        max-width: 95%;
+    }
+
+    /* GROUNDS SECTION */
+    .grounds-block {
+        border-left: 3px solid var(--line-grey);
+        padding-left: 20px;
+        margin-bottom: 50px;
+    }
+
+    .venue-name {
+        font-size: 18px;
+        font-weight: bold;
+        color: var(--ink-navy);
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .venue-loc {
+        font-family: var(--font-sans);
+        font-size: 12px;
+        color: var(--meta-grey);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    /* TIMELINE */
+    .artifact-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .artifact-list li {
+        margin-bottom: 15px;
+        display: grid;
+        grid-template-columns: 110px 1fr;
+        font-size: 14px;
+    }
+
+    .artifact-year {
+        font-family: var(--font-sans);
+        color: var(--meta-grey);
+        font-size: 11px;
+        padding-top: 4px;
+        text-transform: uppercase;
+        white-space: nowrap;
+    }
+
+    .artifact-detail strong {
+        font-weight: normal;
+        color: var(--ink-navy);
+        border-bottom: 1px solid #ddd;
+    }
+
+    /* FOOTER */
+    .record-ref {
+        margin-top: 60px;
+        padding-top: 20px;
+        border-top: 1px solid var(--line-grey);
+        text-align: center;
+    }
+
+    .record-link {
+        font-family: var(--font-sans);
+        font-size: 10px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: var(--meta-grey);
+        text-decoration: none;
+        transition: color 0.2s;
+    }
+
+    .record-link:hover {
+        color: var(--ink-navy);
+    }
+</style>
+</head>
+<body>
+
+<div class="placard-sheet">
+
+    <header>
+        <!-- IMAGE (Archive Mode)
+             Put your PNG in the SAME folder as this HTML file (repo root if that’s where you keep pages)
+             and name it exactly: club-albuquerque-archive.png
+        -->
+        <img src="club-albuquerque-archive.png" alt="Desert rail corridor" class="club-artifact archive">
+
+        <h1>Albuquerque</h1>
+        <div class="club-established">Est. 2024 &bull; New Mexico, USA</div>
+    </header>
+
+    <div class="narrative-block">
+        <h2>Identity</h2>
+        <p>Albuquerque exists at the edge of things. It is a city defined less by arrival than by passage—a junction in the high desert where rail lines, trade routes, and long distances converge. The environment is sparse, elevated, and exposed. Nothing here is hidden for long.</p>
+        <p>The club identity reflects this geography. Play is shaped by altitude, dry air, and space. The game moves faster, carries farther, and punishes indecision. The club does not manufacture pressure; it lets the environment apply it naturally.</p>
+    </div>
+
+    <div class="narrative-block">
+        <h2>Grounds</h2>
+        <div class="grounds-block">
+            <span class="venue-name">Mesa Rail Field</span>
+            <span class="venue-loc">Albuquerque, New Mexico</span>
+        </div>
+        <p>The park sits near active rail corridors and open desert, with little separation between the field and the surrounding infrastructure. Afternoon heat lingers into the evening, and the thin air alters ball flight in ways that demand constant adjustment. Wind is inconsistent but rarely absent.</p>
+        <p>There is no enclosure effect. The horizon remains visible from most angles, reinforcing the sense that play here is exposed—observed not by crowds alone, but by landscape.</p>
+    </div>
+
+    <div class="narrative-block">
+        <h2>Tradition</h2>
+        <p>The club values range and efficiency. Defensive coverage matters. Pitching strategies account for carry and fatigue. Players are taught to assume that the environment will not help them—only reveal mistakes.</p>
+        <p>There is a regional acceptance of endurance over spectacle. Games are not rushed. The expectation is that conditions will test resolve, and that preparation is the only reliable countermeasure.</p>
+    </div>
+
+    <div class="narrative-block">
+        <h2>Timeline</h2>
+        <ul class="artifact-list">
+            <li>
+                <span class="artifact-year">1880</span>
+                <span class="artifact-detail">Arrival of the Atchison, Topeka and Santa Fe Railway, establishing Albuquerque as a regional transit hub.</span>
+            </li>
+            <li>
+                <span class="artifact-year">Mid-20th Century</span>
+                <span class="artifact-detail">Expansion of freight, military, and research infrastructure across the high desert.</span>
+            </li>
+            <li>
+                <span class="artifact-year">2024</span>
+                <span class="artifact-detail"><strong>Charter Member</strong> of Global League Baseball.</span>
+            </li>
+        </ul>
+    </div>
+
+    <div class="record-ref">
+        <a href="team-albuquerque.html" class="record-link">
+            Official Statistics &amp; Roster available in Team Record
+        </a>
+    </div>
+
+</div>
+
+</body>
+</html>

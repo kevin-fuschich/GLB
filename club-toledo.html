@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GLB Club: Toledo</title>
+<title>GLB Club: Vancouver</title>
 <style>
     :root {
         --field-white: #ffffff;
@@ -11,8 +11,8 @@
         --meta-grey: #666666;
         --line-grey: #e0e0e0;
         
-        /* Club Specific Accent: Furnace Rust */
-        --club-accent: #a85d32; 
+        /* Club Specific Accent: Harbor Slate */
+        --club-accent: #4a6c7c; 
 
         --font-serif: "Georgia", "Times New Roman", serif;
         --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -47,14 +47,15 @@
         position: relative;
     }
 
-    /* OPTION C: THE ARTIFACT (Material / Texture) */
+    /* OPTION B: THE ARCHIVE (Documentary Photo) */
     .club-artifact {
         width: 100px; 
         height: auto;
         opacity: 0.95;
         margin-bottom: 25px;
         display: inline-block;
-        /* mix-blend-mode: multiply; */
+        /* Subtle desaturation filter to enforce "Archive" feel */
+        filter: grayscale(20%) contrast(110%);
     }
 
     h1 {
@@ -144,7 +145,7 @@
         font-size: 11px;
         padding-top: 4px;
         text-transform: uppercase;
-        white-space: nowrap;
+        white-space: nowrap; 
     }
 
     .artifact-detail strong {
@@ -181,40 +182,41 @@
 <div class="placard-sheet">
 
     <header>
-        <img src="club-toledo-artifact.jpg" alt="Industrial corrosion sample" class="club-artifact">
-        <h1>Toledo</h1>
-        <div class="club-established">Est. 2024 &bull; Ohio, USA</div>
+        <img src="club-vancouver-archive.jpg" alt="Harbor crane infrastructure" class="club-artifact">
+        <h1>Vancouver</h1>
+        <div class="club-established">Est. 2024 &bull; Canada</div>
     </header>
 
     <div class="narrative-block">
         <h2>Identity</h2>
-        <p>Toledo is built on heat and sand. Known as the “Glass City,” it grew around furnaces, rail spurs, and the supply chains that fed the automotive century. The club inherits that logic: repeatable process, controlled failure, and work that holds under pressure.</p>
+        <p>The city is the Pacific terminus of the rail line and the gateway to the East. It exists in the space between the mountains and the ocean, defined by a perpetual state of transit. Everything here is either arriving or departing.</p>
+        <p>The name “Current” refers not only to the waters of the Burrard Inlet but to the hydroelectric power that drives the grid. The club identity mirrors the climate: persistent, enveloping, and fluid.</p>
     </div>
 
     <div class="narrative-block">
         <h2>Grounds</h2>
         <div class="grounds-block">
-            <span class="venue-name">Furnace Field</span>
-            <span class="venue-loc">Toledo, Ohio</span>
+            <span class="venue-name">Terminal Field</span>
+            <span class="venue-loc">Vancouver, B.C.</span>
         </div>
-        <p>Set near the Maumee River with rail infrastructure in reach. The park is spare: exposed steel, reclaimed brick, and hard shadows that shift across the infield as the light fades. Wind off the water can flatten high contact and turn routine flies into work.</p>
+        <p>Constructed on reclaimed land at the edge of the shipping container yards. The stadium is open to the north, allowing the damp harbor air to settle onto the field at night. The sound of distant foghorns is a constant backdrop to play.</p>
     </div>
 
     <div class="narrative-block">
         <h2>Tradition</h2>
-        <p>The club follows the assembly-line ethic. Outcomes matter more than moments. The preferred style is disciplined and repeatable: take the extra base, finish the play, return the ball. Flash is tolerated; reliability is rewarded.</p>
+        <p>The club rejects rigidity. In a city where rain is not weather but atmosphere, play continues through conditions that would halt games elsewhere. The team philosophy emphasizes adaptability and fluid motion over static power.</p>
     </div>
 
     <div class="narrative-block">
         <h2>Timeline</h2>
         <ul class="artifact-list">
             <li>
-                <span class="artifact-year">Late 19th Century</span>
-                <span class="artifact-detail">Rapid expansion of the glass manufacturing industry in the region.</span>
+                <span class="artifact-year">1887</span>
+                <span class="artifact-detail">Arrival of the first transcontinental train at the waterfront.</span>
             </li>
             <li>
-                <span class="artifact-year">Mid-20th Century</span>
-                <span class="artifact-detail">Peak production period for automotive glass and parts.</span>
+                <span class="artifact-year">Late 20th Century</span>
+                <span class="artifact-detail">Expansion of the deep-sea container terminals.</span>
             </li>
             <li>
                 <span class="artifact-year">2024</span>
@@ -224,7 +226,7 @@
     </div>
 
     <div class="record-ref">
-        <a href="team-toledo.html" class="record-link">
+        <a href="team-vancouver.html" class="record-link">
             Official Statistics &amp; Roster available in Team Record
         </a>
     </div>

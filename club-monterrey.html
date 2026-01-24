@@ -7,33 +7,28 @@
 
 <style>
 :root{
-  --cement-grey:#8a99a6;
-  --industrial-slate:#2f3b44;
-  --safety-orange:#d95e16;
-  --paper:#ffffff;
-  --ink:#111111;
-  --mono:"Courier New", Courier, monospace;
-  --sans:"Helvetica Neue", Helvetica, Arial, sans-serif;
+  --ink:#111;
+  --paper:#fff;
+  --slate:#2F3B44;
+  --accent:#D95E16;
+  --mono: "Courier New", monospace;
+  --sans: Helvetica, Arial, sans-serif;
 }
-
-*{box-sizing:border-box}
 
 body{
   margin:0;
-  padding:24px;
   background:#f0f0f0;
   color:var(--ink);
   font-family:var(--sans);
-  line-height:1.5;
 }
 
 .club{
   max-width:900px;
-  margin:0 auto;
+  margin:40px auto;
   background:var(--paper);
   padding:40px;
   border-top:4px solid var(--ink);
-  box-shadow:0 6px 18px rgba(0,0,0,.06);
+  box-shadow:0 4px 10px rgba(0,0,0,.05);
   position:relative;
 }
 
@@ -44,140 +39,107 @@ body{
   font-family:var(--mono);
   font-size:10px;
   color:#999;
-  letter-spacing:1px;
 }
 
 header{
   border-bottom:4px solid var(--ink);
-  padding-bottom:22px;
-  margin-bottom:28px;
-}
-
-.lockup{
-  display:flex;
-  justify-content:space-between;
-  align-items:flex-end;
-  flex-wrap:wrap;
-  gap:10px;
+  padding-bottom:20px;
 }
 
 h1{
   margin:0;
   font-size:32px;
   font-weight:900;
-  text-transform:uppercase;
   letter-spacing:1px;
+  text-transform:uppercase;
 }
 
 .division{
-  background:var(--industrial-slate);
+  display:inline-block;
+  margin-top:6px;
+  background:var(--slate);
   color:#fff;
-  font-size:12px;
-  font-weight:700;
   padding:4px 8px;
+  font-size:12px;
   text-transform:uppercase;
 }
 
 .facts{
   margin-top:10px;
-  display:flex;
-  flex-wrap:wrap;
-  gap:14px;
   font-size:11px;
-  text-transform:uppercase;
   color:#666;
+  text-transform:uppercase;
 }
 
-.ctas{
-  margin-top:26px;
+.cta{
   display:flex;
-  flex-wrap:wrap;
   gap:10px;
+  margin:30px 0;
+  flex-wrap:wrap;
 }
 
-.ctas a{
+.cta a{
   flex:1;
   min-width:180px;
   text-align:center;
   padding:12px 0;
   border:2px solid var(--ink);
   text-decoration:none;
-  font-weight:700;
-  font-size:12px;
+  font-weight:bold;
   text-transform:uppercase;
   color:var(--ink);
 }
 
-.ctas a.primary{
-  background:var(--industrial-slate);
+.cta a.primary{
+  background:var(--slate);
   color:#fff;
-  border-color:var(--industrial-slate);
+  border-color:var(--slate);
 }
 
-section{margin-top:46px}
+section{
+  margin:50px 0;
+}
 
 h2{
   font-size:14px;
   text-transform:uppercase;
   border-bottom:2px solid var(--ink);
   padding-bottom:6px;
-  margin-bottom:18px;
-  letter-spacing:1px;
 }
 
-.identity p{
-  font-size:16px;
-  max-width:720px;
-}
+p{ font-size:16px; max-width:700px; }
 
-.traits{
-  margin-top:18px;
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:18px;
-  padding:0;
-  list-style:none;
-}
-
-.traits li{
-  font-size:12px;
-  font-weight:700;
-  text-transform:uppercase;
-  border-top:1px solid #ccc;
-  padding-top:10px;
-}
-
-.img{
-  width:100%;
-  border:1px solid #ccc;
-  background:#e0e0e0;
-  margin-bottom:14px;
-}
-
-.park{aspect-ratio:16/9}
-
-.split{
+.grid{
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:30px;
 }
 
-.info h3{
-  margin:0 0 6px 0;
-  font-size:18px;
-}
-
-.sub{
-  font-size:11px;
-  text-transform:uppercase;
-  color:#666;
-  margin-bottom:14px;
-}
-
-.roster{
+.img{
   width:100%;
-  border-collapse:collapse;
-  font-size:13px;
+  aspect-ratio:16/9;
+  object-fit:cover;
+  border:1px solid #ccc;
+  background:#e0e0e0;
+}
+
+.square{ aspect-ratio:1/1; }
+.portrait{ aspect-ratio:3/4; }
+
+.traits{
+  list-style:none;
+  padding:0;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.traits li{
+  font-size:12px;
+  font-weight:bold;
+  text-transform:uppercase;
+  border-top:1px solid #ccc;
+  padding-top:10px;
 }
 
 .roster td{
@@ -188,26 +150,18 @@ h2{
 .pos{
   width:50px;
   font-family:var(--mono);
-  font-weight:700;
-  color:var(--safety-orange);
+  color:var(--accent);
+  font-weight:bold;
 }
 
 footer{
   margin-top:60px;
-  padding-top:18px;
   border-top:1px solid #eee;
+  padding-top:20px;
   font-family:var(--mono);
   font-size:10px;
-  text-transform:uppercase;
-  letter-spacing:1px;
   color:#999;
   text-align:right;
-}
-
-@media(max-width:640px){
-  .split{grid-template-columns:1fr}
-  .traits{grid-template-columns:1fr}
-  .doc-id{display:none}
 }
 </style>
 </head>
@@ -218,60 +172,70 @@ footer{
 <div class="doc-id">MTY-CLUB-01</div>
 
 <header>
-  <div class="lockup">
-    <h1>Monterrey Cementeros</h1>
-    <span class="division">Pacific Division</span>
-  </div>
-
+  <h1>Monterrey Cementeros</h1>
+  <div class="division">Pacific Division</div>
   <div class="facts">
-    <span>Est. 1948</span>
-    <span>•</span>
-    <span><strong>Estadio Fundidora</strong></span>
-    <span>•</span>
-    <span>Mgr. Osvaldo “El Tanque” Guerra</span>
+    Est. 1948 • Estadio Fundidora • Manager: Osvaldo “El Tanque” Guerra
   </div>
 
-  <div class="ctas">
+  <div class="cta">
     <a class="primary" href="team.html?team=monterrey-cementeros">Active Roster</a>
     <a href="day.html?date=2026-04-08">Daily Scores</a>
-    <a href="game.html?date=2026-04-08&game=monterrey-cementeros@tijuana-tecnicos">Latest Box</a>
+    <a href="game.html?date=2026-04-08&game=monterrey-cementeros@tijuana-tecnicos">Latest Box Score</a>
   </div>
 </header>
 
-<section class="identity">
+<section>
 <h2>The Cementeros</h2>
 <p>
-Monterrey is built on heat, limestone, and heavy industry. The Cementeros reflect the city’s foundries: unglamorous, structurally sound, and relentless. They play a compressed game designed to grind opponents into dust. Baseball here is not played — it is worked.
+Monterrey is built on heat, limestone, and heavy industry. The Cementeros reflect
+the city’s foundries—structurally sound, unglamorous, relentless. They do not play
+for speed or spectacle. They work.
 </p>
-
 <ul class="traits">
-<li>Style: Attrition Baseball</li>
-<li>Vibe: Industrial Pressure</li>
-<li>Tradition: “The 5 PM Whistle”</li>
+<li>Style: Attrition</li>
+<li>Vibe: Industrial Noise</li>
+<li>Tradition: The 5 PM Whistle</li>
 </ul>
 </section>
 
 <section>
 <h2>Ballpark</h2>
-<img src="club-monterrey-park.png" alt="Estadio Fundidora" class="img park">
-
-<div class="info">
-<h3>Estadio Fundidora</h3>
-<div class="sub">Capacity: 18,000–22,000</div>
+<img class="img" src="club-monterrey-park.png" alt="Estadio Fundidora">
 <p>
-Built into a former steel complex, the park favors ground-ball pitchers and punishes mistakes with heat and echoing concrete.
+Built into a former steel mill footprint. Vertical walls. Trapped heat.
+Hard ground. No mercy.
 </p>
+</section>
+
+<section>
+<h2>Broadcast</h2>
+<div class="grid">
+<img class="img portrait" src="club-monterrey-broadcast.png">
+<div>
+<strong>Héctor “El Arquitecto” Vega</strong><br>
+Clinical. Methodical. Structural.<br><br>
+“The work is finished. The foundation holds.”
+</div>
+</div>
+</section>
+
+<section>
+<h2>Mascot & Stands</h2>
+<div class="grid">
+<img class="img square" src="club-monterrey-mascot.png">
+<img class="img square" src="club-monterrey-fans.png">
 </div>
 </section>
 
 <section>
 <h2>Core Roster</h2>
 <table class="roster">
-<tr><td class="pos">P</td><td>Victor “El Muro” Paredes</td></tr>
-<tr><td class="pos">C</td><td>Salomon Cross</td></tr>
+<tr><td class="pos">P</td><td>Víctor “El Muro” Paredes</td></tr>
+<tr><td class="pos">C</td><td>Salomón Cross</td></tr>
 <tr><td class="pos">1B</td><td>Diego Fortaleza</td></tr>
 <tr><td class="pos">SS</td><td>Javier Hierro</td></tr>
-<tr><td class="pos">LF</td><td>Tomas Kiln</td></tr>
+<tr><td class="pos">LF</td><td>Tomás Kiln</td></tr>
 <tr><td class="pos">CP</td><td>“Rusty” O’Neil</td></tr>
 </table>
 </section>

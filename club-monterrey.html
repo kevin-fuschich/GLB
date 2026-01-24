@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Monterrey Cementeros — Club Portal</title>
+
+<style>
+:root{
+  --cement-grey:#8a99a6;
+  --industrial-slate:#2F3B44;
+  --safety-orange:#D95E16;
+  --paper-white:#ffffff;
+  --ink-black:#111111;
+
+  --border-thick:4px solid var(--ink-black);
+  --font-sans:"Helvetica Neue",Helvetica,Arial,sans-serif;
+  --font-mono:"Courier New",Courier,monospace;
+}
+
+body{
+  background:#f0f0f0;
+  color:var(--ink-black);
+  font-family:var(--font-sans);
+  margin:0;
+  padding:20px;
+}
+
+.club-sheet{
+  max-width:900px;
+  margin:0 auto;
+  background:var(--paper-white);
+  padding:40px;
+  border-top:var(--border-thick);
+  box-shadow:0 4px 10px rgba(0,0,0,.05);
+  position:relative;
+}
+
+.doc-id{
+  position:absolute;
+  top:14px;
+  right:20px;
+  font-family:var(--font-mono);
+  font-size:10px;
+  color:#999;
+  letter-spacing:1px;
+}
+
+header{
+  border-bottom:var(--border-thick);
+  padding-bottom:20px;
+  margin-bottom:20px;
+}
+
+.club-lockup{
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+}
+
+h1{
+  font-size:32px;
+  font-weight:900;
+  text-transform:uppercase;
+  margin:0;
+}
+
+.division-tag{
+  background:var(--industrial-slate);
+  color:#fff;
+  padding:4px 8px;
+  font-size:12px;
+  text-transform:uppercase;
+}
+
+.fact-bar{
+  display:flex;
+  gap:12px;
+  font-size:11px;
+  text-transform:uppercase;
+  color:#666;
+  margin-top:10px;
+  flex-wrap:wrap;
+}
+
+.cta-row{
+  display:flex;
+  gap:10px;
+  margin:25px 0 40px;
+  flex-wrap:wrap;
+}
+
+.btn{
+  flex:1;
+  min-width:180px;
+  text-align:center;
+  padding:12px 0;
+  border:2px solid var(--ink-black);
+  text-transform:uppercase;
+  font-size:12px;
+  font-weight:bold;
+  text-decoration:none;
+  color:var(--ink-black);
+}
+
+.btn.primary{
+  background:var(--industrial-slate);
+  color:#fff;
+  border-color:var(--industrial-slate);
+}
+
+section{ margin-bottom:50px; }
+
+h2{
+  font-size:14px;
+  text-transform:uppercase;
+  border-bottom:2px solid var(--ink-black);
+  padding-bottom:6px;
+  margin-bottom:20px;
+}
+
+.identity-traits{
+  list-style:none;
+  padding:0;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.identity-traits li{
+  font-size:12px;
+  font-weight:bold;
+  text-transform:uppercase;
+  border-top:1px solid #ccc;
+  padding-top:10px;
+}
+
+.img-slot{
+  background:#e0e0e0;
+  border:1px solid #ccc;
+  margin-bottom:15px;
+  width:100%;
+  object-fit:cover;
+}
+
+.park{ aspect-ratio:16/9; }
+.square{ aspect-ratio:1/1; max-width:260px; }
+.portrait{ aspect-ratio:3/4; max-width:250px; }
+
+.split-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:30px;
+}
+
+.roster-table{
+  width:100%;
+  border-collapse:collapse;
+  font-size:13px;
+}
+
+.roster-table td{
+  padding:10px 0;
+  border-bottom:1px solid #eee;
+}
+
+.roster-pos{
+  font-family:var(--font-mono);
+  font-weight:bold;
+  width:50px;
+  color:var(--safety-orange);
+}
+
+.doc-footer{
+  margin-top:60px;
+  padding-top:20px;
+  border-top:1px solid #eee;
+  font-family:var(--font-mono);
+  font-size:10px;
+  color:#999;
+  text-align:right;
+}
+
+@media(max-width:600px){
+  .split-grid{ grid-template-columns:1fr; }
+  .identity-traits{ grid-template-columns:1fr; }
+  .doc-id{ display:none; }
+}
+</style>
+</head>
+
+<body>
+<div class="club-sheet">
+
+<div class="doc-id">MTY-CLUB-01</div>
+
+<header>
+  <div class="club-lockup">
+    <h1>Monterrey Cementeros</h1>
+    <span class="division-tag">Pacific Division</span>
+  </div>
+
+  <div class="fact-bar">
+    <span>Est. 1948</span>
+    <span>•</span>
+    <span><strong>Estadio Fundidora</strong></span>
+    <span>•</span>
+    <span>Mgr. Osvaldo “El Tanque” Guerra</span>
+  </div>
+
+  <div class="cta-row">
+    <a class="btn primary" href="team.html?team=monterrey-cementeros">Active Roster</a>
+    <a class="btn" href="day.html?date=2026-05-12">Daily Scores</a>
+    <a class="btn" href="game.html?date=2026-04-08&game=monterrey-cementeros@tijuana-tecnicos">Latest Box</a>
+  </div>
+</header>
+
+<section>
+<h2>The Cementeros</h2>
+<p>
+Monterrey is built on heavy industry, limestone, and heat.  
+The Cementeros play baseball the way the city works—compressed, relentless,
+and without ornament. The game is not played. It is worked.
+</p>
+
+<ul class="identity-traits">
+  <li>Style: Attrition</li>
+  <li>Vibe: Industrial Noise</li>
+  <li>Tradition: “5 PM Whistle”</li>
+</ul>
+</section>
+
+<section>
+<h2>Ballpark</h2>
+<img class="img-slot park" src="club-monterrey-park.jpg" alt="">
+<p>
+Built into an abandoned steel mill footprint, Estadio Fundidora traps heat
+and momentum. Ground balls travel fast. Fly balls die early.
+</p>
+</section>
+
+<section>
+<h2>Broadcast</h2>
+<div class="split-grid">
+  <img class="img-slot portrait" src="club-monterrey-broadcast.jpg" alt="">
+  <div>
+    <h3>Héctor “El Arquitecto” Vega</h3>
+    <p>
+    Clinical, rhythmic, structural.  
+    “The foundation holds.”
+    </p>
+  </div>
+</div>
+</section>
+
+<section>
+<h2>Mascot & Stands</h2>
+<div class="split-grid">
+  <div>
+    <img class="img-slot square" src="club-monterrey-mascot.jpg" alt="">
+    <p>Cimiento. He does not move.</p>
+  </div>
+  <div>
+    <img class="img-slot square" src="club-monterrey-fans.jpg" alt="">
+    <p>La Obra. Wrenches on steel. No cheering.</p>
+  </div>
+</div>
+</section>
+
+<section>
+<h2>Core Roster</h2>
+<table class="roster-table">
+<tr><td class="roster-pos">P</td><td>Victor “El Muro” Paredes</td></tr>
+<tr><td class="roster-pos">C</td><td>Salomon Cross</td></tr>
+<tr><td class="roster-pos">1B</td><td>Diego Fortaleza</td></tr>
+<tr><td class="roster-pos">SS</td><td>Javier Hierro</td></tr>
+<tr><td class="roster-pos">LF</td><td>Tomas Kiln</td></tr>
+<tr><td class="roster-pos">CP</td><td>“Rusty” O’Neil</td></tr>
+</table>
+</section>
+
+<section>
+<h2>Archive</h2>
+<ul>
+<li><a href="game.html?date=2026-04-08&game=monterrey-cementeros@tijuana-tecnicos">Opening Day 2026</a></li>
+<li><a href="#">The 1999 Rebuild</a></li>
+<li><a href="#">The Blast Furnace</a></li>
+</ul>
+</section>
+
+<div class="doc-footer">
+GLB Club Portal · Monterrey · Internal
+</div>
+
+</div>
+</body>
+</html>

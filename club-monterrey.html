@@ -3,247 +3,361 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Monterrey Cementeros — Club Dossier</title>
-
+<title>GLB: MONTERREY CEMENTEROS</title>
 <style>
-:root{
-  --ink:#111;
-  --paper:#fff;
-  --slate:#2F3B44;
-  --accent:#D95E16;
-  --mono: "Courier New", monospace;
-  --sans: Helvetica, Arial, sans-serif;
-}
+    :root {
+        /* MONTERREY PALETTE */
+        --bg-color: #ECECEC;       /* Sun-bleached Concrete */
+        --text-color: #1A1A1A;     /* Slate / Oxidized Steel */
+        --accent-color: #FF00FF;   /* Acid Pink */
+        --secondary-accent: #FF8C00; /* Marigold Orange */
 
-body{
-  margin:0;
-  background:#f0f0f0;
-  color:var(--ink);
-  font-family:var(--sans);
-}
+        --border-style: 2px solid #1A1A1A;
+        --font-main: 'Courier New', Courier, monospace;
+        --font-heading: 'Arial Black', sans-serif;
+    }
 
-.club{
-  max-width:900px;
-  margin:40px auto;
-  background:var(--paper);
-  padding:40px;
-  border-top:4px solid var(--ink);
-  box-shadow:0 4px 10px rgba(0,0,0,.05);
-  position:relative;
-}
+    body {
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        font-family: var(--font-main);
+        margin: 0;
+        padding: 40px;
+        line-height: 1.4;
+    }
 
-.doc-id{
-  position:absolute;
-  top:14px;
-  right:18px;
-  font-family:var(--mono);
-  font-size:10px;
-  color:#999;
-}
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        border: var(--border-style);
+        background: #fff;
+        box-shadow: 10px 10px 0px rgba(0,0,0,0.1);
+    }
 
-header{
-  border-bottom:4px solid var(--ink);
-  padding-bottom:20px;
-}
+    /* HEADER */
+    header {
+        border-bottom: var(--border-style);
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #fff;
+    }
 
-h1{
-  margin:0;
-  font-size:32px;
-  font-weight:900;
-  letter-spacing:1px;
-  text-transform:uppercase;
-}
+    .logo {
+        font-weight: bold;
+        font-size: 1.2rem;
+        letter-spacing: -1px;
+    }
 
-.division{
-  display:inline-block;
-  margin-top:6px;
-  background:var(--slate);
-  color:#fff;
-  padding:4px 8px;
-  font-size:12px;
-  text-transform:uppercase;
-}
+    .nav-links a {
+        margin-left: 20px;
+        text-decoration: underline;
+        color: var(--text-color);
+        text-transform: uppercase;
+        font-size: 0.9rem;
+        font-weight: bold;
+    }
 
-.facts{
-  margin-top:10px;
-  font-size:11px;
-  color:#666;
-  text-transform:uppercase;
-}
+    .nav-links a:hover {
+        background: var(--accent-color);
+        color: white;
+        text-decoration: none;
+    }
 
-.cta{
-  display:flex;
-  gap:10px;
-  margin:30px 0;
-  flex-wrap:wrap;
-}
+    /* HERO SECTION */
+    .hero {
+        display: grid;
+        grid-template-columns: 1fr 1.5fr;
+        border-bottom: var(--border-style);
+        min-height: 500px;
+    }
 
-.cta a{
-  flex:1;
-  min-width:180px;
-  text-align:center;
-  padding:12px 0;
-  border:2px solid var(--ink);
-  text-decoration:none;
-  font-weight:bold;
-  text-transform:uppercase;
-  color:var(--ink);
-}
+    .hero-text {
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: #fff;
+    }
 
-.cta a.primary{
-  background:var(--slate);
-  color:#fff;
-  border-color:var(--slate);
-}
+    .status-tag {
+        display: inline-block;
+        background: var(--secondary-accent);
+        color: black;
+        padding: 4px 8px;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 0.8rem;
+        border: 1px solid #000;
+        align-self: flex-start;
+        margin-bottom: 20px;
+    }
 
-section{
-  margin:50px 0;
-}
+    h1 {
+        font-family: var(--font-heading);
+        font-size: 3.5rem;
+        line-height: 0.9;
+        margin: 0;
+        text-transform: uppercase;
+        letter-spacing: -2px;
+    }
 
-h2{
-  font-size:14px;
-  text-transform:uppercase;
-  border-bottom:2px solid var(--ink);
-  padding-bottom:6px;
-}
+    .motto {
+        font-size: 1.2rem;
+        font-style: italic;
+        margin-top: 10px;
+        color: var(--secondary-accent);
+        font-weight: bold;
+    }
 
-p{ font-size:16px; max-width:700px; }
+    .hero-meta {
+        margin-top: 40px;
+        font-size: 0.85rem;
+        border-top: 1px solid #ccc;
+        padding-top: 20px;
+    }
 
-.grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:30px;
-}
+    .hero-image {
+        border-left: var(--border-style);
+        overflow: hidden;
+        position: relative;
+    }
 
-.img{
-  width:100%;
-  aspect-ratio:16/9;
-  object-fit:cover;
-  border:1px solid #ccc;
-  background:#e0e0e0;
-}
+    .hero-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        filter: contrast(1.1) saturate(1.1);
+    }
 
-.square{ aspect-ratio:1/1; }
-.portrait{ aspect-ratio:3/4; }
+    /* CLIMATE STRIP */
+    .climate-strip {
+        background: var(--accent-color);
+        color: white;
+        padding: 15px 40px;
+        font-weight: bold;
+        text-transform: uppercase;
+        border-bottom: var(--border-style);
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.9rem;
+        letter-spacing: 1px;
+    }
 
-.traits{
-  list-style:none;
-  padding:0;
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:20px;
-}
+    /* ARTIFACTS GRID */
+    .artifacts {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        border-bottom: var(--border-style);
+    }
 
-.traits li{
-  font-size:12px;
-  font-weight:bold;
-  text-transform:uppercase;
-  border-top:1px solid #ccc;
-  padding-top:10px;
-}
+    .artifact-card {
+        padding: 25px;
+        border-right: var(--border-style);
+        background: #fff;
+    }
 
-.roster td{
-  padding:10px 0;
-  border-bottom:1px solid #eee;
-}
+    .artifact-card:last-child {
+        border-right: none;
+    }
 
-.pos{
-  width:50px;
-  font-family:var(--mono);
-  color:var(--accent);
-  font-weight:bold;
-}
+    .artifact-image {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        background: #eee;
+        margin-bottom: 20px;
+        border: 1px solid #000;
+        overflow: hidden;
+    }
 
-footer{
-  margin-top:60px;
-  border-top:1px solid #eee;
-  padding-top:20px;
-  font-family:var(--mono);
-  font-size:10px;
-  color:#999;
-  text-align:right;
-}
+    .artifact-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+    }
+
+    .artifact-image:hover img {
+        transform: scale(1.05);
+    }
+
+    h3 {
+        font-family: var(--font-heading);
+        font-size: 1.2rem;
+        margin: 0 0 10px 0;
+        text-transform: uppercase;
+    }
+
+    p {
+        font-size: 0.9rem;
+        margin: 0;
+    }
+
+    /* ROSTER SECTION */
+    .roster-section {
+        padding: 40px;
+        background: #fafafa;
+    }
+
+    .roster-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 1rem;
+        font-family: var(--font-main);
+    }
+
+    .roster-table th {
+        text-align: left;
+        border-bottom: 2px solid #000;
+        padding: 10px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    .roster-table td {
+        border-bottom: 1px solid #ddd;
+        padding: 15px 10px;
+    }
+
+    .number {
+        color: var(--accent-color);
+        font-weight: bold;
+        font-family: var(--font-heading);
+    }
+
+    /* FOOTER */
+    footer {
+        background: #1A1A1A;
+        color: white;
+        padding: 15px;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 0.75rem;
+        letter-spacing: 2px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .hero, .artifacts {
+            grid-template-columns: 1fr;
+        }
+        .hero-image {
+            border-left: none;
+            border-top: var(--border-style);
+            height: 300px;
+        }
+        .artifact-card {
+            border-right: none;
+            border-bottom: var(--border-style);
+        }
+        h1 { font-size: 2.5rem; }
+    }
 </style>
 </head>
-
 <body>
-<div class="club">
 
-<div class="doc-id">MTY-CLUB-01</div>
+<div class="container" id="dossier">
+    <header>
+        <div class="logo">GLB // DIV 03</div>
+        <div class="nav-links">
+            <a href="#dossier">Dossier</a>
+            <a href="team.html?team=monterrey-cementeros">Roster</a>
+            <a href="#broadcast">Broadcast</a>
+        </div>
+    </header>
 
-<header>
-  <h1>Monterrey Cementeros</h1>
-  <div class="division">Pacific Division</div>
-  <div class="facts">
-    Est. 1948 • Estadio Fundidora • Manager: Osvaldo “El Tanque” Guerra
-  </div>
+    <div class="hero">
+        <div class="hero-text">
+            <div>
+                <div class="status-tag">Status: ACTIVE</div>
+                <h1>Monterrey<br>Cementeros</h1>
+                <div class="motto">"El Sol Gana" (The Sun Wins)</div>
+            </div>
 
-  <div class="cta">
-    <a class="primary" href="team.html?team=monterrey-cementeros">Active Roster</a>
-    <a href="day.html?date=2026-04-08">Daily Scores</a>
-    <a href="game.html?date=2026-04-08&game=monterrey-cementeros@tijuana-tecnicos">Latest Box Score</a>
-  </div>
-</header>
+            <div class="hero-meta">
+                <strong>LOCATION:</strong> Monterrey, Nuevo León<br>
+                <strong>IDENTITY:</strong> The Concrete Carnival<br>
+                <strong>ESTABLISHED:</strong> 2024<br>
+                <strong>AVG TEMP:</strong> 36°C (Dry Heat)
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="club-monterrey-park.png" alt="Plaza del Sol - Concrete terraces and mist">
+        </div>
+    </div>
 
-<section>
-<h2>The Cementeros</h2>
-<p>
-Monterrey is built on heat, limestone, and heavy industry. The Cementeros reflect
-the city’s foundries—structurally sound, unglamorous, relentless. They do not play
-for speed or spectacle. They work.
-</p>
-<ul class="traits">
-<li>Style: Attrition</li>
-<li>Vibe: Industrial Noise</li>
-<li>Tradition: The 5 PM Whistle</li>
-</ul>
-</section>
+    <div class="climate-strip">
+        <span>Condition: High Noon</span>
+        <span>Visibility: 100%</span>
+        <span>Vibe: Obtuse Fun</span>
+    </div>
 
-<section>
-<h2>Ballpark</h2>
-<img class="img" src="club-monterrey-park.png" alt="Estadio Fundidora">
-<p>
-Built into a former steel mill footprint. Vertical walls. Trapped heat.
-Hard ground. No mercy.
-</p>
-</section>
+    <div class="artifacts">
+        <div class="artifact-card">
+            <div class="artifact-image">
+                 <img src="club-monterrey-player.png" alt="Player with zinc oxide and pink socks">
+            </div>
+            <h3>The Initiates</h3>
+            <p>Bone-white canvas. Acid pink accents. Zinc oxide war paint. They don't look like athletes; they look like they are dressed for a very strange wedding.</p>
+        </div>
 
-<section>
-<h2>Broadcast</h2>
-<div class="grid">
-<img class="img portrait" src="club-monterrey-broadcast.png">
-<div>
-<strong>Héctor “El Arquitecto” Vega</strong><br>
-Clinical. Methodical. Structural.<br><br>
-“The work is finished. The foundation holds.”
+        <div class="artifact-card">
+            <div class="artifact-image">
+                 <img src="club-monterrey-mascot.png" alt="El Invitado - Giant colorful puppet">
+            </div>
+            <h3>El Invitado</h3>
+            <p>A 12-foot papier-mâché marionette. It dances the entire game. It is not scary; it is overwhelmingly joyful, clumsy, and permanent.</p>
+        </div>
+
+        <div class="artifact-card">
+            <div class="artifact-image">
+                <img src="club-monterrey-fans.png" alt="Fans with zinc oxide and rebar noisemakers">
+            </div>
+            <h3>The Ritual</h3>
+            <p>A surreal block party in the heat. The crowd creates a wall of rhythm using painted rebar noise-makers and hypnotic chanting. Obtuse fun.</p>
+        </div>
+    </div>
+
+    <div class="roster-section" id="broadcast">
+        <h3>BROADCAST / ACTIVE ROSTER (SNAPSHOT)</h3>
+        <table class="roster-table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>NAME</th>
+                    <th>POS</th>
+                    <th>NOTE</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="number">04</td>
+                    <td>Mateo "El Mudo" Garza</td>
+                    <td>3B</td>
+                    <td>Silent Enforcer. Communicates via hex signs.</td>
+                </tr>
+                <tr>
+                    <td class="number">88</td>
+                    <td>Tiago "La Mecha" Solis</td>
+                    <td>P</td>
+                    <td>The Fire Starter. Dances during warmups.</td>
+                </tr>
+                <tr>
+                    <td class="number">10</td>
+                    <td>Valerio K.</td>
+                    <td>MGR</td>
+                    <td>The Architect. Wears linen. Never sweats.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <footer>
+        GLB OFFICIAL CLUB DOSSIER // MONTERREY // END OF FILE
+    </footer>
 </div>
-</div>
-</section>
 
-<section>
-<h2>Mascot & Stands</h2>
-<div class="grid">
-<img class="img square" src="club-monterrey-mascot.png">
-<img class="img square" src="club-monterrey-fans.png">
-</div>
-</section>
-
-<section>
-<h2>Core Roster</h2>
-<table class="roster">
-<tr><td class="pos">P</td><td>Víctor “El Muro” Paredes</td></tr>
-<tr><td class="pos">C</td><td>Salomón Cross</td></tr>
-<tr><td class="pos">1B</td><td>Diego Fortaleza</td></tr>
-<tr><td class="pos">SS</td><td>Javier Hierro</td></tr>
-<tr><td class="pos">LF</td><td>Tomás Kiln</td></tr>
-<tr><td class="pos">CP</td><td>“Rusty” O’Neil</td></tr>
-</table>
-</section>
-
-<footer>
-GLB Club Dossier · Monterrey · Internal
-</footer>
-
-</div>
 </body>
 </html>

@@ -9,8 +9,8 @@
 <style>
 :root{
   /* Spokane Identity: Cold Steel, Smelter Smoke, Oxide Rust */
-  --primary: #4A5863; /* Steel Blue-Grey */
-  --accent: #C0442C;  /* Oxide Rust */
+  --primary: #4A5863;
+  --accent: #C0442C;
   --paper: #ffffff;
   --ink: #0f1214;
 
@@ -109,10 +109,9 @@ h1{
   transition: all 0.2s;
 }
 
-.btn:hover {
+.btn:hover{
   background: var(--ink);
-  color: white;
-  border-color: var(--ink);
+  color: #fff;
 }
 
 .btn.primary{
@@ -121,8 +120,8 @@ h1{
   border-color: var(--primary);
 }
 
-.btn.primary:hover {
-  background: var(--accent); /* Rust interaction on primary */
+.btn.primary:hover{
+  background: var(--accent);
   border-color: var(--accent);
 }
 
@@ -132,7 +131,7 @@ section{ margin-bottom: 50px; }
 h2{
   font-size: 14px;
   text-transform: uppercase;
-  border-bottom: 2px solid var(--accent); /* Accent applied to structural lines */
+  border-bottom: 2px solid var(--accent);
   padding-bottom: 5px;
 }
 
@@ -163,20 +162,19 @@ h2{
   background: #e0e0e0;
   border: 1px solid #ccc;
   margin-bottom: 15px;
-  display: block;
 }
 
-.img-slot img {
+.img-slot img{
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
 }
 
-/* Aspect Ratios */
-.ratio-16-9 { aspect-ratio: 16/9; }
-.ratio-3-4 { aspect-ratio: 3/4; max-width: 250px; }
-.ratio-1-1 { aspect-ratio: 1/1; max-width: 260px; }
+/* Aspect ratios */
+.ratio-16-9{ aspect-ratio: 16/9; }
+.ratio-3-4{ aspect-ratio: 3/4; max-width: 250px; }
+.ratio-1-1{ aspect-ratio: 1/1; max-width: 260px; }
 
 /* SPLIT */
 .split{
@@ -199,14 +197,10 @@ h2{
 
 .pos{
   font-family: var(--mono);
-  color: var(--accent); /* Rust accent for positions */
+  color: var(--accent);
   width: 50px;
   font-weight: bold;
 }
-
-/* LINKS */
-a { color: var(--ink); text-decoration: none; }
-a:hover { color: var(--accent); }
 
 /* FOOTER */
 .doc-footer{
@@ -220,9 +214,9 @@ a:hover { color: var(--accent); }
 }
 
 @media(max-width: 600px){
-  .split{grid-template-columns: 1fr;}
-  .identity ul{grid-template-columns: 1fr;}
-  .doc-id{display: none;}
+  .split{ grid-template-columns: 1fr; }
+  .identity ul{ grid-template-columns: 1fr; }
+  .doc-id{ display: none; }
 }
 </style>
 </head>
@@ -255,11 +249,15 @@ a:hover { color: var(--accent); }
 
 <section class="identity">
   <h2>The Club</h2>
-  <p>The Alloys are defined by patience and compression. Born from the region's aluminum smelters, the club treats baseball as an industrial process. They are known for a suffocating, low-scoring style of play that mirrors the damp, heavy atmosphere of the river valley. Wins are manufactured, not gifted.</p>
+  <p>
+    The Alloys are defined by patience and compression. Born from the region’s aluminum
+    smelters, the club treats baseball as an industrial process. Wins are manufactured,
+    not gifted.
+  </p>
   <ul>
     <li>Style: Pitching / Low Output</li>
     <li>Vibe: Cold Industry</li>
-    <li>Tradition: "The Shift Change"</li>
+    <li>Tradition: “The Shift Change”</li>
   </ul>
 </section>
 
@@ -268,18 +266,24 @@ a:hover { color: var(--accent); }
   <div class="img-slot ratio-16-9">
     <img src="club-spokane-alloys-park.png" alt="The Reduction Yards in fog">
   </div>
-  <p><strong>The Reduction Yards.</strong> A utilitarian structure adjacent to the river, often shrouded in early morning fog. The metal seating retains the cold well into June. There are no luxury boxes, only "Foreman's Risers" along the first base line.</p>
+  <p>
+    <strong>The Reduction Yards.</strong> A utilitarian structure adjacent to the river,
+    often shrouded in early morning fog. Metal seating retains cold well into June.
+  </p>
 </section>
 
 <section>
   <h2>Broadcast</h2>
   <div class="split">
     <div class="img-slot ratio-3-4">
-        <img src="club-spokane-alloys-broadcast.png" alt="Broadcaster Gus Vogel">
+      <img src="club-spokane-alloys-booth.png" alt="Broadcaster Gus Vogel in booth">
     </div>
     <div>
       <h3>Gus Vogel</h3>
-      <p><strong>Voice of the Alloys.</strong> Vogel speaks in a low, monotone register that cuts through the static. He rarely raises his voice, even for home runs. His broadcast style is purely informational, treating the game like a shipping report.</p>
+      <p>
+        <strong>Voice of the Alloys.</strong> Vogel delivers the game in a low,
+        informational register, treating innings like shipping reports.
+      </p>
     </div>
   </div>
 </section>
@@ -289,17 +293,21 @@ a:hover { color: var(--accent); }
   <div class="split">
     <div>
       <div class="img-slot ratio-1-1">
-          <img src="club-spokane-alloys-mascot.png" alt="Scrap Golem Mascot">
+        <img src="club-spokane-alloys-mascot.png" alt="Ingot the mascot">
       </div>
       <h3>Ingot</h3>
-      <p>A silent, hulking figure constructed from recycled smelter plating. Ingot does not perform; he stands sentry near the bullpen, a reminder of the raw material the city produces.</p>
+      <p>
+        A silent golem of riveted scrap metal. He stands sentry, never performing.
+      </p>
     </div>
     <div>
       <div class="img-slot ratio-1-1">
-          <img src="club-spokane-alloys-fans.png" alt="Fans in winter gear, observing silently">
+        <img src="club-spokane-alloys-fans.png" alt="Silent standing fans">
       </div>
       <h3>The Freeze Line</h3>
-      <p>Spokane fans dress for winter regardless of the season. They are known for their "quiet innings"—entire frames played in absolute silence until a strikeout is recorded.</p>
+      <p>
+        Entire innings pass in silence until a strikeout breaks the spell.
+      </p>
     </div>
   </div>
 </section>
@@ -307,7 +315,7 @@ a:hover { color: var(--accent); }
 <section>
   <h2>Core Roster</h2>
   <table class="roster">
-    <tr><td class="pos">P</td><td>Koji "Ice" Tanaka</td></tr>
+    <tr><td class="pos">P</td><td>Koji “Ice” Tanaka</td></tr>
     <tr><td class="pos">C</td><td>B.J. Smelt</td></tr>
     <tr><td class="pos">3B</td><td>Vince Carbon</td></tr>
   </table>

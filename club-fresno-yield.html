@@ -8,9 +8,9 @@
 
 <style>
 :root{
-  /* Fresno Identity: Chlorophyll Green, Corn Gold, Loam Brown */
-  --primary: #2E7D32;
-  --accent: #FFD700;
+  /* Fresno Identity: Heat, Growth, Abundance */
+  --primary: #2E7D32;   /* Chlorophyll Green */
+  --accent: #FFD700;    /* Crop Gold */
   --paper: #ffffff;
   --ink: #111111;
 
@@ -22,191 +22,201 @@
 }
 
 body{
-  background: #fcfcfc;
-  color: var(--ink);
-  font-family: var(--sans);
-  margin: 0;
-  padding: 20px;
+  background:#fafafa;
+  color:var(--ink);
+  font-family:var(--sans);
+  margin:0;
+  padding:20px;
 }
 
 .club-sheet{
-  max-width: 900px;
-  margin: 0 auto;
-  background: var(--paper);
-  padding: 40px;
-  border-top: var(--border-thick);
-  position: relative;
+  max-width:900px;
+  margin:0 auto;
+  background:var(--paper);
+  padding:40px;
+  border-top:var(--border-thick);
+  position:relative;
 }
 
+/* DOC ID */
 .doc-id{
-  position: absolute;
-  top: 15px;
-  right: 20px;
-  font-family: var(--mono);
-  font-size: 10px;
-  color: #999;
+  position:absolute;
+  top:15px;
+  right:20px;
+  font-family:var(--mono);
+  font-size:10px;
+  color:#999;
 }
 
+/* HEADER */
 header{
-  border-bottom: var(--border-thick);
-  padding-bottom: 20px;
-  margin-bottom: 20px;
+  border-bottom:var(--border-thick);
+  padding-bottom:20px;
+  margin-bottom:20px;
 }
 
 .club-lockup{
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  flex-wrap: wrap;
+  display:flex;
+  justify-content:space-between;
+  align-items:baseline;
+  flex-wrap:wrap;
 }
 
 h1{
-  margin: 0;
-  font-size: 32px;
-  font-weight: 900;
-  text-transform: uppercase;
+  margin:0;
+  font-size:32px;
+  font-weight:900;
+  text-transform:uppercase;
 }
 
 .division-tag{
-  background: var(--primary);
-  color: #fff;
-  font-size: 12px;
-  padding: 4px 8px;
-  text-transform: uppercase;
+  background:var(--primary);
+  color:#fff;
+  font-size:12px;
+  padding:4px 8px;
+  text-transform:uppercase;
 }
 
 .fact-bar{
-  display: flex;
-  gap: 15px;
-  font-size: 11px;
-  text-transform: uppercase;
-  color: #666;
-  margin-top: 10px;
-  flex-wrap: wrap;
+  display:flex;
+  gap:15px;
+  font-size:11px;
+  text-transform:uppercase;
+  color:#666;
+  margin-top:10px;
+  flex-wrap:wrap;
 }
 
+/* CTAs */
 .cta-row{
-  display: flex;
-  gap: 10px;
-  margin: 25px 0 40px;
-  flex-wrap: wrap;
+  display:flex;
+  gap:10px;
+  margin:25px 0 40px;
+  flex-wrap:wrap;
 }
 
 .btn{
-  flex: 1;
-  min-width: 180px;
-  border: 2px solid var(--ink);
-  padding: 12px 0;
-  text-align: center;
-  font-size: 12px;
-  font-weight: bold;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: var(--ink);
+  flex:1;
+  min-width:180px;
+  border:2px solid var(--ink);
+  padding:12px 0;
+  text-align:center;
+  font-size:12px;
+  font-weight:bold;
+  text-transform:uppercase;
+  text-decoration:none;
+  color:var(--ink);
+  transition:all .2s;
 }
 
 .btn:hover{
-  background: var(--ink);
-  color: white;
+  background:var(--ink);
+  color:#fff;
 }
 
 .btn.primary{
-  background: var(--primary);
-  color: #fff;
-  border-color: var(--primary);
+  background:var(--primary);
+  color:#fff;
+  border-color:var(--primary);
 }
 
 .btn.primary:hover{
-  background: var(--accent);
-  color: var(--ink);
-  border-color: var(--accent);
+  background:var(--accent);
+  color:var(--ink);
+  border-color:var(--accent);
 }
 
-section{ margin-bottom: 50px; }
+/* SECTIONS */
+section{margin-bottom:50px;}
 
 h2{
-  font-size: 14px;
-  text-transform: uppercase;
-  border-bottom: 2px solid var(--primary);
-  padding-bottom: 5px;
+  font-size:14px;
+  text-transform:uppercase;
+  border-bottom:2px solid var(--primary);
+  padding-bottom:5px;
 }
 
+/* IDENTITY */
 .identity p{
-  font-size: 16px;
-  max-width: 700px;
+  font-size:16px;
+  max-width:700px;
 }
 
 .identity ul{
-  list-style: none;
-  padding: 0;
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-  gap: 20px;
+  list-style:none;
+  padding:0;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
 }
 
 .identity li{
-  font-size: 12px;
-  font-weight: bold;
-  text-transform: uppercase;
-  border-top: 1px solid #ccc;
-  padding-top: 10px;
+  font-size:12px;
+  font-weight:bold;
+  text-transform:uppercase;
+  border-top:1px solid #ccc;
+  padding-top:10px;
 }
 
+/* IMAGES */
 .img-slot{
-  background: #e0e0e0;
-  border: 1px solid #ccc;
-  margin-bottom: 15px;
+  background:#e0e0e0;
+  border:1px solid #ccc;
+  margin-bottom:15px;
 }
 
 .img-slot img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
 }
 
-.ratio-16-9{ aspect-ratio: 16/9; }
-.ratio-3-4{ aspect-ratio: 3/4; max-width: 250px; }
-.ratio-1-1{ aspect-ratio: 1/1; max-width: 260px; }
+.ratio-16-9{aspect-ratio:16/9;}
+.ratio-3-4{aspect-ratio:3/4;max-width:250px;}
+.ratio-1-1{aspect-ratio:1/1;max-width:260px;}
 
+/* SPLIT */
 .split{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:30px;
 }
 
+/* ROSTER */
 .roster{
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 13px;
+  width:100%;
+  border-collapse:collapse;
+  font-size:13px;
 }
 
 .roster td{
-  padding: 10px 0;
-  border-bottom: 1px solid #eee;
+  padding:10px 0;
+  border-bottom:1px solid #eee;
 }
 
 .pos{
-  font-family: var(--mono);
-  color: var(--primary);
-  width: 50px;
-  font-weight: bold;
+  font-family:var(--mono);
+  color:var(--primary);
+  width:50px;
+  font-weight:bold;
 }
 
+/* FOOTER */
 .doc-footer{
-  margin-top: 60px;
-  padding-top: 20px;
-  border-top: 1px solid #eee;
-  font-family: var(--mono);
-  font-size: 10px;
-  color: #999;
-  text-align: right;
+  margin-top:60px;
+  padding-top:20px;
+  border-top:1px solid #eee;
+  font-family:var(--mono);
+  font-size:10px;
+  color:#999;
+  text-align:right;
 }
 
-@media(max-width: 600px){
-  .split{ grid-template-columns: 1fr; }
-  .identity ul{ grid-template-columns: 1fr; }
-  .doc-id{ display: none; }
+@media(max-width:600px){
+  .split{grid-template-columns:1fr;}
+  .identity ul{grid-template-columns:1fr;}
+  .doc-id{display:none;}
 }
 </style>
 </head>
@@ -239,9 +249,9 @@ h2{
 
 <section class="identity">
   <h2>The Club</h2>
-  <p>The Yield plays in a perpetual summer of abundance. Fresno overwhelms opponents through volume and pace, turning every inning into a harvest cycle. Games are loud, loose, and relentless — a team that never looks tired and never slows down.</p>
+  <p>The Yield plays baseball the way the valley grows crops: fast, dense, and without apology. Fresno overwhelms opponents with constant pressure and relentless contact, forcing mistakes through volume. Games here feel long, loud, and sunburned.</p>
   <ul>
-    <li>Style: High Contact / Pressure</li>
+    <li>Style: High Contact / High Output</li>
     <li>Vibe: Summer Abundance</li>
     <li>Tradition: “The Bumper Crop”</li>
   </ul>
@@ -252,18 +262,18 @@ h2{
   <div class="img-slot ratio-16-9">
     <img src="club-fresno-yield-stadium.png" alt="The Corn Cathedral">
   </div>
-  <p><strong>The Corn Cathedral.</strong> Built directly into working farmland, the outfield is bordered by living crops. A home run is said to “feed the county.” The air smells of irrigation and cut grass.</p>
+  <p><strong>The Corn Cathedral.</strong> The outfield dissolves directly into farmland. There is no true wall — just tall corn, orchards, and irrigation rigs. Home runs disappear into growth.</p>
 </section>
 
 <section>
   <h2>Broadcast</h2>
   <div class="split">
     <div class="img-slot ratio-3-4">
-      <img src="club-fresno-yield-broadcast.png" alt="Yield broadcast booth">
+      <img src="club-fresno-yield-broadcast.png" alt="Fresno broadcast booth">
     </div>
     <div>
       <h3>Sunny Jim</h3>
-      <p><strong>Voice of the Yield.</strong> Broadcasting from an open-air gazebo, Jim’s call drifts like a farm report — warm, conversational, and never in a hurry.</p>
+      <p><strong>Voice of the Yield.</strong> Jim sounds like late afternoon. His calls drift between play-by-play, weather updates, and harvest talk. It feels less like a broadcast and more like someone talking to you over a fence.</p>
     </div>
   </div>
 </section>
@@ -276,14 +286,14 @@ h2{
         <img src="club-fresno-yield-mascot.png" alt="The Husk mascot">
       </div>
       <h3>The Husk</h3>
-      <p>A living construct of vines and stalks, The Husk embodies unchecked growth and summer vitality.</p>
+      <p>A walking bundle of stalks and vines. The Husk represents growth without restraint. Leaves fall off him all game long.</p>
     </div>
     <div>
       <div class="img-slot ratio-1-1">
-        <img src="club-fresno-yield-fans.png" alt="Fans on the Picnic Hills">
+        <img src="club-fresno-yield-fans.png" alt="Fresno fans on the hills">
       </div>
       <h3>The Picnic Hills</h3>
-      <p>Blankets, coolers, and families line the berms. Fresno games feel more like a county fair than a contest.</p>
+      <p>No seats. Blankets, coolers, kids running everywhere. It feels more like a county fair than a stadium — until the ball starts flying.</p>
     </div>
   </div>
 </section>

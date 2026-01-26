@@ -1,363 +1,417 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>GLB: MONTERREY CEMENTEROS</title>
 <style>
-    :root {
-        /* MONTERREY PALETTE */
-        --bg-color: #ECECEC;       /* Sun-bleached Concrete */
-        --text-color: #1A1A1A;     /* Slate / Oxidized Steel */
-        --accent-color: #FF00FF;   /* Acid Pink */
-        --secondary-accent: #FF8C00; /* Marigold Orange */
+  :root {
+    /* MONTERREY PALETTE */
+    --bg-color: #ECECEC;         /* Sun-bleached Concrete */
+    --text-color: #1A1A1A;       /* Slate / Oxidized Steel */
+    --accent-color: #FF00FF;     /* Acid Pink */
+    --secondary-accent: #FF8C00; /* Marigold Orange */
 
-        --border-style: 2px solid #1A1A1A;
-        --font-main: 'Courier New', Courier, monospace;
-        --font-heading: 'Arial Black', sans-serif;
-    }
+    --border-style: 2px solid #1A1A1A;
+    --font-main: "Courier New", Courier, monospace;
+    --font-heading: "Arial Black", sans-serif;
+  }
 
-    body {
-        background-color: var(--bg-color);
-        color: var(--text-color);
-        font-family: var(--font-main);
-        margin: 0;
-        padding: 40px;
-        line-height: 1.4;
-    }
+  body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-main);
+    margin: 0;
+    padding: 40px;
+    line-height: 1.4;
+  }
 
-    .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        border: var(--border-style);
-        background: #fff;
-        box-shadow: 10px 10px 0px rgba(0,0,0,0.1);
-    }
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    border: var(--border-style);
+    background: #fff;
+    box-shadow: 10px 10px 0px rgba(0,0,0,0.1);
+  }
 
-    /* HEADER */
-    header {
-        border-bottom: var(--border-style);
-        padding: 20px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background: #fff;
-    }
+  /* HEADER */
+  header {
+    border-bottom: var(--border-style);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+  }
 
-    .logo {
-        font-weight: bold;
-        font-size: 1.2rem;
-        letter-spacing: -1px;
-    }
+  .logo {
+    font-weight: bold;
+    font-size: 1.2rem;
+    letter-spacing: -1px;
+  }
 
-    .nav-links a {
-        margin-left: 20px;
-        text-decoration: underline;
-        color: var(--text-color);
-        text-transform: uppercase;
-        font-size: 0.9rem;
-        font-weight: bold;
-    }
+  .nav-links a {
+    margin-left: 20px;
+    text-decoration: underline;
+    color: var(--text-color);
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    font-weight: bold;
+  }
 
-    .nav-links a:hover {
-        background: var(--accent-color);
-        color: white;
-        text-decoration: none;
-    }
+  .nav-links a:hover {
+    background: var(--accent-color);
+    color: white;
+    text-decoration: none;
+  }
 
-    /* HERO SECTION */
-    .hero {
-        display: grid;
-        grid-template-columns: 1fr 1.5fr;
-        border-bottom: var(--border-style);
-        min-height: 500px;
-    }
+  /* HERO */
+  .hero {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    border-bottom: var(--border-style);
+    min-height: 500px;
+  }
 
-    .hero-text {
-        padding: 40px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        background-color: #fff;
-    }
+  .hero-text {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #fff;
+  }
 
-    .status-tag {
-        display: inline-block;
-        background: var(--secondary-accent);
-        color: black;
-        padding: 4px 8px;
-        font-weight: bold;
-        text-transform: uppercase;
-        font-size: 0.8rem;
-        border: 1px solid #000;
-        align-self: flex-start;
-        margin-bottom: 20px;
-    }
+  .status-tag {
+    display: inline-block;
+    background: var(--secondary-accent);
+    color: black;
+    padding: 4px 8px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    border: 1px solid #000;
+    align-self: flex-start;
+    margin-bottom: 20px;
+  }
 
-    h1 {
-        font-family: var(--font-heading);
-        font-size: 3.5rem;
-        line-height: 0.9;
-        margin: 0;
-        text-transform: uppercase;
-        letter-spacing: -2px;
-    }
+  h1 {
+    font-family: var(--font-heading);
+    font-size: 3.5rem;
+    line-height: 0.9;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+  }
 
-    .motto {
-        font-size: 1.2rem;
-        font-style: italic;
-        margin-top: 10px;
-        color: var(--secondary-accent);
-        font-weight: bold;
-    }
+  .motto {
+    font-size: 1.2rem;
+    font-style: italic;
+    margin-top: 10px;
+    color: var(--secondary-accent);
+    font-weight: bold;
+  }
 
-    .hero-meta {
-        margin-top: 40px;
-        font-size: 0.85rem;
-        border-top: 1px solid #ccc;
-        padding-top: 20px;
-    }
+  .hero-meta {
+    margin-top: 40px;
+    font-size: 0.85rem;
+    border-top: 1px solid #ccc;
+    padding-top: 20px;
+  }
 
+  .hero-image {
+    border-left: var(--border-style);
+    overflow: hidden;
+    position: relative;
+  }
+
+  .hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: contrast(1.1) saturate(1.1);
+  }
+
+  /* CLIMATE STRIP */
+  .climate-strip {
+    background: var(--accent-color);
+    color: white;
+    padding: 15px 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-bottom: var(--border-style);
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+  }
+
+  /* ARTIFACTS GRID */
+  .artifacts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-bottom: var(--border-style);
+  }
+
+  .artifact-card {
+    padding: 25px;
+    border-right: var(--border-style);
+    background: #fff;
+  }
+
+  .artifact-card:last-child {
+    border-right: none;
+  }
+
+  .artifact-image {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background: #eee;
+    margin-bottom: 20px;
+    border: 1px solid #000;
+    overflow: hidden;
+  }
+
+  .artifact-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    display: block;
+  }
+
+  .artifact-image:hover img {
+    transform: scale(1.05);
+  }
+
+  h3 {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    margin: 0 0 10px 0;
+    text-transform: uppercase;
+  }
+
+  p {
+    font-size: 0.9rem;
+    margin: 0;
+  }
+
+  /* BROADCAST BAND */
+  .broadcast-section {
+    padding: 40px;
+    background: #fff;
+    border-bottom: var(--border-style);
+  }
+
+  .broadcast-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 25px;
+    align-items: start;
+  }
+
+  .broadcast-meta {
+    margin-top: 12px;
+    font-size: 0.85rem;
+    border-top: 1px solid #ddd;
+    padding-top: 12px;
+  }
+
+  .broadcast-meta strong {
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  /* ROSTER SECTION */
+  .roster-section {
+    padding: 40px;
+    background: #fafafa;
+  }
+
+  .roster-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1rem;
+    font-family: var(--font-main);
+  }
+
+  .roster-table th {
+    text-align: left;
+    border-bottom: 2px solid #000;
+    padding: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  .roster-table td {
+    border-bottom: 1px solid #ddd;
+    padding: 15px 10px;
+  }
+
+  .number {
+    color: var(--accent-color);
+    font-weight: bold;
+    font-family: var(--font-heading);
+  }
+
+  /* FOOTER */
+  footer {
+    background: #1A1A1A;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+  }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    .broadcast-grid { grid-template-columns: 1fr; }
+  }
+
+  @media (max-width: 768px) {
+    .hero, .artifacts { grid-template-columns: 1fr; }
     .hero-image {
-        border-left: var(--border-style);
-        overflow: hidden;
-        position: relative;
+      border-left: none;
+      border-top: var(--border-style);
+      height: 300px;
     }
-
-    .hero-image img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        display: block;
-        filter: contrast(1.1) saturate(1.1);
-    }
-
-    /* CLIMATE STRIP */
-    .climate-strip {
-        background: var(--accent-color);
-        color: white;
-        padding: 15px 40px;
-        font-weight: bold;
-        text-transform: uppercase;
-        border-bottom: var(--border-style);
-        display: flex;
-        justify-content: space-between;
-        font-size: 0.9rem;
-        letter-spacing: 1px;
-    }
-
-    /* ARTIFACTS GRID */
-    .artifacts {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        border-bottom: var(--border-style);
-    }
-
     .artifact-card {
-        padding: 25px;
-        border-right: var(--border-style);
-        background: #fff;
+      border-right: none;
+      border-bottom: var(--border-style);
     }
-
-    .artifact-card:last-child {
-        border-right: none;
-    }
-
-    .artifact-image {
-        width: 100%;
-        aspect-ratio: 1 / 1;
-        background: #eee;
-        margin-bottom: 20px;
-        border: 1px solid #000;
-        overflow: hidden;
-    }
-
-    .artifact-image img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transition: transform 0.3s ease;
-    }
-
-    .artifact-image:hover img {
-        transform: scale(1.05);
-    }
-
-    h3 {
-        font-family: var(--font-heading);
-        font-size: 1.2rem;
-        margin: 0 0 10px 0;
-        text-transform: uppercase;
-    }
-
-    p {
-        font-size: 0.9rem;
-        margin: 0;
-    }
-
-    /* ROSTER SECTION */
-    .roster-section {
-        padding: 40px;
-        background: #fafafa;
-    }
-
-    .roster-table {
-        width: 100%;
-        border-collapse: collapse;
-        font-size: 1rem;
-        font-family: var(--font-main);
-    }
-
-    .roster-table th {
-        text-align: left;
-        border-bottom: 2px solid #000;
-        padding: 10px;
-        font-weight: bold;
-        text-transform: uppercase;
-    }
-
-    .roster-table td {
-        border-bottom: 1px solid #ddd;
-        padding: 15px 10px;
-    }
-
-    .number {
-        color: var(--accent-color);
-        font-weight: bold;
-        font-family: var(--font-heading);
-    }
-
-    /* FOOTER */
-    footer {
-        background: #1A1A1A;
-        color: white;
-        padding: 15px;
-        text-align: center;
-        text-transform: uppercase;
-        font-size: 0.75rem;
-        letter-spacing: 2px;
-    }
-
-    /* Responsive */
-    @media (max-width: 768px) {
-        .hero, .artifacts {
-            grid-template-columns: 1fr;
-        }
-        .hero-image {
-            border-left: none;
-            border-top: var(--border-style);
-            height: 300px;
-        }
-        .artifact-card {
-            border-right: none;
-            border-bottom: var(--border-style);
-        }
-        h1 { font-size: 2.5rem; }
-    }
+    h1 { font-size: 2.5rem; }
+  }
 </style>
 </head>
+
 <body>
+<div class="container">
+  <header>
+    <div class="logo">GLB // DIV 03</div>
+    <div class="nav-links">
+      <a href="#">Dossier</a>
+      <a href="#">Roster</a>
+      <a href="#">Broadcast</a>
+    </div>
+  </header>
 
-<div class="container" id="dossier">
-    <header>
-        <div class="logo">GLB // DIV 03</div>
-        <div class="nav-links">
-            <a href="#dossier">Dossier</a>
-            <a href="team.html?team=monterrey-cementeros">Roster</a>
-            <a href="#broadcast">Broadcast</a>
-        </div>
-    </header>
+  <div class="hero">
+    <div class="hero-text">
+      <div>
+        <div class="status-tag">Status: ACTIVE</div>
+        <h1>Monterrey<br />Cementeros</h1>
+        <div class="motto">"El Sol Gana" (The Sun Wins)</div>
+      </div>
 
-    <div class="hero">
-        <div class="hero-text">
-            <div>
-                <div class="status-tag">Status: ACTIVE</div>
-                <h1>Monterrey<br>Cementeros</h1>
-                <div class="motto">"El Sol Gana" (The Sun Wins)</div>
-            </div>
-
-            <div class="hero-meta">
-                <strong>LOCATION:</strong> Monterrey, Nuevo León<br>
-                <strong>IDENTITY:</strong> The Concrete Carnival<br>
-                <strong>ESTABLISHED:</strong> 2024<br>
-                <strong>AVG TEMP:</strong> 36°C (Dry Heat)
-            </div>
-        </div>
-        <div class="hero-image">
-            <img src="club-monterrey-park.png" alt="Plaza del Sol - Concrete terraces and mist">
-        </div>
+      <div class="hero-meta">
+        <strong>LOCATION:</strong> Monterrey, Nuevo León<br />
+        <strong>IDENTITY:</strong> The Concrete Carnival<br />
+        <strong>ESTABLISHED:</strong> 2024<br />
+        <strong>AVG TEMP:</strong> 36°C (Dry Heat)
+      </div>
     </div>
 
-    <div class="climate-strip">
-        <span>Condition: High Noon</span>
-        <span>Visibility: 100%</span>
-        <span>Vibe: Obtuse Fun</span>
+    <div class="hero-image">
+      <img src="club-monterrey-park.png" alt="Plaza del Sol - Concrete terraces and mist" />
+    </div>
+  </div>
+
+  <div class="climate-strip">
+    <span>Condition: High Noon</span>
+    <span>Visibility: 100%</span>
+    <span>Vibe: Obtuse Fun</span>
+  </div>
+
+  <div class="artifacts">
+    <div class="artifact-card">
+      <div class="artifact-image">
+        <img src="club-monterrey-player.png" alt="Player with zinc oxide and pink socks" />
+      </div>
+      <h3>The Initiates</h3>
+      <p>Bone-white canvas. Acid pink accents. Zinc oxide war paint. They don't look like athletes; they look like they are dressed for a very strange wedding.</p>
     </div>
 
-    <div class="artifacts">
-        <div class="artifact-card">
-            <div class="artifact-image">
-                 <img src="club-monterrey-player.png" alt="Player with zinc oxide and pink socks">
-            </div>
-            <h3>The Initiates</h3>
-            <p>Bone-white canvas. Acid pink accents. Zinc oxide war paint. They don't look like athletes; they look like they are dressed for a very strange wedding.</p>
-        </div>
-
-        <div class="artifact-card">
-            <div class="artifact-image">
-                 <img src="club-monterrey-mascot.png" alt="El Invitado - Giant colorful puppet">
-            </div>
-            <h3>El Invitado</h3>
-            <p>A 12-foot papier-mâché marionette. It dances the entire game. It is not scary; it is overwhelmingly joyful, clumsy, and permanent.</p>
-        </div>
-
-        <div class="artifact-card">
-            <div class="artifact-image">
-                <img src="club-monterrey-fans.png" alt="Fans with zinc oxide and rebar noisemakers">
-            </div>
-            <h3>The Ritual</h3>
-            <p>A surreal block party in the heat. The crowd creates a wall of rhythm using painted rebar noise-makers and hypnotic chanting. Obtuse fun.</p>
-        </div>
+    <div class="artifact-card">
+      <div class="artifact-image">
+        <img src="club-monterrey-mascot.png" alt="El Invitado - Giant colorful puppet" />
+      </div>
+      <h3>El Invitado</h3>
+      <p>A 12-foot papier-mâché marionette. It dances the entire game. It is not scary; it is overwhelmingly joyful, clumsy, and permanent.</p>
     </div>
 
-    <div class="roster-section" id="broadcast">
-        <h3>BROADCAST / ACTIVE ROSTER (SNAPSHOT)</h3>
-        <table class="roster-table">
-            <thead>
-                <tr>
-                    <th>#</th>
-                    <th>NAME</th>
-                    <th>POS</th>
-                    <th>NOTE</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td class="number">04</td>
-                    <td>Mateo "El Mudo" Garza</td>
-                    <td>3B</td>
-                    <td>Silent Enforcer. Communicates via hex signs.</td>
-                </tr>
-                <tr>
-                    <td class="number">88</td>
-                    <td>Tiago "La Mecha" Solis</td>
-                    <td>P</td>
-                    <td>The Fire Starter. Dances during warmups.</td>
-                </tr>
-                <tr>
-                    <td class="number">10</td>
-                    <td>Valerio K.</td>
-                    <td>MGR</td>
-                    <td>The Architect. Wears linen. Never sweats.</td>
-                </tr>
-            </tbody>
-        </table>
+    <div class="artifact-card">
+      <div class="artifact-image">
+        <img src="club-monterrey-fans.png" alt="Fans with zinc oxide and rebar noisemakers" />
+      </div>
+      <h3>The Ritual</h3>
+      <p>A surreal block party in the heat. The crowd creates a wall of rhythm using painted rebar noise-makers and hypnotic chanting. Obtuse fun.</p>
     </div>
+  </div>
 
-    <footer>
-        GLB OFFICIAL CLUB DOSSIER // MONTERREY // END OF FILE
-    </footer>
+  <!-- BROADCAST (NEW) -->
+  <div class="broadcast-section">
+    <h3>BROADCAST UNIT</h3>
+
+    <div class="broadcast-grid">
+      <div class="artifact-image" style="max-width: 420px;">
+        <img src="club-monterrey-broadcast.png" alt="Broadcast booth / commentator portrait" />
+      </div>
+
+      <div>
+        <p><strong>Primary voice:</strong> Marisol “La Cinta” Ibarra</p>
+        <p style="margin-top:10px;">
+          She calls games like she’s cutting tape in real time—fast edits, hard jumps, no dead air. When the heat spikes, her delivery gets calmer, almost hypnotic.
+          She refuses sponsor reads unless they’re “useful.” Nobody knows what that means, but she always wins.
+        </p>
+
+        <div class="broadcast-meta">
+          <div><strong>Signal:</strong> Terraces Channel 3 (VHF relay)</div>
+          <div><strong>Booth condition:</strong> Uncooled / reflective glare</div>
+          <div><strong>Sign-off:</strong> “La mezcla ya fraguó.” (The mix has set.)</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="roster-section">
+    <h3>ACTIVE ROSTER (SNAPSHOT)</h3>
+    <table class="roster-table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>NAME</th>
+          <th>POS</th>
+          <th>NOTE</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="number">04</td>
+          <td>Mateo "El Mudo" Garza</td>
+          <td>3B</td>
+          <td>Silent Enforcer. Communicates via hex signs.</td>
+        </tr>
+        <tr>
+          <td class="number">88</td>
+          <td>Tiago "La Mecha" Solis</td>
+          <td>P</td>
+          <td>The Fire Starter. Dances during warmups.</td>
+        </tr>
+        <tr>
+          <td class="number">10</td>
+          <td>Valerio K.</td>
+          <td>MGR</td>
+          <td>The Architect. Wears linen. Never sweats.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <footer>
+    GLB OFFICIAL CLUB DOSSIER // MONTERREY // END OF FILE
+  </footer>
 </div>
-
 </body>
 </html>

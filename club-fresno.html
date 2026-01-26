@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Fresno Yield – Club Portal</title>
+
+<style>
+:root{
+  /* Fresno Identity: Sun-bleached agriculture, irrigation hum, dust + routine */
+  --primary: #5C6B4A; /* Dusty Olive */
+  --accent:  #C9A227; /* Faded Safety Yellow (not trophy gold) */
+  --paper:   #ffffff;
+  --ink:     #0f1214;
+
+  --border-thick: 4px solid var(--ink);
+  --border-thin:  1px solid #ccc;
+
+  --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --mono: "Courier New", Courier, monospace;
+}
+
+body{
+  background: #f8f7f2; /* warm, sun-washed */
+  color: var(--ink);
+  font-family: var(--sans);
+  margin: 0;
+  padding: 20px;
+}
+
+.club-sheet{
+  max-width: 900px;
+  margin: 0 auto;
+  background: var(--paper);
+  padding: 40px;
+  border-top: var(--border-thick);
+  position: relative;
+}
+
+/* DOC ID */
+.doc-id{
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-family: var(--mono);
+  font-size: 10px;
+  color: #999;
+}
+
+/* HEADER */
+header{
+  border-bottom: var(--border-thick);
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.club-lockup{
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+
+h1{
+  margin: 0;
+  font-size: 32px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.division-tag{
+  background: var(--primary);
+  color: #fff;
+  font-size: 12px;
+  padding: 4px 8px;
+  text-transform: uppercase;
+}
+
+.fact-bar{
+  display: flex;
+  gap: 15px;
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #666;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+/* CTAs */
+.cta-row{
+  display: flex;
+  gap: 10px;
+  margin: 25px 0 40px;
+  flex-wrap: wrap;
+}
+
+.btn{
+  flex: 1;
+  min-width: 180px;
+  border: 2px solid var(--ink);
+  padding: 12px 0;
+  text-align: center;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--ink);
+  transition: all 0.2s;
+}
+
+.btn:hover{
+  background: var(--ink);
+  color: #fff;
+  border-color: var(--ink);
+}
+
+.btn.primary{
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+}
+
+.btn.primary:hover{
+  background: var(--accent);
+  color: var(--ink);
+  border-color: var(--accent);
+}
+
+/* SECTIONS */
+section{ margin-bottom: 50px; }
+
+h2{
+  font-size: 14px;
+  text-transform: uppercase;
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 5px;
+}
+
+/* IDENTITY */
+.identity p{
+  font-size: 16px;
+  max-width: 700px;
+}
+
+.identity ul{
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 20px;
+}
+
+.identity li{
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-top: 1px solid #ccc;
+  padding-top: 10px;
+}
+
+/* IMAGE SLOTS */
+.img-slot{
+  background: #e0e0e0;
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.img-slot img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Aspect Ratios */
+.ratio-16-9{ aspect-ratio: 16/9; }
+.ratio-3-4{ aspect-ratio: 3/4; max-width: 250px; }
+.ratio-1-1{ aspect-ratio: 1/1; max-width: 260px; }
+
+/* SPLIT */
+.split{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+/* ROSTER */
+.roster{
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.roster td{
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.pos{
+  font-family: var(--mono);
+  color: var(--accent);
+  width: 50px;
+  font-weight: bold;
+}
+
+/* LINKS */
+a{ color: var(--ink); text-decoration: none; }
+a:hover{ color: var(--primary); }
+
+/* FOOTER */
+.doc-footer{
+  margin-top: 60px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+  font-family: var(--mono);
+  font-size: 10px;
+  color: #999;
+  text-align: right;
+}
+
+@media(max-width: 600px){
+  .split{ grid-template-columns: 1fr; }
+  .identity ul{ grid-template-columns: 1fr; }
+  .doc-id{ display: none; }
+}
+</style>
+</head>
+
+<body>
+<div class="club-sheet">
+
+<div class="doc-id">FRS-CLUB-01</div>
+
+<header>
+  <div class="club-lockup">
+    <h1>Fresno Yield</h1>
+    <span class="division-tag">Americas Division</span>
+  </div>
+
+  <div class="fact-bar">
+    <span>Est. —</span>
+    <span>•</span>
+    <span><strong>The Corn Cathedral</strong></span>
+    <span>•</span>
+    <span>Mgr. "Pop" Miller</span>
+  </div>
+
+  <div class="cta-row">
+    <a class="btn primary" href="team.html?team=fresno-yield">Active Roster</a>
+    <a class="btn" href="day.html?date=2026-06-20">Daily Scores</a>
+    <a class="btn" href="game.html?date=2026-06-20&game=fresno-yield@spokane-alloys">Latest Box Score</a>
+  </div>
+</header>
+
+<section class="identity">
+  <h2>The Club</h2>
+  <p>The Yield doesn’t play for flair. They play like a field crew: early, methodical, and impossible to rush. Fresno games feel sun-fixed—everything slowed by heat and routine. They win by staying intact longer than the other team. Nothing heroic. Nothing cute. Just a steady competence that doesn’t crack.</p>
+  <ul>
+    <li>Style: Contact / Wear-Down</li>
+    <li>Vibe: Dry Heat Routine</li>
+    <li>Tradition: "The Water Break"</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Ballpark</h2>
+  <div class="img-slot ratio-16-9">
+    <img src="club-fresno-yield-park.png" alt="The Corn Cathedral in heat shimmer">
+  </div>
+  <p><strong>The Corn Cathedral.</strong> A flat, utilitarian park at the edge of working fields—irrigation lines visible beyond the fence, dust hanging above the warning track, heat shimmer by the 2nd inning. The bleachers are bare metal. Shade is scarce and treated like currency. On bad days the air tastes like fertilizer and sun-baked dirt.</p>
+</section>
+
+<section>
+  <h2>Broadcast</h2>
+  <div class="split">
+    <div class="img-slot ratio-3-4">
+      <img src="club-fresno-yield-broadcast.png" alt="Broadcaster in a sunlit booth">
+    </div>
+    <div>
+      <h3>Sunny Jim</h3>
+      <p><strong>Voice of the Yield.</strong> Jim sounds sun-tired in the best way—calm, practical, never theatrical. He calls innings like a work log: pitch count, wind, glare, field conditions. When the heat spikes, he goes quiet for long stretches, letting the crowd noise and cicadas do the talking.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Mascot & Stands</h2>
+  <div class="split">
+    <div>
+      <div class="img-slot ratio-1-1">
+        <img src="club-fresno-yield-mascot.png" alt="The Husk mascot in patched workwear">
+      </div>
+      <h3>The Husk</h3>
+      <p>A burlap-and-straw figure in patched workwear, built more like a field marker than a mascot. The Husk doesn’t dance. It appears, stands in the same place for innings at a time, and leaves without explanation—like something the park keeps around for luck.</p>
+    </div>
+    <div>
+      <div class="img-slot ratio-1-1">
+        <img src="club-fresno-yield-fans.png" alt="Fans clustered along the shade line">
+      </div>
+      <h3>The Shade Line</h3>
+      <p>Fans cluster wherever shade can be found—under railings, behind posts, along the concourse edge. They don’t heckle. They watch, sip water, and save their energy. When Fresno scores, the reaction is small and satisfied—like finishing a task, not winning a prize.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Core Roster</h2>
+  <table class="roster">
+    <tr><td class="pos">2B</td><td>Rey "Seedcount" Navarro</td></tr>
+    <tr><td class="pos">C</td><td>Hank "Tin Cup" Dyer</td></tr>
+    <tr><td class="pos">P</td><td>Cal "Ditchwater" Morgan</td></tr>
+  </table>
+</section>
+
+<div class="doc-footer">
+  GLB Club Portal · Fresno · Internal
+</div>
+
+</div>
+</body>
+</html>

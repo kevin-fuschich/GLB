@@ -1,1 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>GLB: TIJUANA TECNICOS</title>
+
+<style>
+:root {
+  --bg: #F2F4F6;
+  --ink: #0E1114;
+  --primary: #2C3E50;
+  --accent: #00B3E6;
+
+  --border: 2px solid var(--ink);
+
+  --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --mono: "Courier New", Courier, monospace;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--sans);
+  margin: 0;
+  padding: 40px;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  background: white;
+  border: var(--border);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: var(--border);
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+
+.nav a {
+  margin-left: 20px;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--ink);
+}
+
+.nav a:hover {
+  color: var(--accent);
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  border-bottom: var(--border);
+}
+
+.hero-text {
+  padding: 40px;
+}
+
+.status {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-family: var(--mono);
+  border: 1px solid var(--ink);
+  padding: 4px 8px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 3rem;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+}
+
+.motto {
+  margin-top: 10px;
+  color: var(--accent);
+  font-weight: bold;
+}
+
+.meta {
+  margin-top: 30px;
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+
+.hero-img {
+  border-left: var(--border);
+}
+
+.hero-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.strip {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 30px;
+  background: var(--primary);
+  color: white;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
+.artifacts {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  border-bottom: var(--border);
+}
+
+.card {
+  padding: 25px;
+  border-right: var(--border);
+}
+
+.card:last-child {
+  border-right: none;
+}
+
+.img-box {
+  aspect-ratio: 1/1;
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+}
+
+.img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+h3 {
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+p {
+  font-size: 0.85rem;
+}
+
+footer {
+  text-align: center;
+  padding: 15px;
+  background: var(--ink);
+  color: white;
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+}
+
+@media(max-width:800px) {
+  .hero, .artifacts {
+    grid-template-columns: 1fr;
+  }
+  .hero-img {
+    border-left: none;
+    border-top: var(--border);
+    height: 300px;
+  }
+  .card {
+    border-right: none;
+    border-bottom: var(--border);
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<header>
+  <div class="logo">GLB // PACIFIC</div>
+  <div class="nav">
+    <a href="#">Dossier</a>
+    <a href="#">Roster</a>
+    <a href="#">Broadcast</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-text">
+    <div class="status">STATUS: ACTIVE</div>
+    <h1>Tijuana<br>Tecnicos</h1>
+    <div class="motto">"El Sistema Nunca Falla"</div>
+
+    <div class="meta">
+      <strong>Location:</strong> Tijuana, Baja California<br>
+      <strong>Identity:</strong> Engineered Precision<br>
+      <strong>Philosophy:</strong> Repeatability &gt; Emotion<br>
+      <strong>Environment:</strong> Controlled Variables
+    </div>
+  </div>
+
+  <div class="hero-img">
+    <img src="club-tijuana-tecnicos-stadium.png" alt="Tecnicos Stadium">
+  </div>
+</section>
+
+<div class="strip">
+  <span>Condition: Stable</span>
+  <span>Noise: Minimal</span>
+  <span>Variance: Low</span>
+</div>
+
+<section class="artifacts">
+  <div class="card">
+    <div class="img-box">
+      <img src="club-tijuana-tecnicos-broadcast.png" alt="Tecnicos Broadcast">
+    </div>
+    <h3>The Analysis</h3>
+    <p>Broadcasts emphasize probability, efficiency, and system performance. Emotion is considered interference.</p>
+  </div>
+
+  <div class="card">
+    <div class="img-box">
+      <img src="club-tijuana-tecnicos-mascot.png" alt="Tecnicos Mascot">
+    </div>
+    <h3>The Symbol</h3>
+    <p>The mascot represents function, not personality. It exists to remind the crowd that the system is always watching.</p>
+  </div>
+
+  <div class="card">
+    <div class="img-box">
+      <img src="club-tijuana-tecnicos-fans.png" alt="Tecnicos Fans">
+    </div>
+    <h3>The Stands</h3>
+    <p>Applause is synchronized. Silence is respected. The crowd behaves like a calibrated instrument.</p>
+  </div>
+</section>
+
+<footer>
+  GLB OFFICIAL CLUB DOSSIER // TIJUANA // END
+</footer>
+
+</div>
+
+</body>
+</html>

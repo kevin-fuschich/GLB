@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>Vancouver Current – Club Portal</title>
+
+<style>
+:root{
+  /* Vancouver Current Identity: Moist Coastal, Quiet Pressure, Harbor Glow */
+  --primary: #1F4B57;   /* deep teal */
+  --accent:  #A8DADC;   /* muted cyan */
+  --paper:   #ffffff;
+  --ink:     #0f1214;
+
+  --border-thick: 4px solid var(--ink);
+  --border-thin:  1px solid #cfcfcf;
+
+  --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --mono: "Courier New", Courier, monospace;
+}
+
+body{
+  background: #f4f6f7;
+  color: var(--ink);
+  font-family: var(--sans);
+  margin: 0;
+  padding: 20px;
+  line-height: 1.5;
+}
+
+.club-sheet{
+  max-width: 900px;
+  margin: 0 auto;
+  background: var(--paper);
+  padding: 40px;
+  border-top: var(--border-thick);
+  position: relative;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+}
+
+/* DOC ID */
+.doc-id{
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-family: var(--mono);
+  font-size: 10px;
+  color: #9aa3aa;
+  letter-spacing: 1px;
+}
+
+/* HEADER */
+header{
+  border-bottom: var(--border-thick);
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.club-lockup{
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+h1{
+  margin: 0;
+  font-size: 32px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.division-tag{
+  background: var(--primary);
+  color: #fff;
+  font-size: 12px;
+  padding: 4px 8px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.fact-bar{
+  display: flex;
+  gap: 15px;
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #66727a;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+/* CTAs */
+.cta-row{
+  display: flex;
+  gap: 10px;
+  margin: 25px 0 40px;
+  flex-wrap: wrap;
+}
+
+.btn{
+  flex: 1;
+  min-width: 180px;
+  border: 2px solid var(--ink);
+  padding: 12px 0;
+  text-align: center;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--ink);
+  transition: all 0.2s ease;
+}
+
+.btn:hover{
+  background: var(--ink);
+  color: #fff;
+  border-color: var(--ink);
+}
+
+.btn.primary{
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+}
+
+.btn.primary:hover{
+  background: var(--accent);
+  color: var(--ink);
+  border-color: var(--accent);
+}
+
+/* SECTIONS */
+section{ margin-bottom: 50px; }
+
+h2{
+  font-size: 14px;
+  text-transform: uppercase;
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 5px;
+  letter-spacing: 1px;
+}
+
+/* IDENTITY */
+.identity p{
+  font-size: 16px;
+  max-width: 720px;
+}
+
+.identity ul{
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 20px;
+}
+
+.identity li{
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-top: 1px solid #d7d7d7;
+  padding-top: 10px;
+}
+
+/* IMAGE SLOTS */
+.img-slot{
+  background: #e7eaec;
+  border: 1px solid #cfcfcf;
+  margin-bottom: 15px;
+  display: block;
+  overflow: hidden;
+}
+
+.img-slot img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Aspect Ratios */
+.ratio-16-9 { aspect-ratio: 16/9; }
+.ratio-3-4  { aspect-ratio: 3/4; max-width: 250px; }
+.ratio-1-1  { aspect-ratio: 1/1; max-width: 260px; }
+
+/* SPLIT */
+.split{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+/* ROSTER */
+.roster{
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.roster td{
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.pos{
+  font-family: var(--mono);
+  color: var(--accent);
+  width: 50px;
+  font-weight: bold;
+}
+
+/* LINKS */
+a{ color: var(--ink); text-decoration: none; }
+a:hover{ color: var(--primary); }
+
+/* FOOTER */
+.doc-footer{
+  margin-top: 60px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+  font-family: var(--mono);
+  font-size: 10px;
+  color: #9aa3aa;
+  text-align: right;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+@media(max-width: 600px){
+  .split{ grid-template-columns: 1fr; }
+  .identity ul{ grid-template-columns: 1fr; }
+  .doc-id{ display: none; }
+}
+</style>
+</head>
+
+<body>
+<div class="club-sheet">
+
+  <div class="doc-id">VCR-CLUB-01</div>
+
+  <header>
+    <div class="club-lockup">
+      <h1>Vancouver Current</h1>
+      <span class="division-tag">Americas Division</span>
+    </div>
+
+    <div class="fact-bar">
+      <span>Est. —</span>
+      <span>•</span>
+      <span><strong>The Current Grounds</strong></span>
+      <span>•</span>
+      <span>Mgr. Mara “Tidebook” Sato</span>
+    </div>
+
+    <div class="cta-row">
+      <a class="btn primary" href="team.html?team=vancouver-current">Active Roster</a>
+      <a class="btn" href="day.html?date=2026-05-12">Daily Scores</a>
+      <a class="btn" href="game.html?date=2026-05-12&game=vancouver-current@spokane-alloys">Latest Box Score</a>
+    </div>
+  </header>
+
+  <section class="identity">
+    <h2>The Club</h2>
+    <p>
+      The Current plays like weather: slow arrival, constant pressure, no wasted motion. They don’t chase volume.
+      They wait. They let at-bats lengthen until the air changes. Vancouver wins with soft contact, late counts,
+      and mistakes the opponent can’t feel until it’s already on the ledger.
+    </p>
+    <ul>
+      <li>Style: Patience / Late Counts</li>
+      <li>Vibe: Moist Quiet</li>
+      <li>Tradition: “The Tide Pause”</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Ballpark</h2>
+    <div class="img-slot ratio-16-9">
+      <img src="club-vancouver-current-stadium.png" alt="The Current Grounds under harbor light and drizzle" />
+    </div>
+    <p>
+      <strong>The Current Grounds.</strong> A compact park near the waterline where the seats never fully dry.
+      On damp nights, the field lights reflect off concrete like a thin film. The wind off the harbor turns routine
+      fly balls into private negotiations.
+    </p>
+  </section>
+
+  <section>
+    <h2>Broadcast</h2>
+    <div class="split">
+      <div class="img-slot ratio-3-4">
+        <img src="club-vancouver-current-booth.png" alt="Broadcaster in a small booth with rain-streaked glass" />
+      </div>
+      <div>
+        <h3>Clive Mercer</h3>
+        <p>
+          <strong>Voice of the Current.</strong> Mercer calls games like he’s reading a tide chart aloud—measured,
+          observational, never urgent. He trusts silence. When something big happens, he lowers his voice instead
+          of raising it.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Mascot & Stands</h2>
+    <div class="split">
+      <div>
+        <div class="img-slot ratio-1-1">
+          <img src="club-vancouver-current-mascot.png" alt="Eddy, the Current’s quiet mascot presence" />
+        </div>
+        <h3>Eddy</h3>
+        <p>
+          A rain-slick, watchful presence in a simple rig—part seabird, part municipal worker, all patience.
+          Eddy doesn’t hype the crowd. Eddy appears where the game feels thin.
+        </p>
+      </div>
+      <div>
+        <div class="img-slot ratio-1-1">
+          <img src="club-vancouver-current-fans.png" alt="Fans under umbrellas, standing quietly" />
+        </div>
+        <h3>The Umbrella Line</h3>
+        <p>
+          The standing section along the rail, shoulder-to-shoulder under umbrellas. They don’t chant.
+          They listen. The loudest sound is rain on nylon until a strikeout lands—then a single, clean roar.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Core Roster</h2>
+    <table class="roster">
+      <tr><td class="pos">SS</td><td>Jonah “Stillwater” Keene</td></tr>
+      <tr><td class="pos">C</td><td>Rafi “Backstop” Nadir</td></tr>
+      <tr><td class="pos">P</td><td>Elena “Barometer” Ruiz</td></tr>
+    </table>
+  </section>
+
+  <div class="doc-footer">
+    GLB Club Portal · Vancouver · Internal
+  </div>
+
+</div>
+</body>
+</html>

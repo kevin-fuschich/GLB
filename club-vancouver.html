@@ -3,238 +3,321 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GLB Club: Vancouver</title>
+
+<title>Vancouver Current – Club Portal</title>
+
 <style>
-    :root {
-        --field-white: #ffffff;
-        --ink-navy: #002244;
-        --meta-grey: #666666;
-        --line-grey: #e0e0e0;
+:root{
+  /* Vancouver Identity: Deep Current Teal, Mist Grey, Harbor Ink */
+  --primary: #0F5E6A;  /* deep teal */
+  --accent:  #7FD6E6;  /* sea-glass / bright water */
+  --paper:   #ffffff;
+  --ink:     #0f1214;
 
-        /* Club Specific Accent: Harbor Slate */
-        --club-accent: #4a6a7c;
+  --border-thick: 4px solid var(--ink);
+  --border-thin: 1px solid #ccc;
 
-        --font-serif: "Georgia", "Times New Roman", serif;
-        --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    }
+  --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --mono: "Courier New", Courier, monospace;
+}
 
-    body {
-        background-color: #f4f4f4;
-        font-family: var(--font-serif);
-        color: #111;
-        display: flex;
-        justify-content: center;
-        padding: 50px 20px;
-        margin: 0;
-        -webkit-font-smoothing: antialiased;
-        line-height: 1.6;
-    }
+body{
+  background: #f4f6f7;
+  color: var(--ink);
+  font-family: var(--sans);
+  margin: 0;
+  padding: 20px;
+}
 
-    .placard-sheet {
-        background-color: var(--field-white);
-        width: 100%;
-        max-width: 580px;
-        padding: 50px 45px;
-        box-shadow: 0 4px 20px rgba(0,0,0,0.04);
-        border-top: 5px solid var(--ink-navy);
-        position: relative;
-    }
+.club-sheet{
+  max-width: 900px;
+  margin: 0 auto;
+  background: var(--paper);
+  padding: 40px;
+  border-top: var(--border-thick);
+  position: relative;
+}
 
-    /* CLUB HEADER */
-    header {
-        text-align: center;
-        margin-bottom: 60px;
-        position: relative;
-    }
+/* DOC ID */
+.doc-id{
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-family: var(--mono);
+  font-size: 10px;
+  color: #999;
+}
 
-    /* OPTION B: ARCHIVE (Documentary Evidence) */
-    .club-artifact {
-        width: 100px;
-        height: auto;
-        opacity: 0.95;
-        margin-bottom: 25px;
-        display: inline-block;
-    }
+/* HEADER */
+header{
+  border-bottom: var(--border-thick);
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
 
-    h1 {
-        font-size: 32px;
-        font-weight: normal;
-        margin: 0 0 10px 0;
-        color: var(--ink-navy);
-        letter-spacing: 0.5px;
-        text-rendering: optimizeLegibility;
-        font-kerning: normal;
-    }
+.club-lockup{
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
 
-    .club-established {
-        font-family: var(--font-sans);
-        font-size: 11px;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        color: var(--meta-grey);
-        border-top: 1px solid var(--line-grey);
-        border-bottom: 1px solid var(--line-grey);
-        display: inline-block;
-        padding: 4px 12px;
-    }
+h1{
+  margin: 0;
+  font-size: 32px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
 
-    /* NARRATIVE SECTIONS */
-    .narrative-block {
-        margin-bottom: 50px;
-    }
+.division-tag{
+  background: var(--primary);
+  color: #fff;
+  font-size: 12px;
+  padding: 4px 8px;
+  text-transform: uppercase;
+}
 
-    h2 {
-        font-family: var(--font-sans);
-        font-size: 10px;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 1.5px;
-        color: var(--club-accent);
-        margin: 0 0 15px 0;
-    }
+.fact-bar{
+  display: flex;
+  gap: 15px;
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #666;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
 
-    p {
-        font-size: 15px;
-        color: #222;
-        margin: 0 0 20px 0;
-        max-width: 95%;
-    }
+/* CTAs */
+.cta-row{
+  display: flex;
+  gap: 10px;
+  margin: 25px 0 40px;
+  flex-wrap: wrap;
+}
 
-    /* GROUNDS SECTION */
-    .grounds-block {
-        border-left: 3px solid var(--line-grey);
-        padding-left: 20px;
-        margin-bottom: 50px;
-    }
+.btn{
+  flex: 1;
+  min-width: 180px;
+  border: 2px solid var(--ink);
+  padding: 12px 0;
+  text-align: center;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--ink);
+  transition: all 0.2s;
+}
 
-    .venue-name {
-        font-size: 18px;
-        font-weight: bold;
-        color: var(--ink-navy);
-        display: block;
-        margin-bottom: 5px;
-    }
+.btn:hover{
+  background: var(--ink);
+  color: #fff;
+  border-color: var(--ink);
+}
 
-    .venue-loc {
-        font-family: var(--font-sans);
-        font-size: 12px;
-        color: var(--meta-grey);
-        text-transform: uppercase;
-        letter-spacing: 1px;
-    }
+.btn.primary{
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+}
 
-    /* TIMELINE */
-    .artifact-list {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-    }
+.btn.primary:hover{
+  background: var(--accent);
+  color: var(--ink);
+  border-color: var(--accent);
+}
 
-    .artifact-list li {
-        margin-bottom: 15px;
-        display: grid;
-        grid-template-columns: 110px 1fr;
-        font-size: 14px;
-    }
+/* SECTIONS */
+section{ margin-bottom: 50px; }
 
-    .artifact-year {
-        font-family: var(--font-sans);
-        color: var(--meta-grey);
-        font-size: 11px;
-        padding-top: 4px;
-        text-transform: uppercase;
-        white-space: nowrap;
-    }
+h2{
+  font-size: 14px;
+  text-transform: uppercase;
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 5px;
+}
 
-    .artifact-detail strong {
-        font-weight: normal;
-        color: var(--ink-navy);
-        border-bottom: 1px solid #ddd;
-    }
+/* IDENTITY */
+.identity p{
+  font-size: 16px;
+  max-width: 700px;
+}
 
-    /* FOOTER */
-    .record-ref {
-        margin-top: 60px;
-        padding-top: 20px;
-        border-top: 1px solid var(--line-grey);
-        text-align: center;
-    }
+.identity ul{
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 20px;
+}
 
-    .record-link {
-        font-family: var(--font-sans);
-        font-size: 10px;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        color: var(--meta-grey);
-        text-decoration: none;
-        transition: color 0.2s;
-    }
+.identity li{
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-top: 1px solid #ccc;
+  padding-top: 10px;
+}
 
-    .record-link:hover {
-        color: var(--ink-navy);
-    }
+/* IMAGE SLOTS */
+.img-slot{
+  background: #e0e0e0;
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.img-slot img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Aspect Ratios */
+.ratio-16-9 { aspect-ratio: 16/9; }
+.ratio-3-4  { aspect-ratio: 3/4; max-width: 250px; }
+.ratio-1-1  { aspect-ratio: 1/1; max-width: 260px; }
+
+/* SPLIT */
+.split{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+/* ROSTER */
+.roster{
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.roster td{
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.pos{
+  font-family: var(--mono);
+  color: var(--primary);
+  width: 50px;
+  font-weight: bold;
+}
+
+/* LINKS */
+a{ color: var(--ink); text-decoration: none; }
+a:hover{ color: var(--primary); }
+
+/* FOOTER */
+.doc-footer{
+  margin-top: 60px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+  font-family: var(--mono);
+  font-size: 10px;
+  color: #999;
+  text-align: right;
+}
+
+@media(max-width: 600px){
+  .split{ grid-template-columns: 1fr; }
+  .identity ul{ grid-template-columns: 1fr; }
+  .doc-id{ display: none; }
+}
 </style>
 </head>
+
 <body>
+<div class="club-sheet">
 
-<div class="placard-sheet">
+<div class="doc-id">VAN-CLUB-01</div>
 
-    <header>
-        <img src="club-vancouver-archive.jpg" alt="Vancouver Harbor Archive" class="club-artifact">
-        <h1>Vancouver</h1>
-        <div class="club-established">Est. 2024 &bull; Canada</div>
-    </header>
+<header>
+  <div class="club-lockup">
+    <h1>Vancouver Current</h1>
+    <span class="division-tag">Americas Division</span>
+  </div>
 
-    <div class="narrative-block">
-        <h2>Identity</h2>
-        <p>Vancouver exists at the edge of the continent, where mountains terminate abruptly into water. The city was built not inward, but outward—defined by shipping lanes, fog, and the constant movement of goods across the Pacific.</p>
-        <p>The club identity reflects this position. It is outward-facing, patient, and deliberate, shaped by tides rather than crowds.</p>
+  <div class="fact-bar">
+    <span>Est. —</span>
+    <span>•</span>
+    <span><strong>The Seawall Grounds</strong></span>
+    <span>•</span>
+    <span>Mgr. Maren Holt</span>
+  </div>
+
+  <div class="cta-row">
+    <a class="btn primary" href="team.html?team=vancouver-current">Active Roster</a>
+    <a class="btn" href="day.html?date=2026-06-20">Daily Scores</a>
+    <a class="btn" href="index.html">Master Index</a>
+  </div>
+</header>
+
+<section class="identity">
+  <h2>The Club</h2>
+  <p>The Current play like the tide: steady pressure, clean angles, and a constant sense that something is being pulled under. Their offense is patient and surgical—short bursts, quick reads, no wasted motion. Vancouver doesn’t overwhelm you with noise. It overwhelms you with inevitability.</p>
+  <ul>
+    <li>Style: Precision / Pressure</li>
+    <li>Vibe: Coastal Clarity</li>
+    <li>Tradition: “The Turn”</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Ballpark</h2>
+  <div class="img-slot ratio-16-9">
+    <img src="club-vancouver-current-stadium.png" alt="The Seawall Grounds at golden hour">
+  </div>
+  <p><strong>The Seawall Grounds.</strong> Built on the edge of water with the skyline behind it, the park looks too clean to be real—until the wind shifts. Late games feel like a broadcast from a ship’s deck: bright light, salt air, and an uncanny calm that makes every crack of the bat sound louder than it should.</p>
+</section>
+
+<section>
+  <h2>Broadcast</h2>
+  <div class="split">
+    <div class="img-slot ratio-3-4">
+      <img src="club-vancouver-current-broadcast.png" alt="Current broadcast booth overlooking the water">
     </div>
-
-    <div class="narrative-block">
-        <h2>Grounds</h2>
-        <div class="grounds-block">
-            <span class="venue-name">Harbor Field</span>
-            <span class="venue-loc">Vancouver, Canada</span>
-        </div>
-        <p>Situated near the working port, the park is frequently wrapped in low cloud cover. Moist air dampens flight paths and softens sound, producing a game that feels slower and heavier than its dimensions suggest.</p>
+    <div>
+      <h3>Booth Team</h3>
+      <p><strong>Voice of the Current.</strong> Crisp calls, minimal drama. They speak like people who’ve done this in storms. Their booth windows stay open even when they shouldn’t—because the whole point is hearing the water behind the crowd.</p>
     </div>
+  </div>
+</section>
 
-    <div class="narrative-block">
-        <h2>Tradition</h2>
-        <p>The club values restraint. Flash is considered unnecessary; efficiency is respected. The game is treated as a sequence of decisions made under imperfect visibility.</p>
+<section>
+  <h2>Mascot & Stands</h2>
+  <div class="split">
+    <div>
+      <div class="img-slot ratio-1-1">
+        <img src="club-vancouver-current-mascot.png" alt="Vancouver Current mascot in the stands">
+      </div>
+      <h3>Skipper</h3>
+      <p>A friendly coastal creature with unnerving stamina—always waving, always moving, always exactly where the cameras aren’t. Skipper is part comfort, part distraction: a reminder that the sea is right there, and it’s watching too.</p>
     </div>
-
-    <div class="narrative-block">
-        <h2>Timeline</h2>
-        <ul class="artifact-list">
-            <li>
-                <span class="artifact-year">Late 19th Century</span>
-                <span class="artifact-detail">Development of the harbor as a Pacific trade gateway.</span>
-            </li>
-            <li>
-                <span class="artifact-year">20th Century</span>
-                <span class="artifact-detail">Expansion of maritime and rail infrastructure.</span>
-            </li>
-            <li>
-                <span class="artifact-year">2024</span>
-                <span class="artifact-detail"><strong>Charter Member</strong> of Global League Baseball.</span>
-            </li>
-        </ul>
+    <div>
+      <div class="img-slot ratio-1-1">
+        <img src="club-vancouver-current-fans.png" alt="Fans along the rail with harbor light behind them">
+      </div>
+      <h3>The Rail</h3>
+      <p>Vancouver fans don’t “pack in”—they line up. Along the rail, they lean forward like observers at an aquarium: quiet, intent, and ready for the exact moment the game turns. When it happens, the reaction is sharp and brief—then back to stillness.</p>
     </div>
+  </div>
+</section>
 
-    <div class="record-ref">
-        <a href="team-vancouver.html" class="record-link">
-            Official Statistics &amp; Roster available in Team Record
-        </a>
-    </div>
+<section>
+  <h2>Core Roster</h2>
+  <table class="roster">
+    <tr><td class="pos">SS</td><td>Jules “Undertow” Mercer</td></tr>
+    <tr><td class="pos">P</td><td>Kai “Glasswater” Nomura</td></tr>
+    <tr><td class="pos">C</td><td>Rory Slate</td></tr>
+  </table>
+</section>
 
+<div class="doc-footer">
+  GLB Club Portal · Vancouver · Internal
 </div>
 
-</body>
-</html>
-
 </div>
-
 </body>
 </html>

@@ -3,267 +3,321 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GLB SYSTEM</title>
+
+<title>Vancouver Current – Club Portal</title>
+
 <style>
-    :root {
-        --field-white: #ffffff;
-        --ink-navy: #002244;
-        --meta-grey: #555555;
-        --line-grey: #e0e0e0;
-        --font-serif: "Georgia", "Times New Roman", serif;
-        --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    }
+:root{
+  /* Vancouver Identity: Deep Current Teal, Mist Grey, Harbor Ink */
+  --primary: #0F5E6A;  /* deep teal */
+  --accent:  #7FD6E6;  /* sea-glass / bright water */
+  --paper:   #ffffff;
+  --ink:     #0f1214;
 
-    body {
-        background-color: #f4f4f4;
-        font-family: var(--font-sans);
-        color: var(--ink-navy);
-        display: flex;
-        justify-content: center;
-        padding: 60px 20px;
-        margin: 0;
-        -webkit-font-smoothing: antialiased;
-    }
+  --border-thick: 4px solid var(--ink);
+  --border-thin: 1px solid #ccc;
 
-    .record-sheet {
-        background-color: var(--field-white);
-        width: 100%;
-        max-width: 620px;
-        padding: 40px;
-        box-shadow: 0 2px 15px rgba(0,0,0,0.06);
-        border-top: 5px solid var(--ink-navy);
-    }
+  --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --mono: "Courier New", Courier, monospace;
+}
 
-    header {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        border-bottom: 1px solid var(--ink-navy);
-        padding-bottom: 20px;
-        margin-bottom: 25px;
-    }
+body{
+  background: #f4f6f7;
+  color: var(--ink);
+  font-family: var(--sans);
+  margin: 0;
+  padding: 20px;
+}
 
-    .meta-block {
-        font-family: var(--font-serif);
-        color: var(--ink-navy);
-        line-height: 1.35;
-    }
+.club-sheet{
+  max-width: 900px;
+  margin: 0 auto;
+  background: var(--paper);
+  padding: 40px;
+  border-top: var(--border-thick);
+  position: relative;
+}
 
-    .page-title {
-        font-size: 20px;
-        font-weight: bold;
-        margin: 0 0 6px 0;
-        letter-spacing: 0.5px;
-    }
+/* DOC ID */
+.doc-id{
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-family: var(--mono);
+  font-size: 10px;
+  color: #999;
+}
 
-    .meta-detail {
-        font-size: 13px;
-        color: var(--meta-grey);
-        font-style: italic;
-    }
+/* HEADER */
+header{
+  border-bottom: var(--border-thick);
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
 
-    .stamp-logo {
-        width: 60px;
-        height: auto;
-        opacity: 0.9;
-    }
+.club-lockup{
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
 
-    h2 {
-        font-family: var(--font-serif);
-        font-size: 13px;
-        font-weight: bold;
-        margin: 30px 0 12px 0;
-        padding-bottom: 6px;
-        border-bottom: 1px solid var(--line-grey);
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-        color: var(--ink-navy);
-    }
+h1{
+  margin: 0;
+  font-size: 32px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
 
-    .section:first-of-type h2 {
-        margin-top: 0;
-    }
+.division-tag{
+  background: var(--primary);
+  color: #fff;
+  font-size: 12px;
+  padding: 4px 8px;
+  text-transform: uppercase;
+}
 
-    ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        font-size: 13px;
-        color: #111;
-    }
+.fact-bar{
+  display: flex;
+  gap: 15px;
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #666;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
 
-    li {
-        display: flex;
-        gap: 14px;
-        padding: 8px 0;
-        border-bottom: 1px solid #f0f0f0;
-        align-items: flex-start;
-    }
+/* CTAs */
+.cta-row{
+  display: flex;
+  gap: 10px;
+  margin: 25px 0 40px;
+  flex-wrap: wrap;
+}
 
-    li:last-child {
-        border-bottom: none;
-    }
+.btn{
+  flex: 1;
+  min-width: 180px;
+  border: 2px solid var(--ink);
+  padding: 12px 0;
+  text-align: center;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--ink);
+  transition: all 0.2s;
+}
 
-    .tag {
-        width: 105px;
-        flex: 0 0 105px;
-        font-size: 10px;
-        letter-spacing: 0.5px;
-        text-transform: uppercase;
-        color: var(--meta-grey);
-        font-weight: 600;
-        padding-top: 2px;
-    }
+.btn:hover{
+  background: var(--ink);
+  color: #fff;
+  border-color: var(--ink);
+}
 
-    .text {
-        flex: 1;
-        color: #111;
-        line-height: 1.35;
-    }
+.btn.primary{
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+}
 
-    .mono {
-        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-        font-size: 11px;
-        color: #222;
-        word-break: break-word;
-    }
+.btn.primary:hover{
+  background: var(--accent);
+  color: var(--ink);
+  border-color: var(--accent);
+}
 
-    .note {
-        font-size: 12px;
-        color: var(--meta-grey);
-        line-height: 1.45;
-        margin-top: 10px;
-    }
+/* SECTIONS */
+section{ margin-bottom: 50px; }
 
-    footer {
-        margin-top: 45px;
-        border-top: 1px solid var(--line-grey);
-        padding-top: 15px;
-        font-size: 10px;
-        color: var(--meta-grey);
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-    }
+h2{
+  font-size: 14px;
+  text-transform: uppercase;
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 5px;
+}
 
-    a {
-        color: var(--ink-navy);
-        text-decoration: none;
-        border-bottom: 1px solid transparent;
-    }
+/* IDENTITY */
+.identity p{
+  font-size: 16px;
+  max-width: 700px;
+}
 
-    a:hover {
-        border-bottom: 1px solid var(--ink-navy);
-    }
+.identity ul{
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 20px;
+}
+
+.identity li{
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-top: 1px solid #ccc;
+  padding-top: 10px;
+}
+
+/* IMAGE SLOTS */
+.img-slot{
+  background: #e0e0e0;
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.img-slot img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Aspect Ratios */
+.ratio-16-9 { aspect-ratio: 16/9; }
+.ratio-3-4  { aspect-ratio: 3/4; max-width: 250px; }
+.ratio-1-1  { aspect-ratio: 1/1; max-width: 260px; }
+
+/* SPLIT */
+.split{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+/* ROSTER */
+.roster{
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.roster td{
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.pos{
+  font-family: var(--mono);
+  color: var(--primary);
+  width: 50px;
+  font-weight: bold;
+}
+
+/* LINKS */
+a{ color: var(--ink); text-decoration: none; }
+a:hover{ color: var(--primary); }
+
+/* FOOTER */
+.doc-footer{
+  margin-top: 60px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+  font-family: var(--mono);
+  font-size: 10px;
+  color: #999;
+  text-align: right;
+}
+
+@media(max-width: 600px){
+  .split{ grid-template-columns: 1fr; }
+  .identity ul{ grid-template-columns: 1fr; }
+  .doc-id{ display: none; }
+}
 </style>
 </head>
+
 <body>
+<div class="club-sheet">
 
-<div class="record-sheet">
+<div class="doc-id">VAN-CLUB-01</div>
 
-    <header>
-        <div class="meta-block">
-            <div class="page-title">SYSTEM</div>
-            <div class="meta-detail">League operating record</div>
-        </div>
-        <img src="GLB_white.png" alt="GLB Seal" class="stamp-logo">
-    </header>
+<header>
+  <div class="club-lockup">
+    <h1>Vancouver Current</h1>
+    <span class="division-tag">Americas Division</span>
+  </div>
 
-    <div class="section">
-        <h2>Scope</h2>
-        <ul>
-            <li><div class="tag">Purpose</div><div class="text">Define the publishing standards for GLB records.</div></li>
-            <li><div class="tag">Audience</div><div class="text">Internal use. Public visibility is incidental.</div></li>
-            <li><div class="tag">Tone</div><div class="text">No explanations. No marketing. No winks.</div></li>
-        </ul>
+  <div class="fact-bar">
+    <span>Est. —</span>
+    <span>•</span>
+    <span><strong>The Seawall Grounds</strong></span>
+    <span>•</span>
+    <span>Mgr. Maren Holt</span>
+  </div>
+
+  <div class="cta-row">
+    <a class="btn primary" href="team.html?team=vancouver-current">Active Roster</a>
+    <a class="btn" href="day.html?date=2026-06-20">Daily Scores</a>
+    <a class="btn" href="index.html">Master Index</a>
+  </div>
+</header>
+
+<section class="identity">
+  <h2>The Club</h2>
+  <p>The Current play like the tide: steady pressure, clean angles, and a constant sense that something is being pulled under. Their offense is patient and surgical—short bursts, quick reads, no wasted motion. Vancouver doesn’t overwhelm you with noise. It overwhelms you with inevitability.</p>
+  <ul>
+    <li>Style: Precision / Pressure</li>
+    <li>Vibe: Coastal Clarity</li>
+    <li>Tradition: “The Turn”</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Ballpark</h2>
+  <div class="img-slot ratio-16-9">
+    <img src="club-vancouver-current-stadium.png" alt="The Seawall Grounds at golden hour">
+  </div>
+  <p><strong>The Seawall Grounds.</strong> Built on the edge of water with the skyline behind it, the park looks too clean to be real—until the wind shifts. Late games feel like a broadcast from a ship’s deck: bright light, salt air, and an uncanny calm that makes every crack of the bat sound louder than it should.</p>
+</section>
+
+<section>
+  <h2>Broadcast</h2>
+  <div class="split">
+    <div class="img-slot ratio-3-4">
+      <img src="club-vancouver-current-broadcast.png" alt="Current broadcast booth overlooking the water">
     </div>
-
-    <div class="section">
-        <h2>File Types</h2>
-        <ul>
-            <li><div class="tag">League Record</div><div class="text">Standings, schedule, box scores, and system notices.</div></li>
-            <li><div class="tag">Team Record</div><div class="text">A team’s official record page (facts only).</div></li>
-            <li><div class="tag">Club File</div><div class="text">Identity material. Traditions. Artifacts. Separate from records. <span class="mono">(forthcoming)</span></div></li>
-        </ul>
+    <div>
+      <h3>Booth Team</h3>
+      <p><strong>Voice of the Current.</strong> Crisp calls, minimal drama. They speak like people who’ve done this in storms. Their booth windows stay open even when they shouldn’t—because the whole point is hearing the water behind the crowd.</p>
     </div>
+  </div>
+</section>
 
-    <div class="section">
-        <h2>Naming Standard</h2>
-        <ul>
-            <li>
-                <div class="tag">Index</div>
-                <div class="text"><span class="mono">index.html</span> — silent directory of published records.</div>
-            </li>
-            <li>
-                <div class="tag">Box Score</div>
-                <div class="text"><span class="mono">boxscore.html</span> or <span class="mono">boxscore_YYYY-MM-DD_TEAM_TEAM.html</span> (optional later).</div>
-            </li>
-            <li>
-                <div class="tag">Standings</div>
-                <div class="text"><span class="mono">standings.html</span> — one file per week unless otherwise stated.</div>
-            </li>
-            <li>
-                <div class="tag">Schedule</div>
-                <div class="text"><span class="mono">schedule.html</span> — one file per week unless otherwise stated.</div>
-            </li>
-            <li>
-                <div class="tag">Team Record</div>
-                <div class="text"><span class="mono">team-TEAMSLUG.html</span> (example: <span class="mono">team-san-pedro.html</span>).</div>
-            </li>
-            <li>
-                <div class="tag">Club File</div>
-                <div class="text"><span class="mono">clubs/TEAMSLUG.html</span> (reserved). Not required for launch.</div>
-            </li>
-        </ul>
-        <div class="note">
-            Team slugs are lowercase, hyphenated, no accents. Keep them stable once published.
-        </div>
+<section>
+  <h2>Mascot & Stands</h2>
+  <div class="split">
+    <div>
+      <div class="img-slot ratio-1-1">
+        <img src="club-vancouver-current-mascot.png" alt="Vancouver Current mascot in the stands">
+      </div>
+      <h3>Skipper</h3>
+      <p>A friendly coastal creature with unnerving stamina—always waving, always moving, always exactly where the cameras aren’t. Skipper is part comfort, part distraction: a reminder that the sea is right there, and it’s watching too.</p>
     </div>
-
-    <div class="section">
-        <h2>Visual Standard</h2>
-        <ul>
-            <li><div class="tag">Typography</div><div class="text">Georgia for headings / summaries. Helvetica for dense tables.</div></li>
-            <li><div class="tag">Color</div><div class="text">One ink: navy. Greys for metadata. No secondary palette.</div></li>
-            <li><div class="tag">Layout</div><div class="text">Whitespace and alignment over decoration. Records must read cleanly on one screen.</div></li>
-            <li><div class="tag">Seal</div><div class="text">GLB seal appears on all published record pages.</div></li>
-        </ul>
+    <div>
+      <div class="img-slot ratio-1-1">
+        <img src="club-vancouver-current-fans.png" alt="Fans along the rail with harbor light behind them">
+      </div>
+      <h3>The Rail</h3>
+      <p>Vancouver fans don’t “pack in”—they line up. Along the rail, they lean forward like observers at an aquarium: quiet, intent, and ready for the exact moment the game turns. When it happens, the reaction is sharp and brief—then back to stillness.</p>
     </div>
+  </div>
+</section>
 
-    <div class="section">
-        <h2>Team Record Requirements</h2>
-        <ul>
-            <li><div class="tag">Header</div><div class="text">Team name + division + <span class="mono">Team Record</span> line.</div></li>
-            <li><div class="tag">Snapshot</div><div class="text">Record, runs, allowed, differential in a single quiet table.</div></li>
-            <li><div class="tag">Roster</div><div class="text">Active roster table (placeholder allowed during build phase).</div></li>
-            <li><div class="tag">Recent Games</div><div class="text">List recent results and link box scores when available.</div></li>
-            <li><div class="tag">Club Ref</div><div class="text">Include the line: <span class="mono">Club file forthcoming.</span></div></li>
-        </ul>
-    </div>
+<section>
+  <h2>Core Roster</h2>
+  <table class="roster">
+    <tr><td class="pos">SS</td><td>Jules “Undertow” Mercer</td></tr>
+    <tr><td class="pos">P</td><td>Kai “Glasswater” Nomura</td></tr>
+    <tr><td class="pos">C</td><td>Rory Slate</td></tr>
+  </table>
+</section>
 
-    <div class="section">
-        <h2>Prohibitions</h2>
-        <ul>
-            <li><div class="tag">No lore</div><div class="text">Team Record pages do not contain narrative, history, or fan material.</div></li>
-            <li><div class="tag">No logos</div><div class="text">Team logos are reserved for Club Files (not Team Records).</div></li>
-            <li><div class="tag">No UI noise</div><div class="text">No icons, badges, gradients, or decorative widgets.</div></li>
-            <li><div class="tag">No claims</div><div class="text">No “about GLB” explanations. Records do not justify their existence.</div></li>
-        </ul>
-    </div>
-
-    <div class="section">
-        <h2>Publishing</h2>
-        <ul>
-            <li><div class="tag">Indexing</div><div class="text">Only published files are listed on <span class="mono">index.html</span>.</div></li>
-            <li><div class="tag">Pending</div><div class="text">Use “not yet published” language instead of placeholders with fake detail.</div></li>
-            <li><div class="tag">Corrections</div><div class="text">When a record changes, update the file quietly. No changelog required.</div></li>
-        </ul>
-    </div>
-
-    <footer>
-        GLB SYSTEM FILE — ACTIVE
-    </footer>
-
+<div class="doc-footer">
+  GLB Club Portal · Vancouver · Internal
 </div>
 
+</div>
 </body>
 </html>

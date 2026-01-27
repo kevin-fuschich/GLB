@@ -4,15 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Albuquerque Rail – Club Portal</title>
+<title>Albuquerque Aeros – Club Portal</title>
 
 <style>
 :root{
-  /* Albuquerque Identity: Rail Iron, Desert Teal, Signal Red */
-  --primary: #2F3A40; /* Rail Iron */
-  --accent: #C5422C;  /* Signal Red */
+  /* Albuquerque Identity: Sky Teal, Sunset Coral, High Desert Ink */
+  --primary: #1FA6A3;   /* Sky Teal */
+  --accent: #F26A4B;    /* Sunset Coral */
   --paper: #ffffff;
-  --ink: #0f1214;
+  --ink: #111111;
 
   --border-thick: 4px solid var(--ink);
   --border-thin: 1px solid #ccc;
@@ -22,7 +22,7 @@
 }
 
 body{
-  background: #f4f4f4;
+  background: #fafafa;
   color: var(--ink);
   font-family: var(--sans);
   margin: 0;
@@ -106,13 +106,6 @@ h1{
   text-transform: uppercase;
   text-decoration: none;
   color: var(--ink);
-  transition: all 0.2s;
-}
-
-.btn:hover{
-  background: var(--ink);
-  color: white;
-  border-color: var(--ink);
 }
 
 .btn.primary{
@@ -121,41 +114,14 @@ h1{
   border-color: var(--primary);
 }
 
-.btn.primary:hover{
-  background: var(--accent);
-  border-color: var(--accent);
-}
-
 /* SECTIONS */
 section{ margin-bottom: 50px; }
 
 h2{
   font-size: 14px;
   text-transform: uppercase;
-  border-bottom: 2px solid var(--accent);
+  border-bottom: 2px solid var(--primary);
   padding-bottom: 5px;
-}
-
-/* IDENTITY */
-.identity p{
-  font-size: 16px;
-  max-width: 700px;
-}
-
-.identity ul{
-  list-style: none;
-  padding: 0;
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-  gap: 20px;
-}
-
-.identity li{
-  font-size: 12px;
-  font-weight: bold;
-  text-transform: uppercase;
-  border-top: 1px solid #ccc;
-  padding-top: 10px;
 }
 
 /* IMAGE SLOTS */
@@ -163,7 +129,6 @@ h2{
   background: #e0e0e0;
   border: 1px solid #ccc;
   margin-bottom: 15px;
-  display: block;
 }
 
 .img-slot img{
@@ -173,56 +138,49 @@ h2{
   display: block;
 }
 
-/* Aspect Ratios */
-.ratio-16-9 { aspect-ratio: 16/9; }
-.ratio-3-4 { aspect-ratio: 3/4; max-width: 250px; }
-.ratio-1-1 { aspect-ratio: 1/1; max-width: 260px; }
+.ratio-16-9{ aspect-ratio:16/9; }
+.ratio-3-4{ aspect-ratio:3/4; max-width:250px; }
+.ratio-1-1{ aspect-ratio:1/1; max-width:260px; }
 
-/* SPLIT */
 .split{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:30px;
 }
 
 /* ROSTER */
 .roster{
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 13px;
+  width:100%;
+  border-collapse:collapse;
+  font-size:13px;
 }
 
 .roster td{
-  padding: 10px 0;
-  border-bottom: 1px solid #eee;
+  padding:10px 0;
+  border-bottom:1px solid #eee;
 }
 
 .pos{
-  font-family: var(--mono);
-  color: var(--accent);
-  width: 60px;
-  font-weight: bold;
+  font-family:var(--mono);
+  color:var(--primary);
+  width:50px;
+  font-weight:bold;
 }
-
-/* LINKS */
-a{ color: var(--ink); text-decoration: none; }
-a:hover{ color: var(--accent); }
 
 /* FOOTER */
 .doc-footer{
-  margin-top: 60px;
-  padding-top: 20px;
-  border-top: 1px solid #eee;
-  font-family: var(--mono);
-  font-size: 10px;
-  color: #999;
-  text-align: right;
+  margin-top:60px;
+  padding-top:20px;
+  border-top:1px solid #eee;
+  font-family:var(--mono);
+  font-size:10px;
+  color:#999;
+  text-align:right;
 }
 
-@media(max-width: 600px){
-  .split{ grid-template-columns: 1fr; }
-  .identity ul{ grid-template-columns: 1fr; }
-  .doc-id{ display: none; }
+@media(max-width:600px){
+  .split{grid-template-columns:1fr;}
+  .doc-id{display:none;}
 }
 </style>
 </head>
@@ -234,64 +192,39 @@ a:hover{ color: var(--accent); }
 
 <header>
   <div class="club-lockup">
-    <h1>Albuquerque Rail</h1>
+    <h1>Albuquerque Aeros</h1>
     <span class="division-tag">Americas Division</span>
   </div>
 
   <div class="fact-bar">
     <span>Est. —</span>
     <span>•</span>
-    <span><strong>The Rail Archive</strong></span>
+    <span><strong>Propellant Park</strong></span>
     <span>•</span>
-    <span>Mgr. Celia “Switch” Marrow</span>
-  </div>
-
-  <div class="cta-row">
-    <a class="btn primary" href="team.html?team=albuquerque-rail">Active Roster</a>
-    <a class="btn" href="day.html?date=2026-06-20">Daily Scores</a>
-    <a class="btn" href="game.html?date=2026-06-20&game=albuquerque-rail@spokane-alloys">Latest Box Score</a>
+    <span>Mgr. Sofia Reyes</span>
   </div>
 </header>
 
-<section class="identity">
+<section>
   <h2>The Club</h2>
-  <p>
-    Albuquerque plays baseball like a routing problem. The Rail don’t chase momentum — they schedule it.
-    Their style is measured, modular, and unromantic: move runners, cut angles, shorten innings, force decisions.
-    In the high desert, the air is thin and the sun is loud, but the Rail never look rushed. They look operational.
-  </p>
-  <ul>
-    <li>Style: Pressure / Execution</li>
-    <li>Vibe: High-Desert Logistics</li>
-    <li>Tradition: “The Switch List”</li>
-  </ul>
+  <p>The Aeros believe the game unfolds upward. At altitude, patience matters more than force. Albuquerque plays a calm, deliberate brand of baseball shaped by thin air and long evenings. Games here feel ceremonial—something shared, not consumed.</p>
 </section>
 
 <section>
   <h2>Ballpark</h2>
   <div class="img-slot ratio-16-9">
-    <img src="club-albuquerque-rail-stadium.png" alt="The Rail Archive at dusk">
+    <img src="club-albuquerque-aeros-stadium.png" alt="Propellant Park at dusk with balloons overhead">
   </div>
-  <p>
-    <strong>The Rail Archive.</strong> A ballpark built beside freight yards and storage lots, where the lights hum and
-    the wind carries grit. The scoreboard is old, the seating is plain, and the foul territory feels like a loading dock.
-    At night, trains pass behind left field — not as spectacle, as fact.
-  </p>
 </section>
 
 <section>
   <h2>Broadcast</h2>
   <div class="split">
     <div class="img-slot ratio-3-4">
-      <img src="club-albuquerque-rail-broadcast.png" alt="Rail broadcast booth">
+      <img src="club-albuquerque-aeros-broadcast.png" alt="Aeros broadcast booth overlooking field">
     </div>
     <div>
-      <h3>Marlo “Redline” Bisset</h3>
-      <p>
-        <strong>Voice of the Rail.</strong> Bisset calls games like a dispatcher. Short sentences. Exact language.
-        No poetry, no panic. If a player smiles on camera, he waits until the next batter to mention it — if at all.
-        The broadcast feels like listening to a system run.
-      </p>
+      <p><strong>Voice of the Aeros.</strong> The Albuquerque broadcast favors reflection over urgency. Long pauses are common. The booth treats the game like a shared horizon—something you watch together.</p>
     </div>
   </div>
 </section>
@@ -301,35 +234,17 @@ a:hover{ color: var(--accent); }
   <div class="split">
     <div>
       <div class="img-slot ratio-1-1">
-        <img src="club-albuquerque-rail-mascot.png" alt="Rail mascot">
+        <img src="club-albuquerque-aeros-mascot.png" alt="Aeros balloon mascot interacting with fans">
       </div>
-      <h3>Switchman</h3>
-      <p>
-        A bright orange yard-worker figure with an oversized signal lantern and a face that never changes.
-        Switchman doesn’t dance. He points. He signals. He “routes” the crowd during breaks like they’re cargo.
-      </p>
+      <p>The mascot moves slowly, deliberately—always rising, never rushing.</p>
     </div>
     <div>
       <div class="img-slot ratio-1-1">
-        <img src="club-albuquerque-rail-fans.png" alt="Rail fans in the stands">
+        <img src="club-albuquerque-aeros-fans.png" alt="Families cheering at dusk in Aeros gear">
       </div>
-      <h3>The Platform</h3>
-      <p>
-        The loudest section is called The Platform — a strip of bleachers that faces the freight line.
-        Fans show up in work shirts and sun hats, holding laminated “switch cards” with hand signals.
-        They don’t heckle. They coordinate.
-      </p>
+      <p>Albuquerque crowds feel like gatherings. Kids stay late. Applause comes in waves.</p>
     </div>
   </div>
-</section>
-
-<section>
-  <h2>Core Roster</h2>
-  <table class="roster">
-    <tr><td class="pos">SS</td><td>Rene “Coupler” Ibarra</td></tr>
-    <tr><td class="pos">C</td><td>Hank Yardley</td></tr>
-    <tr><td class="pos">P</td><td>Silas “Deadhead” Quinn</td></tr>
-  </table>
 </section>
 
 <div class="doc-footer">

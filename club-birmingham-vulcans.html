@@ -7,9 +7,9 @@
 
 <style>
 :root{
-  /* Birmingham Identity: Iron / Forge / Ember */
-  --primary: #2F3438; /* Iron */
-  --accent:  #E2572B; /* Forge Orange */
+  /* Birmingham Identity: Foundry Heat, Coal Black, Slag Green */
+  --primary: #B84A2B;   /* Molten Rust */
+  --accent:  #2F6B57;   /* Slag Green */
   --paper:   #ffffff;
   --ink:     #0f1214;
 
@@ -20,8 +20,10 @@
   --mono: "Courier New", Courier, monospace;
 }
 
+*{ box-sizing: border-box; }
+
 body{
-  background: #f4f4f4;
+  background: #f5f3f1; /* warm concrete */
   color: var(--ink);
   font-family: var(--sans);
   margin: 0;
@@ -59,6 +61,7 @@ header{
   justify-content: space-between;
   align-items: baseline;
   flex-wrap: wrap;
+  gap: 12px;
 }
 
 h1{
@@ -66,6 +69,7 @@ h1{
   font-size: 32px;
   font-weight: 900;
   text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .division-tag{
@@ -78,7 +82,7 @@ h1{
 
 .fact-bar{
   display: flex;
-  gap: 15px;
+  gap: 12px;
   font-size: 11px;
   text-transform: uppercase;
   color: #666;
@@ -110,7 +114,7 @@ h1{
 
 .btn:hover{
   background: var(--ink);
-  color: white;
+  color: #fff;
   border-color: var(--ink);
 }
 
@@ -131,19 +135,22 @@ section{ margin-bottom: 50px; }
 h2{
   font-size: 14px;
   text-transform: uppercase;
-  border-bottom: 2px solid var(--accent);
+  border-bottom: 2px solid var(--primary);
   padding-bottom: 5px;
+  margin: 0 0 15px 0;
 }
 
 /* IDENTITY */
 .identity p{
   font-size: 16px;
-  max-width: 700px;
+  max-width: 720px;
+  margin: 0 0 16px 0;
 }
 
 .identity ul{
   list-style: none;
   padding: 0;
+  margin: 0;
   display: grid;
   grid-template-columns: repeat(3,1fr);
   gap: 20px;
@@ -159,10 +166,11 @@ h2{
 
 /* IMAGE SLOTS */
 .img-slot{
-  background: #e0e0e0;
+  background: #e6e6e6;
   border: 1px solid #ccc;
   margin-bottom: 15px;
   display: block;
+  overflow: hidden;
 }
 
 .img-slot img{
@@ -173,15 +181,29 @@ h2{
 }
 
 /* Aspect Ratios */
-.ratio-16-9{ aspect-ratio: 16/9; }
-.ratio-3-4{ aspect-ratio: 3/4; max-width: 250px; }
-.ratio-1-1{ aspect-ratio: 1/1; max-width: 260px; }
+.ratio-16-9 { aspect-ratio: 16/9; }
+.ratio-3-4 { aspect-ratio: 3/4; max-width: 250px; }
+.ratio-1-1 { aspect-ratio: 1/1; max-width: 260px; }
 
 /* SPLIT */
 .split{
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 30px;
+  align-items: start;
+}
+
+h3{
+  margin: 0 0 8px 0;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 0.2px;
+}
+
+p{
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
 }
 
 /* ROSTER */
@@ -199,13 +221,13 @@ h2{
 .pos{
   font-family: var(--mono);
   color: var(--accent);
-  width: 50px;
+  width: 60px;
   font-weight: bold;
 }
 
 /* LINKS */
 a{ color: var(--ink); text-decoration: none; }
-a:hover{ color: var(--accent); }
+a:hover{ color: var(--primary); }
 
 /* FOOTER */
 .doc-footer{
@@ -240,42 +262,40 @@ a:hover{ color: var(--accent); }
     <div class="fact-bar">
       <span>Est. —</span>
       <span>•</span>
-      <span><strong>Slag Field</strong></span>
+      <span><strong>Furnace Field</strong></span>
       <span>•</span>
-      <span>Mgr. Marla “Hot Iron” Keene</span>
+      <span>Mgr. Mara “Tongs” Keene</span>
     </div>
 
     <div class="cta-row">
       <a class="btn primary" href="team.html?team=birmingham-vulcans">Active Roster</a>
-      <a class="btn" href="day.html">Daily Scores</a>
-      <a class="btn" href="game.html">Latest Box Score</a>
+      <a class="btn" href="day.html?date=2026-07-01">Daily Scores</a>
+      <a class="btn" href="game.html?team=birmingham-vulcans">Latest Box Score</a>
     </div>
   </header>
 
   <section class="identity">
     <h2>The Club</h2>
     <p>
-      The Vulcans don’t play “small ball.” They play <em>worked ball</em>.
-      Every at-bat looks hammered into shape: long counts, hard contact, and an
-      absolute refusal to flinch in the heat. Birmingham treats baseball like
-      metalwork—measure twice, swing once, and make it count.
+      The Vulcans play like a furnace runs: steady heat, no wasted motion, and a late-game surge that feels inevitable.
+      Birmingham isn’t “industrial dystopia” — it’s craft and sweat and civic pride. The club treats every inning like
+      a shift you finish clean.
     </p>
     <ul>
-      <li>Style: Power Contact / Pressure</li>
-      <li>Vibe: Forge Pride</li>
-      <li>Tradition: “The First Spark”</li>
+      <li>Style: Pressure / Late Surges</li>
+      <li>Vibe: Foundry Heat</li>
+      <li>Tradition: “The Pour” (7th-inning rally)</li>
     </ul>
   </section>
 
   <section>
     <h2>Ballpark</h2>
     <div class="img-slot ratio-16-9">
-      <img src="club-birmingham-vulcans-stadium.png" alt="Slag Field at golden hour" />
+      <img src="club-birmingham-vulcans-stadium.png" alt="Furnace Field at dusk, warm lights, ironwork details" />
     </div>
     <p>
-      <strong>Slag Field.</strong> Brick, steel, and sun. The park holds heat like
-      a skillet—late innings feel heavier, louder, and closer. When the Vulcans
-      rally, you can hear the stands clap in a steady, industrial rhythm.
+      <strong>Furnace Field.</strong> A brick-and-iron park with glowing light towers and an outfield backdrop of old
+      stacks repurposed as landmarks. When the sun drops, the whole place turns copper.
     </p>
   </section>
 
@@ -283,14 +303,13 @@ a:hover{ color: var(--accent); }
     <h2>Broadcast</h2>
     <div class="split">
       <div class="img-slot ratio-3-4">
-        <img src="club-birmingham-vulcans-booth.png" alt="Broadcaster in the hot booth" />
+        <img src="club-birmingham-vulcans-broadcast.png" alt="Vulcans broadcaster in booth with field behind" />
       </div>
       <div>
         <h3>Walt “Sparks” Dempsey</h3>
         <p>
-          <strong>Voice of the Vulcans.</strong> Dempsey calls games like a shop
-          foreman: calm, exact, and allergic to exaggeration. Big moments get a
-          short line, then he lets the crowd do the rest.
+          <strong>Voice of the Vulcans.</strong> Big-lung, blue-collar play-by-play with a soft spot for pitching craft.
+          He calls strikeouts like they’re welds: clean, bright, and final.
         </p>
       </div>
     </div>
@@ -301,23 +320,23 @@ a:hover{ color: var(--accent); }
     <div class="split">
       <div>
         <div class="img-slot ratio-1-1">
-          <img src="club-birmingham-vulcans-mascot.png" alt="Vulcan mascot" />
+          <img src="club-birmingham-vulcans-mascot.png" alt="Slag, the Vulcans mascot" />
         </div>
-        <h3>Vulcan</h3>
+        <h3>Slag</h3>
         <p>
-          A towering forge-god with a grin, an apron, and a foam hammer that
-          “strikes” the air after home runs. More pageant than menace.
+          A friendly, soot-dusted creature in a riveted vest. Slag doesn’t menace — he works the aisles like a foreman,
+          approving signs, handing out “heat checks,” and making the kids feel official.
         </p>
       </div>
+
       <div>
         <div class="img-slot ratio-1-1">
-          <img src="club-birmingham-vulcans-fans.png" alt="The Furnace Section fans" />
+          <img src="club-birmingham-vulcans-fans.png" alt="Vulcans fans, warm lights, rally energy" />
         </div>
-        <h3>The Furnace Section</h3>
+        <h3>The Spark Section</h3>
         <p>
-          Sun-baked bleachers and proud faces. They don’t heckle—they <em>pressure</em>.
-          A steady clap, a chant that builds like heat, and a hard rule: no one sits
-          during a late-inning rally.
+          A standing rail of regulars who only get loud when it matters. Their rally clap starts slow, then spreads like
+          ignition — one beat at a time.
         </p>
       </div>
     </div>
@@ -326,9 +345,9 @@ a:hover{ color: var(--accent); }
   <section>
     <h2>Core Roster</h2>
     <table class="roster">
-      <tr><td class="pos">1B</td><td>Reggie “Anvil” Knox</td></tr>
-      <tr><td class="pos">DH</td><td>Silas “Slag” Moreno</td></tr>
-      <tr><td class="pos">P</td><td>Jun “Heat Index” Watanabe</td></tr>
+      <tr><td class="pos">P</td><td>Jae “Kiln” Park</td></tr>
+      <tr><td class="pos">C</td><td>Reggie Halloway</td></tr>
+      <tr><td class="pos">SS</td><td>Nico “Rivet” Alvarez</td></tr>
     </table>
   </section>
 

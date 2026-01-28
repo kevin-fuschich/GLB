@@ -1,231 +1,346 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GLB Club: Toledo</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Toledo Assembly – Club Portal</title>
+
 <style>
-    :root {
-        --field-white: #ffffff;
-        --ink-navy: #002244;
-        --meta-grey: #666666;
-        --line-grey: #e0e0e0;
+:root{
+  /* Toledo Identity: Factory Blue, Safety Yellow, Tool Steel */
+  --primary: #1F4E79; /* Factory Blue */
+  --accent: #F2C300;  /* Safety Yellow */
+  --paper: #ffffff;
+  --ink: #0f1214;
 
-        /* Club Specific Accent: Furnace Rust */
-        --club-accent: #a85d32;
+  --border-thick: 4px solid var(--ink);
+  --border-thin: 1px solid #ccc;
 
-        --font-serif: "Georgia", "Times New Roman", serif;
-        --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    }
+  --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --mono: "Courier New", Courier, monospace;
+}
 
-    body {
-        background-color: #f4f4f4;
-        font-family: var(--font-serif);
-        color: #111;
-        display: flex;
-        justify-content: center;
-        padding: 50px 20px;
-        margin: 0;
-        -webkit-font-smoothing: antialiased;
-        line-height: 1.6;
-    }
+body{
+  background: #f4f4f4;
+  color: var(--ink);
+  font-family: var(--sans);
+  margin: 0;
+  padding: 20px;
+}
 
-    .placard-sheet {
-        background-color: var(--field-white);
-        width: 100%;
-        max-width: 580px;
-        padding: 50px 45px;
-        box-shadow: 0 4px 20px rgba(0,0,0,0.04);
-        border-top: 5px solid var(--ink-navy);
-        position: relative;
-    }
+.club-sheet{
+  max-width: 900px;
+  margin: 0 auto;
+  background: var(--paper);
+  padding: 40px;
+  border-top: var(--border-thick);
+  position: relative;
+}
 
-    header {
-        text-align: center;
-        margin-bottom: 60px;
-        position: relative;
-    }
+/* DOC ID */
+.doc-id{
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-family: var(--mono);
+  font-size: 10px;
+  color: #999;
+}
 
-    /* OPTION B/C: ARCHIVE or ARTIFACT */
-    .club-artifact {
-        width: 100px;
-        height: auto;
-        opacity: 0.95;
-        margin-bottom: 25px;
-        display: inline-block;
-        mix-blend-mode: multiply;
-    }
+/* HEADER */
+header{
+  border-bottom: var(--border-thick);
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
 
-    h1 {
-        font-size: 32px;
-        font-weight: normal;
-        margin: 0 0 10px 0;
-        color: var(--ink-navy);
-        letter-spacing: 0.5px;
-        text-rendering: optimizeLegibility;
-        font-kerning: normal;
-    }
+.club-lockup{
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 10px;
+}
 
-    .club-established {
-        font-family: var(--font-sans);
-        font-size: 11px;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        color: var(--meta-grey);
-        border-top: 1px solid var(--line-grey);
-        border-bottom: 1px solid var(--line-grey);
-        display: inline-block;
-        padding: 4px 12px;
-    }
+h1{
+  margin: 0;
+  font-size: 32px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
 
-    .narrative-block {
-        margin-bottom: 50px;
-    }
+.division-tag{
+  background: var(--primary);
+  color: #fff;
+  font-size: 12px;
+  padding: 4px 8px;
+  text-transform: uppercase;
+}
 
-    h2 {
-        font-family: var(--font-sans);
-        font-size: 10px;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 1.5px;
-        color: var(--club-accent);
-        margin: 0 0 15px 0;
-    }
+.fact-bar{
+  display: flex;
+  gap: 15px;
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #666;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
 
-    p {
-        font-size: 15px;
-        color: #222;
-        margin: 0 0 20px 0;
-        max-width: 95%;
-    }
+/* CTAs */
+.cta-row{
+  display: flex;
+  gap: 10px;
+  margin: 25px 0 40px;
+  flex-wrap: wrap;
+}
 
-    .grounds-block {
-        border-left: 3px solid var(--line-grey);
-        padding-left: 20px;
-        margin-bottom: 50px;
-    }
+.btn{
+  flex: 1;
+  min-width: 180px;
+  border: 2px solid var(--ink);
+  padding: 12px 0;
+  text-align: center;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--ink);
+  transition: all 0.2s;
+}
 
-    .venue-name {
-        font-size: 18px;
-        font-weight: bold;
-        color: var(--ink-navy);
-        display: block;
-        margin-bottom: 5px;
-    }
+.btn:hover{
+  background: var(--ink);
+  color: #fff;
+  border-color: var(--ink);
+}
 
-    .venue-loc {
-        font-family: var(--font-sans);
-        font-size: 12px;
-        color: var(--meta-grey);
-        text-transform: uppercase;
-        letter-spacing: 1px;
-    }
+.btn.primary{
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+}
 
-    .artifact-list {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-    }
+.btn.primary:hover{
+  background: var(--accent);
+  color: var(--ink);
+  border-color: var(--accent);
+}
 
-    .artifact-list li {
-        margin-bottom: 15px;
-        display: grid;
-        grid-template-columns: 110px 1fr;
-        font-size: 14px;
-    }
+/* SECTIONS */
+section{ margin-bottom: 50px; }
 
-    .artifact-year {
-        font-family: var(--font-sans);
-        color: var(--meta-grey);
-        font-size: 11px;
-        padding-top: 4px;
-        text-transform: uppercase;
-        white-space: nowrap;
-    }
+h2{
+  font-size: 14px;
+  text-transform: uppercase;
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 5px;
+}
 
-    .artifact-detail strong {
-        font-weight: normal;
-        color: var(--ink-navy);
-        border-bottom: 1px solid #ddd;
-    }
+/* IDENTITY */
+.identity p{
+  font-size: 16px;
+  max-width: 740px;
+  line-height: 1.5;
+}
 
-    .record-ref {
-        margin-top: 60px;
-        padding-top: 20px;
-        border-top: 1px solid var(--line-grey);
-        text-align: center;
-    }
+.identity ul{
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 20px;
+  margin-top: 16px;
+}
 
-    .record-link {
-        font-family: var(--font-sans);
-        font-size: 10px;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        color: var(--meta-grey);
-        text-decoration: none;
-        transition: color 0.2s;
-    }
+.identity li{
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-top: 1px solid #ccc;
+  padding-top: 10px;
+}
 
-    .record-link:hover {
-        color: var(--ink-navy);
-    }
+/* IMAGE SLOTS */
+.img-slot{
+  background: #e0e0e0;
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+  display: block;
+  overflow: hidden;
+}
+
+.img-slot img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Aspect Ratios */
+.ratio-16-9{ aspect-ratio: 16/9; }
+.ratio-3-4{ aspect-ratio: 3/4; max-width: 250px; }
+.ratio-1-1{ aspect-ratio: 1/1; max-width: 260px; }
+
+/* SPLIT */
+.split{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  align-items: start;
+}
+
+/* ROSTER */
+.roster{
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.roster td{
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.pos{
+  font-family: var(--mono);
+  color: var(--primary);
+  width: 60px;
+  font-weight: bold;
+}
+
+/* LINKS */
+a{ color: var(--ink); text-decoration: none; }
+a:hover{ color: var(--primary); }
+
+/* FOOTER */
+.doc-footer{
+  margin-top: 60px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+  font-family: var(--mono);
+  font-size: 10px;
+  color: #999;
+  text-align: right;
+}
+
+@media(max-width: 600px){
+  .split{ grid-template-columns: 1fr; }
+  .identity ul{ grid-template-columns: 1fr; }
+  .doc-id{ display: none; }
+}
 </style>
 </head>
+
 <body>
+<div class="club-sheet">
 
-<div class="placard-sheet">
+  <div class="doc-id">TOL-CLUB-01</div>
 
-    <header>
-        <!-- Cache-bust added so GitHub Pages doesn’t show an old broken file -->
-        <img src="club-toledo-archive.jpg?v=1" alt="Toledo industrial archive image" class="club-artifact">
-        <h1>Toledo</h1>
-        <div class="club-established">Est. 2024 &bull; Ohio</div>
-    </header>
-
-    <div class="narrative-block">
-        <h2>Identity</h2>
-        <p>The city developed around silica and heat. Known as the “Glass City,” its industrial base was built on the furnaces that supplied the automotive boom. The club mirrors the physics of the manufacturing floor: material tempered by fire to withstand structural load.</p>
+  <header>
+    <div class="club-lockup">
+      <h1>Toledo Assembly</h1>
+      <span class="division-tag">Americas Division</span>
     </div>
 
-    <div class="narrative-block">
-        <h2>Grounds</h2>
-        <div class="grounds-block">
-            <span class="venue-name">Furnace Field</span>
-            <span class="venue-loc">Toledo, Ohio</span>
+    <div class="fact-bar">
+      <span>Est. —</span>
+      <span>•</span>
+      <span><strong>Linehouse Field</strong></span>
+      <span>•</span>
+      <span>Mgr. Mara “Torque” Rivas</span>
+    </div>
+
+    <div class="cta-row">
+      <a class="btn primary" href="team.html?team=toledo-assembly">Active Roster</a>
+      <a class="btn" href="day.html">Daily Scores</a>
+      <a class="btn" href="game.html">Latest Box Score</a>
+    </div>
+  </header>
+
+  <section class="identity">
+    <h2>The Club</h2>
+    <p>
+      The Assembly doesn’t “get hot.” It gets <em>tight</em>. This is a club built on repetition—clean routes,
+      clean turns, clean decisions. Players talk about “fit” the way machinists do: everything has a tolerance,
+      and Toledo lives inside it. Games feel organized even when they’re messy.
+    </p>
+    <ul>
+      <li>Style: Fundamentals / Execution</li>
+      <li>Vibe: Shift-Work Pride</li>
+      <li>Tradition: “The Bell Check”</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Ballpark</h2>
+    <div class="img-slot ratio-16-9">
+      <img src="club-toledo-assembly-stadium.png" alt="Linehouse Field at dusk, industrial backdrop" />
+    </div>
+    <p>
+      <strong>Linehouse Field.</strong> A compact park near the river and the old plants—bright lights, clean lines,
+      and a scoreboard that looks like it was borrowed from a factory floor. The concourses smell like pretzels,
+      coffee, and fresh-cut grass—not smoke, not rust.
+    </p>
+  </section>
+
+  <section>
+    <h2>Broadcast</h2>
+    <div class="split">
+      <div class="img-slot ratio-3-4">
+        <img src="club-toledo-assembly-broadcast.png" alt="Toledo broadcaster in a small booth" />
+      </div>
+      <div>
+        <h3>Gordon Pike</h3>
+        <p>
+          <strong>Voice of the Assembly.</strong> Pike calls the game like a checklist—clear, steady,
+          oddly comforting. He’s not a hype man; he’s an air-traffic controller. When Toledo turns a
+          double play, he sounds satisfied, like something clicked into place.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Mascot & Stands</h2>
+    <div class="split">
+      <div>
+        <div class="img-slot ratio-1-1">
+          <img src="club-toledo-assembly-mascot.png" alt="Toledo mascot in the stands high-fiving kids" />
         </div>
-        <p>Set near the Maumee River with rail infrastructure in reach. The park is spare: exposed steel, reclaimed brick, and hard shadows that shift across the infield as the light fades. Wind off the water can flatten high contact and turn routine flies into work.</p>
+        <h3>Rivet</h3>
+        <p>
+          A classic, human-worn shop-floor character: safety vest, work gloves, oversized grin.
+          Rivet is loud in a friendly way—high-fives, goofy dances, and a “tool check” skit between innings.
+        </p>
+      </div>
+      <div>
+        <div class="img-slot ratio-1-1">
+          <img src="club-toledo-assembly-fans.png" alt="Toledo fans in work shirts and caps, lively but grounded" />
+        </div>
+        <h3>The Shift Section</h3>
+        <p>
+          Families, coworkers, and union-shirt regulars. They clap hard for routine plays.
+          The loudest moment isn’t a homer—it’s a perfectly turned double play with the crowd
+          rising like it practiced.
+        </p>
+      </div>
     </div>
+  </section>
 
-    <div class="narrative-block">
-        <h2>Tradition</h2>
-        <p>The club follows the assembly-line ethic. Outcomes matter more than moments. The preferred style is disciplined and repeatable: take the extra base, finish the play, return the ball. Flash is tolerated; reliability is rewarded.</p>
-    </div>
+  <section>
+    <h2>Core Roster</h2>
+    <table class="roster">
+      <tr><td class="pos">SS</td><td>Javi “Spec” Moreno</td></tr>
+      <tr><td class="pos">2B</td><td>Cal “Torque” Jennings</td></tr>
+      <tr><td class="pos">P</td><td>Nina Holt</td></tr>
+    </table>
+  </section>
 
-    <div class="narrative-block">
-        <h2>Timeline</h2>
-        <ul class="artifact-list">
-            <li>
-                <span class="artifact-year">Late 19th Century</span>
-                <span class="artifact-detail">Rapid expansion of the glass manufacturing industry in the region.</span>
-            </li>
-            <li>
-                <span class="artifact-year">Mid-20th Century</span>
-                <span class="artifact-detail">Peak production period for automotive glass and parts.</span>
-            </li>
-            <li>
-                <span class="artifact-year">2024</span>
-                <span class="artifact-detail"><strong>Charter Member</strong> of Global League Baseball.</span>
-            </li>
-        </ul>
-    </div>
-
-    <div class="record-ref">
-        <a href="team-toledo.html" class="record-link">
-            Official Statistics &amp; Roster available in Team Record
-        </a>
-    </div>
+  <div class="doc-footer">
+    GLB Club Portal · Toledo · Internal
+  </div>
 
 </div>
-
 </body>
 </html>

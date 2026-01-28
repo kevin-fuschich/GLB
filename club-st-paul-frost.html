@@ -7,14 +7,14 @@
 
 <style>
 :root{
-  /* St. Paul Frost Identity: Ice Blue, Deep Navy, Whiteout */
-  --primary: #1F3A5F;  /* Deep Navy */
-  --accent:  #8FD3FF;  /* Ice Blue */
+  /* St. Paul Identity: Ice Blue, Deep Navy, Sodium Amber */
+  --primary: #1F3B5C;   /* Deep Navy */
+  --accent:  #9BBCE0;   /* Ice Blue */
   --paper:   #ffffff;
   --ink:     #0f1214;
 
   --border-thick: 4px solid var(--ink);
-  --border-thin:  1px solid #ccc;
+  --border-thin: 1px solid #ccc;
 
   --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
   --mono: "Courier New", Courier, monospace;
@@ -26,7 +26,6 @@ body{
   font-family: var(--sans);
   margin: 0;
   padding: 20px;
-  -webkit-font-smoothing: antialiased;
 }
 
 .club-sheet{
@@ -36,7 +35,6 @@ body{
   padding: 40px;
   border-top: var(--border-thick);
   position: relative;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.05);
 }
 
 /* DOC ID */
@@ -47,7 +45,6 @@ body{
   font-family: var(--mono);
   font-size: 10px;
   color: #999;
-  letter-spacing: 1px;
 }
 
 /* HEADER */
@@ -69,7 +66,6 @@ h1{
   font-size: 32px;
   font-weight: 900;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
 }
 
 .division-tag{
@@ -78,8 +74,6 @@ h1{
   font-size: 12px;
   padding: 4px 8px;
   text-transform: uppercase;
-  font-weight: bold;
-  letter-spacing: 1px;
 }
 
 .fact-bar{
@@ -140,7 +134,6 @@ h2{
   text-transform: uppercase;
   border-bottom: 2px solid var(--accent);
   padding-bottom: 5px;
-  letter-spacing: 1px;
 }
 
 /* IDENTITY */
@@ -180,10 +173,10 @@ h2{
   display: block;
 }
 
-/* Aspect ratios */
-.ratio-16-9{ aspect-ratio: 16/9; }
-.ratio-3-4{ aspect-ratio: 3/4; max-width: 250px; }
-.ratio-1-1{ aspect-ratio: 1/1; max-width: 260px; }
+/* Aspect Ratios */
+.ratio-16-9 { aspect-ratio: 16/9; }
+.ratio-3-4  { aspect-ratio: 3/4; max-width: 250px; }
+.ratio-1-1  { aspect-ratio: 1/1; max-width: 260px; }
 
 /* SPLIT */
 .split{
@@ -224,8 +217,6 @@ a:hover{ color: var(--primary); }
   font-size: 10px;
   color: #999;
   text-align: right;
-  text-transform: uppercase;
-  letter-spacing: 1px;
 }
 
 @media(max-width: 600px){
@@ -250,42 +241,42 @@ a:hover{ color: var(--primary); }
     <div class="fact-bar">
       <span>Est. —</span>
       <span>•</span>
-      <span><strong>Icehouse Field</strong></span>
+      <span><strong>Frostbank Field</strong></span>
       <span>•</span>
-      <span>Mgr. Mara “Black Ice” Lund</span>
+      <span>Mgr. Mara “The Meter” Halvorsen</span>
     </div>
 
     <div class="cta-row">
       <a class="btn primary" href="team.html?team=st-paul-frost">Active Roster</a>
-      <a class="btn" href="day.html">Daily Scores</a>
-      <a class="btn" href="game.html">Latest Box Score</a>
+      <a class="btn" href="day.html?date=2026-05-12">Daily Scores</a>
+      <a class="btn" href="#">Latest Box Score</a>
     </div>
   </header>
 
   <section class="identity">
     <h2>The Club</h2>
     <p>
-      The Frost don’t chase momentum — they remove it. St. Paul plays like the air is heavier here,
-      like every swing needs permission. Their games feel quieter than they should. Not because the fans
-      are absent, but because the noise gets swallowed. Opponents show up thinking it’ll be “cold-weather
-      baseball” and leave talking about the way the game slowed down until it felt inevitable.
+      The Frost don’t “bring energy.” They bring temperature. St. Paul plays a quiet, disciplined game that feels
+      like breath on glass—controlled, steady, inevitable. They win by shrinking innings and stretching patience:
+      long at-bats, clean defense, and pitchers who refuse to hurry. Opponents talk about the silence first. Then
+      the strike zone.
     </p>
     <ul>
-      <li>Style: Run Prevention / Pressure</li>
-      <li>Vibe: Whiteout Control</li>
-      <li>Tradition: “The Freeze Minute”</li>
+      <li>Style: Control / Contact</li>
+      <li>Vibe: Cold Clarity</li>
+      <li>Tradition: “The Third-Inning Stand”</li>
     </ul>
   </section>
 
   <section>
     <h2>Ballpark</h2>
     <div class="img-slot ratio-16-9">
-      <img src="club-st-paul-frost-stadium.png" alt="Icehouse Field under a white sky">
+      <img src="club-st-paul-frost-stadium.png" alt="Frostbank Field under white sky" />
     </div>
     <p>
-      <strong>Icehouse Field.</strong> A low-slung, river-adjacent park that looks temporary on purpose:
-      steel stairs, pale concrete, and wind gaps you can hear. The outfield lights burn a little too blue.
-      On certain nights the whole place looks like a surveillance photo.
+      <strong>Frostbank Field.</strong> Built low and open to the river wind, the park is famous for its hard, bright light
+      and the way sound carries in cold air. Fans say the foul lines feel closer here. The Frost say the same thing
+      about the strike zone.
     </p>
   </section>
 
@@ -293,13 +284,15 @@ a:hover{ color: var(--primary); }
     <h2>Broadcast</h2>
     <div class="split">
       <div class="img-slot ratio-3-4">
-        <img src="club-st-paul-frost-broadcast.png" alt="Broadcaster in a cold booth">
+        <img src="club-st-paul-frost-broadcast.png" alt="Broadcaster in a small booth, winter gear" />
       </div>
       <div>
-        <h3>Cal Rourke</h3>
-        <p><strong>Voice of the Frost.</strong> Rourke calls games like he’s reading weather data.
-          Minimal emotion, surgical timing, long pauses that make the crowd audio feel louder than it is.
-          When something big happens, he doesn’t shout — he lowers his voice.</p>
+        <h3>Len “Blue Band” Rask</h3>
+        <p>
+          <strong>Voice of the Frost.</strong> Rask calls the game like a weather report that learned baseball. Minimal,
+          precise, dry humor. He’s obsessed with count leverage and defensive positioning, and he treats a 2–1 game
+          like a cathedral.
+        </p>
       </div>
     </div>
   </section>
@@ -309,24 +302,23 @@ a:hover{ color: var(--primary); }
     <div class="split">
       <div>
         <div class="img-slot ratio-1-1">
-          <img src="club-st-paul-frost-mascot.png" alt="Mascot: a frost-bitten figure">
+          <img src="club-st-paul-frost-mascot.png" alt="Mascot: a stitched snow-suit figure with a frost visor" />
         </div>
         <h3>Rime</h3>
         <p>
-          A pale, faceless figure in layered thermal fabric and reflective tape — not cute, not scary,
-          just wrong enough to be memorable. Rime moves slowly, like it’s conserving heat.
+          A padded, stitched figure in an old snowmobile suit with a fogged visor and a scarf that never stops moving.
+          Rime doesn’t dance. Rime patrols.
         </p>
       </div>
 
       <div>
         <div class="img-slot ratio-1-1">
-          <img src="club-st-paul-frost-fans.png" alt="Fans standing in winter gear">
+          <img src="club-st-paul-frost-fans.png" alt="Fans standing silently in winter layers" />
         </div>
-        <h3>The Whiteout Row</h3>
+        <h3>The Quiet Deck</h3>
         <p>
-          A standing section in cheap ponchos and matching gloves. They don’t chant.
-          They count. Outs. Pitches. Mistakes. When the Frost turn a double play, the section goes still
-          for one full minute — the Freeze Minute — then resumes as if nothing happened.
+          St. Paul’s fans have a thing they do: they stand together for the full third inning—no chants, no clapping,
+          just presence. When the inning ends, they sit like nothing happened.
         </p>
       </div>
     </div>
@@ -335,9 +327,9 @@ a:hover{ color: var(--primary); }
   <section>
     <h2>Core Roster</h2>
     <table class="roster">
-      <tr><td class="pos">SP</td><td>Owen “Frost Line” Kells</td></tr>
-      <tr><td class="pos">C</td><td>Jae Winton</td></tr>
-      <tr><td class="pos">SS</td><td>Silas North</td></tr>
+      <tr><td class="pos">P</td><td>Oskar “Dead Calm” Nyholm</td></tr>
+      <tr><td class="pos">C</td><td>Walt Kline</td></tr>
+      <tr><td class="pos">SS</td><td>Rae “Cut Line” Sato</td></tr>
     </table>
   </section>
 

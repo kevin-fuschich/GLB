@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>San Pedro — Club Page | GLB</title>
+  <meta name="description" content="San Pedro club page archive for Global League Baseball (GLB). Stadium, identity, kit, broadcast, and club artifacts." />
+
+  <style>
+    :root{
+      --bg:#0b0d10;
+      --card:#12161c;
+      --ink:#e9edf2;
+      --muted:#a9b4c0;
+      --line:#232b35;
+      --link:#cfe3ff;
+      --chip:#1a2230;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --radius: 16px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      background: radial-gradient(1000px 700px at 20% -10%, rgba(120,160,220,.18), transparent 60%),
+                  radial-gradient(900px 600px at 80% 10%, rgba(240,190,120,.10), transparent 55%),
+                  var(--bg);
+      color:var(--ink);
+      line-height:1.45;
+    }
+    a{color:var(--link); text-decoration:none}
+    a:hover{text-decoration:underline}
+
+    .wrap{max-width:1100px; margin:0 auto; padding:28px 18px 70px}
+    .topbar{
+      display:flex; align-items:center; justify-content:space-between;
+      gap:14px; padding:10px 0 18px; border-bottom:1px solid var(--line);
+      margin-bottom:20px;
+    }
+    .crumbs{display:flex; gap:10px; flex-wrap:wrap; align-items:center; color:var(--muted); font-size:14px}
+    .crumbs span{opacity:.6}
+    .titleblock{display:flex; align-items:flex-end; justify-content:space-between; gap:18px; flex-wrap:wrap}
+    h1{margin:0; font-size:40px; letter-spacing:.3px}
+    .sub{color:var(--muted); max-width:68ch; margin-top:8px}
+    .chips{display:flex; gap:8px; flex-wrap:wrap; margin-top:14px}
+    .chip{
+      background:var(--chip);
+      border:1px solid var(--line);
+      padding:7px 10px;
+      border-radius:999px;
+      font-size:12px;
+      color:var(--muted);
+    }
+
+    .hero{
+      margin-top:18px;
+      display:grid;
+      grid-template-columns: 1.25fr .75fr;
+      gap:16px;
+      align-items:stretch;
+    }
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr}
+    }
+
+    .card{
+      background:rgba(18,22,28,.92);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      overflow:hidden;
+    }
+    .card-pad{padding:18px}
+    .img{
+      width:100%; height:100%;
+      display:block;
+      object-fit:cover;
+      background:#0f1318;
+    }
+    .imgframe{aspect-ratio: 16/9; border-bottom:1px solid var(--line)}
+    .imgcap{padding:12px 14px; color:var(--muted); font-size:13px}
+
+    .grid{
+      margin-top:18px;
+      display:grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap:16px;
+    }
+    .col-8{grid-column: span 8}
+    .col-4{grid-column: span 4}
+    .col-12{grid-column: span 12}
+    @media (max-width:900px){
+      .col-8,.col-4,.col-12{grid-column: span 12}
+    }
+
+    h2{margin:0 0 10px; font-size:18px; letter-spacing:.2px}
+    .kvs{display:grid; grid-template-columns: 180px 1fr; gap:10px 14px; margin-top:10px}
+    .k{color:var(--muted)}
+    .v{color:var(--ink)}
+    .rule{border-top:1px solid var(--line); margin:14px 0}
+    .note{color:var(--muted); font-size:13px}
+
+    .archive ul{margin:10px 0 0; padding-left:18px; color:var(--muted)}
+    .archive li{margin:6px 0}
+    .footer{
+      margin-top:22px;
+      color:var(--muted);
+      font-size:12px;
+      opacity:.9;
+    }
+    .muted{color:var(--muted)}
+    .small{font-size:13px}
+    .mono{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace}
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="topbar">
+      <div class="crumbs">
+        <a href="index.html">GLB</a> <span>›</span>
+        <a href="clubs.html">Clubs</a> <span>›</span>
+        <span>San Pedro</span>
+      </div>
+      <div class="crumbs">
+        <span class="mono">club-san-pedro.html</span>
+      </div>
+    </div>
+
+    <div class="titleblock">
+      <div>
+        <h1>San Pedro</h1>
+        <div class="sub">
+          A club page archive: stadium record, identity artifacts, kit, broadcast notes, and uneven fragments collected over time.
+        </div>
+        <div class="chips">
+          <div class="chip">GLB Club Page</div>
+          <div class="chip">Archive-first</div>
+          <div class="chip">No Winks</div>
+          <div class="chip">Updated: <span id="updated"></span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- HERO -->
+    <div class="hero">
+      <div class="card">
+        <div class="imgframe">
+          <!-- Image 1: Stadium -->
+          <img class="img" src="club-san-pedro-stadium.png" alt="San Pedro stadium photograph (archival)" />
+        </div>
+        <div class="imgcap">Stadium record (archival still) — San Pedro.</div>
+      </div>
+
+      <div class="card">
+        <div class="card-pad">
+          <h2>Club Record</h2>
+          <div class="kvs">
+            <div class="k">Home City</div><div class="v">San Pedro</div>
+            <div class="k">Division</div><div class="v muted">[Americas / Pacific] — <em>confirm</em></div>
+            <div class="k">Ballpark</div><div class="v muted">[Stadium name]</div>
+            <div class="k">Colors</div><div class="v muted">[Primary / Secondary / Accent]</div>
+            <div class="k">Club Motto</div><div class="v muted">[Short motto, 3–6 words]</div>
+          </div>
+
+          <div class="rule"></div>
+
+          <div class="note">
+            This page is maintained as a record. Items are added as they appear.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MAIN GRID -->
+    <div class="grid">
+      <!-- Identity -->
+      <div class="card col-8">
+        <div class="card-pad">
+          <h2>Identity Notes</h2>
+          <div class="small muted">
+            Keep it grounded. A club that believes in itself. No commentary about fiction. No “concept.” Just record.
+          </div>
+          <div class="rule"></div>
+          <div class="kvs">
+            <div class="k">Crest</div><div class="v muted">[Describe crest: shape, marks, symbols]</div>
+            <div class="k">Mascot</div><div class="v muted">[Mascot name + species/type]</div>
+            <div class="k">Supporters</div><div class="v muted">[One line about fan culture]</div>
+            <div class="k">Rivalry</div><div class="v muted">[Rival club(s) if known]</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Image 2: Jersey -->
+      <div class="card col-4">
+        <div class="imgframe">
+          <img class="img" src="club-san-pedro-kit.png" alt="San Pedro kit (front/back) promotional render" />
+        </div>
+        <div class="imgcap">Primary kit record — home / away (promotional plate).</div>
+      </div>
+
+      <!-- Stadium detail -->
+      <div class="card col-4">
+        <div class="card-pad">
+          <h2>Ballpark</h2>
+          <div class="kvs">
+            <div class="k">Name</div><div class="v muted">[Stadium name]</div>
+            <div class="k">Capacity</div><div class="v muted">[##,###]</div>
+            <div class="k">Field</div><div class="v muted">[Grass / Turf]</div>
+            <div class="k">Feature</div><div class="v muted">[Signature quirk: wall, backdrop, lights]</div>
+          </div>
+          <div class="rule"></div>
+          <div class="note">Recorded by broadcast stills and on-site photography.</div>
+        </div>
+      </div>
+
+      <!-- Image 3: Mascot -->
+      <div class="card col-4">
+        <div class="imgframe">
+          <img class="img" src="club-san-pedro-mascot.png" alt="San Pedro mascot promotional photo" />
+        </div>
+        <div class="imgcap">Mascot record — promotional still.</div>
+      </div>
+
+      <!-- Broadcast -->
+      <div class="card col-4">
+        <div class="card-pad">
+          <h2>Broadcast</h2>
+          <div class="kvs">
+            <div class="k">Play-by-play</div><div class="v muted">[Name]</div>
+            <div class="k">Color</div><div class="v muted">[Name]</div>
+            <div class="k">Field</div><div class="v muted">[Name]</div>
+          </div>
+          <div class="rule"></div>
+          <div class="note">Local call is preferred. National feeds vary.</div>
+        </div>
+      </div>
+
+      <!-- Image 4: Artifact -->
+      <div class="card col-12">
+        <div class="imgframe" style="aspect-ratio: 21/9;">
+          <img class="img" src="club-san-pedro-artifact.png" alt="San Pedro club artifact (found ephemera)" />
+        </div>
+        <div class="imgcap">Club artifact (found ephemera) — scan / photograph.</div>
+      </div>
+
+      <!-- Archive / Notes -->
+      <div class="card col-12 archive">
+        <div class="card-pad">
+          <h2>Archive Log</h2>
+          <div class="small muted">Add entries as they’re discovered. Date them. Keep them uneven.</div>
+          <ul>
+            <li><span class="mono">[YYYY-MM-DD]</span> — <span class="muted">[Short note: weather, walk-off, incident, quote]</span></li>
+            <li><span class="mono">[YYYY-MM-DD]</span> — <span class="muted">[Short note]</span></li>
+            <li><span class="mono">[YYYY-MM-DD]</span> — <span class="muted">[Short note]</span></li>
+          </ul>
+          <div class="footer">
+            If an image fails to load, verify the file is committed and the path matches exactly (case-sensitive).
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function(){
+      const d = new Date();
+      const opts = { year:'numeric', month:'short', day:'2-digit' };
+      document.getElementById('updated').textContent = d.toLocaleDateString(undefined, opts);
+    })();
+  </script>
+</body>
+</html>

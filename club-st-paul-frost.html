@@ -1,1 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>St. Paul Frost – Club Portal</title>
 
+<style>
+:root{
+  /* St. Paul Frost Identity: Ice Blue, Deep Navy, Whiteout */
+  --primary: #1F3A5F;  /* Deep Navy */
+  --accent:  #8FD3FF;  /* Ice Blue */
+  --paper:   #ffffff;
+  --ink:     #0f1214;
+
+  --border-thick: 4px solid var(--ink);
+  --border-thin:  1px solid #ccc;
+
+  --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --mono: "Courier New", Courier, monospace;
+}
+
+body{
+  background: #f4f6f8;
+  color: var(--ink);
+  font-family: var(--sans);
+  margin: 0;
+  padding: 20px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.club-sheet{
+  max-width: 900px;
+  margin: 0 auto;
+  background: var(--paper);
+  padding: 40px;
+  border-top: var(--border-thick);
+  position: relative;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+}
+
+/* DOC ID */
+.doc-id{
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-family: var(--mono);
+  font-size: 10px;
+  color: #999;
+  letter-spacing: 1px;
+}
+
+/* HEADER */
+header{
+  border-bottom: var(--border-thick);
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.club-lockup{
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+
+h1{
+  margin: 0;
+  font-size: 32px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.division-tag{
+  background: var(--primary);
+  color: #fff;
+  font-size: 12px;
+  padding: 4px 8px;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.fact-bar{
+  display: flex;
+  gap: 15px;
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #666;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+/* CTAs */
+.cta-row{
+  display: flex;
+  gap: 10px;
+  margin: 25px 0 40px;
+  flex-wrap: wrap;
+}
+
+.btn{
+  flex: 1;
+  min-width: 180px;
+  border: 2px solid var(--ink);
+  padding: 12px 0;
+  text-align: center;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--ink);
+  transition: all 0.2s;
+}
+
+.btn:hover{
+  background: var(--ink);
+  color: #fff;
+  border-color: var(--ink);
+}
+
+.btn.primary{
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+}
+
+.btn.primary:hover{
+  background: var(--accent);
+  color: var(--ink);
+  border-color: var(--accent);
+}
+
+/* SECTIONS */
+section{ margin-bottom: 50px; }
+
+h2{
+  font-size: 14px;
+  text-transform: uppercase;
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 5px;
+  letter-spacing: 1px;
+}
+
+/* IDENTITY */
+.identity p{
+  font-size: 16px;
+  max-width: 700px;
+}
+
+.identity ul{
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 20px;
+}
+
+.identity li{
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-top: 1px solid #ccc;
+  padding-top: 10px;
+}
+
+/* IMAGE SLOTS */
+.img-slot{
+  background: #e0e0e0;
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.img-slot img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Aspect ratios */
+.ratio-16-9{ aspect-ratio: 16/9; }
+.ratio-3-4{ aspect-ratio: 3/4; max-width: 250px; }
+.ratio-1-1{ aspect-ratio: 1/1; max-width: 260px; }
+
+/* SPLIT */
+.split{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+/* ROSTER */
+.roster{
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.roster td{
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.pos{
+  font-family: var(--mono);
+  color: var(--accent);
+  width: 50px;
+  font-weight: bold;
+}
+
+/* LINKS */
+a{ color: var(--ink); text-decoration: none; }
+a:hover{ color: var(--primary); }
+
+/* FOOTER */
+.doc-footer{
+  margin-top: 60px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+  font-family: var(--mono);
+  font-size: 10px;
+  color: #999;
+  text-align: right;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+@media(max-width: 600px){
+  .split{ grid-template-columns: 1fr; }
+  .identity ul{ grid-template-columns: 1fr; }
+  .doc-id{ display: none; }
+}
+</style>
+</head>
+
+<body>
+<div class="club-sheet">
+
+  <div class="doc-id">STP-CLUB-01</div>
+
+  <header>
+    <div class="club-lockup">
+      <h1>St. Paul Frost</h1>
+      <span class="division-tag">Americas Division</span>
+    </div>
+
+    <div class="fact-bar">
+      <span>Est. —</span>
+      <span>•</span>
+      <span><strong>Icehouse Field</strong></span>
+      <span>•</span>
+      <span>Mgr. Mara “Black Ice” Lund</span>
+    </div>
+
+    <div class="cta-row">
+      <a class="btn primary" href="team.html?team=st-paul-frost">Active Roster</a>
+      <a class="btn" href="day.html">Daily Scores</a>
+      <a class="btn" href="game.html">Latest Box Score</a>
+    </div>
+  </header>
+
+  <section class="identity">
+    <h2>The Club</h2>
+    <p>
+      The Frost don’t chase momentum — they remove it. St. Paul plays like the air is heavier here,
+      like every swing needs permission. Their games feel quieter than they should. Not because the fans
+      are absent, but because the noise gets swallowed. Opponents show up thinking it’ll be “cold-weather
+      baseball” and leave talking about the way the game slowed down until it felt inevitable.
+    </p>
+    <ul>
+      <li>Style: Run Prevention / Pressure</li>
+      <li>Vibe: Whiteout Control</li>
+      <li>Tradition: “The Freeze Minute”</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Ballpark</h2>
+    <div class="img-slot ratio-16-9">
+      <img src="club-st-paul-frost-stadium.png" alt="Icehouse Field under a white sky">
+    </div>
+    <p>
+      <strong>Icehouse Field.</strong> A low-slung, river-adjacent park that looks temporary on purpose:
+      steel stairs, pale concrete, and wind gaps you can hear. The outfield lights burn a little too blue.
+      On certain nights the whole place looks like a surveillance photo.
+    </p>
+  </section>
+
+  <section>
+    <h2>Broadcast</h2>
+    <div class="split">
+      <div class="img-slot ratio-3-4">
+        <img src="club-st-paul-frost-broadcast.png" alt="Broadcaster in a cold booth">
+      </div>
+      <div>
+        <h3>Cal Rourke</h3>
+        <p><strong>Voice of the Frost.</strong> Rourke calls games like he’s reading weather data.
+          Minimal emotion, surgical timing, long pauses that make the crowd audio feel louder than it is.
+          When something big happens, he doesn’t shout — he lowers his voice.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Mascot & Stands</h2>
+    <div class="split">
+      <div>
+        <div class="img-slot ratio-1-1">
+          <img src="club-st-paul-frost-mascot.png" alt="Mascot: a frost-bitten figure">
+        </div>
+        <h3>Rime</h3>
+        <p>
+          A pale, faceless figure in layered thermal fabric and reflective tape — not cute, not scary,
+          just wrong enough to be memorable. Rime moves slowly, like it’s conserving heat.
+        </p>
+      </div>
+
+      <div>
+        <div class="img-slot ratio-1-1">
+          <img src="club-st-paul-frost-fans.png" alt="Fans standing in winter gear">
+        </div>
+        <h3>The Whiteout Row</h3>
+        <p>
+          A standing section in cheap ponchos and matching gloves. They don’t chant.
+          They count. Outs. Pitches. Mistakes. When the Frost turn a double play, the section goes still
+          for one full minute — the Freeze Minute — then resumes as if nothing happened.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Core Roster</h2>
+    <table class="roster">
+      <tr><td class="pos">SP</td><td>Owen “Frost Line” Kells</td></tr>
+      <tr><td class="pos">C</td><td>Jae Winton</td></tr>
+      <tr><td class="pos">SS</td><td>Silas North</td></tr>
+    </table>
+  </section>
+
+  <div class="doc-footer">
+    GLB Club Portal · St. Paul · Internal
+  </div>
+
+</div>
+</body>
+</html>

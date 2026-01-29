@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Louisville Naturals – Club Portal</title>
+
+<style>
+:root{
+  /* Louisville Identity: River Twilight, Hardwood, Brass, Bourbon */
+  --primary: #1F6F78; /* River Teal */
+  --accent: #C79A2E;  /* Brass Gold */
+  --paper: #ffffff;
+  --ink: #101315;
+
+  --border-thick: 4px solid var(--ink);
+  --border-thin: 1px solid #ccc;
+
+  --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --mono: "Courier New", Courier, monospace;
+}
+
+body{
+  background: #f6f6f6;
+  color: var(--ink);
+  font-family: var(--sans);
+  margin: 0;
+  padding: 20px;
+}
+
+.club-sheet{
+  max-width: 900px;
+  margin: 0 auto;
+  background: var(--paper);
+  padding: 40px;
+  border-top: var(--border-thick);
+  position: relative;
+}
+
+/* DOC ID */
+.doc-id{
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-family: var(--mono);
+  font-size: 10px;
+  color: #999;
+}
+
+/* HEADER */
+header{
+  border-bottom: var(--border-thick);
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.club-lockup{
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+
+h1{
+  margin: 0;
+  font-size: 32px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.division-tag{
+  background: var(--primary);
+  color: #fff;
+  font-size: 12px;
+  padding: 4px 8px;
+  text-transform: uppercase;
+}
+
+.fact-bar{
+  display: flex;
+  gap: 15px;
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #666;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+/* CTAs */
+.cta-row{
+  display: flex;
+  gap: 10px;
+  margin: 25px 0 40px;
+  flex-wrap: wrap;
+}
+
+.btn{
+  flex: 1;
+  min-width: 180px;
+  border: 2px solid var(--ink);
+  padding: 12px 0;
+  text-align: center;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--ink);
+  transition: all 0.2s;
+}
+
+.btn:hover {
+  background: var(--ink);
+  color: white;
+  border-color: var(--ink);
+}
+
+.btn.primary{
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+}
+
+.btn.primary:hover {
+  background: var(--accent);
+  color: var(--ink);
+  border-color: var(--accent);
+}
+
+/* SECTIONS */
+section{ margin-bottom: 50px; }
+
+h2{
+  font-size: 14px;
+  text-transform: uppercase;
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 5px;
+}
+
+/* IDENTITY */
+.identity p{
+  font-size: 16px;
+  max-width: 700px;
+}
+
+.identity ul{
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 20px;
+}
+
+.identity li{
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-top: 1px solid #ccc;
+  padding-top: 10px;
+}
+
+/* IMAGE SLOTS */
+.img-slot{
+  background: #e0e0e0;
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.img-slot img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Aspect Ratios */
+.ratio-16-9{ aspect-ratio: 16/9; }
+.ratio-3-4{ aspect-ratio: 3/4; max-width: 250px; }
+.ratio-1-1{ aspect-ratio: 1/1; max-width: 260px; }
+
+/* SPLIT */
+.split{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+/* ROSTER */
+.roster{
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.roster td{
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.pos{
+  font-family: var(--mono);
+  color: var(--primary);
+  width: 55px;
+  font-weight: bold;
+}
+
+/* LINKS */
+a{ color: var(--ink); text-decoration: none; }
+a:hover{ color: var(--primary); }
+
+/* FOOTER */
+.doc-footer{
+  margin-top: 60px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+  font-family: var(--mono);
+  font-size: 10px;
+  color: #999;
+  text-align: right;
+}
+
+@media(max-width: 600px){
+  .split{ grid-template-columns: 1fr; }
+  .identity ul{ grid-template-columns: 1fr; }
+  .doc-id{ display: none; }
+}
+</style>
+</head>
+
+<body>
+<div class="club-sheet">
+
+<div class="doc-id">LVS-CLUB-01</div>
+
+<header>
+  <div class="club-lockup">
+    <h1>Louisville Naturals</h1>
+    <span class="division-tag">Americas Division</span>
+  </div>
+
+  <div class="fact-bar">
+    <span>Est. —</span>
+    <span>•</span>
+    <span><strong>The Riverwalk Grounds</strong></span>
+    <span>•</span>
+    <span>Mgr. June “Junebug” Carver</span>
+  </div>
+
+  <div class="cta-row">
+    <a class="btn primary" href="team.html?team=louisville-naturals">Active Roster</a>
+    <a class="btn" href="day.html?date=2026-07-18">Daily Scores</a>
+    <a class="btn" href="club-index.html">Club Index</a>
+  </div>
+</header>
+
+<section class="identity">
+  <h2>The Club</h2>
+  <p>The Naturals play like a band that never rushes the chorus. They work the count, take the extra base, and let the river air do the rest. Louisville isn’t loud — it’s confident. Their edge is rhythm: small advantages stacked until the other side starts making mistakes.</p>
+  <ul>
+    <li>Style: Contact / Timing</li>
+    <li>Vibe: River Twilight</li>
+    <li>Tradition: “The Lucky Flip”</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Ballpark</h2>
+  <div class="img-slot ratio-16-9">
+    <img src="club-louisville-naturals-stadium.png" alt="The Riverwalk Grounds at golden hour">
+  </div>
+  <p><strong>The Riverwalk Grounds.</strong> Brick and brass details, wide concourses, and a warm glow that hits the infield right before sunset. The right-field line opens toward the water; the lights come on slowly like they’re making up their mind.</p>
+</section>
+
+<section>
+  <h2>Broadcast</h2>
+  <div class="split">
+    <div class="img-slot ratio-3-4">
+      <img src="club-louisville-naturals-broadcast.png" alt="Louisville broadcast booth">
+    </div>
+    <div>
+      <h3>Cal “Pocket” Raines</h3>
+      <p><strong>Voice of the Naturals.</strong> Cal calls games like he’s telling you a good secret. He’s not a hype man — he’s a storyteller. When a hitter gets lucky, Cal doesn’t deny it. He respects the bounce.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Mascot & Stands</h2>
+  <div class="split">
+    <div>
+      <div class="img-slot ratio-1-1">
+        <img src="club-louisville-naturals-mascot.png" alt="Mascot interacting with fans">
+      </div>
+      <h3>Lucky</h3>
+      <p>A friendly, slightly-worn human-worn mascot built around the team’s superstition: coin flips, lucky charms, and “never step on the line.” Not magical — just beloved. You can tell the costume has history.</p>
+    </div>
+    <div>
+      <div class="img-slot ratio-1-1">
+        <img src="club-louisville-naturals-fans.png" alt="Fans in warm evening light">
+      </div>
+      <h3>The Brass Rail</h3>
+      <p>The crowd leans forward like they’re listening for something. Families, older season-ticket regulars, kids with rally towels. Gold accents everywhere — not flashy, just warm.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Core Roster</h2>
+  <table class="roster">
+    <tr><td class="pos">2B</td><td>Marvin “Mint” Holloway</td></tr>
+    <tr><td class="pos">C</td><td>Rico Duvall</td></tr>
+    <tr><td class="pos">P</td><td>Silas “Left Bank” Mercer</td></tr>
+  </table>
+</section>
+
+<div class="doc-footer">
+  GLB Club Portal · Louisville · Internal
+</div>
+
+</div>
+</body>
+</html>

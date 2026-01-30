@@ -1,26 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Taipei Neon – Club Portal</title>
 
 <style>
 :root{
-  /* Taipei Identity: Night Market Neon, Humid Glow, Wet Asphalt */
-  --primary: #00C2FF;   /* Electric Cyan */
-  --accent:  #FF2DAA;   /* Neon Magenta */
-  --paper:   #ffffff;
-  --ink:     #0f1214;
+  /* Taipei Identity: Asphalt Night, Fluorescent Glow, Rain Metal */
+  --primary: #00E5FF;   /* Neon Cyan */
+  --accent: #FF2E88;    /* Magenta Pink */
+  --paper: #ffffff;
+  --ink: #101418;
 
-  --bg: #f6f6f7;
   --border-thick: 4px solid var(--ink);
-  --mono: "Courier New", Courier, monospace;
+  --border-thin: 1px solid #ccc;
+
   --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --mono: "Courier New", Courier, monospace;
 }
 
 body{
-  background: var(--bg);
+  background: #f2f2f2;
   color: var(--ink);
   font-family: var(--sans);
   margin: 0;
@@ -58,7 +60,6 @@ header{
   justify-content: space-between;
   align-items: baseline;
   flex-wrap: wrap;
-  gap: 10px;
 }
 
 h1{
@@ -66,12 +67,11 @@ h1{
   font-size: 32px;
   font-weight: 900;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
 }
 
 .division-tag{
   background: var(--primary);
-  color: #fff;
+  color: #000;
   font-size: 12px;
   padding: 4px 8px;
   text-transform: uppercase;
@@ -79,16 +79,13 @@ h1{
 
 .fact-bar{
   display: flex;
-  gap: 12px;
+  gap: 15px;
   font-size: 11px;
   text-transform: uppercase;
   color: #666;
   margin-top: 10px;
   flex-wrap: wrap;
-  align-items: center;
 }
-
-.fact-bar .dot{ color:#aaa; }
 
 /* CTAs */
 .cta-row{
@@ -109,24 +106,12 @@ h1{
   text-transform: uppercase;
   text-decoration: none;
   color: var(--ink);
-  transition: all 0.2s;
-}
-
-.btn:hover{
-  background: var(--ink);
-  color: #fff;
-  border-color: var(--ink);
 }
 
 .btn.primary{
   background: var(--primary);
-  color: #fff;
+  color: #000;
   border-color: var(--primary);
-}
-
-.btn.primary:hover{
-  background: var(--accent);
-  border-color: var(--accent);
 }
 
 /* SECTIONS */
@@ -137,13 +122,12 @@ h2{
   text-transform: uppercase;
   border-bottom: 2px solid var(--accent);
   padding-bottom: 5px;
-  letter-spacing: 0.5px;
 }
 
 /* IDENTITY */
 .identity p{
   font-size: 16px;
-  max-width: 720px;
+  max-width: 700px;
 }
 
 .identity ul{
@@ -164,10 +148,9 @@ h2{
 
 /* IMAGE SLOTS */
 .img-slot{
-  background: #e6e6e6;
+  background: #e0e0e0;
   border: 1px solid #ccc;
   margin-bottom: 15px;
-  display: block;
 }
 
 .img-slot img{
@@ -177,7 +160,6 @@ h2{
   display: block;
 }
 
-/* Aspect Ratios */
 .ratio-16-9{ aspect-ratio: 16/9; }
 .ratio-3-4{ aspect-ratio: 3/4; max-width: 250px; }
 .ratio-1-1{ aspect-ratio: 1/1; max-width: 260px; }
@@ -187,7 +169,6 @@ h2{
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 30px;
-  align-items: start;
 }
 
 /* ROSTER */
@@ -205,13 +186,9 @@ h2{
 .pos{
   font-family: var(--mono);
   color: var(--accent);
-  width: 60px;
+  width: 50px;
   font-weight: bold;
 }
-
-/* LINKS */
-a{ color: var(--ink); text-decoration: none; }
-a:hover{ color: var(--accent); }
 
 /* FOOTER */
 .doc-footer{
@@ -225,116 +202,103 @@ a:hover{ color: var(--accent); }
 }
 
 @media(max-width: 600px){
-  .split{ grid-template-columns: 1fr; }
-  .identity ul{ grid-template-columns: 1fr; }
-  .doc-id{ display: none; }
+  .split{grid-template-columns: 1fr;}
+  .identity ul{grid-template-columns: 1fr;}
+  .doc-id{display: none;}
 }
 </style>
 </head>
 
 <body>
 <div class="club-sheet">
-  <div class="doc-id">TPE-CLUB-01</div>
 
-  <header>
-    <div class="club-lockup">
-      <h1>Taipei Neon</h1>
-      <span class="division-tag">Pacific Division</span>
+<div class="doc-id">TPE-CLUB-01</div>
+
+<header>
+  <div class="club-lockup">
+    <h1>Taipei Neon</h1>
+    <span class="division-tag">Pacific Division</span>
+  </div>
+
+  <div class="fact-bar">
+    <span>Est. —</span>
+    <span>•</span>
+    <span><strong>Lantern Field</strong></span>
+    <span>•</span>
+    <span>Mgr. Wei-Lun Kao</span>
+  </div>
+
+  <div class="cta-row">
+    <a class="btn primary" href="team.html?team=taipei-neon">Active Roster</a>
+    <a class="btn" href="day.html">Daily Scores</a>
+    <a class="btn" href="#">Latest Box Score</a>
+  </div>
+</header>
+
+<section class="identity">
+  <h2>The Club</h2>
+  <p>The Neon play under constant motion. Rain, traffic, signage, crowds — nothing in Taipei ever fully stops. The club reflects that energy with speed, pressure, and improvisation. Games feel less like innings and more like long nights that never quite reset.</p>
+  <ul>
+    <li>Style: Speed / Pressure</li>
+    <li>Vibe: Night City</li>
+    <li>Tradition: “Last Train”</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Ballpark</h2>
+  <div class="img-slot ratio-16-9">
+    <img src="club-taipei-neon-stadium.png" alt="Lantern Field at night">
+  </div>
+  <p><strong>Lantern Field.</strong> A compact stadium woven into the city grid. LED boards glow through mist and drizzle. Street noise bleeds into the park. Night games feel continuous with the city around them.</p>
+</section>
+
+<section>
+  <h2>Broadcast</h2>
+  <div class="split">
+    <div class="img-slot ratio-3-4">
+      <img src="club-taipei-neon-broadcast.png" alt="Taipei Neon broadcast booth">
     </div>
-
-    <div class="fact-bar">
-      <span>Est. —</span>
-      <span class="dot">•</span>
-      <span><strong>Lantern Loop Park</strong></span>
-      <span class="dot">•</span>
-      <span>Mgr. Min-Jae “Switch” Kwon</span>
+    <div>
+      <h3>Chen & Lu</h3>
+      <p><strong>Voices of the Neon.</strong> Fast, conversational, bilingual at times. Calls are layered — play-by-play mixed with crowd reaction, street noise, and music drifting in from outside the park.</p>
     </div>
+  </div>
+</section>
 
-    <div class="cta-row">
-      <a class="btn primary" href="team.html?team=taipei-neon">Active Roster</a>
-      <a class="btn" href="day.html">Daily Scores</a>
-      <a class="btn" href="index.html">Club Index</a>
-    </div>
-  </header>
-
-  <section class="identity">
-    <h2>The Club</h2>
-    <p>
-      Taipei plays fast in the glow. The Neon are a rhythm team—quick innings, quick swings, quick decisions—built to
-      weaponize momentum. Their home games feel like a night market: bright signage, moving crowds, and a constant hum
-      that never fully goes quiet. They don’t overpower; they overwhelm.
-    </p>
-    <ul>
-      <li>Style: Speed / Pressure</li>
-      <li>Vibe: Night Market Glow</li>
-      <li>Tradition: “The Light Check”</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>Ballpark</h2>
-    <div class="img-slot ratio-16-9">
-      <img src="club-taipei-neon-stadium.png" alt="Lantern Loop Park under neon glow">
-    </div>
-    <p>
-      <strong>Lantern Loop Park.</strong> A compact stadium stitched into the city—wet pavement, glowing signage, and
-      warm light bouncing off concrete. When the humidity rises, the whole outfield looks like it’s lit from within.
-    </p>
-  </section>
-
-  <section>
-    <h2>Broadcast</h2>
-    <div class="split">
-      <div class="img-slot ratio-3-4">
-        <img src="club-taipei-neon-broadcast.png" alt="Neon broadcast booth">
+<section>
+  <h2>Mascot & Stands</h2>
+  <div class="split">
+    <div>
+      <div class="img-slot ratio-1-1">
+        <img src="club-taipei-neon-mascot.png" alt="Taipei Neon mascot interacting with fans">
       </div>
-      <div>
-        <h3>Jun “Signal” Hsu</h3>
-        <p>
-          <strong>Voice of the Neon.</strong> Hsu calls games like he’s tracking a storm system—calm, precise, and always
-          a half-second ahead of the action. The booth feels open to the city: glass, reflections, and the field humming
-          below.
-        </p>
-      </div>
+      <h3>Glow</h3>
+      <p>A human-worn mascot built for night games — reflective trim, worn fabric, visible seams. Glow moves constantly through the aisles, rarely stopping, always in motion.</p>
     </div>
-  </section>
-
-  <section>
-    <h2>Mascot & Stands</h2>
-    <div class="split">
-      <div>
-        <div class="img-slot ratio-1-1">
-          <img src="club-taipei-neon-mascot.png" alt="Taipei Neon mascot with fans">
-        </div>
-        <h3>Glow</h3>
-        <p>
-          A human-worn mascot built for the aisles—friendly, slightly scuffed, and always in motion. Glow isn’t “cute.”
-          Glow is crowd energy with legs.
-        </p>
+    <div>
+      <div class="img-slot ratio-1-1">
+        <img src="club-taipei-neon-fans.png" alt="Taipei Neon fans at night">
       </div>
-      <div>
-        <div class="img-slot ratio-1-1">
-          <img src="club-taipei-neon-fans.png" alt="Taipei fans in neon accents">
-        </div>
-        <h3>The Lantern Section</h3>
-        <p>
-          Fans arrive dressed for heat and rain at once. Neon accents, towels, small charms—nothing uniform, but
-          unmistakably Taipei. The noise comes in waves, like traffic.
-        </p>
-      </div>
+      <h3>The Night Crowd</h3>
+      <p>After-work fans, students, families, vendors. Phones glow. Food steams. Applause comes in waves instead of bursts.</p>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section>
-    <h2>Core Roster</h2>
-    <table class="roster">
-      <tr><td class="pos">SS</td><td>Ren “Quickstep” Liang</td></tr>
-      <tr><td class="pos">CF</td><td>Hao “Flashline” Wu</td></tr>
-      <tr><td class="pos">P</td><td>Daichi “Slipstream” Mori</td></tr>
-    </table>
-  </section>
+<section>
+  <h2>Core Roster</h2>
+  <table class="roster">
+    <tr><td class="pos">SS</td><td>Liang “Switch” Wen</td></tr>
+    <tr><td class="pos">CF</td><td>Jun Park</td></tr>
+    <tr><td class="pos">P</td><td>Hiro Tan</td></tr>
+  </table>
+</section>
 
-  <div class="doc-footer">GLB Club Portal · Taipei · Internal</div>
+<div class="doc-footer">
+  GLB Club Portal · Taipei · Internal
+</div>
+
 </div>
 </body>
 </html>

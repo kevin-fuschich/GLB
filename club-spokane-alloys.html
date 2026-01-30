@@ -4,11 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Spokane Alloys – Club Portal</title>
+<title>Spokane Alloys – GLB Club File</title>
 
 <style>
 :root{
-  /* Spokane Identity: Cold Steel, Smelter Smoke, Oxide Rust */
   --primary: #4A5863; /* Steel Blue-Grey */
   --accent: #C0442C;  /* Oxide Rust */
   --paper: #ffffff;
@@ -26,19 +25,17 @@ body{
   color: var(--ink);
   font-family: var(--sans);
   margin: 0;
-  padding: 20px;
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
+  padding: 0;
 }
 
+/* MAIN SHEET */
 .club-sheet{
   max-width: 900px;
-  margin: 0 auto;
+  margin: 20px auto;
   background: var(--paper);
   padding: 40px;
   border-top: var(--border-thick);
   position: relative;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
 /* DOC ID */
@@ -49,7 +46,6 @@ body{
   font-family: var(--mono);
   font-size: 10px;
   color: #999;
-  letter-spacing: 1px;
 }
 
 /* HEADER */
@@ -64,7 +60,6 @@ header{
   justify-content: space-between;
   align-items: baseline;
   flex-wrap: wrap;
-  gap: 10px;
 }
 
 h1{
@@ -72,7 +67,6 @@ h1{
   font-size: 32px;
   font-weight: 900;
   text-transform: uppercase;
-  letter-spacing: 1px;
 }
 
 .division-tag{
@@ -81,9 +75,9 @@ h1{
   font-size: 12px;
   padding: 4px 8px;
   text-transform: uppercase;
-  letter-spacing: 1px;
 }
 
+/* FACT BAR */
 .fact-bar{
   display: flex;
   gap: 15px;
@@ -94,13 +88,11 @@ h1{
   flex-wrap: wrap;
 }
 
-.fact-bar strong{ color: var(--ink); }
-
 /* CTAs */
 .cta-row{
   display: flex;
   gap: 10px;
-  margin: 25px 0 20px;
+  margin: 25px 0 40px;
   flex-wrap: wrap;
 }
 
@@ -115,25 +107,12 @@ h1{
   text-transform: uppercase;
   text-decoration: none;
   color: var(--ink);
-  transition: all 0.2s;
-  letter-spacing: 1px;
-}
-
-.btn:hover{
-  background: var(--ink);
-  color: #fff;
-  border-color: var(--ink);
 }
 
 .btn.primary{
   background: var(--primary);
   color: #fff;
   border-color: var(--primary);
-}
-
-.btn.primary:hover{
-  background: var(--accent);
-  border-color: var(--accent);
 }
 
 /* SECTIONS */
@@ -144,32 +123,12 @@ h2{
   text-transform: uppercase;
   border-bottom: 2px solid var(--accent);
   padding-bottom: 5px;
-  margin-bottom: 20px;
-  letter-spacing: 1px;
 }
 
-/* IDENTITY */
+/* CLUB TEXT */
 .identity p{
   font-size: 16px;
-  max-width: 700px;
-  margin: 0 0 18px 0;
-}
-
-.identity ul{
-  list-style: none;
-  padding: 0;
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-  gap: 20px;
-  margin: 0;
-}
-
-.identity li{
-  font-size: 12px;
-  font-weight: bold;
-  text-transform: uppercase;
-  border-top: 1px solid #ccc;
-  padding-top: 10px;
+  max-width: 720px;
 }
 
 /* IMAGE SLOTS */
@@ -177,19 +136,16 @@ h2{
   background: #e0e0e0;
   border: 1px solid #ccc;
   margin-bottom: 15px;
-  display: block;
 }
 
 .img-slot img{
   width: 100%;
-  height: 100%;
-  object-fit: cover;
   display: block;
 }
 
-/* Aspect Ratios */
+/* ASPECT RATIOS */
 .ratio-16-9{ aspect-ratio: 16/9; }
-.ratio-3-4{ aspect-ratio: 3/4; max-width: 250px; }
+.ratio-3-4{ aspect-ratio: 3/4; max-width: 260px; }
 .ratio-1-1{ aspect-ratio: 1/1; max-width: 260px; }
 
 /* SPLIT */
@@ -197,77 +153,18 @@ h2{
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 30px;
-  align-items: start;
 }
 
-/* BROADCAST & ANNOUNCER: 2-column, each has image + copy */
-.ba-card h3{
-  margin: 0 0 8px 0;
-  font-size: 18px;
-}
-
-.ba-card p{
-  margin: 0 0 10px 0;
-  font-size: 14px;
-}
-
-/* ROSTER / FOOTER FACTS */
-.meta-table{
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 13px;
-}
-
-.meta-table td{
-  padding: 10px 0;
-  border-bottom: 1px solid #eee;
-}
-
-.meta-k{
-  width: 160px;
-  font-family: var(--mono);
-  color: #666;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-size: 11px;
-}
-
-/* ARCHIVE LIST */
-.archive-list{
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.archive-list li{ margin-bottom: 10px; }
-.archive-list a{
-  color: var(--ink);
-  text-decoration: none;
-  border-bottom: 1px solid #ccc;
-  transition: border-color 0.2s, color 0.2s;
-}
-.archive-list a:hover{
-  border-bottom-color: var(--accent);
-  color: var(--accent);
-}
-
-/* BASEBALL DIVIDER (inline SVG wrapper) */
-.baseball-divider{
+/* BASEBALL ARTIFACT STRIP */
+.artifact-strip{
   display: flex;
-  align-items: center;
-  gap: 14px;
-  margin: 55px 0 30px;
-  color: #9aa0a6;
-}
-.baseball-divider .line{
-  flex: 1;
-  height: 1px;
-  background: #e6e6e6;
-}
-.baseball-divider svg{
-  width: 22px;
-  height: 22px;
-  flex: 0 0 auto;
-  opacity: 0.7;
+  gap: 25px;
+  font-family: var(--mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #666;
+  border-top: 1px solid #ddd;
+  padding-top: 15px;
 }
 
 /* FOOTER */
@@ -275,37 +172,24 @@ h2{
   margin-top: 60px;
   padding-top: 20px;
   border-top: 1px solid #eee;
-  font-family: var(--mono);
-  font-size: 10px;
-  color: #999;
-  text-transform: uppercase;
-  letter-spacing: 1px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 16px;
+  font-family: var(--mono);
+  font-size: 10px;
+  color: #999;
 }
 
-.doc-footer .glb-mark{
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  white-space: nowrap;
+.glb-mark{
+  font-weight: bold;
+  letter-spacing: 1px;
+  opacity: 0.7;
 }
 
-.doc-footer img{
-  height: 18px; /* small */
-  width: auto;
-  opacity: 0.85;
-}
-
+/* RESPONSIVE */
 @media(max-width: 600px){
   .split{ grid-template-columns: 1fr; }
-  .identity ul{ grid-template-columns: 1fr; }
   .doc-id{ display: none; }
-  .ratio-3-4{ max-width: none; }
-  .ratio-1-1{ max-width: none; }
-  .meta-k{ width: 130px; }
 }
 </style>
 </head>
@@ -313,133 +197,113 @@ h2{
 <body>
 <div class="club-sheet">
 
-  <div class="doc-id">SPK-CLUB-02</div>
+<div class="doc-id">SPK-CLUB-02</div>
 
-  <header>
-    <div class="club-lockup">
-      <h1>Spokane Alloys</h1>
-      <span class="division-tag">Americas Division</span>
-    </div>
-
-    <div class="fact-bar">
-      <span>Est. —</span>
-      <span>•</span>
-      <span><strong>The Reduction Yards</strong></span>
-      <span>•</span>
-      <span>Mgr. Elias Thorne</span>
-    </div>
-
-    <div class="cta-row">
-      <a class="btn primary" href="team.html?team=spokane-alloys">Active Roster</a>
-      <a class="btn" href="day.html">Daily Scores</a>
-      <a class="btn" href="game.html">Latest Box Score</a>
-    </div>
-  </header>
-
-  <section class="identity">
-    <h2>The Club</h2>
-    <p>
-      The Alloys are defined by patience and compression. Born from the region's aluminum smelters, the club treats baseball as an industrial process. They are known for a suffocating, low-scoring style of play that mirrors the damp, heavy atmosphere of the river valley. Wins are manufactured, not gifted.
-    </p>
-    <ul>
-      <li>Field Notes: River Damp</li>
-      <li>Home Trait: Quiet Pressure</li>
-      <li>Ritual: "The Shift Change"</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>Ballpark</h2>
-    <div class="img-slot ratio-16-9">
-      <img src="club-spokane-alloys-park.png" alt="The Reduction Yards in fog">
-    </div>
-    <p><strong>The Reduction Yards.</strong> A utilitarian structure adjacent to the river, often shrouded in early morning fog. The metal seating retains the cold well into June. There are no luxury boxes, only "Foreman's Risers" along the first base line.</p>
-  </section>
-
-  <!-- Baseball visual presence (no new asset needed) -->
-  <div class="baseball-divider" aria-hidden="true">
-    <div class="line"></div>
-    <svg viewBox="0 0 24 24" fill="none">
-      <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/>
-      <path d="M6.8 8.2c1.8 1.2 2.9 2.6 3.4 4.3m7.0-4.3c-1.8 1.2-2.9 2.6-3.4 4.3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-      <path d="M6.8 15.8c1.8-1.2 2.9-2.6 3.4-4.3m7.0 4.3c-1.8-1.2-2.9-2.6-3.4-4.3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.55"/>
-    </svg>
-    <div class="line"></div>
+<header>
+  <div class="club-lockup">
+    <h1>Spokane Alloys</h1>
+    <span class="division-tag">Americas Division</span>
   </div>
 
-  <section>
-    <h2>Broadcast &amp; Announcer</h2>
-
-    <div class="split">
-      <!-- Broadcast -->
-      <div class="ba-card">
-        <div class="img-slot ratio-3-4">
-          <img src="club-spokane-alloys-broadcast.png" alt="Spokane broadcast booth">
-        </div>
-        <h3>Broadcast Booth</h3>
-        <p><strong>Field Feed:</strong> Low gain, heavy room tone. Minimal replay chatter.</p>
-        <p>Open-window audio, occasional rail rattle. The booth feels functional, not theatrical.</p>
-      </div>
-
-      <!-- Announcer -->
-      <div class="ba-card">
-        <div class="img-slot ratio-3-4">
-          <img src="club-spokane-alloys-announcer.png" alt="Announcer portrait">
-        </div>
-        <h3>Gus Vogel</h3>
-        <p><strong>Lead Voice.</strong> Long pauses. Clipped delivery. Doesn’t sell the moment.</p>
-        <p>He calls what happens, then lets the crowd noise (or lack of it) do the rest.</p>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <h2>Mascot &amp; Stands</h2>
-    <div class="split">
-      <div>
-        <div class="img-slot ratio-1-1">
-          <img src="club-spokane-alloys-mascot.png" alt="Ingot the mascot">
-        </div>
-        <h3>Ingot</h3>
-        <p>A silent, hulking figure constructed from recycled smelter plating. Ingot does not perform; he stands sentry near the bullpen, a reminder of the raw material the city produces.</p>
-      </div>
-
-      <div>
-        <div class="img-slot ratio-1-1">
-          <img src="club-spokane-alloys-fans.png" alt="Fans in winter gear, observing silently">
-        </div>
-        <h3>The Freeze Line</h3>
-        <p>Spokane fans dress for winter regardless of the season. They are known for their "quiet innings"—entire frames played in absolute silence until a strikeout is recorded.</p>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <h2>Club File</h2>
-    <table class="meta-table">
-      <tr><td class="meta-k">File Type</td><td>Club Portal Dossier</td></tr>
-      <tr><td class="meta-k">Asset Set</td><td>park / broadcast / announcer / mascot / fans</td></tr>
-      <tr><td class="meta-k">Status</td><td>Active</td></tr>
-    </table>
-  </section>
-
-  <section>
-    <h2>Archive</h2>
-    <ul class="archive-list">
-      <li><a href="team.html?team=spokane-alloys">Active Roster</a></li>
-      <li><a href="day.html">Daily Scores</a></li>
-      <li><a href="game.html">Latest Box Score</a></li>
-    </ul>
-  </section>
-
-  <div class="doc-footer">
-    <span>GLB Club Portal · Spokane · Internal Copy</span>
-
-    <!-- Change this filename to your real GLB mark file -->
-    <span class="glb-mark">
-      <img src="glb-logo.png" alt="GLB mark">
-    </span>
+  <div class="fact-bar">
+    <span>Est. —</span>
+    <span>•</span>
+    <span><strong>The Reduction Yards</strong></span>
+    <span>•</span>
+    <span>Mgr. Elias Thorne</span>
   </div>
+
+  <div class="cta-row">
+    <a class="btn primary" href="team.html?team=spokane-alloys">Active Roster</a>
+    <a class="btn" href="day.html">Daily Scores</a>
+    <a class="btn" href="game.html">Latest Box Score</a>
+  </div>
+</header>
+
+<section class="identity">
+  <h2>The Club</h2>
+  <p>
+    The Spokane Alloys are a long-standing GLB club tied closely to the region’s
+    industrial and riverfront history. Home games are played in low light, cold air,
+    and a stadium built for durability rather than spectacle. The club is known less
+    for ceremony than for routine.
+  </p>
+</section>
+
+<section>
+  <h2>Ballpark</h2>
+  <div class="img-slot ratio-16-9">
+    <img src="club-spokane-alloys-park.png" alt="The Reduction Yards">
+  </div>
+  <p>
+    <strong>The Reduction Yards.</strong> A concrete-and-metal ballpark near the river.
+    Cold surfaces, minimal signage, and exposed structure define the experience.
+  </p>
+</section>
+
+<section>
+  <h2>Broadcast & Announcer</h2>
+  <div class="split">
+    <div>
+      <div class="img-slot ratio-3-4">
+        <img src="club-spokane-alloys-broadcast.png" alt="Broadcast booth">
+      </div>
+      <h3>Gus Vogel — Broadcast</h3>
+      <p>
+        Vogel calls games with long pauses and restrained delivery. The broadcast
+        favors accuracy over emotion.
+      </p>
+    </div>
+
+    <div>
+      <div class="img-slot ratio-3-4">
+        <img src="club-spokane-alloys-announcer.png" alt="Stadium announcer">
+      </div>
+      <h3>Harlan Pike — Stadium Announcer</h3>
+      <p>
+        The in-park voice of the Alloys. Flat cadence. No music cues.
+        Announcements echo through concrete and steel.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Mascot & Stands</h2>
+  <div class="split">
+    <div>
+      <div class="img-slot ratio-1-1">
+        <img src="club-spokane-alloys-mascot.png" alt="Ingot mascot">
+      </div>
+      <h3>Ingot</h3>
+      <p>
+        A silent, utilitarian presence near the bullpen. Appears without ceremony.
+      </p>
+    </div>
+
+    <div>
+      <div class="img-slot ratio-1-1">
+        <img src="club-spokane-alloys-fans.png" alt="Spokane fans">
+      </div>
+      <h3>The Freeze Line</h3>
+      <p>
+        Fans stand through entire innings in silence until strikeouts.
+      </p>
+    </div>
+  </div>
+</section>
+
+<div class="artifact-strip">
+  <span>WOOD BAT</span>
+  <span>ROSTIN BAG</span>
+  <span>WORN LEATHER GLOVE</span>
+  <span>HAND-SCORED CARD</span>
+</div>
+
+<div class="doc-footer">
+  <span>GLB CLUB FILE · SPOKANE · ARCHIVED</span>
+  <span class="glb-mark">GLB</span>
+</div>
 
 </div>
 </body>

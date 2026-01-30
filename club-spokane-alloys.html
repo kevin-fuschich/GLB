@@ -7,14 +7,12 @@
 
 <style>
 :root{
-  /* Spokane Template (clean dossier, not dystopia by default) */
   --paper:#ffffff;
-  --bg:#f3f3f3;
+  --bg:#f2f2f2;
   --ink:#121212;
   --muted:#6b6b6b;
 
-  --primary:#2b2b2b;   /* steel */
-  --accent:#d64b2a;    /* ember/rust */
+  --accent:#d64b2a;
   --line:2px solid var(--ink);
 
   --sans: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
@@ -22,9 +20,10 @@
 }
 
 *{ box-sizing:border-box; }
+
 body{
   margin:0;
-  padding:24px;
+  padding:32px 18px; /* prevents “top cut off” */
   background:var(--bg);
   color:var(--ink);
   font-family:var(--sans);
@@ -34,32 +33,47 @@ body{
   max-width:1100px;
   margin:0 auto;
   background:var(--paper);
-  border-top:6px solid var(--ink);
-  box-shadow:10px 10px 0 rgba(0,0,0,0.10);
+  border: var(--line);
+  border-top: 6px solid var(--ink);
+  box-shadow: 10px 10px 0 rgba(0,0,0,0.10);
   position:relative;
+  overflow:hidden;
 }
 
-/* top doc id */
 .doc-id{
   position:absolute;
   top:14px;
-  right:18px;
+  right:16px;
   font-family:var(--mono);
   font-size:11px;
   color:#9a9a9a;
+  z-index:2;
 }
 
-/* header */
+/* HEADER */
 header{
-  padding:28px 28px 18px;
+  padding:28px 28px 20px;
   border-bottom:var(--line);
+  position:relative;
+}
+
+/* subtle baseball watermark (no new image required) */
+.baseball-mark{
+  position:absolute;
+  left:18px;
+  top:18px;
+  opacity:0.10;
+  transform: rotate(-8deg);
+  z-index:0;
 }
 
 .lockup{
+  position:relative;
+  z-index:1;
   display:flex;
   align-items:flex-end;
   justify-content:space-between;
-  gap:18px;
+  gap:16px;
   flex-wrap:wrap;
 }
 
@@ -80,6 +94,8 @@ h1{
 }
 
 .factbar{
+  position:relative;
+  z-index:1;
   margin-top:10px;
   display:flex;
   gap:10px;
@@ -91,8 +107,10 @@ h1{
 
 .factbar strong{ color:var(--ink); }
 
-/* CTA buttons */
+/* BUTTONS */
 .cta-row{
+  position:relative;
+  z-index:1;
   display:flex;
   gap:10px;
   margin-top:18px;
@@ -101,7 +119,7 @@ h1{
 
 .btn{
   flex:1;
-  min-width:200px;
+  min-width:210px;
   border:2px solid var(--ink);
   padding:12px 10px;
   text-align:center;
@@ -132,9 +150,15 @@ h1{
   border-color:var(--ink);
 }
 
-/* sections */
-section{ padding:24px 28px; border-bottom:1px solid #ececec; }
-section:last-of-type{ border-bottom:none; }
+/* SECTIONS */
+section{
+  padding:24px 28px;
+  border-bottom:1px solid #ececec;
+}
+
+section:last-of-type{
+  border-bottom:none;
+}
 
 h2{
   margin:0 0 12px 0;
@@ -147,13 +171,13 @@ h2{
 
 p{ margin:0; line-height:1.55; }
 
-.small{
-  font-family:var(--mono);
-  font-size:12px;
-  color:var(--muted);
+.caption{
+  margin-top:10px;
+  font-size:13px;
+  color:#333;
 }
 
-/* images */
+/* IMAGES */
 .img-slot{
   background:#e6e6e6;
   border:1px solid #cfcfcf;
@@ -168,7 +192,7 @@ p{ margin:0; line-height:1.55; }
 }
 
 .r16x9{ aspect-ratio:16/9; }
-.r3x4{ aspect-ratio:3/4; max-width:320px; }
+.r3x4{ aspect-ratio:3/4; max-width:340px; }
 .r1x1{ aspect-ratio:1/1; max-width:360px; }
 
 .split{
@@ -185,25 +209,20 @@ p{ margin:0; line-height:1.55; }
   align-items:start;
 }
 
-.grid-2{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:22px;
-}
-
 .card h3{
-  margin:12px 0 6px;
+  margin:0 0 6px 0;
   font-size:16px;
   text-transform:uppercase;
 }
 
-.caption{
+.meta{
+  font-family:var(--mono);
+  font-size:12px;
+  color:var(--muted);
   margin-top:10px;
-  font-size:13px;
-  color:#333;
 }
 
-/* footer / closure */
+/* FOOTER / CLOSURE */
 .footer{
   display:flex;
   justify-content:space-between;
@@ -235,12 +254,10 @@ p{ margin:0; line-height:1.55; }
   opacity:0.95;
 }
 
-/* responsive */
 @media (max-width: 860px){
-  .split, .grid-2{ grid-template-columns:1fr; }
-  .split-tight{ grid-template-columns:1fr; }
+  .split, .split-tight{ grid-template-columns:1fr; }
   .r3x4, .r1x1{ max-width:100%; }
-  body{ padding:14px; }
+  body{ padding:18px 10px; }
 }
 </style>
 </head>
@@ -251,6 +268,15 @@ p{ margin:0; line-height:1.55; }
   <div class="doc-id">SPK-CLUB-ALLOYS</div>
 
   <header>
+    <!-- Inline SVG baseball mark -->
+    <svg class="baseball-mark" width="120" height="120" viewBox="0 0 120 120" aria-hidden="true">
+      <circle cx="60" cy="60" r="46" fill="none" stroke="#121212" stroke-width="6"/>
+      <path d="M34 26c10 10 10 58 0 68" fill="none" stroke="#d64b2a" stroke-width="5"/>
+      <path d="M86 26c-10 10-10 58 0 68" fill="none" stroke="#d64b2a" stroke-width="5"/>
+      <path d="M30 36l10 8M30 52l10 8M30 68l10 8" stroke="#d64b2a" stroke-width="4" />
+      <path d="M90 36l-10 8M90 52l-10 8M90 68l-10 8" stroke="#d64b2a" stroke-width="4" />
+    </svg>
+
     <div class="lockup">
       <h1>Spokane Alloys</h1>
       <div class="div-tag">Americas Division</div>
@@ -262,23 +288,23 @@ p{ margin:0; line-height:1.55; }
       <span>GLB Club Dossier</span>
     </div>
 
-    <!-- KEEP THESE BUTTONS -->
+    <!-- Keep your buttons (but make them “safe” links) -->
     <div class="cta-row">
       <a class="btn primary" href="team.html?team=spokane-alloys">Active Roster</a>
       <a class="btn" href="day.html">Daily Scores</a>
       <a class="btn" href="game.html">Latest Box Score</a>
+    </div>
+
+    <div class="meta">
+      If day.html or game.html require parameters, these pages must handle missing params gracefully (no infinite “loading”).
     </div>
   </header>
 
   <section>
     <h2>The Club</h2>
     <p>
-      Spokane doesn’t “introduce itself.” It documents itself.
-      The Alloys’ dossier reads like something you’d find folded in a glove compartment:
-      practical details, a few superstition notes, and just enough local texture to feel true.
-    </p>
-    <p class="small" style="margin-top:10px;">
-      Note: Avoid “video game bio” tone. These pages should feel like artifacts, not profiles.
+      Spokane doesn’t explain itself. It records itself.
+      This page is an artifact: a clean snapshot of the park, the booth, and the crowd—proof the club exists.
     </p>
   </section>
 
@@ -288,26 +314,14 @@ p{ margin:0; line-height:1.55; }
       <img src="club-spokane-alloys-stadium.png" alt="Spokane Alloys stadium" />
     </div>
     <p class="caption">
-      <strong>Alloy Field.</strong> A real place with real weather and real noise—captured as-is.
+      <strong>Alloy Field.</strong> Captured as-is. Real light. Real seats. Real dirt.
     </p>
   </section>
 
-  <!-- BASEBALL VISUAL PRESENCE (NEW) -->
-  <section>
-    <h2>In Play</h2>
-    <div class="img-slot r16x9">
-      <img src="club-spokane-alloys-action.png" alt="In-game action photo for Spokane Alloys" />
-    </div>
-    <p class="caption">
-      This is where baseball shows up—bat, ball, glove, dirt, motion. No lore. Just proof.
-    </p>
-  </section>
-
-  <!-- BROADCAST + ANNOUNCERS (UPDATED) -->
   <section>
     <h2>Broadcast &amp; Announcer</h2>
 
-    <!-- Broadcast booth row -->
+    <!-- Broadcast booth + copy -->
     <div class="split-tight" style="margin-bottom:22px;">
       <div class="img-slot r3x4">
         <img src="club-spokane-alloys-broadcast.png" alt="Broadcast booth" />
@@ -315,28 +329,33 @@ p{ margin:0; line-height:1.55; }
       <div class="card">
         <h3>Broadcast</h3>
         <p>
-          The booth is part play-by-play, part local transmission—clean audio, imperfect light,
-          and a view that proves the game is happening right now.
+          The booth is utilitarian and close to the game. It’s not cinematic. It’s live.
         </p>
+        <div class="meta" style="margin-top:12px;">
+          This section is intentionally grounded—no lore dump, no “style of play” bio language.
+        </div>
       </div>
     </div>
 
-    <!-- Gus Vogel + PA announcer row -->
-    <div class="grid-2">
+    <!-- Gus + PA name (no new image required) -->
+    <div class="split">
       <div class="card">
         <div class="img-slot r3x4">
           <img src="club-spokane-alloys-announcer.png" alt="Gus Vogel portrait" />
         </div>
         <h3>Gus Vogel</h3>
-        <p class="caption"><strong>Radio voice.</strong> Calm under pressure. Calls the game like it matters.</p>
+        <p class="caption"><strong>Radio voice.</strong> Calls the game straight. Lets the crowd do the rest.</p>
       </div>
 
       <div class="card">
-        <div class="img-slot r3x4">
-          <img src="club-spokane-alloys-pa-announcer.png" alt="In-stadium PA announcer" />
+        <h3>In-stadium PA</h3>
+        <p>
+          <strong>Royce Calder</strong> — the voice inside the park.
+          Lineups, warnings, walk-up names, and the occasional perfectly-timed pause.
+        </p>
+        <div class="meta" style="margin-top:10px;">
+          (No image required yet. If you want one later: club-spokane-alloys-pa-announcer.png)
         </div>
-        <h3>Royce Calder</h3>
-        <p class="caption"><strong>In-stadium PA.</strong> The voice that turns a routine popup into an event.</p>
       </div>
     </div>
   </section>
@@ -347,11 +366,11 @@ p{ margin:0; line-height:1.55; }
       <div class="img-slot r1x1">
         <img src="club-spokane-alloys-mascot.png" alt="Spokane Alloys mascot with fans" />
       </div>
-      <div>
+      <div class="card">
         <h3>In the Stands</h3>
         <p>
-          This is where the club feels real: high-fives, kids at the rail, half-focused adults,
-          and the mascot doing the old job—keep it loud.
+          The job is simple: keep it loud, keep it local, keep kids at the rail.
+          This is where the club feels real.
         </p>
       </div>
     </div>
@@ -363,16 +382,14 @@ p{ margin:0; line-height:1.55; }
       <img src="club-spokane-alloys-fans.png" alt="Spokane Alloys fans" />
     </div>
     <p class="caption">
-      A crowd that looks like a crowd. Slight blur is fine. Uneven light is fine. Real beats perfect.
+      A crowd that looks like a crowd. Uneven lighting, imperfect framing, real energy.
     </p>
   </section>
 
-  <!-- FILE CLOSURE + GLB LOGO -->
   <div class="footer">
     <div class="file-close">
-      GLB CLUB DOSSIER // SPOKANE // DIV: AMERICAS // END OF FILE
+      GLB CLUB DOSSIER // SPOKANE // END OF FILE
     </div>
-
     <div class="glb-mark">
       <img src="glb-logo.png" alt="GLB logo" />
     </div>

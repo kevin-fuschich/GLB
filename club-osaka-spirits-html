@@ -1,1 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Osaka Spirits – Club Portal</title>
+
+<style>
+:root{
+  /* Osaka Identity: Night Market, Neon Reflection, Warm Grit */
+  --primary: #0B1B2B; /* Deep Harbor Navy */
+  --accent:  #FF4D2D; /* Neon Ember */
+  --paper:   #ffffff;
+  --ink:     #0f1214;
+
+  --border-thick: 4px solid var(--ink);
+  --border-thin:  1px solid #ccc;
+
+  --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --mono: "Courier New", Courier, monospace;
+}
+
+body{
+  background: #f4f4f4;
+  color: var(--ink);
+  font-family: var(--sans);
+  margin: 0;
+  padding: 20px;
+}
+
+.club-sheet{
+  max-width: 900px;
+  margin: 0 auto;
+  background: var(--paper);
+  padding: 40px;
+  border-top: var(--border-thick);
+  position: relative;
+}
+
+/* DOC ID */
+.doc-id{
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-family: var(--mono);
+  font-size: 10px;
+  color: #999;
+}
+
+/* HEADER */
+header{
+  border-bottom: var(--border-thick);
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.club-lockup{
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+
+h1{
+  margin: 0;
+  font-size: 32px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.division-tag{
+  background: var(--primary);
+  color: #fff;
+  font-size: 12px;
+  padding: 4px 8px;
+  text-transform: uppercase;
+}
+
+.fact-bar{
+  display: flex;
+  gap: 15px;
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #666;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+/* CTAs */
+.cta-row{
+  display: flex;
+  gap: 10px;
+  margin: 25px 0 40px;
+  flex-wrap: wrap;
+}
+
+.btn{
+  flex: 1;
+  min-width: 180px;
+  border: 2px solid var(--ink);
+  padding: 12px 0;
+  text-align: center;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--ink);
+  transition: all 0.2s;
+}
+
+.btn:hover{
+  background: var(--ink);
+  color: #fff;
+  border-color: var(--ink);
+}
+
+.btn.primary{
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+}
+
+.btn.primary:hover{
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+/* SECTIONS */
+section{ margin-bottom: 50px; }
+
+h2{
+  font-size: 14px;
+  text-transform: uppercase;
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 5px;
+}
+
+/* IDENTITY */
+.identity p{
+  font-size: 16px;
+  max-width: 700px;
+}
+
+.identity ul{
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 20px;
+}
+
+.identity li{
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-top: 1px solid #ccc;
+  padding-top: 10px;
+}
+
+/* IMAGE SLOTS */
+.img-slot{
+  background: #e0e0e0;
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.img-slot img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Aspect Ratios */
+.ratio-16-9{ aspect-ratio: 16/9; }
+.ratio-3-4{ aspect-ratio: 3/4; max-width: 250px; }
+.ratio-1-1{ aspect-ratio: 1/1; max-width: 260px; }
+
+/* SPLIT */
+.split{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+/* ROSTER */
+.roster{
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.roster td{
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.pos{
+  font-family: var(--mono);
+  color: var(--accent);
+  width: 50px;
+  font-weight: bold;
+}
+
+/* LINKS */
+a{ color: var(--ink); text-decoration: none; }
+a:hover{ color: var(--accent); }
+
+/* FOOTER */
+.doc-footer{
+  margin-top: 60px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+  font-family: var(--mono);
+  font-size: 10px;
+  color: #999;
+  text-align: right;
+}
+
+@media(max-width: 600px){
+  .split{ grid-template-columns: 1fr; }
+  .identity ul{ grid-template-columns: 1fr; }
+  .doc-id{ display: none; }
+}
+</style>
+</head>
+
+<body>
+<div class="club-sheet">
+
+<div class="doc-id">OSK-CLUB-01</div>
+
+<header>
+  <div class="club-lockup">
+    <h1>Osaka Spirits</h1>
+    <span class="division-tag">Pacific Division</span>
+  </div>
+
+  <div class="fact-bar">
+    <span>Est. —</span>
+    <span>•</span>
+    <span><strong>Dōtonbori Grounds</strong></span>
+    <span>•</span>
+    <span>Mgr. Haru “Backbeat” Sato</span>
+  </div>
+
+  <div class="cta-row">
+    <a class="btn primary" href="team.html?team=osaka-spirits">Active Roster</a>
+    <a class="btn" href="day.html">Daily Scores</a>
+    <a class="btn" href="#">Latest Box Score</a>
+  </div>
+</header>
+
+<section class="identity">
+  <h2>The Club</h2>
+  <p>The Spirits don’t play quiet baseball. Osaka turns every inning into a street festival—rhythm, banter, snacks, heckling, laughter. The team feeds off noise and momentum, pressing at the margins until a defense breaks. The vibe is night-market energy: warm, crowded, fast, and strangely organized.</p>
+  <ul>
+    <li>Style: Pressure / Momentum</li>
+    <li>Vibe: Neon Night Market</li>
+    <li>Tradition: “Seventh-Inning Toast”</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Ballpark</h2>
+  <div class="img-slot ratio-16-9">
+    <img src="club-osaka-spirits-stadium.png" alt="Dōtonbori Grounds at night, neon reflections">
+  </div>
+  <p><strong>Dōtonbori Grounds.</strong> A compact park stitched into the canal district. Neon signage reflects off damp concrete. Food stalls ring the concourse. The air smells like grilled skewers and citrus soda. Night games feel like the city is leaning in.</p>
+</section>
+
+<section>
+  <h2>Broadcast</h2>
+  <div class="split">
+    <div class="img-slot ratio-3-4">
+      <img src="club-osaka-spirits-broadcast.png" alt="Osaka Spirits broadcast booth">
+    </div>
+    <div>
+      <h3>Mai & Ken</h3>
+      <p><strong>Voices of the Spirits.</strong> Quick, playful, and precise. They call the game like they’re in the stands—laughing, correcting each other, narrating the crowd as much as the diamond. The booth picks up the city: drums, chants, and the occasional vendor call.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Mascot & Stands</h2>
+  <div class="split">
+    <div>
+      <div class="img-slot ratio-1-1">
+        <img src="club-osaka-spirits-mascot.png" alt="Osaka Spirits mascot with fans">
+      </div>
+      <h3>Spir</h3>
+      <p>A human-worn mascot built for chaos—big head, visible seams, scuffed fabric, slightly sweaty. Spir lives in the aisles: high-fives, selfies, mock-arguments with ushers, and constant motion.</p>
+    </div>
+    <div>
+      <div class="img-slot ratio-1-1">
+        <img src="club-osaka-spirits-fans.png" alt="Osaka Spirits fans, night market energy">
+      </div>
+      <h3>The Canal Crowd</h3>
+      <p>Families, students, office workers, tourists—packed shoulder-to-shoulder. Fans clap in rhythm, wave towels, hold glowing sticks, and eat like it’s halftime at a festival. Loud, friendly, relentless.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Core Roster</h2>
+  <table class="roster">
+    <tr><td class="pos">2B</td><td>Riku “Ticker” Morita</td></tr>
+    <tr><td class="pos">C</td><td>Daichi Kondo</td></tr>
+    <tr><td class="pos">P</td><td>Jun “Sidecar” Nishida</td></tr>
+  </table>
+</section>
+
+<div class="doc-footer">
+  GLB Club Portal · Osaka · Internal
+</div>
+
+</div>
+</body>
+</html>

@@ -1,470 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Spokane Alloys – Club Portal</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>GLB — Spokane Alloys</title>
 
 <style>
-:root{
-  /* Spokane Identity: Cold Steel, Smelter Smoke, Oxide Rust */
-  --primary: #4A5863; /* Steel Blue-Grey */
-  --accent: #C0442C;  /* Oxide Rust */
+:root {
+  --ink: #111;
   --paper: #ffffff;
-  --ink: #0f1214;
+  --accent: #9a9a9a;
+  --border: 2px solid #111;
 
-  --border-thick: 4px solid var(--ink);
-  --border-thin: 1px solid #ccc;
-
-  --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --sans: Helvetica, Arial, sans-serif;
   --mono: "Courier New", Courier, monospace;
 }
 
-body{
-  background: #f4f4f4;
+body {
+  margin: 0;
+  padding: 32px;
+  background: #f6f6f6;
   color: var(--ink);
   font-family: var(--sans);
-  margin: 0;
-  padding: 20px;
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
 }
 
-.club-sheet{
-  max-width: 900px;
+.document {
+  max-width: 1100px;
   margin: 0 auto;
   background: var(--paper);
-  padding: 40px;
-  border-top: var(--border-thick);
-  position: relative;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  border: var(--border);
 }
 
-/* DOC ID */
-.doc-id{
-  position: absolute;
-  top: 15px;
-  right: 20px;
-  font-family: var(--mono);
-  font-size: 10px;
-  color: #999;
-  letter-spacing: 1px;
+header {
+  padding: 28px;
+  border-bottom: var(--border);
 }
 
-/* HEADER */
-header{
-  border-bottom: var(--border-thick);
-  padding-bottom: 20px;
-  margin-bottom: 20px;
-}
-
-.club-lockup{
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  flex-wrap: wrap;
-}
-
-h1{
+header h1 {
   margin: 0;
-  font-size: 32px;
-  font-weight: 900;
+  font-size: 34px;
+  letter-spacing: -1px;
   text-transform: uppercase;
-  letter-spacing: 1px;
 }
 
-.division-tag{
-  background: var(--primary);
-  color: #fff;
-  font-size: 12px;
-  padding: 4px 8px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.fact-bar{
-  display: flex;
-  gap: 15px;
-  font-size: 11px;
-  text-transform: uppercase;
-  color: #666;
+.meta {
   margin-top: 10px;
-  flex-wrap: wrap;
-}
-
-.fact-bar strong { color: var(--ink); }
-
-/* CTAs */
-.cta-row{
-  display: flex;
-  gap: 10px;
-  margin: 25px 0 35px;
-  flex-wrap: wrap;
-}
-
-.btn{
-  flex: 1;
-  min-width: 180px;
-  border: 2px solid var(--ink);
-  padding: 12px 0;
-  text-align: center;
   font-size: 12px;
-  font-weight: bold;
   text-transform: uppercase;
-  text-decoration: none;
-  color: var(--ink);
-  transition: all 0.2s;
-  letter-spacing: 1px;
+  color: #555;
 }
 
-.btn:hover{
-  background: var(--ink);
-  color: white;
-  border-color: var(--ink);
+section {
+  padding: 28px;
+  border-bottom: 1px solid #ddd;
 }
 
-.btn.primary{
-  background: var(--primary);
-  color: #fff;
-  border-color: var(--primary);
-}
-
-.btn.primary:hover{
-  background: var(--accent);
-  border-color: var(--accent);
-}
-
-/* SECTIONS */
-section{ margin-bottom: 45px; }
-
-h2{
+section h2 {
+  margin: 0 0 14px 0;
   font-size: 14px;
-  text-transform: uppercase;
-  border-bottom: 2px solid var(--accent);
-  padding-bottom: 6px;
-  margin-bottom: 18px;
   letter-spacing: 1px;
-}
-
-/* ARTIFACT TEXT BLOCKS */
-.block{
-  max-width: 740px;
-  font-size: 15px;
-}
-
-.meta-grid{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 18px 30px;
-  margin-top: 10px;
-}
-
-.meta-grid .item{
-  border-top: 1px solid #ddd;
-  padding-top: 10px;
-  font-size: 12px;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
-  color: #666;
 }
 
-.meta-grid .item strong{
-  display: block;
-  color: var(--ink);
-  font-size: 12px;
-  margin-bottom: 3px;
-}
-
-/* IMAGE SLOTS */
-.img-slot{
-  background: #e0e0e0;
+.image {
   border: 1px solid #ccc;
-  margin-bottom: 15px;
-  display: block;
-  overflow: hidden;
+  margin-bottom: 12px;
 }
 
-.img-slot img{
+.image img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
   display: block;
 }
 
-/* “No image yet” fallback look */
-.img-slot.fallback{
+/* Broadcast split */
+.broadcast {
   display: grid;
-  place-items: center;
-  color: #777;
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  grid-template-columns: 280px 1fr;
+  gap: 24px;
 }
 
-/* Aspect Ratios */
-.ratio-16-9 { aspect-ratio: 16/9; }
-.ratio-3-4 { aspect-ratio: 3/4; max-width: 250px; }
-.ratio-1-1 { aspect-ratio: 1/1; max-width: 260px; }
-
-/* SPLIT */
-.split{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
+/* Closure section */
+.record-note {
+  font-size: 13px;
+  line-height: 1.5;
+  max-width: 720px;
 }
 
-/* NOTES LIST */
-.notes{
-  margin: 0;
-  padding-left: 18px;
-  font-size: 14px;
-}
-
-.notes li{ margin-bottom: 8px; }
-
-/* LINKS */
-a { color: var(--ink); text-decoration: none; }
-a:hover { color: var(--accent); }
-
-/* DOCUMENT CLOSURE */
-.doc-close{
-  margin-top: 55px;
-  padding-top: 18px;
-  border-top: 1px solid #eee;
+/* Footer */
+footer {
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
-  gap: 20px;
-}
-
-.doc-seal{
-  display: flex;
   align-items: center;
-  gap: 10px;
+  padding: 18px 28px;
   font-family: var(--mono);
-  font-size: 10px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: #999;
+  font-size: 11px;
+  color: #666;
 }
 
-.baseball-mark{
-  width: 18px;
+.glb-mark img {
   height: 18px;
-  flex: 0 0 18px;
-  opacity: 0.7;
-}
-
-.doc-footer{
-  display: flex;
-  align-items: flex-end;
-  gap: 14px;
-  font-family: var(--mono);
-  font-size: 10px;
-  color: #999;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  text-align: right;
-}
-
-.glb-logo{
-  width: 34px;   /* small */
-  height: 34px;
-  object-fit: contain;
-  opacity: 0.85;
-  border: 1px solid #eee; /* subtle “stamp” edge */
-  padding: 4px;
-  background: #fff;
-}
-
-/* MOBILE */
-@media(max-width: 600px){
-  .split{ grid-template-columns: 1fr; }
-  .meta-grid{ grid-template-columns: 1fr; }
-  .doc-id{ display: none; }
-  .doc-close{ flex-direction: column; align-items: flex-start; }
-  .doc-footer{ width: 100%; justify-content: space-between; }
+  opacity: 0.8;
 }
 </style>
 </head>
 
 <body>
-<div class="club-sheet">
 
-  <div class="doc-id">SPK-CLUB-02</div>
+<div class="document">
 
-  <header>
-    <div class="club-lockup">
-      <h1>Spokane Alloys</h1>
-      <span class="division-tag">Americas Division</span>
+<header>
+  <h1>Spokane Alloys</h1>
+  <div class="meta">
+    Americas Division · Spokane, Washington · Active Club Record
+  </div>
+</header>
+
+<section>
+  <h2>Ballpark</h2>
+  <div class="image">
+    <img src="club-spokane-alloys-park.png" alt="Spokane Alloys ballpark during live play" />
+  </div>
+  <p>
+    The Alloys play in a working river city stadium framed by rail lines, mills,
+    and elevated steel. Night games are defined by hard shadows, metallic light,
+    and the constant presence of freight movement beyond the outfield.
+  </p>
+</section>
+
+<section>
+  <h2>Broadcast & Announcer</h2>
+  <div class="broadcast">
+    <div class="image">
+      <img src="club-spokane-alloys-announcer.png" alt="Spokane Alloys radio announcer in booth" />
     </div>
-
-    <div class="fact-bar">
-      <span>Est. —</span>
-      <span>•</span>
-      <span><strong>The Reduction Yards</strong></span>
-      <span>•</span>
-      <span>Mgr. Elias Thorne</span>
-    </div>
-
-    <div class="cta-row">
-      <a class="btn primary" href="team.html?team=spokane-alloys">Active Roster</a>
-      <a class="btn" href="day.html">Daily Scores</a>
-      <a class="btn" href="teams.html">Teams</a>
-    </div>
-  </header>
-
-  <!-- DOSSIER SUMMARY -->
-  <section>
-    <h2>Dossier Summary</h2>
-    <div class="block">
-      Spokane operates out of a river-adjacent industrial corridor. Home dates frequently open under low cloud and light drizzle.
-      Crowd volume varies by inning and temperature; attendance remains steady. Facility signage is utilitarian and inconsistently maintained.
-    </div>
-
-    <div class="meta-grid">
-      <div class="item">
-        <strong>Operational Footprint</strong>
-        River corridor / rail access / metalworks perimeter
-      </div>
-      <div class="item">
-        <strong>Primary Facility</strong>
-        The Reduction Yards (open-air steel seating)
-      </div>
-      <div class="item">
-        <strong>Public-Facing Output</strong>
-        Low (limited announcements / limited ceremony)
-      </div>
-      <div class="item">
-        <strong>Noise Pattern</strong>
-        Quiet frames punctuated by isolated surges
-      </div>
-    </div>
-  </section>
-
-  <!-- GAME FRAME (BASEBALL PRESENCE) -->
-  <section>
-    <h2>Game Frame</h2>
-
-    <!-- Optional 5th image.
-         If you add this file, it will render:
-         club-spokane-alloys-action.png
-    -->
-    <div class="img-slot ratio-16-9">
-      <img
-        src="club-spokane-alloys-action.png"
-        alt="In-game action at The Reduction Yards"
-        onerror="this.outerHTML='<div class=&quot;img-slot ratio-16-9 fallback&quot;>Optional asset: club-spokane-alloys-action.png</div>';">
-    </div>
-
-    <div class="block">
-      <strong>Field Note.</strong> Ball carries inconsistently under low ceiling.
-      Infield exchanges are clean in damp conditions; outfield reads become tentative in late innings.
-      (Observation logged without attribution.)
-    </div>
-  </section>
-
-  <!-- BALLPARK -->
-  <section>
-    <h2>Ballpark</h2>
-    <div class="img-slot ratio-16-9">
-      <img src="club-spokane-alloys-park.png" alt="The Reduction Yards">
-    </div>
-    <div class="block">
-      <strong>The Reduction Yards.</strong> A utilitarian structure adjacent to the river, often under heavy morning cloud cover.
-      Metal seating retains cold well into summer months. There are no luxury boxes; only “Foreman’s Risers” along the first-base line.
-    </div>
-  </section>
-
-  <!-- BROADCAST -->
-  <section>
-    <h2>Broadcast</h2>
-    <div class="split">
-      <div class="img-slot ratio-3-4">
-        <img src="club-spokane-alloys-booth.png" alt="Broadcast booth">
-      </div>
-      <div class="block">
-        <h3 style="margin:0 0 6px 0;">Gus Vogel</h3>
-        <div style="font-size:12px; text-transform:uppercase; letter-spacing:1px; color:#666; margin-bottom:12px;">
-          Club feed / home audio
-        </div>
-        Vogel maintains a low register and avoids embellishment. Calls are predominantly informational.
-        Crowd audio frequently exceeds booth levels; no corrective mixing is applied.
-      </div>
-    </div>
-  </section>
-
-  <!-- MASCOT & STANDS -->
-  <section>
-    <h2>Mascot & Stands</h2>
-    <div class="split">
-      <div>
-        <div class="img-slot ratio-1-1">
-          <img src="club-spokane-alloys-mascot.png" alt="Ingot mascot">
-        </div>
-        <h3 style="margin:0 0 8px 0;">Ingot</h3>
-        <div class="block">
-          A heavy, human-worn suit assembled from plated scrap and riveted panels. Activity is minimal.
-          Typically stationed near the bullpen with limited interaction.
-        </div>
-      </div>
-
-      <div>
-        <div class="img-slot ratio-1-1">
-          <img src="club-spokane-alloys-fans.png" alt="Fans in stands">
-        </div>
-        <h3 style="margin:0 0 8px 0;">Spectator Behavior</h3>
-        <div class="block">
-          Extended quiet frames are common. Many attendees remain standing without cheering until a decisive outcome (strikeout, double play, etc.).
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- OPERATIONAL NOTES -->
-  <section>
-    <h2>Operational Notes (Excerpt)</h2>
-    <ul class="notes">
-      <li>Pre-game announcements are brief; music is intermittent and low.</li>
-      <li>Concourse traffic decreases measurably after the 5th inning.</li>
-      <li>“Quiet innings” observed regularly (no coordinated crowd action).</li>
-      <li>Scoreboard messaging remains mostly functional (count, outs, basic prompts).</li>
-    </ul>
-  </section>
-
-  <!-- RITUAL LOG -->
-  <section>
-    <h2>Ritual Log</h2>
-    <div class="block">
-      Near the close of the 7th inning, a bell is rung from the third-base concourse. No announcement is made.
-      Concession activity pauses briefly. The bell is not used again.
-    </div>
-  </section>
-
-  <!-- DOCUMENT CLOSURE -->
-  <div class="doc-close">
-    <div class="doc-seal">
-      <!-- tiny baseball icon (inline SVG) -->
-      <svg class="baseball-mark" viewBox="0 0 24 24" aria-hidden="true">
-        <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.5"></circle>
-        <path d="M6.6 6.9c2.2 1.6 3.6 3.7 4.3 6.1" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"></path>
-        <path d="M17.4 6.9c-2.2 1.6-3.6 3.7-4.3 6.1" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"></path>
-        <path d="M6.8 17.1c2-1.4 3.4-3.3 4.1-5.4" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"></path>
-        <path d="M17.2 17.1c-2-1.4-3.4-3.3-4.1-5.4" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"></path>
-      </svg>
-      <span>GLB / club dossier / internal circulation</span>
-    </div>
-
-    <div class="doc-footer">
-      <span>spokane · file status: active · end of record</span>
-
-      <!-- GLB logo: put glb-logo.png in repo root, or change src path -->
-      <img class="glb-logo" src="glb-logo.png" alt="GLB Logo"
-           onerror="this.style.display='none';">
+    <div>
+      <p><strong>Gus Vogel</strong> has called Alloys games for over a decade. His broadcasts
+      favor pace and clarity over embellishment, often allowing long stretches of
+      crowd and field sound to carry the game.</p>
+      <p>
+        The booth overlooks the third-base line, with an unobstructed view of play
+        and the yard beyond left field.
+      </p>
     </div>
   </div>
+</section>
+
+<section>
+  <h2>In the Stands</h2>
+  <div class="image">
+    <img src="club-spokane-alloys-fans.png" alt="Spokane Alloys fans during night game" />
+  </div>
+  <p>
+    Attendance reflects the city itself: shift workers, families, long-time season
+    holders. Crowd response tends toward collective rhythm rather than spectacle.
+  </p>
+</section>
+
+<section>
+  <h2>Record Note</h2>
+  <div class="record-note">
+    This document reflects the standing conditions, personnel, and environment
+    of the Spokane Alloys as recorded for league archival purposes.
+    <br><br>
+    Game outcomes, rosters, and statistical records are maintained separately
+    and revealed according to the GLB schedule.
+  </div>
+</section>
+
+<footer>
+  <div>GLB CLUB RECORD — SPOKANE</div>
+  <div class="glb-mark">
+    <img src="glb-mark.png" alt="GLB seal" />
+  </div>
+</footer>
 
 </div>
+
 </body>
 </html>

@@ -11,6 +11,7 @@
   --accent:#C0442C;
   --paper:#ffffff;
   --ink:#0f1214;
+
   --border-thick:4px solid var(--ink);
   --sans:"Helvetica Neue", Helvetica, Arial, sans-serif;
   --mono:"Courier New", Courier, monospace;
@@ -32,10 +33,10 @@ body{
   border-top:var(--border-thick);
 }
 
+/* HEADER */
 header{
   border-bottom:var(--border-thick);
   padding-bottom:20px;
-  margin-bottom:20px;
 }
 
 .club-lockup{
@@ -62,7 +63,7 @@ h1{
 
 .fact-bar{
   display:flex;
-  gap:15px;
+  gap:12px;
   font-size:11px;
   text-transform:uppercase;
   color:#666;
@@ -70,6 +71,7 @@ h1{
   flex-wrap:wrap;
 }
 
+/* CTAs */
 .cta-row{
   display:flex;
   gap:10px;
@@ -96,7 +98,8 @@ h1{
   border-color:var(--primary);
 }
 
-section{ margin-bottom:50px; }
+/* SECTIONS */
+section{margin-bottom:50px;}
 
 h2{
   font-size:14px;
@@ -105,44 +108,71 @@ h2{
   padding-bottom:5px;
 }
 
+/* IDENTITY */
+.identity p{
+  font-size:16px;
+  max-width:700px;
+}
+
+/* IMAGE */
 .img-slot{
-  background:#e0e0e0;
   border:1px solid #ccc;
   margin-bottom:15px;
 }
 
 .img-slot img{
   width:100%;
-  height:100%;
-  object-fit:cover;
   display:block;
 }
 
-.ratio-16-9{ aspect-ratio:16/9; }
-.ratio-3-4{ aspect-ratio:3/4; max-width:260px; }
-.ratio-1-1{ aspect-ratio:1/1; max-width:260px; }
-
+/* SPLIT */
 .split{
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:30px;
 }
 
+/* BROADCAST */
+.announcer-name{
+  font-weight:bold;
+  margin-bottom:6px;
+}
+
+/* FOOTER — HARD STOP */
 .doc-footer{
-  margin-top:60px;
-  padding-top:20px;
-  border-top:1px solid #eee;
-  font-family:var(--mono);
-  font-size:10px;
-  color:#999;
+  margin-top:70px;
+  padding:22px 18px;
+  border-top:2px solid #e5e5e5;
+  background:#0f1214;
+  color:#fff;
   display:flex;
   justify-content:space-between;
   align-items:center;
 }
 
-.doc-footer img{
-  height:22px;
-  opacity:0.8;
+.doc-footer-title{
+  font-family:var(--mono);
+  font-size:12px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+.doc-footer-meta{
+  font-family:var(--mono);
+  font-size:10px;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  opacity:0.7;
+}
+
+.glb-logo{
+  height:36px;
+}
+
+/* MOBILE */
+@media(max-width:600px){
+  .split{grid-template-columns:1fr;}
+  .doc-footer{flex-direction:column;gap:16px;align-items:flex-start;}
 }
 </style>
 </head>
@@ -157,9 +187,11 @@ h2{
   </div>
 
   <div class="fact-bar">
-    <span>Spokane, WA</span>
+    <span>Est. —</span>
     <span>•</span>
     <span><strong>The Reduction Yards</strong></span>
+    <span>•</span>
+    <span>Mgr. Elias Thorne</span>
   </div>
 
   <div class="cta-row">
@@ -169,9 +201,17 @@ h2{
   </div>
 </header>
 
+<section class="identity">
+  <h2>The Club</h2>
+  <p>
+    Spokane’s club record is maintained as a matter of archive rather than promotion.
+    What happens on the field is observed, logged, and remembered by those who were present.
+  </p>
+</section>
+
 <section>
   <h2>Ballpark</h2>
-  <div class="img-slot ratio-16-9">
+  <div class="img-slot">
     <img src="club-spokane-alloys-park.png" alt="The Reduction Yards">
   </div>
 </section>
@@ -179,79 +219,56 @@ h2{
 <section>
   <h2>Broadcast & Announcers</h2>
   <div class="split">
-
+    <div class="img-slot">
+      <img src="club-spokane-alloys-announcer.png" alt="Gus Vogel">
+    </div>
     <div>
-      <div class="img-slot ratio-3-4">
-        <img src="club-spokane-alloys-broadcast.png" alt="Gus Vogel">
-      </div>
-      <h3>Gus Vogel</h3>
+      <div class="announcer-name">Gus Vogel — Booth</div>
       <p>
-        <strong>Radio Play-by-Play.</strong><br>
-        Calls the game cleanly and without emphasis.
+        Vogel’s broadcast is unadorned and procedural, delivered from an open booth above home plate.
+      </p>
+      <br>
+      <div class="announcer-name">Ray Caldwell — Stadium PA</div>
+      <p>
+        Caldwell handles in-stadium announcements with minimal flourish.
+        Names are read once. Outcomes are final.
       </p>
     </div>
-
-    <div>
-      <div class="img-slot ratio-3-4">
-        <img src="club-spokane-alloys-announcer.png" alt="Ray Calder">
-      </div>
-      <h3>Ray Calder</h3>
-      <p>
-        <strong>In-Stadium Announcer.</strong><br>
-        Handles lineups and final calls inside the park.
-      </p>
-    </div>
-
   </div>
 </section>
 
 <section>
-  <h2>Mascot & Stands</h2>
+  <h2>In the Stands</h2>
   <div class="split">
-
-    <div>
-      <div class="img-slot ratio-1-1">
-        <img src="club-spokane-alloys-mascot.png" alt="Ingot mascot">
-      </div>
-      <h3>Ingot</h3>
+    <div class="img-slot">
+      <img src="club-spokane-alloys-mascot.png" alt="Ingot Mascot">
+      <p><strong>Ingot.</strong> Present. Recognized. Not theatrical.</p>
+    </div>
+    <div class="img-slot">
+      <img src="club-spokane-alloys-fans.png" alt="Alloys Fans">
       <p>
-        A silent, hulking figure built from riveted aluminum scrap.
-        Ingot does not perform routines.
+        Attendance skews local. Reactions are contained.
+        Applause is brief and deliberate.
       </p>
     </div>
+  </div>
+</section>
 
-    <div>
-      <div class="img-slot ratio-1-1">
-        <img src="club-spokane-alloys-fans.png" alt="Alloys fans">
-      </div>
-      <h3>The Freeze Line</h3>
-      <p>
-        Fans here pride themselves on stillness,
-        breaking silence only for strikeouts.
-      </p>
-    </div>
-
+<section>
+  <h2>On the Field</h2>
+  <div class="img-slot">
+    <img src="club-spokane-alloys-game.png" alt="In-game action">
   </div>
 </section>
 
 <div class="doc-footer">
-  <span>GLB Club Dossier</span>
-  <img src="GLB_white.png" alt="GLB">
-</div>
-
-</div>
-
-  <div class="doc-footer">
-  <div class="doc-footer-left">
-    <div class="doc-footer-title">END OF FILE</div>
-    <div class="doc-footer-meta">GLB CLUB DOSSIER · SPOKANE ALLOYS · ARCHIVE COPY</div>
+  <div>
+    <div class="doc-footer-title">End of File</div>
+    <div class="doc-footer-meta">GLB Club Dossier · Spokane Alloys</div>
   </div>
-
-  <div class="doc-footer-right">
-    <img src="GLB_white.png?v=3" alt="GLB" class="glb-logo">
-    <div class="doc-footer-stamp">GLB // VERIFIED</div>
-  </div>
+  <img src="GLB_white.png?v=4" alt="GLB" class="glb-logo">
 </div>
+
 </div>
 </body>
 </html>

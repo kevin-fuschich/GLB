@@ -7,16 +7,13 @@
 
 <style>
 :root{
-  --primary: #4A5863;
-  --accent: #C0442C;
-  --paper: #ffffff;
-  --ink: #0f1214;
-
-  --border-thick: 4px solid var(--ink);
-  --border-thin: 1px solid #ccc;
-
-  --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --mono: "Courier New", Courier, monospace;
+  --primary:#4A5863;
+  --accent:#C0442C;
+  --paper:#ffffff;
+  --ink:#0f1214;
+  --border-thick:4px solid var(--ink);
+  --sans:"Helvetica Neue", Helvetica, Arial, sans-serif;
+  --mono:"Courier New", Courier, monospace;
 }
 
 body{
@@ -33,16 +30,6 @@ body{
   background:var(--paper);
   padding:40px;
   border-top:var(--border-thick);
-  position:relative;
-}
-
-.doc-id{
-  position:absolute;
-  top:15px;
-  right:20px;
-  font-family:var(--mono);
-  font-size:10px;
-  color:#999;
 }
 
 header{
@@ -118,27 +105,6 @@ h2{
   padding-bottom:5px;
 }
 
-.identity p{
-  font-size:16px;
-  max-width:700px;
-}
-
-.identity ul{
-  list-style:none;
-  padding:0;
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:20px;
-}
-
-.identity li{
-  font-size:12px;
-  font-weight:bold;
-  text-transform:uppercase;
-  border-top:1px solid #ccc;
-  padding-top:10px;
-}
-
 .img-slot{
   background:#e0e0e0;
   border:1px solid #ccc;
@@ -171,21 +137,12 @@ h2{
   color:#999;
   display:flex;
   justify-content:space-between;
-  align-items:center;
-}
-
-@media(max-width:600px){
-  .split{ grid-template-columns:1fr; }
-  .identity ul{ grid-template-columns:1fr; }
-  .doc-id{ display:none; }
 }
 </style>
 </head>
 
 <body>
 <div class="club-sheet">
-
-<div class="doc-id">SPK-CLUB-LOCKED</div>
 
 <header>
   <div class="club-lockup">
@@ -197,8 +154,6 @@ h2{
     <span>Spokane, WA</span>
     <span>•</span>
     <span><strong>The Reduction Yards</strong></span>
-    <span>•</span>
-    <span>Established —</span>
   </div>
 
   <div class="cta-row">
@@ -208,46 +163,41 @@ h2{
   </div>
 </header>
 
-<section class="identity">
-  <h2>The Club</h2>
-  <p>
-    The Spokane Alloys are part of the everyday machinery of the city.
-    They don’t explain themselves. They show up, play, and leave a record.
-    The club exists as a fixture — something locals assume has always been there.
-  </p>
-  <ul>
-    <li>Home Field: The Reduction Yards</li>
-    <li>Affiliation: GLB</li>
-    <li>Region: Inland Northwest</li>
-  </ul>
-</section>
-
 <section>
   <h2>Ballpark</h2>
   <div class="img-slot ratio-16-9">
-    <img src="club-spokane-alloys-park.png" alt="The Reduction Yards, Spokane">
+    <img src="club-spokane-alloys-park.png" alt="The Reduction Yards">
   </div>
-  <p>
-    <strong>The Reduction Yards.</strong>
-    A working stadium along the river. Cold early. Quiet late.
-    Metal seating. No spectacle.
-  </p>
 </section>
 
 <section>
-  <h2>Broadcast & Announcer</h2>
+  <h2>Broadcast & Announcers</h2>
   <div class="split">
-    <div class="img-slot ratio-3-4">
-      <img src="club-spokane-alloys-announcer.png" alt="Gus Vogel, radio announcer">
-    </div>
+
+    <!-- BROADCAST -->
     <div>
+      <div class="img-slot ratio-3-4">
+        <img src="club-spokane-alloys-announcer.png" alt="Gus Vogel">
+      </div>
       <h3>Gus Vogel</h3>
       <p>
-        <strong>Radio Play-by-Play.</strong>
-        Vogel calls the game straight. No flourish.
-        His voice sounds like a report being filed.
+        <strong>Radio Play-by-Play.</strong><br>
+        Calls the game cleanly and without emphasis.
       </p>
     </div>
+
+    <!-- IN-STADIUM -->
+    <div>
+      <div class="img-slot ratio-3-4">
+        <img src="club-spokane-alloys-pa.png" alt="In-stadium announcer">
+      </div>
+      <h3>Ray Calder</h3>
+      <p>
+        <strong>In-Stadium Announcer.</strong><br>
+        Handles lineups, substitutions, and final calls inside the park.
+      </p>
+    </div>
+
   </div>
 </section>
 
@@ -256,21 +206,15 @@ h2{
   <div class="split">
     <div>
       <div class="img-slot ratio-1-1">
-        <img src="club-spokane-alloys-mascot.png" alt="Ingot, Spokane Alloys mascot">
+        <img src="club-spokane-alloys-mascot.png" alt="Ingot mascot">
       </div>
       <h3>Ingot</h3>
-      <p>
-        Ingot does not perform. He appears.
-      </p>
     </div>
     <div>
       <div class="img-slot ratio-1-1">
-        <img src="club-spokane-alloys-fans.png" alt="Spokane Alloys fans">
+        <img src="club-spokane-alloys-fans.png" alt="Alloys fans">
       </div>
       <h3>The Freeze Line</h3>
-      <p>
-        Fans stay quiet. Noise arrives only when it matters.
-      </p>
     </div>
   </div>
 </section>

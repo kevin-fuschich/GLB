@@ -1,324 +1,288 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>GLB: ALBUQUERQUE AEROS</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Albuquerque Aeros – Club Portal</title>
 
 <style>
 :root{
-  /* Spokane-format base system (clean, editorial, artifact-like) */
-  --paper: #ffffff;
-  --ink: #111111;
-  --muted: #666666;
-  --hairline: #e8e8e8;
-
-  /* Albuquerque palette (warm desert + teal) */
-  --primary: #0E8C94;   /* desert-teal */
-  --accent:  #F2994A;   /* balloon-orange */
-  --bg:      #f8f7f4;   /* paper-dust */
+  /* Albuquerque Identity: High Desert + Aerospace */
+  --primary: #3C6E8F;   /* Sky-oxide blue */
+  --accent:  #E67E22;   /* Heat / caution orange */
+  --paper:   #ffffff;
+  --ink:     #0f1214;
 
   --border-thick: 4px solid var(--ink);
-  --border: 2px solid var(--ink);
+  --border-thin:  1px solid #ccc;
 
-  --sans: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-  --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --mono: "Courier New", Courier, monospace;
 }
-
-*{ box-sizing:border-box; }
 
 body{
-  margin:0;
-  padding:40px 20px;
-  background: var(--bg);
+  background: #f4f4f4;
   color: var(--ink);
   font-family: var(--sans);
-  line-height:1.35;
+  margin: 0;
+  padding: 20px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
 }
 
-/* PAGE FRAME */
 .club-sheet{
-  max-width: 980px;
+  max-width: 900px;
   margin: 0 auto;
   background: var(--paper);
+  padding: 40px;
   border-top: var(--border-thick);
-  box-shadow: 12px 12px 0 rgba(0,0,0,.06);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
   position: relative;
-  overflow: hidden;
 }
 
 /* DOC ID */
 .doc-id{
-  position:absolute;
-  top:14px;
-  right:16px;
+  position: absolute;
+  top: 15px;
+  right: 20px;
   font-family: var(--mono);
   font-size: 10px;
-  color: #9a9a9a;
-  letter-spacing: .06em;
+  color: #999;
+  letter-spacing: 1px;
 }
 
 /* HEADER */
 header{
-  padding: 26px 30px 22px;
   border-bottom: var(--border-thick);
+  padding-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .club-lockup{
-  display:flex;
+  display: flex;
   justify-content: space-between;
   align-items: baseline;
-  gap: 16px;
   flex-wrap: wrap;
 }
 
 h1{
-  margin:0;
-  font-size: 34px;
+  margin: 0;
+  font-size: 32px;
   font-weight: 900;
   text-transform: uppercase;
-  letter-spacing: .02em;
+  letter-spacing: 1px;
 }
 
 .division-tag{
-  display:inline-block;
   background: var(--primary);
-  color:#fff;
-  padding: 4px 10px;
-  font-size: 12px;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: .06em;
-}
-
-.fact-bar{
-  margin-top: 10px;
-  display:flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  align-items:center;
-  color: var(--muted);
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: .06em;
-}
-
-.fact-bar strong{ color: var(--ink); }
-
-/* TOP NAV (HOME / DAILY SCORES / TEAMS) */
-.top-links{
-  margin-top: 14px;
-  display:flex;
-  gap: 12px;
-  flex-wrap: wrap;
-  align-items:center;
-}
-
-.top-links a{
-  font-size: 11px;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: .06em;
-  color: var(--ink);
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
-
-.top-links a:hover{
-  background: var(--ink);
   color: #fff;
-  text-decoration: none;
-  padding: 3px 6px;
+  font-size: 12px;
+  padding: 4px 8px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold;
 }
 
-/* CTA BUTTONS */
+/* QUICK FACTS */
+.fact-bar{
+  display: flex;
+  gap: 15px;
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #666;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+.fact-bar strong { color: var(--ink); }
+
+/* CTAs */
 .cta-row{
-  margin-top: 18px;
-  display:flex;
+  display: flex;
   gap: 10px;
+  margin: 25px 0 40px;
   flex-wrap: wrap;
 }
 
 .btn{
   flex: 1;
-  min-width: 190px;
+  min-width: 180px;
   border: 2px solid var(--ink);
-  padding: 12px 10px;
+  padding: 12px 0;
   text-align: center;
   font-size: 12px;
-  font-weight: 900;
+  font-weight: bold;
   text-transform: uppercase;
-  letter-spacing: .06em;
+  text-decoration: none;
   color: var(--ink);
-  text-decoration:none;
-  transition: .18s ease;
+  letter-spacing: 1px;
+  transition: all 0.2s;
   background: #fff;
 }
 
 .btn:hover{
   background: var(--ink);
   color: #fff;
+  border-color: var(--ink);
 }
 
 .btn.primary{
   background: var(--primary);
+  color: #fff;
   border-color: var(--primary);
-  color:#fff;
 }
 
 .btn.primary:hover{
   background: var(--accent);
   border-color: var(--accent);
-  color: var(--ink);
+  color: #111;
 }
 
 /* SECTIONS */
-section{
-  padding: 26px 30px;
-  border-bottom: 1px solid var(--hairline);
-}
-
-section:last-of-type{
-  border-bottom:none;
-}
+section{ margin-bottom: 50px; }
 
 h2{
-  margin:0 0 12px 0;
-  font-size: 13px;
-  font-weight: 900;
+  font-size: 14px;
   text-transform: uppercase;
-  letter-spacing: .10em;
-  border-bottom: 2px solid var(--primary);
-  padding-bottom: 6px;
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 5px;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
 }
 
-p{ margin: 0; font-size: 15px; color: var(--ink); }
-p.subtle{ color: var(--muted); font-size: 13px; margin-top: 10px; }
+/* IDENTITY */
+.identity p{
+  font-size: 16px;
+  max-width: 700px;
+  margin-bottom: 20px;
+}
+
+.identity ul{
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 20px;
+}
+
+.identity li{
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-top: 1px solid #ccc;
+  padding-top: 10px;
+}
 
 /* IMAGE SLOTS */
 .img-slot{
-  width:100%;
-  background:#efefef;
-  border: 1px solid #d0d0d0;
-  overflow:hidden;
-  margin: 0 0 12px 0;
+  background: #e0e0e0;
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+  display: block;
 }
 
 .img-slot img{
-  width:100%;
-  height:100%;
-  display:block;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
+  display: block;
 }
 
-.ratio-16-9{ aspect-ratio: 16/9; }
-.ratio-3-4{ aspect-ratio: 3/4; max-width: 290px; }
-.ratio-1-1{ aspect-ratio: 1/1; max-width: 320px; }
+/* Aspect Ratios */
+.ratio-16-9 { aspect-ratio: 16/9; }
+.ratio-3-4  { aspect-ratio: 3/4; max-width: 250px; }
+.ratio-1-1  { aspect-ratio: 1/1; max-width: 260px; }
 
-/* GRID SPLITS */
+/* SPLIT */
 .split{
-  display:grid;
+  display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 26px;
+  gap: 30px;
   align-items: start;
 }
 
-.two-col{
-  display:grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 22px;
-  align-items: start;
+/* INFO CARD */
+.info-card h3{
+  margin: 0 0 8px 0;
+  font-size: 18px;
+  font-weight: 800;
 }
 
-/* BROADCAST CARDS */
-.person-card h3{
-  margin: 8px 0 6px 0;
-  font-size: 14px;
-  font-weight: 950;
-  text-transform: uppercase;
-  letter-spacing: .08em;
-}
-
-.role{
-  font-family: var(--mono);
+.subhead{
+  display: block;
   font-size: 11px;
+  color: #666;
   text-transform: uppercase;
-  letter-spacing: .10em;
-  color: var(--primary);
-  font-weight: 900;
-  margin: 0 0 10px 0;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
 }
 
-/* FOOTER (TRUE GLOBAL FOOTER) */
-footer{
-  background: var(--ink);
-  color: #fff;
-  padding: 16px 18px;
-}
+/* LINKS */
+a { color: var(--ink); text-decoration: none; }
+a:hover { color: var(--accent); }
 
-.footer-inner{
-  max-width: 980px;
-  margin: 0 auto;
-  display:flex;
+/* FIELD NOTES (closure block before footer) */
+.field-notes{
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+  margin-top: 20px;
+}
+.field-notes ul{
+  margin: 0;
+  padding-left: 18px;
+  color: #444;
+  font-size: 13px;
+}
+.field-notes li{ margin: 8px 0; }
+
+/* FOOTER (true closure bar) */
+.site-footer{
+  margin-top: 50px;
+  padding-top: 18px;
+  border-top: 2px solid #eee;
+  display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 16px;
+  gap: 18px;
 }
 
 .footer-left{
   font-family: var(--mono);
-  font-size: 11px;
-  letter-spacing: .10em;
+  font-size: 10px;
+  color: #999;
   text-transform: uppercase;
-  color: rgba(255,255,255,.86);
+  letter-spacing: 1px;
 }
 
-.footer-left strong{
-  color:#fff;
-}
-
-.footer-right{
-  display:flex;
-  align-items:center;
-  gap: 12px;
-}
-
-.footer-right .seal{
-  display:flex;
-  align-items:center;
+.footer-logo{
+  display: flex;
+  align-items: center;
   gap: 10px;
 }
 
-/* GLB logo sizing (easy knob) */
-:root{
-  --glb-logo-height: 56px; /* visibly present; adjust if you want */
-}
-
-.footer-right img{
-  height: var(--glb-logo-height);
+.footer-logo img{
+  height: 28px; /* tweak this if you want bigger */
   width: auto;
-  display:block;
-  filter: none;
+  display: block;
+  image-rendering: auto;
+  opacity: 0.95;
 }
 
-/* Responsive */
-@media(max-width: 720px){
-  body{ padding: 20px 12px; }
-  header{ padding: 22px 18px; }
-  section{ padding: 22px 18px; }
-  .split, .two-col{ grid-template-columns: 1fr; }
-  .ratio-3-4, .ratio-1-1{ max-width: 100%; }
-  .doc-id{ display:none; }
-  .btn{ min-width: 100%; }
-  .footer-inner{ flex-direction: column; align-items:flex-start; }
+/* MOBILE */
+@media(max-width: 600px){
+  .split{ grid-template-columns: 1fr; }
+  .identity ul{ grid-template-columns: 1fr; }
+  .doc-id{ display: none; }
+  .ratio-3-4, .ratio-1-1{ max-width: none; }
+  .site-footer{ flex-direction: column; align-items: flex-start; }
 }
 </style>
 </head>
 
 <body>
-
 <div class="club-sheet">
-  <div class="doc-id">GLB-CLUB // ABQ-AEROS</div>
+
+  <div class="doc-id">ABQ-CLUB-01</div>
 
   <header>
     <div class="club-lockup">
@@ -327,112 +291,140 @@ footer{
     </div>
 
     <div class="fact-bar">
-      <span>Est. 2024</span>
+      <span>Est. —</span>
       <span>•</span>
       <span><strong>Propellant Park</strong></span>
       <span>•</span>
-      <span>Albuquerque, NM</span>
-    </div>
-
-    <div class="top-links">
-      <a href="index.html">Home</a>
-      <a href="day.html">Daily Scores</a>
-      <a href="teams.html">Teams</a>
+      <span>Mgr. —</span>
     </div>
 
     <div class="cta-row">
       <a class="btn primary" href="team.html?team=albuquerque-aeros">Active Roster</a>
-      <a class="btn" href="day.html">Daily Scores</a>
-      <a class="btn" href="game.html">Latest Box Score</a>
+      <a class="btn" href="day.html?date=2026-05-12">Daily Scores</a>
+      <!-- NOTE: If your boxscore hangs on “Loading…”, it means the game slug/date isn’t in your dataset yet. -->
+      <a class="btn" href="game.html?date=2026-05-12&game=albuquerque-aeros@spokane-alloys">Latest Box Score</a>
     </div>
   </header>
 
   <section class="identity">
     <h2>The Club</h2>
     <p>
-      The Aeros play under high desert light — a crowd that looks up as often as it looks in. Hot air balloons drift
-      beyond the outfield, and the park feels like a civic event more than a venue: families, radios, late sun, and
-      the steady noise of people who came to be together.
+      Albuquerque sits under a hard sky and a wider silence. The Aeros feel like a civic program as much as a team:
+      measured, experimental, and slightly unofficial. On game nights the park reads like a launch site—lines, cones,
+      clipboards, and fans who swear they “saw something” during warmups.
     </p>
-    <p class="subtle">
-      This page is filed as a club dossier artifact. It does not explain itself. It records itself.
-    </p>
+    <ul>
+      <li>Read: High Desert / Airfield</li>
+      <li>Public Mood: Quiet Intensity</li>
+      <li>Ritual: “The Countdown”</li>
+    </ul>
   </section>
 
   <section>
     <h2>Ballpark</h2>
     <div class="img-slot ratio-16-9">
-      <img src="club-albuquerque-aeros-park.png" alt="Propellant Park at golden hour with balloons and packed stands">
+      <img src="club-albuquerque-aeros-park.png" alt="Propellant Park at dusk">
     </div>
-    <p><strong>Propellant Park.</strong> A bowl of light and sky — warm seats, open air, and a scoreboard that always feels a little too loud. When the balloons rise, the crowd points like it’s part of the game.</p>
-  </section>
-
-  <section>
-    <h2>Broadcast &amp; Announcer</h2>
-
-    <!-- Two-column: left = broadcast, right = in-game announcer -->
-    <div class="two-col">
-      <div class="person-card">
-        <div class="img-slot ratio-3-4">
-          <img src="club-albuquerque-aeros-broadcast.png" alt="Broadcast play-by-play booth for Albuquerque Aeros">
-        </div>
-        <h3>Rafa “Skyline” Ortega</h3>
-        <div class="role">Play-by-play</div>
-        <p>
-          Fast, warm, and local. Rafa calls games like he’s narrating the city — innings stitched together with weather,
-          crowd rhythm, and the occasional balloon count.
-        </p>
-      </div>
-
-      <div class="person-card">
-        <div class="img-slot ratio-3-4">
-          <img src="club-albuquerque-aeros-announcer.png" alt="In-stadium public address announcer for Albuquerque Aeros">
-        </div>
-        <h3>Marla Keene</h3>
-        <div class="role">In-stadium announcer</div>
-        <p>
-          The voice inside the park. Clean reads, zero drama, and a cadence that feels like tradition — the kind of
-          presence you don’t notice until it’s missing.
-        </p>
-      </div>
+    <div class="info-card">
+      <h3>Propellant Park</h3>
+      <span class="subhead">High desert light • long shadows • wind warnings</span>
+      <p>
+        A sun-bleached park built like an airfield annex: wide concourses, exposed steel, and a scoreboard that looks
+        repurposed from a municipal project. The wind changes fast here—flags snap, dust lifts, and foul balls carry
+        like they’re trying to leave the county.
+      </p>
     </div>
   </section>
 
   <section>
-    <h2>Mascot &amp; Stands</h2>
-
+    <h2>Broadcast & Announcer</h2>
     <div class="split">
+
+      <!-- Play-by-play -->
       <div>
-        <div class="img-slot ratio-1-1">
-          <img src="club-albuquerque-aeros-mascot.png" alt="Aeros mascot interacting with fans">
+        <div class="img-slot ratio-3-4">
+          <img src="club-albuquerque-aeros-broadcast.png" alt="Broadcast booth play-by-play">
         </div>
-        <p><strong>Mascot.</strong> Not a symbol — a regular. Slightly scuffed costume, big gestures, always in the aisle. High-fives are mandatory.</p>
+        <div class="info-card">
+          <h3>Play-by-Play</h3>
+          <span class="subhead">Radio booth • measured pace</span>
+          <p>
+            Calm, observational, and oddly precise—like a person reading conditions rather than calling a game.
+          </p>
+        </div>
       </div>
 
+      <!-- In-stadium announcer -->
       <div>
-        <div class="img-slot ratio-1-1">
-          <img src="club-albuquerque-aeros-fans.png" alt="Albuquerque Aeros fans in teal and orange in warm sunset light">
+        <div class="img-slot ratio-3-4">
+          <img src="club-albuquerque-aeros-announcer.png" alt="In-stadium announcer portrait">
         </div>
-        <p><strong>The Stands.</strong> Teal shirts, balloon patches, sunburned shoulders, kids on rails. It’s loud in a friendly way — like a neighborhood block party that happens to have baseball.</p>
+        <div class="info-card">
+          <h3>In-Stadium Announcer</h3>
+          <span class="subhead">PA • between innings • crowd control</span>
+          <p>
+            The voice you actually feel in your ribs. Calls lineups like status updates. Sounds like he’s done this
+            for twenty years and still doesn’t trust the weather.
+          </p>
+        </div>
       </div>
+
     </div>
   </section>
 
-  <footer>
-    <div class="footer-inner">
-      <div class="footer-left">
-        <strong>GLB</strong> // Club Dossier // Albuquerque // End of File
-      </div>
+  <section>
+    <h2>Mascot & Stands</h2>
+    <div class="split">
 
-      <div class="footer-right">
-        <div class="seal">
-          <img src="GLB_white.png" alt="GLB logo">
+      <div>
+        <div class="img-slot ratio-1-1">
+          <img src="club-albuquerque-aeros-mascot.png" alt="Albuquerque Aeros mascot with fans">
+        </div>
+        <div class="info-card">
+          <h3>Mascot</h3>
+          <span class="subhead">Human-worn • old suit • beloved</span>
+          <p>
+            A slightly scuffed, very real costume that looks like it’s survived a decade of heat and sunblock.
+            Always in the aisles—high-fives, selfies, and the occasional mock “countdown” with kids.
+          </p>
         </div>
       </div>
+
+      <div>
+        <div class="img-slot ratio-1-1">
+          <img src="club-albuquerque-aeros-fans.png" alt="Fans in the stands at Propellant Park">
+        </div>
+        <div class="info-card">
+          <h3>The Stands</h3>
+          <span class="subhead">Families • regulars • sun hats</span>
+          <p>
+            A mix of families and lifelong locals. People bring seat cushions, share snacks, and point at the sky
+            whenever something crosses it. Loud when it matters. Otherwise: attentive.
+          </p>
+        </div>
+      </div>
+
     </div>
-  </footer>
+  </section>
+
+  <!-- Closure block -->
+  <section class="field-notes">
+    <h2>Field Notes</h2>
+    <ul>
+      <li>Best time to arrive: late light, before the wind switches.</li>
+      <li>Local superstition: never say “easy fly ball.”</li>
+      <li>If you hear a countdown, it’s probably not for the game.</li>
+    </ul>
+  </section>
+
+  <!-- True footer -->
+  <div class="site-footer">
+    <div class="footer-left">GLB Club Portal · Albuquerque · Internal Copy</div>
+    <div class="footer-logo">
+      <img src="GLB_white.png" alt="GLB logo">
+    </div>
+  </div>
 
 </div>
-
 </body>
 </html>

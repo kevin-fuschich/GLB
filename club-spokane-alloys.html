@@ -1,394 +1,528 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Spokane Alloys – Club Portal</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spokane Alloys – Club Portal</title>
 
-<style>
-:root{
-  /* Spokane Identity: Cold Steel, Smelter Smoke, Oxide Rust */
-  --primary: #4A5863; /* Steel Blue-Grey */
-  --accent: #C0442C;  /* Oxide Rust */
-  --paper: #ffffff;
-  --ink: #0f1214;
+  <style>
+    :root{
+      /* Spokane Identity: Cold Steel, Smelter Smoke, Oxide Rust */
+      --primary: #4A5863; /* Steel Blue-Grey */
+      --accent:  #C0442C; /* Oxide Rust */
+      --paper:   #ffffff;
+      --ink:     #0f1214;
 
-  --border-thick: 4px solid var(--ink);
-  --border-thin: 1px solid #ccc;
+      --border-thick: 4px solid var(--ink);
+      --border-thin:  1px solid #ccc;
 
-  --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --mono: "Courier New", Courier, monospace;
-}
+      --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      --mono: "Courier New", Courier, monospace;
+    }
 
-body{
-  background: #f4f4f4;
-  color: var(--ink);
-  font-family: var(--sans);
-  margin: 0;
-  padding: 20px;
-  line-height: 1.5;
-}
+    body{
+      background: #f4f4f4;
+      color: var(--ink);
+      font-family: var(--sans);
+      margin: 0;
+      padding: 20px;
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.5;
+    }
 
-.club-sheet{
-  max-width: 900px;
-  margin: 0 auto;
-  background: var(--paper);
-  padding: 40px;
-  border-top: var(--border-thick);
-  position: relative;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-}
+    .club-sheet{
+      max-width: 900px;
+      margin: 0 auto;
+      background: var(--paper);
+      padding: 40px;
+      border-top: var(--border-thick);
+      position: relative;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
 
-/* DOC ID */
-.doc-id{
-  position: absolute;
-  top: 15px;
-  right: 20px;
-  font-family: var(--mono);
-  font-size: 10px;
-  color: #999;
-  letter-spacing: 1px;
-}
+    /* DOC ID */
+    .doc-id{
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      font-family: var(--mono);
+      font-size: 10px;
+      color: #999;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
 
-/* HEADER */
-header{
-  border-bottom: var(--border-thick);
-  padding-bottom: 20px;
-  margin-bottom: 20px;
-}
+    /* HEADER */
+    header{
+      border-bottom: var(--border-thick);
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+    }
 
-.club-lockup{
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  flex-wrap: wrap;
-  gap: 10px;
-}
+    .club-lockup{
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
 
-h1{
-  margin: 0;
-  font-size: 32px;
-  font-weight: 900;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
+    h1{
+      margin: 0;
+      font-size: 32px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
 
-.division-tag{
-  background: var(--primary);
-  color: #fff;
-  font-size: 12px;
-  padding: 4px 8px;
-  text-transform: uppercase;
-  font-weight: bold;
-  letter-spacing: 1px;
-}
+    .division-tag{
+      background: var(--primary);
+      color: #fff;
+      font-size: 12px;
+      padding: 4px 8px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 700;
+    }
 
-.fact-bar{
-  display: flex;
-  gap: 15px;
-  font-size: 11px;
-  text-transform: uppercase;
-  color: #666;
-  margin-top: 10px;
-  flex-wrap: wrap;
-}
+    .fact-bar{
+      display: flex;
+      gap: 15px;
+      font-size: 11px;
+      text-transform: uppercase;
+      color: #666;
+      margin-top: 10px;
+      flex-wrap: wrap;
+    }
 
-.fact-bar strong { color: var(--ink); }
+    /* TOP NAV (optional) */
+    .top-nav{
+      margin-top: 12px;
+      display: flex;
+      justify-content: flex-end;
+      gap: 14px;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-family: var(--mono);
+    }
+    .top-nav a{
+      color: #666;
+      text-decoration: none;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 2px;
+    }
+    .top-nav a:hover{
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+    }
 
-/* CTAs */
-.cta-row{
-  display: flex;
-  gap: 10px;
-  margin: 25px 0 40px;
-  flex-wrap: wrap;
-}
+    /* CTAs */
+    .cta-row{
+      display: flex;
+      gap: 10px;
+      margin: 18px 0 0;
+      flex-wrap: wrap;
+    }
 
-.btn{
-  flex: 1;
-  min-width: 180px;
-  border: 2px solid var(--ink);
-  padding: 12px 0;
-  text-align: center;
-  font-size: 12px;
-  font-weight: bold;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: var(--ink);
-  letter-spacing: 1px;
-  transition: all 0.2s;
-}
+    .btn{
+      flex: 1;
+      min-width: 180px;
+      border: 2px solid var(--ink);
+      padding: 12px 0;
+      text-align: center;
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      text-decoration: none;
+      color: var(--ink);
+      transition: all 0.2s;
+      background: #fff;
+    }
 
-.btn:hover{
-  background: var(--ink);
-  color: #fff;
-  border-color: var(--ink);
-}
+    .btn:hover{
+      background: var(--ink);
+      color: #fff;
+      border-color: var(--ink);
+    }
 
-.btn.primary{
-  background: var(--primary);
-  color: #fff;
-  border-color: var(--primary);
-}
+    .btn.primary{
+      background: var(--primary);
+      color: #fff;
+      border-color: var(--primary);
+    }
 
-.btn.primary:hover{
-  background: var(--accent);
-  border-color: var(--accent);
-}
+    .btn.primary:hover{
+      background: var(--accent);
+      border-color: var(--accent);
+    }
 
-/* SECTIONS */
-section{ margin-bottom: 50px; }
+    /* SECTIONS */
+    section{ margin-bottom: 50px; }
 
-h2{
-  font-size: 14px;
-  text-transform: uppercase;
-  border-bottom: 2px solid var(--accent);
-  padding-bottom: 5px;
-  letter-spacing: 1px;
-}
+    h2{
+      font-size: 14px;
+      text-transform: uppercase;
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 5px;
+      letter-spacing: 1px;
+      margin: 0 0 18px 0;
+    }
 
-/* IDENTITY */
-.identity p{
-  font-size: 16px;
-  max-width: 720px;
-  margin-top: 10px;
-}
+    /* Baseball micro-icon (inline svg) */
+    .h2-row{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    .ball-mark{
+      width: 22px;
+      height: 22px;
+      flex: 0 0 auto;
+      opacity: 0.9;
+    }
+    .ball-mark path, .ball-mark circle{
+      stroke: var(--accent);
+      fill: none;
+      stroke-width: 1.8;
+      stroke-linecap: round;
+    }
 
-.identity ul{
-  list-style: none;
-  padding: 0;
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-  gap: 20px;
-  margin-top: 18px;
-}
+    /* IDENTITY */
+    .identity p{
+      font-size: 16px;
+      max-width: 740px;
+      margin: 0 0 18px 0;
+    }
 
-.identity li{
-  font-size: 12px;
-  font-weight: bold;
-  text-transform: uppercase;
-  border-top: 1px solid #ccc;
-  padding-top: 10px;
-}
+    .identity ul{
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 20px;
+    }
 
-/* IMAGE SLOTS */
-.img-slot{
-  background: #e0e0e0;
-  border: 1px solid #ccc;
-  margin-bottom: 15px;
-  display: block;
-  overflow: hidden;
-}
+    .identity li{
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      border-top: 1px solid #ccc;
+      padding-top: 10px;
+      color: var(--ink);
+    }
 
-.img-slot img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
+    /* IMAGE SLOTS */
+    .img-slot{
+      background: #e0e0e0;
+      border: 1px solid #ccc;
+      margin-bottom: 15px;
+      display: block;
+      overflow: hidden;
+    }
 
-/* Aspect Ratios */
-.ratio-16-9{ aspect-ratio: 16/9; }
-.ratio-3-4{ aspect-ratio: 3/4; max-width: 250px; }
-.ratio-1-1{ aspect-ratio: 1/1; max-width: 260px; }
+    .img-slot img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
 
-/* SPLIT */
-.split{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
-}
+    /* Aspect Ratios */
+    .ratio-16-9 { aspect-ratio: 16/9; }
+    .ratio-3-4 { aspect-ratio: 3/4; max-width: 250px; }
+    .ratio-1-1 { aspect-ratio: 1/1; max-width: 260px; }
 
-/* BROADCAST GRID (two cards side-by-side) */
-.broadcast-grid{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 24px;
-  align-items: start;
-}
+    /* SPLIT GRID */
+    .split{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      align-items: start;
+    }
 
-.person-card h3{
-  margin: 0 0 8px 0;
-  font-size: 18px;
-}
+    .card h3{
+      margin: 0 0 6px 0;
+      font-size: 18px;
+      font-weight: 900;
+      letter-spacing: 0.2px;
+    }
 
-.person-card p{
-  margin: 0 0 10px 0;
-}
+    .role{
+      display: inline-block;
+      font-family: var(--mono);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #666;
+      margin-bottom: 10px;
+    }
 
-/* LINKS */
-a{ color: var(--ink); text-decoration: none; }
-a:hover{ color: var(--accent); }
+    .card p{
+      margin: 0;
+      font-size: 14px;
+      color: #222;
+    }
 
-/* TRUE FOOTER (closure) */
-.footer{
-  margin-top: 60px;
-  padding: 18px 0 0 0;
-  border-top: 1px solid #eee;
-}
+    /* Mascot & Fans */
+    .two-up{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      align-items: start;
+    }
 
-.footer-inner{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 18px;
-}
+    /* Close-out block */
+    .closeout{
+      border-top: 1px solid #eee;
+      padding-top: 18px;
+      margin-top: 10px;
+      display: flex;
+      gap: 18px;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
 
-.footer-text{
-  font-family: var(--mono);
-  font-size: 10px;
-  color: #999;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  line-height: 1.5;
-}
+    .seal{
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      font-family: var(--mono);
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #888;
+    }
 
-.footer-mark{
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-}
+    .seal .dot{
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: var(--accent);
+      display: inline-block;
+      opacity: 0.9;
+    }
 
-.footer-mark img{
-  height: 32px; /* bigger, visible */
-  width: auto;
-  display: block;
-  opacity: 0.95;
-}
+    /* TRUE FOOTER (unified) */
+    .glb-footer{
+      margin-top: 34px;
+      border-top: var(--border-thick);
+      padding-top: 18px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 16px;
+      align-items: center;
+    }
 
-/* MOBILE */
-@media (max-width: 700px){
-  .split{ grid-template-columns: 1fr; }
-  .broadcast-grid{ grid-template-columns: 1fr; }
-  .identity ul{ grid-template-columns: 1fr; }
-  .doc-id{ display: none; }
-  .ratio-3-4{ max-width: none; }
-  .ratio-1-1{ max-width: none; }
-  .footer-inner{ flex-direction: column; align-items: flex-start; }
-  .footer-mark{ width: 100%; justify-content: flex-start; }
-}
-</style>
+    .glb-footer .footer-left{
+      font-family: var(--mono);
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #777;
+      line-height: 1.6;
+    }
+
+    .glb-footer .footer-left strong{
+      color: #555;
+      font-weight: 900;
+    }
+
+    .glb-footer .footer-right{
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .glb-logo{
+      height: 34px; /* bigger logo per your request */
+      width: auto;
+      display: block;
+    }
+
+    .end-file{
+      font-family: var(--mono);
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #777;
+      white-space: nowrap;
+    }
+
+    /* Responsive */
+    @media(max-width: 600px){
+      .split, .two-up{ grid-template-columns: 1fr; }
+      .identity ul{ grid-template-columns: 1fr; }
+      .doc-id{ display: none; }
+      .ratio-3-4, .ratio-1-1{ max-width: none; }
+      .glb-footer{ grid-template-columns: 1fr; }
+      .glb-footer .footer-right{ justify-content: space-between; }
+    }
+  </style>
 </head>
 
 <body>
-<div class="club-sheet">
+  <div class="club-sheet">
 
-  <div class="doc-id">SPK-CLUB-02</div>
+    <div class="doc-id">SPK-CLUB-02</div>
 
-  <header>
-    <div class="club-lockup">
-      <h1>Spokane Alloys</h1>
-      <span class="division-tag">Americas Division</span>
-    </div>
+    <header>
+      <div class="club-lockup">
+        <h1>Spokane Alloys</h1>
+        <span class="division-tag">Americas Division</span>
+      </div>
 
-    <div class="fact-bar">
-      <span>Est. —</span>
-      <span>•</span>
-      <span><strong>The Reduction Yards</strong></span>
-      <span>•</span>
-      <span>Mgr. Elias Thorne</span>
-    </div>
+      <div class="fact-bar">
+        <span>Est. —</span>
+        <span>•</span>
+        <span><strong>The Reduction Yards</strong></span>
+        <span>•</span>
+        <span>Mgr. Elias Thorne</span>
+      </div>
 
-    <!-- Keep the CTAs exactly like the working Spokane pattern -->
-    <div class="cta-row">
-      <a class="btn primary" href="team.html?team=spokane-alloys">Active Roster</a>
-      <a class="btn" href="day.html?date=2026-05-12">Daily Scores</a>
-      <a class="btn" href="game.html?date=2026-05-12&game=spokane-alloys@vancouver-current">Latest Box Score</a>
-    </div>
-  </header>
+      <!-- These are optional, but included since you mentioned them -->
+      <div class="top-nav">
+        <a href="index.html">Home</a>
+        <a href="day.html">Daily Scores</a>
+        <a href="teams.html">Teams</a>
+      </div>
 
-  <section class="identity">
-    <h2>The Club</h2>
-    <p>
-      Spokane’s club file reads like a shift report: innings logged, work completed, no extra motion.
-      The Alloys don’t “announce” themselves. They show up, hold the line, and let the game get quiet.
-    </p>
-    <ul>
-      <li>Style: —</li>
-      <li>Vibe: Cold Industry</li>
-      <li>Tradition: "The Shift Change"</li>
-    </ul>
-  </section>
+      <div class="cta-row">
+        <a class="btn primary" href="team.html?team=spokane-alloys">Active Roster</a>
+        <a class="btn" href="day.html">Daily Scores</a>
+        <a class="btn" href="game.html">Latest Box Score</a>
+      </div>
+    </header>
 
-  <section>
-    <h2>Ballpark</h2>
-    <div class="img-slot ratio-16-9">
-      <img src="club-spokane-alloys-park.png" alt="The Reduction Yards - ballpark view">
-    </div>
-    <p>
-      <strong>The Reduction Yards.</strong> A river-adjacent park built from utility: corrugated metal,
-      bare concrete, and open air. It holds cold late into the season. When the wind shifts, you can
-      smell the rail lines.
-    </p>
-  </section>
+    <section class="identity">
+      <div class="h2-row">
+        <h2>The Club</h2>
+        <!-- baseball visual (no new images needed) -->
+        <svg class="ball-mark" viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="12" cy="12" r="9"></circle>
+          <path d="M7.2 6.9c2.1 1.4 3.4 3.3 4 5.1"></path>
+          <path d="M16.8 6.9c-2.1 1.4-3.4 3.3-4 5.1"></path>
+          <path d="M7.2 17.1c2.1-1.4 3.4-3.3 4-5.1"></path>
+          <path d="M16.8 17.1c-2.1-1.4-3.4-3.3-4-5.1"></path>
+        </svg>
+      </div>
 
-  <section>
-    <h2>Broadcast & Announcer</h2>
+      <p>
+        Spokane keeps its baseball plainspoken and close to the ground: a night out by the river, a cold drink, a clean inning.
+        The Alloys’ identity comes from place, not slogans—metalwork, rail noise, and the steady patience of people who don’t clap for nothing.
+      </p>
 
-    <div class="broadcast-grid">
+      <ul>
+        <li>Notes: River air / steel seating</li>
+        <li>Atmosphere: Quiet until contact</li>
+        <li>Ritual: “The Shift Change” horn</li>
+      </ul>
+    </section>
 
-      <!-- Broadcast Booth / Play-by-play -->
-      <div class="person-card">
-        <div class="img-slot ratio-3-4">
-          <img src="club-spokane-alloys-booth.png" alt="Broadcast booth - Gus Vogel">
+    <section>
+      <h2>Ballpark</h2>
+      <div class="img-slot ratio-16-9">
+        <img src="club-spokane-alloys-park.png" alt="The Reduction Yards — stadium view" />
+      </div>
+      <p>
+        <strong>The Reduction Yards.</strong> A utilitarian park by the river—metal bleachers, narrow concourses, and a scoreboard that hums louder than it should.
+        Early innings arrive with cold air and long shadows; late innings feel like working overtime.
+      </p>
+    </section>
+
+    <!-- THIS IS THE SECTION YOU LOCKED: TWO COLUMNS, TWO PEOPLE, TWO IMAGES -->
+    <section>
+      <h2>Broadcast &amp; Announcer</h2>
+
+      <div class="split">
+        <!-- LEFT: Broadcast / Play-by-Play -->
+        <div class="card">
+          <div class="img-slot ratio-3-4">
+            <!-- IMPORTANT: per your earlier note, this is booth.png (not broadcast.png) -->
+            <img src="club-spokane-alloys-booth.png" alt="Broadcast booth — Gus Vogel" />
+          </div>
+          <h3>Gus Vogel</h3>
+          <div class="role">Play-by-Play / Broadcast</div>
+          <p>
+            Vogel calls games like a work report—measured, clear, and stubbornly calm. If something big happens,
+            he acknowledges it and moves on. The tone is radio-first: you can see the inning even with your eyes closed.
+          </p>
         </div>
-        <h3>Gus Vogel</h3>
-        <p><strong>Broadcast (Booth).</strong> Low register. Minimal emotion. Calls the game like a shipping report.</p>
-      </div>
 
-      <!-- In-stadium announcer -->
-      <div class="person-card">
-        <div class="img-slot ratio-3-4">
-          <img src="club-spokane-alloys-announcer.png" alt="In-stadium announcer portrait">
+        <!-- RIGHT: In-stadium announcer -->
+        <div class="card">
+          <div class="img-slot ratio-3-4">
+            <!-- Naming convention you set: club-spokane-alloys-announcer.png -->
+            <img src="club-spokane-alloys-announcer.png" alt="In-stadium PA announcer — Spokane" />
+          </div>
+          <h3>Ronan “Switch” Calder</h3>
+          <div class="role">Stadium Announcer</div>
+          <p>
+            Calder’s voice lives inside the park—echoing off steel, cutting through chatter, and landing on every name like a stamped label.
+            He doesn’t hype. He confirms. When he says a number, it sounds official.
+          </p>
         </div>
-        <h3>Cal “Switchboard” Mercer</h3>
-        <p><strong>In-Stadium Announcer.</strong> Fast cadence, clean calls, never hams it up. Sounds like a factory intercom that learned baseball.</p>
       </div>
 
-    </div>
-  </section>
-
-  <section>
-    <h2>Mascot & Stands</h2>
-    <div class="split">
-
-      <div>
-        <div class="img-slot ratio-1-1">
-          <img src="club-spokane-alloys-mascot.png" alt="Ingot mascot">
+      <div class="closeout">
+        <div class="seal">
+          <span class="dot"></span>
+          <span>Recorded on site · booth audio verified · field mic active</span>
         </div>
-        <h3>Ingot</h3>
-        <p>
-          A hulking, human-worn figure built from patched plating and riveted scrap. Not theatrical.
-          Not cute. More like a walking warning sign that occasionally high-fives a kid.
-        </p>
-      </div>
-
-      <div>
-        <div class="img-slot ratio-1-1">
-          <img src="club-spokane-alloys-fans.png" alt="Spokane fans - silent standing">
+        <div class="seal">
+          <span>GLB docket: SPK-02</span>
         </div>
-        <h3>The Freeze Line</h3>
-        <p>
-          Right-field regulars who “stand quiet” through entire innings. No heckling. No wave.
-          The noise comes only when there’s a strikeout—like a stamp of approval.
-        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Mascot &amp; Stands</h2>
+
+      <div class="two-up">
+        <div class="card">
+          <div class="img-slot ratio-1-1">
+            <img src="club-spokane-alloys-mascot.png" alt="Ingot — Spokane Alloys mascot" />
+          </div>
+          <h3>Ingot</h3>
+          <div class="role">Mascot</div>
+          <p>
+            A hulking, human-worn suit built from “recycled smelter plating” (at least, that’s the story).
+            The seams show. The paint chips. Ingot doesn’t dance much—he posts up near the bullpen like a foreman on break.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="img-slot ratio-1-1">
+            <img src="club-spokane-alloys-fans.png" alt="Spokane fans — the Freeze Line" />
+          </div>
+          <h3>The Freeze Line</h3>
+          <div class="role">Supporters’ Section</div>
+          <p>
+            Coats in April. Gloves in May. The Freeze Line is famous for “quiet innings”—whole frames with almost no sound,
+            then a sudden burst when a ball finds leather. It’s not polite. It’s focused.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRUE FOOTER: unified closure + larger logo -->
+    <div class="glb-footer">
+      <div class="footer-left">
+        <strong>GLB Club Dossier</strong> · Spokane Alloys · Internal File<br />
+        This page is a record. It does not explain itself. It closes.
       </div>
 
+      <div class="footer-right">
+        <!-- Your provided path -->
+        <img class="glb-logo" src="GLB_white.png" alt="GLB Logo" />
+        <div class="end-file">END OF FILE</div>
+      </div>
     </div>
-  </section>
 
-  <!-- TRUE FOOTER: no mystery section above it -->
-  <div class="footer">
-    <div class="footer-inner">
-      <div class="footer-text">
-        GLB CLUB PORTAL · SPOKANE · INTERNAL FILE<br>
-        ARCHIVE STATUS: ACTIVE · DISTRIBUTION: LEAGUE
-      </div>
-      <div class="footer-mark">
-        <img src="/GLB_white.png" alt="GLB Mark">
-      </div>
-    </div>
   </div>
-
-</div>
 </body>
 </html>

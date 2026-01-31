@@ -3,277 +3,168 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Birmingham Vulcans – Club Portal</title>
 
 <style>
 :root{
-  /* Birmingham Identity: Foundry Heat + Saturday Night Baseball */
-  --primary: #2F2F33;   /* Coal / iron */
-  --accent:  #C4582B;   /* Furnace orange */
-  --paper:   #ffffff;
-  --ink:     #0f1214;
+  --primary:#7a1f1f;
+  --accent:#d4a437;
+  --paper:#ffffff;
+  --ink:#111111;
 
-  --border-thick: 4px solid var(--ink);
-  --border-thin:  1px solid #ccc;
-
-  --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --mono: "Courier New", Courier, monospace;
+  --border-thick:4px solid var(--ink);
+  --sans:"Helvetica Neue", Helvetica, Arial, sans-serif;
+  --mono:"Courier New", Courier, monospace;
 }
 
 body{
-  background: #f4f4f4;
-  color: var(--ink);
-  font-family: var(--sans);
-  margin: 0;
-  padding: 20px;
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
+  background:#f4f4f4;
+  color:var(--ink);
+  font-family:var(--sans);
+  margin:0;
+  padding:20px;
 }
 
 .club-sheet{
-  max-width: 900px;
-  margin: 0 auto;
-  background: var(--paper);
-  padding: 40px;
-  border-top: var(--border-thick);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-  position: relative;
+  max-width:900px;
+  margin:0 auto;
+  background:var(--paper);
+  padding:40px;
+  border-top:var(--border-thick);
+  position:relative;
 }
 
 /* DOC ID */
 .doc-id{
-  position: absolute;
-  top: 15px;
-  right: 20px;
-  font-family: var(--mono);
-  font-size: 10px;
-  color: #999;
-  letter-spacing: 1px;
+  position:absolute;
+  top:15px;
+  right:20px;
+  font-family:var(--mono);
+  font-size:10px;
+  color:#999;
 }
 
 /* HEADER */
 header{
-  border-bottom: var(--border-thick);
-  padding-bottom: 20px;
-  margin-bottom: 20px;
+  border-bottom:var(--border-thick);
+  padding-bottom:20px;
+  margin-bottom:20px;
 }
 
 .club-lockup{
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  flex-wrap: wrap;
+  display:flex;
+  justify-content:space-between;
+  align-items:baseline;
+  flex-wrap:wrap;
 }
 
 h1{
-  margin: 0;
-  font-size: 32px;
-  font-weight: 900;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  margin:0;
+  font-size:32px;
+  font-weight:900;
+  text-transform:uppercase;
 }
 
 .division-tag{
-  background: var(--primary);
-  color: #fff;
-  font-size: 12px;
-  padding: 4px 8px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-weight: bold;
+  background:var(--primary);
+  color:white;
+  font-size:12px;
+  padding:4px 8px;
+  text-transform:uppercase;
 }
 
-/* QUICK FACTS */
 .fact-bar{
-  display: flex;
-  gap: 15px;
-  font-size: 11px;
-  text-transform: uppercase;
-  color: #666;
-  margin-top: 10px;
-  flex-wrap: wrap;
+  display:flex;
+  gap:15px;
+  font-size:11px;
+  text-transform:uppercase;
+  color:#666;
+  margin-top:10px;
+  flex-wrap:wrap;
 }
-.fact-bar strong { color: var(--ink); }
 
 /* CTAs */
 .cta-row{
-  display: flex;
-  gap: 10px;
-  margin: 25px 0 40px;
-  flex-wrap: wrap;
+  display:flex;
+  gap:10px;
+  margin:25px 0 40px;
+  flex-wrap:wrap;
 }
 
 .btn{
-  flex: 1;
-  min-width: 180px;
-  border: 2px solid var(--ink);
-  padding: 12px 0;
-  text-align: center;
-  font-size: 12px;
-  font-weight: bold;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: var(--ink);
-  letter-spacing: 1px;
-  transition: all 0.2s;
-  background: #fff;
-}
-
-.btn:hover{
-  background: var(--ink);
-  color: #fff;
-  border-color: var(--ink);
+  flex:1;
+  min-width:180px;
+  border:2px solid var(--ink);
+  padding:12px 0;
+  text-align:center;
+  font-size:12px;
+  font-weight:bold;
+  text-transform:uppercase;
+  text-decoration:none;
+  color:var(--ink);
 }
 
 .btn.primary{
-  background: var(--primary);
-  color: #fff;
-  border-color: var(--primary);
-}
-
-.btn.primary:hover{
-  background: var(--accent);
-  border-color: var(--accent);
-  color: #111;
+  background:var(--primary);
+  color:white;
+  border-color:var(--primary);
 }
 
 /* SECTIONS */
-section{ margin-bottom: 50px; }
+section{ margin-bottom:50px; }
 
 h2{
-  font-size: 14px;
-  text-transform: uppercase;
-  border-bottom: 2px solid var(--accent);
-  padding-bottom: 5px;
-  letter-spacing: 1px;
-  margin-bottom: 20px;
-}
-
-/* IDENTITY */
-.identity p{
-  font-size: 16px;
-  max-width: 700px;
-  margin-bottom: 20px;
-}
-
-.identity ul{
-  list-style: none;
-  padding: 0;
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-  gap: 20px;
-}
-
-.identity li{
-  font-size: 12px;
-  font-weight: bold;
-  text-transform: uppercase;
-  border-top: 1px solid #ccc;
-  padding-top: 10px;
+  font-size:14px;
+  text-transform:uppercase;
+  border-bottom:2px solid var(--accent);
+  padding-bottom:5px;
 }
 
 /* IMAGE SLOTS */
 .img-slot{
-  background: #e0e0e0;
-  border: 1px solid #ccc;
-  margin-bottom: 15px;
-  display: block;
+  background:#e0e0e0;
+  border:1px solid #ccc;
+  margin-bottom:15px;
 }
 
 .img-slot img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
 }
 
-/* Aspect Ratios */
-.ratio-16-9 { aspect-ratio: 16/9; }
-.ratio-3-4  { aspect-ratio: 3/4; max-width: 250px; }
-.ratio-1-1  { aspect-ratio: 1/1; max-width: 260px; }
+.ratio-16-9{ aspect-ratio:16/9; }
+.ratio-3-4{ aspect-ratio:3/4; max-width:250px; }
+.ratio-1-1{ aspect-ratio:1/1; max-width:260px; }
 
 /* SPLIT */
 .split{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
-  align-items: start;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:30px;
 }
 
-/* INFO CARD */
-.info-card h3{
-  margin: 0 0 8px 0;
-  font-size: 18px;
-  font-weight: 800;
+/* FOOTER */
+.doc-footer{
+  margin-top:60px;
+  padding-top:25px;
+  border-top:2px solid #eee;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  font-family:var(--mono);
+  font-size:10px;
+  color:#999;
 }
 
-.subhead{
-  display: block;
-  font-size: 11px;
-  color: #666;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 12px;
+.doc-footer img{
+  height:42px;
 }
 
-/* LINKS */
-a { color: var(--ink); text-decoration: none; }
-a:hover { color: var(--accent); }
-
-/* FIELD NOTES (closure block before footer) */
-.field-notes{
-  border-top: 1px solid #eee;
-  padding-top: 20px;
-  margin-top: 20px;
-}
-.field-notes ul{
-  margin: 0;
-  padding-left: 18px;
-  color: #444;
-  font-size: 13px;
-}
-.field-notes li{ margin: 8px 0; }
-
-/* FOOTER (true closure bar) */
-.site-footer{
-  margin-top: 50px;
-  padding-top: 18px;
-  border-top: 2px solid #eee;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 18px;
-}
-
-.footer-left{
-  font-family: var(--mono);
-  font-size: 10px;
-  color: #999;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.footer-logo{
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.footer-logo img{
-  height: 28px;
-  width: auto;
-  display: block;
-  opacity: 0.95;
-}
-
-/* MOBILE */
-@media(max-width: 600px){
-  .split{ grid-template-columns: 1fr; }
-  .identity ul{ grid-template-columns: 1fr; }
-  .doc-id{ display: none; }
-  .ratio-3-4, .ratio-1-1{ max-width: none; }
-  .site-footer{ flex-direction: column; align-items: flex-start; }
+@media(max-width:600px){
+  .split{ grid-template-columns:1fr; }
+  .doc-id{ display:none; }
 }
 </style>
 </head>
@@ -281,148 +172,106 @@ a:hover { color: var(--accent); }
 <body>
 <div class="club-sheet">
 
-  <div class="doc-id">BHM-CLUB-01</div>
+<div class="doc-id">BHM-CLUB-01</div>
 
-  <header>
-    <div class="club-lockup">
-      <h1>Birmingham Vulcans</h1>
-      <span class="division-tag">Americas Division</span>
-    </div>
+<header>
+  <div class="club-lockup">
+    <h1>Birmingham Vulcans</h1>
+    <span class="division-tag">Americas Division</span>
+  </div>
 
-    <div class="fact-bar">
-      <span>Est. —</span>
-      <span>•</span>
-      <span><strong>Slag Yard Park</strong></span>
-      <span>•</span>
-      <span>Mgr. —</span>
-    </div>
+  <div class="fact-bar">
+    <span>Est. —</span>
+    <span>•</span>
+    <span><strong>Slag Field</strong></span>
+    <span>•</span>
+    <span>Mgr. Walt Dempsey</span>
+  </div>
 
-    <div class="cta-row">
-      <a class="btn primary" href="team.html?team=birmingham-vulcans">Active Roster</a>
-      <a class="btn" href="day.html?date=2026-05-12">Daily Scores</a>
-      <a class="btn" href="game.html?date=2026-05-12&game=birmingham-vulcans@toledo-assembly">Latest Box Score</a>
-    </div>
-  </header>
+  <div class="cta-row">
+    <a class="btn primary" href="team.html?team=birmingham-vulcans">Active Roster</a>
+    <a class="btn" href="day.html">Daily Scores</a>
+    <a class="btn" href="game.html">Latest Box Score</a>
+  </div>
+</header>
 
-  <section class="identity">
-    <h2>The Club</h2>
-    <p>
-      The Vulcans play in a working city that treats game night like a standing appointment.
-      The park is loud without trying to be loud—drums, laughter, kids in the aisles, and the
-      steady sense that the locals have been doing this forever. The vibe is heat, hospitality,
-      and civic pride, not dystopia.
-    </p>
-    <ul>
-      <li>Read: Foundry Town / Saturday Night</li>
-      <li>Public Mood: Big Warm Noise</li>
-      <li>Ritual: “The Hammer Time”</li>
-    </ul>
-  </section>
+<section>
+  <h2>The Club</h2>
+  <p>
+    Birmingham is loud, physical, and unembarrassed about it. The Vulcans are a civic fixture —
+    less spectacle than presence. Games feel like events the city expects to endure together.
+  </p>
+</section>
 
-  <section>
-    <h2>Ballpark</h2>
-    <div class="img-slot ratio-16-9">
-      <img src="club-birmingham-vulcans-stadium.png" alt="Slag Yard Park at night">
-    </div>
-    <div class="info-card">
-      <h3>Slag Yard Park</h3>
-      <span class="subhead">Warm lights • brick and steel • music between innings</span>
+<section>
+  <h2>Ballpark</h2>
+  <div class="img-slot ratio-16-9">
+    <img src="club-birmingham-vulcans-stadium.png" alt="Slag Field at dusk">
+  </div>
+  <p>
+    <strong>Slag Field.</strong> Brick, steel, and heat. The park absorbs noise and throws it back.
+    Night games glow under heavy lights and heavier air.
+  </p>
+</section>
+
+<section>
+  <h2>Broadcast & Announcers</h2>
+  <div class="split">
+
+    <div>
+      <div class="img-slot ratio-3-4">
+        <img src="club-birmingham-vulcans-broadcast.png" alt="Radio broadcaster">
+      </div>
+      <h3>Radio Broadcast</h3>
       <p>
-        A classic night-game park with real Southern energy—concourse chatter, barbecue smoke,
-        and stadium lights that feel like they’re part of the neighborhood. The place runs hot.
-        Fans don’t complain; they dress for it.
+        The voice on the wire. Calm, steady, unhurried. Calls the game like it’s meant to last.
       </p>
     </div>
-  </section>
 
-  <section>
-    <h2>Broadcast & Announcer</h2>
-    <div class="split">
-
-      <!-- Play-by-play -->
-      <div>
-        <div class="img-slot ratio-3-4">
-          <img src="club-birmingham-vulcans-broadcast.png" alt="Broadcast booth play-by-play">
-        </div>
-        <div class="info-card">
-          <h3>Play-by-Play</h3>
-          <span class="subhead">Booth • crowd in the background</span>
-          <p>
-            A classic booth call—present, human, and quick with local color. You can hear
-            the ballpark in his pauses.
-          </p>
-        </div>
+    <div>
+      <div class="img-slot ratio-3-4">
+        <img src="club-birmingham-vulcans-announcer.png" alt="In-game announcer">
       </div>
-
-      <!-- In-stadium announcer -->
-      <div>
-        <div class="img-slot ratio-3-4">
-          <img src="club-birmingham-vulcans-announcer.png" alt="In-stadium announcer portrait">
-        </div>
-        <div class="info-card">
-          <h3>In-Stadium Announcer</h3>
-          <span class="subhead">PA • hype • “make some noise”</span>
-          <p>
-            The voice that keeps the whole place moving—lineups, promos, birthdays, and the
-            occasional call-and-response that gets half the park shouting back.
-          </p>
-        </div>
-      </div>
-
+      <h3>In-Game Announcer</h3>
+      <p>
+        Lives inside the park. Names echo. Counts linger. The crowd listens whether they want to or not.
+      </p>
     </div>
-  </section>
 
-  <section>
-    <h2>Mascot & Stands</h2>
-    <div class="split">
-
-      <div>
-        <div class="img-slot ratio-1-1">
-          <img src="club-birmingham-vulcans-mascot.png" alt="Vulcan mascot in the stands with fans">
-        </div>
-        <div class="info-card">
-          <h3>Vulcan</h3>
-          <span class="subhead">Human-worn • slightly scuffed • beloved</span>
-          <p>
-            A real-deal mascot suit with history: seams, wear, and that “he’s been doing this
-            for years” charisma. Always interacting—high-fives, leaning over rails, kids grabbing
-            at the gloves.
-          </p>
-        </div>
-      </div>
-
-      <div>
-        <div class="img-slot ratio-1-1">
-          <img src="club-birmingham-vulcans-fans.png" alt="Birmingham fans cheering at night">
-        </div>
-        <div class="info-card">
-          <h3>The Stands</h3>
-          <span class="subhead">Families • regulars • loud sections</span>
-          <p>
-            The crowd is the feature. It’s mixed, packed, and expressive—people up between
-            pitches, kids dancing, somebody starting a chant that actually spreads.
-          </p>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <section class="field-notes">
-    <h2>Field Notes</h2>
-    <ul>
-      <li>Best time to arrive: when the sun drops and the lights take over.</li>
-      <li>Local superstition: don’t sit down during a rally.</li>
-      <li>If the mascot points at you, you’re doing something—join in.</li>
-    </ul>
-  </section>
-
-  <div class="site-footer">
-    <div class="footer-left">GLB Club Portal · Birmingham · Internal Copy</div>
-    <div class="footer-logo">
-      <img src="GLB_white.png" alt="GLB logo">
-    </div>
   </div>
+</section>
+
+<section>
+  <h2>Mascot & Stands</h2>
+  <div class="split">
+
+    <div>
+      <div class="img-slot ratio-1-1">
+        <img src="club-birmingham-vulcans-mascot.png" alt="Vulcan mascot">
+      </div>
+      <h3>Vulcan</h3>
+      <p>
+        A working mascot. Loud, physical, familiar. Always where the crowd is thickest.
+      </p>
+    </div>
+
+    <div>
+      <div class="img-slot ratio-1-1">
+        <img src="club-birmingham-vulcans-fans.png" alt="Vulcans fans">
+      </div>
+      <h3>The Stands</h3>
+      <p>
+        Families, shift workers, regulars. The noise builds slowly — then stays.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<div class="doc-footer">
+  <span>GLB Club Dossier · Birmingham</span>
+  <img src="/GLB_white.png" alt="GLB Logo">
+</div>
 
 </div>
 </body>

@@ -7,13 +7,13 @@
 
 <style>
   :root{
-    /* Spokane Template — club-specific palette can be tweaked safely */
+    /* Spokane Template — club-specific palette */
     --bg: #f3f3f3;
     --paper: #ffffff;
     --ink: #111111;
 
     --accent: #0EA5A5;          /* teal (Aeros) */
-    --accent2: #F59E0B;         /* warm balloon-gold */
+    --accent2: #F59E0B;         /* balloon-gold */
     --muted: #6b7280;
 
     --border: 2px solid var(--ink);
@@ -144,7 +144,7 @@
     filter: contrast(1.05) saturate(1.05);
   }
 
-  /* CTA BUTTONS (Spokane standard) */
+  /* CTA BUTTONS */
   .cta-row{
     display:flex;
     gap: 10px;
@@ -179,7 +179,7 @@
     color:#000;
   }
 
-  /* CLIMATE STRIP */
+  /* STRIP */
   .strip{
     display:flex;
     justify-content:space-between;
@@ -246,7 +246,7 @@
     color:#111;
   }
 
-  /* Footer (Global, consistent across all clubs) */
+  /* Global footer */
   footer{
     background:#0b0b0b;
     color:#fff;
@@ -271,10 +271,9 @@
     gap: 10px;
   }
   .glb-mark{
-    height: 42px; /* tuned for “40% bigger” feel vs the tiny version */
+    height: 42px; /* ~40% bigger than the tiny version */
     width: auto;
     display:block;
-    image-rendering: auto;
   }
   .footer-tag{
     font-family: var(--mono);
@@ -322,7 +321,6 @@
     </div>
 
     <div class="hero-image">
-      <!-- Try stadium first; if you only have park, it will fall back automatically -->
       <img src="club-albuquerque-aeros-stadium.png"
            onerror="this.onerror=null; this.src='club-albuquerque-aeros-park.png';"
            alt="Propellant Park — sunset, balloons, packed stands">
@@ -357,7 +355,6 @@
   <section>
     <h2>Broadcast & Announcer</h2>
     <div class="two-col">
-      <!-- Play-by-play -->
       <div>
         <div class="img ratio-3-4">
           <img src="club-albuquerque-aeros-broadcast.png" alt="Aeros broadcast booth">
@@ -369,7 +366,6 @@
         </div>
       </div>
 
-      <!-- In-stadium announcer -->
       <div>
         <div class="img ratio-3-4">
           <img src="club-albuquerque-aeros-announcer.png" alt="In-stadium announcer">
@@ -377,7 +373,7 @@
         <div class="label">In-stadium Announcer</div>
         <div class="copy">
           <strong>PA:</strong> (name optional)<br>
-          A familiar local voice — the kind that turns routine moments into ceremonies without sounding like a commercial.
+          A familiar local voice — turns routine moments into ceremonies without sounding like an ad.
         </div>
       </div>
     </div>
@@ -392,9 +388,10 @@
         </div>
         <div class="label">Mascot</div>
         <div class="copy">
-          Big head. Visible seams. Slight scuffs. Lives in the aisles. High-fives until the hand smells like popcorn butter.
+          Big head. Visible seams. Slight scuffs. Lives in the aisles. High-fives until the glove smells like popcorn butter.
         </div>
       </div>
+
       <div>
         <div class="img ratio-1-1">
           <img src="club-albuquerque-aeros-fans.png" alt="Aeros fans in crowd">

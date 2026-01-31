@@ -7,14 +7,15 @@
 
 <style>
 :root{
-  --primary:#4A5863;
-  --accent:#C0442C;
-  --paper:#ffffff;
-  --ink:#0f1214;
+  /* Spokane Identity */
+  --primary: #4A5863;
+  --accent: #C0442C;
+  --paper: #ffffff;
+  --ink: #0f1214;
 
-  --border-thick:4px solid var(--ink);
-  --sans:"Helvetica Neue", Helvetica, Arial, sans-serif;
-  --mono:"Courier New", Courier, monospace;
+  --border-thick: 4px solid var(--ink);
+  --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --mono: "Courier New", Courier, monospace;
 }
 
 body{
@@ -31,12 +32,14 @@ body{
   background:var(--paper);
   padding:40px;
   border-top:var(--border-thick);
+  position:relative;
 }
 
 /* HEADER */
 header{
   border-bottom:var(--border-thick);
   padding-bottom:20px;
+  margin-bottom:20px;
 }
 
 .club-lockup{
@@ -63,7 +66,7 @@ h1{
 
 .fact-bar{
   display:flex;
-  gap:12px;
+  gap:15px;
   font-size:11px;
   text-transform:uppercase;
   color:#666;
@@ -71,7 +74,7 @@ h1{
   flex-wrap:wrap;
 }
 
-/* CTAs */
+/* CTA */
 .cta-row{
   display:flex;
   gap:10px;
@@ -114,6 +117,22 @@ h2{
   max-width:700px;
 }
 
+.identity ul{
+  list-style:none;
+  padding:0;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.identity li{
+  font-size:12px;
+  font-weight:bold;
+  text-transform:uppercase;
+  border-top:1px solid #ccc;
+  padding-top:10px;
+}
+
 /* IMAGE */
 .img-slot{
   border:1px solid #ccc;
@@ -123,7 +142,12 @@ h2{
 .img-slot img{
   width:100%;
   display:block;
+  object-fit:cover;
 }
+
+.ratio-16-9{aspect-ratio:16/9;}
+.ratio-3-4{aspect-ratio:3/4;max-width:250px;}
+.ratio-1-1{aspect-ratio:1/1;max-width:260px;}
 
 /* SPLIT */
 .split{
@@ -132,47 +156,59 @@ h2{
   gap:30px;
 }
 
-/* BROADCAST */
-.announcer-name{
-  font-weight:bold;
-  margin-bottom:6px;
-}
+/* LINKS */
+a{color:var(--ink);text-decoration:none;}
+a:hover{color:var(--accent);}
 
-/* FOOTER — HARD STOP */
-.doc-footer{
-  margin-top:70px;
-  padding:22px 18px;
-  border-top:2px solid #e5e5e5;
+/* === GLB GLOBAL FOOTER === */
+.glb-footer{
+  margin-top:80px;
   background:#0f1214;
   color:#fff;
-  display:flex;
-  justify-content:space-between;
+  border-top:3px solid #e5e5e5;
+}
+
+.glb-footer-inner{
+  max-width:900px;
+  margin:0 auto;
+  padding:24px 20px;
+  display:grid;
+  grid-template-columns:1fr auto 1fr;
   align-items:center;
 }
 
-.doc-footer-title{
+.glb-footer-left{
   font-family:var(--mono);
-  font-size:12px;
-  letter-spacing:2px;
+  font-size:11px;
   text-transform:uppercase;
+  letter-spacing:1px;
 }
 
-.doc-footer-meta{
+.glb-footer-center{
   font-family:var(--mono);
   font-size:10px;
-  letter-spacing:1px;
-  text-transform:uppercase;
-  opacity:0.7;
+  letter-spacing:2px;
+  opacity:.6;
 }
 
-.glb-logo{
-  height:36px;
+.glb-footer-right{
+  text-align:right;
+}
+
+.glb-footer-logo{
+  height:42px;
 }
 
 /* MOBILE */
 @media(max-width:600px){
   .split{grid-template-columns:1fr;}
-  .doc-footer{flex-direction:column;gap:16px;align-items:flex-start;}
+  .identity ul{grid-template-columns:1fr;}
+  .glb-footer-inner{
+    grid-template-columns:1fr;
+    gap:16px;
+    text-align:left;
+  }
+  .glb-footer-right{text-align:left;}
 }
 </style>
 </head>
@@ -204,70 +240,79 @@ h2{
 <section class="identity">
   <h2>The Club</h2>
   <p>
-    Spokane’s club record is maintained as a matter of archive rather than promotion.
-    What happens on the field is observed, logged, and remembered by those who were present.
+    Spokane’s club record reads like municipal paperwork. The Alloys are not defined by slogans or eras, but by repetition—night games, cool air, long innings, and a crowd that understands patience as participation.
   </p>
+  <ul>
+    <li>Founded: Record Pending</li>
+    <li>Home: The Reduction Yards</li>
+    <li>Tradition: The Shift Change</li>
+  </ul>
 </section>
 
 <section>
   <h2>Ballpark</h2>
-  <div class="img-slot">
-    <img src="club-spokane-alloys-park.png" alt="The Reduction Yards">
+  <div class="img-slot ratio-16-9">
+    <img src="club-spokane-alloys-park.png" alt="The Reduction Yards during play">
   </div>
+  <p>
+    The Reduction Yards sit near the river, exposed to evening chill and open sky. The field is plain, functional, and active—bases worn, grass trimmed tight, lights humming into the night.
+  </p>
 </section>
 
 <section>
-  <h2>Broadcast & Announcers</h2>
+  <h2>Broadcast & Announcer</h2>
   <div class="split">
-    <div class="img-slot">
-      <img src="club-spokane-alloys-announcer.png" alt="Gus Vogel">
+    <div class="img-slot ratio-3-4">
+      <img src="club-spokane-alloys-broadcast.png" alt="Broadcast booth">
     </div>
     <div>
-      <div class="announcer-name">Gus Vogel — Booth</div>
+      <h3>Gus Vogel</h3>
       <p>
-        Vogel’s broadcast is unadorned and procedural, delivered from an open booth above home plate.
+        <strong>Radio & Television.</strong> Vogel delivers the game plainly. No mythology, no flourish—just counts, calls, and silence when it matters.
       </p>
-      <br>
-      <div class="announcer-name">Ray Caldwell — Stadium PA</div>
       <p>
-        Caldwell handles in-stadium announcements with minimal flourish.
-        Names are read once. Outcomes are final.
+        <strong>In-Stadium Announcer:</strong> Mark Halvorsen. Known locally for short sentences and a voice that never competes with the crowd.
       </p>
     </div>
   </div>
 </section>
 
 <section>
-  <h2>In the Stands</h2>
+  <h2>Mascot & Stands</h2>
   <div class="split">
-    <div class="img-slot">
-      <img src="club-spokane-alloys-mascot.png" alt="Ingot Mascot">
-      <p><strong>Ingot.</strong> Present. Recognized. Not theatrical.</p>
-    </div>
-    <div class="img-slot">
-      <img src="club-spokane-alloys-fans.png" alt="Alloys Fans">
+    <div>
+      <div class="img-slot ratio-1-1">
+        <img src="club-spokane-alloys-mascot.png" alt="Ingot mascot">
+      </div>
+      <h3>Ingot</h3>
       <p>
-        Attendance skews local. Reactions are contained.
-        Applause is brief and deliberate.
+        A long-running costume worn by dozens over the years. Ingot does not perform routines. He walks the aisles, acknowledges kids, and leans on railings.
+      </p>
+    </div>
+    <div>
+      <div class="img-slot ratio-1-1">
+        <img src="club-spokane-alloys-fans.png" alt="Spokane fans">
+      </div>
+      <h3>The Freeze Line</h3>
+      <p>
+        Fans stand through entire innings. Noise is brief and purposeful. Applause comes late.
       </p>
     </div>
   </div>
 </section>
 
-<section>
-  <h2>On the Field</h2>
-  <div class="img-slot">
-    <img src="club-spokane-alloys-game.png" alt="In-game action">
+<footer class="glb-footer">
+  <div class="glb-footer-inner">
+    <div class="glb-footer-left">
+      <span>Global League Baseball</span>
+      <span>Official Club Record</span>
+    </div>
+    <div class="glb-footer-center">© GLB</div>
+    <div class="glb-footer-right">
+      <img src="GLB_white.png?v=6" alt="GLB Logo" class="glb-footer-logo">
+    </div>
   </div>
-</section>
-
-<div class="doc-footer">
-  <div>
-    <div class="doc-footer-title">End of File</div>
-    <div class="doc-footer-meta">GLB Club Dossier · Spokane Alloys</div>
-  </div>
-  <img src="GLB_white.png?v=4" alt="GLB" class="glb-logo">
-</div>
+</footer>
 
 </div>
 </body>

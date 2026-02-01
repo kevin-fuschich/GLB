@@ -3,8 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mayaguez Sultans — GLB Club Portal</title>
-  <meta name="description" content="Mayaguez Sultans club page for GLB." />
+  <title>Mayaguez Sultans — GLB Club Page</title>
 
   <style>
     :root{
@@ -12,10 +11,10 @@
       --ink:#111;
       --muted:#5a5a5a;
       --line:#e9e9e9;
-      --card:#ffffff;
       --shadow:0 10px 28px rgba(0,0,0,.06);
       --radius:18px;
       --max:1180px;
+      --black:#000;
     }
 
     *{ box-sizing:border-box; }
@@ -35,7 +34,13 @@
     }
 
     /* Header */
-    .top-id{
+    .club-header{
+      border-bottom:1px solid var(--line);
+      padding-bottom:18px;
+      margin-bottom:18px;
+    }
+
+    .kicker{
       font-size:12px;
       letter-spacing:.18em;
       text-transform:uppercase;
@@ -43,35 +48,25 @@
       margin-bottom:10px;
     }
 
-    .club-header{
-      border-bottom:1px solid var(--line);
-      padding-bottom:18px;
-      margin-bottom:20px;
-    }
-
-    .club-header h1{
+    h1{
       margin:0 0 6px;
       font-size:44px;
       line-height:1.08;
       letter-spacing:-.02em;
     }
 
-    .club-sub{
-      margin:0 0 10px;
+    .sub{
+      margin:0 0 12px;
       color:var(--muted);
       font-size:15px;
     }
 
-    .club-meta{
-      margin:0 0 16px;
-      color:var(--muted);
-      font-size:14px;
-    }
-
-    .nav{
+    /* EXACTLY 3 BUTTONS */
+    .top-actions{
       display:flex;
       flex-wrap:wrap;
       gap:10px;
+      margin-top:6px;
     }
     .btn{
       display:inline-block;
@@ -82,52 +77,39 @@
       text-decoration:none;
       font-size:14px;
       transition:transform .08s ease, box-shadow .12s ease;
+      white-space:nowrap;
     }
-    .btn:hover{ box-shadow:0 10px 20px rgba(0,0,0,.06); transform:translateY(-1px); }
-
-    /* Two-column layout */
-    .layout{
-      display:grid;
-      grid-template-columns: 1fr;
-      gap:16px;
-      margin-top:18px;
-    }
-    @media (min-width: 980px){
-      .layout{
-        grid-template-columns: 1.55fr .95fr; /* main + sidebar */
-        gap:18px;
-        align-items:start;
-      }
+    .btn:hover{
+      box-shadow:0 10px 20px rgba(0,0,0,.06);
+      transform:translateY(-1px);
     }
 
-    /* Cards / blocks */
+    /* Shared blocks */
     .card{
-      background:var(--card);
       border:1px solid var(--line);
       border-radius:var(--radius);
+      background:#fff;
       box-shadow:var(--shadow);
       overflow:hidden;
     }
-    .card.pad{ padding:16px 16px 18px; }
+    .pad{ padding:16px 16px 18px; }
 
-    .card h2{
+    h2{
       margin:0 0 10px;
       font-size:22px;
       letter-spacing:-.01em;
     }
-    .card h3{
+    h3{
       margin:14px 0 6px;
       font-size:18px;
       letter-spacing:-.01em;
     }
     .muted{ color:var(--muted); }
 
-    .bullets{
-      margin:10px 0 0;
-      padding-left:18px;
-      color:var(--muted);
+    /* Ballpark = 1-column section */
+    .ballpark{
+      margin-top:18px;
     }
-
     .media img{
       display:block;
       width:100%;
@@ -141,12 +123,27 @@
       background:#fff;
     }
 
+    /* Two-column section (Spokane-style main + sidebar) */
+    .two-col{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:16px;
+      margin-top:18px;
+    }
+    @media (min-width: 980px){
+      .two-col{
+        grid-template-columns: 1.55fr .95fr; /* main + sidebar */
+        gap:18px;
+        align-items:start;
+      }
+    }
+
     .stack{
       display:grid;
       gap:14px;
     }
 
-    /* Sidebar roster / quick facts */
+    /* Sidebar roster + quick info */
     .kv{
       display:grid;
       gap:10px;
@@ -175,14 +172,21 @@
       background:#fff;
     }
 
-    /* Footer (closure + HARD clamp logo size) */
+    /* Footer closure: black bar + GLB logo */
     .glb-footer{
       margin-top:34px;
-      padding:22px 0 10px;
-      border-top:1px solid var(--line);
+      padding:0 0 10px;
       text-align:center;
     }
-    /* clamp ANY image inside footer so it can’t explode */
+    .glb-footer .rule{
+      height:10px;
+      background:var(--black);
+      border-radius:999px;
+      margin:28px auto 16px;
+      max-width:320px;
+    }
+
+    /* HARD clamp logo size (cannot blow up) */
     .glb-footer img{
       width:40px !important;
       max-width:40px !important;
@@ -190,6 +194,7 @@
       display:block !important;
       margin:0 auto 10px !important;
     }
+
     .glb-footer .title{
       font-size:12px;
       letter-spacing:.14em;
@@ -211,75 +216,79 @@
 
 <body>
   <main class="wrap">
-    <div class="top-id">MAY-CLUB-01</div>
-
+    <!-- HEADER -->
     <header class="club-header">
+      <div class="kicker">GLB CLUB DOSSIER</div>
       <h1>Mayaguez Sultans</h1>
-      <p class="club-sub">Pacific Division</p>
-      <p class="club-meta">Est. — • The Salt Court • Mgr. Rafa “Caña” Delgado</p>
+      <p class="sub">Pacific Division • The Salt Court • Manager: Rafa “Caña” Delgado</p>
 
-      <nav class="nav" aria-label="Club navigation">
-        <a class="btn" href="roster-mayaguez.html">Active Roster</a>
+      <!-- EXACTLY THREE BUTTONS -->
+      <nav class="top-actions" aria-label="Club actions">
+        <a class="btn" href="clubs.html">All Clubs</a>
         <a class="btn" href="scores.html">Daily Scores</a>
-        <a class="btn" href="boxscore-latest.html">Latest Box Score</a>
+        <a class="btn" href="club-index.html">Club Index</a>
       </nav>
     </header>
 
-    <section class="layout">
-      <!-- LEFT COLUMN (main narrative) -->
+    <!-- BALLPARK (ONE COLUMN APPROACH) -->
+    <section class="ballpark">
+      <div class="card media">
+        <img src="club-mayaguez-sultans-stadium.png" alt="The Salt Court — Mayaguez Sultans ballpark" />
+        <div class="cap">Ballpark — The Salt Court</div>
+      </div>
+
+      <div class="card pad" style="margin-top:14px;">
+        <h2>Ballpark Notes</h2>
+        <p class="muted" style="margin:0;">
+          Warm concrete. Painted rails. A breeze that carries sea-spray into the seats.
+          At sunset the lights come on like a cue—drums pick up, voices rise, and late innings feel inevitable.
+        </p>
+      </div>
+    </section>
+
+    <!-- TWO-COLUMN APPROACH -->
+    <section class="two-col">
+      <!-- LEFT: main content -->
       <div class="stack">
         <article class="card pad">
           <h2>The Club</h2>
-          <p>
+          <p style="margin:0;">
             The Sultans play baseball like a coastal ritual—slow heat, sudden noise, and a quiet confidence that feels inherited.
             They win with timing and contact, turning late innings into a street parade. In Mayagüez, the game doesn’t end at the
             final out; it dissolves into the night.
           </p>
-          <ul class="bullets">
-            <li><strong>Style:</strong> Contact / Timing</li>
-            <li><strong>Vibe:</strong> Coastal Ritual</li>
-            <li><strong>Tradition:</strong> “The Ninth-Inning Lanterns”</li>
-          </ul>
-        </article>
 
-        <section class="card media">
-          <img src="club-mayaguez-sultans-stadium.png" alt="The Salt Court at golden hour" />
-          <div class="cap">Ballpark — The Salt Court at golden hour</div>
-        </section>
-
-        <article class="card pad">
-          <h2>Ballpark Notes</h2>
-          <p>
-            The Salt Court is warm concrete, painted rails, and a breeze that carries sea-spray into the stands.
-            At sunset, the lights come on like a cue—fans rise, drums pick up, and the late innings feel inevitable.
+          <h3>Identity</h3>
+          <p class="muted" style="margin:0;">
+            Contact / Timing. Patient at-bats. Pressure in the ninth.
+            The team’s best innings happen after everyone else thinks the night has settled.
           </p>
         </article>
 
         <section class="card media">
-          <img src="club-mayaguez-sultans-broadcast.png" alt="Broadcast booth with open-window coastal light" />
-          <div class="cap">Broadcast — booth with open-window coastal light</div>
+          <img src="club-mayaguez-sultans-broadcast.png" alt="Mayaguez broadcast booth" />
+          <div class="cap">Broadcast — Marcos &amp; Lila</div>
         </section>
 
         <article class="card pad">
           <h2>Broadcast</h2>
-          <h3>Marcos &amp; Lila</h3>
-          <p>
+          <p class="muted" style="margin:0;">
             Voices of the Sultans. A booth that feels like a porch: open windows, warm light, a little chaos on the desk.
             They call the game with local rhythm—part baseball, part neighborhood update, always in motion.
           </p>
         </article>
       </div>
 
-      <!-- RIGHT COLUMN (assets + roster) -->
+      <!-- RIGHT: sidebar content -->
       <aside class="stack">
         <section class="card media">
-          <img src="club-mayaguez-sultans-mascot.png" alt="Sultans mascot interacting with fans" />
-          <div class="cap">Mascot — El Sultán at the rail</div>
+          <img src="club-mayaguez-sultans-fans.png" alt="Mayaguez fans in the stands" />
+          <div class="cap">In the stands — The Lantern Section</div>
         </section>
 
         <section class="card media">
-          <img src="club-mayaguez-sultans-fans.png" alt="Mayaguez fans in warm coastal light" />
-          <div class="cap">In the stands — The Lantern Section</div>
+          <img src="club-mayaguez-sultans-mascot.png" alt="Mayaguez mascot" />
+          <div class="cap">Mascot — El Sultán</div>
         </section>
 
         <section class="card pad">
@@ -287,8 +296,8 @@
           <div class="kv" role="list">
             <div class="row" role="listitem"><div class="k">Home</div><div class="v">Mayagüez</div></div>
             <div class="row" role="listitem"><div class="k">Ballpark</div><div class="v">The Salt Court</div></div>
-            <div class="row" role="listitem"><div class="k">Identity</div><div class="v">Coastal ritual</div></div>
-            <div class="row" role="listitem"><div class="k">Game feel</div><div class="v">Late-inning turn</div></div>
+            <div class="row" role="listitem"><div class="k">Club feel</div><div class="v">Coastal ritual</div></div>
+            <div class="row" role="listitem"><div class="k">Signature</div><div class="v">Late-inning turn</div></div>
           </div>
         </section>
 
@@ -303,7 +312,9 @@
       </aside>
     </section>
 
-    <footer class="glb-footer">
+    <!-- FOOTER CLOSURE -->
+    <footer class="glb-footer" aria-label="GLB footer">
+      <div class="rule" aria-hidden="true"></div>
       <img src="GLB_white.png" alt="GLB logo" />
       <div class="title">GLB CLUB DOSSIER · MAYAGUEZ</div>
       <div class="links">

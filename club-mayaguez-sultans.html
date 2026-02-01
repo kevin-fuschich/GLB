@@ -316,6 +316,51 @@ a:hover { color: var(--accent); }
 <footer>
   <div>GLB CLUB DOSSIER · MAYAGUEZ</div>
 <img class="glb-logo" src="GLB_white.png" alt="GLB">
+<style>
+  /* --- GLB footer cleanup (logo too big fix) --- */
+  .glb-footer{
+    margin-top: 56px;
+    padding: 22px 0;
+    border-top: 1px solid #e8e8e8;
+    text-align: center;
+  }
+
+  .glb-footer .glb-logo{
+    width: 64px;          /* <-- main control */
+    max-width: 64px;
+    height: auto;
+    display: block;
+    margin: 0 auto 10px;
+  }
+
+  .glb-footer .glb-footer-title{
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    opacity: 0.75;
+  }
+
+  .glb-footer .glb-footer-links{
+    margin-top: 10px;
+    font-size: 13px;
+  }
+
+  .glb-footer .glb-footer-links a{
+    text-decoration: none;
+  }
+
+  .glb-footer .glb-footer-links a:hover{
+    text-decoration: underline;
+  }
+
+  @media (min-width: 768px){
+    .glb-footer .glb-logo{
+      width: 72px;        /* slightly bigger on desktop */
+      max-width: 72px;
+    }
+  }
+</style>
+
 </footer>
 </div>
 </body>

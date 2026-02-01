@@ -10,31 +10,31 @@
     :root{
       --bg:#ffffff;
       --ink:#111;
-      --muted:#555;
-      --line:#e8e8e8;
+      --muted:#5a5a5a;
+      --line:#e9e9e9;
       --card:#ffffff;
-      --shadow:0 10px 30px rgba(0,0,0,.06);
+      --shadow:0 10px 28px rgba(0,0,0,.06);
       --radius:18px;
-      --max:980px;
+      --max:1180px;
     }
 
     *{ box-sizing:border-box; }
     body{
       margin:0;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
       background:var(--bg);
       color:var(--ink);
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
       line-height:1.55;
     }
 
     a{ color:inherit; }
-
     .wrap{
       max-width:var(--max);
       margin:0 auto;
-      padding:38px 18px 28px;
+      padding:34px 18px 26px;
     }
 
+    /* Header */
     .top-id{
       font-size:12px;
       letter-spacing:.18em;
@@ -43,38 +43,36 @@
       margin-bottom:10px;
     }
 
-    header{
-      padding-bottom:18px;
+    .club-header{
       border-bottom:1px solid var(--line);
-      margin-bottom:22px;
+      padding-bottom:18px;
+      margin-bottom:20px;
     }
 
-    h1{
-      margin:0 0 6px 0;
-      font-size:42px;
-      line-height:1.1;
+    .club-header h1{
+      margin:0 0 6px;
+      font-size:44px;
+      line-height:1.08;
       letter-spacing:-.02em;
     }
 
-    .sub{
+    .club-sub{
+      margin:0 0 10px;
       color:var(--muted);
       font-size:15px;
-      margin:0 0 10px 0;
     }
 
-    .meta{
+    .club-meta{
+      margin:0 0 16px;
       color:var(--muted);
       font-size:14px;
-      margin:0 0 18px 0;
     }
 
     .nav{
       display:flex;
       flex-wrap:wrap;
       gap:10px;
-      margin-top:8px;
     }
-
     .btn{
       display:inline-block;
       padding:10px 14px;
@@ -83,96 +81,121 @@
       background:#fff;
       text-decoration:none;
       font-size:14px;
+      transition:transform .08s ease, box-shadow .12s ease;
     }
-    .btn:hover{ box-shadow:0 8px 18px rgba(0,0,0,.06); }
+    .btn:hover{ box-shadow:0 10px 20px rgba(0,0,0,.06); transform:translateY(-1px); }
 
-    h2{
+    /* Two-column layout */
+    .layout{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap:16px;
+      margin-top:18px;
+    }
+    @media (min-width: 980px){
+      .layout{
+        grid-template-columns: 1.55fr .95fr; /* main + sidebar */
+        gap:18px;
+        align-items:start;
+      }
+    }
+
+    /* Cards / blocks */
+    .card{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      overflow:hidden;
+    }
+    .card.pad{ padding:16px 16px 18px; }
+
+    .card h2{
+      margin:0 0 10px;
       font-size:22px;
-      margin:26px 0 10px 0;
       letter-spacing:-.01em;
     }
-
-    h3{
+    .card h3{
+      margin:14px 0 6px;
       font-size:18px;
-      margin:14px 0 6px 0;
       letter-spacing:-.01em;
     }
+    .muted{ color:var(--muted); }
 
     .bullets{
-      margin:10px 0 0 0;
+      margin:10px 0 0;
       padding-left:18px;
       color:var(--muted);
     }
 
-    .card{
-      margin:14px 0 0 0;
-      background:var(--card);
-      border:1px solid var(--line);
-      border-radius:var(--radius);
-      overflow:hidden;
-      box-shadow:var(--shadow);
-    }
-
-    .card img{
+    .media img{
       display:block;
       width:100%;
       height:auto;
     }
-
-    .card .cap{
-      padding:14px 16px 16px;
+    .cap{
+      padding:12px 14px 14px;
+      font-size:13px;
       color:var(--muted);
-      font-size:14px;
+      border-top:1px solid var(--line);
+      background:#fff;
     }
 
-    .grid{
+    .stack{
       display:grid;
-      grid-template-columns: 1fr;
       gap:14px;
     }
 
-    @media (min-width: 860px){
-      .grid.two{
-        grid-template-columns: 1fr 1fr;
-      }
+    /* Sidebar roster / quick facts */
+    .kv{
+      display:grid;
+      gap:10px;
+      margin-top:10px;
     }
-
-    .roster{
-      padding:14px 16px 16px;
-      border:1px solid var(--line);
-      border-radius:var(--radius);
-      background:#fff;
-      box-shadow:var(--shadow);
-      margin-top:12px;
-    }
-    .roster .row{
-      padding:8px 0;
+    .kv .row{
+      display:flex;
+      justify-content:space-between;
+      gap:12px;
+      padding:10px 0;
       border-bottom:1px solid var(--line);
     }
-    .roster .row:last-child{ border-bottom:none; }
+    .kv .row:last-child{ border-bottom:none; }
+    .kv .k{ color:var(--muted); }
+    .kv .v{ text-align:right; }
 
-    /* --- Footer (logo size fix) --- */
+    .roster{
+      display:grid;
+      gap:10px;
+      margin-top:10px;
+    }
+    .roster .player{
+      padding:10px 12px;
+      border:1px solid var(--line);
+      border-radius:14px;
+      background:#fff;
+    }
+
+    /* Footer (closure + HARD clamp logo size) */
     .glb-footer{
-      margin-top:44px;
+      margin-top:34px;
       padding:22px 0 10px;
       border-top:1px solid var(--line);
       text-align:center;
     }
-
-    .glb-footer .glb-logo{
-      width:64px;        /* <-- adjust this if you want */
-      height:auto;
-      display:block;
-      margin:0 auto 10px;
+    /* clamp ANY image inside footer so it can’t explode */
+    .glb-footer img{
+      width:40px !important;
+      max-width:40px !important;
+      height:auto !important;
+      display:block !important;
+      margin:0 auto 10px !important;
     }
-
     .glb-footer .title{
       font-size:12px;
       letter-spacing:.14em;
       text-transform:uppercase;
       color:var(--muted);
     }
-
     .glb-footer .links{
       margin-top:10px;
       font-size:13px;
@@ -182,9 +205,7 @@
       text-decoration:none;
       border-bottom:1px solid transparent;
     }
-    .glb-footer .links a:hover{
-      border-bottom-color:var(--muted);
-    }
+    .glb-footer .links a:hover{ border-bottom-color:var(--muted); }
   </style>
 </head>
 
@@ -192,104 +213,104 @@
   <main class="wrap">
     <div class="top-id">MAY-CLUB-01</div>
 
-    <header>
+    <header class="club-header">
       <h1>Mayaguez Sultans</h1>
-      <p class="sub">Pacific Division</p>
-      <p class="meta">Est. — • The Salt Court • Mgr. Rafa “Caña” Delgado</p>
+      <p class="club-sub">Pacific Division</p>
+      <p class="club-meta">Est. — • The Salt Court • Mgr. Rafa “Caña” Delgado</p>
 
       <nav class="nav" aria-label="Club navigation">
-        <!-- Keep these hrefs aligned with your real site structure -->
         <a class="btn" href="roster-mayaguez.html">Active Roster</a>
         <a class="btn" href="scores.html">Daily Scores</a>
         <a class="btn" href="boxscore-latest.html">Latest Box Score</a>
       </nav>
     </header>
 
-    <section>
-      <h2>The Club</h2>
-      <p>
-        The Sultans play baseball like a coastal ritual—slow heat, sudden noise, and a quiet confidence that feels inherited.
-        They win with timing and contact, turning late innings into a street parade. In Mayagüez, the game doesn’t end at the final out;
-        it dissolves into the night.
-      </p>
-      <ul class="bullets">
-        <li><strong>Style:</strong> Contact / Timing</li>
-        <li><strong>Vibe:</strong> Coastal Ritual</li>
-        <li><strong>Tradition:</strong> “The Ninth-Inning Lanterns”</li>
-      </ul>
-    </section>
+    <section class="layout">
+      <!-- LEFT COLUMN (main narrative) -->
+      <div class="stack">
+        <article class="card pad">
+          <h2>The Club</h2>
+          <p>
+            The Sultans play baseball like a coastal ritual—slow heat, sudden noise, and a quiet confidence that feels inherited.
+            They win with timing and contact, turning late innings into a street parade. In Mayagüez, the game doesn’t end at the
+            final out; it dissolves into the night.
+          </p>
+          <ul class="bullets">
+            <li><strong>Style:</strong> Contact / Timing</li>
+            <li><strong>Vibe:</strong> Coastal Ritual</li>
+            <li><strong>Tradition:</strong> “The Ninth-Inning Lanterns”</li>
+          </ul>
+        </article>
 
-    <section>
-      <h2>Ballpark</h2>
-      <div class="card">
-        <!-- If your filename differs, update the src -->
-        <img src="club-mayaguez-sultans-stadium.png" alt="The Salt Court at golden hour" />
-        <div class="cap">The Salt Court at golden hour</div>
+        <section class="card media">
+          <img src="club-mayaguez-sultans-stadium.png" alt="The Salt Court at golden hour" />
+          <div class="cap">Ballpark — The Salt Court at golden hour</div>
+        </section>
+
+        <article class="card pad">
+          <h2>Ballpark Notes</h2>
+          <p>
+            The Salt Court is warm concrete, painted rails, and a breeze that carries sea-spray into the stands.
+            At sunset, the lights come on like a cue—fans rise, drums pick up, and the late innings feel inevitable.
+          </p>
+        </article>
+
+        <section class="card media">
+          <img src="club-mayaguez-sultans-broadcast.png" alt="Broadcast booth with open-window coastal light" />
+          <div class="cap">Broadcast — booth with open-window coastal light</div>
+        </section>
+
+        <article class="card pad">
+          <h2>Broadcast</h2>
+          <h3>Marcos &amp; Lila</h3>
+          <p>
+            Voices of the Sultans. A booth that feels like a porch: open windows, warm light, a little chaos on the desk.
+            They call the game with local rhythm—part baseball, part neighborhood update, always in motion.
+          </p>
+        </article>
       </div>
-      <p>
-        The Salt Court. A waterfront park with warm concrete, painted rails, and a breeze that carries sea-spray into the stands.
-        At sunset, the lights come on like a cue—fans rise, drums pick up, and the late innings feel inevitable.
-      </p>
-    </section>
 
-    <section>
-      <h2>Broadcast</h2>
-      <div class="card">
-        <img src="club-mayaguez-sultans-broadcast.png" alt="Broadcast booth with open-window coastal light" />
-        <div class="cap">Broadcast booth with open-window coastal light</div>
-      </div>
-
-      <h3>Marcos &amp; Lila</h3>
-      <p>
-        Voices of the Sultans. A booth that feels like a porch: open windows, warm light, a little chaos on the desk.
-        They call the game with local rhythm—part baseball, part neighborhood update, always in motion.
-      </p>
-    </section>
-
-    <section>
-      <h2>Mascot &amp; Stands</h2>
-
-      <div class="grid two">
-        <div class="card">
+      <!-- RIGHT COLUMN (assets + roster) -->
+      <aside class="stack">
+        <section class="card media">
           <img src="club-mayaguez-sultans-mascot.png" alt="Sultans mascot interacting with fans" />
-          <div class="cap">Sultans mascot interacting with fans</div>
-        </div>
+          <div class="cap">Mascot — El Sultán at the rail</div>
+        </section>
 
-        <div class="card">
+        <section class="card media">
           <img src="club-mayaguez-sultans-fans.png" alt="Mayaguez fans in warm coastal light" />
-          <div class="cap">Mayaguez fans in warm coastal light</div>
-        </div>
-      </div>
+          <div class="cap">In the stands — The Lantern Section</div>
+        </section>
 
-      <h3>El Sultán</h3>
-      <p>
-        A beloved, slightly scuffed costume with real-history energy—more community icon than character.
-        He lives at the rail: high-fives, photos, and the occasional theatrical bow when the crowd gets loud.
-      </p>
+        <section class="card pad">
+          <h2>Quick File</h2>
+          <div class="kv" role="list">
+            <div class="row" role="listitem"><div class="k">Home</div><div class="v">Mayagüez</div></div>
+            <div class="row" role="listitem"><div class="k">Ballpark</div><div class="v">The Salt Court</div></div>
+            <div class="row" role="listitem"><div class="k">Identity</div><div class="v">Coastal ritual</div></div>
+            <div class="row" role="listitem"><div class="k">Game feel</div><div class="v">Late-inning turn</div></div>
+          </div>
+        </section>
 
-      <h3>The Lantern Section</h3>
-      <p>
-        Families, drums, flags, and a shared superstition: the night turns when the Sultans decide it turns.
-        The section has its own rhythm—constant, communal, and just a little magical.
-      </p>
+        <section class="card pad">
+          <h2>Core Roster</h2>
+          <div class="roster">
+            <div class="player">SS Adrián “Chispa” Rivera</div>
+            <div class="player">C Javi “Bronce” Morales</div>
+            <div class="player">P René “Salitre” Soto</div>
+          </div>
+        </section>
+      </aside>
     </section>
 
-    <section>
-      <h2>Core Roster</h2>
-      <div class="roster">
-        <div class="row">SS Adrián “Chispa” Rivera</div>
-        <div class="row">C Javi “Bronce” Morales</div>
-        <div class="row">P René “Salitre” Soto</div>
+    <footer class="glb-footer">
+      <img src="GLB_white.png" alt="GLB logo" />
+      <div class="title">GLB CLUB DOSSIER · MAYAGUEZ</div>
+      <div class="links">
+        <a href="index.html">League Home</a> &nbsp;·&nbsp;
+        <a href="clubs.html">All Clubs</a>
       </div>
-    </section>
-<footer class="glb-footer">
-  <img src="GLB_white.png" class="glb-logo" alt="GLB logo">
-  <div class="title">GLB CLUB DOSSIER · MAYAGUEZ</div>
-  <div class="links">
-    <a href="index.html">League Home</a> ·
-    <a href="clubs.html">All Clubs</a>
-  </div>
-</footer>
+    </footer>
   </main>
 </body>
 </html>

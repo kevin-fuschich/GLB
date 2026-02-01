@@ -1,492 +1,414 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Fresno Yield — Club Portal</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fresno Yield – Club Portal</title>
 
 <style>
-  :root{
-    /* SPOKANE TEMPLATE BASE + Fresno palette */
-    --bg: #f6f6f6;
-    --paper: #ffffff;
-    --ink: #111111;
+:root{
+  /* Spokane template base + Fresno identity */
+  --primary: #2E7D32;   /* Fresno Green */
+  --accent: #FFD700;    /* Fresno Gold */
+  --paper: #ffffff;
+  --ink: #111111;
 
-    --primary: #2E7D32;  /* Fresno green */
-    --accent: #FFD700;   /* Fresno gold */
-    --muted: #666666;
+  --border-thick: 4px solid var(--ink);
+  --border-thin: 1px solid #ddd;
 
-    --border: 3px solid var(--ink);
-    --borderThin: 1px solid #d9d9d9;
+  --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --mono: "Courier New", Courier, monospace;
+}
 
-    --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    --mono: "Courier New", Courier, monospace;
-    --heavy: "Arial Black", Impact, sans-serif;
-  }
+body{
+  background: #fcfcfc;
+  color: var(--ink);
+  font-family: var(--sans);
+  margin: 0;
+  padding: 20px;
+}
 
-  *{ box-sizing: border-box; }
-  body{
-    margin:0;
-    padding:32px;
-    background: var(--bg);
-    color: var(--ink);
-    font-family: var(--sans);
-    line-height: 1.35;
-  }
+.club-sheet{
+  max-width: 900px;
+  margin: 0 auto;
+  background: var(--paper);
+  padding: 40px;
+  border-top: var(--border-thick);
+  position: relative;
+}
 
-  .wrap{
-    max-width: 1200px;
-    margin: 0 auto;
-    background: var(--paper);
-    border: var(--border);
-    box-shadow: 10px 10px 0 rgba(0,0,0,.08);
-    overflow:hidden;
-  }
+/* DOC ID */
+.doc-id{
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-family: var(--mono);
+  font-size: 10px;
+  color: #999;
+}
 
-  /* HEADER (Spokane) */
-  header{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    padding:18px 22px;
-    border-bottom: var(--border);
-    background:#fff;
-  }
-  .brand{
-    font-family: var(--mono);
-    font-weight: 900;
-    letter-spacing: .5px;
-    font-size: 14px;
-    text-transform: uppercase;
-  }
-  nav a{
-    font-family: var(--mono);
-    font-weight: 900;
-    font-size: 12px;
-    text-transform: uppercase;
-    color: var(--ink);
-    text-decoration: underline;
-    margin-left: 18px;
-    padding: 4px 6px;
-  }
-  nav a:hover{
-    background: var(--primary);
-    color:#fff;
-    text-decoration:none;
-  }
+/* HEADER */
+header{
+  border-bottom: var(--border-thick);
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
 
-  /* CTA ROW (Spokane) */
-  .cta-row{
-    display:flex;
-    gap:12px;
-    padding:16px 22px;
-    border-bottom: var(--border);
-    background:#fff;
-    flex-wrap:wrap;
-  }
-  .btn{
-    flex:1;
-    min-width:190px;
-    border:2px solid var(--ink);
-    padding:12px 10px;
-    text-align:center;
-    font-family: var(--mono);
-    font-weight: 900;
-    font-size: 12px;
-    text-transform: uppercase;
-    color: var(--ink);
-    text-decoration:none;
-    transition: .15s;
-    background:#fff;
-  }
-  .btn.primary{
-    background: var(--primary);
-    border-color: var(--primary);
-    color:#fff;
-  }
-  .btn:hover{
-    background: var(--ink);
-    color:#fff;
-    border-color: var(--ink);
-  }
-  .btn.primary:hover{
-    background: var(--accent);
-    color: var(--ink);
-    border-color: var(--accent);
-  }
+.club-lockup{
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 10px;
+}
 
-  /* HERO (Spokane) */
-  .hero{
-    display:grid;
-    grid-template-columns: 1fr 1.6fr;
-    border-bottom: var(--border);
-    min-height: 520px;
-  }
-  .hero-text{
-    padding: 34px 28px;
-    display:flex;
-    flex-direction:column;
-    justify-content:space-between;
-    background:#fff;
-  }
-  .status{
-    display:inline-block;
-    align-self:flex-start;
-    background: var(--accent);
-    color:#000;
-    border: 1px solid #000;
-    padding: 4px 8px;
-    font-family: var(--mono);
-    font-weight: 900;
-    font-size: 12px;
-    text-transform: uppercase;
-    margin-bottom: 18px;
-  }
-  h1{
-    margin:0;
-    font-family: var(--heavy);
-    text-transform: uppercase;
-    letter-spacing: -1px;
-    font-size: 52px;
-    line-height: .92;
-  }
-  .tagline{
-    margin-top: 10px;
-    font-family: var(--mono);
-    font-weight: 900;
-    color: var(--primary);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-size: 12px;
-  }
-  .meta{
-    margin-top: 26px;
-    padding-top: 16px;
-    border-top: var(--borderThin);
-    font-family: var(--mono);
-    font-size: 12px;
-    color: var(--muted);
-  }
-  .meta strong{ color: var(--ink); }
+h1{
+  margin: 0;
+  font-size: 32px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
 
-  .hero-img{
-    border-left: var(--border);
-    overflow:hidden;
-    background:#eaeaea;
-  }
-  .hero-img img{
-    width:100%;
-    height:100%;
-    object-fit: cover;
-    display:block;
-  }
+.division-tag{
+  background: var(--primary);
+  color: #fff;
+  font-size: 12px;
+  padding: 4px 8px;
+  text-transform: uppercase;
+}
 
-  /* STRIP (Spokane) */
-  .strip{
-    display:flex;
-    justify-content:space-between;
-    gap: 14px;
-    padding: 14px 22px;
-    background: var(--primary);
-    color:#fff;
-    border-bottom: var(--border);
-    font-family: var(--mono);
-    font-weight: 900;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-size: 12px;
-    flex-wrap:wrap;
-  }
+.fact-bar{
+  display: flex;
+  gap: 12px;
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #666;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
 
-  /* GRID (Spokane) */
-  .grid{
-    display:grid;
-    grid-template-columns: repeat(3, 1fr);
-    border-bottom: var(--border);
-  }
-  .card{
-    padding:22px;
-    border-right: var(--border);
-    background:#fff;
-  }
-  .card:last-child{ border-right:none; }
+/* TOP NAV (Spokane-style utility links) */
+.top-nav{
+  margin-top: 14px;
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  font-family: var(--mono);
+  font-size: 11px;
+  text-transform: uppercase;
+}
+.top-nav a{
+  color: var(--ink);
+  text-decoration: underline;
+}
+.top-nav a:hover{
+  color: var(--primary);
+}
 
-  .imgbox{
-    width:100%;
-    aspect-ratio: 1 / 1;
-    border: 1px solid #000;
-    background:#efefef;
-    overflow:hidden;
-    margin-bottom: 14px;
-  }
-  .imgbox img{
-    width:100%;
-    height:100%;
-    object-fit: cover;
-    display:block;
-    transition: transform .25s;
-  }
-  .imgbox:hover img{ transform: scale(1.03); }
+/* CTAs */
+.cta-row{
+  display: flex;
+  gap: 10px;
+  margin: 18px 0 10px;
+  flex-wrap: wrap;
+}
 
-  h3{
-    margin:0 0 8px;
-    font-family: var(--heavy);
-    text-transform: uppercase;
-    font-size: 16px;
-    letter-spacing: .3px;
-  }
-  .card p{
-    margin:0;
-    font-size: 13px;
-    color:#222;
-  }
+.btn{
+  flex: 1;
+  min-width: 180px;
+  border: 2px solid var(--ink);
+  padding: 12px 0;
+  text-align: center;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--ink);
+  transition: all 0.2s;
+  font-family: var(--mono);
+}
 
-  /* SECTION (Spokane) */
-  .section{
-    padding: 26px 22px;
-    border-bottom: var(--border);
-    background:#fff;
-  }
-  .section-title{
-    font-family: var(--heavy);
-    text-transform: uppercase;
-    font-size: 16px;
-    letter-spacing: .6px;
-    margin: 0 0 18px;
-    display:flex;
-    align-items:baseline;
-    gap: 10px;
-  }
-  .section-title span{
-    font-family: var(--mono);
-    font-size: 11px;
-    color: var(--muted);
-    font-weight: 900;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-  }
+.btn:hover{
+  background: var(--ink);
+  color: #fff;
+  border-color: var(--ink);
+}
 
-  /* Broadcast & Announcer (two-column) */
-  .two-col{
-    display:grid;
-    grid-template-columns: 1fr 1fr;
-    gap:18px;
-  }
-  .panel{
-    border: 2px solid #000;
-    padding: 14px;
-    background:#fff;
-  }
-  .panel-top{
-    display:grid;
-    grid-template-columns: 150px 1fr;
-    gap:14px;
-    align-items:start;
-  }
-  .portrait{
-    width:100%;
-    aspect-ratio: 3 / 4;
-    border: 1px solid #000;
-    background:#f0f0f0;
-    overflow:hidden;
-  }
-  .portrait img{
-    width:100%;
-    height:100%;
-    object-fit: cover;
-    display:block;
-  }
-  .panel h4{
-    margin:0 0 6px;
-    font-family: var(--heavy);
-    text-transform: uppercase;
-    letter-spacing: .4px;
-    font-size: 14px;
-  }
-  .role{
-    font-family: var(--mono);
-    text-transform: uppercase;
-    font-weight: 900;
-    letter-spacing: 1px;
-    font-size: 11px;
-    color: var(--primary);
-    margin-bottom: 10px;
-  }
-  .panel p{
-    margin:0;
-    font-size: 13px;
-    color:#222;
-  }
+.btn.primary{
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+}
+.btn.primary:hover{
+  background: var(--accent);
+  color: var(--ink);
+  border-color: var(--accent);
+}
 
-  /* TRUE FOOTER (Spokane) */
-  footer{
-    background:#0f0f0f;
-    color:#fff;
-    padding:16px 22px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    gap:16px;
-  }
-  .footer-left{
-    font-family: var(--mono);
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: 11px;
-    opacity: .95;
-  }
-  .footer-right{
-    display:flex;
-    align-items:center;
-    gap:12px;
-  }
-  .seal{
-    border: 2px solid #fff;
-    padding: 6px 10px;
-    font-family: var(--mono);
-    font-weight: 900;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-size: 10px;
-  }
-  .glb-logo{
-    height: 60px; /* ~40% bigger */
-    width:auto;
-    display:block;
-    filter: drop-shadow(0 2px 0 rgba(0,0,0,.35));
-  }
+/* SECTIONS */
+section{ margin-bottom: 46px; }
 
-  /* Responsive */
-  @media (max-width: 900px){
-    .hero{ grid-template-columns: 1fr; }
-    .hero-img{ border-left:none; border-top: var(--border); height: 340px; }
-    .grid{ grid-template-columns: 1fr; }
-    .card{ border-right:none; border-bottom: var(--border); }
-    .card:last-child{ border-bottom:none; }
-    .two-col{ grid-template-columns: 1fr; }
-    .panel-top{ grid-template-columns: 140px 1fr; }
-  }
+h2{
+  font-size: 14px;
+  text-transform: uppercase;
+  border-bottom: 2px solid var(--primary);
+  padding-bottom: 5px;
+  margin: 0 0 14px;
+  letter-spacing: .5px;
+}
+
+/* IMAGE SLOTS */
+.img-slot{
+  background: #e6e6e6;
+  border: 1px solid #ccc;
+  margin-bottom: 12px;
+  display: block;
+  overflow: hidden;
+}
+.img-slot img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Aspect Ratios (Spokane) */
+.ratio-16-9 { aspect-ratio: 16/9; }
+.ratio-3-4  { aspect-ratio: 3/4; max-width: 260px; }
+.ratio-1-1  { aspect-ratio: 1/1; max-width: 280px; }
+
+/* SPLITS */
+.split{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  align-items: start;
+}
+
+/* BROADCAST TWO-COLUMN PANELS */
+.broadcast-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+}
+
+.broadcast-panel{
+  border-top: 1px solid #ccc;
+  padding-top: 14px;
+}
+
+h3{
+  margin: 8px 0 6px;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+}
+
+.role{
+  font-family: var(--mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--primary);
+  margin-bottom: 8px;
+}
+
+/* COPY */
+p{
+  margin: 0;
+  font-size: 15px;
+  max-width: 760px;
+  color: #111;
+}
+
+/* TRUE FOOTER */
+.true-footer{
+  margin-top: 56px;
+  padding: 16px 18px;
+  background: #0f0f0f;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+}
+
+.footer-left{
+  font-family: var(--mono);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  opacity: .95;
+}
+
+.footer-right{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer-seal{
+  border: 2px solid #fff;
+  padding: 6px 10px;
+  font-family: var(--mono);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+.glb-logo{
+  height: 60px; /* ~40% bigger than the smaller version */
+  width: auto;
+  display: block;
+}
+
+/* Responsive */
+@media(max-width: 650px){
+  .split{ grid-template-columns: 1fr; }
+  .broadcast-grid{ grid-template-columns: 1fr; }
+  .ratio-3-4, .ratio-1-1{ max-width: 100%; }
+  .doc-id{ display:none; }
+  .true-footer{ flex-direction: column; align-items: flex-start; }
+}
 </style>
 </head>
 
 <body>
-  <div class="wrap">
+<div class="club-sheet">
 
-    <header>
-      <div class="brand">GLB // CLUB DOSSIER</div>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="day.html">Daily Scores</a>
-        <a href="teams.html">Teams</a>
-      </nav>
-    </header>
+  <div class="doc-id">FRS-CLUB-01</div>
+
+  <header>
+    <div class="club-lockup">
+      <h1>Fresno Yield</h1>
+      <span class="division-tag">Americas Division</span>
+    </div>
+
+    <div class="fact-bar">
+      <span>Est. 2024</span>
+      <span>•</span>
+      <span><strong>The Corn Cathedral</strong></span>
+      <span>•</span>
+      <span>Fresno, CA</span>
+    </div>
+
+    <div class="top-nav">
+      <a href="index.html">Home</a>
+      <a href="day.html">Daily Scores</a>
+      <a href="teams.html">Teams</a>
+    </div>
 
     <div class="cta-row">
       <a class="btn primary" href="team.html?team=fresno-yield">Active Roster</a>
       <a class="btn" href="day.html">Daily Scores</a>
       <a class="btn" href="boxscore.html">Latest Box Score</a>
     </div>
+  </header>
 
-    <div class="hero">
-      <div class="hero-text">
-        <div>
-          <div class="status">Status: Active</div>
-          <h1>Fresno<br>Yield</h1>
-          <div class="tagline">THE CORN CATHEDRAL</div>
+  <section class="identity">
+    <h2>The Club</h2>
+    <p>
+      Fresno doesn’t explain itself. It shows up sun-warmed and over-prepared—coolers, cousins, and a crowd that looks like it drove in from every edge of the valley.
+      You feel it most in the pauses: late light on the dirt, a hum behind home plate, and the sense that the park is part game, part local gathering.
+    </p>
+  </section>
 
-          <div class="meta">
-            <strong>LOCATION:</strong> Fresno, California<br>
-            <strong>HOME PARK:</strong> The Corn Cathedral<br>
-            <strong>ESTABLISHED:</strong> 2024
-          </div>
+  <section>
+    <h2>Ballpark</h2>
+    <div class="img-slot ratio-16-9">
+      <img src="club-fresno-yield-park.png" alt="Fresno Yield ballpark at golden hour">
+    </div>
+    <p>
+      <strong>The Corn Cathedral.</strong> Brick, grass, and heat shimmer—warm lights waking up as the sun drops.
+      It feels agricultural without leaning into parody: real baseball in a place where summer is a permanent condition.
+    </p>
+  </section>
+
+  <section>
+    <h2>Broadcast &amp; Announcer</h2>
+
+    <div class="broadcast-grid">
+      <div class="broadcast-panel">
+        <div class="img-slot ratio-3-4">
+          <img src="club-fresno-yield-broadcast.png" alt="Fresno broadcast booth">
         </div>
-
-        <div class="meta">
-          <strong>FILE NOTE:</strong> A summer-night crowd that looks like it drove in from everywhere around the valley.<br>
-          <strong>FIELD CONDITIONS:</strong> Late sun, baked dirt, soft grass
-        </div>
+        <h3>Sunny Jim</h3>
+        <div class="role">Radio Play-by-Play</div>
+        <p>
+          Warm, unhurried calls that drift into weather and harvest talk—like a neighbor narrating the inning from a porch with a view of the diamond.
+        </p>
       </div>
 
-      <div class="hero-img">
-        <!-- If your file is stadium.png, change this line -->
-        <img src="club-fresno-yield-park.png" alt="Fresno Yield park at golden hour" />
+      <div class="broadcast-panel">
+        <div class="img-slot ratio-3-4">
+          <img src="club-fresno-yield-announcer.png" alt="Fresno in-game announcer">
+        </div>
+        <h3>Marla “Bell” Rios</h3>
+        <div class="role">In-Stadium Announcer</div>
+        <p>
+          Clear cadence, county-fair energy. Between innings she can turn a routine sponsor read into a ritual the crowd somehow respects.
+        </p>
       </div>
     </div>
+  </section>
 
-    <div class="strip">
-      <div>Condition: Late Sun</div>
-      <div>Light: Honey Glow</div>
-      <div>Sound: Fairground Roar</div>
-    </div>
+  <section>
+    <h2>Mascot &amp; Stands</h2>
 
-    <div class="grid">
-      <div class="card">
-        <div class="imgbox">
-          <img src="club-fresno-yield-player.png" alt="Fresno Yield baseball action" />
+    <div class="split">
+      <div>
+        <div class="img-slot ratio-1-1">
+          <img src="club-fresno-yield-mascot.png" alt="Fresno mascot with fans">
         </div>
-        <h3>On-Field</h3>
-        <p>Heat on the dirt. Real baseball. The moment that makes the whole page feel like a club instead of a postcard.</p>
+        <h3>The Husk</h3>
+        <p>
+          A human-worn suit with real seams and real scuffs—beloved because it’s slightly imperfect.
+          It moves like it’s been doing this for years: high-fives, rail-leaning, kids reaching up.
+        </p>
       </div>
 
-      <div class="card">
-        <div class="imgbox">
-          <img src="club-fresno-yield-mascot.png" alt="Fresno Yield mascot in the stands" />
+      <div>
+        <div class="img-slot ratio-1-1">
+          <img src="club-fresno-yield-fans.png" alt="Fresno fans in the stands">
         </div>
-        <h3>Mascot</h3>
-        <p>Human-worn, slightly scuffed, and comfortably familiar — the kind of suit that’s been sweating through innings for years.</p>
-      </div>
-
-      <div class="card">
-        <div class="imgbox">
-          <img src="club-fresno-yield-fans.png" alt="Fresno Yield fans" />
-        </div>
-        <h3>The Stands</h3>
-        <p>Blankets, coolers, kids on the rail — a crowd that’s loud when it matters and relaxed everywhere else.</p>
+        <h3>The Picnic Hills</h3>
+        <p>
+          A crowd that looks lived-in: blankets, sunburn, gold accents, and a soft roar that rises fast when something real happens on the field.
+        </p>
       </div>
     </div>
+  </section>
 
-    <div class="section">
-      <div class="section-title">
-        Broadcast &amp; Announcer <span>two channels / one park</span>
-      </div>
-
-      <div class="two-col">
-        <div class="panel">
-          <div class="panel-top">
-            <div class="portrait">
-              <img src="club-fresno-yield-broadcast.png" alt="Fresno Yield broadcast booth" />
-            </div>
-            <div>
-              <h4>Sunny Jim</h4>
-              <div class="role">Radio Play-by-Play</div>
-              <p>Warm, unhurried calls that drift into weather and harvest talk — like a neighbor narrating the evening from a porch with a view of the diamond.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="panel">
-          <div class="panel-top">
-            <div class="portrait">
-              <img src="club-fresno-yield-announcer.png" alt="Fresno Yield in-game announcer" />
-            </div>
-            <div>
-              <h4>Marla “Bell” Rios</h4>
-              <div class="role">In-Stadium Announcer</div>
-              <p>Clean cadence, fairground energy. Between innings she reads sponsor tags like folklore — and somehow the whole place listens.</p>
-            </div>
-          </div>
-        </div>
-      </div>
+  <div class="true-footer">
+    <div class="footer-left">GLB CLUB DOSSIER // FRESNO YIELD // END OF FILE</div>
+    <div class="footer-right">
+      <div class="footer-seal">Archive Verified</div>
+      <img class="glb-logo" src="/GLB_white.png" alt="GLB logo">
     </div>
-
-    <footer>
-      <div class="footer-left">GLB OFFICIAL CLUB DOSSIER // FRESNO // END OF FILE</div>
-      <div class="footer-right">
-        <div class="seal">ARCHIVE VERIFIED</div>
-        <img class="glb-logo" src="/GLB_white.png" alt="GLB logo" />
-      </div>
-    </footer>
-
   </div>
+
+</div>
+</body>
+</html>
+          <img src="club-fresno-yield-fans.png" alt="Fresno fans in the stands">
+        </div>
+        <h3>The Picnic Hills</h3>
+        <p>
+          A crowd that looks lived-in: blankets, sunburn, gold accents, and a soft roar that rises fast when something real happens on the field.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="true-footer">
+    <div class="footer-left">GLB CLUB DOSSIER // FRESNO YIELD // END OF FILE</div>
+    <div class="footer-right">
+      <div class="footer-seal">Archive Verified</div>
+      <img class="glb-logo" src="/GLB_white.png" alt="GLB logo">
+    </div>
+  </div>
+
+</div>
 </body>
 </html>

@@ -3,232 +3,183 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Durham Gold – Club Portal</title>
+<title>Durham Gold – Club Dossier</title>
 
 <style>
 :root{
-  /* Durham Identity: Golden Hour, Lucky Shine, Tobacco Brick */
-  --primary: #C9A227; /* Gold */
-  --accent:  #1F3A5F; /* Deep Blue (contrast, night-sky) */
-  --paper:   #ffffff;
-  --ink:     #101214;
+  /* Keep Durham identity colors if you want — layout remains Spokane-identical */
+  --primary:#C9A227; /* Gold */
+  --accent:#1F3A5F;  /* Deep Blue */
+  --paper:#ffffff;
+  --ink:#0f1214;
 
-  --border-thick: 4px solid var(--ink);
-  --border-thin:  1px solid #ccc;
+  --border-thick:4px solid var(--ink);
+  --border-thin:1px solid #ccc;
 
-  --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --mono: "Courier New", Courier, monospace;
+  --sans:"Helvetica Neue", Helvetica, Arial, sans-serif;
+  --mono:"Courier New", Courier, monospace;
 }
 
 body{
-  background: #fbfaf6; /* warm paper */
-  color: var(--ink);
-  font-family: var(--sans);
-  margin: 0;
-  padding: 20px;
+  background:#f4f4f4;
+  color:var(--ink);
+  font-family:var(--sans);
+  margin:0;
+  padding:20px;
 }
 
 .club-sheet{
-  max-width: 900px;
-  margin: 0 auto;
-  background: var(--paper);
-  padding: 40px;
-  border-top: var(--border-thick);
-  position: relative;
+  max-width:900px;
+  margin:0 auto;
+  background:var(--paper);
+  padding:40px;
+  border-top:var(--border-thick);
+  position:relative;
 }
 
 /* DOC ID */
 .doc-id{
-  position: absolute;
-  top: 15px;
-  right: 20px;
-  font-family: var(--mono);
-  font-size: 10px;
-  color: #999;
+  position:absolute;
+  top:15px;
+  right:20px;
+  font-family:var(--mono);
+  font-size:10px;
+  color:#999;
 }
 
 /* HEADER */
 header{
-  border-bottom: var(--border-thick);
-  padding-bottom: 20px;
-  margin-bottom: 20px;
+  border-bottom:var(--border-thick);
+  padding-bottom:20px;
+  margin-bottom:25px;
 }
 
 .club-lockup{
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  flex-wrap: wrap;
-  gap: 10px;
+  display:flex;
+  justify-content:space-between;
+  align-items:baseline;
+  flex-wrap:wrap;
 }
 
 h1{
-  margin: 0;
-  font-size: 32px;
-  font-weight: 900;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+  margin:0;
+  font-size:32px;
+  font-weight:900;
+  text-transform:uppercase;
 }
 
 .division-tag{
-  background: var(--accent);
-  color: #fff;
-  font-size: 12px;
-  padding: 4px 8px;
-  text-transform: uppercase;
+  background:var(--primary);
+  color:#fff;
+  font-size:12px;
+  padding:4px 8px;
+  text-transform:uppercase;
 }
 
 .fact-bar{
-  display: flex;
-  gap: 12px;
-  font-size: 11px;
-  text-transform: uppercase;
-  color: #666;
-  margin-top: 10px;
-  flex-wrap: wrap;
+  display:flex;
+  gap:15px;
+  font-size:11px;
+  text-transform:uppercase;
+  color:#666;
+  margin-top:10px;
+  flex-wrap:wrap;
 }
 
 /* CTAs */
 .cta-row{
-  display: flex;
-  gap: 10px;
-  margin: 25px 0 40px;
-  flex-wrap: wrap;
+  display:flex;
+  gap:10px;
+  margin:25px 0 40px;
+  flex-wrap:wrap;
 }
 
 .btn{
-  flex: 1;
-  min-width: 180px;
-  border: 2px solid var(--ink);
-  padding: 12px 0;
-  text-align: center;
-  font-size: 12px;
-  font-weight: bold;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: var(--ink);
-  transition: all 0.2s;
-}
-
-.btn:hover{
-  background: var(--ink);
-  color: #fff;
-  border-color: var(--ink);
+  flex:1;
+  min-width:180px;
+  border:2px solid var(--ink);
+  padding:12px 0;
+  text-align:center;
+  font-size:12px;
+  font-weight:bold;
+  text-transform:uppercase;
+  text-decoration:none;
+  color:var(--ink);
 }
 
 .btn.primary{
-  background: var(--primary);
-  color: var(--ink);
-  border-color: var(--primary);
-}
-
-.btn.primary:hover{
-  background: var(--accent);
-  color: #fff;
-  border-color: var(--accent);
+  background:var(--primary);
+  color:#fff;
+  border-color:var(--primary);
 }
 
 /* SECTIONS */
-section{ margin-bottom: 50px; }
+section{margin-bottom:55px;}
 
 h2{
-  font-size: 14px;
-  text-transform: uppercase;
-  border-bottom: 2px solid var(--primary);
-  padding-bottom: 5px;
+  font-size:14px;
+  text-transform:uppercase;
+  border-bottom:2px solid var(--accent);
+  padding-bottom:5px;
 }
 
 /* IDENTITY */
 .identity p{
-  font-size: 16px;
-  max-width: 720px;
-  line-height: 1.5;
-}
-
-.identity ul{
-  list-style: none;
-  padding: 0;
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-  gap: 20px;
-}
-
-.identity li{
-  font-size: 12px;
-  font-weight: bold;
-  text-transform: uppercase;
-  border-top: 1px solid #ccc;
-  padding-top: 10px;
+  font-size:16px;
+  max-width:700px;
 }
 
 /* IMAGE SLOTS */
 .img-slot{
-  background: #e7e2d3; /* warm placeholder */
-  border: 1px solid #cfc7b5;
-  margin-bottom: 15px;
-  display: block;
-  overflow: hidden;
+  background:#e0e0e0;
+  border:1px solid #ccc;
+  margin-bottom:15px;
 }
 
 .img-slot img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
 }
 
-/* Aspect Ratios */
-.ratio-16-9 { aspect-ratio: 16/9; }
-.ratio-3-4  { aspect-ratio: 3/4; max-width: 260px; }
-.ratio-1-1  { aspect-ratio: 1/1; max-width: 280px; }
+.ratio-16-9{aspect-ratio:16/9;}
+.ratio-3-4{aspect-ratio:3/4; max-width:260px;}
+.ratio-1-1{aspect-ratio:1/1; max-width:260px;}
 
 /* SPLIT */
 .split{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
-  align-items: start;
-}
-
-/* ROSTER */
-.roster{
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 13px;
-}
-
-.roster td{
-  padding: 10px 0;
-  border-bottom: 1px solid #eee;
-}
-
-.pos{
-  font-family: var(--mono);
-  color: var(--accent);
-  width: 55px;
-  font-weight: bold;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:30px;
 }
 
 /* LINKS */
-a{ color: var(--ink); text-decoration: none; }
-a:hover{ color: var(--accent); }
+a{color:var(--ink); text-decoration:none;}
+a:hover{color:var(--accent);}
 
 /* FOOTER */
-.doc-footer{
-  margin-top: 60px;
-  padding-top: 20px;
-  border-top: 1px solid #eee;
-  font-family: var(--mono);
-  font-size: 10px;
-  color: #999;
-  text-align: right;
+footer{
+  margin-top:70px;
+  padding:30px 20px;
+  border-top:var(--border-thick);
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  font-family:var(--mono);
+  font-size:11px;
+  color:#777;
 }
 
-@media(max-width: 600px){
-  .split{ grid-template-columns: 1fr; }
-  .identity ul{ grid-template-columns: 1fr; }
-  .doc-id{ display: none; }
+.glb-logo{
+  height:56px;
+  width:auto;
+}
+
+@media(max-width:600px){
+  .split{grid-template-columns:1fr;}
+  footer{flex-direction:column; gap:15px;}
+  .doc-id{display:none;}
 }
 </style>
 </head>
@@ -267,17 +218,12 @@ a:hover{ color: var(--accent); }
     that turns every inning into a neighborhood festival. The Gold aren’t dystopia. They’re a warm hallucination:
     brick, light, music, and a little superstition.
   </p>
-  <ul>
-    <li>Style: Fast / Opportunistic</li>
-    <li>Vibe: Golden Hour Fever Dream</li>
-    <li>Tradition: “The Coin Flip”</li>
-  </ul>
 </section>
 
 <section>
   <h2>Ballpark</h2>
   <div class="img-slot ratio-16-9">
-    <img src="club-durham-gold-stadium.png" alt="Durham Gold stadium in glowing golden hour">
+    <img src="/GLB/club-durham-gold-stadium.png" alt="The Gilt Yard">
   </div>
   <p>
     <strong>The Gilt Yard.</strong> A brick-and-light ballpark that looks normal until sunset hits it.
@@ -287,28 +233,37 @@ a:hover{ color: var(--accent); }
 </section>
 
 <section>
-  <h2>Broadcast</h2>
+  <h2>Broadcast & Announcers</h2>
   <div class="split">
-    <div class="img-slot ratio-3-4">
-      <img src="club-durham-gold-broadcast.png" alt="Durham Gold broadcast booth">
+    <div>
+      <div class="img-slot ratio-3-4">
+        <img src="/GLB/club-durham-gold-broadcast.png" alt="Broadcast booth">
+      </div>
+      <h3>Reed</h3>
+      <p>
+        <strong>Play-by-play.</strong> Reed calls the action like he’s narrating a summer memory—bright,
+        fast, and a little unreal when the rally starts to climb.
+      </p>
     </div>
     <div>
-      <h3>Reed &amp; June</h3>
+      <div class="img-slot ratio-3-4">
+        <img src="/GLB/club-durham-gold-announcer.png" alt="In-stadium announcer">
+      </div>
+      <h3>June</h3>
       <p>
-        <strong>Voice of the Gold.</strong> Reed calls the action like he’s narrating a summer memory.
-        June interrupts with sharp, practical reads that keep the broadcast honest.
-        Their booth is open-windowed when weather allows — you can hear the crowd breathe.
+        <strong>In-stadium announcer.</strong> Clear, practical, and sharp—June keeps the park moving.
+        Lineups, counts, promos: clean delivery, no wasted air.
       </p>
     </div>
   </div>
 </section>
 
 <section>
-  <h2>Mascot &amp; Stands</h2>
+  <h2>Mascot & Stands</h2>
   <div class="split">
     <div>
       <div class="img-slot ratio-1-1">
-        <img src="club-durham-gold-mascot.png" alt="Durham Gold mascot with fans">
+        <img src="/GLB/club-durham-gold-mascot.png" alt="Nug mascot">
       </div>
       <h3>Nug</h3>
       <p>
@@ -318,7 +273,7 @@ a:hover{ color: var(--accent); }
     </div>
     <div>
       <div class="img-slot ratio-1-1">
-        <img src="club-durham-gold-fans.png" alt="Durham Gold fans in golden hour">
+        <img src="/GLB/club-durham-gold-fans.png" alt="Durham Gold fans">
       </div>
       <h3>The Shiners</h3>
       <p>
@@ -329,36 +284,10 @@ a:hover{ color: var(--accent); }
   </div>
 </section>
 
-<section>
-  <h2>Core Roster</h2>
-  <table class="roster">
-    <tr><td class="pos">SS</td><td>Cal “Sunflash” Bennett</td></tr>
-    <tr><td class="pos">1B</td><td>Hector “Hush Money” Lira</td></tr>
-    <tr><td class="pos">P</td><td>Wes “Gleam” Reddick</td></tr>
-  </table>
-</section>
-
-<footer class="glb-footer">
-  <div class="glb-footer-inner">
-    <div class="glb-footer-brand">
-      <img 
-        src="assets/glb-logo.png" 
-        alt="Global League Baseball logo" 
-        class="glb-footer-logo"
-      />
-      <div class="glb-footer-text">
-        <strong>Global League Baseball</strong>
-        <span>© Global League Baseball</span>
-      </div>
-    </div>
-
-    <div class="glb-footer-meta">
-      <span>An international professional baseball league</span>
-      <span>Established 2026</span>
-    </div>
-  </div>
+<footer>
+  <div>GLB CLUB DOSSIER · DURHAM</div>
+  <img class="glb-logo" src="/GLB/GLB_white.png" alt="GLB">
 </footer>
-  
 
 </div>
 </body>

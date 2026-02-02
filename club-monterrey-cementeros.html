@@ -1,435 +1,296 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>GLB: MONTERREY CEMENTEROS</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Monterrey Cementeros – Club Dossier</title>
+
 <style>
-  :root {
-    /* MONTERREY PALETTE */
-    --bg-color: #ECECEC;         /* Sun-bleached Concrete */
-    --text-color: #1A1A1A;       /* Slate / Oxidized Steel */
-    --accent-color: #FF00FF;     /* Acid Pink */
-    --secondary-accent: #FF8C00; /* Marigold Orange */
+:root{
+  --primary:#4A5863;
+  --accent:#C0442C;
+  --paper:#ffffff;
+  --ink:#0f1214;
 
-    --border-style: 2px solid #1A1A1A;
-    --font-main: "Courier New", Courier, monospace;
-    --font-heading: "Arial Black", sans-serif;
-  }
+  --border-thick:4px solid var(--ink);
+  --border-thin:1px solid #ccc;
 
-  body {
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    font-family: var(--font-main);
-    margin: 0;
-    padding: 40px;
-    line-height: 1.4;
-  }
+  --sans:"Helvetica Neue", Helvetica, Arial, sans-serif;
+  --mono:"Courier New", Courier, monospace;
+}
 
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    border: var(--border-style);
-    background: #fff;
-    box-shadow: 10px 10px 0px rgba(0,0,0,0.1);
-  }
+body{
+  background:#f4f4f4;
+  color:var(--ink);
+  font-family:var(--sans);
+  margin:0;
+  padding:20px;
+}
 
-  /* HEADER */
-  header {
-    border-bottom: var(--border-style);
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #fff;
-  }
+.club-sheet{
+  max-width:900px;
+  margin:0 auto;
+  background:var(--paper);
+  padding:40px;
+  border-top:var(--border-thick);
+  position:relative;
+}
 
-  .logo {
-    font-weight: bold;
-    font-size: 1.2rem;
-    letter-spacing: -1px;
-  }
+/* DOC ID */
+.doc-id{
+  position:absolute;
+  top:15px;
+  right:20px;
+  font-family:var(--mono);
+  font-size:10px;
+  color:#999;
+}
 
-  .nav-links a {
-    margin-left: 20px;
-    text-decoration: underline;
-    color: var(--text-color);
-    text-transform: uppercase;
-    font-size: 0.9rem;
-    font-weight: bold;
-  }
+/* HEADER */
+header{
+  border-bottom:var(--border-thick);
+  padding-bottom:20px;
+  margin-bottom:25px;
+}
 
-  .nav-links a:hover {
-    background: var(--accent-color);
-    color: white;
-    text-decoration: none;
-  }
+.club-lockup{
+  display:flex;
+  justify-content:space-between;
+  align-items:baseline;
+  flex-wrap:wrap;
+}
 
-  /* HERO */
-  .hero {
-    display: grid;
-    grid-template-columns: 1fr 1.5fr;
-    border-bottom: var(--border-style);
-    min-height: 500px;
-  }
+h1{
+  margin:0;
+  font-size:32px;
+  font-weight:900;
+  text-transform:uppercase;
+}
 
-  .hero-text {
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background-color: #fff;
-  }
+.division-tag{
+  background:var(--primary);
+  color:#fff;
+  font-size:12px;
+  padding:4px 8px;
+  text-transform:uppercase;
+}
 
-  .status-tag {
-    display: inline-block;
-    background: var(--secondary-accent);
-    color: black;
-    padding: 4px 8px;
-    font-weight: bold;
-    text-transform: uppercase;
-    font-size: 0.8rem;
-    border: 1px solid #000;
-    align-self: flex-start;
-    margin-bottom: 20px;
-  }
+.fact-bar{
+  display:flex;
+  gap:15px;
+  font-size:11px;
+  text-transform:uppercase;
+  color:#666;
+  margin-top:10px;
+  flex-wrap:wrap;
+}
 
-  h1 {
-    font-family: var(--font-heading);
-    font-size: 3.5rem;
-    line-height: 0.9;
-    margin: 0;
-    text-transform: uppercase;
-    letter-spacing: -2px;
-  }
+/* CTAs */
+.cta-row{
+  display:flex;
+  gap:10px;
+  margin:25px 0 40px;
+  flex-wrap:wrap;
+}
 
-  .motto {
-    font-size: 1.2rem;
-    font-style: italic;
-    margin-top: 10px;
-    color: var(--secondary-accent);
-    font-weight: bold;
-  }
+.btn{
+  flex:1;
+  min-width:180px;
+  border:2px solid var(--ink);
+  padding:12px 0;
+  text-align:center;
+  font-size:12px;
+  font-weight:bold;
+  text-transform:uppercase;
+  text-decoration:none;
+  color:var(--ink);
+}
 
-  .hero-meta {
-    margin-top: 40px;
-    font-size: 0.85rem;
-    border-top: 1px solid #ccc;
-    padding-top: 20px;
-  }
+.btn.primary{
+  background:var(--primary);
+  color:#fff;
+  border-color:var(--primary);
+}
 
-  .hero-image {
-    border-left: var(--border-style);
-    overflow: hidden;
-    position: relative;
-  }
+/* SECTIONS */
+section{margin-bottom:55px;}
 
-  .hero-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    filter: contrast(1.1) saturate(1.1);
-  }
+h2{
+  font-size:14px;
+  text-transform:uppercase;
+  border-bottom:2px solid var(--accent);
+  padding-bottom:5px;
+}
 
-  /* CLIMATE STRIP */
-  .climate-strip {
-    background: var(--accent-color);
-    color: white;
-    padding: 15px 40px;
-    font-weight: bold;
-    text-transform: uppercase;
-    border-bottom: var(--border-style);
-    display: flex;
-    justify-content: space-between;
-    font-size: 0.9rem;
-    letter-spacing: 1px;
-  }
+/* IDENTITY */
+.identity p{
+  font-size:16px;
+  max-width:700px;
+}
 
-  /* ARTIFACTS GRID */
-  .artifacts {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    border-bottom: var(--border-style);
-  }
+/* IMAGE SLOTS */
+.img-slot{
+  background:#e0e0e0;
+  border:1px solid #ccc;
+  margin-bottom:15px;
+}
 
-  .artifact-card {
-    padding: 25px;
-    border-right: var(--border-style);
-    background: #fff;
-  }
+.img-slot img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
 
-  .artifact-card:last-child {
-    border-right: none;
-  }
+.ratio-16-9{aspect-ratio:16/9;}
+.ratio-3-4{aspect-ratio:3/4; max-width:260px;}
+.ratio-1-1{aspect-ratio:1/1; max-width:260px;}
 
-  .artifact-image {
-    width: 100%;
-    aspect-ratio: 1 / 1;
-    background: #eee;
-    margin-bottom: 20px;
-    border: 1px solid #000;
-    overflow: hidden;
-  }
+/* SPLIT */
+.split{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:30px;
+}
 
-  .artifact-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-    display: block;
-  }
+/* LINKS */
+a{color:var(--ink); text-decoration:none;}
+a:hover{color:var(--accent);}
 
-  .artifact-image:hover img {
-    transform: scale(1.05);
-  }
+/* FOOTER */
+footer{
+  margin-top:70px;
+  padding:30px 20px;
+  border-top:var(--border-thick);
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  font-family:var(--mono);
+  font-size:11px;
+  color:#777;
+}
 
-  h3 {
-    font-family: var(--font-heading);
-    font-size: 1.2rem;
-    margin: 0 0 10px 0;
-    text-transform: uppercase;
-  }
+.glb-logo{
+  height:56px; /* ~40% larger */
+  width:auto;
+}
 
-  p {
-    font-size: 0.9rem;
-    margin: 0;
-  }
-
-  /* BROADCAST BAND */
-  .broadcast-section {
-    padding: 40px;
-    background: #fff;
-    border-bottom: var(--border-style);
-  }
-
-  .broadcast-grid {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 25px;
-    align-items: start;
-  }
-
-  .broadcast-meta {
-    margin-top: 12px;
-    font-size: 0.85rem;
-    border-top: 1px solid #ddd;
-    padding-top: 12px;
-  }
-
-  .broadcast-meta strong {
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-  }
-
-  /* ROSTER SECTION */
-  .roster-section {
-    padding: 40px;
-    background: #fafafa;
-  }
-
-  .roster-table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 1rem;
-    font-family: var(--font-main);
-  }
-
-  .roster-table th {
-    text-align: left;
-    border-bottom: 2px solid #000;
-    padding: 10px;
-    font-weight: bold;
-    text-transform: uppercase;
-  }
-
-  .roster-table td {
-    border-bottom: 1px solid #ddd;
-    padding: 15px 10px;
-  }
-
-  .number {
-    color: var(--accent-color);
-    font-weight: bold;
-    font-family: var(--font-heading);
-  }
-
-  /* FOOTER */
-  footer {
-    background: #1A1A1A;
-    color: white;
-    padding: 15px;
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 0.75rem;
-    letter-spacing: 2px;
-  }
-
-  /* Responsive */
-  @media (max-width: 900px) {
-    .broadcast-grid { grid-template-columns: 1fr; }
-  }
-
-  @media (max-width: 768px) {
-    .hero, .artifacts { grid-template-columns: 1fr; }
-    .hero-image {
-      border-left: none;
-      border-top: var(--border-style);
-      height: 300px;
-    }
-    .artifact-card {
-      border-right: none;
-      border-bottom: var(--border-style);
-    }
-    h1 { font-size: 2.5rem; }
-  }
+@media(max-width:600px){
+  .split{grid-template-columns:1fr;}
+  footer{flex-direction:column; gap:15px;}
+  .doc-id{display:none;}
+}
 </style>
 </head>
 
 <body>
-<div class="container">
-  <header>
-    <div class="logo">GLB // DIV 03</div>
-    <div class="nav-links">
-      <a href="#">Dossier</a>
-      <a href="#">Roster</a>
-      <a href="#">Broadcast</a>
-    </div>
-  </header>
+<div class="club-sheet">
 
-  <div class="hero">
-    <div class="hero-text">
-      <div>
-        <div class="status-tag">Status: ACTIVE</div>
-        <h1>Monterrey<br />Cementeros</h1>
-        <div class="motto">"El Sol Gana" (The Sun Wins)</div>
-      </div>
+<div class="doc-id">MTY-CLUB-LOCKED</div>
 
-      <div class="hero-meta">
-        <strong>LOCATION:</strong> Monterrey, Nuevo León<br />
-        <strong>IDENTITY:</strong> The Concrete Carnival<br />
-        <strong>ESTABLISHED:</strong> 2024<br />
-        <strong>AVG TEMP:</strong> 36°C (Dry Heat)
-      </div>
-    </div>
-
-    <div class="hero-image">
-      <img src="club-monterrey-stadium.png" alt="Plaza del Sol - Concrete terraces and mist" />
-    </div>
+<header>
+  <div class="club-lockup">
+    <h1>Monterrey Cementeros</h1>
+    <span class="division-tag">Americas Division</span>
   </div>
 
-  <div class="climate-strip">
-    <span>Condition: High Noon</span>
-    <span>Visibility: 100%</span>
-    <span>Vibe: Obtuse Fun</span>
+  <div class="fact-bar">
+    <span>Est. —</span>
+    <span>•</span>
+    <span><strong>The Kiln Grounds</strong></span>
+    <span>•</span>
+    <span>Mgr. Tomás “Nivel” Aranda</span>
   </div>
 
-  <div class="artifacts">
-    <div class="artifact-card">
-      <div class="artifact-image">
-        <img src="club-monterrey-player.png" alt="Player with zinc oxide and pink socks" />
-      </div>
-      <h3>The Initiates</h3>
-      <p>Bone-white canvas. Acid pink accents. Zinc oxide war paint. They don't look like athletes; they look like they are dressed for a very strange wedding.</p>
-    </div>
+  <div class="cta-row">
+    <a class="btn primary" href="team.html?team=monterrey-cementeros">Active Roster</a>
+    <a class="btn" href="day.html">Daily Scores</a>
+    <a class="btn" href="game.html">Latest Box Score</a>
+  </div>
+</header>
 
-    <div class="artifact-card">
-      <div class="artifact-image">
-        <img src="club-monterrey-mascot.png" alt="El Invitado - Giant colorful puppet" />
-      </div>
-      <h3>El Invitado</h3>
-      <p>A 12-foot papier-mâché marionette. It dances the entire game. It is not scary; it is overwhelmingly joyful, clumsy, and permanent.</p>
-    </div>
+<section class="identity">
+  <h2>The Club</h2>
+  <p>
+    The Monterrey Cementeros play with the calm pressure of a jobsite that never stops.
+    Nothing wasted, nothing decorative. They build innings the way you set forms—square,
+    tight, and ready for weight. Their wins feel poured, not sparked: patient at-bats,
+    hard contact, and defense that holds its line until the game gives in.
+  </p>
+</section>
 
-    <div class="artifact-card">
-      <div class="artifact-image">
-        <img src="club-monterrey-fans.png" alt="Fans with zinc oxide and rebar noisemakers" />
+<section>
+  <h2>Ballpark</h2>
+  <div class="img-slot ratio-16-9">
+    <img src="club-monterrey-cementeros-park.png" alt="The Kiln Grounds">
+  </div>
+  <p>
+    <strong>The Kiln Grounds.</strong> A concrete-and-steel park framed by industrial light
+    and distant hills. The air is dry, the sound carries, and the game feels close—bat cracks
+    snap sharply and the infield chatter echoes off hard surfaces. Night games run cool and exact.
+  </p>
+</section>
+
+<section>
+  <h2>Broadcast & Announcers</h2>
+  <div class="split">
+    <div>
+      <div class="img-slot ratio-3-4">
+        <img src="club-monterrey-cementeros-broadcast.png" alt="Broadcast booth">
       </div>
-      <h3>The Ritual</h3>
-      <p>A surreal block party in the heat. The crowd creates a wall of rhythm using painted rebar noise-makers and hypnotic chanting. Obtuse fun.</p>
+      <h3>Iván Soria</h3>
+      <p>
+        <strong>Play-by-play.</strong> Steady, methodical, and precise. Soria calls the game
+        like a foreman reading measurements—clean counts, clean pace, no extra noise.
+      </p>
+    </div>
+    <div>
+      <div class="img-slot ratio-3-4">
+        <img src="club-monterrey-cementeros-announcer.png" alt="In-stadium announcer">
+      </div>
+      <h3>Rafaela “Raf” Quiñones</h3>
+      <p>
+        <strong>In-stadium announcer.</strong> Clear and commanding, with timing that lands
+        like a mallet tap. Lineups, counts, substitutions—delivered cleanly through the bowl
+        without a syllable wasted.
+      </p>
     </div>
   </div>
+</section>
 
-  <!-- BROADCAST (NEW) -->
-  <div class="broadcast-section">
-    <h3>BROADCAST UNIT</h3>
-
-    <div class="broadcast-grid">
-      <div class="artifact-image" style="max-width: 420px;">
-        <img src="club-monterrey-broadcast.png" alt="Broadcast booth / commentator portrait" />
+<section>
+  <h2>Mascot & Stands</h2>
+  <div class="split">
+    <div>
+      <div class="img-slot ratio-1-1">
+        <img src="club-monterrey-cementeros-mascot.png" alt="Cemento mascot">
       </div>
-
-      <div>
-        <p><strong>Primary voice:</strong> Marisol “La Cinta” Ibarra</p>
-        <p style="margin-top:10px;">
-          She calls games like she’s cutting tape in real time—fast edits, hard jumps, no dead air. When the heat spikes, her delivery gets calmer, almost hypnotic.
-          She refuses sponsor reads unless they’re “useful.” Nobody knows what that means, but she always wins.
-        </p>
-
-        <div class="broadcast-meta">
-          <div><strong>Signal:</strong> Terraces Channel 3 (VHF relay)</div>
-          <div><strong>Booth condition:</strong> Uncooled / reflective glare</div>
-          <div><strong>Sign-off:</strong> “La mezcla ya fraguó.” (The mix has set.)</div>
-        </div>
+      <h3>Cemento</h3>
+      <p>
+        A heavy, old-school mascot built like a block—more presence than performance.
+        Cemento doesn’t do routines. He patrols the rails, nods at kids, and “sets” near
+        the dugout when the late innings tighten.
+      </p>
+    </div>
+    <div>
+      <div class="img-slot ratio-1-1">
+        <img src="club-monterrey-cementeros-fans.png" alt="Monterrey fans">
       </div>
+      <h3>The Mix Line</h3>
+      <p>
+        Fans here watch like they’re checking a level—quiet until it matters, then all at once.
+        They clap in bursts, chant in short waves, and lean forward when the game turns heavy.
+        Late applause means it held.
+      </p>
     </div>
   </div>
+</section>
 
-  <div class="roster-section">
-    <h3>ACTIVE ROSTER (SNAPSHOT)</h3>
-    <table class="roster-table">
-      <thead>
-        <tr>
-          <th>#</th>
-          <th>NAME</th>
-          <th>POS</th>
-          <th>NOTE</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td class="number">04</td>
-          <td>Mateo "El Mudo" Garza</td>
-          <td>3B</td>
-          <td>Silent Enforcer. Communicates via hex signs.</td>
-        </tr>
-        <tr>
-          <td class="number">88</td>
-          <td>Tiago "La Mecha" Solis</td>
-          <td>P</td>
-          <td>The Fire Starter. Dances during warmups.</td>
-        </tr>
-        <tr>
-          <td class="number">10</td>
-          <td>Valerio K.</td>
-          <td>MGR</td>
-          <td>The Architect. Wears linen. Never sweats.</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <footer class="glb-footer">
-  <div class="glb-footer-inner">
-    <div class="glb-footer-brand">
-      <img 
-        src="assets/glb-logo.png" 
-        alt="Global League Baseball logo" 
-        class="glb-footer-logo"
-      />
-      <div class="glb-footer-text">
-        <strong>Global League Baseball</strong>
-        <span>© Global League Baseball</span>
-      </div>
-    </div>
-
-    <div class="glb-footer-meta">
-      <span>An international professional baseball league</span>
-      <span>Established 2026</span>
-    </div>
-  </div>
+<footer>
+  <div>GLB CLUB DOSSIER · MONTERREY</div>
+  <img class="glb-logo" src="GLB_white.png" alt="GLB">
 </footer>
-  
+
 </div>
 </body>
 </html>

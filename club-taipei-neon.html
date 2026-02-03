@@ -1,210 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Taipei Neon – Club Portal</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Taipei Neon – Club Dossier</title>
 
 <style>
 :root{
-  /* Taipei Identity: Asphalt Night, Fluorescent Glow, Rain Metal */
-  --primary: #00E5FF;   /* Neon Cyan */
-  --accent: #FF2E88;    /* Magenta Pink */
-  --paper: #ffffff;
-  --ink: #101418;
+  /* Taipei palette (Spokane-compatible, neon-forward but controlled) */
+  --primary:#2B2F5C;   /* deep indigo */
+  --accent:#17F3FF;    /* neon cyan */
+  --paper:#ffffff;
+  --ink:#0f1214;
 
-  --border-thick: 4px solid var(--ink);
-  --border-thin: 1px solid #ccc;
+  --border-thick:4px solid var(--ink);
+  --border-thin:1px solid #ccc;
 
-  --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --mono: "Courier New", Courier, monospace;
+  --sans:"Helvetica Neue", Helvetica, Arial, sans-serif;
+  --mono:"Courier New", Courier, monospace;
 }
 
 body{
-  background: #f2f2f2;
-  color: var(--ink);
-  font-family: var(--sans);
-  margin: 0;
-  padding: 20px;
+  background:#f4f4f4;
+  color:var(--ink);
+  font-family:var(--sans);
+  margin:0;
+  padding:20px;
 }
 
 .club-sheet{
-  max-width: 900px;
-  margin: 0 auto;
-  background: var(--paper);
-  padding: 40px;
-  border-top: var(--border-thick);
-  position: relative;
+  max-width:900px;
+  margin:0 auto;
+  background:var(--paper);
+  padding:40px;
+  border-top:var(--border-thick);
+  position:relative;
 }
 
 /* DOC ID */
 .doc-id{
-  position: absolute;
-  top: 15px;
-  right: 20px;
-  font-family: var(--mono);
-  font-size: 10px;
-  color: #999;
+  position:absolute;
+  top:15px;
+  right:20px;
+  font-family:var(--mono);
+  font-size:10px;
+  color:#999;
 }
 
 /* HEADER */
 header{
-  border-bottom: var(--border-thick);
-  padding-bottom: 20px;
-  margin-bottom: 20px;
+  border-bottom:var(--border-thick);
+  padding-bottom:20px;
+  margin-bottom:25px;
 }
 
 .club-lockup{
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  flex-wrap: wrap;
+  display:flex;
+  justify-content:space-between;
+  align-items:baseline;
+  flex-wrap:wrap;
 }
 
 h1{
-  margin: 0;
-  font-size: 32px;
-  font-weight: 900;
-  text-transform: uppercase;
+  margin:0;
+  font-size:32px;
+  font-weight:900;
+  text-transform:uppercase;
 }
 
 .division-tag{
-  background: var(--primary);
-  color: #000;
-  font-size: 12px;
-  padding: 4px 8px;
-  text-transform: uppercase;
+  background:var(--primary);
+  color:#fff;
+  font-size:12px;
+  padding:4px 8px;
+  text-transform:uppercase;
 }
 
 .fact-bar{
-  display: flex;
-  gap: 15px;
-  font-size: 11px;
-  text-transform: uppercase;
-  color: #666;
-  margin-top: 10px;
-  flex-wrap: wrap;
+  display:flex;
+  gap:15px;
+  font-size:11px;
+  text-transform:uppercase;
+  color:#666;
+  margin-top:10px;
+  flex-wrap:wrap;
 }
 
 /* CTAs */
 .cta-row{
-  display: flex;
-  gap: 10px;
-  margin: 25px 0 40px;
-  flex-wrap: wrap;
+  display:flex;
+  gap:10px;
+  margin:25px 0 40px;
+  flex-wrap:wrap;
 }
 
 .btn{
-  flex: 1;
-  min-width: 180px;
-  border: 2px solid var(--ink);
-  padding: 12px 0;
-  text-align: center;
-  font-size: 12px;
-  font-weight: bold;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: var(--ink);
+  flex:1;
+  min-width:180px;
+  border:2px solid var(--ink);
+  padding:12px 0;
+  text-align:center;
+  font-size:12px;
+  font-weight:bold;
+  text-transform:uppercase;
+  text-decoration:none;
+  color:var(--ink);
+  transition:all 0.2s;
+}
+
+.btn:hover{
+  background:var(--ink);
+  color:#fff;
+  border-color:var(--ink);
 }
 
 .btn.primary{
-  background: var(--primary);
-  color: #000;
-  border-color: var(--primary);
+  background:var(--primary);
+  color:#fff;
+  border-color:var(--primary);
+}
+
+.btn.primary:hover{
+  background:var(--accent);
+  color:var(--ink);
+  border-color:var(--accent);
 }
 
 /* SECTIONS */
-section{ margin-bottom: 50px; }
+section{ margin-bottom:55px; }
 
 h2{
-  font-size: 14px;
-  text-transform: uppercase;
-  border-bottom: 2px solid var(--accent);
-  padding-bottom: 5px;
+  font-size:14px;
+  text-transform:uppercase;
+  border-bottom:2px solid var(--accent);
+  padding-bottom:5px;
 }
 
 /* IDENTITY */
 .identity p{
-  font-size: 16px;
-  max-width: 700px;
-}
-
-.identity ul{
-  list-style: none;
-  padding: 0;
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-  gap: 20px;
-}
-
-.identity li{
-  font-size: 12px;
-  font-weight: bold;
-  text-transform: uppercase;
-  border-top: 1px solid #ccc;
-  padding-top: 10px;
+  font-size:16px;
+  max-width:700px;
 }
 
 /* IMAGE SLOTS */
 .img-slot{
-  background: #e0e0e0;
-  border: 1px solid #ccc;
-  margin-bottom: 15px;
+  background:#e0e0e0;
+  border:1px solid #ccc;
+  margin-bottom:15px;
 }
 
 .img-slot img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
 }
 
-.ratio-16-9{ aspect-ratio: 16/9; }
-.ratio-3-4{ aspect-ratio: 3/4; max-width: 250px; }
-.ratio-1-1{ aspect-ratio: 1/1; max-width: 260px; }
+.ratio-16-9{ aspect-ratio:16/9; }
+.ratio-3-4{ aspect-ratio:3/4; max-width:260px; }
+.ratio-1-1{ aspect-ratio:1/1; max-width:260px; }
 
 /* SPLIT */
 .split{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:30px;
 }
 
-/* ROSTER */
-.roster{
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 13px;
-}
-
-.roster td{
-  padding: 10px 0;
-  border-bottom: 1px solid #eee;
-}
-
-.pos{
-  font-family: var(--mono);
-  color: var(--accent);
-  width: 50px;
-  font-weight: bold;
-}
+/* LINKS */
+a{ color:var(--ink); text-decoration:none; }
+a:hover{ color:var(--accent); }
 
 /* FOOTER */
-.doc-footer{
-  margin-top: 60px;
-  padding-top: 20px;
-  border-top: 1px solid #eee;
-  font-family: var(--mono);
-  font-size: 10px;
-  color: #999;
-  text-align: right;
+footer{
+  margin-top:70px;
+  padding:30px 20px;
+  border-top:var(--border-thick);
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  font-family:var(--mono);
+  font-size:11px;
+  color:#777;
 }
 
-@media(max-width: 600px){
-  .split{grid-template-columns: 1fr;}
-  .identity ul{grid-template-columns: 1fr;}
-  .doc-id{display: none;}
+.glb-logo{
+  height:56px; /* locked template size */
+  width:auto;
+}
+
+@media(max-width:600px){
+  .split{ grid-template-columns:1fr; }
+  footer{ flex-direction:column; gap:15px; }
+  .doc-id{ display:none; }
 }
 </style>
 </head>
@@ -223,45 +211,62 @@ h2{
   <div class="fact-bar">
     <span>Est. —</span>
     <span>•</span>
-    <span><strong>Lantern Field</strong></span>
+    <span><strong>Neon Harbor Park</strong></span>
     <span>•</span>
-    <span>Mgr. Wei-Lun Kao</span>
+    <span>Mgr. Lin “Switch” Yu</span>
   </div>
 
   <div class="cta-row">
     <a class="btn primary" href="team.html?team=taipei-neon">Active Roster</a>
     <a class="btn" href="day.html">Daily Scores</a>
-    <a class="btn" href="#">Latest Box Score</a>
+    <a class="btn" href="game.html">Latest Box Score</a>
   </div>
 </header>
 
 <section class="identity">
   <h2>The Club</h2>
-  <p>The Neon play under constant motion. Rain, traffic, signage, crowds — nothing in Taipei ever fully stops. The club reflects that energy with speed, pressure, and improvisation. Games feel less like innings and more like long nights that never quite reset.</p>
-  <ul>
-    <li>Style: Speed / Pressure</li>
-    <li>Vibe: Night City</li>
-    <li>Tradition: “Last Train”</li>
-  </ul>
+  <p>
+    Taipei plays under signage, streetlight, and late trains—baseball recorded in bright color without
+    turning into a cartoon. The park feels alive even during warmups: vendor calls, camera shutters,
+    and the soft click of cleats on concrete. Nothing here tries to be “mystical.” It just happens fast,
+    and it looks good while it does.
+  </p>
 </section>
 
 <section>
   <h2>Ballpark</h2>
   <div class="img-slot ratio-16-9">
-    <img src="club-taipei-neon-stadium.png" alt="Lantern Field at night">
+    <img src="club-taipei-neon-stadium.png" alt="Neon Harbor Park at night" />
   </div>
-  <p><strong>Lantern Field.</strong> A compact stadium woven into the city grid. LED boards glow through mist and drizzle. Street noise bleeds into the park. Night games feel continuous with the city around them.</p>
+  <p>
+    <strong>Neon Harbor Park.</strong> A compact urban stadium boxed in by rooftops and LED boards.
+    When the lights come on, the outfield fence glows like a shoreline. You can hear the game—bat on ball,
+    glove pop, the crowd’s lift—over the city’s constant hum.
+  </p>
 </section>
 
 <section>
-  <h2>Broadcast</h2>
+  <h2>Broadcast & Announcers</h2>
   <div class="split">
-    <div class="img-slot ratio-3-4">
-      <img src="club-taipei-neon-broadcast.png" alt="Taipei Neon broadcast booth">
+    <div>
+      <div class="img-slot ratio-3-4">
+        <img src="club-taipei-neon-broadcast.png" alt="Broadcast booth" />
+      </div>
+      <h3>Jia-Hao Chen</h3>
+      <p>
+        <strong>Play-by-play.</strong> Quick reads, clean pacing, and an ear for the crowd. Chen calls
+        the game like he’s tracking motion—pitch, swing, contact—then lets the stadium do the rest.
+      </p>
     </div>
     <div>
-      <h3>Chen & Lu</h3>
-      <p><strong>Voices of the Neon.</strong> Fast, conversational, bilingual at times. Calls are layered — play-by-play mixed with crowd reaction, street noise, and music drifting in from outside the park.</p>
+      <div class="img-slot ratio-3-4">
+        <img src="club-taipei-neon-announcer.png" alt="In-stadium announcer" />
+      </div>
+      <h3>Mei “Spark” Huang</h3>
+      <p>
+        <strong>In-stadium announcer.</strong> Bright, controlled energy with perfect timing—lineups,
+        promos, walk-up cues. When she hits the last name, the crowd answers like it’s reflex.
+      </p>
     </div>
   </div>
 </section>
@@ -271,35 +276,34 @@ h2{
   <div class="split">
     <div>
       <div class="img-slot ratio-1-1">
-        <img src="club-taipei-neon-mascot.png" alt="Taipei Neon mascot interacting with fans">
+        <img src="club-taipei-neon-mascot.png" alt="Taipei mascot" />
       </div>
       <h3>Glow</h3>
-      <p>A human-worn mascot built for night games — reflective trim, worn fabric, visible seams. Glow moves constantly through the aisles, rarely stopping, always in motion.</p>
+      <p>
+        A human-worn mascot built for movement—soft edges, bright accents, and a costume that looks used,
+        not manufactured for a photoshoot. Glow lives in the aisles: selfies, high-fives, and sprinting
+        from section to section when a chant starts.
+      </p>
     </div>
     <div>
       <div class="img-slot ratio-1-1">
-        <img src="club-taipei-neon-fans.png" alt="Taipei Neon fans at night">
+        <img src="club-taipei-neon-fans.png" alt="Taipei fans" />
       </div>
-      <h3>The Night Crowd</h3>
-      <p>After-work fans, students, families, vendors. Phones glow. Food steams. Applause comes in waves instead of bursts.</p>
+      <h3>The Night Market Bleachers</h3>
+      <p>
+        Snacks, neon wristbands, handheld radios, and constant chatter. Fans keep score on their phones,
+        then argue about the strike zone anyway. When a ball finds the gap, the entire section stands up
+        at once—like a switch flipped.
+      </p>
     </div>
   </div>
 </section>
 
-<section>
-  <h2>Core Roster</h2>
-  <table class="roster">
-    <tr><td class="pos">SS</td><td>Liang “Switch” Wen</td></tr>
-    <tr><td class="pos">CF</td><td>Jun Park</td></tr>
-    <tr><td class="pos">P</td><td>Hiro Tan</td></tr>
-  </table>
-</section>
-
 <footer>
   <div>GLB CLUB DOSSIER · TAIPEI</div>
-<img class="glb-logo" src="GLB_white.png" alt="GLB">
+  <img class="glb-logo" src="GLB_white.png" alt="GLB" />
 </footer>
-  
+
 </div>
 </body>
 </html>

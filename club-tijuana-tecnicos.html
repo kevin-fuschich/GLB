@@ -3,253 +3,295 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>GLB: TIJUANA TECNICOS</title>
+<title>St. Paul Frost – Club Dossier</title>
 
 <style>
-:root {
-  --bg: #F2F4F6;
-  --ink: #0E1114;
-  --primary: #2C3E50;
-  --accent: #00B3E6;
+:root{
+  /* St. Paul palette (Spokane-compatible) */
+  --primary:#1F4B5A;   /* deep cold teal */
+  --accent:#7EA6B7;    /* ice blue */
+  --paper:#ffffff;
+  --ink:#0f1214;
 
-  --border: 2px solid var(--ink);
+  --border-thick:4px solid var(--ink);
+  --border-thin:1px solid #ccc;
 
-  --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --mono: "Courier New", Courier, monospace;
+  --sans:"Helvetica Neue", Helvetica, Arial, sans-serif;
+  --mono:"Courier New", Courier, monospace;
 }
 
-body {
-  background: var(--bg);
-  color: var(--ink);
-  font-family: var(--sans);
-  margin: 0;
-  padding: 40px;
+body{
+  background:#f4f4f4;
+  color:var(--ink);
+  font-family:var(--sans);
+  margin:0;
+  padding:20px;
 }
 
-.container {
-  max-width: 1100px;
-  margin: 0 auto;
-  background: white;
-  border: var(--border);
+.club-sheet{
+  max-width:900px;
+  margin:0 auto;
+  background:var(--paper);
+  padding:40px;
+  border-top:var(--border-thick);
+  position:relative;
 }
 
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  border-bottom: var(--border);
+/* DOC ID */
+.doc-id{
+  position:absolute;
+  top:15px;
+  right:20px;
+  font-family:var(--mono);
+  font-size:10px;
+  color:#999;
 }
 
-.logo {
-  font-weight: bold;
-  font-size: 1rem;
-  letter-spacing: 1px;
+/* HEADER */
+header{
+  border-bottom:var(--border-thick);
+  padding-bottom:20px;
+  margin-bottom:25px;
 }
 
-.nav a {
-  margin-left: 20px;
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: var(--ink);
+.club-lockup{
+  display:flex;
+  justify-content:space-between;
+  align-items:baseline;
+  flex-wrap:wrap;
 }
 
-.nav a:hover {
-  color: var(--accent);
+h1{
+  margin:0;
+  font-size:32px;
+  font-weight:900;
+  text-transform:uppercase;
 }
 
-.hero {
-  display: grid;
-  grid-template-columns: 1fr 1.4fr;
-  border-bottom: var(--border);
+.division-tag{
+  background:var(--primary);
+  color:#fff;
+  font-size:12px;
+  padding:4px 8px;
+  text-transform:uppercase;
 }
 
-.hero-text {
-  padding: 40px;
+.fact-bar{
+  display:flex;
+  gap:15px;
+  font-size:11px;
+  text-transform:uppercase;
+  color:#666;
+  margin-top:10px;
+  flex-wrap:wrap;
 }
 
-.status {
-  display: inline-block;
-  font-size: 0.75rem;
-  font-family: var(--mono);
-  border: 1px solid var(--ink);
-  padding: 4px 8px;
-  margin-bottom: 20px;
+/* CTAs */
+.cta-row{
+  display:flex;
+  gap:10px;
+  margin:25px 0 40px;
+  flex-wrap:wrap;
 }
 
-h1 {
-  font-size: 3rem;
-  margin: 0;
-  text-transform: uppercase;
-  letter-spacing: -1px;
+.btn{
+  flex:1;
+  min-width:180px;
+  border:2px solid var(--ink);
+  padding:12px 0;
+  text-align:center;
+  font-size:12px;
+  font-weight:bold;
+  text-transform:uppercase;
+  text-decoration:none;
+  color:var(--ink);
 }
 
-.motto {
-  margin-top: 10px;
-  color: var(--accent);
-  font-weight: bold;
+.btn.primary{
+  background:var(--primary);
+  color:#fff;
+  border-color:var(--primary);
 }
 
-.meta {
-  margin-top: 30px;
-  font-size: 0.85rem;
-  line-height: 1.6;
+/* SECTIONS */
+section{margin-bottom:55px;}
+
+h2{
+  font-size:14px;
+  text-transform:uppercase;
+  border-bottom:2px solid var(--accent);
+  padding-bottom:5px;
 }
 
-.hero-img {
-  border-left: var(--border);
+/* IDENTITY */
+.identity p{
+  font-size:16px;
+  max-width:700px;
 }
 
-.hero-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+/* IMAGE SLOTS */
+.img-slot{
+  background:#e0e0e0;
+  border:1px solid #ccc;
+  margin-bottom:15px;
 }
 
-.strip {
-  display: flex;
-  justify-content: space-between;
-  padding: 12px 30px;
-  background: var(--primary);
-  color: white;
-  font-size: 0.8rem;
-  text-transform: uppercase;
+.img-slot img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
 }
 
-.artifacts {
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-  border-bottom: var(--border);
+.ratio-16-9{aspect-ratio:16/9;}
+.ratio-3-4{aspect-ratio:3/4; max-width:260px;}
+.ratio-1-1{aspect-ratio:1/1; max-width:260px;}
+
+/* SPLIT */
+.split{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:30px;
 }
 
-.card {
-  padding: 25px;
-  border-right: var(--border);
+/* LINKS */
+a{color:var(--ink); text-decoration:none;}
+a:hover{color:var(--accent);}
+
+/* FOOTER (MATCH SPOKANE TEMPLATE) */
+footer{
+  margin-top:70px;
+  padding:30px 20px;
+  border-top:var(--border-thick);
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  font-family:var(--mono);
+  font-size:11px;
+  color:#777;
 }
 
-.card:last-child {
-  border-right: none;
+.glb-logo{
+  height:56px; /* Spokane locked size */
+  width:auto;
 }
 
-.img-box {
-  aspect-ratio: 1/1;
-  border: 1px solid #ccc;
-  margin-bottom: 15px;
-}
-
-.img-box img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-h3 {
-  font-size: 1rem;
-  text-transform: uppercase;
-}
-
-p {
-  font-size: 0.85rem;
-}
-
-footer {
-  text-align: center;
-  padding: 15px;
-  background: var(--ink);
-  color: white;
-  font-size: 0.7rem;
-  letter-spacing: 2px;
-}
-
-@media(max-width:800px) {
-  .hero, .artifacts {
-    grid-template-columns: 1fr;
-  }
-  .hero-img {
-    border-left: none;
-    border-top: var(--border);
-    height: 300px;
-  }
-  .card {
-    border-right: none;
-    border-bottom: var(--border);
-  }
+@media(max-width:600px){
+  .split{grid-template-columns:1fr;}
+  footer{flex-direction:column; gap:15px;}
+  .doc-id{display:none;}
 }
 </style>
 </head>
 
 <body>
+<div class="club-sheet">
 
-<div class="container">
+<div class="doc-id">STP-CLUB-01</div>
 
 <header>
-  <div class="logo">GLB // PACIFIC</div>
-  <div class="nav">
-    <a href="#">Dossier</a>
-    <a href="#">Roster</a>
-    <a href="#">Broadcast</a>
+  <div class="club-lockup">
+    <h1>St. Paul Frost</h1>
+    <span class="division-tag">Americas Division</span>
+  </div>
+
+  <div class="fact-bar">
+    <span>Est. —</span>
+    <span>•</span>
+    <span><strong>Rimefield Park</strong></span>
+    <span>•</span>
+    <span>Mgr. Anya Kline</span>
+  </div>
+
+  <div class="cta-row">
+    <a class="btn primary" href="team.html?team=st-paul-frost">Active Roster</a>
+    <a class="btn" href="day.html">Daily Scores</a>
+    <a class="btn" href="game.html">Latest Box Score</a>
   </div>
 </header>
 
-<section class="hero">
-  <div class="hero-text">
-    <div class="status">STATUS: ACTIVE</div>
-    <h1>Tijuana<br>Tecnicos</h1>
-    <div class="motto">"El Sistema Nunca Falla"</div>
+<section class="identity">
+  <h2>The Club</h2>
+  <p>
+    St. Paul doesn’t sell a myth or a “style of play.” It records what happens:
+    breath in the dugout, late shadows on the infield, and the small pauses between pitches
+    when the whole park seems to listen. The Frost feel local—built for cold nights,
+    bright lights, and the kind of crowd that stays attentive all nine.
+  </p>
+</section>
 
-    <div class="meta">
-      <strong>Location:</strong> Tijuana, Baja California<br>
-      <strong>Identity:</strong> Engineered Precision<br>
-      <strong>Philosophy:</strong> Repeatability &gt; Emotion<br>
-      <strong>Environment:</strong> Controlled Variables
-    </div>
+<section>
+  <h2>Ballpark</h2>
+  <div class="img-slot ratio-16-9">
+    <img src="club-st-paul-frost-stadium.png" alt="Rimefield Park">
   </div>
+  <p>
+    <strong>Rimefield Park.</strong> A river-adjacent stadium with wide concourses and
+    hard, clean sightlines. When the sun drops, the lights come on fast—and the field
+    turns crisp. You can hear a bat crack from anywhere.
+  </p>
+</section>
 
-  <div class="hero-img">
-    <img src="club-tijuana-tecnicos-stadium.png" alt="Tecnicos Stadium">
+<section>
+  <h2>Broadcast & Announcers</h2>
+  <div class="split">
+    <div>
+      <div class="img-slot ratio-3-4">
+        <img src="club-st-paul-frost-broadcast.png" alt="Broadcast booth">
+      </div>
+      <h3>June Halvorsen</h3>
+      <p>
+        <strong>Play-by-play.</strong> Clear, measured calls with just enough warmth to
+        make it feel like you’re already there. Halvorsen lets the crowd noise breathe,
+        then lands the moment when it matters.
+      </p>
+    </div>
+    <div>
+      <div class="img-slot ratio-3-4">
+        <img src="club-st-paul-frost-announcer.png" alt="In-stadium announcer">
+      </div>
+      <h3>Pat “Northbound” Keane</h3>
+      <p>
+        <strong>In-stadium announcer.</strong> A steady baritone that cuts clean through
+        the upper deck. Lineups, counts, promotions—kept tight, never corny, always audible.
+      </p>
+    </div>
   </div>
 </section>
 
-<div class="strip">
-  <span>Condition: Stable</span>
-  <span>Noise: Minimal</span>
-  <span>Variance: Low</span>
-</div>
-
-<section class="artifacts">
-  <div class="card">
-    <div class="img-box">
-      <img src="club-tijuana-tecnicos-broadcast.png" alt="Tecnicos Broadcast">
+<section>
+  <h2>Mascot & Stands</h2>
+  <div class="split">
+    <div>
+      <div class="img-slot ratio-1-1">
+        <img src="club-st-paul-frost-mascot.png" alt="Frost mascot">
+      </div>
+      <h3>Rime</h3>
+      <p>
+        A human-worn costume with visible seams, a little scuff, and an old-pro confidence.
+        Rime works the aisles—high-fives at the rail, photos in the concourse, and quick
+        waves to kids who spot him first.
+      </p>
     </div>
-    <h3>The Analysis</h3>
-    <p>Broadcasts emphasize probability, efficiency, and system performance. Emotion is considered interference.</p>
-  </div>
-
-  <div class="card">
-    <div class="img-box">
-      <img src="club-tijuana-tecnicos-mascot.png" alt="Tecnicos Mascot">
+    <div>
+      <div class="img-slot ratio-1-1">
+        <img src="club-st-paul-frost-fans.png" alt="St. Paul fans">
+      </div>
+      <h3>The Ice Rail</h3>
+      <p>
+        Gloves on, hats low, and a lot of quiet focus between big moments. When the count
+        runs full, people stand without thinking. The cheer is sharp—then it’s back to watching.
+      </p>
     </div>
-    <h3>The Symbol</h3>
-    <p>The mascot represents function, not personality. It exists to remind the crowd that the system is always watching.</p>
-  </div>
-
-  <div class="card">
-    <div class="img-box">
-      <img src="club-tijuana-tecnicos-fans.png" alt="Tecnicos Fans">
-    </div>
-    <h3>The Stands</h3>
-    <p>Applause is synchronized. Silence is respected. The crowd behaves like a calibrated instrument.</p>
   </div>
 </section>
 
 <footer>
-  <div>GLB CLUB DOSSIER · TIJUANA</div>
-<img class="glb-logo" src="GLB_white.png" alt="GLB">
+  <div>GLB CLUB DOSSIER · ST. PAUL</div>
+  <!-- If your logo is stored at root, use "/GLB_white.png" instead -->
+  <img class="glb-logo" src="GLB_white.png" alt="GLB">
 </footer>
 
 </div>
-
 </body>
 </html>

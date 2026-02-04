@@ -1,6 +1,14 @@
 <!doctype html>
 <html lang="en">
-<head>
+const params = new URLSearchParams(window.location.search);
+let date = params.get("date");
+
+if (!date) {
+  const d = new Date();
+  date = d.toISOString().slice(0, 10); // YYYY-MM-DD
+}
+  
+  <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>GLB — Day</title>

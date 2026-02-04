@@ -1,23 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>GLB — Daily Scores</title>
 
 <style>
 :root{
-  --ink:#0f1214;
   --paper:#ffffff;
-  --border:4px solid var(--ink);
-  --mono:"Courier New", Courier, monospace;
+  --ink:#0f1214;
+  --muted:#666;
+  --border-thick:4px solid var(--ink);
+  --border-thin:1px solid #ddd;
   --sans:"Helvetica Neue", Helvetica, Arial, sans-serif;
+  --mono:"Courier New", Courier, monospace;
 }
 
 body{
-  background:#f4f4f4;
   margin:0;
   padding:20px;
+  background:#f4f4f4;
   color:var(--ink);
   font-family:var(--sans);
 }
@@ -27,102 +29,218 @@ body{
   margin:0 auto;
   background:var(--paper);
   padding:40px;
-  border-top:var(--border);
+  border-top:var(--border-thick);
 }
 
 header{
-  border-bottom:var(--border);
-  padding-bottom:20px;
-  margin-bottom:30px;
+  border-bottom:var(--border-thick);
+  padding-bottom:18px;
+  margin-bottom:22px;
 }
 
 h1{
   margin:0;
   font-size:28px;
+  font-weight:900;
   text-transform:uppercase;
+  letter-spacing:0.5px;
 }
 
-.date-line{
+.meta{
   margin-top:8px;
   font-family:var(--mono);
   font-size:12px;
-  color:#666;
+  color:var(--muted);
+}
+
+.controls{
+  margin-top:18px;
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+}
+
+.btn{
+  border:2px solid var(--ink);
+  padding:10px 14px;
+  font-size:12px;
+  font-weight:bold;
+  text-transform:uppercase;
+  text-decoration:none;
+  color:var(--ink);
+  display:inline-block;
+}
+
+.btn:hover{
+  background:var(--ink);
+  color:#fff;
+}
+
+.list{
+  margin-top:24px;
+  display:grid;
+  gap:12px;
+}
+
+.card{
+  border:1px solid var(--border-thin);
+  padding:14px 14px;
+  background:#fff;
+}
+
+.row{
+  display:flex;
+  justify-content:space-between;
+  gap:16px;
+  flex-wrap:wrap;
 }
 
 .game{
-  padding:18px 0;
-  border-bottom:1px solid #ddd;
-  display:grid;
-  grid-template-columns: 1fr auto;
-  gap:10px;
-}
-
-.teams{
-  font-weight:bold;
-}
-
-.score{
   font-family:var(--mono);
+  font-size:13px;
+  text-transform:uppercase;
 }
 
 .note{
-  margin-top:40px;
+  margin-top:8px;
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.45;
+}
+
+footer{
+  margin-top:70px;
+  padding:30px 20px;
+  border-top:var(--border-thick);
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
   font-family:var(--mono);
   font-size:11px;
   color:#777;
+}
+
+footer a{
+  text-decoration:none;
+  color:var(--ink);
+}
+
+footer a:hover{ color:#000; }
+
+@media(max-width:600px){
+  footer{flex-direction:column; gap:12px; align-items:flex-start;}
 }
 </style>
 </head>
 
 <body>
-
 <div class="sheet">
 
 <header>
   <h1>Daily Scores</h1>
-  <div class="date-line" id="dateLine"></div>
+  <div class="meta" id="metaLine">DATE: —</div>
+
+  <div class="controls">
+    <a class="btn" id="prevDay" href="#">Previous</a>
+    <a class="btn" id="todayBtn" href="#">Today</a>
+    <a class="btn" id="nextDay" href="#">Next</a>
+  </div>
 </header>
 
-<div id="games"></div>
-
-<div class="note">
-  GLOBAL LEAGUE BASEBALL · DAILY RECORD
+<div class="list" id="scoresList">
+  <!-- Populated by JS -->
 </div>
+
+<footer>
+  <a id="backToClub" href="index.html">← Back to Club</a>
+  <a href="index.html">GLB League Index</a>
+</footer>
 
 </div>
 
 <script>
-/* DATE HANDLING — SAFE DEFAULT */
-const params = new URLSearchParams(window.location.search);
-let date = params.get("date");
+(function(){
+  const params = new URLSearchParams(window.location.search);
+  const team = params.get("team");     // optional; used for Back to Club
+  let date = params.get("date");       // optional; defaults to today
 
-if (!date) {
-  const today = new Date();
-  date = today.toISOString().slice(0,10);
-}
+  // Default date = today (no error state)
+  if(!date){
+    const today = new Date();
+    date = today.toISOString().slice(0,10); // YYYY-MM-DD
+  }
 
-/* DISPLAY DATE */
-document.getElementById("dateLine").textContent =
-  `Games for ${date}`;
+  // Back to club (if team exists)
+  const back = document.getElementById("backToClub");
+  if(team){
+    back.href = `club-${team}.html`;
+  } else {
+    back.href = "index.html";
+  }
 
-/* PLACEHOLDER DATA (REMOVE LATER) */
-const sampleGames = [
-  { away: "Spokane Alloys", home: "Fresno Yield", score: "3–2" },
-  { away: "Albuquerque Aeros", home: "Tijuana Técnicos", score: "6–5" },
-  { away: "St. Paul Frost", home: "Birmingham Vulcans", score: "1–0" }
-];
+  // Date controls
+  const toDate = (s)=> new Date(s + "T12:00:00");
+  const fmt = (d)=> d.toISOString().slice(0,10);
 
-const container = document.getElementById("games");
+  const d = toDate(date);
+  const prev = new Date(d); prev.setDate(d.getDate()-1);
+  const next = new Date(d); next.setDate(d.getDate()+1);
+  const today = new Date(); const todayStr = fmt(today);
 
-sampleGames.forEach(g => {
-  const row = document.createElement("div");
-  row.className = "game";
-  row.innerHTML = `
-    <div class="teams">${g.away} @ ${g.home}</div>
-    <div class="score">${g.score}</div>
-  `;
-  container.appendChild(row);
-});
+  const base = (t)=> t ? `day.html?team=${encodeURIComponent(t)}&date=` : `day.html?date=`;
+  document.getElementById("prevDay").href = base(team) + fmt(prev);
+  document.getElementById("nextDay").href = base(team) + fmt(next);
+  document.getElementById("todayBtn").href = base(team) + todayStr;
+
+  document.getElementById("metaLine").textContent = `DATE: ${date}`;
+
+  // Placeholder scoreboard (you’ll swap this later when the real data exists)
+  const scores = [
+    { away:"spokane-alloys", home:"fresno-yield", awayR:3, homeR:4, status:"FINAL" },
+    { away:"albuquerque-aeros", home:"st-paul-frost", awayR:2, homeR:2, status:"F/10" },
+    { away:"vancouver-current", home:"monterrey-cementeros", awayR:null, homeR:null, status:"SCHEDULED" }
+  ];
+
+  const list = document.getElementById("scoresList");
+  list.innerHTML = "";
+
+  scores.forEach(g=>{
+    const a = (g.awayR===null) ? "—" : g.awayR;
+    const h = (g.homeR===null) ? "—" : g.homeR;
+
+    const card = document.createElement("div");
+    card.className = "card";
+
+    const row = document.createElement("div");
+    row.className = "row";
+
+    const left = document.createElement("div");
+    left.className = "game";
+    left.textContent = `${g.away} @ ${g.home}`;
+
+    const right = document.createElement("div");
+    right.className = "game";
+    right.textContent = `${a}–${h} · ${g.status}`;
+
+    row.appendChild(left);
+    row.appendChild(right);
+
+    const note = document.createElement("div");
+    note.className = "note";
+
+    // Link to game page if you want (optional)
+    const gameParam = `${g.away}@${g.home}`;
+    const gameUrl = team
+      ? `game.html?team=${encodeURIComponent(team)}&date=${encodeURIComponent(date)}&game=${encodeURIComponent(gameParam)}`
+      : `game.html?date=${encodeURIComponent(date)}&game=${encodeURIComponent(gameParam)}`;
+
+    note.innerHTML = `Box score: <a href="${gameUrl}">${gameParam}</a>`;
+
+    card.appendChild(row);
+    card.appendChild(note);
+    list.appendChild(card);
+  });
+})();
 </script>
 
 </body>

@@ -7,12 +7,13 @@
 
 <style>
 :root{
-  --field-white:#ffffff;
+  --paper:#ffffff;
   --ink:#0f1214;
-  --meta:#666;
+  --meta:#555;
   --line:#e0e0e0;
 
   --sans:"Helvetica Neue", Helvetica, Arial, sans-serif;
+  --serif:Georgia, "Times New Roman", serif;
   --mono:"Courier New", Courier, monospace;
 }
 
@@ -20,19 +21,19 @@ body{
   background:#f4f4f4;
   font-family:var(--sans);
   color:var(--ink);
+  margin:0;
+  padding:50px 20px;
   display:flex;
   justify-content:center;
-  padding:50px 20px;
-  margin:0;
 }
 
-.dossier-sheet{
-  background:#fff;
+.team-sheet{
+  background:var(--paper);
   width:100%;
-  max-width:580px;
+  max-width:620px;
   padding:40px;
-  box-shadow:0 2px 15px rgba(0,0,0,0.06);
   border-top:5px solid var(--ink);
+  box-shadow:0 2px 15px rgba(0,0,0,0.06);
 }
 
 /* HEADER */
@@ -52,20 +53,39 @@ header{
   text-transform:uppercase;
 }
 
-.header-meta{
+.team-meta{
   font-size:13px;
   color:var(--meta);
+  font-style:italic;
 }
 
-.glb-stamp{
-  height:60px;
+.club-link{
+  margin-top:4px;
+  font-size:11px;
+}
+
+.club-link a{
+  color:var(--ink);
+  text-decoration:none;
+  opacity:0.7;
+}
+
+.club-link a:hover{
+  opacity:1;
+  text-decoration:underline;
+}
+
+/* TEAM LOGO */
+.team-logo{
+  height:72px;
   width:auto;
 }
 
 /* SECTION HEADERS */
 h2{
-  font-family:var(--mono);
-  font-size:13px;
+  font-family:var(--serif);
+  font-size:14px;
+  font-weight:bold;
   text-transform:uppercase;
   border-bottom:1px solid var(--line);
   margin-top:35px;
@@ -85,6 +105,7 @@ th{
   font-size:10px;
   color:var(--meta);
   text-transform:uppercase;
+  text-align:left;
   padding:6px 8px;
   border-bottom:1px solid var(--ink);
 }
@@ -99,70 +120,69 @@ td{
 
 .col-player{width:50%;}
 .col-pos{width:15%;}
-.col-bt{width:20%;}
-.col-age{width:15%;}
+.col-bt{width:15%;}
+.col-age{width:20%;}
 
-/* LINKS */
-a{
-  color:var(--ink);
-  text-decoration:none;
+/* TEAM PHOTO */
+.team-photo{
+  margin-top:20px;
 }
 
-a:hover{text-decoration:underline;}
-
-/* NOTES */
-.notes-list{
-  list-style:none;
-  padding:0;
-  margin:0;
-  font-size:12px;
-}
-
-.notes-list li{
-  display:flex;
-  margin-bottom:6px;
-}
-
-.note-label{
-  width:120px;
-  font-size:10px;
-  font-weight:600;
-  color:var(--meta);
-  text-transform:uppercase;
+.team-photo img{
+  width:100%;
+  display:block;
+  border:1px solid var(--line);
 }
 
 /* FOOTER */
 footer{
   margin-top:50px;
-  border-top:1px solid var(--line);
   padding-top:15px;
+  border-top:1px solid var(--line);
   font-size:10px;
   color:var(--meta);
   text-transform:uppercase;
   letter-spacing:0.5px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.glb-logo{
+  height:48px;
+  width:auto;
 }
 </style>
 </head>
 
 <body>
 
-<div class="dossier-sheet">
+<div class="team-sheet">
 
 <header>
   <div class="header-text">
     <h1>Spokane Alloys</h1>
-    <div class="header-meta">Spokane — Americas Division</div>
-    <div class="header-meta">Team Record</div>
-    <div class="header-meta">Linked from club dossier</div>
+    <div class="team-meta">Spokane — Americas Division</div>
+    <div class="team-meta">Team Record</div>
+    <div class="club-link">
+      <a href="club-spokane-alloys.html">View Club Dossier</a>
+    </div>
   </div>
 
-  <!-- TEAM LOGO -->
   <img
-    src="club-spokane-alloys-logo.png"
+    src="team-spokane-alloys-logo.png"
     alt="Spokane Alloys Logo"
-    class="glb-stamp"
+    class="team-logo"
   >
 </header>
+
+<!-- TEAM PHOTO -->
+<div class="team-photo">
+  <img
+    src="team-spokane-alloys-photo.png"
+    alt="Spokane Alloys Team Photo"
+  >
+</div>
 
 <h2>Season Snapshot</h2>
 <table>
@@ -214,7 +234,7 @@ footer{
       <th>Date</th>
       <th>Opponent</th>
       <th>Result</th>
-      <th>Box</th>
+      <th class="align-right">Box</th>
     </tr>
   </thead>
   <tbody>
@@ -222,21 +242,16 @@ footer{
       <td>Apr 8</td>
       <td>Fresno</td>
       <td>W 2–0</td>
-      <td><a href="boxscore.html">View</a></td>
+      <td class="align-right">
+        <a href="boxscore.html">Box</a>
+      </td>
     </tr>
   </tbody>
 </table>
 
-<h2>Club Notes</h2>
-<ul class="notes-list">
-  <li><span class="note-label">Home Venue</span><span>Alloy Park</span></li>
-  <li><span class="note-label">Manager</span><span>Elias Thorne</span></li>
-  <li><span class="note-label">Established</span><span>2024</span></li>
-</ul>
-
 <footer>
-  Records current through most recent official scoring.<br>
-  Roster data subject to change.
+  <div>GLB TEAM RECORD · SPOKANE</div>
+  <img src="GLB_white.png" alt="GLB" class="glb-logo">
 </footer>
 
 </div>

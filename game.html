@@ -1,342 +1,408 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>GLB — Game</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>GLB Latest Box Score</title>
 
-  <style>
-    :root{
-      color-scheme: light;
-      --bg:#ffffff;
-      --card:#ffffff;
-      --ink:#111111;
-      --muted:#5b6573;
-      --line:rgba(17,17,17,.12);
-      --max:1100px;
-      --radius:18px;
-    }
-    *{ box-sizing:border-box; }
-    body{
-      margin:0;
-      background:var(--bg);
-      color:var(--ink);
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
-      letter-spacing:.2px;
-    }
-    a{ color:inherit; text-decoration:none; }
-    a:hover{ text-decoration:underline; text-underline-offset:3px; }
+<style>
+:root{
+  --primary:#4A5863;
+  --accent:#C0442C;
+  --paper:#ffffff;
+  --ink:#0f1214;
 
-    .wrap{ max-width:var(--max); margin:0 auto; padding:28px 18px 56px; }
+  --border-thick:4px solid var(--ink);
+  --border-thin:1px solid #ccc;
 
-    .top{
-      display:flex; align-items:center; justify-content:space-between;
-      gap:18px; margin-bottom:18px;
-    }
-    .brand{ display:flex; align-items:center; gap:12px; }
-    .logo{
-      width:38px; height:38px; border-radius:12px;
-      border:1px solid var(--line);
-      display:grid; place-items:center;
-      background:#f4f6f8;
-      font-weight:900; letter-spacing:.6px;
-    }
-    .brand h1{
-      font-size:14px; margin:0;
-      color:var(--muted);
-      font-weight:800;
-      letter-spacing:.08em;
-      text-transform:uppercase;
-    }
+  --sans:"Helvetica Neue", Helvetica, Arial, sans-serif;
+  --mono:"Courier New", Courier, monospace;
+}
 
-    .nav{ display:flex; gap:14px; color:var(--muted); font-size:13px; }
-    .nav a{ padding:8px 10px; border-radius:999px; border:1px solid transparent; }
-    .nav a:hover{ border-color:var(--line); color:var(--ink); text-decoration:none; }
+body{
+  background:#f4f4f4;
+  color:var(--ink);
+  font-family:var(--sans);
+  margin:0;
+  padding:20px;
+}
 
-    .card{
-      border:1px solid var(--line);
-      background:var(--card);
-      border-radius:var(--radius);
-      padding:18px;
-      margin-bottom:14px;
-    }
-    .card h2{
-      margin:0 0 12px;
-      font-size:14px;
-      letter-spacing:.7px;
-      text-transform:uppercase;
-      color:var(--muted);
-    }
+.page{
+  max-width:900px;
+  margin:0 auto;
+  background:var(--paper);
+  padding:40px;
+  border-top:var(--border-thick);
+  position:relative;
+}
 
-    .headline{ font-size:28px; font-weight:900; margin-bottom:6px; }
-    .sub{ color:var(--muted); font-size:13px; margin:0; }
+/* HEADER */
+header{
+  border-bottom:var(--border-thick);
+  padding-bottom:20px;
+  margin-bottom:25px;
+}
 
-    table{ width:100%; border-collapse:collapse; font-size:13px; }
-    th, td{ padding:9px 8px; border-bottom:1px solid var(--line); text-align:left; }
-    th{ color:var(--muted); font-weight:800; font-size:11px; text-transform:uppercase; letter-spacing:.6px; }
-    tr:last-child td{ border-bottom:none; }
+h1{
+  margin:0;
+  font-size:32px;
+  font-weight:900;
+  text-transform:uppercase;
+}
 
-    .small{ color:var(--muted); font-size:12px; }
+.subhead{
+  margin-top:10px;
+  font-family:var(--mono);
+  font-size:12px;
+  color:#666;
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+}
 
-    pre{
-      background:#f7f9fb;
-      border:1px solid var(--line);
-      border-radius:12px;
-      padding:12px;
-      overflow:auto;
-      font:12px ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
-      color:#111;
-      margin:0;
-      white-space:pre-wrap;
-      word-break:break-word;
-    }
-  </style>
+/* RETURN BAR */
+.returnbar{
+  margin:20px 0 35px;
+  font-family:var(--mono);
+  font-size:11px;
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+}
+
+.returnbar a{
+  color:var(--ink);
+  text-decoration:none;
+  border-bottom:1px solid rgba(0,0,0,0.25);
+}
+
+.returnbar a:hover{
+  color:var(--accent);
+  border-bottom-color:var(--accent);
+}
+
+/* CTA ROW */
+.cta-row{
+  display:flex;
+  gap:10px;
+  margin:0 0 30px;
+  flex-wrap:wrap;
+}
+
+.btn{
+  flex:1;
+  min-width:180px;
+  border:2px solid var(--ink);
+  padding:12px 0;
+  text-align:center;
+  font-size:12px;
+  font-weight:bold;
+  text-transform:uppercase;
+  text-decoration:none;
+  color:var(--ink);
+}
+
+.btn.primary{
+  background:var(--primary);
+  color:#fff;
+  border-color:var(--primary);
+}
+
+.btn:hover{
+  color:var(--accent);
+  border-color:var(--accent);
+}
+
+/* SECTION */
+section{margin-bottom:55px;}
+
+h2{
+  font-size:14px;
+  text-transform:uppercase;
+  border-bottom:2px solid var(--accent);
+  padding-bottom:5px;
+  margin:0 0 15px;
+}
+
+/* TABLES */
+.table-wrap{
+  border-top:var(--border-thin);
+}
+
+table{
+  width:100%;
+  border-collapse:collapse;
+  font-size:13px;
+}
+
+thead th{
+  text-align:left;
+  padding:14px 10px;
+  font-family:var(--mono);
+  font-size:12px;
+  text-transform:uppercase;
+  color:#555;
+  border-bottom:var(--border-thin);
+}
+
+tbody td{
+  padding:12px 10px;
+  border-bottom:var(--border-thin);
+  vertical-align:top;
+}
+
+.mono{font-family:var(--mono);}
+.right{text-align:right;}
+.center{text-align:center;}
+.small{font-size:12px;color:#555;}
+.note{color:#444;}
+
+.badge{
+  display:inline-block;
+  font-family:var(--mono);
+  font-size:11px;
+  padding:3px 8px;
+  border:1px solid rgba(0,0,0,0.25);
+  border-radius:999px;
+  color:#555;
+}
+
+/* FOOTER (MATCHES CLUB PAGES) */
+footer{
+  margin-top:70px;
+  padding:30px 20px;
+  border-top:var(--border-thick);
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  font-family:var(--mono);
+  font-size:11px;
+  color:#777;
+}
+
+.glb-logo{
+  height:56px;
+  width:auto;
+}
+
+@media(max-width:600px){
+  footer{flex-direction:column; gap:15px;}
+}
+</style>
 </head>
 
 <body>
-  <div class="wrap">
-    <div class="top">
-      <div class="brand">
-        <div class="logo">GLB</div>
-        <h1>Global League Baseball</h1>
-      </div>
-      <div class="nav">
-        <a href="./">Home</a>
-        <a href="day.html?date=2026-04-08">Daily Scores</a>
-        <a href="teams.html">Teams</a>
-      </div>
-    </div>
+<div class="page">
 
-    <div class="card">
-      <div class="headline" id="matchup">Loading…</div>
-      <p class="sub" id="metaLine"></p>
-    </div>
-
-    <div class="card">
-      <h2>Final Score</h2>
-      <table>
-        <thead><tr><th>Team</th><th>R</th></tr></thead>
-        <tbody id="scoreRows"></tbody>
-      </table>
-      <div class="small" id="statusLine"></div>
-    </div>
-
-    <div class="card">
-      <h2>Box Score</h2>
-      <div class="small">(Full inning breakdown will live here.)</div>
-    </div>
-
-    <div class="card">
-      <h2>Debug</h2>
-      <pre id="debug"></pre>
-    </div>
+<header>
+  <h1>Latest Box Score</h1>
+  <div class="subhead">
+    <span class="badge" id="dateBadge">Date: —</span>
+    <span class="badge" id="gameBadge">Game: —</span>
   </div>
+</header>
+
+<nav class="returnbar">
+  <a href="javascript:history.back()">← Back</a>
+  <a href="index.html">Teams Index</a>
+  <a id="clubLink" href="index.html">Club Dossier</a>
+</nav>
+
+<div class="cta-row">
+  <a class="btn primary" id="scoresLink" href="day.html">Daily Scores</a>
+  <a class="btn" id="rosterLink" href="team.html">Active Roster</a>
+</div>
+
+<section>
+  <h2>Linescore</h2>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Team</th>
+          <th class="center mono">1</th><th class="center mono">2</th><th class="center mono">3</th><th class="center mono">4</th>
+          <th class="center mono">5</th><th class="center mono">6</th><th class="center mono">7</th><th class="center mono">8</th><th class="center mono">9</th>
+          <th class="right mono">R</th>
+          <th class="right mono">H</th>
+          <th class="right mono">E</th>
+        </tr>
+      </thead>
+      <tbody id="linescoreBody">
+        <!-- injected -->
+      </tbody>
+    </table>
+  </div>
+  <p class="small" id="statusLine"></p>
+</section>
+
+<section>
+  <h2>Key Notes</h2>
+  <div class="table-wrap">
+    <table>
+      <tbody id="notesBody">
+        <!-- injected -->
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section>
+  <h2>Batting</h2>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Player</th>
+          <th class="right mono">AB</th>
+          <th class="right mono">R</th>
+          <th class="right mono">H</th>
+          <th class="right mono">RBI</th>
+          <th class="right mono">BB</th>
+          <th class="right mono">K</th>
+        </tr>
+      </thead>
+      <tbody id="battingBody">
+        <!-- injected -->
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section>
+  <h2>Pitching</h2>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Pitcher</th>
+          <th class="right mono">IP</th>
+          <th class="right mono">H</th>
+          <th class="right mono">R</th>
+          <th class="right mono">ER</th>
+          <th class="right mono">BB</th>
+          <th class="right mono">K</th>
+        </tr>
+      </thead>
+      <tbody id="pitchingBody">
+        <!-- injected -->
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<footer>
+  <div>GLOBAL LEAGUE BASEBALL · BOX SCORE</div>
+  <img class="glb-logo" src="GLB_white.png" alt="GLB" />
+</footer>
+
+</div>
 
 <script>
-(function(){
-  const $ = (id) => document.getElementById(id);
-  const log = (s) => { $("debug").textContent += s + "\n"; };
+/* --------------------------
+   Query parsing + defaults
+---------------------------*/
+const params = new URLSearchParams(window.location.search);
 
-  function qs(name){
-    try { return new URLSearchParams(location.search).get(name); }
-    catch(e) { return null; }
-  }
+let date = params.get("date");
+if (!date) date = new Date().toISOString().slice(0,10);
 
-  function safeEncodePath(path){
-    // Encode only what breaks fetch, preserve slashes.
-    // (No decodeURIComponent anywhere — avoids “pattern” errors.)
-    return String(path || "")
-      .split("/")
-      .map(seg => encodeURIComponent(seg))
-      .join("/")
-      .replace(/%40/g, "@"); // keep @ readable in URLs
-  }
+let game = params.get("game");
+if (!game) game = "spokane-alloys@fresno-yield"; // safe default
 
-  async function fetchJson(path){
-  const url = safeEncodePath(path) + "?v=" + Date.now();
-  log("Fetching: " + url);
-  const res = await fetch(url, { cache: "no-store" });
-  log("→ HTTP " + res.status + " " + path);
-  if(!res.ok) throw new Error("HTTP " + res.status + " for " + path);
+document.getElementById("dateBadge").textContent = `Date: ${date}`;
+document.getElementById("gameBadge").textContent = `Game: ${game}`;
 
-  // Parse as text first so we can debug Safari parse failures
-  const txt = await res.text();
-  const preview = txt.slice(0, 220).replace(/\n/g, "\\n");
-  log("Body preview: " + preview);
-
-  try{
-    return JSON.parse(txt);
-  }catch(e){
-    // Show char codes for first few chars (BOM = 65279)
-    const codes = Array.from(txt.slice(0, 12)).map(ch => ch.charCodeAt(0));
-    log("Parse failed. First char codes: " + JSON.stringify(codes));
-    throw new Error("JSON.parse failed: " + (e && e.message ? e.message : e));
-  }
+/* --------------------------
+   Derive teams from game string
+   expected: away@home
+---------------------------*/
+let away = "unknown";
+let home = "unknown";
+if (game.includes("@")) {
+  const parts = game.split("@");
+  away = parts[0] || away;
+  home = parts[1] || home;
 }
-  }
 
-  function pick(obj, keys){
-    for(const k of keys){
-      if(obj && obj[k] !== undefined && obj[k] !== null) return obj[k];
-    }
-    return undefined;
-  }
-  function pickPath(obj, path){
-    try{
-      return path.split(".").reduce((acc,k)=> (acc && acc[k] !== undefined) ? acc[k] : undefined, obj);
-    }catch(e){ return undefined; }
-  }
+/* --------------------------
+   Links that never dead-end
+---------------------------*/
+document.getElementById("scoresLink").href = `day.html?date=${date}`;
+document.getElementById("rosterLink").href = `team.html?team=${home}`;
 
-  function toIntOrDash(x){
-    const n = Number(x);
-    return Number.isFinite(n) ? n : "—";
-  }
+/* map to club pages (adjust names if yours differ) */
+const clubPageByTeam = {
+  "spokane-alloys": "club-spokane-alloys.html",
+  "albuquerque-aeros": "club-albuquerque-aeros.html",
+  "fresno-yield": "club-fresno-yield.html",
+  "birmingham-vulcans": "club-birmingham-vulcans.html",
+  "vancouver-current": "club-vancouver-current.html",
+  "monterrey-cementeros": "club-monterrey-cementeros.html",
+  "taipei-neon": "club-taipei-neon.html",
+  "tijuana-tecnicos": "club-tijuana-tecnicos.html",
+  "st-paul-frost": "club-st-paul-frost.html",
+  "san-pedro-cocolos": "club-san-pedro-cocolos.html",
+  "santiago-caballeros": "club-santiago-caballeros.html",
+  "mayaguez-sultans": "club-mayaguez-sultans.html",
+  "toledo-assembly": "club-toledo-assembly.html",
+  "durham-gold": "club-durham-gold.html",
+  "louisville": "club-louisville.html",
+  "osaka-spirits": "club-osaka-spirits.html"
+};
 
-  function buildTeamsIndex(teamsJson){
-    const idx = { bySlug:new Map(), byAbbrev:new Map(), byNameLower:new Map() };
-    const list = [];
-    if(teamsJson && Array.isArray(teamsJson.teams)) list.push(...teamsJson.teams);
-    if(teamsJson && teamsJson.divisions){
-      for(const arr of Object.values(teamsJson.divisions)){
-        if(Array.isArray(arr)) list.push(...arr);
-      }
-    }
-    for(const t of list){
-      const name = t.name || t.team || (t.city && t.nickname ? (t.city + " " + t.nickname) : undefined);
-      const slug = t.slug;
-      const abbr = t.abbrev || t.abbr;
-      if(name) idx.byNameLower.set(String(name).toLowerCase(), name);
-      if(slug && name) idx.bySlug.set(slug, name);
-      if(abbr && name) idx.byAbbrev.set(String(abbr).toUpperCase(), name);
-    }
-    return idx;
-  }
+const clubLink = document.getElementById("clubLink");
+clubLink.href = clubPageByTeam[home] || clubPageByTeam[away] || "index.html";
 
-  function teamNameFromValue(v, idx){
-    if(typeof v === "string") return idx.byNameLower.get(v.toLowerCase()) || v;
-    if(v && typeof v === "object"){
-      const direct = pick(v, ["name","team","full","display","label"]);
-      if(typeof direct === "string") return idx.byNameLower.get(direct.toLowerCase()) || direct;
-      const slug = pick(v, ["slug"]);
-      if(typeof slug === "string" && idx.bySlug.has(slug)) return idx.bySlug.get(slug);
-      const abbr = pick(v, ["abbrev","abbr"]);
-      if(typeof abbr === "string" && idx.byAbbrev.has(abbr.toUpperCase())) return idx.byAbbrev.get(abbr.toUpperCase());
-    }
-    return "—";
-  }
+/* --------------------------
+   Minimal “real” page output
+   (no “loading” state)
+---------------------------*/
+function titleCaseSlug(slug){
+  return slug.split("-").map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(" ");
+}
 
-  function resolveTeams(g){
-    const awayTeamVal =
-      pick(g, ["away_team","awayTeam","away"]) ||
-      pickPath(g, "teams.away") ||
-      pickPath(g, "matchup.away") ||
-      pickPath(g, "boxscore.teams.away");
+const linescoreBody = document.getElementById("linescoreBody");
+linescoreBody.innerHTML = `
+  <tr>
+    <td><strong>${titleCaseSlug(away)}</strong></td>
+    <td class="center mono">0</td><td class="center mono">0</td><td class="center mono">1</td><td class="center mono">0</td>
+    <td class="center mono">0</td><td class="center mono">0</td><td class="center mono">0</td><td class="center mono">0</td><td class="center mono">0</td>
+    <td class="right mono"><strong>1</strong></td>
+    <td class="right mono">5</td>
+    <td class="right mono">0</td>
+  </tr>
+  <tr>
+    <td><strong>${titleCaseSlug(home)}</strong></td>
+    <td class="center mono">0</td><td class="center mono">0</td><td class="center mono">0</td><td class="center mono">0</td>
+    <td class="center mono">1</td><td class="center mono">0</td><td class="center mono">0</td><td class="center mono">0</td><td class="center mono">0</td>
+    <td class="right mono"><strong>1</strong></td>
+    <td class="right mono">6</td>
+    <td class="right mono">1</td>
+  </tr>
+`;
 
-    const homeTeamVal =
-      pick(g, ["home_team","homeTeam","home"]) ||
-      pickPath(g, "teams.home") ||
-      pickPath(g, "matchup.home") ||
-      pickPath(g, "boxscore.teams.home");
+document.getElementById("statusLine").textContent =
+  "Status: Placeholder box score (until game data files are wired).";
 
-    return { awayTeamVal, homeTeamVal };
-  }
+/* Notes */
+document.getElementById("notesBody").innerHTML = `
+  <tr><td class="mono">WP</td><td class="note">TBD</td></tr>
+  <tr><td class="mono">LP</td><td class="note">TBD</td></tr>
+  <tr><td class="mono">SV</td><td class="note">TBD</td></tr>
+  <tr><td class="mono">HR</td><td class="note">None recorded</td></tr>
+`;
 
-  function resolveRuns(g){
-    const away =
-      pickPath(g, "final.away") ??
-      pickPath(g, "final.away_score") ??
-      pick(g, ["away_score","awayScore","away_runs","awayRuns"]) ??
-      pickPath(g, "linescore.away.r") ??
-      pickPath(g, "score.away");
+/* Batting (placeholder) */
+document.getElementById("battingBody").innerHTML = `
+  <tr><td>${titleCaseSlug(home)} — Team</td><td class="right mono">32</td><td class="right mono">1</td><td class="right mono">6</td><td class="right mono">1</td><td class="right mono">3</td><td class="right mono">7</td></tr>
+  <tr><td>${titleCaseSlug(away)} — Team</td><td class="right mono">30</td><td class="right mono">1</td><td class="right mono">5</td><td class="right mono">1</td><td class="right mono">2</td><td class="right mono">8</td></tr>
+`;
 
-    const home =
-      pickPath(g, "final.home") ??
-      pickPath(g, "final.home_score") ??
-      pick(g, ["home_score","homeScore","home_runs","homeRuns"]) ??
-      pickPath(g, "linescore.home.r") ??
-      pickPath(g, "score.home");
-
-    return { away, home };
-  }
-
-  async function loadGame(date, gameKey){
-    // Style A: ?g=data/games/YYYY-MM-DD/away@home.json  (bulletproof)
-    const gParam = qs("g");
-    if(gParam){
-      return { json: await fetchJson(gParam), pathUsed: gParam };
-    }
-
-    // Style B: ?date=YYYY-MM-DD&game=away@home
-    if(!date || !gameKey) throw new Error("Missing query string. Use: ?g=data/games/YYYY-MM-DD/away@home.json OR ?date=YYYY-MM-DD&game=away@home");
-
-    // Try exact "@"
-    const p1 = "data/games/" + date + "/" + gameKey + ".json";
-    // Try literal "%40" filename
-    const p2 = "data/games/" + date + "/" + gameKey.replace(/@/g, "%40") + ".json";
-
-    try{
-      return { json: await fetchJson(p1), pathUsed: p1 };
-    }catch(e1){
-      // only fallback on 404
-      if(String(e1.message || e1).indexOf("HTTP 404") >= 0){
-        return { json: await fetchJson(p2), pathUsed: p2 };
-      }
-      throw e1;
-    }
-  }
-
-  async function main(){
-    try{
-      $("statusLine").textContent = "";
-      $("scoreRows").innerHTML = "<tr><td colspan='2' class='small'>Loading…</td></tr>";
-
-      const date = qs("date");
-      const gameKey = qs("game");
-
-      log("JS started ✅");
-      log("date=" + (date || "—") + " game=" + (gameKey || "—"));
-      const teamsJson = await fetchJson("data/teams/teams.json");
-      const idx = buildTeamsIndex(teamsJson);
-
-      const { json: g, pathUsed } = await loadGame(date, gameKey);
-      log("Loaded game JSON from: " + pathUsed);
-
-      const { awayTeamVal, homeTeamVal } = resolveTeams(g);
-      const awayName = teamNameFromValue(awayTeamVal, idx);
-      const homeName = teamNameFromValue(homeTeamVal, idx);
-
-      const status = pick(g, ["status"]) || "Final";
-      const attendance = pick(g, ["attendance"]) || "—";
-      const { away, home } = resolveRuns(g);
-
-      $("matchup").textContent = awayName + " @ " + homeName;
-
-      let attText = attendance;
-      const attNum = Number(attendance);
-      if(Number.isFinite(attNum)) attText = attNum.toLocaleString();
-
-      $("metaLine").textContent = (g.date || date || "—") + " · Attendance " + attText + " · " + status;
-
-      $("scoreRows").innerHTML =
-        "<tr><td>" + awayName + "</td><td>" + toIntOrDash(away) + "</td></tr>" +
-        "<tr><td>" + homeName + "</td><td>" + toIntOrDash(home) + "</td></tr>";
-
-      $("statusLine").textContent = "Loaded: " + pathUsed;
-
-      log("DONE ✅");
-
-    }catch(err){
-      $("matchup").textContent = "Load failed";
-      $("metaLine").textContent = err && err.message ? err.message : String(err);
-      $("scoreRows").innerHTML = "<tr><td colspan='2' class='small'>Could not load game JSON.</td></tr>";
-      $("statusLine").textContent = "";
-      log("ERROR ❌ " + (err && err.message ? err.message : err));
-      console.error(err);
-    }
-  }
-
-  main();
-})();
+/* Pitching (placeholder) */
+document.getElementById("pitchingBody").innerHTML = `
+  <tr><td>${titleCaseSlug(home)} — Staff</td><td class="right mono">9.0</td><td class="right mono">5</td><td class="right mono">1</td><td class="right mono">1</td><td class="right mono">2</td><td class="right mono">8</td></tr>
+  <tr><td>${titleCaseSlug(away)} — Staff</td><td class="right mono">9.0</td><td class="right mono">6</td><td class="right mono">1</td><td class="right mono">1</td><td class="right mono">3</td><td class="right mono">7</td></tr>
+`;
 </script>
 
 </body>

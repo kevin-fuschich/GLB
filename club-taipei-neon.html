@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Taipei Neon – Club Dossier</title>
 
 <style>
 :root{
-  /* Taipei palette (Spokane-compatible, neon-forward but controlled) */
-  --primary:#2B2F5C;   /* deep indigo */
-  --accent:#17F3FF;    /* neon cyan */
+  /* Taipei Neon palette (subtle, Spokane-compatible) */
+  --primary:#1E3A5F;     /* deep night blue */
+  --accent:#E83E8C;      /* neon magenta */
   --paper:#ffffff;
   --ink:#0f1214;
 
@@ -105,13 +105,6 @@ h1{
   text-transform:uppercase;
   text-decoration:none;
   color:var(--ink);
-  transition:all 0.2s;
-}
-
-.btn:hover{
-  background:var(--ink);
-  color:#fff;
-  border-color:var(--ink);
 }
 
 .btn.primary{
@@ -120,14 +113,8 @@ h1{
   border-color:var(--primary);
 }
 
-.btn.primary:hover{
-  background:var(--accent);
-  color:var(--ink);
-  border-color:var(--accent);
-}
-
 /* SECTIONS */
-section{ margin-bottom:55px; }
+section{margin-bottom:55px;}
 
 h2{
   font-size:14px;
@@ -156,9 +143,9 @@ h2{
   display:block;
 }
 
-.ratio-16-9{ aspect-ratio:16/9; }
-.ratio-3-4{ aspect-ratio:3/4; max-width:260px; }
-.ratio-1-1{ aspect-ratio:1/1; max-width:260px; }
+.ratio-16-9{aspect-ratio:16/9;}
+.ratio-3-4{aspect-ratio:3/4; max-width:260px;}
+.ratio-1-1{aspect-ratio:1/1; max-width:260px;}
 
 /* SPLIT */
 .split{
@@ -168,8 +155,8 @@ h2{
 }
 
 /* LINKS */
-a{ color:var(--ink); text-decoration:none; }
-a:hover{ color:var(--accent); }
+a{color:var(--ink); text-decoration:none;}
+a:hover{color:var(--accent);}
 
 /* FOOTER */
 footer{
@@ -185,14 +172,14 @@ footer{
 }
 
 .glb-logo{
-  height:56px; /* locked template size */
+  height:56px;
   width:auto;
 }
 
 @media(max-width:600px){
-  .split{ grid-template-columns:1fr; }
-  footer{ flex-direction:column; gap:15px; }
-  .doc-id{ display:none; }
+  .split{grid-template-columns:1fr;}
+  footer{flex-direction:column; gap:15px;}
+  .doc-id{display:none;}
 }
 </style>
 </head>
@@ -211,9 +198,9 @@ footer{
   <div class="fact-bar">
     <span>Est. —</span>
     <span>•</span>
-    <span><strong>Neon Harbor Park</strong></span>
+    <span><strong>Neon Grounds</strong></span>
     <span>•</span>
-    <span>Mgr. Lin “Switch” Yu</span>
+    <span>Mgr. Lin Wei-Cheng</span>
   </div>
 
   <div class="cta-row">
@@ -226,22 +213,22 @@ footer{
 <section class="identity">
   <h2>The Club</h2>
   <p>
-    Taipei plays under signage, streetlight, and late trains—baseball recorded in bright color without
-    turning into a cartoon. The park feels alive even during warmups: vendor calls, camera shutters,
-    and the soft click of cleats on concrete. Nothing here tries to be “mystical.” It just happens fast,
-    and it looks good while it does.
+    Taipei plays under light—real light, reflected light, and whatever bleeds in
+    from the city beyond the gates. Games feel fast even when they’re not.
+    There’s no mythmaking here. Just innings stacked late into the night,
+    when sound carries farther and the crowd stays longer than planned.
   </p>
 </section>
 
 <section>
   <h2>Ballpark</h2>
   <div class="img-slot ratio-16-9">
-    <img src="club-taipei-neon-stadium.png" alt="Neon Harbor Park at night" />
+    <img src="club-taipei-neon-stadium.png" alt="Neon Grounds">
   </div>
   <p>
-    <strong>Neon Harbor Park.</strong> A compact urban stadium boxed in by rooftops and LED boards.
-    When the lights come on, the outfield fence glows like a shoreline. You can hear the game—bat on ball,
-    glove pop, the crowd’s lift—over the city’s constant hum.
+    <strong>Neon Grounds.</strong> A compact park tucked into the city’s edge.
+    Sign glow reflects off concrete, and the outfield wall hums softly after dark.
+    The game never fully separates from the street.
   </p>
 </section>
 
@@ -250,22 +237,22 @@ footer{
   <div class="split">
     <div>
       <div class="img-slot ratio-3-4">
-        <img src="club-taipei-neon-broadcast.png" alt="Broadcast booth" />
+        <img src="club-taipei-neon-broadcast.png" alt="Broadcast booth">
       </div>
-      <h3>Jia-Hao Chen</h3>
+      <h3>Jun-Hao Chen</h3>
       <p>
-        <strong>Play-by-play.</strong> Quick reads, clean pacing, and an ear for the crowd. Chen calls
-        the game like he’s tracking motion—pitch, swing, contact—then lets the stadium do the rest.
+        <strong>Play-by-play.</strong> Sharp pacing, quick resets.
+        Chen lets silence do some of the work—then snaps the call right on contact.
       </p>
     </div>
     <div>
       <div class="img-slot ratio-3-4">
-        <img src="club-taipei-neon-announcer.png" alt="In-stadium announcer" />
+        <img src="club-taipei-neon-announcer.png" alt="In-stadium announcer">
       </div>
       <h3>Mei “Spark” Huang</h3>
       <p>
-        <strong>In-stadium announcer.</strong> Bright, controlled energy with perfect timing—lineups,
-        promos, walk-up cues. When she hits the last name, the crowd answers like it’s reflex.
+        <strong>In-stadium announcer.</strong> Bright voice, easy rhythm.
+        Lineups land clean. Crowd cues hit on time. Nothing forced.
       </p>
     </div>
   </div>
@@ -276,24 +263,23 @@ footer{
   <div class="split">
     <div>
       <div class="img-slot ratio-1-1">
-        <img src="club-taipei-neon-mascot.png" alt="Taipei mascot" />
+        <img src="club-taipei-neon-mascot.png" alt="Neon mascot">
       </div>
       <h3>Glow</h3>
       <p>
-        A human-worn mascot built for movement—soft edges, bright accents, and a costume that looks used,
-        not manufactured for a photoshoot. Glow lives in the aisles: selfies, high-fives, and sprinting
-        from section to section when a chant starts.
+        A human-worn suit with reflective trim and worn sneakers.
+        Glow moves constantly—aisles, rails, concourse edges—
+        never quite where you expect.
       </p>
     </div>
     <div>
       <div class="img-slot ratio-1-1">
-        <img src="club-taipei-neon-fans.png" alt="Taipei fans" />
+        <img src="club-taipei-neon-fans.png" alt="Taipei fans">
       </div>
-      <h3>The Night Market Bleachers</h3>
+      <h3>The Night Crowd</h3>
       <p>
-        Snacks, neon wristbands, handheld radios, and constant chatter. Fans keep score on their phones,
-        then argue about the strike zone anyway. When a ball finds the gap, the entire section stands up
-        at once—like a switch flipped.
+        Phones out. Radios on. Food still warm.
+        Applause comes in waves that rise and vanish just as fast.
       </p>
     </div>
   </div>
@@ -301,7 +287,7 @@ footer{
 
 <footer>
   <div>GLB CLUB DOSSIER · TAIPEI</div>
-  <img class="glb-logo" src="GLB_white.png" alt="GLB" />
+  <img class="glb-logo" src="GLB_white.png" alt="GLB">
 </footer>
 
 </div>

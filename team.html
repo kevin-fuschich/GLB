@@ -1,268 +1,312 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>GLB — Team</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>GLB Active Roster</title>
 
-  <style>
-    :root{
-      color-scheme: light;
-      --bg:#ffffff;
-      --card:#ffffff;
-      --ink:#111111;
-      --muted:#5b6573;
-      --line:rgba(17,17,17,.12);
-      --max:1100px;
-      --radius:18px;
-    }
-    *{ box-sizing:border-box; }
-    body{
-      margin:0;
-      background:var(--bg);
-      color:var(--ink);
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
-      letter-spacing:.2px;
-    }
-    a{ color:inherit; text-decoration:none; }
-    a:hover{ text-decoration:underline; text-underline-offset:3px; }
+<style>
+:root{
+  --primary:#4A5863;
+  --accent:#C0442C;
+  --paper:#ffffff;
+  --ink:#0f1214;
 
-    .wrap{ max-width:var(--max); margin:0 auto; padding:28px 18px 56px; }
+  --border-thick:4px solid var(--ink);
+  --border-thin:1px solid #ccc;
 
-    .top{ display:flex; align-items:center; justify-content:space-between; gap:18px; margin-bottom:18px; }
-    .brand{ display:flex; align-items:center; gap:12px; }
-    .logo{
-      width:38px; height:38px; border-radius:12px;
-      border:1px solid var(--line);
-      display:grid; place-items:center;
-      background:#f4f6f8;
-      font-weight:900;
-      letter-spacing:.6px;
-    }
-    .brand h1{ font-size:14px; margin:0; color:var(--muted); font-weight:750; letter-spacing:.08em; }
+  --sans:"Helvetica Neue", Helvetica, Arial, sans-serif;
+  --mono:"Courier New", Courier, monospace;
+}
 
-    .nav{ display:flex; gap:14px; color:var(--muted); font-size:13px; }
-    .nav a{ padding:8px 10px; border-radius:999px; border:1px solid transparent; }
-    .nav a:hover{ border-color:var(--line); color:var(--ink); text-decoration:none; }
+body{
+  background:#f4f4f4;
+  color:var(--ink);
+  font-family:var(--sans);
+  margin:0;
+  padding:20px;
+}
 
-    .hero{
-      border:1px solid var(--line);
-      background:var(--card);
-      border-radius:var(--radius);
-      padding:22px;
-      display:grid;
-      grid-template-columns: 1.2fr .8fr;
-      gap:18px;
-    }
-    .kicker{ color:var(--muted); font-size:12px; letter-spacing:.8px; text-transform:uppercase; }
-    .teamName{ margin:8px 0 6px; font-size:36px; line-height:1.05; font-weight:950; }
-    .metaRow{ display:flex; flex-wrap:wrap; gap:10px; margin-top:10px; color:var(--muted); font-size:13px; }
-    .pill{ border:1px solid var(--line); border-radius:999px; padding:7px 10px; background:#f7f9fb; }
+.page{
+  max-width:900px;
+  margin:0 auto;
+  background:var(--paper);
+  padding:40px;
+  border-top:var(--border-thick);
+  position:relative;
+}
 
-    .statGrid{ display:grid; grid-template-columns: repeat(3, 1fr); gap:10px; }
-    .stat{ border:1px solid var(--line); border-radius:14px; padding:12px; background:#f7f9fb; }
-    .stat .label{ color:var(--muted); font-size:11px; letter-spacing:.6px; text-transform:uppercase; }
-    .stat .value{ font-size:18px; font-weight:900; margin-top:6px; }
+/* HEADER */
+header{
+  border-bottom:var(--border-thick);
+  padding-bottom:20px;
+  margin-bottom:25px;
+}
 
-    .grid{ display:grid; grid-template-columns: 1fr 1fr; gap:14px; margin-top:14px; }
-    .card{ border:1px solid var(--line); background:var(--card); border-radius:var(--radius); padding:18px; }
-    .card h2{ margin:0 0 12px; font-size:14px; letter-spacing:.7px; text-transform:uppercase; color:var(--muted); }
+h1{
+  margin:0;
+  font-size:32px;
+  font-weight:900;
+  text-transform:uppercase;
+}
 
-    table{ width:100%; border-collapse:collapse; font-size:13px; }
-    th, td{ padding:9px 8px; border-bottom:1px solid var(--line); text-align:left; }
-    th{ color:var(--muted); font-weight:800; font-size:11px; text-transform:uppercase; letter-spacing:.6px; }
-    tr:last-child td{ border-bottom:none; }
+.subhead{
+  margin-top:10px;
+  font-family:var(--mono);
+  font-size:12px;
+  color:#666;
+}
 
-    .coachLine{ display:flex; justify-content:space-between; gap:12px; padding:10px 0; border-bottom:1px solid var(--line); }
-    .coachLine:last-child{ border-bottom:none; }
-    .coachRole{ color:var(--muted); font-size:12px; text-transform:uppercase; letter-spacing:.6px; }
-    .coachName{ font-weight:900; }
-    .small{ color:var(--muted); font-size:12px; }
+/* RETURN BAR */
+.returnbar{
+  margin:20px 0 35px;
+  font-family:var(--mono);
+  font-size:11px;
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+}
 
-    @media (max-width: 860px){
-      .hero{ grid-template-columns:1fr; }
-      .grid{ grid-template-columns:1fr; }
-      .statGrid{ grid-template-columns: repeat(2, 1fr); }
-    }
-  </style>
+.returnbar a{
+  color:var(--ink);
+  text-decoration:none;
+  border-bottom:1px solid rgba(0,0,0,0.25);
+}
+
+.returnbar a:hover{
+  color:var(--accent);
+  border-bottom-color:var(--accent);
+}
+
+/* CTA ROW */
+.cta-row{
+  display:flex;
+  gap:10px;
+  margin:0 0 30px;
+  flex-wrap:wrap;
+}
+
+.btn{
+  flex:1;
+  min-width:180px;
+  border:2px solid var(--ink);
+  padding:12px 0;
+  text-align:center;
+  font-size:12px;
+  font-weight:bold;
+  text-transform:uppercase;
+  text-decoration:none;
+  color:var(--ink);
+}
+
+.btn.primary{
+  background:var(--primary);
+  color:#fff;
+  border-color:var(--primary);
+}
+
+.btn:hover{
+  color:var(--accent);
+  border-color:var(--accent);
+}
+
+/* TABLE */
+.table-wrap{
+  border-top:var(--border-thin);
+}
+
+table{
+  width:100%;
+  border-collapse:collapse;
+  font-size:13px;
+}
+
+thead th{
+  text-align:left;
+  padding:14px 10px;
+  font-family:var(--mono);
+  font-size:12px;
+  text-transform:uppercase;
+  color:#555;
+  border-bottom:var(--border-thin);
+}
+
+tbody td{
+  padding:14px 10px;
+  border-bottom:var(--border-thin);
+  vertical-align:top;
+}
+
+.num, .pos{
+  font-family:var(--mono);
+  white-space:nowrap;
+}
+
+.pos{
+  color:var(--accent);
+  font-weight:bold;
+}
+
+.note{
+  color:#444;
+}
+
+/* FOOTER (MATCHES CLUB PAGES) */
+footer{
+  margin-top:70px;
+  padding:30px 20px;
+  border-top:var(--border-thick);
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  font-family:var(--mono);
+  font-size:11px;
+  color:#777;
+}
+
+.glb-logo{
+  height:56px; /* matches your Spokane template */
+  width:auto;
+}
+
+@media(max-width:600px){
+  footer{flex-direction:column; gap:15px;}
+  .cta-row{gap:8px;}
+}
+</style>
 </head>
 
 <body>
-  <div class="wrap">
-    <div class="top">
-      <div class="brand">
-        <div class="logo">GLB</div>
-        <div><h1>GLOBAL LEAGUE BASEBALL</h1></div>
-      </div>
-      <div class="nav">
-        <a href="./">Home</a>
-        <a href="day.html?date=2026-04-08">Daily Scores</a>
-        <a href="teams.html">Teams</a>
-      </div>
-    </div>
+<div class="page">
 
-    <section class="hero">
-      <div>
-        <div class="kicker">TEAM</div>
-        <div class="teamName" id="teamName">Loading…</div>
-        <div class="metaRow" id="metaRow"></div>
-      </div>
+<header>
+  <h1>Active Roster</h1>
+  <div class="subhead" id="teamLine">Team: —</div>
+</header>
 
-      <div>
-        <div class="statGrid">
-          <div class="stat">
-            <div class="label">Division</div>
-            <div class="value" id="divisionVal">—</div>
-          </div>
-          <div class="stat">
-            <div class="label">Abbrev</div>
-            <div class="value" id="abbrVal">—</div>
-          </div>
-          <div class="stat">
-            <div class="label">Founded</div>
-            <div class="value" id="foundedVal">—</div>
-          </div>
-        </div>
-        <div class="small" id="statusLine">Loading roster…</div>
-      </div>
-    </section>
+<nav class="returnbar">
+  <a href="javascript:history.back()">← Back</a>
+  <a href="index.html">Teams Index</a>
+  <a id="clubLink" href="club-spokane-alloys.html">Club Dossier</a>
+</nav>
 
-    <section class="grid">
-      <div class="card">
-        <h2>Coaching Staff</h2>
-        <div id="coaches"></div>
-      </div>
+<div class="cta-row">
+  <a class="btn primary" id="dailyLink" href="day.html">Daily Scores</a>
+  <a class="btn" id="boxLink" href="game.html">Latest Box Score</a>
+</div>
 
-      <div class="card">
-        <h2>Roster</h2>
-        <table>
-          <thead><tr><th>Pos</th><th>Player</th><th>B/T</th><th>Born</th></tr></thead>
-          <tbody id="rosterBody"></tbody>
-        </table>
-      </div>
+<section class="table-wrap">
+  <table>
+    <thead>
+      <tr>
+        <th class="num">#</th>
+        <th>Player</th>
+        <th class="pos">Pos</th>
+        <th class="note">Note</th>
+      </tr>
+    </thead>
+    <tbody id="rosterBody">
+      <!-- Rows injected -->
+    </tbody>
+  </table>
+</section>
 
-      <div class="card">
-        <h2>Ballpark</h2>
-        <div class="small">(Placeholder — we’ll wire this next.)</div>
-      </div>
+<footer>
+  <div>GLOBAL LEAGUE BASEBALL · ACTIVE ROSTER</div>
+  <img class="glb-logo" src="GLB_white.png" alt="GLB" />
+</footer>
 
-      <div class="card">
-        <h2>Identity</h2>
-        <div class="small">(Placeholder — logo lockup, colors, mascot, broadcaster, etc.)</div>
-      </div>
-    </section>
-  </div>
+</div>
 
-  <script>
-    const $ = (id) => document.getElementById(id);
-    const qs = (name) => new URLSearchParams(location.search).get(name);
+<script>
+/* --- TEAM PARAM --- */
+const params = new URLSearchParams(window.location.search);
+let team = params.get("team");
 
-    async function loadJson(path){
-      const url = path + "?v=" + Date.now();
-      const res = await fetch(url, { cache: "no-store" });
-      if(!res.ok) throw new Error("HTTP " + res.status + " for " + path);
-      return res.json();
-    }
+// Default team (prevents “missing query string” behavior)
+if (!team) team = "spokane-alloys";
 
-    function fmtBT(p){
-      const b = p.bats || "—";
-      const t = p.throws || "—";
-      return (b === "—" && t === "—") ? "—" : `${b}/${t}`;
-    }
+/* --- DATE DEFAULT FOR LINKS --- */
+const today = new Date().toISOString().slice(0,10);
 
-    function renderCoaches(c){
-      if(!c) return "<div class='small'>No coaching data.</div>";
-      const map = [
-        ["Manager", c.manager],
-        ["Pitching Coach", c.pitching_coach],
-        ["Hitting Coach", c.hitting_coach]
-      ];
-      return map.map(([role, obj]) => {
-        if(!obj) return "";
-        return `
-          <div class="coachLine">
-            <div>
-              <div class="coachRole">${role}</div>
-              <div class="coachName">${obj.name}</div>
-            </div>
-            <div class="small" style="text-align:right;">
-              <div>${obj.born || "—"}</div>
-              <div>${obj.birthplace || "—"}</div>
-            </div>
-          </div>
-        `;
-      }).join("");
-    }
+/* --- MAP TEAM -> CLUB PAGE ---
+   Add entries as you want; unknown teams fall back to index.
+*/
+const clubPageByTeam = {
+  "spokane-alloys": "club-spokane-alloys.html",
+  "albuquerque-aeros": "club-albuquerque-aeros.html",
+  "fresno-yield": "club-fresno-yield.html",
+  "birmingham-vulcans": "club-birmingham-vulcans.html",
+  "vancouver-current": "club-vancouver-current.html",
+  "monterrey-cementeros": "club-monterrey-cementeros.html",
+  "taipei-neon": "club-taipei-neon.html",
+  "tijuana-tecnicos": "club-tijuana-tecnicos.html",
+  "st-paul-frost": "club-st-paul-frost.html",
+  "san-pedro-cocolos": "club-san-pedro-cocolos.html",
+  "santiago-caballeros": "club-santiago-caballeros.html",
+  "mayaguez-sultans": "club-mayaguez-sultans.html",
+  "toledo-assembly": "club-toledo-assembly.html",
+  "durham-gold": "club-durham-gold.html",
+  "louisville": "club-louisville.html",
+  "osaka-spirits": "club-osaka-spirits.html"
+};
 
-    function renderRoster(players){
-      const rows = (players || []).map(p => `
-        <tr>
-          <td>${p.position || "—"}</td>
-          <td>${p.name || "—"}</td>
-          <td>${fmtBT(p)}</td>
-          <td>${p.born || "—"}</td>
-        </tr>
-      `).join("");
-      $("rosterBody").innerHTML = rows || "<tr><td colspan='4' class='small'>No players.</td></tr>";
-    }
+/* --- TEAM DISPLAY NAME --- */
+function titleCaseSlug(slug){
+  return slug.split("-").map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(" ");
+}
 
-    function findTeamRecord(teamsJson, slug){
-      const divs = (teamsJson && teamsJson.divisions) ? teamsJson.divisions : {};
-      for(const [divName, arr] of Object.entries(divs)){
-        for(const t of (arr || [])){
-          if(t.slug === slug) return { ...t, division: divName };
-        }
-      }
-      return null;
-    }
+document.getElementById("teamLine").textContent = `Team: ${titleCaseSlug(team)}`;
 
-    (async function main(){
-      try{
-        const slug = qs("team");
-        if(!slug){
-          $("teamName").textContent = "Missing team parameter";
-          $("statusLine").textContent = "Use: team.html?team=vancouver-current";
-          return;
-        }
+/* --- LINK WIRING --- */
+const clubLink = document.getElementById("clubLink");
+clubLink.href = clubPageByTeam[team] || "index.html";
 
-        const teams = await loadJson("data/teams/teams.json");
-        const rec = findTeamRecord(teams, slug);
+document.getElementById("dailyLink").href = `day.html?date=${today}`;
+document.getElementById("boxLink").href = `game.html?date=${today}&game=${team}@tbd`;
 
-        if(!rec){
-          $("teamName").textContent = "Team not found";
-          $("statusLine").textContent = "No team with slug: " + slug;
-          return;
-        }
+/* --- ROSTER DATA ---
+   Replace later with real rosters.
+   For now: stable placeholder per team.
+*/
+const rosters = {
+  "spokane-alloys": [
+    { num:"12", name:'Koji "Ice" Tanaka', pos:"P", note:"Quiet tempo. Works fast." },
+    { num:"33", name:"B.J. Smelt", pos:"C", note:"Blocks everything. Calls a heavy game." },
+    { num:"08", name:"Vince Carbon", pos:"3B", note:"Hard hands. Hard throws." }
+  ],
+  "albuquerque-aeros": [
+    { num:"07", name:'Javi "Throttle" Núñez', pos:"CF", note:"All speed, no apology." },
+    { num:"22", name:"Marla Keene", pos:"P", note:"High spin. Likes altitude." },
+    { num:"44", name:"DeShawn Pryor", pos:"1B", note:"Big target. Bigger laugh." }
+  ],
+  "fresno-yield": [
+    { num:"05", name:'Speedy "Sprout" Jones', pos:"CF", note:"First step wins." },
+    { num:"17", name:"Big Country Vance", pos:"RF", note:"Gap power. Easy stride." },
+    { num:"31", name:"Lefty Groves", pos:"P", note:"Smooth motion. Paints corners." }
+  ]
+};
 
-        const displayName = rec.name || rec.team || "—";
-        const abbr = rec.abbrev || rec.abbr || "—";
+// Fallback roster if team not listed
+const fallbackRoster = [
+  { num:"00", name:"Roster Pending", pos:"—", note:"This team will populate once roster files are defined." },
+  { num:"00", name:"Roster Pending", pos:"—", note:"Use team=slug in the URL to route correctly." }
+];
 
-        $("teamName").textContent = displayName;
-        $("divisionVal").textContent = rec.division || "—";
-        $("abbrVal").textContent = abbr;
+const list = rosters[team] || fallbackRoster;
+const body = document.getElementById("rosterBody");
 
-        const rosterPath = `data/teams/roster/${slug}.json`;
-        const roster = await loadJson(rosterPath);
+list.forEach(p => {
+  const tr = document.createElement("tr");
+  tr.innerHTML = `
+    <td class="num">${p.num}</td>
+    <td>${p.name}</td>
+    <td class="pos">${p.pos}</td>
+    <td class="note">${p.note}</td>
+  `;
+  body.appendChild(tr);
+});
+</script>
 
-        $("foundedVal").textContent = roster.founded || "—";
-
-        const pills = [];
-        if(roster.city) pills.push(`<div class="pill">${roster.city}</div>`);
-        pills.push(`<div class="pill">${abbr}</div>`);
-        pills.push(`<div class="pill">${rec.division} Division</div>`);
-        $("metaRow").innerHTML = pills.join("");
-
-        $("coaches").innerHTML = renderCoaches(roster.coaches);
-        renderRoster(roster.players);
-
-        $("statusLine").textContent = `Loaded: ${rosterPath}`;
-        document.title = `GLB — ${displayName}`;
-      }catch(err){
-        $("teamName").textContent = "Load failed";
-        $("statusLine").textContent = (err && err.message) ? err.message : String(err);
-        console.error(err);
-      }
-    })();
-  </script>
 </body>
 </html>

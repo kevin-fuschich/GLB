@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Toledo — Club Dossier</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Toledo – Club Dossier</title>
 
 <style>
 :root{
@@ -18,8 +18,6 @@
   --sans:"Helvetica Neue", Helvetica, Arial, sans-serif;
   --mono:"Courier New", Courier, monospace;
 }
-
-*{box-sizing:border-box;}
 
 body{
   background:#f4f4f4;
@@ -44,299 +42,251 @@ body{
   top:15px;
   right:20px;
   font-family:var(--mono);
-  font-size:12px;
-  letter-spacing:0.08em;
-  color:#333;
+  font-size:10px;
+  color:#999;
 }
 
 /* HEADER */
-.header{
+header{
+  border-bottom:var(--border-thick);
+  padding-bottom:20px;
+  margin-bottom:25px;
+}
+
+.club-lockup{
   display:flex;
-  align-items:flex-start;
   justify-content:space-between;
-  gap:20px;
-  padding-bottom:18px;
-  border-bottom:var(--border-thin);
-  margin-bottom:18px;
-}
-
-.title-block{
-  flex:1;
-}
-
-.league{
-  font-family:var(--mono);
-  font-size:12px;
-  letter-spacing:0.14em;
-  text-transform:uppercase;
-  color:#333;
-}
-
-.club-name{
-  margin:10px 0 6px;
-  font-size:44px;
-  line-height:1.05;
-  letter-spacing:-0.02em;
-}
-
-.subhead{
-  margin:0;
-  font-size:14px;
-  line-height:1.4;
-  color:#333;
-  max-width:520px;
-}
-
-.logo-block{
-  width:150px;
-  flex:0 0 150px;
-  border:var(--border-thin);
-  padding:10px;
-  background:#fff;
-}
-
-.logo-block img{
-  width:100%;
-  height:auto;
-  display:block;
-}
-
-/* GRID */
-.grid{
-  display:grid;
-  grid-template-columns: 1fr 1fr;
-  gap:18px;
-  margin-top:18px;
-}
-
-.section{
-  border:var(--border-thin);
-  padding:14px;
-  background:#fff;
-}
-
-.section h2{
-  margin:0 0 10px;
-  font-size:14px;
-  letter-spacing:0.12em;
-  text-transform:uppercase;
-  font-family:var(--mono);
-  color:#222;
-}
-
-.kv{
-  display:grid;
-  grid-template-columns: 140px 1fr;
-  gap:8px 12px;
-  font-size:14px;
-}
-
-.kv .k{
-  font-family:var(--mono);
-  font-size:12px;
-  letter-spacing:0.08em;
-  color:#333;
-  text-transform:uppercase;
-}
-
-.kv .v{
-  color:#111;
-}
-
-.badges{
-  display:flex;
+  align-items:baseline;
   flex-wrap:wrap;
-  gap:8px;
 }
 
-.badge{
-  border:1px solid #ddd;
-  padding:6px 10px;
+h1{
+  margin:0;
+  font-size:32px;
+  font-weight:900;
+  text-transform:uppercase;
+}
+
+.division-tag{
+  background:var(--primary);
+  color:#fff;
   font-size:12px;
-  border-radius:999px;
-  background:#fafafa;
+  padding:4px 8px;
+  text-transform:uppercase;
 }
 
-.two-col{
-  grid-column:1 / -1;
+.fact-bar{
+  display:flex;
+  gap:15px;
+  font-size:11px;
+  text-transform:uppercase;
+  color:#666;
+  margin-top:10px;
+  flex-wrap:wrap;
 }
 
-hr.rule{
-  border:none;
-  border-top:var(--border-thin);
-  margin:14px 0;
+/* CTAs */
+.cta-row{
+  display:flex;
+  gap:10px;
+  margin:25px 0 40px;
+  flex-wrap:wrap;
 }
 
-/* ARCHIVE IMAGE */
-.archive{
-  display:grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  gap:14px;
-  align-items:start;
+.btn{
+  flex:1;
+  min-width:180px;
+  border:2px solid var(--ink);
+  padding:12px 0;
+  text-align:center;
+  font-size:12px;
+  font-weight:bold;
+  text-transform:uppercase;
+  text-decoration:none;
+  color:var(--ink);
 }
 
-.archive img{
+.btn.primary{
+  background:var(--primary);
+  color:#fff;
+  border-color:var(--primary);
+}
+
+/* SECTIONS */
+section{margin-bottom:55px;}
+
+h2{
+  font-size:14px;
+  text-transform:uppercase;
+  border-bottom:2px solid var(--accent);
+  padding-bottom:5px;
+}
+
+/* IDENTITY */
+.identity p{
+  font-size:16px;
+  max-width:700px;
+}
+
+/* IMAGE SLOTS */
+.img-slot{
+  background:#e0e0e0;
+  border:1px solid #ccc;
+  margin-bottom:15px;
+}
+
+.img-slot img{
   width:100%;
-  height:auto;
+  height:100%;
+  object-fit:cover;
   display:block;
-  border:var(--border-thin);
 }
 
-.caption{
-  font-family:var(--mono);
-  font-size:12px;
-  line-height:1.35;
-  color:#333;
+.ratio-16-9{aspect-ratio:16/9;}
+.ratio-3-4{aspect-ratio:3/4; max-width:260px;}
+.ratio-1-1{aspect-ratio:1/1; max-width:260px;}
+
+/* SPLIT */
+.split{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:30px;
 }
 
-.small{
-  font-size:13px;
-  line-height:1.45;
-}
+/* LINKS */
+a{color:var(--ink); text-decoration:none;}
+a:hover{color:var(--accent);}
 
 /* FOOTER */
-.footer{
-  margin-top:22px;
-  padding-top:16px;
-  border-top:var(--border-thin);
+footer{
+  margin-top:70px;
+  padding:30px 20px;
+  border-top:var(--border-thick);
   display:flex;
   justify-content:space-between;
-  gap:16px;
-  align-items:flex-end;
-}
-
-.footer .left{
+  align-items:center;
   font-family:var(--mono);
-  font-size:12px;
-  letter-spacing:0.08em;
-  color:#333;
+  font-size:11px;
+  color:#777;
 }
 
-.footer .right{
-  text-align:right;
-  font-family:var(--mono);
-  font-size:12px;
-  letter-spacing:0.08em;
-  color:#333;
+.glb-logo{
+  height:56px; /* ~40% larger */
+  width:auto;
 }
 
-@media (max-width:820px){
-  .header{flex-direction:column;}
-  .logo-block{width:180px; flex-basis:auto;}
-  .grid{grid-template-columns:1fr;}
-  .archive{grid-template-columns:1fr;}
+@media(max-width:600px){
+  .split{grid-template-columns:1fr;}
+  footer{flex-direction:column; gap:15px;}
+  .doc-id{display:none;}
 }
 </style>
 </head>
 
 <body>
-  <div class="club-sheet">
-    <div class="doc-id">GLB DOSSIER • TOLEDO • ID: TBD</div>
+<div class="club-sheet">
 
-    <div class="header">
-      <div class="title-block">
-        <div class="league">GLOBAL LEAGUE BASEBALL</div>
-        <h1 class="club-name">Toledo</h1>
-        <p class="subhead">
-          A city with teeth and humor — built on river grit, factories, and Friday-night loyalty.
-          This dossier documents the club as it is remembered and recorded.
-        </p>
-      </div>
+<div class="doc-id">TOL-CLUB-LOCKED</div>
 
-      <!-- Replace this with your actual Toledo logo filename -->
-      <div class="logo-block">
-        <img src="club-toledo-logo.png" alt="Toledo club logo" />
+<header>
+  <div class="club-lockup">
+    <h1>Toledo</h1>
+    <span class="division-tag">Americas Division</span>
+  </div>
+
+  <div class="fact-bar">
+    <span>Est. —</span>
+    <span>•</span>
+    <span><strong>The Glassworks</strong></span>
+    <span>•</span>
+    <span>Mgr. Mara Velez</span>
+  </div>
+
+  <div class="cta-row">
+    <a class="btn primary" href="team.html?team=toledo">Active Roster</a>
+    <a class="btn" href="day.html">Daily Scores</a>
+    <a class="btn" href="game.html">Latest Box Score</a>
+  </div>
+</header>
+
+<section class="identity">
+  <h2>The Club</h2>
+  <p>
+    Toledo plays with a loud calm—equal parts river-town grit and factory-floor precision.
+    The club doesn’t chase flash. It chases pressure: long at-bats, hard turns, and
+    innings that feel like they were welded together instead of won.
+  </p>
+</section>
+
+<section>
+  <h2>Ballpark</h2>
+  <div class="img-slot ratio-16-9">
+    <img src="club-toledo-park.png" alt="The Glassworks">
+  </div>
+  <p>
+    <strong>The Glassworks.</strong> A bright, angular park with exposed trusswork and
+    clean sightlines. The field sits close to the seats—everything feels near, and
+    the crowd sounds sharper when the game tightens.
+  </p>
+</section>
+
+<section>
+  <h2>Broadcast & Announcers</h2>
+  <div class="split">
+    <div>
+      <div class="img-slot ratio-3-4">
+        <img src="club-toledo-broadcast.png" alt="Broadcast booth">
       </div>
+      <h3>Cal Mercer</h3>
+      <p>
+        <strong>Play-by-play.</strong> Fast, conversational, and local to the bone.
+        Mercer calls momentum shifts early—before the box score catches up.
+      </p>
     </div>
-
-    <div class="grid">
-      <div class="section">
-        <h2>Club Profile</h2>
-        <div class="kv">
-          <div class="k">City</div><div class="v">Toledo</div>
-          <div class="k">Division</div><div class="v">TBD</div>
-          <div class="k">Colors</div><div class="v">TBD</div>
-          <div class="k">Identity</div><div class="v">TBD (blue-collar, loud, loyal)</div>
-          <div class="k">Tagline</div><div class="v">TBD</div>
-        </div>
-        <hr class="rule" />
-        <div class="badges">
-          <span class="badge">River Town</span>
-          <span class="badge">Factory Humor</span>
-          <span class="badge">Hard Luck / Hard Love</span>
-          <span class="badge">Crowd-Driven</span>
-        </div>
+    <div>
+      <div class="img-slot ratio-3-4">
+        <img src="club-toledo-announcer.png" alt="In-stadium announcer">
       </div>
-
-      <div class="section">
-        <h2>Ballpark</h2>
-        <div class="kv">
-          <div class="k">Name</div><div class="v">TBD Stadium Name</div>
-          <div class="k">Capacity</div><div class="v">TBD</div>
-          <div class="k">Surface</div><div class="v">Natural Grass / TBD</div>
-          <div class="k">Signature</div><div class="v">TBD (one weird sightline, one beloved smell)</div>
-          <div class="k">Location</div><div class="v">TBD (near water / rail / industry)</div>
-        </div>
-      </div>
-
-      <div class="section two-col">
-        <h2>Archive Artifact</h2>
-        <div class="archive">
-          <!-- Replace this with your actual Toledo archive image filename -->
-          <img src="club-toledo-archive.jpg" alt="Toledo archival artifact" />
-          <div class="caption">
-            <strong>FOUND MATERIAL:</strong><br />
-            Source: TBD<br />
-            Date: TBD<br />
-            Condition: Uneven / sun-faded / handled<br /><br />
-            Notes: This artifact is included as-is. No cleanup beyond sizing.
-          </div>
-        </div>
-      </div>
-
-      <div class="section">
-        <h2>Broadcast</h2>
-        <div class="kv">
-          <div class="k">Play-by-Play</div><div class="v">TBD</div>
-          <div class="k">Color</div><div class="v">TBD</div>
-          <div class="k">Sideline</div><div class="v">TBD</div>
-          <div class="k">Tone</div><div class="v">Fast, funny, local references</div>
-        </div>
-        <p class="small" style="margin:12px 0 0;">
-          Booth rule: they speak like the city speaks — smart, blunt, and allergic to hype.
-        </p>
-      </div>
-
-      <div class="section">
-        <h2>Mascot & Rituals</h2>
-        <div class="kv">
-          <div class="k">Mascot</div><div class="v">TBD</div>
-          <div class="k">7th Inning</div><div class="v">TBD (crowd chant / odd contest)</div>
-          <div class="k">Walk-up</div><div class="v">TBD (regional, loud, a little wrong)</div>
-          <div class="k">Tradition</div><div class="v">TBD</div>
-        </div>
-      </div>
-
-      <div class="section two-col">
-        <h2>Club Notes</h2>
-        <p class="small" style="margin:0;">
-          Toledo plays like a chip on the shoulder with a grin. Not polished. Not trying to be.
-          When they win, it feels like the city did it. When they lose, the city keeps talking anyway.
-        </p>
-        <hr class="rule" />
-        <div class="kv">
-          <div class="k">Roster Style</div><div class="v">TBD (contact/chaos/power/arms)</div>
-          <div class="k">Weakness</div><div class="v">TBD</div>
-          <div class="k">Strength</div><div class="v">TBD</div>
-          <div class="k">Rival</div><div class="v">TBD</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="footer">
-      <div class="left">GLB • CLUB DOSSIER • TOLEDO</div>
-      <div class="right">ARCHIVE SYSTEM • DO NOT EXPLAIN</div>
+      <h3>Joan Rusk</h3>
+      <p>
+        <strong>In-stadium announcer.</strong> Crisp delivery with a hint of bite.
+        Names land clean, numbers land cleaner—then she gets out of the way.
+      </p>
     </div>
   </div>
+</section>
+
+<section>
+  <h2>Mascot & Stands</h2>
+  <div class="split">
+    <div>
+      <div class="img-slot ratio-1-1">
+        <img src="club-toledo-mascot.png" alt="Mascot">
+      </div>
+      <h3>Shatter</h3>
+      <p>
+        A glass-helmeted presence with an unpredictable orbit—appearing behind dugouts,
+        perching near foul poles, and silently “judging” pitchers during mound visits.
+      </p>
+    </div>
+    <div>
+      <div class="img-slot ratio-1-1">
+        <img src="club-toledo-fans.png" alt="Toledo fans">
+      </div>
+      <h3>The River Rail</h3>
+      <p>
+        Toledo fans don’t do polite. They do accurate. They ride the count, they call
+        the hop, and they remember every bad bounce like it owes them money.
+      </p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div>GLB CLUB DOSSIER · TOLEDO</div>
+  <img class="glb-logo" src="GLB_white.png" alt="GLB">
+</footer>
+
+</div>
 </body>
 </html>

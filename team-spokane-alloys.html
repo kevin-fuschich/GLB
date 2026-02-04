@@ -3,16 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Spokane Alloys — Team Record</title>
+<title>GLB Team Record: Spokane Alloys</title>
 
 <style>
 :root{
-  --paper:#ffffff;
+  --field-white:#ffffff;
   --ink:#0f1214;
   --meta:#666;
   --line:#e0e0e0;
-
-  --border-thick:4px solid var(--ink);
 
   --sans:"Helvetica Neue", Helvetica, Arial, sans-serif;
   --mono:"Courier New", Courier, monospace;
@@ -22,16 +20,19 @@ body{
   background:#f4f4f4;
   font-family:var(--sans);
   color:var(--ink);
+  display:flex;
+  justify-content:center;
+  padding:50px 20px;
   margin:0;
-  padding:40px 20px;
 }
 
-.team-sheet{
-  max-width:700px;
-  margin:0 auto;
-  background:var(--paper);
+.dossier-sheet{
+  background:#fff;
+  width:100%;
+  max-width:580px;
   padding:40px;
-  border-top:var(--border-thick);
+  box-shadow:0 2px 15px rgba(0,0,0,0.06);
+  border-top:5px solid var(--ink);
 }
 
 /* HEADER */
@@ -61,53 +62,16 @@ header{
   width:auto;
 }
 
-/* SNAPSHOT */
-.snapshot{
-  margin-bottom:35px;
-}
-
-.snapshot table{
-  width:100%;
-  border-collapse:collapse;
-  font-size:14px;
-}
-
-.snapshot th{
-  font-size:11px;
-  color:var(--meta);
-  text-transform:uppercase;
-  border-bottom:1px solid var(--line);
-  padding-bottom:6px;
-}
-
-.snapshot td{
-  padding-top:8px;
-  font-weight:600;
-}
-
-/* SECTIONS */
-section{
-  margin-bottom:45px;
-}
-
+/* SECTION HEADERS */
 h2{
+  font-family:var(--mono);
   font-size:13px;
   text-transform:uppercase;
-  letter-spacing:0.5px;
   border-bottom:1px solid var(--line);
-  padding-bottom:6px;
+  margin-top:35px;
   margin-bottom:15px;
-}
-
-/* TEAM PHOTO */
-.team-photo{
-  margin:20px 0 10px;
-  border:1px solid var(--line);
-}
-
-.team-photo img{
-  width:100%;
-  display:block;
+  padding-bottom:5px;
+  letter-spacing:0.5px;
 }
 
 /* TABLES */
@@ -121,8 +85,8 @@ th{
   font-size:10px;
   color:var(--meta);
   text-transform:uppercase;
-  border-bottom:1px solid var(--ink);
   padding:6px 8px;
+  border-bottom:1px solid var(--ink);
 }
 
 td{
@@ -133,133 +97,146 @@ td{
 .align-center{text-align:center;}
 .align-right{text-align:right;}
 
+.col-player{width:50%;}
+.col-pos{width:15%;}
+.col-bt{width:20%;}
+.col-age{width:15%;}
+
+/* LINKS */
+a{
+  color:var(--ink);
+  text-decoration:none;
+}
+
+a:hover{text-decoration:underline;}
+
+/* NOTES */
+.notes-list{
+  list-style:none;
+  padding:0;
+  margin:0;
+  font-size:12px;
+}
+
+.notes-list li{
+  display:flex;
+  margin-bottom:6px;
+}
+
+.note-label{
+  width:120px;
+  font-size:10px;
+  font-weight:600;
+  color:var(--meta);
+  text-transform:uppercase;
+}
+
 /* FOOTER */
 footer{
-  margin-top:60px;
-  padding-top:20px;
-  border-top:var(--border-thick);
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  font-family:var(--mono);
-  font-size:11px;
-  color:#777;
-}
-
-footer img{
-  height:56px;
-}
-
-@media(max-width:600px){
-  header{flex-direction:column; gap:15px;}
-  footer{flex-direction:column; gap:15px;}
+  margin-top:50px;
+  border-top:1px solid var(--line);
+  padding-top:15px;
+  font-size:10px;
+  color:var(--meta);
+  text-transform:uppercase;
+  letter-spacing:0.5px;
 }
 </style>
 </head>
 
 <body>
 
-<div class="team-sheet">
+<div class="dossier-sheet">
 
 <header>
   <div class="header-text">
     <h1>Spokane Alloys</h1>
-    <div class="header-meta">Americas Division</div>
-    <div class="header-meta">Official Team Record</div>
+    <div class="header-meta">Spokane — Americas Division</div>
+    <div class="header-meta">Team Record</div>
+    <div class="header-meta">Linked from club dossier</div>
   </div>
-  <img src="GLB_white.png" alt="GLB" class="glb-stamp">
+
+  <!-- TEAM LOGO -->
+  <img
+    src="club-spokane-alloys-logo.png"
+    alt="Spokane Alloys Logo"
+    class="glb-stamp"
+  >
 </header>
 
-<section class="snapshot">
-  <table>
-    <thead>
-      <tr>
-        <th>Record</th>
-        <th>Runs</th>
-        <th>Allowed</th>
-        <th>Diff</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>1–0</td>
-        <td>2</td>
-        <td>0</td>
-        <td>+2</td>
-      </tr>
-    </tbody>
-  </table>
-</section>
+<h2>Season Snapshot</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Record</th>
+      <th>Runs</th>
+      <th>Allowed</th>
+      <th>Diff</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1–0</td>
+      <td>2</td>
+      <td>0</td>
+      <td>+2</td>
+    </tr>
+  </tbody>
+</table>
 
-<section>
-  <h2>Team Photo</h2>
-  <div class="team-photo">
-    <img src="team-spokane-alloys-photo.png" alt="Spokane Alloys team photo">
-  </div>
-</section>
+<h2>Active Roster</h2>
+<table>
+  <thead>
+    <tr>
+      <th class="col-player">Player</th>
+      <th class="col-pos">Pos</th>
+      <th class="col-bt align-center">B/T</th>
+      <th class="col-age align-right">Age</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>J. Carter</td><td>CF</td><td class="align-center">R/R</td><td class="align-right">28</td></tr>
+    <tr><td>M. Rivas</td><td>2B</td><td class="align-center">S/R</td><td class="align-right">27</td></tr>
+    <tr><td>A. Hollis</td><td>SS</td><td class="align-center">R/R</td><td class="align-right">26</td></tr>
+    <tr><td>B. Kwan</td><td>1B</td><td class="align-center">L/R</td><td class="align-right">30</td></tr>
+    <tr><td>D. Mercer</td><td>3B</td><td class="align-center">R/R</td><td class="align-right">29</td></tr>
+    <tr><td>T. Hodge</td><td>LF</td><td class="align-center">L/L</td><td class="align-right">25</td></tr>
+    <tr><td>R. Alvarez</td><td>RF</td><td class="align-center">R/R</td><td class="align-right">31</td></tr>
+    <tr><td>G. Voss</td><td>C</td><td class="align-center">R/R</td><td class="align-right">28</td></tr>
+    <tr><td>S. Okoye</td><td>P</td><td class="align-center">R/R</td><td class="align-right">32</td></tr>
+  </tbody>
+</table>
 
-<section>
-  <h2>Active Roster</h2>
-  <table>
-    <thead>
-      <tr>
-        <th>Player</th>
-        <th>Pos</th>
-        <th class="align-center">B/T</th>
-        <th class="align-right">Age</th>
-      </tr>
-    </thead>
-    <tbody>
-      <!-- Starting Pitchers -->
-      <tr><td>Samuel Okoye</td><td>P</td><td class="align-center">R/R</td><td class="align-right">32</td></tr>
-      <tr><td>Ian Calder</td><td>P</td><td class="align-center">L/L</td><td class="align-right">29</td></tr>
-      <tr><td>Marcus Venn</td><td>P</td><td class="align-center">R/R</td><td class="align-right">27</td></tr>
-      <tr><td>Jonah Price</td><td>P</td><td class="align-center">R/L</td><td class="align-right">31</td></tr>
+<h2>Recent Games</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Opponent</th>
+      <th>Result</th>
+      <th>Box</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Apr 8</td>
+      <td>Fresno</td>
+      <td>W 2–0</td>
+      <td><a href="boxscore.html">View</a></td>
+    </tr>
+  </tbody>
+</table>
 
-      <!-- Relievers -->
-      <tr><td>Alexei Morozov</td><td>P</td><td class="align-center">R/R</td><td class="align-right">34</td></tr>
-      <tr><td>Caleb Dunn</td><td>P</td><td class="align-center">L/R</td><td class="align-right">26</td></tr>
-      <tr><td>Rico Alvarez</td><td>P</td><td class="align-center">R/R</td><td class="align-right">28</td></tr>
-
-      <!-- Position Players -->
-      <tr><td>Grant Voss</td><td>C</td><td class="align-center">R/R</td><td class="align-right">30</td></tr>
-      <tr><td>Ben Kwan</td><td>1B</td><td class="align-center">L/R</td><td class="align-right">29</td></tr>
-      <tr><td>Marco Rivas</td><td>2B</td><td class="align-center">S/R</td><td class="align-right">27</td></tr>
-      <tr><td>Daniel Mercer</td><td>3B</td><td class="align-center">R/R</td><td class="align-right">31</td></tr>
-      <tr><td>Andrew Hollis</td><td>SS</td><td class="align-center">R/R</td><td class="align-right">26</td></tr>
-
-      <tr><td>James Carter</td><td>CF</td><td class="align-center">R/R</td><td class="align-right">28</td></tr>
-      <tr><td>Ty Hodge</td><td>LF</td><td class="align-center">L/L</td><td class="align-right">25</td></tr>
-      <tr><td>Rafael Cruz</td><td>RF</td><td class="align-center">R/R</td><td class="align-right">33</td></tr>
-    </tbody>
-  </table>
-</section>
-
-<section>
-  <h2>Recent Games</h2>
-  <table>
-    <thead>
-      <tr>
-        <th>Date</th>
-        <th>Opponent</th>
-        <th>Result</th>
-        <th class="align-right">Box</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Apr 8</td>
-        <td>Fresno</td>
-        <td>W 2–0</td>
-        <td class="align-right"><a href="boxscore.html">View</a></td>
-      </tr>
-    </tbody>
-  </table>
-</section>
+<h2>Club Notes</h2>
+<ul class="notes-list">
+  <li><span class="note-label">Home Venue</span><span>Alloy Park</span></li>
+  <li><span class="note-label">Manager</span><span>Elias Thorne</span></li>
+  <li><span class="note-label">Established</span><span>2024</span></li>
+</ul>
 
 <footer>
-  <div>GLB TEAM RECORD · SPOKANE</div>
-  <img src="GLB_white.png" alt="GLB">
+  Records current through most recent official scoring.<br>
+  Roster data subject to change.
 </footer>
 
 </div>

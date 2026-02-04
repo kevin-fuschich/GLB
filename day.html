@@ -1,30 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>GLB — Daily Scores</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GLB Daily Scores</title>
 
 <style>
 :root{
-  --paper:#ffffff;
   --ink:#0f1214;
-  --muted:#666;
+  --paper:#ffffff;
   --border-thick:4px solid var(--ink);
-  --border-thin:1px solid #ddd;
   --sans:"Helvetica Neue", Helvetica, Arial, sans-serif;
   --mono:"Courier New", Courier, monospace;
 }
 
 body{
+  background:#f4f4f4;
   margin:0;
   padding:20px;
-  background:#f4f4f4;
-  color:var(--ink);
   font-family:var(--sans);
+  color:var(--ink);
 }
 
-.sheet{
+.page{
   max-width:900px;
   margin:0 auto;
   background:var(--paper);
@@ -32,80 +30,17 @@ body{
   border-top:var(--border-thick);
 }
 
-header{
-  border-bottom:var(--border-thick);
-  padding-bottom:18px;
-  margin-bottom:22px;
-}
-
 h1{
-  margin:0;
+  margin-top:0;
   font-size:28px;
-  font-weight:900;
   text-transform:uppercase;
-  letter-spacing:0.5px;
 }
 
-.meta{
-  margin-top:8px;
-  font-family:var(--mono);
-  font-size:12px;
-  color:var(--muted);
-}
-
-.controls{
-  margin-top:18px;
-  display:flex;
-  gap:10px;
-  flex-wrap:wrap;
-}
-
-.btn{
-  border:2px solid var(--ink);
-  padding:10px 14px;
-  font-size:12px;
-  font-weight:bold;
-  text-transform:uppercase;
-  text-decoration:none;
-  color:var(--ink);
-  display:inline-block;
-}
-
-.btn:hover{
-  background:var(--ink);
-  color:#fff;
-}
-
-.list{
-  margin-top:24px;
-  display:grid;
-  gap:12px;
-}
-
-.card{
-  border:1px solid var(--border-thin);
-  padding:14px 14px;
-  background:#fff;
-}
-
-.row{
-  display:flex;
-  justify-content:space-between;
-  gap:16px;
-  flex-wrap:wrap;
-}
-
-.game{
+.notice{
   font-family:var(--mono);
   font-size:13px;
-  text-transform:uppercase;
-}
-
-.note{
-  margin-top:8px;
-  color:var(--muted);
-  font-size:13px;
-  line-height:1.45;
+  color:#555;
+  margin-top:30px;
 }
 
 footer{
@@ -120,127 +55,46 @@ footer{
   color:#777;
 }
 
-footer a{
-  text-decoration:none;
-  color:var(--ink);
+.glb-logo{
+  height:56px;
+  width:auto;
 }
 
-footer a:hover{ color:#000; }
-
 @media(max-width:600px){
-  footer{flex-direction:column; gap:12px; align-items:flex-start;}
+  footer{flex-direction:column; gap:15px;}
 }
 </style>
 </head>
 
 <body>
-<div class="sheet">
+<div class="page">
 
-<header>
-  <h1>Daily Scores</h1>
-  <div class="meta" id="metaLine">DATE: —</div>
+<h1>Daily Scores</h1>
 
-  <div class="controls">
-    <a class="btn" id="prevDay" href="#">Previous</a>
-    <a class="btn" id="todayBtn" href="#">Today</a>
-    <a class="btn" id="nextDay" href="#">Next</a>
-  </div>
-</header>
+<div class="notice" id="date-line"></div>
 
-<div class="list" id="scoresList">
-  <!-- Populated by JS -->
+<div class="notice">
+  Scores will appear here once the daily log is wired.
 </div>
 
 <footer>
-  <a id="backToClub" href="index.html">← Back to Club</a>
-  <a href="index.html">GLB League Index</a>
+  <div>GLB LEAGUE RECORD · DAILY LOG</div>
+  <img class="glb-logo" src="GLB_white.png" alt="GLB">
 </footer>
 
 </div>
 
 <script>
-(function(){
-  const params = new URLSearchParams(window.location.search);
-  const team = params.get("team");     // optional; used for Back to Club
-  let date = params.get("date");       // optional; defaults to today
+const params = new URLSearchParams(window.location.search);
+let date = params.get("date");
 
-  // Default date = today (no error state)
-  if(!date){
-    const today = new Date();
-    date = today.toISOString().slice(0,10); // YYYY-MM-DD
-  }
+if (!date) {
+  const today = new Date();
+  date = today.toISOString().slice(0,10);
+}
 
-  // Back to club (if team exists)
-  const back = document.getElementById("backToClub");
-  if(team){
-    back.href = `club-${team}.html`;
-  } else {
-    back.href = "index.html";
-  }
-
-  // Date controls
-  const toDate = (s)=> new Date(s + "T12:00:00");
-  const fmt = (d)=> d.toISOString().slice(0,10);
-
-  const d = toDate(date);
-  const prev = new Date(d); prev.setDate(d.getDate()-1);
-  const next = new Date(d); next.setDate(d.getDate()+1);
-  const today = new Date(); const todayStr = fmt(today);
-
-  const base = (t)=> t ? `day.html?team=${encodeURIComponent(t)}&date=` : `day.html?date=`;
-  document.getElementById("prevDay").href = base(team) + fmt(prev);
-  document.getElementById("nextDay").href = base(team) + fmt(next);
-  document.getElementById("todayBtn").href = base(team) + todayStr;
-
-  document.getElementById("metaLine").textContent = `DATE: ${date}`;
-
-  // Placeholder scoreboard (you’ll swap this later when the real data exists)
-  const scores = [
-    { away:"spokane-alloys", home:"fresno-yield", awayR:3, homeR:4, status:"FINAL" },
-    { away:"albuquerque-aeros", home:"st-paul-frost", awayR:2, homeR:2, status:"F/10" },
-    { away:"vancouver-current", home:"monterrey-cementeros", awayR:null, homeR:null, status:"SCHEDULED" }
-  ];
-
-  const list = document.getElementById("scoresList");
-  list.innerHTML = "";
-
-  scores.forEach(g=>{
-    const a = (g.awayR===null) ? "—" : g.awayR;
-    const h = (g.homeR===null) ? "—" : g.homeR;
-
-    const card = document.createElement("div");
-    card.className = "card";
-
-    const row = document.createElement("div");
-    row.className = "row";
-
-    const left = document.createElement("div");
-    left.className = "game";
-    left.textContent = `${g.away} @ ${g.home}`;
-
-    const right = document.createElement("div");
-    right.className = "game";
-    right.textContent = `${a}–${h} · ${g.status}`;
-
-    row.appendChild(left);
-    row.appendChild(right);
-
-    const note = document.createElement("div");
-    note.className = "note";
-
-    // Link to game page if you want (optional)
-    const gameParam = `${g.away}@${g.home}`;
-    const gameUrl = team
-      ? `game.html?team=${encodeURIComponent(team)}&date=${encodeURIComponent(date)}&game=${encodeURIComponent(gameParam)}`
-      : `game.html?date=${encodeURIComponent(date)}&game=${encodeURIComponent(gameParam)}`;
-
-    note.innerHTML = `Box score: <a href="${gameUrl}">${gameParam}</a>`;
-
-    card.appendChild(row);
-    card.appendChild(note);
-    list.appendChild(card);
-  });
-})();
+document.getElementById("date-line").textContent =
+  "Date: " + date;
 </script>
 
 </body>

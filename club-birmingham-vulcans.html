@@ -3,290 +3,296 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Birmingham Vulcans – Club Portal</title>
+<title>GLB Team Record – Birmingham Vulcans</title>
 
 <style>
 :root{
-  --primary:#7a1f1f;
-  --accent:#d4a437;
   --paper:#ffffff;
-  --ink:#111111;
+  --ink:#0f1214;
+  --meta:#666;
+  --line:#e0e0e0;
 
-  --border-thick:4px solid var(--ink);
   --sans:"Helvetica Neue", Helvetica, Arial, sans-serif;
   --mono:"Courier New", Courier, monospace;
 }
 
 body{
   background:#f4f4f4;
-  color:var(--ink);
   font-family:var(--sans);
+  color:var(--ink);
   margin:0;
-  padding:20px;
+  padding:40px 20px;
 }
 
-.club-sheet{
-  max-width:900px;
+.sheet{
+  max-width:640px;
   margin:0 auto;
   background:var(--paper);
   padding:40px;
-  border-top:var(--border-thick);
-  position:relative;
-}
-
-/* DOC ID */
-.doc-id{
-  position:absolute;
-  top:15px;
-  right:20px;
-  font-family:var(--mono);
-  font-size:10px;
-  color:#999;
+  border-top:5px solid var(--ink);
+  box-shadow:0 4px 20px rgba(0,0,0,.08);
 }
 
 /* HEADER */
 header{
-  border-bottom:var(--border-thick);
-  padding-bottom:20px;
-  margin-bottom:20px;
-}
-
-.club-lockup{
   display:flex;
   justify-content:space-between;
-  align-items:baseline;
-  flex-wrap:wrap;
+  align-items:flex-start;
+  padding-bottom:20px;
+  border-bottom:2px solid var(--ink);
+  margin-bottom:30px;
 }
 
-h1{
-  margin:0;
-  font-size:32px;
+.header-text h1{
+  margin:0 0 6px 0;
+  font-size:22px;
   font-weight:900;
   text-transform:uppercase;
 }
 
-.division-tag{
-  background:var(--primary);
-  color:white;
-  font-size:12px;
-  padding:4px 8px;
-  text-transform:uppercase;
+.header-meta{
+  font-size:13px;
+  color:var(--meta);
 }
 
-.fact-bar{
-  display:flex;
-  gap:15px;
-  font-size:11px;
-  text-transform:uppercase;
-  color:#666;
-  margin-top:10px;
-  flex-wrap:wrap;
+.team-logo{
+  height:120px; /* big + readable */
+  width:auto;
 }
 
-/* CTAs */
-.cta-row{
-  display:flex;
-  gap:10px;
-  margin:25px 0 40px;
-  flex-wrap:wrap;
+/* TEAM PHOTO */
+.team-photo{
+  margin:30px 0;
+  border:1px solid var(--line);
 }
 
-.btn{
-  flex:1;
-  min-width:180px;
-  border:2px solid var(--ink);
-  padding:12px 0;
-  text-align:center;
-  font-size:12px;
-  font-weight:bold;
-  text-transform:uppercase;
-  text-decoration:none;
-  color:var(--ink);
-}
-
-.btn.primary{
-  background:var(--primary);
-  color:white;
-  border-color:var(--primary);
-}
-
-/* SECTIONS */
-section{ margin-bottom:50px; }
-
-h2{
-  font-size:14px;
-  text-transform:uppercase;
-  border-bottom:2px solid var(--accent);
-  padding-bottom:5px;
-}
-
-/* IMAGE SLOTS */
-.img-slot{
-  background:#e0e0e0;
-  border:1px solid #ccc;
-  margin-bottom:15px;
-}
-
-.img-slot img{
+.team-photo img{
   width:100%;
-  height:100%;
-  object-fit:cover;
   display:block;
 }
 
-.ratio-16-9{ aspect-ratio:16/9; }
-.ratio-3-4{ aspect-ratio:3/4; max-width:250px; }
-.ratio-1-1{ aspect-ratio:1/1; max-width:260px; }
-
-/* SPLIT */
-.split{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:30px;
+/* SECTION HEADERS */
+h2{
+  font-family:var(--mono);
+  font-size:13px;
+  text-transform:uppercase;
+  letter-spacing:.5px;
+  margin:40px 0 12px;
+  padding-bottom:6px;
+  border-bottom:1px solid var(--line);
 }
 
+/* TABLES */
+table{
+  width:100%;
+  border-collapse:collapse;
+  font-size:13px;
+}
+
+th{
+  font-size:11px;
+  color:var(--meta);
+  font-weight:600;
+  text-transform:uppercase;
+  padding:6px;
+  border-bottom:2px solid var(--ink);
+}
+
+td{
+  padding:8px 6px;
+  border-bottom:1px solid #f0f0f0;
+}
+
+.align-center{ text-align:center; }
+.align-right{ text-align:right; }
+
+/* ROSTER HEADSHOTS */
+.roster-pic{
+  width:48px;
+  height:48px;
+  object-fit:cover;
+  border-radius:6px;
+  border:1px solid var(--line);
+  display:block;
+}
+
+/* LINKS */
+a{ color:var(--ink); }
+a:hover{ opacity:.8; }
+
 /* FOOTER */
-.doc-footer{
-  margin-top:60px;
-  padding-top:25px;
-  border-top:2px solid #eee;
+footer{
+  margin-top:50px;
+  padding-top:18px;
+  border-top:1px solid var(--line);
   display:flex;
   justify-content:space-between;
   align-items:center;
   font-family:var(--mono);
   font-size:10px;
-  color:#999;
+  color:#777;
 }
 
-.doc-footer img{
-  height:42px;
-}
-
-@media(max-width:600px){
-  .split{ grid-template-columns:1fr; }
-  .doc-id{ display:none; }
+.glb-logo{
+  height:56px;
+  width:auto;
 }
 </style>
 </head>
 
 <body>
-<div class="club-sheet">
-
-<div class="doc-id">BHM-CLUB-01</div>
+<div class="sheet">
 
 <header>
-  <div class="club-lockup">
+  <div class="header-text">
     <h1>Birmingham Vulcans</h1>
-    <span class="division-tag">Americas Division</span>
+    <div class="header-meta">Birmingham — Americas Division</div>
+    <div class="header-meta">Team Record & Active Roster</div>
   </div>
 
-  <div class="fact-bar">
-    <span>Est. —</span>
-    <span>•</span>
-    <span><strong>Slag Field</strong></span>
-    <span>•</span>
-    <span>Mgr. Walt Dempsey</span>
-  </div>
-
-  <div class="cta-row">
-    <a class="btn primary" href="team.html?team=birmingham-vulcans">Active Roster</a>
-    <a class="btn" href="day.html">Daily Scores</a>
-    <a class="btn" href="game.html">Latest Box Score</a>
-  </div>
+  <img src="team-birmingham-vulcans-logo.png" alt="Birmingham Vulcans Logo" class="team-logo">
 </header>
 
-<section>
-  <h2>The Club</h2>
-  <p>
-    Birmingham is loud, physical, and unembarrassed about it. The Vulcans are a civic fixture —
-    less spectacle than presence. Games feel like events the city expects to endure together.
-  </p>
-</section>
+<!-- TEAM PHOTO (you’ll generate/upload this) -->
+<div class="team-photo">
+  <img src="team-birmingham-vulcans-photo.png" alt="Birmingham Vulcans Team Photo">
+</div>
 
-<section>
-  <h2>Ballpark</h2>
-  <div class="img-slot ratio-16-9">
-    <img src="club-birmingham-vulcans-stadium.png" alt="Slag Field at dusk">
-  </div>
-  <p>
-    <strong>Slag Field.</strong> Brick, steel, and heat. The park absorbs noise and throws it back.
-    Night games glow under heavy lights and heavier air.
-  </p>
-</section>
+<h2>Season Snapshot</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Record</th>
+      <th>Runs</th>
+      <th>Allowed</th>
+      <th>Diff</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0–0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
 
-<section>
-  <h2>Broadcast & Announcers</h2>
-  <div class="split">
+<h2>Active Roster</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Pic</th>
+      <th>Player</th>
+      <th>Pos</th>
+      <th class="align-center">B/T</th>
+      <th class="align-right">Age</th>
+    </tr>
+  </thead>
 
-    <div>
-      <div class="img-slot ratio-3-4">
-        <img src="club-birmingham-vulcans-broadcast.png" alt="Radio broadcaster">
-      </div>
-      <h3>Radio Broadcast</h3>
-      <p>
-        The voice on the wire. Calm, steady, unhurried. Calls the game like it’s meant to last.
-      </p>
-    </div>
+  <!-- PASTE/EDIT ROSTER ROWS ONLY INSIDE THIS <tbody> ... </tbody> -->
+  <tbody>
+    <!-- STARTING PITCHERS (5) -->
+    <tr data-player-id="bhm-001">
+      <td><img class="roster-pic" src="player-birmingham-miles-wetherby.png" alt="Miles Wetherby"></td>
+      <td>Miles Wetherby</td><td>SP</td><td class="align-center">R/R</td><td class="align-right">29</td>
+    </tr>
+    <tr data-player-id="bhm-002">
+      <td><img class="roster-pic" src="player-birmingham-adama-keita.png" alt="Adama Keita"></td>
+      <td>Adama Keita</td><td>SP</td><td class="align-center">R/R</td><td class="align-right">26</td>
+    </tr>
+    <tr data-player-id="bhm-003">
+      <td><img class="roster-pic" src="player-birmingham-kaito-morishima.png" alt="Kaito Morishima"></td>
+      <td>Kaito Morishima</td><td>SP</td><td class="align-center">L/R</td><td class="align-right">24</td>
+    </tr>
+    <tr data-player-id="bhm-004">
+      <td><img class="roster-pic" src="player-birmingham-ivan-echevarria.png" alt="Iván Echevarría"></td>
+      <td>Iván Echevarría</td><td>SP</td><td class="align-center">R/R</td><td class="align-right">31</td>
+    </tr>
+    <tr data-player-id="bhm-005">
+      <td><img class="roster-pic" src="player-birmingham-ruben-vassallo.png" alt="Rubén Vassallo"></td>
+      <td>Rubén Vassallo</td><td>SP</td><td class="align-center">L/L</td><td class="align-right">27</td>
+    </tr>
 
-    <div>
-      <div class="img-slot ratio-3-4">
-        <img src="club-birmingham-vulcans-announcer.png" alt="In-game announcer">
-      </div>
-      <h3>In-Game Announcer</h3>
-      <p>
-        Lives inside the park. Names echo. Counts linger. The crowd listens whether they want to or not.
-      </p>
-    </div>
+    <!-- RELIEVERS (3) -->
+    <tr data-player-id="bhm-006">
+      <td><img class="roster-pic" src="player-birmingham-colm-heneghan.png" alt="Colm Heneghan"></td>
+      <td>Colm Heneghan</td><td>RP</td><td class="align-center">R/R</td><td class="align-right">28</td>
+    </tr>
+    <tr data-player-id="bhm-007">
+      <td><img class="roster-pic" src="player-birmingham-sandeep-bhandari.png" alt="Sandeep Bhandari"></td>
+      <td>Sandeep Bhandari</td><td>RP</td><td class="align-center">R/R</td><td class="align-right">25</td>
+    </tr>
+    <tr data-player-id="bhm-008">
+      <td><img class="roster-pic" src="player-birmingham-jurgen-falkenrath.png" alt="Jürgen Falkenrath"></td>
+      <td>Jürgen Falkenrath</td><td>RP</td><td class="align-center">L/L</td><td class="align-right">32</td>
+    </tr>
 
-  </div>
-</section>
+    <!-- CATCHER (1) -->
+    <tr data-player-id="bhm-009">
+      <td><img class="roster-pic" src="player-birmingham-darnay-boudreaux.png" alt="Darnay Boudreaux"></td>
+      <td>Darnay Boudreaux</td><td>C</td><td class="align-center">R/R</td><td class="align-right">30</td>
+    </tr>
 
-<section>
-  <h2>Mascot & Stands</h2>
-  <div class="split">
+    <!-- INFIELD (4) -->
+    <tr data-player-id="bhm-010">
+      <td><img class="roster-pic" src="player-birmingham-teo-arjona.png" alt="Teo Arjona"></td>
+      <td>Teo Arjona</td><td>1B</td><td class="align-center">L/R</td><td class="align-right">33</td>
+    </tr>
+    <tr data-player-id="bhm-011">
+      <td><img class="roster-pic" src="player-birmingham-callum-sato.png" alt="Callum Sato"></td>
+      <td>Callum Sato</td><td>2B</td><td class="align-center">S/R</td><td class="align-right">23</td>
+    </tr>
+    <tr data-player-id="bhm-012">
+      <td><img class="roster-pic" src="player-birmingham-niko-vujasin.png" alt="Niko Vujasin"></td>
+      <td>Niko Vujasin</td><td>SS</td><td class="align-center">R/R</td><td class="align-right">27</td>
+    </tr>
+    <tr data-player-id="bhm-013">
+      <td><img class="roster-pic" src="player-birmingham-quincy-reddick.png" alt="Quincy Reddick"></td>
+      <td>Quincy Reddick</td><td>3B</td><td class="align-center">R/R</td><td class="align-right">28</td>
+    </tr>
 
-    <div>
-      <div class="img-slot ratio-1-1">
-        <img src="club-birmingham-vulcans-mascot.png" alt="Vulcan mascot">
-      </div>
-      <h3>Vulcan</h3>
-      <p>
-        A working mascot. Loud, physical, familiar. Always where the crowd is thickest.
-      </p>
-    </div>
+    <!-- OUTFIELD (3) -->
+    <tr data-player-id="bhm-014">
+      <td><img class="roster-pic" src="player-birmingham-malik-nwosu.png" alt="Malik Nwosu"></td>
+      <td>Malik Nwosu</td><td>LF</td><td class="align-center">L/L</td><td class="align-right">24</td>
+    </tr>
+    <tr data-player-id="bhm-015">
+      <td><img class="roster-pic" src="player-birmingham-esteban-llorente.png" alt="Esteban Llorente"></td>
+      <td>Esteban Llorente</td><td>CF</td><td class="align-center">R/R</td><td class="align-right">29</td>
+    </tr>
+    <tr data-player-id="bhm-016">
+      <td><img class="roster-pic" src="player-birmingham-petr-novak.png" alt="Petr Novák"></td>
+      <td>Petr Novák</td><td>RF</td><td class="align-center">R/R</td><td class="align-right">26</td>
+    </tr>
+  </tbody>
+</table>
 
-    <div>
-      <div class="img-slot ratio-1-1">
-        <img src="club-birmingham-vulcans-fans.png" alt="Vulcans fans">
-      </div>
-      <h3>The Stands</h3>
-      <p>
-        Families, shift workers, regulars. The noise builds slowly — then stays.
-      </p>
-    </div>
+<h2>Recent Games</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Opponent</th>
+      <th>Result</th>
+      <th class="align-right">Box</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>—</td>
+      <td>—</td>
+      <td>—</td>
+      <td class="align-right"><a href="boxscore.html">View</a></td>
+    </tr>
+  </tbody>
+</table>
 
-  </div>
-</section>
-<footer class="glb-footer">
-  <div class="glb-footer-inner">
-    <div class="glb-footer-brand">
-      <img 
-        src="assets/glb-logo.png" 
-        alt="Global League Baseball logo" 
-        class="glb-footer-logo"
-      />
-      <div class="glb-footer-text">
-        <strong>Global League Baseball</strong>
-        <span>© Global League Baseball</span>
-      </div>
-    </div>
-
-    <div class="glb-footer-meta">
-      <span>An international professional baseball league</span>
-      <span>Established 2026</span>
-    </div>
-  </div>
+<footer>
+  <div>GLOBAL LEAGUE BASEBALL · TEAM RECORD</div>
+  <img src="GLB_white.png" alt="GLB" class="glb-logo">
 </footer>
+
 </div>
 </body>
 </html>

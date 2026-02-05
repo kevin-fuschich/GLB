@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GLB Team Record – Albuquerque Aeros</title>
+
+<style>
+:root{
+  --paper:#ffffff;
+  --ink:#0f1214;
+  --meta:#666;
+  --line:#e0e0e0;
+
+  --sans:"Helvetica Neue", Helvetica, Arial, sans-serif;
+  --mono:"Courier New", Courier, monospace;
+}
+
+body{
+  background:#f4f4f4;
+  font-family:var(--sans);
+  color:var(--ink);
+  margin:0;
+  padding:40px 20px;
+}
+
+.sheet{
+  max-width:640px;
+  margin:0 auto;
+  background:var(--paper);
+  padding:40px;
+  border-top:5px solid var(--ink);
+  box-shadow:0 4px 20px rgba(0,0,0,.08);
+}
+
+/* HEADER */
+header{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  padding-bottom:20px;
+  border-bottom:2px solid var(--ink);
+  margin-bottom:30px;
+}
+
+.header-text h1{
+  margin:0 0 6px 0;
+  font-size:22px;
+  font-weight:900;
+  text-transform:uppercase;
+}
+
+.header-meta{
+  font-size:13px;
+  color:var(--meta);
+}
+
+.team-logo{
+  height:120px; /* 100% larger */
+  width:auto;
+}
+
+/* TEAM PHOTO */
+.team-photo{
+  margin:30px 0;
+  border:1px solid var(--line);
+}
+
+.team-photo img{
+  width:100%;
+  display:block;
+}
+
+/* SECTION HEADERS */
+h2{
+  font-family:var(--mono);
+  font-size:13px;
+  text-transform:uppercase;
+  letter-spacing:.5px;
+  margin:40px 0 12px;
+  padding-bottom:6px;
+  border-bottom:1px solid var(--line);
+}
+
+/* TABLES */
+table{
+  width:100%;
+  border-collapse:collapse;
+  font-size:13px;
+}
+
+th{
+  font-size:11px;
+  color:var(--meta);
+  font-weight:600;
+  text-transform:uppercase;
+  padding:6px;
+  border-bottom:2px solid var(--ink);
+}
+
+td{
+  padding:8px 6px;
+  border-bottom:1px solid #f0f0f0;
+}
+
+.align-center{ text-align:center; }
+.align-right{ text-align:right; }
+
+/* ROSTER HEADSHOTS */
+.roster-pic{
+  width:48px;
+  height:48px;
+  object-fit:cover;
+  border-radius:6px;
+  border:1px solid var(--line);
+  display:block;
+}
+
+/* LINKS */
+a{ color:var(--ink); text-decoration:none; }
+a:hover{ text-decoration:underline; }
+
+/* FOOTER */
+footer{
+  margin-top:50px;
+  padding-top:18px;
+  border-top:1px solid var(--line);
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  font-family:var(--mono);
+  font-size:10px;
+  color:#777;
+}
+
+.glb-logo{
+  height:56px;
+  width:auto;
+}
+</style>
+</head>
+
+<body>
+<div class="sheet">
+
+<header>
+  <div class="header-text">
+    <h1>Albuquerque Aeros</h1>
+    <div class="header-meta">Albuquerque — Americas Division</div>
+    <div class="header-meta">Team Record & Active Roster</div>
+  </div>
+
+  <img src="team-albuquerque-aeros-logo.png" alt="Albuquerque Aeros Logo" class="team-logo">
+</header>
+
+<!-- TEAM PHOTO -->
+<div class="team-photo">
+  <img src="team-albuquerque-aeros-photo.png" alt="Albuquerque Aeros Team Photo">
+</div>
+
+<h2>Season Snapshot</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Record</th>
+      <th>Runs</th>
+      <th>Allowed</th>
+      <th>Diff</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0–1</td>
+      <td>0</td>
+      <td>2</td>
+      <td>-2</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Active Roster</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Pic</th>
+      <th>Player</th>
+      <th>Pos</th>
+      <th class="align-center">B/T</th>
+      <th class="align-right">Age</th>
+    </tr>
+  </thead>
+
+  <!-- PASTE / EDIT ROSTER ROWS INSIDE THIS <tbody> -->
+  <tbody>
+    <!-- STARTING PITCHERS (5) -->
+    <tr data-player-id="abq-001">
+      <td><img class="roster-pic" src="player-albuquerque-idris-kourouma.png" alt="Idris Kourouma"></td>
+      <td>Idris Kourouma</td><td>SP</td><td class="align-center">R/R</td><td class="align-right">29</td>
+    </tr>
+    <tr data-player-id="abq-002">
+      <td><img class="roster-pic" src="player-albuquerque-pieter-vanvleuten.png" alt="Pieter VanVleuten"></td>
+      <td>Pieter VanVleuten</td><td>SP</td><td class="align-center">L/L</td><td class="align-right">31</td>
+    </tr>
+    <tr data-player-id="abq-003">
+      <td><img class="roster-pic" src="player-albuquerque-nikhil-jadhav.png" alt="Nikhil Jadhav"></td>
+      <td>Nikhil Jadhav</td><td>SP</td><td class="align-center">R/R</td><td class="align-right">26</td>
+    </tr>
+    <tr data-player-id="abq-004">
+      <td><img class="roster-pic" src="player-albuquerque-ronan-kaczmarek.png" alt="Ronan Kaczmarek"></td>
+      <td>Ronan Kaczmarek</td><td>SP</td><td class="align-center">R/R</td><td class="align-right">24</td>
+    </tr>
+    <tr data-player-id="abq-005">
+      <td><img class="roster-pic" src="player-albuquerque-satoshi-kurobane.png" alt="Satoshi Kurobane"></td>
+      <td>Satoshi Kurobane</td><td>SP</td><td class="align-center">R/R</td><td class="align-right">28</td>
+    </tr>
+
+    <!-- RELIEVERS (3) -->
+    <tr data-player-id="abq-006">
+      <td><img class="roster-pic" src="player-albuquerque-eamon-quirke.png" alt="Eamon Quirke"></td>
+      <td>Eamon Quirke</td><td>RP</td><td class="align-center">R/R</td><td class="align-right">27</td>
+    </tr>
+    <tr data-player-id="abq-007">
+      <td><img class="roster-pic" src="player-albuquerque-jaemin-gwak.png" alt="Jae-min Gwak"></td>
+      <td>Jae-min Gwak</td><td>RP</td><td class="align-center">L/R</td><td class="align-right">23</td>
+    </tr>
+    <tr data-player-id="abq-008">
+      <td><img class="roster-pic" src="player-albuquerque-lazaro-bracamonte.png" alt="Lázaro Bracamonte"></td>
+      <td>Lázaro Bracamonte</td><td>RP</td><td class="align-center">R/R</td><td class="align-right">30</td>
+    </tr>
+
+    <!-- CATCHER (1) -->
+    <tr data-player-id="abq-009">
+      <td><img class="roster-pic" src="player-albuquerque-rui-damas.png" alt="Rui Damas"></td>
+      <td>Rui Damas</td><td>C</td><td class="align-center">R/R</td><td class="align-right">28</td>
+    </tr>
+
+    <!-- INFIELD (4) -->
+    <tr data-player-id="abq-010">
+      <td><img class="roster-pic" src="player-albuquerque-tobias-vandenberg.png" alt="Tobias Vandenberg"></td>
+      <td>Tobias Vandenberg</td><td>1B</td><td class="align-center">L/R</td><td class="align-right">32</td>
+    </tr>
+    <tr data-player-id="abq-011">
+      <td><img class="roster-pic" src="player-albuquerque-kofi-agyeman.png" alt="Kofi Agyeman"></td>
+      <td>Kofi Agyeman</td><td>2B</td><td class="align-center">S/R</td><td class="align-right">25</td>
+    </tr>
+    <tr data-player-id="abq-012">
+      <td><img class="roster-pic" src="player-albuquerque-iker-zubizarreta.png" alt="Iker Zubizarreta"></td>
+      <td>Iker Zubizarreta</td><td>SS</td><td class="align-center">R/R</td><td class="align-right">26</td>
+    </tr>
+    <tr data-player-id="abq-013">
+      <td><img class="roster-pic" src="player-albuquerque-carmine-sforza.png" alt="Carmine Sforza"></td>
+      <td>Carmine Sforza</td><td>3B</td><td class="align-center">R/R</td><td class="align-right">29</td>
+    </tr>
+
+    <!-- OUTFIELD (3) -->
+    <tr data-player-id="abq-014">
+      <td><img class="roster-pic" src="player-albuquerque-adama-kouyate.png" alt="Adama Kouyaté"></td>
+      <td>Adama Kouyaté</td><td>CF</td><td class="align-center">R/R</td><td class="align-right">27</td>
+    </tr>
+    <tr data-player-id="abq-015">
+      <td><img class="roster-pic" src="player-albuquerque-elior-benami.png" alt="Elior Ben-Ami"></td>
+      <td>Elior Ben-Ami</td><td>LF</td><td class="align-center">L/L</td><td class="align-right">22</td>
+    </tr>
+    <tr data-player-id="abq-016">
+      <td><img class="roster-pic" src="player-albuquerque-paolo-ventresca.png" alt="Paolo Ventresca"></td>
+      <td>Paolo Ventresca</td><td>RF</td><td class="align-center">R/R</td><td class="align-right">31</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Recent Games</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Opponent</th>
+      <th>Result</th>
+      <th class="align-right">Box</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Apr 8</td>
+      <td>Spokane Alloys</td>
+      <td>L 0–2</td>
+      <td class="align-right"><a href="boxscore.html">View</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<footer>
+  <div>GLOBAL LEAGUE BASEBALL · TEAM RECORD</div>
+  <img src="GLB_white.png" alt="GLB" class="glb-logo">
+</footer>
+
+</div>
+</body>
+</html>

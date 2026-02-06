@@ -1,267 +1,298 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GLB Team Record: Louisville Naturals</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>GLB Team Record – Louisville Naturals</title>
+
 <style>
-    :root {
-        --field-white: #ffffff;
-        --ink-navy: #002244;
-        --meta-grey: #555555;
-        --line-grey: #e0e0e0;
-        --font-serif: "Georgia", "Times New Roman", serif;
-        --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    }
+:root{
+  --paper:#ffffff;
+  --ink:#0f1214;
+  --meta:#666;
+  --line:#e0e0e0;
 
-    body {
-        background-color: #f4f4f4;
-        font-family: var(--font-sans);
-        color: var(--ink-navy);
-        display: flex;
-        justify-content: center;
-        padding: 50px 20px;
-        margin: 0;
-        -webkit-font-smoothing: antialiased;
-    }
+  --sans:"Helvetica Neue", Helvetica, Arial, sans-serif;
+  --mono:"Courier New", Courier, monospace;
+}
 
-    .dossier-sheet {
-        background-color: var(--field-white);
-        width: 100%;
-        max-width: 580px;
-        padding: 40px;
-        box-shadow: 0 2px 15px rgba(0,0,0,0.06);
-        border-top: 5px solid var(--ink-navy);
-    }
+body{
+  background:#f4f4f4;
+  font-family:var(--sans);
+  color:var(--ink);
+  margin:0;
+  padding:40px 20px;
+}
 
-    header {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        margin-bottom: 30px;
-        padding-bottom: 20px;
-        border-bottom: 1px solid var(--ink-navy);
-    }
+.sheet{
+  max-width:640px;
+  margin:0 auto;
+  background:var(--paper);
+  padding:40px;
+  border-top:5px solid var(--ink);
+  box-shadow:0 4px 20px rgba(0,0,0,.08);
+}
 
-    .header-text {
-        font-family: var(--font-serif);
-    }
+/* HEADER */
+header{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  padding-bottom:20px;
+  border-bottom:2px solid var(--ink);
+  margin-bottom:30px;
+}
 
-    h1 {
-        font-size: 20px;
-        font-weight: bold;
-        margin: 0 0 6px 0;
-    }
+.header-text h1{
+  margin:0 0 6px 0;
+  font-size:22px;
+  font-weight:900;
+  text-transform:uppercase;
+}
 
-    .team-meta {
-        font-size: 14px;
-        font-style: italic;
-        color: var(--meta-grey);
-        margin-bottom: 2px;
-    }
+.header-meta{
+  font-size:13px;
+  color:var(--meta);
+}
 
-    .club-reference {
-        font-size: 11px;
-        color: var(--meta-grey);
-        font-style: italic;
-    }
+.team-logo{
+  height:120px;
+  width:auto;
+}
 
-    .stamp-logo {
-        width: 60px;
-        height: auto;
-        opacity: 0.9;
-    }
+/* TEAM PHOTO */
+.team-photo{
+  margin:30px 0;
+  border:1px solid var(--line);
+}
 
-    h2 {
-        font-family: var(--font-serif);
-        font-size: 14px;
-        font-weight: bold;
-        text-transform: uppercase;
-        border-bottom: 1px solid var(--line-grey);
-        margin-top: 35px;
-        margin-bottom: 15px;
-        padding-bottom: 5px;
-        letter-spacing: 0.5px;
-    }
+.team-photo img{
+  width:100%;
+  display:block;
+}
 
-    table {
-        width: 100%;
-        border-collapse: collapse;
-        font-size: 13px;
-        table-layout: fixed;
-    }
+/* SECTION HEADERS */
+h2{
+  font-family:var(--mono);
+  font-size:13px;
+  text-transform:uppercase;
+  letter-spacing:.5px;
+  margin:40px 0 12px;
+  padding-bottom:6px;
+  border-bottom:1px solid var(--line);
+}
 
-    th {
-        font-weight: 600;
-        font-size: 10px;
-        color: var(--meta-grey);
-        padding: 4px 8px;
-        border-bottom: 1px solid var(--ink-navy);
-        text-transform: uppercase;
-    }
+/* TABLES */
+table{
+  width:100%;
+  border-collapse:collapse;
+  font-size:13px;
+}
 
-    td {
-        padding: 8px 8px;
-        border-bottom: 1px solid #f0f0f0;
-        color: #111;
-    }
+th{
+  font-size:11px;
+  color:var(--meta);
+  font-weight:600;
+  text-transform:uppercase;
+  padding:6px;
+  border-bottom:2px solid var(--ink);
+}
 
-    .snapshot-table th {
-        border-bottom: 1px solid var(--line-grey);
-        text-transform: none;
-        font-size: 11px;
-    }
+td{
+  padding:8px 6px;
+  border-bottom:1px solid #f0f0f0;
+}
 
-    .snapshot-table td {
-        font-weight: 500;
-        font-size: 14px;
-    }
+.align-center{ text-align:center; }
+.align-right{ text-align:right; }
 
-    .col-player { width: 50%; }
-    .col-pos { width: 15%; }
-    .col-bt { width: 20%; text-align: center; }
-    .col-age { width: 15%; text-align: right; }
+/* ROSTER HEADSHOTS */
+.roster-pic{
+  width:48px;
+  height:48px;
+  object-fit:cover;
+  border-radius:6px;
+  border:1px solid var(--line);
+  display:block;
+}
 
-    .align-center { text-align: center; }
-    .align-right { text-align: right; }
+/* LINKS */
+a{ color:var(--ink); text-decoration:none; }
+a:hover{ text-decoration:underline; }
 
-    .col-date { width: 30%; }
-    .col-opp { width: 35%; }
-    .col-result { width: 20%; }
-    .col-link { width: 15%; text-align: right; }
+/* FOOTER */
+footer{
+  margin-top:50px;
+  padding-top:18px;
+  border-top:1px solid var(--line);
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  font-family:var(--mono);
+  font-size:10px;
+  color:#777;
+}
 
-    a.box-link {
-        color: var(--ink-navy);
-        text-decoration: none;
-        font-size: 11px;
-        opacity: 0.7;
-    }
-
-    a.box-link:hover {
-        opacity: 1;
-        text-decoration: underline;
-    }
-
-    .notes-list {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        font-size: 12px;
-    }
-
-    .notes-list li {
-        display: flex;
-        margin-bottom: 6px;
-    }
-
-    .note-label {
-        width: 120px;
-        font-size: 10px;
-        font-weight: 600;
-        color: var(--meta-grey);
-        text-transform: uppercase;
-    }
-
-    footer {
-        margin-top: 50px;
-        border-top: 1px solid var(--line-grey);
-        padding-top: 15px;
-        font-size: 10px;
-        color: var(--meta-grey);
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-    }
+.glb-logo{
+  height:56px;
+  width:auto;
+}
 </style>
 </head>
-<body>
 
-<div class="dossier-sheet">
+<body>
+<div class="sheet">
 
 <header>
-    <div class="header-text">
-        <h1>Louisville Naturals</h1>
-        <div class="team-meta">Louisville — Americas Division</div>
-        <div class="team-meta">Team Record</div>
-        <div class="club-reference">Club file forthcoming.</div>
-    </div>
-    <img src="GLB_white.png" alt="GLB Seal" class="stamp-logo">
+  <div class="header-text">
+    <h1>Louisville Naturals</h1>
+    <div class="header-meta">Louisville — Americas Division</div>
+    <div class="header-meta">Team Record &amp; Active Roster</div>
+  </div>
+
+  <!-- Team logo (top-right) -->
+  <img src="team-louisville-naturals-logo.png" alt="Louisville Naturals Logo" class="team-logo">
 </header>
 
-<table class="snapshot-table">
-    <thead>
-        <tr>
-            <th>Record</th>
-            <th>Runs</th>
-            <th>Allowed</th>
-            <th>Diff</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>1–0</td>
-            <td>6</td>
-            <td>1</td>
-            <td>+5</td>
-        </tr>
-    </tbody>
+<!-- TEAM PHOTO (you’ll generate/upload this) -->
+<div class="team-photo">
+  <img src="team-louisville-naturals-photo.png" alt="Louisville Naturals Team Photo">
+</div>
+
+<h2>Season Snapshot</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Record</th>
+      <th>Runs</th>
+      <th>Allowed</th>
+      <th>Diff</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0–0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2>Active Roster</h2>
 <table>
-    <thead>
-        <tr>
-            <th class="col-player">Player</th>
-            <th class="col-pos">Pos</th>
-            <th class="col-bt align-center">B/T</th>
-            <th class="col-age align-right">Age</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr><td>T. Stephenson</td><td>C</td><td class="align-center">R/R</td><td class="align-right">27</td></tr>
-        <tr><td>C. Walker</td><td>1B</td><td class="align-center">R/R</td><td class="align-right">33</td></tr>
-        <tr><td>J. India</td><td>2B</td><td class="align-center">R/R</td><td class="align-right">27</td></tr>
-        <tr><td>E. De La Cruz</td><td>SS</td><td class="align-center">S/R</td><td class="align-right">22</td></tr>
-        <tr><td>S. Marte</td><td>3B</td><td class="align-center">R/R</td><td class="align-right">35</td></tr>
-        <tr><td>T. Friedl</td><td>CF</td><td class="align-center">L/L</td><td class="align-right">28</td></tr>
-        <tr><td>J. Fraley</td><td>LF</td><td class="align-center">L/L</td><td class="align-right">29</td></tr>
-        <tr><td>N. Castellanos</td><td>RF</td><td class="align-center">R/R</td><td class="align-right">32</td></tr>
-        <tr><td>H. Greene</td><td>P</td><td class="align-center">R/R</td><td class="align-right">25</td></tr>
-    </tbody>
+  <thead>
+    <tr>
+      <th>Pic</th>
+      <th>Player</th>
+      <th>Pos</th>
+      <th class="align-center">B/T</th>
+      <th class="align-right">Age</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <!-- Starting Pitchers (5) -->
+    <tr data-player-id="lou-001">
+      <td><img class="roster-pic" src="player-louisville-aurelien-bastide.png" alt="Aurélien Bastide"></td>
+      <td>Aurélien Bastide</td><td>SP</td><td class="align-center">R/R</td><td class="align-right">29</td>
+    </tr>
+    <tr data-player-id="lou-002">
+      <td><img class="roster-pic" src="player-louisville-calder-ryzan.png" alt="Calder Ryzan"></td>
+      <td>Calder Ryzan</td><td>SP</td><td class="align-center">L/L</td><td class="align-right">26</td>
+    </tr>
+    <tr data-player-id="lou-003">
+      <td><img class="roster-pic" src="player-louisville-eunseok-choi.png" alt="Eun-seok Choi"></td>
+      <td>Eun-seok Choi</td><td>SP</td><td class="align-center">R/R</td><td class="align-right">28</td>
+    </tr>
+    <tr data-player-id="lou-004">
+      <td><img class="roster-pic" src="player-louisville-nasir-darzi.png" alt="Nasir Darzi"></td>
+      <td>Nasir Darzi</td><td>SP</td><td class="align-center">R/R</td><td class="align-right">31</td>
+    </tr>
+    <tr data-player-id="lou-005">
+      <td><img class="roster-pic" src="player-louisville-tiago-muniz.png" alt="Tiago Muniz"></td>
+      <td>Tiago Muniz</td><td>SP</td><td class="align-center">L/R</td><td class="align-right">25</td>
+    </tr>
+
+    <!-- Relievers (3) -->
+    <tr data-player-id="lou-006">
+      <td><img class="roster-pic" src="player-louisville-oscar-vintner.png" alt="Oscar Vintner"></td>
+      <td>Oscar Vintner</td><td>RP</td><td class="align-center">R/R</td><td class="align-right">27</td>
+    </tr>
+    <tr data-player-id="lou-007">
+      <td><img class="roster-pic" src="player-louisville-kaito-suzume.png" alt="Kaito Suzume"></td>
+      <td>Kaito Suzume</td><td>RP</td><td class="align-center">R/R</td><td class="align-right">24</td>
+    </tr>
+    <tr data-player-id="lou-008">
+      <td><img class="roster-pic" src="player-louisville-maia-kenrick.png" alt="Maia Kenrick"></td>
+      <td>Maia Kenrick</td><td>RP</td><td class="align-center">L/L</td><td class="align-right">30</td>
+    </tr>
+
+    <!-- Catcher (1) -->
+    <tr data-player-id="lou-009">
+      <td><img class="roster-pic" src="player-louisville-ruben-castel.png" alt="Rubén Castel"></td>
+      <td>Rubén Castel</td><td>C</td><td class="align-center">R/R</td><td class="align-right">28</td>
+    </tr>
+
+    <!-- Infielders (4) -->
+    <tr data-player-id="lou-010">
+      <td><img class="roster-pic" src="player-louisville-oren-khouri.png" alt="Oren Khouri"></td>
+      <td>Oren Khouri</td><td>1B</td><td class="align-center">L/R</td><td class="align-right">32</td>
+    </tr>
+    <tr data-player-id="lou-011">
+      <td><img class="roster-pic" src="player-louisville-santino-pereda.png" alt="Santino Pereda"></td>
+      <td>Santino Pereda</td><td>2B</td><td class="align-center">S/R</td><td class="align-right">23</td>
+    </tr>
+    <tr data-player-id="lou-012">
+      <td><img class="roster-pic" src="player-louisville-dexter-ubeda.png" alt="Dexter Úbeda"></td>
+      <td>Dexter Úbeda</td><td>SS</td><td class="align-center">R/R</td><td class="align-right">27</td>
+    </tr>
+    <tr data-player-id="lou-013">
+      <td><img class="roster-pic" src="player-louisville-jonah-ramorin.png" alt="Jonah Ramorin"></td>
+      <td>Jonah Ramorin</td><td>3B</td><td class="align-center">R/R</td><td class="align-right">29</td>
+    </tr>
+
+    <!-- Outfielders (3) -->
+    <tr data-player-id="lou-014">
+      <td><img class="roster-pic" src="player-louisville-isaac-nyambe.png" alt="Isaac Nyambe"></td>
+      <td>Isaac Nyambe</td><td>CF</td><td class="align-center">R/R</td><td class="align-right">26</td>
+    </tr>
+    <tr data-player-id="lou-015">
+      <td><img class="roster-pic" src="player-louisville-mateo-salvat.png" alt="Mateo Salvat"></td>
+      <td>Mateo Salvat</td><td>LF</td><td class="align-center">L/L</td><td class="align-right">24</td>
+    </tr>
+    <tr data-player-id="lou-016">
+      <td><img class="roster-pic" src="player-louisville-viktor-helmer.png" alt="Viktor Helmer"></td>
+      <td>Viktor Helmer</td><td>RF</td><td class="align-center">R/R</td><td class="align-right">31</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2>Recent Games</h2>
 <table>
-    <thead>
-        <tr>
-            <th class="col-date">Date</th>
-            <th class="col-opp">Opponent</th>
-            <th class="col-result">Result</th>
-            <th class="col-link">Box</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Apr 8</td>
-            <td>Durham</td>
-            <td>W 6–1</td>
-            <td class="col-link"><a href="boxscore.html" class="box-link">Box</a></td>
-        </tr>
-    </tbody>
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Opponent</th>
+      <th>Result</th>
+      <th class="align-right">Box</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>—</td>
+      <td>—</td>
+      <td>—</td>
+      <td class="align-right"><a href="boxscore.html">View</a></td>
+    </tr>
+  </tbody>
 </table>
 
-<h2>Club Notes</h2>
-<ul class="notes-list">
-    <li><span class="note-label">Home Venue</span><span>Riverfront Grounds</span></li>
-    <li><span class="note-label">Manager</span><span>—</span></li>
-    <li><span class="note-label">Established</span><span>2024 (Charter Member)</span></li>
-</ul>
-
 <footer>
-    Records current through most recent official scoring.<br>
-    Roster data subject to change.
+  <div>GLOBAL LEAGUE BASEBALL · TEAM RECORD</div>
+  <img src="GLB_white.png" alt="GLB" class="glb-logo">
 </footer>
 
 </div>
-
 </body>
 </html>

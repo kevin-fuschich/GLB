@@ -3,17 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>San Pedro Cocolos – Club Dossier</title>
+<title>GLB Team Record – San Pedro Cocolos</title>
 
 <style>
 :root{
-  --primary:#4A5863;
-  --accent:#C0442C;
   --paper:#ffffff;
   --ink:#0f1214;
-
-  --border-thick:4px solid var(--ink);
-  --border-thin:1px solid #ccc;
+  --meta:#666;
+  --line:#e0e0e0;
 
   --sans:"Helvetica Neue", Helvetica, Arial, sans-serif;
   --mono:"Courier New", Courier, monospace;
@@ -21,270 +18,274 @@
 
 body{
   background:#f4f4f4;
-  color:var(--ink);
   font-family:var(--sans);
+  color:var(--ink);
   margin:0;
-  padding:20px;
+  padding:40px 20px;
 }
 
-.club-sheet{
-  max-width:900px;
+.sheet{
+  max-width:640px;
   margin:0 auto;
   background:var(--paper);
   padding:40px;
-  border-top:var(--border-thick);
-  position:relative;
-}
-
-/* DOC ID */
-.doc-id{
-  position:absolute;
-  top:15px;
-  right:20px;
-  font-family:var(--mono);
-  font-size:10px;
-  color:#999;
+  border-top:5px solid var(--ink);
+  box-shadow:0 4px 20px rgba(0,0,0,.08);
 }
 
 /* HEADER */
 header{
-  border-bottom:var(--border-thick);
-  padding-bottom:20px;
-  margin-bottom:25px;
-}
-
-.club-lockup{
   display:flex;
   justify-content:space-between;
-  align-items:baseline;
-  flex-wrap:wrap;
+  align-items:flex-start;
+  padding-bottom:20px;
+  border-bottom:2px solid var(--ink);
+  margin-bottom:30px;
 }
 
-h1{
-  margin:0;
-  font-size:32px;
+.header-text h1{
+  margin:0 0 6px 0;
+  font-size:22px;
   font-weight:900;
   text-transform:uppercase;
 }
 
-.division-tag{
-  background:var(--primary);
-  color:#fff;
-  font-size:12px;
-  padding:4px 8px;
-  text-transform:uppercase;
+.header-meta{
+  font-size:13px;
+  color:var(--meta);
 }
 
-.fact-bar{
-  display:flex;
-  gap:15px;
-  font-size:11px;
-  text-transform:uppercase;
-  color:#666;
-  margin-top:10px;
-  flex-wrap:wrap;
+.team-logo{
+  height:120px; /* 100% larger */
+  width:auto;
 }
 
-/* CTAs */
-.cta-row{
-  display:flex;
-  gap:10px;
-  margin:25px 0 40px;
-  flex-wrap:wrap;
+/* TEAM PHOTO */
+.team-photo{
+  margin:30px 0;
+  border:1px solid var(--line);
 }
 
-.btn{
-  flex:1;
-  min-width:180px;
-  border:2px solid var(--ink);
-  padding:12px 0;
-  text-align:center;
-  font-size:12px;
-  font-weight:bold;
-  text-transform:uppercase;
-  text-decoration:none;
-  color:var(--ink);
-}
-
-.btn.primary{
-  background:var(--primary);
-  color:#fff;
-  border-color:var(--primary);
-}
-
-/* SECTIONS */
-section{margin-bottom:55px;}
-
-h2{
-  font-size:14px;
-  text-transform:uppercase;
-  border-bottom:2px solid var(--accent);
-  padding-bottom:5px;
-}
-
-/* IDENTITY */
-.identity p{
-  font-size:16px;
-  max-width:700px;
-}
-
-/* IMAGE SLOTS */
-.img-slot{
-  background:#e0e0e0;
-  border:1px solid #ccc;
-  margin-bottom:15px;
-}
-
-.img-slot img{
+.team-photo img{
   width:100%;
-  height:100%;
-  object-fit:cover;
   display:block;
 }
 
-.ratio-16-9{aspect-ratio:16/9;}
-.ratio-3-4{aspect-ratio:3/4; max-width:260px;}
-.ratio-1-1{aspect-ratio:1/1; max-width:260px;}
-
-/* SPLIT */
-.split{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:30px;
+/* SECTION HEADERS */
+h2{
+  font-family:var(--mono);
+  font-size:13px;
+  text-transform:uppercase;
+  letter-spacing:.5px;
+  margin:40px 0 12px;
+  padding-bottom:6px;
+  border-bottom:1px solid var(--line);
 }
 
-/* LINKS */
-a{color:var(--ink); text-decoration:none;}
-a:hover{color:var(--accent);}
+/* TABLES */
+table{
+  width:100%;
+  border-collapse:collapse;
+  font-size:13px;
+}
+
+th{
+  font-size:11px;
+  color:var(--meta);
+  font-weight:600;
+  text-transform:uppercase;
+  padding:6px;
+  border-bottom:2px solid var(--ink);
+}
+
+td{
+  padding:8px 6px;
+  border-bottom:1px solid #f0f0f0;
+}
+
+.align-center{ text-align:center; }
+.align-right{ text-align:right; }
+
+/* ROSTER HEADSHOTS */
+.roster-pic{
+  width:48px;
+  height:48px;
+  object-fit:cover;
+  border-radius:6px;
+  border:1px solid var(--line);
+  display:block;
+}
 
 /* FOOTER */
 footer{
-  margin-top:70px;
-  padding:30px 20px;
-  border-top:var(--border-thick);
+  margin-top:50px;
+  padding-top:18px;
+  border-top:1px solid var(--line);
   display:flex;
   justify-content:space-between;
   align-items:center;
   font-family:var(--mono);
-  font-size:11px;
+  font-size:10px;
   color:#777;
 }
 
 .glb-logo{
-  height:56px; /* ~40% larger */
+  height:56px;
   width:auto;
-}
-
-@media(max-width:600px){
-  .split{grid-template-columns:1fr;}
-  footer{flex-direction:column; gap:15px;}
-  .doc-id{display:none;}
 }
 </style>
 </head>
 
 <body>
-<div class="club-sheet">
-
-<div class="doc-id">SPC-CLUB-LOCKED</div>
+<div class="sheet">
 
 <header>
-  <div class="club-lockup">
+  <div class="header-text">
     <h1>San Pedro Cocolos</h1>
-    <span class="division-tag">Americas Division</span>
+    <div class="header-meta">San Pedro — Pacific Division</div>
+    <div class="header-meta">Team Record & Active Roster</div>
   </div>
 
-  <div class="fact-bar">
-    <span>Est. —</span>
-    <span>•</span>
-    <span><strong>El Malecón</strong></span>
-    <span>•</span>
-    <span>Mgr. Ramón “Rayo” De La Cruz</span>
-  </div>
-
-  <div class="cta-row">
-    <a class="btn primary" href="team.html?team=san-pedro-cocolos">Active Roster</a>
-    <a class="btn" href="day.html">Daily Scores</a>
-    <a class="btn" href="game.html">Latest Box Score</a>
-  </div>
+  <img src="team-san-pedro-cocolos-logo.png" alt="San Pedro Cocolos Logo" class="team-logo">
 </header>
 
-<section class="identity">
-  <h2>The Club</h2>
-  <p>
-    The San Pedro Cocolos play with heat and rhythm—fast hands, loud bats, and a confidence that spreads inning to inning.
-    They don’t wait for momentum. They manufacture it: pressure on the bases, sharp contact, and a crowd that turns every
-    big pitch into a drumbeat.
-  </p>
-</section>
+<!-- TEAM PHOTO -->
+<div class="team-photo">
+  <img src="team-san-pedro-cocolos-photo.png" alt="San Pedro Cocolos Team Photo">
+</div>
 
-<section>
-  <h2>Ballpark</h2>
-  <div class="img-slot ratio-16-9">
-    <img src="club-san-pedro-cocolos-stadium.png" alt="El Malecón">
-  </div>
-  <p>
-    <strong>El Malecón.</strong> A waterfront park where the salt air hangs over the infield and the lights
-    glow against the palm line. The stands sit close. Music leaks into the concourse. Late innings feel like a street festival
-    that just happens to have baseball at its center.
-  </p>
-</section>
+<h2>Season Snapshot</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Record</th>
+      <th>Runs</th>
+      <th>Allowed</th>
+      <th>Diff</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0–0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
 
-<section>
-  <h2>Broadcast & Announcers</h2>
-  <div class="split">
-    <div>
-      <div class="img-slot ratio-3-4">
-        <img src="club-san-pedro-cocolos-broadcast.png" alt="Broadcast booth">
-      </div>
-      <h3>Luis “El Narrador” Peña</h3>
-      <p>
-        <strong>Play-by-play.</strong> Fast, musical, and crystal clear. Peña calls rallies like they’re climbing stairs—
-        every pitch a step, every swing a landing. He lets the crowd sing through his pauses.
-      </p>
-    </div>
-    <div>
-      <div class="img-slot ratio-3-4">
-        <img src="club-san-pedro-cocolos-announcer.png" alt="In-stadium announcer">
-      </div>
-      <h3>Maribel Santos</h3>
-      <p>
-        <strong>In-stadium announcer.</strong> Bright and commanding. Her voice cuts cleanly through the bowl—lineups,
-        counts, substitutions, and promotions delivered with timing that keeps the park moving.
-      </p>
-    </div>
-  </div>
-</section>
+<h2>Active Roster</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Pic</th>
+      <th>Player</th>
+      <th>Pos</th>
+      <th class="align-center">B/T</th>
+      <th class="align-right">Age</th>
+    </tr>
+  </thead>
 
-<section>
-  <h2>Mascot & Stands</h2>
-  <div class="split">
-    <div>
-      <div class="img-slot ratio-1-1">
-        <img src="club-san-pedro-cocolos-mascot.png" alt="Cocolo mascot">
-      </div>
-      <h3>Cocolo</h3>
-      <p>
-        A local legend in costume—more swagger than routine. Cocolo works the rail with high-fives, shoulder shimmies,
-        and a slow, theatrical wave when the Cocolos take the lead.
-      </p>
-    </div>
-    <div>
-      <div class="img-slot ratio-1-1">
-        <img src="club-san-pedro-cocolos-fans.png" alt="San Pedro fans">
-      </div>
-      <h3>The Wharf Side</h3>
-      <p>
-        Drums, flags, and chants that bounce off concrete. Fans arrive early, stay late, and treat every close game like a
-        neighborhood event. When the ninth inning hits, the whole section leans forward together.
-      </p>
-    </div>
-  </div>
-</section>
+  <tbody>
+    <!-- STARTING PITCHERS (5) -->
+    <tr data-player-id="sp-001">
+      <td><img class="roster-pic" src="player-san-pedro-emanuel-arellano.png" alt="Emanuel Arellano"></td>
+      <td>Emanuel Arellano</td><td>SP</td><td class="align-center">R/R</td><td class="align-right">27</td>
+    </tr>
+    <tr data-player-id="sp-002">
+      <td><img class="roster-pic" src="player-san-pedro-caleb-thorsen.png" alt="Caleb Thorsen"></td>
+      <td>Caleb Thorsen</td><td>SP</td><td class="align-center">L/L</td><td class="align-right">30</td>
+    </tr>
+    <tr data-player-id="sp-003">
+      <td><img class="roster-pic" src="player-san-pedro-haru-watanobe.png" alt="Haru Watanobe"></td>
+      <td>Haru Watanobe</td><td>SP</td><td class="align-center">R/R</td><td class="align-right">25</td>
+    </tr>
+    <tr data-player-id="sp-004">
+      <td><img class="roster-pic" src="player-san-pedro-ozias-nkuna.png" alt="Ozias Nkuna"></td>
+      <td>Ozias Nkuna</td><td>SP</td><td class="align-center">R/R</td><td class="align-right">29</td>
+    </tr>
+    <tr data-player-id="sp-005">
+      <td><img class="roster-pic" src="player-san-pedro-luca-veracini.png" alt="Luca Veracini"></td>
+      <td>Luca Veracini</td><td>SP</td><td class="align-center">R/L</td><td class="align-right">28</td>
+    </tr>
+
+    <!-- RELIEVERS (3) -->
+    <tr data-player-id="sp-006">
+      <td><img class="roster-pic" src="player-san-pedro-tyson-barnell.png" alt="Tyson Barnell"></td>
+      <td>Tyson Barnell</td><td>RP</td><td class="align-center">R/R</td><td class="align-right">26</td>
+    </tr>
+    <tr data-player-id="sp-007">
+      <td><img class="roster-pic" src="player-san-pedro-nasir-azoulay.png" alt="Nasir Azoulay"></td>
+      <td>Nasir Azoulay</td><td>RP</td><td class="align-center">L/L</td><td class="align-right">31</td>
+    </tr>
+    <tr data-player-id="sp-008">
+      <td><img class="roster-pic" src="player-san-pedro-joaquin-delvalle.png" alt="Joaquín Delvalle"></td>
+      <td>Joaquín Delvalle</td><td>RP</td><td class="align-center">R/R</td><td class="align-right">24</td>
+    </tr>
+
+    <!-- CATCHER (1) -->
+    <tr data-player-id="sp-009">
+      <td><img class="roster-pic" src="player-san-pedro-mikhail-korovin.png" alt="Mikhail Korovin"></td>
+      <td>Mikhail Korovin</td><td>C</td><td class="align-center">R/R</td><td class="align-right">28</td>
+    </tr>
+
+    <!-- INFIELDERS (4) -->
+    <tr data-player-id="sp-010">
+      <td><img class="roster-pic" src="player-san-pedro-gideon-sayre.png" alt="Gideon Sayre"></td>
+      <td>Gideon Sayre</td><td>1B</td><td class="align-center">L/R</td><td class="align-right">33</td>
+    </tr>
+    <tr data-player-id="sp-011">
+      <td><img class="roster-pic" src="player-san-pedro-raul-castillon.png" alt="Raúl Castillón"></td>
+      <td>Raúl Castillón</td><td>2B</td><td class="align-center">S/R</td><td class="align-right">27</td>
+    </tr>
+    <tr data-player-id="sp-012">
+      <td><img class="roster-pic" src="player-san-pedro-eamon-kellis.png" alt="Eamon Kellis"></td>
+      <td>Eamon Kellis</td><td>SS</td><td class="align-center">R/R</td><td class="align-right">26</td>
+    </tr>
+    <tr data-player-id="sp-013">
+      <td><img class="roster-pic" src="player-san-pedro-vikram-mistry.png" alt="Vikram Mistry"></td>
+      <td>Vikram Mistry</td><td>3B</td><td class="align-center">R/R</td><td class="align-right">29</td>
+    </tr>
+
+    <!-- OUTFIELDERS (3) -->
+    <tr data-player-id="sp-014">
+      <td><img class="roster-pic" src="player-san-pedro-aden-rousseau.png" alt="Aden Rousseau"></td>
+      <td>Aden Rousseau</td><td>CF</td><td class="align-center">L/L</td><td class="align-right">25</td>
+    </tr>
+    <tr data-player-id="sp-015">
+      <td><img class="roster-pic" src="player-san-pedro-hassan-elmalik.png" alt="Hassan Elmalik"></td>
+      <td>Hassan Elmalik</td><td>LF</td><td class="align-center">R/R</td><td class="align-right">30</td>
+    </tr>
+    <tr data-player-id="sp-016">
+      <td><img class="roster-pic" src="player-san-pedro-noah-kovachik.png" alt="Noah Kovachik"></td>
+      <td>Noah Kovachik</td><td>RF</td><td class="align-center">R/R</td><td class="align-right">23</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Recent Games</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Opponent</th>
+      <th>Result</th>
+      <th class="align-right">Box</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>—</td>
+      <td>—</td>
+      <td>—</td>
+      <td class="align-right">—</td>
+    </tr>
+  </tbody>
+</table>
 
 <footer>
-  <div>GLB CLUB DOSSIER · SAN PEDRO</div>
-  <img class="glb-logo" src="GLB_white.png" alt="GLB">
+  <div>GLOBAL LEAGUE BASEBALL · TEAM RECORD</div>
+  <img src="GLB_white.png" alt="GLB" class="glb-logo">
 </footer>
 
 </div>

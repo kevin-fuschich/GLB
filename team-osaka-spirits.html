@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GLB Team Record – Osaka Spirits</title>
+
+<style>
+:root{
+  --paper:#ffffff;
+  --ink:#0f1214;
+  --meta:#666;
+  --line:#e0e0e0;
+
+  --sans:"Helvetica Neue", Helvetica, Arial, sans-serif;
+  --mono:"Courier New", Courier, monospace;
+}
+
+body{
+  background:#f4f4f4;
+  font-family:var(--sans);
+  color:var(--ink);
+  margin:0;
+  padding:40px 20px;
+}
+
+.sheet{
+  max-width:640px;
+  margin:0 auto;
+  background:var(--paper);
+  padding:40px;
+  border-top:5px solid var(--ink);
+  box-shadow:0 4px 20px rgba(0,0,0,.08);
+}
+
+/* HEADER */
+header{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  padding-bottom:20px;
+  border-bottom:2px solid var(--ink);
+  margin-bottom:30px;
+}
+
+.header-text h1{
+  margin:0 0 6px 0;
+  font-size:22px;
+  font-weight:900;
+  text-transform:uppercase;
+}
+
+.header-meta{
+  font-size:13px;
+  color:var(--meta);
+}
+
+.team-logo{
+  height:120px; /* consistent with Spokane template */
+  width:auto;
+}
+
+/* TEAM PHOTO */
+.team-photo{
+  margin:30px 0;
+  border:1px solid var(--line);
+}
+
+.team-photo img{
+  width:100%;
+  display:block;
+}
+
+/* SECTION HEADERS */
+h2{
+  font-family:var(--mono);
+  font-size:13px;
+  text-transform:uppercase;
+  letter-spacing:.5px;
+  margin:40px 0 12px;
+  padding-bottom:6px;
+  border-bottom:1px solid var(--line);
+}
+
+/* TABLES */
+table{
+  width:100%;
+  border-collapse:collapse;
+  font-size:13px;
+}
+
+th{
+  font-size:11px;
+  color:var(--meta);
+  font-weight:600;
+  text-transform:uppercase;
+  padding:6px;
+  border-bottom:2px solid var(--ink);
+}
+
+td{
+  padding:8px 6px;
+  border-bottom:1px solid #f0f0f0;
+}
+
+.align-center{ text-align:center; }
+.align-right{ text-align:right; }
+
+/* ROSTER HEADSHOTS */
+.roster-pic{
+  width:48px;
+  height:48px;
+  object-fit:cover;
+  border-radius:6px;
+  border:1px solid var(--line);
+  display:block;
+  background:#fff;
+}
+
+/* LINKS */
+a{ color:var(--ink); text-decoration:none; }
+a:hover{ text-decoration:underline; }
+
+/* FOOTER */
+footer{
+  margin-top:50px;
+  padding-top:18px;
+  border-top:1px solid var(--line);
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  font-family:var(--mono);
+  font-size:10px;
+  color:#777;
+}
+
+.glb-logo{
+  height:56px;
+  width:auto;
+}
+</style>
+</head>
+
+<body>
+<div class="sheet">
+
+<header>
+  <div class="header-text">
+    <h1>Osaka Spirits</h1>
+    <div class="header-meta">Osaka — Pacific Division</div>
+    <div class="header-meta">Team Record & Active Roster</div>
+  </div>
+
+  <!-- TEAM LOGO (top-right) -->
+  <img src="team-osaka-spirits-logo.png" alt="Osaka Spirits Logo" class="team-logo">
+</header>
+
+<!-- TEAM PHOTO (you’ll generate / add later) -->
+<div class="team-photo">
+  <img src="team-osaka-spirits-photo.png" alt="Osaka Spirits Team Photo">
+</div>
+
+<h2>Season Snapshot</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Record</th>
+      <th>Runs</th>
+      <th>Allowed</th>
+      <th>Diff</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0–0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Active Roster</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Pic</th>
+      <th>Player</th>
+      <th>Pos</th>
+      <th class="align-center">B/T</th>
+      <th class="align-right">Age</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <!-- STARTING PITCHERS (5) -->
+    <tr data-player-id="osk-001">
+      <td><img class="roster-pic" src="player-osaka-hiroto-kurobane.png" alt="Hiroto Kurobane"></td>
+      <td>Hiroto Kurobane</td><td>SP</td><td class="align-center">R/R</td><td class="align-right">27</td>
+    </tr>
+    <tr data-player-id="osk-002">
+      <td><img class="roster-pic" src="player-osaka-enzo-dalmau.png" alt="Enzo Dalmau"></td>
+      <td>Enzo Dalmau</td><td>SP</td><td class="align-center">R/R</td><td class="align-right">31</td>
+    </tr>
+    <tr data-player-id="osk-003">
+      <td><img class="roster-pic" src="player-osaka-kofi-agyeman.png" alt="Kofi Agyeman"></td>
+      <td>Kofi Agyeman</td><td>SP</td><td class="align-center">L/L</td><td class="align-right">25</td>
+    </tr>
+    <tr data-player-id="osk-004">
+      <td><img class="roster-pic" src="player-osaka-luka-vukovic.png" alt="Luka Vuković"></td>
+      <td>Luka Vuković</td><td>SP</td><td class="align-center">R/R</td><td class="align-right">29</td>
+    </tr>
+    <tr data-player-id="osk-005">
+      <td><img class="roster-pic" src="player-osaka-rowan-cahir.png" alt="Rowan Cahir"></td>
+      <td>Rowan Cahir</td><td>SP</td><td class="align-center">L/R</td><td class="align-right">26</td>
+    </tr>
+
+    <!-- RELIEVERS (3) -->
+    <tr data-player-id="osk-006">
+      <td><img class="roster-pic" src="player-osaka-sandeep-nayar.png" alt="Sandeep Nayar"></td>
+      <td>Sandeep Nayar</td><td>RP</td><td class="align-center">R/R</td><td class="align-right">28</td>
+    </tr>
+    <tr data-player-id="osk-007">
+      <td><img class="roster-pic" src="player-osaka-mateo-zubillaga.png" alt="Mateo Zubillaga"></td>
+      <td>Mateo Zubillaga</td><td>RP</td><td class="align-center">R/R</td><td class="align-right">24</td>
+    </tr>
+    <tr data-player-id="osk-008">
+      <td><img class="roster-pic" src="player-osaka-jaemin-seok.png" alt="Jae-min Seok"></td>
+      <td>Jae-min Seok</td><td>RP</td><td class="align-center">L/L</td><td class="align-right">30</td>
+    </tr>
+
+    <!-- CATCHER (1) -->
+    <tr data-player-id="osk-009">
+      <td><img class="roster-pic" src="player-osaka-marcelino-quispe.png" alt="Marcelino Quispe"></td>
+      <td>Marcelino Quispe</td><td>C</td><td class="align-center">R/R</td><td class="align-right">27</td>
+    </tr>
+
+    <!-- INFIELDERS (4) -->
+    <tr data-player-id="osk-010">
+      <td><img class="roster-pic" src="player-osaka-thabo-mkhize.png" alt="Thabo Mkhize"></td>
+      <td>Thabo Mkhize</td><td>1B</td><td class="align-center">L/R</td><td class="align-right">32</td>
+    </tr>
+    <tr data-player-id="osk-011">
+      <td><img class="roster-pic" src="player-osaka-arman-daryan.png" alt="Arman Daryan"></td>
+      <td>Arman Daryan</td><td>2B</td><td class="align-center">S/R</td><td class="align-right">23</td>
+    </tr>
+    <tr data-player-id="osk-012">
+      <td><img class="roster-pic" src="player-osaka-kenjiro-suganuma.png" alt="Kenjiro Suganuma"></td>
+      <td>Kenjiro Suganuma</td><td>SS</td><td class="align-center">R/R</td><td class="align-right">26</td>
+    </tr>
+    <tr data-player-id="osk-013">
+      <td><img class="roster-pic" src="player-osaka-dariusz-kwiatkowski.png" alt="Dariusz Kwiatkowski"></td>
+      <td>Dariusz Kwiatkowski</td><td>3B</td><td class="align-center">R/R</td><td class="align-right">29</td>
+    </tr>
+
+    <!-- OUTFIELDERS (3) -->
+    <tr data-player-id="osk-014">
+      <td><img class="roster-pic" src="player-osaka-nikhil-bhandari.png" alt="Nikhil Bhandari"></td>
+      <td>Nikhil Bhandari</td><td>CF</td><td class="align-center">R/R</td><td class="align-right">25</td>
+    </tr>
+    <tr data-player-id="osk-015">
+      <td><img class="roster-pic" src="player-osaka-thiago-ramires.png" alt="Thiago Ramires"></td>
+      <td>Thiago Ramires</td><td>LF</td><td class="align-center">L/L</td><td class="align-right">22</td>
+    </tr>
+    <tr data-player-id="osk-016">
+      <td><img class="roster-pic" src="player-osaka-yusef-elbadri.png" alt="Yusef El-Badri"></td>
+      <td>Yusef El-Badri</td><td>RF</td><td class="align-center">R/R</td><td class="align-right">31</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Recent Games</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Opponent</th>
+      <th>Result</th>
+      <th class="align-right">Box</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>—</td>
+      <td>—</td>
+      <td>—</td>
+      <td class="align-right"><a href="boxscore.html">View</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<footer>
+  <div>GLOBAL LEAGUE BASEBALL · TEAM RECORD</div>
+  <img src="GLB_white.png" alt="GLB" class="glb-logo">
+</footer>
+
+</div>
+</body>
+</html>

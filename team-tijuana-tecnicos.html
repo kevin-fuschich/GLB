@@ -106,17 +106,6 @@ td{
 .align-center{ text-align:center; }
 .align-right{ text-align:right; }
 
-/* ROSTER HEADSHOTS (placeholder for now) */
-.roster-pic{
-  width:48px;
-  height:48px;
-  object-fit:cover;
-  border-radius:6px;
-  border:1px solid var(--line);
-  display:block;
-  background:#fafafa;
-}
-
 /* FOOTER */
 footer{
   margin-top:50px;
@@ -147,11 +136,10 @@ footer{
     <div class="header-meta">Team Record & Active Roster</div>
   </div>
 
-  <!-- TEAM LOGO (top-right) -->
   <img src="team-tijuana-tecnicos-logo.png" alt="Tijuana Técnicos Logo" class="team-logo">
 </header>
 
-<!-- TEAM PHOTO (you’ll generate later) -->
+<!-- TEAM PHOTO -->
 <div class="team-photo">
   <img src="team-tijuana-tecnicos-photo.png" alt="Tijuana Técnicos Team Photo">
 </div>
@@ -180,94 +168,38 @@ footer{
 <table>
   <thead>
     <tr>
-      <th>Pic</th>
       <th>Player</th>
       <th>Pos</th>
       <th class="align-center">B/T</th>
       <th class="align-right">Age</th>
     </tr>
   </thead>
-
-  <!--
-    HEADSHOTS NOTE:
-    We aren’t doing headshots yet, so all players point to ONE placeholder file:
-    player-placeholder.png
-    (Create that once later, and the page won’t show broken images.)
-  -->
   <tbody>
-    <!-- STARTING PITCHERS (5) -->
-    <tr data-player-id="tij-001">
-      <td><img class="roster-pic" src="player-placeholder.png" alt="Iñaki Armenta"></td>
-      <td>Iñaki Armenta</td><td>SP</td><td class="align-center">R/R</td><td class="align-right">29</td>
-    </tr>
-    <tr data-player-id="tij-002">
-      <td><img class="roster-pic" src="player-placeholder.png" alt="Rodolfo Quirarte"></td>
-      <td>Rodolfo Quirarte</td><td>SP</td><td class="align-center">L/L</td><td class="align-right">26</td>
-    </tr>
-    <tr data-player-id="tij-003">
-      <td><img class="roster-pic" src="player-placeholder.png" alt="Kensuke Morita"></td>
-      <td>Kensuke Morita</td><td>SP</td><td class="align-center">R/R</td><td class="align-right">31</td>
-    </tr>
-    <tr data-player-id="tij-004">
-      <td><img class="roster-pic" src="player-placeholder.png" alt="Adekunle Nwankwo"></td>
-      <td>Adekunle Nwankwo</td><td>SP</td><td class="align-center">R/R</td><td class="align-right">27</td>
-    </tr>
-    <tr data-player-id="tij-005">
-      <td><img class="roster-pic" src="player-placeholder.png" alt="Dario Iriarte"></td>
-      <td>Dario Iriarte</td><td>SP</td><td class="align-center">L/R</td><td class="align-right">24</td>
-    </tr>
+    <!-- SP (5) -->
+    <tr><td>Iñaki Armenta</td><td>SP</td><td class="align-center">R/R</td><td class="align-right">29</td></tr>
+    <tr><td>Rodolfo Quirarte</td><td>SP</td><td class="align-center">L/L</td><td class="align-right">26</td></tr>
+    <tr><td>Kensuke Morita</td><td>SP</td><td class="align-center">R/R</td><td class="align-right">31</td></tr>
+    <tr><td>Adekunle Nwankwo</td><td>SP</td><td class="align-center">R/R</td><td class="align-right">27</td></tr>
+    <tr><td>Dario Iriarte</td><td>SP</td><td class="align-center">L/R</td><td class="align-right">24</td></tr>
 
-    <!-- RELIEVERS (3) -->
-    <tr data-player-id="tij-006">
-      <td><img class="roster-pic" src="player-placeholder.png" alt="Maksim Vuković"></td>
-      <td>Maksim Vuković</td><td>RP</td><td class="align-center">R/R</td><td class="align-right">30</td>
-    </tr>
-    <tr data-player-id="tij-007">
-      <td><img class="roster-pic" src="player-placeholder.png" alt="Esaú Balandrán"></td>
-      <td>Esaú Balandrán</td><td>RP</td><td class="align-center">R/R</td><td class="align-right">25</td>
-    </tr>
-    <tr data-player-id="tij-008">
-      <td><img class="roster-pic" src="player-placeholder.png" alt="Min-jun Seo"></td>
-      <td>Min-jun Seo</td><td>RP</td><td class="align-center">L/L</td><td class="align-right">28</td>
-    </tr>
+    <!-- RP (3) -->
+    <tr><td>Maksim Vuković</td><td>RP</td><td class="align-center">R/R</td><td class="align-right">30</td></tr>
+    <tr><td>Esaú Balandrán</td><td>RP</td><td class="align-center">R/R</td><td class="align-right">25</td></tr>
+    <tr><td>Min-jun Seo</td><td>RP</td><td class="align-center">L/L</td><td class="align-right">28</td></tr>
 
-    <!-- CATCHER (1) -->
-    <tr data-player-id="tij-009">
-      <td><img class="roster-pic" src="player-placeholder.png" alt="Nicolás Echevarría"></td>
-      <td>Nicolás Echevarría</td><td>C</td><td class="align-center">R/R</td><td class="align-right">32</td>
-    </tr>
+    <!-- C (1) -->
+    <tr><td>Nicolás Echevarría</td><td>C</td><td class="align-center">R/R</td><td class="align-right">32</td></tr>
 
-    <!-- INFIELD (4) -->
-    <tr data-player-id="tij-010">
-      <td><img class="roster-pic" src="player-placeholder.png" alt="Caleb Thorson"></td>
-      <td>Caleb Thorson</td><td>1B</td><td class="align-center">L/R</td><td class="align-right">27</td>
-    </tr>
-    <tr data-player-id="tij-011">
-      <td><img class="roster-pic" src="player-placeholder.png" alt="Yulian Petrenko"></td>
-      <td>Yulian Petrenko</td><td>2B</td><td class="align-center">S/R</td><td class="align-right">23</td>
-    </tr>
-    <tr data-player-id="tij-012">
-      <td><img class="roster-pic" src="player-placeholder.png" alt="Saúl Ledesma"></td>
-      <td>Saúl Ledesma</td><td>SS</td><td class="align-center">R/R</td><td class="align-right">26</td>
-    </tr>
-    <tr data-player-id="tij-013">
-      <td><img class="roster-pic" src="player-placeholder.png" alt="Bastien Desrosiers"></td>
-      <td>Bastien Desrosiers</td><td>3B</td><td class="align-center">R/R</td><td class="align-right">29</td>
-    </tr>
+    <!-- IF (4) -->
+    <tr><td>Caleb Thorson</td><td>1B</td><td class="align-center">L/R</td><td class="align-right">27</td></tr>
+    <tr><td>Yulian Petrenko</td><td>2B</td><td class="align-center">S/R</td><td class="align-right">23</td></tr>
+    <tr><td>Saúl Ledesma</td><td>SS</td><td class="align-center">R/R</td><td class="align-right">26</td></tr>
+    <tr><td>Bastien Desrosiers</td><td>3B</td><td class="align-center">R/R</td><td class="align-right">29</td></tr>
 
-    <!-- OUTFIELD (3) -->
-    <tr data-player-id="tij-014">
-      <td><img class="roster-pic" src="player-placeholder.png" alt="Matías Saldívar"></td>
-      <td>Matías Saldívar</td><td>LF</td><td class="align-center">L/L</td><td class="align-right">22</td>
-    </tr>
-    <tr data-player-id="tij-015">
-      <td><img class="roster-pic" src="player-placeholder.png" alt="Eamon Kavanagh"></td>
-      <td>Eamon Kavanagh</td><td>CF</td><td class="align-center">R/R</td><td class="align-right">28</td>
-    </tr>
-    <tr data-player-id="tij-016">
-      <td><img class="roster-pic" src="player-placeholder.png" alt="Ravi Chandrasekhar"></td>
-      <td>Ravi Chandrasekhar</td><td>RF</td><td class="align-center">R/R</td><td class="align-right">31</td>
-    </tr>
+    <!-- OF (3) -->
+    <tr><td>Matías Saldívar</td><td>LF</td><td class="align-center">L/L</td><td class="align-right">22</td></tr>
+    <tr><td>Eamon Kavanagh</td><td>CF</td><td class="align-center">R/R</td><td class="align-right">28</td></tr>
+    <tr><td>Ravi Chandrasekhar</td><td>RF</td><td class="align-center">R/R</td><td class="align-right">31</td></tr>
   </tbody>
 </table>
 

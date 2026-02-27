@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Birmingham Vulcans – Club Portal</title>
 
 <style>
 :root{
   /* Birmingham Identity: Iron / Fire / Foundry */
-  --primary: #2E2F33;   /* Foundry charcoal */
+  --primary: #2E2F33;   /* Charcoal */
   --accent:  #F15A24;   /* Molten orange */
   --paper:   #ffffff;
   --ink:     #0f1214;
@@ -41,7 +41,6 @@ body{
   position: relative;
 }
 
-/* DOC ID */
 .doc-id{
   position: absolute;
   top: 15px;
@@ -52,7 +51,6 @@ body{
   letter-spacing: 1px;
 }
 
-/* HEADER */
 header{
   border-bottom: var(--border-thick);
   padding-bottom: 20px;
@@ -62,4 +60,306 @@ header{
 .club-lockup{
   display: flex;
   justify-content: space-between;
-  align-items:
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+
+h1{
+  margin: 0;
+  font-size: 32px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.division-tag{
+  background: var(--primary);
+  color: #fff;
+  font-size: 12px;
+  padding: 4px 8px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+.fact-bar{
+  display: flex;
+  gap: 15px;
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #666;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+.fact-bar strong { color: var(--ink); }
+
+.cta-row{
+  display: flex;
+  gap: 10px;
+  margin: 25px 0 40px;
+  flex-wrap: wrap;
+}
+
+.btn{
+  flex: 1;
+  min-width: 180px;
+  border: 2px solid var(--ink);
+  padding: 12px 0;
+  text-align: center;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--ink);
+  letter-spacing: 1px;
+  transition: all 0.2s;
+  background: #fff;
+}
+
+.btn:hover{
+  background: var(--ink);
+  color: #fff;
+}
+
+.btn.primary{
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+}
+
+.btn.primary:hover{
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #111;
+}
+
+section{ margin-bottom: 50px; }
+
+h2{
+  font-size: 14px;
+  text-transform: uppercase;
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 5px;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+.identity p{
+  font-size: 16px;
+  max-width: 700px;
+  margin-bottom: 20px;
+}
+
+.identity ul{
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 20px;
+}
+
+.identity li{
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-top: 1px solid #ccc;
+  padding-top: 10px;
+}
+
+.img-slot{
+  background: #e0e0e0;
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+}
+
+.img-slot img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.ratio-16-9 { aspect-ratio: 16/9; }
+.ratio-3-4  { aspect-ratio: 3/4; max-width: 250px; }
+.ratio-1-1  { aspect-ratio: 1/1; max-width: 260px; }
+
+.split{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  align-items: start;
+}
+
+.info-card h3{
+  margin: 0 0 8px 0;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.subhead{
+  display: block;
+  font-size: 11px;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+
+.field-notes{
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+  margin-top: 20px;
+}
+
+.glb-footer{
+  margin-top: 50px;
+  padding-top: 18px;
+  border-top: 2px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 11px;
+  color: #666;
+}
+</style>
+</head>
+
+<body>
+<div class="club-sheet">
+
+<div class="doc-id">BHM-CLUB-01</div>
+
+<header>
+  <div class="club-lockup">
+    <h1>Birmingham Vulcans</h1>
+    <span class="division-tag">Americas Division</span>
+  </div>
+
+  <div class="fact-bar">
+    <span>Est. —</span>
+    <span>•</span>
+    <span><strong>Cinder Field</strong></span>
+    <span>•</span>
+    <span>Mgr. —</span>
+  </div>
+
+  <div class="cta-row">
+    <a class="btn primary" href="team.html?team=birmingham-vulcans">Active Roster</a>
+    <a class="btn" href="day.html?date=2026-05-12">Daily Scores</a>
+    <a class="btn" href="game.html?date=2026-05-12&game=birmingham-vulcans@albuquerque-aeros">Latest Box Score</a>
+  </div>
+</header>
+
+<section class="identity">
+  <h2>The Club</h2>
+  <p>
+    Birmingham plays like it was forged. The Vulcans carry an industrial rhythm —
+    deliberate, physical, and unafraid of heat. On game nights the air feels
+    heavier, like something is being built in real time.
+  </p>
+  <ul>
+    <li>Read: Ironworks / Foundry</li>
+    <li>Public Mood: Grit & Volume</li>
+    <li>Ritual: “Strike the Anvil”</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Ballpark</h2>
+  <div class="img-slot ratio-16-9">
+    <img src="club-birmingham-vulcans-park.png" alt="Cinder Field at dusk">
+  </div>
+  <div class="info-card">
+    <h3>Cinder Field</h3>
+    <span class="subhead">Steel beams • brick concourse • late light</span>
+    <p>
+      Built on old industrial ground, Cinder Field feels solid and grounded.
+      The brick holds heat long after sunset, and the crowd noise rises
+      like sparks from a furnace.
+    </p>
+  </div>
+</section>
+
+<section>
+  <h2>Broadcast & Announcer</h2>
+  <div class="split">
+
+    <div>
+      <div class="img-slot ratio-3-4">
+        <img src="club-birmingham-vulcans-broadcast.png" alt="Broadcast booth">
+      </div>
+      <div class="info-card">
+        <h3>Play-by-Play</h3>
+        <span class="subhead">Radio • steady • grounded</span>
+        <p>
+          Direct and unsentimental. Calls games like a shift report.
+        </p>
+      </div>
+    </div>
+
+    <div>
+      <div class="img-slot ratio-3-4">
+        <img src="club-birmingham-vulcans-announcer.png" alt="In-stadium announcer">
+      </div>
+      <div class="info-card">
+        <h3>In-Stadium Announcer</h3>
+        <span class="subhead">PA • forceful • unmistakable</span>
+        <p>
+          Voice cuts clean through noise. When he says your name, you feel it.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <h2>Mascot & Stands</h2>
+  <div class="split">
+
+    <div>
+      <div class="img-slot ratio-1-1">
+        <img src="club-birmingham-vulcans-mascot.png" alt="Vulcans mascot">
+      </div>
+      <div class="info-card">
+        <h3>Mascot</h3>
+        <span class="subhead">Helmeted • flame-touched • loud</span>
+        <p>
+          Part blacksmith, part legend. Always near the dugout rail.
+        </p>
+      </div>
+    </div>
+
+    <div>
+      <div class="img-slot ratio-1-1">
+        <img src="club-birmingham-vulcans-fans.png" alt="Fans at Cinder Field">
+      </div>
+      <div class="info-card">
+        <h3>The Stands</h3>
+        <span class="subhead">Blue collar • generational • proud</span>
+        <p>
+          Multi-generational families. Loud when needed. Loyal always.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="field-notes">
+  <h2>Field Notes</h2>
+  <ul>
+    <li>Best time to arrive: just before sunset.</li>
+    <li>Local superstition: tap the railing before first pitch.</li>
+    <li>If sparks fly, it’s probably intentional.</li>
+  </ul>
+</section>
+
+<footer class="glb-footer">
+  <div>Global League Baseball © 2026</div>
+  <div>Forged for Competition</div>
+</footer>
+
+</div>
+</body>
+</html>

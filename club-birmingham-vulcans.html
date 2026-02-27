@@ -1,298 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GLB Team Record – Birmingham Vulcans</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>Birmingham Vulcans – Club Portal</title>
 
 <style>
 :root{
-  --paper:#ffffff;
-  --ink:#0f1214;
-  --meta:#666;
-  --line:#e0e0e0;
+  /* Birmingham Identity: Iron / Fire / Foundry */
+  --primary: #2E2F33;   /* Foundry charcoal */
+  --accent:  #F15A24;   /* Molten orange */
+  --paper:   #ffffff;
+  --ink:     #0f1214;
 
-  --sans:"Helvetica Neue", Helvetica, Arial, sans-serif;
-  --mono:"Courier New", Courier, monospace;
+  --border-thick: 4px solid var(--ink);
+  --border-thin:  1px solid #ccc;
+
+  --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --mono: "Courier New", Courier, monospace;
 }
 
 body{
-  background:#f4f4f4;
-  font-family:var(--sans);
-  color:var(--ink);
-  margin:0;
-  padding:40px 20px;
+  background: #f4f4f4;
+  color: var(--ink);
+  font-family: var(--sans);
+  margin: 0;
+  padding: 20px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
 }
 
-.sheet{
-  max-width:640px;
-  margin:0 auto;
-  background:var(--paper);
-  padding:40px;
-  border-top:5px solid var(--ink);
-  box-shadow:0 4px 20px rgba(0,0,0,.08);
+.club-sheet{
+  max-width: 900px;
+  margin: 0 auto;
+  background: var(--paper);
+  padding: 40px;
+  border-top: var(--border-thick);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  position: relative;
+}
+
+/* DOC ID */
+.doc-id{
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-family: var(--mono);
+  font-size: 10px;
+  color: #999;
+  letter-spacing: 1px;
 }
 
 /* HEADER */
 header{
-  display:flex;
-  justify-content:space-between;
-  align-items:flex-start;
-  padding-bottom:20px;
-  border-bottom:2px solid var(--ink);
-  margin-bottom:30px;
+  border-bottom: var(--border-thick);
+  padding-bottom: 20px;
+  margin-bottom: 20px;
 }
 
-.header-text h1{
-  margin:0 0 6px 0;
-  font-size:22px;
-  font-weight:900;
-  text-transform:uppercase;
-}
-
-.header-meta{
-  font-size:13px;
-  color:var(--meta);
-}
-
-.team-logo{
-  height:120px; /* big + readable */
-  width:auto;
-}
-
-/* TEAM PHOTO */
-.team-photo{
-  margin:30px 0;
-  border:1px solid var(--line);
-}
-
-.team-photo img{
-  width:100%;
-  display:block;
-}
-
-/* SECTION HEADERS */
-h2{
-  font-family:var(--mono);
-  font-size:13px;
-  text-transform:uppercase;
-  letter-spacing:.5px;
-  margin:40px 0 12px;
-  padding-bottom:6px;
-  border-bottom:1px solid var(--line);
-}
-
-/* TABLES */
-table{
-  width:100%;
-  border-collapse:collapse;
-  font-size:13px;
-}
-
-th{
-  font-size:11px;
-  color:var(--meta);
-  font-weight:600;
-  text-transform:uppercase;
-  padding:6px;
-  border-bottom:2px solid var(--ink);
-}
-
-td{
-  padding:8px 6px;
-  border-bottom:1px solid #f0f0f0;
-}
-
-.align-center{ text-align:center; }
-.align-right{ text-align:right; }
-
-/* ROSTER HEADSHOTS */
-.roster-pic{
-  width:48px;
-  height:48px;
-  object-fit:cover;
-  border-radius:6px;
-  border:1px solid var(--line);
-  display:block;
-}
-
-/* LINKS */
-a{ color:var(--ink); }
-a:hover{ opacity:.8; }
-
-/* FOOTER */
-footer{
-  margin-top:50px;
-  padding-top:18px;
-  border-top:1px solid var(--line);
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  font-family:var(--mono);
-  font-size:10px;
-  color:#777;
-}
-
-.glb-logo{
-  height:56px;
-  width:auto;
-}
-</style>
-</head>
-
-<body>
-<div class="sheet">
-
-<header>
-  <div class="header-text">
-    <h1>Birmingham Vulcans</h1>
-    <div class="header-meta">Birmingham — Americas Division</div>
-    <div class="header-meta">Team Record & Active Roster</div>
-  </div>
-
-  <img src="team-birmingham-vulcans-logo.png" alt="Birmingham Vulcans Logo" class="team-logo">
-</header>
-
-<!-- TEAM PHOTO (you’ll generate/upload this) -->
-<div class="team-photo">
-  <img src="team-birmingham-vulcans-photo.png" alt="Birmingham Vulcans Team Photo">
-</div>
-
-<h2>Season Snapshot</h2>
-<table>
-  <thead>
-    <tr>
-      <th>Record</th>
-      <th>Runs</th>
-      <th>Allowed</th>
-      <th>Diff</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>0–0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-  </tbody>
-</table>
-
-<h2>Active Roster</h2>
-<table>
-  <thead>
-    <tr>
-      <th>Pic</th>
-      <th>Player</th>
-      <th>Pos</th>
-      <th class="align-center">B/T</th>
-      <th class="align-right">Age</th>
-    </tr>
-  </thead>
-
-  <!-- PASTE/EDIT ROSTER ROWS ONLY INSIDE THIS <tbody> ... </tbody> -->
-  <tbody>
-    <!-- STARTING PITCHERS (5) -->
-    <tr data-player-id="bhm-001">
-      <td><img class="roster-pic" src="player-birmingham-miles-wetherby.png" alt="Miles Wetherby"></td>
-      <td>Miles Wetherby</td><td>SP</td><td class="align-center">R/R</td><td class="align-right">29</td>
-    </tr>
-    <tr data-player-id="bhm-002">
-      <td><img class="roster-pic" src="player-birmingham-adama-keita.png" alt="Adama Keita"></td>
-      <td>Adama Keita</td><td>SP</td><td class="align-center">R/R</td><td class="align-right">26</td>
-    </tr>
-    <tr data-player-id="bhm-003">
-      <td><img class="roster-pic" src="player-birmingham-kaito-morishima.png" alt="Kaito Morishima"></td>
-      <td>Kaito Morishima</td><td>SP</td><td class="align-center">L/R</td><td class="align-right">24</td>
-    </tr>
-    <tr data-player-id="bhm-004">
-      <td><img class="roster-pic" src="player-birmingham-ivan-echevarria.png" alt="Iván Echevarría"></td>
-      <td>Iván Echevarría</td><td>SP</td><td class="align-center">R/R</td><td class="align-right">31</td>
-    </tr>
-    <tr data-player-id="bhm-005">
-      <td><img class="roster-pic" src="player-birmingham-ruben-vassallo.png" alt="Rubén Vassallo"></td>
-      <td>Rubén Vassallo</td><td>SP</td><td class="align-center">L/L</td><td class="align-right">27</td>
-    </tr>
-
-    <!-- RELIEVERS (3) -->
-    <tr data-player-id="bhm-006">
-      <td><img class="roster-pic" src="player-birmingham-colm-heneghan.png" alt="Colm Heneghan"></td>
-      <td>Colm Heneghan</td><td>RP</td><td class="align-center">R/R</td><td class="align-right">28</td>
-    </tr>
-    <tr data-player-id="bhm-007">
-      <td><img class="roster-pic" src="player-birmingham-sandeep-bhandari.png" alt="Sandeep Bhandari"></td>
-      <td>Sandeep Bhandari</td><td>RP</td><td class="align-center">R/R</td><td class="align-right">25</td>
-    </tr>
-    <tr data-player-id="bhm-008">
-      <td><img class="roster-pic" src="player-birmingham-jurgen-falkenrath.png" alt="Jürgen Falkenrath"></td>
-      <td>Jürgen Falkenrath</td><td>RP</td><td class="align-center">L/L</td><td class="align-right">32</td>
-    </tr>
-
-    <!-- CATCHER (1) -->
-    <tr data-player-id="bhm-009">
-      <td><img class="roster-pic" src="player-birmingham-darnay-boudreaux.png" alt="Darnay Boudreaux"></td>
-      <td>Darnay Boudreaux</td><td>C</td><td class="align-center">R/R</td><td class="align-right">30</td>
-    </tr>
-
-    <!-- INFIELD (4) -->
-    <tr data-player-id="bhm-010">
-      <td><img class="roster-pic" src="player-birmingham-teo-arjona.png" alt="Teo Arjona"></td>
-      <td>Teo Arjona</td><td>1B</td><td class="align-center">L/R</td><td class="align-right">33</td>
-    </tr>
-    <tr data-player-id="bhm-011">
-      <td><img class="roster-pic" src="player-birmingham-callum-sato.png" alt="Callum Sato"></td>
-      <td>Callum Sato</td><td>2B</td><td class="align-center">S/R</td><td class="align-right">23</td>
-    </tr>
-    <tr data-player-id="bhm-012">
-      <td><img class="roster-pic" src="player-birmingham-niko-vujasin.png" alt="Niko Vujasin"></td>
-      <td>Niko Vujasin</td><td>SS</td><td class="align-center">R/R</td><td class="align-right">27</td>
-    </tr>
-    <tr data-player-id="bhm-013">
-      <td><img class="roster-pic" src="player-birmingham-quincy-reddick.png" alt="Quincy Reddick"></td>
-      <td>Quincy Reddick</td><td>3B</td><td class="align-center">R/R</td><td class="align-right">28</td>
-    </tr>
-
-    <!-- OUTFIELD (3) -->
-    <tr data-player-id="bhm-014">
-      <td><img class="roster-pic" src="player-birmingham-malik-nwosu.png" alt="Malik Nwosu"></td>
-      <td>Malik Nwosu</td><td>LF</td><td class="align-center">L/L</td><td class="align-right">24</td>
-    </tr>
-    <tr data-player-id="bhm-015">
-      <td><img class="roster-pic" src="player-birmingham-esteban-llorente.png" alt="Esteban Llorente"></td>
-      <td>Esteban Llorente</td><td>CF</td><td class="align-center">R/R</td><td class="align-right">29</td>
-    </tr>
-    <tr data-player-id="bhm-016">
-      <td><img class="roster-pic" src="player-birmingham-petr-novak.png" alt="Petr Novák"></td>
-      <td>Petr Novák</td><td>RF</td><td class="align-center">R/R</td><td class="align-right">26</td>
-    </tr>
-  </tbody>
-</table>
-
-<h2>Recent Games</h2>
-<table>
-  <thead>
-    <tr>
-      <th>Date</th>
-      <th>Opponent</th>
-      <th>Result</th>
-      <th class="align-right">Box</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>—</td>
-      <td>—</td>
-      <td>—</td>
-      <td class="align-right"><a href="boxscore.html">View</a></td>
-    </tr>
-  </tbody>
-</table>
-
-<footer>
-  <div>GLOBAL LEAGUE BASEBALL · TEAM RECORD</div>
-  <img src="GLB_white.png" alt="GLB" class="glb-logo">
-</footer>
-
-</div>
-</body>
-</html>
+.club-lockup{
+  display: flex;
+  justify-content: space-between;
+  align-items:

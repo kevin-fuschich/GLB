@@ -1,17 +1,12 @@
 /* ==========================================================
    GLB Home — League Office Live Index Controller
-   ----------------------------------------------------------
-   Data sources:
-   /data/hero.json
-   /data/day-YYYY-MM-DD.json  (preferred)
-   /data/schedule.json        (fallback)
-   /data/standings.json
-   /data/featured.json
-   /data/clubs.json
+   IMPORTANT: Uses RELATIVE data paths (works on GitHub Pages project sites)
    ========================================================== */
 
 (function () {
   const $ = (sel) => document.querySelector(sel);
+
+  const PATH = "data/"; // <-- relative (NO leading slash)
 
   const state = {
     hero: [],
@@ -22,10 +17,6 @@
     clubFilter: "all",
     standingsFilter: "all"
   };
-
-  /* ----------------------------------------------------------
-     Utilities
-  ---------------------------------------------------------- */
 
   function safeText(el, text) {
     if (!el) return;
@@ -56,17 +47,12 @@
 
   async function fetchJSON(path) {
     try {
-      const res = await fetch(path);
-      if (!res.ok) throw new Error();
+      const res = await fetch(path, { cache: "no-store" });
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
       return await res.json();
     } catch {
       return null;
     }
-  }
-
-  function setPressed(btn, pressed) {
-    if (!btn) return;
-    btn.setAttribute("aria-pressed", pressed ? "true" : "false");
   }
 
   function clampIndex(i, len) {
@@ -78,10 +64,7 @@
     return String(n).padStart(2, "0");
   }
 
-  /* ----------------------------------------------------------
-     Provenance Timestamp (Eastern Time)
-  ---------------------------------------------------------- */
-
+  // Provenance Timestamp (Eastern Time)
   function setProvenanceTime() {
     const el = $("#provTime");
     if (!el) return;
@@ -105,9 +88,9 @@
     el.textContent = `${parts.year}-${parts.month}-${parts.day} ${parts.hour}:${parts.minute}`;
   }
 
-  /* ==========================================================
-     HERO SYSTEM
-  ========================================================== */
+  /* =========================
+     HERO
+  ========================= */
 
   function updateHeroCounter() {
     const el = $("#heroCounter");
@@ -120,38 +103,25 @@
   function applyHeroOverlay(item) {
     safeText($("#heroTitle"), item.team || "—");
     safeText($("#heroCaption"), item.caption || "");
-    safeText($("#heroDivisionPill"), (item.division || "GLB").toUpperCase());
-
     const link = $("#heroLink");
     const target = item.link || "#clubs";
-    if (link) {
-      link.href = target;
-      link.textContent =
-        target && target !== "#clubs"
-          ? "View Club Dossier →"
-          : "Explore Clubs →";
-    }
+    if (link) link.href = target;
   }
 
   function renderHero() {
     const stage = $("#heroStage");
-    const status = $("#heroStatus");
     if (!stage) return;
 
     stage.querySelectorAll(".hero-slide").forEach(n => n.remove());
 
     if (!state.hero.length) {
-      safeText(status, "No images");
-      safeText($("#heroCounter"), "—");
+      updateHeroCounter();
       return;
     }
 
-    safeText(status, `${state.hero.length} frames`);
-
     state.hero.forEach((item, idx) => {
       const slide = document.createElement("div");
-      slide.className =
-        "hero-slide" + (idx === state.heroIndex ? " is-active" : "");
+      slide.className = "hero-slide" + (idx === state.heroIndex ? " is-active" : "");
 
       const img = document.createElement("img");
       img.className = "hero-img";
@@ -160,7 +130,7 @@
       img.loading = idx === 0 ? "eager" : "lazy";
 
       slide.appendChild(img);
-      stage.insertBefore(slide, $("#heroCounter"));
+      stage.appendChild(slide);
     });
 
     applyHeroOverlay(state.hero[state.heroIndex]);
@@ -174,7 +144,7 @@
       s.classList.toggle("is-active", idx === state.heroIndex);
     });
 
-    applyHeroOverlay(state.hero[state.heroIndex]);
+    if (state.hero[state.heroIndex]) applyHeroOverlay(state.hero[state.heroIndex]);
     updateHeroCounter();
 
     if (user) restartHeroTimer();
@@ -184,7 +154,7 @@
     stopHeroTimer();
     state.heroTimer = setInterval(() => {
       if (!state.heroPaused) goHero(state.heroIndex + 1);
-    }, 12000); // slower for archival feel
+    }, 12000);
   }
 
   function stopHeroTimer() {
@@ -200,37 +170,21 @@
   }
 
   function wireHeroControls() {
-    $("#heroPrev")?.addEventListener("click", () =>
-      goHero(state.heroIndex - 1, true)
-    );
-    $("#heroNext")?.addEventListener("click", () =>
-      goHero(state.heroIndex + 1, true)
-    );
-
-    const hero = $("#hero");
-    hero?.addEventListener("mouseenter", () => (state.heroPaused = true));
-    hero?.addEventListener("mouseleave", () => (state.heroPaused = false));
+    $("#heroPrev")?.addEventListener("click", () => goHero(state.heroIndex - 1, true));
+    $("#heroNext")?.addEventListener("click", () => goHero(state.heroIndex + 1, true));
   }
 
   async function loadHero() {
-    const data = await fetchJSON("/data/hero.json");
+    const data = await fetchJSON(PATH + "hero.json");
     state.hero = Array.isArray(data?.items) ? data.items : [];
     renderHero();
     wireHeroControls();
     startHeroTimer();
   }
 
-  /* ==========================================================
-     TODAY SYSTEM
-  ========================================================== */
-
-  function badge(status) {
-    if (status === "live")
-      return `<span class="badge"><span class="dotlive"></span>LIVE</span>`;
-    if (status === "final")
-      return `<span class="badge">FINAL</span>`;
-    return `<span class="badge">UPCOMING</span>`;
-  }
+  /* =========================
+     TODAY
+  ========================= */
 
   function buildGameLink(dateISO, away, home) {
     const key = encodeURIComponent(`${away}@${home}`);
@@ -242,45 +196,35 @@
     const wrap = $("#todayGames");
     if (!wrap) return;
 
-    if (!games.length) {
-      wrap.innerHTML = `<div class="empty">No games today.</div>`;
+    if (!Array.isArray(games) || games.length === 0) {
+      wrap.innerHTML = `<div>No games today.</div>`;
       return;
     }
 
-    wrap.innerHTML = games.map(g => {
+    wrap.innerHTML = games.slice(0, 6).map(g => {
       const away = g.away || "Away";
       const home = g.home || "Home";
       const status = (g.status || "upcoming").toLowerCase();
 
       const score =
-        typeof g.awayScore === "number" &&
-        typeof g.homeScore === "number"
+        typeof g.awayScore === "number" && typeof g.homeScore === "number"
           ? `${g.awayScore}–${g.homeScore}`
           : "—";
 
       const timeLabel =
-        status === "final"
-          ? "Final"
-          : status === "live"
-          ? g.inning || "In progress"
-          : g.timeLocal || "TBD";
+        status === "final" ? "Final" :
+        status === "live" ? (g.inning || "In progress") :
+        (g.timeLocal || "TBD");
 
       return `
         <a class="game" href="${buildGameLink(dateISO, away, home)}">
-          <div class="game-left">
+          <div>
             <p class="matchup">${away} @ ${home}</p>
-            <p class="statusline">
-              ${badge(status)}
-              <span>${timeLabel}</span>
-            </p>
+            <p class="statusline">${timeLabel}</p>
           </div>
-          <div class="game-right">
-            <div class="score">${
-              status === "upcoming" ? "—" : score
-            }</div>
-            <div class="time">${
-              status === "upcoming" ? timeLabel : "Box Score →"
-            }</div>
+          <div>
+            <div class="score">${status === "upcoming" ? "—" : score}</div>
+            <div class="time">${status === "upcoming" ? timeLabel : "Box Score →"}</div>
           </div>
         </a>
       `;
@@ -291,193 +235,122 @@
     const params = new URLSearchParams(window.location.search);
     const dateISO = params.get("date") || toISODate(new Date());
 
-    const dayData = await fetchJSON(`/data/day-${dateISO}.json`);
+    const dayData = await fetchJSON(PATH + `day-${dateISO}.json`);
     if (dayData?.games) {
       renderToday(dateISO, dayData.games);
       return;
     }
 
-    const sched = await fetchJSON("/data/schedule.json");
+    const sched = await fetchJSON(PATH + "schedule.json");
     const games = sched?.dates?.[dateISO] || [];
     renderToday(dateISO, games);
   }
 
-  /* ==========================================================
+  /* =========================
      STANDINGS
-  ========================================================== */
+  ========================= */
 
   function renderStandings(data) {
-    safeText(
-      $("#standingsAsOf"),
-      data?.asOf ? `As of ${formatLocalDateLabel(data.asOf)}` : "—"
-    );
-
+    safeText($("#standingsAsOf"), data?.asOf ? `As of ${formatLocalDateLabel(data.asOf)}` : "—");
     const target = $("#standingsTables");
     if (!target) return;
 
-    const divisions = data?.divisions || {};
-    const want = state.standingsFilter;
+    const divs = data?.divisions || {};
+    const rowsA = Array.isArray(divs.americas) ? divs.americas : [];
+    const rowsP = Array.isArray(divs.pacific) ? divs.pacific : [];
 
     function table(title, rows) {
       return `
-        <div class="division-title">${title}</div>
+        <div style="margin:14px 0 8px;font-family:ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:1px;text-transform:uppercase;color:#2a3a45;">${title}</div>
         <table>
           <thead>
-            <tr>
-              <th>Team</th>
-              <th class="num">W-L</th>
-              <th class="num">GB</th>
-              <th class="num">RD</th>
-            </tr>
+            <tr><th>Team</th><th class="num">W-L</th><th class="num">GB</th><th class="num">RD</th></tr>
           </thead>
           <tbody>
-            ${rows
-              .map(
-                r => `
+            ${rows.map(r => `
               <tr>
-                <td class="team"><a href="${r.link || "#"}">${
-                  r.team
-                }</a></td>
-                <td class="num">${r.w}-${r.l}</td>
-                <td class="num">${r.gb}</td>
-                <td class="num">${
-                  r.rd > 0 ? "+" + r.rd : r.rd
-                }</td>
+                <td><a href="${r.link || "#"}">${r.team || "—"}</a></td>
+                <td class="num">${(r.w ?? "—")}-${(r.l ?? "—")}</td>
+                <td class="num">${r.gb ?? "—"}</td>
+                <td class="num">${r.rd ?? "—"}</td>
               </tr>
-            `
-              )
-              .join("")}
+            `).join("")}
           </tbody>
         </table>
       `;
     }
 
-    let html = "";
-    if (want === "all" || want === "americas")
-      html += table("Americas Division", divisions.americas || []);
-    if (want === "all" || want === "pacific")
-      html += table("Pacific Division", divisions.pacific || []);
-
-    target.innerHTML = html || `<div class="empty">No standings available.</div>`;
+    target.innerHTML =
+      table("Americas Division", rowsA) +
+      table("Pacific Division", rowsP);
   }
 
   async function loadStandings() {
-    const data = await fetchJSON("/data/standings.json");
+    const data = await fetchJSON(PATH + "standings.json");
     if (data) renderStandings(data);
   }
 
-  function wireStandingsToggles() {
-    const all = $("#stAll");
-    const am = $("#stAmericas");
-    const pa = $("#stPacific");
-
-    function set(mode) {
-      state.standingsFilter = mode;
-      setPressed(all, mode === "all");
-      setPressed(am, mode === "americas");
-      setPressed(pa, mode === "pacific");
-      loadStandings();
-    }
-
-    all?.addEventListener("click", () => set("all"));
-    am?.addEventListener("click", () => set("americas"));
-    pa?.addEventListener("click", () => set("pacific"));
-  }
-
-  /* ==========================================================
+  /* =========================
      FEATURED
-  ========================================================== */
+  ========================= */
 
   function renderFeatured(data) {
     const body = $("#featuredBody");
     if (!body) return;
 
     if (!data?.club) {
-      body.innerHTML = `<div class="empty">No memo filed.</div>`;
+      body.innerHTML = `No memo filed.`;
       return;
     }
 
     body.innerHTML = `
-      <div class="featured">
-        <img src="${data.club.image}" alt="${data.club.name}" />
-        <div>
-          <h3>${data.club.name}</h3>
-          <p>${data.club.copy || ""}</p>
-          <a href="${data.club.link || "#clubs"}">View Club Dossier →</a>
-        </div>
+      <div>
+        <div style="font-family:Georgia,serif;font-weight:bold;font-size:16px;margin-bottom:6px;">${data.club.name || "—"}</div>
+        <div style="color:#2a3a45;margin-bottom:10px;">${data.club.copy || ""}</div>
+        <a href="${data.club.link || "#clubs"}">View Club Dossier →</a>
       </div>
     `;
   }
 
   async function loadFeatured() {
-    const data = await fetchJSON("/data/featured.json");
+    const data = await fetchJSON(PATH + "featured.json");
     renderFeatured(data);
   }
 
-  /* ==========================================================
+  /* =========================
      CLUBS
-  ========================================================== */
+  ========================= */
 
   function renderClubs() {
     const grid = $("#clubsGrid");
     if (!grid) return;
 
-    const filtered = state.clubs.filter(c =>
-      state.clubFilter === "all"
-        ? true
-        : c.division.toLowerCase() === state.clubFilter
-    );
+    // If clubs failed to load, show a clear message instead of silence
+    if (!Array.isArray(state.clubs) || state.clubs.length === 0) {
+      grid.innerHTML = `<div>No clubs loaded.</div>`;
+      return;
+    }
 
-    safeText($("#clubsCount"), `${filtered.length} clubs`);
-
-    grid.innerHTML = filtered
-      .map(
-        c => `
-        <a class="club" href="${c.link}">
-          <p class="name">${c.name}</p>
-          <div class="meta2">
-            <span class="mark"></span>
-            <span>${c.division.toUpperCase()}</span>
-          </div>
-        </a>
-      `
-      )
-      .join("");
+    grid.innerHTML = state.clubs.map(c => `
+      <a class="club" href="${c.link || "#"}">
+        <p class="name">${c.name || "—"}</p>
+        <div class="meta2">${(c.division || "—").toUpperCase()}</div>
+      </a>
+    `).join("");
   }
 
   async function loadClubs() {
-    const data = await fetchJSON("/data/clubs.json");
+    const data = await fetchJSON(PATH + "clubs.json");
     state.clubs = Array.isArray(data?.clubs) ? data.clubs : [];
     renderClubs();
   }
 
-  function wireClubToggles() {
-    const all = $("#clAll");
-    const am = $("#clAmericas");
-    const pa = $("#clPacific");
-
-    function set(mode) {
-      state.clubFilter = mode;
-      setPressed(all, mode === "all");
-      setPressed(am, mode === "americas");
-      setPressed(pa, mode === "pacific");
-      renderClubs();
-    }
-
-    all?.addEventListener("click", () => set("all"));
-    am?.addEventListener("click", () => set("americas"));
-    pa?.addEventListener("click", () => set("pacific"));
-  }
-
-  /* ==========================================================
+  /* =========================
      INIT
-  ========================================================== */
+  ========================= */
 
   async function init() {
     setProvenanceTime();
-    wireStandingsToggles();
-    wireClubToggles();
-
     await Promise.allSettled([
       loadHero(),
       loadToday(),

@@ -1,0 +1,20 @@
+{
+  "clubs": [
+    {"name":"San Pedro Cocolos","division":"Pacific","link":"team-sanpedro.html"},
+    {"name":"Monterrey Cementeros","division":"Pacific","link":"team-monterrey.html"},
+    {"name":"Taipei Neon","division":"Pacific","link":"team-taipei.html"},
+    {"name":"Osaka Spirits","division":"Pacific","link":"team-osaka.html"},
+    {"name":"Tijuana Tecnicos","division":"Pacific","link":"team-tijuana.html"},
+    {"name":"Vancouver Current","division":"Pacific","link":"team-vancouver.html"},
+    {"name":"Santiago Caballeros","division":"Pacific","link":"team-santiago.html"},
+    {"name":"Mayaguez Sultans","division":"Pacific","link":"team-mayaguez.html"},
+    {"name":"Louisville Naturals","division":"Americas","link":"team-louisville.html"},
+    {"name":"Spokane Alloys","division":"Americas","link":"team-spokane.html"},
+    {"name":"Birmingham Vulcans","division":"Americas","link":"team-birmingham.html"},
+    {"name":"Toledo Assembly","division":"Americas","link":"team-toledo.html"},
+    {"name":"Albuquerque Aeros","division":"Americas","link":"team-albuquerque.html"},
+    {"name":"St. Paul Frost","division":"Americas","link":"team-stpaul.html"},
+    {"name":"Fresno Yield","division":"Americas","link":"team-fresno.html"},
+    {"name":"Durham Gold","division":"Americas","link":"team-durham.html"}
+  ]
+}

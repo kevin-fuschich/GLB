@@ -1,232 +1,779 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>GLB Records</title>
-<style>
-:root{
-  --field-white:#ffffff;
-  --ink-navy:#002244;
-  --meta-grey:#555555;
-  --line-grey:#d6d6d6;
-  --paper:#f4f4f4;
-  --font-serif:"Georgia","Times New Roman",serif;
-  --font-sans:"Helvetica Neue",Helvetica,Arial,sans-serif;
-}
-body{
-  background:var(--paper);
-  font-family:var(--font-sans);
-  color:var(--ink-navy);
-  display:flex;
-  justify-content:center;
-  padding:50px 20px;
-  margin:0;
-  -webkit-font-smoothing:antialiased;
-}
-.sheet{
-  background:var(--field-white);
-  width:100%;
-  max-width:580px;
-  padding:40px;
-  box-shadow:0 2px 15px rgba(0,0,0,0.06);
-  border-top:5px solid var(--ink-navy);
-}
-header{
-  display:flex;
-  justify-content:space-between;
-  align-items:flex-start;
-  margin-bottom:35px;
-  border-bottom:1px solid var(--ink-navy);
-  padding-bottom:20px;
-}
-.meta{
-  font-family:var(--font-serif);
-  font-size:14px;
-  line-height:1.6;
-}
-.meta .title{
-  font-weight:bold;
-  color:#000;
-  display:block;
-  margin-bottom:2px;
-}
-.meta .sub{
-  color:#333;
-  font-style:italic;
-}
-.stamp-logo{
-  width:60px;
-  height:auto;
-  opacity:0.9;
-}
-.section{
-  margin-top:26px;
-}
-.section:first-of-type{ margin-top:0; }
-.section h2{
-  font-family:var(--font-serif);
-  font-size:12px;
-  letter-spacing:1px;
-  text-transform:uppercase;
-  color:var(--meta-grey);
-  margin:0 0 10px 0;
-}
-.list{
-  list-style:none;
-  padding:0;
-  margin:0;
-}
-.item{
-  padding:10px 0;
-  border-bottom:1px solid #f0f0f0;
-}
-.item:last-child{ border-bottom:none; }
-.row{
-  display:flex;
-  justify-content:space-between;
-  gap:12px;
-}
-.left{
-  min-width:0;
-}
-.right{
-  flex:0 0 auto;
-  color:var(--meta-grey);
-  font-size:11px;
-  font-variant-numeric:tabular-nums;
-  white-space:nowrap;
-}
-.doc-title{
-  font-family:var(--font-serif);
-  font-size:14px;
-  color:#000;
-  margin:0;
-}
-.doc-meta{
-  font-size:11px;
-  color:var(--meta-grey);
-  margin:2px 0 0 0;
-}
-a{
-  color:var(--ink-navy);
-  text-decoration:none;
-}
-a:hover{ text-decoration:underline; }
-.status{
-  font-size:11px;
-  color:var(--meta-grey);
-  font-style:italic;
-}
-footer{
-  margin-top:40px;
-  border-top:1px solid var(--line-grey);
-  padding-top:15px;
-  font-size:10px;
-  color:var(--meta-grey);
-  text-transform:uppercase;
-  letter-spacing:1px;
-}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="color-scheme" content="light" />
+  <title>Global League Baseball (GLB)</title>
+
+  <style>
+    :root{
+      --field-white:#ffffff;
+      --ink-navy:#002244;
+      --ink-black:#111111;
+      --meta-grey:#555555;
+      --line-grey:#d6d6d6;
+      --paper:#f4f4f4;
+      --soft:#f7f7f7;
+      --font-serif:"Georgia","Times New Roman",serif;
+      --font-sans:"Helvetica Neue",Helvetica,Arial,sans-serif;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+      --radius:12px;
+      --shadow:0 2px 18px rgba(0,0,0,0.06);
+      --max:980px;
+    }
+
+    *{ box-sizing:border-box; }
+    body{
+      background:var(--paper);
+      font-family:var(--font-sans);
+      color:var(--ink-navy);
+      display:flex;
+      justify-content:center;
+      padding:46px 18px;
+      margin:0;
+      -webkit-font-smoothing:antialiased;
+      text-rendering:optimizeLegibility;
+    }
+
+    a{ color:var(--ink-navy); text-decoration:none; }
+    a:hover{ text-decoration:underline; }
+
+    .sheet{
+      background:var(--field-white);
+      width:100%;
+      max-width:var(--max);
+      padding:34px;
+      box-shadow:var(--shadow);
+      border-top:6px solid var(--ink-navy);
+    }
+
+    header{
+      display:flex;
+      justify-content:space-between;
+      align-items:flex-start;
+      gap:18px;
+      margin-bottom:26px;
+      border-bottom:1px solid var(--ink-navy);
+      padding-bottom:18px;
+    }
+
+    .meta{
+      font-family:var(--font-serif);
+      font-size:14px;
+      line-height:1.55;
+    }
+    .meta .title{
+      font-weight:bold;
+      color:var(--ink-black);
+      display:block;
+      letter-spacing:0.2px;
+      margin-bottom:2px;
+    }
+    .meta .sub{
+      color:#333;
+      font-style:italic;
+    }
+
+    .stamp-logo{
+      width:62px;
+      height:auto;
+      opacity:0.92;
+      flex:0 0 auto;
+    }
+
+    .top-note{
+      margin-top:10px;
+      font-family:var(--font-sans);
+      font-size:12px;
+      color:var(--meta-grey);
+      max-width:64ch;
+    }
+    .top-note strong{ color:var(--ink-black); font-weight:600; }
+
+    .section{
+      margin-top:28px;
+    }
+    .section:first-of-type{ margin-top:0; }
+
+    .section h2{
+      font-family:var(--font-serif);
+      font-size:12px;
+      letter-spacing:1px;
+      text-transform:uppercase;
+      color:var(--meta-grey);
+      margin:0 0 10px 0;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+    }
+
+    /* --- Controls (toggles) --- */
+    .toggles{
+      display:flex;
+      gap:8px;
+      flex-wrap:wrap;
+    }
+    .toggle{
+      font-family:var(--mono);
+      font-size:11px;
+      letter-spacing:0.2px;
+      border:1px solid var(--line-grey);
+      background:var(--field-white);
+      color:var(--meta-grey);
+      padding:6px 10px;
+      border-radius:999px;
+      cursor:pointer;
+      user-select:none;
+    }
+    .toggle[aria-pressed="true"]{
+      border-color:var(--ink-navy);
+      color:var(--ink-navy);
+    }
+
+    /* --- HERO --- */
+    .hero{
+      border:1px solid var(--line-grey);
+      border-radius:var(--radius);
+      overflow:hidden;
+      background:var(--soft);
+      position:relative;
+    }
+
+    .hero-stage{
+      position:relative;
+      width:100%;
+      height:440px;
+      background:#eaeaea;
+    }
+
+    .hero-slide{
+      position:absolute;
+      inset:0;
+      opacity:0;
+      transition:opacity 420ms ease;
+      display:flex;
+      align-items:stretch;
+      justify-content:stretch;
+    }
+
+    .hero-slide.is-active{ opacity:1; }
+
+    .hero-img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+      filter:saturate(0.96) contrast(1.02);
+    }
+
+    .hero-overlay{
+      position:absolute;
+      left:0;
+      right:0;
+      bottom:0;
+      padding:18px 18px 16px 18px;
+      background:linear-gradient(to top, rgba(0,0,0,0.62), rgba(0,0,0,0.0));
+      color:#fff;
+    }
+
+    .hero-kicker{
+      font-family:var(--mono);
+      font-size:11px;
+      text-transform:uppercase;
+      letter-spacing:1.1px;
+      opacity:0.88;
+      margin:0 0 6px 0;
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      align-items:center;
+    }
+    .hero-kicker .pill{
+      border:1px solid rgba(255,255,255,0.28);
+      padding:4px 8px;
+      border-radius:999px;
+      line-height:1;
+      opacity:0.92;
+    }
+
+    .hero-title{
+      margin:0;
+      font-family:var(--font-serif);
+      font-size:26px;
+      letter-spacing:0.3px;
+      text-transform:none;
+    }
+
+    .hero-caption{
+      margin:6px 0 0 0;
+      font-size:13px;
+      color:rgba(255,255,255,0.88);
+      max-width:72ch;
+    }
+
+    .hero-link{
+      margin-top:10px;
+      display:inline-flex;
+      gap:8px;
+      align-items:center;
+      font-family:var(--mono);
+      font-size:12px;
+      color:#fff;
+      text-decoration:none;
+      border-bottom:1px solid rgba(255,255,255,0.45);
+      padding-bottom:2px;
+    }
+    .hero-link:hover{ border-bottom-color:#fff; text-decoration:none; }
+
+    .hero-ui{
+      position:absolute;
+      top:12px;
+      right:12px;
+      display:flex;
+      gap:8px;
+      align-items:center;
+      z-index:4;
+    }
+
+    .hero-btn{
+      width:38px;
+      height:38px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,0.25);
+      background:rgba(0,0,0,0.25);
+      color:#fff;
+      cursor:pointer;
+      display:grid;
+      place-items:center;
+      backdrop-filter: blur(4px);
+    }
+    .hero-btn:hover{ background:rgba(0,0,0,0.35); }
+
+    .hero-dots{
+      position:absolute;
+      left:14px;
+      top:14px;
+      display:flex;
+      gap:7px;
+      z-index:4;
+      padding:6px 8px;
+      border-radius:999px;
+      background:rgba(0,0,0,0.18);
+      border:1px solid rgba(255,255,255,0.12);
+      backdrop-filter: blur(4px);
+    }
+    .dot{
+      width:8px; height:8px;
+      border-radius:999px;
+      background:rgba(255,255,255,0.40);
+      border:0;
+      cursor:pointer;
+      padding:0;
+    }
+    .dot[aria-current="true"]{ background:#fff; }
+
+    /* --- TODAY + FEATURED: cards --- */
+    .cards{
+      display:grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap:14px;
+    }
+
+    .panel{
+      border:1px solid var(--line-grey);
+      border-radius:var(--radius);
+      overflow:hidden;
+      background:var(--field-white);
+    }
+
+    .panel-h{
+      padding:12px 14px;
+      border-bottom:1px solid var(--line-grey);
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+      background:#fff;
+    }
+    .panel-h .label{
+      font-family:var(--mono);
+      font-size:11px;
+      text-transform:uppercase;
+      letter-spacing:1px;
+      color:var(--meta-grey);
+    }
+    .panel-h .small{
+      font-family:var(--mono);
+      font-size:11px;
+      color:var(--meta-grey);
+      font-variant-numeric:tabular-nums;
+      white-space:nowrap;
+    }
+    .panel-b{ padding:12px 14px; }
+
+    .game-grid{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:10px;
+    }
+
+    .game{
+      border:1px solid #ececec;
+      border-radius:12px;
+      padding:10px 12px;
+      background:#fff;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+    }
+    .game:hover{ border-color:#dcdcdc; }
+
+    .game-left{
+      min-width:0;
+    }
+    .matchup{
+      font-family:var(--font-serif);
+      font-size:14px;
+      color:var(--ink-black);
+      margin:0;
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
+    }
+    .statusline{
+      margin:3px 0 0 0;
+      font-family:var(--mono);
+      font-size:11px;
+      color:var(--meta-grey);
+      display:flex;
+      gap:8px;
+      align-items:center;
+      flex-wrap:wrap;
+    }
+    .badge{
+      display:inline-flex;
+      align-items:center;
+      gap:6px;
+      padding:2px 8px;
+      border-radius:999px;
+      border:1px solid #e7e7e7;
+      background:#fff;
+      line-height:1.4;
+    }
+    .dotlive{
+      width:6px; height:6px; border-radius:999px;
+      background:#b00020;
+      display:inline-block;
+    }
+
+    .game-right{
+      flex:0 0 auto;
+      text-align:right;
+      font-family:var(--mono);
+      font-size:12px;
+      color:var(--ink-black);
+      font-variant-numeric:tabular-nums;
+      white-space:nowrap;
+    }
+    .score{
+      font-size:14px;
+      font-weight:700;
+      letter-spacing:0.3px;
+    }
+    .time{
+      color:var(--meta-grey);
+      margin-top:2px;
+      font-size:11px;
+    }
+
+    .empty{
+      font-family:var(--mono);
+      font-size:12px;
+      color:var(--meta-grey);
+      padding:12px;
+      border:1px dashed #dddddd;
+      border-radius:12px;
+      background:#fff;
+    }
+
+    /* --- Standings --- */
+    .standings-wrap{
+      border:1px solid var(--line-grey);
+      border-radius:var(--radius);
+      overflow:hidden;
+      background:#fff;
+    }
+    .standings-h{
+      padding:12px 14px;
+      border-bottom:1px solid var(--line-grey);
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+    }
+    .standings-h .label{
+      font-family:var(--mono);
+      font-size:11px;
+      text-transform:uppercase;
+      letter-spacing:1px;
+      color:var(--meta-grey);
+    }
+    table{
+      width:100%;
+      border-collapse:collapse;
+      font-variant-numeric:tabular-nums;
+    }
+    th, td{
+      padding:10px 14px;
+      border-bottom:1px solid #efefef;
+      text-align:left;
+      font-size:12px;
+    }
+    th{
+      font-family:var(--mono);
+      text-transform:uppercase;
+      letter-spacing:1px;
+      font-size:11px;
+      color:var(--meta-grey);
+      background:#fff;
+    }
+    tr:last-child td{ border-bottom:none; }
+    td.num{ text-align:right; font-family:var(--mono); }
+    td.team a{
+      font-family:var(--font-serif);
+      font-size:13px;
+      color:var(--ink-black);
+    }
+
+    .division-title{
+      font-family:var(--mono);
+      font-size:11px;
+      letter-spacing:1px;
+      text-transform:uppercase;
+      color:var(--meta-grey);
+      padding:12px 14px 8px 14px;
+      border-top:1px solid var(--line-grey);
+      background:#fff;
+    }
+    .division-title:first-of-type{ border-top:none; }
+
+    /* --- Featured --- */
+    .featured{
+      display:grid;
+      grid-template-columns: 140px 1fr;
+      gap:12px;
+      align-items:stretch;
+    }
+    .featured img{
+      width:140px;
+      height:120px;
+      object-fit:cover;
+      border-radius:12px;
+      border:1px solid #ececec;
+      background:#eaeaea;
+    }
+    .featured h3{
+      margin:0;
+      font-family:var(--font-serif);
+      font-size:16px;
+      color:var(--ink-black);
+    }
+    .featured p{
+      margin:6px 0 0 0;
+      font-size:12px;
+      color:var(--meta-grey);
+      line-height:1.45;
+      max-width:60ch;
+    }
+    .featured a{
+      display:inline-flex;
+      margin-top:10px;
+      font-family:var(--mono);
+      font-size:12px;
+      border-bottom:1px solid #d0d0d0;
+      padding-bottom:2px;
+    }
+
+    /* --- Clubs Grid --- */
+    .clubs-wrap{
+      border:1px solid var(--line-grey);
+      border-radius:var(--radius);
+      overflow:hidden;
+      background:#fff;
+    }
+    .clubs-h{
+      padding:12px 14px;
+      border-bottom:1px solid var(--line-grey);
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+    }
+    .clubs-h .label{
+      font-family:var(--mono);
+      font-size:11px;
+      text-transform:uppercase;
+      letter-spacing:1px;
+      color:var(--meta-grey);
+    }
+    .clubs{
+      padding:14px;
+      display:grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap:10px;
+    }
+    .club{
+      border:1px solid #ececec;
+      border-radius:12px;
+      padding:10px 10px 9px 10px;
+      background:#fff;
+      min-height:74px;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+      gap:6px;
+    }
+    .club:hover{ border-color:#dcdcdc; }
+    .club .name{
+      font-family:var(--font-serif);
+      color:var(--ink-black);
+      font-size:14px;
+      margin:0;
+      line-height:1.2;
+    }
+    .club .meta2{
+      font-family:var(--mono);
+      font-size:11px;
+      color:var(--meta-grey);
+      text-transform:uppercase;
+      letter-spacing:1px;
+      display:flex;
+      gap:8px;
+      flex-wrap:wrap;
+      align-items:center;
+    }
+    .club .mark{
+      width:14px; height:14px;
+      border-radius:4px;
+      border:1px solid #e6e6e6;
+      background:#f0f0f0;
+      display:inline-block;
+      overflow:hidden;
+      flex:0 0 auto;
+    }
+    .club .mark img{
+      width:100%; height:100%;
+      object-fit:contain;
+      display:block;
+      opacity:0.95;
+    }
+
+    /* --- Footer (standardized) --- */
+    .footer-bar{
+      margin-top:34px;
+      border-top:1px solid var(--line-grey);
+      padding-top:14px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:12px;
+    }
+    .footer-left{
+      font-family:var(--mono);
+      font-size:10px;
+      color:var(--meta-grey);
+      text-transform:uppercase;
+      letter-spacing:1px;
+      line-height:1.3;
+    }
+    .footer-right img{
+      width:54px;
+      height:auto;
+      opacity:0.92;
+    }
+    .footer-links{
+      margin-top:6px;
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      font-family:var(--mono);
+      font-size:10px;
+      letter-spacing:1px;
+      text-transform:uppercase;
+    }
+    .footer-links a{ color:var(--meta-grey); }
+    .footer-links a:hover{ color:var(--ink-navy); text-decoration:underline; }
+
+    /* --- Responsive --- */
+    @media (max-width: 860px){
+      .cards{ grid-template-columns:1fr; }
+      .hero-stage{ height:380px; }
+      .clubs{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 520px){
+      body{ padding:28px 12px; }
+      .sheet{ padding:22px; }
+      .hero-stage{ height:320px; }
+      .hero-title{ font-size:22px; }
+      .clubs{ grid-template-columns: 1fr; }
+      .featured{ grid-template-columns: 1fr; }
+      .featured img{ width:100%; height:160px; }
+      header{ padding-bottom:14px; margin-bottom:18px; }
+    }
+
+    /* Accessibility helper */
+    .sr-only{
+      position:absolute;
+      width:1px;height:1px;
+      padding:0;margin:-1px;
+      overflow:hidden;clip:rect(0,0,0,0);
+      white-space:nowrap;border:0;
+    }
+  </style>
 </head>
+
 <body>
+  <div class="sheet">
 
-<div class="sheet">
+    <header>
+      <div class="meta">
+        <span class="title">GLOBAL LEAGUE BASEBALL</span>
+        <span class="sub">League Office Record — Live Index</span>
+        <div class="top-note">
+          <strong>International professional baseball</strong> operating across two divisions — Americas and Pacific.
+          Built as an archival record with a live scoreboard layer.
+        </div>
+      </div>
+      <img src="GLB_white.png" alt="GLB Seal" class="stamp-logo" />
+    </header>
 
-  <header>
-    <div class="meta">
-      <span class="title">Records</span>
-      <span class="sub">GLB</span>
+    <!-- HERO -->
+    <div class="section" aria-label="Hero showcase">
+      <h2>
+        Showcase
+        <span class="status" id="heroStatus" style="font-family:var(--mono);font-size:11px;color:var(--meta-grey);">Loading</span>
+      </h2>
+
+      <div class="hero" id="hero" data-autoplay-ms="9000">
+        <div class="hero-stage" id="heroStage" aria-roledescription="carousel" aria-label="GLB showcase images">
+          <!-- slides injected -->
+          <div class="hero-dots" id="heroDots" aria-label="Showcase navigation"></div>
+
+          <div class="hero-ui">
+            <button class="hero-btn" id="heroPrev" aria-label="Previous image">‹</button>
+            <button class="hero-btn" id="heroNext" aria-label="Next image">›</button>
+          </div>
+
+          <div class="hero-overlay" id="heroOverlay">
+            <p class="hero-kicker" id="heroKicker">
+              <span class="pill">GLB</span>
+              <span class="pill" id="heroDivisionPill">—</span>
+            </p>
+            <h1 class="hero-title" id="heroTitle">—</h1>
+            <p class="hero-caption" id="heroCaption">—</p>
+            <a class="hero-link" id="heroLink" href="#clubs">View Club Dossier →</a>
+          </div>
+        </div>
+      </div>
     </div>
-    <img src="GLB_white.png" alt="GLB Seal" class="stamp-logo" />
-  </header>
 
-  <div class="section">
-    <h2>Documents</h2>
-    <ul class="list">
-      <li class="item">
-        <div class="row">
-          <div class="left">
-            <p class="doc-title"><a href="boxscore_stresstest.html">Official Box Score — Monterrey at San Pedro — 14 innings</a></p>
-            <p class="doc-meta">Final 12–10</p>
-          </div>
-          <div class="right">June 18, 2026</div>
-        </div>
-      </li>
+    <!-- TODAY + FEATURED -->
+    <div class="section">
+      <h2>Today</h2>
+      <div class="cards">
 
-      <li class="item">
-        <div class="row">
-          <div class="left">
-            <p class="doc-title"><a href="boxscore.html">Official Box Score — Monterrey at San Pedro</a></p>
-            <p class="doc-meta">Final 7–1</p>
+        <!-- Today in GLB -->
+        <div class="panel" id="todayPanel">
+          <div class="panel-h">
+            <div class="label">Today in GLB</div>
+            <div class="small" id="todayDateLabel">—</div>
           </div>
-          <div class="right">June 4, 2026</div>
+          <div class="panel-b">
+            <div class="game-grid" id="todayGames">
+              <div class="empty">Loading schedule.</div>
+            </div>
+          </div>
         </div>
-      </li>
 
-      <li class="item">
-        <div class="row">
-          <div class="left">
-            <p class="doc-title"><a href="standings.html">Standings — Week 1</a></p>
-            <p class="doc-meta status">Not yet published</p>
+        <!-- Featured Club -->
+        <div class="panel" id="featuredPanel">
+          <div class="panel-h">
+            <div class="label">From the League</div>
+            <div class="small" id="featuredHint">File: /data/featured.json</div>
           </div>
-          <div class="right">(pending)</div>
+          <div class="panel-b" id="featuredBody">
+            <div class="empty">Loading featured club.</div>
+          </div>
         </div>
-      </li>
 
-      <li class="item">
-        <div class="row">
-          <div class="left">
-            <p class="doc-title"><a href="schedule.html">Schedule — Week 1</a></p>
-            <p class="doc-meta status">Not yet published</p>
-          </div>
-          <div class="right">(pending)</div>
+      </div>
+    </div>
+
+    <!-- STANDINGS -->
+    <div class="section">
+      <h2>
+        Standings
+        <span class="toggles" role="group" aria-label="Standings filter">
+          <button class="toggle" id="stAll" aria-pressed="true">All</button>
+          <button class="toggle" id="stAmericas" aria-pressed="false">Americas</button>
+          <button class="toggle" id="stPacific" aria-pressed="false">Pacific</button>
+        </span>
+      </h2>
+
+      <div class="standings-wrap" id="standingsWrap">
+        <div class="standings-h">
+          <div class="label">League Table</div>
+          <div class="small" id="standingsAsOf">—</div>
         </div>
-      </li>
-    </ul>
+        <div id="standingsTables">
+          <div class="empty" style="margin:14px;">Loading standings.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CLUB DIRECTORY -->
+    <div class="section" id="clubs">
+      <h2>
+        Clubs
+        <span class="toggles" role="group" aria-label="Club filter">
+          <button class="toggle" id="clAll" aria-pressed="true">All</button>
+          <button class="toggle" id="clAmericas" aria-pressed="false">Americas</button>
+          <button class="toggle" id="clPacific" aria-pressed="false">Pacific</button>
+        </span>
+      </h2>
+
+      <div class="clubs-wrap">
+        <div class="clubs-h">
+          <div class="label">Club Directory</div>
+          <div class="small" id="clubsCount">—</div>
+        </div>
+        <div class="clubs" id="clubsGrid">
+          <div class="empty">Loading clubs.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER (standardized) -->
+    <footer class="footer-bar">
+      <div class="footer-left">
+        GLB CLUB DOSSIER / GLOBAL LEAGUE BASEBALL
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="day.html">Daily Scores</a>
+          <a href="#clubs">Clubs</a>
+        </div>
+      </div>
+      <div class="footer-right">
+        <img src="GLB_white.png" alt="GLB" />
+      </div>
+    </footer>
+
   </div>
 
-  <div class="section">
-    <h2>Teams</h2>
-    <ul class="list">
-      <li class="item"><div class="row"><div class="left"><p class="doc-title"><a href="team-sanpedro.html">San Pedro Cocolos</a></p><p class="doc-meta">Pacific Division</p></div><div class="right">Record file</div></div></li>
-      <li class="item"><div class="row"><div class="left"><p class="doc-title"><a href="team-monterrey.html">Monterrey Cementeros</a></p><p class="doc-meta">Pacific Division</p></div><div class="right">Record file</div></div></li>
-      <li class="item"><div class="row"><div class="left"><p class="doc-title"><a href="team-taipei.html">Taipei Neon</a></p><p class="doc-meta">Pacific Division</p></div><div class="right">Record file</div></div></li>
-      <li class="item"><div class="row"><div class="left"><p class="doc-title"><a href="team-osaka.html">Osaka Spirits</a></p><p class="doc-meta">Pacific Division</p></div><div class="right">Record file</div></div></li>
-      <li class="item"><div class="row"><div class="left"><p class="doc-title"><a href="team-tijuana.html">Tijuana Tecnicos</a></p><p class="doc-meta">Pacific Division</p></div><div class="right">Record file</div></div></li>
-      <li class="item"><div class="row"><div class="left"><p class="doc-title"><a href="team-vancouver.html">Vancouver Current</a></p><p class="doc-meta">Pacific Division</p></div><div class="right">Record file</div></div></li>
-      <li class="item"><div class="row"><div class="left"><p class="doc-title"><a href="team-santiago.html">Santiago Caballeros</a></p><p class="doc-meta">Pacific Division</p></div><div class="right">Record file</div></div></li>
-      <li class="item"><div class="row"><div class="left"><p class="doc-title"><a href="team-mayaguez.html">Mayaguez Sultans</a></p><p class="doc-meta">Pacific Division</p></div><div class="right">Record file</div></div></li>
-
-      <li class="item"><div class="row"><div class="left"><p class="doc-title"><a href="team-louisville.html">Louisville Naturals</a></p><p class="doc-meta">Americas Division</p></div><div class="right">Record file</div></div></li>
-      <li class="item"><div class="row"><div class="left"><p class="doc-title"><a href="team-spokane.html">Spokane Alloys</a></p><p class="doc-meta">Americas Division</p></div><div class="right">Record file</div></div></li>
-      <li class="item"><div class="row"><div class="left"><p class="doc-title"><a href="team-birmingham.html">Birmingham Vulcans</a></p><p class="doc-meta">Americas Division</p></div><div class="right">Record file</div></div></li>
-      <li class="item"><div class="row"><div class="left"><p class="doc-title"><a href="team-toledo.html">Toledo Assembly</a></p><p class="doc-meta">Americas Division</p></div><div class="right">Record file</div></div></li>
-      <li class="item"><div class="row"><div class="left"><p class="doc-title"><a href="team-albuquerque.html">Albuquerque Aeros</a></p><p class="doc-meta">Americas Division</p></div><div class="right">Record file</div></div></li>
-      <li class="item"><div class="row"><div class="left"><p class="doc-title"><a href="team-stpaul.html">St. Paul Frost</a></p><p class="doc-meta">Americas Division</p></div><div class="right">Record file</div></div></li>
-      <li class="item"><div class="row"><div class="left"><p class="doc-title"><a href="team-fresno.html">Fresno Yield</a></p><p class="doc-meta">Americas Division</p></div><div class="right">Record file</div></div></li>
-      <li class="item"><div class="row"><div class="left"><p class="doc-title"><a href="team-durham.html">Durham Gold</a></p><p class="doc-meta">Americas Division</p></div><div class="right">Record file</div></div></li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <h2>System</h2>
-    <ul class="list">
-      <li class="item">
-        <div class="row">
-          <div class="left">
-            <p class="doc-title">Health</p>
-            <p class="doc-meta">System check</p>
-          </div>
-          <div class="right">(undated)</div>
-        </div>
-      </li>
-    </ul>
-  </div>
-
-  <footer>GLB records.</footer>
-
-</div>
-
+  <script src="glb-home.js"></script>
 </body>
 </html>

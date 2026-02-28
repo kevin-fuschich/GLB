@@ -7,10 +7,10 @@
 
 <style>
 :root{
-  --paper:#f1efe9;
+  --paper:#f2f0ea;
   --white:#ffffff;
   --ink:#0e1a22;
-  --ink-soft:#2a3a45;
+  --ink-soft:#2c3a44;
   --line:#c6beb3;
   --mono:ui-monospace, SFMono-Regular, Menlo, monospace;
   --serif:Georgia, "Times New Roman", serif;
@@ -51,7 +51,6 @@ header{
   font-family:var(--serif);
   font-size:20px;
   font-weight:bold;
-  letter-spacing:.5px;
 }
 
 .header-sub{
@@ -61,7 +60,7 @@ header{
   color:var(--ink-soft);
 }
 
-.header-right img{
+header img{
   width:60px;
 }
 
@@ -86,6 +85,11 @@ header{
   height:420px;
   overflow:hidden;
   background:#ddd;
+}
+
+#heroStage{
+  position:absolute;
+  inset:0;
 }
 
 .hero-slide{
@@ -122,8 +126,18 @@ header{
 }
 
 .hero-overlay p{
-  margin:0;
+  margin:0 0 8px 0;
   font-size:14px;
+}
+
+.hero-counter{
+  position:absolute;
+  top:20px;
+  left:20px;
+  font-family:var(--mono);
+  font-size:12px;
+  background:rgba(255,255,255,0.85);
+  padding:6px 10px;
 }
 
 .hero-controls{
@@ -138,19 +152,9 @@ header{
 
 .hero-controls button{
   border:1px solid var(--line);
-  background:rgba(255,255,255,0.75);
+  background:rgba(255,255,255,0.85);
   padding:6px 10px;
   cursor:pointer;
-}
-
-.hero-counter{
-  position:absolute;
-  top:20px;
-  left:20px;
-  font-family:var(--mono);
-  font-size:12px;
-  background:rgba(255,255,255,0.8);
-  padding:6px 10px;
 }
 
 /* TODAY */
@@ -273,6 +277,7 @@ td.num{
 }
 </style>
 </head>
+
 <body>
 
 <div class="wrapper">
@@ -285,12 +290,9 @@ td.num{
       Updated: <span id="provTime">—</span> ET
     </div>
   </div>
-  <div class="header-right">
-    <img src="GLB_white.png" alt="GLB Seal">
-  </div>
+  <img src="GLB_white.png" alt="GLB Seal">
 </header>
 
-<!-- HERO -->
 <div id="hero" class="hero">
   <div id="heroStage"></div>
   <div id="heroCounter" class="hero-counter">—</div>
@@ -301,33 +303,27 @@ td.num{
   <div class="hero-overlay">
     <h1 id="heroTitle">—</h1>
     <p id="heroCaption"></p>
-    <div>
-      <a id="heroLink" href="#clubs" style="color:#fff;text-decoration:underline;">Explore Clubs →</a>
-    </div>
+    <a id="heroLink" href="#clubs" style="color:#fff;text-decoration:underline;">Explore Clubs →</a>
   </div>
 </div>
 
-<!-- TODAY -->
 <section class="section">
   <h2>Today in GLB</h2>
   <div id="todayDateLabel" style="margin-bottom:12px;font-weight:600;"></div>
   <div id="todayGames" class="games">Loading schedule.</div>
 </section>
 
-<!-- STANDINGS -->
 <section class="section">
   <h2>Standings</h2>
   <div id="standingsAsOf" style="margin-bottom:14px;"></div>
   <div id="standingsTables">Loading standings.</div>
 </section>
 
-<!-- FEATURED -->
 <section class="section">
   <h2>Office Memo</h2>
   <div id="featuredBody">Loading memo.</div>
 </section>
 
-<!-- CLUBS -->
 <section class="section" id="clubs">
   <h2>Club Directory</h2>
   <div id="clubsGrid">Loading clubs.</div>

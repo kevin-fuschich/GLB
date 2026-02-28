@@ -1,0 +1,26 @@
+{
+  "asOf": "2026-03-01",
+  "games": [
+    {
+      "date": "2026-03-01",
+      "status": "FINAL",
+      "awayTeam": "mayaguez-sultans",
+      "awayName": "Mayaguez Sultans",
+      "awayScore": 4,
+      "homeTeam": "spokane-alloys",
+      "homeName": "Spokane Alloys",
+      "homeScore": 2,
+      "boxUrl": "game.html?date=2026-03-01&game=mayaguez-sultans@spokane-alloys"
+    },
+    {
+      "date": "2026-03-02",
+      "status": "SCHEDULED",
+      "timeET": "7:10 PM ET",
+      "awayTeam": "st-paul-frost",
+      "awayName": "St. Paul Frost",
+      "homeTeam": "durham-gold",
+      "homeName": "Durham Gold",
+      "boxUrl": "game.html?date=2026-03-02&game=st-paul-frost@durham-gold"
+    }
+  ]
+}

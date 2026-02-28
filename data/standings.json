@@ -1,0 +1,25 @@
+{
+  "asOf": "2026-02-28",
+  "divisions": {
+    "americas": [
+      { "team": "Louisville Naturals", "link": "team-louisville.html", "w": 0, "l": 0, "gb": "—", "rd": 0 },
+      { "team": "Spokane Alloys", "link": "team-spokane.html", "w": 0, "l": 0, "gb": "—", "rd": 0 },
+      { "team": "Birmingham Vulcans", "link": "team-birmingham.html", "w": 0, "l": 0, "gb": "—", "rd": 0 },
+      { "team": "Toledo Assembly", "link": "team-toledo.html", "w": 0, "l": 0, "gb": "—", "rd": 0 },
+      { "team": "Albuquerque Aeros", "link": "team-albuquerque.html", "w": 0, "l": 0, "gb": "—", "rd": 0 },
+      { "team": "St. Paul Frost", "link": "team-stpaul.html", "w": 0, "l": 0, "gb": "—", "rd": 0 },
+      { "team": "Fresno Yield", "link": "team-fresno.html", "w": 0, "l": 0, "gb": "—", "rd": 0 },
+      { "team": "Durham Gold", "link": "team-durham.html", "w": 0, "l": 0, "gb": "—", "rd": 0 }
+    ],
+    "pacific": [
+      { "team": "San Pedro Cocolos", "link": "team-sanpedro.html", "w": 0, "l": 0, "gb": "—", "rd": 0 },
+      { "team": "Monterrey Cementeros", "link": "team-monterrey.html", "w": 0, "l": 0, "gb": "—", "rd": 0 },
+      { "team": "Taipei Neon", "link": "team-taipei.html", "w": 0, "l": 0, "gb": "—", "rd": 0 },
+      { "team": "Osaka Spirits", "link": "team-osaka.html", "w": 0, "l": 0, "gb": "—", "rd": 0 },
+      { "team": "Tijuana Tecnicos", "link": "team-tijuana.html", "w": 0, "l": 0, "gb": "—", "rd": 0 },
+      { "team": "Vancouver Current", "link": "team-vancouver.html", "w": 0, "l": 0, "gb": "—", "rd": 0 },
+      { "team": "Santiago Caballeros", "link": "team-santiago.html", "w": 0, "l": 0, "gb": "—", "rd": 0 },
+      { "team": "Mayaguez Sultans", "link": "team-mayaguez.html", "w": 0, "l": 0, "gb": "—", "rd": 0 }
+    ]
+  }
+}

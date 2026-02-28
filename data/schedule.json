@@ -1,0 +1,9 @@
+{
+  "dates": {
+    "2026-02-28": [
+      { "away": "Louisville", "home": "St. Paul", "status": "upcoming", "timeLocal": "7:10 PM" },
+      { "away": "San Pedro", "home": "Monterrey", "status": "upcoming", "timeLocal": "8:05 PM" },
+      { "away": "Osaka", "home": "Taipei", "status": "upcoming", "timeLocal": "9:40 PM" }
+    ]
+  }
+}

@@ -1,12 +1,10 @@
-/* ==========================================================
-   GLB Home — League Office Live Index Controller
-   IMPORTANT: Uses RELATIVE data paths (works on GitHub Pages project sites)
-   ========================================================== */
+/* GLB Home — League Office Live Index Controller
+   FIX: uses RELATIVE paths so it works at /GLB/ on GitHub Pages.
+*/
 
 (function () {
   const $ = (sel) => document.querySelector(sel);
-
-  const PATH = "data/"; // <-- relative (NO leading slash)
+  const PATH = "data/"; // relative to index.html in /GLB/
 
   const state = {
     hero: [],
@@ -64,7 +62,6 @@
     return String(n).padStart(2, "0");
   }
 
-  // Provenance Timestamp (Eastern Time)
   function setProvenanceTime() {
     const el = $("#provTime");
     if (!el) return;
@@ -88,10 +85,7 @@
     el.textContent = `${parts.year}-${parts.month}-${parts.day} ${parts.hour}:${parts.minute}`;
   }
 
-  /* =========================
-     HERO
-  ========================= */
-
+  /* HERO */
   function updateHeroCounter() {
     const el = $("#heroCounter");
     if (!el) return;
@@ -137,7 +131,7 @@
     updateHeroCounter();
   }
 
-  function goHero(nextIndex, user = false) {
+  function goHero(nextIndex) {
     state.heroIndex = clampIndex(nextIndex, state.hero.length);
 
     document.querySelectorAll(".hero-slide").forEach((s, idx) => {
@@ -146,32 +140,18 @@
 
     if (state.hero[state.heroIndex]) applyHeroOverlay(state.hero[state.heroIndex]);
     updateHeroCounter();
-
-    if (user) restartHeroTimer();
   }
 
   function startHeroTimer() {
-    stopHeroTimer();
+    clearInterval(state.heroTimer);
     state.heroTimer = setInterval(() => {
       if (!state.heroPaused) goHero(state.heroIndex + 1);
     }, 12000);
   }
 
-  function stopHeroTimer() {
-    if (state.heroTimer) {
-      clearInterval(state.heroTimer);
-      state.heroTimer = null;
-    }
-  }
-
-  function restartHeroTimer() {
-    stopHeroTimer();
-    startHeroTimer();
-  }
-
   function wireHeroControls() {
-    $("#heroPrev")?.addEventListener("click", () => goHero(state.heroIndex - 1, true));
-    $("#heroNext")?.addEventListener("click", () => goHero(state.heroIndex + 1, true));
+    $("#heroPrev")?.addEventListener("click", () => goHero(state.heroIndex - 1));
+    $("#heroNext")?.addEventListener("click", () => goHero(state.heroIndex + 1));
   }
 
   async function loadHero() {
@@ -182,10 +162,7 @@
     startHeroTimer();
   }
 
-  /* =========================
-     TODAY
-  ========================= */
-
+  /* TODAY */
   function buildGameLink(dateISO, away, home) {
     const key = encodeURIComponent(`${away}@${home}`);
     return `game.html?date=${dateISO}&game=${key}`;
@@ -197,7 +174,7 @@
     if (!wrap) return;
 
     if (!Array.isArray(games) || games.length === 0) {
-      wrap.innerHTML = `<div>No games today.</div>`;
+      wrap.innerHTML = `<div class="empty">No games today.</div>`;
       return;
     }
 
@@ -218,11 +195,11 @@
 
       return `
         <a class="game" href="${buildGameLink(dateISO, away, home)}">
-          <div>
+          <div class="game-left">
             <p class="matchup">${away} @ ${home}</p>
             <p class="statusline">${timeLabel}</p>
           </div>
-          <div>
+          <div class="game-right">
             <div class="score">${status === "upcoming" ? "—" : score}</div>
             <div class="time">${status === "upcoming" ? timeLabel : "Box Score →"}</div>
           </div>
@@ -246,10 +223,7 @@
     renderToday(dateISO, games);
   }
 
-  /* =========================
-     STANDINGS
-  ========================= */
-
+  /* STANDINGS */
   function renderStandings(data) {
     safeText($("#standingsAsOf"), data?.asOf ? `As of ${formatLocalDateLabel(data.asOf)}` : "—");
     const target = $("#standingsTables");
@@ -261,7 +235,7 @@
 
     function table(title, rows) {
       return `
-        <div style="margin:14px 0 8px;font-family:ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:1px;text-transform:uppercase;color:#2a3a45;">${title}</div>
+        <div class="division-title">${title}</div>
         <table>
           <thead>
             <tr><th>Team</th><th class="num">W-L</th><th class="num">GB</th><th class="num">RD</th></tr>
@@ -269,7 +243,7 @@
           <tbody>
             ${rows.map(r => `
               <tr>
-                <td><a href="${r.link || "#"}">${r.team || "—"}</a></td>
+                <td class="team"><a href="${r.link || "#"}">${r.team || "—"}</a></td>
                 <td class="num">${(r.w ?? "—")}-${(r.l ?? "—")}</td>
                 <td class="num">${r.gb ?? "—"}</td>
                 <td class="num">${r.rd ?? "—"}</td>
@@ -280,9 +254,7 @@
       `;
     }
 
-    target.innerHTML =
-      table("Americas Division", rowsA) +
-      table("Pacific Division", rowsP);
+    target.innerHTML = table("Americas Division", rowsA) + table("Pacific Division", rowsP);
   }
 
   async function loadStandings() {
@@ -290,24 +262,24 @@
     if (data) renderStandings(data);
   }
 
-  /* =========================
-     FEATURED
-  ========================= */
-
+  /* FEATURED */
   function renderFeatured(data) {
     const body = $("#featuredBody");
     if (!body) return;
 
     if (!data?.club) {
-      body.innerHTML = `No memo filed.`;
+      body.innerHTML = `<div class="empty">No memo filed.</div>`;
       return;
     }
 
     body.innerHTML = `
-      <div>
-        <div style="font-family:Georgia,serif;font-weight:bold;font-size:16px;margin-bottom:6px;">${data.club.name || "—"}</div>
-        <div style="color:#2a3a45;margin-bottom:10px;">${data.club.copy || ""}</div>
-        <a href="${data.club.link || "#clubs"}">View Club Dossier →</a>
+      <div class="featured">
+        <img src="${data.club.image}" alt="${data.club.name || "Featured club"}" />
+        <div>
+          <h3>${data.club.name || "—"}</h3>
+          <p>${data.club.copy || ""}</p>
+          <a href="${data.club.link || "#clubs"}">View Club Dossier →</a>
+        </div>
       </div>
     `;
   }
@@ -317,17 +289,13 @@
     renderFeatured(data);
   }
 
-  /* =========================
-     CLUBS
-  ========================= */
-
+  /* CLUBS */
   function renderClubs() {
     const grid = $("#clubsGrid");
     if (!grid) return;
 
-    // If clubs failed to load, show a clear message instead of silence
     if (!Array.isArray(state.clubs) || state.clubs.length === 0) {
-      grid.innerHTML = `<div>No clubs loaded.</div>`;
+      grid.innerHTML = `<div class="empty">No clubs loaded.</div>`;
       return;
     }
 
@@ -344,10 +312,6 @@
     state.clubs = Array.isArray(data?.clubs) ? data.clubs : [];
     renderClubs();
   }
-
-  /* =========================
-     INIT
-  ========================= */
 
   async function init() {
     setProvenanceTime();

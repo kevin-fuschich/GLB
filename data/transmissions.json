@@ -1,49 +1,22 @@
 {
   "items": [
     {
-      "location": "Upper Deck — Monterrey",
-      "quote": "They stopped throwing strikes when the drums started.",
-      "tag": "FAN TRANSMISSION"
+      "location": "Upper Deck — San Pedro",
+      "quote": "The chant started as a joke. By the 6th, it was law.",
+      "tag": "FAN TRANSMISSION",
+      "image": "images/transmissions/san-pedro-transmissions.png"
+    },
+    {
+      "location": "Left Field Line — Toledo",
+      "quote": "They went quiet after the first walk. You could feel it turn.",
+      "tag": "FAN TRANSMISSION",
+      "image": "images/transmissions/toledo-transmissions.png"
     },
     {
       "location": "Section 112 — Vancouver",
       "quote": "Wind shifted in the 8th. Changed everything.",
-      "tag": "FAN TRANSMISSION"
-    },
-    {
-      "location": "Outfield Rail — St. Paul",
-      "quote": "You could hear the ball hit the glove.",
-      "tag": "FAN TRANSMISSION"
-    },
-    {
-      "location": "Third Base Line — Osaka",
-      "quote": "No one moved until the bat cracked. Then the whole section stood up.",
-      "tag": "FAN TRANSMISSION"
-    },
-    {
-      "location": "Concourse Window — Taipei",
-      "quote": "The stadium lights made the infield look like a sheet of paper.",
-      "tag": "FAN TRANSMISSION"
-    },
-    {
-      "location": "Bleachers — San Pedro",
-      "quote": "The chant started as a joke. By the 6th, it was law.",
-      "tag": "FAN TRANSMISSION"
-    },
-    {
-      "location": "Right Field Corner — Mayagüez",
-      "quote": "You don’t notice the sea until the flags stop moving.",
-      "tag": "FAN TRANSMISSION"
-    },
-    {
-      "location": "Press Row Spillover — Durham",
-      "quote": "The scoreboard said nothing. The crowd knew anyway.",
-      "tag": "FAN TRANSMISSION"
-    },
-    {
-      "location": "Lower Bowl — Louisville",
-      "quote": "Two pitches in, you could tell the catcher didn’t trust the fastball.",
-      "tag": "FAN TRANSMISSION"
+      "tag": "FAN TRANSMISSION",
+      "image": "images/transmissions/vancouver-transmissions.png"
     }
   ]
 }

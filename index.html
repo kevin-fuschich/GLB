@@ -290,10 +290,29 @@ td.num{ text-align:right; font-variant-numeric:tabular-nums; }
   <div id="todayGames" class="games">Loading schedule.</div>
 </section>
 
-<!-- NEW: FROM THE STANDS -->
 <section class="section" aria-label="From the Stands">
   <h2>From the Stands</h2>
 
+  <div class="transmission" role="note" aria-live="polite">
+    <div class="transmission-top">
+      <div class="transmission-tag" id="txTag">FAN TRANSMISSION</div>
+      <div class="transmission-meta">
+        Source: GLB Supporter Network • ID: <span id="txId">—</span>
+      </div>
+    </div>
+
+    <!-- IMAGE -->
+    <img id="txImage" src="" alt="Transmission image" style="width:100%;height:220px;object-fit:cover;margin-bottom:14px;border:1px solid var(--line);" />
+
+    <!-- QUOTE -->
+    <p class="transmission-quote" id="txQuote">Loading transmission.</p>
+
+    <!-- LOCATION -->
+    <div class="transmission-loc" style="margin-top:10px;font-family:var(--mono);font-size:11px;color:var(--ink-soft);">
+      Filed: <span id="txLocation">—</span>
+    </div>
+  </div>
+</section>
   <div class="transmission" role="note" aria-live="polite">
     <div class="transmission-top">
       <div class="transmission-tag" id="txTag">FAN TRANSMISSION</div>

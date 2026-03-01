@@ -1,13 +1,6 @@
 /* ==========================================================
    GLB Home — League Office Live Index Controller
-   Data sources (relative):
-   data/hero.json
-   data/day-YYYY-MM-DD.json (preferred)
-   data/schedule.json       (fallback)
-   data/standings.json
-   data/featured.json
-   data/clubs.json
-   data/transmissions.json  (From the Stands)
+   Relative paths for GitHub Pages (/GLB/)
    ========================================================== */
 
 (function () {
@@ -21,6 +14,10 @@
     heroPaused: false,
     clubs: []
   };
+
+  /* ==========================================================
+     Utilities
+  ========================================================== */
 
   function safeText(el, text) {
     if (!el) return;
@@ -52,7 +49,7 @@
   async function fetchJSON(path) {
     try {
       const res = await fetch(path, { cache: "no-store" });
-      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      if (!res.ok) throw new Error();
       return await res.json();
     } catch {
       return null;
@@ -68,7 +65,10 @@
     return String(n).padStart(2, "0");
   }
 
-  /* Provenance Timestamp (Eastern Time) */
+  /* ==========================================================
+     Provenance Timestamp (Eastern Time)
+  ========================================================== */
+
   function setProvenanceTime() {
     const el = $("#provTime");
     if (!el) return;
@@ -200,7 +200,7 @@
     if (!wrap) return;
 
     if (!Array.isArray(games) || games.length === 0) {
-      wrap.innerHTML = `<div class="empty">No games today.</div>`;
+      wrap.innerHTML = `<div>No games today.</div>`;
       return;
     }
 
@@ -221,11 +221,11 @@
 
       return `
         <a class="game" href="${buildGameLink(dateISO, away, home)}">
-          <div class="game-left">
+          <div>
             <p class="matchup">${away} @ ${home}</p>
             <p class="statusline">${timeLabel}</p>
           </div>
-          <div class="game-right">
+          <div>
             <div class="score">${status === "upcoming" ? "—" : score}</div>
             <div class="time">${status === "upcoming" ? timeLabel : "Box Score →"}</div>
           </div>
@@ -235,8 +235,7 @@
   }
 
   async function loadToday() {
-    const params = new URLSearchParams(window.location.search);
-    const dateISO = params.get("date") || toISODate(new Date());
+    const dateISO = toISODate(new Date());
 
     const dayData = await fetchJSON(PATH + `day-${dateISO}.json`);
     if (dayData?.games) {
@@ -255,30 +254,29 @@
 
   function renderStandings(data) {
     safeText($("#standingsAsOf"), data?.asOf ? `As of ${formatLocalDateLabel(data.asOf)}` : "—");
-
     const target = $("#standingsTables");
     if (!target) return;
 
     const divs = data?.divisions || {};
-    const rowsA = Array.isArray(divs.americas) ? divs.americas : [];
-    const rowsP = Array.isArray(divs.pacific) ? divs.pacific : [];
+    const rowsA = divs.americas || [];
+    const rowsP = divs.pacific || [];
 
     function table(title, rows) {
       return `
-        <div style="margin:14px 0 8px;font-family:ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:1px;text-transform:uppercase;color:#2c3a44;">
+        <div style="margin:14px 0 8px;font-family:monospace;font-size:12px;text-transform:uppercase;">
           ${title}
         </div>
         <table>
           <thead>
-            <tr><th>Team</th><th class="num">W-L</th><th class="num">GB</th><th class="num">RD</th></tr>
+            <tr><th>Team</th><th>W-L</th><th>GB</th><th>RD</th></tr>
           </thead>
           <tbody>
             ${rows.map(r => `
               <tr>
-                <td><a href="${r.link || "#"}">${r.team || "—"}</a></td>
-                <td class="num">${(r.w ?? "—")}-${(r.l ?? "—")}</td>
-                <td class="num">${r.gb ?? "—"}</td>
-                <td class="num">${(r.rd ?? "—")}</td>
+                <td><a href="${r.link || "#"}">${r.team}</a></td>
+                <td>${r.w}-${r.l}</td>
+                <td>${r.gb}</td>
+                <td>${r.rd}</td>
               </tr>
             `).join("")}
           </tbody>
@@ -286,7 +284,8 @@
       `;
     }
 
-    target.innerHTML = table("Americas Division", rowsA) + table("Pacific Division", rowsP);
+    target.innerHTML = table("Americas Division", rowsA) +
+                       table("Pacific Division", rowsP);
   }
 
   async function loadStandings() {
@@ -303,18 +302,16 @@
     if (!body) return;
 
     if (!data?.club) {
-      body.innerHTML = `<div class="empty">No memo filed.</div>`;
+      body.innerHTML = `<div>No memo filed.</div>`;
       return;
     }
 
     body.innerHTML = `
-      <div class="featured">
-        <img src="${data.club.image}" alt="${data.club.name || "Featured club"}" />
-        <div>
-          <h3>${data.club.name || "—"}</h3>
-          <p>${data.club.copy || ""}</p>
-          <a href="${data.club.link || "#clubs"}">View Club Dossier →</a>
-        </div>
+      <div>
+        <img src="${data.club.image}" style="width:100%;max-height:240px;object-fit:cover;">
+        <h3>${data.club.name}</h3>
+        <p>${data.club.copy}</p>
+        <a href="${data.club.link}">View Club Dossier →</a>
       </div>
     `;
   }
@@ -332,31 +329,25 @@
     const grid = $("#clubsGrid");
     if (!grid) return;
 
-    if (!Array.isArray(state.clubs) || state.clubs.length === 0) {
-      grid.innerHTML = `<div class="empty">No clubs loaded.</div>`;
-      return;
-    }
-
     grid.innerHTML = state.clubs.map(c => `
-      <a class="club" href="${c.link || "#"}">
-        <p class="name">${c.name || "—"}</p>
-        <div class="meta2">${(c.division || "—").toUpperCase()}</div>
+      <a class="club" href="${c.link}">
+        <p class="name">${c.name}</p>
+        <div class="meta2">${c.division.toUpperCase()}</div>
       </a>
     `).join("");
   }
 
   async function loadClubs() {
     const data = await fetchJSON(PATH + "clubs.json");
-    state.clubs = Array.isArray(data?.clubs) ? data.clubs : [];
+    state.clubs = data?.clubs || [];
     renderClubs();
   }
 
   /* ==========================================================
-     FROM THE STANDS
+     FROM THE STANDS (WITH IMAGE)
   ========================================================== */
 
   function makeId(dateISO, idx) {
-    // GLB-TX-YYYYMMDD-##
     const ymd = dateISO.replaceAll("-", "");
     return `GLB-TX-${ymd}-${String(idx + 1).padStart(2, "0")}`;
   }
@@ -364,24 +355,24 @@
   async function loadTransmission() {
     const dateISO = toISODate(new Date());
     const data = await fetchJSON(PATH + "transmissions.json");
-    const items = Array.isArray(data?.items) ? data.items : [];
+    const items = data?.items || [];
 
-    if (!items.length) {
-      safeText($("#txQuote"), "No transmission filed.");
-      safeText($("#txLocation"), "—");
-      safeText($("#txId"), "—");
-      safeText($("#txTag"), "FAN TRANSMISSION");
-      return;
-    }
+    if (!items.length) return;
 
-    // Stable “random”: rotate daily but not every refresh
-    const pick = (new Date(dateISO).getDate() + new Date(dateISO).getMonth()) % items.length;
+    const pick = new Date().getDate() % items.length;
     const item = items[pick];
 
     safeText($("#txTag"), (item.tag || "FAN TRANSMISSION").toUpperCase());
-    safeText($("#txQuote"), `“${item.quote || "—"}”`);
-    safeText($("#txLocation"), item.location || "—");
+    safeText($("#txQuote"), `“${item.quote}”`);
+    safeText($("#txLocation"), item.location);
     safeText($("#txId"), makeId(dateISO, pick));
+
+    const img = document.getElementById("txImage");
+    if (img && item.image) {
+      img.src = item.image;
+      img.alt = `Transmission — ${item.location}`;
+      img.style.display = "block";
+    }
   }
 
   /* ==========================================================
@@ -402,4 +393,5 @@
   }
 
   init();
+
 })();

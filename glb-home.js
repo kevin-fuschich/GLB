@@ -1,19 +1,25 @@
-/* GLB Home — League Office Live Index Controller
-   FIX: uses RELATIVE paths so it works at /GLB/ on GitHub Pages.
-*/
+/* ==========================================================
+   GLB Home — League Office Live Index Controller
+   Data sources (relative):
+   data/hero.json
+   data/day-YYYY-MM-DD.json (preferred)
+   data/schedule.json       (fallback)
+   data/standings.json
+   data/featured.json
+   data/clubs.json
+   data/transmissions.json  (From the Stands)
+   ========================================================== */
 
 (function () {
   const $ = (sel) => document.querySelector(sel);
-  const PATH = "data/"; // relative to index.html in /GLB/
+  const PATH = "data/";
 
   const state = {
     hero: [],
     heroIndex: 0,
     heroTimer: null,
     heroPaused: false,
-    clubs: [],
-    clubFilter: "all",
-    standingsFilter: "all"
+    clubs: []
   };
 
   function safeText(el, text) {
@@ -62,6 +68,7 @@
     return String(n).padStart(2, "0");
   }
 
+  /* Provenance Timestamp (Eastern Time) */
   function setProvenanceTime() {
     const el = $("#provTime");
     if (!el) return;
@@ -85,7 +92,10 @@
     el.textContent = `${parts.year}-${parts.month}-${parts.day} ${parts.hour}:${parts.minute}`;
   }
 
-  /* HERO */
+  /* ==========================================================
+     HERO
+  ========================================================== */
+
   function updateHeroCounter() {
     const el = $("#heroCounter");
     if (!el) return;
@@ -98,8 +108,7 @@
     safeText($("#heroTitle"), item.team || "—");
     safeText($("#heroCaption"), item.caption || "");
     const link = $("#heroLink");
-    const target = item.link || "#clubs";
-    if (link) link.href = target;
+    if (link) link.href = item.link || "#clubs";
   }
 
   function renderHero() {
@@ -131,7 +140,7 @@
     updateHeroCounter();
   }
 
-  function goHero(nextIndex) {
+  function goHero(nextIndex, user = false) {
     state.heroIndex = clampIndex(nextIndex, state.hero.length);
 
     document.querySelectorAll(".hero-slide").forEach((s, idx) => {
@@ -140,18 +149,32 @@
 
     if (state.hero[state.heroIndex]) applyHeroOverlay(state.hero[state.heroIndex]);
     updateHeroCounter();
+
+    if (user) restartHeroTimer();
   }
 
   function startHeroTimer() {
-    clearInterval(state.heroTimer);
+    stopHeroTimer();
     state.heroTimer = setInterval(() => {
       if (!state.heroPaused) goHero(state.heroIndex + 1);
     }, 12000);
   }
 
+  function stopHeroTimer() {
+    if (state.heroTimer) {
+      clearInterval(state.heroTimer);
+      state.heroTimer = null;
+    }
+  }
+
+  function restartHeroTimer() {
+    stopHeroTimer();
+    startHeroTimer();
+  }
+
   function wireHeroControls() {
-    $("#heroPrev")?.addEventListener("click", () => goHero(state.heroIndex - 1));
-    $("#heroNext")?.addEventListener("click", () => goHero(state.heroIndex + 1));
+    $("#heroPrev")?.addEventListener("click", () => goHero(state.heroIndex - 1, true));
+    $("#heroNext")?.addEventListener("click", () => goHero(state.heroIndex + 1, true));
   }
 
   async function loadHero() {
@@ -162,7 +185,10 @@
     startHeroTimer();
   }
 
-  /* TODAY */
+  /* ==========================================================
+     TODAY
+  ========================================================== */
+
   function buildGameLink(dateISO, away, home) {
     const key = encodeURIComponent(`${away}@${home}`);
     return `game.html?date=${dateISO}&game=${key}`;
@@ -223,9 +249,13 @@
     renderToday(dateISO, games);
   }
 
-  /* STANDINGS */
+  /* ==========================================================
+     STANDINGS
+  ========================================================== */
+
   function renderStandings(data) {
     safeText($("#standingsAsOf"), data?.asOf ? `As of ${formatLocalDateLabel(data.asOf)}` : "—");
+
     const target = $("#standingsTables");
     if (!target) return;
 
@@ -235,7 +265,9 @@
 
     function table(title, rows) {
       return `
-        <div class="division-title">${title}</div>
+        <div style="margin:14px 0 8px;font-family:ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:1px;text-transform:uppercase;color:#2c3a44;">
+          ${title}
+        </div>
         <table>
           <thead>
             <tr><th>Team</th><th class="num">W-L</th><th class="num">GB</th><th class="num">RD</th></tr>
@@ -243,10 +275,10 @@
           <tbody>
             ${rows.map(r => `
               <tr>
-                <td class="team"><a href="${r.link || "#"}">${r.team || "—"}</a></td>
+                <td><a href="${r.link || "#"}">${r.team || "—"}</a></td>
                 <td class="num">${(r.w ?? "—")}-${(r.l ?? "—")}</td>
                 <td class="num">${r.gb ?? "—"}</td>
-                <td class="num">${r.rd ?? "—"}</td>
+                <td class="num">${(r.rd ?? "—")}</td>
               </tr>
             `).join("")}
           </tbody>
@@ -262,7 +294,10 @@
     if (data) renderStandings(data);
   }
 
-  /* FEATURED */
+  /* ==========================================================
+     FEATURED
+  ========================================================== */
+
   function renderFeatured(data) {
     const body = $("#featuredBody");
     if (!body) return;
@@ -289,7 +324,10 @@
     renderFeatured(data);
   }
 
-  /* CLUBS */
+  /* ==========================================================
+     CLUBS
+  ========================================================== */
+
   function renderClubs() {
     const grid = $("#clubsGrid");
     if (!grid) return;
@@ -313,11 +351,50 @@
     renderClubs();
   }
 
+  /* ==========================================================
+     FROM THE STANDS
+  ========================================================== */
+
+  function makeId(dateISO, idx) {
+    // GLB-TX-YYYYMMDD-##
+    const ymd = dateISO.replaceAll("-", "");
+    return `GLB-TX-${ymd}-${String(idx + 1).padStart(2, "0")}`;
+  }
+
+  async function loadTransmission() {
+    const dateISO = toISODate(new Date());
+    const data = await fetchJSON(PATH + "transmissions.json");
+    const items = Array.isArray(data?.items) ? data.items : [];
+
+    if (!items.length) {
+      safeText($("#txQuote"), "No transmission filed.");
+      safeText($("#txLocation"), "—");
+      safeText($("#txId"), "—");
+      safeText($("#txTag"), "FAN TRANSMISSION");
+      return;
+    }
+
+    // Stable “random”: rotate daily but not every refresh
+    const pick = (new Date(dateISO).getDate() + new Date(dateISO).getMonth()) % items.length;
+    const item = items[pick];
+
+    safeText($("#txTag"), (item.tag || "FAN TRANSMISSION").toUpperCase());
+    safeText($("#txQuote"), `“${item.quote || "—"}”`);
+    safeText($("#txLocation"), item.location || "—");
+    safeText($("#txId"), makeId(dateISO, pick));
+  }
+
+  /* ==========================================================
+     INIT
+  ========================================================== */
+
   async function init() {
     setProvenanceTime();
+
     await Promise.allSettled([
       loadHero(),
       loadToday(),
+      loadTransmission(),
       loadStandings(),
       loadFeatured(),
       loadClubs()

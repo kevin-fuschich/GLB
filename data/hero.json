@@ -2,24 +2,38 @@
   "items": [
     {
       "image": "images/hero/hero-01.png",
-      "team": "St. Paul Frost",
-      "caption": "Night operations. Gate count logged.",
-      "link": "team-stpaul.html",
-      "division": "Americas"
-    },
-    {
-      "image": "images/hero/hero-02.png",
       "team": "San Pedro Cocolos",
-      "caption": "Lower bowl: partial fill, late innings.",
+      "caption": "Filed: Pacific night session.",
       "link": "team-sanpedro.html",
       "division": "Pacific"
     },
     {
-      "image": "images/hero/hero-03.png",
-      "team": "Louisville Naturals",
-      "caption": "Roster photos pending final clearance.",
-      "link": "team-louisville.html",
+      "image": "images/hero/hero-02.png",
+      "team": "Toledo Assembly",
+      "caption": "Gate count logged. Wind: variable.",
+      "link": "team-toledo.html",
       "division": "Americas"
+    },
+    {
+      "image": "images/hero/hero-03.png",
+      "team": "Vancouver Current",
+      "caption": "Upper bowl partial fill.",
+      "link": "team-vancouver.html",
+      "division": "Pacific"
+    },
+    {
+      "image": "images/hero/hero-04.png",
+      "team": "St. Paul Frost",
+      "caption": "First pitch: 19:10 local.",
+      "link": "team-stpaul.html",
+      "division": "Americas"
+    },
+    {
+      "image": "images/hero/hero-05.png",
+      "team": "Monterrey Cementeros",
+      "caption": "Lower deck pressure rising.",
+      "link": "team-monterrey.html",
+      "division": "Pacific"
     }
   ]
 }

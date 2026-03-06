@@ -1,0 +1,11 @@
+{
+ "Americas": [
+  {"team":"Louisville Naturals","W":12,"L":6,"GB":0},
+  {"team":"Toledo Assembly","W":10,"L":8,"GB":2},
+  {"team":"St. Paul Frost","W":9,"L":9,"GB":3}
+ ],
+ "Pacific": [
+  {"team":"San Pedro Cocolos","W":13,"L":5,"GB":0},
+  {"team":"Vancouver Current","W":11,"L":7,"GB":2}
+ ]
+}

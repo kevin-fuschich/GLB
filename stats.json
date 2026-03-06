@@ -1,0 +1,11 @@
+{
+ "batting":[
+  {"player":"Mateo Salvat","team":"Louisville","AVG":".342","HR":6,"RBI":19},
+  {"player":"Isaac Nyambe","team":"Louisville","AVG":".318","HR":4,"RBI":17}
+ ],
+
+ "pitching":[
+  {"player":"Aurélien Bastide","team":"Louisville","ERA":2.14,"W":4,"SO":41},
+  {"player":"Nasir Darzi","team":"Louisville","ERA":2.80,"W":3,"SO":33}
+ ]
+}

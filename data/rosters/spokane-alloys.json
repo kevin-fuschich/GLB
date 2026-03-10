@@ -1,0 +1,23 @@
+{
+  "team": "Spokane Alloys",
+  "players": [
+    {
+      "name": "Kellan Brynden",
+      "slug": "kellan-brynden",
+      "position": "SP",
+      "bats": "R",
+      "throws": "R",
+      "age": 29,
+      "photo": "kellan-brynden.jpg"
+    },
+    {
+      "name": "Oskar Svanholm",
+      "slug": "oskar-svanholm",
+      "position": "SP",
+      "bats": "L",
+      "throws": "L",
+      "age": 26,
+      "photo": "oskar-svanholm.jpg"
+    }
+  ]
+}

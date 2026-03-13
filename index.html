@@ -4,28 +4,28 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Global League Baseball (GLB)</title>
-  <meta name="description" content="Global League Baseball — official league site for standings, teams, schedules, and league bulletins." />
+  <meta name="description" content="Global League Baseball official site. Scores, standings, schedule, teams, stats, and league news." />
 
   <style>
     :root{
-      --ink-navy:#002244;
-      --ink-black:#111111;
-      --paper:#f2f0ec;
-      --field-white:#fffdf8;
-      --line-grey:#cfc8bc;
-      --soft-line:#e6e0d6;
-      --meta-grey:#5f5a52;
-      --muted-ink:#3d3a35;
-      --score-bg:#0d2238;
-      --score-panel:#16324d;
-      --score-line:rgba(255,255,255,0.14);
-      --score-text:#f4f1ea;
-      --accent:#d9d1c2;
+      --navy:#0b1e33;
+      --navy-2:#102843;
+      --blue:#1d4f91;
+      --blue-soft:#eaf1fb;
+      --border:#d9dee5;
+      --border-dark:#2a3f59;
+      --bg:#f3f5f7;
+      --card:#ffffff;
+      --text:#111111;
+      --muted:#5f6b7a;
+      --light-text:#dfe7f1;
+      --white:#ffffff;
 
-      --font-serif:"Georgia","Times New Roman",serif;
-      --font-sans:"Helvetica Neue",Helvetica,Arial,sans-serif;
+      --font-sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+      --font-serif:Georgia,"Times New Roman",serif;
 
-      --max:1180px;
+      --max:1280px;
+      --radius:14px;
     }
 
     *{ box-sizing:border-box; }
@@ -33,116 +33,109 @@
     html, body{
       margin:0;
       padding:0;
-      background:var(--paper);
-      color:var(--ink-black);
+      background:var(--bg);
+      color:var(--text);
       font-family:var(--font-sans);
       -webkit-font-smoothing:antialiased;
     }
 
-    a{ color:inherit; }
+    a{
+      color:inherit;
+      text-decoration:none;
+    }
 
-    /* TOP SCOREBOARD NAV */
+    img{
+      display:block;
+      max-width:100%;
+    }
+
+    .container{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:0 20px;
+    }
+
+    /* TOP NAV */
     .site-header{
+      background:var(--navy);
+      color:var(--white);
+      border-bottom:1px solid rgba(255,255,255,0.08);
       position:sticky;
       top:0;
       z-index:1000;
-      background:var(--score-bg);
-      color:var(--score-text);
-      border-bottom:1px solid rgba(255,255,255,0.08);
-      box-shadow:0 2px 10px rgba(0,0,0,0.12);
     }
 
-    .scoreboard-bar{
-      max-width:var(--max);
-      margin:0 auto;
-      display:grid;
-      grid-template-columns: 180px 1fr auto;
-      align-items:stretch;
+    .topbar{
       min-height:72px;
-    }
-
-    .brand-cell{
       display:flex;
       align-items:center;
-      padding:0 18px;
-      border-right:1px solid var(--score-line);
-      background:
-        linear-gradient(to bottom, rgba(255,255,255,0.03), rgba(255,255,255,0));
+      justify-content:space-between;
+      gap:20px;
     }
 
-    .brand-link{
-      text-decoration:none;
-      color:var(--score-text);
+    .brand{
       display:flex;
-      flex-direction:column;
-      line-height:1.05;
+      align-items:center;
+      gap:14px;
+      min-width:0;
+      flex-shrink:0;
     }
 
     .brand-mark{
-      font-size:22px;
-      font-weight:700;
-      letter-spacing:1.6px;
+      font-weight:800;
+      letter-spacing:1.4px;
+      font-size:24px;
+      line-height:1;
     }
 
     .brand-sub{
-      font-size:10px;
+      font-size:11px;
       text-transform:uppercase;
-      letter-spacing:1.6px;
-      color:rgba(255,255,255,0.72);
-      margin-top:4px;
+      letter-spacing:1.2px;
+      color:var(--light-text);
+      white-space:nowrap;
     }
 
-    .nav-strip{
+    .nav-links{
       display:flex;
-      align-items:stretch;
+      align-items:center;
+      gap:0;
+      flex:1;
+      justify-content:center;
       min-width:0;
     }
 
-    .nav-strip a{
-      text-decoration:none;
-      color:rgba(255,255,255,0.84);
-      padding:0 18px;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      border-right:1px solid var(--score-line);
+    .nav-links a{
+      color:rgba(255,255,255,0.92);
+      padding:26px 16px 22px;
+      font-size:13px;
+      font-weight:600;
       text-transform:uppercase;
-      letter-spacing:1px;
-      font-size:12px;
+      letter-spacing:0.8px;
+      border-bottom:4px solid transparent;
       white-space:nowrap;
-      position:relative;
     }
 
-    .nav-strip a:hover{
+    .nav-links a:hover{
       background:rgba(255,255,255,0.04);
-      color:#ffffff;
     }
 
-    .nav-strip a.active{
-      color:#ffffff;
-      background:linear-gradient(to bottom, rgba(255,255,255,0.06), rgba(255,255,255,0.015));
+    .nav-links a.active{
+      border-bottom-color:#7fb0ff;
     }
 
-    .nav-strip a.active::after{
-      content:"";
-      position:absolute;
-      left:10px;
-      right:10px;
-      bottom:8px;
-      height:2px;
-      background:var(--accent);
-    }
-
-    .meta-cell{
+    .header-right{
       display:flex;
       align-items:center;
       gap:16px;
-      padding:0 18px;
-      border-left:1px solid var(--score-line);
+      flex-shrink:0;
+    }
+
+    .header-meta{
       font-size:11px;
       text-transform:uppercase;
       letter-spacing:1px;
-      color:rgba(255,255,255,0.76);
+      color:var(--light-text);
       white-space:nowrap;
     }
 
@@ -152,339 +145,397 @@
       border:0;
       background:none;
       color:#fff;
-      font-size:22px;
-      padding:0 16px;
+      font-size:24px;
       cursor:pointer;
-      border-left:1px solid var(--score-line);
+      padding:8px 0 8px 8px;
     }
 
     .mobile-menu{
       display:none;
-      border-top:1px solid var(--score-line);
-      background:var(--score-panel);
+      background:var(--navy-2);
+      border-top:1px solid rgba(255,255,255,0.08);
     }
 
     .mobile-menu a{
       display:block;
       padding:16px 20px;
-      text-decoration:none;
-      color:rgba(255,255,255,0.88);
-      border-top:1px solid rgba(255,255,255,0.08);
-      text-transform:uppercase;
-      letter-spacing:1px;
-      font-size:12px;
-    }
-
-    .mobile-menu a.active{
       color:#fff;
-      background:rgba(255,255,255,0.04);
+      font-size:13px;
+      font-weight:600;
+      text-transform:uppercase;
+      letter-spacing:0.8px;
+      border-top:1px solid rgba(255,255,255,0.08);
     }
 
     .mobile-menu.open{
       display:block;
     }
 
-    /* HERO */
-    .hero-wrap{
-      padding:28px 20px 18px;
+    /* SCORES STRIP */
+    .scores-strip{
+      background:#ffffff;
+      border-bottom:1px solid var(--border);
     }
 
-    .hero{
-      max-width:var(--max);
-      margin:0 auto;
-      background:var(--field-white);
-      border:1px solid var(--line-grey);
-      box-shadow:0 10px 30px rgba(0,0,0,0.05);
-      overflow:hidden;
-    }
-
-    .hero-grid{
+    .scores-row{
       display:grid;
-      grid-template-columns: 1.2fr 0.9fr;
-      min-height:540px;
+      grid-template-columns: repeat(4, minmax(0,1fr));
+      gap:0;
     }
 
-    .hero-copy{
-      padding:52px 52px 42px;
-      position:relative;
-      background:
-        linear-gradient(to bottom, rgba(255,255,255,0.72), rgba(255,255,255,0.92)),
-        repeating-linear-gradient(
-          to bottom,
-          transparent 0,
-          transparent 29px,
-          rgba(0,34,68,0.03) 30px
-        );
-    }
-
-    .hero-copy::after{
-      content:"";
-      position:absolute;
-      right:32px;
-      top:26px;
-      width:140px;
-      height:140px;
-      border-radius:50%;
-      border:2px solid rgba(0,34,68,0.07);
-      box-shadow:
-        inset 0 0 0 12px rgba(0,34,68,0.03),
-        inset 0 0 0 28px rgba(0,34,68,0.015);
-      pointer-events:none;
-    }
-
-    .eyebrow{
-      display:inline-block;
-      font-size:11px;
-      text-transform:uppercase;
-      letter-spacing:1.5px;
-      color:var(--meta-grey);
-      margin-bottom:18px;
-      padding-bottom:7px;
-      border-bottom:1px solid rgba(0,34,68,0.15);
-    }
-
-    .hero h1{
-      margin:0 0 18px;
-      font-family:var(--font-serif);
-      font-size:56px;
-      line-height:0.96;
-      font-weight:700;
-      color:var(--ink-navy);
-      max-width:620px;
-      letter-spacing:-0.8px;
-    }
-
-    .hero-deck{
-      max-width:520px;
-      margin:0 0 26px;
-      color:var(--muted-ink);
-      font-size:16px;
-      line-height:1.6;
-    }
-
-    .hero-actions{
-      display:flex;
-      gap:12px;
-      flex-wrap:wrap;
-      margin-bottom:32px;
-    }
-
-    .btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      min-height:44px;
-      padding:0 18px;
-      text-decoration:none;
-      border:1px solid var(--ink-navy);
-      font-size:12px;
-      letter-spacing:1px;
-      text-transform:uppercase;
-      transition:0.15s ease;
-    }
-
-    .btn-primary{
-      background:var(--ink-navy);
-      color:#fff;
-    }
-
-    .btn-primary:hover{
-      background:#0b315b;
-    }
-
-    .btn-secondary{
-      background:transparent;
-      color:var(--ink-navy);
-    }
-
-    .btn-secondary:hover{
-      background:#f3f6f9;
-    }
-
-    .hero-notes{
-      display:grid;
-      grid-template-columns: repeat(3, minmax(0,1fr));
-      gap:18px;
-      padding-top:20px;
-      border-top:1px solid var(--soft-line);
-    }
-
-    .note{
+    .score-cell{
+      padding:14px 16px;
+      border-right:1px solid var(--border);
       min-width:0;
     }
 
-    .note-label{
-      font-size:10px;
+    .score-cell:last-child{
+      border-right:none;
+    }
+
+    .score-top{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+      margin-bottom:8px;
+      font-size:11px;
       text-transform:uppercase;
-      letter-spacing:1.2px;
-      color:var(--meta-grey);
-      margin-bottom:6px;
+      letter-spacing:0.7px;
+      color:var(--muted);
     }
 
-    .note-value{
-      font-family:var(--font-serif);
-      font-size:17px;
-      color:var(--ink-navy);
-      line-height:1.3;
+    .score-status{
+      font-weight:700;
+      color:var(--blue);
     }
 
-    .hero-image{
+    .team-line{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      padding:3px 0;
+      font-size:14px;
+    }
+
+    .team-name{
+      min-width:0;
+      overflow:hidden;
+      text-overflow:ellipsis;
+      white-space:nowrap;
+    }
+
+    .team-score{
+      font-weight:700;
+      flex-shrink:0;
+    }
+
+    /* PAGE */
+    .page{
+      padding:22px 0 36px;
+    }
+
+    .main-grid{
+      display:grid;
+      grid-template-columns: minmax(0, 2fr) minmax(320px, 0.95fr);
+      gap:22px;
+      align-items:start;
+    }
+
+    .card{
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      overflow:hidden;
+      box-shadow:0 1px 2px rgba(16,24,40,0.04);
+    }
+
+    /* HERO */
+    .hero-card{
+      overflow:hidden;
+    }
+
+    .hero-media{
       position:relative;
-      min-height:340px;
+      min-height:420px;
       background:
-        linear-gradient(rgba(0,0,0,0.08), rgba(0,0,0,0.18)),
+        linear-gradient(to top, rgba(0,0,0,0.65), rgba(0,0,0,0.12)),
         url("images/hero/hero-01.png") center center / cover no-repeat;
-      border-left:1px solid var(--line-grey);
     }
 
-    .hero-caption{
+    .hero-content{
       position:absolute;
       left:0;
       right:0;
       bottom:0;
-      padding:16px 18px;
-      background:linear-gradient(to top, rgba(0,0,0,0.66), rgba(0,0,0,0));
+      padding:28px 28px 26px;
       color:#fff;
     }
 
-    .hero-caption .cap-kicker{
+    .hero-kicker{
+      display:inline-block;
+      margin-bottom:10px;
+      font-size:11px;
+      font-weight:700;
+      text-transform:uppercase;
+      letter-spacing:0.9px;
+      color:#cfe1ff;
+    }
+
+    .hero-title{
+      margin:0 0 10px;
+      font-size:38px;
+      line-height:1.04;
+      font-weight:800;
+      max-width:760px;
+    }
+
+    .hero-deck{
+      margin:0;
+      max-width:760px;
+      font-size:16px;
+      line-height:1.5;
+      color:rgba(255,255,255,0.9);
+    }
+
+    .hero-links{
+      display:flex;
+      gap:18px;
+      flex-wrap:wrap;
+      padding:16px 28px 18px;
+      border-top:1px solid var(--border);
+      background:#fff;
+    }
+
+    .hero-link{
+      font-size:13px;
+      font-weight:700;
+      color:var(--blue);
+    }
+
+    .hero-link:hover{
+      text-decoration:underline;
+    }
+
+    /* SIDE RAIL */
+    .rail-section{
+      padding:18px 18px 16px;
+      border-bottom:1px solid var(--border);
+    }
+
+    .rail-section:last-child{
+      border-bottom:none;
+    }
+
+    .section-label{
+      margin:0 0 12px;
+      font-size:12px;
+      font-weight:800;
+      text-transform:uppercase;
+      letter-spacing:0.8px;
+      color:#22364c;
+    }
+
+    .news-list{
+      display:grid;
+      gap:14px;
+    }
+
+    .news-item{
+      padding-bottom:14px;
+      border-bottom:1px solid var(--border);
+    }
+
+    .news-item:last-child{
+      padding-bottom:0;
+      border-bottom:none;
+    }
+
+    .news-tag{
       display:block;
+      margin-bottom:5px;
+      font-size:10px;
+      font-weight:800;
+      text-transform:uppercase;
+      letter-spacing:0.8px;
+      color:var(--blue);
+    }
+
+    .news-headline{
+      margin:0 0 4px;
+      font-size:17px;
+      line-height:1.25;
+      font-weight:800;
+    }
+
+    .news-meta{
+      font-size:12px;
+      color:var(--muted);
+    }
+
+    .mini-standings table{
+      width:100%;
+      border-collapse:collapse;
+      font-size:13px;
+    }
+
+    .mini-standings th{
+      text-align:right;
+      padding:0 0 10px 8px;
       font-size:10px;
       text-transform:uppercase;
-      letter-spacing:1.2px;
-      opacity:0.82;
-      margin-bottom:4px;
+      letter-spacing:0.7px;
+      color:var(--muted);
+      border-bottom:1px solid var(--border);
     }
 
-    .hero-caption .cap-line{
-      font-size:13px;
-      line-height:1.45;
+    .mini-standings th:first-child,
+    .mini-standings td:first-child{
+      text-align:left;
+      padding-left:0;
     }
 
-    /* CONTENT */
-    .section{
-      max-width:var(--max);
-      margin:0 auto;
-      padding:18px 20px 48px;
+    .mini-standings td{
+      padding:9px 0 9px 8px;
+      border-bottom:1px solid #edf0f3;
+      text-align:right;
     }
 
-    .section-header{
+    .mini-standings tr:last-child td{
+      border-bottom:none;
+    }
+
+    .mini-standings .leader{
+      font-weight:700;
+    }
+
+    /* LOWER MODULES */
+    .modules{
+      margin-top:22px;
+      display:grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap:22px;
+    }
+
+    .module-head{
       display:flex;
+      align-items:center;
       justify-content:space-between;
-      align-items:end;
-      gap:20px;
-      border-bottom:1px solid var(--line-grey);
-      padding-bottom:12px;
-      margin-bottom:20px;
+      gap:16px;
+      padding:18px 18px 14px;
+      border-bottom:1px solid var(--border);
     }
 
-    .section-title{
-      font-family:var(--font-serif);
-      font-size:28px;
-      color:var(--ink-navy);
+    .module-title{
       margin:0;
+      font-size:19px;
+      line-height:1.15;
+      font-weight:800;
+      color:#1a2c42;
     }
 
-    .section-meta{
-      font-size:11px;
-      text-transform:uppercase;
-      letter-spacing:1.2px;
-      color:var(--meta-grey);
+    .module-link{
+      font-size:12px;
+      font-weight:700;
+      color:var(--blue);
       white-space:nowrap;
     }
 
-    .quick-grid{
+    .module-body{
+      padding:16px 18px 18px;
+    }
+
+    .schedule-list,
+    .story-list,
+    .team-list{
       display:grid;
-      grid-template-columns: repeat(4, minmax(0,1fr));
-      gap:16px;
+      gap:14px;
     }
 
-    .quick-card{
-      background:var(--field-white);
-      border:1px solid var(--line-grey);
-      text-decoration:none;
-      color:inherit;
-      padding:18px;
-      min-height:150px;
-      display:flex;
-      flex-direction:column;
-      justify-content:space-between;
-      box-shadow:0 4px 16px rgba(0,0,0,0.03);
+    .schedule-item,
+    .story-item,
+    .team-item{
+      padding-bottom:14px;
+      border-bottom:1px solid var(--border);
     }
 
-    .quick-card:hover{
-      transform:translateY(-1px);
-      box-shadow:0 8px 20px rgba(0,0,0,0.05);
+    .schedule-item:last-child,
+    .story-item:last-child,
+    .team-item:last-child{
+      padding-bottom:0;
+      border-bottom:none;
     }
 
-    .quick-label{
+    .schedule-date,
+    .story-type,
+    .team-label{
+      display:block;
+      margin-bottom:4px;
       font-size:10px;
+      font-weight:800;
       text-transform:uppercase;
-      letter-spacing:1.2px;
-      color:var(--meta-grey);
-      margin-bottom:12px;
+      letter-spacing:0.8px;
+      color:var(--blue);
     }
 
-    .quick-title{
-      font-family:var(--font-serif);
-      color:var(--ink-navy);
-      font-size:22px;
-      line-height:1.05;
-      margin:0 0 8px;
+    .schedule-matchup,
+    .story-title-sm,
+    .team-title{
+      margin:0 0 3px;
+      font-size:16px;
+      line-height:1.28;
+      font-weight:800;
     }
 
-    .quick-text{
-      font-size:14px;
-      line-height:1.5;
-      color:var(--muted-ink);
-      margin:0;
+    .schedule-meta,
+    .story-meta,
+    .team-meta{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.45;
     }
 
+    /* FOOTER */
     .site-footer{
-      max-width:var(--max);
-      margin:0 auto;
-      padding:0 20px 40px;
-      color:var(--meta-grey);
-      font-size:11px;
-      text-transform:uppercase;
-      letter-spacing:1.2px;
+      margin-top:28px;
+      padding:0 0 40px;
     }
 
     .site-footer-inner{
-      border-top:1px solid var(--line-grey);
+      border-top:1px solid var(--border);
       padding-top:18px;
       display:flex;
       justify-content:space-between;
-      gap:18px;
+      gap:16px;
       flex-wrap:wrap;
+      font-size:11px;
+      font-weight:700;
+      text-transform:uppercase;
+      letter-spacing:0.8px;
+      color:var(--muted);
     }
 
-    @media (max-width: 980px){
-      .scoreboard-bar{
-        grid-template-columns: 1fr auto;
-      }
-
-      .meta-cell{
-        display:none;
-      }
-
-      .hero-grid{
-        grid-template-columns: 1fr;
-      }
-
-      .hero-image{
-        min-height:300px;
-        border-left:0;
-        border-top:1px solid var(--line-grey);
-      }
-
-      .quick-grid{
+    @media (max-width: 1100px){
+      .scores-row{
         grid-template-columns: repeat(2, minmax(0,1fr));
       }
+
+      .score-cell:nth-child(2){
+        border-right:none;
+      }
+
+      .score-cell:nth-child(-n+2){
+        border-bottom:1px solid var(--border);
+      }
+
+      .modules{
+        grid-template-columns: 1fr;
+      }
     }
 
-    @media (max-width: 760px){
-      .nav-strip{
+    @media (max-width: 920px){
+      .nav-links{
         display:none;
       }
 
@@ -492,51 +543,63 @@
         display:block;
       }
 
-      .brand-cell{
-        border-right:0;
+      .header-meta{
+        display:none;
       }
 
-      .hero-copy{
-        padding:34px 24px 30px;
+      .main-grid{
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 680px){
+      .container{
+        padding:0 14px;
       }
 
-      .hero h1{
-        font-size:40px;
-        max-width:none;
+      .topbar{
+        min-height:64px;
+      }
+
+      .brand-mark{
+        font-size:22px;
+      }
+
+      .brand-sub{
+        display:none;
+      }
+
+      .scores-row{
+        grid-template-columns: 1fr;
+      }
+
+      .score-cell{
+        border-right:none;
+        border-bottom:1px solid var(--border);
+      }
+
+      .score-cell:last-child{
+        border-bottom:none;
+      }
+
+      .hero-media{
+        min-height:360px;
+      }
+
+      .hero-content{
+        padding:22px 18px 18px;
+      }
+
+      .hero-title{
+        font-size:30px;
       }
 
       .hero-deck{
         font-size:15px;
       }
 
-      .hero-notes{
-        grid-template-columns: 1fr;
-        gap:14px;
-      }
-
-      .hero-wrap,
-      .section,
-      .site-footer{
-        padding-left:14px;
-        padding-right:14px;
-      }
-    }
-
-    @media (max-width: 540px){
-      .quick-grid{
-        grid-template-columns: 1fr;
-      }
-
-      .section-header{
-        display:block;
-      }
-
-      .section-meta{
-        margin-top:8px;
-      }
-
-      .hero h1{
-        font-size:34px;
+      .hero-links{
+        padding:14px 18px 16px;
       }
     }
   </style>
@@ -544,135 +607,291 @@
 <body>
 
   <header class="site-header">
-    <div class="scoreboard-bar">
-      <div class="brand-cell">
-        <a href="index.html" class="brand-link" aria-label="Global League Baseball home">
-          <span class="brand-mark">GLB</span>
-          <span class="brand-sub">Global League Baseball</span>
+    <div class="container">
+      <div class="topbar">
+        <a href="index.html" class="brand" aria-label="Global League Baseball home">
+          <div class="brand-mark">GLB</div>
+          <div class="brand-sub">Global League Baseball</div>
         </a>
+
+        <nav class="nav-links" aria-label="Primary">
+          <a href="index.html" class="active">Home</a>
+          <a href="scores.html">Scores</a>
+          <a href="standings.html">Standings</a>
+          <a href="schedule.html">Schedule</a>
+          <a href="teams.html">Teams</a>
+          <a href="stats.html">Stats</a>
+          <a href="news.html">News</a>
+        </nav>
+
+        <div class="header-right">
+          <div class="header-meta">Season 1 · Week 1</div>
+          <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">☰</button>
+        </div>
       </div>
-
-      <nav class="nav-strip" aria-label="Primary">
-        <a href="index.html" class="active">Home</a>
-        <a href="standings.html">Standings</a>
-        <a href="schedule.html">Schedule</a>
-        <a href="teams.html">Teams</a>
-        <a href="stadiums.html">Stadiums</a>
-        <a href="bulletin.html">League Bulletin</a>
-      </nav>
-
-      <div class="meta-cell">
-        <span>Season 01</span>
-        <span>Week 1</span>
-      </div>
-
-      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
-        ☰
-      </button>
     </div>
 
     <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile">
       <a href="index.html" class="active">Home</a>
+      <a href="scores.html">Scores</a>
       <a href="standings.html">Standings</a>
       <a href="schedule.html">Schedule</a>
       <a href="teams.html">Teams</a>
-      <a href="stadiums.html">Stadiums</a>
-      <a href="bulletin.html">League Bulletin</a>
+      <a href="stats.html">Stats</a>
+      <a href="news.html">News</a>
     </nav>
   </header>
 
-  <main>
-    <div class="hero-wrap">
-      <section class="hero" aria-label="Homepage hero">
-        <div class="hero-grid">
-          <div class="hero-copy">
-            <div class="eyebrow">Official League Index</div>
-            <h1>Baseball from everywhere. Logged like it matters.</h1>
-            <p class="hero-deck">
-              Global League Baseball is a structured, international baseball world built through clubs,
-              places, records, weather, logistics, and strange local identity. Follow the standings,
-              track the clubs, and move through the league like a real publication.
-            </p>
+  <section class="scores-strip" aria-label="Recent scores">
+    <div class="container">
+      <div class="scores-row">
+        <a class="score-cell" href="scores.html">
+          <div class="score-top">
+            <span>Final</span>
+            <span class="score-status">Box</span>
+          </div>
+          <div class="team-line">
+            <span class="team-name">San Pedro Cocolos</span>
+            <span class="team-score">7</span>
+          </div>
+          <div class="team-line">
+            <span class="team-name">Monterrey Cementeros</span>
+            <span class="team-score">1</span>
+          </div>
+        </a>
 
-            <div class="hero-actions">
-              <a class="btn btn-primary" href="standings.html">View Standings</a>
-              <a class="btn btn-secondary" href="teams.html">Browse Teams</a>
+        <a class="score-cell" href="scores.html">
+          <div class="score-top">
+            <span>Final</span>
+            <span class="score-status">Box</span>
+          </div>
+          <div class="team-line">
+            <span class="team-name">Taipei Neon</span>
+            <span class="team-score">4</span>
+          </div>
+          <div class="team-line">
+            <span class="team-name">Osaka Spirits</span>
+            <span class="team-score">2</span>
+          </div>
+        </a>
+
+        <a class="score-cell" href="scores.html">
+          <div class="score-top">
+            <span>Final</span>
+            <span class="score-status">Box</span>
+          </div>
+          <div class="team-line">
+            <span class="team-name">Louisville Naturals</span>
+            <span class="team-score">6</span>
+          </div>
+          <div class="team-line">
+            <span class="team-name">Durham Gold</span>
+            <span class="team-score">1</span>
+          </div>
+        </a>
+
+        <a class="score-cell" href="scores.html">
+          <div class="score-top">
+            <span>Final</span>
+            <span class="score-status">Box</span>
+          </div>
+          <div class="team-line">
+            <span class="team-name">Spokane Alloys</span>
+            <span class="team-score">2</span>
+          </div>
+          <div class="team-line">
+            <span class="team-name">Fresno Yield</span>
+            <span class="team-score">0</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <main class="page">
+    <div class="container">
+      <div class="main-grid">
+
+        <section class="card hero-card" aria-label="Featured story">
+          <div class="hero-media">
+            <div class="hero-content">
+              <div class="hero-kicker">Featured</div>
+              <h1 class="hero-title">Opening Week Is Underway Across Global League Baseball</h1>
+              <p class="hero-deck">
+                Week 1 results are in, division tables are live, and clubs across both divisions have opened their seasons with the first official scores of the year.
+              </p>
             </div>
+          </div>
+          <div class="hero-links">
+            <a class="hero-link" href="standings.html">View Standings</a>
+            <a class="hero-link" href="scores.html">See All Scores</a>
+            <a class="hero-link" href="schedule.html">Full Schedule</a>
+          </div>
+        </section>
 
-            <div class="hero-notes">
-              <div class="note">
-                <div class="note-label">Current Filing</div>
-                <div class="note-value">Opening week results now posted</div>
-              </div>
-              <div class="note">
-                <div class="note-label">League Scope</div>
-                <div class="note-value">Two divisions. Sixteen clubs.</div>
-              </div>
-              <div class="note">
-                <div class="note-label">Reading Path</div>
-                <div class="note-value">Standings, schedules, teams, stadiums, bulletins</div>
-              </div>
+        <aside class="card" aria-label="Right rail">
+          <div class="rail-section">
+            <h2 class="section-label">Latest News</h2>
+            <div class="news-list">
+              <a class="news-item" href="news.html">
+                <span class="news-tag">League</span>
+                <h3 class="news-headline">Standings posted following first official scoring review</h3>
+                <div class="news-meta">Updated nightly after game processing</div>
+              </a>
+
+              <a class="news-item" href="news.html">
+                <span class="news-tag">Clubs</span>
+                <h3 class="news-headline">San Pedro and Louisville open with statement wins</h3>
+                <div class="news-meta">Early leaders emerge in both divisions</div>
+              </a>
+
+              <a class="news-item" href="news.html">
+                <span class="news-tag">Schedule</span>
+                <h3 class="news-headline">Week 1 continues with a full slate of divisional matchups</h3>
+                <div class="news-meta">Next round now posted on the schedule page</div>
+              </a>
             </div>
           </div>
 
-          <div class="hero-image" role="img" aria-label="GLB stadium hero image">
-            <div class="hero-caption">
-              <span class="cap-kicker">Filed Image</span>
-              <div class="cap-line">Night session in progress. Attendance partial. Conditions under review.</div>
+          <div class="rail-section mini-standings">
+            <h2 class="section-label">Standings Snapshot</h2>
+            <table>
+              <thead>
+                <tr>
+                  <th>Pacific</th>
+                  <th>W</th>
+                  <th>L</th>
+                  <th>PCT</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="leader">San Pedro</td>
+                  <td>1</td>
+                  <td>0</td>
+                  <td>1.000</td>
+                </tr>
+                <tr>
+                  <td>Taipei</td>
+                  <td>1</td>
+                  <td>0</td>
+                  <td>1.000</td>
+                </tr>
+                <tr>
+                  <td>Tijuana</td>
+                  <td>1</td>
+                  <td>0</td>
+                  <td>1.000</td>
+                </tr>
+                <tr>
+                  <td>Santiago</td>
+                  <td>1</td>
+                  <td>0</td>
+                  <td>1.000</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </aside>
+
+      </div>
+
+      <section class="modules" aria-label="Homepage modules">
+
+        <section class="card">
+          <div class="module-head">
+            <h2 class="module-title">Upcoming Games</h2>
+            <a class="module-link" href="schedule.html">Full Schedule</a>
+          </div>
+          <div class="module-body">
+            <div class="schedule-list">
+              <a class="schedule-item" href="schedule.html">
+                <span class="schedule-date">April 9 · 7:10 PM Local</span>
+                <h3 class="schedule-matchup">Monterrey Cementeros at San Pedro Cocolos</h3>
+                <div class="schedule-meta">Pacific Division · Night game</div>
+              </a>
+
+              <a class="schedule-item" href="schedule.html">
+                <span class="schedule-date">April 9 · 7:40 PM Local</span>
+                <h3 class="schedule-matchup">Osaka Spirits at Taipei Neon</h3>
+                <div class="schedule-meta">Pacific Division · City series continues</div>
+              </a>
+
+              <a class="schedule-item" href="schedule.html">
+                <span class="schedule-date">April 9 · 6:35 PM Local</span>
+                <h3 class="schedule-matchup">Durham Gold at Louisville Naturals</h3>
+                <div class="schedule-meta">Americas Division · Second game of set</div>
+              </a>
             </div>
           </div>
-        </div>
+        </section>
+
+        <section class="card">
+          <div class="module-head">
+            <h2 class="module-title">From Around the League</h2>
+            <a class="module-link" href="news.html">More News</a>
+          </div>
+          <div class="module-body">
+            <div class="story-list">
+              <a class="story-item" href="news.html">
+                <span class="story-type">Game Recap</span>
+                <h3 class="story-title-sm">Spokane opens with a shutout win over Fresno</h3>
+                <div class="story-meta">The Alloys hold Fresno scoreless in one of Opening Week’s cleanest pitching lines.</div>
+              </a>
+
+              <a class="story-item" href="news.html">
+                <span class="story-type">Notebook</span>
+                <h3 class="story-title-sm">Run differential already shaping the early table</h3>
+                <div class="story-meta">Week 1 is small-sample territory, but a few clubs have already created separation.</div>
+              </a>
+
+              <a class="story-item" href="news.html">
+                <span class="story-type">League Bulletin</span>
+                <h3 class="story-title-sm">Official scoring review completed for all first-wave games</h3>
+                <div class="story-meta">League tables and team pages reflect the latest validated numbers.</div>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section class="card">
+          <div class="module-head">
+            <h2 class="module-title">Teams to Watch</h2>
+            <a class="module-link" href="teams.html">All Teams</a>
+          </div>
+          <div class="module-body">
+            <div class="team-list">
+              <a class="team-item" href="teams.html">
+                <span class="team-label">Pacific</span>
+                <h3 class="team-title">San Pedro Cocolos</h3>
+                <div class="team-meta">Strong opening result and the best early run differential in the division.</div>
+              </a>
+
+              <a class="team-item" href="teams.html">
+                <span class="team-label">Americas</span>
+                <h3 class="team-title">Louisville Naturals</h3>
+                <div class="team-meta">A decisive first win puts Louisville at the top of the early Americas table.</div>
+              </a>
+
+              <a class="team-item" href="teams.html">
+                <span class="team-label">Americas</span>
+                <h3 class="team-title">Spokane Alloys</h3>
+                <div class="team-meta">A 2–0 shutout win gives Spokane one of the cleanest openings of the week.</div>
+              </a>
+            </div>
+          </div>
+        </section>
+
       </section>
+
+      <footer class="site-footer">
+        <div class="site-footer-inner">
+          <div>Global League Baseball Official Site</div>
+          <div>Scores · Standings · Schedule · Teams · Stats · News</div>
+        </div>
+      </footer>
     </div>
-
-    <section class="section" aria-labelledby="quicklinks-title">
-      <div class="section-header">
-        <h2 class="section-title" id="quicklinks-title">League Access</h2>
-        <div class="section-meta">Primary destinations</div>
-      </div>
-
-      <div class="quick-grid">
-        <a class="quick-card" href="standings.html">
-          <div>
-            <div class="quick-label">Tables</div>
-            <h3 class="quick-title">Standings</h3>
-            <p class="quick-text">Official divisional order, runs, runs allowed, and differential.</p>
-          </div>
-        </a>
-
-        <a class="quick-card" href="schedule.html">
-          <div>
-            <div class="quick-label">Fixtures</div>
-            <h3 class="quick-title">Schedule</h3>
-            <p class="quick-text">Game listings, dates, sites, and live progression through the season.</p>
-          </div>
-        </a>
-
-        <a class="quick-card" href="teams.html">
-          <div>
-            <div class="quick-label">Clubs</div>
-            <h3 class="quick-title">Teams</h3>
-            <p class="quick-text">Roster pages, identities, uniforms, records, and local atmosphere.</p>
-          </div>
-        </a>
-
-        <a class="quick-card" href="bulletin.html">
-          <div>
-            <div class="quick-label">Notes</div>
-            <h3 class="quick-title">League Bulletin</h3>
-            <p class="quick-text">Filed updates, league texture, official notices, and world-building material.</p>
-          </div>
-        </a>
-      </div>
-    </section>
   </main>
-
-  <footer class="site-footer">
-    <div class="site-footer-inner">
-      <div>Global League Baseball — Official Site</div>
-      <div>Built as a living league record</div>
-    </div>
-  </footer>
 
   <script>
     const navToggle = document.getElementById('navToggle');

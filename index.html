@@ -498,22 +498,77 @@
 
     /* FOOTER */
     .site-footer{
-      margin-top:28px;
-      padding:0 0 40px;
+      margin-top:60px;
+      background:#0b1e33;
+      color:#dfe7f1;
     }
 
-    .site-footer-inner{
-      border-top:1px solid var(--border);
-      padding-top:18px;
+    .footer-main{
+      display:grid;
+      grid-template-columns: 1.6fr 1fr 1fr 1fr;
+      gap:40px;
+      padding:46px 20px;
+    }
+
+    .footer-brand{
+      max-width:320px;
+    }
+
+    .footer-logo{
+      font-weight:800;
+      font-size:26px;
+      letter-spacing:1.4px;
+      margin-bottom:8px;
+    }
+
+    .footer-tag{
+      font-size:11px;
+      text-transform:uppercase;
+      letter-spacing:1px;
+      color:#9fb6d1;
+      margin-bottom:14px;
+    }
+
+    .footer-desc{
+      margin:0;
+      font-size:14px;
+      line-height:1.5;
+      color:#c9d7e6;
+    }
+
+    .footer-col h4{
+      margin:0 0 12px;
+      font-size:12px;
+      text-transform:uppercase;
+      letter-spacing:1px;
+      color:#9fb6d1;
+    }
+
+    .footer-col a{
+      display:block;
+      font-size:14px;
+      padding:4px 0;
+      color:#ffffff;
+    }
+
+    .footer-col a:hover{
+      text-decoration:underline;
+    }
+
+    .footer-bottom{
+      border-top:1px solid rgba(255,255,255,0.1);
+      background:#081628;
+    }
+
+    .footer-bottom-inner{
+      padding:14px 20px;
       display:flex;
       justify-content:space-between;
-      gap:16px;
-      flex-wrap:wrap;
+      gap:20px;
       font-size:11px;
-      font-weight:700;
       text-transform:uppercase;
-      letter-spacing:0.8px;
-      color:var(--muted);
+      letter-spacing:1px;
+      color:#9fb6d1;
     }
 
     @media (max-width: 1100px){
@@ -549,6 +604,11 @@
 
       .main-grid{
         grid-template-columns: 1fr;
+      }
+
+      .footer-main{
+        grid-template-columns: 1fr 1fr;
+        gap:30px;
       }
     }
 
@@ -600,6 +660,15 @@
 
       .hero-links{
         padding:14px 18px 16px;
+      }
+
+      .footer-main{
+        grid-template-columns: 1fr;
+      }
+
+      .footer-bottom-inner{
+        flex-direction:column;
+        gap:6px;
       }
     }
   </style>
@@ -883,15 +952,53 @@
         </section>
 
       </section>
-
-      <footer class="site-footer">
-        <div class="site-footer-inner">
-          <div>Global League Baseball Official Site</div>
-          <div>Scores · Standings · Schedule · Teams · Stats · News</div>
-        </div>
-      </footer>
     </div>
   </main>
+
+  <footer class="site-footer">
+    <div class="container footer-main">
+
+      <div class="footer-brand">
+        <div class="footer-logo">GLB</div>
+        <div class="footer-tag">Global League Baseball</div>
+        <p class="footer-desc">
+          Official league site providing scores, standings, schedules,
+          club information, and league bulletins.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4>League</h4>
+        <a href="standings.html">Standings</a>
+        <a href="scores.html">Scores</a>
+        <a href="schedule.html">Schedule</a>
+        <a href="stats.html">Stats</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Clubs</h4>
+        <a href="teams.html">Teams</a>
+        <a href="stadiums.html">Stadiums</a>
+        <a href="rosters.html">Rosters</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>League News</h4>
+        <a href="news.html">News</a>
+        <a href="bulletin.html">League Bulletin</a>
+        <a href="archive.html">Archive</a>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <span>© 2026 Global League Baseball</span>
+        <span>Season 1</span>
+        <span>Official League Record</span>
+      </div>
+    </div>
+  </footer>
 
   <script>
     const navToggle = document.getElementById('navToggle');

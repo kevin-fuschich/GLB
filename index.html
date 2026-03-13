@@ -1,366 +1,688 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Global League Baseball — League Office Index</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Global League Baseball (GLB)</title>
+  <meta name="description" content="Global League Baseball — official league site for standings, teams, schedules, and league bulletins." />
 
-<style>
-:root{
-  --paper:#f2f0ea;
-  --white:#ffffff;
-  --ink:#0e1a22;
-  --ink-soft:#2c3a44;
-  --line:#c6beb3;
-  --mono:ui-monospace, SFMono-Regular, Menlo, monospace;
-  --serif:Georgia, "Times New Roman", serif;
-  --sans:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-}
+  <style>
+    :root{
+      --ink-navy:#002244;
+      --ink-black:#111111;
+      --paper:#f2f0ec;
+      --field-white:#fffdf8;
+      --line-grey:#cfc8bc;
+      --soft-line:#e6e0d6;
+      --meta-grey:#5f5a52;
+      --muted-ink:#3d3a35;
+      --score-bg:#0d2238;
+      --score-panel:#16324d;
+      --score-line:rgba(255,255,255,0.14);
+      --score-text:#f4f1ea;
+      --accent:#d9d1c2;
 
-*{box-sizing:border-box;}
+      --font-serif:"Georgia","Times New Roman",serif;
+      --font-sans:"Helvetica Neue",Helvetica,Arial,sans-serif;
 
-body{
-  margin:0;
-  background:var(--paper);
-  font-family:var(--sans);
-  color:var(--ink);
-  -webkit-font-smoothing:antialiased;
-}
+      --max:1180px;
+    }
 
-.wrapper{
-  max-width:1200px;
-  margin:60px auto;
-  padding:0 24px;
-}
+    *{ box-sizing:border-box; }
 
-.sheet{
-  background:var(--white);
-  border-top:6px solid var(--ink);
-  box-shadow:0 4px 30px rgba(0,0,0,0.05);
-}
+    html, body{
+      margin:0;
+      padding:0;
+      background:var(--paper);
+      color:var(--ink-black);
+      font-family:var(--font-sans);
+      -webkit-font-smoothing:antialiased;
+    }
 
-header{
-  display:flex;
-  justify-content:space-between;
-  align-items:flex-start;
-  padding:32px;
-  border-bottom:1px solid var(--line);
-}
+    a{ color:inherit; }
 
-.header-title{
-  font-family:var(--serif);
-  font-size:20px;
-  font-weight:bold;
-}
+    /* TOP SCOREBOARD NAV */
+    .site-header{
+      position:sticky;
+      top:0;
+      z-index:1000;
+      background:var(--score-bg);
+      color:var(--score-text);
+      border-bottom:1px solid rgba(255,255,255,0.08);
+      box-shadow:0 2px 10px rgba(0,0,0,0.12);
+    }
 
-.header-sub{
-  font-family:var(--mono);
-  font-size:12px;
-  margin-top:6px;
-  color:var(--ink-soft);
-}
+    .scoreboard-bar{
+      max-width:var(--max);
+      margin:0 auto;
+      display:grid;
+      grid-template-columns: 180px 1fr auto;
+      align-items:stretch;
+      min-height:72px;
+    }
 
-header img{ width:60px; }
+    .brand-cell{
+      display:flex;
+      align-items:center;
+      padding:0 18px;
+      border-right:1px solid var(--score-line);
+      background:
+        linear-gradient(to bottom, rgba(255,255,255,0.03), rgba(255,255,255,0));
+    }
 
-.section{
-  padding:40px 32px;
-  border-bottom:1px solid var(--line);
-}
+    .brand-link{
+      text-decoration:none;
+      color:var(--score-text);
+      display:flex;
+      flex-direction:column;
+      line-height:1.05;
+    }
 
-.section h2{
-  font-family:var(--mono);
-  font-size:12px;
-  letter-spacing:2px;
-  text-transform:uppercase;
-  margin:0 0 20px 0;
-  color:var(--ink-soft);
-}
+    .brand-mark{
+      font-size:22px;
+      font-weight:700;
+      letter-spacing:1.6px;
+    }
 
-/* HERO */
-.hero{
-  position:relative;
-  height:420px;
-  overflow:hidden;
-  background:#ddd;
-}
+    .brand-sub{
+      font-size:10px;
+      text-transform:uppercase;
+      letter-spacing:1.6px;
+      color:rgba(255,255,255,0.72);
+      margin-top:4px;
+    }
 
-#heroStage{ position:absolute; inset:0; }
+    .nav-strip{
+      display:flex;
+      align-items:stretch;
+      min-width:0;
+    }
 
-.hero-slide{ position:absolute; inset:0; opacity:0; transition:opacity .6s ease; }
-.hero-slide.is-active{ opacity:1; }
+    .nav-strip a{
+      text-decoration:none;
+      color:rgba(255,255,255,0.84);
+      padding:0 18px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      border-right:1px solid var(--score-line);
+      text-transform:uppercase;
+      letter-spacing:1px;
+      font-size:12px;
+      white-space:nowrap;
+      position:relative;
+    }
 
-.hero-img{ width:100%; height:100%; object-fit:cover; }
+    .nav-strip a:hover{
+      background:rgba(255,255,255,0.04);
+      color:#ffffff;
+    }
 
-.hero-overlay{
-  position:absolute;
-  bottom:0;
-  left:0;
-  right:0;
-  background:rgba(10,18,25,0.72);
-  color:#fff;
-  padding:20px 32px;
-}
+    .nav-strip a.active{
+      color:#ffffff;
+      background:linear-gradient(to bottom, rgba(255,255,255,0.06), rgba(255,255,255,0.015));
+    }
 
-.hero-overlay h1{
-  margin:0 0 6px 0;
-  font-family:var(--serif);
-  font-size:28px;
-}
+    .nav-strip a.active::after{
+      content:"";
+      position:absolute;
+      left:10px;
+      right:10px;
+      bottom:8px;
+      height:2px;
+      background:var(--accent);
+    }
 
-.hero-overlay p{
-  margin:0 0 8px 0;
-  font-size:14px;
-}
+    .meta-cell{
+      display:flex;
+      align-items:center;
+      gap:16px;
+      padding:0 18px;
+      border-left:1px solid var(--score-line);
+      font-size:11px;
+      text-transform:uppercase;
+      letter-spacing:1px;
+      color:rgba(255,255,255,0.76);
+      white-space:nowrap;
+    }
 
-.hero-counter{
-  position:absolute;
-  top:20px;
-  left:20px;
-  font-family:var(--mono);
-  font-size:12px;
-  background:rgba(255,255,255,0.88);
-  padding:6px 10px;
-  border:1px solid var(--line);
-}
+    .nav-toggle{
+      display:none;
+      appearance:none;
+      border:0;
+      background:none;
+      color:#fff;
+      font-size:22px;
+      padding:0 16px;
+      cursor:pointer;
+      border-left:1px solid var(--score-line);
+    }
 
-.hero-controls{
-  position:absolute;
-  top:20px;
-  right:20px;
-  display:flex;
-  gap:8px;
-  font-family:var(--mono);
-  font-size:12px;
-}
+    .mobile-menu{
+      display:none;
+      border-top:1px solid var(--score-line);
+      background:var(--score-panel);
+    }
 
-.hero-controls button{
-  border:1px solid var(--line);
-  background:rgba(255,255,255,0.84);
-  padding:6px 10px;
-  cursor:pointer;
-}
+    .mobile-menu a{
+      display:block;
+      padding:16px 20px;
+      text-decoration:none;
+      color:rgba(255,255,255,0.88);
+      border-top:1px solid rgba(255,255,255,0.08);
+      text-transform:uppercase;
+      letter-spacing:1px;
+      font-size:12px;
+    }
 
-/* TODAY */
-.games{
-  display:grid;
-  gap:14px;
-}
+    .mobile-menu a.active{
+      color:#fff;
+      background:rgba(255,255,255,0.04);
+    }
 
-.game{
-  display:flex;
-  justify-content:space-between;
-  border:1px solid var(--line);
-  padding:14px 16px;
-  text-decoration:none;
-  color:var(--ink);
-}
+    .mobile-menu.open{
+      display:block;
+    }
 
-.game:hover{ background:#faf9f6; }
+    /* HERO */
+    .hero-wrap{
+      padding:28px 20px 18px;
+    }
 
-.matchup{ margin:0; font-weight:700; }
-.statusline{ margin:4px 0 0 0; font-size:12px; color:var(--ink-soft); }
+    .hero{
+      max-width:var(--max);
+      margin:0 auto;
+      background:var(--field-white);
+      border:1px solid var(--line-grey);
+      box-shadow:0 10px 30px rgba(0,0,0,0.05);
+      overflow:hidden;
+    }
 
-.score{ font-weight:800; font-size:18px; text-align:right; }
-.time{ font-size:12px; color:var(--ink-soft); text-align:right; }
+    .hero-grid{
+      display:grid;
+      grid-template-columns: 1.2fr 0.9fr;
+      min-height:540px;
+    }
 
-/* STANDINGS */
-table{ width:100%; border-collapse:collapse; }
-th, td{ padding:8px 10px; border-bottom:1px solid var(--line); font-size:14px; }
-th{
-  font-family:var(--mono);
-  font-size:11px;
-  letter-spacing:1px;
-  text-transform:uppercase;
-  text-align:left;
-  color:var(--ink);
-}
-td.num{ text-align:right; font-variant-numeric:tabular-nums; }
+    .hero-copy{
+      padding:52px 52px 42px;
+      position:relative;
+      background:
+        linear-gradient(to bottom, rgba(255,255,255,0.72), rgba(255,255,255,0.92)),
+        repeating-linear-gradient(
+          to bottom,
+          transparent 0,
+          transparent 29px,
+          rgba(0,34,68,0.03) 30px
+        );
+    }
 
-/* CLUBS */
-#clubsGrid{
-  display:grid;
-  grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
-  gap:14px;
-}
+    .hero-copy::after{
+      content:"";
+      position:absolute;
+      right:32px;
+      top:26px;
+      width:140px;
+      height:140px;
+      border-radius:50%;
+      border:2px solid rgba(0,34,68,0.07);
+      box-shadow:
+        inset 0 0 0 12px rgba(0,34,68,0.03),
+        inset 0 0 0 28px rgba(0,34,68,0.015);
+      pointer-events:none;
+    }
 
-.club{
-  border:1px solid var(--line);
-  padding:16px;
-  text-decoration:none;
-  color:var(--ink);
-}
+    .eyebrow{
+      display:inline-block;
+      font-size:11px;
+      text-transform:uppercase;
+      letter-spacing:1.5px;
+      color:var(--meta-grey);
+      margin-bottom:18px;
+      padding-bottom:7px;
+      border-bottom:1px solid rgba(0,34,68,0.15);
+    }
 
-.club:hover{ background:#faf9f6; }
-.club .name{ font-weight:800; margin:0 0 6px 0; }
-.club .meta2{ font-family:var(--mono); font-size:11px; color:var(--ink-soft); }
+    .hero h1{
+      margin:0 0 18px;
+      font-family:var(--font-serif);
+      font-size:56px;
+      line-height:0.96;
+      font-weight:700;
+      color:var(--ink-navy);
+      max-width:620px;
+      letter-spacing:-0.8px;
+    }
 
-/* FROM THE STANDS */
-.transmission{
-  border:1px solid var(--line);
-  padding:18px 18px;
-  background:#fbfaf7;
-}
+    .hero-deck{
+      max-width:520px;
+      margin:0 0 26px;
+      color:var(--muted-ink);
+      font-size:16px;
+      line-height:1.6;
+    }
 
-.transmission-top{
-  display:flex;
-  justify-content:space-between;
-  gap:14px;
-  margin-bottom:10px;
-  font-family:var(--mono);
-  font-size:11px;
-  color:var(--ink-soft);
-  letter-spacing:0.2px;
-}
+    .hero-actions{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-bottom:32px;
+    }
 
-.transmission-tag{
-  text-transform:uppercase;
-  letter-spacing:1.6px;
-}
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:44px;
+      padding:0 18px;
+      text-decoration:none;
+      border:1px solid var(--ink-navy);
+      font-size:12px;
+      letter-spacing:1px;
+      text-transform:uppercase;
+      transition:0.15s ease;
+    }
 
-.transmission-meta{
-  text-align:right;
-  white-space:nowrap;
-}
+    .btn-primary{
+      background:var(--ink-navy);
+      color:#fff;
+    }
 
-.transmission-quote{
-  margin:0;
-  font-family:var(--serif);
-  font-size:18px;
-  line-height:1.45;
-  color:var(--ink);
-}
+    .btn-primary:hover{
+      background:#0b315b;
+    }
 
-.transmission-loc{
-  margin-top:10px;
-  font-family:var(--mono);
-  font-size:11px;
-  color:var(--ink-soft);
-}
+    .btn-secondary{
+      background:transparent;
+      color:var(--ink-navy);
+    }
 
-/* FOOTER */
-.footer-bar{
-  display:flex;
-  justify-content:space-between;
-  padding:28px 32px;
-  font-family:var(--mono);
-  font-size:11px;
-}
+    .btn-secondary:hover{
+      background:#f3f6f9;
+    }
 
-.footer-links a{
-  margin-right:12px;
-  text-decoration:none;
-  color:var(--ink);
-}
+    .hero-notes{
+      display:grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap:18px;
+      padding-top:20px;
+      border-top:1px solid var(--soft-line);
+    }
 
-.footer-links a:hover{ text-decoration:underline; }
-</style>
+    .note{
+      min-width:0;
+    }
+
+    .note-label{
+      font-size:10px;
+      text-transform:uppercase;
+      letter-spacing:1.2px;
+      color:var(--meta-grey);
+      margin-bottom:6px;
+    }
+
+    .note-value{
+      font-family:var(--font-serif);
+      font-size:17px;
+      color:var(--ink-navy);
+      line-height:1.3;
+    }
+
+    .hero-image{
+      position:relative;
+      min-height:340px;
+      background:
+        linear-gradient(rgba(0,0,0,0.08), rgba(0,0,0,0.18)),
+        url("images/hero/hero-01.png") center center / cover no-repeat;
+      border-left:1px solid var(--line-grey);
+    }
+
+    .hero-caption{
+      position:absolute;
+      left:0;
+      right:0;
+      bottom:0;
+      padding:16px 18px;
+      background:linear-gradient(to top, rgba(0,0,0,0.66), rgba(0,0,0,0));
+      color:#fff;
+    }
+
+    .hero-caption .cap-kicker{
+      display:block;
+      font-size:10px;
+      text-transform:uppercase;
+      letter-spacing:1.2px;
+      opacity:0.82;
+      margin-bottom:4px;
+    }
+
+    .hero-caption .cap-line{
+      font-size:13px;
+      line-height:1.45;
+    }
+
+    /* CONTENT */
+    .section{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:18px 20px 48px;
+    }
+
+    .section-header{
+      display:flex;
+      justify-content:space-between;
+      align-items:end;
+      gap:20px;
+      border-bottom:1px solid var(--line-grey);
+      padding-bottom:12px;
+      margin-bottom:20px;
+    }
+
+    .section-title{
+      font-family:var(--font-serif);
+      font-size:28px;
+      color:var(--ink-navy);
+      margin:0;
+    }
+
+    .section-meta{
+      font-size:11px;
+      text-transform:uppercase;
+      letter-spacing:1.2px;
+      color:var(--meta-grey);
+      white-space:nowrap;
+    }
+
+    .quick-grid{
+      display:grid;
+      grid-template-columns: repeat(4, minmax(0,1fr));
+      gap:16px;
+    }
+
+    .quick-card{
+      background:var(--field-white);
+      border:1px solid var(--line-grey);
+      text-decoration:none;
+      color:inherit;
+      padding:18px;
+      min-height:150px;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+      box-shadow:0 4px 16px rgba(0,0,0,0.03);
+    }
+
+    .quick-card:hover{
+      transform:translateY(-1px);
+      box-shadow:0 8px 20px rgba(0,0,0,0.05);
+    }
+
+    .quick-label{
+      font-size:10px;
+      text-transform:uppercase;
+      letter-spacing:1.2px;
+      color:var(--meta-grey);
+      margin-bottom:12px;
+    }
+
+    .quick-title{
+      font-family:var(--font-serif);
+      color:var(--ink-navy);
+      font-size:22px;
+      line-height:1.05;
+      margin:0 0 8px;
+    }
+
+    .quick-text{
+      font-size:14px;
+      line-height:1.5;
+      color:var(--muted-ink);
+      margin:0;
+    }
+
+    .site-footer{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:0 20px 40px;
+      color:var(--meta-grey);
+      font-size:11px;
+      text-transform:uppercase;
+      letter-spacing:1.2px;
+    }
+
+    .site-footer-inner{
+      border-top:1px solid var(--line-grey);
+      padding-top:18px;
+      display:flex;
+      justify-content:space-between;
+      gap:18px;
+      flex-wrap:wrap;
+    }
+
+    @media (max-width: 980px){
+      .scoreboard-bar{
+        grid-template-columns: 1fr auto;
+      }
+
+      .meta-cell{
+        display:none;
+      }
+
+      .hero-grid{
+        grid-template-columns: 1fr;
+      }
+
+      .hero-image{
+        min-height:300px;
+        border-left:0;
+        border-top:1px solid var(--line-grey);
+      }
+
+      .quick-grid{
+        grid-template-columns: repeat(2, minmax(0,1fr));
+      }
+    }
+
+    @media (max-width: 760px){
+      .nav-strip{
+        display:none;
+      }
+
+      .nav-toggle{
+        display:block;
+      }
+
+      .brand-cell{
+        border-right:0;
+      }
+
+      .hero-copy{
+        padding:34px 24px 30px;
+      }
+
+      .hero h1{
+        font-size:40px;
+        max-width:none;
+      }
+
+      .hero-deck{
+        font-size:15px;
+      }
+
+      .hero-notes{
+        grid-template-columns: 1fr;
+        gap:14px;
+      }
+
+      .hero-wrap,
+      .section,
+      .site-footer{
+        padding-left:14px;
+        padding-right:14px;
+      }
+    }
+
+    @media (max-width: 540px){
+      .quick-grid{
+        grid-template-columns: 1fr;
+      }
+
+      .section-header{
+        display:block;
+      }
+
+      .section-meta{
+        margin-top:8px;
+      }
+
+      .hero h1{
+        font-size:34px;
+      }
+    }
+  </style>
 </head>
-
 <body>
-<div class="wrapper">
-<div class="sheet">
 
-<header>
-  <div>
-    <div class="header-title">League Office Record — Live Index</div>
-    <div class="header-sub">
-      Updated: <span id="provTime">—</span> ET
-    </div>
-  </div>
-  <img src="GLB_white.png" alt="GLB Seal">
-</header>
-
-<div id="hero" class="hero">
-  <div id="heroStage"></div>
-  <div id="heroCounter" class="hero-counter">—</div>
-  <div class="hero-controls">
-    <button id="heroPrev">← Prev</button>
-    <button id="heroNext">Next →</button>
-  </div>
-  <div class="hero-overlay">
-    <h1 id="heroTitle">—</h1>
-    <p id="heroCaption"></p>
-    <a id="heroLink" href="#clubs" style="color:#fff;text-decoration:underline;">View Club Dossier →</a>
-  </div>
-</div>
-
-<section class="section">
-  <h2>Today in GLB</h2>
-  <div id="todayDateLabel" style="margin-bottom:12px;font-weight:700;"></div>
-  <div id="todayGames" class="games">Loading schedule.</div>
-</section>
-
-<section class="section" aria-label="From the Stands">
-  <h2>From the Stands</h2>
-
-  <div class="transmission" role="note" aria-live="polite">
-    <div class="transmission-top">
-      <div class="transmission-tag" id="txTag">FAN TRANSMISSION</div>
-      <div class="transmission-meta">
-        Source: GLB Supporter Network • ID: <span id="txId">—</span>
+  <header class="site-header">
+    <div class="scoreboard-bar">
+      <div class="brand-cell">
+        <a href="index.html" class="brand-link" aria-label="Global League Baseball home">
+          <span class="brand-mark">GLB</span>
+          <span class="brand-sub">Global League Baseball</span>
+        </a>
       </div>
-    </div>
 
-    <!-- IMAGE -->
-    <img id="txImage" src="" alt="Transmission image" style="width:100%;height:220px;object-fit:cover;margin-bottom:14px;border:1px solid var(--line);" />
+      <nav class="nav-strip" aria-label="Primary">
+        <a href="index.html" class="active">Home</a>
+        <a href="standings.html">Standings</a>
+        <a href="schedule.html">Schedule</a>
+        <a href="teams.html">Teams</a>
+        <a href="stadiums.html">Stadiums</a>
+        <a href="bulletin.html">League Bulletin</a>
+      </nav>
 
-    <!-- QUOTE -->
-    <p class="transmission-quote" id="txQuote">Loading transmission.</p>
-
-    <!-- LOCATION -->
-    <div class="transmission-loc" style="margin-top:10px;font-family:var(--mono);font-size:11px;color:var(--ink-soft);">
-      Filed: <span id="txLocation">—</span>
-    </div>
-  </div>
-</section>
-  <div class="transmission" role="note" aria-live="polite">
-    <div class="transmission-top">
-      <div class="transmission-tag" id="txTag">FAN TRANSMISSION</div>
-      <div class="transmission-meta">
-        Source: GLB Supporter Network • ID: <span id="txId">—</span>
+      <div class="meta-cell">
+        <span>Season 01</span>
+        <span>Week 1</span>
       </div>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        ☰
+      </button>
     </div>
 
-    <p class="transmission-quote" id="txQuote">Loading transmission.</p>
-    <div class="transmission-loc">
-      Filed: <span id="txLocation">—</span>
+    <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile">
+      <a href="index.html" class="active">Home</a>
+      <a href="standings.html">Standings</a>
+      <a href="schedule.html">Schedule</a>
+      <a href="teams.html">Teams</a>
+      <a href="stadiums.html">Stadiums</a>
+      <a href="bulletin.html">League Bulletin</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="hero-wrap">
+      <section class="hero" aria-label="Homepage hero">
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <div class="eyebrow">Official League Index</div>
+            <h1>Baseball from everywhere. Logged like it matters.</h1>
+            <p class="hero-deck">
+              Global League Baseball is a structured, international baseball world built through clubs,
+              places, records, weather, logistics, and strange local identity. Follow the standings,
+              track the clubs, and move through the league like a real publication.
+            </p>
+
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="standings.html">View Standings</a>
+              <a class="btn btn-secondary" href="teams.html">Browse Teams</a>
+            </div>
+
+            <div class="hero-notes">
+              <div class="note">
+                <div class="note-label">Current Filing</div>
+                <div class="note-value">Opening week results now posted</div>
+              </div>
+              <div class="note">
+                <div class="note-label">League Scope</div>
+                <div class="note-value">Two divisions. Sixteen clubs.</div>
+              </div>
+              <div class="note">
+                <div class="note-label">Reading Path</div>
+                <div class="note-value">Standings, schedules, teams, stadiums, bulletins</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-image" role="img" aria-label="GLB stadium hero image">
+            <div class="hero-caption">
+              <span class="cap-kicker">Filed Image</span>
+              <div class="cap-line">Night session in progress. Attendance partial. Conditions under review.</div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
-  </div>
-</section>
 
-<section class="section">
-  <h2>Standings</h2>
-  <div id="standingsAsOf" style="margin-bottom:14px;"></div>
-  <div id="standingsTables">Loading standings.</div>
-</section>
+    <section class="section" aria-labelledby="quicklinks-title">
+      <div class="section-header">
+        <h2 class="section-title" id="quicklinks-title">League Access</h2>
+        <div class="section-meta">Primary destinations</div>
+      </div>
 
-<section class="section">
-  <h2>Office Memo</h2>
-  <div id="featuredBody">Loading memo.</div>
-</section>
+      <div class="quick-grid">
+        <a class="quick-card" href="standings.html">
+          <div>
+            <div class="quick-label">Tables</div>
+            <h3 class="quick-title">Standings</h3>
+            <p class="quick-text">Official divisional order, runs, runs allowed, and differential.</p>
+          </div>
+        </a>
 
-<section class="section" id="clubs">
-  <h2>Club Directory</h2>
-  <div id="clubsGrid">Loading clubs.</div>
-</section>
+        <a class="quick-card" href="schedule.html">
+          <div>
+            <div class="quick-label">Fixtures</div>
+            <h3 class="quick-title">Schedule</h3>
+            <p class="quick-text">Game listings, dates, sites, and live progression through the season.</p>
+          </div>
+        </a>
 
-<footer class="footer-bar">
-  <div>
-    GLB CLUB DOSSIER / GLOBAL LEAGUE BASEBALL
-    <div class="footer-links">
-      <a href="index.html">Home</a>
-      <a href="day.html">Daily Scores</a>
-      <a href="#clubs">Clubs</a>
+        <a class="quick-card" href="teams.html">
+          <div>
+            <div class="quick-label">Clubs</div>
+            <h3 class="quick-title">Teams</h3>
+            <p class="quick-text">Roster pages, identities, uniforms, records, and local atmosphere.</p>
+          </div>
+        </a>
+
+        <a class="quick-card" href="bulletin.html">
+          <div>
+            <div class="quick-label">Notes</div>
+            <h3 class="quick-title">League Bulletin</h3>
+            <p class="quick-text">Filed updates, league texture, official notices, and world-building material.</p>
+          </div>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer-inner">
+      <div>Global League Baseball — Official Site</div>
+      <div>Built as a living league record</div>
     </div>
-  </div>
-  <div>
-    <img src="GLB_white.png" alt="GLB" width="50">
-  </div>
-</footer>
+  </footer>
 
-</div>
-</div>
+  <script>
+    const navToggle = document.getElementById('navToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
 
-<script src="glb-home.js"></script>
+    navToggle.addEventListener('click', function () {
+      const isOpen = mobileMenu.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+  </script>
+
 </body>
 </html>

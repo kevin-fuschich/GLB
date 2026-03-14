@@ -18,6 +18,132 @@
       "throws": "L",
       "age": 26,
       "photo": "oskar-svanholm.jpg"
+    },
+    {
+      "name": "Mateusz Kasprowicz",
+      "slug": "mateusz-kasprowicz",
+      "position": "SP",
+      "bats": "R",
+      "throws": "R",
+      "age": 31,
+      "photo": "mateusz-kasprowicz.jpg"
+    },
+    {
+      "name": "Diego Álvarez Mora",
+      "slug": "diego-alvarez-mora",
+      "position": "SP",
+      "bats": "R",
+      "throws": "R",
+      "age": 27,
+      "photo": "diego-alvarez-mora.jpg"
+    },
+    {
+      "name": "Lukas Havel",
+      "slug": "lukas-havel",
+      "position": "SP",
+      "bats": "L",
+      "throws": "R",
+      "age": 24,
+      "photo": "lukas-havel.jpg"
+    },
+    {
+      "name": "Caleb Reidman",
+      "slug": "caleb-reidman",
+      "position": "RP",
+      "bats": "R",
+      "throws": "R",
+      "age": 28,
+      "photo": "caleb-reidman.jpg"
+    },
+    {
+      "name": "Sergio Ibarra Lugo",
+      "slug": "sergio-ibarra-lugo",
+      "position": "RP",
+      "bats": "L",
+      "throws": "L",
+      "age": 25,
+      "photo": "sergio-ibarra-lugo.jpg"
+    },
+    {
+      "name": "Yaw Mensah",
+      "slug": "yaw-mensah",
+      "position": "RP",
+      "bats": "R",
+      "throws": "R",
+      "age": 32,
+      "photo": "yaw-mensah.jpg"
+    },
+    {
+      "name": "Nikolai Dobrynin",
+      "slug": "nikolai-dobrynin",
+      "position": "C",
+      "bats": "R",
+      "throws": "R",
+      "age": 30,
+      "photo": "nikolai-dobrynin.jpg"
+    },
+    {
+      "name": "Evan Carroll IV",
+      "slug": "evan-carroll-iv",
+      "position": "1B",
+      "bats": "L",
+      "throws": "R",
+      "age": 33,
+      "photo": "evan-carroll-iv.jpg"
+    },
+    {
+      "name": "Marco DelVecchio",
+      "slug": "marco-delvecchio",
+      "position": "2B",
+      "bats": "S",
+      "throws": "R",
+      "age": 27,
+      "photo": "marco-delvecchio.jpg"
+    },
+    {
+      "name": "Tomasz Kubas",
+      "slug": "tomasz-kubas",
+      "position": "SS",
+      "bats": "R",
+      "throws": "R",
+      "age": 24,
+      "photo": "tomasz-kubas.jpg"
+    },
+    {
+      "name": "Andrés Mireles",
+      "slug": "andres-mireles",
+      "position": "3B",
+      "bats": "R",
+      "throws": "R",
+      "age": 29,
+      "photo": "andres-mireles.jpg"
+    },
+    {
+      "name": "Wyatt Hollander",
+      "slug": "wyatt-hollander",
+      "position": "CF",
+      "bats": "R",
+      "throws": "R",
+      "age": 26,
+      "photo": "wyatt-hollander.jpg"
+    },
+    {
+      "name": "Luis Quiñones",
+      "slug": "luis-quinones",
+      "position": "LF",
+      "bats": "L",
+      "throws": "L",
+      "age": 28,
+      "photo": "luis-quinones.jpg"
+    },
+    {
+      "name": "Pieter van Wyk",
+      "slug": "pieter-van-wyk",
+      "position": "RF",
+      "bats": "R",
+      "throws": "R",
+      "age": 30,
+      "photo": "pieter-van-wyk.jpg"
     }
   ]
 }

@@ -3,17 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Spokane Alloys – Club Dossier</title>
+<title>GLB Team Record – Spokane Alloys</title>
 
 <style>
 :root{
-  --primary:#4A5863;
-  --accent:#C0442C;
   --paper:#ffffff;
   --ink:#0f1214;
-
-  --border-thick:4px solid var(--ink);
-  --border-thin:1px solid #ccc;
+  --meta:#666;
+  --line:#e0e0e0;
 
   --sans:"Helvetica Neue", Helvetica, Arial, sans-serif;
   --mono:"Courier New", Courier, monospace;
@@ -21,273 +18,237 @@
 
 body{
   background:#f4f4f4;
-  color:var(--ink);
   font-family:var(--sans);
+  color:var(--ink);
   margin:0;
-  padding:20px;
+  padding:40px 20px;
 }
 
-.club-sheet{
-  max-width:900px;
+.sheet{
+  max-width:640px;
   margin:0 auto;
   background:var(--paper);
   padding:40px;
-  border-top:var(--border-thick);
-  position:relative;
+  border-top:5px solid var(--ink);
+  box-shadow:0 4px 20px rgba(0,0,0,.08);
 }
 
-/* DOC ID */
-.doc-id{
-  position:absolute;
-  top:15px;
-  right:20px;
-  font-family:var(--mono);
-  font-size:10px;
-  color:#999;
-}
-
-/* HEADER */
 header{
-  border-bottom:var(--border-thick);
-  padding-bottom:20px;
-  margin-bottom:25px;
-}
-
-.club-lockup{
   display:flex;
   justify-content:space-between;
-  align-items:baseline;
-  flex-wrap:wrap;
+  align-items:flex-start;
+  padding-bottom:20px;
+  border-bottom:2px solid var(--ink);
+  margin-bottom:30px;
 }
 
-h1{
-  margin:0;
-  font-size:32px;
+.header-text h1{
+  margin:0 0 6px 0;
+  font-size:22px;
   font-weight:900;
   text-transform:uppercase;
 }
 
-.division-tag{
-  background:var(--primary);
-  color:#fff;
-  font-size:12px;
-  padding:4px 8px;
-  text-transform:uppercase;
+.header-meta{
+  font-size:13px;
+  color:var(--meta);
 }
 
-.fact-bar{
-  display:flex;
-  gap:15px;
-  font-size:11px;
-  text-transform:uppercase;
-  color:#666;
-  margin-top:10px;
-  flex-wrap:wrap;
+.team-logo{
+  height:120px;
+  width:auto;
 }
 
-/* CTAs */
-.cta-row{
-  display:flex;
-  gap:10px;
-  margin:25px 0 40px;
-  flex-wrap:wrap;
+.team-photo{
+  margin:30px 0;
+  border:1px solid var(--line);
 }
 
-.btn{
-  flex:1;
-  min-width:180px;
-  border:2px solid var(--ink);
-  padding:12px 0;
-  text-align:center;
-  font-size:12px;
-  font-weight:bold;
-  text-transform:uppercase;
-  text-decoration:none;
-  color:var(--ink);
-}
-
-.btn.primary{
-  background:var(--primary);
-  color:#fff;
-  border-color:var(--primary);
-}
-
-/* SECTIONS */
-section{margin-bottom:55px;}
-
-h2{
-  font-size:14px;
-  text-transform:uppercase;
-  border-bottom:2px solid var(--accent);
-  padding-bottom:5px;
-}
-
-/* IDENTITY */
-.identity p{
-  font-size:16px;
-  max-width:700px;
-}
-
-/* IMAGE SLOTS */
-.img-slot{
-  background:#e0e0e0;
-  border:1px solid #ccc;
-  margin-bottom:15px;
-}
-
-.img-slot img{
+.team-photo img{
   width:100%;
-  height:100%;
-  object-fit:cover;
   display:block;
 }
 
-.ratio-16-9{aspect-ratio:16/9;}
-.ratio-3-4{aspect-ratio:3/4; max-width:260px;}
-.ratio-1-1{aspect-ratio:1/1; max-width:260px;}
-
-/* SPLIT */
-.split{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:30px;
+h2{
+  font-family:var(--mono);
+  font-size:13px;
+  text-transform:uppercase;
+  letter-spacing:.5px;
+  margin:40px 0 12px;
+  padding-bottom:6px;
+  border-bottom:1px solid var(--line);
 }
 
-/* LINKS */
-a{color:var(--ink); text-decoration:none;}
-a:hover{color:var(--accent);}
+table{
+  width:100%;
+  border-collapse:collapse;
+  font-size:13px;
+}
 
-/* FOOTER */
+th{
+  font-size:11px;
+  color:var(--meta);
+  font-weight:600;
+  text-transform:uppercase;
+  padding:6px;
+  border-bottom:2px solid var(--ink);
+}
+
+td{
+  padding:8px 6px;
+  border-bottom:1px solid #f0f0f0;
+}
+
+.align-center{ text-align:center; }
+.align-right{ text-align:right; }
+
+.roster-pic{
+  width:48px;
+  height:48px;
+  object-fit:cover;
+  border-radius:6px;
+  border:1px solid var(--line);
+  display:block;
+  background:#f0f0f0;
+}
+
 footer{
-  margin-top:70px;
-  padding:30px 20px;
-  border-top:var(--border-thick);
+  margin-top:50px;
+  padding-top:18px;
+  border-top:1px solid var(--line);
   display:flex;
   justify-content:space-between;
   align-items:center;
   font-family:var(--mono);
-  font-size:11px;
+  font-size:10px;
   color:#777;
 }
 
 .glb-logo{
-  height:56px; /* ~40% larger */
+  height:56px;
   width:auto;
-}
-
-@media(max-width:600px){
-  .split{grid-template-columns:1fr;}
-  footer{flex-direction:column; gap:15px;}
-  .doc-id{display:none;}
 }
 </style>
 </head>
 
 <body>
-<div class="club-sheet">
-
-<div class="doc-id">SPK-CLUB-LOCKED</div>
+<div class="sheet">
 
 <header>
-  <div class="club-lockup">
-    <h1>Spokane Alloys</h1>
-    <span class="division-tag">Americas Division</span>
+  <div class="header-text">
+    <h1 id="team-name">Spokane Alloys</h1>
+    <div class="header-meta">Spokane — Americas Division</div>
+    <div class="header-meta">Team Record & Active Roster</div>
   </div>
 
-  <div class="fact-bar">
-    <span>Est. —</span>
-    <span>•</span>
-    <span><strong>The Reduction Yards</strong></span>
-    <span>•</span>
-    <span>Mgr. Elias Thorne</span>
-  </div>
-
-  <div class="cta-row">
-    <a class="btn primary" href="team.html?team=spokane-alloys">Active Roster</a>
-    <a class="btn" href="day.html">Daily Scores</a>
-    <a class="btn" href="game.html">Latest Box Score</a>
-  </div>
+  <img src="team-spokane-alloys-logo.png" alt="Spokane Alloys Logo" class="team-logo">
 </header>
 
-<section class="identity">
-  <h2>The Club</h2>
-  <p>
-    The Spokane Alloys maintain a deliberate, workmanlike approach to the game.
-    Nothing flashy, nothing rushed. Games here feel earned—measured in innings,
-    pitch counts, and long defensive stretches that reward patience.
-  </p>
-</section>
+<div class="team-photo">
+  <img src="team-spokane-alloys-photo.png" alt="Spokane Alloys Team Photo">
+</div>
 
-<section>
-  <h2>Ballpark</h2>
-  <div class="img-slot ratio-16-9">
-    <img src="club-spokane-alloys-park.png" alt="The Reduction Yards">
-  </div>
-  <p>
-    <strong>The Reduction Yards.</strong> A river-adjacent park built of steel,
-    concrete, and exposed structure. Bat cracks echo sharply. Gloves pop loud
-    in the evening air.
-  </p>
-</section>
+<h2>Season Snapshot</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Record</th>
+      <th>Runs</th>
+      <th>Allowed</th>
+      <th>Diff</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>—</td>
+      <td>—</td>
+      <td>—</td>
+      <td>—</td>
+    </tr>
+  </tbody>
+</table>
 
-<section>
-  <h2>Broadcast & Announcers</h2>
-  <div class="split">
-    <div>
-      <div class="img-slot ratio-3-4">
-        <img src="club-spokane-alloys-broadcast.png" alt="Broadcast booth">
-      </div>
-      <h3>Gus Vogel</h3>
-      <p>
-        <strong>Play-by-play.</strong> Calm, precise, and unembellished.
-        Vogel calls the game like a ledger—every pitch accounted for.
-      </p>
-    </div>
-    <div>
-      <div class="img-slot ratio-3-4">
-        <img src="club-spokane-alloys-announcer.png" alt="In-stadium announcer">
-      </div>
-      <h3>Ray Calder</h3>
-      <p>
-        <strong>In-stadium announcer.</strong> A steady baritone voice that
-        carries cleanly through the steel grandstands. Lineups, counts,
-        substitutions—nothing wasted.
-      </p>
-    </div>
-  </div>
-</section>
+<h2>Active Roster</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Pic</th>
+      <th>Player</th>
+      <th>Pos</th>
+      <th class="align-center">B/T</th>
+      <th class="align-right">Age</th>
+    </tr>
+  </thead>
+  <tbody id="roster-body"></tbody>
+</table>
 
-<section>
-  <h2>Mascot & Stands</h2>
-  <div class="split">
-    <div>
-      <div class="img-slot ratio-1-1">
-        <img src="club-spokane-alloys-mascot.png" alt="Ingot mascot">
-      </div>
-      <h3>Ingot</h3>
-      <p>
-        A long-standing fixture of the park. Ingot doesn’t perform routines—
-        he wanders, acknowledges, and looms quietly near the bullpen.
-      </p>
-    </div>
-    <div>
-      <div class="img-slot ratio-1-1">
-        <img src="club-spokane-alloys-fans.png" alt="Spokane fans">
-      </div>
-      <h3>The Freeze Line</h3>
-      <p>
-        Fans here watch closely. Gloves out, scorecards open.
-        Applause comes late—but it means something when it arrives.
-      </p>
-    </div>
-  </div>
-</section>
+<h2>Recent Games</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Opponent</th>
+      <th>Result</th>
+      <th class="align-right">Box</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Apr 8</td>
+      <td>Fresno Yield</td>
+      <td>W 2–0</td>
+      <td class="align-right"><a href="boxscore.html">View</a></td>
+    </tr>
+  </tbody>
+</table>
 
 <footer>
-  <div>GLB CLUB DOSSIER · SPOKANE</div>
-<img class="glb-logo" src="GLB_white.png" alt="GLB">
+  <div>GLOBAL LEAGUE BASEBALL · TEAM RECORD</div>
+  <img src="GLB_white.png" alt="GLB" class="glb-logo">
 </footer>
 
 </div>
+
+<script>
+async function loadRoster() {
+  try {
+    const response = await fetch('data/rosters/spokane-alloys.json');
+    const data = await response.json();
+
+    document.getElementById('team-name').textContent = data.team;
+
+    const rosterBody = document.getElementById('roster-body');
+    rosterBody.innerHTML = '';
+
+    data.players.forEach(player => {
+      const row = document.createElement('tr');
+
+      row.innerHTML = `
+        <td>
+          <img
+            class="roster-pic"
+            src="assets/images/players/spokane-alloys/${player.photo}"
+            alt="${player.name}"
+            loading="lazy"
+          >
+        </td>
+        <td>${player.name}</td>
+        <td>${player.position}</td>
+        <td class="align-center">${player.bats}/${player.throws}</td>
+        <td class="align-right">${player.age}</td>
+      `;
+
+      rosterBody.appendChild(row);
+    });
+  } catch (error) {
+    console.error('Failed to load roster:', error);
+    document.getElementById('roster-body').innerHTML =
+      '<tr><td colspan="5">Roster unavailable.</td></tr>';
+  }
+}
+
+loadRoster();
+</script>
+
 </body>
 </html>

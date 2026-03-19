@@ -5,221 +5,409 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Birmingham Vulcans – Club Portal</title>
+<meta name="description" content="Official club portal for the Birmingham Vulcans of Global League Baseball. Explore OGWA Park, Brass Vulcan, club identity, and field notes.">
 
 <style>
 :root{
-  /* Birmingham Identity: Iron / Fire / Foundry */
-  --primary: #2E2F33;   /* Charcoal */
-  --accent:  #F15A24;   /* Molten orange */
-  --paper:   #ffffff;
-  --ink:     #0f1214;
+  /* Birmingham Identity: steel / brick / heat */
+  --bg:#f3f4f5;
+  --paper:#ffffff;
+  --ink:#0f1214;
+  --muted:#666b70;
+  --line:#d9dde1;
 
-  --border-thick: 4px solid var(--ink);
-  --border-thin:  1px solid #ccc;
+  --charcoal:#2e2f33;
+  --charcoal-2:#1f2124;
+  --orange:#f15a24;
+  --orange-deep:#be4519;
+  --steel:#5a636c;
+  --soft:#f7f7f8;
 
-  --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --mono: "Courier New", Courier, monospace;
+  --border-thick:4px solid var(--ink);
+  --border-thin:1px solid var(--line);
+
+  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;
+  --mono:"Courier New",Courier,monospace;
+
+  --max:980px;
+  --radius:16px;
+  --shadow:0 10px 28px rgba(0,0,0,.06);
 }
 
+*{box-sizing:border-box}
+
+html{scroll-behavior:smooth}
+
 body{
-  background: #f4f4f4;
-  color: var(--ink);
-  font-family: var(--sans);
-  margin: 0;
-  padding: 20px;
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font-family:var(--sans);
+  line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+}
+
+img{
+  max-width:100%;
+  display:block;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
 }
 
 .club-sheet{
-  max-width: 900px;
-  margin: 0 auto;
-  background: var(--paper);
-  padding: 40px;
-  border-top: var(--border-thick);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-  position: relative;
+  max-width:var(--max);
+  margin:28px auto;
+  background:var(--paper);
+  padding:42px;
+  border-top:var(--border-thick);
+  box-shadow:var(--shadow);
+  position:relative;
 }
 
 .doc-id{
-  position: absolute;
-  top: 15px;
-  right: 20px;
-  font-family: var(--mono);
-  font-size: 10px;
-  color: #999;
-  letter-spacing: 1px;
+  position:absolute;
+  top:16px;
+  right:22px;
+  font-family:var(--mono);
+  font-size:10px;
+  color:#9a9fa6;
+  letter-spacing:1px;
+  text-transform:uppercase;
 }
 
 header{
-  border-bottom: var(--border-thick);
-  padding-bottom: 20px;
-  margin-bottom: 20px;
+  border-bottom:var(--border-thick);
+  padding-bottom:22px;
+  margin-bottom:28px;
 }
 
 .club-lockup{
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  flex-wrap: wrap;
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-end;
+  gap:18px;
+  flex-wrap:wrap;
+}
+
+.title-block{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+.kicker{
+  font-family:var(--mono);
+  font-size:11px;
+  color:var(--muted);
+  text-transform:uppercase;
+  letter-spacing:1px;
 }
 
 h1{
-  margin: 0;
-  font-size: 32px;
-  font-weight: 900;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  margin:0;
+  font-size:clamp(2rem, 5vw, 3rem);
+  line-height:1;
+  font-weight:900;
+  text-transform:uppercase;
+  letter-spacing:.03em;
 }
 
 .division-tag{
-  background: var(--primary);
-  color: #fff;
-  font-size: 12px;
-  padding: 4px 8px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-weight: bold;
+  background:var(--charcoal);
+  color:#fff;
+  font-size:12px;
+  padding:6px 10px;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  font-weight:800;
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+}
+
+.division-tag::before{
+  content:"";
+  width:8px;
+  height:8px;
+  border-radius:50%;
+  background:var(--orange);
+  display:inline-block;
 }
 
 .fact-bar{
-  display: flex;
-  gap: 15px;
-  font-size: 11px;
-  text-transform: uppercase;
-  color: #666;
-  margin-top: 10px;
-  flex-wrap: wrap;
+  display:flex;
+  gap:10px 14px;
+  flex-wrap:wrap;
+  align-items:center;
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:.06em;
+  color:var(--muted);
+  margin-top:14px;
 }
-.fact-bar strong { color: var(--ink); }
+
+.fact-bar strong{
+  color:var(--ink);
+  font-weight:800;
+}
+
+.sep{
+  color:#b1b6bc;
+}
 
 .cta-row{
-  display: flex;
-  gap: 10px;
-  margin: 25px 0 40px;
-  flex-wrap: wrap;
+  display:flex;
+  gap:10px;
+  margin:26px 0 0;
+  flex-wrap:wrap;
 }
 
 .btn{
-  flex: 1;
-  min-width: 180px;
-  border: 2px solid var(--ink);
-  padding: 12px 0;
-  text-align: center;
-  font-size: 12px;
-  font-weight: bold;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: var(--ink);
-  letter-spacing: 1px;
-  transition: all 0.2s;
-  background: #fff;
+  flex:1 1 190px;
+  border:2px solid var(--ink);
+  padding:12px 14px;
+  text-align:center;
+  font-size:12px;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  transition:all .18s ease;
+  background:#fff;
 }
 
 .btn:hover{
-  background: var(--ink);
-  color: #fff;
+  background:var(--ink);
+  color:#fff;
 }
 
 .btn.primary{
-  background: var(--primary);
-  color: #fff;
-  border-color: var(--primary);
+  background:var(--charcoal);
+  color:#fff;
+  border-color:var(--charcoal);
 }
 
 .btn.primary:hover{
-  background: var(--accent);
-  border-color: var(--accent);
-  color: #111;
+  background:var(--orange);
+  border-color:var(--orange);
+  color:#111;
 }
 
-section{ margin-bottom: 50px; }
+section{
+  margin-bottom:52px;
+}
 
 h2{
-  font-size: 14px;
-  text-transform: uppercase;
-  border-bottom: 2px solid var(--accent);
-  padding-bottom: 5px;
-  letter-spacing: 1px;
-  margin-bottom: 20px;
+  margin:0 0 18px;
+  font-size:14px;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  padding-bottom:6px;
+  border-bottom:2px solid var(--orange);
 }
 
-.identity p{
-  font-size: 16px;
-  max-width: 700px;
-  margin-bottom: 20px;
+p{
+  margin:0 0 16px;
 }
 
-.identity ul{
-  list-style: none;
-  padding: 0;
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-  gap: 20px;
+.lead{
+  font-size:16px;
+  max-width:760px;
 }
 
-.identity li{
-  font-size: 12px;
-  font-weight: bold;
-  text-transform: uppercase;
-  border-top: 1px solid #ccc;
-  padding-top: 10px;
+.identity-grid{
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:18px;
+  margin-top:24px;
 }
 
+.identity-card{
+  border-top:2px solid var(--line);
+  padding-top:10px;
+}
+
+.identity-card .label{
+  font-size:11px;
+  color:var(--muted);
+  text-transform:uppercase;
+  letter-spacing:1px;
+  margin-bottom:6px;
+}
+
+.identity-card .value{
+  font-size:13px;
+  font-weight:800;
+  text-transform:uppercase;
+  line-height:1.35;
+}
+
+.hero-img,
 .img-slot{
-  background: #e0e0e0;
-  border: 1px solid #ccc;
-  margin-bottom: 15px;
+  background:#e5e7ea;
+  border:1px solid var(--line);
+  overflow:hidden;
 }
 
-.img-slot img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
+.hero-img{
+  aspect-ratio:16 / 9;
+  margin-bottom:16px;
 }
 
-.ratio-16-9 { aspect-ratio: 16/9; }
-.ratio-3-4  { aspect-ratio: 3/4; max-width: 250px; }
-.ratio-1-1  { aspect-ratio: 1/1; max-width: 260px; }
-
-.split{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
-  align-items: start;
+.img-slot img,
+.hero-img img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
 }
 
 .info-card h3{
-  margin: 0 0 8px 0;
-  font-size: 18px;
-  font-weight: 800;
+  margin:0 0 6px;
+  font-size:20px;
+  font-weight:900;
+  letter-spacing:.01em;
 }
 
 .subhead{
-  display: block;
-  font-size: 11px;
-  color: #666;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 12px;
+  display:block;
+  font-size:11px;
+  color:var(--muted);
+  text-transform:uppercase;
+  letter-spacing:1px;
+  margin-bottom:12px;
 }
 
-.field-notes{
-  border-top: 1px solid #eee;
-  padding-top: 20px;
-  margin-top: 20px;
+.split{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:28px;
+  align-items:start;
+}
+
+.ratio-3-4{
+  aspect-ratio:3 / 4;
+  max-width:280px;
+  margin-bottom:14px;
+}
+
+.ratio-1-1{
+  aspect-ratio:1 / 1;
+  max-width:280px;
+  margin-bottom:14px;
+}
+
+.note-grid{
+  display:grid;
+  grid-template-columns:1.15fr .85fr;
+  gap:28px;
+  align-items:start;
+}
+
+.panel{
+  border:1px solid var(--line);
+  background:var(--soft);
+  padding:20px;
+}
+
+.panel h3{
+  margin:0 0 10px;
+  font-size:15px;
+  text-transform:uppercase;
+  letter-spacing:.06em;
+}
+
+.panel ul{
+  margin:0;
+  padding-left:18px;
+}
+
+.panel li{
+  margin-bottom:10px;
+}
+
+.callout{
+  background:linear-gradient(180deg, #22252a 0%, #181a1d 100%);
+  color:#f0f2f4;
+  border:none;
+}
+
+.callout .small{
+  display:block;
+  font-size:10px;
+  text-transform:uppercase;
+  letter-spacing:.12em;
+  color:#b8c0c8;
+  margin-bottom:10px;
+}
+
+.callout p{
+  margin:0;
+  font-size:1rem;
 }
 
 .glb-footer{
-  margin-top: 50px;
-  padding-top: 18px;
-  border-top: 2px solid #eee;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 11px;
-  color: #666;
+  margin-top:56px;
+  padding-top:18px;
+  border-top:2px solid #eceef0;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+  font-size:11px;
+  color:var(--muted);
+  text-transform:uppercase;
+  letter-spacing:.08em;
+  flex-wrap:wrap;
+}
+
+@media (max-width: 860px){
+  .club-sheet{
+    padding:28px 22px;
+    margin:0;
+    max-width:none;
+  }
+
+  .split,
+  .note-grid,
+  .identity-grid{
+    grid-template-columns:1fr;
+  }
+
+  .ratio-3-4,
+  .ratio-1-1{
+    max-width:none;
+  }
+
+  .doc-id{
+    position:static;
+    margin-bottom:12px;
+    display:block;
+  }
+}
+
+@media (max-width: 560px){
+  body{
+    padding:0;
+  }
+
+  .club-sheet{
+    border-top-width:5px;
+    box-shadow:none;
+  }
+
+  .btn{
+    flex-basis:100%;
+  }
+
+  .fact-bar{
+    gap:8px 10px;
+  }
+
+  .sep{
+    display:none;
+  }
 }
 </style>
 </head>
@@ -227,138 +415,177 @@ h2{
 <body>
 <div class="club-sheet">
 
-<div class="doc-id">BHM-CLUB-01</div>
+  <div class="doc-id">BHM-CLUB-02</div>
 
-<header>
-  <div class="club-lockup">
-    <h1>Birmingham Vulcans</h1>
-    <span class="division-tag">Americas Division</span>
-  </div>
+  <header>
+    <div class="club-lockup">
+      <div class="title-block">
+        <div class="kicker">Global League Baseball · Club Portal</div>
+        <h1>Birmingham Vulcans</h1>
+      </div>
+      <span class="division-tag">Americas Division</span>
+    </div>
 
-  <div class="fact-bar">
-    <span>Est. —</span>
-    <span>•</span>
-    <span><strong>Cinder Field</strong></span>
-    <span>•</span>
-    <span>Mgr. —</span>
-  </div>
+    <div class="fact-bar">
+      <span>Est. —</span>
+      <span class="sep">•</span>
+      <span><strong>OGWA Park</strong></span>
+      <span class="sep">•</span>
+      <span>City: <strong>Birmingham</strong></span>
+      <span class="sep">•</span>
+      <span>Club File: <strong>Active</strong></span>
+    </div>
 
-  <div class="cta-row">
-    <a class="btn primary" href="team.html?team=birmingham-vulcans">Active Roster</a>
-    <a class="btn" href="day.html?date=2026-05-12">Daily Scores</a>
-    <a class="btn" href="game.html?date=2026-05-12&game=birmingham-vulcans@albuquerque-aeros">Latest Box Score</a>
-  </div>
-</header>
+    <div class="cta-row">
+      <a class="btn primary" href="team.html?team=birmingham-vulcans">Active Roster</a>
+      <a class="btn" href="ogwa-park.html">OGWA Park</a>
+      <a class="btn" href="mascot-brass-vulcan.html">Brass Vulcan</a>
+      <a class="btn" href="day.html?date=2026-05-12">Daily Scores</a>
+    </div>
+  </header>
 
-<section class="identity">
-  <h2>The Club</h2>
-  <p>
-    Birmingham plays like it was forged. The Vulcans carry an industrial rhythm —
-    deliberate, physical, and unafraid of heat. On game nights the air feels
-    heavier, like something is being built in real time.
-  </p>
-  <ul>
-    <li>Read: Ironworks / Foundry</li>
-    <li>Public Mood: Grit & Volume</li>
-    <li>Ritual: “Strike the Anvil”</li>
-  </ul>
-</section>
-
-<section>
-  <h2>Ballpark</h2>
-  <div class="img-slot ratio-16-9">
-    <img src="club-birmingham-vulcans-stadium.png" alt="Cinder Field at dusk">
-  </div>
-  <div class="info-card">
-    <h3>Cinder Field</h3>
-    <span class="subhead">Steel beams • brick concourse • late light</span>
-    <p>
-      Built on old industrial ground, Cinder Field feels solid and grounded.
-      The brick holds heat long after sunset, and the crowd noise rises
-      like sparks from a furnace.
+  <section class="identity">
+    <h2>The Club</h2>
+    <p class="lead">
+      Birmingham plays with controlled intensity. The Vulcans feel forged rather than assembled —
+      deliberate, heavy, and built to hold shape under pressure. On game nights, the park carries
+      that same logic: heat, structure, and the sense that something permanent is being made in public.
     </p>
-  </div>
-</section>
 
-<section>
-  <h2>Broadcast & Announcer</h2>
-  <div class="split">
-
-    <div>
-      <div class="img-slot ratio-3-4">
-        <img src="club-birmingham-vulcans-broadcast.png" alt="Broadcast booth">
+    <div class="identity-grid">
+      <div class="identity-card">
+        <div class="label">Read</div>
+        <div class="value">Foundry / Heat / Structure</div>
       </div>
-      <div class="info-card">
-        <h3>Play-by-Play</h3>
-        <span class="subhead">Radio • steady • grounded</span>
+      <div class="identity-card">
+        <div class="label">Public Mood</div>
+        <div class="value">Controlled Intensity</div>
+      </div>
+      <div class="identity-card">
+        <div class="label">Primary Landmark</div>
+        <div class="value">The Pour</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Ballpark</h2>
+
+    <div class="hero-img">
+      <img src="club-birmingham-vulcans-stadium.png" alt="OGWA Park at dusk">
+    </div>
+
+    <div class="info-card">
+      <h3>OGWA Park</h3>
+      <span class="subhead">Steel • brick • structure • late light</span>
+      <p>
+        OGWA Park is built around Birmingham’s industrial logic: overbuilt steel, grounded materials,
+        and public space that feels engineered rather than decorated. Outside the main approach stands
+        The Pour, the club’s defining landmark and pregame meeting point.
+      </p>
+      <p>
+        The park does not perform grit. It carries it in the materials — dark steel, brick, heavy framing,
+        and a crowd that builds slowly and gets louder by accumulation rather than spectacle.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Broadcast & Announcer</h2>
+
+    <div class="split">
+      <div>
+        <div class="img-slot ratio-3-4">
+          <img src="club-birmingham-vulcans-broadcast.png" alt="Birmingham Vulcans broadcast booth">
+        </div>
+        <div class="info-card">
+          <h3>Play-by-Play</h3>
+          <span class="subhead">Radio • steady • grounded</span>
+          <p>
+            The broadcast voice is direct and unsentimental. Games are called with the clarity of a shift report:
+            no wasted language, no forced mythology, just pressure, count, contact, and consequence.
+          </p>
+        </div>
+      </div>
+
+      <div>
+        <div class="img-slot ratio-3-4">
+          <img src="club-birmingham-vulcans-announcer.png" alt="Birmingham Vulcans in-stadium announcer">
+        </div>
+        <div class="info-card">
+          <h3>In-Stadium Announcer</h3>
+          <span class="subhead">PA • forceful • unmistakable</span>
+          <p>
+            The public-address voice cuts clean through the park. It does not shout for effect. It lands hard,
+            names the moment, and leaves enough space for the crowd to finish the rest.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Mascot & Stands</h2>
+
+    <div class="split">
+      <div>
+        <div class="img-slot ratio-1-1">
+          <img src="club-birmingham-vulcans-mascot.png" alt="Brass Vulcan mascot">
+        </div>
+        <div class="info-card">
+          <h3>Brass Vulcan</h3>
+          <span class="subhead">Foundry giant • physical • unmistakable</span>
+          <p>
+            Brass Vulcan is the club’s mascot and public presence at OGWA Park. Used with restraint,
+            he appears in big moments, crowd interactions, and around The Pour, where he feels less like
+            a performer and more like part of the park itself.
+          </p>
+        </div>
+      </div>
+
+      <div>
+        <div class="img-slot ratio-1-1">
+          <img src="club-birmingham-vulcans-fans.png" alt="Fans at OGWA Park">
+        </div>
+        <div class="info-card">
+          <h3>The Stands</h3>
+          <span class="subhead">Generational • local • unshowy</span>
+          <p>
+            The crowd carries itself with pride more than flash. Families, regulars, and workers fill the park
+            with a home-field energy that builds gradually and stays heavy once it arrives.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Field Notes</h2>
+
+    <div class="note-grid">
+      <div class="panel">
+        <h3>Observed Conditions</h3>
+        <ul>
+          <li>Best arrival window: before dusk, while The Pour is active outside the gate.</li>
+          <li>Common meeting point: The Pour plaza.</li>
+          <li>Crowd build is delayed but cumulative; the park rarely starts loud and almost never stays quiet.</li>
+          <li>Public energy reads more structural than theatrical — less spectacle, more pressure.</li>
+        </ul>
+      </div>
+
+      <div class="panel callout">
+        <span class="small">Club Read</span>
         <p>
-          Direct and unsentimental. Calls games like a shift report.
+          Birmingham does not ask to be admired first. It asks to be taken seriously.
         </p>
       </div>
     </div>
+  </section>
 
-    <div>
-      <div class="img-slot ratio-3-4">
-        <img src="club-birmingham-vulcans-announcer.png" alt="In-stadium announcer">
-      </div>
-      <div class="info-card">
-        <h3>In-Stadium Announcer</h3>
-        <span class="subhead">PA • forceful • unmistakable</span>
-        <p>
-          Voice cuts clean through noise. When he says your name, you feel it.
-        </p>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<section>
-  <h2>Mascot & Stands</h2>
-  <div class="split">
-
-    <div>
-      <div class="img-slot ratio-1-1">
-        <img src="club-birmingham-vulcans-mascot.png" alt="Vulcans mascot">
-      </div>
-      <div class="info-card">
-        <h3>Mascot</h3>
-        <span class="subhead">Helmeted • flame-touched • loud</span>
-        <p>
-          Part blacksmith, part legend. Always near the dugout rail.
-        </p>
-      </div>
-    </div>
-
-    <div>
-      <div class="img-slot ratio-1-1">
-        <img src="club-birmingham-vulcans-fans.png" alt="Fans at Cinder Field">
-      </div>
-      <div class="info-card">
-        <h3>The Stands</h3>
-        <span class="subhead">Blue collar • generational • proud</span>
-        <p>
-          Multi-generational families. Loud when needed. Loyal always.
-        </p>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<section class="field-notes">
-  <h2>Field Notes</h2>
-  <ul>
-    <li>Best time to arrive: just before sunset.</li>
-    <li>Local superstition: tap the railing before first pitch.</li>
-    <li>If sparks fly, it’s probably intentional.</li>
-  </ul>
-</section>
-
-<footer class="glb-footer">
-  <div>Global League Baseball © 2026</div>
-  <div>Forged for Competition</div>
-</footer>
+  <footer class="glb-footer">
+    <div>Global League Baseball © 2026</div>
+    <div>Americas Division Club File</div>
+  </footer>
 
 </div>
 </body>

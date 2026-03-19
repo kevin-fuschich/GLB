@@ -3,257 +3,244 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GLB Team Record – Birmingham Vulcans</title>
+
+<title>Birmingham Vulcans — GLB</title>
 
 <style>
 :root{
-  --paper:#ffffff;
   --ink:#0f1214;
-  --meta:#666;
-  --line:#e0e0e0;
+  --muted:#6b6f75;
+  --line:#e1e4e8;
+  --bg:#f4f5f6;
+  --card:#ffffff;
 
-  --sans:"Helvetica Neue", Helvetica, Arial, sans-serif;
-  --mono:"Courier New", Courier, monospace;
+  --accent:#f15a24;
+  --dark:#2e2f33;
+
+  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
 }
 
 body{
-  background:#f4f4f4;
-  font-family:var(--sans);
-  color:var(--ink);
   margin:0;
-  padding:40px 20px;
+  font-family:var(--sans);
+  background:var(--bg);
+  color:var(--ink);
 }
 
-.sheet{
-  max-width:640px;
+.container{
+  max-width:1100px;
   margin:0 auto;
-  background:var(--paper);
-  padding:40px;
-  border-top:5px solid var(--ink);
-  box-shadow:0 4px 20px rgba(0,0,0,.08);
+  padding:30px 20px;
 }
 
 /* HEADER */
-header{
-  display:flex;
-  justify-content:space-between;
-  align-items:flex-start;
-  padding-bottom:20px;
-  border-bottom:2px solid var(--ink);
+
+.header{
   margin-bottom:30px;
 }
 
-.header-text h1{
-  margin:0 0 6px 0;
-  font-size:22px;
+h1{
+  margin:0;
+  font-size:40px;
   font-weight:900;
-  text-transform:uppercase;
+  letter-spacing:.02em;
 }
 
-.header-meta{
+.meta{
+  margin-top:8px;
   font-size:13px;
-  color:var(--meta);
+  color:var(--muted);
+  text-transform:uppercase;
+  letter-spacing:.08em;
 }
 
-.team-logo{
-  height:120px;
-  width:auto;
-}
+/* HERO */
 
-/* TEAM PHOTO */
-.team-photo{
+.hero{
   margin:30px 0;
+}
+
+.hero img{
+  width:100%;
   border:1px solid var(--line);
 }
 
-.team-photo img{
+/* GRID */
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:24px;
+  margin-top:30px;
+}
+
+.card{
+  background:var(--card);
+  border:1px solid var(--line);
+}
+
+.card img{
   width:100%;
   display:block;
 }
 
-/* SECTION HEADERS */
-h2{
-  font-family:var(--mono);
-  font-size:13px;
-  text-transform:uppercase;
-  letter-spacing:.5px;
-  margin:40px 0 12px;
-  padding-bottom:6px;
-  border-bottom:1px solid var(--line);
+.card-body{
+  padding:16px;
 }
 
-/* TABLES */
-table{
+.card h3{
+  margin:0 0 6px;
+  font-size:16px;
+  text-transform:uppercase;
+  letter-spacing:.05em;
+}
+
+.card p{
+  margin:0;
+  font-size:14px;
+  color:var(--muted);
+}
+
+/* FEATURE STRIP */
+
+.feature{
+  margin:50px 0;
+}
+
+.feature img{
   width:100%;
-  border-collapse:collapse;
-  font-size:13px;
-}
-
-th{
-  font-size:11px;
-  color:var(--meta);
-  font-weight:600;
-  text-transform:uppercase;
-  padding:6px;
-  border-bottom:2px solid var(--ink);
-}
-
-td{
-  padding:8px 6px;
-  border-bottom:1px solid #f0f0f0;
-}
-
-.align-center{ text-align:center; }
-.align-right{ text-align:right; }
-
-/* ROSTER HEADSHOTS */
-.roster-pic{
-  width:48px;
-  height:48px;
-  object-fit:cover;
-  border-radius:6px;
-  border:1px solid var(--line);
   display:block;
+  border:1px solid var(--line);
 }
 
-/* FOOTER */
-footer{
-  margin-top:50px;
-  padding-top:18px;
-  border-top:1px solid var(--line);
+/* CTA */
+
+.links{
   display:flex;
-  justify-content:space-between;
-  align-items:center;
-  font-family:var(--mono);
-  font-size:10px;
-  color:#777;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:30px;
 }
 
-.glb-logo{
-  height:56px;
-  width:auto;
+.btn{
+  padding:12px 16px;
+  border:2px solid var(--ink);
+  text-decoration:none;
+  font-size:12px;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+  color:var(--ink);
+}
+
+.btn:hover{
+  background:var(--ink);
+  color:#fff;
+}
+
+.btn.primary{
+  background:var(--dark);
+  color:#fff;
+  border-color:var(--dark);
+}
+
+.btn.primary:hover{
+  background:var(--accent);
+  border-color:var(--accent);
+  color:#111;
+}
+
+/* MOBILE */
+
+@media(max-width:800px){
+  .grid{
+    grid-template-columns:1fr;
+  }
 }
 </style>
 </head>
 
 <body>
-<div class="sheet">
 
-<header>
-  <div class="header-text">
+<div class="container">
+
+  <!-- HEADER -->
+  <div class="header">
     <h1>Birmingham Vulcans</h1>
-    <div class="header-meta">Birmingham — Americas Division</div>
-    <div class="header-meta">Team Record & Active Roster</div>
+    <div class="meta">Americas Division · OGWA Park</div>
   </div>
 
-  <img src="team-birmingham-vulcans-logo.png" alt="Birmingham Vulcans Logo" class="team-logo">
-</header>
+  <!-- HERO -->
+  <div class="hero">
+    <img src="park1.png" alt="park1">
+  </div>
 
-<!-- TEAM PHOTO -->
-<div class="team-photo">
-  <img src="team-birmingham-vulcans-photo.png" alt="Birmingham Vulcans Team Photo">
-</div>
+  <!-- FEATURE: THE POUR -->
+  <div class="feature">
+    <img src="park-pour.png" alt="park-pour">
+  </div>
 
-<h2>Season Snapshot</h2>
-<table>
-  <thead>
-    <tr>
-      <th>Record</th>
-      <th>Runs</th>
-      <th>Allowed</th>
-      <th>Diff</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>0–0</td>
-      <td>—</td>
-      <td>—</td>
-      <td>—</td>
-    </tr>
-  </tbody>
-</table>
+  <!-- GRID -->
+  <div class="grid">
 
-<h2>Active Roster</h2>
-<table>
-  <thead>
-    <tr>
-      <th>Pic</th>
-      <th>Player</th>
-      <th>Pos</th>
-      <th class="align-center">B/T</th>
-      <th class="align-right">Age</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><img class="roster-pic" src="player-birmingham-cole-ramsey.png"></td>
-      <td>Cole Ramsey</td><td>SP</td><td class="align-center">R/R</td><td class="align-right">29</td>
-    </tr>
-    <tr>
-      <td><img class="roster-pic" src="player-birmingham-dante-rios.png"></td>
-      <td>Dante Ríos</td><td>SP</td><td class="align-center">L/L</td><td class="align-right">26</td>
-    </tr>
-    <tr>
-      <td><img class="roster-pic" src="player-birmingham-isaac-morrow.png"></td>
-      <td>Isaac Morrow</td><td>RP</td><td class="align-center">R/R</td><td class="align-right">31</td>
-    </tr>
-    <tr>
-      <td><img class="roster-pic" src="player-birmingham-caleb-hawkins.png"></td>
-      <td>Caleb Hawkins</td><td>C</td><td class="align-center">R/R</td><td class="align-right">28</td>
-    </tr>
-    <tr>
-      <td><img class="roster-pic" src="player-birmingham-julian-santoro.png"></td>
-      <td>Julian Santoro</td><td>1B</td><td class="align-center">L/R</td><td class="align-right">27</td>
-    </tr>
-    <tr>
-      <td><img class="roster-pic" src="player-birmingham-nico-valente.png"></td>
-      <td>Nico Valente</td><td>2B</td><td class="align-center">R/R</td><td class="align-right">24</td>
-    </tr>
-    <tr>
-      <td><img class="roster-pic" src="player-birmingham-malik-johnson.png"></td>
-      <td>Malik Johnson</td><td>SS</td><td class="align-center">S/R</td><td class="align-right">25</td>
-    </tr>
-    <tr>
-      <td><img class="roster-pic" src="player-birmingham-owen-keller.png"></td>
-      <td>Owen Keller</td><td>3B</td><td class="align-center">R/R</td><td class="align-right">30</td>
-    </tr>
-    <tr>
-      <td><img class="roster-pic" src="player-birmingham-reese-walker.png"></td>
-      <td>Reese Walker</td><td>CF</td><td class="align-center">L/L</td><td class="align-right">26</td>
-    </tr>
-    <tr>
-      <td><img class="roster-pic" src="player-birmingham-antonio-bela.png"></td>
-      <td>Antonio Bela</td><td>RF</td><td class="align-center">R/R</td><td class="align-right">32</td>
-    </tr>
-  </tbody>
-</table>
+    <div class="card">
+      <img src="brass-pour.png" alt="brass-pour">
+      <div class="card-body">
+        <h3>Brass Vulcan</h3>
+        <p>Primary presence at The Pour and in-game moments.</p>
+      </div>
+    </div>
 
-<h2>Recent Games</h2>
-<table>
-  <thead>
-    <tr>
-      <th>Date</th>
-      <th>Opponent</th>
-      <th>Result</th>
-      <th class="align-right">Box</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>—</td>
-      <td>—</td>
-      <td>—</td>
-      <td class="align-right">—</td>
-    </tr>
-  </tbody>
-</table>
+    <div class="card">
+      <img src="concourse1.png" alt="concourse1">
+      <div class="card-body">
+        <h3>Concourse</h3>
+        <p>Movement, density, and pregame flow.</p>
+      </div>
+    </div>
 
-<footer>
-  <div>GLOBAL LEAGUE BASEBALL · TEAM RECORD</div>
-  <img src="GLB_white.png" alt="GLB" class="glb-logo">
-</footer>
+    <div class="card">
+      <img src="concourse2.png" alt="concourse2">
+      <div class="card-body">
+        <h3>The Stands</h3>
+        <p>Generational crowd. Builds slowly. Holds.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="store1.png" alt="store1">
+      <div class="card-body">
+        <h3>OGWA Store</h3>
+        <p>Issued equipment. No excess.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="ogwa1.jpeg" alt="ogwa1">
+      <div class="card-body">
+        <h3>OGWA System</h3>
+        <p>Access to water. Functional. Permanent.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="anthem1.png" alt="anthem1">
+      <div class="card-body">
+        <h3>Opening Sequence</h3>
+        <p>Structured, direct, and observed.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- LINKS -->
+  <div class="links">
+    <a class="btn primary" href="team.html?team=birmingham-vulcans">Roster</a>
+    <a class="btn" href="ogwa-park.html">OGWA Park</a>
+    <a class="btn" href="mascot-brass-vulcan.html">Brass Vulcan</a>
+  </div>
 
 </div>
+
 </body>
 </html>

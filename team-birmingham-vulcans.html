@@ -27,15 +27,11 @@ body{
   color:var(--ink);
 }
 
-/* CONTAINER */
-
 .container{
   max-width:1100px;
   margin:0 auto;
   padding:30px 20px;
 }
-
-/* HEADER */
 
 .header{
   margin-bottom:30px;
@@ -45,7 +41,6 @@ h1{
   margin:0;
   font-size:40px;
   font-weight:900;
-  letter-spacing:.02em;
 }
 
 .meta{
@@ -53,33 +48,16 @@ h1{
   font-size:13px;
   color:var(--muted);
   text-transform:uppercase;
-  letter-spacing:.08em;
 }
 
-/* HERO */
-
-.hero{
-  margin:30px 0;
-}
-
-.hero img{
-  width:100%;
-  border:1px solid var(--line);
-}
-
-/* FEATURE */
-
-.feature{
-  margin:40px 0;
-}
-
-.feature img{
+.hero img,
+.feature img,
+.card img{
   width:100%;
   border:1px solid var(--line);
 }
 
 /* GRID */
-
 .grid{
   display:grid;
   grid-template-columns:repeat(2,1fr);
@@ -92,11 +70,6 @@ h1{
   border:1px solid var(--line);
 }
 
-.card img{
-  width:100%;
-  display:block;
-}
-
 .card-body{
   padding:16px;
 }
@@ -105,7 +78,6 @@ h1{
   margin:0 0 6px;
   font-size:14px;
   text-transform:uppercase;
-  letter-spacing:.08em;
 }
 
 .card p{
@@ -113,8 +85,6 @@ h1{
   font-size:13px;
   color:var(--muted);
 }
-
-/* LINKS */
 
 .links{
   display:flex;
@@ -130,7 +100,6 @@ h1{
   font-size:12px;
   font-weight:800;
   text-transform:uppercase;
-  letter-spacing:.08em;
   color:var(--ink);
 }
 
@@ -151,12 +120,8 @@ h1{
   color:#111;
 }
 
-/* MOBILE */
-
 @media(max-width:800px){
-  .grid{
-    grid-template-columns:1fr;
-  }
+  .grid{ grid-template-columns:1fr; }
 }
 </style>
 </head>
@@ -173,27 +138,27 @@ h1{
 
   <!-- HERO -->
   <div class="hero">
-    <img src="park1.png" alt="park1">
+    <img src="assets/teams/vancouver-vulcans/park/park1.png">
   </div>
 
-  <!-- FEATURE: THE POUR -->
+  <!-- POUR -->
   <div class="feature">
-    <img src="park-pour.png" alt="park-pour">
+    <img src="assets/teams/vancouver-vulcans/park/park-pour.png">
   </div>
 
   <!-- GRID -->
   <div class="grid">
 
     <div class="card">
-      <img src="brass-pour.png" alt="brass-pour">
+      <img src="assets/teams/vancouver-vulcans/park/brass-pour.png">
       <div class="card-body">
         <h3>Brass Vulcan</h3>
-        <p>Primary presence at The Pour and in-game moments.</p>
+        <p>Primary presence at The Pour.</p>
       </div>
     </div>
 
     <div class="card">
-      <img src="concourse1.png" alt="concourse1">
+      <img src="assets/teams/vancouver-vulcans/park/concourse1.png">
       <div class="card-body">
         <h3>Concourse</h3>
         <p>Movement and pregame flow.</p>
@@ -201,31 +166,23 @@ h1{
     </div>
 
     <div class="card">
-      <img src="concourse2.png" alt="concourse2">
+      <img src="assets/teams/vancouver-vulcans/park/concourse2.png">
       <div class="card-body">
         <h3>The Stands</h3>
-        <p>Generational crowd. Builds slowly.</p>
+        <p>Generational crowd.</p>
       </div>
     </div>
 
     <div class="card">
-      <img src="store1.png" alt="store1">
+      <img src="assets/teams/vancouver-vulcans/park/brass-fans.png">
       <div class="card-body">
-        <h3>OGWA Store</h3>
-        <p>Issued equipment.</p>
+        <h3>Fans</h3>
+        <p>Loud. Loyal. Present.</p>
       </div>
     </div>
 
     <div class="card">
-      <img src="ogwa1.jpeg" alt="ogwa1">
-      <div class="card-body">
-        <h3>OGWA System</h3>
-        <p>Access to water. Functional.</p>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="anthem1.png" alt="anthem1">
+      <img src="assets/teams/vancouver-vulcans/park/anthem1.png">
       <div class="card-body">
         <h3>Opening Sequence</h3>
         <p>Structured and direct.</p>
@@ -237,8 +194,6 @@ h1{
   <!-- LINKS -->
   <div class="links">
     <a class="btn primary" href="team.html?team=birmingham-vulcans">Roster</a>
-    <a class="btn" href="ogwa-park.html">OGWA Park</a>
-    <a class="btn" href="mascot-brass-vulcan.html">Brass Vulcan</a>
     <a class="btn" href="club-birmingham-vulcans.html">Club File</a>
   </div>
 

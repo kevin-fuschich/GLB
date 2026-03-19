@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brass Vulcan | Birmingham Vulcans | GLB</title>
+  <meta name="description" content="Meet Brass Vulcan, the official mascot of the Birmingham Vulcans at OGWA Park." />
+  <style>
+    :root{
+      --bg:#f3f1ec;
+      --card:#fffdf8;
+      --ink:#111111;
+      --muted:#5e5a54;
+      --line:#d7d1c8;
+      --black:#111111;
+      --steel:#3d434a;
+      --orange:#c95a1a;
+      --orange-deep:#9f4311;
+      --cream:#efe6d8;
+      --max:1160px;
+      --radius:18px;
+      --shadow:0 16px 40px rgba(0,0,0,.08);
+      --serif:Georgia,"Times New Roman",serif;
+      --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--ink);
+      font-family:var(--sans);
+      line-height:1.6;
+    }
+
+    img{max-width:100%;display:block}
+    a{color:inherit;text-decoration:none}
+
+    .site-header{
+      background:#151515;
+      color:#fff;
+      border-bottom:1px solid rgba(255,255,255,.1);
+    }
+
+    .site-header-inner,
+    .container{
+      width:min(var(--max), calc(100% - 32px));
+      margin:0 auto;
+    }
+
+    .site-header-inner{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      min-height:72px;
+      gap:20px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:14px;
+      font-weight:800;
+      letter-spacing:.04em;
+      text-transform:uppercase;
+    }
+
+    .brand-mark{
+      width:38px;
+      height:38px;
+      border:2px solid #fff;
+      border-radius:10px;
+      display:grid;
+      place-items:center;
+      font-size:.9rem;
+      font-weight:900;
+    }
+
+    .nav{
+      display:flex;
+      gap:18px;
+      flex-wrap:wrap;
+      font-size:.95rem;
+      color:rgba(255,255,255,.82);
+    }
+
+    .hero{
+      padding:42px 0 28px;
+    }
+
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.15fr .85fr;
+      gap:28px;
+      align-items:stretch;
+    }
+
+    .hero-copy,
+    .hero-image{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      overflow:hidden;
+    }
+
+    .hero-copy{
+      padding:34px;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+    }
+
+    .eyebrow{
+      font-size:.82rem;
+      letter-spacing:.16em;
+      text-transform:uppercase;
+      color:var(--orange-deep);
+      font-weight:800;
+      margin-bottom:12px;
+    }
+
+    h1{
+      margin:0 0 14px;
+      font-family:var(--serif);
+      font-size:clamp(2.2rem, 5vw, 4.3rem);
+      line-height:1.02;
+      letter-spacing:-.02em;
+    }
+
+    .subhead{
+      margin:0 0 18px;
+      max-width:58ch;
+      color:var(--muted);
+      font-size:1.04rem;
+    }
+
+    .meta-row{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-top:8px;
+    }
+
+    .tag{
+      display:inline-flex;
+      align-items:center;
+      padding:8px 12px;
+      border-radius:999px;
+      background:var(--cream);
+      border:1px solid #e2d4bd;
+      color:#6b3918;
+      font-size:.82rem;
+      font-weight:800;
+      letter-spacing:.05em;
+      text-transform:uppercase;
+    }
+
+    .hero-image{
+      min-height:100%;
+      background:#ddd;
+    }
+
+    .hero-image img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+
+    .main{
+      padding:8px 0 56px;
+    }
+
+    .content-grid{
+      display:grid;
+      grid-template-columns:1.35fr .75fr;
+      gap:28px;
+      align-items:start;
+    }
+
+    .panel{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      overflow:hidden;
+    }
+
+    .panel-body{
+      padding:30px;
+    }
+
+    .panel h2{
+      margin:0 0 14px;
+      font-family:var(--serif);
+      font-size:1.75rem;
+      line-height:1.1;
+    }
+
+    .panel p{
+      margin:0 0 16px;
+    }
+
+    .panel p:last-child{
+      margin-bottom:0;
+    }
+
+    .facts{
+      list-style:none;
+      margin:0;
+      padding:0;
+      display:grid;
+      gap:12px;
+    }
+
+    .facts li{
+      padding:14px 16px;
+      background:#faf7f1;
+      border:1px solid #e8e0d4;
+      border-radius:14px;
+    }
+
+    .facts strong{
+      display:block;
+      margin-bottom:4px;
+      font-size:.82rem;
+      text-transform:uppercase;
+      letter-spacing:.08em;
+      color:var(--orange-deep);
+    }
+
+    .quote{
+      background:linear-gradient(180deg, #22170f, #17110d);
+      color:#f7eee4;
+      border:none;
+    }
+
+    .quote .panel-body{
+      padding:30px;
+    }
+
+    .quote blockquote{
+      margin:0;
+      font-family:var(--serif);
+      font-size:1.5rem;
+      line-height:1.3;
+    }
+
+    .gallery{
+      display:grid;
+      grid-template-columns:repeat(2, 1fr);
+      gap:18px;
+      margin-top:18px;
+    }
+
+    .gallery figure{
+      margin:0;
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:14px;
+      overflow:hidden;
+    }
+
+    .gallery img{
+      width:100%;
+      aspect-ratio:4 / 3;
+      object-fit:cover;
+      background:#ddd;
+    }
+
+    .gallery figcaption{
+      padding:10px 12px;
+      font-size:.9rem;
+      color:var(--muted);
+    }
+
+    .site-footer{
+      border-top:1px solid var(--line);
+      padding:26px 0 34px;
+      color:var(--muted);
+      font-size:.95rem;
+    }
+
+    @media (max-width: 960px){
+      .hero-grid,
+      .content-grid{
+        grid-template-columns:1fr;
+      }
+    }
+
+    @media (max-width: 640px){
+      .hero-copy,
+      .panel-body,
+      .quote .panel-body{
+        padding:22px;
+      }
+
+      .gallery{
+        grid-template-columns:1fr;
+      }
+
+      .nav{
+        display:none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <div class="brand">
+        <div class="brand-mark">GLB</div>
+        <div>Global League Baseball</div>
+      </div>
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="teams.html">Teams</a>
+        <a href="birmingham-vulcans.html">Birmingham Vulcans</a>
+        <a href="ogwa-park.html">OGWA Park</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <div class="eyebrow">Official Mascot</div>
+        <h1>Brass Vulcan</h1>
+        <p class="subhead">
+          The Birmingham Vulcans’ mascot is not a sideline prop. Brass Vulcan is the living furnace of OGWA Park:
+          part myth, part worker, part public ritual.
+        </p>
+        <div class="meta-row">
+          <span class="tag">Birmingham Vulcans</span>
+          <span class="tag">OGWA Park</span>
+          <span class="tag">Forged Presence</span>
+        </div>
+      </div>
+
+      <div class="hero-image">
+        <img src="images/mascots/brass-vulcan-hero.jpg" alt="Brass Vulcan high-fiving fans at OGWA Park">
+      </div>
+    </div>
+  </section>
+
+  <main class="main">
+    <div class="container content-grid">
+      <section class="panel">
+        <div class="panel-body">
+          <h2>Biography</h2>
+          <p>
+            Brass Vulcan is the living furnace at the heart of Birmingham baseball. He is not a cartoon,
+            not a throwaway between-inning distraction, and not a mascot built to be smoothed into blandness.
+            He feels older than the team itself, as if he stepped out of the same industrial myth that shaped
+            the city and simply decided to stay.
+          </p>
+          <p>
+            Built from foundry language — riveted metal, worn leather, scorched surfaces, heavy gloves, and
+            physical presence — Brass gives the Birmingham Vulcans a human form without softening their edge.
+            He is used with purpose. He appears in big moments, in crowd interaction, around The Pour, and in
+            the kinds of public rituals that turn a team into a culture.
+          </p>
+          <p>
+            Fans do not talk about Brass like a mascot. They talk about him like he belongs to the park.
+            Kids reach for high-fives. Adults stop for pictures they did not mean to take. Visiting fans
+            laugh at first and then realize they are looking at something more grounded than goofy. Brass
+            works because he feels forged from the same steel-and-heat logic as the ballpark itself.
+          </p>
+          <p>
+            He is joyful, but not silly. Heavy, but not slow. Loud, but not sloppy. He anchors the public
+            emotional life of the Vulcans without overexposure, and that discipline is part of his power.
+            Brass Vulcan does not need to be everywhere. He only needs to appear at the right time and the
+            whole place tightens into a home crowd.
+          </p>
+
+          <div class="gallery">
+            <figure>
+              <img src="images/mascots/brass-vulcan-fans.jpg" alt="Brass Vulcan greeting fans in the stands">
+              <figcaption>Pregame crowd interaction at OGWA Park.</figcaption>
+            </figure>
+            <figure>
+              <img src="images/mascots/brass-vulcan-pour.jpg" alt="Brass Vulcan standing near The Pour at OGWA Park">
+              <figcaption>Brass near The Pour, the park’s primary public landmark.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <aside class="sidebar">
+        <section class="panel">
+          <div class="panel-body">
+            <h2>Profile</h2>
+            <ul class="facts">
+              <li>
+                <strong>Name</strong>
+                Brass Vulcan
+              </li>
+              <li>
+                <strong>Club</strong>
+                Birmingham Vulcans
+              </li>
+              <li>
+                <strong>Home Park</strong>
+                OGWA Park
+              </li>
+              <li>
+                <strong>Primary Zone</strong>
+                The Pour / main crowd interaction areas
+              </li>
+              <li>
+                <strong>Character Type</strong>
+                Worker-myth / foundry giant
+              </li>
+              <li>
+                <strong>Use Standard</strong>
+                High-impact appearances only
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="panel quote" style="margin-top:20px;">
+          <div class="panel-body">
+            <blockquote>
+              “He is not polished. He is not sleek. He is not trying to be lovable in the generic way mascots usually are.”
+            </blockquote>
+          </div>
+        </section>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      Brass Vulcan — Birmingham Vulcans mascot profile | Global League Baseball
+    </div>
+  </footer>
+</body>
+</html>

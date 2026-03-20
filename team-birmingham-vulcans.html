@@ -13,10 +13,8 @@
   --line:#e1e4e8;
   --bg:#f4f5f6;
   --card:#ffffff;
-
   --accent:#f15a24;
   --dark:#2e2f33;
-
   --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
 }
 
@@ -33,10 +31,6 @@ body{
   padding:30px 20px;
 }
 
-.header{
-  margin-bottom:30px;
-}
-
 h1{
   margin:0;
   font-size:40px;
@@ -51,13 +45,11 @@ h1{
 }
 
 .hero img,
-.feature img,
 .card img{
   width:100%;
   border:1px solid var(--line);
 }
 
-/* GRID */
 .grid{
   display:grid;
   grid-template-columns:repeat(2,1fr);
@@ -114,12 +106,6 @@ h1{
   border-color:var(--dark);
 }
 
-.btn.primary:hover{
-  background:var(--accent);
-  border-color:var(--accent);
-  color:#111;
-}
-
 @media(max-width:800px){
   .grid{ grid-template-columns:1fr; }
 }
@@ -130,20 +116,12 @@ h1{
 
 <div class="container">
 
-  <!-- HEADER -->
-  <div class="header">
-    <h1>Birmingham Vulcans</h1>
-    <div class="meta">Americas Division · OGWA Park</div>
-  </div>
+  <h1>Birmingham Vulcans</h1>
+  <div class="meta">Americas Division · OGWA Park</div>
 
   <!-- HERO -->
   <div class="hero">
     <img src="assets/teams/vancouver-vulcans/park/park1.png">
-  </div>
-
-  <!-- POUR -->
-  <div class="feature">
-    <img src="assets/teams/vancouver-vulcans/park/park-pour.png">
   </div>
 
   <!-- GRID -->
@@ -152,32 +130,16 @@ h1{
     <div class="card">
       <img src="assets/teams/vancouver-vulcans/park/brass-pour.png">
       <div class="card-body">
-        <h3>Brass Vulcan</h3>
-        <p>Primary presence at The Pour.</p>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="assets/teams/vancouver-vulcans/park/concourse1.png">
-      <div class="card-body">
-        <h3>Concourse</h3>
-        <p>Movement and pregame flow.</p>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="assets/teams/vancouver-vulcans/park/concourse2.png">
-      <div class="card-body">
-        <h3>The Stands</h3>
-        <p>Generational crowd.</p>
+        <h3>The Pour</h3>
+        <p>Core ritual of the park.</p>
       </div>
     </div>
 
     <div class="card">
       <img src="assets/teams/vancouver-vulcans/park/brass-fans.png">
       <div class="card-body">
-        <h3>Fans</h3>
-        <p>Loud. Loyal. Present.</p>
+        <h3>The Crowd</h3>
+        <p>Close, loud, and present.</p>
       </div>
     </div>
 
@@ -185,7 +147,7 @@ h1{
       <img src="assets/teams/vancouver-vulcans/park/anthem1.png">
       <div class="card-body">
         <h3>Opening Sequence</h3>
-        <p>Structured and direct.</p>
+        <p>Structured start to every game.</p>
       </div>
     </div>
 

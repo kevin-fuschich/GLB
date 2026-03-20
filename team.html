@@ -1,277 +1,297 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GLB — Team</title>
-  <style>
-    :root{
-      --ink:#0f1214;
-      --muted:#6b6f75;
-      --line:#e1e4e8;
-      --bg:#f4f5f6;
-      --card:#ffffff;
-      --accent:#f15a24;
-      --dark:#2e2f33;
-      --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    *{ box-sizing:border-box; }
+<title>GLB — Team</title>
 
-    body{
-      margin:0;
-      font-family:var(--sans);
-      background:var(--bg);
-      color:var(--ink);
-    }
+<style>
+:root{
+  --ink:#0f1214;
+  --muted:#6b6f75;
+  --line:#e1e4e8;
+  --bg:#f4f5f6;
+  --card:#ffffff;
+  --accent:#f15a24;
+  --dark:#2e2f33;
+  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+}
 
-    .container{
-      max-width:1100px;
-      margin:0 auto;
-      padding:30px 20px 50px;
-    }
+*{box-sizing:border-box}
 
-    .topbar{
-      margin-bottom:24px;
-    }
+body{
+  margin:0;
+  font-family:var(--sans);
+  background:var(--bg);
+  color:var(--ink);
+}
 
-    .back-link{
-      display:inline-block;
-      margin-bottom:18px;
-      font-size:12px;
-      font-weight:700;
-      text-transform:uppercase;
-      letter-spacing:.08em;
-      color:var(--muted);
-      text-decoration:none;
-    }
+.container{
+  max-width:1100px;
+  margin:0 auto;
+  padding:30px 20px 50px;
+}
 
-    .back-link:hover{
-      color:var(--ink);
-    }
+/* HEADER */
 
-    h1{
-      margin:0;
-      font-size:40px;
-      font-weight:900;
-      line-height:1.02;
-    }
+.topbar{
+  margin-bottom:24px;
+}
 
-    .meta{
-      margin-top:8px;
-      font-size:13px;
-      color:var(--muted);
-      text-transform:uppercase;
-      letter-spacing:.08em;
-    }
+.back-link{
+  display:inline-block;
+  margin-bottom:18px;
+  font-size:12px;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+  color:var(--muted);
+  text-decoration:none;
+}
 
-    .hero{
-      margin:30px 0;
-    }
+.back-link:hover{
+  color:var(--ink);
+}
 
-    .hero img,
-    .card img{
-      width:100%;
-      display:block;
-      border:1px solid var(--line);
-      background:#ddd;
-    }
+h1{
+  margin:0;
+  font-size:40px;
+  font-weight:900;
+  line-height:1.02;
+}
 
-    .grid{
-      display:grid;
-      grid-template-columns:repeat(2,1fr);
-      gap:24px;
-      margin-top:30px;
-    }
+.meta{
+  margin-top:8px;
+  font-size:13px;
+  color:var(--muted);
+  text-transform:uppercase;
+  letter-spacing:.08em;
+}
 
-    .card{
-      background:var(--card);
-      border:1px solid var(--line);
-    }
+/* HERO */
 
-    .card-body{
-      padding:16px;
-    }
+.hero{
+  margin:30px 0;
+}
 
-    .card h3{
-      margin:0 0 6px;
-      font-size:14px;
-      text-transform:uppercase;
-      letter-spacing:.04em;
-    }
+.hero img,
+.card img{
+  width:100%;
+  display:block;
+  border:1px solid var(--line);
+}
 
-    .card p{
-      margin:0;
-      font-size:13px;
-      color:var(--muted);
-      line-height:1.5;
-    }
+/* GRID */
 
-    .links{
-      display:flex;
-      gap:12px;
-      flex-wrap:wrap;
-      margin-top:40px;
-    }
+.grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:24px;
+  margin-top:30px;
+}
 
-    .btn{
-      padding:12px 16px;
-      border:2px solid var(--ink);
-      text-decoration:none;
-      font-size:12px;
-      font-weight:800;
-      text-transform:uppercase;
-      letter-spacing:.08em;
-      color:var(--ink);
-      background:#fff;
-    }
+.card{
+  background:var(--card);
+  border:1px solid var(--line);
+}
 
-    .btn:hover{
-      background:var(--ink);
-      color:#fff;
-    }
+.card-body{
+  padding:16px;
+}
 
-    .btn.primary{
-      background:var(--dark);
-      color:#fff;
-      border-color:var(--dark);
-    }
+.card h3{
+  margin:0 0 6px;
+  font-size:14px;
+  text-transform:uppercase;
+  letter-spacing:.04em;
+}
 
-    .btn.primary:hover{
-      background:var(--accent);
-      border-color:var(--accent);
-      color:#111;
-    }
+.card p{
+  margin:0;
+  font-size:13px;
+  color:var(--muted);
+}
 
-    .empty{
-      padding:28px;
-      border:1px solid var(--line);
-      background:#fff;
-      color:var(--muted);
-      font-size:14px;
-    }
+/* LINKS */
 
-    @media (max-width:800px){
-      .grid{
-        grid-template-columns:1fr;
-      }
+.links{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:40px;
+}
 
-      h1{
-        font-size:32px;
-      }
-    }
-  </style>
+.btn{
+  padding:12px 16px;
+  border:2px solid var(--ink);
+  text-decoration:none;
+  font-size:12px;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+  color:var(--ink);
+}
+
+.btn:hover{
+  background:var(--ink);
+  color:#fff;
+}
+
+.btn.primary{
+  background:var(--dark);
+  color:#fff;
+  border-color:var(--dark);
+}
+
+.btn.primary:hover{
+  background:var(--accent);
+  border-color:var(--accent);
+  color:#111;
+}
+
+/* FALLBACK */
+
+.empty{
+  padding:28px;
+  border:1px solid var(--line);
+  background:#fff;
+  color:var(--muted);
+  font-size:14px;
+}
+
+@media(max-width:800px){
+  .grid{ grid-template-columns:1fr; }
+  h1{ font-size:32px; }
+}
+</style>
 </head>
-<body>
-  <div class="container">
-    <div class="topbar">
-      <a class="back-link" href="index.html">← Back to GLB</a>
-      <h1 id="team-name">Team</h1>
-      <div class="meta" id="team-meta">Division · Ballpark</div>
-    </div>
 
-    <div id="team-content"></div>
+<body>
+
+<div class="container">
+
+  <div class="topbar">
+    <a class="back-link" href="index.html">← Back to GLB</a>
+    <h1 id="team-name">Team</h1>
+    <div class="meta" id="team-meta">Division · Ballpark</div>
   </div>
 
-  <script>
-    const params = new URLSearchParams(window.location.search);
-    const team = params.get("team");
+  <div id="team-content"></div>
 
-    const teams = {
-      "birmingham-vulcans": {
-        name: "Birmingham Vulcans",
-        meta: "Americas Division · OGWA Park",
-        hero: {
-          src: "assets/park1.png",
-          alt: "park1"
-        },
-        cards: [
-          {
-            title: "The Pour",
-            body: "Core ritual of the park.",
-            src: "assets/brass-pour.png",
-            alt: "brass-pour"
-          },
-          {
-            title: "The Crowd",
-            body: "Close, loud, and present.",
-            src: "assets/brass-fans.png",
-            alt: "brass-fans"
-          },
-          {
-            title: "Opening Sequence",
-            body: "Structured start to every game.",
-            src: "assets/anthem1.png",
-            alt: "anthem1"
-          }
-        ],
-        links: [
-          {
-            label: "Roster",
-            href: "team-record-birmingham-vulcans.html",
-            primary: true
-          },
-          {
-            label: "Club File",
-            href: "club-birmingham-vulcans.html",
-            primary: false
-          },
-          {
-            label: "Mascot",
-            href: "mascot-brass-vulcan.html",
-            primary: false
-          }
-        ]
+</div>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+const team = params.get("team");
+
+/* ============================= */
+/* TEAM CONFIG                   */
+/* ============================= */
+
+const teams = {
+
+  "birmingham-vulcans": {
+    name: "Birmingham Vulcans",
+    meta: "Americas Division · OGWA Park",
+
+    hero: "assets/teams/birmingham-vulcans/park1.png",
+
+    cards: [
+      {
+        title: "The Pour",
+        text: "Core ritual of the park.",
+        img: "assets/teams/birmingham-vulcans/brass-pour.png"
+      },
+      {
+        title: "The Crowd",
+        text: "Close, loud, and present.",
+        img: "assets/teams/birmingham-vulcans/brass-fans.png"
+      },
+      {
+        title: "Opening Sequence",
+        text: "Structured start to every game.",
+        img: "assets/teams/birmingham-vulcans/anthem1.png"
       }
-    };
+    ],
 
-    const teamData = teams[team];
-    const teamNameEl = document.getElementById("team-name");
-    const teamMetaEl = document.getElementById("team-meta");
-    const teamContentEl = document.getElementById("team-content");
+    links: [
+      {
+        label: "Roster",
+        href: "team-record-birmingham-vulcans.html",
+        primary: true
+      },
+      {
+        label: "Club File",
+        href: "club-birmingham-vulcans.html"
+      },
+      {
+        label: "Mascot",
+        href: "mascot-brass-vulcan.html"
+      }
+    ]
+  }
 
-    if (!teamData) {
-      document.title = "GLB — Team Not Found";
-      teamNameEl.textContent = "Team Not Found";
-      teamMetaEl.textContent = "No matching team file";
-      teamContentEl.innerHTML = `
-        <div class="empty">
-          No team configuration exists for this URL parameter.
-        </div>
-      `;
-    } else {
-      document.title = `GLB — ${teamData.name}`;
-      teamNameEl.textContent = teamData.name;
-      teamMetaEl.textContent = teamData.meta;
+};
 
-      const cardsHtml = teamData.cards.map(card => `
-        <div class="card">
-          <img src="${card.src}" alt="${card.alt}">
-          <div class="card-body">
-            <h3>${card.title}</h3>
-            <p>${card.body}</p>
-          </div>
-        </div>
-      `).join("");
+/* ============================= */
+/* RENDER                        */
+/* ============================= */
 
-      const linksHtml = teamData.links.map(link => `
-        <a class="btn${link.primary ? " primary" : ""}" href="${link.href}">${link.label}</a>
-      `).join("");
+const data = teams[team];
 
-      teamContentEl.innerHTML = `
-        <div class="hero">
-          <img src="${teamData.hero.src}" alt="${teamData.hero.alt}">
-        </div>
+const nameEl = document.getElementById("team-name");
+const metaEl = document.getElementById("team-meta");
+const contentEl = document.getElementById("team-content");
 
-        <div class="grid">
-          ${cardsHtml}
-        </div>
+if(!data){
+  document.title = "GLB — Team Not Found";
+  nameEl.textContent = "Team Not Found";
+  metaEl.textContent = "Invalid team parameter";
 
-        <div class="links">
-          ${linksHtml}
-        </div>
-      `;
-    }
-  </script>
+  contentEl.innerHTML = `
+    <div class="empty">
+      No team configuration exists for this URL.
+    </div>
+  `;
+}
+else{
+
+  document.title = `GLB — ${data.name}`;
+  nameEl.textContent = data.name;
+  metaEl.textContent = data.meta;
+
+  const cardsHTML = data.cards.map(card => `
+    <div class="card">
+      <img src="${card.img}">
+      <div class="card-body">
+        <h3>${card.title}</h3>
+        <p>${card.text}</p>
+      </div>
+    </div>
+  `).join("");
+
+  const linksHTML = data.links.map(link => `
+    <a class="btn ${link.primary ? "primary" : ""}" href="${link.href}">
+      ${link.label}
+    </a>
+  `).join("");
+
+  contentEl.innerHTML = `
+    <div class="hero">
+      <img src="${data.hero}">
+    </div>
+
+    <div class="grid">
+      ${cardsHTML}
+    </div>
+
+    <div class="links">
+      ${linksHTML}
+    </div>
+  `;
+}
+</script>
+
 </body>
 </html>

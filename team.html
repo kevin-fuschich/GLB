@@ -13,7 +13,7 @@
   --line:#e1e4e8;
   --bg:#f4f5f6;
   --card:#ffffff;
-  --accent:#f15a24;
+  --accent:#1d4f91;
   --dark:#2e2f33;
   --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
 }
@@ -32,8 +32,6 @@ body{
   margin:0 auto;
   padding:30px 20px 50px;
 }
-
-/* HEADER */
 
 .topbar{
   margin-bottom:24px;
@@ -69,8 +67,6 @@ h1{
   letter-spacing:.08em;
 }
 
-/* HERO */
-
 .hero{
   margin:30px 0;
 }
@@ -80,9 +76,8 @@ h1{
   width:100%;
   display:block;
   border:1px solid var(--line);
+  background:#ddd;
 }
-
-/* GRID */
 
 .grid{
   display:grid;
@@ -111,9 +106,8 @@ h1{
   margin:0;
   font-size:13px;
   color:var(--muted);
+  line-height:1.5;
 }
-
-/* LINKS */
 
 .links{
   display:flex;
@@ -131,6 +125,7 @@ h1{
   text-transform:uppercase;
   letter-spacing:.08em;
   color:var(--ink);
+  background:#fff;
 }
 
 .btn:hover{
@@ -147,10 +142,8 @@ h1{
 .btn.primary:hover{
   background:var(--accent);
   border-color:var(--accent);
-  color:#111;
+  color:#fff;
 }
-
-/* FALLBACK */
 
 .empty{
   padding:28px;
@@ -160,17 +153,20 @@ h1{
   font-size:14px;
 }
 
-@media(max-width:800px){
-  .grid{ grid-template-columns:1fr; }
-  h1{ font-size:32px; }
+@media (max-width:800px){
+  .grid{
+    grid-template-columns:1fr;
+  }
+
+  h1{
+    font-size:32px;
+  }
 }
 </style>
 </head>
-
 <body>
 
 <div class="container">
-
   <div class="topbar">
     <a class="back-link" href="index.html">← Back to GLB</a>
     <h1 id="team-name">Team</h1>
@@ -178,43 +174,40 @@ h1{
   </div>
 
   <div id="team-content"></div>
-
 </div>
 
 <script>
 const params = new URLSearchParams(window.location.search);
 const team = params.get("team");
 
-/* ============================= */
-/* TEAM CONFIG                   */
-/* ============================= */
-
 const teams = {
-
   "birmingham-vulcans": {
     name: "Birmingham Vulcans",
     meta: "Americas Division · OGWA Park",
-
-    hero: "assets/teams/birmingham-vulcans/park1.png",
-
+    hero: {
+      src: "assets/teams/birmingham-vulcans/park1.png",
+      alt: "park1"
+    },
     cards: [
       {
         title: "The Pour",
-        text: "Core ritual of the park.",
-        img: "assets/teams/birmingham-vulcans/brass-pour.png"
+        body: "Core ritual of the park.",
+        src: "assets/teams/birmingham-vulcans/brass-pour.png",
+        alt: "brass-pour"
       },
       {
         title: "The Crowd",
-        text: "Close, loud, and present.",
-        img: "assets/teams/birmingham-vulcans/brass-fans.png"
+        body: "Close, loud, and present.",
+        src: "assets/teams/birmingham-vulcans/brass-fans.png",
+        alt: "brass-fans"
       },
       {
         title: "Opening Sequence",
-        text: "Structured start to every game.",
-        img: "assets/teams/birmingham-vulcans/anthem1.png"
+        body: "Structured start to every game.",
+        src: "assets/teams/birmingham-vulcans/anthem1.png",
+        alt: "anthem1"
       }
     ],
-
     links: [
       {
         label: "Roster",
@@ -223,71 +216,126 @@ const teams = {
       },
       {
         label: "Club File",
-        href: "club-birmingham-vulcans.html"
+        href: "club-birmingham-vulcans.html",
+        primary: false
       },
       {
         label: "Mascot",
-        href: "mascot-brass-vulcan.html"
+        href: "mascot-brass-vulcan.html",
+        primary: false
+      }
+    ]
+  },
+
+  "albuquerque-aeros": {
+    name: "Albuquerque Aeros",
+    meta: "Americas Division · Propellant Energy Park",
+    hero: {
+      src: "assets/teams/albuquerque-aeros/park1.png",
+      alt: "park1"
+    },
+    cards: [
+      {
+        title: "Propellant Energy Park",
+        body: "High desert baseball under lift, light, and pressure.",
+        src: "assets/teams/albuquerque-aeros/park-gate.png",
+        alt: "park-gate"
+      },
+      {
+        title: "Concourse",
+        body: "Clay tones, dust, movement, and embedded park identity.",
+        src: "assets/teams/albuquerque-aeros/concourse1.png",
+        alt: "concourse1"
+      },
+      {
+        title: "Kirk & Burke",
+        body: "Balloon mascots built to feel real, weird, and park-native.",
+        src: "assets/teams/albuquerque-aeros/kirk-burke-crowd.png",
+        alt: "kirk-burke-crowd"
+      },
+      {
+        title: "The Pilot",
+        body: "Aviation-era myth rendered as a tactile stadium character.",
+        src: "assets/teams/albuquerque-aeros/pilot1.png",
+        alt: "pilot1"
+      },
+      {
+        title: "Night Game",
+        body: "Moonlight, desert air, and late-game atmosphere.",
+        src: "assets/teams/albuquerque-aeros/night-game1.png",
+        alt: "night-game1"
+      },
+      {
+        title: "Turkey Sightings",
+        body: "There is a turkey in the park. Sightings vary.",
+        src: "assets/teams/albuquerque-aeros/turkey1.png",
+        alt: "turkey1"
+      }
+    ],
+    links: [
+      {
+        label: "Club File",
+        href: "club-albuquerque-aeros.html",
+        primary: true
+      },
+      {
+        label: "Turkey Sightings",
+        href: "turkey-sightings.html",
+        primary: false
+      },
+      {
+        label: "Park",
+        href: "propellant-energy-park.html",
+        primary: false
       }
     ]
   }
-
 };
 
-/* ============================= */
-/* RENDER                        */
-/* ============================= */
+const teamData = teams[team];
+const teamNameEl = document.getElementById("team-name");
+const teamMetaEl = document.getElementById("team-meta");
+const teamContentEl = document.getElementById("team-content");
 
-const data = teams[team];
-
-const nameEl = document.getElementById("team-name");
-const metaEl = document.getElementById("team-meta");
-const contentEl = document.getElementById("team-content");
-
-if(!data){
+if (!teamData) {
   document.title = "GLB — Team Not Found";
-  nameEl.textContent = "Team Not Found";
-  metaEl.textContent = "Invalid team parameter";
-
-  contentEl.innerHTML = `
+  teamNameEl.textContent = "Team Not Found";
+  teamMetaEl.textContent = "No matching team file";
+  teamContentEl.innerHTML = `
     <div class="empty">
-      No team configuration exists for this URL.
+      No team configuration exists for this URL parameter.
     </div>
   `;
-}
-else{
+} else {
+  document.title = `GLB — ${teamData.name}`;
+  teamNameEl.textContent = teamData.name;
+  teamMetaEl.textContent = teamData.meta;
 
-  document.title = `GLB — ${data.name}`;
-  nameEl.textContent = data.name;
-  metaEl.textContent = data.meta;
-
-  const cardsHTML = data.cards.map(card => `
+  const cardsHtml = teamData.cards.map(card => `
     <div class="card">
-      <img src="${card.img}">
+      <img src="${card.src}" alt="${card.alt}">
       <div class="card-body">
         <h3>${card.title}</h3>
-        <p>${card.text}</p>
+        <p>${card.body}</p>
       </div>
     </div>
   `).join("");
 
-  const linksHTML = data.links.map(link => `
-    <a class="btn ${link.primary ? "primary" : ""}" href="${link.href}">
-      ${link.label}
-    </a>
+  const linksHtml = teamData.links.map(link => `
+    <a class="btn${link.primary ? " primary" : ""}" href="${link.href}">${link.label}</a>
   `).join("");
 
-  contentEl.innerHTML = `
+  teamContentEl.innerHTML = `
     <div class="hero">
-      <img src="${data.hero}">
+      <img src="${teamData.hero.src}" alt="${teamData.hero.alt}">
     </div>
 
     <div class="grid">
-      ${cardsHTML}
+      ${cardsHtml}
     </div>
 
     <div class="links">
-      ${linksHTML}
+      ${linksHtml}
     </div>
   `;
 }

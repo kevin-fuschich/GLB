@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Turkey Sightings | Albuquerque Aeros | GLB</title>
+  <meta name="description" content="Live sightings log for the Albuquerque Turkey at Propellant Energy Park." />
+
+  <style>
+    :root{
+      --navy:#0b1e33;
+      --navy-2:#102843;
+      --blue:#1d4f91;
+      --border:#d9dee5;
+      --border-dark:#2a3f59;
+      --bg:#f3f5f7;
+      --card:#ffffff;
+      --text:#111111;
+      --muted:#5f6b7a;
+      --light-text:#dfe7f1;
+      --white:#ffffff;
+
+      --teal:#18b7c9;
+      --copper:#c9783a;
+      --sand:#efe3cf;
+      --clay:#c7663a;
+      --success:#1d7f49;
+
+      --font-sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+      --font-serif:Georgia,"Times New Roman",serif;
+
+      --max:1280px;
+      --radius:14px;
+    }
+
+    *{ box-sizing:border-box; }
+
+    html, body{
+      margin:0;
+      padding:0;
+      background:var(--bg);
+      color:var(--text);
+      font-family:var(--font-sans);
+      -webkit-font-smoothing:antialiased;
+    }
+
+    a{
+      color:inherit;
+      text-decoration:none;
+    }
+
+    img{
+      display:block;
+      max-width:100%;
+    }
+
+    .container{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:0 20px;
+    }
+
+    /* HEADER */
+    .site-header{
+      background:var(--navy);
+      color:var(--white);
+      border-bottom:1px solid rgba(255,255,255,0.08);
+      position:sticky;
+      top:0;
+      z-index:1000;
+    }
+
+    .topbar{
+      min-height:72px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:14px;
+      min-width:0;
+      flex-shrink:0;
+    }
+
+    .brand-mark{
+      font-weight:800;
+      letter-spacing:1.4px;
+      font-size:24px;
+      line-height:1;
+    }
+
+    .brand-sub{
+      font-size:11px;
+      text-transform:uppercase;
+      letter-spacing:1.2px;
+      color:var(--light-text);
+      white-space:nowrap;
+    }
+
+    .nav-links{
+      display:flex;
+      align-items:center;
+      gap:0;
+      flex:1;
+      justify-content:center;
+      min-width:0;
+    }
+
+    .nav-links a{
+      color:rgba(255,255,255,0.92);
+      padding:26px 16px 22px;
+      font-size:13px;
+      font-weight:600;
+      text-transform:uppercase;
+      letter-spacing:0.8px;
+      border-bottom:4px solid transparent;
+      white-space:nowrap;
+    }
+
+    .nav-links a:hover{
+      background:rgba(255,255,255,0.04);
+    }
+
+    .nav-links a.active{
+      border-bottom-color:#7fb0ff;
+    }
+
+    .header-right{
+      display:flex;
+      align-items:center;
+      gap:16px;
+      flex-shrink:0;
+    }
+
+    .header-meta{
+      font-size:11px;
+      text-transform:uppercase;
+      letter-spacing:1px;
+      color:var(--light-text);
+      white-space:nowrap;
+    }
+
+    .nav-toggle{
+      display:none;
+      appearance:none;
+      border:0;
+      background:none;
+      color:#fff;
+      font-size:24px;
+      cursor:pointer;
+      padding:8px 0 8px 8px;
+    }
+
+    .mobile-menu{
+      display:none;
+      background:var(--navy-2);
+      border-top:1px solid rgba(255,255,255,0.08);
+    }
+
+    .mobile-menu a{
+      display:block;
+      padding:16px 20px;
+      color:#fff;
+      font-size:13px;
+      font-weight:600;
+      text-transform:uppercase;
+      letter-spacing:0.8px;
+      border-top:1px solid rgba(255,255,255,0.08);
+    }
+
+    .mobile-menu.open{
+      display:block;
+    }
+
+    /* PAGE */
+    .page{
+      padding:22px 0 40px;
+    }
+
+    .eyebrow{
+      display:inline-block;
+      font-size:11px;
+      font-weight:800;
+      text-transform:uppercase;
+      letter-spacing:0.9px;
+      color:var(--blue);
+      margin-bottom:10px;
+    }
+
+    .hero-card{
+      background:
+        linear-gradient(180deg, rgba(11,30,51,.15), rgba(11,30,51,.65)),
+        linear-gradient(135deg, #1b354f, #0c1827 70%);
+      color:#fff;
+      border-radius:var(--radius);
+      overflow:hidden;
+      border:1px solid var(--border-dark);
+      margin-bottom:22px;
+    }
+
+    .hero-inner{
+      padding:30px 28px 26px;
+    }
+
+    .hero-title{
+      margin:0 0 10px;
+      font-size:42px;
+      line-height:1.02;
+      font-weight:800;
+      letter-spacing:-0.02em;
+    }
+
+    .hero-deck{
+      margin:0;
+      max-width:760px;
+      font-size:17px;
+      line-height:1.55;
+      color:rgba(255,255,255,0.9);
+    }
+
+    .hero-links{
+      display:flex;
+      gap:18px;
+      flex-wrap:wrap;
+      margin-top:18px;
+      font-size:13px;
+      font-weight:700;
+      text-transform:uppercase;
+      letter-spacing:.6px;
+    }
+
+    .hero-links a{
+      color:#bfe0ff;
+    }
+
+    .hero-links a:hover{
+      text-decoration:underline;
+    }
+
+    .status-strip{
+      display:grid;
+      grid-template-columns:repeat(4, minmax(0,1fr));
+      gap:0;
+      background:#fff;
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      overflow:hidden;
+      margin-bottom:22px;
+    }
+
+    .status-item{
+      padding:18px 18px 16px;
+      border-right:1px solid var(--border);
+    }
+
+    .status-item:last-child{
+      border-right:none;
+    }
+
+    .status-label{
+      display:block;
+      margin-bottom:6px;
+      font-size:10px;
+      font-weight:800;
+      text-transform:uppercase;
+      letter-spacing:0.8px;
+      color:var(--muted);
+    }
+
+    .status-value{
+      font-size:20px;
+      font-weight:800;
+      line-height:1.15;
+      color:#14263c;
+    }
+
+    .status-value.live{
+      color:var(--success);
+    }
+
+    .main-grid{
+      display:grid;
+      grid-template-columns:minmax(0, 1.65fr) minmax(320px, .8fr);
+      gap:22px;
+      align-items:start;
+    }
+
+    .card{
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      overflow:hidden;
+      box-shadow:0 1px 2px rgba(16,24,40,0.04);
+    }
+
+    .card-head{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      padding:18px 18px 14px;
+      border-bottom:1px solid var(--border);
+    }
+
+    .card-title{
+      margin:0;
+      font-size:19px;
+      line-height:1.15;
+      font-weight:800;
+      color:#1a2c42;
+    }
+
+    .card-link{
+      font-size:12px;
+      font-weight:700;
+      color:var(--blue);
+      white-space:nowrap;
+    }
+
+    .card-body{
+      padding:16px 18px 18px;
+    }
+
+    .sighting-list{
+      display:grid;
+      gap:16px;
+    }
+
+    .sighting{
+      display:grid;
+      grid-template-columns:160px minmax(0,1fr);
+      gap:16px;
+      padding-bottom:16px;
+      border-bottom:1px solid var(--border);
+    }
+
+    .sighting:last-child{
+      padding-bottom:0;
+      border-bottom:none;
+    }
+
+    .sighting-photo{
+      background:linear-gradient(135deg, #d6b694, #b87045);
+      min-height:110px;
+      border-radius:10px;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .sighting-photo::before{
+      content:"TURKEY";
+      position:absolute;
+      left:12px;
+      bottom:10px;
+      font-size:10px;
+      letter-spacing:1px;
+      font-weight:800;
+      color:#fff;
+      background:rgba(0,0,0,.45);
+      padding:6px 8px;
+      border-radius:999px;
+    }
+
+    .sighting-meta{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px 14px;
+      margin-bottom:8px;
+      font-size:11px;
+      text-transform:uppercase;
+      letter-spacing:0.8px;
+      color:var(--muted);
+    }
+
+    .verified{
+      color:var(--success);
+      font-weight:800;
+    }
+
+    .sighting-text{
+      margin:0 0 8px;
+      font-size:16px;
+      line-height:1.45;
+      font-weight:700;
+      color:#172a40;
+    }
+
+    .sighting-note{
+      margin:0;
+      font-size:14px;
+      line-height:1.55;
+      color:var(--muted);
+    }
+
+    .stack{
+      display:grid;
+      gap:22px;
+    }
+
+    .note-list,
+    .steps,
+    .leaderboard{
+      display:grid;
+      gap:12px;
+    }
+
+    .note-item,
+    .step-item,
+    .leader-item{
+      padding:14px 14px;
+      background:#fafbfd;
+      border:1px solid var(--border);
+      border-radius:10px;
+    }
+
+    .step-num{
+      display:inline-flex;
+      width:22px;
+      height:22px;
+      align-items:center;
+      justify-content:center;
+      margin-right:8px;
+      border-radius:999px;
+      background:#eaf1fb;
+      color:var(--blue);
+      font-size:11px;
+      font-weight:800;
+    }
+
+    .form-grid{
+      display:grid;
+      gap:12px;
+    }
+
+    .form-grid input,
+    .form-grid textarea,
+    .form-grid select{
+      width:100%;
+      border:1px solid var(--border);
+      border-radius:10px;
+      padding:12px 12px;
+      font:inherit;
+      background:#fff;
+      color:var(--text);
+    }
+
+    .form-grid textarea{
+      min-height:110px;
+      resize:vertical;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      min-height:46px;
+      padding:0 16px;
+      border-radius:10px;
+      border:2px solid #14263c;
+      background:#14263c;
+      color:#fff;
+      font-size:12px;
+      font-weight:800;
+      text-transform:uppercase;
+      letter-spacing:0.8px;
+      cursor:pointer;
+    }
+
+    .btn:hover{
+      background:#0e1c2d;
+      border-color:#0e1c2d;
+    }
+
+    .callout{
+      padding:16px;
+      border-radius:12px;
+      background:linear-gradient(135deg, #fff7ec, #f5e2cd);
+      border:1px solid #e7cfae;
+      color:#6b3918;
+      font-size:14px;
+      line-height:1.55;
+    }
+
+    /* FOOTER */
+    .site-footer{
+      margin-top:60px;
+      background:#0b1e33;
+      color:#dfe7f1;
+    }
+
+    .footer-main{
+      display:grid;
+      grid-template-columns: 1.6fr 1fr 1fr 1fr;
+      gap:40px;
+      padding:46px 20px;
+    }
+
+    .footer-brand{
+      max-width:320px;
+    }
+
+    .footer-logo{
+      font-weight:800;
+      font-size:26px;
+      letter-spacing:1.4px;
+      margin-bottom:8px;
+    }
+
+    .footer-tag{
+      font-size:11px;
+      text-transform:uppercase;
+      letter-spacing:1px;
+      color:#9fb6d1;
+      margin-bottom:14px;
+    }
+
+    .footer-desc{
+      margin:0;
+      font-size:14px;
+      line-height:1.5;
+      color:#c9d7e6;
+    }
+
+    .footer-col h4{
+      margin:0 0 12px;
+      font-size:12px;
+      text-transform:uppercase;
+      letter-spacing:1px;
+      color:#9fb6d1;
+    }
+
+    .footer-col a{
+      display:block;
+      font-size:14px;
+      padding:4px 0;
+      color:#ffffff;
+    }
+
+    .footer-col a:hover{
+      text-decoration:underline;
+    }
+
+    .footer-bottom{
+      border-top:1px solid rgba(255,255,255,0.1);
+      background:#081628;
+    }
+
+    .footer-bottom-inner{
+      padding:14px 20px;
+      display:flex;
+      justify-content:space-between;
+      gap:20px;
+      font-size:11px;
+      text-transform:uppercase;
+      letter-spacing:1px;
+      color:#9fb6d1;
+    }
+
+    @media (max-width: 1040px){
+      .status-strip{
+        grid-template-columns:repeat(2, minmax(0,1fr));
+      }
+
+      .status-item:nth-child(2){
+        border-right:none;
+      }
+
+      .status-item:nth-child(-n+2){
+        border-bottom:1px solid var(--border);
+      }
+    }
+
+    @media (max-width: 920px){
+      .nav-links{
+        display:none;
+      }
+
+      .nav-toggle{
+        display:block;
+      }
+
+      .header-meta{
+        display:none;
+      }
+
+      .main-grid{
+        grid-template-columns:1fr;
+      }
+
+      .footer-main{
+        grid-template-columns:1fr 1fr;
+        gap:30px;
+      }
+    }
+
+    @media (max-width: 720px){
+      .container{
+        padding:0 14px;
+      }
+
+      .topbar{
+        min-height:64px;
+      }
+
+      .brand-mark{
+        font-size:22px;
+      }
+
+      .brand-sub{
+        display:none;
+      }
+
+      .hero-inner{
+        padding:22px 18px 20px;
+      }
+
+      .hero-title{
+        font-size:32px;
+      }
+
+      .hero-deck{
+        font-size:15px;
+      }
+
+      .status-strip{
+        grid-template-columns:1fr;
+      }
+
+      .status-item{
+        border-right:none;
+        border-bottom:1px solid var(--border);
+      }
+
+      .status-item:last-child{
+        border-bottom:none;
+      }
+
+      .sighting{
+        grid-template-columns:1fr;
+      }
+
+      .footer-main{
+        grid-template-columns:1fr;
+      }
+
+      .footer-bottom-inner{
+        flex-direction:column;
+        gap:6px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="topbar">
+        <a href="index.html" class="brand" aria-label="Global League Baseball home">
+          <div class="brand-mark">GLB</div>
+          <div class="brand-sub">Global League Baseball</div>
+        </a>
+
+        <nav class="nav-links" aria-label="Primary">
+          <a href="index.html">Home</a>
+          <a href="scores.html">Scores</a>
+          <a href="standings.html">Standings</a>
+          <a href="schedule.html">Schedule</a>
+          <a href="teams.html" class="active">Teams</a>
+          <a href="stats.html">Stats</a>
+          <a href="news.html">News</a>
+        </nav>
+
+        <div class="header-right">
+          <div class="header-meta">Propellant Energy Park</div>
+          <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">☰</button>
+        </div>
+      </div>
+    </div>
+
+    <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile">
+      <a href="index.html">Home</a>
+      <a href="scores.html">Scores</a>
+      <a href="standings.html">Standings</a>
+      <a href="schedule.html">Schedule</a>
+      <a href="teams.html" class="active">Teams</a>
+      <a href="stats.html">Stats</a>
+      <a href="news.html">News</a>
+    </nav>
+  </header>
+
+  <main class="page">
+    <div class="container">
+
+      <section class="hero-card">
+        <div class="hero-inner">
+          <div class="eyebrow">Propellant Energy Park</div>
+          <h1 class="hero-title">Turkey Sightings Log</h1>
+          <p class="hero-deck">
+            There is a turkey in the park. Sightings vary. Some are verified. Some are not.
+            If you find it, document the encounter and report it.
+          </p>
+          <div class="hero-links">
+            <a href="team.html?team=albuquerque-aeros">Albuquerque Aeros</a>
+            <a href="club-albuquerque-aeros.html">Club File</a>
+            <a href="stadiums.html">Ballparks</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="status-strip" aria-label="Turkey status">
+        <div class="status-item">
+          <span class="status-label">Status</span>
+          <div class="status-value live">Active</div>
+        </div>
+        <div class="status-item">
+          <span class="status-label">Last Verified Sighting</span>
+          <div class="status-value">Section 108 · 7:42 PM</div>
+        </div>
+        <div class="status-item">
+          <span class="status-label">Sightings Tonight</span>
+          <div class="status-value">17</div>
+        </div>
+        <div class="status-item">
+          <span class="status-label">First Rewards Remaining</span>
+          <div class="status-value">8</div>
+        </div>
+      </section>
+
+      <section class="main-grid">
+        <div class="card">
+          <div class="card-head">
+            <h2 class="card-title">Latest Sightings</h2>
+            <a class="card-link" href="#">Season Archive</a>
+          </div>
+          <div class="card-body">
+            <div class="sighting-list">
+
+              <article class="sighting">
+                <div class="sighting-photo"></div>
+                <div>
+                  <div class="sighting-meta">
+                    <span class="verified">Verified</span>
+                    <span>Section 108</span>
+                    <span>7:42 PM</span>
+                    <span>3rd Inning</span>
+                  </div>
+                  <p class="sighting-text">Seen near the main aisle behind the third-base side. Did not remain in place.</p>
+                  <p class="sighting-note">Submitted by Carlos M. “Thought it was a prop at first. It turned and looked at us and then it was gone.”</p>
+                </div>
+              </article>
+
+              <article class="sighting">
+                <div class="sighting-photo"></div>
+                <div>
+                  <div class="sighting-meta">
+                    <span class="verified">Verified</span>
+                    <span>Left Field Concourse</span>
+                    <span>6:58 PM</span>
+                    <span>Pregame</span>
+                  </div>
+                  <p class="sighting-text">Stationary for approximately forty seconds beside a beverage rail. Moved after photo traffic increased.</p>
+                  <p class="sighting-note">Submitted by Maya R. “My son found it before I did. We got the picture. It was much smaller than I expected.”</p>
+                </div>
+              </article>
+
+              <article class="sighting">
+                <div class="sighting-photo"></div>
+                <div>
+                  <div class="sighting-meta">
+                    <span>Unverified</span>
+                    <span>Upper Deck Ramp</span>
+                    <span>6:31 PM</span>
+                    <span>Pregame</span>
+                  </div>
+                  <p class="sighting-text">Possible visual near the ramp wall, east side. No clean image recovered.</p>
+                  <p class="sighting-note">Submitted by “Section 214 Dad.” “Might have been the turkey. Might have been signage. Nobody agrees.”</p>
+                </div>
+              </article>
+
+              <article class="sighting">
+                <div class="sighting-photo"></div>
+                <div>
+                  <div class="sighting-meta">
+                    <span class="verified">Verified</span>
+                    <span>Section 132</span>
+                    <span>8:10 PM</span>
+                    <span>5th Inning</span>
+                  </div>
+                  <p class="sighting-text">Partial view only. Feathers confirmed. Relocated before security lane reached row break.</p>
+                  <p class="sighting-note">Submitted by Jenna L. “Everyone around us suddenly stood up. By the time I got my phone out, it was halfway gone.”</p>
+                </div>
+              </article>
+
+            </div>
+          </div>
+        </div>
+
+        <aside class="stack">
+
+          <section class="card">
+            <div class="card-head">
+              <h2 class="card-title">How It Works</h2>
+            </div>
+            <div class="card-body">
+              <div class="steps">
+                <div class="step-item"><span class="step-num">1</span> Find the turkey somewhere inside Propellant Energy Park.</div>
+                <div class="step-item"><span class="step-num">2</span> Take a photo with it or capture a clear sighting image.</div>
+                <div class="step-item"><span class="step-num">3</span> Submit the image and location details before the end of the game.</div>
+                <div class="step-item"><span class="step-num">4</span> First verified sightings each night receive a reward.</div>
+              </div>
+            </div>
+          </section>
+
+          <section class="card">
+            <div class="card-head">
+              <h2 class="card-title">Report Sighting</h2>
+            </div>
+            <div class="card-body">
+              <form class="form-grid">
+                <input type="text" placeholder="Your name" />
+                <select>
+                  <option>Select location</option>
+                  <option>Section 108</option>
+                  <option>Section 132</option>
+                  <option>Left Field Concourse</option>
+                  <option>Main Gate</option>
+                  <option>Upper Deck Ramp</option>
+                  <option>Other</option>
+                </select>
+                <input type="text" placeholder="Time seen (example: 7:42 PM)" />
+                <textarea placeholder="What did you see? Add notes if relevant."></textarea>
+                <button class="btn" type="button">Submit Sighting</button>
+              </form>
+            </div>
+          </section>
+
+          <section class="card">
+            <div class="card-head">
+              <h2 class="card-title">Field Notes</h2>
+            </div>
+            <div class="card-body">
+              <div class="note-list">
+                <div class="note-item">Does not remain in one place for long.</div>
+                <div class="note-item">Most often reported between pregame and the sixth inning.</div>
+                <div class="note-item">Crowd congestion appears to trigger movement.</div>
+                <div class="note-item">Multiple witnesses have reported a second visual that could not be confirmed.</div>
+              </div>
+            </div>
+          </section>
+
+          <section class="card">
+            <div class="card-head">
+              <h2 class="card-title">Season Leaders</h2>
+            </div>
+            <div class="card-body">
+              <div class="leaderboard">
+                <div class="leader-item"><strong>1.</strong> Luis G. — 9 verified sightings</div>
+                <div class="leader-item"><strong>2.</strong> Maya R. — 7 verified sightings</div>
+                <div class="leader-item"><strong>3.</strong> Section 214 Dad — 6 verified sightings</div>
+              </div>
+            </div>
+          </section>
+
+          <section class="callout">
+            Rewards vary by game. Verified first sightings may receive popcorn, fountain drinks,
+            or designated merchandise discounts. Not all reported sightings are confirmed.
+          </section>
+
+        </aside>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-main">
+
+      <div class="footer-brand">
+        <div class="footer-logo">GLB</div>
+        <div class="footer-tag">Global League Baseball</div>
+        <p class="footer-desc">
+          Official league site providing scores, standings, schedules,
+          club information, and league bulletins.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4>League</h4>
+        <a href="standings.html">Standings</a>
+        <a href="scores.html">Scores</a>
+        <a href="schedule.html">Schedule</a>
+        <a href="stats.html">Stats</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Aeros</h4>
+        <a href="team.html?team=albuquerque-aeros">Team Page</a>
+        <a href="club-albuquerque-aeros.html">Club File</a>
+        <a href="stadiums.html">Propellant Energy Park</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Tracking</h4>
+        <a href="turkey-sightings.html">Sightings Log</a>
+        <a href="news.html">League News</a>
+        <a href="archive.html">Archive</a>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <span>© 2026 Global League Baseball</span>
+        <span>Albuquerque Aeros</span>
+        <span>Park Tracking Record</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const navToggle = document.getElementById('navToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    navToggle.addEventListener('click', function () {
+      const isOpen = mobileMenu.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+  </script>
+
+</body>
+</html>

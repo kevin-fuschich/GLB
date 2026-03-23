@@ -1,0 +1,149 @@
+{
+  "team": "Monterrey Cementeros",
+  "players": [
+    {
+      "name": "Emilio Zendejas",
+      "slug": "emilio-zendejas",
+      "position": "SP",
+      "bats": "R",
+      "throws": "R",
+      "age": 28,
+      "photo": "emilio-zendejas.jpg"
+    },
+    {
+      "name": "Masato Yanagisawa",
+      "slug": "masato-yanagisawa",
+      "position": "SP",
+      "bats": "R",
+      "throws": "R",
+      "age": 26,
+      "photo": "masato-yanagisawa.jpg"
+    },
+    {
+      "name": "Dariusz Chmiel",
+      "slug": "dariusz-chmiel",
+      "position": "SP",
+      "bats": "R",
+      "throws": "R",
+      "age": 31,
+      "photo": "dariusz-chmiel.jpg"
+    },
+    {
+      "name": "Arjun Bhatnagar",
+      "slug": "arjun-bhatnagar",
+      "position": "SP",
+      "bats": "L",
+      "throws": "L",
+      "age": 27,
+      "photo": "arjun-bhatnagar.jpg"
+    },
+    {
+      "name": "Cole Wexler",
+      "slug": "cole-wexler",
+      "position": "SP",
+      "bats": "R",
+      "throws": "R",
+      "age": 29,
+      "photo": "cole-wexler.jpg"
+    },
+    {
+      "name": "Niko Kouris",
+      "slug": "niko-kouris",
+      "position": "RP",
+      "bats": "R",
+      "throws": "R",
+      "age": 25,
+      "photo": "niko-kouris.jpg"
+    },
+    {
+      "name": "Bashir El-Khatib",
+      "slug": "bashir-el-khatib",
+      "position": "RP",
+      "bats": "R",
+      "throws": "R",
+      "age": 30,
+      "photo": "bashir-el-khatib.jpg"
+    },
+    {
+      "name": "Rowan Treadwell",
+      "slug": "rowan-treadwell",
+      "position": "RP",
+      "bats": "L",
+      "throws": "R",
+      "age": 24,
+      "photo": "rowan-treadwell.jpg"
+    },
+    {
+      "name": "Julián Sauri",
+      "slug": "julian-sauri",
+      "position": "C",
+      "bats": "R",
+      "throws": "R",
+      "age": 28,
+      "photo": "julian-sauri.jpg"
+    },
+    {
+      "name": "Eamon Kilrea",
+      "slug": "eamon-kilrea",
+      "position": "1B",
+      "bats": "L",
+      "throws": "R",
+      "age": 32,
+      "photo": "eamon-kilrea.jpg"
+    },
+    {
+      "name": "Thiago Pereyra",
+      "slug": "thiago-pereyra",
+      "position": "2B",
+      "bats": "S",
+      "throws": "R",
+      "age": 26,
+      "photo": "thiago-pereyra.jpg"
+    },
+    {
+      "name": "Kofi Mensah",
+      "slug": "kofi-mensah",
+      "position": "SS",
+      "bats": "R",
+      "throws": "R",
+      "age": 27,
+      "photo": "kofi-mensah.jpg"
+    },
+    {
+      "name": "Luka Vuković",
+      "slug": "luka-vukovic",
+      "position": "3B",
+      "bats": "R",
+      "throws": "R",
+      "age": 29,
+      "photo": "luka-vukovic.jpg"
+    },
+    {
+      "name": "Seiji Fukumori",
+      "slug": "seiji-fukumori",
+      "position": "CF",
+      "bats": "L",
+      "throws": "L",
+      "age": 25,
+      "photo": "seiji-fukumori.jpg"
+    },
+    {
+      "name": "Andrés Cázares",
+      "slug": "andres-cazares",
+      "position": "LF",
+      "bats": "R",
+      "throws": "R",
+      "age": 23,
+      "photo": "andres-cazares.jpg"
+    },
+    {
+      "name": "Micah Lunsford",
+      "slug": "micah-lunsford",
+      "position": "RF",
+      "bats": "R",
+      "throws": "R",
+      "age": 31,
+      "photo": "micah-lunsford.jpg"
+    }
+  ]
+}

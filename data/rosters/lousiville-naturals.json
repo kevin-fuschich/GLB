@@ -1,0 +1,149 @@
+{
+  "team": "Louisville Naturals",
+  "players": [
+    {
+      "name": "Gabriel Ionescu",
+      "slug": "gabriel-ionescu",
+      "position": "SP",
+      "bats": "R",
+      "throws": "R",
+      "age": 29,
+      "photo": "gabriel-ionescu.jpg"
+    },
+    {
+      "name": "Mateo Álvarez",
+      "slug": "mateo-alvarez",
+      "position": "SP",
+      "bats": "L",
+      "throws": "L",
+      "age": 27,
+      "photo": "mateo-alvarez.jpg"
+    },
+    {
+      "name": "Calvin Rhodes",
+      "slug": "calvin-rhodes",
+      "position": "SP",
+      "bats": "R",
+      "throws": "R",
+      "age": 31,
+      "photo": "calvin-rhodes.jpg"
+    },
+    {
+      "name": "Santiago Correa",
+      "slug": "santiago-correa",
+      "position": "SP",
+      "bats": "R",
+      "throws": "R",
+      "age": 26,
+      "photo": "santiago-correa.jpg"
+    },
+    {
+      "name": "Darius Okonkwo",
+      "slug": "darius-okonkwo",
+      "position": "SP",
+      "bats": "R",
+      "throws": "R",
+      "age": 25,
+      "photo": "darius-okonkwo.jpg"
+    },
+    {
+      "name": "Evan Sutter",
+      "slug": "evan-sutter",
+      "position": "RP",
+      "bats": "R",
+      "throws": "R",
+      "age": 28,
+      "photo": "evan-sutter.jpg"
+    },
+    {
+      "name": "Luis Delgado",
+      "slug": "luis-delgado",
+      "position": "RP",
+      "bats": "L",
+      "throws": "L",
+      "age": 30,
+      "photo": "luis-delgado.jpg"
+    },
+    {
+      "name": "Kieran Walsh",
+      "slug": "kieran-walsh",
+      "position": "RP",
+      "bats": "R",
+      "throws": "R",
+      "age": 27,
+      "photo": "kieran-walsh.jpg"
+    },
+    {
+      "name": "Noah Bianchi",
+      "slug": "noah-bianchi",
+      "position": "C",
+      "bats": "R",
+      "throws": "R",
+      "age": 29,
+      "photo": "noah-bianchi.jpg"
+    },
+    {
+      "name": "Mateo Fernández",
+      "slug": "mateo-fernandez",
+      "position": "1B",
+      "bats": "L",
+      "throws": "R",
+      "age": 32,
+      "photo": "mateo-fernandez.jpg"
+    },
+    {
+      "name": "Jalen Brooks",
+      "slug": "jalen-brooks",
+      "position": "2B",
+      "bats": "S",
+      "throws": "R",
+      "age": 24,
+      "photo": "jalen-brooks.jpg"
+    },
+    {
+      "name": "Rafael Costa",
+      "slug": "rafael-costa",
+      "position": "SS",
+      "bats": "R",
+      "throws": "R",
+      "age": 26,
+      "photo": "rafael-costa.jpg"
+    },
+    {
+      "name": "Dominic Russo",
+      "slug": "dominic-russo",
+      "position": "3B",
+      "bats": "R",
+      "throws": "R",
+      "age": 28,
+      "photo": "dominic-russo.jpg"
+    },
+    {
+      "name": "Andre Wallace",
+      "slug": "andre-wallace",
+      "position": "CF",
+      "bats": "R",
+      "throws": "R",
+      "age": 27,
+      "photo": "andre-wallace.jpg"
+    },
+    {
+      "name": "Tomás Rivas",
+      "slug": "tomas-rivas",
+      "position": "LF",
+      "bats": "L",
+      "throws": "L",
+      "age": 25,
+      "photo": "tomas-rivas.jpg"
+    },
+    {
+      "name": "Blake Harrison",
+      "slug": "blake-harrison",
+      "position": "RF",
+      "bats": "R",
+      "throws": "R",
+      "age": 31,
+      "photo": "blake-harrison.jpg"
+    }
+  ]
+}

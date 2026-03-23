@@ -1,1 +1,149 @@
-
+{
+  "team": "Santiago Caballeros",
+  "players": [
+    {
+      "name": "Alejandro Figueroa",
+      "slug": "alejandro-figueroa",
+      "position": "SP",
+      "bats": "R",
+      "throws": "R",
+      "age": 30,
+      "photo": "alejandro-figueroa.jpg"
+    },
+    {
+      "name": "Hugo Velázquez",
+      "slug": "hugo-velazquez",
+      "position": "SP",
+      "bats": "L",
+      "throws": "L",
+      "age": 27,
+      "photo": "hugo-velazquez.jpg"
+    },
+    {
+      "name": "Mateo Rentería",
+      "slug": "mateo-renteria",
+      "position": "SP",
+      "bats": "R",
+      "throws": "R",
+      "age": 25,
+      "photo": "mateo-renteria.jpg"
+    },
+    {
+      "name": "Andrés Guzmán",
+      "slug": "andres-guzman",
+      "position": "SP",
+      "bats": "R",
+      "throws": "R",
+      "age": 31,
+      "photo": "andres-guzman.jpg"
+    },
+    {
+      "name": "Luis Fernando Cruz",
+      "slug": "luis-fernando-cruz",
+      "position": "SP",
+      "bats": "R",
+      "throws": "R",
+      "age": 26,
+      "photo": "luis-fernando-cruz.jpg"
+    },
+    {
+      "name": "Esteban Montoya",
+      "slug": "esteban-montoya",
+      "position": "RP",
+      "bats": "R",
+      "throws": "R",
+      "age": 28,
+      "photo": "esteban-montoya.jpg"
+    },
+    {
+      "name": "Jhonny Peralta",
+      "slug": "jhonny-peralta",
+      "position": "RP",
+      "bats": "R",
+      "throws": "R",
+      "age": 29,
+      "photo": "jhonny-peralta.jpg"
+    },
+    {
+      "name": "Cristóbal Núñez",
+      "slug": "cristobal-nunez",
+      "position": "RP",
+      "bats": "L",
+      "throws": "L",
+      "age": 24,
+      "photo": "cristobal-nunez.jpg"
+    },
+    {
+      "name": "Rafael Jiménez",
+      "slug": "rafael-jimenez",
+      "position": "C",
+      "bats": "R",
+      "throws": "R",
+      "age": 28,
+      "photo": "rafael-jimenez.jpg"
+    },
+    {
+      "name": "Carlos Peña",
+      "slug": "carlos-pena",
+      "position": "1B",
+      "bats": "L",
+      "throws": "R",
+      "age": 32,
+      "photo": "carlos-pena.jpg"
+    },
+    {
+      "name": "José Ramírez",
+      "slug": "jose-ramirez",
+      "position": "2B",
+      "bats": "S",
+      "throws": "R",
+      "age": 26,
+      "photo": "jose-ramirez.jpg"
+    },
+    {
+      "name": "Miguel Tejada",
+      "slug": "miguel-tejada",
+      "position": "SS",
+      "bats": "R",
+      "throws": "R",
+      "age": 27,
+      "photo": "miguel-tejada.jpg"
+    },
+    {
+      "name": "Eduardo Núñez",
+      "slug": "eduardo-nunez",
+      "position": "3B",
+      "bats": "R",
+      "throws": "R",
+      "age": 29,
+      "photo": "eduardo-nunez.jpg"
+    },
+    {
+      "name": "Starling Marte",
+      "slug": "starling-marte",
+      "position": "CF",
+      "bats": "R",
+      "throws": "R",
+      "age": 25,
+      "photo": "starling-marte.jpg"
+    },
+    {
+      "name": "Melky Cabrera",
+      "slug": "melky-cabrera",
+      "position": "LF",
+      "bats": "S",
+      "throws": "L",
+      "age": 30,
+      "photo": "melky-cabrera.jpg"
+    },
+    {
+      "name": "Nelson Cruz",
+      "slug": "nelson-cruz",
+      "position": "RF",
+      "bats": "R",
+      "throws": "R",
+      "age": 34,
+      "photo": "nelson-cruz.jpg"
+    }
+  ]
+}

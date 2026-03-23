@@ -1,0 +1,149 @@
+{
+  "team": "Mayagüez Sultans",
+  "players": [
+    {
+      "name": "Dario Vukovic",
+      "slug": "dario-vukovic",
+      "position": "SP",
+      "bats": "R",
+      "throws": "R",
+      "age": 29,
+      "photo": "dario-vukovic.jpg"
+    },
+    {
+      "name": "Kaito Natsume",
+      "slug": "kaito-natsume",
+      "position": "SP",
+      "bats": "R",
+      "throws": "R",
+      "age": 26,
+      "photo": "kaito-natsume.jpg"
+    },
+    {
+      "name": "Adewale Bamidele",
+      "slug": "adewale-bamidele",
+      "position": "SP",
+      "bats": "R",
+      "throws": "R",
+      "age": 31,
+      "photo": "adewale-bamidele.jpg"
+    },
+    {
+      "name": "Lucian Ionescu",
+      "slug": "lucian-ionescu",
+      "position": "SP",
+      "bats": "L",
+      "throws": "L",
+      "age": 27,
+      "photo": "lucian-ionescu.jpg"
+    },
+    {
+      "name": "Ismail Benjeloun",
+      "slug": "ismail-benjeloun",
+      "position": "SP",
+      "bats": "R",
+      "throws": "R",
+      "age": 25,
+      "photo": "ismail-benjeloun.jpg"
+    },
+    {
+      "name": "Seamus Keary",
+      "slug": "seamus-keary",
+      "position": "RP",
+      "bats": "R",
+      "throws": "R",
+      "age": 28,
+      "photo": "seamus-keary.jpg"
+    },
+    {
+      "name": "Rafiq Qureshi",
+      "slug": "rafiq-qureshi",
+      "position": "RP",
+      "bats": "R",
+      "throws": "R",
+      "age": 24,
+      "photo": "rafiq-qureshi.jpg"
+    },
+    {
+      "name": "Tomasz Wierzbicki",
+      "slug": "tomasz-wierzbicki",
+      "position": "RP",
+      "bats": "L",
+      "throws": "R",
+      "age": 30,
+      "photo": "tomasz-wierzbicki.jpg"
+    },
+    {
+      "name": "Tomer Barzilai",
+      "slug": "tomer-barzilai",
+      "position": "C",
+      "bats": "R",
+      "throws": "R",
+      "age": 29,
+      "photo": "tomer-barzilai.jpg"
+    },
+    {
+      "name": "Enzo Carvajal",
+      "slug": "enzo-carvajal",
+      "position": "1B",
+      "bats": "L",
+      "throws": "R",
+      "age": 27,
+      "photo": "enzo-carvajal.jpg"
+    },
+    {
+      "name": "Nils Adebayo",
+      "slug": "nils-adebayo",
+      "position": "2B",
+      "bats": "S",
+      "throws": "R",
+      "age": 23,
+      "photo": "nils-adebayo.jpg"
+    },
+    {
+      "name": "Jae-min Seok",
+      "slug": "jae-min-seok",
+      "position": "SS",
+      "bats": "R",
+      "throws": "R",
+      "age": 26,
+      "photo": "jae-min-seok.jpg"
+    },
+    {
+      "name": "Pavel Hrynko",
+      "slug": "pavel-hrynko",
+      "position": "3B",
+      "bats": "R",
+      "throws": "R",
+      "age": 32,
+      "photo": "pavel-hrynko.jpg"
+    },
+    {
+      "name": "Malik Doumbia",
+      "slug": "malik-doumbia",
+      "position": "LF",
+      "bats": "L",
+      "throws": "L",
+      "age": 24,
+      "photo": "malik-doumbia.jpg"
+    },
+    {
+      "name": "César Iglesiarias",
+      "slug": "cesar-iglesiarias",
+      "position": "CF",
+      "bats": "R",
+      "throws": "R",
+      "age": 28,
+      "photo": "cesar-iglesiarias.jpg"
+    },
+    {
+      "name": "Ari Kasprzyk",
+      "slug": "ari-kasprzyk",
+      "position": "RF",
+      "bats": "R",
+      "throws": "R",
+      "age": 30,
+      "photo": "ari-kasprzyk.jpg"
+    }
+  ]
+}

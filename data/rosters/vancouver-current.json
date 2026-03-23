@@ -1,0 +1,149 @@
+{
+  "team": "Vancouver Current",
+  "players": [
+    {
+      "name": "Iseul Kang",
+      "slug": "iseul-kang",
+      "position": "SP",
+      "bats": "R",
+      "throws": "R",
+      "age": 27,
+      "photo": "iseul-kang.jpg"
+    },
+    {
+      "name": "Dane Winslow",
+      "slug": "dane-winslow",
+      "position": "SP",
+      "bats": "L",
+      "throws": "L",
+      "age": 30,
+      "photo": "dane-winslow.jpg"
+    },
+    {
+      "name": "Maksim Zorya",
+      "slug": "maksim-zorya",
+      "position": "SP",
+      "bats": "R",
+      "throws": "R",
+      "age": 25,
+      "photo": "maksim-zorya.jpg"
+    },
+    {
+      "name": "Raine Talukder",
+      "slug": "raine-talukder",
+      "position": "SP",
+      "bats": "R",
+      "throws": "L",
+      "age": 29,
+      "photo": "raine-talukder.jpg"
+    },
+    {
+      "name": "Emilio Córdoba",
+      "slug": "emilio-cordoba",
+      "position": "SP",
+      "bats": "L",
+      "throws": "L",
+      "age": 26,
+      "photo": "emilio-cordoba.jpg"
+    },
+    {
+      "name": "Kofi Ansah",
+      "slug": "kofi-ansah",
+      "position": "RP",
+      "bats": "R",
+      "throws": "R",
+      "age": 28,
+      "photo": "kofi-ansah.jpg"
+    },
+    {
+      "name": "Nico Penfold",
+      "slug": "nico-penfold",
+      "position": "RP",
+      "bats": "L",
+      "throws": "R",
+      "age": 24,
+      "photo": "nico-penfold.jpg"
+    },
+    {
+      "name": "Yohei Arakida",
+      "slug": "yohei-arakida",
+      "position": "RP",
+      "bats": "R",
+      "throws": "R",
+      "age": 31,
+      "photo": "yohei-arakida.jpg"
+    },
+    {
+      "name": "Silas Boudreau",
+      "slug": "silas-boudreau",
+      "position": "C",
+      "bats": "R",
+      "throws": "R",
+      "age": 29,
+      "photo": "silas-boudreau.jpg"
+    },
+    {
+      "name": "Eamon Kerr",
+      "slug": "eamon-kerr",
+      "position": "1B",
+      "bats": "L",
+      "throws": "R",
+      "age": 32,
+      "photo": "eamon-kerr.jpg"
+    },
+    {
+      "name": "Soraya Jafari",
+      "slug": "soraya-jafari",
+      "position": "2B",
+      "bats": "S",
+      "throws": "R",
+      "age": 26,
+      "photo": "soraya-jafari.jpg"
+    },
+    {
+      "name": "Alejo Santillán",
+      "slug": "alejo-santillan",
+      "position": "SS",
+      "bats": "R",
+      "throws": "R",
+      "age": 23,
+      "photo": "alejo-santillan.jpg"
+    },
+    {
+      "name": "Roman Velasco",
+      "slug": "roman-velasco",
+      "position": "3B",
+      "bats": "R",
+      "throws": "R",
+      "age": 28,
+      "photo": "roman-velasco.jpg"
+    },
+    {
+      "name": "Taj Adelman",
+      "slug": "taj-adelman",
+      "position": "LF",
+      "bats": "L",
+      "throws": "L",
+      "age": 27,
+      "photo": "taj-adelman.jpg"
+    },
+    {
+      "name": "Marcell Lind",
+      "slug": "marcell-lind",
+      "position": "CF",
+      "bats": "R",
+      "throws": "R",
+      "age": 25,
+      "photo": "marcell-lind.jpg"
+    },
+    {
+      "name": "Oziel Narváez",
+      "slug": "oziel-narvaez",
+      "position": "RF",
+      "bats": "R",
+      "throws": "R",
+      "age": 30,
+      "photo": "oziel-narvaez.jpg"
+    }
+  ]
+}

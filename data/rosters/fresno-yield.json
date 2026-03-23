@@ -1,0 +1,149 @@
+{
+  "team": "Fresno Yield",
+  "players": [
+    {
+      "name": "Román Velasco",
+      "slug": "roman-velasco",
+      "position": "SP",
+      "bats": "R",
+      "throws": "R",
+      "age": 29,
+      "photo": "roman-velasco.jpg"
+    },
+    {
+      "name": "Cedric Wainwright",
+      "slug": "cedric-wainwright",
+      "position": "SP",
+      "bats": "L",
+      "throws": "L",
+      "age": 27,
+      "photo": "cedric-wainwright.jpg"
+    },
+    {
+      "name": "Kenji Nomura",
+      "slug": "kenji-nomura",
+      "position": "SP",
+      "bats": "R",
+      "throws": "R",
+      "age": 26,
+      "photo": "kenji-nomura.jpg"
+    },
+    {
+      "name": "Arinze Nwokoye",
+      "slug": "arinze-nwokoye",
+      "position": "SP",
+      "bats": "R",
+      "throws": "R",
+      "age": 31,
+      "photo": "arinze-nwokoye.jpg"
+    },
+    {
+      "name": "Silas Torgersen",
+      "slug": "silas-torgersen",
+      "position": "SP",
+      "bats": "L",
+      "throws": "R",
+      "age": 24,
+      "photo": "silas-torgersen.jpg"
+    },
+    {
+      "name": "Ibrahim Koroma",
+      "slug": "ibrahim-koroma",
+      "position": "RP",
+      "bats": "R",
+      "throws": "R",
+      "age": 28,
+      "photo": "ibrahim-koroma.jpg"
+    },
+    {
+      "name": "Mateo Azarcón",
+      "slug": "mateo-azarcon",
+      "position": "RP",
+      "bats": "R",
+      "throws": "R",
+      "age": 25,
+      "photo": "mateo-azarcon.jpg"
+    },
+    {
+      "name": "Dušan Marević",
+      "slug": "dusan-marevic",
+      "position": "RP",
+      "bats": "L",
+      "throws": "L",
+      "age": 30,
+      "photo": "dusan-marevic.jpg"
+    },
+    {
+      "name": "Luis Eccheri",
+      "slug": "luis-eccheri",
+      "position": "C",
+      "bats": "R",
+      "throws": "R",
+      "age": 27,
+      "photo": "luis-eccheri.jpg"
+    },
+    {
+      "name": "Jonah Kershaw",
+      "slug": "jonah-kershaw",
+      "position": "1B",
+      "bats": "L",
+      "throws": "R",
+      "age": 32,
+      "photo": "jonah-kershaw.jpg"
+    },
+    {
+      "name": "Søren Ahlgren",
+      "slug": "soren-ahlgren",
+      "position": "2B",
+      "bats": "S",
+      "throws": "R",
+      "age": 23,
+      "photo": "soren-ahlgren.jpg"
+    },
+    {
+      "name": "Raúl Sestayo",
+      "slug": "raul-sestayo",
+      "position": "SS",
+      "bats": "R",
+      "throws": "R",
+      "age": 26,
+      "photo": "raul-sestayo.jpg"
+    },
+    {
+      "name": "Eamon Kilbride",
+      "slug": "eamon-kilbride",
+      "position": "3B",
+      "bats": "R",
+      "throws": "R",
+      "age": 29,
+      "photo": "eamon-kilbride.jpg"
+    },
+    {
+      "name": "Malachi Quartey",
+      "slug": "malachi-quartey",
+      "position": "CF",
+      "bats": "R",
+      "throws": "R",
+      "age": 25,
+      "photo": "malachi-quartey.jpg"
+    },
+    {
+      "name": "Hiroshi Kawabata",
+      "slug": "hiroshi-kawabata",
+      "position": "LF",
+      "bats": "L",
+      "throws": "L",
+      "age": 28,
+      "photo": "hiroshi-kawabata.jpg"
+    },
+    {
+      "name": "Anwar Elamin",
+      "slug": "anwar-elamin",
+      "position": "RF",
+      "bats": "R",
+      "throws": "R",
+      "age": 31,
+      "photo": "anwar-elamin.jpg"
+    }
+  ]
+}

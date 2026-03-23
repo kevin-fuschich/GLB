@@ -1,0 +1,95 @@
+{
+  "team": "Taipei Neon",
+  "players": [
+    {
+      "name": "Kaito Ueda",
+      "slug": "kaito-ueda",
+      "position": "CF",
+      "bats": "R",
+      "throws": "R",
+      "age": 25,
+      "photo": "kaito-ueda.jpg"
+    },
+    {
+      "name": "Han-wei Tseng",
+      "slug": "han-wei-tseng",
+      "position": "2B",
+      "bats": "S",
+      "throws": "R",
+      "age": 23,
+      "photo": "han-wei-tseng.jpg"
+    },
+    {
+      "name": "Martín Echevarría",
+      "slug": "martin-echevarria",
+      "position": "1B",
+      "bats": "L",
+      "throws": "R",
+      "age": 31,
+      "photo": "martin-echevarria.jpg"
+    },
+    {
+      "name": "Dariusz Wierzbik",
+      "slug": "dariusz-wierzbik",
+      "position": "SS",
+      "bats": "R",
+      "throws": "R",
+      "age": 26,
+      "photo": "dariusz-wierzbik.jpg"
+    },
+    {
+      "name": "Adebayo Olumide",
+      "slug": "adebayo-olumide",
+      "position": "3B",
+      "bats": "R",
+      "throws": "R",
+      "age": 28,
+      "photo": "adebayo-olumide.jpg"
+    },
+    {
+      "name": "Hiroto Kuzumi",
+      "slug": "hiroto-kuzumi",
+      "position": "SP",
+      "bats": "R",
+      "throws": "R",
+      "age": 27,
+      "photo": "hiroto-kuzumi.jpg"
+    },
+    {
+      "name": "Joaquín Iturriaga",
+      "slug": "joaquin-iturriaga",
+      "position": "SP",
+      "bats": "R",
+      "throws": "R",
+      "age": 29,
+      "photo": "joaquin-iturriaga.jpg"
+    },
+    {
+      "name": "Eitan Ben-Sasson",
+      "slug": "eitan-ben-sasson",
+      "position": "SP",
+      "bats": "L",
+      "throws": "L",
+      "age": 26,
+      "photo": "eitan-ben-sasson.jpg"
+    },
+    {
+      "name": "Idris El-Amin",
+      "slug": "idris-el-amin",
+      "position": "RP",
+      "bats": "L",
+      "throws": "L",
+      "age": 31,
+      "photo": "idris-el-amin.jpg"
+    },
+    {
+      "name": "Owen Rasmusson",
+      "slug": "owen-rasmusson",
+      "position": "C",
+      "bats": "R",
+      "throws": "R",
+      "age": 29,
+      "photo": "owen-rasmusson.jpg"
+    }
+  ]
+}

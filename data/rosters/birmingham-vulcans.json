@@ -1,0 +1,149 @@
+{
+  "team": "Birmingham Vulcans",
+  "players": [
+    {
+      "name": "Hassan Al-Saleh",
+      "slug": "hassan-al-saleh",
+      "position": "SP",
+      "bats": "R",
+      "throws": "R",
+      "age": 30,
+      "photo": "hassan-al-saleh.jpg"
+    },
+    {
+      "name": "Thierry Boucher",
+      "slug": "thierry-boucher",
+      "position": "SP",
+      "bats": "L",
+      "throws": "L",
+      "age": 27,
+      "photo": "thierry-boucher.jpg"
+    },
+    {
+      "name": "Jared Whitlock",
+      "slug": "jared-whitlock",
+      "position": "SP",
+      "bats": "R",
+      "throws": "R",
+      "age": 29,
+      "photo": "jared-whitlock.jpg"
+    },
+    {
+      "name": "Emilio Duarte",
+      "slug": "emilio-duarte",
+      "position": "SP",
+      "bats": "R",
+      "throws": "R",
+      "age": 26,
+      "photo": "emilio-duarte.jpg"
+    },
+    {
+      "name": "Luka Petrovic",
+      "slug": "luka-petrovic",
+      "position": "SP",
+      "bats": "L",
+      "throws": "R",
+      "age": 24,
+      "photo": "luka-petrovic.jpg"
+    },
+    {
+      "name": "Micah Torrence",
+      "slug": "micah-torrence",
+      "position": "RP",
+      "bats": "R",
+      "throws": "R",
+      "age": 28,
+      "photo": "micah-torrence.jpg"
+    },
+    {
+      "name": "Antonio Bela",
+      "slug": "antonio-bela",
+      "position": "RP",
+      "bats": "L",
+      "throws": "L",
+      "age": 25,
+      "photo": "antonio-bela.jpg"
+    },
+    {
+      "name": "Reese Walker",
+      "slug": "reese-walker",
+      "position": "RP",
+      "bats": "R",
+      "throws": "R",
+      "age": 31,
+      "photo": "reese-walker.jpg"
+    },
+    {
+      "name": "Owen Keller",
+      "slug": "owen-keller",
+      "position": "C",
+      "bats": "R",
+      "throws": "R",
+      "age": 30,
+      "photo": "owen-keller.jpg"
+    },
+    {
+      "name": "Malik Johnson",
+      "slug": "malik-johnson",
+      "position": "1B",
+      "bats": "L",
+      "throws": "R",
+      "age": 27,
+      "photo": "malik-johnson.jpg"
+    },
+    {
+      "name": "Nico Valente",
+      "slug": "nico-valente",
+      "position": "2B",
+      "bats": "S",
+      "throws": "R",
+      "age": 26,
+      "photo": "nico-valente.jpg"
+    },
+    {
+      "name": "Julian Santoro",
+      "slug": "julian-santoro",
+      "position": "SS",
+      "bats": "R",
+      "throws": "R",
+      "age": 28,
+      "photo": "julian-santoro.jpg"
+    },
+    {
+      "name": "Caleb Hawkins",
+      "slug": "caleb-hawkins",
+      "position": "3B",
+      "bats": "R",
+      "throws": "R",
+      "age": 29,
+      "photo": "caleb-hawkins.jpg"
+    },
+    {
+      "name": "Isaac Morrow",
+      "slug": "isaac-morrow",
+      "position": "CF",
+      "bats": "L",
+      "throws": "L",
+      "age": 25,
+      "photo": "isaac-morrow.jpg"
+    },
+    {
+      "name": "Dante Rios",
+      "slug": "dante-rios",
+      "position": "LF",
+      "bats": "R",
+      "throws": "R",
+      "age": 24,
+      "photo": "dante-rios.jpg"
+    },
+    {
+      "name": "Cole Ramsey",
+      "slug": "cole-ramsey",
+      "position": "RF",
+      "bats": "R",
+      "throws": "R",
+      "age": 32,
+      "photo": "cole-ramsey.jpg"
+    }
+  ]
+}

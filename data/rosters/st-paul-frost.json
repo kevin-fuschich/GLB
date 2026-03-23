@@ -1,0 +1,149 @@
+{
+  "team": "St. Paul Frost",
+  "players": [
+    {
+      "name": "Caleb Warnock",
+      "slug": "caleb-warnock",
+      "position": "SP",
+      "bats": "R",
+      "throws": "R",
+      "age": 29,
+      "photo": "caleb-warnock.jpg"
+    },
+    {
+      "name": "Miguel Alcázar",
+      "slug": "miguel-alcazar",
+      "position": "SP",
+      "bats": "L",
+      "throws": "R",
+      "age": 27,
+      "photo": "miguel-alcazar.jpg"
+    },
+    {
+      "name": "Ryan Keswick",
+      "slug": "ryan-keswick",
+      "position": "SP",
+      "bats": "R",
+      "throws": "R",
+      "age": 31,
+      "photo": "ryan-keswick.jpg"
+    },
+    {
+      "name": "Tae-ho Choi",
+      "slug": "tae-ho-choi",
+      "position": "SP",
+      "bats": "R",
+      "throws": "R",
+      "age": 26,
+      "photo": "tae-ho-choi.jpg"
+    },
+    {
+      "name": "Nolan Brix",
+      "slug": "nolan-brix",
+      "position": "SP",
+      "bats": "L",
+      "throws": "L",
+      "age": 24,
+      "photo": "nolan-brix.jpg"
+    },
+    {
+      "name": "Darius Collins",
+      "slug": "darius-collins",
+      "position": "RP",
+      "bats": "R",
+      "throws": "R",
+      "age": 28,
+      "photo": "darius-collins.jpg"
+    },
+    {
+      "name": "Antonio Vélez",
+      "slug": "antonio-velez",
+      "position": "RP",
+      "bats": "L",
+      "throws": "R",
+      "age": 25,
+      "photo": "antonio-velez.jpg"
+    },
+    {
+      "name": "Lukáš Horvat",
+      "slug": "lukas-horvat",
+      "position": "RP",
+      "bats": "R",
+      "throws": "R",
+      "age": 32,
+      "photo": "lukas-horvat.jpg"
+    },
+    {
+      "name": "Evan Morrissey",
+      "slug": "evan-morrissey",
+      "position": "C",
+      "bats": "R",
+      "throws": "R",
+      "age": 30,
+      "photo": "evan-morrissey.jpg"
+    },
+    {
+      "name": "Javier Lucero",
+      "slug": "javier-lucero",
+      "position": "1B",
+      "bats": "L",
+      "throws": "R",
+      "age": 28,
+      "photo": "javier-lucero.jpg"
+    },
+    {
+      "name": "Owen Hartnell",
+      "slug": "owen-hartnell",
+      "position": "2B",
+      "bats": "R",
+      "throws": "R",
+      "age": 26,
+      "photo": "owen-hartnell.jpg"
+    },
+    {
+      "name": "Masato Kobori",
+      "slug": "masato-kobori",
+      "position": "SS",
+      "bats": "R",
+      "throws": "R",
+      "age": 24,
+      "photo": "masato-kobori.jpg"
+    },
+    {
+      "name": "Trevor Yates",
+      "slug": "trevor-yates",
+      "position": "3B",
+      "bats": "R",
+      "throws": "R",
+      "age": 31,
+      "photo": "trevor-yates.jpg"
+    },
+    {
+      "name": "Malik Jefferson",
+      "slug": "malik-jefferson",
+      "position": "CF",
+      "bats": "R",
+      "throws": "R",
+      "age": 25,
+      "photo": "malik-jefferson.jpg"
+    },
+    {
+      "name": "Rodrigo Fuentes",
+      "slug": "rodrigo-fuentes",
+      "position": "LF",
+      "bats": "L",
+      "throws": "L",
+      "age": 29,
+      "photo": "rodrigo-fuentes.jpg"
+    },
+    {
+      "name": "Jake Lanier",
+      "slug": "jake-lanier",
+      "position": "RF",
+      "bats": "R",
+      "throws": "R",
+      "age": 27,
+      "photo": "jake-lanier.jpg"
+    }
+  ]
+}

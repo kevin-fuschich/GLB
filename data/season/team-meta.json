@@ -1,1 +1,18 @@
-hold.txt
+{
+  "spokane-alloys": { "name": "Spokane Alloys", "division": "Americas" },
+  "durham-gold": { "name": "Durham Gold", "division": "Americas" },
+  "birmingham-vulcans": { "name": "Birmingham Vulcans", "division": "Americas" },
+  "albuquerque-aeros": { "name": "Albuquerque Aeros", "division": "Americas" },
+  "toledo-assembly": { "name": "Toledo Assembly", "division": "Americas" },
+  "fresno-yield": { "name": "Fresno Yield", "division": "Americas" },
+  "mayaguez-sultans": { "name": "Mayagüez Sultans", "division": "Americas" },
+  "louisville-naturals": { "name": "Louisville Naturals", "division": "Americas" },
+  "st-paul-frost": { "name": "St. Paul Frost", "division": "Americas" },
+
+  "monterrey-cementeros": { "name": "Monterrey Cementeros", "division": "Pacific" },
+  "osaka-spirits": { "name": "Osaka Spirits", "division": "Pacific" },
+  "san-pedro-cocolos": { "name": "San Pedro Cocolos", "division": "Pacific" },
+  "santiago-caballeros": { "name": "Santiago Caballeros", "division": "Pacific" },
+  "taipei-neon": { "name": "Taipei Neon", "division": "Pacific" },
+  "vancouver-current": { "name": "Vancouver Current", "division": "Pacific" }
+}

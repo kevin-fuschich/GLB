@@ -1,0 +1,149 @@
+{
+  "team": "Toledo Assembly",
+  "players": [
+    {
+      "name": "Ion Vasilev",
+      "slug": "ion-vasilev",
+      "position": "SP",
+      "bats": "R",
+      "throws": "R",
+      "age": 29,
+      "photo": "ion-vasilev.jpg"
+    },
+    {
+      "name": "Farid Azeroual",
+      "slug": "farid-azeroual",
+      "position": "SP",
+      "bats": "R",
+      "throws": "R",
+      "age": 27,
+      "photo": "farid-azeroual.jpg"
+    },
+    {
+      "name": "Teemu Salonen",
+      "slug": "teemu-salonen",
+      "position": "SP",
+      "bats": "L",
+      "throws": "L",
+      "age": 25,
+      "photo": "teemu-salonen.jpg"
+    },
+    {
+      "name": "Zahir Kamara",
+      "slug": "zahir-kamara",
+      "position": "SP",
+      "bats": "R",
+      "throws": "R",
+      "age": 31,
+      "photo": "zahir-kamara.jpg"
+    },
+    {
+      "name": "Caius Dobrescu",
+      "slug": "caius-dobrescu",
+      "position": "SP",
+      "bats": "R",
+      "throws": "R",
+      "age": 24,
+      "photo": "caius-dobrescu.jpg"
+    },
+    {
+      "name": "Renan Vidigal",
+      "slug": "renan-vidigal",
+      "position": "RP",
+      "bats": "R",
+      "throws": "R",
+      "age": 28,
+      "photo": "renan-vidigal.jpg"
+    },
+    {
+      "name": "Blaise Mathurin",
+      "slug": "blaise-mathurin",
+      "position": "RP",
+      "bats": "L",
+      "throws": "R",
+      "age": 26,
+      "photo": "blaise-mathurin.jpg"
+    },
+    {
+      "name": "Jun-seo Kang",
+      "slug": "jun-seo-kang",
+      "position": "RP",
+      "bats": "R",
+      "throws": "R",
+      "age": 30,
+      "photo": "jun-seo-kang.jpg"
+    },
+    {
+      "name": "Omar Nazzal",
+      "slug": "omar-nazzal",
+      "position": "C",
+      "bats": "R",
+      "throws": "R",
+      "age": 29,
+      "photo": "omar-nazzal.jpg"
+    },
+    {
+      "name": "Caleb Ardoin",
+      "slug": "caleb-ardoin",
+      "position": "1B",
+      "bats": "L",
+      "throws": "R",
+      "age": 32,
+      "photo": "caleb-ardoin.jpg"
+    },
+    {
+      "name": "Samir Benyahia",
+      "slug": "samir-benyahia",
+      "position": "2B",
+      "bats": "S",
+      "throws": "R",
+      "age": 23,
+      "photo": "samir-benyahia.jpg"
+    },
+    {
+      "name": "Evan Trelawny",
+      "slug": "evan-trelawny",
+      "position": "SS",
+      "bats": "R",
+      "throws": "R",
+      "age": 27,
+      "photo": "evan-trelawny.jpg"
+    },
+    {
+      "name": "Kwame Ofori",
+      "slug": "kwame-ofori",
+      "position": "3B",
+      "bats": "R",
+      "throws": "R",
+      "age": 28,
+      "photo": "kwame-ofori.jpg"
+    },
+    {
+      "name": "Mateo Acebedo",
+      "slug": "mateo-acebedo",
+      "position": "LF",
+      "bats": "L",
+      "throws": "L",
+      "age": 24,
+      "photo": "mateo-acebedo.jpg"
+    },
+    {
+      "name": "Niko Velković",
+      "slug": "niko-velkovic",
+      "position": "CF",
+      "bats": "R",
+      "throws": "R",
+      "age": 26,
+      "photo": "niko-velkovic.jpg"
+    },
+    {
+      "name": "Jasper Quade",
+      "slug": "jasper-quade",
+      "position": "RF",
+      "bats": "R",
+      "throws": "R",
+      "age": 31,
+      "photo": "jasper-quade.jpg"
+    }
+  ]
+}

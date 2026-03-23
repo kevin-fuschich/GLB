@@ -1,1 +1,10 @@
-hold.txt
+{
+  "spokane-alloys": {
+    "name": "Spokane Alloys",
+    "division": "Americas"
+  },
+  "durham-gold": {
+    "name": "Durham Gold",
+    "division": "Americas"
+  }
+}

@@ -2,148 +2,148 @@
   "team": "Osaka Spirits",
   "players": [
     {
-      "name": "Takumi Arakawa",
-      "slug": "takumi-arakawa",
+      "name": "Hiroto Kurobane",
+      "slug": "hiroto-kurobane",
       "position": "SP",
       "bats": "R",
       "throws": "R",
       "age": 27,
-      "photo": "takumi-arakawa.jpg"
+      "photo": "hiroto-kurobane.jpg"
     },
     {
-      "name": "Daichi Fujimoto",
-      "slug": "daichi-fujimoto",
+      "name": "Enzo Dalmau",
+      "slug": "enzo-dalmau",
       "position": "SP",
       "bats": "R",
       "throws": "R",
-      "age": 29,
-      "photo": "daichi-fujimoto.jpg"
+      "age": 31,
+      "photo": "enzo-dalmau.jpg"
     },
     {
-      "name": "Riku Matsuda",
-      "slug": "riku-matsuda",
+      "name": "Kofi Agyeman",
+      "slug": "kofi-agyeman",
       "position": "SP",
       "bats": "L",
       "throws": "L",
       "age": 25,
-      "photo": "riku-matsuda.jpg"
+      "photo": "kofi-agyeman.jpg"
     },
     {
-      "name": "Shota Nakahara",
-      "slug": "shota-nakahara",
+      "name": "Luka Vuković",
+      "slug": "luka-vukovic",
       "position": "SP",
       "bats": "R",
       "throws": "R",
-      "age": 30,
-      "photo": "shota-nakahara.jpg"
+      "age": 29,
+      "photo": "luka-vukovic.jpg"
     },
     {
-      "name": "Kenta Uehara",
-      "slug": "kenta-uehara",
+      "name": "Rowan Cahir",
+      "slug": "rowan-cahir",
       "position": "SP",
-      "bats": "R",
+      "bats": "L",
       "throws": "R",
       "age": 26,
-      "photo": "kenta-uehara.jpg"
+      "photo": "rowan-cahir.jpg"
     },
     {
-      "name": "Yusuke Tanabe",
-      "slug": "yusuke-tanabe",
+      "name": "Sandeep Nayar",
+      "slug": "sandeep-nayar",
       "position": "RP",
       "bats": "R",
       "throws": "R",
       "age": 28,
-      "photo": "yusuke-tanabe.jpg"
+      "photo": "sandeep-nayar.jpg"
     },
     {
-      "name": "Hiroto Shimizu",
-      "slug": "hiroto-shimizu",
+      "name": "Mateo Zubillaga",
+      "slug": "mateo-zubillaga",
+      "position": "RP",
+      "bats": "R",
+      "throws": "R",
+      "age": 24,
+      "photo": "mateo-zubillaga.jpg"
+    },
+    {
+      "name": "Jae-min Seok",
+      "slug": "jae-min-seok",
       "position": "RP",
       "bats": "L",
       "throws": "L",
-      "age": 24,
-      "photo": "hiroto-shimizu.jpg"
+      "age": 30,
+      "photo": "jae-min-seok.jpg"
     },
     {
-      "name": "Keisuke Mori",
-      "slug": "keisuke-mori",
-      "position": "RP",
-      "bats": "R",
-      "throws": "R",
-      "age": 31,
-      "photo": "keisuke-mori.jpg"
-    },
-    {
-      "name": "Tatsuya Okada",
-      "slug": "tatsuya-okada",
+      "name": "Marcelino Quispe",
+      "slug": "marcelino-quispe",
       "position": "C",
       "bats": "R",
       "throws": "R",
-      "age": 29,
-      "photo": "tatsuya-okada.jpg"
+      "age": 27,
+      "photo": "marcelino-quispe.jpg"
     },
     {
-      "name": "Kohei Yamamoto",
-      "slug": "kohei-yamamoto",
+      "name": "Thabo Mkhize",
+      "slug": "thabo-mkhize",
       "position": "1B",
       "bats": "L",
       "throws": "R",
       "age": 32,
-      "photo": "kohei-yamamoto.jpg"
+      "photo": "thabo-mkhize.jpg"
     },
     {
-      "name": "Naoki Sato",
-      "slug": "naoki-sato",
+      "name": "Arman Daryan",
+      "slug": "arman-daryan",
       "position": "2B",
       "bats": "S",
       "throws": "R",
-      "age": 26,
-      "photo": "naoki-sato.jpg"
+      "age": 23,
+      "photo": "arman-daryan.jpg"
     },
     {
-      "name": "Haruto Kinoshita",
-      "slug": "haruto-kinoshita",
+      "name": "Kenjiro Suganuma",
+      "slug": "kenjiro-suganuma",
       "position": "SS",
       "bats": "R",
       "throws": "R",
-      "age": 25,
-      "photo": "haruto-kinoshita.jpg"
+      "age": 26,
+      "photo": "kenjiro-suganuma.jpg"
     },
     {
-      "name": "Ren Takahashi",
-      "slug": "ren-takahashi",
+      "name": "Dariusz Kwiatkowski",
+      "slug": "dariusz-kwiatkowski",
       "position": "3B",
       "bats": "R",
       "throws": "R",
-      "age": 28,
-      "photo": "ren-takahashi.jpg"
+      "age": 29,
+      "photo": "dariusz-kwiatkowski.jpg"
     },
     {
-      "name": "Yuta Nishikawa",
-      "slug": "yuta-nishikawa",
+      "name": "Nikhil Bhandari",
+      "slug": "nikhil-bhandari",
       "position": "CF",
-      "bats": "L",
-      "throws": "L",
-      "age": 27,
-      "photo": "yuta-nishikawa.jpg"
-    },
-    {
-      "name": "Shunpei Otsuka",
-      "slug": "shunpei-otsuka",
-      "position": "LF",
       "bats": "R",
       "throws": "R",
-      "age": 24,
-      "photo": "shunpei-otsuka.jpg"
+      "age": 25,
+      "photo": "nikhil-bhandari.jpg"
     },
     {
-      "name": "Kazuhiro Inoue",
-      "slug": "kazuhiro-inoue",
+      "name": "Thiago Ramires",
+      "slug": "thiago-ramires",
+      "position": "LF",
+      "bats": "L",
+      "throws": "L",
+      "age": 22,
+      "photo": "thiago-ramires.jpg"
+    },
+    {
+      "name": "Yusef El-Badri",
+      "slug": "yusef-el-badri",
       "position": "RF",
       "bats": "R",
       "throws": "R",
-      "age": 30,
-      "photo": "kazuhiro-inoue.jpg"
+      "age": 31,
+      "photo": "yusef-el-badri.jpg"
     }
   ]
 }

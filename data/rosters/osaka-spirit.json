@@ -1,0 +1,149 @@
+{
+  "team": "Osaka Spirits",
+  "players": [
+    {
+      "name": "Takumi Arakawa",
+      "slug": "takumi-arakawa",
+      "position": "SP",
+      "bats": "R",
+      "throws": "R",
+      "age": 27,
+      "photo": "takumi-arakawa.jpg"
+    },
+    {
+      "name": "Daichi Fujimoto",
+      "slug": "daichi-fujimoto",
+      "position": "SP",
+      "bats": "R",
+      "throws": "R",
+      "age": 29,
+      "photo": "daichi-fujimoto.jpg"
+    },
+    {
+      "name": "Riku Matsuda",
+      "slug": "riku-matsuda",
+      "position": "SP",
+      "bats": "L",
+      "throws": "L",
+      "age": 25,
+      "photo": "riku-matsuda.jpg"
+    },
+    {
+      "name": "Shota Nakahara",
+      "slug": "shota-nakahara",
+      "position": "SP",
+      "bats": "R",
+      "throws": "R",
+      "age": 30,
+      "photo": "shota-nakahara.jpg"
+    },
+    {
+      "name": "Kenta Uehara",
+      "slug": "kenta-uehara",
+      "position": "SP",
+      "bats": "R",
+      "throws": "R",
+      "age": 26,
+      "photo": "kenta-uehara.jpg"
+    },
+    {
+      "name": "Yusuke Tanabe",
+      "slug": "yusuke-tanabe",
+      "position": "RP",
+      "bats": "R",
+      "throws": "R",
+      "age": 28,
+      "photo": "yusuke-tanabe.jpg"
+    },
+    {
+      "name": "Hiroto Shimizu",
+      "slug": "hiroto-shimizu",
+      "position": "RP",
+      "bats": "L",
+      "throws": "L",
+      "age": 24,
+      "photo": "hiroto-shimizu.jpg"
+    },
+    {
+      "name": "Keisuke Mori",
+      "slug": "keisuke-mori",
+      "position": "RP",
+      "bats": "R",
+      "throws": "R",
+      "age": 31,
+      "photo": "keisuke-mori.jpg"
+    },
+    {
+      "name": "Tatsuya Okada",
+      "slug": "tatsuya-okada",
+      "position": "C",
+      "bats": "R",
+      "throws": "R",
+      "age": 29,
+      "photo": "tatsuya-okada.jpg"
+    },
+    {
+      "name": "Kohei Yamamoto",
+      "slug": "kohei-yamamoto",
+      "position": "1B",
+      "bats": "L",
+      "throws": "R",
+      "age": 32,
+      "photo": "kohei-yamamoto.jpg"
+    },
+    {
+      "name": "Naoki Sato",
+      "slug": "naoki-sato",
+      "position": "2B",
+      "bats": "S",
+      "throws": "R",
+      "age": 26,
+      "photo": "naoki-sato.jpg"
+    },
+    {
+      "name": "Haruto Kinoshita",
+      "slug": "haruto-kinoshita",
+      "position": "SS",
+      "bats": "R",
+      "throws": "R",
+      "age": 25,
+      "photo": "haruto-kinoshita.jpg"
+    },
+    {
+      "name": "Ren Takahashi",
+      "slug": "ren-takahashi",
+      "position": "3B",
+      "bats": "R",
+      "throws": "R",
+      "age": 28,
+      "photo": "ren-takahashi.jpg"
+    },
+    {
+      "name": "Yuta Nishikawa",
+      "slug": "yuta-nishikawa",
+      "position": "CF",
+      "bats": "L",
+      "throws": "L",
+      "age": 27,
+      "photo": "yuta-nishikawa.jpg"
+    },
+    {
+      "name": "Shunpei Otsuka",
+      "slug": "shunpei-otsuka",
+      "position": "LF",
+      "bats": "R",
+      "throws": "R",
+      "age": 24,
+      "photo": "shunpei-otsuka.jpg"
+    },
+    {
+      "name": "Kazuhiro Inoue",
+      "slug": "kazuhiro-inoue",
+      "position": "RF",
+      "bats": "R",
+      "throws": "R",
+      "age": 30,
+      "photo": "kazuhiro-inoue.jpg"
+    }
+  ]
+}

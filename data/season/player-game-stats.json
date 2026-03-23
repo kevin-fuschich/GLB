@@ -1,1 +1,18 @@
-
+[
+  {
+    "gameId": "2026-04-08-spokane-fresno",
+    "player": "kellan-brynden",
+    "team": "spokane-alloys",
+    "type": "pitcher",
+    "stats": {
+      "ip": 7.0,
+      "h": 3,
+      "er": 0,
+      "bb": 1,
+      "so": 6,
+      "w": 1,
+      "l": 0,
+      "sv": 0
+    }
+  }
+]

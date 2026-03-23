@@ -1,1 +1,11 @@
-hold.txt
+[
+  {
+    "id": "2026-04-08-spokane-fresno",
+    "date": "2026-04-08",
+    "home": "spokane-alloys",
+    "away": "fresno-yield",
+    "homeScore": 2,
+    "awayScore": 0,
+    "status": "final"
+  }
+]

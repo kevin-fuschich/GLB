@@ -1,0 +1,149 @@
+{
+  "team": "San Pedro Cocolos",
+  "players": [
+    {
+      "name": "Ivo Korolenko",
+      "slug": "ivo-korolenko",
+      "position": "SP",
+      "bats": "R",
+      "throws": "R",
+      "age": 29,
+      "photo": "ivo-korolenko.jpg"
+    },
+    {
+      "name": "Nolan Garrity",
+      "slug": "nolan-garrity",
+      "position": "SP",
+      "bats": "L",
+      "throws": "L",
+      "age": 27,
+      "photo": "nolan-garrity.jpg"
+    },
+    {
+      "name": "Kenji Morishita",
+      "slug": "kenji-morishita",
+      "position": "SP",
+      "bats": "R",
+      "throws": "R",
+      "age": 25,
+      "photo": "kenji-morishita.jpg"
+    },
+    {
+      "name": "Souleymane Diallo",
+      "slug": "souleymane-diallo",
+      "position": "SP",
+      "bats": "R",
+      "throws": "R",
+      "age": 30,
+      "photo": "souleymane-diallo.jpg"
+    },
+    {
+      "name": "Enzo Carvajal",
+      "slug": "enzo-carvajal",
+      "position": "SP",
+      "bats": "R",
+      "throws": "R",
+      "age": 26,
+      "photo": "enzo-carvajal.jpg"
+    },
+    {
+      "name": "Marek Zielinski",
+      "slug": "marek-zielinski",
+      "position": "RP",
+      "bats": "R",
+      "throws": "R",
+      "age": 28,
+      "photo": "marek-zielinski.jpg"
+    },
+    {
+      "name": "Teo Arellano",
+      "slug": "teo-arellano",
+      "position": "RP",
+      "bats": "L",
+      "throws": "L",
+      "age": 24,
+      "photo": "teo-arellano.jpg"
+    },
+    {
+      "name": "Isaac Rendell",
+      "slug": "isaac-rendell",
+      "position": "RP",
+      "bats": "R",
+      "throws": "R",
+      "age": 31,
+      "photo": "isaac-rendell.jpg"
+    },
+    {
+      "name": "Matías Serey",
+      "slug": "matias-serey",
+      "position": "C",
+      "bats": "R",
+      "throws": "R",
+      "age": 28,
+      "photo": "matias-serey.jpg"
+    },
+    {
+      "name": "Caleb VanHoorn",
+      "slug": "caleb-vanhoorn",
+      "position": "1B",
+      "bats": "L",
+      "throws": "R",
+      "age": 32,
+      "photo": "caleb-vanhoorn.jpg"
+    },
+    {
+      "name": "Omar Benyahia",
+      "slug": "omar-benyahia",
+      "position": "2B",
+      "bats": "S",
+      "throws": "R",
+      "age": 23,
+      "photo": "omar-benyahia.jpg"
+    },
+    {
+      "name": "Ryo Kawabata",
+      "slug": "ryo-kawabata",
+      "position": "SS",
+      "bats": "R",
+      "throws": "R",
+      "age": 26,
+      "photo": "ryo-kawabata.jpg"
+    },
+    {
+      "name": "Darius Kofi",
+      "slug": "darius-kofi",
+      "position": "3B",
+      "bats": "R",
+      "throws": "R",
+      "age": 29,
+      "photo": "darius-kofi.jpg"
+    },
+    {
+      "name": "Miguel Encarnación",
+      "slug": "miguel-encarnacion",
+      "position": "CF",
+      "bats": "R",
+      "throws": "R",
+      "age": 25,
+      "photo": "miguel-encarnacion.jpg"
+    },
+    {
+      "name": "Victor Sundqvist",
+      "slug": "victor-sundqvist",
+      "position": "LF",
+      "bats": "L",
+      "throws": "L",
+      "age": 27,
+      "photo": "victor-sundqvist.jpg"
+    },
+    {
+      "name": "Naveen Iyer",
+      "slug": "naveen-iyer",
+      "position": "RF",
+      "bats": "R",
+      "throws": "R",
+      "age": 30,
+      "photo": "naveen-iyer.jpg"
+    }
+  ]
+}

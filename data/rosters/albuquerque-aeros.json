@@ -1,0 +1,149 @@
+{
+  "team": "Albuquerque Aeros",
+  "players": [
+    {
+      "name": "Idris Kourouma",
+      "slug": "idris-kourouma",
+      "position": "SP",
+      "bats": "R",
+      "throws": "R",
+      "age": 29,
+      "photo": "idris-kourouma.jpg"
+    },
+    {
+      "name": "Pieter VanVleuten",
+      "slug": "pieter-vanvleuten",
+      "position": "SP",
+      "bats": "L",
+      "throws": "L",
+      "age": 31,
+      "photo": "pieter-vanvleuten.jpg"
+    },
+    {
+      "name": "Nikhil Jadhav",
+      "slug": "nikhil-jadhav",
+      "position": "SP",
+      "bats": "R",
+      "throws": "R",
+      "age": 26,
+      "photo": "nikhil-jadhav.jpg"
+    },
+    {
+      "name": "Ronan Kaczmarek",
+      "slug": "ronan-kaczmarek",
+      "position": "SP",
+      "bats": "R",
+      "throws": "R",
+      "age": 24,
+      "photo": "ronan-kaczmarek.jpg"
+    },
+    {
+      "name": "Satoshi Kurobane",
+      "slug": "satoshi-kurobane",
+      "position": "SP",
+      "bats": "R",
+      "throws": "R",
+      "age": 28,
+      "photo": "satoshi-kurobane.jpg"
+    },
+    {
+      "name": "Eamon Quirke",
+      "slug": "eamon-quirke",
+      "position": "RP",
+      "bats": "R",
+      "throws": "R",
+      "age": 27,
+      "photo": "eamon-quirke.jpg"
+    },
+    {
+      "name": "Jae-min Gwak",
+      "slug": "jae-min-gwak",
+      "position": "RP",
+      "bats": "L",
+      "throws": "R",
+      "age": 23,
+      "photo": "jae-min-gwak.jpg"
+    },
+    {
+      "name": "Lázaro Bracamonte",
+      "slug": "lazaro-bracamonte",
+      "position": "RP",
+      "bats": "R",
+      "throws": "R",
+      "age": 30,
+      "photo": "lazaro-bracamonte.jpg"
+    },
+    {
+      "name": "Rui Damas",
+      "slug": "rui-damas",
+      "position": "C",
+      "bats": "R",
+      "throws": "R",
+      "age": 28,
+      "photo": "rui-damas.jpg"
+    },
+    {
+      "name": "Tobias Vandenberg",
+      "slug": "tobias-vandenberg",
+      "position": "1B",
+      "bats": "L",
+      "throws": "R",
+      "age": 32,
+      "photo": "tobias-vandenberg.jpg"
+    },
+    {
+      "name": "Kofi Agyeman",
+      "slug": "kofi-agyeman",
+      "position": "2B",
+      "bats": "S",
+      "throws": "R",
+      "age": 25,
+      "photo": "kofi-agyeman.jpg"
+    },
+    {
+      "name": "Iker Zubizarreta",
+      "slug": "iker-zubizarreta",
+      "position": "SS",
+      "bats": "R",
+      "throws": "R",
+      "age": 26,
+      "photo": "iker-zubizarreta.jpg"
+    },
+    {
+      "name": "Carmine Sforza",
+      "slug": "carmine-sforza",
+      "position": "3B",
+      "bats": "R",
+      "throws": "R",
+      "age": 29,
+      "photo": "carmine-sforza.jpg"
+    },
+    {
+      "name": "Adama Kouyaté",
+      "slug": "adama-kouyate",
+      "position": "CF",
+      "bats": "R",
+      "throws": "R",
+      "age": 27,
+      "photo": "adama-kouyate.jpg"
+    },
+    {
+      "name": "Elior Ben-Ami",
+      "slug": "elior-ben-ami",
+      "position": "LF",
+      "bats": "L",
+      "throws": "L",
+      "age": 22,
+      "photo": "elior-ben-ami.jpg"
+    },
+    {
+      "name": "Paolo Ventresca",
+      "slug": "paolo-ventresca",
+      "position": "RF",
+      "bats": "R",
+      "throws": "R",
+      "age": 31,
+      "photo": "paolo-ventresca.jpg"
+    }
+  ]
+}

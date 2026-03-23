@@ -1,0 +1,140 @@
+{
+  "team": "Durham Gold",
+  "players": [
+    {
+      "name": "Caleb Rowan",
+      "slug": "caleb-rowan",
+      "position": "SP",
+      "bats": "R",
+      "throws": "R",
+      "age": 29,
+      "photo": "caleb-rowan.jpg"
+    },
+    {
+      "name": "Antonio Beltrán",
+      "slug": "antonio-beltran",
+      "position": "SP",
+      "bats": "L",
+      "throws": "L",
+      "age": 27,
+      "photo": "antonio-beltran.jpg"
+    },
+    {
+      "name": "Isaac Friedel",
+      "slug": "isaac-friedel",
+      "position": "SP",
+      "bats": "R",
+      "throws": "R",
+      "age": 31,
+      "photo": "isaac-friedel.jpg"
+    },
+    {
+      "name": "Kenji Nomura",
+      "slug": "kenji-nomura",
+      "position": "SP",
+      "bats": "R",
+      "throws": "R",
+      "age": 26,
+      "photo": "kenji-nomura.jpg"
+    },
+    {
+      "name": "Devin Marsh",
+      "slug": "devin-marsh",
+      "position": "RP",
+      "bats": "R",
+      "throws": "R",
+      "age": 28,
+      "photo": "devin-marsh.jpg"
+    },
+    {
+      "name": "Luis Carreño",
+      "slug": "luis-carreno",
+      "position": "RP",
+      "bats": "L",
+      "throws": "R",
+      "age": 25,
+      "photo": "luis-carreno.jpg"
+    },
+    {
+      "name": "Noah Pryce",
+      "slug": "noah-pryce",
+      "position": "RP",
+      "bats": "R",
+      "throws": "R",
+      "age": 30,
+      "photo": "noah-pryce.jpg"
+    },
+    {
+      "name": "Ethan Bowen",
+      "slug": "ethan-bowen",
+      "position": "C",
+      "bats": "R",
+      "throws": "R",
+      "age": 32,
+      "photo": "ethan-bowen.jpg"
+    },
+    {
+      "name": "Marcelo Ibarra",
+      "slug": "marcelo-ibarra",
+      "position": "1B",
+      "bats": "L",
+      "throws": "R",
+      "age": 28,
+      "photo": "marcelo-ibarra.jpg"
+    },
+    {
+      "name": "Joshua Kent",
+      "slug": "joshua-kent",
+      "position": "2B",
+      "bats": "S",
+      "throws": "R",
+      "age": 24,
+      "photo": "joshua-kent.jpg"
+    },
+    {
+      "name": "Omar Salcedo",
+      "slug": "omar-salcedo",
+      "position": "SS",
+      "bats": "R",
+      "throws": "R",
+      "age": 27,
+      "photo": "omar-salcedo.jpg"
+    },
+    {
+      "name": "Tyrell Winston",
+      "slug": "tyrell-winston",
+      "position": "3B",
+      "bats": "R",
+      "throws": "R",
+      "age": 29,
+      "photo": "tyrell-winston.jpg"
+    },
+    {
+      "name": "Aaron Fletcher",
+      "slug": "aaron-fletcher",
+      "position": "CF",
+      "bats": "L",
+      "throws": "L",
+      "age": 26,
+      "photo": "aaron-fletcher.jpg"
+    },
+    {
+      "name": "Mateo Ríos",
+      "slug": "mateo-rios",
+      "position": "LF",
+      "bats": "R",
+      "throws": "R",
+      "age": 23,
+      "photo": "mateo-rios.jpg"
+    },
+    {
+      "name": "Calvin Ross",
+      "slug": "calvin-ross",
+      "position": "RF",
+      "bats": "R",
+      "throws": "R",
+      "age": 31,
+      "photo": "calvin-ross.jpg"
+    }
+  ]
+}

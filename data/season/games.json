@@ -1,5 +1,32 @@
 [
   {
+    "id": "2026-04-08-san-pedro-monterrey",
+    "date": "2026-04-08",
+    "home": "san-pedro-cocolos",
+    "away": "monterrey-cementeros",
+    "homeScore": 7,
+    "awayScore": 1,
+    "status": "final"
+  },
+  {
+    "id": "2026-04-08-taipei-osaka",
+    "date": "2026-04-08",
+    "home": "taipei-neon",
+    "away": "osaka-spirits",
+    "homeScore": 4,
+    "awayScore": 2,
+    "status": "final"
+  },
+  {
+    "id": "2026-04-08-louisville-durham",
+    "date": "2026-04-08",
+    "home": "louisville-naturals",
+    "away": "durham-gold",
+    "homeScore": 6,
+    "awayScore": 1,
+    "status": "final"
+  },
+  {
     "id": "2026-04-08-spokane-fresno",
     "date": "2026-04-08",
     "home": "spokane-alloys",

@@ -1,1 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GLB — Road to Tijuana | Donk Championships</title>
 
+  <style>
+    :root{
+      --paper:#ffffff;
+      --field:#f5f5f3;
+      --ink:#111111;
+      --navy:#002244;
+      --meta:#666666;
+      --line:#d9d9d9;
+      --soft:#f0f0ee;
+      --gold:#b88a2a;
+      --red:#8c1d1d;
+
+      --sans:"Helvetica Neue", Helvetica, Arial, sans-serif;
+      --serif:Georgia, "Times New Roman", serif;
+      --mono:"Courier New", Courier, monospace;
+    }
+
+    *{box-sizing:border-box}
+
+    body{
+      margin:0;
+      background:var(--field);
+      color:var(--ink);
+      font-family:var(--sans);
+      line-height:1.5;
+    }
+
+    a{
+      color:var(--navy);
+      text-decoration:none;
+    }
+
+    a:hover{
+      text-decoration:underline;
+    }
+
+    img{
+      display:block;
+      max-width:100%;
+    }
+
+    .site-header{
+      background:#fff;
+      border-bottom:1px solid var(--line);
+      position:sticky;
+      top:0;
+      z-index:100;
+    }
+
+    .topbar{
+      max-width:1280px;
+      margin:0 auto;
+      padding:14px 20px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+    }
+
+    .brand{
+      font-size:13px;
+      font-weight:700;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+      color:var(--navy);
+      white-space:nowrap;
+    }
+
+    .brand a{
+      color:var(--navy);
+      text-decoration:none;
+    }
+
+    .nav{
+      display:flex;
+      flex-wrap:wrap;
+      gap:16px;
+      justify-content:flex-end;
+    }
+
+    .nav a{
+      font-size:12px;
+      font-weight:700;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      color:var(--ink);
+    }
+
+    .page{
+      max-width:1280px;
+      margin:0 auto;
+      padding:26px 20px 60px;
+    }
+
+    .breadcrumbs{
+      font-size:11px;
+      font-weight:700;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      color:var(--meta);
+      margin-bottom:18px;
+    }
+
+    .hero{
+      background:#fff;
+      border:1px solid var(--line);
+      margin-bottom:24px;
+      overflow:hidden;
+    }
+
+    .hero-image{
+      width:100%;
+      height:520px;
+      object-fit:cover;
+      background:#ddd;
+    }
+
+    .hero-copy{
+      padding:24px 24px 22px;
+      border-top:1px solid var(--line);
+    }
+
+    .eyebrow{
+      font-size:12px;
+      font-weight:700;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      color:var(--red);
+      margin-bottom:10px;
+    }
+
+    h1{
+      margin:0 0 10px;
+      font-family:var(--serif);
+      font-size:48px;
+      line-height:1.02;
+      color:var(--navy);
+    }
+
+    .hero-subhead{
+      margin:0;
+      max-width:860px;
+      font-size:18px;
+      color:var(--meta);
+    }
+
+    .intro-grid{
+      display:grid;
+      grid-template-columns:2fr 1fr;
+      gap:24px;
+      margin-bottom:24px;
+    }
+
+    .panel{
+      background:#fff;
+      border:1px solid var(--line);
+    }
+
+    .panel-header{
+      padding:13px 18px;
+      border-bottom:1px solid var(--line);
+      background:var(--soft);
+      font-size:12px;
+      font-weight:700;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      color:var(--navy);
+    }
+
+    .panel-body{
+      padding:18px;
+    }
+
+    .lede{
+      margin:0;
+      font-size:16px;
+    }
+
+    .stat-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:12px;
+    }
+
+    .stat{
+      border:1px solid var(--line);
+      padding:12px;
+      background:#fff;
+    }
+
+    .stat-label{
+      font-size:11px;
+      font-weight:700;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      color:var(--meta);
+      margin-bottom:6px;
+    }
+
+    .stat-value{
+      font-size:20px;
+      font-weight:700;
+      color:var(--navy);
+      font-family:var(--serif);
+      line-height:1.1;
+    }
+
+    .champions-header{
+      display:flex;
+      align-items:end;
+      justify-content:space-between;
+      gap:20px;
+      margin:0 0 14px;
+    }
+
+    .section-title{
+      margin:0;
+      font-size:28px;
+      font-family:var(--serif);
+      color:var(--navy);
+      line-height:1.1;
+    }
+
+    .section-kicker{
+      font-size:12px;
+      font-weight:700;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      color:var(--meta);
+      margin-bottom:6px;
+    }
+
+    .champion-grid{
+      display:grid;
+      grid-template-columns:repeat(2, minmax(0, 1fr));
+      gap:24px;
+    }
+
+    .champion-card{
+      background:#fff;
+      border:1px solid var(--line);
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+    }
+
+    .champion-card img{
+      width:100%;
+      height:330px;
+      object-fit:cover;
+      background:#ddd;
+      border-bottom:1px solid var(--line);
+    }
+
+    .champion-body{
+      padding:18px;
+    }
+
+    .city-line{
+      font-size:11px;
+      font-weight:700;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      color:var(--red);
+      margin-bottom:6px;
+    }
+
+    .champion-name{
+      margin:0 0 8px;
+      font-size:31px;
+      line-height:1.05;
+      font-family:var(--serif);
+      color:var(--navy);
+    }
+
+    .car-line{
+      margin:0 0 8px;
+      font-size:15px;
+      color:var(--ink);
+      font-weight:700;
+    }
+
+    .theme-line{
+      margin:0 0 12px;
+      font-size:14px;
+      color:var(--meta);
+    }
+
+    .winner-tag{
+      display:inline-block;
+      font-size:11px;
+      font-weight:700;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      padding:6px 8px;
+      border:1px solid var(--line);
+      background:var(--soft);
+      margin-bottom:12px;
+      color:var(--navy);
+    }
+
+    .caption{
+      margin:0 0 14px;
+      font-size:15px;
+    }
+
+    .champion-meta{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:12px;
+      margin-top:auto;
+    }
+
+    .meta-box{
+      border-top:1px solid var(--line);
+      padding-top:10px;
+    }
+
+    .meta-box .label{
+      display:block;
+      font-size:10px;
+      font-weight:700;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      color:var(--meta);
+      margin-bottom:5px;
+    }
+
+    .meta-box .value{
+      font-size:14px;
+      color:var(--ink);
+      font-weight:700;
+    }
+
+    .bottom-grid{
+      margin-top:24px;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:24px;
+    }
+
+    .list{
+      margin:0;
+      padding-left:18px;
+    }
+
+    .list li{
+      margin-bottom:8px;
+      font-size:15px;
+    }
+
+    .footer-note{
+      max-width:1280px;
+      margin:0 auto;
+      padding:0 20px 44px;
+      font-size:11px;
+      color:var(--meta);
+      letter-spacing:.08em;
+      text-transform:uppercase;
+    }
+
+    @media (max-width: 980px){
+      .intro-grid,
+      .bottom-grid,
+      .champion-grid{
+        grid-template-columns:1fr;
+      }
+
+      .hero-image{
+        height:340px;
+      }
+
+      h1{
+        font-size:38px;
+      }
+    }
+
+    @media (max-width: 640px){
+      .topbar{
+        align-items:flex-start;
+        flex-direction:column;
+      }
+
+      .nav{
+        justify-content:flex-start;
+      }
+
+      .champion-card img{
+        height:260px;
+      }
+
+      h1{
+        font-size:32px;
+      }
+
+      .champion-name{
+        font-size:26px;
+      }
+
+      .champion-meta,
+      .stat-grid{
+        grid-template-columns:1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="topbar">
+      <div class="brand"><a href="index.html">Global League Baseball</a></div>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="standings.html">Standings</a>
+        <a href="teams.html">Teams</a>
+        <a href="schedule.html">Schedule</a>
+        <a href="donk-championships.html">Donk</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <div class="breadcrumbs">
+      <a href="index.html">Home</a> / Donk Championships / Road to Tijuana
+    </div>
+
+    <section class="hero">
+      <img class="hero-image" src="images/donk/durham-numoney.png" alt="NuMONEY and the winning Durham donk hop under the lights" />
+      <div class="hero-copy">
+        <div class="eyebrow">GLB Event Series</div>
+        <h1>Road to Tijuana</h1>
+        <p class="hero-subhead">
+          The Supreme Donk Championships travel through select GLB cities as a stadium event series built around custom cars, live judging, and city champions. Winners are crowned on-site and advance toward the circuit final in Tijuana.
+        </p>
+      </div>
+    </section>
+
+    <section class="intro-grid">
+      <div class="panel">
+        <div class="panel-header">About the Circuit</div>
+        <div class="panel-body">
+          <p class="lede">
+            The Road to Tijuana is a recurring GLB stadium experience staged before the game and recognized during the seventh inning. Each host city crowns one official donk champion based on style, presence, build identity, and live competition performance. What began as a side spectacle has become one of the most anticipated event layers inside the GLB world.
+          </p>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-header">Circuit Snapshot</div>
+        <div class="panel-body">
+          <div class="stat-grid">
+            <div class="stat">
+              <div class="stat-label">Cities</div>
+              <div class="stat-value">8</div>
+            </div>
+            <div class="stat">
+              <div class="stat-label">Final</div>
+              <div class="stat-value">Tijuana</div>
+            </div>
+            <div class="stat">
+              <div class="stat-label">Winner Reveal</div>
+              <div class="stat-value">7th Inning</div>
+            </div>
+            <div class="stat">
+              <div class="stat-label">Format</div>
+              <div class="stat-value">Live Judging</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="champions-header">
+        <div>
+          <div class="section-kicker">Official City Champions</div>
+          <h2 class="section-title">2026 Qualified Field</h2>
+        </div>
+      </div>
+
+      <div class="champion-grid">
+
+        <article class="champion-card">
+          <img src="images/donk/durham-numoney.png" alt="NuMONEY with his Durham-winning Caprice Classic" />
+          <div class="champion-body">
+            <div class="city-line">Durham</div>
+            <h3 class="champion-name">NuMONEY</h3>
+            <p class="car-line">Caprice Classic</p>
+            <p class="theme-line">Candy red / cream drip • Pall Mall theme</p>
+            <div class="winner-tag">Durham Champion</div>
+            <p class="caption">
+              NuMONEY’s Caprice cleared the Durham mark under the lights and became the defining image of the circuit’s opening stop.
+            </p>
+            <div class="champion-meta">
+              <div class="meta-box">
+                <span class="label">Signature</span>
+                <span class="value">Measured Hop</span>
+              </div>
+              <div class="meta-box">
+                <span class="label">Win Type</span>
+                <span class="value">Highest Mark</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="champion-card">
+          <img src="images/donk/taipei-toi-boi-roi.png" alt="Toi Boi Roi with his banana yellow Taipei-winning Impala" />
+          <div class="champion-body">
+            <div class="city-line">Taipei</div>
+            <h3 class="champion-name">Toi Boi Roi</h3>
+            <p class="car-line">Impala</p>
+            <p class="theme-line">Banana yellow candy drip • Arcade jungle theme</p>
+            <div class="winner-tag">Taipei Champion</div>
+            <p class="caption">
+              Toi Boi Roi earned Best Style honors with a controlled tripod lean, chrome-heavy finish, and a nightlife build that owned the Taipei stop.
+            </p>
+            <div class="champion-meta">
+              <div class="meta-box">
+                <span class="label">Signature</span>
+                <span class="value">Tripod Lean</span>
+              </div>
+              <div class="meta-box">
+                <span class="label">Win Type</span>
+                <span class="value">Best Style</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="champion-card">
+          <img src="images/donk/atlanta-big-rell.png" alt="Big Rell beside his deep burgundy Atlanta donk build" />
+          <div class="champion-body">
+            <div class="city-line">Atlanta</div>
+            <h3 class="champion-name">Big Rell</h3>
+            <p class="car-line">1974 Caprice Classic</p>
+            <p class="theme-line">Deep candy burgundy • Chrome-forward Southern build</p>
+            <div class="winner-tag">Atlanta Champion</div>
+            <p class="caption">
+              Big Rell brought the most restrained and intimidating build of the circuit, winning Atlanta on presence, stance, and total authority.
+            </p>
+            <div class="champion-meta">
+              <div class="meta-box">
+                <span class="label">Signature</span>
+                <span class="value">Slow Lift Dominance</span>
+              </div>
+              <div class="meta-box">
+                <span class="label">Win Type</span>
+                <span class="value">Most Supreme</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="champion-card">
+          <img src="images/donk/albuquerque-perk-o-lata.png" alt="Perk-O-Lata with his Ton O Suds themed Cadillac in Albuquerque" />
+          <div class="champion-body">
+            <div class="city-line">Albuquerque</div>
+            <h3 class="champion-name">Perk-O-Lata</h3>
+            <p class="car-line">1985 Cadillac</p>
+            <p class="theme-line">Aqua / teal candy drip • Ton O’ Suds Carwash theme</p>
+            <div class="winner-tag">Albuquerque Champion</div>
+            <p class="caption">
+              The Albuquerque field belonged to Perk-O-Lata, whose glossy wash-cycle build turned a full concept into one of the circuit’s strongest identities.
+            </p>
+            <div class="champion-meta">
+              <div class="meta-box">
+                <span class="label">Signature</span>
+                <span class="value">Wash Cycle Bounce</span>
+              </div>
+              <div class="meta-box">
+                <span class="label">Win Type</span>
+                <span class="value">Best Theme</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="champion-card">
+          <img src="images/donk/louisville-clementine-latham.png" alt="Clementine Latham and her French's Mustard Plymouth Fury III in Louisville" />
+          <div class="champion-body">
+            <div class="city-line">Louisville</div>
+            <h3 class="champion-name">Clementine Latham</h3>
+            <p class="car-line">1972 Plymouth Fury III</p>
+            <p class="theme-line">French’s Mustard theme • Ballpark condiment build</p>
+            <div class="winner-tag">Louisville Champion</div>
+            <p class="caption">
+              Clementine Latham stood out in the Naturals’ ballpark setting with a bold, playful build that still felt fully serious in execution.
+            </p>
+            <div class="champion-meta">
+              <div class="meta-box">
+                <span class="label">Signature</span>
+                <span class="value">Ballpark Theme</span>
+              </div>
+              <div class="meta-box">
+                <span class="label">Win Type</span>
+                <span class="value">Best Theme</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="champion-card">
+          <img src="images/donk/vancouver-michael-bonnehomme.png" alt="Michael Bonnehomme with his Swedish Fish themed Chevy Citation in Vancouver" />
+          <div class="champion-body">
+            <div class="city-line">Vancouver</div>
+            <h3 class="champion-name">Michael Bonnehomme</h3>
+            <p class="car-line">1980 Chevy Citation</p>
+            <p class="theme-line">Swedish Fish theme • Red and aqua city-night finish</p>
+            <div class="winner-tag">Vancouver Champion</div>
+            <p class="caption">
+              Bonnehomme’s Citation gave Vancouver one of the circuit’s sharpest color stories, landing Best Style with a clean and playful build.
+            </p>
+            <div class="champion-meta">
+              <div class="meta-box">
+                <span class="label">Signature</span>
+                <span class="value">Color Split Identity</span>
+              </div>
+              <div class="meta-box">
+                <span class="label">Win Type</span>
+                <span class="value">Best Style</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="champion-card">
+          <img src="images/donk/fresno-daryl-deez.png" alt="Daryl Deez with his Green Giant Green Beans themed Caprice in Fresno" />
+          <div class="champion-body">
+            <div class="city-line">Fresno</div>
+            <h3 class="champion-name">Daryl Deez</h3>
+            <p class="car-line">1992 Chevy Caprice</p>
+            <p class="theme-line">Green Giant Green Beans theme • Heavy green field build</p>
+            <div class="winner-tag">Fresno Champion</div>
+            <p class="caption">
+              Veteran builder Daryl Deez brought full commitment to Fresno with a Green Giant Caprice that dominated on theme, tone, and crowd response.
+            </p>
+            <div class="champion-meta">
+              <div class="meta-box">
+                <span class="label">Signature</span>
+                <span class="value">Veteran Presence</span>
+              </div>
+              <div class="meta-box">
+                <span class="label">Win Type</span>
+                <span class="value">Best Theme</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="champion-card">
+          <img src="images/donk/san-pedro-omar-azul.png" alt="Omar Azul with his Good and Plenty themed Caprice in San Pedro" />
+          <div class="champion-body">
+            <div class="city-line">San Pedro</div>
+            <h3 class="champion-name">Omar Azul</h3>
+            <p class="car-line">1974 Chevy Caprice</p>
+            <p class="theme-line">Good &amp; Plenty theme • Purple and white coastal finish</p>
+            <div class="winner-tag">San Pedro Champion</div>
+            <p class="caption">
+              Omar Azul closed the field with a younger, composed build that gave San Pedro one of the circuit’s cleanest and most controlled statements.
+            </p>
+            <div class="champion-meta">
+              <div class="meta-box">
+                <span class="label">Signature</span>
+                <span class="value">Composed Swagger</span>
+              </div>
+              <div class="meta-box">
+                <span class="label">Win Type</span>
+                <span class="value">Best Style</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="bottom-grid">
+      <div class="panel">
+        <div class="panel-header">How Donk Fits Into GLB</div>
+        <div class="panel-body">
+          <ul class="list">
+            <li>Pre-game plaza and parking lot showcases at select host cities.</li>
+            <li>Live judging and fan walk-through before first pitch.</li>
+            <li>Seventh inning recognition on the stadium board.</li>
+            <li>Event pages and city recaps published alongside team coverage.</li>
+            <li>Road to Tijuana standings and champion archive housed in one circuit hub.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-header">Suggested Next Links</div>
+        <div class="panel-body">
+          <ul class="list">
+            <li><a href="donk-durham.html">Durham Donk Championships</a></li>
+            <li><a href="team.html?team=durham-gold">Durham Gold Team Page</a></li>
+            <li><a href="team.html?team=san-pedro-cocolos">San Pedro Cocolos Team Page</a></li>
+            <li><a href="standings.html">League Standings</a></li>
+            <li><a href="index.html">Return to GLB Home</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div class="footer-note">
+    Global League Baseball • Donk Championships Event Series • Road to Tijuana
+  </div>
+
+</body>
+</html>

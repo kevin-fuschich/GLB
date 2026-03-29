@@ -1,1 +1,118 @@
-hold
+{
+  "team": "Tijuana Tecnicos",
+  "slug": "tijuana-tecnicos",
+  "players": [
+    {
+      "name": "Rafael Montoya",
+      "position": "SP",
+      "bats": "R",
+      "throws": "R",
+      "age": 27
+    },
+    {
+      "name": "Diego Verdugo",
+      "position": "SP",
+      "bats": "L",
+      "throws": "L",
+      "age": 30
+    },
+    {
+      "name": "Esteban Arce",
+      "position": "SP",
+      "bats": "R",
+      "throws": "R",
+      "age": 25
+    },
+    {
+      "name": "Tomás Zepeda",
+      "position": "SP",
+      "bats": "R",
+      "throws": "R",
+      "age": 29
+    },
+    {
+      "name": "Mauricio Cota",
+      "position": "RP",
+      "bats": "R",
+      "throws": "R",
+      "age": 26
+    },
+    {
+      "name": "Iván Lizárraga",
+      "position": "RP",
+      "bats": "L",
+      "throws": "L",
+      "age": 28
+    },
+    {
+      "name": "Julián Ochoa",
+      "position": "RP",
+      "bats": "R",
+      "throws": "R",
+      "age": 24
+    },
+    {
+      "name": "Sergio Hinojosa",
+      "position": "C",
+      "bats": "R",
+      "throws": "R",
+      "age": 31
+    },
+    {
+      "name": "Bruno Valdés",
+      "position": "1B",
+      "bats": "L",
+      "throws": "R",
+      "age": 29
+    },
+    {
+      "name": "Matías Camarena",
+      "position": "2B",
+      "bats": "S",
+      "throws": "R",
+      "age": 25
+    },
+    {
+      "name": "Nicolás Paredes",
+      "position": "SS",
+      "bats": "R",
+      "throws": "R",
+      "age": 27
+    },
+    {
+      "name": "Adrián Fierro",
+      "position": "3B",
+      "bats": "R",
+      "throws": "R",
+      "age": 28
+    },
+    {
+      "name": "Emilio Barrón",
+      "position": "LF",
+      "bats": "L",
+      "throws": "L",
+      "age": 26
+    },
+    {
+      "name": "Gael Marrufo",
+      "position": "CF",
+      "bats": "R",
+      "throws": "R",
+      "age": 23
+    },
+    {
+      "name": "Cristóbal Saucedo",
+      "position": "RF",
+      "bats": "R",
+      "throws": "R",
+      "age": 30
+    },
+    {
+      "name": "Héctor Belmonte",
+      "position": "DH",
+      "bats": "L",
+      "throws": "R",
+      "age": 32
+    }
+  ]
+}

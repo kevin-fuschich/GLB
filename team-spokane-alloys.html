@@ -13,8 +13,7 @@
   --line:#e1e4e8;
   --bg:#f4f5f6;
   --card:#ffffff;
-  --accent:#7f8c8d;
-  --dark:#2e2f33;
+  --navy:#0d2235;
   --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
 }
 
@@ -25,94 +24,155 @@ body{
   color:var(--ink);
 }
 
+/* CONTAINER */
 .container{
   max-width:1100px;
   margin:0 auto;
   padding:30px 20px;
 }
 
-h1{
-  margin:0;
-  font-size:40px;
+/* HERO */
+.hero{
+  position:relative;
+  height:260px;
+  border-radius:10px;
+  overflow:hidden;
+  background:url('team-spokane-alloys-photo.png') center/cover no-repeat;
+  color:#fff;
+}
+
+.hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(90deg, rgba(13,34,53,.85) 0%, rgba(13,34,53,.5) 40%, rgba(13,34,53,0) 100%);
+}
+
+.hero-content{
+  position:absolute;
+  bottom:20px;
+  left:24px;
+  z-index:2;
+}
+
+.hero .division{
+  font-size:12px;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  opacity:.8;
+}
+
+.hero h1{
+  font-size:64px; /* doubled size */
+  margin:6px 0;
   font-weight:900;
 }
 
-.meta{
-  margin-top:8px;
-  font-size:13px;
-  color:var(--muted);
-  text-transform:uppercase;
+.hero p{
+  margin:0;
+  font-size:14px;
+  opacity:.9;
 }
 
-.hero{
-  margin:30px 0;
-}
-
-.hero img,
-.card img{
-  width:100%;
-  display:block;
-  border:1px solid var(--line);
-}
-
-.grid{
+/* GRID LAYOUT */
+.layout{
   display:grid;
-  grid-template-columns:repeat(2,1fr);
+  grid-template-columns:2fr 1fr;
   gap:24px;
-  margin-top:30px;
+  margin-top:24px;
 }
 
 .card{
   background:var(--card);
   border:1px solid var(--line);
+  border-radius:10px;
 }
 
-.card-body{
+.card h2{
+  font-size:16px;
+  margin:0;
+  padding:16px;
+  border-bottom:1px solid var(--line);
+}
+
+/* SNAPSHOT */
+.snapshot{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:12px;
   padding:16px;
 }
 
-.card h3{
-  margin:0 0 6px;
-  font-size:14px;
-  text-transform:uppercase;
+.stat{
+  background:#f8f9fa;
+  border:1px solid var(--line);
+  border-radius:8px;
+  padding:12px;
 }
 
-.card p{
-  margin:0;
-  font-size:13px;
+.stat small{
+  display:block;
+  font-size:11px;
   color:var(--muted);
-}
-
-.links{
-  display:flex;
-  gap:12px;
-  flex-wrap:wrap;
-  margin-top:40px;
-}
-
-.btn{
-  padding:12px 16px;
-  border:2px solid var(--ink);
-  text-decoration:none;
-  font-size:12px;
-  font-weight:800;
   text-transform:uppercase;
+}
+
+.stat strong{
+  font-size:20px;
+}
+
+/* ROSTER */
+table{
+  width:100%;
+  border-collapse:collapse;
+}
+
+th, td{
+  padding:10px;
+  border-bottom:1px solid var(--line);
+  font-size:13px;
+}
+
+th{
+  text-align:left;
+  color:var(--muted);
+  text-transform:uppercase;
+  font-size:11px;
+}
+
+.player-link{
+  font-weight:700;
+  text-decoration:none;
   color:var(--ink);
 }
 
-.btn:hover{
-  background:var(--ink);
-  color:#fff;
+.player-link:hover{
+  text-decoration:underline;
 }
 
-.btn.primary{
-  background:var(--dark);
-  color:#fff;
-  border-color:var(--dark);
+.roster-pic{
+  width:42px;
+  height:42px;
+  border-radius:6px;
+  object-fit:cover;
 }
 
-@media(max-width:800px){
-  .grid{ grid-template-columns:1fr; }
+/* SIDEBAR */
+.sidebar .section{
+  padding:16px;
+  border-bottom:1px solid var(--line);
+}
+
+.sidebar h3{
+  font-size:11px;
+  text-transform:uppercase;
+  color:var(--muted);
+  margin:0 0 6px;
+}
+
+.sidebar strong{
+  display:block;
+  margin-bottom:4px;
 }
 </style>
 </head>
@@ -121,45 +181,88 @@ h1{
 
 <div class="container">
 
-  <h1>Spokane Alloys</h1>
-  <div class="meta">Pacific Division · Alloy Yard</div>
-
+  <!-- HERO -->
   <div class="hero">
-    <img src="assets/spokane-alloys-hero.png" alt="Spokane Alloys action scene">
+    <div class="hero-content">
+      <div class="division">Americas Division</div>
+      <h1>Spokane Alloys</h1>
+      <p>Club record, active roster, and current club file for Spokane's opening campaign.</p>
+    </div>
   </div>
 
-  <div class="grid">
+  <div class="layout">
 
-    <div class="card">
-      <img src="assets/spokane-alloys-play.png" alt="Spokane Alloys play being made">
-      <div class="card-body">
-        <h3>The Play</h3>
-        <p>A hard-edged club built around pressure, precision, and clean defensive execution.</p>
+    <!-- MAIN -->
+    <div>
+
+      <!-- SNAPSHOT -->
+      <div class="card">
+        <h2>Season Snapshot</h2>
+        <div class="snapshot">
+          <div class="stat"><small>Record</small><strong>1–0</strong></div>
+          <div class="stat"><small>Runs</small><strong>2</strong></div>
+          <div class="stat"><small>Allowed</small><strong>0</strong></div>
+          <div class="stat"><small>Diff</small><strong>+2</strong></div>
+        </div>
       </div>
+
+      <!-- ROSTER -->
+      <div class="card" style="margin-top:20px;">
+        <h2>Active Roster</h2>
+
+        <table>
+          <thead>
+            <tr>
+              <th></th>
+              <th>Player</th>
+              <th>Pos</th>
+              <th>B/T</th>
+              <th>Age</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td><img class="roster-pic" src="assets/images/players/spokane-alloys/spokane-kellan-brynden.png"></td>
+              <td><a class="player-link" href="player.html?player=kellan-brynden">Kellan Brynden</a></td>
+              <td>SP</td>
+              <td>R/R</td>
+              <td>29</td>
+            </tr>
+
+            <!-- ADD MORE PLAYERS HERE -->
+
+          </tbody>
+        </table>
+
+      </div>
+
     </div>
 
-    <div class="card">
-      <img src="assets/spokane-alloys-crowd.png" alt="Spokane Alloys crowd">
-      <div class="card-body">
-        <h3>The Crowd</h3>
-        <p>Industrial, loyal, cold-weather loud. The Yard does not soften for visitors.</p>
+    <!-- SIDEBAR -->
+    <div class="sidebar card">
+
+      <div class="section">
+        <h3>Club Notes</h3>
+        <strong>Spokane opened with a shutout win</strong>
+        <p style="margin:0;font-size:13px;color:var(--muted);">The Alloys held Fresno scoreless and opened 1–0.</p>
       </div>
+
+      <div class="section">
+        <h3>Pitching</h3>
+        <strong>Staff depth is a defining early trait</strong>
+        <p style="margin:0;font-size:13px;color:var(--muted);">Five listed starters shape the early club identity.</p>
+      </div>
+
+      <div class="section">
+        <h3>Club File</h3>
+        <p style="margin:4px 0;">City: Spokane</p>
+        <p style="margin:4px 0;">Division: Americas</p>
+        <p style="margin:4px 0;">Status: Active</p>
+      </div>
+
     </div>
 
-    <div class="card">
-      <img src="assets/spokane-alloys-foundry.png" alt="Spokane Alloys foundry ritual">
-      <div class="card-body">
-        <h3>The Foundry</h3>
-        <p>The club identity centers on forged metal, pressure, heat, and resilience.</p>
-      </div>
-    </div>
-
-  </div>
-
-  <div class="links">
-    <a class="btn primary" href="team.html?team=spokane-alloys">Roster</a>
-    <a class="btn" href="club-spokane-alloys.html">Club File</a>
-    <a class="btn" href="mascot-spokane-alloys.html">Mascot</a>
   </div>
 
 </div>

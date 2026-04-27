@@ -3,190 +3,165 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>GLB — Spokane Alloys</title>
 
 <style>
 :root{
-  --ink:#111;
-  --navy:#002244;
-  --line:#d9d9d9;
-  --bg:#ffffff;
+  --ink:#0f1214;
+  --muted:#6b6f75;
+  --line:#e1e4e8;
+  --bg:#f4f5f6;
+  --card:#ffffff;
+  --accent:#7f8c8d;
+  --dark:#2e2f33;
+  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
 }
 
 body{
   margin:0;
-  font-family:Arial, Helvetica, sans-serif;
+  font-family:var(--sans);
   background:var(--bg);
   color:var(--ink);
 }
 
-/* HERO */
+.container{
+  max-width:1100px;
+  margin:0 auto;
+  padding:30px 20px;
+}
+
+h1{
+  margin:0;
+  font-size:40px;
+  font-weight:900;
+}
+
+.meta{
+  margin-top:8px;
+  font-size:13px;
+  color:var(--muted);
+  text-transform:uppercase;
+}
+
 .hero{
-  position:relative;
-  height:320px;
-  background:url('team-spokane-alloys-photo.png') center/cover no-repeat;
+  margin:30px 0;
 }
 
-.hero-overlay{
-  position:absolute;
-  inset:0;
-  background:rgba(0,0,0,0.35);
-}
-
-.hero-content{
-  position:absolute;
-  bottom:20px;
-  left:20px;
-  display:flex;
-  align-items:center;
-  gap:20px;
-  color:#fff;
-}
-
-.team-logo{
-  width:180px; /* increased ~200% */
-}
-
-.team-name{
-  font-size:36px;
-  font-weight:800;
-}
-
-/* NAV LINK */
-.club-link{
-  margin:20px;
-  display:inline-block;
-  font-weight:bold;
-  text-decoration:none;
-  color:var(--navy);
-}
-
-/* SECTION */
-.section{
-  margin:30px 20px;
-}
-
-.section h2{
-  border-bottom:2px solid var(--line);
-  padding-bottom:6px;
-}
-
-/* ROSTER */
-.roster-table{
+.hero img,
+.card img{
   width:100%;
-  border-collapse:collapse;
-}
-
-.roster-table td{
-  padding:10px;
-  border-bottom:1px solid var(--line);
-}
-
-.player-link{
-  font-weight:bold;
-  text-decoration:none;
-  color:var(--ink);
-}
-
-.player-link:hover{
-  text-decoration:underline;
-}
-
-.roster-pic{
-  width:54px;
-  height:54px;
-  border-radius:6px;
-  object-fit:cover;
+  display:block;
   border:1px solid var(--line);
 }
 
-/* GRID */
 .grid{
   display:grid;
-  grid-template-columns:repeat(3, 1fr);
-  gap:15px;
+  grid-template-columns:repeat(2,1fr);
+  gap:24px;
+  margin-top:30px;
 }
 
 .card{
+  background:var(--card);
   border:1px solid var(--line);
-  padding:10px;
+}
+
+.card-body{
+  padding:16px;
+}
+
+.card h3{
+  margin:0 0 6px;
+  font-size:14px;
+  text-transform:uppercase;
+}
+
+.card p{
+  margin:0;
+  font-size:13px;
+  color:var(--muted);
+}
+
+.links{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:40px;
+}
+
+.btn{
+  padding:12px 16px;
+  border:2px solid var(--ink);
+  text-decoration:none;
+  font-size:12px;
+  font-weight:800;
+  text-transform:uppercase;
+  color:var(--ink);
+}
+
+.btn:hover{
+  background:var(--ink);
+  color:#fff;
+}
+
+.btn.primary{
+  background:var(--dark);
+  color:#fff;
+  border-color:var(--dark);
+}
+
+@media(max-width:800px){
+  .grid{ grid-template-columns:1fr; }
 }
 </style>
 </head>
 
 <body>
 
-<!-- HERO -->
-<div class="hero">
-  <div class="hero-overlay"></div>
-  <div class="hero-content">
-    <img src="assets/images/logos/spokane-alloys.png" class="team-logo">
-    <div class="team-name">Spokane Alloys</div>
+<div class="container">
+
+  <h1>Spokane Alloys</h1>
+  <div class="meta">Pacific Division · Alloy Yard</div>
+
+  <div class="hero">
+    <img src="assets/spokane-alloys-hero.png" alt="Spokane Alloys action scene">
   </div>
-</div>
 
-<a class="club-link" href="club.html?team=spokane-alloys">→ Enter Clubhouse</a>
-
-<!-- UPCOMING GAMES -->
-<div class="section">
-  <h2>UPCOMING GAMES</h2>
   <div class="grid">
-    <div class="card">vs Tacoma Steel — May 12</div>
-    <div class="card">@ Boise Range — May 14</div>
-    <div class="card">vs Portland Drift — May 16</div>
+
+    <div class="card">
+      <img src="assets/spokane-alloys-play.png" alt="Spokane Alloys play being made">
+      <div class="card-body">
+        <h3>The Play</h3>
+        <p>A hard-edged club built around pressure, precision, and clean defensive execution.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="assets/spokane-alloys-crowd.png" alt="Spokane Alloys crowd">
+      <div class="card-body">
+        <h3>The Crowd</h3>
+        <p>Industrial, loyal, cold-weather loud. The Yard does not soften for visitors.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="assets/spokane-alloys-foundry.png" alt="Spokane Alloys foundry ritual">
+      <div class="card-body">
+        <h3>The Foundry</h3>
+        <p>The club identity centers on forged metal, pressure, heat, and resilience.</p>
+      </div>
+    </div>
+
   </div>
-</div>
 
-<!-- TEAM LEADERS -->
-<div class="section">
-  <h2>TEAM LEADERS</h2>
-  <div class="grid">
-    <div class="card">AVG: Kellan Brynden (.312)</div>
-    <div class="card">RBIs: Mateo Ríos (28)</div>
-    <div class="card">HRs: Calvin Ross (9)</div>
-    <div class="card">W: Caleb Rowan (6)</div>
-    <div class="card">ERA: Antonio Beltrán (2.89)</div>
-    <div class="card">SV: Devin Marsh (8)</div>
+  <div class="links">
+    <a class="btn primary" href="team.html?team=spokane-alloys">Roster</a>
+    <a class="btn" href="club-spokane-alloys.html">Club File</a>
+    <a class="btn" href="mascot-spokane-alloys.html">Mascot</a>
   </div>
-</div>
 
-<!-- ACTIVE ROSTER -->
-<div class="section">
-  <h2>ACTIVE ROSTER</h2>
-
-  <table class="roster-table">
-
-    <tr>
-      <td>
-        <a href="player.html?player=caleb-rowan">
-          <img class="roster-pic" src="assets/images/players/spokane-alloys/spokane-caleb-rowan.png">
-        </a>
-      </td>
-      <td>
-        <a class="player-link" href="player.html?player=caleb-rowan">Caleb Rowan</a>
-      </td>
-      <td>SP</td>
-      <td>R/R</td>
-      <td>29</td>
-    </tr>
-
-    <tr>
-      <td>
-        <a href="player.html?player=antonio-beltran">
-          <img class="roster-pic" src="assets/images/players/spokane-alloys/spokane-antonio-beltran.png">
-        </a>
-      </td>
-      <td>
-        <a class="player-link" href="player.html?player=antonio-beltran">Antonio Beltrán</a>
-      </td>
-      <td>SP</td>
-      <td>L/L</td>
-      <td>27</td>
-    </tr>
-
-    <!-- ADD REMAINING PLAYERS SAME PATTERN -->
-
-  </table>
 </div>
 
 </body>

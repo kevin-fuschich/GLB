@@ -312,7 +312,7 @@ async function loadTeam(){
     team.id;
 
   document.getElementById('team-logo').src =
-    `images/logos/${team.slug}.png`;
+    `team-${team.slug}-logo.png`;
 
   document.getElementById('team-logo').alt =
     `${team.name} Logo`;
@@ -346,7 +346,7 @@ async function loadRoster(slug){
         <div class="player-card">
 
           <img
-            src="images/players/${player.photo}"
+            src="assets/images/players/${slug}/${player.photo}"
             alt="${player.name}"
           >
 

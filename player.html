@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>GLB Player</title>
+
+<style>
+:root{
+  --navy:#0b1e33;
+  --blue:#1d4f91;
+  --border:#d9dee5;
+  --bg:#f3f5f7;
+  --card:#ffffff;
+  --text:#111111;
+  --muted:#5f6b7a;
+  --light-text:#dfe7f1;
+  --white:#ffffff;
+  --max:1280px;
+  --radius:14px;
+  --font-sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+}
+
+*{
+  box-sizing:border-box;
+}
+
+html,
+body{
+  margin:0;
+  padding:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:var(--font-sans);
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+img{
+  display:block;
+  max-width:100%;
+}
+
+.container{
+  max-width:var(--max);
+  margin:0 auto;
+  padding:0 20px;
+}
+
+/* HEADER */
+.site-header{
+  background:var(--navy);
+  color:#fff;
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.topbar{
+  min-height:72px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:14px;
+}
+
+.brand-mark{
+  font-weight:800;
+  letter-spacing:1.4px;
+  font-size:24px;
+}
+
+.brand-sub{
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:1.2px;
+  color:var(--light-text);
+}
+
+.nav-links{
+  display:flex;
+  align-items:center;
+  gap:0;
+  flex:1;
+  justify-content:center;
+}
+
+.nav-links a{
+  color:rgba(255,255,255,.92);
+  padding:26px 16px 22px;
+  font-size:13px;
+  font-weight:600;
+  text-transform:uppercase;
+  letter-spacing:.8px;
+  border-bottom:4px solid transparent;
+}
+
+.nav-links a.active{
+  border-bottom-color:#7fb0ff;
+}
+
+.header-meta{
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  color:var(--light-text);
+}
+
+/* PAGE */
+.page{
+  padding:28px 0 50px;
+}
+
+.layout{
+  display:grid;
+  grid-template-columns:340px 1fr;
+  gap:28px;
+}
+
+.card{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:12px;
+  overflow:hidden;
+}
+
+.player-card{
+  padding:18px;
+}
+
+.player-photo{
+  width:100%;
+  aspect-ratio:1/1;
+  object-fit:cover;
+  border-radius:10px;
+  background:#e8edf2;
+  border:1px solid var(--border);
+}
+
+.player-name{
+  font-size:38px;
+  line-height:1;
+  margin:18px 0 8px;
+  font-weight:900;
+}
+
+.player-meta{
+  color:var(--muted);
+  font-size:14px;
+  margin-bottom:20px;
+}
+
+.info-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:12px;
+}
+
+.info-box{
+  border:1px solid var(--border);
+  border-radius:10px;
+  padding:12px;
+  background:#fafbfd;
+}
+
+.info-box small{
+  display:block;
+  font-size:10px;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+  color:var(--muted);
+  margin-bottom:5px;
+}
+
+.info-box strong{
+  font-size:18px;
+}
+
+.module{
+  margin-bottom:24px;
+}
+
+.module-head{
+  padding:16px 18px;
+  border-bottom:1px solid var(--border);
+}
+
+.module-title{
+  margin:0;
+  font-size:18px;
+  font-weight:800;
+}
+
+.module-body{
+  padding:18px;
+}
+
+.archive-note{
+  border-left:4px solid var(--blue);
+  background:#f8fbff;
+  padding:14px;
+  margin-bottom:14px;
+}
+
+.archive-note:last-child{
+  margin-bottom:0;
+}
+
+.archive-note strong{
+  display:block;
+  margin-bottom:4px;
+}
+
+.card-gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(180px,1fr));
+  gap:18px;
+}
+
+.card-item{
+  border:1px solid var(--border);
+  border-radius:12px;
+  overflow:hidden;
+  background:#fff;
+}
+
+.card-item img{
+  width:100%;
+  aspect-ratio:7/10;
+  object-fit:cover;
+  background:#eef2f5;
+}
+
+.card-caption{
+  padding:10px;
+  font-size:12px;
+  color:var(--muted);
+}
+
+.stats-table{
+  width:100%;
+  border-collapse:collapse;
+}
+
+.stats-table th,
+.stats-table td{
+  padding:12px;
+  border-bottom:1px solid var(--border);
+  font-size:13px;
+}
+
+.stats-table th{
+  text-align:left;
+  text-transform:uppercase;
+  font-size:11px;
+  color:var(--muted);
+}
+
+.site-footer{
+  margin-top:60px;
+  background:#0b1e33;
+  color:#dfe7f1;
+}
+
+.footer-main{
+  display:grid;
+  grid-template-columns:1.6fr 1fr 1fr 1fr;
+  gap:40px;
+  padding:46px 20px;
+}
+
+.footer-logo{
+  font-weight:800;
+  font-size:26px;
+  letter-spacing:1.4px;
+  margin-bottom:8px;
+}
+
+.footer-tag{
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  color:#9fb6d1;
+  margin-bottom:14px;
+}
+
+.footer-desc{
+  margin:0;
+  color:#b8c8dc;
+  line-height:1.5;
+  font-size:13px;
+}
+
+.footer-col h4{
+  margin:0 0 12px;
+  color:#fff;
+  font-size:12px;
+  text-transform:uppercase;
+  letter-spacing:1px;
+}
+
+.footer-col a{
+  display:block;
+  margin:9px 0;
+  color:#b8c8dc;
+  font-size:13px;
+}
+
+.footer-bottom{
+  border-top:1px solid rgba(255,255,255,.08);
+  color:#9fb6d1;
+  font-size:12px;
+}
+
+.footer-bottom-inner{
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  padding:16px 20px;
+}
+
+@media(max-width:900px){
+
+  .nav-links,
+  .header-meta{
+    display:none;
+  }
+
+  .layout{
+    grid-template-columns:1fr;
+  }
+
+  .footer-main{
+    grid-template-columns:1fr 1fr;
+  }
+
+}
+
+@media(max-width:640px){
+
+  .container{
+    padding:0 14px;
+  }
+
+  .player-name{
+    font-size:32px;
+  }
+
+  .footer-main{
+    grid-template-columns:1fr;
+  }
+
+  .footer-bottom-inner{
+    flex-direction:column;
+    gap:6px;
+  }
+
+}
+</style>
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="container">
+
+    <div class="topbar">
+
+      <a href="index.html" class="brand">
+        <div class="brand-mark">GLB</div>
+        <div class="brand-sub">Global League Baseball</div>
+      </a>
+
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="scores.html">Scores</a>
+        <a href="standings.html">Standings</a>
+        <a href="schedule.html">Schedule</a>
+        <a href="teams.html">Teams</a>
+        <a href="stats.html" class="active">Players</a>
+        <a href="news.html">News</a>
+      </nav>
+
+      <div class="header-meta">
+        Official League Record
+      </div>
+
+    </div>
+
+  </div>
+</header>
+
+<main class="page">
+
+  <div class="container">
+
+    <div class="layout">
+
+      <aside class="card player-card">
+
+        <img
+          id="playerPhoto"
+          class="player-photo"
+          src=""
+          alt=""
+        >
+
+        <h1 class="player-name" id="playerName">
+          Loading...
+        </h1>
+
+        <div class="player-meta" id="playerMeta">
+          GLB Active Player File
+        </div>
+
+        <div class="info-grid">
+
+          <div class="info-box">
+            <small>Position</small>
+            <strong id="position">—</strong>
+          </div>
+
+          <div class="info-box">
+            <small>Age</small>
+            <strong id="age">—</strong>
+          </div>
+
+          <div class="info-box">
+            <small>Bats / Throws</small>
+            <strong id="bt">—</strong>
+          </div>
+
+          <div class="info-box">
+            <small>Club</small>
+            <strong id="club">—</strong>
+          </div>
+
+        </div>
+
+      </aside>
+
+      <section>
+
+        <div class="card module">
+
+          <div class="module-head">
+            <h2 class="module-title">
+              Archive Notes
+            </h2>
+          </div>
+
+          <div class="module-body">
+
+            <div class="archive-note">
+              <strong>
+                Civic Record Entry
+              </strong>
+
+              <div id="archiveText">
+                Active GLB player file currently under review.
+              </div>
+            </div>
+
+            <div class="archive-note">
+              <strong>
+                Collector Status
+              </strong>
+
+              Regional collector interest has increased following recent club performances.
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="card module">
+
+          <div class="module-head">
+            <h2 class="module-title">
+              Season Statistics
+            </h2>
+          </div>
+
+          <div class="module-body">
+
+            <table class="stats-table">
+
+              <thead>
+                <tr>
+                  <th>Category</th>
+                  <th>Value</th>
+                </tr>
+              </thead>
+
+              <tbody>
+
+                <tr>
+                  <td>Games</td>
+                  <td>4</td>
+                </tr>
+
+                <tr>
+                  <td>ERA</td>
+                  <td>2.11</td>
+                </tr>
+
+                <tr>
+                  <td>Strikeouts</td>
+                  <td>28</td>
+                </tr>
+
+                <tr>
+                  <td>WHIP</td>
+                  <td>1.02</td>
+                </tr>
+
+              </tbody>
+
+            </table>
+
+          </div>
+
+        </div>
+
+        <div class="card module">
+
+          <div class="module-head">
+            <h2 class="module-title">
+              GLB Archive Cards
+            </h2>
+          </div>
+
+          <div class="module-body">
+
+            <div class="card-gallery">
+
+              <div class="card-item">
+                <img
+                  src="archive-card-placeholder.jpg"
+                  alt=""
+                >
+
+                <div class="card-caption">
+                  2026 League Issue · Archive Scan
+                </div>
+              </div>
+
+              <div class="card-item">
+                <img
+                  src="archive-card-placeholder.jpg"
+                  alt=""
+                >
+
+                <div class="card-caption">
+                  Regional Print Variant
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+    </div>
+
+  </div>
+
+</main>
+
+<footer class="site-footer">
+
+  <div class="container footer-main">
+
+    <div>
+      <div class="footer-logo">GLB</div>
+
+      <div class="footer-tag">
+        Global League Baseball
+      </div>
+
+      <p class="footer-desc">
+        Official league site providing scores,
+        standings, schedules, club information,
+        and league bulletins.
+      </p>
+    </div>
+
+    <div class="footer-col">
+      <h4>League</h4>
+
+      <a href="standings.html">Standings</a>
+      <a href="scores.html">Scores</a>
+      <a href="schedule.html">Schedule</a>
+      <a href="stats.html">Stats</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Clubs</h4>
+
+      <a href="teams.html">Teams</a>
+      <a href="stadiums.html">Stadiums</a>
+      <a href="rosters.html">Rosters</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>League News</h4>
+
+      <a href="news.html">News</a>
+      <a href="bulletin.html">League Bulletin</a>
+      <a href="archive.html">Archive</a>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+
+    <div class="container footer-bottom-inner">
+
+      <span>© 2026 Global League Baseball</span>
+
+      <span>Season 1</span>
+
+      <span>Official League Record</span>
+
+    </div>
+
+  </div>
+
+</footer>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+
+const playerSlug =
+  params.get("player") || "idris-kourouma";
+
+const players = {
+
+  "idris-kourouma": {
+
+    name: "Idris Kourouma",
+
+    team: "Albuquerque Aeros",
+
+    position: "SP",
+
+    age: 29,
+
+    bats: "R",
+
+    throws: "R",
+
+    photo:
+      "assets/images/players/albuquerque-aeros/idris-kourouma.jpg",
+
+    archive:
+      "League observers continue to track Kourouma's unusually calm mound presence during high-pressure innings. Several regional broadcasts have referred to him as 'The Quietest Arm In Baseball.'"
+
+  }
+
+};
+
+const player =
+  players[playerSlug];
+
+if(player){
+
+  document.title =
+    `GLB — ${player.name}`;
+
+  document.getElementById("playerName").textContent =
+    player.name;
+
+  document.getElementById("playerMeta").textContent =
+    `${player.team} · Active GLB Player File`;
+
+  document.getElementById("position").textContent =
+    player.position;
+
+  document.getElementById("age").textContent =
+    player.age;
+
+  document.getElementById("bt").textContent =
+    `${player.bats}/${player.throws}`;
+
+  document.getElementById("club").textContent =
+    player.team;
+
+  document.getElementById("archiveText").textContent =
+    player.archive;
+
+  document.getElementById("playerPhoto").src =
+    player.photo;
+
+}
+</script>
+
+</body>
+</html>

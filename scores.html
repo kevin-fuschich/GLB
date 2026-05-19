@@ -48,7 +48,100 @@ footer{margin-top:60px;background:#0b1e33;color:#dfe7f1;padding:30px 20px;text-a
 
   </div>
 </header>
+:root{
+  --navy:#0b1e33;
+  --blue:#1d4f91;
+  --border:#d9dee5;
+  --bg:#f3f5f7;
+  --card:#ffffff;
+  --text:#111111;
+  --muted:#5f6b7a;
+  --light-text:#dfe7f1;
+  --white:#ffffff;
+  --max:1280px;
+  --radius:14px;
+  --font-sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+}
 
+.container{
+  max-width:var(--max);
+  margin:0 auto;
+  padding:0 20px;
+}
+
+.site-header{
+  background:#0b1e33;
+  color:#fff;
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.topbar{
+  min-height:72px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  color:#fff;
+  text-decoration:none;
+}
+
+.brand-mark{
+  font-weight:800;
+  letter-spacing:1.4px;
+  font-size:24px;
+}
+
+.brand-sub{
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:1.2px;
+  color:#dfe7f1;
+}
+
+.nav-links{
+  display:flex;
+  align-items:center;
+  gap:0;
+  flex:1;
+  justify-content:center;
+}
+
+.nav-links a{
+  color:rgba(255,255,255,.92);
+  padding:26px 16px 22px;
+  font-size:13px;
+  font-weight:600;
+  text-transform:uppercase;
+  letter-spacing:.8px;
+  border-bottom:4px solid transparent;
+  text-decoration:none;
+}
+
+.nav-links a.active{
+  border-bottom-color:#7fb0ff;
+}
+
+.header-meta{
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  color:#dfe7f1;
+}
+
+@media(max-width:900px){
+
+  .nav-links,
+  .header-meta{
+    display:none;
+  }
+
+}
 <main>
   <h1>Scores</h1>
   <p>Official GLB game results and posted finals.</p>

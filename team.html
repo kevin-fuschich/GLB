@@ -1,1 +1,423 @@
-html <!DOCTYPE html> <html lang="en">  <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0">  <title>GLB Team</title>  <style>  :root{   --bg:#f4f1ea;   --paper:#fffdf8;   --ink:#111111;   --muted:#666666;   --line:#d8d2c7;   --accent:#0d2b45; }  *{   box-sizing:border-box; }  body{   margin:0;   background:var(--bg);   color:var(--ink);   font-family:Georgia, serif; }  header{   background:var(--accent);   color:white;   padding:40px 20px; }  header h1{   margin:0;   font-size:42px;   letter-spacing:.04em; }  header p{   margin-top:10px;   color:rgba(255,255,255,.75); }  nav{   display:flex;   gap:20px;   margin-top:20px;   flex-wrap:wrap; }  nav a{   color:white;   text-decoration:none;   font-size:14px;   text-transform:uppercase;   letter-spacing:.08em; }  main{   max-width:1200px;   margin:auto;   padding:30px 20px 80px; }  .hero{   background:var(--paper);   border:1px solid var(--line);   padding:30px;   margin-bottom:30px; }  .hero-grid{   display:grid;   grid-template-columns:300px 1fr;   gap:30px; }  .hero img{   width:100%;   border:1px solid var(--line);   background:#dddddd; }  .meta{   display:grid;   grid-template-columns:repeat(auto-fit,minmax(180px,1fr));   gap:16px;   margin-top:20px; }  .meta-card{   background:#faf8f3;   border:1px solid var(--line);   padding:16px; }  .meta-card h3{   margin:0 0 6px;   font-size:12px;   text-transform:uppercase;   letter-spacing:.08em;   color:var(--muted); }  .section{   margin-top:40px; }  .section h2{   font-size:28px;   margin-bottom:20px; }  .roster-grid{   display:grid;   grid-template-columns:repeat(auto-fill,minmax(220px,1fr));   gap:20px; }  .player-card{   background:var(--paper);   border:1px solid var(--line);   padding:16px; }  .player-card img{   width:100%;   aspect-ratio:1/1;   object-fit:cover;   background:#dddddd;   border:1px solid var(--line);   margin-bottom:12px; }  .player-card h3{   margin:0;   font-size:20px; }  .player-card p{   margin:6px 0;   color:var(--muted); }  footer{   margin-top:60px;   padding:40px 20px;   text-align:center;   color:var(--muted);   font-size:13px; }  @media (max-width:800px){    .hero-grid{     grid-template-columns:1fr;   }  }  </style> </head>  <body>  <header>    <h1 id="team-name">GLB Team</h1>    <p id="team-meta">     Global League Baseball   </p>    <nav>     <a href="index.html">Home</a>     <a href="standings.html">Standings</a>     <a href="schedule.html">Schedule</a>     <a href="archive.html">Archive</a>   </nav>  </header>  <main>  <section class="hero">    <div class="hero-grid">      <div>       <img id="team-logo" src="" alt="">     </div>      <div>        <h2 id="hero-title">         Loading...       </h2>        <p id="hero-description">         Official GLB club profile.       </p>        <div class="meta">          <div class="meta-card">           <h3>League</h3>           <div id="league">GLB</div>         </div>          <div class="meta-card">           <h3>Conference</h3>           <div id="conference">—</div>         </div>          <div class="meta-card">           <h3>Founded</h3>           <div id="founded">—</div>         </div>          <div class="meta-card">           <h3>Club ID</h3>           <div id="club-id">—</div>         </div>          <div class="meta-card">           <h3>Record</h3>           <div id="record">—</div>         </div>          <div class="meta-card">           <h3>Streak</h3>           <div id="streak">—</div>         </div>        </div>      </div>    </div>  </section>  <section class="section">    <h2>Roster</h2>    <div class="roster-grid" id="roster-grid">     Loading roster...   </div>  </section>  </main>  <footer>   Global League Baseball — Civic Mythology Engine </footer>  <script>  const params = new URLSearchParams(window.location.search); const slug = params.get('team');  async function loadTeam(){    const teamsResponse =     await fetch('data/teams.json');    const teamsData =     await teamsResponse.json();    const team =     teamsData.teams.find(       t => t.slug === slug     );    if(!team){      document.body.innerHTML =       '<h1 style="padding:40px;">Team not found.</h1>';      return;   }    document.title =     `GLB — ${team.name}`;    document.getElementById('team-name').textContent =     team.name;    document.getElementById('hero-title').textContent =     team.name;    document.getElementById('team-meta').textContent =     `${team.city} • ${team.conference} Conference`;    document.getElementById('league').textContent =     team.league;    document.getElementById('conference').textContent =     team.conference;    document.getElementById('founded').textContent =     team.founded;    document.getElementById('club-id').textContent =     team.id;    document.getElementById('team-logo').src =     `images/logos/${team.slug}.png`;    document.getElementById('team-logo').alt =     `${team.name} Logo`;    loadRoster(team.slug);    loadStandings(team.slug);  }  async function loadRoster(slug){    try{      const response =       await fetch(         `data/rosters/${slug}.json`       );      const data =       await response.json();      const rosterGrid =       document.getElementById(         'roster-grid'       );      rosterGrid.innerHTML =       data.players.map(player => `          <div class="player-card">            <img             src="images/players/${player.photo}"             alt="${player.name}"           >            <h3>${player.name}</h3>            <p>${player.position}</p>            <p>             Bats: ${player.bats}             /             Throws: ${player.throws}           </p>            <p>             Age ${player.age}           </p>          </div>        `).join('');    }catch(error){      document.getElementById(       'roster-grid'     ).innerHTML =       'Roster unavailable.';   } }  async function loadStandings(slug){    try{      const response =       await fetch(         'data/standings.json'       );      const data =       await response.json();      const standing =       data.standings.find(         s => s.team === slug       );      if(!standing) return;      document.getElementById(       'record'     ).textContent =       `${standing.wins}-${standing.losses} (${standing.pct})`;      document.getElementById(       'streak'     ).textContent =       `${standing.streak} • Rank ${standing.rank}`;    }catch(error){      console.error(       'Standings failed to load:',       error     );   } }  loadTeam();  </script>  </body> </html> 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>GLB Team</title>
+
+<style>
+
+:root{
+  --bg:#f4f1ea;
+  --paper:#fffdf8;
+  --ink:#111111;
+  --muted:#666666;
+  --line:#d8d2c7;
+  --accent:#0d2b45;
+}
+
+*{
+  box-sizing:border-box;
+}
+
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font-family:Georgia, serif;
+}
+
+header{
+  background:var(--accent);
+  color:white;
+  padding:40px 20px;
+}
+
+header h1{
+  margin:0;
+  font-size:42px;
+  letter-spacing:.04em;
+}
+
+header p{
+  margin-top:10px;
+  color:rgba(255,255,255,.75);
+}
+
+nav{
+  display:flex;
+  gap:20px;
+  margin-top:20px;
+  flex-wrap:wrap;
+}
+
+nav a{
+  color:white;
+  text-decoration:none;
+  font-size:14px;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+}
+
+main{
+  max-width:1200px;
+  margin:auto;
+  padding:30px 20px 80px;
+}
+
+.hero{
+  background:var(--paper);
+  border:1px solid var(--line);
+  padding:30px;
+  margin-bottom:30px;
+}
+
+.hero-grid{
+  display:grid;
+  grid-template-columns:300px 1fr;
+  gap:30px;
+}
+
+.hero img{
+  width:100%;
+  border:1px solid var(--line);
+  background:#dddddd;
+}
+
+.meta{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:16px;
+  margin-top:20px;
+}
+
+.meta-card{
+  background:#faf8f3;
+  border:1px solid var(--line);
+  padding:16px;
+}
+
+.meta-card h3{
+  margin:0 0 6px;
+  font-size:12px;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+  color:var(--muted);
+}
+
+.section{
+  margin-top:40px;
+}
+
+.section h2{
+  font-size:28px;
+  margin-bottom:20px;
+}
+
+.roster-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
+  gap:20px;
+}
+
+.player-card{
+  background:var(--paper);
+  border:1px solid var(--line);
+  padding:16px;
+}
+
+.player-card img{
+  width:100%;
+  aspect-ratio:1/1;
+  object-fit:cover;
+  background:#dddddd;
+  border:1px solid var(--line);
+  margin-bottom:12px;
+}
+
+.player-card h3{
+  margin:0;
+  font-size:20px;
+}
+
+.player-card p{
+  margin:6px 0;
+  color:var(--muted);
+}
+
+footer{
+  margin-top:60px;
+  padding:40px 20px;
+  text-align:center;
+  color:var(--muted);
+  font-size:13px;
+}
+
+@media (max-width:800px){
+
+  .hero-grid{
+    grid-template-columns:1fr;
+  }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+  <h1 id="team-name">GLB Team</h1>
+
+  <p id="team-meta">
+    Global League Baseball
+  </p>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="standings.html">Standings</a>
+    <a href="schedule.html">Schedule</a>
+    <a href="archive.html">Archive</a>
+  </nav>
+
+</header>
+
+<main>
+
+<section class="hero">
+
+  <div class="hero-grid">
+
+    <div>
+      <img id="team-logo" src="" alt="">
+    </div>
+
+    <div>
+
+      <h2 id="hero-title">
+        Loading...
+      </h2>
+
+      <p id="hero-description">
+        Official GLB club profile.
+      </p>
+
+      <div class="meta">
+
+        <div class="meta-card">
+          <h3>League</h3>
+          <div id="league">GLB</div>
+        </div>
+
+        <div class="meta-card">
+          <h3>Conference</h3>
+          <div id="conference">—</div>
+        </div>
+
+        <div class="meta-card">
+          <h3>Founded</h3>
+          <div id="founded">—</div>
+        </div>
+
+        <div class="meta-card">
+          <h3>Club ID</h3>
+          <div id="club-id">—</div>
+        </div>
+
+        <div class="meta-card">
+          <h3>Record</h3>
+          <div id="record">—</div>
+        </div>
+
+        <div class="meta-card">
+          <h3>Streak</h3>
+          <div id="streak">—</div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section class="section">
+
+  <h2>Roster</h2>
+
+  <div class="roster-grid" id="roster-grid">
+    Loading roster...
+  </div>
+
+</section>
+
+</main>
+
+<footer>
+  Global League Baseball — Civic Mythology Engine
+</footer>
+
+<script>
+
+const params = new URLSearchParams(window.location.search);
+const slug = params.get('team');
+
+async function loadTeam(){
+
+  const teamsResponse =
+    await fetch('data/teams.json');
+
+  const teamsData =
+    await teamsResponse.json();
+
+  const team =
+    teamsData.teams.find(
+      t => t.slug === slug
+    );
+
+  if(!team){
+
+    document.body.innerHTML =
+      '<h1 style="padding:40px;">Team not found.</h1>';
+
+    return;
+  }
+
+  document.title =
+    `GLB — ${team.name}`;
+
+  document.getElementById('team-name').textContent =
+    team.name;
+
+  document.getElementById('hero-title').textContent =
+    team.name;
+
+  document.getElementById('team-meta').textContent =
+    `${team.city} • ${team.conference} Conference`;
+
+  document.getElementById('league').textContent =
+    team.league;
+
+  document.getElementById('conference').textContent =
+    team.conference;
+
+  document.getElementById('founded').textContent =
+    team.founded;
+
+  document.getElementById('club-id').textContent =
+    team.id;
+
+  document.getElementById('team-logo').src =
+    `images/logos/${team.slug}.png`;
+
+  document.getElementById('team-logo').alt =
+    `${team.name} Logo`;
+
+  loadRoster(team.slug);
+
+  loadStandings(team.slug);
+
+}
+
+async function loadRoster(slug){
+
+  try{
+
+    const response =
+      await fetch(
+        `data/rosters/${slug}.json`
+      );
+
+    const data =
+      await response.json();
+
+    const rosterGrid =
+      document.getElementById(
+        'roster-grid'
+      );
+
+    rosterGrid.innerHTML =
+      data.players.map(player => `
+
+        <div class="player-card">
+
+          <img
+            src="images/players/${player.photo}"
+            alt="${player.name}"
+          >
+
+          <h3>${player.name}</h3>
+
+          <p>${player.position}</p>
+
+          <p>
+            Bats: ${player.bats}
+            /
+            Throws: ${player.throws}
+          </p>
+
+          <p>
+            Age ${player.age}
+          </p>
+
+        </div>
+
+      `).join('');
+
+  }catch(error){
+
+    document.getElementById(
+      'roster-grid'
+    ).innerHTML =
+      'Roster unavailable.';
+  }
+}
+
+async function loadStandings(slug){
+
+  try{
+
+    const response =
+      await fetch(
+        'data/standings.json'
+      );
+
+    const data =
+      await response.json();
+
+    const standing =
+      data.standings.find(
+        s => s.team === slug
+      );
+
+    if(!standing) return;
+
+    document.getElementById(
+      'record'
+    ).textContent =
+      `${standing.wins}-${standing.losses} (${standing.pct})`;
+
+    document.getElementById(
+      'streak'
+    ).textContent =
+      `${standing.streak} • Rank ${standing.rank}`;
+
+  }catch(error){
+
+    console.error(
+      'Standings failed to load:',
+      error
+    );
+  }
+}
+
+loadTeam();
+
+</script>
+
+</body>
+</html>

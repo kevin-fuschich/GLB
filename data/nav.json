@@ -1,0 +1,11 @@
+{
+  "source": "GLB Master Control",
+  "version": "1.0",
+  "items": [
+    { "label": "Home", "url": "index.html" },
+    { "label": "Teams", "url": "teams.html" },
+    { "label": "Standings", "url": "standings.html" },
+    { "label": "Schedule", "url": "schedule.html" },
+    { "label": "Archive", "url": "archive.html" }
+  ]
+}

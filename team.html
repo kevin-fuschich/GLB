@@ -865,4 +865,57 @@ loadPage();
 </style>
 
 </body>
+  <footer class="site-footer">
+  <div class="container footer-main">
+    <div>
+      <div class="footer-logo">GLB</div>
+      <div class="footer-tag">Global League Baseball</div>
+      <p class="footer-desc">Official league site providing scores, standings, schedules, club information, and league bulletins.</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>League</h4>
+      <a href="standings.html">Standings</a>
+      <a href="scores.html">Scores</a>
+      <a href="schedule.html">Schedule</a>
+      <a href="stats.html">Stats</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Clubs</h4>
+      <a href="teams.html">Teams</a>
+      <a href="stadiums.html">Stadiums</a>
+      <a href="rosters.html">Rosters</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>League News</h4>
+      <a href="news.html">News</a>
+      <a href="bulletin.html">League Bulletin</a>
+      <a href="archive.html">Archive</a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container footer-bottom-inner">
+      <span>© 2026 Global League Baseball</span>
+      <span>Season 1</span>
+      <span>Official League Record</span>
+    </div>
+  </div>
+</footer>
+
+<style>
+.site-footer{margin-top:60px;background:#0b1e33;color:#dfe7f1;}
+.footer-main{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:40px;padding:46px 20px;}
+.footer-logo{font-weight:800;font-size:26px;letter-spacing:1.4px;margin-bottom:8px;}
+.footer-tag{font-size:11px;text-transform:uppercase;letter-spacing:1px;color:#9fb6d1;margin-bottom:14px;}
+.footer-desc{margin:0;color:#b8c8dc;line-height:1.5;font-size:13px;}
+.footer-col h4{margin:0 0 12px;color:#fff;font-size:12px;text-transform:uppercase;letter-spacing:1px;}
+.footer-col a{display:block;margin:9px 0;color:#b8c8dc;font-size:13px;text-decoration:none;}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.08);color:#9fb6d1;font-size:12px;}
+.footer-bottom-inner{display:flex;justify-content:space-between;gap:20px;padding:16px 20px;}
+@media(max-width:900px){.footer-main{grid-template-columns:1fr 1fr;}}
+@media(max-width:640px){.footer-main{grid-template-columns:1fr;}.footer-bottom-inner{flex-direction:column;gap:6px;}}
+</style>
 </html>

@@ -1,21 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>GLB Team</title>
+<meta name="description" content="Global League Baseball team page.">
 
 <style>
-
 :root{
-  --bg:#f4f1ea;
-  --paper:#fffdf8;
-  --ink:#111111;
-  --muted:#666666;
-  --line:#d8d2c7;
-  --accent:#0d2b45;
+  --navy:#0b1e33;
+  --navy-2:#102843;
+  --blue:#1d4f91;
+  --border:#d9dee5;
+  --bg:#f3f5f7;
+  --card:#ffffff;
+  --text:#111111;
+  --muted:#5f6b7a;
+  --light:#dfe7f1;
+  --white:#ffffff;
+  --radius:14px;
+  --max:1280px;
+  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
 }
 
 *{
@@ -25,398 +31,845 @@
 body{
   margin:0;
   background:var(--bg);
-  color:var(--ink);
-  font-family:Georgia, serif;
+  color:var(--text);
+  font-family:var(--sans);
 }
 
-header{
-  background:var(--accent);
-  color:white;
-  padding:40px 20px;
-}
-
-header h1{
-  margin:0;
-  font-size:42px;
-  letter-spacing:.04em;
-}
-
-header p{
-  margin-top:10px;
-  color:rgba(255,255,255,.75);
-}
-
-nav{
-  display:flex;
-  gap:20px;
-  margin-top:20px;
-  flex-wrap:wrap;
-}
-
-nav a{
-  color:white;
+a{
+  color:inherit;
   text-decoration:none;
-  font-size:14px;
-  text-transform:uppercase;
-  letter-spacing:.08em;
 }
 
-main{
-  max-width:1200px;
-  margin:auto;
-  padding:30px 20px 80px;
+img{
+  display:block;
+  max-width:100%;
 }
 
-.hero{
-  background:var(--paper);
-  border:1px solid var(--line);
-  padding:30px;
-  margin-bottom:30px;
+.container{
+  max-width:var(--max);
+  margin:0 auto;
+  padding:0 20px;
 }
 
-.hero-grid{
-  display:grid;
-  grid-template-columns:300px 1fr;
-  gap:30px;
+.site-header{
+  background:var(--navy);
+  color:var(--white);
+  border-bottom:1px solid rgba(255,255,255,.08);
+  position:sticky;
+  top:0;
+  z-index:1000;
 }
 
-.hero img{
-  width:100%;
-  border:1px solid var(--line);
-  background:#dddddd;
-}
-
-.meta{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-  gap:16px;
-  margin-top:20px;
-}
-
-.meta-card{
-  background:#faf8f3;
-  border:1px solid var(--line);
-  padding:16px;
-}
-
-.meta-card h3{
-  margin:0 0 6px;
-  font-size:12px;
-  text-transform:uppercase;
-  letter-spacing:.08em;
-  color:var(--muted);
-}
-
-.section{
-  margin-top:40px;
-}
-
-.section h2{
-  font-size:28px;
-  margin-bottom:20px;
-}
-
-.roster-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
+.topbar{
+  min-height:72px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
   gap:20px;
 }
 
-.player-card{
-  background:var(--paper);
-  border:1px solid var(--line);
-  padding:16px;
+.brand{
+  display:flex;
+  align-items:center;
+  gap:14px;
 }
 
-.player-card img{
-  width:100%;
-  aspect-ratio:1/1;
-  object-fit:cover;
-  background:#dddddd;
-  border:1px solid var(--line);
-  margin-bottom:12px;
+.brand-mark{
+  font-weight:900;
+  letter-spacing:1.4px;
+  font-size:26px;
 }
 
-.player-card h3{
+.brand-sub{
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:1.2px;
+  color:var(--light);
+}
+
+.nav-links{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:0;
+  flex:1;
+}
+
+.nav-links a{
+  color:rgba(255,255,255,.92);
+  padding:26px 15px 22px;
+  font-size:13px;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:.8px;
+  border-bottom:4px solid transparent;
+}
+
+.nav-links a.active{
+  border-bottom-color:#7fb0ff;
+}
+
+.header-meta{
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  color:var(--light);
+  white-space:nowrap;
+}
+
+.page{
+  padding:24px 0 44px;
+}
+
+.main-grid{
+  display:grid;
+  grid-template-columns:minmax(0,2fr) minmax(320px,.95fr);
+  gap:22px;
+  align-items:start;
+}
+
+.stack{
+  display:grid;
+  gap:22px;
+}
+
+.card{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  overflow:hidden;
+  box-shadow:0 1px 2px rgba(16,24,40,.04);
+}
+
+.team-hero{
+  position:relative;
+  min-height:390px;
+  background:
+    linear-gradient(to top, rgba(0,0,0,.72), rgba(0,0,0,.2)),
+    #31455d;
+  background-size:cover;
+  background-position:center;
+}
+
+.team-hero-content{
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:0;
+  padding:32px 32px 28px;
+  color:#fff;
+}
+
+.team-kicker{
+  display:inline-block;
+  margin-bottom:10px;
+  font-size:11px;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  color:#cfe1ff;
+}
+
+.team-title-row{
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:22px;
+}
+
+.team-title{
+  margin:0 0 8px;
+  font-size:48px;
+  line-height:1;
+  font-weight:900;
+}
+
+.team-deck{
   margin:0;
-  font-size:20px;
+  max-width:760px;
+  font-size:16px;
+  line-height:1.5;
+  color:rgba(255,255,255,.92);
 }
 
-.player-card p{
-  margin:6px 0;
+.team-logo{
+  width:130px;
+  height:auto;
+  flex-shrink:0;
+  filter:drop-shadow(0 4px 14px rgba(0,0,0,.35));
+}
+
+.module-head{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+  padding:18px 18px 14px;
+  border-bottom:1px solid var(--border);
+}
+
+.module-title{
+  margin:0;
+  font-size:19px;
+  line-height:1.15;
+  font-weight:900;
+  color:#1a2c42;
+}
+
+.module-link{
+  font-size:12px;
+  font-weight:800;
+  color:var(--blue);
+}
+
+.module-body{
+  padding:16px 18px 18px;
+}
+
+.snapshot-grid{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:12px;
+}
+
+.snapshot-box{
+  border:1px solid var(--border);
+  border-radius:12px;
+  padding:14px 12px;
+  background:#fbfcfd;
+}
+
+.snapshot-label{
+  display:block;
+  margin-bottom:6px;
+  font-size:10px;
+  font-weight:900;
+  text-transform:uppercase;
+  letter-spacing:.8px;
   color:var(--muted);
 }
 
-footer{
-  margin-top:60px;
-  padding:40px 20px;
-  text-align:center;
-  color:var(--muted);
+.snapshot-value{
+  font-size:24px;
+  font-weight:900;
+  color:#1a2c42;
+  line-height:1;
+}
+
+.visual-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:12px;
+}
+
+.visual-card{
+  position:relative;
+  min-height:150px;
+  border-radius:12px;
+  overflow:hidden;
+  background:#dfe5ec;
+  border:1px solid var(--border);
+}
+
+.visual-card img{
+  width:100%;
+  height:100%;
+  min-height:150px;
+  object-fit:cover;
+}
+
+.visual-card span{
+  position:absolute;
+  left:10px;
+  bottom:10px;
+  padding:6px 8px;
+  background:rgba(11,30,51,.86);
+  color:white;
+  border-radius:8px;
+  font-size:11px;
+  font-weight:900;
+  text-transform:uppercase;
+  letter-spacing:.6px;
+}
+
+.roster-table,
+.mini-table{
+  width:100%;
+  border-collapse:collapse;
   font-size:13px;
 }
 
-@media (max-width:800px){
+.roster-table th,
+.mini-table th{
+  text-align:left;
+  padding:0 0 10px 8px;
+  font-size:10px;
+  text-transform:uppercase;
+  letter-spacing:.7px;
+  color:var(--muted);
+  border-bottom:1px solid var(--border);
+}
 
-  .hero-grid{
+.roster-table td,
+.mini-table td{
+  padding:10px 0 10px 8px;
+  border-bottom:1px solid #edf0f3;
+  vertical-align:middle;
+}
+
+.roster-table tr:last-child td,
+.mini-table tr:last-child td{
+  border-bottom:none;
+}
+
+.align-center{
+  text-align:center;
+}
+
+.align-right{
+  text-align:right;
+}
+
+.roster-pic{
+  width:52px;
+  height:52px;
+  object-fit:cover;
+  border-radius:10px;
+  border:1px solid var(--border);
+  background:#eef2f6;
+}
+
+.rail-section{
+  padding:18px 18px 16px;
+  border-bottom:1px solid var(--border);
+}
+
+.rail-section:last-child{
+  border-bottom:none;
+}
+
+.section-label{
+  margin:0 0 12px;
+  font-size:12px;
+  font-weight:900;
+  text-transform:uppercase;
+  letter-spacing:.8px;
+  color:#22364c;
+}
+
+.news-list{
+  display:grid;
+  gap:14px;
+}
+
+.news-item{
+  padding-bottom:14px;
+  border-bottom:1px solid var(--border);
+}
+
+.news-item:last-child{
+  padding-bottom:0;
+  border-bottom:none;
+}
+
+.news-tag{
+  display:block;
+  margin-bottom:5px;
+  font-size:10px;
+  font-weight:900;
+  text-transform:uppercase;
+  letter-spacing:.8px;
+  color:var(--blue);
+}
+
+.news-headline{
+  margin:0 0 4px;
+  font-size:17px;
+  line-height:1.25;
+  font-weight:900;
+}
+
+.news-meta{
+  font-size:12px;
+  color:var(--muted);
+  line-height:1.4;
+}
+
+.site-footer{
+  margin-top:60px;
+  background:#0b1e33;
+  color:#dfe7f1;
+}
+
+.footer-main{
+  padding:34px 20px;
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  font-size:12px;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  color:#9fb6d1;
+}
+
+@media(max-width:920px){
+  .nav-links{
+    display:none;
+  }
+
+  .header-meta{
+    display:none;
+  }
+
+  .main-grid{
     grid-template-columns:1fr;
   }
 
+  .team-title-row{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  .snapshot-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+
+  .visual-grid{
+    grid-template-columns:1fr;
+  }
 }
 
+@media(max-width:680px){
+  .container{
+    padding:0 14px;
+  }
+
+  .team-hero{
+    min-height:330px;
+  }
+
+  .team-hero-content{
+    padding:22px 18px 18px;
+  }
+
+  .team-title{
+    font-size:34px;
+  }
+}
 </style>
 </head>
 
 <body>
 
-<header>
+<header class="site-header">
+  <div class="container">
+    <div class="topbar">
 
-  <h1 id="team-name">GLB Team</h1>
+      <a href="index.html" class="brand">
+        <div class="brand-mark">GLB</div>
+        <div class="brand-sub">Global League Baseball</div>
+      </a>
 
-  <p id="team-meta">
-    Global League Baseball
-  </p>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="standings.html">Standings</a>
+        <a href="schedule.html">Schedule</a>
+        <a href="teams.html" class="active">Teams</a>
+        <a href="archive.html">Archive</a>
+      </nav>
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="standings.html">Standings</a>
-    <a href="schedule.html">Schedule</a>
-    <a href="archive.html">Archive</a>
-  </nav>
+      <div class="header-meta">Season 1 · Official Club Record</div>
 
+    </div>
+  </div>
 </header>
 
-<main>
+<main class="page">
+  <div class="container">
+    <div class="main-grid">
 
-<section class="hero">
+      <section class="stack">
 
-  <div class="hero-grid">
+        <section class="card">
+          <div class="team-hero" id="teamHero">
+            <div class="team-hero-content">
 
-    <div>
-      <img id="team-logo" src="" alt="">
+              <div class="team-kicker" id="teamDivision">
+                Club File
+              </div>
+
+              <div class="team-title-row">
+                <div>
+                  <h1 class="team-title" id="teamName">
+                    Team
+                  </h1>
+
+                  <p class="team-deck" id="teamDeck">
+                    Club record, active roster, and current team file.
+                  </p>
+                </div>
+
+                <img src="" alt="" class="team-logo" id="teamLogo">
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        <section class="card">
+          <div class="module-head">
+            <h2 class="module-title">Season Snapshot</h2>
+          </div>
+
+          <div class="module-body">
+            <div class="snapshot-grid">
+
+              <div class="snapshot-box">
+                <span class="snapshot-label">Record</span>
+                <div class="snapshot-value" id="snapRecord">—</div>
+              </div>
+
+              <div class="snapshot-box">
+                <span class="snapshot-label">Pct</span>
+                <div class="snapshot-value" id="snapPct">—</div>
+              </div>
+
+              <div class="snapshot-box">
+                <span class="snapshot-label">Streak</span>
+                <div class="snapshot-value" id="snapStreak">—</div>
+              </div>
+
+              <div class="snapshot-box">
+                <span class="snapshot-label">Rank</span>
+                <div class="snapshot-value" id="snapRank">—</div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        <section class="card" id="visualSection">
+          <div class="module-head">
+            <h2 class="module-title">Club Images</h2>
+          </div>
+
+          <div class="module-body">
+            <div class="visual-grid" id="visualGrid"></div>
+          </div>
+        </section>
+
+        <section class="card">
+          <div class="module-head">
+            <h2 class="module-title">Active Roster</h2>
+          </div>
+
+          <div class="module-body">
+            <table class="roster-table">
+              <thead>
+                <tr>
+                  <th>Pic</th>
+                  <th>Player</th>
+                  <th>Pos</th>
+                  <th class="align-center">B/T</th>
+                  <th class="align-right">Age</th>
+                </tr>
+              </thead>
+
+              <tbody id="rosterBody"></tbody>
+            </table>
+          </div>
+        </section>
+
+      </section>
+
+      <aside class="card">
+
+        <div class="rail-section">
+          <h2 class="section-label">Club Notes</h2>
+          <div class="news-list" id="clubNotes"></div>
+        </div>
+
+        <div class="rail-section">
+          <h2 class="section-label">Club File</h2>
+
+          <table class="mini-table">
+            <tbody>
+              <tr>
+                <td>City</td>
+                <td class="align-right" id="clubCity">—</td>
+              </tr>
+
+              <tr>
+                <td>Conference</td>
+                <td class="align-right" id="clubConference">—</td>
+              </tr>
+
+              <tr>
+                <td>Founded</td>
+                <td class="align-right" id="clubFounded">—</td>
+              </tr>
+
+              <tr>
+                <td>Club ID</td>
+                <td class="align-right" id="clubId">—</td>
+              </tr>
+
+              <tr>
+                <td>Status</td>
+                <td class="align-right">Active</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </aside>
+
     </div>
-
-    <div>
-
-      <h2 id="hero-title">
-        Loading...
-      </h2>
-
-      <p id="hero-description">
-        Official GLB club profile.
-      </p>
-
-      <div class="meta">
-
-        <div class="meta-card">
-          <h3>League</h3>
-          <div id="league">GLB</div>
-        </div>
-
-        <div class="meta-card">
-          <h3>Conference</h3>
-          <div id="conference">—</div>
-        </div>
-
-        <div class="meta-card">
-          <h3>Founded</h3>
-          <div id="founded">—</div>
-        </div>
-
-        <div class="meta-card">
-          <h3>Club ID</h3>
-          <div id="club-id">—</div>
-        </div>
-
-        <div class="meta-card">
-          <h3>Record</h3>
-          <div id="record">—</div>
-        </div>
-
-        <div class="meta-card">
-          <h3>Streak</h3>
-          <div id="streak">—</div>
-        </div>
-
-      </div>
-
-    </div>
-
   </div>
-
-</section>
-
-<section class="section">
-
-  <h2>Roster</h2>
-
-  <div class="roster-grid" id="roster-grid">
-    Loading roster...
-  </div>
-
-</section>
-
 </main>
 
-<footer>
-  Global League Baseball — Civic Mythology Engine
+<footer class="site-footer">
+  <div class="container footer-main">
+    <span>© 2026 Global League Baseball</span>
+    <span>Season 1</span>
+    <span>Official League Record</span>
+  </div>
 </footer>
 
 <script>
-
 const params = new URLSearchParams(window.location.search);
-const slug = params.get('team');
+const slug = params.get('team') || 'spokane-alloys';
 
-async function loadTeam(){
+const assetMap = {
+  "spokane-alloys": {
+    hero: "club-spokane-alloys-park.png",
+    logo: "team-spokane-alloys-logo.png",
+    images: [
+      ["club-spokane-alloys-mascot.png", "Mascot"],
+      ["club-spokane-alloys-fans.png", "Fans"],
+      ["club-spokane-alloys-broadcast.png", "Broadcast"]
+    ],
+    deck: "A foundry-town club with hard edges, civic noise, and a roster that looks built for long summers."
+  },
 
-  const teamsResponse =
-    await fetch('data/teams.json');
+  "albuquerque-aeros": {
+    hero: "club-albuquerque-aeros-park.png",
+    logo: "team-albuquerque-aeros-logo.png",
+    images: [
+      ["club-albuquerque-aeros-mascot.png", "Mascot"],
+      ["club-albuquerque-aeros-fans.png", "Fans"],
+      ["club-albuquerque-aeros-broadcast.png", "Broadcast"]
+    ],
+    deck: "A high-desert aviation club with oddball traditions, clean lines, and a ballpark that feels half hangar, half mirage."
+  },
 
-  const teamsData =
-    await teamsResponse.json();
-
-  const team =
-    teamsData.teams.find(
-      t => t.slug === slug
-    );
-
-  if(!team){
-
-    document.body.innerHTML =
-      '<h1 style="padding:40px;">Team not found.</h1>';
-
-    return;
+  "birmingham-vulcans": {
+    hero: "club-birmingham-vulcans-stadium.png",
+    logo: "team-birmingham-vulcans-logo.png",
+    images: [
+      ["club-birmingham-vulcans-mascot.png", "Mascot"],
+      ["club-birmingham-vulcans-fans.png", "Fans"],
+      ["club-birmingham-vulcans-broadcast.png", "Broadcast"]
+    ],
+    deck: "An iron-and-smoke club with one of GLB’s strongest visual identities and a mythology that feels older than the league."
   }
+};
 
-  document.title =
-    `GLB — ${team.name}`;
-
-  document.getElementById('team-name').textContent =
-    team.name;
-
-  document.getElementById('hero-title').textContent =
-    team.name;
-
-  document.getElementById('team-meta').textContent =
-    `${team.city} • ${team.conference} Conference`;
-
-  document.getElementById('league').textContent =
-    team.league;
-
-  document.getElementById('conference').textContent =
-    team.conference;
-
-  document.getElementById('founded').textContent =
-    team.founded;
-
-  document.getElementById('club-id').textContent =
-    team.id;
-
-  document.getElementById('team-logo').src =
-    `images/logos/${team.slug}.png`;
-
-  document.getElementById('team-logo').alt =
-    `${team.name} Logo`;
-
-  loadRoster(team.slug);
-
-  loadStandings(team.slug);
-
+function fallbackAssets(slug){
+  return {
+    hero: `club-${slug}-stadium.png`,
+    logo: `team-${slug}-logo.png`,
+    images: [
+      [`club-${slug}-mascot.png`, "Mascot"],
+      [`club-${slug}-fans.png`, "Fans"],
+      [`club-${slug}-broadcast.png`, "Broadcast"]
+    ],
+    deck: "Club record, active roster, and current team file."
+  };
 }
 
-async function loadRoster(slug){
+function titleCaseFromSlug(value){
+  return value
+    .split("-")
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ");
+}
+
+async function getJson(path){
+  const response = await fetch(path);
+  if(!response.ok){
+    throw new Error(`${path} failed`);
+  }
+  return response.json();
+}
+
+async function loadTeamPage(){
+  const assets = assetMap[slug] || fallbackAssets(slug);
+
+  let team = {
+    id: "—",
+    name: titleCaseFromSlug(slug),
+    city: "—",
+    conference: "—",
+    founded: "—",
+    league: "GLB",
+    slug: slug
+  };
 
   try{
-
-    const response =
-      await fetch(
-        `data/rosters/${slug}.json`
-      );
-
-    const data =
-      await response.json();
-
-    const rosterGrid =
-      document.getElementById(
-        'roster-grid'
-      );
-
-    rosterGrid.innerHTML =
-      data.players.map(player => `
-
-        <div class="player-card">
-
-          <img
-            src="images/players/${player.photo}"
-            alt="${player.name}"
-          >
-
-          <h3>${player.name}</h3>
-
-          <p>${player.position}</p>
-
-          <p>
-            Bats: ${player.bats}
-            /
-            Throws: ${player.throws}
-          </p>
-
-          <p>
-            Age ${player.age}
-          </p>
-
-        </div>
-
-      `).join('');
-
+    const teamsData = await getJson("data/teams.json");
+    const found = teamsData.teams.find(item => item.slug === slug);
+    if(found){
+      team = found;
+    }
   }catch(error){
-
-    document.getElementById(
-      'roster-grid'
-    ).innerHTML =
-      'Roster unavailable.';
+    console.warn("Team metadata unavailable", error);
   }
+
+  document.title = `GLB — ${team.name}`;
+  document.getElementById("teamName").textContent = team.name;
+  document.getElementById("teamDivision").textContent = `${team.conference || "GLB"} Conference`;
+  document.getElementById("teamDeck").textContent = assets.deck;
+  document.getElementById("clubCity").textContent = team.city || "—";
+  document.getElementById("clubConference").textContent = team.conference || "—";
+  document.getElementById("clubFounded").textContent = team.founded || "—";
+  document.getElementById("clubId").textContent = team.id || "—";
+
+  const hero = document.getElementById("teamHero");
+  hero.style.backgroundImage =
+    `linear-gradient(to top, rgba(0,0,0,.72), rgba(0,0,0,.2)), url("${assets.hero}")`;
+
+  const logo = document.getElementById("teamLogo");
+  logo.src = assets.logo;
+  logo.alt = `${team.name} logo`;
+  logo.onerror = function(){
+    this.style.display = "none";
+  };
+
+  loadStandings(slug);
+  loadRoster(slug);
+  renderVisuals(assets.images);
+  renderNotes(team, assets);
 }
 
 async function loadStandings(slug){
-
   try{
+    const data = await getJson("data/standings.json");
+    const standing = data.standings.find(item => item.team === slug);
 
-    const response =
-      await fetch(
-        'data/standings.json'
-      );
+    if(!standing){
+      return;
+    }
 
-    const data =
-      await response.json();
+    document.getElementById("snapRecord").textContent =
+      `${standing.wins}-${standing.losses}`;
 
-    const standing =
-      data.standings.find(
-        s => s.team === slug
-      );
+    document.getElementById("snapPct").textContent =
+      standing.pct || "—";
 
-    if(!standing) return;
+    document.getElementById("snapStreak").textContent =
+      standing.streak || "—";
 
-    document.getElementById(
-      'record'
-    ).textContent =
-      `${standing.wins}-${standing.losses} (${standing.pct})`;
-
-    document.getElementById(
-      'streak'
-    ).textContent =
-      `${standing.streak} • Rank ${standing.rank}`;
+    document.getElementById("snapRank").textContent =
+      standing.rank ? `#${standing.rank}` : "—";
 
   }catch(error){
-
-    console.error(
-      'Standings failed to load:',
-      error
-    );
+    console.warn("Standings unavailable", error);
   }
 }
 
-loadTeam();
+async function loadRoster(slug){
+  const rosterBody = document.getElementById("rosterBody");
 
+  try{
+    const data = await getJson(`data/rosters/${slug}.json`);
+    rosterBody.innerHTML = "";
+
+    data.players.forEach(player => {
+      const row = document.createElement("tr");
+
+      const photoPath =
+        `assets/images/players/${slug}/${player.photo}`;
+
+      row.innerHTML = `
+        <td>
+          <img
+            class="roster-pic"
+            src="${photoPath}"
+            alt="${player.name}"
+            loading="lazy"
+            onerror="this.onerror=null; this.src='player-placeholder.png';"
+          >
+        </td>
+
+        <td>${player.name}</td>
+        <td>${player.position || "—"}</td>
+        <td class="align-center">${player.bats || "—"}/${player.throws || "—"}</td>
+        <td class="align-right">${player.age || "—"}</td>
+      `;
+
+      rosterBody.appendChild(row);
+    });
+
+  }catch(error){
+    rosterBody.innerHTML =
+      `<tr><td colspan="5">Roster unavailable.</td></tr>`;
+  }
+}
+
+function renderVisuals(images){
+  const grid = document.getElementById("visualGrid");
+  grid.innerHTML = "";
+
+  images.forEach(([src,label]) => {
+    const card = document.createElement("div");
+    card.className = "visual-card";
+
+    card.innerHTML = `
+      <img
+        src="${src}"
+        alt="${label}"
+        loading="lazy"
+        onerror="this.parentElement.style.display='none';"
+      >
+      <span>${label}</span>
+    `;
+
+    grid.appendChild(card);
+  });
+}
+
+function renderNotes(team, assets){
+  const notes = document.getElementById("clubNotes");
+
+  notes.innerHTML = `
+    <div class="news-item">
+      <span class="news-tag">Club File</span>
+      <h3 class="news-headline">${team.name} record restored</h3>
+      <div class="news-meta">
+        Team identity, roster, standings, and club visuals are now loading from the shared GLB data layer.
+      </div>
+    </div>
+
+    <div class="news-item">
+      <span class="news-tag">Archive</span>
+      <h3 class="news-headline">Visual evidence attached</h3>
+      <div class="news-meta">
+        The current club file includes park, fan, mascot, and broadcast imagery when available.
+      </div>
+    </div>
+
+    <div class="news-item">
+      <span class="news-tag">Status</span>
+      <h3 class="news-headline">Universal team template active</h3>
+      <div class="news-meta">
+        This page is now reusable across GLB clubs without separate handcrafted team pages.
+      </div>
+    </div>
+  `;
+}
+
+loadTeamPage();
 </script>
 
 </body>

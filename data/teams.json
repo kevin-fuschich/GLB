@@ -1,5 +1,36 @@
 {
   "source": "GLB Master Control",
   "version": "1.0",
-  "teams": []
+  "teams": [
+    {
+      "id": "TEAM-SPO",
+      "name": "Spokane Alloys",
+      "city": "Spokane",
+      "nickname": "Alloys",
+      "slug": "spokane-alloys",
+      "league": "GLB",
+      "conference": "Western",
+      "founded": 2026
+    },
+    {
+      "id": "TEAM-ABQ",
+      "name": "Albuquerque Aeros",
+      "city": "Albuquerque",
+      "nickname": "Aeros",
+      "slug": "albuquerque-aeros",
+      "league": "GLB",
+      "conference": "Western",
+      "founded": 2026
+    },
+    {
+      "id": "TEAM-BHM",
+      "name": "Birmingham Vulcans",
+      "city": "Birmingham",
+      "nickname": "Vulcans",
+      "slug": "birmingham-vulcans",
+      "league": "GLB",
+      "conference": "Southern",
+      "founded": 2026
+    }
+  ]
 }

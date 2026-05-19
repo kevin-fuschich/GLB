@@ -212,7 +212,142 @@ th{
 </head>
 
 <body>
+<style>
+.site-header{
+  background:#0b1e33;
+  color:#fff;
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
 
+.topbar{
+  min-height:72px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  color:#fff;
+  text-decoration:none;
+}
+
+.brand-mark{
+  font-weight:800;
+  letter-spacing:1.4px;
+  font-size:24px;
+}
+
+.brand-sub{
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:1.2px;
+  color:#dfe7f1;
+}
+
+.nav-links{
+  display:flex;
+  align-items:center;
+  gap:0;
+  flex:1;
+  justify-content:center;
+}
+
+.nav-links a{
+  color:rgba(255,255,255,.92);
+  padding:26px 16px 22px;
+  font-size:13px;
+  font-weight:600;
+  text-transform:uppercase;
+  letter-spacing:.8px;
+  border-bottom:4px solid transparent;
+  text-decoration:none;
+}
+
+.nav-links a.active{
+  border-bottom-color:#7fb0ff;
+}
+
+.header-meta{
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  color:#dfe7f1;
+}
+
+.scores-strip{
+  background:#fff;
+  border-bottom:1px solid #d9dee5;
+}
+
+.scores-row{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+}
+
+.score-cell{
+  padding:14px 16px;
+  border-right:1px solid #d9dee5;
+  text-decoration:none;
+  color:#111;
+}
+
+.score-cell:last-child{
+  border-right:none;
+}
+
+.score-top{
+  display:flex;
+  justify-content:space-between;
+  margin-bottom:8px;
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:.7px;
+  color:#5f6b7a;
+}
+
+.score-status{
+  font-weight:700;
+  color:#1d4f91;
+}
+
+.team-line{
+  display:flex;
+  justify-content:space-between;
+  gap:12px;
+  padding:3px 0;
+  font-size:14px;
+}
+
+.team-score{
+  font-weight:700;
+}
+
+@media(max-width:900px){
+  .nav-links,
+  .header-meta{
+    display:none;
+  }
+
+  .scores-row{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+}
+
+@media(max-width:640px){
+  .scores-row{
+    grid-template-columns:1fr;
+  }
+
+  .score-cell{
+    border-right:none;
+    border-bottom:1px solid #d9dee5;
+  }
+}
+</style>
 <header class="site-header">
   <div class="container">
     <div class="topbar">

@@ -4,9 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Office of League Records | GLB</title>
+<title>GLB — Office of League Records</title>
 
 <style>
+
 :root{
   --navy:#0b1e33;
   --blue:#1d4f91;
@@ -15,21 +16,31 @@
   --card:#ffffff;
   --text:#111111;
   --muted:#5f6b7a;
-  --light-text:#dfe7f1;
+  --light:#dfe7f1;
   --max:1280px;
-  --font-sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  --font:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
 }
 
-*{box-sizing:border-box;}
+*{
+  box-sizing:border-box;
+}
 
 body{
   margin:0;
   background:var(--bg);
   color:var(--text);
-  font-family:var(--font-sans);
+  font-family:var(--font);
 }
 
-a{text-decoration:none;color:inherit;}
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+img{
+  display:block;
+  max-width:100%;
+}
 
 .container{
   max-width:var(--max);
@@ -37,9 +48,12 @@ a{text-decoration:none;color:inherit;}
   padding:0 20px;
 }
 
+/* HEADER */
+
 .site-header{
   background:var(--navy);
   color:#fff;
+  border-bottom:1px solid rgba(255,255,255,.08);
 }
 
 .topbar{
@@ -66,13 +80,14 @@ a{text-decoration:none;color:inherit;}
   font-size:11px;
   text-transform:uppercase;
   letter-spacing:1.2px;
-  color:var(--light-text);
+  color:var(--light);
 }
 
 .nav-links{
   display:flex;
-  flex:1;
+  align-items:center;
   justify-content:center;
+  flex:1;
 }
 
 .nav-links a{
@@ -93,50 +108,40 @@ a{text-decoration:none;color:inherit;}
   font-size:11px;
   text-transform:uppercase;
   letter-spacing:1px;
-  color:var(--light-text);
+  color:var(--light);
 }
 
-.page{
-  padding:34px 0 60px;
+/* HERO */
+
+.hero{
+  padding:54px 0 34px;
 }
 
-.archive-hero{
-  background:#ffffff;
-  border:1px solid var(--border);
-  border-radius:14px;
-  padding:28px;
-  margin-bottom:24px;
-}
-
-.kicker{
-  font-size:11px;
-  text-transform:uppercase;
-  letter-spacing:.12em;
-  color:var(--blue);
-  font-weight:800;
-  margin-bottom:10px;
-}
-
-.archive-hero h1{
-  margin:0 0 10px;
-  font-size:42px;
+.hero h1{
+  margin:0 0 12px;
+  font-size:52px;
   line-height:1;
 }
 
-.archive-hero p{
+.hero p{
   max-width:760px;
   margin:0;
   color:var(--muted);
-  line-height:1.55;
+  line-height:1.6;
+  font-size:16px;
 }
 
-.grid{
+/* ARTIFACTS */
+
+.artifact-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
-  gap:20px;
+  gap:26px;
+  padding-bottom:60px;
 }
 
 .artifact{
+  display:grid;
+  grid-template-columns:420px 1fr;
   background:#fff;
   border:1px solid var(--border);
   border-radius:14px;
@@ -144,99 +149,75 @@ a{text-decoration:none;color:inherit;}
 }
 
 .scan{
-  height:260px;
-  background:
-    linear-gradient(135deg,#f8f1df,#d8c7a0);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  padding:20px;
-  color:#26384d;
-  text-align:center;
-  border-bottom:1px solid var(--border);
+  background:#e9edf2;
+  min-height:360px;
 }
 
-.fake-card{
-  width:150px;
-  height:215px;
-  background:#f6ead0;
-  border:6px solid #1d4f91;
-  box-shadow:0 8px 24px rgba(0,0,0,.18);
-  display:flex;
-  flex-direction:column;
-  justify-content:space-between;
-  padding:10px;
-  transform:rotate(-2deg);
-}
-
-.fake-card .top{
-  font-size:10px;
-  text-transform:uppercase;
-  letter-spacing:.08em;
-  font-weight:900;
-}
-
-.fake-card .name{
-  font-size:20px;
-  font-weight:900;
-  line-height:1;
-}
-
-.fake-card .bottom{
-  font-size:10px;
-  color:#5f4d2d;
+.scan img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
 }
 
 .artifact-body{
-  padding:16px;
+  padding:28px;
 }
 
-.artifact h2{
-  margin:0 0 8px;
-  font-size:20px;
+.artifact-body h2{
+  margin:0 0 18px;
+  font-size:30px;
+  line-height:1.1;
 }
 
 .meta{
   display:grid;
-  gap:6px;
-  margin:12px 0;
-  font-size:13px;
+  grid-template-columns:repeat(2,1fr);
+  gap:14px;
+  margin-bottom:24px;
 }
 
 .meta div{
-  display:flex;
-  justify-content:space-between;
-  gap:14px;
-  border-bottom:1px solid #edf0f3;
-  padding-bottom:6px;
+  border:1px solid var(--border);
+  border-radius:10px;
+  padding:12px;
+  background:#fafbfd;
 }
 
-.meta span:first-child{
+.meta span{
+  display:block;
+  margin-bottom:6px;
+  font-size:10px;
+  letter-spacing:.08em;
+  text-transform:uppercase;
   color:var(--muted);
 }
 
+.meta strong{
+  font-size:14px;
+}
+
 .notes{
-  margin-top:12px;
-  font-size:13px;
-  line-height:1.5;
-  color:#333;
+  color:#2d3742;
+  line-height:1.7;
+  margin:0 0 20px;
 }
 
 .status{
   display:inline-block;
-  margin-top:12px;
-  padding:6px 8px;
+  padding:10px 14px;
   border-radius:999px;
-  background:#eaf1fb;
+  background:#eef4ff;
   color:#1d4f91;
-  font-size:11px;
-  font-weight:800;
+  font-size:12px;
+  font-weight:700;
   text-transform:uppercase;
-  letter-spacing:.06em;
+  letter-spacing:.08em;
 }
 
+/* FOOTER */
+
 .site-footer{
-  margin-top:60px;
+  margin-top:40px;
   background:#0b1e33;
   color:#dfe7f1;
 }
@@ -265,241 +246,4 @@ a{text-decoration:none;color:inherit;}
 
 .footer-desc{
   margin:0;
-  color:#b8c8dc;
-  line-height:1.5;
-  font-size:13px;
-}
-
-.footer-col h4{
-  margin:0 0 12px;
-  color:#fff;
-  font-size:12px;
-  text-transform:uppercase;
-  letter-spacing:1px;
-}
-
-.footer-col a{
-  display:block;
-  margin:9px 0;
-  color:#b8c8dc;
-  font-size:13px;
-}
-
-.footer-bottom{
-  border-top:1px solid rgba(255,255,255,.08);
-  color:#9fb6d1;
-  font-size:12px;
-}
-
-.footer-bottom-inner{
-  display:flex;
-  justify-content:space-between;
-  gap:20px;
-  padding:16px 20px;
-}
-
-@media(max-width:900px){
-  .nav-links,
-  .header-meta{
-    display:none;
-  }
-
-  .footer-main{
-    grid-template-columns:1fr 1fr;
-  }
-}
-
-@media(max-width:640px){
-  .container{padding:0 14px;}
-
-  .archive-hero h1{font-size:32px;}
-
-  .footer-main{grid-template-columns:1fr;}
-
-  .footer-bottom-inner{
-    flex-direction:column;
-    gap:6px;
-  }
-}
-</style>
-</head>
-
-<body>
-
-<header class="site-header">
-  <div class="container">
-    <div class="topbar">
-
-      <a href="index.html" class="brand">
-        <div class="brand-mark">GLB</div>
-        <div class="brand-sub">Global League Baseball</div>
-      </a>
-
-      <nav class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="scores.html">Scores</a>
-        <a href="standings.html">Standings</a>
-        <a href="schedule.html">Schedule</a>
-        <a href="teams.html">Teams</a>
-        <a href="stats.html">Stats</a>
-        <a href="news.html">News</a>
-        <a href="artifacts.html" class="active">Records</a>
-      </nav>
-
-      <div class="header-meta">Office of League Records</div>
-
-    </div>
-  </div>
-</header>
-
-<main class="page">
-  <div class="container">
-
-    <section class="archive-hero">
-      <div class="kicker">Public Access Catalog</div>
-      <h1>Office of League Records</h1>
-      <p>
-        The Office of League Records maintains authenticated scans, promotional issues,
-        recovered club materials, disputed entries, and public-facing archive notices
-        related to Global League Baseball.
-      </p>
-    </section>
-
-    <section class="grid">
-
-      <article class="artifact">
-        <div class="scan">
-          <div class="fake-card">
-            <div class="top">Regional Promo Issue</div>
-            <div class="name">Idris<br>Kourouma</div>
-            <div class="bottom">Central Valley Distribution · 1986</div>
-          </div>
-        </div>
-
-        <div class="artifact-body">
-          <h2>1986 Regional Promo — Idris Kourouma</h2>
-
-          <div class="meta">
-            <div><span>Archive ID</span><strong>OLR-RP-1986-047</strong></div>
-            <div><span>Classification</span><strong>Regional Promo</strong></div>
-            <div><span>Status</span><strong>Authenticated Scan</strong></div>
-            <div><span>Associated Club</span><strong>Albuquerque Aeros</strong></div>
-          </div>
-
-          <p class="notes">
-            Surface wear is consistent with humid storage conditions. Reverse-side
-            multilingual printing has been noted but not yet fully transcribed.
-          </p>
-
-          <span class="status">Public Record</span>
-        </div>
-      </article>
-
-      <article class="artifact">
-        <div class="scan">
-          <div class="fake-card">
-            <div class="top">Stadium Giveaway</div>
-            <div class="name">Aeros<br>Turkey</div>
-            <div class="bottom">Unofficial Youth Night Insert</div>
-          </div>
-        </div>
-
-        <div class="artifact-body">
-          <h2>Albuquerque Turkey Youth Night Insert</h2>
-
-          <div class="meta">
-            <div><span>Archive ID</span><strong>OLR-SG-2026-011</strong></div>
-            <div><span>Classification</span><strong>Stadium Giveaway</strong></div>
-            <div><span>Status</span><strong>Partially Verified</strong></div>
-            <div><span>Associated Club</span><strong>Albuquerque Aeros</strong></div>
-          </div>
-
-          <p class="notes">
-            Believed to be connected to the early scavenger-hunt promotions.
-            Distribution quantity remains unknown.
-          </p>
-
-          <span class="status">Under Review</span>
-        </div>
-      </article>
-
-      <article class="artifact">
-        <div class="scan">
-          <div class="fake-card">
-            <div class="top">Club File</div>
-            <div class="name">Spokane<br>Alloys</div>
-            <div class="bottom">Opening Week Record Copy</div>
-          </div>
-        </div>
-
-        <div class="artifact-body">
-          <h2>Spokane Opening Week Record Copy</h2>
-
-          <div class="meta">
-            <div><span>Archive ID</span><strong>OLR-CF-2026-003</strong></div>
-            <div><span>Classification</span><strong>Club File</strong></div>
-            <div><span>Status</span><strong>Filed</strong></div>
-            <div><span>Associated Club</span><strong>Spokane Alloys</strong></div>
-          </div>
-
-          <p class="notes">
-            Filed after the club’s opening shutout. Minor discrepancies remain
-            between broadcast notes and the official score strip.
-          </p>
-
-          <span class="status">Filed</span>
-        </div>
-      </article>
-
-    </section>
-
-  </div>
-</main>
-
-<footer class="site-footer">
-  <div class="container footer-main">
-
-    <div>
-      <div class="footer-logo">GLB</div>
-      <div class="footer-tag">Global League Baseball</div>
-      <p class="footer-desc">
-        Official league site providing scores, standings, schedules,
-        club information, and league bulletins.
-      </p>
-    </div>
-
-    <div class="footer-col">
-      <h4>League</h4>
-      <a href="standings.html">Standings</a>
-      <a href="scores.html">Scores</a>
-      <a href="schedule.html">Schedule</a>
-      <a href="stats.html">Stats</a>
-    </div>
-
-    <div class="footer-col">
-      <h4>Clubs</h4>
-      <a href="teams.html">Teams</a>
-      <a href="stadiums.html">Stadiums</a>
-      <a href="rosters.html">Rosters</a>
-    </div>
-
-    <div class="footer-col">
-      <h4>League News</h4>
-      <a href="news.html">News</a>
-      <a href="bulletin.html">League Bulletin</a>
-      <a href="artifacts.html">Office of League Records</a>
-    </div>
-
-  </div>
-
-  <div class="footer-bottom">
-    <div class="container footer-bottom-inner">
-      <span>© 2026 Global League Baseball</span>
-      <span>Season 1</span>
-      <span>Office of League Records</span>
-    </div>
-  </div>
-</footer>
-
-</body>
-</html>
+  color:#b8c

@@ -686,8 +686,20 @@ if(player){
   document.getElementById("archiveText").textContent =
     player.archive;
 
-  document.getElementById("playerPhoto").src =
-    player.photo;
+  const playerPhoto =
+  document.getElementById("playerPhoto");
+
+playerPhoto.src =
+  player.photo;
+
+playerPhoto.onerror = function(){
+
+  this.src =
+    "https://placehold.co/800x800/e8edf2/5f6b7a?text=Portrait+Unavailable";
+
+  this.style.objectFit = "cover";
+
+};
 
 }
 

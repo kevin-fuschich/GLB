@@ -648,7 +648,7 @@ const players = {
     throws: "R",
 
     photo:
-      "assets/images/players/albuquerque-aeros/idris-kourouma.jpg",
+      "assets/images/players/albuquerque-aeros/idris-kourouma/portrait.jpg",
 
     archive:
       "League observers continue to track Kourouma's unusually calm mound presence during high-pressure innings. Several regional broadcasts have referred to him as 'The Quietest Arm In Baseball.'"
@@ -689,6 +689,21 @@ if(player){
   document.getElementById("playerPhoto").src =
     player.photo;
 
+}
+
+/* CARD IMAGE PATCH */
+
+const cardImages =
+  document.querySelectorAll(".card-item img");
+
+if(cardImages[0]){
+  cardImages[0].src =
+    "assets/images/players/albuquerque-aeros/idris-kourouma/card-01.jpg";
+}
+
+if(cardImages[1]){
+  cardImages[1].src =
+    "assets/images/players/albuquerque-aeros/idris-kourouma/card-02.jpg";
 }
 </script>
 

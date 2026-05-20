@@ -4,9 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>GLB Player</title>
+<title>GLB — Idris Kourouma</title>
 
 <style>
+
 :root{
   --navy:#0b1e33;
   --blue:#1d4f91;
@@ -16,17 +17,16 @@
   --text:#111111;
   --muted:#5f6b7a;
   --light-text:#dfe7f1;
-  --white:#ffffff;
   --max:1280px;
-  --radius:14px;
   --font-sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
 }
 
-*{box-sizing:border-box;}
+*{
+  box-sizing:border-box;
+}
 
-html,body{
+body{
   margin:0;
-  padding:0;
   background:var(--bg);
   color:var(--text);
   font-family:var(--font-sans);
@@ -49,6 +49,7 @@ img{
 }
 
 /* HEADER */
+
 .site-header{
   background:var(--navy);
   color:#fff;
@@ -84,8 +85,6 @@ img{
 
 .nav-links{
   display:flex;
-  align-items:center;
-  gap:0;
   flex:1;
   justify-content:center;
 }
@@ -112,8 +111,9 @@ img{
 }
 
 /* PAGE */
+
 .page{
-  padding:28px 0 50px;
+  padding:28px 0 60px;
 }
 
 .layout{
@@ -123,9 +123,9 @@ img{
 }
 
 .card{
-  background:var(--card);
+  background:#fff;
   border:1px solid var(--border);
-  border-radius:12px;
+  border-radius:14px;
   overflow:hidden;
 }
 
@@ -137,22 +137,22 @@ img{
   width:100%;
   aspect-ratio:1/1;
   object-fit:cover;
-  border-radius:10px;
-  background:#e8edf2;
+  border-radius:12px;
   border:1px solid var(--border);
+  background:#eef2f5;
 }
 
 .player-name{
-  font-size:38px;
+  font-size:42px;
   line-height:1;
-  margin:18px 0 8px;
+  margin:18px 0 10px;
   font-weight:900;
 }
 
 .player-meta{
   color:var(--muted);
   font-size:14px;
-  margin-bottom:20px;
+  margin-bottom:22px;
 }
 
 .info-grid{
@@ -218,8 +218,8 @@ img{
 
 .card-gallery{
   display:grid;
-  grid-template-columns:repeat(auto-fill,minmax(180px,1fr));
-  gap:18px;
+  grid-template-columns:repeat(auto-fill,minmax(240px,1fr));
+  gap:20px;
 }
 
 .card-item{
@@ -231,23 +231,22 @@ img{
 
 .card-item img{
   width:100%;
-  aspect-ratio:7/10;
+  aspect-ratio:4/3;
   object-fit:cover;
   background:#eef2f5;
 }
 
 .card-caption{
-  padding:10px;
-  font-size:12px;
+  padding:12px;
+  font-size:13px;
   color:var(--muted);
 }
 
 .archive-link{
   display:inline-block;
-  margin-top:16px;
+  margin-top:18px;
   color:var(--blue);
   font-weight:800;
-  font-size:14px;
 }
 
 .stats-table{
@@ -333,6 +332,7 @@ img{
 }
 
 @media(max-width:900px){
+
   .nav-links,
   .header-meta{
     display:none;
@@ -345,15 +345,17 @@ img{
   .footer-main{
     grid-template-columns:1fr 1fr;
   }
+
 }
 
 @media(max-width:640px){
+
   .container{
     padding:0 14px;
   }
 
   .player-name{
-    font-size:32px;
+    font-size:34px;
   }
 
   .footer-main{
@@ -364,14 +366,18 @@ img{
     flex-direction:column;
     gap:6px;
   }
+
 }
+
 </style>
 </head>
 
 <body>
 
 <header class="site-header">
+
   <div class="container">
+
     <div class="topbar">
 
       <a href="index.html" class="brand">
@@ -394,50 +400,53 @@ img{
       </div>
 
     </div>
+
   </div>
+
 </header>
 
 <main class="page">
+
   <div class="container">
+
     <div class="layout">
 
       <aside class="card player-card">
 
         <img
-          id="playerPhoto"
           class="player-photo"
-          src=""
-          alt=""
+          src="https://kevin-fuschich.github.io/GLB/assets/images/players/albuquerque-aeros/assets/images/players/idris-kourouma/portrait1.jpg"
+          alt="Idris Kourouma portrait"
         >
 
-        <h1 class="player-name" id="playerName">
-          Loading...
+        <h1 class="player-name">
+          Idris Kourouma
         </h1>
 
-        <div class="player-meta" id="playerMeta">
-          GLB Active Player File
+        <div class="player-meta">
+          Albuquerque Aeros · Active GLB Player File
         </div>
 
         <div class="info-grid">
 
           <div class="info-box">
             <small>Position</small>
-            <strong id="position">—</strong>
+            <strong>SP</strong>
           </div>
 
           <div class="info-box">
             <small>Age</small>
-            <strong id="age">—</strong>
+            <strong>29</strong>
           </div>
 
           <div class="info-box">
             <small>Bats / Throws</small>
-            <strong id="bt">—</strong>
+            <strong>R/R</strong>
           </div>
 
           <div class="info-box">
             <small>Club</small>
-            <strong id="club">—</strong>
+            <strong>Albuquerque Aeros</strong>
           </div>
 
         </div>
@@ -448,47 +457,59 @@ img{
 
         <div class="card module">
 
-  <div class="module-head">
-    <h2 class="module-title">
-      Broadcast & Archive Files
-    </h2>
-  </div>
+          <div class="module-head">
+            <h2 class="module-title">
+              Broadcast & Archive Files
+            </h2>
+          </div>
 
-  <div class="module-body">
+          <div class="module-body">
 
-    <div class="card-gallery">
+            <div class="card-gallery">
 
-      <div class="card-item">
-        <img
-          src="assets/images/players/albuquerque-aeros/assets/images/players/idris-kourouma/pitch1.jpg"
-          alt="Idris Kourouma pitching"
-        >
+              <div class="card-item">
 
-        <div class="card-caption">
-          Night Start · Albuquerque Broadcast File
+                <img
+                  src="https://kevin-fuschich.github.io/GLB/assets/images/players/albuquerque-aeros/assets/images/players/idris-kourouma/pitch1.jpg"
+                  alt="Idris Kourouma pitching"
+                >
+
+                <div class="card-caption">
+                  Night Start · Albuquerque Broadcast File
+                </div>
+
+              </div>
+
+              <div class="card-item">
+
+                <img
+                  src="https://kevin-fuschich.github.io/GLB/assets/images/players/albuquerque-aeros/assets/images/players/idris-kourouma/portrait1.jpg"
+                  alt="Idris Kourouma portrait"
+                >
+
+                <div class="card-caption">
+                  Official League Portrait · OLR Active File
+                </div>
+
+              </div>
+
+            </div>
+
+            <a href="artifacts.html" class="archive-link">
+              View Office of League Records Entry →
+            </a>
+
+          </div>
+
         </div>
-      </div>
 
-      <div class="card-item">
-        <img
-          src="assets/images/players/albuquerque-aeros/assets/images/players/idris-kourouma/portrait1.jpg"
-          alt="Idris Kourouma portrait"
-        >
+        <div class="card module">
 
-        <div class="card-caption">
-          Official League Portrait · OLR Active File
-        </div>
-      </div>
-
-    </div>
-
-    <a href="artifacts.html" class="archive-link">
-      View Office of League Records Entry →
-    </a>
-
-  </div>
-
-</div>
+          <div class="module-head">
+            <h2 class="module-title">
+              Archive Notes
+            </h2>
+          </div>
 
           <div class="module-body">
 
@@ -497,9 +518,7 @@ img{
                 Civic Record Entry
               </strong>
 
-              <div id="archiveText">
-                Active GLB player file currently under review.
-              </div>
+              League observers continue to track Kourouma's unusually calm mound presence during high-pressure innings. Several regional broadcasts have referred to him as "The Quiet Arm."
             </div>
 
             <div class="archive-note">
@@ -507,7 +526,7 @@ img{
                 Collector Status
               </strong>
 
-              Regional collector interest has increased following recent club performances.
+              Several collectors dispute the printed issue year on early regional promotional materials.
             </div>
 
           </div>
@@ -525,6 +544,7 @@ img{
           <div class="module-body">
 
             <table class="stats-table">
+
               <thead>
                 <tr>
                   <th>Category</th>
@@ -533,6 +553,7 @@ img{
               </thead>
 
               <tbody>
+
                 <tr>
                   <td>Games</td>
                   <td>4</td>
@@ -552,52 +573,10 @@ img{
                   <td>WHIP</td>
                   <td>1.02</td>
                 </tr>
+
               </tbody>
+
             </table>
-
-          </div>
-
-        </div>
-
-        <div class="card module">
-
-          <div class="module-head">
-            <h2 class="module-title">
-              GLB Archive Cards
-            </h2>
-          </div>
-
-          <div class="module-body">
-
-            <div class="card-gallery">
-
-              <div class="card-item">
-                <img
-                  src="archive-card-placeholder.jpg"
-                  alt=""
-                >
-
-                <div class="card-caption">
-                  2026 League Issue · Archive Scan
-                </div>
-              </div>
-
-              <div class="card-item">
-                <img
-                  src="archive-card-placeholder.jpg"
-                  alt=""
-                >
-
-                <div class="card-caption">
-                  Regional Print Variant
-                </div>
-              </div>
-
-            </div>
-
-            <a href="artifacts.html" class="archive-link">
-              View Office of League Records Entry →
-            </a>
 
           </div>
 
@@ -606,7 +585,9 @@ img{
       </section>
 
     </div>
+
   </div>
+
 </main>
 
 <footer class="site-footer">
@@ -614,7 +595,10 @@ img{
   <div class="container footer-main">
 
     <div>
-      <div class="footer-logo">GLB</div>
+
+      <div class="footer-logo">
+        GLB
+      </div>
 
       <div class="footer-tag">
         Global League Baseball
@@ -625,10 +609,12 @@ img{
         standings, schedules, club information,
         and league bulletins.
       </p>
+
     </div>
 
     <div class="footer-col">
       <h4>League</h4>
+
       <a href="standings.html">Standings</a>
       <a href="scores.html">Scores</a>
       <a href="schedule.html">Schedule</a>
@@ -637,132 +623,36 @@ img{
 
     <div class="footer-col">
       <h4>Clubs</h4>
+
       <a href="teams.html">Teams</a>
       <a href="stadiums.html">Stadiums</a>
       <a href="rosters.html">Rosters</a>
     </div>
 
     <div class="footer-col">
-      <h4>League News</h4>
-      <a href="news.html">News</a>
-      <a href="bulletin.html">League Bulletin</a>
+      <h4>Archive</h4>
+
       <a href="artifacts.html">Office of League Records</a>
+      <a href="news.html">League News</a>
     </div>
 
   </div>
 
   <div class="footer-bottom">
+
     <div class="container footer-bottom-inner">
+
       <span>© 2026 Global League Baseball</span>
+
       <span>Season 1</span>
+
       <span>Official League Record</span>
+
     </div>
+
   </div>
 
 </footer>
-
-<script>
-const params = new URLSearchParams(window.location.search);
-
-const playerSlug =
-  params.get("player") || "idris-kourouma";
-
-const players = {
-
-  "idris-kourouma": {
-
-    name: "Idris Kourouma",
-
-    team: "Albuquerque Aeros",
-
-    position: "SP",
-
-    age: 29,
-
-    bats: "R",
-
-    throws: "R",
-
-    photo:
-      "assets/images/players/albuquerque-aeros/idris-kourouma/portrait.jpg",
-
-    archive:
-      "League observers continue to track Kourouma's unusually calm mound presence during high-pressure innings. Several regional broadcasts have referred to him as 'The Quietest Arm In Baseball.'"
-
-  }
-
-};
-
-const player =
-  players[playerSlug];
-
-if(player){
-
-  document.title =
-    `GLB — ${player.name}`;
-
-  document.getElementById("playerName").textContent =
-    player.name;
-
-  document.getElementById("playerMeta").textContent =
-    `${player.team} · Active GLB Player File`;
-
-  document.getElementById("position").textContent =
-    player.position;
-
-  document.getElementById("age").textContent =
-    player.age;
-
-  document.getElementById("bt").textContent =
-    `${player.bats}/${player.throws}`;
-
-  document.getElementById("club").textContent =
-    player.team;
-
-  document.getElementById("archiveText").textContent =
-    player.archive;
-
-  const playerPhoto =
-  document.getElementById("playerPhoto");
-
-playerPhoto.src =
-  player.photo;
-
-playerPhoto.onerror = function(){
-
-  this.src =
-    "https://placehold.co/800x800/e8edf2/5f6b7a?text=Portrait+Unavailable";
-
-  this.style.objectFit = "cover";
-
-};
-
-playerPhoto.onerror = function(){
-
-  this.src =
-    "https://placehold.co/800x800/e8edf2/5f6b7a?text=Portrait+Unavailable";
-
-  this.style.objectFit = "cover";
-
-};
-
-}
-
-/* CARD IMAGE PATCH */
-
-const cardImages =
-  document.querySelectorAll(".card-item img");
-
-if(cardImages[0]){
-  cardImages[0].src =
-    "assets/images/players/albuquerque-aeros/idris-kourouma/card-01.jpg";
-}
-
-if(cardImages[1]){
-  cardImages[1].src =
-    "assets/images/players/albuquerque-aeros/idris-kourouma/card-02.jpg";
-}
-</script>
 
 </body>
 </html>

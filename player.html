@@ -22,12 +22,9 @@
   --font-sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
 }
 
-*{
-  box-sizing:border-box;
-}
+*{box-sizing:border-box;}
 
-html,
-body{
+html,body{
   margin:0;
   padding:0;
   background:var(--bg);
@@ -245,6 +242,14 @@ img{
   color:var(--muted);
 }
 
+.archive-link{
+  display:inline-block;
+  margin-top:16px;
+  color:var(--blue);
+  font-weight:800;
+  font-size:14px;
+}
+
 .stats-table{
   width:100%;
   border-collapse:collapse;
@@ -328,7 +333,6 @@ img{
 }
 
 @media(max-width:900px){
-
   .nav-links,
   .header-meta{
     display:none;
@@ -341,11 +345,9 @@ img{
   .footer-main{
     grid-template-columns:1fr 1fr;
   }
-
 }
 
 @media(max-width:640px){
-
   .container{
     padding:0 14px;
   }
@@ -362,7 +364,6 @@ img{
     flex-direction:column;
     gap:6px;
   }
-
 }
 </style>
 </head>
@@ -371,7 +372,6 @@ img{
 
 <header class="site-header">
   <div class="container">
-
     <div class="topbar">
 
       <a href="index.html" class="brand">
@@ -394,14 +394,11 @@ img{
       </div>
 
     </div>
-
   </div>
 </header>
 
 <main class="page">
-
   <div class="container">
-
     <div class="layout">
 
       <aside class="card player-card">
@@ -492,7 +489,6 @@ img{
           <div class="module-body">
 
             <table class="stats-table">
-
               <thead>
                 <tr>
                   <th>Category</th>
@@ -501,7 +497,6 @@ img{
               </thead>
 
               <tbody>
-
                 <tr>
                   <td>Games</td>
                   <td>4</td>
@@ -521,9 +516,7 @@ img{
                   <td>WHIP</td>
                   <td>1.02</td>
                 </tr>
-
               </tbody>
-
             </table>
 
           </div>
@@ -566,6 +559,10 @@ img{
 
             </div>
 
+            <a href="artifacts.html" class="archive-link">
+              View Office of League Records Entry →
+            </a>
+
           </div>
 
         </div>
@@ -573,9 +570,7 @@ img{
       </section>
 
     </div>
-
   </div>
-
 </main>
 
 <footer class="site-footer">
@@ -598,7 +593,6 @@ img{
 
     <div class="footer-col">
       <h4>League</h4>
-
       <a href="standings.html">Standings</a>
       <a href="scores.html">Scores</a>
       <a href="schedule.html">Schedule</a>
@@ -607,7 +601,6 @@ img{
 
     <div class="footer-col">
       <h4>Clubs</h4>
-
       <a href="teams.html">Teams</a>
       <a href="stadiums.html">Stadiums</a>
       <a href="rosters.html">Rosters</a>
@@ -615,26 +608,19 @@ img{
 
     <div class="footer-col">
       <h4>League News</h4>
-
       <a href="news.html">News</a>
       <a href="bulletin.html">League Bulletin</a>
-      <a href="archive.html">Archive</a>
+      <a href="artifacts.html">Office of League Records</a>
     </div>
 
   </div>
 
   <div class="footer-bottom">
-
     <div class="container footer-bottom-inner">
-
       <span>© 2026 Global League Baseball</span>
-
       <span>Season 1</span>
-
       <span>Official League Record</span>
-
     </div>
-
   </div>
 
 </footer>

@@ -12,7 +12,6 @@
   --blue:#1d4f91;
   --border:#d9dee5;
   --bg:#f3f5f7;
-  --card:#ffffff;
   --text:#111111;
   --muted:#5f6b7a;
   --light-text:#dfe7f1;
@@ -20,9 +19,7 @@
   --font-sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
 }
 
-*{
-  box-sizing:border-box;
-}
+*{box-sizing:border-box;}
 
 body{
   margin:0;
@@ -31,15 +28,8 @@ body{
   font-family:var(--font-sans);
 }
 
-a{
-  color:inherit;
-  text-decoration:none;
-}
-
-img{
-  display:block;
-  max-width:100%;
-}
+a{color:inherit;text-decoration:none;}
+img{display:block;max-width:100%;}
 
 .container{
   max-width:var(--max);
@@ -96,9 +86,7 @@ img{
   border-bottom:4px solid transparent;
 }
 
-.nav-links a.active{
-  border-bottom-color:#7fb0ff;
-}
+.nav-links a.active{border-bottom-color:#7fb0ff;}
 
 .header-meta{
   font-size:11px;
@@ -107,9 +95,7 @@ img{
   color:var(--light-text);
 }
 
-.page{
-  padding:28px 0 60px;
-}
+.page{padding:28px 0 60px;}
 
 .layout{
   display:grid;
@@ -124,9 +110,7 @@ img{
   overflow:hidden;
 }
 
-.player-card{
-  padding:18px;
-}
+.player-card{padding:18px;}
 
 .player-photo{
   width:100%;
@@ -171,13 +155,9 @@ img{
   margin-bottom:5px;
 }
 
-.info-box strong{
-  font-size:18px;
-}
+.info-box strong{font-size:18px;}
 
-.module{
-  margin-bottom:24px;
-}
+.module{margin-bottom:24px;}
 
 .module-head{
   padding:16px 18px;
@@ -190,21 +170,7 @@ img{
   font-weight:800;
 }
 
-.module-body{
-  padding:18px;
-}
-
-.archive-note{
-  border-left:4px solid var(--blue);
-  background:#f8fbff;
-  padding:14px;
-  margin-bottom:14px;
-}
-
-.archive-note strong{
-  display:block;
-  margin-bottom:4px;
-}
+.module-body{padding:18px;}
 
 .card-gallery{
   display:grid;
@@ -236,6 +202,59 @@ img{
   margin-top:18px;
   color:var(--blue);
   font-weight:800;
+}
+
+.archive-note{
+  border-left:4px solid var(--blue);
+  background:#f8fbff;
+  padding:14px;
+  margin-bottom:14px;
+}
+
+.archive-note strong{
+  display:block;
+  margin-bottom:4px;
+}
+
+.moment-image{
+  width:100%;
+  border-radius:12px;
+  border:1px solid var(--border);
+  margin-bottom:14px;
+}
+
+.moment-kicker{
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:.1em;
+  color:var(--blue);
+  font-weight:800;
+  margin-bottom:6px;
+}
+
+.moment-title{
+  font-size:28px;
+  line-height:1.05;
+  font-weight:900;
+  margin:0 0 10px;
+}
+
+.moment-copy{
+  color:#2d3742;
+  line-height:1.65;
+  margin:0 0 14px;
+}
+
+.moment-tag{
+  display:inline-block;
+  padding:8px 10px;
+  border-radius:999px;
+  background:#eef4ff;
+  color:#1d4f91;
+  font-size:11px;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:.08em;
 }
 
 .stats-table{
@@ -321,37 +340,16 @@ img{
 }
 
 @media(max-width:900px){
-  .nav-links,
-  .header-meta{
-    display:none;
-  }
-
-  .layout{
-    grid-template-columns:1fr;
-  }
-
-  .footer-main{
-    grid-template-columns:1fr 1fr;
-  }
+  .nav-links,.header-meta{display:none;}
+  .layout{grid-template-columns:1fr;}
+  .footer-main{grid-template-columns:1fr 1fr;}
 }
 
 @media(max-width:640px){
-  .container{
-    padding:0 14px;
-  }
-
-  .player-name{
-    font-size:34px;
-  }
-
-  .footer-main{
-    grid-template-columns:1fr;
-  }
-
-  .footer-bottom-inner{
-    flex-direction:column;
-    gap:6px;
-  }
+  .container{padding:0 14px;}
+  .player-name{font-size:34px;}
+  .footer-main{grid-template-columns:1fr;}
+  .footer-bottom-inner{flex-direction:column;gap:6px;}
 }
 </style>
 </head>
@@ -359,11 +357,8 @@ img{
 <body>
 
 <header class="site-header">
-
   <div class="container">
-
     <div class="topbar">
-
       <a href="index.html" class="brand">
         <div class="brand-mark">GLB</div>
         <div class="brand-sub">Global League Baseball</div>
@@ -379,40 +374,29 @@ img{
         <a href="news.html">News</a>
       </nav>
 
-      <div class="header-meta">
-        Official League Record
-      </div>
-
+      <div class="header-meta">Official League Record</div>
     </div>
-
   </div>
-
 </header>
 
 <main class="page">
-
   <div class="container">
-
     <div class="layout">
 
       <aside class="card player-card">
-
         <img
           class="player-photo"
           src="https://kevin-fuschich.github.io/GLB/assets/images/players/albuquerque-aeros/assets/images/players/idris-kourouma/portrait1.jpg"
           alt="Idris Kourouma portrait"
         >
 
-        <h1 class="player-name">
-          Idris Kourouma
-        </h1>
+        <h1 class="player-name">Idris Kourouma</h1>
 
         <div class="player-meta">
           Albuquerque Aeros · Active GLB Player File
         </div>
 
         <div class="info-grid">
-
           <div class="info-box">
             <small>Position</small>
             <strong>SP</strong>
@@ -432,62 +416,47 @@ img{
             <small>Club</small>
             <strong>Albuquerque Aeros</strong>
           </div>
-
         </div>
-
       </aside>
 
       <section>
 
         <div class="card module">
-
           <div class="module-head">
-            <h2 class="module-title">
-              Broadcast & Archive Files
-            </h2>
+            <h2 class="module-title">Broadcast & Archive Files</h2>
           </div>
 
           <div class="module-body">
-
             <div class="card-gallery">
 
               <div class="card-item">
-
                 <img
                   src="https://kevin-fuschich.github.io/GLB/assets/images/players/albuquerque-aeros/assets/images/players/idris-kourouma/pitch1.jpg"
                   alt="Idris Kourouma pitching"
                 >
-
                 <div class="card-caption">
                   Night Start · Albuquerque Broadcast File
                 </div>
-
               </div>
 
               <div class="card-item">
-
                 <img
                   src="https://kevin-fuschich.github.io/GLB/assets/images/players/albuquerque-aeros/assets/images/players/idris-kourouma/portrait1.jpg"
                   alt="Idris Kourouma portrait"
                 >
-
                 <div class="card-caption">
                   Official League Portrait · OLR Active File
                 </div>
-
               </div>
 
               <div class="card-item">
-
                 <img
                   src="https://kevin-fuschich.github.io/GLB/assets/images/players/albuquerque-aeros/assets/images/players/idris-kourouma/idris-kourouma-card-073.jpg"
                   alt="Southwest Circuit Series Card #073"
                 >
-
                 <div class="card-caption">
                   Southwest Circuit Series · Card #073
                 </div>
-
               </div>
 
             </div>
@@ -495,53 +464,68 @@ img{
             <a href="artifacts.html" class="archive-link">
               View Archived Southwest Circuit Card #073 →
             </a>
-
           </div>
-
         </div>
 
         <div class="card module">
-
           <div class="module-head">
-            <h2 class="module-title">
-              Archive Notes
-            </h2>
+            <h2 class="module-title">Moments</h2>
           </div>
 
           <div class="module-body">
+            <img
+              class="moment-image"
+              src="assets/images/moments/southwestern-dust-event-trash-can.jpg"
+              alt="Overturned trash can at Propellant Park during a dust event"
+            >
 
+            <div class="moment-kicker">
+              OLR Partial Broadcast Recovery
+            </div>
+
+            <h3 class="moment-title">
+              The Long Inning
+            </h3>
+
+            <p class="moment-copy">
+              The seventh inning of the Southwestern Dust Event remains one of the
+              most replayed fragments in Albuquerque broadcast history. Visibility
+              failed across portions of Propellant Park while Kourouma remained on
+              the mound. Supporters later began referring to the inning simply as
+              “The Long Inning.”
+            </p>
+
+            <span class="moment-tag">
+              Southwestern Dust Event
+            </span>
+          </div>
+        </div>
+
+        <div class="card module">
+          <div class="module-head">
+            <h2 class="module-title">Archive Notes</h2>
+          </div>
+
+          <div class="module-body">
             <div class="archive-note">
-              <strong>
-                Civic Record Entry
-              </strong>
-
+              <strong>Civic Record Entry</strong>
               League observers continue to track Kourouma's unusually calm mound presence during high-pressure innings. Several regional broadcasts have referred to him as "The Quiet Arm."
             </div>
 
             <div class="archive-note">
-              <strong>
-                Collector Status
-              </strong>
-
+              <strong>Collector Status</strong>
               Several collectors dispute the printed issue year on early regional promotional materials.
             </div>
-
           </div>
-
         </div>
 
         <div class="card module">
-
           <div class="module-head">
-            <h2 class="module-title">
-              Season Statistics
-            </h2>
+            <h2 class="module-title">Season Statistics</h2>
           </div>
 
           <div class="module-body">
-
             <table class="stats-table">
-
               <thead>
                 <tr>
                   <th>Category</th>
@@ -550,68 +534,35 @@ img{
               </thead>
 
               <tbody>
-
-                <tr>
-                  <td>Games</td>
-                  <td>4</td>
-                </tr>
-
-                <tr>
-                  <td>ERA</td>
-                  <td>2.11</td>
-                </tr>
-
-                <tr>
-                  <td>Strikeouts</td>
-                  <td>28</td>
-                </tr>
-
-                <tr>
-                  <td>WHIP</td>
-                  <td>1.02</td>
-                </tr>
-
+                <tr><td>Games</td><td>4</td></tr>
+                <tr><td>ERA</td><td>2.11</td></tr>
+                <tr><td>Strikeouts</td><td>28</td></tr>
+                <tr><td>WHIP</td><td>1.02</td></tr>
               </tbody>
-
             </table>
-
           </div>
-
         </div>
 
       </section>
 
     </div>
-
   </div>
-
 </main>
 
 <footer class="site-footer">
-
   <div class="container footer-main">
 
     <div>
-
-      <div class="footer-logo">
-        GLB
-      </div>
-
-      <div class="footer-tag">
-        Global League Baseball
-      </div>
-
+      <div class="footer-logo">GLB</div>
+      <div class="footer-tag">Global League Baseball</div>
       <p class="footer-desc">
-        Official league site providing scores,
-        standings, schedules, club information,
-        and league bulletins.
+        Official league site providing scores, standings, schedules,
+        club information, and league bulletins.
       </p>
-
     </div>
 
     <div class="footer-col">
       <h4>League</h4>
-
       <a href="standings.html">Standings</a>
       <a href="scores.html">Scores</a>
       <a href="schedule.html">Schedule</a>
@@ -620,7 +571,6 @@ img{
 
     <div class="footer-col">
       <h4>Clubs</h4>
-
       <a href="teams.html">Teams</a>
       <a href="stadiums.html">Stadiums</a>
       <a href="rosters.html">Rosters</a>
@@ -628,7 +578,6 @@ img{
 
     <div class="footer-col">
       <h4>Archive</h4>
-
       <a href="artifacts.html">Office of League Records</a>
       <a href="news.html">League News</a>
     </div>
@@ -636,19 +585,12 @@ img{
   </div>
 
   <div class="footer-bottom">
-
     <div class="container footer-bottom-inner">
-
       <span>© 2026 Global League Baseball</span>
-
       <span>Season 1</span>
-
       <span>Official League Record</span>
-
     </div>
-
   </div>
-
 </footer>
 
 </body>

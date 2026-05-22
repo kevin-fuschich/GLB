@@ -3,8 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>GLB — Idris Kourouma</title>
+<title>GLB Player</title>
 
 <style>
 :root{
@@ -12,337 +11,80 @@
   --blue:#1d4f91;
   --border:#d9dee5;
   --bg:#f3f5f7;
-  --text:#111111;
+  --text:#111;
   --muted:#5f6b7a;
   --light-text:#dfe7f1;
   --max:1280px;
-  --font-sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  --font:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
 }
 
 *{box-sizing:border-box;}
 
-body{
-  margin:0;
-  background:var(--bg);
-  color:var(--text);
-  font-family:var(--font-sans);
-}
-
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--font);}
 a{color:inherit;text-decoration:none;}
 img{display:block;max-width:100%;}
 
-.container{
-  max-width:var(--max);
-  margin:0 auto;
-  padding:0 20px;
-}
+.container{max-width:var(--max);margin:0 auto;padding:0 20px;}
 
-.site-header{
-  background:var(--navy);
-  color:#fff;
-  border-bottom:1px solid rgba(255,255,255,.08);
-}
-
-.topbar{
-  min-height:72px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:20px;
-}
-
-.brand{
-  display:flex;
-  align-items:center;
-  gap:14px;
-}
-
-.brand-mark{
-  font-weight:800;
-  letter-spacing:1.4px;
-  font-size:24px;
-}
-
-.brand-sub{
-  font-size:11px;
-  text-transform:uppercase;
-  letter-spacing:1.2px;
-  color:var(--light-text);
-}
-
-.nav-links{
-  display:flex;
-  flex:1;
-  justify-content:center;
-}
-
-.nav-links a{
-  color:rgba(255,255,255,.92);
-  padding:26px 16px 22px;
-  font-size:13px;
-  font-weight:600;
-  text-transform:uppercase;
-  letter-spacing:.8px;
-  border-bottom:4px solid transparent;
-}
-
+.site-header{background:var(--navy);color:#fff;border-bottom:1px solid rgba(255,255,255,.08);}
+.topbar{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px;}
+.brand{display:flex;align-items:center;gap:14px;}
+.brand-mark{font-weight:800;letter-spacing:1.4px;font-size:24px;}
+.brand-sub{font-size:11px;text-transform:uppercase;letter-spacing:1.2px;color:var(--light-text);}
+.nav-links{display:flex;flex:1;justify-content:center;}
+.nav-links a{color:rgba(255,255,255,.92);padding:26px 16px 22px;font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.8px;border-bottom:4px solid transparent;}
 .nav-links a.active{border-bottom-color:#7fb0ff;}
-
-.header-meta{
-  font-size:11px;
-  text-transform:uppercase;
-  letter-spacing:1px;
-  color:var(--light-text);
-}
+.header-meta{font-size:11px;text-transform:uppercase;letter-spacing:1px;color:var(--light-text);}
 
 .page{padding:28px 0 60px;}
+.layout{display:grid;grid-template-columns:340px 1fr;gap:28px;}
 
-.layout{
-  display:grid;
-  grid-template-columns:340px 1fr;
-  gap:28px;
-}
-
-.card{
-  background:#fff;
-  border:1px solid var(--border);
-  border-radius:14px;
-  overflow:hidden;
-}
-
+.card{background:#fff;border:1px solid var(--border);border-radius:14px;overflow:hidden;}
 .player-card{padding:18px;}
 
-.player-photo{
-  width:100%;
-  aspect-ratio:1/1;
-  object-fit:cover;
-  border-radius:12px;
-  border:1px solid var(--border);
-}
+.player-photo{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:12px;border:1px solid var(--border);background:#eef2f5;}
+.player-name{font-size:42px;line-height:1;margin:18px 0 10px;font-weight:900;}
+.player-meta{color:var(--muted);font-size:14px;margin-bottom:22px;}
 
-.player-name{
-  font-size:42px;
-  line-height:1;
-  margin:18px 0 10px;
-  font-weight:900;
-}
-
-.player-meta{
-  color:var(--muted);
-  font-size:14px;
-  margin-bottom:22px;
-}
-
-.info-grid{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:12px;
-}
-
-.info-box{
-  border:1px solid var(--border);
-  border-radius:10px;
-  padding:12px;
-  background:#fafbfd;
-}
-
-.info-box small{
-  display:block;
-  font-size:10px;
-  text-transform:uppercase;
-  letter-spacing:.08em;
-  color:var(--muted);
-  margin-bottom:5px;
-}
-
+.info-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;}
+.info-box{border:1px solid var(--border);border-radius:10px;padding:12px;background:#fafbfd;}
+.info-box small{display:block;font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:5px;}
 .info-box strong{font-size:18px;}
 
 .module{margin-bottom:24px;}
-
-.module-head{
-  padding:16px 18px;
-  border-bottom:1px solid var(--border);
-}
-
-.module-title{
-  margin:0;
-  font-size:18px;
-  font-weight:800;
-}
-
+.module-head{padding:16px 18px;border-bottom:1px solid var(--border);}
+.module-title{margin:0;font-size:18px;font-weight:800;}
 .module-body{padding:18px;}
 
-.card-gallery{
-  display:grid;
-  grid-template-columns:repeat(auto-fill,minmax(240px,1fr));
-  gap:20px;
-}
+.card-gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:20px;}
+.card-item{border:1px solid var(--border);border-radius:12px;overflow:hidden;background:#fff;}
+.card-item img{width:100%;aspect-ratio:4/3;object-fit:cover;}
+.card-caption{padding:12px;font-size:13px;color:var(--muted);}
 
-.card-item{
-  border:1px solid var(--border);
-  border-radius:12px;
-  overflow:hidden;
-  background:#fff;
-}
+.archive-link{display:inline-block;margin-top:18px;color:var(--blue);font-weight:800;}
 
-.card-item img{
-  width:100%;
-  aspect-ratio:4/3;
-  object-fit:cover;
-}
+.archive-note{border-left:4px solid var(--blue);background:#f8fbff;padding:14px;margin-bottom:14px;line-height:1.55;}
+.archive-note strong{display:block;margin-bottom:4px;}
 
-.card-caption{
-  padding:12px;
-  font-size:13px;
-  color:var(--muted);
-}
+.moment-image,.sighting-image{width:100%;border-radius:12px;border:1px solid var(--border);margin-bottom:14px;}
+.moment-kicker,.sighting-kicker{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--blue);font-weight:800;margin-bottom:6px;}
+.moment-title,.sighting-title{font-size:28px;line-height:1.05;font-weight:900;margin:0 0 10px;}
+.moment-copy,.sighting-copy{color:#2d3742;line-height:1.65;margin:0 0 14px;}
+.moment-tag,.sighting-tag{display:inline-block;padding:8px 10px;border-radius:999px;background:#eef4ff;color:#1d4f91;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;}
 
-.archive-link{
-  display:inline-block;
-  margin-top:18px;
-  color:var(--blue);
-  font-weight:800;
-}
+.stats-table{width:100%;border-collapse:collapse;}
+.stats-table th,.stats-table td{padding:12px;border-bottom:1px solid var(--border);font-size:13px;}
+.stats-table th{text-align:left;text-transform:uppercase;font-size:11px;color:var(--muted);}
 
-.archive-note{
-  border-left:4px solid var(--blue);
-  background:#f8fbff;
-  padding:14px;
-  margin-bottom:14px;
-}
-
-.archive-note strong{
-  display:block;
-  margin-bottom:4px;
-}
-
-.moment-image,
-.sighting-image{
-  width:100%;
-  border-radius:12px;
-  border:1px solid var(--border);
-  margin-bottom:14px;
-}
-
-.moment-kicker,
-.sighting-kicker{
-  font-size:11px;
-  text-transform:uppercase;
-  letter-spacing:.1em;
-  color:var(--blue);
-  font-weight:800;
-  margin-bottom:6px;
-}
-
-.moment-title,
-.sighting-title{
-  font-size:28px;
-  line-height:1.05;
-  font-weight:900;
-  margin:0 0 10px;
-}
-
-.moment-copy,
-.sighting-copy{
-  color:#2d3742;
-  line-height:1.65;
-  margin:0 0 14px;
-}
-
-.moment-tag,
-.sighting-tag{
-  display:inline-block;
-  padding:8px 10px;
-  border-radius:999px;
-  background:#eef4ff;
-  color:#1d4f91;
-  font-size:11px;
-  font-weight:800;
-  text-transform:uppercase;
-  letter-spacing:.08em;
-}
-
-.stats-table{
-  width:100%;
-  border-collapse:collapse;
-}
-
-.stats-table th,
-.stats-table td{
-  padding:12px;
-  border-bottom:1px solid var(--border);
-  font-size:13px;
-}
-
-.stats-table th{
-  text-align:left;
-  text-transform:uppercase;
-  font-size:11px;
-  color:var(--muted);
-}
-
-.site-footer{
-  margin-top:60px;
-  background:#0b1e33;
-  color:#dfe7f1;
-}
-
-.footer-main{
-  display:grid;
-  grid-template-columns:1.6fr 1fr 1fr 1fr;
-  gap:40px;
-  padding:46px 20px;
-}
-
-.footer-logo{
-  font-weight:800;
-  font-size:26px;
-  letter-spacing:1.4px;
-  margin-bottom:8px;
-}
-
-.footer-tag{
-  font-size:11px;
-  text-transform:uppercase;
-  letter-spacing:1px;
-  color:#9fb6d1;
-  margin-bottom:14px;
-}
-
-.footer-desc{
-  margin:0;
-  color:#b8c8dc;
-  line-height:1.5;
-  font-size:13px;
-}
-
-.footer-col h4{
-  margin:0 0 12px;
-  color:#fff;
-  font-size:12px;
-  text-transform:uppercase;
-  letter-spacing:1px;
-}
-
-.footer-col a{
-  display:block;
-  margin:9px 0;
-  color:#b8c8dc;
-  font-size:13px;
-}
-
-.footer-bottom{
-  border-top:1px solid rgba(255,255,255,.08);
-  color:#9fb6d1;
-  font-size:12px;
-}
-
-.footer-bottom-inner{
-  display:flex;
-  justify-content:space-between;
-  gap:20px;
-  padding:16px 20px;
-}
+.site-footer{margin-top:60px;background:#0b1e33;color:#dfe7f1;}
+.footer-main{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:40px;padding:46px 20px;}
+.footer-logo{font-weight:800;font-size:26px;letter-spacing:1.4px;margin-bottom:8px;}
+.footer-tag{font-size:11px;text-transform:uppercase;letter-spacing:1px;color:#9fb6d1;margin-bottom:14px;}
+.footer-desc{margin:0;color:#b8c8dc;line-height:1.5;font-size:13px;}
+.footer-col h4{margin:0 0 12px;color:#fff;font-size:12px;text-transform:uppercase;letter-spacing:1px;}
+.footer-col a{display:block;margin:9px 0;color:#b8c8dc;font-size:13px;}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.08);color:#9fb6d1;font-size:12px;}
+.footer-bottom-inner{display:flex;justify-content:space-between;gap:20px;padding:16px 20px;}
 
 @media(max-width:900px){
   .nav-links,.header-meta{display:none;}
@@ -389,37 +131,33 @@ img{display:block;max-width:100%;}
     <div class="layout">
 
       <aside class="card player-card">
-        <img
-          class="player-photo"
-          src="https://kevin-fuschich.github.io/GLB/assets/images/players/albuquerque-aeros/assets/images/players/idris-kourouma/portrait1.jpg"
-          alt="Idris Kourouma portrait"
-        >
+        <img id="playerPhoto" class="player-photo" src="" alt="">
 
-        <h1 class="player-name">Idris Kourouma</h1>
+        <h1 id="playerName" class="player-name">Loading...</h1>
 
-        <div class="player-meta">
-          Albuquerque Aeros · Active GLB Player File
+        <div id="playerMeta" class="player-meta">
+          Active GLB Player File
         </div>
 
         <div class="info-grid">
           <div class="info-box">
             <small>Position</small>
-            <strong>SP</strong>
+            <strong id="playerPosition">—</strong>
           </div>
 
           <div class="info-box">
             <small>Age</small>
-            <strong>29</strong>
+            <strong id="playerAge">—</strong>
           </div>
 
           <div class="info-box">
             <small>Bats / Throws</small>
-            <strong>R/R</strong>
+            <strong id="playerBT">—</strong>
           </div>
 
           <div class="info-box">
             <small>Club</small>
-            <strong>Albuquerque Aeros</strong>
+            <strong id="playerClub">Albuquerque Aeros</strong>
           </div>
         </div>
       </aside>
@@ -432,112 +170,20 @@ img{display:block;max-width:100%;}
           </div>
 
           <div class="module-body">
-            <div class="card-gallery">
-
+            <div class="card-gallery" id="archiveGallery">
               <div class="card-item">
-                <img
-                  src="https://kevin-fuschich.github.io/GLB/assets/images/players/albuquerque-aeros/assets/images/players/idris-kourouma/pitch1.jpg"
-                  alt="Idris Kourouma pitching"
-                >
-                <div class="card-caption">
-                  Night Start · Albuquerque Broadcast File
-                </div>
+                <img id="archiveImageOne" src="" alt="">
+                <div id="archiveCaptionOne" class="card-caption">Active roster portrait</div>
               </div>
-
-              <div class="card-item">
-                <img
-                  src="https://kevin-fuschich.github.io/GLB/assets/images/players/albuquerque-aeros/assets/images/players/idris-kourouma/portrait1.jpg"
-                  alt="Idris Kourouma portrait"
-                >
-                <div class="card-caption">
-                  Official League Portrait · OLR Active File
-                </div>
-              </div>
-
-              <div class="card-item">
-                <img
-                  src="https://kevin-fuschich.github.io/GLB/assets/images/players/albuquerque-aeros/assets/images/players/idris-kourouma/idris-kourouma-card-073.jpg"
-                  alt="Southwest Circuit Series Card #073"
-                >
-                <div class="card-caption">
-                  Southwest Circuit Series · Card #073
-                </div>
-              </div>
-
             </div>
 
-            <a href="artifacts.html" class="archive-link">
-              View Archived Southwest Circuit Card #073 →
+            <a id="archiveLink" href="artifacts.html" class="archive-link">
+              View Office of League Records →
             </a>
           </div>
         </div>
 
-        <div class="card module">
-          <div class="module-head">
-            <h2 class="module-title">Moments</h2>
-          </div>
-
-          <div class="module-body">
-            <img
-              class="moment-image"
-              src="assets/images/moments/southwestern-dust-event-trash-can.jpg"
-              alt="Overturned trash can at Propellant Park during a dust event"
-            >
-
-            <div class="moment-kicker">
-              OLR Partial Broadcast Recovery
-            </div>
-
-            <h3 class="moment-title">
-              The Long Inning
-            </h3>
-
-            <p class="moment-copy">
-              The seventh inning of the Southwestern Dust Event remains one of the
-              most replayed fragments in Albuquerque broadcast history. Visibility
-              failed across portions of Propellant Park while Kourouma remained on
-              the mound. Supporters later began referring to the inning simply as
-              “The Long Inning.”
-            </p>
-
-            <span class="moment-tag">
-              Southwestern Dust Event
-            </span>
-          </div>
-        </div>
-
-        <div class="card module">
-          <div class="module-head">
-            <h2 class="module-title">Sightings</h2>
-          </div>
-
-          <div class="module-body">
-            <img
-              class="sighting-image"
-              src="assets/images/sightings/idris-roasted-corn-gate-d.jpg"
-              alt="Idris Kourouma buying roasted corn near Gate D"
-            >
-
-            <div class="sighting-kicker">
-              Supporter Upload · Approx. May 2023
-            </div>
-
-            <h3 class="sighting-title">
-              Roasted Corn Near Gate D
-            </h3>
-
-            <p class="sighting-copy">
-              One of the earliest widely shared public sightings of Kourouma away
-              from the field shows him buying roasted corn from a vendor near Gate D
-              after a late home game. The image circulated among Aeros supporters
-              before being copied into the public OLR index.
-            </p>
-
-            <span class="sighting-tag">
-              Unverified Public Sighting
-            </span>
-          </div>
-        </div>
+        <div id="idrisMoments"></div>
 
         <div class="card module">
           <div class="module-head">
@@ -547,12 +193,12 @@ img{display:block;max-width:100%;}
           <div class="module-body">
             <div class="archive-note">
               <strong>Civic Record Entry</strong>
-              League observers continue to track Kourouma's unusually calm mound presence during high-pressure innings. Several regional broadcasts have referred to him as "The Quiet Arm."
+              <span id="archiveNote">Active GLB player file currently under public archive review.</span>
             </div>
 
             <div class="archive-note">
               <strong>Collector Status</strong>
-              Several collectors dispute the printed issue year on early regional promotional materials.
+              <span id="collectorNote">No dedicated collector file has been published for this player.</span>
             </div>
           </div>
         </div>
@@ -573,9 +219,9 @@ img{display:block;max-width:100%;}
 
               <tbody>
                 <tr><td>Games</td><td>4</td></tr>
-                <tr><td>ERA</td><td>2.11</td></tr>
-                <tr><td>Strikeouts</td><td>28</td></tr>
-                <tr><td>WHIP</td><td>1.02</td></tr>
+                <tr><td>Archive Status</td><td>Active File</td></tr>
+                <tr><td>Club</td><td>Albuquerque Aeros</td></tr>
+                <tr><td>Record Type</td><td>Public Player File</td></tr>
               </tbody>
             </table>
           </div>
@@ -610,8 +256,7 @@ img{display:block;max-width:100%;}
     <div class="footer-col">
       <h4>Clubs</h4>
       <a href="teams.html">Teams</a>
-      <a href="stadiums.html">Stadiums</a>
-      <a href="rosters.html">Rosters</a>
+      <a href="team.html?team=albuquerque-aeros">Albuquerque Aeros</a>
     </div>
 
     <div class="footer-col">
@@ -630,6 +275,196 @@ img{display:block;max-width:100%;}
     </div>
   </div>
 </footer>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+const playerSlug = params.get("player") || "idris-kourouma";
+
+const teamSlug = "albuquerque-aeros";
+const cityPrefix = "albuquerque";
+const teamName = "Albuquerque Aeros";
+
+function titleCaseFromSlug(value){
+  return value
+    .split("-")
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ");
+}
+
+async function getJson(path){
+  const response = await fetch(path);
+  if(!response.ok){
+    throw new Error(path + " failed");
+  }
+  return response.json();
+}
+
+function playerImagePath(slug){
+  return `assets/teams/${teamSlug}/images/players/${cityPrefix}-${slug}.png`;
+}
+
+function setImageFallback(img){
+  img.onerror = function(){
+    this.src = "https://placehold.co/800x800/e8edf2/5f6b7a?text=Portrait+Unavailable";
+  };
+}
+
+async function loadPlayer(){
+  let player = {
+    name: titleCaseFromSlug(playerSlug),
+    slug: playerSlug,
+    position: "—",
+    age: "—",
+    bats: "—",
+    throws: "—"
+  };
+
+  try{
+    const roster = await getJson(`data/rosters/${teamSlug}.json`);
+    const found = roster.players.find(p => p.slug === playerSlug);
+
+    if(found){
+      player = found;
+    }
+  }catch(error){
+    console.warn("Roster unavailable", error);
+  }
+
+  const photo = playerImagePath(player.slug);
+
+  document.title = `GLB — ${player.name}`;
+  document.getElementById("playerName").textContent = player.name;
+  document.getElementById("playerMeta").textContent = `${teamName} · Active GLB Player File`;
+  document.getElementById("playerPosition").textContent = player.position || "—";
+  document.getElementById("playerAge").textContent = player.age || "—";
+  document.getElementById("playerBT").textContent = `${player.bats || "—"}/${player.throws || "—"}`;
+  document.getElementById("playerClub").textContent = teamName;
+
+  const playerPhoto = document.getElementById("playerPhoto");
+  playerPhoto.src = photo;
+  playerPhoto.alt = `${player.name} portrait`;
+  setImageFallback(playerPhoto);
+
+  const archiveImageOne = document.getElementById("archiveImageOne");
+  archiveImageOne.src = photo;
+  archiveImageOne.alt = `${player.name} roster portrait`;
+  setImageFallback(archiveImageOne);
+
+  document.getElementById("archiveCaptionOne").textContent =
+    `${player.name} · Active roster portrait`;
+
+  if(player.slug === "idris-kourouma"){
+    loadIdrisSpecialContent();
+  }
+}
+
+function loadIdrisSpecialContent(){
+  document.getElementById("archiveGallery").innerHTML = `
+    <div class="card-item">
+      <img
+        src="https://kevin-fuschich.github.io/GLB/assets/images/players/albuquerque-aeros/assets/images/players/idris-kourouma/pitch1.jpg"
+        alt="Idris Kourouma pitching"
+      >
+      <div class="card-caption">
+        Night Start · Albuquerque Broadcast File
+      </div>
+    </div>
+
+    <div class="card-item">
+      <img
+        src="https://kevin-fuschich.github.io/GLB/assets/images/players/albuquerque-aeros/assets/images/players/idris-kourouma/portrait1.jpg"
+        alt="Idris Kourouma portrait"
+      >
+      <div class="card-caption">
+        Official League Portrait · OLR Active File
+      </div>
+    </div>
+
+    <div class="card-item">
+      <img
+        src="https://kevin-fuschich.github.io/GLB/assets/images/players/albuquerque-aeros/assets/images/players/idris-kourouma/idris-kourouma-card-073.jpg"
+        alt="Southwest Circuit Series Card #073"
+      >
+      <div class="card-caption">
+        Southwest Circuit Series · Card #073
+      </div>
+    </div>
+  `;
+
+  document.getElementById("archiveLink").textContent =
+    "View Archived Southwest Circuit Card #073 →";
+
+  document.getElementById("archiveNote").textContent =
+    'League observers continue to track Kourouma’s unusually calm mound presence during high-pressure innings. Several regional broadcasts have referred to him as "The Quiet Arm."';
+
+  document.getElementById("collectorNote").textContent =
+    "Several collectors dispute the printed issue year on early regional promotional materials.";
+
+  document.getElementById("idrisMoments").innerHTML = `
+    <div class="card module">
+      <div class="module-head">
+        <h2 class="module-title">Moments</h2>
+      </div>
+
+      <div class="module-body">
+        <img
+          class="moment-image"
+          src="assets/images/moments/southwestern-dust-event-trash-can.jpg"
+          alt="Overturned trash can at Propellant Park during a dust event"
+        >
+
+        <div class="moment-kicker">
+          OLR Partial Broadcast Recovery
+        </div>
+
+        <h3 class="moment-title">
+          The Long Inning
+        </h3>
+
+        <p class="moment-copy">
+          The seventh inning of the Southwestern Dust Event remains one of the most replayed fragments in Albuquerque broadcast history. Visibility failed across portions of Propellant Park while Kourouma remained on the mound. Supporters later began referring to the inning simply as “The Long Inning.”
+        </p>
+
+        <span class="moment-tag">
+          Southwestern Dust Event
+        </span>
+      </div>
+    </div>
+
+    <div class="card module">
+      <div class="module-head">
+        <h2 class="module-title">Sightings</h2>
+      </div>
+
+      <div class="module-body">
+        <img
+          class="sighting-image"
+          src="assets/images/sightings/idris-roasted-corn-gate-d.jpg"
+          alt="Idris Kourouma buying roasted corn near Gate D"
+        >
+
+        <div class="sighting-kicker">
+          Supporter Upload · Approx. May 2023
+        </div>
+
+        <h3 class="sighting-title">
+          Roasted Corn Near Gate D
+        </h3>
+
+        <p class="sighting-copy">
+          One of the earliest widely shared public sightings of Kourouma away from the field shows him buying roasted corn from a vendor near Gate D after a late home game. The image circulated among Aeros supporters before being copied into the public OLR index.
+        </p>
+
+        <span class="sighting-tag">
+          Unverified Public Sighting
+        </span>
+      </div>
+    </div>
+  `;
+}
+
+loadPlayer();
+</script>
 
 </body>
 </html>

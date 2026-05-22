@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Propellant Park | Albuquerque Aeros</title>
+<title>GLB — Propellant Park</title>
 
 <style>
 :root{
@@ -14,9 +14,9 @@
   --bg:#f3f5f7;
   --text:#111111;
   --muted:#5f6b7a;
-  --light-text:#dfe7f1;
+  --light:#dfe7f1;
   --max:1280px;
-  --font-sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  --font:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
 }
 
 *{box-sizing:border-box;}
@@ -25,17 +25,26 @@ body{
   margin:0;
   background:var(--bg);
   color:var(--text);
-  font-family:var(--font-sans);
+  font-family:var(--font);
 }
 
-a{color:inherit;text-decoration:none;}
-img{display:block;max-width:100%;}
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+img{
+  display:block;
+  max-width:100%;
+}
 
 .container{
   max-width:var(--max);
   margin:0 auto;
   padding:0 20px;
 }
+
+/* HEADER */
 
 .site-header{
   background:var(--navy);
@@ -67,7 +76,7 @@ img{display:block;max-width:100%;}
   font-size:11px;
   text-transform:uppercase;
   letter-spacing:1.2px;
-  color:var(--light-text);
+  color:var(--light);
 }
 
 .nav-links{
@@ -86,62 +95,72 @@ img{display:block;max-width:100%;}
   border-bottom:4px solid transparent;
 }
 
-.nav-links a.active{border-bottom-color:#7fb0ff;}
+.nav-links a.active{
+  border-bottom-color:#7fb0ff;
+}
 
 .header-meta{
   font-size:11px;
   text-transform:uppercase;
   letter-spacing:1px;
-  color:var(--light-text);
+  color:var(--light);
 }
+
+/* HERO */
 
 .hero{
   position:relative;
-  min-height:460px;
+  height:560px;
+  overflow:hidden;
   background:
-    linear-gradient(to top, rgba(0,0,0,.72), rgba(0,0,0,.18)),
-    url("../../images/moments/southwestern-dust-event-trash-can.jpg") center center / cover no-repeat,
-    #31455d;
+    linear-gradient(
+      rgba(11,30,51,.30),
+      rgba(11,30,51,.55)
+    ),
+    url("images/ballpark/propellant-park-overview.jpg")
+    center/cover no-repeat;
+}
+
+.hero-content{
+  position:absolute;
+  left:40px;
+  bottom:40px;
+  max-width:760px;
   color:#fff;
 }
 
-.hero-inner{
-  max-width:var(--max);
-  margin:0 auto;
-  padding:260px 20px 42px;
-}
-
-.kicker{
+.hero-kicker{
   font-size:12px;
-  text-transform:uppercase;
   letter-spacing:.12em;
-  font-weight:800;
-  color:#cfe1ff;
+  text-transform:uppercase;
+  opacity:.9;
   margin-bottom:10px;
 }
 
 .hero h1{
-  margin:0 0 10px;
-  font-size:62px;
-  line-height:.95;
+  font-size:72px;
+  line-height:.92;
+  margin:0 0 14px;
   font-weight:900;
 }
 
 .hero p{
-  max-width:760px;
+  font-size:18px;
+  line-height:1.6;
   margin:0;
-  color:rgba(255,255,255,.9);
-  font-size:16px;
-  line-height:1.55;
+  max-width:680px;
+  color:#eef3fa;
 }
 
+/* PAGE */
+
 .page{
-  padding:28px 0 60px;
+  padding:34px 0 60px;
 }
 
 .layout{
   display:grid;
-  grid-template-columns:1.6fr .9fr;
+  grid-template-columns:2fr 1fr;
   gap:28px;
 }
 
@@ -150,94 +169,113 @@ img{display:block;max-width:100%;}
   border:1px solid var(--border);
   border-radius:14px;
   overflow:hidden;
-  margin-bottom:24px;
+  margin-bottom:28px;
 }
 
 .card-head{
-  padding:16px 18px;
+  padding:18px 20px;
   border-bottom:1px solid var(--border);
 }
 
-.card-head h2{
+.card-title{
   margin:0;
-  font-size:19px;
-  font-weight:900;
+  font-size:20px;
+  font-weight:800;
 }
 
 .card-body{
-  padding:18px;
+  padding:20px;
 }
 
-.copy{
-  color:#2d3742;
-  line-height:1.65;
-  margin:0 0 16px;
+/* SPONSOR */
+
+.sponsor-banner{
+  margin-bottom:28px;
+  border-radius:14px;
+  overflow:hidden;
+  border:1px solid var(--border);
+  background:#fff;
 }
 
-.info-grid{
+.sponsor-banner img{
+  width:100%;
+  height:auto;
+  display:block;
+}
+
+/* GALLERY */
+
+.gallery{
   display:grid;
   grid-template-columns:repeat(2,1fr);
-  gap:12px;
+  gap:18px;
+}
+
+.gallery img{
+  width:100%;
+  border-radius:12px;
+  border:1px solid var(--border);
+}
+
+.caption{
+  margin-top:10px;
+  font-size:13px;
+  color:var(--muted);
+  line-height:1.5;
+}
+
+/* INFO */
+
+.info-list{
+  display:grid;
+  gap:14px;
 }
 
 .info-box{
   border:1px solid var(--border);
   border-radius:10px;
-  padding:12px;
+  padding:14px;
   background:#fafbfd;
 }
 
 .info-box small{
   display:block;
+  margin-bottom:4px;
   font-size:10px;
-  text-transform:uppercase;
   letter-spacing:.08em;
+  text-transform:uppercase;
   color:var(--muted);
-  margin-bottom:5px;
 }
 
 .info-box strong{
-  font-size:17px;
-}
-
-.archive-note{
-  border-left:4px solid var(--blue);
-  background:#f8fbff;
-  padding:14px;
-  margin-bottom:14px;
-  line-height:1.55;
-}
-
-.archive-note strong{
   display:block;
+  font-size:18px;
   margin-bottom:4px;
 }
 
-.photo{
-  width:100%;
-  border-radius:12px;
-  border:1px solid var(--border);
-  margin-bottom:12px;
-}
-
-.caption{
-  color:var(--muted);
+.info-box span{
   font-size:13px;
-  line-height:1.45;
+  color:var(--muted);
+  line-height:1.5;
 }
 
-.tag{
-  display:inline-block;
-  margin-top:10px;
-  padding:8px 10px;
-  border-radius:999px;
-  background:#eef4ff;
-  color:#1d4f91;
-  font-size:11px;
-  font-weight:800;
-  text-transform:uppercase;
-  letter-spacing:.08em;
+/* NOTES */
+
+.note{
+  border-left:4px solid var(--blue);
+  background:#f8fbff;
+  padding:16px;
+  margin-bottom:14px;
+  line-height:1.6;
+  color:#2d3742;
 }
+
+.note strong{
+  display:block;
+  margin-bottom:6px;
+}
+
+/* FOOTER */
 
 .site-footer{
   margin-top:60px;
@@ -302,20 +340,68 @@ img{display:block;max-width:100%;}
   padding:16px 20px;
 }
 
+/* MOBILE */
+
 @media(max-width:900px){
-  .nav-links,.header-meta{display:none;}
-  .layout{grid-template-columns:1fr;}
-  .footer-main{grid-template-columns:1fr 1fr;}
-  .hero h1{font-size:44px;}
+
+  .nav-links,
+  .header-meta{
+    display:none;
+  }
+
+  .layout{
+    grid-template-columns:1fr;
+  }
+
+  .hero{
+    height:460px;
+  }
+
+  .hero h1{
+    font-size:54px;
+  }
+
+  .gallery{
+    grid-template-columns:1fr;
+  }
+
+  .footer-main{
+    grid-template-columns:1fr 1fr;
+  }
 }
 
 @media(max-width:640px){
-  .container{padding:0 14px;}
-  .hero-inner{padding:220px 14px 32px;}
-  .hero h1{font-size:38px;}
-  .info-grid{grid-template-columns:1fr;}
-  .footer-main{grid-template-columns:1fr;}
-  .footer-bottom-inner{flex-direction:column;gap:6px;}
+
+  .container{
+    padding:0 14px;
+  }
+
+  .hero{
+    height:420px;
+  }
+
+  .hero-content{
+    left:22px;
+    right:22px;
+    bottom:26px;
+  }
+
+  .hero h1{
+    font-size:42px;
+  }
+
+  .hero p{
+    font-size:15px;
+  }
+
+  .footer-main{
+    grid-template-columns:1fr;
+  }
+
+  .footer-bottom-inner{
+    flex-direction:column;
+    gap:6px;
+  }
 }
 </style>
 </head>
@@ -325,6 +411,7 @@ img{display:block;max-width:100%;}
 <header class="site-header">
   <div class="container">
     <div class="topbar">
+
       <a href="../../../index.html" class="brand">
         <div class="brand-mark">GLB</div>
         <div class="brand-sub">Global League Baseball</div>
@@ -336,74 +423,157 @@ img{display:block;max-width:100%;}
         <a href="../../../standings.html">Standings</a>
         <a href="../../../schedule.html">Schedule</a>
         <a href="../../../teams.html" class="active">Teams</a>
-        <a href="../../../stats.html">Players</a>
+        <a href="../../../stats.html">Stats</a>
         <a href="../../../news.html">News</a>
       </nav>
 
-      <div class="header-meta">Albuquerque Aeros Club File</div>
+      <div class="header-meta">
+        Official Ballpark File
+      </div>
+
     </div>
   </div>
 </header>
 
 <section class="hero">
-  <div class="hero-inner">
-    <div class="kicker">Albuquerque Aeros Ballpark File</div>
-    <h1>Propellant Park</h1>
+  <div class="hero-content">
+
+    <div class="hero-kicker">
+      Albuquerque Aeros Ballpark File
+    </div>
+
+    <h1>
+      Propellant Park
+    </h1>
+
     <p>
-      A high-desert ballpark known for late starts, low visibility broadcasts,
-      concession smoke, and the persistent civic mythology of the Southwestern Dust Event.
+      Set against the Sandia Mountains and illuminated by
+      the glow of New Mexico sunset skies, Propellant Park
+      has quickly become one of the defining environments
+      of the GLB Southwestern Conference.
     </p>
+
   </div>
 </section>
 
 <main class="page">
+
   <div class="container">
+
+    <div class="sponsor-banner">
+      <img
+        src="images/sponsors/propellant-energy-family-night-ad.jpg"
+        alt="Propellant Energy family night advertisement"
+      >
+    </div>
+
     <div class="layout">
 
       <section>
 
         <div class="card">
+
           <div class="card-head">
-            <h2>Park Overview</h2>
+            <h2 class="card-title">
+              Ballpark Gallery
+            </h2>
           </div>
 
           <div class="card-body">
-            <p class="copy">
-              Propellant Park sits on the eastern edge of Albuquerque’s public transit corridor,
-              where stadium lights are visible through dry evening air long before the gates appear.
-              The park is known less for luxury than for atmosphere: warm metal railings, vendor smoke,
-              dust on the lower concourse, and the peculiar hush that settles over the crowd during
-              late innings.
-            </p>
 
-            <p class="copy">
-              Aeros supporters often describe the park as sounding larger than it looks. Radio calls,
-              hand-cranked noisemakers, warning-track footsteps, and the low hum of the outfield fixtures
-              are all part of the venue’s public memory.
-            </p>
+            <div class="gallery">
+
+              <div>
+                <img
+                  src="images/ballpark/propellant-park-gate.jpg"
+                  alt="Propellant Park front gate"
+                >
+
+                <div class="caption">
+                  Sunset crowds arriving through the main
+                  gate before opening pitch.
+                </div>
+              </div>
+
+              <div>
+                <img
+                  src="images/ballpark/propellant-park-concourse.jpg"
+                  alt="Propellant Park concourse"
+                >
+
+                <div class="caption">
+                  The central concourse remains one of the
+                  busiest gathering spaces in the league.
+                </div>
+              </div>
+
+              <div>
+                <img
+                  src="images/ballpark/propellant-park-sunset.jpg"
+                  alt="Propellant Park at sunset"
+                >
+
+                <div class="caption">
+                  Evening games beneath the Sandia skyline
+                  have become a signature broadcast image.
+                </div>
+              </div>
+
+              <div>
+                <img
+                  src="images/ballpark/propellant-park-mascots.jpg"
+                  alt="Propellant Park mascots"
+                >
+
+                <div class="caption">
+                  Balloon mascots roaming the lower bowl
+                  during family nights.
+                </div>
+              </div>
+
+            </div>
+
           </div>
+
         </div>
 
         <div class="card">
+
           <div class="card-head">
-            <h2>Recorded Moment</h2>
+            <h2 class="card-title">
+              Office of League Records Notes
+            </h2>
           </div>
 
           <div class="card-body">
-            <img
-              class="photo"
-              src="../../images/moments/southwestern-dust-event-trash-can.jpg"
-              alt="Overturned trash can at Propellant Park during the Southwestern Dust Event"
-            >
 
-            <div class="caption">
-              OLR Partial Broadcast Recovery: overturned concourse receptacle during the Southwestern Dust Event.
-              The image is frequently associated with the seventh inning later remembered by supporters as
-              “The Long Inning.”
+            <div class="note">
+              <strong>Regional Identity</strong>
+
+              Propellant Park has become closely associated
+              with warm desert sunset broadcasts, hot-air
+              balloon imagery, and late-night Southwestern
+              conference games.
             </div>
 
-            <span class="tag">Southwestern Dust Event</span>
+            <div class="note">
+              <strong>Food & Concourse Culture</strong>
+
+              Gate D roasted corn vendors remain among the
+              most photographed unofficial traditions tied
+              to Aeros home games.
+            </div>
+
+            <div class="note">
+              <strong>Broadcast Recognition</strong>
+
+              Multiple national GLB broadcasts have used
+              Propellant Park establishing shots as league
+              transition footage during primetime games.
+            </div>
+
           </div>
+
         </div>
 
       </section>
@@ -411,132 +581,146 @@ img{display:block;max-width:100%;}
       <aside>
 
         <div class="card">
+
           <div class="card-head">
-            <h2>Ballpark File</h2>
+            <h2 class="card-title">
+              Venue File
+            </h2>
           </div>
 
           <div class="card-body">
-            <div class="info-grid">
-              <div class="info-box">
-                <small>Club</small>
-                <strong>Albuquerque Aeros</strong>
-              </div>
+
+            <div class="info-list">
 
               <div class="info-box">
                 <small>Venue</small>
                 <strong>Propellant Park</strong>
+                <span>Official home of the Albuquerque Aeros.</span>
               </div>
 
               <div class="info-box">
-                <small>Region</small>
-                <strong>High Desert</strong>
+                <small>Capacity</small>
+                <strong>38,200</strong>
+                <span>Expandable standing-room concourse sections during major events.</span>
               </div>
 
               <div class="info-box">
-                <small>Status</small>
-                <strong>Active</strong>
+                <small>Sponsor</small>
+                <strong>Propellant Energy</strong>
+                <span>New Mexico regional energy provider and official stadium naming partner.</span>
               </div>
+
+              <div class="info-box">
+                <small>Known For</small>
+                <strong>Sunset Broadcasts</strong>
+                <span>Frequently cited among the most visually distinctive stadium settings in GLB.</span>
+              </div>
+
             </div>
+
           </div>
+
         </div>
 
         <div class="card">
+
           <div class="card-head">
-            <h2>Office Notes</h2>
+            <h2 class="card-title">
+              Related Files
+            </h2>
           </div>
 
           <div class="card-body">
-            <div class="archive-note">
-              <strong>OLR Venue Classification</strong>
-              Public-facing venue file. Weather-related broadcast interruptions remain under partial review.
+
+            <div class="info-list">
+
+              <div class="info-box">
+                <small>Club Page</small>
+                <strong>
+                  <a href="../../../team.html?team=albuquerque-aeros">
+                    Albuquerque Aeros →
+                  </a>
+                </strong>
+              </div>
+
+              <div class="info-box">
+                <small>Player File</small>
+                <strong>
+                  <a href="../../../player.html?player=idris-kourouma">
+                    Idris Kourouma →
+                  </a>
+                </strong>
+              </div>
+
             </div>
 
-            <div class="archive-note">
-              <strong>Supporter Tradition</strong>
-              Some Aeros supporters remain silent during the first batter of a Kourouma start.
-              The origin of the practice is disputed.
-            </div>
-
-            <div class="archive-note">
-              <strong>Known Concourse Phrase</strong>
-              “You can taste the lights from Gate D.”
-            </div>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-head">
-            <h2>Related Files</h2>
           </div>
 
-          <div class="card-body">
-            <p class="copy">
-              <a href="../../../player.html" style="color:#1d4f91;font-weight:800;">
-                Idris Kourouma Player File →
-              </a>
-            </p>
-
-            <p class="copy">
-              <a href="../../../artifacts.html" style="color:#1d4f91;font-weight:800;">
-                Office of League Records →
-              </a>
-            </p>
-
-            <p class="copy">
-              <a href="../../../team.html?team=albuquerque-aeros" style="color:#1d4f91;font-weight:800;">
-                Albuquerque Aeros Club Page →
-              </a>
-            </p>
-          </div>
         </div>
 
       </aside>
 
     </div>
+
   </div>
+
 </main>
 
 <footer class="site-footer">
+
   <div class="container footer-main">
 
     <div>
       <div class="footer-logo">GLB</div>
-      <div class="footer-tag">Global League Baseball</div>
+
+      <div class="footer-tag">
+        Global League Baseball
+      </div>
+
       <p class="footer-desc">
-        Official league site providing scores, standings, schedules,
-        club information, and league bulletins.
+        Official league site providing scores,
+        standings, schedules, club information,
+        and league bulletins.
       </p>
     </div>
 
     <div class="footer-col">
       <h4>League</h4>
+
       <a href="../../../standings.html">Standings</a>
       <a href="../../../scores.html">Scores</a>
       <a href="../../../schedule.html">Schedule</a>
-      <a href="../../../stats.html">Stats</a>
     </div>
 
     <div class="footer-col">
       <h4>Clubs</h4>
+
       <a href="../../../teams.html">Teams</a>
-      <a href="../../../team.html?team=albuquerque-aeros">Aeros</a>
+      <a href="../../../stats.html">Stats</a>
+      <a href="../../../news.html">News</a>
     </div>
 
     <div class="footer-col">
       <h4>Archive</h4>
+
       <a href="../../../artifacts.html">Office of League Records</a>
-      <a href="../../../news.html">League News</a>
+      <a href="../../../bulletin.html">League Bulletin</a>
     </div>
 
   </div>
 
   <div class="footer-bottom">
     <div class="container footer-bottom-inner">
+
       <span>© 2026 Global League Baseball</span>
-      <span>Albuquerque Aeros</span>
-      <span>Propellant Park Venue File</span>
+
+      <span>Season 1</span>
+
+      <span>Official League Record</span>
+
     </div>
   </div>
+
 </footer>
 
 </body>

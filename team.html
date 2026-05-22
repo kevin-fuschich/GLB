@@ -686,8 +686,11 @@ async function loadRoster(){
     data.players.forEach(player => {
       const row = document.createElement("tr");
 
-      const photoPath =
-        `assets/images/players/${slug}/${player.photo}`;
+const cityPrefix =
+  slug.split("-")[0];
+
+const photoPath =
+  `assets/teams/${slug}/images/players/${cityPrefix}-${player.slug}.png`;
 
       row.innerHTML = `
         <td>

@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>GLB — Propellant Park</title>
 
 <style>
@@ -11,36 +12,118 @@
   --blue:#1d4f91;
   --border:#d9dee5;
   --bg:#f3f5f7;
-  --text:#111;
+  --text:#111111;
   --muted:#5f6b7a;
   --light:#dfe7f1;
   --max:1280px;
   --font:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
 }
 
-*{box-sizing:border-box;}
-body{margin:0;background:var(--bg);color:var(--text);font-family:var(--font);}
-a{color:inherit;text-decoration:none;}
-img{display:block;max-width:100%;}
+*{
+  box-sizing:border-box;
+}
 
-.container{max-width:var(--max);margin:0 auto;padding:0 20px;}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:var(--font);
+}
 
-.site-header{background:var(--navy);color:#fff;}
-.topbar{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px;}
-.brand{display:flex;align-items:center;gap:14px;}
-.brand-mark{font-weight:800;letter-spacing:1.4px;font-size:24px;}
-.brand-sub{font-size:11px;text-transform:uppercase;letter-spacing:1.2px;color:var(--light);}
-.nav-links{display:flex;flex:1;justify-content:center;}
-.nav-links a{color:rgba(255,255,255,.92);padding:26px 16px 22px;font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.8px;border-bottom:4px solid transparent;}
-.nav-links a.active{border-bottom-color:#7fb0ff;}
-.header-meta{font-size:11px;text-transform:uppercase;letter-spacing:1px;color:var(--light);}
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+img{
+  display:block;
+  max-width:100%;
+}
+
+.container{
+  max-width:var(--max);
+  margin:0 auto;
+  padding:0 20px;
+}
+
+/* HEADER */
+
+.site-header{
+  background:var(--navy);
+  color:#fff;
+}
+
+.topbar{
+  min-height:72px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:14px;
+}
+
+.brand-mark{
+  font-weight:800;
+  letter-spacing:1.4px;
+  font-size:24px;
+}
+
+.brand-sub{
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:1.2px;
+  color:var(--light);
+}
+
+.nav-links{
+  display:flex;
+  flex:1;
+  justify-content:center;
+}
+
+.nav-links a{
+  color:rgba(255,255,255,.92);
+  padding:26px 16px 22px;
+  font-size:13px;
+  font-weight:600;
+  text-transform:uppercase;
+  letter-spacing:.8px;
+  border-bottom:4px solid transparent;
+}
+
+.nav-links a.active{
+  border-bottom-color:#7fb0ff;
+}
+
+.header-meta{
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  color:var(--light);
+}
+
+/* HERO */
 
 .hero{
-  height:560px;
   position:relative;
-  background:
-    linear-gradient(rgba(11,30,51,.25),rgba(11,30,51,.60)),
-    url("images/ballpark/propellant-park-overview.png") center/cover no-repeat;
+  height:560px;
+  overflow:hidden;
+
+  background-image:
+    linear-gradient(
+      rgba(11,30,51,.25),
+      rgba(11,30,51,.60)
+    ),
+    url("images/ballpark/propellant-park-overview.png");
+
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
 }
 
 .hero-content{
@@ -51,60 +134,256 @@ img{display:block;max-width:100%;}
   color:#fff;
 }
 
-.hero-kicker{font-size:12px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px;}
-.hero h1{font-size:72px;line-height:.92;margin:0 0 14px;font-weight:900;}
-.hero p{font-size:18px;line-height:1.6;margin:0;color:#eef3fa;}
+.hero-kicker{
+  font-size:12px;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  margin-bottom:10px;
+}
 
-.page{padding:34px 0 60px;}
-.layout{display:grid;grid-template-columns:2fr 1fr;gap:28px;}
+.hero h1{
+  font-size:72px;
+  line-height:.92;
+  margin:0 0 14px;
+  font-weight:900;
+}
 
-.card{background:#fff;border:1px solid var(--border);border-radius:14px;overflow:hidden;margin-bottom:28px;}
-.card-head{padding:18px 20px;border-bottom:1px solid var(--border);}
-.card-title{margin:0;font-size:20px;font-weight:800;}
-.card-body{padding:20px;}
+.hero p{
+  font-size:18px;
+  line-height:1.6;
+  margin:0;
+  color:#eef3fa;
+}
 
-.sponsor-banner{margin-bottom:28px;border-radius:14px;overflow:hidden;border:1px solid var(--border);background:#fff;}
-.sponsor-banner img{width:100%;height:auto;}
+/* PAGE */
 
-.gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;}
-.gallery img{width:100%;border-radius:12px;border:1px solid var(--border);}
-.caption{margin-top:10px;font-size:13px;color:var(--muted);line-height:1.5;}
+.page{
+  padding:34px 0 60px;
+}
 
-.info-list{display:grid;gap:14px;}
-.info-box{border:1px solid var(--border);border-radius:10px;padding:14px;background:#fafbfd;}
-.info-box small{display:block;margin-bottom:4px;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);}
-.info-box strong{display:block;font-size:18px;margin-bottom:4px;}
-.info-box span{font-size:13px;color:var(--muted);line-height:1.5;}
+.layout{
+  display:grid;
+  grid-template-columns:2fr 1fr;
+  gap:28px;
+}
 
-.note{border-left:4px solid var(--blue);background:#f8fbff;padding:16px;margin-bottom:14px;line-height:1.6;color:#2d3742;}
-.note strong{display:block;margin-bottom:6px;}
+.card{
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:14px;
+  overflow:hidden;
+  margin-bottom:28px;
+}
 
-.site-footer{margin-top:60px;background:#0b1e33;color:#dfe7f1;}
-.footer-main{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:40px;padding:46px 20px;}
-.footer-logo{font-weight:800;font-size:26px;letter-spacing:1.4px;margin-bottom:8px;}
-.footer-tag{font-size:11px;text-transform:uppercase;letter-spacing:1px;color:#9fb6d1;margin-bottom:14px;}
-.footer-desc{margin:0;color:#b8c8dc;line-height:1.5;font-size:13px;}
-.footer-col h4{margin:0 0 12px;color:#fff;font-size:12px;text-transform:uppercase;letter-spacing:1px;}
-.footer-col a{display:block;margin:9px 0;color:#b8c8dc;font-size:13px;}
-.footer-bottom{border-top:1px solid rgba(255,255,255,.08);color:#9fb6d1;font-size:12px;}
-.footer-bottom-inner{display:flex;justify-content:space-between;gap:20px;padding:16px 20px;}
+.card-head{
+  padding:18px 20px;
+  border-bottom:1px solid var(--border);
+}
+
+.card-title{
+  margin:0;
+  font-size:20px;
+  font-weight:800;
+}
+
+.card-body{
+  padding:20px;
+}
+
+/* SPONSOR */
+
+.sponsor-banner{
+  margin-bottom:28px;
+  border-radius:14px;
+  overflow:hidden;
+  border:1px solid var(--border);
+  background:#fff;
+}
+
+.sponsor-banner img{
+  width:100%;
+  height:auto;
+}
+
+/* GALLERY */
+
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:18px;
+}
+
+.gallery img{
+  width:100%;
+  border-radius:12px;
+  border:1px solid var(--border);
+}
+
+.caption{
+  margin-top:10px;
+  font-size:13px;
+  color:var(--muted);
+  line-height:1.5;
+}
+
+/* SIDEBAR */
+
+.info-list{
+  display:grid;
+  gap:14px;
+}
+
+.info-box{
+  border:1px solid var(--border);
+  border-radius:10px;
+  padding:14px;
+  background:#fafbfd;
+}
+
+.info-box small{
+  display:block;
+  margin-bottom:4px;
+  font-size:10px;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  color:var(--muted);
+}
+
+.info-box strong{
+  display:block;
+  font-size:18px;
+  margin-bottom:4px;
+}
+
+.info-box span{
+  font-size:13px;
+  color:var(--muted);
+  line-height:1.5;
+}
+
+/* FOOTER */
+
+.site-footer{
+  margin-top:60px;
+  background:#0b1e33;
+  color:#dfe7f1;
+}
+
+.footer-main{
+  display:grid;
+  grid-template-columns:1.6fr 1fr 1fr 1fr;
+  gap:40px;
+  padding:46px 20px;
+}
+
+.footer-logo{
+  font-weight:800;
+  font-size:26px;
+  letter-spacing:1.4px;
+  margin-bottom:8px;
+}
+
+.footer-tag{
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  color:#9fb6d1;
+  margin-bottom:14px;
+}
+
+.footer-desc{
+  margin:0;
+  color:#b8c8dc;
+  line-height:1.5;
+  font-size:13px;
+}
+
+.footer-col h4{
+  margin:0 0 12px;
+  color:#fff;
+  font-size:12px;
+  text-transform:uppercase;
+  letter-spacing:1px;
+}
+
+.footer-col a{
+  display:block;
+  margin:9px 0;
+  color:#b8c8dc;
+  font-size:13px;
+}
+
+.footer-bottom{
+  border-top:1px solid rgba(255,255,255,.08);
+  color:#9fb6d1;
+  font-size:12px;
+}
+
+.footer-bottom-inner{
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  padding:16px 20px;
+}
+
+/* MOBILE */
 
 @media(max-width:900px){
-  .nav-links,.header-meta{display:none;}
-  .layout{grid-template-columns:1fr;}
-  .gallery{grid-template-columns:1fr;}
-  .hero h1{font-size:54px;}
-  .footer-main{grid-template-columns:1fr 1fr;}
+
+  .nav-links,
+  .header-meta{
+    display:none;
+  }
+
+  .layout{
+    grid-template-columns:1fr;
+  }
+
+  .gallery{
+    grid-template-columns:1fr;
+  }
+
+  .hero h1{
+    font-size:54px;
+  }
+
+  .footer-main{
+    grid-template-columns:1fr 1fr;
+  }
 }
 
 @media(max-width:640px){
-  .container{padding:0 14px;}
-  .hero{height:420px;}
-  .hero-content{left:22px;right:22px;bottom:26px;}
-  .hero h1{font-size:42px;}
-  .hero p{font-size:15px;}
-  .footer-main{grid-template-columns:1fr;}
-  .footer-bottom-inner{flex-direction:column;gap:6px;}
+
+  .container{
+    padding:0 14px;
+  }
+
+  .hero{
+    height:420px;
+  }
+
+  .hero-content{
+    left:22px;
+    right:22px;
+    bottom:26px;
+  }
+
+  .hero h1{
+    font-size:42px;
+  }
+
+  .hero p{
+    font-size:15px;
+  }
+
+  .footer-main{
+    grid-template-columns:1fr;
+  }
+
+  .footer-bottom-inner{
+    flex-direction:column;
+    gap:6px;
+  }
 }
 </style>
 </head>
@@ -113,7 +392,9 @@ img{display:block;max-width:100%;}
 
 <header class="site-header">
   <div class="container">
+
     <div class="topbar">
+
       <a href="../../../index.html" class="brand">
         <div class="brand-mark">GLB</div>
         <div class="brand-sub">Global League Baseball</div>
@@ -129,28 +410,47 @@ img{display:block;max-width:100%;}
         <a href="../../../news.html">News</a>
       </nav>
 
-      <div class="header-meta">Official Ballpark File</div>
+      <div class="header-meta">
+        Official Ballpark File
+      </div>
+
     </div>
+
   </div>
 </header>
 
 <section class="hero">
+
   <div class="hero-content">
-    <div class="hero-kicker">Albuquerque Aeros Ballpark File</div>
-    <h1>Propellant Park</h1>
+
+    <div class="hero-kicker">
+      Albuquerque Aeros Ballpark File
+    </div>
+
+    <h1>
+      Propellant Park
+    </h1>
+
     <p>
-      Set against the Sandia Mountains and illuminated by New Mexico sunset skies,
-      Propellant Park has quickly become one of the defining environments of the
-      GLB Southwestern Conference.
+      Set against the Sandia Mountains and illuminated by
+      New Mexico sunset skies, Propellant Park has quickly
+      become one of the defining environments of the GLB
+      Southwestern Conference.
     </p>
+
   </div>
+
 </section>
 
 <main class="page">
+
   <div class="container">
 
     <div class="sponsor-banner">
-      <img src="images/sponsors/propellant-energy-logo.png" alt="Propellant Energy sponsor">
+      <img
+        src="images/sponsors/propellant-energy-logo.png"
+        alt="Propellant Energy sponsor"
+      >
     </div>
 
     <div class="layout">
@@ -158,55 +458,65 @@ img{display:block;max-width:100%;}
       <section>
 
         <div class="card">
+
           <div class="card-head">
-            <h2 class="card-title">Ballpark Gallery</h2>
+            <h2 class="card-title">
+              Ballpark Gallery
+            </h2>
           </div>
 
           <div class="card-body">
+
             <div class="gallery">
 
               <div>
-                <img src="images/ballpark/propellant-park-gate.png" alt="Propellant Park front gate">
-                <div class="caption">Sunset crowds arriving through the main gate before opening pitch.</div>
+                <img
+                  src="images/ballpark/propellant-park-gate.png"
+                  alt="Propellant Park front gate"
+                >
+
+                <div class="caption">
+                  Sunset crowds arriving through the main gate before opening pitch.
+                </div>
               </div>
 
               <div>
-                <img src="images/ballpark/propellant-park-concourse.png" alt="Propellant Park concourse">
-                <div class="caption">The central concourse remains one of the busiest gathering spaces in the league.</div>
+                <img
+                  src="images/ballpark/propellant-park-concourse.png"
+                  alt="Propellant Park concourse"
+                >
+
+                <div class="caption">
+                  The central concourse remains one of the busiest gathering spaces in the league.
+                </div>
               </div>
 
               <div>
-                <img src="images/ballpark/propellant-park-sunset.png" alt="Propellant Park at sunset">
-                <div class="caption">Evening games beneath the Sandia skyline have become a signature broadcast image.</div>
+                <img
+                  src="images/ballpark/propellant-park-sunset.png"
+                  alt="Propellant Park at sunset"
+                >
+
+                <div class="caption">
+                  Evening games beneath the Sandia skyline have become a signature broadcast image.
+                </div>
               </div>
 
               <div>
-                <img src="images/ballpark/propellant-park-fans.png" alt="Propellant Park fans and mascots">
-                <div class="caption">Balloon mascots roaming the lower bowl during family nights.</div>
+                <img
+                  src="images/ballpark/propellant-park-fans.png"
+                  alt="Propellant Park fans and mascots"
+                >
+
+                <div class="caption">
+                  Balloon mascots roaming the lower bowl during family nights.
+                </div>
               </div>
 
             </div>
-          </div>
-        </div>
 
-        <div class="card">
-          <div class="card-head">
-            <h2 class="card-title">Office of League Records Notes</h2>
           </div>
 
-          <div class="card-body">
-            <div class="note">
-              <strong>Regional Identity</strong>
-              Propellant Park is closely associated with warm desert sunset broadcasts,
-              hot-air balloon imagery, and late-night Southwestern Conference games.
-            </div>
-
-            <div class="note">
-              <strong>Food & Concourse Culture</strong>
-              Gate D roasted corn vendors remain among the most photographed unofficial
-              traditions tied to Aeros home games.
-            </div>
-          </div>
         </div>
 
       </section>
@@ -214,11 +524,15 @@ img{display:block;max-width:100%;}
       <aside>
 
         <div class="card">
+
           <div class="card-head">
-            <h2 class="card-title">Venue File</h2>
+            <h2 class="card-title">
+              Venue File
+            </h2>
           </div>
 
           <div class="card-body">
+
             <div class="info-list">
 
               <div class="info-box">
@@ -239,82 +553,52 @@ img{display:block;max-width:100%;}
                 <span>New Mexico regional energy provider and official stadium naming partner.</span>
               </div>
 
-              <div class="info-box">
-                <small>Known For</small>
-                <strong>Sunset Broadcasts</strong>
-                <span>Frequently cited among the most visually distinctive stadium settings in GLB.</span>
-              </div>
-
             </div>
-          </div>
-        </div>
 
-        <div class="card">
-          <div class="card-head">
-            <h2 class="card-title">Related Files</h2>
           </div>
 
-          <div class="card-body">
-            <div class="info-list">
-              <div class="info-box">
-                <small>Club</small>
-                <strong><a href="../../../team.html?team=albuquerque-aeros">Albuquerque Aeros →</a></strong>
-              </div>
-
-              <div class="info-box">
-                <small>Player</small>
-                <strong><a href="../../../player.html?player=idris-kourouma">Idris Kourouma →</a></strong>
-              </div>
-            </div>
-          </div>
         </div>
 
       </aside>
 
     </div>
+
   </div>
+
 </main>
 
 <footer class="site-footer">
+
   <div class="container footer-main">
 
     <div>
       <div class="footer-logo">GLB</div>
-      <div class="footer-tag">Global League Baseball</div>
+
+      <div class="footer-tag">
+        Global League Baseball
+      </div>
+
       <p class="footer-desc">
-        Official league site providing scores, standings, schedules,
-        club information, and league bulletins.
+        Official league site providing scores,
+        standings, schedules, club information,
+        and league bulletins.
       </p>
-    </div>
-
-    <div class="footer-col">
-      <h4>League</h4>
-      <a href="../../../standings.html">Standings</a>
-      <a href="../../../scores.html">Scores</a>
-      <a href="../../../schedule.html">Schedule</a>
-    </div>
-
-    <div class="footer-col">
-      <h4>Clubs</h4>
-      <a href="../../../teams.html">Teams</a>
-      <a href="../../../team.html?team=albuquerque-aeros">Aeros</a>
-    </div>
-
-    <div class="footer-col">
-      <h4>Archive</h4>
-      <a href="../../../artifacts.html">Office of League Records</a>
-      <a href="../../../news.html">League News</a>
     </div>
 
   </div>
 
   <div class="footer-bottom">
     <div class="container footer-bottom-inner">
+
       <span>© 2026 Global League Baseball</span>
-      <span>Albuquerque Aeros</span>
-      <span>Propellant Park Venue File</span>
+
+      <span>Season 1</span>
+
+      <span>Official League Record</span>
+
     </div>
   </div>
+
 </footer>
 
 </body>

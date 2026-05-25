@@ -1,1 +1,680 @@
-ok
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GLB — OGWA Stadium</title>
+
+<style>
+body{
+  margin:0;
+  background:#f3f5f7;
+  color:#111;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+}
+
+a{text-decoration:none;color:inherit;}
+img{display:block;max-width:100%;}
+
+.container{
+  max-width:1200px;
+  margin:0 auto;
+  padding:0 20px;
+}
+
+.site-header{
+  background:#0f1820;
+  color:white;
+}
+
+.topbar{
+  min-height:72px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  color:white;
+}
+
+.brand-mark{
+  font-weight:800;
+  font-size:24px;
+  letter-spacing:1.4px;
+}
+
+.brand-sub{
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:1.2px;
+  color:#dfe7f1;
+}
+
+.nav-links{
+  display:flex;
+  flex:1;
+  justify-content:center;
+}
+
+.nav-links a{
+  color:white;
+  padding:26px 14px 22px;
+  font-size:13px;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:.8px;
+}
+
+.header-meta{
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  color:#dfe7f1;
+}
+
+/* HERO */
+
+.hero{
+  height:580px;
+  position:relative;
+  background:
+    linear-gradient(
+      rgba(15,24,32,.18),
+      rgba(15,24,32,.72)
+    ),
+    url("ogwa-hero1.png") center/cover no-repeat;
+}
+
+.hero-content{
+  position:absolute;
+  left:40px;
+  bottom:40px;
+  color:white;
+  max-width:780px;
+}
+
+.hero-kicker{
+  font-size:12px;
+  text-transform:uppercase;
+  letter-spacing:.12em;
+  margin-bottom:10px;
+  color:#c8ddd9;
+}
+
+.hero h1{
+  font-size:76px;
+  line-height:.9;
+  margin:0 0 14px;
+  font-weight:900;
+}
+
+.hero p{
+  font-size:18px;
+  line-height:1.6;
+  margin:0;
+  color:#eef3fa;
+}
+
+/* PAGE */
+
+.page{
+  padding:34px 0 60px;
+}
+
+.layout{
+  display:grid;
+  grid-template-columns:2fr 1fr;
+  gap:28px;
+}
+
+.card{
+  background:white;
+  border:1px solid #d9dee5;
+  border-radius:14px;
+  overflow:hidden;
+  margin-bottom:28px;
+}
+
+.card-head{
+  padding:18px 20px;
+  border-bottom:1px solid #d9dee5;
+}
+
+.card-title{
+  margin:0;
+  font-size:20px;
+  font-weight:800;
+}
+
+.card-body{
+  padding:20px;
+}
+
+.feature-banner{
+  margin-bottom:28px;
+  border-radius:14px;
+  overflow:hidden;
+  border:1px solid #d9dee5;
+  background:white;
+}
+
+.feature-banner img{
+  width:100%;
+  height:auto;
+}
+
+/* INTRO */
+
+.lede{
+  font-size:16px;
+  line-height:1.7;
+  color:#354250;
+  margin:0;
+}
+
+.callout{
+  margin-top:18px;
+  padding:18px;
+  border-left:4px solid #8ab8b2;
+  background:#f4f8f7;
+  color:#24323a;
+  line-height:1.6;
+}
+
+/* GALLERY */
+
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:18px;
+}
+
+.gallery img{
+  width:100%;
+  border-radius:12px;
+  border:1px solid #d9dee5;
+}
+
+.caption{
+  margin-top:10px;
+  font-size:13px;
+  color:#5f6b7a;
+  line-height:1.5;
+}
+
+/* SIDEBAR */
+
+.info-list{
+  display:grid;
+  gap:14px;
+}
+
+.info-box{
+  border:1px solid #d9dee5;
+  border-radius:10px;
+  padding:14px;
+  background:#fafbfd;
+}
+
+.info-box small{
+  display:block;
+  margin-bottom:4px;
+  font-size:10px;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  color:#5f6b7a;
+}
+
+.info-box strong{
+  display:block;
+  font-size:18px;
+  margin-bottom:4px;
+}
+
+.info-box span{
+  font-size:13px;
+  color:#5f6b7a;
+  line-height:1.5;
+}
+
+/* FEATURE GRID */
+
+.feature-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:18px;
+}
+
+.feature-grid img{
+  border-radius:12px;
+  border:1px solid #d9dee5;
+}
+
+.feature-copy{
+  font-size:14px;
+  line-height:1.7;
+  color:#354250;
+}
+
+/* FOOTER */
+
+.site-footer{
+  margin-top:60px;
+  background:#0f1820;
+  color:#dfe7f1;
+}
+
+.footer-main{
+  display:grid;
+  grid-template-columns:1.6fr 1fr 1fr 1fr;
+  gap:40px;
+  padding:46px 20px;
+}
+
+.footer-logo{
+  font-weight:800;
+  font-size:26px;
+  letter-spacing:1.4px;
+  margin-bottom:8px;
+}
+
+.footer-tag{
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  color:#9fb6d1;
+  margin-bottom:14px;
+}
+
+.footer-desc{
+  margin:0;
+  color:#b8c8dc;
+  line-height:1.5;
+  font-size:13px;
+}
+
+.footer-col h4{
+  margin:0 0 12px;
+  color:white;
+  font-size:12px;
+  text-transform:uppercase;
+  letter-spacing:1px;
+}
+
+.footer-col a{
+  display:block;
+  margin:9px 0;
+  color:#b8c8dc;
+  font-size:13px;
+}
+
+.footer-bottom{
+  border-top:1px solid rgba(255,255,255,.08);
+  color:#9fb6d1;
+  font-size:12px;
+}
+
+.footer-bottom-inner{
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  padding:16px 20px;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+  .nav-links,
+  .header-meta{
+    display:none;
+  }
+
+  .layout,
+  .feature-grid{
+    grid-template-columns:1fr;
+  }
+
+  .gallery{
+    grid-template-columns:1fr;
+  }
+
+  .hero h1{
+    font-size:54px;
+  }
+
+  .footer-main{
+    grid-template-columns:1fr 1fr;
+  }
+}
+
+@media(max-width:640px){
+  .container{
+    padding:0 14px;
+  }
+
+  .hero{
+    height:430px;
+  }
+
+  .hero-content{
+    left:22px;
+    right:22px;
+    bottom:26px;
+  }
+
+  .hero h1{
+    font-size:42px;
+  }
+
+  .hero p{
+    font-size:15px;
+  }
+
+  .footer-main{
+    grid-template-columns:1fr;
+  }
+
+  .footer-bottom-inner{
+    flex-direction:column;
+    gap:6px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <div class="topbar">
+
+      <a href="../../../index.html" class="brand">
+        <div class="brand-mark">GLB</div>
+        <div class="brand-sub">Global League Baseball</div>
+      </a>
+
+      <nav class="nav-links">
+        <a href="../../../index.html">Home</a>
+        <a href="../../../scores.html">Scores</a>
+        <a href="../../../standings.html">Standings</a>
+        <a href="../../../schedule.html">Schedule</a>
+        <a href="../../../teams.html">Teams</a>
+        <a href="../../../stats.html">Stats</a>
+        <a href="../../../news.html">News</a>
+      </nav>
+
+      <div class="header-meta">
+        Official Ballpark File
+      </div>
+
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-kicker">
+      Spokane Alloys Ballpark File
+    </div>
+
+    <h1>OGWA Stadium</h1>
+
+    <p>
+      Set along Spokane’s riverfront, OGWA Stadium combines modern Northwest
+      architecture, sea-glass detailing, and a restrained industrial profile
+      built around the Spokane Alloys.
+    </p>
+  </div>
+</section>
+
+<main class="page">
+  <div class="container">
+
+    <div class="feature-banner">
+      <img src="ogwa-rainwall.png" alt="OGWA Stadium Sea Glass Rain Wall bottle filling station">
+    </div>
+
+    <div class="layout">
+
+      <section>
+
+        <div class="card">
+          <div class="card-head">
+            <h2 class="card-title">Venue Overview</h2>
+          </div>
+
+          <div class="card-body">
+            <p class="lede">
+              Opened in 2019, OGWA Stadium anchors the Spokane Alloys’ riverfront
+              ballpark district with a design language built around concrete,
+              steel, glass, water, and restrained sea-glass color. The park is
+              modern without feeling oversized, premium without feeling detached,
+              and built to feel like a functioning part of Spokane rather than
+              a stadium dropped into it.
+            </p>
+
+            <div class="callout">
+              Known by fans as <strong>Hydro Field</strong>, the stadium is defined
+              by its sea-glass concourse glow, river-facing approaches, and the
+              Sea Glass Rain Wall bottle filling station — a practical fan amenity
+              that has become one of the park’s most recognizable features.
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-head">
+            <h2 class="card-title">Ballpark Gallery</h2>
+          </div>
+
+          <div class="card-body">
+            <div class="gallery">
+
+              <div>
+                <img src="ogwa-hero1.png" alt="OGWA Stadium exterior entrance">
+                <div class="caption">
+                  Fans arriving at OGWA Stadium before first pitch, with the main entry
+                  structure and sea-glass panels lit against the evening sky.
+                </div>
+              </div>
+
+              <div>
+                <img src="ogwa-concourse1.png" alt="OGWA Stadium concourse">
+                <div class="caption">
+                  The open concourse uses exposed concrete, steel framing, directional
+                  signage, and sea-glass lighting to create one of the league’s most
+                  distinctive interior stadium environments.
+                </div>
+              </div>
+
+              <div>
+                <img src="ogwa-scoreboard1.png" alt="OGWA Stadium scoreboard">
+                <div class="caption">
+                  OGWA’s main scoreboard sits within an industrial frame and carries
+                  the stadium’s signature nighttime identity.
+                </div>
+              </div>
+
+              <div>
+                <img src="ogwa-fans2.png" alt="Spokane Alloys fans inside OGWA Stadium">
+                <div class="caption">
+                  A game-night view from the lower bowl, where the crowd, scoreboard,
+                  riverfront backdrop, and stadium lighting combine into the park’s
+                  central in-game atmosphere.
+                </div>
+              </div>
+
+              <div>
+                <img src="ogwa-aerial1.png" alt="Aerial view of OGWA Stadium in Spokane">
+                <div class="caption">
+                  Aerial view of OGWA Stadium within Spokane’s riverfront and rail-adjacent
+                  urban fabric.
+                </div>
+              </div>
+
+              <div>
+                <img src="ogwa-rainwall.png" alt="Sea Glass Rain Wall at OGWA Stadium">
+                <div class="caption">
+                  The Sea Glass Rain Wall combines water refill stations with a textured
+                  architectural wall inspired by the Spokane River.
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-head">
+            <h2 class="card-title">Sea Glass Rain Wall</h2>
+          </div>
+
+          <div class="card-body">
+            <div class="feature-grid">
+              <img src="ogwa-rainwall.png" alt="OGWA Stadium Sea Glass Rain Wall">
+
+              <div class="feature-copy">
+                <p>
+                  The Sea Glass Rain Wall is OGWA Stadium’s signature fan amenity:
+                  a concourse bottle filling station built into a textured glass
+                  water wall.
+                </p>
+
+                <p>
+                  Fans use it to refill bottles during games, including the Spokane
+                  Alloys OGWA bottles distributed through stadium promotions. The
+                  feature is practical first, but its sound, texture, and filtered
+                  light have made it one of the park’s most photographed interior
+                  landmarks.
+                </p>
+
+                <p>
+                  It is not treated as a spectacle. It is part of the building:
+                  useful, calm, durable, and specific to Spokane.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <aside>
+
+        <div class="card">
+          <div class="card-head">
+            <h2 class="card-title">Venue File</h2>
+          </div>
+
+          <div class="card-body">
+            <div class="info-list">
+
+              <div class="info-box">
+                <small>Venue</small>
+                <strong>OGWA Stadium</strong>
+                <span>Official home of the Spokane Alloys.</span>
+              </div>
+
+              <div class="info-box">
+                <small>Nickname</small>
+                <strong>Hydro Field</strong>
+                <span>Common fan and media reference tied to the stadium’s water and sea-glass design language.</span>
+              </div>
+
+              <div class="info-box">
+                <small>Opened</small>
+                <strong>2019</strong>
+                <span>Built as part of a riverfront redevelopment district.</span>
+              </div>
+
+              <div class="info-box">
+                <small>Capacity</small>
+                <strong>20,480</strong>
+                <span>Mid-sized, loud, and designed around close field views.</span>
+              </div>
+
+              <div class="info-box">
+                <small>Surface</small>
+                <strong>Natural Grass</strong>
+                <span>Open-air park with cool spring nights and dry summer evenings.</span>
+              </div>
+
+              <div class="info-box">
+                <small>Field Dimensions</small>
+                <strong>317 / 401 / 312</strong>
+                <span>Short corners, deeper center, and angular wall behavior keep the park mostly neutral.</span>
+              </div>
+
+              <div class="info-box">
+                <small>District</small>
+                <strong>River Foundry</strong>
+                <span>Riverfront, rail-adjacent, and active beyond gameday.</span>
+              </div>
+
+              <div class="info-box">
+                <small>Known For</small>
+                <strong>Sea Glass Light</strong>
+                <span>Concourse glow, scoreboard accents, river-facing entries, and the Rain Wall refill system.</span>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </aside>
+
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+
+  <div class="container footer-main">
+
+    <div>
+      <div class="footer-logo">GLB</div>
+      <div class="footer-tag">Global League Baseball</div>
+      <p class="footer-desc">
+        Official league site providing scores, standings, schedules,
+        club information, venue files, and league bulletins.
+      </p>
+    </div>
+
+    <div class="footer-col">
+      <h4>League</h4>
+      <a href="../../../standings.html">Standings</a>
+      <a href="../../../scores.html">Scores</a>
+      <a href="../../../schedule.html">Schedule</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Clubs</h4>
+      <a href="../../../teams.html">Teams</a>
+      <a href="../../../team.html?team=spokane-alloys">Spokane Alloys</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Archive</h4>
+      <a href="../../../artifacts.html">Office of League Records</a>
+      <a href="../../../news.html">League News</a>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container footer-bottom-inner">
+      <span>© 2026 Global League Baseball</span>
+      <span>Spokane Alloys</span>
+      <span>OGWA Stadium Venue File</span>
+    </div>
+  </div>
+
+</footer>
+
+</body>
+</html>

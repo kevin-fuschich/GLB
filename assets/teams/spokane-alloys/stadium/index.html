@@ -6,10 +6,24 @@
 <title>GLB — OGWA Stadium</title>
 
 <style>
+:root{
+  --ink:#111;
+  --muted:#5f6b7a;
+  --line:#d9dee5;
+  --bg:#f3f5f7;
+  --card:#fff;
+  --navy:#0f1820;
+  --teal:#8ab8b2;
+  --soft:#f4f8f7;
+  --link:#1d4f91;
+}
+
+*{box-sizing:border-box;}
+
 body{
   margin:0;
-  background:#f3f5f7;
-  color:#111;
+  background:var(--bg);
+  color:var(--ink);
   font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
 }
 
@@ -22,8 +36,10 @@ img{display:block;max-width:100%;}
   padding:0 20px;
 }
 
+/* HEADER */
+
 .site-header{
-  background:#0f1820;
+  background:var(--navy);
   color:white;
 }
 
@@ -83,10 +99,7 @@ img{display:block;max-width:100%;}
   height:580px;
   position:relative;
   background:
-    linear-gradient(
-      rgba(15,24,32,.18),
-      rgba(15,24,32,.72)
-    ),
+    linear-gradient(rgba(15,24,32,.18),rgba(15,24,32,.72)),
     url("ogwa-hero1.png") center/cover no-repeat;
 }
 
@@ -133,8 +146,8 @@ img{display:block;max-width:100%;}
 }
 
 .card{
-  background:white;
-  border:1px solid #d9dee5;
+  background:var(--card);
+  border:1px solid var(--line);
   border-radius:14px;
   overflow:hidden;
   margin-bottom:28px;
@@ -142,7 +155,7 @@ img{display:block;max-width:100%;}
 
 .card-head{
   padding:18px 20px;
-  border-bottom:1px solid #d9dee5;
+  border-bottom:1px solid var(--line);
 }
 
 .card-title{
@@ -159,7 +172,7 @@ img{display:block;max-width:100%;}
   margin-bottom:28px;
   border-radius:14px;
   overflow:hidden;
-  border:1px solid #d9dee5;
+  border:1px solid var(--line);
   background:white;
 }
 
@@ -167,8 +180,6 @@ img{display:block;max-width:100%;}
   width:100%;
   height:auto;
 }
-
-/* INTRO */
 
 .lede{
   font-size:16px;
@@ -180,8 +191,8 @@ img{display:block;max-width:100%;}
 .callout{
   margin-top:18px;
   padding:18px;
-  border-left:4px solid #8ab8b2;
-  background:#f4f8f7;
+  border-left:4px solid var(--teal);
+  background:var(--soft);
   color:#24323a;
   line-height:1.6;
 }
@@ -197,13 +208,13 @@ img{display:block;max-width:100%;}
 .gallery img{
   width:100%;
   border-radius:12px;
-  border:1px solid #d9dee5;
+  border:1px solid var(--line);
 }
 
 .caption{
   margin-top:10px;
   font-size:13px;
-  color:#5f6b7a;
+  color:var(--muted);
   line-height:1.5;
 }
 
@@ -215,7 +226,7 @@ img{display:block;max-width:100%;}
 }
 
 .info-box{
-  border:1px solid #d9dee5;
+  border:1px solid var(--line);
   border-radius:10px;
   padding:14px;
   background:#fafbfd;
@@ -227,7 +238,7 @@ img{display:block;max-width:100%;}
   font-size:10px;
   letter-spacing:.08em;
   text-transform:uppercase;
-  color:#5f6b7a;
+  color:var(--muted);
 }
 
 .info-box strong{
@@ -238,7 +249,7 @@ img{display:block;max-width:100%;}
 
 .info-box span{
   font-size:13px;
-  color:#5f6b7a;
+  color:var(--muted);
   line-height:1.5;
 }
 
@@ -248,11 +259,12 @@ img{display:block;max-width:100%;}
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:18px;
+  align-items:start;
 }
 
 .feature-grid img{
   border-radius:12px;
-  border:1px solid #d9dee5;
+  border:1px solid var(--line);
 }
 
 .feature-copy{
@@ -261,11 +273,15 @@ img{display:block;max-width:100%;}
   color:#354250;
 }
 
+.feature-copy p:first-child{
+  margin-top:0;
+}
+
 /* FOOTER */
 
 .site-footer{
-  margin-top:60px;
-  background:#0f1820;
+  margin-top:40px;
+  background:var(--navy);
   color:#dfe7f1;
 }
 
@@ -393,24 +409,22 @@ img{display:block;max-width:100%;}
   <div class="container">
     <div class="topbar">
 
-      <a href="../../../index.html" class="brand">
+      <a href="../../../../index.html" class="brand">
         <div class="brand-mark">GLB</div>
         <div class="brand-sub">Global League Baseball</div>
       </a>
 
       <nav class="nav-links">
-        <a href="../../../index.html">Home</a>
-        <a href="../../../scores.html">Scores</a>
-        <a href="../../../standings.html">Standings</a>
-        <a href="../../../schedule.html">Schedule</a>
-        <a href="../../../teams.html">Teams</a>
-        <a href="../../../stats.html">Stats</a>
-        <a href="../../../news.html">News</a>
+        <a href="../../../../index.html">Home</a>
+        <a href="../../../../scores.html">Scores</a>
+        <a href="../../../../standings.html">Standings</a>
+        <a href="../../../../schedule.html">Schedule</a>
+        <a href="../../../../teams.html">Teams</a>
+        <a href="../../../../stats.html">Stats</a>
+        <a href="../../../../news.html">News</a>
       </nav>
 
-      <div class="header-meta">
-        Official Ballpark File
-      </div>
+      <div class="header-meta">Official Ballpark File</div>
 
     </div>
   </div>
@@ -418,9 +432,7 @@ img{display:block;max-width:100%;}
 
 <section class="hero">
   <div class="hero-content">
-    <div class="hero-kicker">
-      Spokane Alloys Ballpark File
-    </div>
+    <div class="hero-kicker">Spokane Alloys Ballpark File</div>
 
     <h1>OGWA Stadium</h1>
 
@@ -647,21 +659,21 @@ img{display:block;max-width:100%;}
 
     <div class="footer-col">
       <h4>League</h4>
-      <a href="../../../standings.html">Standings</a>
-      <a href="../../../scores.html">Scores</a>
-      <a href="../../../schedule.html">Schedule</a>
+      <a href="../../../../standings.html">Standings</a>
+      <a href="../../../../scores.html">Scores</a>
+      <a href="../../../../schedule.html">Schedule</a>
     </div>
 
     <div class="footer-col">
       <h4>Clubs</h4>
-      <a href="../../../teams.html">Teams</a>
-      <a href="../../../team.html?team=spokane-alloys">Spokane Alloys</a>
+      <a href="../../../../teams.html">Teams</a>
+      <a href="../../../../team.html?team=spokane-alloys">Spokane Alloys</a>
     </div>
 
     <div class="footer-col">
       <h4>Archive</h4>
-      <a href="../../../artifacts.html">Office of League Records</a>
-      <a href="../../../news.html">League News</a>
+      <a href="../../../../artifacts.html">Office of League Records</a>
+      <a href="../../../../news.html">League News</a>
     </div>
 
   </div>

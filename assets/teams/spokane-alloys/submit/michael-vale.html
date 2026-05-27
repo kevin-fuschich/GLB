@@ -1,1 +1,204 @@
-test
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GLB Archive Intake — Michael Vale</title>
+  <style>
+    body{
+      margin:0;
+      font-family: Georgia, "Times New Roman", serif;
+      background:#f4efe6;
+      color:#1b1b1b;
+    }
+    .wrap{
+      max-width:860px;
+      margin:0 auto;
+      padding:40px 20px;
+    }
+    .card{
+      background:#fffaf0;
+      border:1px solid #2b2b2b;
+      box-shadow:8px 8px 0 #1b1b1b;
+      padding:34px;
+    }
+    .kicker{
+      font-size:12px;
+      letter-spacing:.16em;
+      text-transform:uppercase;
+      margin-bottom:18px;
+    }
+    h1{
+      margin:0;
+      font-size:42px;
+      line-height:1;
+    }
+    .role{
+      margin-top:8px;
+      font-size:18px;
+      color:#555;
+    }
+    .record{
+      margin:18px 0 26px;
+      font-family:monospace;
+      font-size:14px;
+      background:#eee2cf;
+      display:inline-block;
+      padding:8px 10px;
+      border:1px solid #444;
+    }
+    h2{
+      margin-top:30px;
+      font-size:22px;
+    }
+    p, li{
+      font-size:16px;
+      line-height:1.55;
+    }
+    .note{
+      border-left:4px solid #1b1b1b;
+      padding-left:16px;
+      margin:24px 0;
+      color:#333;
+    }
+    label{
+      display:block;
+      margin-top:18px;
+      font-weight:bold;
+    }
+    input, textarea{
+      width:100%;
+      box-sizing:border-box;
+      margin-top:7px;
+      padding:12px;
+      border:1px solid #333;
+      background:#fff;
+      font-family:inherit;
+      font-size:16px;
+    }
+    textarea{
+      min-height:210px;
+    }
+    .checkbox{
+      display:flex;
+      gap:10px;
+      margin-top:20px;
+      align-items:flex-start;
+    }
+    .checkbox input{
+      width:auto;
+      margin-top:5px;
+    }
+    button{
+      margin-top:26px;
+      background:#111;
+      color:white;
+      border:none;
+      padding:14px 22px;
+      font-size:15px;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      cursor:pointer;
+    }
+    .footer-note{
+      margin-top:30px;
+      font-size:14px;
+      color:#555;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="wrap">
+    <section class="card">
+      <div class="kicker">Global League Baseball · Archive Intake Division</div>
+
+      <h1>Michael Vale</h1>
+      <div class="role">Lead Stadium Broadcaster — Spokane Alloys</div>
+
+      <div class="record">GLB Record ID: GLB-SPO-BCAST-0001</div>
+
+      <h2>Contribute to this record</h2>
+      <p>
+        Contributing to this record gives you the opportunity to help define part of the
+        Global League Baseball universe. Approved contributions may become part of this
+        record’s permanent archive.
+      </p>
+
+      <div class="note">
+        <p>
+          Michael Vale is an existing GLB record. You are not naming him or claiming ownership.
+          You are contributing written material that may help shape his official archival bio.
+        </p>
+      </div>
+
+      <h2>Creative brief</h2>
+      <p>
+        Write a short biographical profile for Michael Vale, lead stadium broadcaster for the
+        Spokane Alloys. The tone should feel grounded, believable, and consistent with a
+        professional baseball archive, media guide, stadium program, or team personnel file.
+      </p>
+
+      <p>A strong contribution may include:</p>
+      <ul>
+        <li>professional background</li>
+        <li>connection to Spokane or the Alloys</li>
+        <li>broadcast style</li>
+        <li>memorable habits or signature phrases</li>
+        <li>role in the stadium experience</li>
+        <li>relationship to fans, players, or the local baseball community</li>
+      </ul>
+
+      <p>
+        Suggested length: <strong>100–250 words.</strong><br>
+        Avoid parody, meme language, supernatural elements, or exaggerated backstory.
+      </p>
+
+      <form action="https://formspree.io/f/mwvzrwwj" method="POST">
+
+        <input type="hidden" name="glb_record_name" value="Michael Vale">
+        <input type="hidden" name="glb_record_id" value="GLB-SPO-BCAST-0001">
+        <input type="hidden" name="glb_team" value="Spokane Alloys">
+        <input type="hidden" name="glb_record_type" value="Broadcast Personnel Bio">
+
+        <label for="contributor_name">Contributor name or handle</label>
+        <input id="contributor_name" name="contributor_name" type="text" placeholder="Optional">
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" placeholder="Optional, but helpful if we need to follow up">
+
+        <label for="title">Contribution title</label>
+        <input id="title" name="contribution_title" type="text" placeholder="Example: The Voice Above the Alloy Yard">
+
+        <label for="contribution">Your contribution</label>
+        <textarea id="contribution" name="contribution_text" required placeholder="Write Michael Vale’s bio here..."></textarea>
+
+        <label for="notes">Notes for the archive review</label>
+        <textarea id="notes" name="archive_notes" placeholder="Optional. Add any context, intent, or notes for the GLB archive review."></textarea>
+
+        <div class="checkbox">
+          <input id="permission" name="permission_confirmed" type="checkbox" required>
+          <label for="permission">
+            I understand this submission may be edited, declined, or incorporated into GLB archive material at the discretion of the league archive.
+          </label>
+        </div>
+
+        <button type="submit">Submit Contribution</button>
+      </form>
+
+      <div class="footer-note">
+        <p>
+          How contributing to GLB records works: When you contribute to a GLB record, you are
+          helping document part of the league’s growing historical archive. Each record carries
+          a unique GLB provenance ID and occupies a permanent place within the league archive.
+          Submissions are reviewed before publication to protect GLB’s canon, continuity, and tone.
+        </p>
+        <p>
+          — Marisol Vega<br>
+          Commissioner, Global League Baseball
+        </p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

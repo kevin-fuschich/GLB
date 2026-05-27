@@ -157,7 +157,7 @@ a{
 
 .hero{
   position:relative;
-  height:340px;
+  height:260px;
   border-radius:10px;
   overflow:hidden;
   background:center/cover no-repeat;
@@ -171,46 +171,39 @@ a{
   background:
     linear-gradient(
       90deg,
-      rgba(13,34,53,.88) 0%,
-      rgba(13,34,53,.58) 42%,
-      rgba(13,34,53,.08) 100%
+      rgba(13,34,53,.85) 0%,
+      rgba(13,34,53,.5) 40%,
+      rgba(13,34,53,0) 100%
     );
 }
 
 .hero-content{
   position:absolute;
-  bottom:24px;
-  left:28px;
-  right:28px;
+  bottom:20px;
+  left:24px;
+  right:24px;
   z-index:2;
-}
-
-.hero-logo{
-  width:180px;
-  max-width:42%;
-  margin-bottom:14px;
-  filter:drop-shadow(0 2px 10px rgba(0,0,0,.35));
 }
 
 .hero .division{
   font-size:12px;
   letter-spacing:.1em;
   text-transform:uppercase;
-  opacity:.88;
+  opacity:.8;
 }
 
 .hero h1{
-  font-size:72px;
+  font-size:64px;
   margin:6px 0;
   font-weight:900;
-  line-height:.92;
+  line-height:.95;
 }
 
 .hero p{
   margin:0;
-  font-size:15px;
-  opacity:.95;
-  max-width:640px;
+  font-size:14px;
+  opacity:.9;
+  max-width:620px;
 }
 
 /* LAYOUT */
@@ -263,29 +256,6 @@ a{
   font-size:20px;
 }
 
-/* HISTORY IMAGE */
-
-.history-image-wrap{
-  padding:16px;
-}
-
-.history-image{
-  width:100%;
-  height:260px;
-  object-fit:cover;
-  display:block;
-  border-radius:8px;
-  border:1px solid var(--line);
-  background:#eef1f4;
-}
-
-.history-caption{
-  margin:10px 0 0;
-  font-size:13px;
-  line-height:1.45;
-  color:var(--muted);
-}
-
 /* TABLE */
 
 table{
@@ -321,6 +291,102 @@ th{
   border-radius:6px;
   object-fit:cover;
   background:#f0f0f0;
+}
+
+/* MEDIA */
+
+.media-wrap{
+  padding:16px;
+  display:grid;
+  gap:18px;
+}
+
+.media-card{
+  border:1px solid var(--line);
+  border-radius:10px;
+  overflow:hidden;
+  background:#fff;
+}
+
+.media-photo{
+  width:100%;
+  height:240px;
+  object-fit:cover;
+  display:block;
+}
+
+.media-info{
+  padding:16px;
+}
+
+.media-role{
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+  color:var(--muted);
+  margin-bottom:10px;
+}
+
+.media-name{
+  font-size:22px;
+  font-weight:800;
+  margin-bottom:8px;
+}
+
+.media-bio{
+  font-size:14px;
+  line-height:1.5;
+  color:#444;
+  margin-bottom:14px;
+}
+
+.media-status{
+  display:inline-block;
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+  padding:6px 10px;
+  border-radius:999px;
+  background:#eef3f8;
+  border:1px solid #d7dfe8;
+  margin-bottom:14px;
+}
+
+.record-contribution{
+  margin-top:14px;
+  padding-top:12px;
+  border-top:1px solid rgba(0,0,0,.08);
+}
+
+.record-id{
+  font-family:monospace;
+  font-size:11px;
+  letter-spacing:.05em;
+  opacity:.72;
+  margin-bottom:7px;
+}
+
+.contribute-link{
+  display:inline-block;
+  color:#1d4f91;
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:.05em;
+  text-transform:uppercase;
+  text-decoration:underline;
+  text-underline-offset:3px;
+}
+
+.contribute-link:hover{
+  opacity:.78;
+}
+
+.contribute-help{
+  margin:8px 0 0;
+  font-size:12px;
+  line-height:1.45;
+  color:#5f6368;
+  max-width:420px;
 }
 
 /* SIDEBAR */
@@ -367,6 +433,8 @@ th{
   font-size:13px;
 }
 
+/* MOBILE */
+
 @media(max-width:900px){
 
   .nav-links,
@@ -398,24 +466,12 @@ th{
     border-bottom:1px solid #d9dee5;
   }
 
-  .hero{
-    height:280px;
-  }
-
   .hero h1{
-    font-size:44px;
-  }
-
-  .hero-logo{
-    width:120px;
+    font-size:42px;
   }
 
   .snapshot{
     grid-template-columns:repeat(2,1fr);
-  }
-
-  .history-image{
-    height:210px;
   }
 }
 </style>
@@ -454,28 +510,51 @@ Season 1 · Official League Record
 
 </header>
 
+<section class="scores-strip">
+
+<div class="container">
+
+<div class="scores-row">
+
+<a class="score-cell" href="scores.html">
+<div class="score-top">
+<span>Final</span>
+<span class="score-status">Box</span>
+</div>
+
+<div class="team-line">
+<span>Spokane Alloys</span>
+<span class="team-score">2</span>
+</div>
+
+<div class="team-line">
+<span>Fresno Yield</span>
+<span class="team-score">0</span>
+</div>
+</a>
+
+</div>
+
+</div>
+
+</section>
+
 <main class="container">
 
 <div class="hero" id="hero">
 
 <div class="hero-content">
 
-<img
-class="hero-logo"
-src="team-spokane-alloys-logo.png"
-alt="Spokane Alloys logo"
->
-
 <div class="division" id="division">
-Americas Conference
+Division
 </div>
 
 <h1 id="teamName">
-Spokane Alloys
+Team
 </h1>
 
 <p id="teamDeck">
-Club record, active roster, and current club file for Spokane's opening campaign.
+Club record, active roster, and current club file.
 </p>
 
 </div>
@@ -494,22 +573,22 @@ Club record, active roster, and current club file for Spokane's opening campaign
 
 <div class="stat">
 <small>Record</small>
-<strong id="record">1-0</strong>
+<strong id="record">—</strong>
 </div>
 
 <div class="stat">
 <small>Win %</small>
-<strong id="pct">1.000</strong>
+<strong id="pct">—</strong>
 </div>
 
 <div class="stat">
 <small>Streak</small>
-<strong id="streak">W1</strong>
+<strong id="streak">—</strong>
 </div>
 
 <div class="stat">
 <small>Rank</small>
-<strong id="rank">#1</strong>
+<strong id="rank">—</strong>
 </div>
 
 </div>
@@ -518,19 +597,138 @@ Club record, active roster, and current club file for Spokane's opening campaign
 
 <div class="card" style="margin-top:20px;">
 
-<h2>Club History Image</h2>
+<h2>Active Roster</h2>
 
-<div class="history-image-wrap">
+<table>
+
+<thead>
+<tr>
+<th></th>
+<th>Player</th>
+<th>Pos</th>
+<th>B/T</th>
+<th>Age</th>
+</tr>
+</thead>
+
+<tbody id="rosterBody">
+<tr>
+<td colspan="5">Loading roster...</td>
+</tr>
+</tbody>
+
+</table>
+
+</div>
+
+<div class="card" style="margin-top:20px;">
+
+<h2>Broadcast & Media</h2>
+
+<div class="media-wrap">
+
+<div class="media-card">
 
 <img
-class="history-image"
-src="club-spokane-alloys-park.png"
-alt="Spokane Alloys archival stadium image"
+class="media-photo"
+src="assets/teams/spokane-alloys/stadium/spokane-alloys-broadcast.png"
+alt="Martin Vale"
 >
 
-<p class="history-caption">
-Archival stadium image from the Spokane Alloys club file. Better suited here as a historical image than as the primary team-page hero.
+<div class="media-info">
+
+<div class="media-role">
+Senior Radio Broadcaster
+</div>
+
+<div class="media-name">
+Martin Vale
+</div>
+
+<div class="media-bio">
+Has called Spokane home broadcasts since the club’s inaugural season.
+Additional archival material regarding Vale’s professional background,
+broadcast style, and connection to the Spokane baseball community remains incomplete.
+</div>
+
+<div class="media-status">
+Archive Status: Partial Record
+</div>
+
+<div class="record-contribution">
+
+<div class="record-id">
+GLB Record ID: GLB-SPO-BCAST-0001
+</div>
+
+<a
+class="contribute-link"
+href="https://kevin-fuschich.github.io/GLB/assets/teams/spokane-alloys/submit/martin-vale.html">
+Contribute to this record
+</a>
+
+<p class="contribute-help">
+Contributing to this record gives you the opportunity to help define
+Martin Vale’s archival bio and play a role in building Global League
+Baseball’s cooperative universe.
 </p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="media-card">
+
+<img
+class="media-photo"
+src="assets/teams/spokane-alloys/stadium/spokane-alloys-announcer.png"
+alt="Graham Mercer"
+>
+
+<div class="media-info">
+
+<div class="media-role">
+Broadcast Analyst
+</div>
+
+<div class="media-name">
+Graham Mercer
+</div>
+
+<div class="media-bio">
+Joined the Spokane broadcast rotation during the 2027 season following
+regional and collegiate baseball coverage work throughout the Inland Northwest.
+Additional archival material remains incomplete.
+</div>
+
+<div class="media-status">
+Archive Status: Partial Record
+</div>
+
+<div class="record-contribution">
+
+<div class="record-id">
+GLB Record ID: GLB-SPO-BCAST-0002
+</div>
+
+<a
+class="contribute-link"
+href="https://kevin-fuschich.github.io/GLB/assets/teams/spokane-alloys/submit/graham-mercer.html">
+Contribute to this record
+</a>
+
+<p class="contribute-help">
+Contributing to this record gives you the opportunity to help expand
+the archival history surrounding Spokane’s broadcast operation.
+</p>
+
+</div>
+
+</div>
+
+</div>
 
 </div>
 
@@ -543,19 +741,20 @@ Archival stadium image from the Spokane Alloys club file. Better suited here as 
 <div class="section">
 
 <img
+id="teamLogo"
 class="logo-small"
-src="team-spokane-alloys-logo.png"
-alt="Spokane Alloys logo"
+src=""
+alt=""
 >
 
 <h3>Club Notes</h3>
 
-<strong>
-Spokane opened with a shutout win
+<strong id="noteTitle">
+Club file loading
 </strong>
 
-<p>
-The Alloys held Fresno scoreless and opened 1–0.
+<p id="noteText">
+Current GLB record and roster are being retrieved.
 </p>
 
 </div>
@@ -564,9 +763,9 @@ The Alloys held Fresno scoreless and opened 1–0.
 
 <h3>Club File</h3>
 
-<p>City: Spokane</p>
-<p>Conference: Americas</p>
-<p>Club ID: SPO</p>
+<p id="clubCity">City: —</p>
+<p id="clubConference">Conference: —</p>
+<p id="clubId">Club ID: —</p>
 <p>Status: Active</p>
 
 </div>
@@ -575,17 +774,18 @@ The Alloys held Fresno scoreless and opened 1–0.
 
 <h3>Ballpark</h3>
 
-<strong>
-OGWA Stadium
+<strong id="ballparkName">
+Ballpark file loading
 </strong>
 
-<p>
-Riverfront, rail-adjacent, and known for its sea-glass concourse lighting, scoreboard glow, and Rain Wall refill system.
+<p id="ballparkText">
+Venue information is being retrieved.
 </p>
 
 <a
+id="ballparkLink"
 class="ballpark-link"
-href="assets/teams/spokane-alloys/stadium/"
+href="#"
 >
 Open Ballpark File →
 </a>
@@ -599,33 +799,228 @@ Open Ballpark File →
 </main>
 
 <script>
-const hero = document.getElementById("hero");
+const params = new URLSearchParams(window.location.search);
 
-heroCandidates: [
-"assets/teams/spokane-alloys/stadium/ogwa-aerial1.png?v=4",
-"assets/teams/spokane-alloys/stadium/ogwa-fans1.png?v=4"
-],
-];
+const slug = params.get("team") || "spokane-alloys";
 
-function testImage(path){
-  return new Promise(resolve => {
+const teamVisuals = {
 
-    const img = new Image();
-
-    img.onload = () => resolve(path);
-
-    img.onerror = () => resolve(null);
-
-    img.src = path;
-  });
+"spokane-alloys": {
+hero: "club-spokane-alloys-park.png",
+logo: "team-spokane-alloys-logo.png",
+deck: "Club record, active roster, and current club file for Spokane's opening campaign.",
+noteTitle: "Spokane opened with a shutout win",
+noteText: "The Alloys held Fresno scoreless and opened 1–0.",
+ballparkName: "OGWA Stadium",
+ballparkText: "Riverfront, rail-adjacent, and known for its sea-glass concourse lighting, scoreboard glow, and Rain Wall refill system.",
+ballparkLink: "assets/teams/spokane-alloys/stadium/"
 }
 
-async function setHero(){
+};
 
-  for(const path of heroCandidates){
+function titleCaseFromSlug(value){
 
-    const working = await testImage(path);
+return value
+.split("-")
+.map(word =>
+word.charAt(0).toUpperCase() + word.slice(1)
+)
+.join(" ");
+}
 
-    if(working){
+async function getJson(path){
 
-     
+const response = await fetch(path);
+
+if(!response.ok){
+throw new Error(path + " failed");
+}
+
+return response.json();
+}
+
+async function loadPage(){
+
+const visuals = teamVisuals[slug] || teamVisuals["spokane-alloys"];
+
+let team = {
+id:"—",
+name:titleCaseFromSlug(slug),
+city:"—",
+conference:"—",
+slug:slug
+};
+
+try{
+
+const teamsData = await getJson("data/teams.json");
+
+const found = teamsData.teams.find(
+t => t.slug === slug
+);
+
+if(found){
+team = found;
+}
+
+}catch(error){
+
+console.warn("Team metadata unavailable", error);
+
+}
+
+document.title = "GLB — " + team.name;
+
+document.getElementById("teamName").textContent =
+team.name;
+
+document.getElementById("division").textContent =
+(team.conference || "GLB") + " Conference";
+
+document.getElementById("teamDeck").textContent =
+visuals.deck;
+
+document.getElementById("clubCity").textContent =
+"City: " + (team.city || "—");
+
+document.getElementById("clubConference").textContent =
+"Conference: " + (team.conference || "—");
+
+document.getElementById("clubId").textContent =
+"Club ID: " + (team.id || "—");
+
+document.getElementById("noteTitle").textContent =
+visuals.noteTitle;
+
+document.getElementById("noteText").textContent =
+visuals.noteText;
+
+document.getElementById("ballparkName").textContent =
+visuals.ballparkName;
+
+document.getElementById("ballparkText").textContent =
+visuals.ballparkText;
+
+document.getElementById("ballparkLink").href =
+visuals.ballparkLink;
+
+document.getElementById("hero").style.backgroundImage =
+`url("${visuals.hero}")`;
+
+const logo = document.getElementById("teamLogo");
+
+logo.src = visuals.logo;
+
+logo.alt = team.name + " logo";
+
+logo.onerror = function(){
+this.style.display = "none";
+};
+
+loadStandings();
+loadRoster();
+}
+
+async function loadStandings(){
+
+try{
+
+const data = await getJson("data/standings.json");
+
+const standing = data.standings.find(
+s => s.team === slug
+);
+
+if(!standing){
+return;
+}
+
+document.getElementById("record").textContent =
+`${standing.wins}-${standing.losses}`;
+
+document.getElementById("pct").textContent =
+standing.pct || "—";
+
+document.getElementById("streak").textContent =
+standing.streak || "—";
+
+document.getElementById("rank").textContent =
+standing.rank ? "#" + standing.rank : "—";
+
+}catch(error){
+
+console.warn("Standings unavailable", error);
+
+}
+}
+
+async function loadRoster(){
+
+const rosterBody =
+document.getElementById("rosterBody");
+
+try{
+
+const data = await getJson(
+`data/rosters/${slug}.json`
+);
+
+rosterBody.innerHTML = "";
+
+data.players.forEach(player => {
+
+const row =
+document.createElement("tr");
+
+const cityPrefix =
+slug.split("-")[0];
+
+const photoPath =
+`assets/teams/${slug}/images/players/${cityPrefix}-${player.slug}.png`;
+
+row.innerHTML = `
+<td>
+<img
+class="roster-pic"
+src="${photoPath}"
+alt="${player.name}"
+loading="lazy"
+onerror="this.style.visibility='hidden';"
+>
+</td>
+
+<td>
+<a
+class="player-link"
+href="player.html?player=${player.slug || ""}"
+>
+${player.name}
+</a>
+</td>
+
+<td>${player.position || "—"}</td>
+
+<td>
+${player.bats || "—"}/${player.throws || "—"}
+</td>
+
+<td>${player.age || "—"}</td>
+`;
+
+rosterBody.appendChild(row);
+
+});
+
+}catch(error){
+
+rosterBody.innerHTML =
+`<tr><td colspan="5">Roster unavailable.</td></tr>`;
+
+}
+}
+
+loadPage();
+</script>
+
+</body>
+</html>

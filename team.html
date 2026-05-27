@@ -330,7 +330,7 @@ th{
 .media-name{
   font-size:22px;
   font-weight:800;
-  margin-bottom:10px;
+  margin-bottom:8px;
 }
 
 .media-bio{
@@ -352,13 +352,41 @@ th{
   margin-bottom:14px;
 }
 
-.claim-link{
+.record-contribution{
+  margin-top:14px;
+  padding-top:12px;
+  border-top:1px solid rgba(0,0,0,.08);
+}
+
+.record-id{
+  font-family:monospace;
+  font-size:11px;
+  letter-spacing:.05em;
+  opacity:.72;
+  margin-bottom:7px;
+}
+
+.contribute-link{
   display:inline-block;
   color:#1d4f91;
   font-size:12px;
   font-weight:700;
   letter-spacing:.05em;
   text-transform:uppercase;
+  text-decoration:underline;
+  text-underline-offset:3px;
+}
+
+.contribute-link:hover{
+  opacity:.78;
+}
+
+.contribute-help{
+  margin:8px 0 0;
+  font-size:12px;
+  line-height:1.45;
+  color:#5f6368;
+  max-width:420px;
 }
 
 /* SIDEBAR */
@@ -604,34 +632,49 @@ Club record, active roster, and current club file.
 <img
 class="media-photo"
 src="assets/teams/spokane-alloys/stadium/spokane-alloys-broadcast.png"
-alt="Martin Vale"
+alt="Michael Vale"
 >
 
 <div class="media-info">
 
 <div class="media-role">
-Senior Radio Broadcaster
+Lead Stadium Broadcaster
 </div>
 
 <div class="media-name">
-Martin Vale
+Michael Vale
 </div>
 
 <div class="media-bio">
-Has called Spokane home broadcasts since the club’s inaugural season. Additional archival material remains incomplete.
+Has called Spokane home broadcasts since the club’s inaugural season.
+Additional archival material regarding Vale’s professional background,
+broadcast style, and connection to the Spokane baseball community
+remains incomplete.
 </div>
 
 <div class="media-status">
 Archive Status: Partial Record
 </div>
 
-<br>
+<div class="record-contribution">
+
+<div class="record-id">
+GLB Record ID: GLB-SPO-BCAST-0001
+</div>
 
 <a
-class="claim-link"
-href="submit.html?record=SPO-MEDIA-001">
-Claim This Record →
+class="contribute-link"
+href="./assets/teams/spokane-alloys/submit/michael-vale.html">
+Contribute to this record
 </a>
+
+<p class="contribute-help">
+Contributing to this record gives you the opportunity to help define
+Michael Vale’s archival bio and play a role in building Global League
+Baseball’s cooperative universe.
+</p>
+
+</div>
 
 </div>
 
@@ -656,20 +699,33 @@ Graham Mercer
 </div>
 
 <div class="media-bio">
-Joined the Spokane broadcast rotation during the 2027 season following collegiate and regional baseball coverage work.
+Joined the Spokane broadcast rotation during the 2027 season following
+regional and collegiate baseball coverage work throughout the Inland Northwest.
+Additional archival material remains incomplete.
 </div>
 
 <div class="media-status">
 Archive Status: Partial Record
 </div>
 
-<br>
+<div class="record-contribution">
+
+<div class="record-id">
+GLB Record ID: GLB-SPO-BCAST-0002
+</div>
 
 <a
-class="claim-link"
-href="submit.html?record=SPO-MEDIA-002">
-Claim This Record →
+class="contribute-link"
+href="./assets/teams/spokane-alloys/submit/graham-mercer.html">
+Contribute to this record
 </a>
+
+<p class="contribute-help">
+Contributing to this record gives you the opportunity to help expand
+the archival history surrounding Spokane’s broadcast operation.
+</p>
+
+</div>
 
 </div>
 
@@ -786,7 +842,7 @@ return response.json();
 
 async function loadPage(){
 
-const visuals = teamVisuals[slug];
+const visuals = teamVisuals[slug] || teamVisuals["spokane-alloys"];
 
 let team = {
 id:"—",

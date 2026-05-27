@@ -7,77 +7,233 @@
 <title>GLB Archive Intake — Martin Vale</title>
 
 <style>
+:root{
+  --ink:#0f1214;
+  --muted:#6b6f75;
+  --line:#e1e4e8;
+  --bg:#f4f5f6;
+  --card:#ffffff;
+  --navy:#0b1e33;
+  --blue:#1d4f91;
+  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+}
+
+*{
+  box-sizing:border-box;
+}
+
 body{
   margin:0;
-  font-family: Georgia, "Times New Roman", serif;
-  background:#f4efe6;
-  color:#1b1b1b;
+  font-family:var(--sans);
+  background:var(--bg);
+  color:var(--ink);
 }
 
-.wrap{
-  max-width:860px;
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+.container{
+  max-width:1100px;
   margin:0 auto;
-  padding:40px 20px;
+  padding:30px 20px;
 }
 
-.card{
-  background:#fffaf0;
-  border:1px solid #2b2b2b;
-  box-shadow:8px 8px 0 #1b1b1b;
-  padding:34px;
+/* HEADER */
+
+.site-header{
+  background:#0b1e33;
+  color:#fff;
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.topbar{
+  min-height:72px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  color:#fff;
+}
+
+.brand-mark{
+  font-weight:800;
+  letter-spacing:1.4px;
+  font-size:24px;
+}
+
+.brand-sub{
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:1.2px;
+  color:#dfe7f1;
+}
+
+.nav-links{
+  display:flex;
+  align-items:center;
+  flex:1;
+  justify-content:center;
+}
+
+.nav-links a{
+  color:rgba(255,255,255,.92);
+  padding:26px 16px 22px;
+  font-size:13px;
+  font-weight:600;
+  text-transform:uppercase;
+  letter-spacing:.8px;
+  border-bottom:4px solid transparent;
+}
+
+.nav-links a.active{
+  border-bottom-color:#7fb0ff;
+}
+
+.header-meta{
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  color:#dfe7f1;
+}
+
+/* PAGE */
+
+.back-link{
+  display:inline-block;
+  margin-bottom:18px;
+  color:#1d4f91;
+  font-size:13px;
+  font-weight:700;
+}
+
+.intake-hero{
+  background:#0b1e33;
+  color:#fff;
+  border-radius:10px;
+  padding:32px;
+  margin-bottom:24px;
+  position:relative;
+  overflow:hidden;
+}
+
+.intake-hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(13,34,53,.95) 0%,
+      rgba(13,34,53,.72) 55%,
+      rgba(29,79,145,.32) 100%
+    );
+}
+
+.intake-hero-content{
+  position:relative;
+  z-index:2;
 }
 
 .kicker{
   font-size:12px;
-  letter-spacing:.16em;
+  letter-spacing:.12em;
   text-transform:uppercase;
-  margin-bottom:18px;
+  color:#dfe7f1;
+  margin-bottom:10px;
 }
 
-h1{
+.intake-hero h1{
   margin:0;
-  font-size:42px;
-  line-height:1;
+  font-size:52px;
+  line-height:.95;
+  font-weight:900;
 }
 
 .role{
-  margin-top:8px;
-  font-size:18px;
-  color:#555;
+  margin-top:10px;
+  font-size:16px;
+  color:#dfe7f1;
 }
 
-.record{
-  margin:18px 0 26px;
-  font-family:monospace;
-  font-size:14px;
-  background:#eee2cf;
+.record-id{
   display:inline-block;
+  margin-top:18px;
+  font-family:monospace;
+  font-size:12px;
+  letter-spacing:.05em;
+  background:rgba(255,255,255,.1);
+  border:1px solid rgba(255,255,255,.25);
   padding:8px 10px;
-  border:1px solid #444;
+  border-radius:6px;
 }
 
-h2{
-  margin-top:30px;
-  font-size:22px;
+.layout{
+  display:grid;
+  grid-template-columns:2fr 1fr;
+  gap:24px;
+}
+
+.card{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:10px;
+  overflow:hidden;
+}
+
+.card h2{
+  font-size:16px;
+  margin:0;
+  padding:16px;
+  border-bottom:1px solid var(--line);
+}
+
+.card-body{
+  padding:18px;
 }
 
 p,
 li{
-  font-size:16px;
+  font-size:14px;
   line-height:1.55;
+  color:#444;
 }
 
-.note{
-  border-left:4px solid #1b1b1b;
-  padding-left:16px;
-  margin:24px 0;
-  color:#333;
+ul{
+  margin-top:8px;
+  padding-left:20px;
+}
+
+.notice{
+  background:#f8f9fa;
+  border:1px solid var(--line);
+  border-radius:8px;
+  padding:14px;
+  margin:16px 0;
+}
+
+.notice strong{
+  display:block;
+  font-size:13px;
+  margin-bottom:4px;
+}
+
+.form-card{
+  margin-top:20px;
 }
 
 label{
   display:block;
-  margin-top:18px;
-  font-weight:bold;
+  margin-top:16px;
+  font-size:13px;
+  font-weight:700;
 }
 
 input,
@@ -86,71 +242,150 @@ textarea{
   box-sizing:border-box;
   margin-top:7px;
   padding:12px;
-  border:1px solid #333;
+  border:1px solid #cfd5dc;
+  border-radius:8px;
   background:#fff;
-  font-family:inherit;
-  font-size:16px;
+  font-family:var(--sans);
+  font-size:14px;
 }
 
 textarea{
-  min-height:210px;
+  min-height:190px;
+  resize:vertical;
+}
+
+.field-help{
+  margin-top:5px;
+  font-size:12px;
+  color:var(--muted);
+  line-height:1.4;
 }
 
 .checkbox{
   display:flex;
   gap:10px;
-  margin-top:20px;
+  margin-top:18px;
   align-items:flex-start;
 }
 
 .checkbox input{
   width:auto;
-  margin-top:5px;
+  margin-top:4px;
+}
+
+.checkbox label{
+  margin-top:0;
+  font-weight:500;
+  color:#444;
 }
 
 button{
-  margin-top:26px;
-  background:#111;
+  margin-top:24px;
+  background:#1d4f91;
   color:white;
   border:none;
-  padding:14px 22px;
-  font-size:15px;
-  letter-spacing:.08em;
+  border-radius:8px;
+  padding:14px 20px;
+  font-size:13px;
+  font-weight:800;
+  letter-spacing:.07em;
   text-transform:uppercase;
   cursor:pointer;
 }
 
 button:hover{
-  opacity:.85;
+  opacity:.88;
 }
 
-.footer-note{
-  margin-top:30px;
-  font-size:14px;
-  color:#555;
+.sidebar .section{
+  padding:16px;
+  border-bottom:1px solid var(--line);
 }
 
-.back-link{
-  display:inline-block;
-  margin-bottom:18px;
+.sidebar .section:last-child{
+  border-bottom:none;
+}
+
+.sidebar h3{
+  font-size:11px;
+  text-transform:uppercase;
+  color:var(--muted);
+  margin:0 0 8px;
+  letter-spacing:.06em;
+}
+
+.sidebar strong{
+  display:block;
+  margin-bottom:6px;
+}
+
+.sidebar p{
+  margin:0;
   font-size:13px;
+  color:var(--muted);
+  line-height:1.45;
+}
+
+.status-pill{
+  display:inline-block;
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+  padding:6px 10px;
+  border-radius:999px;
+  background:#eef3f8;
+  border:1px solid #d7dfe8;
   color:#1d4f91;
-  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   font-weight:700;
 }
 
+.small-list{
+  margin:0;
+  padding-left:18px;
+}
+
+.small-list li{
+  font-size:13px;
+  color:var(--muted);
+  margin-bottom:6px;
+}
+
+.commissioner{
+  margin-top:16px;
+  padding-top:14px;
+  border-top:1px solid var(--line);
+}
+
+.commissioner p{
+  font-size:13px;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+  .nav-links,
+  .header-meta{
+    display:none;
+  }
+
+  .layout{
+    grid-template-columns:1fr;
+  }
+}
+
 @media(max-width:640px){
-  .wrap{
-    padding:24px 14px;
+
+  .container{
+    padding:20px 14px;
   }
 
-  .card{
+  .intake-hero{
     padding:24px;
-    box-shadow:5px 5px 0 #1b1b1b;
   }
 
-  h1{
-    font-size:34px;
+  .intake-hero h1{
+    font-size:38px;
   }
 }
 </style>
@@ -158,16 +393,49 @@ button:hover{
 
 <body>
 
-<main class="wrap">
+<header class="site-header">
+
+<div class="container">
+
+<div class="topbar">
+
+<a href="https://kevin-fuschich.github.io/GLB/index.html" class="brand">
+<div class="brand-mark">GLB</div>
+<div class="brand-sub">Global League Baseball</div>
+</a>
+
+<nav class="nav-links">
+<a href="https://kevin-fuschich.github.io/GLB/index.html">Home</a>
+<a href="https://kevin-fuschich.github.io/GLB/scores.html">Scores</a>
+<a href="https://kevin-fuschich.github.io/GLB/standings.html">Standings</a>
+<a href="https://kevin-fuschich.github.io/GLB/schedule.html">Schedule</a>
+<a href="https://kevin-fuschich.github.io/GLB/teams.html" class="active">Teams</a>
+<a href="https://kevin-fuschich.github.io/GLB/stats.html">Stats</a>
+<a href="https://kevin-fuschich.github.io/GLB/news.html">News</a>
+</nav>
+
+<div class="header-meta">
+Archive Intake Division
+</div>
+
+</div>
+
+</div>
+
+</header>
+
+<main class="container">
 
 <a class="back-link" href="https://kevin-fuschich.github.io/GLB/team.html?team=spokane-alloys">
 ← Return to Spokane Alloys club file
 </a>
 
-<section class="card">
+<section class="intake-hero">
+
+<div class="intake-hero-content">
 
 <div class="kicker">
-Global League Baseball · Archive Intake Division
+Global League Baseball · Record Contribution
 </div>
 
 <h1>Martin Vale</h1>
@@ -176,11 +444,23 @@ Global League Baseball · Archive Intake Division
 Senior Radio Broadcaster — Spokane Alloys
 </div>
 
-<div class="record">
+<div class="record-id">
 GLB Record ID: GLB-SPO-BCAST-0001
 </div>
 
+</div>
+
+</section>
+
+<div class="layout">
+
+<div>
+
+<section class="card">
+
 <h2>Contribute to this record</h2>
+
+<div class="card-body">
 
 <p>
 Contributing to this record gives you the opportunity to help define part of the
@@ -188,14 +468,15 @@ Global League Baseball universe. Approved contributions may become part of this
 record’s permanent archive.
 </p>
 
-<div class="note">
+<div class="notice">
+<strong>Existing GLB record</strong>
 <p>
-Martin Vale is an existing GLB record. You are not naming him or claiming ownership.
+Martin Vale already exists in the GLB archive. You are not naming him or claiming ownership.
 You are contributing written material that may help shape his official archival bio.
 </p>
 </div>
 
-<h2>Creative brief</h2>
+<h2 style="padding:0;border-bottom:none;margin-top:22px;">Creative brief</h2>
 
 <p>
 Write a short biographical profile for Martin Vale, senior radio broadcaster for the
@@ -219,6 +500,16 @@ Suggested length: <strong>100–250 words.</strong><br>
 Avoid parody, meme language, supernatural elements, or exaggerated backstory.
 </p>
 
+</div>
+
+</section>
+
+<section class="card form-card">
+
+<h2>Archive Intake Form</h2>
+
+<div class="card-body">
+
 <form action="https://formspree.io/f/mwvzrwwj" method="POST">
 
 <input type="hidden" name="glb_record_name" value="Martin Vale">
@@ -237,8 +528,9 @@ Avoid parody, meme language, supernatural elements, or exaggerated backstory.
 
 <label for="contribution">Your contribution</label>
 <textarea id="contribution" name="contribution_text" required placeholder="Write Martin Vale’s bio here..."></textarea>
+<div class="field-help">Recommended length: 100–250 words.</div>
 
-<label for="notes">Notes for the archive review</label>
+<label for="notes">Notes for archive review</label>
 <textarea id="notes" name="archive_notes" placeholder="Optional. Add any context, intent, or notes for the GLB archive review."></textarea>
 
 <div class="checkbox">
@@ -252,21 +544,67 @@ I understand this submission may be edited, declined, or incorporated into GLB a
 
 </form>
 
-<div class="footer-note">
+</div>
+
+</section>
+
+</div>
+
+<aside class="sidebar card">
+
+<div class="section">
+
+<h3>Record Status</h3>
+
+<span class="status-pill">Partial Record</span>
+
+</div>
+
+<div class="section">
+
+<h3>Record File</h3>
+
+<p>Subject: Martin Vale</p>
+<p>Club: Spokane Alloys</p>
+<p>Type: Broadcast Personnel Bio</p>
+<p>ID: GLB-SPO-BCAST-0001</p>
+
+</div>
+
+<div class="section">
+
+<h3>Contribution Guidance</h3>
+
+<ul class="small-list">
+<li>Write in third person.</li>
+<li>Keep it grounded and believable.</li>
+<li>Avoid parody or meme language.</li>
+<li>Do not introduce ownership language.</li>
+<li>Preserve GLB continuity and tone.</li>
+</ul>
+
+</div>
+
+<div class="section commissioner">
+
+<h3>Commissioner’s Note</h3>
+
 <p>
-How contributing to GLB records works: When you contribute to a GLB record, you are
-helping document part of the league’s growing historical archive. Each record carries
-a unique GLB provenance ID and occupies a permanent place within the league archive.
-Submissions are reviewed before publication to protect GLB’s canon, continuity, and tone.
+When you contribute to a GLB record, you are helping document part of the league’s
+growing historical archive. Each record carries a unique GLB provenance ID and
+occupies a permanent place within the league archive.
 </p>
 
 <p>
 — Marisol Vega<br>
 Commissioner, Global League Baseball
 </p>
+
 </div>
 
-</section>
+</aside>
+
+</div>
 
 </main>
 

@@ -157,7 +157,7 @@ a{
 
 .hero{
   position:relative;
-  height:260px;
+  height:340px;
   border-radius:10px;
   overflow:hidden;
   background:center/cover no-repeat;
@@ -179,31 +179,38 @@ a{
 
 .hero-content{
   position:absolute;
-  bottom:20px;
-  left:24px;
-  right:24px;
+  bottom:24px;
+  left:28px;
+  right:28px;
   z-index:2;
+}
+
+.hero-logo{
+  width:180px;
+  max-width:42%;
+  margin-bottom:14px;
+  filter:drop-shadow(0 2px 10px rgba(0,0,0,.35));
 }
 
 .hero .division{
   font-size:12px;
   letter-spacing:.1em;
   text-transform:uppercase;
-  opacity:.8;
+  opacity:.88;
 }
 
 .hero h1{
-  font-size:64px;
+  font-size:72px;
   margin:6px 0;
   font-weight:900;
-  line-height:.95;
+  line-height:.92;
 }
 
 .hero p{
   margin:0;
-  font-size:14px;
-  opacity:.9;
-  max-width:620px;
+  font-size:15px;
+  opacity:.95;
+  max-width:640px;
 }
 
 /* LAYOUT */
@@ -316,102 +323,6 @@ th{
   background:#f0f0f0;
 }
 
-/* MEDIA */
-
-.media-wrap{
-  padding:16px;
-  display:grid;
-  gap:18px;
-}
-
-.media-card{
-  border:1px solid var(--line);
-  border-radius:10px;
-  overflow:hidden;
-  background:#fff;
-}
-
-.media-photo{
-  width:100%;
-  height:240px;
-  object-fit:cover;
-  display:block;
-}
-
-.media-info{
-  padding:16px;
-}
-
-.media-role{
-  font-size:11px;
-  text-transform:uppercase;
-  letter-spacing:.08em;
-  color:var(--muted);
-  margin-bottom:10px;
-}
-
-.media-name{
-  font-size:22px;
-  font-weight:800;
-  margin-bottom:8px;
-}
-
-.media-bio{
-  font-size:14px;
-  line-height:1.5;
-  color:#444;
-  margin-bottom:14px;
-}
-
-.media-status{
-  display:inline-block;
-  font-size:11px;
-  text-transform:uppercase;
-  letter-spacing:.08em;
-  padding:6px 10px;
-  border-radius:999px;
-  background:#eef3f8;
-  border:1px solid #d7dfe8;
-  margin-bottom:14px;
-}
-
-.record-contribution{
-  margin-top:14px;
-  padding-top:12px;
-  border-top:1px solid rgba(0,0,0,.08);
-}
-
-.record-id{
-  font-family:monospace;
-  font-size:11px;
-  letter-spacing:.05em;
-  opacity:.72;
-  margin-bottom:7px;
-}
-
-.contribute-link{
-  display:inline-block;
-  color:#1d4f91;
-  font-size:12px;
-  font-weight:700;
-  letter-spacing:.05em;
-  text-transform:uppercase;
-  text-decoration:underline;
-  text-underline-offset:3px;
-}
-
-.contribute-link:hover{
-  opacity:.78;
-}
-
-.contribute-help{
-  margin:8px 0 0;
-  font-size:12px;
-  line-height:1.45;
-  color:#5f6368;
-  max-width:420px;
-}
-
 /* SIDEBAR */
 
 .sidebar .section{
@@ -456,8 +367,6 @@ th{
   font-size:13px;
 }
 
-/* MOBILE */
-
 @media(max-width:900px){
 
   .nav-links,
@@ -489,8 +398,16 @@ th{
     border-bottom:1px solid #d9dee5;
   }
 
+  .hero{
+    height:280px;
+  }
+
   .hero h1{
-    font-size:42px;
+    font-size:44px;
+  }
+
+  .hero-logo{
+    width:120px;
   }
 
   .snapshot{
@@ -506,31 +423,208 @@ th{
 
 <body>
 
+<header class="site-header">
+
+<div class="container">
+
+<div class="topbar">
+
+<a href="index.html" class="brand">
+<div class="brand-mark">GLB</div>
+<div class="brand-sub">Global League Baseball</div>
+</a>
+
+<nav class="nav-links">
+<a href="index.html">Home</a>
+<a href="scores.html">Scores</a>
+<a href="standings.html">Standings</a>
+<a href="schedule.html">Schedule</a>
+<a href="teams.html" class="active">Teams</a>
+<a href="stats.html">Stats</a>
+<a href="news.html">News</a>
+</nav>
+
+<div class="header-meta">
+Season 1 · Official League Record
+</div>
+
+</div>
+
+</div>
+
+</header>
+
+<main class="container">
+
+<div class="hero" id="hero">
+
+<div class="hero-content">
+
+<img
+class="hero-logo"
+src="team-spokane-alloys-logo.png"
+alt="Spokane Alloys logo"
+>
+
+<div class="division" id="division">
+Americas Conference
+</div>
+
+<h1 id="teamName">
+Spokane Alloys
+</h1>
+
+<p id="teamDeck">
+Club record, active roster, and current club file for Spokane's opening campaign.
+</p>
+
+</div>
+
+</div>
+
+<div class="layout">
+
+<div>
+
+<div class="card">
+
+<h2>Season Snapshot</h2>
+
+<div class="snapshot">
+
+<div class="stat">
+<small>Record</small>
+<strong id="record">1-0</strong>
+</div>
+
+<div class="stat">
+<small>Win %</small>
+<strong id="pct">1.000</strong>
+</div>
+
+<div class="stat">
+<small>Streak</small>
+<strong id="streak">W1</strong>
+</div>
+
+<div class="stat">
+<small>Rank</small>
+<strong id="rank">#1</strong>
+</div>
+
+</div>
+
+</div>
+
+<div class="card" style="margin-top:20px;">
+
+<h2>Club History Image</h2>
+
+<div class="history-image-wrap">
+
+<img
+class="history-image"
+src="club-spokane-alloys-park.png"
+alt="Spokane Alloys archival stadium image"
+>
+
+<p class="history-caption">
+Archival stadium image from the Spokane Alloys club file. Better suited here as a historical image than as the primary team-page hero.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="sidebar card">
+
+<div class="section">
+
+<img
+class="logo-small"
+src="team-spokane-alloys-logo.png"
+alt="Spokane Alloys logo"
+>
+
+<h3>Club Notes</h3>
+
+<strong>
+Spokane opened with a shutout win
+</strong>
+
+<p>
+The Alloys held Fresno scoreless and opened 1–0.
+</p>
+
+</div>
+
+<div class="section">
+
+<h3>Club File</h3>
+
+<p>City: Spokane</p>
+<p>Conference: Americas</p>
+<p>Club ID: SPO</p>
+<p>Status: Active</p>
+
+</div>
+
+<div class="section">
+
+<h3>Ballpark</h3>
+
+<strong>
+OGWA Stadium
+</strong>
+
+<p>
+Riverfront, rail-adjacent, and known for its sea-glass concourse lighting, scoreboard glow, and Rain Wall refill system.
+</p>
+
+<a
+class="ballpark-link"
+href="assets/teams/spokane-alloys/stadium/"
+>
+Open Ballpark File →
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</main>
+
 <script>
-const params = new URLSearchParams(window.location.search);
+const hero = document.getElementById("hero");
 
-const slug = params.get("team") || "spokane-alloys";
+const heroCandidates = [
+  "assets/teams/spokane-alloys/stadium/ogwa-aerial1.png?v=3",
+  "assets/teams/spokane-alloys/stadium/ogwa-fans1.png?v=3"
+];
 
-const teamVisuals = {
+function testImage(path){
+  return new Promise(resolve => {
 
-"spokane-alloys": {
-heroCandidates: [
-"assets/teams/spokane-alloys/stadium/ogwa-aerial1.png",
-"assets/teams/spokane-alloys/stadium/ogwa-fans1.png"
-],
-historyImage: "club-spokane-alloys-park.png",
-historyCaption: "Archival stadium image from the Spokane Alloys club file. Better suited here as a historical image than as the primary team-page hero.",
-logo: "team-spokane-alloys-logo.png",
-deck: "Club record, active roster, and current club file for Spokane's opening campaign.",
-noteTitle: "Spokane opened with a shutout win",
-noteText: "The Alloys held Fresno scoreless and opened 1–0.",
-ballparkName: "OGWA Stadium",
-ballparkText: "Riverfront, rail-adjacent, and known for its sea-glass concourse lighting, scoreboard glow, and Rain Wall refill system.",
-ballparkLink: "assets/teams/spokane-alloys/stadium/"
+    const img = new Image();
+
+    img.onload = () => resolve(path);
+
+    img.onerror = () => resolve(null);
+
+    img.src = path;
+  });
 }
 
-};
-</script>
+async function setHero(){
 
-</body>
-</html>
+  for(const path of heroCandidates){
+
+    const working = await testImage(path);
+
+    if(working){
+
+     

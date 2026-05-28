@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GLB Player File</title>
+<title>GLB Team Page</title>
 
 <style>
 :root{
@@ -27,7 +27,7 @@ body{
 
 a{color:inherit}
 
-/* HEADER */
+/* STANDARD HEADER */
 .site-header{
   background:var(--navy);
   color:#fff;
@@ -69,33 +69,26 @@ a{color:inherit}
 
 /* HERO */
 .hero{
-  background:linear-gradient(135deg,#0b1f36,#12375d);
+  min-height:430px;
   color:#fff;
-  padding:56px 22px;
+  background:#0b1f36;
+  background-size:cover;
+  background-position:center;
+  position:relative;
+}
+
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(90deg,rgba(11,31,54,.92),rgba(11,31,54,.58),rgba(11,31,54,.12));
 }
 
 .hero-inner{
+  position:relative;
   max-width:1180px;
   margin:0 auto;
-  display:grid;
-  grid-template-columns:300px 1fr;
-  gap:34px;
-  align-items:center;
-}
-
-.player-photo{
-  background:#dfe5ec;
-  border-radius:22px;
-  overflow:hidden;
-  min-height:360px;
-}
-
-.player-photo img{
-  width:100%;
-  height:100%;
-  min-height:360px;
-  object-fit:cover;
-  display:block;
+  padding:72px 22px;
 }
 
 .eyebrow{
@@ -104,30 +97,33 @@ a{color:inherit}
   font-size:12px;
   font-weight:900;
   margin-bottom:12px;
-  opacity:.75;
+  opacity:.78;
 }
 
 h1{
-  font-size:56px;
+  font-size:64px;
   line-height:.95;
-  margin:0 0 14px;
+  margin:0 0 16px;
 }
 
 .subtitle{
-  color:rgba(255,255,255,.82);
-  font-size:19px;
+  max-width:680px;
+  color:rgba(255,255,255,.84);
+  font-size:20px;
+  line-height:1.45;
 }
 
 .meta-grid{
-  margin-top:28px;
+  margin-top:30px;
   display:grid;
   grid-template-columns:repeat(4,1fr);
   gap:12px;
+  max-width:850px;
 }
 
 .meta{
-  background:rgba(255,255,255,.08);
-  border:1px solid rgba(255,255,255,.16);
+  background:rgba(255,255,255,.1);
+  border:1px solid rgba(255,255,255,.18);
   border-radius:14px;
   padding:14px;
 }
@@ -151,9 +147,6 @@ main{
   max-width:1180px;
   margin:34px auto 60px;
   padding:0 22px;
-  display:grid;
-  grid-template-columns:1fr 360px;
-  gap:26px;
 }
 
 .card{
@@ -183,118 +176,75 @@ p{
   color:#343a40;
 }
 
-/* CARD PLACEHOLDERS */
-.cards-grid{
+.roster-grid{
   display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:16px;
+  grid-template-columns:repeat(4,1fr);
+  gap:18px;
 }
 
-.fake-card{
-  min-height:280px;
-  border:2px dashed #b8c0cc;
-  border-radius:16px;
-  background:#fafafa;
-  padding:16px;
-  display:flex;
-  flex-direction:column;
-  justify-content:space-between;
-}
-
-.fake-card-top{
-  font-weight:900;
-  color:var(--navy);
-  letter-spacing:.08em;
-}
-
-.fake-card-image{
-  flex:1;
-  margin:14px 0;
-  border:1px dashed #c9d0da;
-  border-radius:12px;
-  background:#f1f3f5;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  color:var(--muted);
-  font-size:13px;
-}
-
-.fake-card-name{
-  font-weight:900;
-}
-
-/* BIO FORM */
-.bio-form{
-  display:grid;
-  gap:10px;
-  margin-top:16px;
-}
-
-.bio-form input,
-.bio-form textarea{
-  width:100%;
+.player-card{
+  display:block;
+  text-decoration:none;
   border:1px solid var(--line);
-  border-radius:12px;
-  padding:12px;
-  font-family:Arial, Helvetica, sans-serif;
+  border-radius:16px;
+  overflow:hidden;
+  background:#fff;
+}
+
+.player-card img{
+  width:100%;
+  aspect-ratio:1/1;
+  object-fit:cover;
+  display:block;
+  background:#e8edf2;
+}
+
+.player-card-body{
+  padding:14px;
+}
+
+.player-name{
+  font-weight:900;
+  margin-bottom:5px;
+}
+
+.player-position{
+  color:var(--muted);
   font-size:14px;
 }
 
-.bio-form textarea{
-  min-height:140px;
-  resize:vertical;
-}
-
-.bio-submit{
-  border:0;
-  border-radius:999px;
-  background:var(--navy);
-  color:#fff;
-  padding:12px 18px;
-  font-weight:900;
-  cursor:pointer;
-  width:max-content;
-}
-
-/* SIDE FILE */
-.record-list{
+.staff-grid{
   display:grid;
-  gap:14px;
+  grid-template-columns:repeat(2,1fr);
+  gap:18px;
 }
 
-.record-item{
-  border-top:1px solid var(--line);
-  padding-top:14px;
+.staff-card{
+  border:1px solid var(--line);
+  border-radius:16px;
+  overflow:hidden;
+  background:#fff;
 }
 
-.record-item:first-child{
-  border-top:0;
-  padding-top:0;
+.staff-card img{
+  width:100%;
+  aspect-ratio:16/10;
+  object-fit:cover;
+  display:block;
+  background:#e8edf2;
 }
 
-.record-kicker{
+.staff-card-body{
+  padding:14px;
+}
+
+.staff-name{
+  font-weight:900;
+  margin-bottom:5px;
+}
+
+.staff-role{
   color:var(--muted);
-  font-size:12px;
-  text-transform:uppercase;
-  letter-spacing:.1em;
-  font-weight:900;
-  margin-bottom:6px;
-}
-
-.record-value{
-  font-weight:700;
-}
-
-.btn{
-  display:inline-block;
-  margin-top:14px;
-  text-decoration:none;
-  background:var(--navy);
-  color:#fff;
-  padding:12px 16px;
-  border-radius:999px;
-  font-weight:900;
   font-size:14px;
 }
 
@@ -351,20 +301,15 @@ p{
   font-size:13px;
 }
 
-/* RESPONSIVE */
 @media(max-width:900px){
-  .hero-inner,
-  main,
+  .meta-grid,
+  .roster-grid,
+  .staff-grid,
   .footer-inner{
     grid-template-columns:1fr;
   }
 
-  .meta-grid,
-  .cards-grid{
-    grid-template-columns:1fr;
-  }
-
-  h1{font-size:42px}
+  h1{font-size:44px}
 }
 
 @media(max-width:800px){
@@ -396,126 +341,62 @@ p{
   </div>
 </header>
 
-<section class="hero">
+<section id="hero" class="hero">
   <div class="hero-inner">
-    <div class="player-photo">
-      <img id="playerPhoto" src="" alt="">
-    </div>
+    <div class="eyebrow" id="teamConference">Conference</div>
+    <h1 id="teamName">Loading...</h1>
+    <div class="subtitle" id="teamDescription">Team page loading.</div>
 
-    <div>
-      <div class="eyebrow">Official Player File</div>
-      <h1 id="playerName">Loading...</h1>
-      <div id="playerMeta" class="subtitle">GLB Player File</div>
-
-      <div class="meta-grid">
-        <div class="meta">
-          <div class="meta-label">Position</div>
-          <div id="playerPosition" class="meta-value">—</div>
-        </div>
-        <div class="meta">
-          <div class="meta-label">Age</div>
-          <div id="playerAge" class="meta-value">—</div>
-        </div>
-        <div class="meta">
-          <div class="meta-label">Bats / Throws</div>
-          <div id="playerBT" class="meta-value">—</div>
-        </div>
-        <div class="meta">
-          <div class="meta-label">Club</div>
-          <div id="playerClub" class="meta-value">—</div>
-        </div>
+    <div class="meta-grid">
+      <div class="meta">
+        <div class="meta-label">Club</div>
+        <div class="meta-value" id="metaClub">—</div>
+      </div>
+      <div class="meta">
+        <div class="meta-label">Conference</div>
+        <div class="meta-value" id="metaConference">—</div>
+      </div>
+      <div class="meta">
+        <div class="meta-label">Home</div>
+        <div class="meta-value" id="metaHome">—</div>
+      </div>
+      <div class="meta">
+        <div class="meta-label">Status</div>
+        <div class="meta-value">Active</div>
       </div>
     </div>
   </div>
 </section>
 
 <main>
-  <div>
 
-    <section class="card">
-      <div class="card-head">
-        <h2>Player Bio</h2>
-      </div>
-      <div class="card-body">
-        <p id="playerBio">No approved public bio has been published for this player yet.</p>
-      </div>
-    </section>
+  <section class="card">
+    <div class="card-head">
+      <h2>Roster</h2>
+    </div>
+    <div class="card-body">
+      <div id="rosterGrid" class="roster-grid"></div>
+    </div>
+  </section>
 
-    <section class="card">
-      <div class="card-head">
-        <h2>Claim This Bio</h2>
-      </div>
-      <div class="card-body">
-        <p>This bio spot is claimable. Submit a suggested player bio for review.</p>
+  <section class="card" id="staffSection">
+    <div class="card-head">
+      <h2>Stadium Voice Talent</h2>
+    </div>
+    <div class="card-body">
+      <div id="staffGrid" class="staff-grid"></div>
+    </div>
+  </section>
 
-        <form class="bio-form" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
-          <input id="bioPlayerField" name="player" type="text" readonly>
-          <input id="bioTeamField" name="team" type="text" readonly>
-          <input id="bioCodeField" name="claim_code" type="text" readonly>
+  <section class="card">
+    <div class="card-head">
+      <h2>Team Notes</h2>
+    </div>
+    <div class="card-body">
+      <p id="teamNotes">No additional team notes have been published yet.</p>
+    </div>
+  </section>
 
-          <input name="contributor_name" type="text" placeholder="Your name">
-          <input name="contributor_email" type="email" placeholder="Your email">
-          <textarea name="suggested_bio" placeholder="Write a suggested player bio..."></textarea>
-
-          <button class="bio-submit" type="submit">Submit Bio for Review</button>
-        </form>
-      </div>
-    </section>
-
-    <section class="card">
-      <div class="card-head">
-        <h2>Cards</h2>
-      </div>
-      <div class="card-body">
-        <div class="cards-grid">
-          <div class="fake-card">
-            <div class="fake-card-top">GLB CARD 01</div>
-            <div class="fake-card-image">Card image placeholder</div>
-            <div class="fake-card-name" id="cardNameOne">Player Card</div>
-          </div>
-
-          <div class="fake-card">
-            <div class="fake-card-top">GLB CARD 02</div>
-            <div class="fake-card-image">Card image placeholder</div>
-            <div class="fake-card-name" id="cardNameTwo">Player Card</div>
-          </div>
-
-          <div class="fake-card">
-            <div class="fake-card-top">GLB CARD 03</div>
-            <div class="fake-card-image">Card image placeholder</div>
-            <div class="fake-card-name" id="cardNameThree">Player Card</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-  </div>
-
-  <aside>
-    <section class="card">
-      <div class="card-head">
-        <h2>Player File</h2>
-      </div>
-      <div class="card-body">
-        <div class="record-list">
-          <div class="record-item">
-            <div class="record-kicker">Player</div>
-            <div id="sidePlayer" class="record-value">—</div>
-          </div>
-          <div class="record-item">
-            <div class="record-kicker">Club</div>
-            <div id="sideClub" class="record-value">—</div>
-          </div>
-          <div class="record-item">
-            <div class="record-kicker">Claim Code</div>
-            <div id="sideCode" class="record-value">—</div>
-          </div>
-        </div>
-
-        <a id="teamLink" class="btn" href="teams.html">View Team →</a>
-      </div>
-    </section>
-  </aside>
 </main>
 
 <footer class="site-footer">
@@ -562,89 +443,70 @@ p{
 
 <script>
 const params = new URLSearchParams(window.location.search);
-const playerSlug = params.get("player") || "kellan-brynden";
+const teamSlug = params.get("team") || "spokane-alloys";
 
 const TEAMS = {
   "spokane-alloys": {
     teamName: "Spokane Alloys",
+    conference: "Americas",
+    home: "OGWA Stadium",
+    description: "Official team page for the Spokane Alloys.",
+    notes: "Spokane Alloys team record active for GLB Season 1.",
+    hero: "assets/teams/spokane-alloys/stadium/spokane-alloys-ogwa-stadium.png",
     cityPrefix: "spokane",
-    teamPage: "team.html?team=spokane-alloys"
+    players: [
+      {
+        name: "Kellan Brynden",
+        slug: "kellan-brynden",
+        position: "—"
+      },
+      {
+        name: "Graham Mercer",
+        slug: "graham-mercer",
+        position: "—"
+      }
+    ],
+    staff: [
+      {
+        name: "Mara Voss",
+        role: "Public Address Announcer",
+        image: "assets/teams/spokane-alloys/stadium/spokane-alloys-announcer.png"
+      },
+      {
+        name: "Elias Trent",
+        role: "In-Stadium Host",
+        image: "assets/teams/spokane-alloys/stadium/spokane-alloys-broadcast.png"
+      }
+    ]
   },
+
   "albuquerque-aeros": {
     teamName: "Albuquerque Aeros",
+    conference: "Americas",
+    home: "Albuquerque",
+    description: "Official team page for the Albuquerque Aeros.",
+    notes: "Albuquerque Aeros team record active for GLB Season 1.",
+    hero: "assets/teams/albuquerque-aeros/stadium/albuquerque-aeros-stadium.png",
     cityPrefix: "albuquerque",
-    teamPage: "team.html?team=albuquerque-aeros"
+    players: [
+      {
+        name: "Idris Kourouma",
+        slug: "idris-kourouma",
+        position: "Pitcher"
+      }
+    ],
+    staff: []
   }
 };
 
-const PLAYER_TEAM_INDEX = {
-  "kellan-brynden": "spokane-alloys",
-  "graham-mercer": "spokane-alloys",
-  "idris-kourouma": "albuquerque-aeros"
-};
-
-const PLAYER_OVERRIDES = {
-  "kellan-brynden": {
-    name:"Kellan Brynden",
-    position:"—",
-    age:"—",
-    bats:"—",
-    throws:"—",
-    bio:""
-  },
-  "graham-mercer": {
-    name:"Graham Mercer",
-    position:"—",
-    age:"—",
-    bats:"—",
-    throws:"—",
-    bio:""
-  },
-  "idris-kourouma": {
-    name:"Idris Kourouma",
-    position:"Pitcher",
-    age:"—",
-    bats:"—",
-    throws:"—",
-    bio:""
-  }
-};
-
-const teamSlug = params.get("team") || PLAYER_TEAM_INDEX[playerSlug] || "spokane-alloys";
 const team = TEAMS[teamSlug] || TEAMS["spokane-alloys"];
 
-function titleCaseFromSlug(slug){
-  return slug.split("-").map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(" ");
+function playerImagePath(player){
+  return `assets/teams/${teamSlug}/images/players/${team.cityPrefix}-${player.slug}.png`;
 }
 
-function playerImagePath(){
-  return `assets/teams/${teamSlug}/images/players/${team.cityPrefix}-${playerSlug}.png`;
-}
-
-function makeClaimCode(){
-  const raw = `${teamSlug}-${playerSlug}`;
-  let hash = 0;
-
-  for(let i = 0; i < raw.length; i++){
-    hash = ((hash << 5) - hash) + raw.charCodeAt(i);
-    hash |= 0;
-  }
-
-  return `GLB-BIO-${Math.abs(hash).toString(36).toUpperCase()}`;
-}
-
-async function getRosterPlayer(){
-  try{
-    const response = await fetch(`data/rosters/${teamSlug}.json`);
-    if(!response.ok) return null;
-
-    const roster = await response.json();
-    if(!roster || !Array.isArray(roster.players)) return null;
-
-    return roster.players.find(player => player.slug === playerSlug) || null;
-  }catch(error){
-    return null;
-  }
+function playerUrl(player){
+  return `player.html?team=${teamSlug}&player=${player.slug}`;
 }
 
 function setText(id,value){
@@ -652,64 +514,61 @@ function setText(id,value){
   if(el) el.textContent = value;
 }
 
-function setValue(id,value){
-  const el = document.getElementById(id);
-  if(el) el.value = value;
+function renderTeam(){
+  document.title = `GLB — ${team.teamName}`;
+
+  const hero = document.getElementById("hero");
+  hero.style.backgroundImage = `url('${team.hero}')`;
+
+  setText("teamConference", team.conference);
+  setText("teamName", team.teamName);
+  setText("teamDescription", team.description);
+  setText("metaClub", team.teamName);
+  setText("metaConference", team.conference);
+  setText("metaHome", team.home);
+  setText("teamNotes", team.notes);
+
+  const rosterGrid = document.getElementById("rosterGrid");
+
+  rosterGrid.innerHTML = team.players.map(player => `
+    <a class="player-card" href="${playerUrl(player)}">
+      <img 
+        src="${playerImagePath(player)}" 
+        alt="${player.name}"
+        onerror="this.onerror=null;this.src='https://placehold.co/800x800/e8edf2/5f6b7a?text=Player+Photo';"
+      >
+      <div class="player-card-body">
+        <div class="player-name">${player.name}</div>
+        <div class="player-position">${player.position || "—"}</div>
+      </div>
+    </a>
+  `).join("");
+
+  const staffSection = document.getElementById("staffSection");
+  const staffGrid = document.getElementById("staffGrid");
+
+  if(!team.staff || team.staff.length === 0){
+    staffSection.style.display = "none";
+  }else{
+    staffSection.style.display = "block";
+
+    staffGrid.innerHTML = team.staff.map(person => `
+      <div class="staff-card">
+        <img 
+          src="${person.image}" 
+          alt="${person.name}"
+          onerror="this.onerror=null;this.src='https://placehold.co/1000x650/e8edf2/5f6b7a?text=Stadium+Talent';"
+        >
+        <div class="staff-card-body">
+          <div class="staff-name">${person.name}</div>
+          <div class="staff-role">${person.role}</div>
+        </div>
+      </div>
+    `).join("");
+  }
 }
 
-async function loadPlayer(){
-  const rosterPlayer = await getRosterPlayer();
-
-  const player = {
-    name: titleCaseFromSlug(playerSlug),
-    position: "—",
-    age: "—",
-    bats: "—",
-    throws: "—",
-    bio: "",
-    ...(PLAYER_OVERRIDES[playerSlug] || {}),
-    ...(rosterPlayer || {})
-  };
-
-  const playerName = player.name || titleCaseFromSlug(playerSlug);
-  const claimCode = makeClaimCode();
-
-  document.title = `GLB — ${playerName}`;
-
-  setText("playerName", playerName);
-  setText("playerMeta", `${team.teamName} · Player File`);
-  setText("playerPosition", player.position || "—");
-  setText("playerAge", player.age || "—");
-  setText("playerBT", `${player.bats || "—"} / ${player.throws || "—"}`);
-  setText("playerClub", team.teamName);
-  setText("playerBio", player.bio || "No approved public bio has been published for this player yet.");
-
-  setText("sidePlayer", playerName);
-  setText("sideClub", team.teamName);
-  setText("sideCode", claimCode);
-
-  setText("cardNameOne", `${playerName} Card`);
-  setText("cardNameTwo", `${playerName} Card`);
-  setText("cardNameThree", `${playerName} Card`);
-
-  setValue("bioPlayerField", playerName);
-  setValue("bioTeamField", team.teamName);
-  setValue("bioCodeField", claimCode);
-
-  const img = document.getElementById("playerPhoto");
-  img.src = playerImagePath();
-  img.alt = `${playerName} portrait`;
-  img.onerror = function(){
-    this.onerror = null;
-    this.src = "https://placehold.co/800x800/e8edf2/5f6b7a?text=Player+Photo";
-  };
-
-  const teamLink = document.getElementById("teamLink");
-  teamLink.href = team.teamPage;
-  teamLink.textContent = `View ${team.teamName} →`;
-}
-
-loadPlayer();
+renderTeam();
 </script>
 
 </body>

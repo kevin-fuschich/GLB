@@ -312,7 +312,12 @@ th{
   width:100%;
   height:240px;
   object-fit:cover;
+  object-position:center center;
   display:block;
+}
+
+.media-photo.face-top{
+  object-position:center top;
 }
 
 .media-info{
@@ -682,7 +687,7 @@ Baseball’s cooperative universe.
 <div class="media-card">
 
 <img
-class="media-photo"
+class="media-photo face-top"
 src="assets/teams/spokane-alloys/stadium/spokane-alloys-announcer.png"
 alt="Graham Mercer"
 >
@@ -806,7 +811,7 @@ const slug = params.get("team") || "spokane-alloys";
 const teamVisuals = {
 
 "spokane-alloys": {
-hero: "club-spokane-alloys-park.png",
+hero: "assets/teams/spokane-alloys/stadium/ogwa-stadium-hero.png",
 logo: "team-spokane-alloys-logo.png",
 deck: "Club record, active roster, and current club file for Spokane's opening campaign.",
 noteTitle: "Spokane opened with a shutout win",

@@ -1,18 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>GLB Player File</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>GLB Player</title>
 
 <style>
 :root{
-  --navy:#0b1e33;
-  --ink:#111;
-  --muted:#6b7280;
-  --line:#e5e7eb;
+  --ink:#0f1214;
+  --muted:#6b6f75;
+  --line:#e1e4e8;
   --bg:#f6f7f9;
-  --card:#fff;
+  --card:#ffffff;
+  --navy:#0b1f36;
+  --navy2:#102f4f;
+  --gold:#c8a45d;
+  --radius:18px;
+  --shadow:0 18px 45px rgba(15,18,20,.10);
 }
 
 *{box-sizing:border-box}
@@ -20,162 +25,355 @@
 body{
   margin:0;
   font-family:Arial, Helvetica, sans-serif;
-  color:var(--ink);
   background:var(--bg);
+  color:var(--ink);
 }
 
-header{
+a{color:inherit}
+
+.site-header{
   background:var(--navy);
   color:#fff;
-  padding:18px 28px;
+  border-bottom:4px solid var(--gold);
 }
 
-header a{
-  color:#fff;
-  text-decoration:none;
-  margin-right:18px;
-  font-size:14px;
+.header-inner{
+  max-width:1180px;
+  margin:0 auto;
+  padding:18px 22px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
 }
 
 .brand{
-  font-weight:800;
+  font-weight:900;
   letter-spacing:.08em;
-  margin-bottom:12px;
+  text-transform:uppercase;
 }
 
-main{
-  max-width:1100px;
-  margin:40px auto;
-  padding:0 24px;
-}
-
-.player-card{
-  display:grid;
-  grid-template-columns:360px 1fr;
-  gap:32px;
-  background:var(--card);
-  border:1px solid var(--line);
-  border-radius:18px;
-  overflow:hidden;
-}
-
-.player-photo{
-  background:#dfe3e8;
-  min-height:480px;
+.nav{
   display:flex;
-  align-items:center;
-  justify-content:center;
+  gap:18px;
+  flex-wrap:wrap;
+  font-size:14px;
 }
 
-.player-photo img{
+.nav a{
+  color:#fff;
+  text-decoration:none;
+  opacity:.9;
+}
+
+.nav a:hover{opacity:1}
+
+.hero{
+  background:
+    linear-gradient(135deg, rgba(11,31,54,.96), rgba(16,47,79,.92)),
+    var(--navy);
+  color:#fff;
+  padding:54px 22px;
+}
+
+.hero-inner{
+  max-width:1180px;
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:280px 1fr;
+  gap:34px;
+  align-items:center;
+}
+
+.player-photo-wrap{
+  background:#dfe5ec;
+  border:1px solid rgba(255,255,255,.25);
+  border-radius:22px;
+  overflow:hidden;
+  min-height:340px;
+  box-shadow:var(--shadow);
+}
+
+.player-photo-wrap img{
   width:100%;
   height:100%;
+  min-height:340px;
   object-fit:cover;
   display:block;
 }
 
-.player-info{
-  padding:36px;
-}
-
 .eyebrow{
+  color:var(--gold);
   text-transform:uppercase;
-  letter-spacing:.12em;
+  letter-spacing:.16em;
   font-size:12px;
-  color:var(--muted);
-  font-weight:700;
+  font-weight:900;
   margin-bottom:12px;
 }
 
 h1{
-  font-size:44px;
-  line-height:1;
-  margin:0 0 10px;
+  font-size:56px;
+  line-height:.95;
+  margin:0 0 14px;
 }
 
-.club{
-  font-size:20px;
-  color:var(--muted);
-  margin-bottom:28px;
+.player-subtitle{
+  color:rgba(255,255,255,.82);
+  font-size:19px;
+}
+
+.meta-grid{
+  margin-top:28px;
+  display:grid;
+  grid-template-columns:repeat(4, minmax(0, 1fr));
+  gap:12px;
 }
 
 .meta{
-  display:grid;
-  grid-template-columns:repeat(2,minmax(0,1fr));
-  gap:16px;
-  margin:24px 0 32px;
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.16);
+  border-radius:14px;
+  padding:14px;
 }
 
-.meta-item{
-  border-top:1px solid var(--line);
-  padding-top:12px;
-}
-
-.label{
-  font-size:12px;
+.meta-label{
+  color:rgba(255,255,255,.62);
   text-transform:uppercase;
-  color:var(--muted);
-  letter-spacing:.08em;
-  font-weight:700;
-  margin-bottom:5px;
+  letter-spacing:.12em;
+  font-size:11px;
+  font-weight:900;
+  margin-bottom:6px;
 }
 
-.value{
-  font-size:18px;
-  font-weight:700;
+.meta-value{
+  font-size:17px;
+  font-weight:800;
 }
 
-section{
-  margin-top:34px;
+main{
+  max-width:1180px;
+  margin:34px auto 60px;
+  padding:0 22px;
+  display:grid;
+  grid-template-columns:1fr 360px;
+  gap:26px;
 }
 
-h2{
+.card{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  box-shadow:0 10px 25px rgba(15,18,20,.04);
+  overflow:hidden;
+}
+
+.module{
+  margin-bottom:24px;
+}
+
+.module-head{
+  padding:18px 20px;
+  border-bottom:1px solid var(--line);
+}
+
+.module-title{
+  margin:0;
   font-size:22px;
-  margin-bottom:12px;
+}
+
+.module-body{
+  padding:20px;
 }
 
 p{
-  line-height:1.55;
-  color:#2f3438;
+  line-height:1.58;
+  color:#343a40;
 }
 
-.button-row{
-  margin-top:30px;
+.archive-gallery{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:16px;
+}
+
+.card-item{
+  border:1px solid var(--line);
+  border-radius:14px;
+  overflow:hidden;
+  background:#fff;
+}
+
+.card-item img{
+  width:100%;
+  display:block;
+  aspect-ratio:4/3;
+  object-fit:cover;
+  background:#e8edf2;
+}
+
+.card-caption{
+  padding:12px 14px;
+  color:var(--muted);
+  font-size:14px;
+}
+
+.stats-table{
+  width:100%;
+  border-collapse:collapse;
+}
+
+.stats-table th,
+.stats-table td{
+  text-align:left;
+  border-bottom:1px solid var(--line);
+  padding:12px 10px;
+}
+
+.stats-table th{
+  color:var(--muted);
+  text-transform:uppercase;
+  letter-spacing:.08em;
+  font-size:12px;
+}
+
+.stat-label{
+  color:var(--muted);
+}
+
+.record-list{
+  display:grid;
+  gap:14px;
+}
+
+.record-item{
+  border-top:1px solid var(--line);
+  padding-top:14px;
+}
+
+.record-item:first-child{
+  border-top:0;
+  padding-top:0;
+}
+
+.record-kicker{
+  color:var(--muted);
+  font-size:12px;
+  text-transform:uppercase;
+  letter-spacing:.1em;
+  font-weight:900;
+  margin-bottom:6px;
+}
+
+.record-value{
+  font-weight:700;
+}
+
+.bio-help{
+  color:var(--muted);
+  font-size:14px;
+  margin-top:0;
+}
+
+.bio-form{
+  display:grid;
+  gap:10px;
+  margin-top:16px;
+}
+
+.bio-form input,
+.bio-form textarea{
+  width:100%;
+  border:1px solid var(--line);
+  border-radius:12px;
+  padding:12px;
+  font-family:Arial, Helvetica, sans-serif;
+  font-size:14px;
+}
+
+.bio-form textarea{
+  min-height:140px;
+  resize:vertical;
+}
+
+.bio-submit{
+  border:0;
+  border-radius:999px;
+  background:var(--navy);
+  color:#fff;
+  padding:12px 18px;
+  font-weight:900;
+  cursor:pointer;
+  width:max-content;
 }
 
 .btn{
   display:inline-block;
+  margin-top:14px;
+  text-decoration:none;
   background:var(--navy);
   color:#fff;
-  padding:12px 18px;
+  padding:12px 16px;
   border-radius:999px;
-  text-decoration:none;
-  font-weight:700;
+  font-weight:900;
   font-size:14px;
 }
 
-.notice{
-  background:#fff3cd;
-  border:1px solid #ffe08a;
-  padding:20px;
-  border-radius:12px;
+.site-footer{
+  background:#0f1214;
+  color:#fff;
+  padding:38px 22px;
 }
 
-@media(max-width:800px){
-  .player-card{
+.footer-inner{
+  max-width:1180px;
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:1.5fr 1fr 1fr 1fr;
+  gap:24px;
+}
+
+.footer-brand{
+  font-weight:900;
+  letter-spacing:.08em;
+  margin-bottom:8px;
+}
+
+.footer-title{
+  font-weight:900;
+  margin-bottom:10px;
+}
+
+.footer-links{
+  display:grid;
+  gap:8px;
+}
+
+.footer-links a{
+  color:rgba(255,255,255,.72);
+  text-decoration:none;
+  font-size:14px;
+}
+
+.copyright{
+  max-width:1180px;
+  margin:24px auto 0;
+  color:rgba(255,255,255,.55);
+  font-size:13px;
+}
+
+@media(max-width:900px){
+  .hero-inner,
+  main,
+  .footer-inner{
     grid-template-columns:1fr;
   }
 
-  .player-photo{
-    min-height:360px;
+  .meta-grid{
+    grid-template-columns:repeat(2, minmax(0, 1fr));
   }
 
   h1{
-    font-size:34px;
-  }
-
-  .meta{
-    grid-template-columns:1fr;
+    font-size:42px;
   }
 }
 </style>
@@ -183,180 +381,483 @@ p{
 
 <body>
 
-<header>
-  <div class="brand">GLB GLOBAL LEAGUE BASEBALL</div>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="scores.html">Scores</a>
-    <a href="standings.html">Standings</a>
-    <a href="schedule.html">Schedule</a>
-    <a href="teams.html">Teams</a>
-    <a href="players.html">Players</a>
-    <a href="news.html">News</a>
-  </nav>
+<header class="site-header">
+  <div class="header-inner">
+    <div class="brand">GLB Global League Baseball</div>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="scores.html">Scores</a>
+      <a href="standings.html">Standings</a>
+      <a href="schedule.html">Schedule</a>
+      <a href="teams.html">Teams</a>
+      <a href="players.html">Players</a>
+      <a href="news.html">News</a>
+    </nav>
+  </div>
 </header>
 
-<main id="app">
-  <div class="notice">Loading player file...</div>
+<section class="hero">
+  <div class="hero-inner">
+    <div class="player-photo-wrap">
+      <img id="playerPhoto" src="" alt="">
+    </div>
+
+    <div>
+      <div class="eyebrow">Official League Record</div>
+      <h1 id="playerName">Loading...</h1>
+      <div id="playerMeta" class="player-subtitle">Active GLB Player File</div>
+
+      <div class="meta-grid">
+        <div class="meta">
+          <div class="meta-label">Position</div>
+          <div id="playerPosition" class="meta-value">—</div>
+        </div>
+
+        <div class="meta">
+          <div class="meta-label">Age</div>
+          <div id="playerAge" class="meta-value">—</div>
+        </div>
+
+        <div class="meta">
+          <div class="meta-label">Bats / Throws</div>
+          <div id="playerBT" class="meta-value">—</div>
+        </div>
+
+        <div class="meta">
+          <div class="meta-label">Club</div>
+          <div id="playerClub" class="meta-value">—</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<main>
+  <div>
+
+    <div class="card module">
+      <div class="module-head">
+        <h2 class="module-title">Broadcast & Archive Files</h2>
+      </div>
+
+      <div class="module-body">
+        <div id="archiveGallery" class="archive-gallery">
+          <div class="card-item">
+            <img id="archiveImageOne" src="" alt="">
+            <div id="archiveCaptionOne" class="card-caption">Active roster portrait</div>
+          </div>
+        </div>
+
+        <a id="archiveLink" class="btn" href="office-of-league-records.html">
+          View Office of League Records →
+        </a>
+      </div>
+    </div>
+
+    <div class="card module">
+      <div class="module-head">
+        <h2 class="module-title">Archive Notes</h2>
+      </div>
+
+      <div class="module-body">
+        <div class="record-list">
+          <div class="record-item">
+            <div class="record-kicker">Civic Record Entry</div>
+            <div id="archiveNote" class="record-value">
+              Active GLB player file currently under public archive review.
+            </div>
+          </div>
+
+          <div class="record-item">
+            <div class="record-kicker">Collector Status</div>
+            <div id="collectorStatus" class="record-value">
+              No dedicated collector file has been published for this player.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card module">
+      <div class="module-head">
+        <h2 class="module-title">Player Bio</h2>
+      </div>
+
+      <div class="module-body">
+        <p id="playerBio" class="bio-help">
+          No approved public bio has been published for this player yet.
+        </p>
+
+        <p class="bio-help">
+          Want to contribute a player bio? Submit suggested copy below. It will go to league review before anything is published.
+        </p>
+
+        <form
+          id="bioForm"
+          class="bio-form"
+          action="mailto:kevin.fuschich@gmail.com"
+          method="post"
+          enctype="text/plain"
+        >
+          <input id="bioPlayerField" name="Player" type="text" readonly>
+          <input id="bioTeamField" name="Team" type="text" readonly>
+          <input id="bioCodeField" name="Submission Code" type="text" readonly>
+
+          <input name="Contributor Name" type="text" placeholder="Your name">
+          <input name="Contributor Email" type="email" placeholder="Your email">
+
+          <textarea name="Suggested Bio" placeholder="Write a suggested player bio for review..."></textarea>
+
+          <button class="bio-submit" type="submit">Submit Bio for Review</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="card module">
+      <div class="module-head">
+        <h2 class="module-title">Season Statistics</h2>
+      </div>
+
+      <div class="module-body">
+        <table class="stats-table">
+          <thead>
+            <tr>
+              <th>Category</th>
+              <th>Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="stat-label">Games</td>
+              <td id="statGames">4</td>
+            </tr>
+            <tr>
+              <td class="stat-label">Archive Status</td>
+              <td>Active File</td>
+            </tr>
+            <tr>
+              <td class="stat-label">Club</td>
+              <td id="statClub">—</td>
+            </tr>
+            <tr>
+              <td class="stat-label">Record Type</td>
+              <td>Public Player File</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+
+  <aside>
+    <div class="card module">
+      <div class="module-head">
+        <h2 class="module-title">Player File</h2>
+      </div>
+
+      <div class="module-body">
+        <div class="record-list">
+          <div class="record-item">
+            <div class="record-kicker">Player</div>
+            <div id="sidePlayer" class="record-value">—</div>
+          </div>
+
+          <div class="record-item">
+            <div class="record-kicker">Club</div>
+            <div id="sideClub" class="record-value">—</div>
+          </div>
+
+          <div class="record-item">
+            <div class="record-kicker">File Code</div>
+            <div id="sideCode" class="record-value">—</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </aside>
 </main>
 
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">GLB</div>
+      <p>Global League Baseball</p>
+      <p>Official league site providing scores, standings, schedules, club information, and league bulletins.</p>
+    </div>
+
+    <div>
+      <div class="footer-title">League</div>
+      <div class="footer-links">
+        <a href="standings.html">Standings</a>
+        <a href="scores.html">Scores</a>
+        <a href="schedule.html">Schedule</a>
+        <a href="stats.html">Stats</a>
+      </div>
+    </div>
+
+    <div>
+      <div class="footer-title">Clubs</div>
+      <div class="footer-links">
+        <a href="teams.html">Teams</a>
+        <a id="footerTeamLink" href="team.html?team=albuquerque-aeros">Team Page</a>
+      </div>
+    </div>
+
+    <div>
+      <div class="footer-title">Archive</div>
+      <div class="footer-links">
+        <a href="office-of-league-records.html">Office of League Records</a>
+        <a href="news.html">League News</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="copyright">
+    © 2026 Global League Baseball Season 1 Official League Record
+  </div>
+</footer>
+
 <script>
-/* =========================================================
-   GLB PLAYER PAGE
-   Reads:
-   player.html?team=spokane-alloys&player=kellan-brynden
-
-   Also supports old-style URL:
-   player.html?player=kellan-brynden
-========================================================= */
-
 const params = new URLSearchParams(window.location.search);
-const playerSlug = params.get("player") || "";
-let teamSlug = params.get("team") || "";
 
-/* =========================================================
-   TEAM CONFIG
-========================================================= */
+const playerSlug = params.get("player") || "idris-kourouma";
 
 const TEAMS = {
-  "spokane-alloys": {
-    teamName: "Spokane Alloys",
-    cityPrefix: "spokane",
-    teamPage: "team.html?team=spokane-alloys"
-  },
   "albuquerque-aeros": {
     teamName: "Albuquerque Aeros",
     cityPrefix: "albuquerque",
     teamPage: "team.html?team=albuquerque-aeros"
+  },
+  "spokane-alloys": {
+    teamName: "Spokane Alloys",
+    cityPrefix: "spokane",
+    teamPage: "team.html?team=spokane-alloys"
   }
 };
 
-/* =========================================================
-   PLAYER INDEX
-   Add more players here as needed.
-   This lets old URLs without ?team= still work.
-========================================================= */
-
 const PLAYER_TEAM_INDEX = {
-  "kellan-brynden": "spokane-alloys"
+  "idris-kourouma": "albuquerque-aeros",
+  "kellan-brynden": "spokane-alloys",
+  "graham-mercer": "spokane-alloys"
 };
 
-/* =========================================================
-   PLAYER DATA
-   Add details here as you build files out.
-========================================================= */
-
-const PLAYERS = {
+const PLAYER_OVERRIDES = {
   "kellan-brynden": {
     name: "Kellan Brynden",
     position: "—",
     age: "—",
-    batsThrows: "—",
-    status: "Active GLB Player File",
-    notes: "Active player file currently under public archive review."
+    bats: "—",
+    throws: "—",
+    games: "4",
+    bio: ""
+  },
+  "graham-mercer": {
+    name: "Graham Mercer",
+    position: "—",
+    age: "—",
+    bats: "—",
+    throws: "—",
+    games: "4",
+    bio: ""
+  },
+  "idris-kourouma": {
+    name: "Idris Kourouma",
+    position: "Pitcher",
+    age: "—",
+    bats: "—",
+    throws: "—",
+    games: "4",
+    bio: ""
   }
 };
 
-/* If team is missing, infer it from player index */
-if (!teamSlug && PLAYER_TEAM_INDEX[playerSlug]) {
-  teamSlug = PLAYER_TEAM_INDEX[playerSlug];
+const teamSlug =
+  params.get("team") ||
+  PLAYER_TEAM_INDEX[playerSlug] ||
+  "albuquerque-aeros";
+
+const teamConfig = TEAMS[teamSlug] || TEAMS["albuquerque-aeros"];
+
+function titleCaseFromSlug(value){
+  return value
+    .split("-")
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ");
 }
 
-/* Final fallback */
-if (!teamSlug) {
-  teamSlug = "spokane-alloys";
+function playerImagePath(slug){
+  return `assets/teams/${teamSlug}/images/players/${teamConfig.cityPrefix}-${slug}.png`;
 }
 
-const team = TEAMS[teamSlug];
-const player = PLAYERS[playerSlug];
-
-const app = document.getElementById("app");
-
-if (!playerSlug || !player) {
-  app.innerHTML = `
-    <div class="notice">
-      <strong>Player not found.</strong><br>
-      Check the player URL slug.
-    </div>
-  `;
-  throw new Error("Player not found");
+function fallbackImagePath(){
+  return "https://placehold.co/800x800/e8edf2/5f6b7a?text=Portrait+Unavailable";
 }
 
-if (!team) {
-  app.innerHTML = `
-    <div class="notice">
-      <strong>Team not found.</strong><br>
-      Check the team URL slug.
-    </div>
-  `;
-  throw new Error("Team not found");
+function setImage(img, src, alt){
+  if(!img) return;
+
+  img.src = src;
+  img.alt = alt;
+
+  img.onerror = function(){
+    this.onerror = null;
+    this.src = fallbackImagePath();
+  };
 }
 
-/* Correct player image path */
-const playerImage = `assets/teams/${teamSlug}/images/players/${team.cityPrefix}-${playerSlug}.png`;
+function makeSubmissionCode(playerSlug, teamSlug){
+  const raw = `${teamSlug}-${playerSlug}`;
+  let hash = 0;
 
-document.title = `GLB — ${player.name}`;
+  for(let i = 0; i < raw.length; i++){
+    hash = ((hash << 5) - hash) + raw.charCodeAt(i);
+    hash |= 0;
+  }
 
-app.innerHTML = `
-  <article class="player-card">
+  const clean = Math.abs(hash).toString(36).toUpperCase();
+  return `GLB-BIO-${clean}`;
+}
 
-    <div class="player-photo">
-      <img 
-        src="${playerImage}" 
-        alt="${player.name}, ${team.teamName}"
-        onerror="this.parentElement.innerHTML='<div style=&quot;padding:24px;text-align:center;color:#6b7280;&quot;>Player photo not found<br><small>${playerImage}</small></div>';"
+async function getRosterPlayer(){
+  try{
+    const response = await fetch(`data/rosters/${teamSlug}.json`);
+
+    if(!response.ok){
+      return null;
+    }
+
+    const roster = await response.json();
+
+    if(!roster || !Array.isArray(roster.players)){
+      return null;
+    }
+
+    return roster.players.find(player => player.slug === playerSlug) || null;
+  }catch(error){
+    return null;
+  }
+}
+
+async function loadPlayer(){
+  const rosterPlayer = await getRosterPlayer();
+
+  const player = {
+    name: titleCaseFromSlug(playerSlug),
+    slug: playerSlug,
+    position: "—",
+    age: "—",
+    bats: "—",
+    throws: "—",
+    games: "4",
+    bio: "",
+    ...(PLAYER_OVERRIDES[playerSlug] || {}),
+    ...(rosterPlayer || {})
+  };
+
+  const playerName = player.name || titleCaseFromSlug(playerSlug);
+  const teamName = teamConfig.teamName;
+  const imagePath = playerImagePath(playerSlug);
+  const submissionCode = makeSubmissionCode(playerSlug, teamSlug);
+
+  document.title = `GLB — ${playerName}`;
+
+  document.getElementById("playerName").textContent = playerName;
+  document.getElementById("playerMeta").textContent = `${teamName} · Active GLB Player File`;
+  document.getElementById("playerPosition").textContent = player.position || "—";
+  document.getElementById("playerAge").textContent = player.age || "—";
+  document.getElementById("playerBT").textContent = `${player.bats || "—"} / ${player.throws || "—"}`;
+  document.getElementById("playerClub").textContent = teamName;
+
+  setImage(
+    document.getElementById("playerPhoto"),
+    imagePath,
+    `${playerName} portrait`
+  );
+
+  setImage(
+    document.getElementById("archiveImageOne"),
+    imagePath,
+    `${playerName} roster portrait`
+  );
+
+  document.getElementById("archiveCaptionOne").textContent =
+    `${playerName} · Active roster portrait`;
+
+  document.getElementById("archiveNote").textContent =
+    player.archiveNote || "Active GLB player file currently under public archive review.";
+
+  document.getElementById("collectorStatus").textContent =
+    player.collectorStatus || "No dedicated collector file has been published for this player.";
+
+  document.getElementById("statGames").textContent = player.games || "4";
+  document.getElementById("statClub").textContent = teamName;
+
+  document.getElementById("sidePlayer").textContent = playerName;
+  document.getElementById("sideClub").textContent = teamName;
+  document.getElementById("sideCode").textContent = submissionCode;
+
+  const playerBio = document.getElementById("playerBio");
+  playerBio.textContent = player.bio || "No approved public bio has been published for this player yet.";
+
+  document.getElementById("bioPlayerField").value = playerName;
+  document.getElementById("bioTeamField").value = teamName;
+  document.getElementById("bioCodeField").value = submissionCode;
+
+  document.getElementById("footerTeamLink").href = teamConfig.teamPage;
+  document.getElementById("footerTeamLink").textContent = teamName;
+
+  if(playerSlug === "idris-kourouma"){
+    loadIdrisSpecialContent();
+  }
+}
+
+function loadIdrisSpecialContent(){
+  const archiveGallery = document.getElementById("archiveGallery");
+
+  archiveGallery.innerHTML = `
+    <div class="card-item">
+      <img
+        src="assets/images/players/albuquerque-aeros/assets/images/players/idris-kourouma/pitch1.jpg"
+        alt="Idris Kourouma pitching"
       >
-    </div>
-
-    <div class="player-info">
-      <div class="eyebrow">Official League Record</div>
-      <h1>${player.name}</h1>
-      <div class="club">${team.teamName}</div>
-
-      <div class="meta">
-        <div class="meta-item">
-          <div class="label">Position</div>
-          <div class="value">${player.position}</div>
-        </div>
-
-        <div class="meta-item">
-          <div class="label">Age</div>
-          <div class="value">${player.age}</div>
-        </div>
-
-        <div class="meta-item">
-          <div class="label">Bats / Throws</div>
-          <div class="value">${player.batsThrows}</div>
-        </div>
-
-        <div class="meta-item">
-          <div class="label">Club</div>
-          <div class="value">${team.teamName}</div>
-        </div>
-      </div>
-
-      <section>
-        <h2>Broadcast & Archive Files</h2>
-        <p>${player.status}</p>
-      </section>
-
-      <section>
-        <h2>Archive Notes</h2>
-        <p>${player.notes}</p>
-      </section>
-
-      <section>
-        <h2>Season Statistics</h2>
-        <p>Season statistics file pending.</p>
-      </section>
-
-      <div class="button-row">
-        <a class="btn" href="${team.teamPage}">View ${team.teamName} →</a>
+      <div class="card-caption">
+        Night Start · Albuquerque Broadcast File
       </div>
     </div>
 
-  </article>
-`;
+    <div class="card-item">
+      <img
+        src="assets/images/players/albuquerque-aeros/assets/images/players/idris-kourouma/portrait1.jpg"
+        alt="Idris Kourouma portrait"
+      >
+      <div class="card-caption">
+        Official League Portrait · OLR Active File
+      </div>
+    </div>
+
+    <div class="card-item">
+      <img
+        src="assets/images/players/albuquerque-aeros/assets/images/players/idris-kourouma/idris-kourouma-card-073.jpg"
+        alt="Southwest Circuit Series Card #073"
+      >
+      <div class="card-caption">
+        Southwest Circuit Series · Card #073
+      </div>
+    </div>
+  `;
+
+  document.getElementById("archiveLink").textContent =
+    "View Archived Southwest Circuit Card #073 →";
+
+  document.getElementById("archiveNote").textContent =
+    'League observers continue to track Kourouma’s unusually calm mound presence during high-pressure innings. Several regional broadcasts have referred to him as "The Quiet Arm."';
+
+  document.getElementById("collectorStatus").textContent =
+    "Southwest Circuit Series Card #073 active.";
+}
+
+loadPlayer();
 </script>
 
 </body>

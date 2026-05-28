@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>GLB Player File</title>
-
 <style>
 :root{
   --ink:#111;
@@ -15,24 +14,19 @@
   --navy:#0b1f36;
   --radius:18px;
 }
-
 *{box-sizing:border-box}
-
 body{
   margin:0;
   font-family:Arial, Helvetica, sans-serif;
   background:var(--bg);
   color:var(--ink);
 }
-
 a{color:inherit}
-
 /* STANDARD HEADER */
 .site-header{
   background:var(--navy);
   color:#fff;
 }
-
 .header-inner{
   max-width:1180px;
   margin:0 auto;
@@ -42,7 +36,6 @@ a{color:inherit}
   align-items:center;
   gap:20px;
 }
-
 .brand{
   color:#fff;
   text-decoration:none;
@@ -51,29 +44,26 @@ a{color:inherit}
   text-transform:uppercase;
   white-space:nowrap;
 }
-
 .nav{
   display:flex;
   gap:18px;
   flex-wrap:wrap;
   font-size:14px;
 }
-
 .nav a{
   color:#fff;
   text-decoration:none;
   opacity:.92;
 }
-
-.nav a:hover{opacity:1}
-
+.nav a:hover{
+  opacity:1;
+}
 /* HERO */
 .hero{
   background:linear-gradient(135deg,#0b1f36,#12375d);
   color:#fff;
   padding:56px 22px;
 }
-
 .hero-inner{
   max-width:1180px;
   margin:0 auto;
@@ -82,14 +72,12 @@ a{color:inherit}
   gap:34px;
   align-items:center;
 }
-
 .player-photo{
   background:#dfe5ec;
   border-radius:22px;
   overflow:hidden;
   min-height:360px;
 }
-
 .player-photo img{
   width:100%;
   height:100%;
@@ -97,7 +85,6 @@ a{color:inherit}
   object-fit:cover;
   display:block;
 }
-
 .eyebrow{
   text-transform:uppercase;
   letter-spacing:.16em;
@@ -106,32 +93,27 @@ a{color:inherit}
   margin-bottom:12px;
   opacity:.75;
 }
-
 h1{
   font-size:56px;
   line-height:.95;
   margin:0 0 14px;
 }
-
 .subtitle{
   color:rgba(255,255,255,.82);
   font-size:19px;
 }
-
 .meta-grid{
   margin-top:28px;
   display:grid;
   grid-template-columns:repeat(4,1fr);
   gap:12px;
 }
-
 .meta{
   background:rgba(255,255,255,.08);
   border:1px solid rgba(255,255,255,.16);
   border-radius:14px;
   padding:14px;
 }
-
 .meta-label{
   color:rgba(255,255,255,.62);
   text-transform:uppercase;
@@ -140,12 +122,10 @@ h1{
   font-weight:900;
   margin-bottom:6px;
 }
-
 .meta-value{
   font-size:17px;
   font-weight:800;
 }
-
 /* PAGE */
 main{
   max-width:1180px;
@@ -155,7 +135,6 @@ main{
   grid-template-columns:1fr 360px;
   gap:26px;
 }
-
 .card{
   background:var(--card);
   border:1px solid var(--line);
@@ -163,33 +142,27 @@ main{
   overflow:hidden;
   margin-bottom:24px;
 }
-
 .card-head{
   padding:18px 20px;
   border-bottom:1px solid var(--line);
 }
-
 .card-head h2{
   margin:0;
   font-size:22px;
 }
-
 .card-body{
   padding:20px;
 }
-
 p{
   line-height:1.58;
   color:#343a40;
 }
-
 /* CARD PLACEHOLDERS */
 .cards-grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
   gap:16px;
 }
-
 .fake-card{
   min-height:280px;
   border:2px dashed #b8c0cc;
@@ -200,13 +173,11 @@ p{
   flex-direction:column;
   justify-content:space-between;
 }
-
 .fake-card-top{
   font-weight:900;
   color:var(--navy);
   letter-spacing:.08em;
 }
-
 .fake-card-image{
   flex:1;
   margin:14px 0;
@@ -219,18 +190,15 @@ p{
   color:var(--muted);
   font-size:13px;
 }
-
 .fake-card-name{
   font-weight:900;
 }
-
 /* BIO FORM */
 .bio-form{
   display:grid;
   gap:10px;
   margin-top:16px;
 }
-
 .bio-form input,
 .bio-form textarea{
   width:100%;
@@ -240,12 +208,10 @@ p{
   font-family:Arial, Helvetica, sans-serif;
   font-size:14px;
 }
-
 .bio-form textarea{
   min-height:140px;
   resize:vertical;
 }
-
 .bio-submit{
   border:0;
   border-radius:999px;
@@ -256,23 +222,19 @@ p{
   cursor:pointer;
   width:max-content;
 }
-
 /* SIDE FILE */
 .record-list{
   display:grid;
   gap:14px;
 }
-
 .record-item{
   border-top:1px solid var(--line);
   padding-top:14px;
 }
-
 .record-item:first-child{
   border-top:0;
   padding-top:0;
 }
-
 .record-kicker{
   color:var(--muted);
   font-size:12px;
@@ -281,11 +243,9 @@ p{
   font-weight:900;
   margin-bottom:6px;
 }
-
 .record-value{
   font-weight:700;
 }
-
 .btn{
   display:inline-block;
   margin-top:14px;
@@ -297,14 +257,12 @@ p{
   font-weight:900;
   font-size:14px;
 }
-
 /* STANDARD FOOTER */
 .site-footer{
   background:#0f1214;
   color:#fff;
   padding:38px 22px;
 }
-
 .footer-inner{
   max-width:1180px;
   margin:0 auto;
@@ -312,45 +270,39 @@ p{
   grid-template-columns:1.5fr 1fr 1fr 1fr;
   gap:24px;
 }
-
 .footer-brand{
   font-weight:900;
   letter-spacing:.08em;
   text-transform:uppercase;
   margin-bottom:10px;
 }
-
 .footer-copy{
   color:rgba(255,255,255,.68);
   line-height:1.5;
   margin:0;
 }
-
 .footer-title{
   font-weight:900;
   margin-bottom:10px;
 }
-
 .footer-links{
   display:grid;
   gap:8px;
 }
-
 .footer-links a{
   color:rgba(255,255,255,.72);
   text-decoration:none;
   font-size:14px;
 }
-
-.footer-links a:hover{color:#fff}
-
+.footer-links a:hover{
+  color:#fff;
+}
 .copyright{
   max-width:1180px;
   margin:24px auto 0;
   color:rgba(255,255,255,.55);
   font-size:13px;
 }
-
 /* RESPONSIVE */
 @media(max-width:900px){
   .hero-inner,
@@ -358,32 +310,29 @@ p{
   .footer-inner{
     grid-template-columns:1fr;
   }
-
   .meta-grid,
   .cards-grid{
     grid-template-columns:1fr;
   }
-
-  h1{font-size:42px}
+  h1{
+    font-size:42px;
+  }
 }
-
 @media(max-width:800px){
   .header-inner{
     flex-direction:column;
     align-items:flex-start;
   }
-
-  .nav{gap:14px}
+  .nav{
+    gap:14px;
+  }
 }
 </style>
 </head>
-
 <body>
-
 <header class="site-header">
   <div class="header-inner">
     <a class="brand" href="index.html">GLB Global League Baseball</a>
-
     <nav class="nav">
       <a href="index.html">Home</a>
       <a href="scores.html">Scores</a>
@@ -395,18 +344,17 @@ p{
     </nav>
   </div>
 </header>
-
 <section class="hero">
   <div class="hero-inner">
     <div class="player-photo">
       <img id="playerPhoto" src="" alt="">
     </div>
-
     <div>
       <div class="eyebrow">Official Player File</div>
       <h1 id="playerName">Loading...</h1>
-      <div id="playerMeta" class="subtitle">GLB Player File</div>
-
+      <div id="playerMeta" class="subtitle">
+        GLB Player File
+      </div>
       <div class="meta-grid">
         <div class="meta">
           <div class="meta-label">Position</div>
@@ -428,40 +376,50 @@ p{
     </div>
   </div>
 </section>
-
 <main>
   <div>
-
     <section class="card">
       <div class="card-head">
         <h2>Player Bio</h2>
       </div>
       <div class="card-body">
-        <p id="playerBio">No approved public bio has been published for this player yet.</p>
+        <p id="playerBio">
+          No approved public bio has been published for this player yet.
+        </p>
       </div>
     </section>
-
     <section class="card">
       <div class="card-head">
         <h2>Claim This Bio</h2>
       </div>
       <div class="card-body">
-        <p>This bio spot is claimable. Submit a suggested player bio for review.</p>
-
-        <form class="bio-form" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
+        <p>
+          This bio spot is claimable. Submit a suggested player bio for review.
+        </p>
+        <form class="bio-form" action="https://formspree.io/f/xjgzjlyn" method="POST">
           <input id="bioPlayerField" name="player" type="text" readonly>
           <input id="bioTeamField" name="team" type="text" readonly>
           <input id="bioCodeField" name="claim_code" type="text" readonly>
-
-          <input name="contributor_name" type="text" placeholder="Your name">
-          <input name="contributor_email" type="email" placeholder="Your email">
-          <textarea name="suggested_bio" placeholder="Write a suggested player bio..."></textarea>
-
-          <button class="bio-submit" type="submit">Submit Bio for Review</button>
+          <input
+            name="contributor_name"
+            type="text"
+            placeholder="Your name"
+          >
+          <input
+            name="contributor_email"
+            type="email"
+            placeholder="Your email"
+          >
+          <textarea
+            name="suggested_bio"
+            placeholder="Write a suggested player bio..."
+          ></textarea>
+          <button class="bio-submit" type="submit">
+            Submit Bio for Review
+          </button>
         </form>
       </div>
     </section>
-
     <section class="card">
       <div class="card-head">
         <h2>Cards</h2>
@@ -471,26 +429,28 @@ p{
           <div class="fake-card">
             <div class="fake-card-top">GLB CARD 01</div>
             <div class="fake-card-image">Card image placeholder</div>
-            <div class="fake-card-name" id="cardNameOne">Player Card</div>
+            <div class="fake-card-name" id="cardNameOne">
+              Player Card
+            </div>
           </div>
-
           <div class="fake-card">
             <div class="fake-card-top">GLB CARD 02</div>
             <div class="fake-card-image">Card image placeholder</div>
-            <div class="fake-card-name" id="cardNameTwo">Player Card</div>
+            <div class="fake-card-name" id="cardNameTwo">
+              Player Card
+            </div>
           </div>
-
           <div class="fake-card">
             <div class="fake-card-top">GLB CARD 03</div>
             <div class="fake-card-image">Card image placeholder</div>
-            <div class="fake-card-name" id="cardNameThree">Player Card</div>
+            <div class="fake-card-name" id="cardNameThree">
+              Player Card
+            </div>
           </div>
         </div>
       </div>
     </section>
-
   </div>
-
   <aside>
     <section class="card">
       <div class="card-head">
@@ -511,22 +471,22 @@ p{
             <div id="sideCode" class="record-value">—</div>
           </div>
         </div>
-
-        <a id="teamLink" class="btn" href="teams.html">View Team →</a>
+        <a id="teamLink" class="btn" href="teams.html">
+          View Team →
+        </a>
       </div>
     </section>
   </aside>
 </main>
-
 <footer class="site-footer">
   <div class="footer-inner">
     <div>
       <div class="footer-brand">GLB</div>
       <p class="footer-copy">
-        Global League Baseball official site. Scores, standings, schedules, club pages, player files, and league records.
+        Global League Baseball official site. Scores, standings,
+        schedules, club pages, player files, and league records.
       </p>
     </div>
-
     <div>
       <div class="footer-title">League</div>
       <div class="footer-links">
@@ -536,7 +496,6 @@ p{
         <a href="stats.html">Stats</a>
       </div>
     </div>
-
     <div>
       <div class="footer-title">Clubs</div>
       <div class="footer-links">
@@ -545,25 +504,24 @@ p{
         <a href="news.html">News</a>
       </div>
     </div>
-
     <div>
       <div class="footer-title">Records</div>
       <div class="footer-links">
-        <a href="office-of-league-records.html">Office of League Records</a>
+        <a href="office-of-league-records.html">
+          Office of League Records
+        </a>
         <a href="submit.html">Submit Content</a>
       </div>
     </div>
   </div>
-
   <div class="copyright">
     © 2026 Global League Baseball. All league records subject to review.
   </div>
 </footer>
-
 <script>
 const params = new URLSearchParams(window.location.search);
-const playerSlug = params.get("player") || "kellan-brynden";
-
+const playerSlug =
+  params.get("player") || "kellan-brynden";
 const TEAMS = {
   "spokane-alloys": {
     teamName: "Spokane Alloys",
@@ -576,13 +534,11 @@ const TEAMS = {
     teamPage: "team.html?team=albuquerque-aeros"
   }
 };
-
 const PLAYER_TEAM_INDEX = {
   "kellan-brynden": "spokane-alloys",
   "graham-mercer": "spokane-alloys",
   "idris-kourouma": "albuquerque-aeros"
 };
-
 const PLAYER_OVERRIDES = {
   "kellan-brynden": {
     name:"Kellan Brynden",
@@ -609,57 +565,64 @@ const PLAYER_OVERRIDES = {
     bio:""
   }
 };
-
-const teamSlug = params.get("team") || PLAYER_TEAM_INDEX[playerSlug] || "spokane-alloys";
-const team = TEAMS[teamSlug] || TEAMS["spokane-alloys"];
-
+const teamSlug =
+  params.get("team") ||
+  PLAYER_TEAM_INDEX[playerSlug] ||
+  "spokane-alloys";
+const team =
+  TEAMS[teamSlug] || TEAMS["spokane-alloys"];
 function titleCaseFromSlug(slug){
-  return slug.split("-").map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(" ");
+  return slug
+    .split("-")
+    .map(
+      w => w.charAt(0).toUpperCase() + w.slice(1)
+    )
+    .join(" ");
 }
-
 function playerImagePath(){
   return `assets/teams/${teamSlug}/images/players/${team.cityPrefix}-${playerSlug}.png`;
 }
-
 function makeClaimCode(){
   const raw = `${teamSlug}-${playerSlug}`;
   let hash = 0;
-
   for(let i = 0; i < raw.length; i++){
     hash = ((hash << 5) - hash) + raw.charCodeAt(i);
     hash |= 0;
   }
-
-  return `GLB-BIO-${Math.abs(hash).toString(36).toUpperCase()}`;
+  return `GLB-BIO-${Math.abs(hash)
+    .toString(36)
+    .toUpperCase()}`;
 }
-
 async function getRosterPlayer(){
   try{
-    const response = await fetch(`data/rosters/${teamSlug}.json`);
+    const response =
+      await fetch(`data/rosters/${teamSlug}.json`);
     if(!response.ok) return null;
-
     const roster = await response.json();
-    if(!roster || !Array.isArray(roster.players)) return null;
-
-    return roster.players.find(player => player.slug === playerSlug) || null;
+    if(!roster || !Array.isArray(roster.players)){
+      return null;
+    }
+    return roster.players.find(
+      player => player.slug === playerSlug
+    ) || null;
   }catch(error){
     return null;
   }
 }
-
 function setText(id,value){
   const el = document.getElementById(id);
-  if(el) el.textContent = value;
+  if(el){
+    el.textContent = value;
+  }
 }
-
 function setValue(id,value){
   const el = document.getElementById(id);
-  if(el) el.value = value;
+  if(el){
+    el.value = value;
+  }
 }
-
 async function loadPlayer(){
   const rosterPlayer = await getRosterPlayer();
-
   const player = {
     name: titleCaseFromSlug(playerSlug),
     position: "—",
@@ -670,47 +633,60 @@ async function loadPlayer(){
     ...(PLAYER_OVERRIDES[playerSlug] || {}),
     ...(rosterPlayer || {})
   };
-
-  const playerName = player.name || titleCaseFromSlug(playerSlug);
+  const playerName =
+    player.name || titleCaseFromSlug(playerSlug);
   const claimCode = makeClaimCode();
-
   document.title = `GLB — ${playerName}`;
-
   setText("playerName", playerName);
-  setText("playerMeta", `${team.teamName} · Player File`);
-  setText("playerPosition", player.position || "—");
-  setText("playerAge", player.age || "—");
-  setText("playerBT", `${player.bats || "—"} / ${player.throws || "—"}`);
-  setText("playerClub", team.teamName);
-  setText("playerBio", player.bio || "No approved public bio has been published for this player yet.");
-
+  setText(
+    "playerMeta",
+    `${team.teamName} · Player File`
+  );
+  setText(
+    "playerPosition",
+    player.position || "—"
+  );
+  setText(
+    "playerAge",
+    player.age || "—"
+  );
+  setText(
+    "playerBT",
+    `${player.bats || "—"} / ${player.throws || "—"}`
+  );
+  setText(
+    "playerClub",
+    team.teamName
+  );
+  setText(
+    "playerBio",
+    player.bio ||
+    "No approved public bio has been published for this player yet."
+  );
   setText("sidePlayer", playerName);
   setText("sideClub", team.teamName);
   setText("sideCode", claimCode);
-
   setText("cardNameOne", `${playerName} Card`);
   setText("cardNameTwo", `${playerName} Card`);
   setText("cardNameThree", `${playerName} Card`);
-
   setValue("bioPlayerField", playerName);
   setValue("bioTeamField", team.teamName);
   setValue("bioCodeField", claimCode);
-
   const img = document.getElementById("playerPhoto");
   img.src = playerImagePath();
   img.alt = `${playerName} portrait`;
   img.onerror = function(){
     this.onerror = null;
-    this.src = "https://placehold.co/800x800/e8edf2/5f6b7a?text=Player+Photo";
+    this.src =
+      "https://placehold.co/800x800/e8edf2/5f6b7a?text=Player+Photo";
   };
-
-  const teamLink = document.getElementById("teamLink");
+  const teamLink =
+    document.getElementById("teamLink");
   teamLink.href = team.teamPage;
-  teamLink.textContent = `View ${team.teamName} →`;
+  teamLink.textContent =
+    `View ${team.teamName} →`;
 }
-
 loadPlayer();
 </script>
-
 </body>
 </html>

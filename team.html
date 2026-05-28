@@ -25,6 +25,9 @@ body{
   color:var(--ink);
 }
 
+a{color:inherit}
+
+/* HEADER */
 .site-header{
   background:var(--navy);
   color:#fff;
@@ -41,9 +44,12 @@ body{
 }
 
 .brand{
+  color:#fff;
+  text-decoration:none;
   font-weight:900;
   letter-spacing:.08em;
   text-transform:uppercase;
+  white-space:nowrap;
 }
 
 .nav{
@@ -56,8 +62,12 @@ body{
 .nav a{
   color:#fff;
   text-decoration:none;
+  opacity:.92;
 }
 
+.nav a:hover{opacity:1}
+
+/* HERO */
 .hero{
   background:linear-gradient(135deg,#0b1f36,#12375d);
   color:#fff;
@@ -136,6 +146,7 @@ h1{
   font-weight:800;
 }
 
+/* PAGE */
 main{
   max-width:1180px;
   margin:34px auto 60px;
@@ -172,6 +183,7 @@ p{
   color:#343a40;
 }
 
+/* CARD PLACEHOLDERS */
 .cards-grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
@@ -212,6 +224,7 @@ p{
   font-weight:900;
 }
 
+/* BIO FORM */
 .bio-form{
   display:grid;
   gap:10px;
@@ -244,6 +257,7 @@ p{
   width:max-content;
 }
 
+/* SIDE FILE */
 .record-list{
   display:grid;
   gap:14px;
@@ -284,9 +298,64 @@ p{
   font-size:14px;
 }
 
+/* FOOTER */
+.site-footer{
+  background:#0f1214;
+  color:#fff;
+  padding:38px 22px;
+}
+
+.footer-inner{
+  max-width:1180px;
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:1.5fr 1fr 1fr 1fr;
+  gap:24px;
+}
+
+.footer-brand{
+  font-weight:900;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  margin-bottom:10px;
+}
+
+.footer-copy{
+  color:rgba(255,255,255,.68);
+  line-height:1.5;
+  margin:0;
+}
+
+.footer-title{
+  font-weight:900;
+  margin-bottom:10px;
+}
+
+.footer-links{
+  display:grid;
+  gap:8px;
+}
+
+.footer-links a{
+  color:rgba(255,255,255,.72);
+  text-decoration:none;
+  font-size:14px;
+}
+
+.footer-links a:hover{color:#fff}
+
+.copyright{
+  max-width:1180px;
+  margin:24px auto 0;
+  color:rgba(255,255,255,.55);
+  font-size:13px;
+}
+
+/* RESPONSIVE */
 @media(max-width:900px){
   .hero-inner,
-  main{
+  main,
+  .footer-inner{
     grid-template-columns:1fr;
   }
 
@@ -297,6 +366,15 @@ p{
 
   h1{font-size:42px}
 }
+
+@media(max-width:800px){
+  .header-inner{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  .nav{gap:14px}
+}
 </style>
 </head>
 
@@ -304,7 +382,8 @@ p{
 
 <header class="site-header">
   <div class="header-inner">
-    <div class="brand">GLB Global League Baseball</div>
+    <a class="brand" href="index.html">GLB Global League Baseball</a>
+
     <nav class="nav">
       <a href="index.html">Home</a>
       <a href="scores.html">Scores</a>
@@ -364,7 +443,7 @@ p{
 
     <section class="card">
       <div class="card-head">
-        <h2>Contribute to This Bio</h2>
+        <h2>Claim This Bio</h2>
       </div>
       <div class="card-body">
         <p>This bio spot is claimable. Submit a suggested player bio for review.</p>
@@ -439,6 +518,48 @@ p{
   </aside>
 </main>
 
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">GLB</div>
+      <p class="footer-copy">
+        Global League Baseball official site. Scores, standings, schedules, club pages, player files, and league records.
+      </p>
+    </div>
+
+    <div>
+      <div class="footer-title">League</div>
+      <div class="footer-links">
+        <a href="scores.html">Scores</a>
+        <a href="standings.html">Standings</a>
+        <a href="schedule.html">Schedule</a>
+        <a href="stats.html">Stats</a>
+      </div>
+    </div>
+
+    <div>
+      <div class="footer-title">Clubs</div>
+      <div class="footer-links">
+        <a href="teams.html">Teams</a>
+        <a href="players.html">Players</a>
+        <a href="news.html">News</a>
+      </div>
+    </div>
+
+    <div>
+      <div class="footer-title">Records</div>
+      <div class="footer-links">
+        <a href="office-of-league-records.html">Office of League Records</a>
+        <a href="submit.html">Submit Content</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="copyright">
+    © 2026 Global League Baseball. All league records subject to review.
+  </div>
+</footer>
+
 <script>
 const params = new URLSearchParams(window.location.search);
 const playerSlug = params.get("player") || "kellan-brynden";
@@ -463,9 +584,30 @@ const PLAYER_TEAM_INDEX = {
 };
 
 const PLAYER_OVERRIDES = {
-  "kellan-brynden": { name:"Kellan Brynden", position:"—", age:"—", bats:"—", throws:"—", bio:"" },
-  "graham-mercer": { name:"Graham Mercer", position:"—", age:"—", bats:"—", throws:"—", bio:"" },
-  "idris-kourouma": { name:"Idris Kourouma", position:"Pitcher", age:"—", bats:"—", throws:"—", bio:"" }
+  "kellan-brynden": {
+    name:"Kellan Brynden",
+    position:"—",
+    age:"—",
+    bats:"—",
+    throws:"—",
+    bio:""
+  },
+  "graham-mercer": {
+    name:"Graham Mercer",
+    position:"—",
+    age:"—",
+    bats:"—",
+    throws:"—",
+    bio:""
+  },
+  "idris-kourouma": {
+    name:"Idris Kourouma",
+    position:"Pitcher",
+    age:"—",
+    bats:"—",
+    throws:"—",
+    bio:""
+  }
 };
 
 const teamSlug = params.get("team") || PLAYER_TEAM_INDEX[playerSlug] || "spokane-alloys";
@@ -482,10 +624,12 @@ function playerImagePath(){
 function makeClaimCode(){
   const raw = `${teamSlug}-${playerSlug}`;
   let hash = 0;
+
   for(let i = 0; i < raw.length; i++){
     hash = ((hash << 5) - hash) + raw.charCodeAt(i);
     hash |= 0;
   }
+
   return `GLB-BIO-${Math.abs(hash).toString(36).toUpperCase()}`;
 }
 
@@ -493,8 +637,10 @@ async function getRosterPlayer(){
   try{
     const response = await fetch(`data/rosters/${teamSlug}.json`);
     if(!response.ok) return null;
+
     const roster = await response.json();
     if(!roster || !Array.isArray(roster.players)) return null;
+
     return roster.players.find(player => player.slug === playerSlug) || null;
   }catch(error){
     return null;

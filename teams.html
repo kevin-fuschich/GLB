@@ -619,7 +619,7 @@
       const abbrev = team.abbrev || team.abbr || '—';
 
       return `
-        <a class="team-card" href="team.html?team=${encodeURIComponent(slug)}">
+        <a class="team-card" href="team-${slug}.html">
           <span class="team-label">${divisionName}</span>
           <h3 class="team-name">${name}</h3>
           <p class="team-meta">

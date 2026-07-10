@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="The official club record of the Spokane Alloys, members of Global League Baseball's Pacific Division."
+  />
+  <title>Spokane Alloys | Global League Baseball</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap");
+
+    :root {
+      --ink: #142126;
+      --muted: #5f6d72;
+      --paper: #f3f0e8;
+      --paper-deep: #e7e1d5;
+      --alloy: #a8b0b2;
+      --river: #456f78;
+      --river-dark: #274850;
+      --rust: #a65f3d;
+      --line: rgba(20, 33, 38, 0.18);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        linear-gradient(rgba(243, 240, 232, 0.94), rgba(243, 240, 232, 0.97)),
+        url("images/ogwa-aerial1.jpg") center top / cover fixed;
+      font-family: "Inter", sans-serif;
+    }
+
+    h1,
+    h2,
+    h3,
+    .display {
+      font-family: "Oswald", sans-serif;
+      letter-spacing: 0.02em;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .shell {
+      width: min(1180px, calc(100% - 32px));
+      margin-inline: auto;
+    }
+
+    .eyebrow {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+
+    .paper-card {
+      border: 1px solid var(--line);
+      background: rgba(250, 248, 242, 0.92);
+      box-shadow: 0 20px 50px rgba(20, 33, 38, 0.08);
+    }
+
+    .image-frame {
+      position: relative;
+      overflow: hidden;
+      background: #d8d4ca;
+    }
+
+    .image-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 500ms ease;
+    }
+
+    .image-frame:hover img {
+      transform: scale(1.025);
+    }
+
+    .image-frame::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.15);
+    }
+
+    .rule {
+      height: 1px;
+      background: var(--line);
+    }
+
+    .fact-label {
+      color: var(--muted);
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .fact-value {
+      margin-top: 0.28rem;
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    .nav-link {
+      position: relative;
+      padding-block: 0.2rem;
+    }
+
+    .nav-link::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: -0.15rem;
+      left: 0;
+      height: 1px;
+      background: currentColor;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 180ms ease;
+    }
+
+    .nav-link:hover::after,
+    .nav-link:focus-visible::after {
+      transform: scaleX(1);
+    }
+
+    .hero-overlay {
+      background:
+        linear-gradient(90deg, rgba(18, 31, 36, 0.94) 0%, rgba(18, 31, 36, 0.72) 48%, rgba(18, 31, 36, 0.18) 100%),
+        linear-gradient(0deg, rgba(18, 31, 36, 0.34), rgba(18, 31, 36, 0.08));
+    }
+
+    .section-number {
+      color: rgba(20, 33, 38, 0.2);
+      font-family: "Oswald", sans-serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+    }
+
+    .caption {
+      color: var(--muted);
+      font-size: 0.78rem;
+      line-height: 1.5;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <a
+    href="#main-content"
+    class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:bg-white focus:px-4 focus:py-3 focus:font-semibold focus:text-slate-900"
+  >
+    Skip to content
+  </a>
+
+  <header class="border-b border-white/10 bg-[#142126] text-white">
+    <div class="shell flex min-h-20 items-center justify-between gap-6">
+      <a href="index.html" class="flex items-center gap-3" aria-label="Global League Baseball home">
+        <div class="grid h-10 w-10 place-items-center border border-white/35 font-bold tracking-widest">
+          GLB
+        </div>
+        <div>
+          <div class="display text-lg font-semibold uppercase leading-none">Global League Baseball</div>
+          <div class="mt-1 text-[10px] font-semibold uppercase tracking-[0.22em] text-white/60">
+            Official League Record
+          </div>
+        </div>
+      </a>
+
+      <button
+        id="menuButton"
+        class="rounded border border-white/25 px-3 py-2 text-xs font-bold uppercase tracking-[0.14em] md:hidden"
+        type="button"
+        aria-expanded="false"
+        aria-controls="siteNav"
+      >
+        Menu
+      </button>
+
+      <nav
+        id="siteNav"
+        class="hidden items-center gap-7 text-xs font-semibold uppercase tracking-[0.13em] md:flex"
+        aria-label="Primary navigation"
+      >
+        <a class="nav-link" href="scores.html">Scores</a>
+        <a class="nav-link" href="standings.html">Standings</a>
+        <a class="nav-link" href="schedule.html">Schedule</a>
+        <a class="nav-link" href="teams.html">Clubs</a>
+        <a class="nav-link" href="players.html">Players</a>
+      </nav>
+    </div>
+
+    <nav
+      id="mobileNav"
+      class="shell hidden border-t border-white/10 py-5 text-xs font-semibold uppercase tracking-[0.13em] md:hidden"
+      aria-label="Mobile navigation"
+    >
+      <div class="grid grid-cols-2 gap-4">
+        <a href="scores.html">Scores</a>
+        <a href="standings.html">Standings</a>
+        <a href="schedule.html">Schedule</a>
+        <a href="teams.html">Clubs</a>
+        <a href="players.html">Players</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="relative isolate min-h-[560px] overflow-hidden bg-[#1b2e34] text-white">
+      <img
+        src="images/ogwa-aerial1.jpg"
+        alt="Aerial view of OGWA Stadium and the surrounding Spokane River District"
+        class="absolute inset-0 -z-20 h-full w-full object-cover"
+      />
+      <div class="hero-overlay absolute inset-0 -z-10"></div>
+
+      <div class="shell flex min-h-[560px] items-end py-14 md:py-20">
+        <div class="max-w-3xl">
+          <div class="mb-6 flex flex-wrap items-center gap-3">
+            <span class="eyebrow text-white/70">Pacific Division</span>
+            <span class="h-px w-9 bg-white/40"></span>
+            <span class="eyebrow text-white/70">Spokane, Washington</span>
+          </div>
+
+          <p class="display text-lg uppercase tracking-[0.18em] text-white/75">Established 2019</p>
+          <h1 class="mt-2 text-6xl font-bold uppercase leading-[0.9] sm:text-7xl md:text-8xl">
+            Spokane<br />Alloys
+          </h1>
+          <p class="mt-7 max-w-2xl text-base leading-7 text-white/82 md:text-lg">
+            Forged in the Inland Northwest, the Alloys are Spokane’s club: modern,
+            regional and unmistakably at home along the river.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="border-b border-[var(--line)] bg-[var(--paper-deep)]">
+      <div class="shell grid grid-cols-2 gap-px bg-[var(--line)] md:grid-cols-6">
+        <div class="bg-[var(--paper-deep)] px-5 py-5">
+          <div class="fact-label">Club</div>
+          <div class="fact-value">Spokane Alloys</div>
+        </div>
+        <div class="bg-[var(--paper-deep)] px-5 py-5">
+          <div class="fact-label">Division</div>
+          <div class="fact-value">Pacific</div>
+        </div>
+        <div class="bg-[var(--paper-deep)] px-5 py-5">
+          <div class="fact-label">Ballpark</div>
+          <div class="fact-value">OGWA Stadium</div>
+        </div>
+        <div class="bg-[var(--paper-deep)] px-5 py-5">
+          <div class="fact-label">Capacity</div>
+          <div class="fact-value">20,000</div>
+        </div>
+        <div class="bg-[var(--paper-deep)] px-5 py-5">
+          <div class="fact-label">Surface</div>
+          <div class="fact-value">Hybrid</div>
+        </div>
+        <div class="bg-[var(--paper-deep)] px-5 py-5">
+          <div class="fact-label">Opened</div>
+          <div class="fact-value">2019</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 md:py-24">
+      <div class="shell grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-20">
+        <div>
+          <div class="flex items-center gap-4">
+            <span class="section-number">01</span>
+            <span class="eyebrow text-[var(--river-dark)]">The Club</span>
+          </div>
+          <h2 class="mt-5 text-4xl font-semibold uppercase leading-tight md:text-5xl">
+            Spokane’s club.
+          </h2>
+          <div class="mt-7 space-y-5 text-[15px] leading-7 text-[var(--muted)] md:text-base">
+            <p>
+              The Spokane Alloys joined Global League Baseball in 2019 and quickly became
+              one of the Pacific Division’s defining clubs. Their identity draws from the
+              region’s industrial history, changing skyline and enduring relationship with
+              the Spokane River.
+            </p>
+            <p>
+              The name reflects strength through combination: different elements brought
+              together to create something durable. That idea is visible throughout the
+              club’s home, its visual language and the supporters who fill the River District
+              on game days.
+            </p>
+          </div>
+        </div>
+
+        <figure>
+          <div class="image-frame aspect-[4/3]">
+            <img
+              src="images/fans1.jpg"
+              alt="Spokane Alloys supporters gathered inside OGWA Stadium"
+              loading="lazy"
+            />
+          </div>
+          <figcaption class="caption mt-3">
+            Alloys supporters during a Pacific Division home date at OGWA Stadium.
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="bg-[#20383f] py-16 text-white md:py-24">
+      <div class="shell">
+        <div class="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-end lg:gap-20">
+          <div>
+            <div class="flex items-center gap-4">
+              <span class="section-number !text-white/25">02</span>
+              <span class="eyebrow text-white/65">Home Ground</span>
+            </div>
+            <h2 class="mt-5 text-4xl font-semibold uppercase leading-tight md:text-5xl">
+              OGWA Stadium
+            </h2>
+            <p class="mt-7 max-w-xl text-[15px] leading-7 text-white/72 md:text-base">
+              An open-air, 20,000-seat ballpark in Spokane’s River District, OGWA Stadium
+              pairs a compact baseball footprint with broad concourses, river-facing views
+              and sea-glass light throughout the structure.
+            </p>
+
+            <dl class="mt-9 grid grid-cols-2 gap-x-8 gap-y-7 border-t border-white/15 pt-8">
+              <div>
+                <dt class="fact-label !text-white/45">Setting</dt>
+                <dd class="mt-2 font-semibold">River District</dd>
+              </div>
+              <div>
+                <dt class="fact-label !text-white/45">Configuration</dt>
+                <dd class="mt-2 font-semibold">Open Air</dd>
+              </div>
+              <div>
+                <dt class="fact-label !text-white/45">Capacity</dt>
+                <dd class="mt-2 font-semibold">20,000</dd>
+              </div>
+              <div>
+                <dt class="fact-label !text-white/45">Playing Surface</dt>
+                <dd class="mt-2 font-semibold">Hybrid</dd>
+              </div>
+            </dl>
+
+            <a
+              href="ballpark-ogwa-stadium.html"
+              class="mt-10 inline-flex items-center gap-3 border border-white/35 px-5 py-3 text-xs font-bold uppercase tracking-[0.15em] transition hover:bg-white hover:text-[#20383f]"
+            >
+              View ballpark record
+              <span aria-hidden="true">→</span>
+            </a>
+          </div>
+
+          <figure>
+            <div class="image-frame aspect-[16/10]">
+              <img
+                src="images/concourse1.jpg"
+                alt="The main concourse at OGWA Stadium"
+                loading="lazy"
+              />
+            </div>
+            <figcaption class="caption mt-3 !text-white/52">
+              The river-facing concourse at OGWA Stadium.
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 md:py-24">
+      <div class="shell">
+        <div class="max-w-2xl">
+          <div class="flex items-center gap-4">
+            <span class="section-number">03</span>
+            <span class="eyebrow text-[var(--river-dark)]">At the Ballpark</span>
+          </div>
+          <h2 class="mt-5 text-4xl font-semibold uppercase leading-tight md:text-5xl">
+            Details that belong to Spokane.
+          </h2>
+        </div>
+
+        <div class="mt-12 grid gap-7 md:grid-cols-3">
+          <article class="paper-card p-4">
+            <div class="image-frame aspect-[4/3]">
+              <img
+                src="images/rainwall.jpg"
+                alt="The Rain Wall refill station at OGWA Stadium"
+                loading="lazy"
+              />
+            </div>
+            <div class="px-2 pb-3 pt-6">
+              <p class="eyebrow text-[var(--river)]">Ballpark Feature</p>
+              <h3 class="mt-3 text-2xl font-semibold uppercase">The Rain Wall</h3>
+              <p class="mt-4 text-sm leading-6 text-[var(--muted)]">
+                A public refill wall built into the main concourse, designed as both a
+                gathering point and a practical part of the stadium.
+              </p>
+            </div>
+          </article>
+
+          <article class="paper-card p-4">
+            <div class="image-frame aspect-[4/3]">
+              <img
+                src="images/giveaway1.jpg"
+                alt="A reusable bottle giveaway at an Alloys home game"
+                loading="lazy"
+              />
+            </div>
+            <div class="px-2 pb-3 pt-6">
+              <p class="eyebrow text-[var(--river)]">Club Tradition</p>
+              <h3 class="mt-3 text-2xl font-semibold uppercase">Monthly Bottle Night</h3>
+              <p class="mt-4 text-sm leading-6 text-[var(--muted)]">
+                Once each homestand cycle, supporters receive a limited Spokane edition
+                reusable bottle produced for the club.
+              </p>
+            </div>
+          </article>
+
+          <article class="paper-card p-4">
+            <div class="image-frame aspect-[4/3]">
+              <img
+                src="images/scoreboard1.jpg"
+                alt="The scoreboard and sea-glass lighting at OGWA Stadium"
+                loading="lazy"
+              />
+            </div>
+            <div class="px-2 pb-3 pt-6">
+              <p class="eyebrow text-[var(--river)]">Visual Identity</p>
+              <h3 class="mt-3 text-2xl font-semibold uppercase">Sea-Glass Light</h3>
+              <p class="mt-4 text-sm leading-6 text-[var(--muted)]">
+                Soft green-blue lighting runs through the stadium after sunset, giving
+                night games a distinct River District atmosphere.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="border-y border-[var(--line)] bg-[var(--paper-deep)] py-16 md:py-20">
+      <div class="shell grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-start lg:gap-20">
+        <div>
+          <div class="flex items-center gap-4">
+            <span class="section-number">04</span>
+            <span class="eyebrow text-[var(--river-dark)]">Club Voices</span>
+          </div>
+          <h2 class="mt-5 text-4xl font-semibold uppercase leading-tight md:text-5xl">
+            From Spokane.
+          </h2>
+          <p class="mt-6 max-w-md text-[15px] leading-7 text-[var(--muted)]">
+            The Alloys’ broadcast record is carried by two voices closely associated with
+            the club and the city.
+          </p>
+        </div>
+
+        <div class="grid gap-5 sm:grid-cols-2">
+          <article class="border-t-4 border-[var(--river-dark)] bg-white/65 p-7">
+            <p class="eyebrow text-[var(--river)]">Lead Broadcaster</p>
+            <h3 class="mt-4 text-3xl font-semibold uppercase">Martin Vale</h3>
+            <p class="mt-4 text-sm leading-6 text-[var(--muted)]">
+              The primary radio voice of the Spokane Alloys and the club’s longest-serving
+              game broadcaster.
+            </p>
+            <p class="mt-7 text-[11px] font-bold uppercase tracking-[0.14em] text-[var(--muted)]">
+              GLB-SPO-BCAST-0001
+            </p>
+          </article>
+
+          <article class="border-t-4 border-[var(--rust)] bg-white/65 p-7">
+            <p class="eyebrow text-[var(--rust)]">Analyst</p>
+            <h3 class="mt-4 text-3xl font-semibold uppercase">Graham Mercer</h3>
+            <p class="mt-4 text-sm leading-6 text-[var(--muted)]">
+              Former professional infielder and Spokane analyst, known for a direct,
+              detail-first view of the game.
+            </p>
+            <p class="mt-7 text-[11px] font-bold uppercase tracking-[0.14em] text-[var(--muted)]">
+              GLB-SPO-BCAST-0002
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 md:py-24">
+      <div class="shell">
+        <div class="flex flex-col justify-between gap-7 md:flex-row md:items-end">
+          <div>
+            <div class="flex items-center gap-4">
+              <span class="section-number">05</span>
+              <span class="eyebrow text-[var(--river-dark)]">Club Record</span>
+            </div>
+            <h2 class="mt-5 text-4xl font-semibold uppercase md:text-5xl">Spokane Alloys</h2>
+          </div>
+
+          <div class="flex flex-wrap gap-3">
+            <a
+              href="team.html?club=spokane-alloys"
+              class="border border-[var(--ink)] bg-[var(--ink)] px-5 py-3 text-xs font-bold uppercase tracking-[0.14em] text-white transition hover:bg-transparent hover:text-[var(--ink)]"
+            >
+              Team record
+            </a>
+            <a
+              href="schedule.html?club=spokane-alloys"
+              class="border border-[var(--ink)] px-5 py-3 text-xs font-bold uppercase tracking-[0.14em] transition hover:bg-[var(--ink)] hover:text-white"
+            >
+              Schedule
+            </a>
+            <a
+              href="scores.html?club=spokane-alloys"
+              class="border border-[var(--ink)] px-5 py-3 text-xs font-bold uppercase tracking-[0.14em] transition hover:bg-[var(--ink)] hover:text-white"
+            >
+              Scores
+            </a>
+          </div>
+        </div>
+
+        <div class="rule my-10"></div>
+
+        <div class="grid gap-8 md:grid-cols-[1fr_auto] md:items-center">
+          <p class="max-w-3xl text-sm leading-7 text-[var(--muted)]">
+            This page is part of the official Global League Baseball club archive.
+            Corrections, photographs and documented additions may be submitted for review.
+          </p>
+          <a
+            href="contribute.html?record=spokane-alloys"
+            class="text-xs font-bold uppercase tracking-[0.14em] text-[var(--river-dark)] underline decoration-1 underline-offset-4"
+          >
+            Contribute to this record
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-[#142126] py-12 text-white">
+    <div class="shell grid gap-10 md:grid-cols-[1fr_auto] md:items-end">
+      <div>
+        <div class="display text-xl font-semibold uppercase">Global League Baseball</div>
+        <p class="mt-3 max-w-xl text-sm leading-6 text-white/58">
+          The official record of GLB clubs, players, ballparks and competition.
+        </p>
+      </div>
+
+      <div class="text-left md:text-right">
+        <p class="text-[11px] font-semibold uppercase tracking-[0.16em] text-white/45">
+          Office of the Commissioner
+        </p>
+        <p class="mt-2 text-sm font-semibold">Marisol Vega, Commissioner</p>
+      </div>
+    </div>
+
+    <div class="shell mt-10 border-t border-white/10 pt-6 text-[11px] uppercase tracking-[0.12em] text-white/38">
+      © <span id="year"></span> Global League Baseball
+    </div>
+  </footer>
+
+  <script>
+    const menuButton = document.getElementById("menuButton");
+    const mobileNav = document.getElementById("mobileNav");
+
+    menuButton.addEventListener("click", () => {
+      const isOpen = menuButton.getAttribute("aria-expanded") === "true";
+      menuButton.setAttribute("aria-expanded", String(!isOpen));
+      mobileNav.classList.toggle("hidden");
+    });
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

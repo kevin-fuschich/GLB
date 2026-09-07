@@ -3,297 +3,1380 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GLB Team Record – Vancouver Current</title>
+
+<title>Vancouver Current | Global League Baseball</title>
+
+<meta
+  name="description"
+  content="Official team page for the Vancouver Current of Global League Baseball."
+>
 
 <style>
 :root{
-  --paper:#ffffff;
-  --ink:#0f1214;
-  --meta:#666;
-  --line:#e0e0e0;
-
-  --sans:"Helvetica Neue", Helvetica, Arial, sans-serif;
-  --mono:"Courier New", Courier, monospace;
+--navy:#0b1e33;
+--navy2:#102843;
+--blue:#1d4f91;
+--border:#d9dee5;
+--bg:#f3f5f7;
+--card:#ffffff;
+--text:#111111;
+--muted:#5f6b7a;
+--light:#dfe7f1;
+--current:#173846;
+--current-soft:#e9f2f3;
+--max:1280px;
 }
 
+*{box-sizing:border-box}
+
+html,
 body{
-  background:#f4f4f4;
-  font-family:var(--sans);
-  color:var(--ink);
-  margin:0;
-  padding:40px 20px;
+margin:0;
+padding:0;
+background:var(--bg);
+color:var(--text);
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
 }
 
-.sheet{
-  max-width:640px;
-  margin:0 auto;
-  background:var(--paper);
-  padding:40px;
-  border-top:5px solid var(--ink);
-  box-shadow:0 4px 20px rgba(0,0,0,.08);
+img{
+display:block;
+max-width:100%;
+}
+
+a{
+color:inherit;
+text-decoration:none;
+}
+
+.container{
+max-width:var(--max);
+margin:0 auto;
+padding:0 20px;
 }
 
 /* HEADER */
-header{
-  display:flex;
-  justify-content:space-between;
-  align-items:flex-start;
-  padding-bottom:20px;
-  border-bottom:2px solid var(--ink);
-  margin-bottom:30px;
+
+.site-header{
+position:sticky;
+top:0;
+z-index:1000;
+background:var(--navy);
+color:#fff;
 }
 
-.header-text h1{
-  margin:0 0 6px 0;
-  font-size:22px;
-  font-weight:900;
-  text-transform:uppercase;
+.topbar{
+min-height:72px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:20px;
 }
 
+.brand{
+display:flex;
+gap:14px;
+align-items:center;
+}
+
+.brand-mark{
+font-size:24px;
+font-weight:900;
+letter-spacing:1.4px;
+}
+
+.brand-sub,
 .header-meta{
-  font-size:13px;
-  color:var(--meta);
+font-size:11px;
+text-transform:uppercase;
+letter-spacing:1px;
+color:var(--light);
 }
 
-.team-logo{
-  height:120px; /* 100% larger */
-  width:auto;
+.nav-links{
+display:flex;
+justify-content:center;
+flex:1;
 }
 
-/* TEAM PHOTO */
-.team-photo{
-  margin:30px 0;
-  border:1px solid var(--line);
+.nav-links a{
+padding:26px 16px 22px;
+font-size:13px;
+font-weight:700;
+text-transform:uppercase;
+letter-spacing:.8px;
+border-bottom:4px solid transparent;
 }
 
-.team-photo img{
-  width:100%;
-  display:block;
+.nav-links a.active{
+border-bottom-color:#7fb0ff;
 }
 
-/* SECTION HEADERS */
-h2{
-  font-family:var(--mono);
-  font-size:13px;
-  text-transform:uppercase;
-  letter-spacing:.5px;
-  margin:40px 0 12px;
-  padding-bottom:6px;
-  border-bottom:1px solid var(--line);
+.nav-toggle{
+display:none;
+border:0;
+background:none;
+color:#fff;
+font-size:24px;
 }
 
-/* TABLES */
-table{
-  width:100%;
-  border-collapse:collapse;
-  font-size:13px;
+.mobile-menu{
+display:none;
+background:var(--navy2);
 }
 
-th{
-  font-size:11px;
-  color:var(--meta);
-  font-weight:600;
-  text-transform:uppercase;
-  padding:6px;
-  border-bottom:2px solid var(--ink);
+.mobile-menu.open{
+display:block;
 }
 
-td{
-  padding:8px 6px;
-  border-bottom:1px solid #f0f0f0;
-  vertical-align:middle;
+.mobile-menu a{
+display:block;
+padding:15px 20px;
+border-top:1px solid #ffffff14;
+color:#fff;
+font-weight:700;
 }
 
-.align-center{ text-align:center; }
-.align-right{ text-align:right; }
+/* PAGE */
 
-/* ROSTER HEADSHOTS */
-.roster-pic{
-  width:48px;
-  height:48px;
-  object-fit:cover;
-  border-radius:6px;
-  border:1px solid var(--line);
-  display:block;
-  background:#f6f6f6;
+.page{
+padding:28px 0 48px;
+}
+
+/* HERO */
+
+.team-hero{
+position:relative;
+min-height:430px;
+overflow:hidden;
+border-radius:18px;
+color:#fff;
+
+background:
+linear-gradient(
+90deg,
+#071625f5 0%,
+#0b1e33e3 35%,
+#0b1e338f 63%,
+#0b1e3329 100%
+),
+url("assets/teams/vancouver-current/images/stadium/vancouver-stadium1.png")
+center/cover no-repeat;
+}
+
+.team-hero-inner{
+min-height:430px;
+padding:36px;
+display:flex;
+flex-direction:column;
+justify-content:flex-end;
+}
+
+.team-kicker{
+font-size:11px;
+font-weight:800;
+text-transform:uppercase;
+letter-spacing:1.2px;
+color:#d7e8ff;
+}
+
+.team-title{
+margin:12px 0 0;
+font-size:64px;
+line-height:.98;
+letter-spacing:-2px;
+}
+
+.team-location{
+margin:12px 0 0;
+color:#ffffffe6;
+}
+
+.team-actions{
+display:flex;
+gap:10px;
+flex-wrap:wrap;
+align-items:center;
+margin-top:20px;
+}
+
+.team-tag{
+display:inline-flex;
+align-items:center;
+padding:8px 11px;
+border:1px solid #ffffff38;
+border-radius:999px;
+background:#ffffff17;
+font-size:11px;
+font-weight:800;
+text-transform:uppercase;
+}
+
+.club-link{
+display:inline-flex;
+align-items:center;
+padding:9px 14px;
+border-radius:999px;
+background:#fff;
+color:var(--current);
+font-size:11px;
+font-weight:900;
+text-transform:uppercase;
+box-shadow:0 2px 6px #00000020;
+}
+
+.club-link:hover{
+background:#edf5f3;
+}
+
+/* GRID */
+
+.content-grid{
+display:grid;
+grid-template-columns:minmax(0,2fr) minmax(280px,.9fr);
+gap:22px;
+margin-top:22px;
+align-items:start;
+}
+
+.main-column,
+.side-column{
+display:grid;
+gap:22px;
+}
+
+/* CARDS */
+
+.card{
+background:var(--card);
+border:1px solid var(--border);
+border-radius:16px;
+overflow:hidden;
+box-shadow:0 1px 2px #1018280a;
+}
+
+.card-header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:12px;
+padding:17px 18px;
+border-bottom:1px solid var(--border);
+}
+
+.card-title{
+margin:0;
+font-size:17px;
+color:var(--current);
+}
+
+.card-label{
+font-size:10px;
+font-weight:800;
+text-transform:uppercase;
+color:var(--blue);
+}
+
+.card-body{
+padding:18px;
+}
+
+.story-copy{
+margin:0;
+font-size:15px;
+line-height:1.72;
+color:#334150;
+}
+
+/* ROSTER */
+
+.table-wrap{
+overflow-x:auto;
+}
+
+.roster-table{
+width:100%;
+min-width:700px;
+border-collapse:collapse;
+}
+
+.roster-table th,
+.roster-table td{
+padding:12px 14px;
+border-bottom:1px solid var(--border);
+text-align:left;
+vertical-align:middle;
+}
+
+.roster-table th{
+background:#f8fafb;
+color:var(--muted);
+font-size:10px;
+text-transform:uppercase;
+letter-spacing:.8px;
+}
+
+.player-cell{
+display:flex;
+align-items:center;
+gap:11px;
+min-width:220px;
+}
+
+.player-placeholder{
+width:46px;
+height:46px;
+flex:0 0 46px;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:9px;
+border:1px solid var(--border);
+background:#e8edf0;
+color:var(--current);
+font-size:12px;
+font-weight:900;
+letter-spacing:.5px;
+}
+
+.player-name{
+display:block;
+font-weight:800;
+color:var(--current);
+}
+
+.player-role{
+display:block;
+margin-top:3px;
+font-size:11px;
+color:var(--muted);
+}
+
+.roster-note{
+padding:14px 18px;
+background:#fbfcfd;
+color:var(--muted);
+font-size:13px;
+}
+
+/* COACHES */
+
+.coach-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:12px;
+}
+
+.coach{
+padding:15px;
+border:1px solid var(--border);
+border-radius:12px;
+background:#f8fafb;
+}
+
+.coach-role{
+display:block;
+font-size:9px;
+font-weight:850;
+text-transform:uppercase;
+letter-spacing:.7px;
+color:var(--muted);
+}
+
+.coach strong{
+display:block;
+margin-top:5px;
+font-size:15px;
+color:var(--current);
+}
+
+.coach span:last-child{
+display:block;
+margin-top:5px;
+font-size:11px;
+line-height:1.45;
+color:var(--muted);
+}
+
+/* STADIUM */
+
+.stadium-feature{
+display:grid;
+grid-template-columns:1.25fr .75fr;
+gap:18px;
+}
+
+.stadium-image{
+width:100%;
+height:100%;
+min-height:270px;
+object-fit:cover;
+border-radius:12px;
+}
+
+.stadium-name{
+margin:0 0 8px;
+color:var(--current);
+}
+
+.stadium-location{
+margin:0 0 14px;
+color:var(--muted);
+font-size:13px;
+}
+
+.stadium-facts{
+display:grid;
+gap:10px;
+}
+
+.stadium-fact{
+padding:11px;
+border:1px solid var(--border);
+border-radius:10px;
+background:#f8fafb;
+}
+
+.stadium-fact span{
+display:block;
+font-size:9px;
+font-weight:850;
+text-transform:uppercase;
+color:var(--muted);
+}
+
+.stadium-fact strong{
+display:block;
+margin-top:3px;
+font-size:13px;
+color:var(--current);
+}
+
+.partner-link{
+display:inline-flex;
+margin-top:14px;
+font-size:12px;
+font-weight:850;
+color:var(--blue);
+}
+
+/* GALLERY */
+
+.gallery-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:12px;
+}
+
+.gallery-item{
+position:relative;
+margin:0;
+overflow:hidden;
+border-radius:12px;
+min-height:180px;
+background:#dfe4e8;
+}
+
+.gallery-item img{
+width:100%;
+height:100%;
+min-height:180px;
+object-fit:cover;
+}
+
+.gallery-caption{
+position:absolute;
+left:0;
+right:0;
+bottom:0;
+padding:30px 12px 11px;
+background:linear-gradient(transparent,#05101bcc);
+color:#fff;
+font-size:11px;
+font-weight:700;
+}
+
+/* SIDEBAR */
+
+.file-row{
+display:grid;
+grid-template-columns:92px 1fr;
+gap:12px;
+padding:12px 0;
+border-bottom:1px solid var(--border);
+font-size:13px;
+}
+
+.file-key{
+font-size:10px;
+font-weight:850;
+text-transform:uppercase;
+color:var(--muted);
+}
+
+.file-value{
+font-weight:650;
+}
+
+.note-block{
+padding:14px;
+border-left:4px solid #96c9ce;
+background:var(--current-soft);
+}
+
+.note-block + .note-block{
+margin-top:12px;
+}
+
+.note-block strong{
+color:var(--current);
+}
+
+.note-block p{
+margin:6px 0 0;
+color:#4d5c67;
+font-size:13px;
+line-height:1.55;
+}
+
+.announcer-image{
+width:100%;
+max-height:320px;
+object-fit:cover;
+object-position:center top;
+border-radius:12px;
+border:1px solid var(--border);
+}
+
+.caption{
+margin:9px 0 0;
+font-size:11px;
+line-height:1.5;
+color:var(--muted);
 }
 
 /* FOOTER */
-footer{
-  margin-top:50px;
-  padding-top:18px;
-  border-top:1px solid var(--line);
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  font-family:var(--mono);
-  font-size:10px;
-  color:#777;
+
+.site-footer{
+margin-top:60px;
+background:var(--navy);
+color:var(--light);
 }
 
-.glb-logo{
-  height:56px;
-  width:auto;
+.footer-main{
+display:grid;
+grid-template-columns:1.6fr 1fr 1fr 1fr;
+gap:40px;
+padding:46px 20px;
 }
 
-a{ color:var(--ink); text-decoration:none; }
-a:hover{ text-decoration:underline; }
+.footer-logo{
+font-size:26px;
+font-weight:900;
+}
 
+.footer-col h4{
+font-size:12px;
+text-transform:uppercase;
+color:#9fb6d1;
+}
+
+.footer-col a{
+display:block;
+padding:4px 0;
+color:#fff;
+}
+
+.footer-bottom{
+background:#081628;
+}
+
+.footer-bottom-inner{
+display:flex;
+justify-content:space-between;
+padding:14px 20px;
+font-size:11px;
+text-transform:uppercase;
+color:#9fb6d1;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:1000px){
+.content-grid{
+grid-template-columns:1fr;
+}
+}
+
+@media(max-width:920px){
+.nav-links{
+display:none;
+}
+
+.nav-toggle{
+display:block;
+}
+
+.header-meta{
+display:none;
+}
+
+.stadium-feature{
+grid-template-columns:1fr;
+}
+
+.footer-main{
+grid-template-columns:1fr 1fr;
+}
+}
+
+@media(max-width:760px){
+.coach-grid{
+grid-template-columns:1fr;
+}
+
+.gallery-grid{
+grid-template-columns:1fr 1fr;
+}
+}
+
+@media(max-width:680px){
+.container{
+padding:0 14px;
+}
+
+.team-title{
+font-size:43px;
+}
+
+.team-hero,
+.team-hero-inner{
+min-height:390px;
+}
+
+.team-hero-inner{
+padding:24px 20px;
+}
+
+.gallery-grid{
+grid-template-columns:1fr;
+}
+
+.footer-main{
+grid-template-columns:1fr;
+}
+
+.footer-bottom-inner{
+flex-direction:column;
+gap:6px;
+}
+}
 </style>
 </head>
 
 <body>
-<div class="sheet">
 
-<header>
-  <div class="header-text">
-    <h1>Vancouver Current</h1>
-    <div class="header-meta">Vancouver — Pacific Division</div>
-    <div class="header-meta">Team Record & Active Roster</div>
-  </div>
+<header class="site-header">
 
-  <img src="team-vancouver-current-logo.png" alt="Vancouver Current Logo" class="team-logo">
+<div class="container">
+
+<div class="topbar">
+
+<a href="index.html" class="brand">
+<div class="brand-mark">GLB</div>
+<div class="brand-sub">Global League Baseball</div>
+</a>
+
+<nav class="nav-links">
+<a href="index.html">Home</a>
+<a href="scores.html">Scores</a>
+<a href="standings.html">Standings</a>
+<a href="schedule.html">Schedule</a>
+<a href="teams.html" class="active">Teams</a>
+<a href="stats.html">Stats</a>
+<a href="news.html">News</a>
+</nav>
+
+<div class="header-right">
+<div class="header-meta">Vancouver Current</div>
+<button class="nav-toggle" id="navToggle">☰</button>
+</div>
+
+</div>
+
+</div>
+
+<nav class="mobile-menu" id="mobileMenu">
+<a href="index.html">Home</a>
+<a href="scores.html">Scores</a>
+<a href="standings.html">Standings</a>
+<a href="schedule.html">Schedule</a>
+<a href="teams.html">Teams</a>
+<a href="stats.html">Stats</a>
+<a href="news.html">News</a>
+</nav>
+
 </header>
 
-<!-- TEAM PHOTO -->
-<div class="team-photo">
-  <img src="team-vancouver-current-photo.png" alt="Vancouver Current Team Photo">
+<main class="page">
+
+<div class="container">
+
+<section class="team-hero">
+
+<div class="team-hero-inner">
+
+<div class="team-kicker">
+Global League Baseball
 </div>
 
-<h2>Season Snapshot</h2>
-<table>
-  <thead>
-    <tr>
-      <th>Record</th>
-      <th>Runs</th>
-      <th>Allowed</th>
-      <th>Diff</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>0–0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-  </tbody>
+<h1 class="team-title">
+Vancouver Current
+</h1>
+
+<p class="team-location">
+Vancouver, British Columbia · WAP MOP SHOPPE STADIUM
+</p>
+
+<div class="team-actions">
+
+<span class="team-tag">
+Vancouver, BC
+</span>
+
+<a
+  class="club-link"
+  href="club-vancouver-current.html"
+>
+View Club Page →
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<div class="content-grid">
+
+<div class="main-column">
+
+<section class="card">
+
+<div class="card-header">
+<h2 class="card-title">Active Roster</h2>
+<span class="card-label">15 Players</span>
+</div>
+
+<div class="table-wrap">
+
+<table class="roster-table">
+
+<thead>
+<tr>
+<th>Player</th>
+<th>Pos</th>
+<th>Birthplace</th>
+<th>Status</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td>
+<div class="player-cell">
+<div class="player-placeholder">RM</div>
+<div>
+<span class="player-name">Ryan McAllister</span>
+<span class="player-role">Catcher</span>
+</div>
+</div>
+</td>
+<td>C</td>
+<td>Surrey, British Columbia, Canada</td>
+<td>Active</td>
+</tr>
+
+<tr>
+<td>
+<div class="player-cell">
+<div class="player-placeholder">JP</div>
+<div>
+<span class="player-name">Julio Paredes</span>
+<span class="player-role">First baseman</span>
+</div>
+</div>
+</td>
+<td>1B</td>
+<td>Caracas, Venezuela</td>
+<td>Active</td>
+</tr>
+
+<tr>
+<td>
+<div class="player-cell">
+<div class="player-placeholder">JL</div>
+<div>
+<span class="player-name">Jae-hyun Lee</span>
+<span class="player-role">Second baseman</span>
+</div>
+</div>
+</td>
+<td>2B</td>
+<td>Seoul, South Korea</td>
+<td>Active</td>
+</tr>
+
+<tr>
+<td>
+<div class="player-cell">
+<div class="player-placeholder">TG</div>
+<div>
+<span class="player-name">Tomás Guerrero</span>
+<span class="player-role">Third baseman</span>
+</div>
+</div>
+</td>
+<td>3B</td>
+<td>Guadalajara, Jalisco, Mexico</td>
+<td>Active</td>
+</tr>
+
+<tr>
+<td>
+<div class="player-cell">
+<div class="player-placeholder">NR</div>
+<div>
+<span class="player-name">Nicolás Rojas</span>
+<span class="player-role">Shortstop</span>
+</div>
+</div>
+</td>
+<td>SS</td>
+<td>Valparaíso, Chile</td>
+<td>Active</td>
+</tr>
+
+<tr>
+<td>
+<div class="player-cell">
+<div class="player-placeholder">CW</div>
+<div>
+<span class="player-name">Connor Walsh</span>
+<span class="player-role">Left fielder</span>
+</div>
+</div>
+</td>
+<td>LF</td>
+<td>Burnaby, British Columbia, Canada</td>
+<td>Active</td>
+</tr>
+
+<tr>
+<td>
+<div class="player-cell">
+<div class="player-placeholder">MS</div>
+<div>
+<span class="player-name">Miguel Soto</span>
+<span class="player-role">Center fielder</span>
+</div>
+</div>
+</td>
+<td>CF</td>
+<td>San Juan, Puerto Rico</td>
+<td>Active</td>
+</tr>
+
+<tr>
+<td>
+<div class="player-cell">
+<div class="player-placeholder">KN</div>
+<div>
+<span class="player-name">Kazuya Nishimura</span>
+<span class="player-role">Right fielder</span>
+</div>
+</div>
+</td>
+<td>RF</td>
+<td>Osaka, Japan</td>
+<td>Active</td>
+</tr>
+
+<tr>
+<td>
+<div class="player-cell">
+<div class="player-placeholder">EB</div>
+<div>
+<span class="player-name">Evan Brooks</span>
+<span class="player-role">Designated hitter</span>
+</div>
+</div>
+</td>
+<td>DH</td>
+<td>Bellingham, Washington, USA</td>
+<td>Active</td>
+</tr>
+
+<tr>
+<td>
+<div class="player-cell">
+<div class="player-placeholder">TC</div>
+<div>
+<span class="player-name">Trevor Caldwell</span>
+<span class="player-role">Starting pitcher</span>
+</div>
+</div>
+</td>
+<td>SP</td>
+<td>Kelowna, British Columbia, Canada</td>
+<td>Active</td>
+</tr>
+
+<tr>
+<td>
+<div class="player-cell">
+<div class="player-placeholder">AV</div>
+<div>
+<span class="player-name">Andrés Valdés</span>
+<span class="player-role">Starting pitcher</span>
+</div>
+</div>
+</td>
+<td>SP</td>
+<td>Maracay, Venezuela</td>
+<td>Active</td>
+</tr>
+
+<tr>
+<td>
+<div class="player-cell">
+<div class="player-placeholder">HY</div>
+<div>
+<span class="player-name">Hiroto Yamane</span>
+<span class="player-role">Starting pitcher</span>
+</div>
+</div>
+</td>
+<td>SP</td>
+<td>Hiroshima, Japan</td>
+<td>Active</td>
+</tr>
+
+<tr>
+<td>
+<div class="player-cell">
+<div class="player-placeholder">CM</div>
+<div>
+<span class="player-name">Carlos Medina</span>
+<span class="player-role">Relief pitcher</span>
+</div>
+</div>
+</td>
+<td>RP</td>
+<td>Santiago, Dominican Republic</td>
+<td>Active</td>
+</tr>
+
+<tr>
+<td>
+<div class="player-cell">
+<div class="player-placeholder">LP</div>
+<div>
+<span class="player-name">Logan Price</span>
+<span class="player-role">Relief pitcher</span>
+</div>
+</div>
+</td>
+<td>RP</td>
+<td>Kamloops, British Columbia, Canada</td>
+<td>Active</td>
+</tr>
+
+<tr>
+<td>
+<div class="player-cell">
+<div class="player-placeholder">RS</div>
+<div>
+<span class="player-name">Roberto Salazar</span>
+<span class="player-role">Closer</span>
+</div>
+</div>
+</td>
+<td>CL</td>
+<td>Mexicali, Baja California, Mexico</td>
+<td>Active</td>
+</tr>
+
+</tbody>
+
 </table>
 
-<h2>Active Roster</h2>
-<table>
-  <thead>
-    <tr>
-      <th>Pic</th>
-      <th>Player</th>
-      <th>Pos</th>
-      <th class="align-center">B/T</th>
-      <th class="align-right">Age</th>
-    </tr>
-  </thead>
+</div>
 
-  <tbody>
-    <!-- STARTING PITCHERS (5) -->
-    <tr data-player-id="van-001">
-      <td><img class="roster-pic" src="player-vancouver-iseul-kang.png" alt="Iseul Kang"></td>
-      <td>Iseul Kang</td><td>SP</td><td class="align-center">R/R</td><td class="align-right">27</td>
-    </tr>
-    <tr data-player-id="van-002">
-      <td><img class="roster-pic" src="player-vancouver-dane-winslow.png" alt="Dane Winslow"></td>
-      <td>Dane Winslow</td><td>SP</td><td class="align-center">L/L</td><td class="align-right">30</td>
-    </tr>
-    <tr data-player-id="van-003">
-      <td><img class="roster-pic" src="player-vancouver-maksim-zorya.png" alt="Maksim Zorya"></td>
-      <td>Maksim Zorya</td><td>SP</td><td class="align-center">R/R</td><td class="align-right">25</td>
-    </tr>
-    <tr data-player-id="van-004">
-      <td><img class="roster-pic" src="player-vancouver-raine-talukder.png" alt="Raine Talukder"></td>
-      <td>Raine Talukder</td><td>SP</td><td class="align-center">R/L</td><td class="align-right">29</td>
-    </tr>
-    <tr data-player-id="van-005">
-      <td><img class="roster-pic" src="player-vancouver-emilio-cordoba.png" alt="Emilio Córdoba"></td>
-      <td>Emilio Córdoba</td><td>SP</td><td class="align-center">L/L</td><td class="align-right">26</td>
-    </tr>
+<div class="roster-note">
+Vancouver Current · Official active roster. Player portraits can be added as individual image assets are completed.
+</div>
 
-    <!-- RELIEF PITCHERS (3) -->
-    <tr data-player-id="van-006">
-      <td><img class="roster-pic" src="player-vancouver-kofi-ansah.png" alt="Kofi Ansah"></td>
-      <td>Kofi Ansah</td><td>RP</td><td class="align-center">R/R</td><td class="align-right">28</td>
-    </tr>
-    <tr data-player-id="van-007">
-      <td><img class="roster-pic" src="player-vancouver-nico-penfold.png" alt="Nico Penfold"></td>
-      <td>Nico Penfold</td><td>RP</td><td class="align-center">L/R</td><td class="align-right">24</td>
-    </tr>
-    <tr data-player-id="van-008">
-      <td><img class="roster-pic" src="player-vancouver-yohei-arakida.png" alt="Yohei Arakida"></td>
-      <td>Yohei Arakida</td><td>RP</td><td class="align-center">R/R</td><td class="align-right">31</td>
-    </tr>
+</section>
 
-    <!-- CATCHER (1) -->
-    <tr data-player-id="van-009">
-      <td><img class="roster-pic" src="player-vancouver-silas-boudreau.png" alt="Silas Boudreau"></td>
-      <td>Silas Boudreau</td><td>C</td><td class="align-center">R/R</td><td class="align-right">29</td>
-    </tr>
+<section class="card">
 
-    <!-- INFIELDERS (4) -->
-    <tr data-player-id="van-010">
-      <td><img class="roster-pic" src="player-vancouver-eamon-kerr.png" alt="Eamon Kerr"></td>
-      <td>Eamon Kerr</td><td>1B</td><td class="align-center">L/R</td><td class="align-right">32</td>
-    </tr>
-    <tr data-player-id="van-011">
-      <td><img class="roster-pic" src="player-vancouver-soraya-jafari.png" alt="Soraya Jafari"></td>
-      <td>Soraya Jafari</td><td>2B</td><td class="align-center">S/R</td><td class="align-right">26</td>
-    </tr>
-    <tr data-player-id="van-012">
-      <td><img class="roster-pic" src="player-vancouver-alejo-santillan.png" alt="Alejo Santillán"></td>
-      <td>Alejo Santillán</td><td>SS</td><td class="align-center">R/R</td><td class="align-right">23</td>
-    </tr>
-    <tr data-player-id="van-013">
-      <td><img class="roster-pic" src="player-vancouver-roman-velasco.png" alt="Roman Velasco"></td>
-      <td>Roman Velasco</td><td>3B</td><td class="align-center">R/R</td><td class="align-right">28</td>
-    </tr>
+<div class="card-header">
+<h2 class="card-title">Coaching Staff</h2>
+<span class="card-label">Vancouver Current</span>
+</div>
 
-    <!-- OUTFIELDERS (3) -->
-    <tr data-player-id="van-014">
-      <td><img class="roster-pic" src="player-vancouver-taj-adelman.png" alt="Taj Adelman"></td>
-      <td>Taj Adelman</td><td>LF</td><td class="align-center">L/L</td><td class="align-right">27</td>
-    </tr>
-    <tr data-player-id="van-015">
-      <td><img class="roster-pic" src="player-vancouver-marcell-lind.png" alt="Marcell Lind"></td>
-      <td>Marcell Lind</td><td>CF</td><td class="align-center">R/R</td><td class="align-right">25</td>
-    </tr>
-    <tr data-player-id="van-016">
-      <td><img class="roster-pic" src="player-vancouver-oziel-narvaez.png" alt="Oziel Narváez"></td>
-      <td>Oziel Narváez</td><td>RF</td><td class="align-center">R/R</td><td class="align-right">30</td>
-    </tr>
-  </tbody>
-</table>
+<div class="card-body">
 
-<h2>Recent Games</h2>
-<table>
-  <thead>
-    <tr>
-      <th>Date</th>
-      <th>Opponent</th>
-      <th>Result</th>
-      <th class="align-right">Box</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>—</td>
-      <td>—</td>
-      <td>—</td>
-      <td class="align-right"><a href="boxscore.html">View</a></td>
-    </tr>
-  </tbody>
-</table>
+<div class="coach-grid">
 
-<footer>
-  <div>GLOBAL LEAGUE BASEBALL · TEAM RECORD</div>
-  <img src="GLB_white.png" alt="GLB" class="glb-logo">
+<div class="coach">
+<span class="coach-role">Manager</span>
+<strong>Graham Holloway</strong>
+<span>Vancouver, British Columbia, Canada</span>
+</div>
+
+<div class="coach">
+<span class="coach-role">Pitching Coach</span>
+<strong>Alejandro Fierro</strong>
+<span>Hermosillo, Sonora, Mexico</span>
+</div>
+
+<div class="coach">
+<span class="coach-role">Hitting Coach</span>
+<strong>Sean McLeod</strong>
+<span>Victoria, British Columbia, Canada</span>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="card">
+
+<div class="card-header">
+<h2 class="card-title">Club Identity</h2>
+<span class="card-label">Vancouver Club File</span>
+</div>
+
+<div class="card-body">
+
+<p class="story-copy">
+The Vancouver Current represent Vancouver, British Columbia. The club's home is WAP MOP SHOPPE STADIUM, where the Current's baseball identity intersects with the wider culture surrounding the venue, supporters, and city.
+</p>
+
+</div>
+
+</section>
+
+<section class="card">
+
+<div class="card-header">
+<h2 class="card-title">WAP MOP SHOPPE STADIUM</h2>
+<span class="card-label">Home Ground</span>
+</div>
+
+<div class="card-body">
+
+<div class="stadium-feature">
+
+<img
+  class="stadium-image"
+  src="assets/teams/vancouver-current/images/stadium/vancouver-stadium1.png"
+  alt="WAP MOP SHOPPE STADIUM, home of the Vancouver Current"
+>
+
+<div>
+
+<h3 class="stadium-name">
+WAP MOP SHOPPE STADIUM
+</h3>
+
+<p class="stadium-location">
+Vancouver, British Columbia
+</p>
+
+<div class="stadium-facts">
+
+<div class="stadium-fact">
+<span>Home Club</span>
+<strong>Vancouver Current</strong>
+</div>
+
+<div class="stadium-fact">
+<span>Naming Partner</span>
+<strong>WAP MOP SHOPPE</strong>
+</div>
+
+<div class="stadium-fact">
+<span>Venue</span>
+<strong>Global League Baseball</strong>
+</div>
+
+</div>
+
+<a
+  class="partner-link"
+  href="https://wapmopshoppe.com"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+Visit WAP MOP SHOPPE →
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="card">
+
+<div class="card-header">
+<h2 class="card-title">Stadium File</h2>
+<span class="card-label">WAP MOP SHOPPE STADIUM</span>
+</div>
+
+<div class="card-body">
+
+<div class="gallery-grid">
+
+<figure class="gallery-item">
+<img
+  src="assets/teams/vancouver-current/images/stadium/vancouver-stadium-concourse1.png"
+  alt="Concourse at WAP MOP SHOPPE STADIUM"
+>
+<figcaption class="gallery-caption">
+Concourse
+</figcaption>
+</figure>
+
+<figure class="gallery-item">
+<img
+  src="assets/teams/vancouver-current/images/stadium/vancouver-stadium-concourse2.PNG"
+  alt="WAP MOP SHOPPE STADIUM concourse"
+>
+<figcaption class="gallery-caption">
+Stadium concourse
+</figcaption>
+</figure>
+
+<figure class="gallery-item">
+<img
+  src="assets/teams/vancouver-current/images/stadium/vancouver-stadium-concourse3.png"
+  alt="Interior public space at WAP MOP SHOPPE STADIUM"
+>
+<figcaption class="gallery-caption">
+Public level
+</figcaption>
+</figure>
+
+</div>
+
+</div>
+
+</section>
+
+</div>
+
+<aside class="side-column">
+
+<section class="card">
+
+<div class="card-header">
+<h2 class="card-title">Club File</h2>
+</div>
+
+<div class="card-body">
+
+<div class="file-row">
+<div class="file-key">Club</div>
+<div class="file-value">Vancouver Current</div>
+</div>
+
+<div class="file-row">
+<div class="file-key">City</div>
+<div class="file-value">Vancouver, British Columbia</div>
+</div>
+
+<div class="file-row">
+<div class="file-key">Country</div>
+<div class="file-value">Canada</div>
+</div>
+
+<div class="file-row">
+<div class="file-key">Stadium</div>
+<div class="file-value">WAP MOP SHOPPE STADIUM</div>
+</div>
+
+<div class="file-row">
+<div class="file-key">Players</div>
+<div class="file-value">15</div>
+</div>
+
+<div class="file-row">
+<div class="file-key">Manager</div>
+<div class="file-value">Graham Holloway</div>
+</div>
+
+</div>
+
+</section>
+
+<section class="card">
+
+<div class="card-header">
+<h2 class="card-title">Naming Partner</h2>
+</div>
+
+<div class="card-body">
+
+<div class="note-block">
+
+<strong>WAP MOP SHOPPE</strong>
+
+<p>
+The Vancouver Current play at WAP MOP SHOPPE STADIUM. The naming relationship connects the GLB venue with WAP MOP SHOPPE while keeping the Current's baseball identity independent.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="card">
+
+<div class="card-header">
+<h2 class="card-title">Club Voice</h2>
+</div>
+
+<div class="card-body">
+
+<img
+  class="announcer-image"
+  src="assets/teams/vancouver-current/images/club/club-vancouver-current-announcer.png"
+  alt="Vancouver Current announcer"
+>
+
+<p class="caption">
+Vancouver club and broadcast personalities will be documented more fully on the Current's club page.
+</p>
+
+</div>
+
+</section>
+
+<section class="card">
+
+<div class="card-header">
+<h2 class="card-title">Official Record</h2>
+</div>
+
+<div class="card-body">
+
+<p
+  class="story-copy"
+  style="font-size:13px"
+>
+This page is part of the official Global League Baseball team record. Club culture, supporters, entertainment, and venue traditions are documented separately on the Vancouver Current club page.
+</p>
+
+<p style="margin-bottom:0">
+
+<a
+  href="club-vancouver-current.html"
+  style="color:var(--blue);font-weight:800;font-size:12px"
+>
+View club page →
+</a>
+
+</p>
+
+<p>
+
+<a
+  href="contribute.html"
+  style="color:var(--blue);font-weight:800;font-size:12px"
+>
+Contribute to this record →
+</a>
+
+</p>
+
+</div>
+
+</section>
+
+</aside>
+
+</div>
+
+</div>
+
+</main>
+
+<footer class="site-footer">
+
+<div class="container footer-main">
+
+<div>
+<div class="footer-logo">GLB</div>
+<p>Global League Baseball</p>
+<p>
+Official league site providing scores, standings, schedules, club information, and league bulletins.
+</p>
+</div>
+
+<div class="footer-col">
+<h4>League</h4>
+<a href="standings.html">Standings</a>
+<a href="scores.html">Scores</a>
+<a href="schedule.html">Schedule</a>
+<a href="stats.html">Stats</a>
+</div>
+
+<div class="footer-col">
+<h4>Clubs</h4>
+<a href="teams.html">Teams</a>
+<a href="stadiums.html">Stadiums</a>
+<a href="rosters.html">Rosters</a>
+</div>
+
+<div class="footer-col">
+<h4>League News</h4>
+<a href="news.html">News</a>
+<a href="bulletin.html">League Bulletin</a>
+<a href="archive.html">Archive</a>
+</div>
+
+</div>
+
+<div class="footer-bottom">
+
+<div class="container footer-bottom-inner">
+<span>© 2026 Global League Baseball</span>
+<span>Vancouver Current</span>
+<span>Official League Record</span>
+</div>
+
+</div>
+
 </footer>
 
-</div>
+<script>
+const navToggle=document.getElementById("navToggle");
+const mobileMenu=document.getElementById("mobileMenu");
+
+navToggle.addEventListener(
+  "click",
+  ()=>mobileMenu.classList.toggle("open")
+);
+</script>
+
 </body>
 </html>

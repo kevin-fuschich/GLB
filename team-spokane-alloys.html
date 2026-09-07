@@ -48,8 +48,6 @@ margin:auto;
 padding:0 20px;
 }
 
-/* HEADER */
-
 .site-header{
 position:sticky;
 top:0;
@@ -130,13 +128,9 @@ color:white;
 font-weight:700;
 }
 
-/* PAGE */
-
 .page{
 padding:28px 0 48px;
 }
-
-/* HERO */
 
 .team-hero{
 position:relative;
@@ -144,7 +138,6 @@ min-height:430px;
 border-radius:18px;
 overflow:hidden;
 color:white;
-
 background:
 linear-gradient(
 90deg,
@@ -193,6 +186,8 @@ margin-top:20px;
 }
 
 .team-tag{
+display:inline-flex;
+align-items:center;
 padding:8px 11px;
 border:1px solid #ffffff38;
 border-radius:999px;
@@ -202,7 +197,9 @@ font-weight:800;
 text-transform:uppercase;
 }
 
-/* GRID */
+a.team-tag:hover{
+background:#ffffff26;
+}
 
 .content-grid{
 display:grid;
@@ -217,8 +214,6 @@ align-items:start;
 display:grid;
 gap:22px;
 }
-
-/* CARDS */
 
 .card{
 background:var(--card);
@@ -253,8 +248,6 @@ color:var(--blue);
 padding:18px;
 }
 
-/* SNAPSHOT */
-
 .snapshot-grid{
 display:grid;
 grid-template-columns:repeat(4,1fr);
@@ -288,8 +281,6 @@ margin-top:7px;
 font-size:11px;
 color:var(--muted);
 }
-
-/* RESULT */
 
 .result-row{
 display:grid;
@@ -326,8 +317,6 @@ font-size:28px;
 font-weight:850;
 color:var(--alloys);
 }
-
-/* ROSTER */
 
 .table-wrap{
 overflow-x:auto;
@@ -392,16 +381,12 @@ color:var(--muted);
 font-size:13px;
 }
 
-/* STORY */
-
 .story-copy{
 margin:0;
 font-size:15px;
 line-height:1.72;
 color:#334150;
 }
-
-/* STADIUM */
 
 .stadium-feature{
 display:grid;
@@ -452,8 +437,6 @@ font-size:13px;
 color:var(--alloys);
 }
 
-/* GALLERY */
-
 .gallery-grid{
 display:grid;
 grid-template-columns:repeat(3,1fr);
@@ -487,8 +470,6 @@ color:white;
 font-size:11px;
 font-weight:700;
 }
-
-/* SIDEBAR */
 
 .file-row{
 display:grid;
@@ -548,8 +529,6 @@ color:var(--muted);
 font-size:12px;
 }
 
-/* FOOTER */
-
 .site-footer{
 margin-top:60px;
 background:var(--navy);
@@ -592,8 +571,6 @@ font-size:11px;
 text-transform:uppercase;
 color:#9fb6d1;
 }
-
-/* RESPONSIVE */
 
 @media(max-width:1000px){
 .content-grid{
@@ -672,103 +649,42 @@ gap:6px;
 <header class="site-header">
 
 <div class="container">
-
 <div class="topbar">
 
 <a href="index.html" class="brand">
-
-<div class="brand-mark">
-GLB
-</div>
-
-<div class="brand-sub">
-Global League Baseball
-</div>
-
+<div class="brand-mark">GLB</div>
+<div class="brand-sub">Global League Baseball</div>
 </a>
 
 <nav class="nav-links">
-
-<a href="index.html">
-Home
-</a>
-
-<a href="scores.html">
-Scores
-</a>
-
-<a href="standings.html">
-Standings
-</a>
-
-<a href="schedule.html">
-Schedule
-</a>
-
-<a href="teams.html" class="active">
-Teams
-</a>
-
-<a href="stats.html">
-Stats
-</a>
-
-<a href="news.html">
-News
-</a>
-
+<a href="index.html">Home</a>
+<a href="scores.html">Scores</a>
+<a href="standings.html">Standings</a>
+<a href="schedule.html">Schedule</a>
+<a href="teams.html" class="active">Teams</a>
+<a href="stats.html">Stats</a>
+<a href="news.html">News</a>
 </nav>
 
 <div class="header-right">
-
-<div class="header-meta">
-Season 1 · Spokane
-</div>
-
-<button class="nav-toggle" id="navToggle">
-☰
-</button>
-
+<div class="header-meta">Season 1 · Spokane</div>
+<button class="nav-toggle" id="navToggle">☰</button>
 </div>
 
 </div>
-
 </div>
 
 <nav class="mobile-menu" id="mobileMenu">
-
-<a href="index.html">
-Home
-</a>
-
-<a href="scores.html">
-Scores
-</a>
-
-<a href="standings.html">
-Standings
-</a>
-
-<a href="schedule.html">
-Schedule
-</a>
-
-<a href="teams.html">
-Teams
-</a>
-
-<a href="stats.html">
-Stats
-</a>
-
-<a href="news.html">
-News
-</a>
-
+<a href="index.html">Home</a>
+<a href="scores.html">Scores</a>
+<a href="standings.html">Standings</a>
+<a href="schedule.html">Schedule</a>
+<a href="teams.html">Teams</a>
+<a href="stats.html">Stats</a>
+<a href="news.html">News</a>
 </nav>
 
 </header>
-
 
 <main class="page">
 
@@ -796,13 +712,9 @@ Spokane, Washington · OGWA Stadium · Club code SPO
 Pacific Division
 </span>
 
-<span class="team-tag">
-Season 1
-</span>
-
-<span class="team-tag">
-Active Club
-</span>
+<a class="team-tag" href="club-spokane-alloys.html">
+Club Page →
+</a>
 
 </div>
 
@@ -810,24 +722,15 @@ Active Club
 
 </section>
 
-
 <div class="content-grid">
 
 <div class="main-column">
 
-
 <section class="card">
 
 <div class="card-header">
-
-<h2 class="card-title">
-Season Snapshot
-</h2>
-
-<span class="card-label">
-Current Club Record
-</span>
-
+<h2 class="card-title">Season Snapshot</h2>
+<span class="card-label">Current Club Record</span>
 </div>
 
 <div class="card-body">
@@ -835,67 +738,27 @@ Current Club Record
 <div class="snapshot-grid">
 
 <div class="snapshot-stat">
-
-<span class="snapshot-label">
-Record
-</span>
-
-<strong class="snapshot-value">
-1–0
-</strong>
-
-<div class="snapshot-note">
-Opening record
-</div>
-
+<span class="snapshot-label">Record</span>
+<strong class="snapshot-value">1–0</strong>
+<div class="snapshot-note">Opening record</div>
 </div>
 
 <div class="snapshot-stat">
-
-<span class="snapshot-label">
-Runs
-</span>
-
-<strong class="snapshot-value">
-2
-</strong>
-
-<div class="snapshot-note">
-Runs scored
-</div>
-
+<span class="snapshot-label">Runs</span>
+<strong class="snapshot-value">2</strong>
+<div class="snapshot-note">Runs scored</div>
 </div>
 
 <div class="snapshot-stat">
-
-<span class="snapshot-label">
-Allowed
-</span>
-
-<strong class="snapshot-value">
-0
-</strong>
-
-<div class="snapshot-note">
-Runs allowed
-</div>
-
+<span class="snapshot-label">Allowed</span>
+<strong class="snapshot-value">0</strong>
+<div class="snapshot-note">Runs allowed</div>
 </div>
 
 <div class="snapshot-stat">
-
-<span class="snapshot-label">
-Differential
-</span>
-
-<strong class="snapshot-value">
-+2
-</strong>
-
-<div class="snapshot-note">
-Run differential
-</div>
-
+<span class="snapshot-label">Differential</span>
+<strong class="snapshot-value">+2</strong>
+<div class="snapshot-note">Run differential</div>
 </div>
 
 </div>
@@ -904,19 +767,11 @@ Run differential
 
 </section>
 
-
 <section class="card">
 
 <div class="card-header">
-
-<h2 class="card-title">
-Latest Result
-</h2>
-
-<span class="card-label">
-Official Final
-</span>
-
+<h2 class="card-title">Latest Result</h2>
+<span class="card-label">Official Final</span>
 </div>
 
 <div class="card-body">
@@ -928,15 +783,8 @@ Win
 </div>
 
 <div class="result-matchup">
-
-<strong>
-Spokane Alloys vs. Fresno Yield
-</strong>
-
-<span>
-Spokane opened the season with a shutout victory.
-</span>
-
+<strong>Spokane Alloys vs. Fresno Yield</strong>
+<span>Spokane opened the season with a shutout victory.</span>
 </div>
 
 <div class="result-score">
@@ -949,19 +797,11 @@ Spokane opened the season with a shutout victory.
 
 </section>
 
-
 <section class="card">
 
 <div class="card-header">
-
-<h2 class="card-title">
-Active Roster
-</h2>
-
-<span class="card-label">
-16 Players · Season 1
-</span>
-
+<h2 class="card-title">Active Roster</h2>
+<span class="card-label">16 Players · Season 1</span>
 </div>
 
 <div class="table-wrap">
@@ -969,832 +809,271 @@ Active Roster
 <table class="roster-table">
 
 <thead>
-
 <tr>
-
-<th>
-Player
-</th>
-
-<th>
-Pos
-</th>
-
-<th>
-B/T
-</th>
-
-<th>
-Age
-</th>
-
-<th>
-Status
-</th>
-
+<th>Player</th>
+<th>Pos</th>
+<th>B/T</th>
+<th>Age</th>
+<th>Status</th>
 </tr>
-
 </thead>
 
 <tbody>
 
 <tr>
-
 <td>
-
 <div class="player-cell">
-
-<img
-class="roster-pic"
-src="assets/images/players/spokane-alloys/spokane-kellan-brynden.png"
-alt="Kellan Brynden"
->
-
+<img class="roster-pic" src="assets/images/players/spokane-alloys/spokane-kellan-brynden.png" alt="Kellan Brynden">
 <div>
-
-<a
-class="player-name"
-href="player.html?player=kellan-brynden"
->
-Kellan Brynden
-</a>
-
-<span class="player-role">
-Starting pitcher
-</span>
-
+<a class="player-name" href="player.html?player=kellan-brynden">Kellan Brynden</a>
+<span class="player-role">Starting pitcher</span>
 </div>
-
 </div>
-
 </td>
-
-<td>
-SP
-</td>
-
-<td>
-R/R
-</td>
-
-<td>
-29
-</td>
-
-<td>
-Active
-</td>
-
+<td>SP</td>
+<td>R/R</td>
+<td>29</td>
+<td>Active</td>
 </tr>
 
-
 <tr>
-
 <td>
-
 <div class="player-cell">
-
-<img
-class="roster-pic"
-src="assets/images/players/spokane-alloys/spokane-oskar-svanholm.png"
-alt="Oskar Svanholm"
->
-
+<img class="roster-pic" src="assets/images/players/spokane-alloys/spokane-oskar-svanholm.png" alt="Oskar Svanholm">
 <div>
-
-<a
-class="player-name"
-href="player.html?player=oskar-svanholm"
->
-Oskar Svanholm
-</a>
-
-<span class="player-role">
-Starting pitcher
-</span>
-
+<a class="player-name" href="player.html?player=oskar-svanholm">Oskar Svanholm</a>
+<span class="player-role">Starting pitcher</span>
 </div>
-
 </div>
-
 </td>
-
-<td>
-SP
-</td>
-
-<td>
-L/L
-</td>
-
-<td>
-26
-</td>
-
-<td>
-Active
-</td>
-
+<td>SP</td>
+<td>L/L</td>
+<td>26</td>
+<td>Active</td>
 </tr>
 
-
 <tr>
-
 <td>
-
 <div class="player-cell">
-
-<img
-class="roster-pic"
-src="assets/images/players/spokane-alloys/spokane-mateusz-kasprowicz.png"
-alt="Mateusz Kasprowicz"
->
-
+<img class="roster-pic" src="assets/images/players/spokane-alloys/spokane-mateusz-kasprowicz.png" alt="Mateusz Kasprowicz">
 <div>
-
-<a
-class="player-name"
-href="player.html?player=mateusz-kasprowicz"
->
-Mateusz Kasprowicz
-</a>
-
-<span class="player-role">
-Starting pitcher
-</span>
-
+<a class="player-name" href="player.html?player=mateusz-kasprowicz">Mateusz Kasprowicz</a>
+<span class="player-role">Starting pitcher</span>
 </div>
-
 </div>
-
 </td>
-
-<td>
-SP
-</td>
-
-<td>
-R/R
-</td>
-
-<td>
-31
-</td>
-
-<td>
-Active
-</td>
-
+<td>SP</td>
+<td>R/R</td>
+<td>31</td>
+<td>Active</td>
 </tr>
 
-
 <tr>
-
 <td>
-
 <div class="player-cell">
-
-<img
-class="roster-pic"
-src="assets/images/players/spokane-alloys/spokane-diego-alvarez-mora.png"
-alt="Diego Álvarez Mora"
->
-
+<img class="roster-pic" src="assets/images/players/spokane-alloys/spokane-diego-alvarez-mora.png" alt="Diego Álvarez Mora">
 <div>
-
-<a
-class="player-name"
-href="player.html?player=diego-alvarez-mora"
->
-Diego Álvarez Mora
-</a>
-
-<span class="player-role">
-Starting pitcher
-</span>
-
+<a class="player-name" href="player.html?player=diego-alvarez-mora">Diego Álvarez Mora</a>
+<span class="player-role">Starting pitcher</span>
 </div>
-
 </div>
-
 </td>
-
-<td>
-SP
-</td>
-
-<td>
-R/R
-</td>
-
-<td>
-27
-</td>
-
-<td>
-Active
-</td>
-
+<td>SP</td>
+<td>R/R</td>
+<td>27</td>
+<td>Active</td>
 </tr>
 
-
 <tr>
-
 <td>
-
 <div class="player-cell">
-
-<img
-class="roster-pic"
-src="assets/images/players/spokane-alloys/spokane-lukas-havel.png"
-alt="Lukas Havel"
->
-
+<img class="roster-pic" src="assets/images/players/spokane-alloys/spokane-lukas-havel.png" alt="Lukas Havel">
 <div>
-
-<a
-class="player-name"
-href="player.html?player=lukas-havel"
->
-Lukas Havel
-</a>
-
-<span class="player-role">
-Starting pitcher
-</span>
-
+<a class="player-name" href="player.html?player=lukas-havel">Lukas Havel</a>
+<span class="player-role">Starting pitcher</span>
 </div>
-
 </div>
-
 </td>
-
-<td>
-SP
-</td>
-
-<td>
-L/R
-</td>
-
-<td>
-24
-</td>
-
-<td>
-Active
-</td>
-
+<td>SP</td>
+<td>L/R</td>
+<td>24</td>
+<td>Active</td>
 </tr>
 
-
 <tr>
-
 <td>
-
 <div class="player-cell">
-
-<img
-class="roster-pic"
-src="assets/images/players/spokane-alloys/spokane-caleb-reidman.png"
-alt="Caleb Reidman"
->
-
+<img class="roster-pic" src="assets/images/players/spokane-alloys/spokane-caleb-reidman.png" alt="Caleb Reidman">
 <div>
-
-<a
-class="player-name"
-href="player.html?player=caleb-reidman"
->
-Caleb Reidman
-</a>
-
-<span class="player-role">
-Relief pitcher
-</span>
-
+<a class="player-name" href="player.html?player=caleb-reidman">Caleb Reidman</a>
+<span class="player-role">Relief pitcher</span>
 </div>
-
 </div>
-
 </td>
-
-<td>
-RP
-</td>
-
-<td>
-R/R
-</td>
-
-<td>
-28
-</td>
-
-<td>
-Active
-</td>
-
+<td>RP</td>
+<td>R/R</td>
+<td>28</td>
+<td>Active</td>
 </tr>
 
-
 <tr>
-
 <td>
-
 <div class="player-cell">
-
-<img
-class="roster-pic"
-src="assets/images/players/spokane-alloys/spokane-sergio-ibarra-lugo.png"
-alt="Sergio Ibarra Lugo"
->
-
+<img class="roster-pic" src="assets/images/players/spokane-alloys/spokane-sergio-ibarra-lugo.png" alt="Sergio Ibarra Lugo">
 <div>
-
-<a
-class="player-name"
-href="player.html?player=sergio-ibarra-lugo"
->
-Sergio Ibarra Lugo
-</a>
-
-<span class="player-role">
-Relief pitcher
-</span>
-
+<a class="player-name" href="player.html?player=sergio-ibarra-lugo">Sergio Ibarra Lugo</a>
+<span class="player-role">Relief pitcher</span>
 </div>
-
 </div>
-
 </td>
-
-<td>
-RP
-</td>
-
-<td>
-L/L
-</td>
-
-<td>
-25
-</td>
-
-<td>
-Active
-</td>
-
+<td>RP</td>
+<td>L/L</td>
+<td>25</td>
+<td>Active</td>
 </tr>
 
-
 <tr>
-
 <td>
-
 <div class="player-cell">
-
-<img
-class="roster-pic"
-src="assets/images/players/spokane-alloys/spokane-yaw-mensah.png"
-alt="Yaw Mensah"
->
-
+<img class="roster-pic" src="assets/images/players/spokane-alloys/spokane-yaw-mensah.png" alt="Yaw Mensah">
 <div>
-
-<a
-class="player-name"
-href="player.html?player=yaw-mensah"
->
-Yaw Mensah
-</a>
-
-<span class="player-role">
-Relief pitcher
-</span>
-
+<a class="player-name" href="player.html?player=yaw-mensah">Yaw Mensah</a>
+<span class="player-role">Relief pitcher</span>
 </div>
-
 </div>
-
 </td>
-
-<td>
-RP
-</td>
-
-<td>
-R/R
-</td>
-
-<td>
-32
-</td>
-
-<td>
-Active
-</td>
-
+<td>RP</td>
+<td>R/R</td>
+<td>32</td>
+<td>Active</td>
 </tr>
 
-
 <tr>
-
 <td>
-
 <div class="player-cell">
-
-<img
-class="roster-pic"
-src="assets/images/players/spokane-alloys/spokane-nikolai-dobrynin.png"
-alt="Nikolai Dobrynin"
->
-
+<img class="roster-pic" src="assets/images/players/spokane-alloys/spokane-nikolai-dobrynin.png" alt="Nikolai Dobrynin">
 <div>
-
-<a
-class="player-name"
-href="player.html?player=nikolai-dobrynin"
->
-Nikolai Dobrynin
-</a>
-
-<span class="player-role">
-Catcher
-</span>
-
+<a class="player-name" href="player.html?player=nikolai-dobrynin">Nikolai Dobrynin</a>
+<span class="player-role">Catcher</span>
 </div>
-
 </div>
-
 </td>
-
-<td>
-C
-</td>
-
-<td>
-R/R
-</td>
-
-<td>
-30
-</td>
-
-<td>
-Active
-</td>
-
+<td>C</td>
+<td>R/R</td>
+<td>30</td>
+<td>Active</td>
 </tr>
 
-
 <tr>
-
 <td>
-
 <div class="player-cell">
-
-<img
-class="roster-pic"
-src="assets/images/players/spokane-alloys/spokane-evan-carroll-iv.png"
-alt="Evan Carroll IV"
->
-
+<img class="roster-pic" src="assets/images/players/spokane-alloys/spokane-evan-carroll-iv.png" alt="Evan Carroll IV">
 <div>
-
-<a
-class="player-name"
-href="player.html?player=evan-carroll-iv"
->
-Evan Carroll IV
-</a>
-
-<span class="player-role">
-First baseman
-</span>
-
+<a class="player-name" href="player.html?player=evan-carroll-iv">Evan Carroll IV</a>
+<span class="player-role">First baseman</span>
 </div>
-
 </div>
-
 </td>
-
-<td>
-1B
-</td>
-
-<td>
-L/R
-</td>
-
-<td>
-33
-</td>
-
-<td>
-Active
-</td>
-
+<td>1B</td>
+<td>L/R</td>
+<td>33</td>
+<td>Active</td>
 </tr>
 
-
 <tr>
-
 <td>
-
 <div class="player-cell">
-
-<img
-class="roster-pic"
-src="assets/images/players/spokane-alloys/spokane-marco-delvecchio.png"
-alt="Marco DelVecchio"
->
-
+<img class="roster-pic" src="assets/images/players/spokane-alloys/spokane-marco-delvecchio.png" alt="Marco DelVecchio">
 <div>
-
-<a
-class="player-name"
-href="player.html?player=marco-delvecchio"
->
-Marco DelVecchio
-</a>
-
-<span class="player-role">
-Second baseman
-</span>
-
+<a class="player-name" href="player.html?player=marco-delvecchio">Marco DelVecchio</a>
+<span class="player-role">Second baseman</span>
 </div>
-
 </div>
-
 </td>
-
-<td>
-2B
-</td>
-
-<td>
-S/R
-</td>
-
-<td>
-27
-</td>
-
-<td>
-Active
-</td>
-
+<td>2B</td>
+<td>S/R</td>
+<td>27</td>
+<td>Active</td>
 </tr>
 
-
 <tr>
-
 <td>
-
 <div class="player-cell">
-
-<img
-class="roster-pic"
-src="assets/images/players/spokane-alloys/spokane-tomasz-kubas.png"
-alt="Tomasz Kubas"
->
-
+<img class="roster-pic" src="assets/images/players/spokane-alloys/spokane-tomasz-kubas.png" alt="Tomasz Kubas">
 <div>
-
-<a
-class="player-name"
-href="player.html?player=tomasz-kubas"
->
-Tomasz Kubas
-</a>
-
-<span class="player-role">
-Shortstop
-</span>
-
+<a class="player-name" href="player.html?player=tomasz-kubas">Tomasz Kubas</a>
+<span class="player-role">Shortstop</span>
 </div>
-
 </div>
-
 </td>
-
-<td>
-SS
-</td>
-
-<td>
-R/R
-</td>
-
-<td>
-24
-</td>
-
-<td>
-Active
-</td>
-
+<td>SS</td>
+<td>R/R</td>
+<td>24</td>
+<td>Active</td>
 </tr>
 
-
 <tr>
-
 <td>
-
 <div class="player-cell">
-
-<img
-class="roster-pic"
-src="assets/images/players/spokane-alloys/spokane-andres-mireles.png"
-alt="Andrés Mireles"
->
-
+<img class="roster-pic" src="assets/images/players/spokane-alloys/spokane-andres-mireles.png" alt="Andrés Mireles">
 <div>
-
-<a
-class="player-name"
-href="player.html?player=andres-mireles"
->
-Andrés Mireles
-</a>
-
-<span class="player-role">
-Third baseman
-</span>
-
+<a class="player-name" href="player.html?player=andres-mireles">Andrés Mireles</a>
+<span class="player-role">Third baseman</span>
 </div>
-
 </div>
-
 </td>
-
-<td>
-3B
-</td>
-
-<td>
-R/R
-</td>
-
-<td>
-29
-</td>
-
-<td>
-Active
-</td>
-
+<td>3B</td>
+<td>R/R</td>
+<td>29</td>
+<td>Active</td>
 </tr>
 
-
 <tr>
-
 <td>
-
 <div class="player-cell">
-
-<img
-class="roster-pic"
-src="assets/images/players/spokane-alloys/spokane-wyatt-hollander.png"
-alt="Wyatt Hollander"
->
-
+<img class="roster-pic" src="assets/images/players/spokane-alloys/spokane-wyatt-hollander.png" alt="Wyatt Hollander">
 <div>
-
-<a
-class="player-name"
-href="player.html?player=wyatt-hollander"
->
-Wyatt Hollander
-</a>
-
-<span class="player-role">
-Center fielder
-</span>
-
+<a class="player-name" href="player.html?player=wyatt-hollander">Wyatt Hollander</a>
+<span class="player-role">Center fielder</span>
 </div>
-
 </div>
-
 </td>
-
-<td>
-CF
-</td>
-
-<td>
-R/R
-</td>
-
-<td>
-26
-</td>
-
-<td>
-Active
-</td>
-
+<td>CF</td>
+<td>R/R</td>
+<td>26</td>
+<td>Active</td>
 </tr>
 
-
 <tr>
-
 <td>
-
 <div class="player-cell">
-
-<img
-class="roster-pic"
-src="assets/images/players/spokane-alloys/spokane-luis-quinones.png"
-alt="Luis Quiñones"
->
-
+<img class="roster-pic" src="assets/images/players/spokane-alloys/spokane-luis-quinones.png" alt="Luis Quiñones">
 <div>
-
-<a
-class="player-name"
-href="player.html?player=luis-quinones"
->
-Luis Quiñones
-</a>
-
-<span class="player-role">
-Left fielder
-</span>
-
+<a class="player-name" href="player.html?player=luis-quinones">Luis Quiñones</a>
+<span class="player-role">Left fielder</span>
 </div>
-
 </div>
-
 </td>
-
-<td>
-LF
-</td>
-
-<td>
-L/L
-</td>
-
-<td>
-28
-</td>
-
-<td>
-Active
-</td>
-
+<td>LF</td>
+<td>L/L</td>
+<td>28</td>
+<td>Active</td>
 </tr>
 
-
 <tr>
-
 <td>
-
 <div class="player-cell">
-
-<img
-class="roster-pic"
-src="assets/images/players/spokane-alloys/spokane-pieter-van-wyk.png"
-alt="Pieter van Wyk"
->
-
+<img class="roster-pic" src="assets/images/players/spokane-alloys/spokane-pieter-van-wyk.png" alt="Pieter van Wyk">
 <div>
-
-<a
-class="player-name"
-href="player.html?player=pieter-van-wyk"
->
-Pieter van Wyk
-</a>
-
-<span class="player-role">
-Right fielder
-</span>
-
+<a class="player-name" href="player.html?player=pieter-van-wyk">Pieter van Wyk</a>
+<span class="player-role">Right fielder</span>
 </div>
-
 </div>
-
 </td>
-
-<td>
-RF
-</td>
-
-<td>
-R/R
-</td>
-
-<td>
-30
-</td>
-
-<td>
-Active
-</td>
-
+<td>RF</td>
+<td>R/R</td>
+<td>30</td>
+<td>Active</td>
 </tr>
 
 </tbody>
@@ -1809,19 +1088,11 @@ Spokane Alloys · Official Season 1 active roster.
 
 </section>
 
-
 <section class="card">
 
 <div class="card-header">
-
-<h2 class="card-title">
-Club Identity
-</h2>
-
-<span class="card-label">
-Spokane Club File
-</span>
-
+<h2 class="card-title">Club Identity</h2>
+<span class="card-label">Spokane Club File</span>
 </div>
 
 <div class="card-body">
@@ -1834,19 +1105,11 @@ Founded as one of the sixteen charter clubs of Global League Baseball, the Spoka
 
 </section>
 
-
 <section class="card">
 
 <div class="card-header">
-
-<h2 class="card-title">
-OGWA Stadium
-</h2>
-
-<span class="card-label">
-Home Ground
-</span>
-
+<h2 class="card-title">OGWA Stadium</h2>
+<span class="card-label">Home Ground</span>
 </div>
 
 <div class="card-body">
@@ -1872,51 +1135,23 @@ River District · Spokane, Washington
 <div class="stadium-facts">
 
 <div class="stadium-fact">
-
-<span>
-Capacity
-</span>
-
-<strong>
-Approximately 20,000
-</strong>
-
+<span>Capacity</span>
+<strong>Approximately 20,000</strong>
 </div>
 
 <div class="stadium-fact">
-
-<span>
-Playing Surface
-</span>
-
-<strong>
-Hybrid
-</strong>
-
+<span>Playing Surface</span>
+<strong>Hybrid</strong>
 </div>
 
 <div class="stadium-fact">
-
-<span>
-Configuration
-</span>
-
-<strong>
-Open air
-</strong>
-
+<span>Configuration</span>
+<strong>Open air</strong>
 </div>
 
 <div class="stadium-fact">
-
-<span>
-Opened
-</span>
-
-<strong>
-2019
-</strong>
-
+<span>Opened</span>
+<strong>2019</strong>
 </div>
 
 </div>
@@ -1929,19 +1164,11 @@ Opened
 
 </section>
 
-
 <section class="card">
 
 <div class="card-header">
-
-<h2 class="card-title">
-Stadium File
-</h2>
-
-<span class="card-label">
-OGWA Stadium
-</span>
-
+<h2 class="card-title">Stadium File</h2>
+<span class="card-label">OGWA Stadium</span>
 </div>
 
 <div class="card-body">
@@ -1949,86 +1176,63 @@ OGWA Stadium
 <div class="gallery-grid">
 
 <figure class="gallery-item">
-
 <img
 src="assets/teams/spokane-alloys/images/stadium/main-concourse.png"
 alt="Main concourse at OGWA Stadium"
 >
-
 <figcaption class="gallery-caption">
 Main concourse
 </figcaption>
-
 </figure>
 
-
 <figure class="gallery-item">
-
 <img
 src="assets/teams/spokane-alloys/images/stadium/ogwa-stadium-entrance.png"
 alt="Exterior entrance to OGWA Stadium"
 >
-
 <figcaption class="gallery-caption">
 Exterior entrance
 </figcaption>
-
 </figure>
 
-
 <figure class="gallery-item">
-
 <img
 src="assets/teams/spokane-alloys/stadium/ogwa-rainwall.png"
 alt="The Rain Wall at OGWA Stadium"
 >
-
 <figcaption class="gallery-caption">
 The Rain Wall
 </figcaption>
-
 </figure>
 
-
 <figure class="gallery-item">
-
 <img
 src="assets/teams/spokane-alloys/stadium/ogwa-fans1.png"
 alt="Spokane Alloys fans at OGWA Stadium"
 >
-
 <figcaption class="gallery-caption">
 Game atmosphere
 </figcaption>
-
 </figure>
 
-
 <figure class="gallery-item">
-
 <img
 src="assets/teams/spokane-alloys/images/stadium/ogwa-aerial1.png"
 alt="Aerial view of OGWA Stadium"
 >
-
 <figcaption class="gallery-caption">
 Sea Glass Club
 </figcaption>
-
 </figure>
 
-
 <figure class="gallery-item">
-
 <img
 src="assets/teams/spokane-alloys/images/stadium/ogwa-scoreboard1.png"
 alt="OGWA Stadium scoreboard during a Spokane Alloys game"
 >
-
 <figcaption class="gallery-caption">
 Scoreboard view
 </figcaption>
-
 </figure>
 
 </div>
@@ -2037,157 +1241,78 @@ Scoreboard view
 
 </section>
 
-
 </div>
 
-
 <aside class="side-column">
-
 
 <section class="card">
 
 <div class="card-header">
-
-<h2 class="card-title">
-Club File
-</h2>
-
+<h2 class="card-title">Club File</h2>
 </div>
 
 <div class="card-body">
 
 <div class="file-row">
-
-<div class="file-key">
-Club
+<div class="file-key">Club</div>
+<div class="file-value">Spokane Alloys</div>
 </div>
-
-<div class="file-value">
-Spokane Alloys
-</div>
-
-</div>
-
 
 <div class="file-row">
-
-<div class="file-key">
-City
+<div class="file-key">City</div>
+<div class="file-value">Spokane, Washington</div>
 </div>
-
-<div class="file-value">
-Spokane, Washington
-</div>
-
-</div>
-
 
 <div class="file-row">
-
-<div class="file-key">
-Division
+<div class="file-key">Division</div>
+<div class="file-value">Pacific Division</div>
 </div>
-
-<div class="file-value">
-Pacific Division
-</div>
-
-</div>
-
 
 <div class="file-row">
-
-<div class="file-key">
-Code
+<div class="file-key">Code</div>
+<div class="file-value">SPO</div>
 </div>
-
-<div class="file-value">
-SPO
-</div>
-
-</div>
-
 
 <div class="file-row">
-
-<div class="file-key">
-Stadium
+<div class="file-key">Stadium</div>
+<div class="file-value">OGWA Stadium</div>
 </div>
-
-<div class="file-value">
-OGWA Stadium
-</div>
-
-</div>
-
 
 <div class="file-row">
-
-<div class="file-key">
-District
+<div class="file-key">District</div>
+<div class="file-value">River District</div>
 </div>
-
-<div class="file-value">
-River District
-</div>
-
-</div>
-
 
 <div class="file-row">
-
-<div class="file-key">
-Status
-</div>
-
-<div class="file-value">
-Active
-</div>
-
+<div class="file-key">Status</div>
+<div class="file-value">Active</div>
 </div>
 
 </div>
 
 </section>
 
-
 <section class="card">
 
 <div class="card-header">
-
-<h2 class="card-title">
-Club Notes
-</h2>
-
+<h2 class="card-title">Club Notes</h2>
 </div>
 
 <div class="card-body">
 
 <div class="note-block">
-
-<strong>
-Shutout opening
-</strong>
-
-<p>
-Spokane held Fresno scoreless in its first recorded game.
-</p>
-
+<strong>Shutout opening</strong>
+<p>Spokane held Fresno scoreless in its first recorded game.</p>
 </div>
 
 </div>
 
 </section>
 
-
 <section class="card">
 
 <div class="card-header">
-
-<h2 class="card-title">
-Broadcast Team
-</h2>
-
+<h2 class="card-title">Broadcast Team</h2>
 </div>
 
 <div class="card-body">
@@ -2199,19 +1324,11 @@ MV
 </div>
 
 <div class="broadcaster-info">
-
-<strong>
-Martin Vale
-</strong>
-
-<span>
-Senior Radio Broadcaster
-</span>
-
+<strong>Martin Vale</strong>
+<span>Senior Radio Broadcaster</span>
 </div>
 
 </div>
-
 
 <div class="broadcaster">
 
@@ -2220,15 +1337,8 @@ GM
 </div>
 
 <div class="broadcaster-info">
-
-<strong>
-Graham Mercer
-</strong>
-
-<span>
-Broadcast Analyst
-</span>
-
+<strong>Graham Mercer</strong>
+<span>Broadcast Analyst</span>
 </div>
 
 </div>
@@ -2237,41 +1347,30 @@ Broadcast Analyst
 
 </section>
 
-
 <section class="card">
 
 <div class="card-header">
-
-<h2 class="card-title">
-Official Record
-</h2>
-
+<h2 class="card-title">Official Record</h2>
 </div>
 
 <div class="card-body">
 
-<p
-class="story-copy"
-style="font-size:13px"
->
+<p class="story-copy" style="font-size:13px">
 This page is part of the official Global League Baseball team record. Corrections, additions, and archival material may be submitted for review.
 </p>
 
 <p>
-
 <a
 href="contribute.html"
 style="color:var(--blue);font-weight:800;font-size:12px"
 >
 Contribute to this record →
 </a>
-
 </p>
 
 </div>
 
 </section>
-
 
 </aside>
 
@@ -2280,7 +1379,6 @@ Contribute to this record →
 </div>
 
 </main>
-
 
 <footer class="site-footer">
 
@@ -2301,7 +1399,6 @@ Official league site providing scores, standings, schedules, club information, a
 </p>
 
 </div>
-
 
 <div class="footer-col">
 
@@ -2327,7 +1424,6 @@ Stats
 
 </div>
 
-
 <div class="footer-col">
 
 <h4>
@@ -2347,7 +1443,6 @@ Rosters
 </a>
 
 </div>
-
 
 <div class="footer-col">
 
@@ -2371,29 +1466,19 @@ Archive
 
 </div>
 
-
 <div class="footer-bottom">
 
 <div class="container footer-bottom-inner">
 
-<span>
-© 2026 Global League Baseball
-</span>
-
-<span>
-Season 1
-</span>
-
-<span>
-Official League Record
-</span>
+<span>© 2026 Global League Baseball</span>
+<span>Season 1</span>
+<span>Official League Record</span>
 
 </div>
 
 </div>
 
 </footer>
-
 
 <script>
 

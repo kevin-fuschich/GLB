@@ -7,8 +7,8 @@
 <title>Spokane Alloys Club | Global League Baseball</title>
 
 <meta
-name="description"
-content="Club culture, traditions, entertainment, and identity of the Spokane Alloys of Global League Baseball."
+  name="description"
+  content="Club culture, traditions, entertainment, and identity of the Spokane Alloys of Global League Baseball."
 >
 
 <style>
@@ -29,9 +29,7 @@ content="Club culture, traditions, entertainment, and identity of the Spokane Al
 --max:1280px;
 }
 
-*{
-box-sizing:border-box;
-}
+*{box-sizing:border-box}
 
 html,
 body{
@@ -57,7 +55,6 @@ max-width:var(--max);
 margin:0 auto;
 padding:0 20px;
 }
-
 
 /* HEADER */
 
@@ -141,13 +138,11 @@ color:#fff;
 font-weight:700;
 }
 
-
 /* PAGE */
 
 .page{
 padding:28px 0 48px;
 }
-
 
 /* HERO */
 
@@ -195,7 +190,7 @@ letter-spacing:-2px;
 
 .club-subtitle{
 margin:12px 0 0;
-max-width:650px;
+max-width:680px;
 font-size:16px;
 line-height:1.55;
 color:#ffffffe8;
@@ -237,7 +232,6 @@ box-shadow:0 2px 6px #00000025;
 background:var(--pale);
 }
 
-
 /* LAYOUT */
 
 .content-grid{
@@ -253,7 +247,6 @@ align-items:start;
 display:grid;
 gap:22px;
 }
-
 
 /* CARDS */
 
@@ -303,8 +296,7 @@ color:#334150;
 margin-top:14px;
 }
 
-
-/* CULTURE INTRO */
+/* INTRO */
 
 .culture-grid{
 display:grid;
@@ -327,14 +319,23 @@ flex-direction:column;
 justify-content:center;
 }
 
-
-/* FEATURE CARDS */
+/* FEATURE BLOCKS */
 
 .feature-block{
 display:grid;
-grid-template-columns:190px minmax(0,1fr);
-gap:20px;
-align-items:center;
+grid-template-columns:minmax(220px,.9fr) minmax(0,1.35fr);
+gap:22px;
+align-items:start;
+}
+
+.feature-thumb{
+width:100%;
+aspect-ratio:4 / 3;
+object-fit:cover;
+object-position:center;
+border-radius:14px;
+border:1px solid var(--border);
+background:#dfe4e8;
 }
 
 .feature-eyebrow{
@@ -364,153 +365,57 @@ color:#40505f;
 margin-top:9px;
 }
 
-
-/* DONK */
-
-.donk-thumb{
-position:relative;
-min-height:165px;
-overflow:hidden;
-border-radius:14px;
-background:
-radial-gradient(circle at 27% 70%,#05070a 0 16%,transparent 17%),
-radial-gradient(circle at 74% 70%,#05070a 0 16%,transparent 17%),
-linear-gradient(160deg,#24394d 0%,#101b27 48%,#07101a 100%);
-border:1px solid #203448;
+.feature-meta{
+display:grid;
+grid-template-columns:repeat(2,minmax(0,1fr));
+gap:10px;
+margin-top:16px;
 }
 
-.donk-car{
-position:absolute;
-left:17%;
-right:15%;
-bottom:44px;
-height:47px;
-border-radius:28px 44px 10px 10px;
-background:#b9d8d0;
-transform:skewX(-10deg);
-box-shadow:
-0 -16px 0 -5px #dbe9e5,
-0 5px 15px #0008;
-}
-
-.donk-car:before{
-content:"";
-position:absolute;
-left:27%;
-top:-20px;
-width:43%;
-height:25px;
-border-radius:20px 30px 0 0;
-background:#b9d8d0;
-}
-
-.donk-thumb-label{
-position:absolute;
-left:12px;
-top:11px;
-font-size:10px;
-font-weight:900;
-text-transform:uppercase;
-letter-spacing:1.2px;
-color:#d8e9e5;
-}
-
-.donk-thumb-title{
-position:absolute;
-left:12px;
-bottom:10px;
-font-size:23px;
-font-weight:950;
-letter-spacing:-1px;
-color:#fff;
-}
-
-.donk-thumb-title span{
-display:block;
-font-size:9px;
-letter-spacing:1.7px;
-font-weight:800;
-color:var(--glass);
-}
-
-
-/* SONAR SYSTEM */
-
-.sonar-thumb{
-position:relative;
-min-height:180px;
-overflow:hidden;
-border-radius:14px;
-background:
-linear-gradient(135deg,#17191c,#363b40 45%,#111316);
-border:1px solid #30353a;
-}
-
-.sonar-line{
-position:absolute;
-left:-10%;
-width:120%;
-height:2px;
-background:#ffffff20;
-transform:rotate(-9deg);
-}
-
-.sonar-line:nth-child(1){top:34%}
-.sonar-line:nth-child(2){top:49%}
-.sonar-line:nth-child(3){top:65%}
-
-.sonar-drum{
-position:absolute;
-left:21px;
-bottom:26px;
-width:73px;
-height:73px;
-border:6px solid #e5e5e5;
-border-radius:50%;
-box-shadow:inset 0 0 0 2px #111;
-}
-
-.sonar-guitar{
-position:absolute;
-right:38px;
-top:34px;
-width:14px;
-height:105px;
-background:#dadada;
-transform:rotate(27deg);
+.meta-box{
+padding:11px 12px;
+border:1px solid var(--border);
 border-radius:10px;
+background:#f8fafb;
 }
 
-.sonar-guitar:after{
-content:"";
-position:absolute;
-width:52px;
-height:65px;
-bottom:-6px;
-left:-18px;
-background:#c9c9c9;
-border-radius:40% 55% 43% 58%;
-}
-
-.sonar-logo{
-position:absolute;
-top:13px;
-left:14px;
-font-size:22px;
-font-weight:950;
-letter-spacing:2px;
-color:#fff;
-}
-
-.sonar-logo span{
+.meta-box span{
 display:block;
-margin-top:1px;
 font-size:9px;
-letter-spacing:2.3px;
-font-weight:750;
-color:#c6c9cc;
+font-weight:850;
+text-transform:uppercase;
+letter-spacing:.5px;
+color:var(--muted);
 }
 
+.meta-box strong{
+display:block;
+margin-top:4px;
+font-size:13px;
+color:var(--alloys);
+}
+
+/* DONK SUPREME */
+
+.supreme-block{
+margin-top:16px;
+padding:14px;
+border-left:4px solid #c72f8a;
+background:#fbf3f8;
+}
+
+.supreme-block strong{
+display:block;
+color:#7c1b56;
+font-size:13px;
+}
+
+.supreme-block p{
+margin:6px 0 0;
+font-size:12px;
+line-height:1.55;
+color:#6b4560;
+}
 
 /* TRADITIONS */
 
@@ -540,7 +445,6 @@ font-size:12px;
 line-height:1.5;
 color:var(--muted);
 }
-
 
 /* SIDEBAR */
 
@@ -598,7 +502,6 @@ line-height:1.5;
 color:var(--muted);
 }
 
-
 /* FOOTER */
 
 .site-footer{
@@ -644,19 +547,15 @@ text-transform:uppercase;
 color:#9fb6d1;
 }
 
-
 /* RESPONSIVE */
 
 @media(max-width:1000px){
-
 .content-grid{
 grid-template-columns:1fr;
 }
-
 }
 
 @media(max-width:920px){
-
 .nav-links{
 display:none;
 }
@@ -673,14 +572,16 @@ display:none;
 grid-template-columns:1fr;
 }
 
+.feature-block{
+grid-template-columns:1fr;
+}
+
 .footer-main{
 grid-template-columns:1fr 1fr;
 }
-
 }
 
 @media(max-width:700px){
-
 .container{
 padding:0 14px;
 }
@@ -698,13 +599,8 @@ min-height:390px;
 padding:24px 20px;
 }
 
-.feature-block{
+.feature-meta{
 grid-template-columns:1fr;
-}
-
-.donk-thumb,
-.sonar-thumb{
-min-height:190px;
 }
 
 .tradition-grid{
@@ -719,9 +615,7 @@ grid-template-columns:1fr;
 flex-direction:column;
 gap:6px;
 }
-
 }
-
 </style>
 </head>
 
@@ -734,105 +628,44 @@ gap:6px;
 <div class="topbar">
 
 <a href="index.html" class="brand">
-
-<div class="brand-mark">
-GLB
-</div>
-
-<div class="brand-sub">
-Global League Baseball
-</div>
-
+<div class="brand-mark">GLB</div>
+<div class="brand-sub">Global League Baseball</div>
 </a>
 
 <nav class="nav-links">
-
-<a href="index.html">
-Home
-</a>
-
-<a href="scores.html">
-Scores
-</a>
-
-<a href="standings.html">
-Standings
-</a>
-
-<a href="schedule.html">
-Schedule
-</a>
-
-<a href="teams.html" class="active">
-Teams
-</a>
-
-<a href="stats.html">
-Stats
-</a>
-
-<a href="news.html">
-News
-</a>
-
+<a href="index.html">Home</a>
+<a href="scores.html">Scores</a>
+<a href="standings.html">Standings</a>
+<a href="schedule.html">Schedule</a>
+<a href="teams.html" class="active">Teams</a>
+<a href="stats.html">Stats</a>
+<a href="news.html">News</a>
 </nav>
 
 <div class="header-right">
-
-<div class="header-meta">
-Spokane Alloys · Club
-</div>
-
-<button class="nav-toggle" id="navToggle">
-☰
-</button>
-
+<div class="header-meta">Spokane Alloys · Club</div>
+<button class="nav-toggle" id="navToggle">☰</button>
 </div>
 
 </div>
 
 </div>
-
 
 <nav class="mobile-menu" id="mobileMenu">
-
-<a href="index.html">
-Home
-</a>
-
-<a href="scores.html">
-Scores
-</a>
-
-<a href="standings.html">
-Standings
-</a>
-
-<a href="schedule.html">
-Schedule
-</a>
-
-<a href="teams.html">
-Teams
-</a>
-
-<a href="stats.html">
-Stats
-</a>
-
-<a href="news.html">
-News
-</a>
-
+<a href="index.html">Home</a>
+<a href="scores.html">Scores</a>
+<a href="standings.html">Standings</a>
+<a href="schedule.html">Schedule</a>
+<a href="teams.html">Teams</a>
+<a href="stats.html">Stats</a>
+<a href="news.html">News</a>
 </nav>
 
 </header>
 
-
 <main class="page">
 
 <div class="container">
-
 
 <section class="club-hero">
 
@@ -857,8 +690,8 @@ Club Culture
 </span>
 
 <a
-class="team-link"
-href="team-spokane-alloys.html"
+  class="team-link"
+  href="team-spokane-alloys.html"
 >
 View Team Page →
 </a>
@@ -869,25 +702,15 @@ View Team Page →
 
 </section>
 
-
 <div class="content-grid">
 
-
 <div class="main-column">
-
 
 <section class="card">
 
 <div class="card-header">
-
-<h2 class="card-title">
-The Spokane Club
-</h2>
-
-<span class="card-label">
-Beyond the Box Score
-</span>
-
+<h2 class="card-title">The Spokane Club</h2>
+<span class="card-label">Beyond the Box Score</span>
 </div>
 
 <div class="card-body">
@@ -895,9 +718,9 @@ Beyond the Box Score
 <div class="culture-grid">
 
 <img
-class="culture-image"
-src="assets/teams/spokane-alloys/images/stadium/club-spokane-alloys-stadium2.png"
-alt="Spokane Alloys club atmosphere at OGWA Stadium"
+  class="culture-image"
+  src="assets/teams/spokane-alloys/images/stadium/club-spokane-alloys-stadium2.png"
+  alt="Spokane Alloys club atmosphere at OGWA Stadium"
 >
 
 <div class="culture-copy">
@@ -918,62 +741,78 @@ The team page remains the official baseball record. This club page is where the 
 
 </section>
 
-
 <section class="card">
 
 <div class="card-header">
-
-<h2 class="card-title">
-DONK
-</h2>
-
-<span class="card-label">
-Resident Motorsports Event
-</span>
-
+<h2 class="card-title">DONK</h2>
+<span class="card-label">Car Show League</span>
 </div>
 
 <div class="card-body">
 
 <div class="feature-block">
 
-<div class="donk-thumb" aria-label="DONK custom car competition graphic">
-
-<div class="donk-thumb-label">
-Competition Series
-</div>
-
-<div class="donk-car"></div>
-
-<div class="donk-thumb-title">
-DONK
-<span>ROAD TO DONK SUPREME</span>
-</div>
-
-</div>
-
+<img
+  class="feature-thumb"
+  src="assets/teams/spokane-alloys/images/club/donk-luthar-pinedrop.png"
+  alt="Luthar Pinedrop with his candy-themed 1980s Chevrolet Caprice DONK entry"
+>
 
 <div>
 
 <div class="feature-eyebrow">
-OGWA Stadium Event Series
+Spokane DONK Entry
 </div>
 
 <h3 class="feature-title">
-DONK
+Luthar Pinedrop
 </h3>
 
 <p class="feature-copy">
-DONK is a separate competitive car-show league built around customized vehicles and head-to-head category battles. Drivers and builders compete across different judged classes rather than simply entering a traditional static car show.
+DONK is a separate competitive car-show league where drivers and builders battle across judged categories, custom-build classes, presentation, engineering, identity, and spectacle.
 </p>
 
 <p class="feature-copy">
-Events build toward the league's top distinction: <strong>DONK SUPREME</strong>, the championship title awarded at the end of the competition cycle.
+Spokane's current entry is driven by <strong>Luthar Pinedrop</strong>, whose 1980s Chevrolet Caprice carries a candy-saturated SweeTARTS-inspired identity: bright color, oversized wheels, polished steel, and a deliberately excessive presentation.
 </p>
 
 <p class="feature-copy">
-Spokane's relationship with DONK makes the series part of the Alloys' wider club culture without making it a baseball competition. DONK exists as its own league; OGWA Stadium is one of the places where the worlds intersect.
+The point is not simply to own an unusual car. DONK competitors build a complete identity around the machine, then defend it against rivals across the competition calendar.
 </p>
+
+<div class="feature-meta">
+
+<div class="meta-box">
+<span>Driver</span>
+<strong>Luthar Pinedrop</strong>
+</div>
+
+<div class="meta-box">
+<span>Car</span>
+<strong>1980s Chevrolet Caprice</strong>
+</div>
+
+<div class="meta-box">
+<span>Identity</span>
+<strong>SweeTARTS Candy Build</strong>
+</div>
+
+<div class="meta-box">
+<span>League</span>
+<strong>DONK</strong>
+</div>
+
+</div>
+
+<div class="supreme-block">
+
+<strong>DONK SUPREME</strong>
+
+<p>
+The DONK championship title. Category victories and season performance ultimately build toward the right to compete for DONK SUPREME.
+</p>
+
+</div>
 
 </div>
 
@@ -983,41 +822,22 @@ Spokane's relationship with DONK makes the series part of the Alloys' wider club
 
 </section>
 
-
 <section class="card">
 
 <div class="card-header">
-
-<h2 class="card-title">
-SONAR SYSTEM
-</h2>
-
-<span class="card-label">
-Monthly Resident Entertainment
-</span>
-
+<h2 class="card-title">SONAR SYSTEM</h2>
+<span class="card-label">Monthly Resident Entertainment</span>
 </div>
 
 <div class="card-body">
 
 <div class="feature-block">
 
-<div class="sonar-thumb" aria-label="Sonar System resident music duo graphic">
-
-<div class="sonar-line"></div>
-<div class="sonar-line"></div>
-<div class="sonar-line"></div>
-
-<div class="sonar-drum"></div>
-<div class="sonar-guitar"></div>
-
-<div class="sonar-logo">
-SONAR SYSTEM
-<span>SPOKANE RESIDENT SERIES</span>
-</div>
-
-</div>
-
+<img
+  class="feature-thumb"
+  src="assets/teams/spokane-alloys/images/club/sonar-system.png"
+  alt="SONAR SYSTEM with Bea Beatty on guitar and Pauly Czykowski on drums"
+>
 
 <div>
 
@@ -1030,16 +850,40 @@ SONAR SYSTEM
 </h3>
 
 <p class="feature-copy">
-SONAR SYSTEM is the Spokane Alloys' monthly resident musical act: a male-female two-piece built around drums, guitar, distortion, and the stripped-down force of a band with nowhere to hide.
+SONAR SYSTEM is the Spokane Alloys' monthly resident musical act: a stripped-down male-female two-piece built around guitar, drums, distortion, volume, and the kind of raw Northwest sound that feels native to the industrial edges of OGWA Stadium.
 </p>
 
 <p class="feature-copy">
-The drummer handles the percussion side of the duo while the guitarist carries the melodic and abrasive edge. The sound sits naturally inside Spokane's heavier Northwest music tradition — raw, loud, minimal, and designed to work in a ballpark without turning into generic stadium entertainment.
+<strong>Bea Beatty</strong> fronts the duo on guitar and vocals. <strong>Pauly Czykowski</strong> plays drums. There is no large backing band and very little polish added for the sake of the venue. The attraction is the friction between two people making more noise than two people should reasonably be able to make.
 </p>
 
 <p class="feature-copy">
-Their monthly appearance is treated as part of the club calendar rather than a one-off concert booking, giving SONAR SYSTEM an ongoing place in the identity of the Alloys and OGWA Stadium.
+Their appearances are part of Spokane's recurring club calendar rather than one-off concert bookings, making SONAR SYSTEM part of the Alloys' identity in the same way the stadium, supporters, and matchday rituals are.
 </p>
+
+<div class="feature-meta">
+
+<div class="meta-box">
+<span>Lead</span>
+<strong>Bea Beatty</strong>
+</div>
+
+<div class="meta-box">
+<span>Role</span>
+<strong>Guitar · Vocals</strong>
+</div>
+
+<div class="meta-box">
+<span>Drummer</span>
+<strong>Pauly Czykowski</strong>
+</div>
+
+<div class="meta-box">
+<span>Residency</span>
+<strong>Monthly</strong>
+</div>
+
+</div>
 
 </div>
 
@@ -1049,19 +893,11 @@ Their monthly appearance is treated as part of the club calendar rather than a o
 
 </section>
 
-
 <section class="card">
 
 <div class="card-header">
-
-<h2 class="card-title">
-Club Traditions
-</h2>
-
-<span class="card-label">
-Spokane Matchday
-</span>
-
+<h2 class="card-title">Club Traditions</h2>
+<span class="card-label">Spokane Matchday</span>
 </div>
 
 <div class="card-body">
@@ -1075,11 +911,10 @@ SONAR SYSTEM Residency
 </strong>
 
 <span>
-A monthly live appearance by the club's resident two-piece.
+A monthly live appearance by Bea Beatty and Pauly Czykowski as the Alloys' resident musical act.
 </span>
 
 </div>
-
 
 <div class="tradition">
 
@@ -1088,11 +923,10 @@ DONK Events
 </strong>
 
 <span>
-Selected DONK competition events bring custom vehicles and category battles into the wider OGWA Stadium calendar.
+Selected DONK competition events bring drivers, custom builds, and category battles into the wider OGWA Stadium calendar.
 </span>
 
 </div>
-
 
 <div class="tradition">
 
@@ -1112,142 +946,83 @@ A recurring reusable-bottle giveaway tied to OGWA Stadium's sea-glass identity a
 
 </section>
 
-
 </div>
 
-
 <aside class="side-column">
-
 
 <section class="card">
 
 <div class="card-header">
-
-<h2 class="card-title">
-Club File
-</h2>
-
+<h2 class="card-title">Club File</h2>
 </div>
 
 <div class="card-body">
 
 <div class="file-row">
-
-<div class="file-key">
-Club
+<div class="file-key">Club</div>
+<div class="file-value">Spokane Alloys</div>
 </div>
-
-<div class="file-value">
-Spokane Alloys
-</div>
-
-</div>
-
 
 <div class="file-row">
-
-<div class="file-key">
-City
+<div class="file-key">City</div>
+<div class="file-value">Spokane, Washington</div>
 </div>
-
-<div class="file-value">
-Spokane, Washington
-</div>
-
-</div>
-
 
 <div class="file-row">
-
-<div class="file-key">
-Home
+<div class="file-key">Home</div>
+<div class="file-value">OGWA Stadium</div>
 </div>
-
-<div class="file-value">
-OGWA Stadium
-</div>
-
-</div>
-
 
 <div class="file-row">
-
-<div class="file-key">
-Division
+<div class="file-key">Division</div>
+<div class="file-value">Pacific Division</div>
 </div>
-
-<div class="file-value">
-Pacific Division
-</div>
-
-</div>
-
 
 <div class="file-row">
-
-<div class="file-key">
-Club Code
+<div class="file-key">Club Code</div>
+<div class="file-value">SPO</div>
 </div>
-
-<div class="file-value">
-SPO
-</div>
-
-</div>
-
 
 <div class="file-row">
-
-<div class="file-key">
-Resident Act
+<div class="file-key">Resident Act</div>
+<div class="file-value">SONAR SYSTEM</div>
 </div>
 
-<div class="file-value">
-SONAR SYSTEM
-</div>
-
+<div class="file-row">
+<div class="file-key">DONK Driver</div>
+<div class="file-value">Luthar Pinedrop</div>
 </div>
 
 </div>
 
 </section>
 
-
 <section class="card">
 
 <div class="card-header">
-
-<h2 class="card-title">
-Club Character
-</h2>
-
+<h2 class="card-title">Club Character</h2>
 </div>
 
 <div class="card-body">
 
 <img
-class="mascot-image"
-src="assets/teams/spokane-alloys/images/stadium/club-spokane-alloys-mascot.png"
-alt="Spokane Alloys mascot"
+  class="mascot-image"
+  src="assets/teams/spokane-alloys/images/stadium/club-spokane-alloys-mascot.png"
+  alt="Spokane Alloys mascot"
 >
 
 <p class="small-caption">
-The Alloys' club identity extends beyond the roster into the crowd, mascot, entertainment, and recurring stadium culture surrounding the team.
+The Alloys' identity extends beyond the roster into the crowd, mascot, resident entertainment, custom machinery, and recurring stadium culture surrounding the team.
 </p>
 
 </div>
 
 </section>
 
-
 <section class="card">
 
 <div class="card-header">
-
-<h2 class="card-title">
-Around OGWA
-</h2>
-
+<h2 class="card-title">Around OGWA</h2>
 </div>
 
 <div class="card-body">
@@ -1264,7 +1039,6 @@ Lighting, design details, and reusable-bottle traditions connect the stadium to 
 
 </div>
 
-
 <div class="note-block">
 
 <strong>
@@ -1277,7 +1051,6 @@ OGWA Stadium's refill feature has become one of the venue's recognizable public 
 
 </div>
 
-
 <div class="note-block">
 
 <strong>
@@ -1285,7 +1058,7 @@ Not just game day
 </strong>
 
 <p>
-DONK and SONAR SYSTEM give the stadium recurring cultural programming outside the basic rhythm of baseball.
+DONK and SONAR SYSTEM give OGWA Stadium recurring cultural programming beyond the basic rhythm of baseball.
 </p>
 
 </div>
@@ -1294,22 +1067,17 @@ DONK and SONAR SYSTEM give the stadium recurring cultural programming outside th
 
 </section>
 
-
 <section class="card">
 
 <div class="card-header">
-
-<h2 class="card-title">
-Official Club Record
-</h2>
-
+<h2 class="card-title">Official Club Record</h2>
 </div>
 
 <div class="card-body">
 
 <p
-class="story-copy"
-style="font-size:13px"
+  class="story-copy"
+  style="font-size:13px"
 >
 This page documents the culture and identity surrounding the Spokane Alloys. Baseball records, roster information, and competitive results remain on the official team page.
 </p>
@@ -1317,8 +1085,8 @@ This page documents the culture and identity surrounding the Spokane Alloys. Bas
 <p style="margin-bottom:0">
 
 <a
-href="team-spokane-alloys.html"
-style="color:var(--blue);font-weight:800;font-size:12px"
+  href="team-spokane-alloys.html"
+  style="color:var(--blue);font-weight:800;font-size:12px"
 >
 View official team page →
 </a>
@@ -1328,8 +1096,8 @@ View official team page →
 <p>
 
 <a
-href="contribute.html"
-style="color:var(--blue);font-weight:800;font-size:12px"
+  href="contribute.html"
+  style="color:var(--blue);font-weight:800;font-size:12px"
 >
 Contribute to this record →
 </a>
@@ -1340,17 +1108,13 @@ Contribute to this record →
 
 </section>
 
-
 </aside>
 
-
 </div>
-
 
 </div>
 
 </main>
-
 
 <footer class="site-footer">
 
@@ -1372,91 +1136,46 @@ Official league site providing scores, standings, schedules, club information, a
 
 </div>
 
+<div class="footer-col">
+
+<h4>League</h4>
+
+<a href="standings.html">Standings</a>
+<a href="scores.html">Scores</a>
+<a href="schedule.html">Schedule</a>
+<a href="stats.html">Stats</a>
+
+</div>
 
 <div class="footer-col">
 
-<h4>
-League
-</h4>
+<h4>Clubs</h4>
 
-<a href="standings.html">
-Standings
-</a>
-
-<a href="scores.html">
-Scores
-</a>
-
-<a href="schedule.html">
-Schedule
-</a>
-
-<a href="stats.html">
-Stats
-</a>
+<a href="teams.html">Teams</a>
+<a href="stadiums.html">Stadiums</a>
+<a href="rosters.html">Rosters</a>
 
 </div>
-
 
 <div class="footer-col">
 
-<h4>
-Clubs
-</h4>
+<h4>League News</h4>
 
-<a href="teams.html">
-Teams
-</a>
-
-<a href="stadiums.html">
-Stadiums
-</a>
-
-<a href="rosters.html">
-Rosters
-</a>
-
-</div>
-
-
-<div class="footer-col">
-
-<h4>
-League News
-</h4>
-
-<a href="news.html">
-News
-</a>
-
-<a href="bulletin.html">
-League Bulletin
-</a>
-
-<a href="archive.html">
-Archive
-</a>
+<a href="news.html">News</a>
+<a href="bulletin.html">League Bulletin</a>
+<a href="archive.html">Archive</a>
 
 </div>
 
 </div>
-
 
 <div class="footer-bottom">
 
 <div class="container footer-bottom-inner">
 
-<span>
-© 2026 Global League Baseball
-</span>
-
-<span>
-Spokane Alloys
-</span>
-
-<span>
-Official Club Record
-</span>
+<span>© 2026 Global League Baseball</span>
+<span>Spokane Alloys</span>
+<span>Official Club Record</span>
 
 </div>
 
@@ -1464,20 +1183,14 @@ Official Club Record
 
 </footer>
 
-
 <script>
-
-const navToggle =
-document.getElementById("navToggle");
-
-const mobileMenu =
-document.getElementById("mobileMenu");
+const navToggle=document.getElementById("navToggle");
+const mobileMenu=document.getElementById("mobileMenu");
 
 navToggle.addEventListener(
-"click",
-() => mobileMenu.classList.toggle("open")
+  "click",
+  ()=>mobileMenu.classList.toggle("open")
 );
-
 </script>
 
 </body>

@@ -8,7 +8,7 @@
 
 <meta
   name="description"
-  content="Club culture, traditions, entertainment, and identity of the Spokane Alloys of Global League Baseball."
+  content="Club culture, traditions, entertainment, broadcast team, and identity of the Spokane Alloys of Global League Baseball."
 >
 
 <style>
@@ -29,7 +29,9 @@
 --max:1280px;
 }
 
-*{box-sizing:border-box}
+*{
+box-sizing:border-box;
+}
 
 html,
 body{
@@ -55,6 +57,7 @@ max-width:var(--max);
 margin:0 auto;
 padding:0 20px;
 }
+
 
 /* HEADER */
 
@@ -138,11 +141,13 @@ color:#fff;
 font-weight:700;
 }
 
+
 /* PAGE */
 
 .page{
 padding:28px 0 48px;
 }
+
 
 /* HERO */
 
@@ -232,6 +237,7 @@ box-shadow:0 2px 6px #00000025;
 background:var(--pale);
 }
 
+
 /* LAYOUT */
 
 .content-grid{
@@ -247,6 +253,7 @@ align-items:start;
 display:grid;
 gap:22px;
 }
+
 
 /* CARDS */
 
@@ -296,6 +303,7 @@ color:#334150;
 margin-top:14px;
 }
 
+
 /* INTRO */
 
 .culture-grid{
@@ -318,6 +326,7 @@ display:flex;
 flex-direction:column;
 justify-content:center;
 }
+
 
 /* FEATURE BLOCKS */
 
@@ -395,6 +404,7 @@ font-size:13px;
 color:var(--alloys);
 }
 
+
 /* DONK SUPREME */
 
 .supreme-block{
@@ -416,6 +426,66 @@ font-size:12px;
 line-height:1.55;
 color:#6b4560;
 }
+
+
+/* BROADCAST TEAM */
+
+.broadcast-grid{
+display:grid;
+grid-template-columns:repeat(2,minmax(0,1fr));
+gap:18px;
+}
+
+.broadcast-card{
+overflow:hidden;
+border:1px solid var(--border);
+border-radius:14px;
+background:#f8fafb;
+}
+
+.broadcast-image{
+width:100%;
+height:300px;
+object-fit:cover;
+object-position:center;
+background:#dfe4e8;
+}
+
+.broadcast-card.vale .broadcast-image{
+object-position:center center;
+}
+
+.broadcast-card.mercer .broadcast-image{
+object-fit:contain;
+background:#e8ecef;
+}
+
+.broadcast-info{
+padding:16px 17px 18px;
+}
+
+.broadcast-role{
+font-size:9px;
+font-weight:900;
+text-transform:uppercase;
+letter-spacing:1px;
+color:var(--blue);
+}
+
+.broadcast-name{
+margin:5px 0 8px;
+font-size:22px;
+line-height:1.1;
+color:var(--alloys);
+}
+
+.broadcast-copy{
+margin:0;
+font-size:13px;
+line-height:1.6;
+color:var(--muted);
+}
+
 
 /* TRADITIONS */
 
@@ -445,6 +515,7 @@ font-size:12px;
 line-height:1.5;
 color:var(--muted);
 }
+
 
 /* SIDEBAR */
 
@@ -502,6 +573,7 @@ line-height:1.5;
 color:var(--muted);
 }
 
+
 /* FOOTER */
 
 .site-footer{
@@ -547,15 +619,19 @@ text-transform:uppercase;
 color:#9fb6d1;
 }
 
+
 /* RESPONSIVE */
 
 @media(max-width:1000px){
+
 .content-grid{
 grid-template-columns:1fr;
 }
+
 }
 
 @media(max-width:920px){
+
 .nav-links{
 display:none;
 }
@@ -579,9 +655,11 @@ grid-template-columns:1fr;
 .footer-main{
 grid-template-columns:1fr 1fr;
 }
+
 }
 
 @media(max-width:700px){
+
 .container{
 padding:0 14px;
 }
@@ -603,6 +681,15 @@ padding:24px 20px;
 grid-template-columns:1fr;
 }
 
+.broadcast-grid{
+grid-template-columns:1fr;
+}
+
+.broadcast-image{
+height:auto;
+aspect-ratio:4 / 3;
+}
+
 .tradition-grid{
 grid-template-columns:1fr;
 }
@@ -615,7 +702,9 @@ grid-template-columns:1fr;
 flex-direction:column;
 gap:6px;
 }
+
 }
+
 </style>
 </head>
 
@@ -663,9 +752,11 @@ gap:6px;
 
 </header>
 
+
 <main class="page">
 
 <div class="container">
+
 
 <section class="club-hero">
 
@@ -680,7 +771,7 @@ Spokane Alloys
 </h1>
 
 <p class="club-subtitle">
-The people, traditions, noise, machines, music, and matchday culture surrounding Spokane's Global League Baseball club.
+The people, traditions, noise, machines, music, broadcast voices, and matchday culture surrounding Spokane's Global League Baseball club.
 </p>
 
 <div class="hero-actions">
@@ -702,9 +793,12 @@ View Team Page →
 
 </section>
 
+
 <div class="content-grid">
 
+
 <div class="main-column">
+
 
 <section class="card">
 
@@ -730,7 +824,7 @@ The Spokane Alloys are built around more than the baseball club itself. OGWA Sta
 </p>
 
 <p class="story-copy">
-The team page remains the official baseball record. This club page is where the other parts of Spokane live: supporters, recurring entertainment, stadium traditions, special events, and the pieces of culture that have grown around the Alloys.
+The team page remains the official baseball record. This club page is where the other parts of Spokane live: supporters, broadcasters, recurring entertainment, stadium traditions, special events, and the pieces of culture that have grown around the Alloys.
 </p>
 
 </div>
@@ -741,11 +835,12 @@ The team page remains the official baseball record. This club page is where the 
 
 </section>
 
+
 <section class="card">
 
 <div class="card-header">
 <h2 class="card-title">DONK</h2>
-<span class="card-label">Car Show League</span>
+<span class="card-label">Independent Car Show League</span>
 </div>
 
 <div class="card-body">
@@ -755,7 +850,7 @@ The team page remains the official baseball record. This club page is where the 
 <img
   class="feature-thumb"
   src="assets/teams/spokane-alloys/images/club/donk-luthar-pinedrop.png"
-  alt="Luthar Pinedrop with his candy-themed 1980s Chevrolet Caprice DONK entry"
+  alt="Luthar Pineberry with Spokane's candy-themed Chevrolet Caprice DONK entry"
 >
 
 <div>
@@ -765,15 +860,15 @@ Spokane DONK Entry
 </div>
 
 <h3 class="feature-title">
-Luthar Pinedrop
+Luthar Pineberry
 </h3>
 
 <p class="feature-copy">
-DONK is a separate competitive car-show league where drivers and builders battle across judged categories, custom-build classes, presentation, engineering, identity, and spectacle.
+DONK is a separate competitive car-show league whose events are hosted at selected GLB parks. Drivers and builders compete across judged categories involving custom builds, presentation, engineering, identity, and spectacle.
 </p>
 
 <p class="feature-copy">
-Spokane's current entry is driven by <strong>Luthar Pinedrop</strong>, whose 1980s Chevrolet Caprice carries a candy-saturated SweeTARTS-inspired identity: bright color, oversized wheels, polished steel, and a deliberately excessive presentation.
+Spokane's entry is driven by <strong>Luthar Pineberry</strong>, whose 1986 Chevrolet Caprice Classic carries a candy-saturated SweeTARTS-inspired identity: bright color, oversized wheels, polished surfaces, and a deliberately excessive competition presence.
 </p>
 
 <p class="feature-copy">
@@ -784,12 +879,12 @@ The point is not simply to own an unusual car. DONK competitors build a complete
 
 <div class="meta-box">
 <span>Driver</span>
-<strong>Luthar Pinedrop</strong>
+<strong>Luthar Pineberry</strong>
 </div>
 
 <div class="meta-box">
 <span>Car</span>
-<strong>1980s Chevrolet Caprice</strong>
+<strong>1986 Chevrolet Caprice Classic</strong>
 </div>
 
 <div class="meta-box">
@@ -821,6 +916,7 @@ The DONK championship title. Category victories and season performance ultimatel
 </div>
 
 </section>
+
 
 <section class="card">
 
@@ -893,6 +989,80 @@ Their appearances are part of Spokane's recurring club calendar rather than one-
 
 </section>
 
+
+<section class="card">
+
+<div class="card-header">
+<h2 class="card-title">Broadcast Team</h2>
+<span class="card-label">Voices of the Alloys</span>
+</div>
+
+<div class="card-body">
+
+<div class="broadcast-grid">
+
+
+<article class="broadcast-card vale">
+
+<img
+  class="broadcast-image"
+  src="assets/teams/spokane-alloys/stadium/spokane-alloys-broadcast.png"
+  alt="Spokane Alloys broadcaster Martin Vale in the OGWA Stadium broadcast booth"
+>
+
+<div class="broadcast-info">
+
+<div class="broadcast-role">
+Play-by-Play
+</div>
+
+<h3 class="broadcast-name">
+Martin Vale
+</h3>
+
+<p class="broadcast-copy">
+Martin Vale is the primary voice of Spokane Alloys baseball. His measured, observational play-by-play has become part of the atmosphere of games at OGWA Stadium, particularly during the colder and wetter stretches of the Spokane season.
+</p>
+
+</div>
+
+</article>
+
+
+<article class="broadcast-card mercer">
+
+<img
+  class="broadcast-image"
+  src="assets/teams/spokane-alloys/stadium/spokane-alloys-announcer.png"
+  alt="Spokane Alloys broadcaster Graham Mercer at the microphone"
+>
+
+<div class="broadcast-info">
+
+<div class="broadcast-role">
+Analyst
+</div>
+
+<h3 class="broadcast-name">
+Graham Mercer
+</h3>
+
+<p class="broadcast-copy">
+Graham Mercer works alongside Vale as Spokane's regular analyst. His conversational style and tendency to linger on the smaller details of a game provide the counterweight to Vale's play-by-play.
+</p>
+
+</div>
+
+</article>
+
+
+</div>
+
+</div>
+
+</section>
+
+
 <section class="card">
 
 <div class="card-header">
@@ -946,9 +1116,12 @@ A recurring reusable-bottle giveaway tied to OGWA Stadium's sea-glass identity a
 
 </section>
 
+
 </div>
 
+
 <aside class="side-column">
+
 
 <section class="card">
 
@@ -984,18 +1157,24 @@ A recurring reusable-bottle giveaway tied to OGWA Stadium's sea-glass identity a
 </div>
 
 <div class="file-row">
+<div class="file-key">Broadcast</div>
+<div class="file-value">Martin Vale · Graham Mercer</div>
+</div>
+
+<div class="file-row">
 <div class="file-key">Resident Act</div>
 <div class="file-value">SONAR SYSTEM</div>
 </div>
 
 <div class="file-row">
 <div class="file-key">DONK Driver</div>
-<div class="file-value">Luthar Pinedrop</div>
+<div class="file-value">Luthar Pineberry</div>
 </div>
 
 </div>
 
 </section>
+
 
 <section class="card">
 
@@ -1012,12 +1191,13 @@ A recurring reusable-bottle giveaway tied to OGWA Stadium's sea-glass identity a
 >
 
 <p class="small-caption">
-The Alloys' identity extends beyond the roster into the crowd, mascot, resident entertainment, custom machinery, and recurring stadium culture surrounding the team.
+The Alloys' identity extends beyond the roster into the crowd, mascot, broadcast voices, resident entertainment, custom machinery, and recurring stadium culture surrounding the team.
 </p>
 
 </div>
 
 </section>
+
 
 <section class="card">
 
@@ -1046,7 +1226,7 @@ The Rain Wall
 </strong>
 
 <p>
-OGWA Stadium's refill feature has become one of the venue's recognizable public spaces.
+OGWA Stadium's refill feature has become one of the venue's most recognizable public spaces, giving the concourse a strange industrial-water atmosphere unique to the park.
 </p>
 
 </div>
@@ -1066,6 +1246,7 @@ DONK and SONAR SYSTEM give OGWA Stadium recurring cultural programming beyond th
 </div>
 
 </section>
+
 
 <section class="card">
 
@@ -1108,13 +1289,16 @@ Contribute to this record →
 
 </section>
 
+
 </aside>
+
 
 </div>
 
 </div>
 
 </main>
+
 
 <footer class="site-footer">
 
@@ -1183,7 +1367,9 @@ Official league site providing scores, standings, schedules, club information, a
 
 </footer>
 
+
 <script>
+
 const navToggle=document.getElementById("navToggle");
 const mobileMenu=document.getElementById("mobileMenu");
 
@@ -1191,6 +1377,7 @@ navToggle.addEventListener(
   "click",
   ()=>mobileMenu.classList.toggle("open")
 );
+
 </script>
 
 </body>

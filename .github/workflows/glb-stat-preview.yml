@@ -19,10 +19,13 @@ jobs:
       - name: Set up Node
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '24'
 
       - name: Generate deterministic preview
         run: node tools/generate-season.js
+
+      - name: Analyze statistical environment
+        run: node tools/analyze-stat-preview.js
 
       - name: Show generated files
         run: find data/generated-preview -maxdepth 2 -type f -print

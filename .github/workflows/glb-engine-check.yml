@@ -32,8 +32,8 @@ jobs:
       - name: Validate canonical rosters
         run: node tools/generate-season.js
 
-      - name: Dry-run 75 percent season backfill
-        run: node tools/backfill-season.js --percent 75 --dry-run
+      - name: Validate official season snapshot
+        run: node tools/validate-season-snapshot.js
 
       - name: Generate 75 percent season snapshot
         if: github.event_name == 'push'

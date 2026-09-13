@@ -30,6 +30,9 @@ jobs:
       - name: Recalculate pitching decisions
         run: node tools/assign-pitching-decisions.js
 
+      - name: Build player population layer
+        run: node tools/build-player-population.js
+
       - name: Validate preview reconciliation
         run: node tools/validate-stat-preview.js
 

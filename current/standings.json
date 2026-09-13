@@ -2,8 +2,8 @@
   "as_of": "2026-04-08",
   "divisions": {
     "Americas": [
-      { "team": "Albuquerque Aeros", "slug": "albuquerque-aeros", "w": 1, "l": 0, "pct": "1.000", "gb": "-", "rs": 6, "ra": 3, "diff": "+3" },
-      { "team": "Birmingham Vulcans", "slug": "birmingham-vulcans", "w": 1, "l": 0, "pct": "1.000", "gb": "0", "rs": 5, "ra": 1, "diff": "+4" },
+      { "team": "Birmingham Vulcans", "slug": "birmingham-vulcans", "w": 1, "l": 0, "pct": "1.000", "gb": "-", "rs": 5, "ra": 1, "diff": "+4" },
+      { "team": "Albuquerque Aeros", "slug": "albuquerque-aeros", "w": 1, "l": 0, "pct": "1.000", "gb": "0", "rs": 6, "ra": 3, "diff": "+3" },
       { "team": "Louisville Naturals", "slug": "louisville-naturals", "w": 1, "l": 0, "pct": "1.000", "gb": "0", "rs": 4, "ra": 2, "diff": "+2" },
       { "team": "St. Paul Frost", "slug": "st-paul-frost", "w": 0, "l": 0, "pct": ".000", "gb": "0.5", "rs": 0, "ra": 0, "diff": "0" },
       { "team": "Toledo Assembly", "slug": "toledo-assembly", "w": 0, "l": 0, "pct": ".000", "gb": "0.5", "rs": 0, "ra": 0, "diff": "0" },

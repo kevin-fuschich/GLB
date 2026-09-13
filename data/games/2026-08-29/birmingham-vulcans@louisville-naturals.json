@@ -1,0 +1,386 @@
+{
+  "schema": "glb.boxscore.v1",
+  "game_id": "2026-08-29_birmingham-vulcans@louisville-naturals",
+  "date": "2026-08-29",
+  "away": {
+    "slug": "birmingham-vulcans",
+    "name": "Birmingham Vulcans"
+  },
+  "home": {
+    "slug": "louisville-naturals",
+    "name": "Louisville Naturals"
+  },
+  "status": "Final",
+  "attendance": 28792,
+  "linescore": {
+    "innings": [
+      {
+        "inning": 1,
+        "away": 0,
+        "home": 0
+      },
+      {
+        "inning": 2,
+        "away": 0,
+        "home": 2
+      },
+      {
+        "inning": 3,
+        "away": 0,
+        "home": 0
+      },
+      {
+        "inning": 4,
+        "away": 2,
+        "home": 0
+      },
+      {
+        "inning": 5,
+        "away": 0,
+        "home": 0
+      },
+      {
+        "inning": 6,
+        "away": 2,
+        "home": 0
+      },
+      {
+        "inning": 7,
+        "away": 1,
+        "home": 2
+      },
+      {
+        "inning": 8,
+        "away": 0,
+        "home": 1
+      },
+      {
+        "inning": 9,
+        "away": 0,
+        "home": 1
+      }
+    ],
+    "totals": {
+      "away": {
+        "R": 5,
+        "H": 10,
+        "E": 1
+      },
+      "home": {
+        "R": 6,
+        "H": 6,
+        "E": 1
+      }
+    }
+  },
+  "final": {
+    "away": 5,
+    "home": 6
+  },
+  "batting": {
+    "away": [
+      {
+        "player": "owen-keller",
+        "name": "Owen Keller",
+        "position": "C",
+        "AB": 4,
+        "R": 3,
+        "H": 2,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 1,
+        "K": 3,
+        "HR": 0,
+        "SB": 1
+      },
+      {
+        "player": "malik-johnson",
+        "name": "Malik Johnson",
+        "position": "1B",
+        "AB": 4,
+        "R": 1,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 0,
+        "K": 2,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "nico-valente",
+        "name": "Nico Valente",
+        "position": "2B",
+        "AB": 5,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "julian-santoro",
+        "name": "Julian Santoro",
+        "position": "SS",
+        "AB": 4,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 1,
+        "K": 1,
+        "HR": 0,
+        "SB": 1
+      },
+      {
+        "player": "caleb-hawkins",
+        "name": "Caleb Hawkins",
+        "position": "3B",
+        "AB": 3,
+        "R": 0,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 0,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "isaac-morrow",
+        "name": "Isaac Morrow",
+        "position": "CF",
+        "AB": 4,
+        "R": 1,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 3,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "dante-rios",
+        "name": "Dante Rios",
+        "position": "LF",
+        "AB": 4,
+        "R": 0,
+        "H": 3,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 2,
+        "BB": 0,
+        "K": 1,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "cole-ramsey",
+        "name": "Cole Ramsey",
+        "position": "RF",
+        "AB": 5,
+        "R": 0,
+        "H": 2,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 2,
+        "HR": 0,
+        "SB": 0
+      }
+    ],
+    "home": [
+      {
+        "player": "noah-bianchi",
+        "name": "Noah Bianchi",
+        "position": "C",
+        "AB": 4,
+        "R": 2,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 2,
+        "BB": 1,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "mateo-fernandez",
+        "name": "Mateo Fernández",
+        "position": "1B",
+        "AB": 4,
+        "R": 1,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 2,
+        "K": 1,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "jalen-brooks",
+        "name": "Jalen Brooks",
+        "position": "2B",
+        "AB": 4,
+        "R": 0,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 1,
+        "K": 3,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "rafael-costa",
+        "name": "Rafael Costa",
+        "position": "SS",
+        "AB": 4,
+        "R": 1,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 0,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "dominic-russo",
+        "name": "Dominic Russo",
+        "position": "3B",
+        "AB": 5,
+        "R": 1,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 1,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "andre-wallace",
+        "name": "Andre Wallace",
+        "position": "CF",
+        "AB": 3,
+        "R": 0,
+        "H": 2,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 2,
+        "BB": 0,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "tomas-rivas",
+        "name": "Tomás Rivas",
+        "position": "LF",
+        "AB": 5,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 2,
+        "HR": 0,
+        "SB": 1
+      },
+      {
+        "player": "blake-harrison",
+        "name": "Blake Harrison",
+        "position": "RF",
+        "AB": 3,
+        "R": 1,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 2,
+        "HR": 0,
+        "SB": 0
+      }
+    ]
+  },
+  "pitching": {
+    "away": [
+      {
+        "player": "thierry-boucher",
+        "name": "Thierry Boucher",
+        "IP_outs": 19,
+        "H": 4,
+        "R": 0,
+        "ER": 0,
+        "BB": 4,
+        "K": 3,
+        "HR": 0,
+        "IP": 6.1
+      },
+      {
+        "player": "antonio-bela",
+        "name": "Antonio Bela",
+        "IP_outs": 8,
+        "H": 2,
+        "R": 6,
+        "ER": 6,
+        "BB": 1,
+        "K": 5,
+        "HR": 0,
+        "IP": 2.2
+      }
+    ],
+    "home": [
+      {
+        "player": "mateo-alvarez",
+        "name": "Mateo Álvarez",
+        "IP_outs": 18,
+        "H": 4,
+        "R": 0,
+        "ER": 0,
+        "BB": 0,
+        "K": 9,
+        "HR": 0,
+        "IP": 6
+      },
+      {
+        "player": "kieran-walsh",
+        "name": "Kieran Walsh",
+        "IP_outs": 9,
+        "H": 6,
+        "R": 5,
+        "ER": 5,
+        "BB": 2,
+        "K": 3,
+        "HR": 0,
+        "IP": 3
+      }
+    ]
+  },
+  "decisions": {
+    "W": "mateo-alvarez",
+    "L": "thierry-boucher",
+    "SV": null
+  },
+  "notes": []
+}

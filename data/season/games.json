@@ -9758,5 +9758,1125 @@
     "awayScore": 3,
     "status": "final",
     "source": "data/games/2026-08-28/vancouver-current@toledo-assembly.json"
+  },
+  {
+    "id": "2026-08-29_albuquerque-aeros@fresno-yield",
+    "date": "2026-08-29",
+    "home": "fresno-yield",
+    "away": "albuquerque-aeros",
+    "homeScore": 2,
+    "awayScore": 7,
+    "status": "final",
+    "source": "data/games/2026-08-29/albuquerque-aeros@fresno-yield.json"
+  },
+  {
+    "id": "2026-08-29_birmingham-vulcans@louisville-naturals",
+    "date": "2026-08-29",
+    "home": "louisville-naturals",
+    "away": "birmingham-vulcans",
+    "homeScore": 6,
+    "awayScore": 5,
+    "status": "final",
+    "source": "data/games/2026-08-29/birmingham-vulcans@louisville-naturals.json"
+  },
+  {
+    "id": "2026-08-29_durham-gold@spokane-alloys",
+    "date": "2026-08-29",
+    "home": "spokane-alloys",
+    "away": "durham-gold",
+    "homeScore": 4,
+    "awayScore": 3,
+    "status": "final",
+    "source": "data/games/2026-08-29/durham-gold@spokane-alloys.json"
+  },
+  {
+    "id": "2026-08-29_monterrey-cementeros@osaka-spirits",
+    "date": "2026-08-29",
+    "home": "osaka-spirits",
+    "away": "monterrey-cementeros",
+    "homeScore": 2,
+    "awayScore": 6,
+    "status": "final",
+    "source": "data/games/2026-08-29/monterrey-cementeros@osaka-spirits.json"
+  },
+  {
+    "id": "2026-08-29_san-pedro-cocolos@mayaguez-sultans",
+    "date": "2026-08-29",
+    "home": "mayaguez-sultans",
+    "away": "san-pedro-cocolos",
+    "homeScore": 3,
+    "awayScore": 0,
+    "status": "final",
+    "source": "data/games/2026-08-29/san-pedro-cocolos@mayaguez-sultans.json"
+  },
+  {
+    "id": "2026-08-29_st-paul-frost@taipei-neon",
+    "date": "2026-08-29",
+    "home": "taipei-neon",
+    "away": "st-paul-frost",
+    "homeScore": 6,
+    "awayScore": 5,
+    "status": "final",
+    "source": "data/games/2026-08-29/st-paul-frost@taipei-neon.json"
+  },
+  {
+    "id": "2026-08-29_tijuana-tecnicos@santiago-caballeros",
+    "date": "2026-08-29",
+    "home": "santiago-caballeros",
+    "away": "tijuana-tecnicos",
+    "homeScore": 3,
+    "awayScore": 2,
+    "status": "final",
+    "source": "data/games/2026-08-29/tijuana-tecnicos@santiago-caballeros.json"
+  },
+  {
+    "id": "2026-08-29_toledo-assembly@vancouver-current",
+    "date": "2026-08-29",
+    "home": "vancouver-current",
+    "away": "toledo-assembly",
+    "homeScore": 6,
+    "awayScore": 3,
+    "status": "final",
+    "source": "data/games/2026-08-29/toledo-assembly@vancouver-current.json"
+  },
+  {
+    "id": "2026-08-30_birmingham-vulcans@fresno-yield",
+    "date": "2026-08-30",
+    "home": "fresno-yield",
+    "away": "birmingham-vulcans",
+    "homeScore": 4,
+    "awayScore": 6,
+    "status": "final",
+    "source": "data/games/2026-08-30/birmingham-vulcans@fresno-yield.json"
+  },
+  {
+    "id": "2026-08-30_louisville-naturals@albuquerque-aeros",
+    "date": "2026-08-30",
+    "home": "albuquerque-aeros",
+    "away": "louisville-naturals",
+    "homeScore": 6,
+    "awayScore": 5,
+    "status": "final",
+    "source": "data/games/2026-08-30/louisville-naturals@albuquerque-aeros.json"
+  },
+  {
+    "id": "2026-08-30_mayaguez-sultans@durham-gold",
+    "date": "2026-08-30",
+    "home": "durham-gold",
+    "away": "mayaguez-sultans",
+    "homeScore": 8,
+    "awayScore": 0,
+    "status": "final",
+    "source": "data/games/2026-08-30/mayaguez-sultans@durham-gold.json"
+  },
+  {
+    "id": "2026-08-30_monterrey-cementeros@santiago-caballeros",
+    "date": "2026-08-30",
+    "home": "santiago-caballeros",
+    "away": "monterrey-cementeros",
+    "homeScore": 3,
+    "awayScore": 5,
+    "status": "final",
+    "source": "data/games/2026-08-30/monterrey-cementeros@santiago-caballeros.json"
+  },
+  {
+    "id": "2026-08-30_osaka-spirits@spokane-alloys",
+    "date": "2026-08-30",
+    "home": "spokane-alloys",
+    "away": "osaka-spirits",
+    "homeScore": 0,
+    "awayScore": 3,
+    "status": "final",
+    "source": "data/games/2026-08-30/osaka-spirits@spokane-alloys.json"
+  },
+  {
+    "id": "2026-08-30_san-pedro-cocolos@st-paul-frost",
+    "date": "2026-08-30",
+    "home": "st-paul-frost",
+    "away": "san-pedro-cocolos",
+    "homeScore": 2,
+    "awayScore": 4,
+    "status": "final",
+    "source": "data/games/2026-08-30/san-pedro-cocolos@st-paul-frost.json"
+  },
+  {
+    "id": "2026-08-30_taipei-neon@toledo-assembly",
+    "date": "2026-08-30",
+    "home": "toledo-assembly",
+    "away": "taipei-neon",
+    "homeScore": 6,
+    "awayScore": 1,
+    "status": "final",
+    "source": "data/games/2026-08-30/taipei-neon@toledo-assembly.json"
+  },
+  {
+    "id": "2026-08-30_tijuana-tecnicos@vancouver-current",
+    "date": "2026-08-30",
+    "home": "vancouver-current",
+    "away": "tijuana-tecnicos",
+    "homeScore": 4,
+    "awayScore": 5,
+    "status": "final",
+    "source": "data/games/2026-08-30/tijuana-tecnicos@vancouver-current.json"
+  },
+  {
+    "id": "2026-08-31_durham-gold@louisville-naturals",
+    "date": "2026-08-31",
+    "home": "louisville-naturals",
+    "away": "durham-gold",
+    "homeScore": 3,
+    "awayScore": 1,
+    "status": "final",
+    "source": "data/games/2026-08-31/durham-gold@louisville-naturals.json"
+  },
+  {
+    "id": "2026-08-31_mayaguez-sultans@albuquerque-aeros",
+    "date": "2026-08-31",
+    "home": "albuquerque-aeros",
+    "away": "mayaguez-sultans",
+    "homeScore": 2,
+    "awayScore": 1,
+    "status": "final",
+    "source": "data/games/2026-08-31/mayaguez-sultans@albuquerque-aeros.json"
+  },
+  {
+    "id": "2026-08-31_monterrey-cementeros@birmingham-vulcans",
+    "date": "2026-08-31",
+    "home": "birmingham-vulcans",
+    "away": "monterrey-cementeros",
+    "homeScore": 4,
+    "awayScore": 6,
+    "status": "final",
+    "source": "data/games/2026-08-31/monterrey-cementeros@birmingham-vulcans.json"
+  },
+  {
+    "id": "2026-08-31_osaka-spirits@fresno-yield",
+    "date": "2026-08-31",
+    "home": "fresno-yield",
+    "away": "osaka-spirits",
+    "homeScore": 0,
+    "awayScore": 4,
+    "status": "final",
+    "source": "data/games/2026-08-31/osaka-spirits@fresno-yield.json"
+  },
+  {
+    "id": "2026-08-31_san-pedro-cocolos@santiago-caballeros",
+    "date": "2026-08-31",
+    "home": "santiago-caballeros",
+    "away": "san-pedro-cocolos",
+    "homeScore": 4,
+    "awayScore": 2,
+    "status": "final",
+    "source": "data/games/2026-08-31/san-pedro-cocolos@santiago-caballeros.json"
+  },
+  {
+    "id": "2026-08-31_spokane-alloys@st-paul-frost",
+    "date": "2026-08-31",
+    "home": "st-paul-frost",
+    "away": "spokane-alloys",
+    "homeScore": 7,
+    "awayScore": 5,
+    "status": "final",
+    "source": "data/games/2026-08-31/spokane-alloys@st-paul-frost.json"
+  },
+  {
+    "id": "2026-08-31_tijuana-tecnicos@toledo-assembly",
+    "date": "2026-08-31",
+    "home": "toledo-assembly",
+    "away": "tijuana-tecnicos",
+    "homeScore": 4,
+    "awayScore": 2,
+    "status": "final",
+    "source": "data/games/2026-08-31/tijuana-tecnicos@toledo-assembly.json"
+  },
+  {
+    "id": "2026-08-31_vancouver-current@taipei-neon",
+    "date": "2026-08-31",
+    "home": "taipei-neon",
+    "away": "vancouver-current",
+    "homeScore": 0,
+    "awayScore": 1,
+    "status": "final",
+    "source": "data/games/2026-08-31/vancouver-current@taipei-neon.json"
+  },
+  {
+    "id": "2026-09-01_albuquerque-aeros@monterrey-cementeros",
+    "date": "2026-09-01",
+    "home": "monterrey-cementeros",
+    "away": "albuquerque-aeros",
+    "homeScore": 4,
+    "awayScore": 3,
+    "status": "final",
+    "source": "data/games/2026-09-01/albuquerque-aeros@monterrey-cementeros.json"
+  },
+  {
+    "id": "2026-09-01_birmingham-vulcans@mayaguez-sultans",
+    "date": "2026-09-01",
+    "home": "mayaguez-sultans",
+    "away": "birmingham-vulcans",
+    "homeScore": 1,
+    "awayScore": 4,
+    "status": "final",
+    "source": "data/games/2026-09-01/birmingham-vulcans@mayaguez-sultans.json"
+  },
+  {
+    "id": "2026-09-01_fresno-yield@louisville-naturals",
+    "date": "2026-09-01",
+    "home": "louisville-naturals",
+    "away": "fresno-yield",
+    "homeScore": 4,
+    "awayScore": 2,
+    "status": "final",
+    "source": "data/games/2026-09-01/fresno-yield@louisville-naturals.json"
+  },
+  {
+    "id": "2026-09-01_osaka-spirits@durham-gold",
+    "date": "2026-09-01",
+    "home": "durham-gold",
+    "away": "osaka-spirits",
+    "homeScore": 5,
+    "awayScore": 3,
+    "status": "final",
+    "source": "data/games/2026-09-01/osaka-spirits@durham-gold.json"
+  },
+  {
+    "id": "2026-09-01_san-pedro-cocolos@spokane-alloys",
+    "date": "2026-09-01",
+    "home": "spokane-alloys",
+    "away": "san-pedro-cocolos",
+    "homeScore": 1,
+    "awayScore": 3,
+    "status": "final",
+    "source": "data/games/2026-09-01/san-pedro-cocolos@spokane-alloys.json"
+  },
+  {
+    "id": "2026-09-01_santiago-caballeros@toledo-assembly",
+    "date": "2026-09-01",
+    "home": "toledo-assembly",
+    "away": "santiago-caballeros",
+    "homeScore": 3,
+    "awayScore": 5,
+    "status": "final",
+    "source": "data/games/2026-09-01/santiago-caballeros@toledo-assembly.json"
+  },
+  {
+    "id": "2026-09-01_st-paul-frost@vancouver-current",
+    "date": "2026-09-01",
+    "home": "vancouver-current",
+    "away": "st-paul-frost",
+    "homeScore": 4,
+    "awayScore": 3,
+    "status": "final",
+    "source": "data/games/2026-09-01/st-paul-frost@vancouver-current.json"
+  },
+  {
+    "id": "2026-09-01_taipei-neon@tijuana-tecnicos",
+    "date": "2026-09-01",
+    "home": "tijuana-tecnicos",
+    "away": "taipei-neon",
+    "homeScore": 4,
+    "awayScore": 5,
+    "status": "final",
+    "source": "data/games/2026-09-01/taipei-neon@tijuana-tecnicos.json"
+  },
+  {
+    "id": "2026-09-02_birmingham-vulcans@san-pedro-cocolos",
+    "date": "2026-09-02",
+    "home": "san-pedro-cocolos",
+    "away": "birmingham-vulcans",
+    "homeScore": 2,
+    "awayScore": 5,
+    "status": "final",
+    "source": "data/games/2026-09-02/birmingham-vulcans@san-pedro-cocolos.json"
+  },
+  {
+    "id": "2026-09-02_durham-gold@monterrey-cementeros",
+    "date": "2026-09-02",
+    "home": "monterrey-cementeros",
+    "away": "durham-gold",
+    "homeScore": 3,
+    "awayScore": 4,
+    "status": "final",
+    "source": "data/games/2026-09-02/durham-gold@monterrey-cementeros.json"
+  },
+  {
+    "id": "2026-09-02_fresno-yield@mayaguez-sultans",
+    "date": "2026-09-02",
+    "home": "mayaguez-sultans",
+    "away": "fresno-yield",
+    "homeScore": 1,
+    "awayScore": 2,
+    "status": "final",
+    "source": "data/games/2026-09-02/fresno-yield@mayaguez-sultans.json"
+  },
+  {
+    "id": "2026-09-02_louisville-naturals@santiago-caballeros",
+    "date": "2026-09-02",
+    "home": "santiago-caballeros",
+    "away": "louisville-naturals",
+    "homeScore": 2,
+    "awayScore": 8,
+    "status": "final",
+    "source": "data/games/2026-09-02/louisville-naturals@santiago-caballeros.json"
+  },
+  {
+    "id": "2026-09-02_osaka-spirits@albuquerque-aeros",
+    "date": "2026-09-02",
+    "home": "albuquerque-aeros",
+    "away": "osaka-spirits",
+    "homeScore": 5,
+    "awayScore": 3,
+    "status": "final",
+    "source": "data/games/2026-09-02/osaka-spirits@albuquerque-aeros.json"
+  },
+  {
+    "id": "2026-09-02_spokane-alloys@taipei-neon",
+    "date": "2026-09-02",
+    "home": "taipei-neon",
+    "away": "spokane-alloys",
+    "homeScore": 3,
+    "awayScore": 4,
+    "status": "final",
+    "source": "data/games/2026-09-02/spokane-alloys@taipei-neon.json"
+  },
+  {
+    "id": "2026-09-02_toledo-assembly@st-paul-frost",
+    "date": "2026-09-02",
+    "home": "st-paul-frost",
+    "away": "toledo-assembly",
+    "homeScore": 4,
+    "awayScore": 5,
+    "status": "final",
+    "source": "data/games/2026-09-02/toledo-assembly@st-paul-frost.json"
+  },
+  {
+    "id": "2026-09-02_vancouver-current@tijuana-tecnicos",
+    "date": "2026-09-02",
+    "home": "tijuana-tecnicos",
+    "away": "vancouver-current",
+    "homeScore": 2,
+    "awayScore": 5,
+    "status": "final",
+    "source": "data/games/2026-09-02/vancouver-current@tijuana-tecnicos.json"
+  },
+  {
+    "id": "2026-09-03_albuquerque-aeros@san-pedro-cocolos",
+    "date": "2026-09-03",
+    "home": "san-pedro-cocolos",
+    "away": "albuquerque-aeros",
+    "homeScore": 1,
+    "awayScore": 4,
+    "status": "final",
+    "source": "data/games/2026-09-03/albuquerque-aeros@san-pedro-cocolos.json"
+  },
+  {
+    "id": "2026-09-03_louisville-naturals@mayaguez-sultans",
+    "date": "2026-09-03",
+    "home": "mayaguez-sultans",
+    "away": "louisville-naturals",
+    "homeScore": 5,
+    "awayScore": 1,
+    "status": "final",
+    "source": "data/games/2026-09-03/louisville-naturals@mayaguez-sultans.json"
+  },
+  {
+    "id": "2026-09-03_monterrey-cementeros@fresno-yield",
+    "date": "2026-09-03",
+    "home": "fresno-yield",
+    "away": "monterrey-cementeros",
+    "homeScore": 7,
+    "awayScore": 2,
+    "status": "final",
+    "source": "data/games/2026-09-03/monterrey-cementeros@fresno-yield.json"
+  },
+  {
+    "id": "2026-09-03_osaka-spirits@birmingham-vulcans",
+    "date": "2026-09-03",
+    "home": "birmingham-vulcans",
+    "away": "osaka-spirits",
+    "homeScore": 7,
+    "awayScore": 4,
+    "status": "final",
+    "source": "data/games/2026-09-03/osaka-spirits@birmingham-vulcans.json"
+  },
+  {
+    "id": "2026-09-03_santiago-caballeros@durham-gold",
+    "date": "2026-09-03",
+    "home": "durham-gold",
+    "away": "santiago-caballeros",
+    "homeScore": 3,
+    "awayScore": 1,
+    "status": "final",
+    "source": "data/games/2026-09-03/santiago-caballeros@durham-gold.json"
+  },
+  {
+    "id": "2026-09-03_taipei-neon@st-paul-frost",
+    "date": "2026-09-03",
+    "home": "st-paul-frost",
+    "away": "taipei-neon",
+    "homeScore": 5,
+    "awayScore": 2,
+    "status": "final",
+    "source": "data/games/2026-09-03/taipei-neon@st-paul-frost.json"
+  },
+  {
+    "id": "2026-09-03_tijuana-tecnicos@spokane-alloys",
+    "date": "2026-09-03",
+    "home": "spokane-alloys",
+    "away": "tijuana-tecnicos",
+    "homeScore": 6,
+    "awayScore": 4,
+    "status": "final",
+    "source": "data/games/2026-09-03/tijuana-tecnicos@spokane-alloys.json"
+  },
+  {
+    "id": "2026-09-03_vancouver-current@toledo-assembly",
+    "date": "2026-09-03",
+    "home": "toledo-assembly",
+    "away": "vancouver-current",
+    "homeScore": 7,
+    "awayScore": 2,
+    "status": "final",
+    "source": "data/games/2026-09-03/vancouver-current@toledo-assembly.json"
+  },
+  {
+    "id": "2026-09-05_durham-gold@san-pedro-cocolos",
+    "date": "2026-09-05",
+    "home": "san-pedro-cocolos",
+    "away": "durham-gold",
+    "homeScore": 1,
+    "awayScore": 2,
+    "status": "final",
+    "source": "data/games/2026-09-05/durham-gold@san-pedro-cocolos.json"
+  },
+  {
+    "id": "2026-09-05_louisville-naturals@monterrey-cementeros",
+    "date": "2026-09-05",
+    "home": "monterrey-cementeros",
+    "away": "louisville-naturals",
+    "homeScore": 4,
+    "awayScore": 2,
+    "status": "final",
+    "source": "data/games/2026-09-05/louisville-naturals@monterrey-cementeros.json"
+  },
+  {
+    "id": "2026-09-05_mayaguez-sultans@taipei-neon",
+    "date": "2026-09-05",
+    "home": "taipei-neon",
+    "away": "mayaguez-sultans",
+    "homeScore": 6,
+    "awayScore": 4,
+    "status": "final",
+    "source": "data/games/2026-09-05/mayaguez-sultans@taipei-neon.json"
+  },
+  {
+    "id": "2026-09-05_santiago-caballeros@albuquerque-aeros",
+    "date": "2026-09-05",
+    "home": "albuquerque-aeros",
+    "away": "santiago-caballeros",
+    "homeScore": 3,
+    "awayScore": 1,
+    "status": "final",
+    "source": "data/games/2026-09-05/santiago-caballeros@albuquerque-aeros.json"
+  },
+  {
+    "id": "2026-09-05_spokane-alloys@birmingham-vulcans",
+    "date": "2026-09-05",
+    "home": "birmingham-vulcans",
+    "away": "spokane-alloys",
+    "homeScore": 8,
+    "awayScore": 7,
+    "status": "final",
+    "source": "data/games/2026-09-05/spokane-alloys@birmingham-vulcans.json"
+  },
+  {
+    "id": "2026-09-05_st-paul-frost@fresno-yield",
+    "date": "2026-09-05",
+    "home": "fresno-yield",
+    "away": "st-paul-frost",
+    "homeScore": 6,
+    "awayScore": 3,
+    "status": "final",
+    "source": "data/games/2026-09-05/st-paul-frost@fresno-yield.json"
+  },
+  {
+    "id": "2026-09-05_tijuana-tecnicos@osaka-spirits",
+    "date": "2026-09-05",
+    "home": "osaka-spirits",
+    "away": "tijuana-tecnicos",
+    "homeScore": 12,
+    "awayScore": 3,
+    "status": "final",
+    "source": "data/games/2026-09-05/tijuana-tecnicos@osaka-spirits.json"
+  },
+  {
+    "id": "2026-09-05_toledo-assembly@vancouver-current",
+    "date": "2026-09-05",
+    "home": "vancouver-current",
+    "away": "toledo-assembly",
+    "homeScore": 6,
+    "awayScore": 0,
+    "status": "final",
+    "source": "data/games/2026-09-05/toledo-assembly@vancouver-current.json"
+  },
+  {
+    "id": "2026-09-06_albuquerque-aeros@spokane-alloys",
+    "date": "2026-09-06",
+    "home": "spokane-alloys",
+    "away": "albuquerque-aeros",
+    "homeScore": 5,
+    "awayScore": 2,
+    "status": "final",
+    "source": "data/games/2026-09-06/albuquerque-aeros@spokane-alloys.json"
+  },
+  {
+    "id": "2026-09-06_birmingham-vulcans@santiago-caballeros",
+    "date": "2026-09-06",
+    "home": "santiago-caballeros",
+    "away": "birmingham-vulcans",
+    "homeScore": 3,
+    "awayScore": 5,
+    "status": "final",
+    "source": "data/games/2026-09-06/birmingham-vulcans@santiago-caballeros.json"
+  },
+  {
+    "id": "2026-09-06_fresno-yield@san-pedro-cocolos",
+    "date": "2026-09-06",
+    "home": "san-pedro-cocolos",
+    "away": "fresno-yield",
+    "homeScore": 4,
+    "awayScore": 5,
+    "status": "final",
+    "source": "data/games/2026-09-06/fresno-yield@san-pedro-cocolos.json"
+  },
+  {
+    "id": "2026-09-06_louisville-naturals@osaka-spirits",
+    "date": "2026-09-06",
+    "home": "osaka-spirits",
+    "away": "louisville-naturals",
+    "homeScore": 6,
+    "awayScore": 3,
+    "status": "final",
+    "source": "data/games/2026-09-06/louisville-naturals@osaka-spirits.json"
+  },
+  {
+    "id": "2026-09-06_mayaguez-sultans@tijuana-tecnicos",
+    "date": "2026-09-06",
+    "home": "tijuana-tecnicos",
+    "away": "mayaguez-sultans",
+    "homeScore": 6,
+    "awayScore": 7,
+    "status": "final",
+    "source": "data/games/2026-09-06/mayaguez-sultans@tijuana-tecnicos.json"
+  },
+  {
+    "id": "2026-09-06_monterrey-cementeros@taipei-neon",
+    "date": "2026-09-06",
+    "home": "taipei-neon",
+    "away": "monterrey-cementeros",
+    "homeScore": 7,
+    "awayScore": 3,
+    "status": "final",
+    "source": "data/games/2026-09-06/monterrey-cementeros@taipei-neon.json"
+  },
+  {
+    "id": "2026-09-06_st-paul-frost@durham-gold",
+    "date": "2026-09-06",
+    "home": "durham-gold",
+    "away": "st-paul-frost",
+    "homeScore": 0,
+    "awayScore": 1,
+    "status": "final",
+    "source": "data/games/2026-09-06/st-paul-frost@durham-gold.json"
+  },
+  {
+    "id": "2026-09-06_vancouver-current@toledo-assembly",
+    "date": "2026-09-06",
+    "home": "toledo-assembly",
+    "away": "vancouver-current",
+    "homeScore": 3,
+    "awayScore": 4,
+    "status": "final",
+    "source": "data/games/2026-09-06/vancouver-current@toledo-assembly.json"
+  },
+  {
+    "id": "2026-09-07_durham-gold@spokane-alloys",
+    "date": "2026-09-07",
+    "home": "spokane-alloys",
+    "away": "durham-gold",
+    "homeScore": 0,
+    "awayScore": 2,
+    "status": "final",
+    "source": "data/games/2026-09-07/durham-gold@spokane-alloys.json"
+  },
+  {
+    "id": "2026-09-07_fresno-yield@santiago-caballeros",
+    "date": "2026-09-07",
+    "home": "santiago-caballeros",
+    "away": "fresno-yield",
+    "homeScore": 6,
+    "awayScore": 4,
+    "status": "final",
+    "source": "data/games/2026-09-07/fresno-yield@santiago-caballeros.json"
+  },
+  {
+    "id": "2026-09-07_monterrey-cementeros@tijuana-tecnicos",
+    "date": "2026-09-07",
+    "home": "tijuana-tecnicos",
+    "away": "monterrey-cementeros",
+    "homeScore": 6,
+    "awayScore": 5,
+    "status": "final",
+    "source": "data/games/2026-09-07/monterrey-cementeros@tijuana-tecnicos.json"
+  },
+  {
+    "id": "2026-09-07_osaka-spirits@vancouver-current",
+    "date": "2026-09-07",
+    "home": "vancouver-current",
+    "away": "osaka-spirits",
+    "homeScore": 5,
+    "awayScore": 4,
+    "status": "final",
+    "source": "data/games/2026-09-07/osaka-spirits@vancouver-current.json"
+  },
+  {
+    "id": "2026-09-07_san-pedro-cocolos@louisville-naturals",
+    "date": "2026-09-07",
+    "home": "louisville-naturals",
+    "away": "san-pedro-cocolos",
+    "homeScore": 5,
+    "awayScore": 2,
+    "status": "final",
+    "source": "data/games/2026-09-07/san-pedro-cocolos@louisville-naturals.json"
+  },
+  {
+    "id": "2026-09-07_st-paul-frost@albuquerque-aeros",
+    "date": "2026-09-07",
+    "home": "albuquerque-aeros",
+    "away": "st-paul-frost",
+    "homeScore": 1,
+    "awayScore": 11,
+    "status": "final",
+    "source": "data/games/2026-09-07/st-paul-frost@albuquerque-aeros.json"
+  },
+  {
+    "id": "2026-09-07_taipei-neon@birmingham-vulcans",
+    "date": "2026-09-07",
+    "home": "birmingham-vulcans",
+    "away": "taipei-neon",
+    "homeScore": 0,
+    "awayScore": 3,
+    "status": "final",
+    "source": "data/games/2026-09-07/taipei-neon@birmingham-vulcans.json"
+  },
+  {
+    "id": "2026-09-07_toledo-assembly@mayaguez-sultans",
+    "date": "2026-09-07",
+    "home": "mayaguez-sultans",
+    "away": "toledo-assembly",
+    "homeScore": 3,
+    "awayScore": 1,
+    "status": "final",
+    "source": "data/games/2026-09-07/toledo-assembly@mayaguez-sultans.json"
+  },
+  {
+    "id": "2026-09-08_birmingham-vulcans@st-paul-frost",
+    "date": "2026-09-08",
+    "home": "st-paul-frost",
+    "away": "birmingham-vulcans",
+    "homeScore": 7,
+    "awayScore": 8,
+    "status": "final",
+    "source": "data/games/2026-09-08/birmingham-vulcans@st-paul-frost.json"
+  },
+  {
+    "id": "2026-09-08_mayaguez-sultans@santiago-caballeros",
+    "date": "2026-09-08",
+    "home": "santiago-caballeros",
+    "away": "mayaguez-sultans",
+    "homeScore": 4,
+    "awayScore": 6,
+    "status": "final",
+    "source": "data/games/2026-09-08/mayaguez-sultans@santiago-caballeros.json"
+  },
+  {
+    "id": "2026-09-08_san-pedro-cocolos@osaka-spirits",
+    "date": "2026-09-08",
+    "home": "osaka-spirits",
+    "away": "san-pedro-cocolos",
+    "homeScore": 5,
+    "awayScore": 6,
+    "status": "final",
+    "source": "data/games/2026-09-08/san-pedro-cocolos@osaka-spirits.json"
+  },
+  {
+    "id": "2026-09-08_spokane-alloys@monterrey-cementeros",
+    "date": "2026-09-08",
+    "home": "monterrey-cementeros",
+    "away": "spokane-alloys",
+    "homeScore": 3,
+    "awayScore": 8,
+    "status": "final",
+    "source": "data/games/2026-09-08/spokane-alloys@monterrey-cementeros.json"
+  },
+  {
+    "id": "2026-09-08_taipei-neon@albuquerque-aeros",
+    "date": "2026-09-08",
+    "home": "albuquerque-aeros",
+    "away": "taipei-neon",
+    "homeScore": 5,
+    "awayScore": 4,
+    "status": "final",
+    "source": "data/games/2026-09-08/taipei-neon@albuquerque-aeros.json"
+  },
+  {
+    "id": "2026-09-08_tijuana-tecnicos@durham-gold",
+    "date": "2026-09-08",
+    "home": "durham-gold",
+    "away": "tijuana-tecnicos",
+    "homeScore": 5,
+    "awayScore": 2,
+    "status": "final",
+    "source": "data/games/2026-09-08/tijuana-tecnicos@durham-gold.json"
+  },
+  {
+    "id": "2026-09-08_toledo-assembly@fresno-yield",
+    "date": "2026-09-08",
+    "home": "fresno-yield",
+    "away": "toledo-assembly",
+    "homeScore": 3,
+    "awayScore": 2,
+    "status": "final",
+    "source": "data/games/2026-09-08/toledo-assembly@fresno-yield.json"
+  },
+  {
+    "id": "2026-09-08_vancouver-current@louisville-naturals",
+    "date": "2026-09-08",
+    "home": "louisville-naturals",
+    "away": "vancouver-current",
+    "homeScore": 5,
+    "awayScore": 0,
+    "status": "final",
+    "source": "data/games/2026-09-08/vancouver-current@louisville-naturals.json"
+  },
+  {
+    "id": "2026-09-09_albuquerque-aeros@tijuana-tecnicos",
+    "date": "2026-09-09",
+    "home": "tijuana-tecnicos",
+    "away": "albuquerque-aeros",
+    "homeScore": 4,
+    "awayScore": 3,
+    "status": "final",
+    "source": "data/games/2026-09-09/albuquerque-aeros@tijuana-tecnicos.json"
+  },
+  {
+    "id": "2026-09-09_durham-gold@taipei-neon",
+    "date": "2026-09-09",
+    "home": "taipei-neon",
+    "away": "durham-gold",
+    "homeScore": 3,
+    "awayScore": 2,
+    "status": "final",
+    "source": "data/games/2026-09-09/durham-gold@taipei-neon.json"
+  },
+  {
+    "id": "2026-09-09_fresno-yield@vancouver-current",
+    "date": "2026-09-09",
+    "home": "vancouver-current",
+    "away": "fresno-yield",
+    "homeScore": 4,
+    "awayScore": 2,
+    "status": "final",
+    "source": "data/games/2026-09-09/fresno-yield@vancouver-current.json"
+  },
+  {
+    "id": "2026-09-09_louisville-naturals@st-paul-frost",
+    "date": "2026-09-09",
+    "home": "st-paul-frost",
+    "away": "louisville-naturals",
+    "homeScore": 4,
+    "awayScore": 3,
+    "status": "final",
+    "source": "data/games/2026-09-09/louisville-naturals@st-paul-frost.json"
+  },
+  {
+    "id": "2026-09-09_mayaguez-sultans@spokane-alloys",
+    "date": "2026-09-09",
+    "home": "spokane-alloys",
+    "away": "mayaguez-sultans",
+    "homeScore": 6,
+    "awayScore": 5,
+    "status": "final",
+    "source": "data/games/2026-09-09/mayaguez-sultans@spokane-alloys.json"
+  },
+  {
+    "id": "2026-09-09_osaka-spirits@monterrey-cementeros",
+    "date": "2026-09-09",
+    "home": "monterrey-cementeros",
+    "away": "osaka-spirits",
+    "homeScore": 0,
+    "awayScore": 6,
+    "status": "final",
+    "source": "data/games/2026-09-09/osaka-spirits@monterrey-cementeros.json"
+  },
+  {
+    "id": "2026-09-09_santiago-caballeros@san-pedro-cocolos",
+    "date": "2026-09-09",
+    "home": "san-pedro-cocolos",
+    "away": "santiago-caballeros",
+    "homeScore": 5,
+    "awayScore": 7,
+    "status": "final",
+    "source": "data/games/2026-09-09/santiago-caballeros@san-pedro-cocolos.json"
+  },
+  {
+    "id": "2026-09-09_toledo-assembly@birmingham-vulcans",
+    "date": "2026-09-09",
+    "home": "birmingham-vulcans",
+    "away": "toledo-assembly",
+    "homeScore": 1,
+    "awayScore": 3,
+    "status": "final",
+    "source": "data/games/2026-09-09/toledo-assembly@birmingham-vulcans.json"
+  },
+  {
+    "id": "2026-09-10_albuquerque-aeros@toledo-assembly",
+    "date": "2026-09-10",
+    "home": "toledo-assembly",
+    "away": "albuquerque-aeros",
+    "homeScore": 3,
+    "awayScore": 7,
+    "status": "final",
+    "source": "data/games/2026-09-10/albuquerque-aeros@toledo-assembly.json"
+  },
+  {
+    "id": "2026-09-10_mayaguez-sultans@louisville-naturals",
+    "date": "2026-09-10",
+    "home": "louisville-naturals",
+    "away": "mayaguez-sultans",
+    "homeScore": 0,
+    "awayScore": 2,
+    "status": "final",
+    "source": "data/games/2026-09-10/mayaguez-sultans@louisville-naturals.json"
+  },
+  {
+    "id": "2026-09-10_monterrey-cementeros@st-paul-frost",
+    "date": "2026-09-10",
+    "home": "st-paul-frost",
+    "away": "monterrey-cementeros",
+    "homeScore": 3,
+    "awayScore": 4,
+    "status": "final",
+    "source": "data/games/2026-09-10/monterrey-cementeros@st-paul-frost.json"
+  },
+  {
+    "id": "2026-09-10_santiago-caballeros@osaka-spirits",
+    "date": "2026-09-10",
+    "home": "osaka-spirits",
+    "away": "santiago-caballeros",
+    "homeScore": 4,
+    "awayScore": 2,
+    "status": "final",
+    "source": "data/games/2026-09-10/santiago-caballeros@osaka-spirits.json"
+  },
+  {
+    "id": "2026-09-10_spokane-alloys@san-pedro-cocolos",
+    "date": "2026-09-10",
+    "home": "san-pedro-cocolos",
+    "away": "spokane-alloys",
+    "homeScore": 2,
+    "awayScore": 7,
+    "status": "final",
+    "source": "data/games/2026-09-10/spokane-alloys@san-pedro-cocolos.json"
+  },
+  {
+    "id": "2026-09-10_taipei-neon@fresno-yield",
+    "date": "2026-09-10",
+    "home": "fresno-yield",
+    "away": "taipei-neon",
+    "homeScore": 3,
+    "awayScore": 2,
+    "status": "final",
+    "source": "data/games/2026-09-10/taipei-neon@fresno-yield.json"
+  },
+  {
+    "id": "2026-09-10_tijuana-tecnicos@birmingham-vulcans",
+    "date": "2026-09-10",
+    "home": "birmingham-vulcans",
+    "away": "tijuana-tecnicos",
+    "homeScore": 10,
+    "awayScore": 2,
+    "status": "final",
+    "source": "data/games/2026-09-10/tijuana-tecnicos@birmingham-vulcans.json"
+  },
+  {
+    "id": "2026-09-10_vancouver-current@durham-gold",
+    "date": "2026-09-10",
+    "home": "durham-gold",
+    "away": "vancouver-current",
+    "homeScore": 4,
+    "awayScore": 3,
+    "status": "final",
+    "source": "data/games/2026-09-10/vancouver-current@durham-gold.json"
+  },
+  {
+    "id": "2026-09-12_durham-gold@birmingham-vulcans",
+    "date": "2026-09-12",
+    "home": "birmingham-vulcans",
+    "away": "durham-gold",
+    "homeScore": 2,
+    "awayScore": 3,
+    "status": "final",
+    "source": "data/games/2026-09-12/durham-gold@birmingham-vulcans.json"
+  },
+  {
+    "id": "2026-09-12_fresno-yield@tijuana-tecnicos",
+    "date": "2026-09-12",
+    "home": "tijuana-tecnicos",
+    "away": "fresno-yield",
+    "homeScore": 5,
+    "awayScore": 3,
+    "status": "final",
+    "source": "data/games/2026-09-12/fresno-yield@tijuana-tecnicos.json"
+  },
+  {
+    "id": "2026-09-12_louisville-naturals@taipei-neon",
+    "date": "2026-09-12",
+    "home": "taipei-neon",
+    "away": "louisville-naturals",
+    "homeScore": 7,
+    "awayScore": 1,
+    "status": "final",
+    "source": "data/games/2026-09-12/louisville-naturals@taipei-neon.json"
+  },
+  {
+    "id": "2026-09-12_monterrey-cementeros@toledo-assembly",
+    "date": "2026-09-12",
+    "home": "toledo-assembly",
+    "away": "monterrey-cementeros",
+    "homeScore": 7,
+    "awayScore": 5,
+    "status": "final",
+    "source": "data/games/2026-09-12/monterrey-cementeros@toledo-assembly.json"
+  },
+  {
+    "id": "2026-09-12_san-pedro-cocolos@spokane-alloys",
+    "date": "2026-09-12",
+    "home": "spokane-alloys",
+    "away": "san-pedro-cocolos",
+    "homeScore": 3,
+    "awayScore": 2,
+    "status": "final",
+    "source": "data/games/2026-09-12/san-pedro-cocolos@spokane-alloys.json"
+  },
+  {
+    "id": "2026-09-12_santiago-caballeros@osaka-spirits",
+    "date": "2026-09-12",
+    "home": "osaka-spirits",
+    "away": "santiago-caballeros",
+    "homeScore": 6,
+    "awayScore": 2,
+    "status": "final",
+    "source": "data/games/2026-09-12/santiago-caballeros@osaka-spirits.json"
+  },
+  {
+    "id": "2026-09-12_st-paul-frost@mayaguez-sultans",
+    "date": "2026-09-12",
+    "home": "mayaguez-sultans",
+    "away": "st-paul-frost",
+    "homeScore": 2,
+    "awayScore": 1,
+    "status": "final",
+    "source": "data/games/2026-09-12/st-paul-frost@mayaguez-sultans.json"
+  },
+  {
+    "id": "2026-09-12_vancouver-current@albuquerque-aeros",
+    "date": "2026-09-12",
+    "home": "albuquerque-aeros",
+    "away": "vancouver-current",
+    "homeScore": 2,
+    "awayScore": 8,
+    "status": "final",
+    "source": "data/games/2026-09-12/vancouver-current@albuquerque-aeros.json"
+  },
+  {
+    "id": "2026-09-13_birmingham-vulcans@albuquerque-aeros",
+    "date": "2026-09-13",
+    "home": "albuquerque-aeros",
+    "away": "birmingham-vulcans",
+    "homeScore": 8,
+    "awayScore": 2,
+    "status": "final",
+    "source": "data/games/2026-09-13/birmingham-vulcans@albuquerque-aeros.json"
+  },
+  {
+    "id": "2026-09-13_louisville-naturals@fresno-yield",
+    "date": "2026-09-13",
+    "home": "fresno-yield",
+    "away": "louisville-naturals",
+    "homeScore": 5,
+    "awayScore": 0,
+    "status": "final",
+    "source": "data/games/2026-09-13/louisville-naturals@fresno-yield.json"
+  },
+  {
+    "id": "2026-09-13_mayaguez-sultans@vancouver-current",
+    "date": "2026-09-13",
+    "home": "vancouver-current",
+    "away": "mayaguez-sultans",
+    "homeScore": 1,
+    "awayScore": 2,
+    "status": "final",
+    "source": "data/games/2026-09-13/mayaguez-sultans@vancouver-current.json"
+  },
+  {
+    "id": "2026-09-13_osaka-spirits@st-paul-frost",
+    "date": "2026-09-13",
+    "home": "st-paul-frost",
+    "away": "osaka-spirits",
+    "homeScore": 3,
+    "awayScore": 2,
+    "status": "final",
+    "source": "data/games/2026-09-13/osaka-spirits@st-paul-frost.json"
+  },
+  {
+    "id": "2026-09-13_san-pedro-cocolos@monterrey-cementeros",
+    "date": "2026-09-13",
+    "home": "monterrey-cementeros",
+    "away": "san-pedro-cocolos",
+    "homeScore": 4,
+    "awayScore": 1,
+    "status": "final",
+    "source": "data/games/2026-09-13/san-pedro-cocolos@monterrey-cementeros.json"
+  },
+  {
+    "id": "2026-09-13_spokane-alloys@santiago-caballeros",
+    "date": "2026-09-13",
+    "home": "santiago-caballeros",
+    "away": "spokane-alloys",
+    "homeScore": 5,
+    "awayScore": 3,
+    "status": "final",
+    "source": "data/games/2026-09-13/spokane-alloys@santiago-caballeros.json"
+  },
+  {
+    "id": "2026-09-13_taipei-neon@tijuana-tecnicos",
+    "date": "2026-09-13",
+    "home": "tijuana-tecnicos",
+    "away": "taipei-neon",
+    "homeScore": 1,
+    "awayScore": 5,
+    "status": "final",
+    "source": "data/games/2026-09-13/taipei-neon@tijuana-tecnicos.json"
+  },
+  {
+    "id": "2026-09-13_toledo-assembly@durham-gold",
+    "date": "2026-09-13",
+    "home": "durham-gold",
+    "away": "toledo-assembly",
+    "homeScore": 6,
+    "awayScore": 0,
+    "status": "final",
+    "source": "data/games/2026-09-13/toledo-assembly@durham-gold.json"
   }
 ]

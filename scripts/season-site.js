@@ -165,7 +165,9 @@
           `team.html?team=${encodeURIComponent(form.row.slug)}`);
         const homerLeader = leaders.batting?.HR?.[0];
         if (homerLeader) setStory(2, 'Player Watch',
-          `${homerLeader.player} leads GLB with ${homerLeader.value} home runs`,
+          Number(leaders.batting.HR?.[1]?.value) === Number(homerLeader.value)
+            ? `${homerLeader.player} shares the GLB home-run lead at ${homerLeader.value}`
+            : `${homerLeader.player} leads GLB with ${homerLeader.value} home runs`,
           `${homerLeader.team} · Season 1`,
           `player.html?team=${encodeURIComponent(homerLeader.team_slug)}&player=${encodeURIComponent(homerLeader.player_slug)}`);
       }

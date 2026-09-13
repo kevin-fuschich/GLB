@@ -378,6 +378,7 @@ function main() {
   const playerTotals = aggregatePlayers(games, playerIndex, warnings);
   writeJson(path.join(SEASON_DIR, 'player-stats.json'), serializablePlayerTotals(playerTotals));
   writeJson(path.join(CURRENT_DIR, 'leaders.json'), buildLeaders(playerTotals, asOf));
+  writeJson(path.join(CURRENT_DIR, 'today.json'), { date: asOf });
 
   const richGames = games.filter(game => game.batting && game.pitching).length;
   console.log(`Rebuilt GLB data from ${games.length} official box score(s); ${richGames} include player lines.`);

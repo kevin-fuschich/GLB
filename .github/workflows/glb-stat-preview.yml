@@ -27,6 +27,9 @@ jobs:
       - name: Generate deterministic preview
         run: node tools/generate-season-v3.js
 
+      - name: Recalculate pitching decisions
+        run: node tools/assign-pitching-decisions.js
+
       - name: Validate preview reconciliation
         run: node tools/validate-stat-preview.js
 

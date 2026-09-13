@@ -62,6 +62,8 @@
         fetchJSON('data/season/games.json'), fetchJSON('data/season/player-stats.json'), fetchJSON('current/leaders.json')
       ]);
       for (const team of Object.values(teams.divisions).flat()) names.set(team.slug, team.team);
+      const progress = Math.round(100 * games.length / (names.size * 162 / 2));
+      $$('.header-meta').forEach(el => el.textContent = `Season 1 · ${progress}% complete`);
       if (page === 'standings') {
         const sections = $$('.standings-block .division');
         for (const [section, division] of sections.map(s => [s, s.querySelector('h2').id.startsWith('pacific') ? 'Pacific' : 'Americas'])) {
@@ -118,8 +120,9 @@
         }));
         const heroCopy = $('.hero-deck');
         if (heroCopy) heroCopy.textContent = `${games.length} official games recorded through ${dateText(standings.as_of)}. Explore the season results and club standings.`;
+        const heroTitle = $('.hero-title'); if (heroTitle) heroTitle.textContent = 'Global League Baseball Season 1';
         const headlines = $$('.news-headline');
-        if (headlines[0]) headlines[0].textContent = 'The league reaches 75% of its inaugural season';
+        if (headlines[0]) headlines[0].textContent = `${games.length} games recorded in the inaugural season`;
         if (headlines[1]) headlines[1].textContent = 'Club standings and player leaders updated';
         if (headlines[2]) headlines[2].textContent = 'Explore box scores from across the league';
       }

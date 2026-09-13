@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "status": "branch-proposed",
+  "source": {"season": 2026, "seed": 2026, "sample_games_per_team": 48},
+  "principle": "These are stable priors for future simulations so recognizable players and team styles persist across reruns.",
+  "marquee_players": [
+    {"team":"tijuana-tecnicos","player":"emilio-barron","name":"Emilio Barrón","position":"LF","archetype":"power-bat","baseline_talent":0.972},
+    {"team":"albuquerque-aeros","player":"rui-damas","name":"Rui Damas","position":"C","archetype":"power-bat","baseline_talent":0.968},
+    {"team":"st-paul-frost","player":"malik-jefferson","name":"Malik Jefferson","position":"CF","archetype":"power-bat","baseline_talent":0.963},
+    {"team":"spokane-alloys","player":"lukas-havel","name":"Lukas Havel","position":"SP","archetype":"ace","baseline_talent":0.955},
+    {"team":"mayaguez-sultans","player":"nils-adebayo","name":"Nils Adebayo","position":"2B","archetype":"power-bat","baseline_talent":0.949},
+    {"team":"toledo-assembly","player":"evan-trelawny","name":"Evan Trelawny","position":"SS","archetype":"power-bat","baseline_talent":0.948},
+    {"team":"santiago-caballeros","player":"damian-velasquez","name":"Damián Velásquez","position":"C","archetype":"power-bat","baseline_talent":0.945},
+    {"team":"monterrey-cementeros","player":"julian-sauri","name":"Julián Sauri","position":"C","archetype":"power-bat","baseline_talent":0.941},
+    {"team":"mayaguez-sultans","player":"malik-doumbia","name":"Malik Doumbia","position":"LF","archetype":"power-bat","baseline_talent":0.939},
+    {"team":"spokane-alloys","player":"wyatt-hollander","name":"Wyatt Hollander","position":"CF","archetype":"impact-all-around","baseline_talent":0.937},
+    {"team":"spokane-alloys","player":"kellan-brynden","name":"Kellan Brynden","position":"SP","archetype":"ace","baseline_talent":0.927},
+    {"team":"santiago-caballeros","player":"emin-kocak","name":"Emin Koçak","position":"RP","archetype":"elite-reliever","baseline_talent":0.927}
+  ],
+  "team_identities": [
+    {"slug":"albuquerque-aeros","style":"offense-forward"},
+    {"slug":"birmingham-vulcans","style":"offense-forward"},
+    {"slug":"durham-gold","style":"balanced-contender"},
+    {"slug":"fresno-yield","style":"rebuilding"},
+    {"slug":"louisville-naturals","style":"balanced"},
+    {"slug":"mayaguez-sultans","style":"offense-forward"},
+    {"slug":"monterrey-cementeros","style":"run-prevention"},
+    {"slug":"osaka-spirits","style":"rebuilding"},
+    {"slug":"san-pedro-cocolos","style":"pitching-dependent"},
+    {"slug":"santiago-caballeros","style":"balanced-contender"},
+    {"slug":"spokane-alloys","style":"run-prevention"},
+    {"slug":"st-paul-frost","style":"rebuilding"},
+    {"slug":"taipei-neon","style":"balanced"},
+    {"slug":"tijuana-tecnicos","style":"offense-forward"},
+    {"slug":"toledo-assembly","style":"run-prevention"},
+    {"slug":"vancouver-current","style":"slug-and-survive"}
+  ]
+}

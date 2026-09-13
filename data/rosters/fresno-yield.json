@@ -1,7 +1,7 @@
 {
   "team": "Fresno Yield",
   "players": [
-    { "name": "Román Velasco", "slug": "roman-velasco", "position": "SP", "bats": "R", "throws": "R", "age": 29, "photo": "roman-velasco.jpg" },
+    { "name": "Román Villaseñor", "slug": "roman-villasenor", "position": "SP", "bats": "R", "throws": "R", "age": 29, "photo": "roman-villasenor.jpg" },
     { "name": "Cedric Wainwright", "slug": "cedric-wainwright", "position": "SP", "bats": "L", "throws": "L", "age": 27, "photo": "cedric-wainwright.jpg" },
     { "name": "Kenji Takamori", "slug": "kenji-takamori", "position": "SP", "bats": "R", "throws": "R", "age": 26, "photo": "kenji-takamori.jpg" },
     { "name": "Arinze Nwokoye", "slug": "arinze-nwokoye", "position": "SP", "bats": "R", "throws": "R", "age": 31, "photo": "arinze-nwokoye.jpg" },

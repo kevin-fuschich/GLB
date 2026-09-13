@@ -52,6 +52,8 @@
       return `assets/images/players/spokane-alloys/spokane-${player.slug}.png`;
     if (player.teamSlug === 'albuquerque-aeros')
       return `assets/teams/albuquerque-aeros/images/players/albuquerque-${player.slug}${player.slug === 'carmine-sforza' ? '.pthinnng' : ''}.png`;
+    if (player.teamSlug === 'durham-gold')
+      return `assets/images/players/durham-gold/durham-${player.slug}.jpg`;
     return null;
   }
   function text(tag, value, className) {
@@ -65,7 +67,8 @@
     card.className = 'glb-player-card';
     if (link) card.href = `player.html?team=${encodeURIComponent(player.teamSlug)}&player=${encodeURIComponent(player.slug)}`;
     card.setAttribute('aria-label', `${player.name}, ${player.position}, ${player.teamName} player card`);
-    const palette = palettes[[...player.teamSlug].reduce((sum, char) => sum + char.charCodeAt(0), 0) % palettes.length];
+    const palette = player.teamSlug === 'durham-gold' ? ['#18283d', '#d9ad65'] :
+      palettes[[...player.teamSlug].reduce((sum, char) => sum + char.charCodeAt(0), 0) % palettes.length];
     card.style.setProperty('--player-deep', palette[0]);
     card.style.setProperty('--player-accent', palette[1]);
     const top = text('div', '', 'glb-player-card__top');

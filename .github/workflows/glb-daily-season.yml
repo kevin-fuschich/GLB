@@ -1,6 +1,10 @@
 name: GLB Daily Season
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/glb-daily-season.yml
   schedule:
     # 6 a.m. New York in daylight/standard time. The runner skips the 5 a.m. tick.
     - cron: '0 10 * * *'

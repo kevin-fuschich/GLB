@@ -159,7 +159,7 @@
           }
         }
         select.addEventListener('change', renderMonth); controls.append(select);
-        sheet.append(controls, list); renderMonth();
+        sheet.insertBefore(controls, sheet.querySelector('footer'));\n        sheet.insertBefore(list, sheet.querySelector('footer')); renderMonth();
       }
       if (page === 'scores') {
         const select = $('#month');

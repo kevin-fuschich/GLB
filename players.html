@@ -1,22 +1,80 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>GLB Players</title><link rel="stylesheet" href="season.css"><style>.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px}.player{border:1px solid var(--line);background:#fff;padding:13px;color:var(--ink);text-decoration:none}.player:hover{background:#f0ede5}.player span{display:block;color:#526273;font-size:.9rem}.filters{display:flex;gap:16px;flex-wrap:wrap}.filters input,.filters select{padding:9px;font:inherit;min-width:200px}</style></head><body><header><nav><a href="index.html">GLB Home</a><a href="teams.html">Teams</a><a href="standings.html">Standings</a><a href="stats.html">Player Stats</a></nav><h1>Player Directory</h1><div>All active GLB rosters</div></header><main><p id="count">Loading players…</p><div class="panel"><div class="filters"><div><label for="search">Find a player</label><input id="search" type="search" placeholder="Name"></div><div><label for="club">Club</label><select id="club"><option value="">All clubs</option></select></div></div><div class="grid" id="players"></div></div></main><script>
-(async()=>{
- const get=async path=>{const r=await fetch(path,{cache:'no-store'});if(!r.ok)throw Error(`${path}: ${r.status}`);return r.json()};
- try{
-  const registry=await get('data/teams/teams.json');const teams=Object.values(registry.divisions).flat();
-  const all=(await Promise.all(teams.map(async team=>({team,roster:await get(team.roster_path)})))).flatMap(({team,roster})=>roster.players.map(player=>({...player,teamName:team.team,teamSlug:team.slug})));
-  all.sort((a,b)=>a.name.localeCompare(b.name));
-  const select=document.getElementById('club');
-  for(const team of teams){const option=document.createElement('option');option.value=team.slug;option.textContent=team.team;select.append(option)}
-  const render=()=>{const query=document.getElementById('search').value.trim().toLocaleLowerCase(),club=select.value;
-   const visible=all.filter(player=>(!club||player.teamSlug===club)&&player.name.toLocaleLowerCase().includes(query));
-   document.getElementById('count').textContent=`${visible.length} of ${all.length} active players`;
-   document.getElementById('players').replaceChildren(...visible.map(player=>{
-    const a=document.createElement('a');a.className='player';a.href=`player.html?team=${encodeURIComponent(player.teamSlug)}&player=${encodeURIComponent(player.slug)}`;
-    const name=document.createElement('strong');name.textContent=player.name;
-    const meta=document.createElement('span');meta.textContent=`${player.position} · ${player.teamName}`;
-    a.append(name,meta);return a}));
-  };
-  document.getElementById('search').addEventListener('input',render);select.addEventListener('change',render);render();
- }catch(error){document.getElementById('count').textContent=`Player directory unavailable: ${error.message}`;console.error(error)}
-})();
-</script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Player Cards | GLB</title>
+  <link rel="stylesheet" href="season.css">
+  <link rel="stylesheet" href="player-cards.css">
+  <style>
+    .filters{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:20px}
+    .filters label{display:block;margin-bottom:6px;font-weight:700}
+    .filters input,.filters select{padding:9px;font:inherit;min-width:200px;max-width:100%}
+    .player-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:24px}
+    .player-grid .glb-player-card{align-self:start}
+  </style>
+</head>
+<body>
+  <header>
+    <nav><a href="index.html">GLB Home</a><a href="teams.html">Teams</a><a href="standings.html">Standings</a><a href="stats.html">Player Stats</a></nav>
+    <h1>Player Cards</h1>
+    <div>Browse the league’s players and career records.</div>
+  </header>
+  <main>
+    <p id="count" role="status">Loading players…</p>
+    <div class="panel">
+      <div class="filters">
+        <div><label for="search">Find a player</label><input id="search" type="search" placeholder="Name"></div>
+        <div><label for="club">Club</label><select id="club"><option value="">All clubs</option></select></div>
+      </div>
+      <div class="player-grid" id="players"></div>
+    </div>
+  </main>
+  <script src="scripts/player-cards.js?v=20260913a"></script>
+  <script>
+    (async () => {
+      const get = async path => {
+        const response = await fetch(path, {cache:'no-store'});
+        if (!response.ok) throw new Error(`${path}: HTTP ${response.status}`);
+        return response.json();
+      };
+      try {
+        const [registry, seasons] = await Promise.all([
+          get('data/teams/teams.json'), GLBPlayerCards.loadSeasons()
+        ]);
+        const teams = Object.values(registry.divisions).flat();
+        const all = (await Promise.all(teams.map(async team => ({
+          team, roster: await get(team.roster_path)
+        })))).flatMap(({team, roster}) => roster.players.map(player => ({
+          ...player, teamName: team.team, teamSlug: team.slug
+        })));
+        all.sort((a,b) => a.name.localeCompare(b.name));
+        const records = new Map(all.map(player => [player.slug,
+          GLBPlayerCards.careerFor(player.slug, seasons)]));
+        const select = document.getElementById('club');
+        for (const team of teams) {
+          const option = document.createElement('option');
+          option.value = team.slug;
+          option.textContent = team.team;
+          select.append(option);
+        }
+        const render = () => {
+          const query = document.getElementById('search').value.trim().toLocaleLowerCase();
+          const club = select.value;
+          const visible = all.filter(player => (!club || player.teamSlug === club) &&
+            player.name.toLocaleLowerCase().includes(query));
+          document.getElementById('count').textContent = `${visible.length} of ${all.length} active players`;
+          document.getElementById('players').replaceChildren(...visible.map(player =>
+            GLBPlayerCards.createCard(player, records.get(player.slug))));
+        };
+        document.getElementById('search').addEventListener('input', render);
+        select.addEventListener('change', render);
+        render();
+      } catch(error) {
+        document.getElementById('count').textContent = `Player cards unavailable: ${error.message}`;
+        console.error(error);
+      }
+    })();
+  </script>
+</body>
+</html>

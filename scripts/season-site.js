@@ -62,6 +62,8 @@
         fetchJSON('data/season/games.json'), fetchJSON('data/season/player-stats.json'), fetchJSON('current/leaders.json')
       ]);
       for (const team of Object.values(teams.divisions).flat()) names.set(team.slug, team.team);
+      const seasonYear = standings.as_of?.slice(0, 4) || 'Current';
+      $$('.header-meta').forEach(el => { el.textContent = `${seasonYear} Season`; });
       const clubRows = Object.values(standings.divisions).flat();
       const seasonComplete = clubRows.every(row => row.w + row.l >= 162);
       const stretchRun = clubRows.every(row => row.w + row.l >= 120);
@@ -120,13 +122,13 @@
           return a;
         }));
         const heroKicker = $('.hero-kicker');
-        if (heroKicker) heroKicker.textContent = seasonComplete ? 'Regular Season Complete' : stretchRun ? 'The Stretch Run' : 'Season 1';
+        if (heroKicker) heroKicker.textContent = seasonComplete ? 'Regular Season Complete' : stretchRun ? 'The Stretch Run' : 'On the Diamond';
         const heroCopy = $('.hero-deck');
         if (heroCopy) heroCopy.textContent = seasonComplete
           ? 'The regular season is in the books. Explore the final standings, scores, and player leaders.'
           : stretchRun
-            ? 'The stretch run is on. Follow the latest scores, division races, and players shaping Season 1.'
-            : 'Follow the latest scores, division races, and players shaping Season 1.';
+            ? 'The stretch run is on. Follow the latest scores, division races, and players shaping the league.'
+            : 'Follow the latest scores, division races, and players shaping the league.';
         const stories = document.querySelectorAll('.news-list .news-item');
         const setStory = (index, tag, headline, meta, href) => {
           const card = stories[index];
@@ -168,14 +170,14 @@
           Number(leaders.batting.HR?.[1]?.value) === Number(homerLeader.value)
             ? `${homerLeader.player} shares the GLB home-run lead at ${homerLeader.value}`
             : `${homerLeader.player} leads GLB with ${homerLeader.value} home runs`,
-          `${homerLeader.team} · Season 1`,
+          `${homerLeader.team} · Home run leader`,
           `player.html?team=${encodeURIComponent(homerLeader.team_slug)}&player=${encodeURIComponent(homerLeader.player_slug)}`);
       }
       if (page === 'schedule') {
         const sheet = $('.record-sheet');
         $('#season-loading')?.remove();
         $$('.date-group').forEach(el => el.remove());
-        const detail = $('.meta-detail'); if (detail) detail.textContent = `Season 1 · Results through ${dateText(standings.as_of)}`;
+        const detail = $('.meta-detail'); if (detail) detail.textContent = `${seasonYear} · Results through ${dateText(standings.as_of)}`;
         const controls = document.createElement('div'); controls.className = 'season-controls';
         const select = document.createElement('select'); select.setAttribute('aria-label', 'Select month');
         const months = [...new Set(games.map(g => g.date.slice(0, 7)))];

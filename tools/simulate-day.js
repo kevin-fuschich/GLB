@@ -36,16 +36,6 @@ function randInt(rng, min, max) {
   return Math.floor(rng() * (max - min + 1)) + min;
 }
 
-function weightedIndex(rng, weights) {
-  const total = weights.reduce((a, b) => a + b, 0);
-  let roll = rng() * total;
-  for (let i = 0; i < weights.length; i += 1) {
-    roll -= weights[i];
-    if (roll <= 0) return i;
-  }
-  return weights.length - 1;
-}
-
 function loadTeams() {
   const data = readJson(TEAMS_PATH);
   const teams = [];
@@ -108,29 +98,40 @@ function buildBatting(rng, hitters, runs) {
   const totalWalks = randInt(rng, 1, 5);
   const totalKs = randInt(rng, 4, 12);
   const totalHR = Math.min(totalHits, runs, randInt(rng, 0, Math.min(3, runs)));
+  const totalExtra = Math.max(0, totalHits - totalHR);
+  const totalDoubles = Math.min(totalExtra, randInt(rng, 0, 3));
+  const totalTriples = Math.min(totalExtra - totalDoubles, rng() < 0.16 ? 1 : 0);
   const totalSB = randInt(rng, 0, 2);
 
   const hits = distributeTotal(rng, totalHits, n, 4);
   const walks = distributeTotal(rng, totalWalks, n, 3);
   const strikeouts = distributeTotal(rng, totalKs, n, 3);
   const homers = distributeTotal(rng, totalHR, n, 2);
+  const doubles = distributeTotal(rng, totalDoubles, n, 2);
+  const triples = distributeTotal(rng, totalTriples, n, 1);
   const runVals = distributeTotal(rng, runs, n, 4);
   const rbiVals = distributeTotal(rng, runs, n, 5);
   const steals = distributeTotal(rng, totalSB, n, 2);
 
   return hitters.map((player, i) => {
     const ab = Math.max(hits[i], 3 + randInt(rng, 0, 2));
+    const h = Math.min(hits[i], ab);
+    let hr = Math.min(homers[i], h);
+    let twoB = Math.min(doubles[i], Math.max(0, h - hr));
+    let threeB = Math.min(triples[i], Math.max(0, h - hr - twoB));
     return {
       player: player.slug,
       name: player.name,
       position: player.position,
       AB: ab,
       R: runVals[i],
-      H: Math.min(hits[i], ab),
+      H: h,
+      '2B': twoB,
+      '3B': threeB,
       RBI: rbiVals[i],
       BB: walks[i],
       K: Math.min(strikeouts[i], ab),
-      HR: Math.min(homers[i], hits[i], ab),
+      HR: hr,
       SB: steals[i]
     };
   });
@@ -190,24 +191,21 @@ function finalizePitching(lines) {
   return lines.map(row => ({ ...row, IP: formatIP(row.IP_outs) }));
 }
 
+function sumRuns(lines) {
+  return lines.reduce((sum, row) => sum + Number(row.R || 0), 0);
+}
+
 function chooseDecisions(homeWon, awayPitching, homePitching, rng) {
   const winnerLines = homeWon ? homePitching : awayPitching;
   const loserLines = homeWon ? awayPitching : homePitching;
   const winner = winnerLines[0].player;
   const loser = loserLines[0].player;
-  const saveEligible = Math.abs(
-    (homeWon ? sumRuns(homePitching) : sumRuns(awayPitching)) -
-    (homeWon ? sumRuns(awayPitching) : sumRuns(homePitching))
-  ) <= 3;
-  const save = saveEligible && rng() < 0.75 ? winnerLines[winnerLines.length - 1].player : null;
+  const margin = Math.abs(sumRuns(homePitching) - sumRuns(awayPitching));
+  const save = margin <= 3 && rng() < 0.75 ? winnerLines[winnerLines.length - 1].player : null;
   return { W: winner, L: loser, SV: save };
 }
 
-function sumRuns(lines) {
-  return lines.reduce((sum, row) => sum + Number(row.R || 0), 0);
-}
-
-function simulateGame(date, awayTeam, homeTeam, awayRoster, homeRoster, gameIndex) {
+function simulateGame(date, awayTeam, homeTeam, awayRoster, homeRoster, gameIndex = 0) {
   const rng = mulberry32(hashString(`${date}|${awayTeam.slug}|${homeTeam.slug}`));
   let awayRuns = simulateRuns(rng);
   let homeRuns = simulateRuns(rng);
@@ -247,6 +245,39 @@ function simulateGame(date, awayTeam, homeTeam, awayRoster, homeRoster, gameInde
   };
 }
 
+function simulateSlate(date, games, options = {}) {
+  const teams = loadTeams();
+  const bySlug = new Map(teams.map(team => [team.slug, team]));
+  const used = new Set();
+  const results = [];
+
+  if (!Array.isArray(games) || games.length === 0) {
+    throw new Error('Slate must contain a non-empty games array.');
+  }
+
+  games.forEach((game, index) => {
+    const away = bySlug.get(game.away);
+    const home = bySlug.get(game.home);
+    if (!away || !home) throw new Error(`Unknown team in game ${index + 1}.`);
+    if (away.slug === home.slug) throw new Error(`Game ${index + 1} has the same team twice.`);
+    if (used.has(away.slug) || used.has(home.slug)) throw new Error('A team appears twice in the slate.');
+    used.add(away.slug);
+    used.add(home.slug);
+
+    const awayRoster = loadRoster(away);
+    const homeRoster = loadRoster(home);
+    const box = simulateGame(date, away, home, awayRoster, homeRoster, index);
+    const out = path.join(GAMES_DIR, date, `${away.slug}@${home.slug}.json`);
+    if (fs.existsSync(out) && !options.overwrite) {
+      throw new Error(`Refusing to overwrite existing official game: ${out}`);
+    }
+    writeJson(out, box);
+    results.push({ path: out, box });
+  });
+
+  return results;
+}
+
 function parseArgs() {
   const args = process.argv.slice(2);
   const date = args[0];
@@ -261,31 +292,21 @@ function parseArgs() {
 function main() {
   const { date, slatePath } = parseArgs();
   const slate = readJson(slatePath);
-  const teams = loadTeams();
-  const bySlug = new Map(teams.map(team => [team.slug, team]));
-  const used = new Set();
-
-  if (!Array.isArray(slate.games) || slate.games.length === 0) {
-    throw new Error('Slate must contain a non-empty games array.');
-  }
-
-  slate.games.forEach((game, index) => {
-    const away = bySlug.get(game.away);
-    const home = bySlug.get(game.home);
-    if (!away || !home) throw new Error(`Unknown team in game ${index + 1}.`);
-    if (away.slug === home.slug) throw new Error(`Game ${index + 1} has the same team twice.`);
-    if (used.has(away.slug) || used.has(home.slug)) throw new Error(`A team appears twice in the slate.`);
-    used.add(away.slug);
-    used.add(home.slug);
-
-    const awayRoster = loadRoster(away);
-    const homeRoster = loadRoster(home);
-    const box = simulateGame(date, away, home, awayRoster, homeRoster, index);
-    const out = path.join(GAMES_DIR, date, `${away.slug}@${home.slug}.json`);
-    if (fs.existsSync(out)) throw new Error(`Refusing to overwrite existing official game: ${out}`);
-    writeJson(out, box);
-    console.log(`${away.team} ${box.final.away}, ${home.team} ${box.final.home}`);
+  const results = simulateSlate(date, slate.games || []);
+  results.forEach(({ box }) => {
+    console.log(`${box.away.name} ${box.final.away}, ${box.home.name} ${box.final.home}`);
   });
 }
 
-main();
+if (require.main === module) main();
+
+module.exports = {
+  ROOT,
+  GAMES_DIR,
+  loadTeams,
+  loadRoster,
+  simulateGame,
+  simulateSlate,
+  readJson,
+  writeJson
+};

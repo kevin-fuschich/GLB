@@ -1,263 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GLB Teams</title>
-
-<style>
-:root{
-  --ink:#111;
-  --muted:#667085;
-  --line:#e5e7eb;
-  --bg:#f6f7f9;
-  --card:#fff;
-  --navy:#0b1f36;
-  --radius:18px;
-}
-*{box-sizing:border-box}
-body{
-  margin:0;
-  font-family:Arial, Helvetica, sans-serif;
-  background:var(--bg);
-  color:var(--ink);
-}
-a{color:inherit;text-decoration:none}
-
-.site-header{background:var(--navy);color:#fff}
-.header-inner{
-  max-width:1180px;
-  margin:0 auto;
-  padding:18px 22px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:20px;
-}
-.brand{
-  color:#fff;
-  font-weight:900;
-  letter-spacing:.08em;
-  text-transform:uppercase;
-  white-space:nowrap;
-}
-.nav{display:flex;gap:18px;flex-wrap:wrap;font-size:14px}
-.nav a{color:#fff;opacity:.92}
-.nav a:hover{opacity:1}
-
-.hero{
-  background:linear-gradient(135deg,#0b1f36,#12375d);
-  color:#fff;
-  padding:64px 22px;
-}
-.hero-inner{
-  max-width:1180px;
-  margin:0 auto;
-}
-.eyebrow{
-  text-transform:uppercase;
-  letter-spacing:.16em;
-  font-size:12px;
-  font-weight:900;
-  opacity:.75;
-  margin-bottom:12px;
-}
-h1{
-  font-size:56px;
-  line-height:.95;
-  margin:0 0 14px;
-}
-.subtitle{
-  max-width:760px;
-  color:rgba(255,255,255,.82);
-  font-size:19px;
-  line-height:1.5;
-}
-
-main{
-  max-width:1180px;
-  margin:34px auto 60px;
-  padding:0 22px;
-}
-
-.section-head{
-  margin:0 0 18px;
-  font-size:28px;
-}
-
-.team-grid{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:18px;
-  margin-bottom:40px;
-}
-
-.team-card{
-  background:var(--card);
-  border:1px solid var(--line);
-  border-radius:var(--radius);
-  overflow:hidden;
-  box-shadow:0 1px 2px rgba(16,24,40,.04);
-  transition:transform .15s ease, box-shadow .15s ease;
-}
-.team-card:hover{
-  transform:translateY(-2px);
-  box-shadow:0 8px 22px rgba(16,24,40,.09);
-}
-.team-image{
-  height:150px;
-  background:#dfe5ec;
-  overflow:hidden;
-}
-.team-image img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-}
-.team-body{
-  padding:18px;
-}
-.team-conference{
-  color:#1d4f91;
-  text-transform:uppercase;
-  letter-spacing:.12em;
-  font-size:11px;
-  font-weight:900;
-  margin-bottom:7px;
-}
-.team-name{
-  margin:0 0 8px;
-  font-size:21px;
-  line-height:1.15;
-}
-.team-meta{
-  color:var(--muted);
-  font-size:14px;
-  line-height:1.45;
-}
-
-.site-footer{
-  background:#0f1214;
-  color:#fff;
-  padding:38px 22px;
-}
-.footer-inner{
-  max-width:1180px;
-  margin:0 auto;
-}
-.footer-brand{
-  font-weight:900;
-  letter-spacing:.08em;
-  text-transform:uppercase;
-  margin-bottom:10px;
-}
-.footer-copy{
-  color:rgba(255,255,255,.68);
-  line-height:1.5;
-  margin:0;
-}
-
-@media(max-width:1000px){
-  .team-grid{grid-template-columns:repeat(2,1fr)}
-}
-@media(max-width:620px){
-  .header-inner{flex-direction:column;align-items:flex-start}
-  h1{font-size:42px}
-  .team-grid{grid-template-columns:1fr}
-}
-</style>
-</head>
-
-<body>
-
-<header class="site-header">
-  <div class="header-inner">
-    <a class="brand" href="index.html">GLB Global League Baseball</a>
-    <nav class="nav">
-      <a href="index.html">Home</a>
-      <a href="scores.html">Scores</a>
-      <a href="standings.html">Standings</a>
-      <a href="schedule.html">Schedule</a>
-      <a href="teams.html">Teams</a>
-      <a href="players.html">Players</a>
-      <a href="news.html">News</a>
-    </nav>
-  </div>
-</header>
-
-<section class="hero">
-  <div class="hero-inner">
-    <div class="eyebrow">League Clubs</div>
-    <h1>Teams</h1>
-    <div class="subtitle">
-      Official club directory for Global League Baseball. Each team page includes club records, roster files, stadium notes, and archive material.
-    </div>
-  </div>
-</section>
-
-<main>
-  <h2 class="section-head">Americas</h2>
-  <div class="team-grid" id="americasGrid"></div>
-
-  <h2 class="section-head">Pacific</h2>
-  <div class="team-grid" id="pacificGrid"></div>
-</main>
-
-<footer class="site-footer">
-  <div class="footer-inner">
-    <div class="footer-brand">GLB</div>
-    <p class="footer-copy">
-      Global League Baseball official site. Scores, standings, schedules, club pages, player files, and league records.
-    </p>
-  </div>
-</footer>
-
-<script>
-const TEAMS = [
-  { name:"Louisville Naturals", slug:"louisville-naturals", conference:"Americas" },
-  { name:"Durham Gold", slug:"durham-gold", conference:"Americas" },
-  { name:"Birmingham Vulcans", slug:"birmingham-vulcans", conference:"Americas" },
-  { name:"St. Paul Frost", slug:"st-paul-frost", conference:"Americas" },
-  { name:"Fresno Yield", slug:"fresno-yield", conference:"Americas" },
-  { name:"Albuquerque Aeros", slug:"albuquerque-aeros", conference:"Americas" },
-  { name:"Tijuana Tecnicos", slug:"tijuana-tecnicos", conference:"Americas" },
-  { name:"Monterrey Cementeros", slug:"monterrey-cementeros", conference:"Americas" },
-
-  { name:"Osaka Spirits", slug:"osaka-spirits", conference:"Pacific" },
-  { name:"Taipei Neon", slug:"taipei-neon", conference:"Pacific" },
-  { name:"Spokane Alloys", slug:"spokane-alloys", conference:"Pacific" },
-  { name:"San Pedro Cocolos", slug:"san-pedro-cocolos", conference:"Pacific" },
-  { name:"Mayagüez Sultans", slug:"mayaguez-sultans", conference:"Pacific" },
-  { name:"Vancouver Current", slug:"vancouver-current", conference:"Pacific" },
-  { name:"Toledo Assembly", slug:"toledo-assembly", conference:"Pacific" },
-  { name:"Santiago Caballeros", slug:"santiago-caballeros", conference:"Pacific" }
-];
-
-function imagePath(team){
-  return `assets/teams/${team.slug}/images/team-card.png`;
-}
-
-function renderTeam(team){
-  return `
-    <a class="team-card" href="team.html?team=${team.slug}">
-      <div class="team-image">
-        <img src="${imagePath(team)}" alt="${team.name}" onerror="this.src='https://placehold.co/800x500/e8edf2/5f6b7a?text=GLB+Club'">
-      </div>
-      <div class="team-body">
-        <div class="team-conference">${team.conference}</div>
-        <h3 class="team-name">${team.name}</h3>
-        <div class="team-meta">View club record, roster, stadium file, and league archive notes.</div>
-      </div>
-    </a>
-  `;
-}
-
-document.getElementById("americasGrid").innerHTML =
-  TEAMS.filter(t => t.conference === "Americas").map(renderTeam).join("");
-
-document.getElementById("pacificGrid").innerHTML =
-  TEAMS.filter(t => t.conference === "Pacific").map(renderTeam).join("");
-</script>
-
-</body>
-</html>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>GLB Club</title><link rel="stylesheet" href="season.css"><style>
+.summary{display:flex;gap:25px;flex-wrap:wrap;margin-top:12px}.summary strong{display:block;font:1.7rem Georgia,serif}.roster{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}.player{border:1px solid var(--line);padding:14px;color:var(--ink);text-decoration:none;background:#fff}.player:hover{background:#f0ede5}.player span{display:block;color:#526273;font-size:.9rem}.result{font-size:.95rem}
+</style></head><body><header><nav><a href="index.html">GLB Home</a><a href="teams.html">All Teams</a><a href="standings.html">Standings</a><a href="stats.html">Player Stats</a><a href="scores.html">Scores</a></nav><h1 id="club-name">Club Profile</h1><div id="club-division">Loading official club record…</div></header><main id="profile"><section class="panel"><h2>2026 Season</h2><div class="summary" id="club-record"></div><p id="club-links"></p></section><section class="panel"><h2>Active Roster</h2><p class="muted">Player lines include only games with recorded batting and pitching detail.</p><div id="roster" class="roster"></div></section><section class="panel"><h2>Recent Results</h2><div id="club-games"></div></section></main><script>
+(async()=>{
+ const qs=new URLSearchParams(location.search),slug=qs.get('team');
+ const text=(tag,value)=>{const el=document.createElement(tag);el.textContent=String(value??'—');return el};
+ const get=async path=>{const r=await fetch(path,{cache:'no-store'});if(!r.ok)throw Error(`${path}: ${r.status}`);return r.json()};
+ try{
+  const [registry,standings,stats,games]=await Promise.all([get('data/teams/teams.json'),get('current/standings.json'),get('data/season/player-stats.json'),get('data/season/games.json')]);
+  const found=Object.entries(registry.divisions).flatMap(([division,teams])=>teams.map(team=>({...team,division}))).find(team=>team.slug===slug);
+  if(!found)throw Error('Select a club from the team directory.');
+  const roster=await get(found.roster_path),record=Object.values(standings.divisions).flat().find(row=>row.slug===slug);
+  const teamNames=new Map(Object.values(registry.divisions).flat().map(t=>[t.slug,t.team]));
+  document.title=`GLB — ${found.team}`;document.getElementById('club-name').textContent=found.team;
+  document.getElementById('club-division').textContent=`${found.division} Division · ${found.abbr} · As of ${standings.as_of}`;
+  const summary=document.getElementById('club-record');
+  for(const [label,value] of [['Record',`${record.w}–${record.l}`],['Win %',record.pct],['Runs',record.rs],['Allowed',record.ra],['Diff',record.diff]]){const block=document.createElement('div');block.append(text('strong',value),text('span',label));summary.append(block)}
+  const clubLink=text('a','Explore club culture →');clubLink.href=`club-${encodeURIComponent(slug)}.html`;
+  document.getElementById('club-links').append(clubLink);
+  const totals=new Map(stats.filter(row=>row.team_slug===slug).map(row=>[row.player,row]));
+  const container=document.getElementById('roster');
+  for(const player of roster.players){const a=document.createElement('a');a.className='player';a.href=`player.html?team=${encodeURIComponent(slug)}&player=${encodeURIComponent(player.slug)}`;
+   a.append(text('strong',player.name),text('span',`${player.position} · Age ${player.age}`));
+   const row=totals.get(player.slug);const pitching=['SP','RP','CL'].includes(player.position);
+   a.append(text('span',row?(pitching?`${row.pitching.W} W · ${row.pitching.K} K · ${row.pitching.ERA??'—'} ERA`:`${row.batting.H} H · ${row.batting.HR} HR · ${row.batting.AVG} AVG`):'No recorded season line'));
+   container.append(a)}
+  const list=document.getElementById('club-games');
+  for(const game of games.filter(g=>g.home===slug||g.away===slug).slice(-5).reverse()){
+   const a=document.createElement('a');a.className='result';a.href=`box.html?date=${game.date}&game=${encodeURIComponent(`${game.away}@${game.home}`)}`;
+   a.append(text('time',game.date),text('strong',`${game.away===slug?'at '+teamNames.get(game.home):'vs '+teamNames.get(game.away)} · ${game.awayScore}–${game.homeScore}`),text('span','Box →'));list.append(a)}
+ }catch(error){const p=text('p',error.message);p.setAttribute('role','alert');document.getElementById('profile').replaceChildren(p);console.error(error)}
+})();
+</script></body></html>

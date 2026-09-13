@@ -85,13 +85,13 @@
         "position": "C",
         "AB": 5,
         "R": 1,
-        "H": 0,
+        "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 1,
         "BB": 0,
-        "K": 1,
-        "HR": 0,
+        "K": 2,
+        "HR": 1,
         "SB": 0
       },
       {
@@ -105,7 +105,7 @@
         "3B": 0,
         "RBI": 1,
         "BB": 0,
-        "K": 3,
+        "K": 0,
         "HR": 0,
         "SB": 0
       },
@@ -115,12 +115,12 @@
         "position": "2B",
         "AB": 5,
         "R": 1,
-        "H": 2,
+        "H": 1,
         "2B": 0,
         "3B": 0,
-        "RBI": 0,
+        "RBI": 1,
         "BB": 0,
-        "K": 0,
+        "K": 2,
         "HR": 1,
         "SB": 1
       },
@@ -145,12 +145,12 @@
         "position": "3B",
         "AB": 5,
         "R": 1,
-        "H": 0,
+        "H": 2,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
         "BB": 0,
-        "K": 1,
+        "K": 0,
         "HR": 0,
         "SB": 1
       },
@@ -163,7 +163,7 @@
         "H": 1,
         "2B": 1,
         "3B": 0,
-        "RBI": 2,
+        "RBI": 1,
         "BB": 1,
         "K": 0,
         "HR": 0,
@@ -180,7 +180,7 @@
         "3B": 0,
         "RBI": 1,
         "BB": 2,
-        "K": 0,
+        "K": 1,
         "HR": 0,
         "SB": 0
       },
@@ -190,12 +190,12 @@
         "position": "RF",
         "AB": 4,
         "R": 2,
-        "H": 2,
+        "H": 0,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
         "BB": 0,
-        "K": 2,
+        "K": 1,
         "HR": 0,
         "SB": 0
       }
@@ -212,7 +212,7 @@
         "3B": 0,
         "RBI": 0,
         "BB": 1,
-        "K": 3,
+        "K": 1,
         "HR": 0,
         "SB": 0
       },
@@ -222,12 +222,12 @@
         "position": "1B",
         "AB": 4,
         "R": 1,
-        "H": 2,
+        "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 2,
         "BB": 0,
-        "K": 3,
+        "K": 1,
         "HR": 0,
         "SB": 0
       },
@@ -251,14 +251,14 @@
         "name": "Tomasz Kubas",
         "position": "SS",
         "AB": 4,
-        "R": 0,
-        "H": 0,
+        "R": 1,
+        "H": 3,
         "2B": 0,
         "3B": 0,
         "RBI": 1,
         "BB": 1,
-        "K": 0,
-        "HR": 0,
+        "K": 1,
+        "HR": 1,
         "SB": 0
       },
       {
@@ -266,13 +266,13 @@
         "name": "Andrés Mireles",
         "position": "3B",
         "AB": 3,
-        "R": 2,
-        "H": 1,
+        "R": 1,
+        "H": 0,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
         "BB": 0,
-        "K": 3,
+        "K": 2,
         "HR": 0,
         "SB": 0
       },
@@ -282,12 +282,12 @@
         "position": "CF",
         "AB": 4,
         "R": 0,
-        "H": 4,
+        "H": 3,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
         "BB": 0,
-        "K": 0,
+        "K": 1,
         "HR": 0,
         "SB": 1
       },
@@ -302,7 +302,7 @@
         "3B": 0,
         "RBI": 0,
         "BB": 0,
-        "K": 0,
+        "K": 3,
         "HR": 0,
         "SB": 0
       },
@@ -317,7 +317,7 @@
         "3B": 0,
         "RBI": 1,
         "BB": 1,
-        "K": 1,
+        "K": 0,
         "HR": 0,
         "SB": 0
       }
@@ -326,15 +326,15 @@
   "pitching": {
     "away": [
       {
-        "player": "isaac-friedel",
-        "name": "Isaac Friedel",
+        "player": "caleb-rowan",
+        "name": "Caleb Rowan",
         "IP_outs": 21,
         "H": 2,
         "R": 4,
         "ER": 4,
         "BB": 2,
-        "K": 12,
-        "HR": 0,
+        "K": 8,
+        "HR": 1,
         "IP": 7
       },
       {
@@ -345,42 +345,43 @@
         "R": 0,
         "ER": 0,
         "BB": 2,
-        "K": 0,
+        "K": 3,
         "HR": 0,
         "IP": 2
       }
     ],
     "home": [
       {
-        "player": "oskar-svanholm",
-        "name": "Oskar Svanholm",
+        "player": "mateusz-kasprowicz",
+        "name": "Mateusz Kasprowicz",
         "IP_outs": 18,
         "H": 5,
         "R": 3,
         "ER": 3,
         "BB": 0,
-        "K": 3,
-        "HR": 1,
+        "K": 4,
+        "HR": 2,
         "IP": 6
       },
       {
-        "player": "sergio-ibarra-lugo",
-        "name": "Sergio Ibarra Lugo",
+        "player": "yaw-mensah",
+        "name": "Yaw Mensah",
         "IP_outs": 9,
         "H": 1,
         "R": 2,
         "ER": 2,
         "BB": 4,
-        "K": 4,
+        "K": 2,
         "HR": 0,
         "IP": 3
       }
     ]
   },
   "decisions": {
-    "W": "isaac-friedel",
-    "L": "oskar-svanholm",
+    "W": "caleb-rowan",
+    "L": "mateusz-kasprowicz",
     "SV": "noah-pryce"
   },
-  "notes": []
+  "notes": [],
+  "calibration": "glb.stats-calibrated.v1"
 }

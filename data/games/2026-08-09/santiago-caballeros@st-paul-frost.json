@@ -85,12 +85,12 @@
         "position": "C",
         "AB": 3,
         "R": 0,
-        "H": 2,
+        "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
         "BB": 0,
-        "K": 1,
+        "K": 2,
         "HR": 0,
         "SB": 1
       },
@@ -105,7 +105,7 @@
         "3B": 0,
         "RBI": 1,
         "BB": 2,
-        "K": 3,
+        "K": 0,
         "HR": 0,
         "SB": 0
       },
@@ -120,7 +120,7 @@
         "3B": 0,
         "RBI": 1,
         "BB": 0,
-        "K": 3,
+        "K": 0,
         "HR": 0,
         "SB": 0
       },
@@ -130,7 +130,7 @@
         "position": "SS",
         "AB": 5,
         "R": 1,
-        "H": 1,
+        "H": 2,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
@@ -145,7 +145,7 @@
         "position": "3B",
         "AB": 3,
         "R": 0,
-        "H": 1,
+        "H": 0,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
@@ -160,12 +160,12 @@
         "position": "LF",
         "AB": 5,
         "R": 1,
-        "H": 0,
+        "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 1,
         "BB": 1,
-        "K": 1,
+        "K": 2,
         "HR": 0,
         "SB": 0
       },
@@ -180,7 +180,7 @@
         "3B": 0,
         "RBI": 0,
         "BB": 0,
-        "K": 0,
+        "K": 1,
         "HR": 0,
         "SB": 0
       },
@@ -195,7 +195,7 @@
         "3B": 0,
         "RBI": 1,
         "BB": 0,
-        "K": 1,
+        "K": 2,
         "HR": 0,
         "SB": 0
       }
@@ -242,7 +242,7 @@
         "3B": 0,
         "RBI": 0,
         "BB": 0,
-        "K": 1,
+        "K": 0,
         "HR": 0,
         "SB": 0
       },
@@ -251,8 +251,8 @@
         "name": "Masato Kobori",
         "position": "SS",
         "AB": 3,
-        "R": 1,
-        "H": 2,
+        "R": 0,
+        "H": 0,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
@@ -267,12 +267,12 @@
         "position": "3B",
         "AB": 4,
         "R": 1,
-        "H": 1,
+        "H": 2,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
         "BB": 0,
-        "K": 1,
+        "K": 0,
         "HR": 0,
         "SB": 0
       },
@@ -287,7 +287,7 @@
         "3B": 0,
         "RBI": 1,
         "BB": 0,
-        "K": 3,
+        "K": 1,
         "HR": 0,
         "SB": 1
       },
@@ -296,14 +296,14 @@
         "name": "Rodrigo Fuentes",
         "position": "LF",
         "AB": 5,
-        "R": 0,
-        "H": 0,
+        "R": 1,
+        "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 1,
         "BB": 0,
-        "K": 1,
-        "HR": 0,
+        "K": 3,
+        "HR": 1,
         "SB": 0
       },
       {
@@ -326,61 +326,62 @@
   "pitching": {
     "away": [
       {
-        "player": "kenji-hoshino",
-        "name": "Kenji Hoshino",
+        "player": "aron-videla",
+        "name": "Arón Videla",
         "IP_outs": 21,
         "H": 2,
         "R": 3,
         "ER": 3,
         "BB": 0,
-        "K": 10,
-        "HR": 0,
+        "K": 7,
+        "HR": 1,
         "IP": 7
       },
       {
-        "player": "joaquim-silveira",
-        "name": "Joaquim Silveira",
+        "player": "tyrese-warnock",
+        "name": "Tyrese Warnock",
         "IP_outs": 6,
         "H": 4,
         "R": 0,
         "ER": 0,
         "BB": 2,
-        "K": 1,
+        "K": 2,
         "HR": 0,
         "IP": 2
       }
     ],
     "home": [
       {
-        "player": "ryan-keswick",
-        "name": "Ryan Keswick",
+        "player": "caleb-warnock",
+        "name": "Caleb Warnock",
         "IP_outs": 21,
         "H": 4,
         "R": 2,
         "ER": 2,
         "BB": 1,
-        "K": 9,
+        "K": 8,
         "HR": 0,
         "IP": 7
       },
       {
-        "player": "antonio-velez",
-        "name": "Antonio Vélez",
+        "player": "darius-collins",
+        "name": "Darius Collins",
         "IP_outs": 6,
         "H": 2,
         "R": 2,
         "ER": 2,
         "BB": 2,
-        "K": 3,
+        "K": 2,
         "HR": 0,
         "IP": 2
       }
     ]
   },
   "decisions": {
-    "W": "kenji-hoshino",
-    "L": "ryan-keswick",
+    "W": "aron-videla",
+    "L": "caleb-warnock",
     "SV": null
   },
-  "notes": []
+  "notes": [],
+  "calibration": "glb.stats-calibrated.v1"
 }

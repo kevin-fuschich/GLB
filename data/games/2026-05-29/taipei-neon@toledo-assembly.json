@@ -100,7 +100,7 @@
         "position": "2B",
         "AB": 4,
         "R": 0,
-        "H": 0,
+        "H": 2,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
@@ -115,12 +115,12 @@
         "position": "1B",
         "AB": 4,
         "R": 0,
-        "H": 2,
+        "H": 0,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
         "BB": 1,
-        "K": 3,
+        "K": 1,
         "HR": 0,
         "SB": 0
       },
@@ -135,7 +135,7 @@
         "3B": 0,
         "RBI": 1,
         "BB": 0,
-        "K": 2,
+        "K": 3,
         "HR": 0,
         "SB": 0
       },
@@ -145,12 +145,12 @@
         "position": "3B",
         "AB": 5,
         "R": 0,
-        "H": 0,
+        "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
         "BB": 0,
-        "K": 1,
+        "K": 0,
         "HR": 0,
         "SB": 0
       },
@@ -175,12 +175,12 @@
         "position": "LF",
         "AB": 5,
         "R": 0,
-        "H": 1,
+        "H": 0,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
         "BB": 0,
-        "K": 1,
+        "K": 2,
         "HR": 0,
         "SB": 0
       },
@@ -195,7 +195,7 @@
         "3B": 0,
         "RBI": 0,
         "BB": 0,
-        "K": 0,
+        "K": 1,
         "HR": 0,
         "SB": 0
       },
@@ -210,7 +210,7 @@
         "3B": 0,
         "RBI": 1,
         "BB": 0,
-        "K": 1,
+        "K": 0,
         "HR": 0,
         "SB": 0
       }
@@ -222,7 +222,7 @@
         "position": "C",
         "AB": 3,
         "R": 0,
-        "H": 1,
+        "H": 0,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
@@ -242,7 +242,7 @@
         "3B": 0,
         "RBI": 0,
         "BB": 0,
-        "K": 0,
+        "K": 2,
         "HR": 0,
         "SB": 0
       },
@@ -272,7 +272,7 @@
         "3B": 1,
         "RBI": 0,
         "BB": 1,
-        "K": 2,
+        "K": 0,
         "HR": 0,
         "SB": 0
       },
@@ -282,12 +282,12 @@
         "position": "3B",
         "AB": 5,
         "R": 0,
-        "H": 0,
+        "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
         "BB": 0,
-        "K": 1,
+        "K": 2,
         "HR": 0,
         "SB": 0
       },
@@ -297,12 +297,12 @@
         "position": "LF",
         "AB": 4,
         "R": 0,
-        "H": 3,
+        "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
         "BB": 0,
-        "K": 1,
+        "K": 0,
         "HR": 0,
         "SB": 0
       },
@@ -317,7 +317,7 @@
         "3B": 0,
         "RBI": 0,
         "BB": 0,
-        "K": 2,
+        "K": 0,
         "HR": 0,
         "SB": 2
       },
@@ -327,7 +327,7 @@
         "position": "RF",
         "AB": 5,
         "R": 0,
-        "H": 0,
+        "H": 2,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
@@ -341,61 +341,62 @@
   "pitching": {
     "away": [
       {
-        "player": "eitan-ben-sasson",
-        "name": "Eitan Ben-Sasson",
+        "player": "tsai-ming-hao",
+        "name": "Tsai Ming Hao",
         "IP_outs": 18,
         "H": 8,
         "R": 0,
         "ER": 0,
         "BB": 0,
-        "K": 8,
+        "K": 5,
         "HR": 0,
         "IP": 6
       },
       {
-        "player": "idris-el-amin",
-        "name": "Idris El-Amin",
+        "player": "miguel-santos-tpe",
+        "name": "Miguel Santos",
         "IP_outs": 9,
         "H": 0,
         "R": 0,
         "ER": 0,
         "BB": 1,
-        "K": 2,
+        "K": 3,
         "HR": 0,
         "IP": 3
       }
     ],
     "home": [
       {
-        "player": "farid-azeroual",
-        "name": "Farid Azeroual",
+        "player": "zahir-kamara",
+        "name": "Zahir Kamara",
         "IP_outs": 19,
         "H": 4,
         "R": 1,
         "ER": 1,
         "BB": 0,
-        "K": 4,
+        "K": 6,
         "HR": 0,
         "IP": 6.1
       },
       {
-        "player": "jun-seo-kang",
-        "name": "Jun-seo Kang",
+        "player": "blaise-mathurin",
+        "name": "Blaise Mathurin",
         "IP_outs": 8,
         "H": 1,
         "R": 1,
         "ER": 1,
         "BB": 1,
-        "K": 6,
+        "K": 3,
         "HR": 0,
         "IP": 2.2
       }
     ]
   },
   "decisions": {
-    "W": "eitan-ben-sasson",
-    "L": "farid-azeroual",
+    "W": "tsai-ming-hao",
+    "L": "zahir-kamara",
     "SV": null
   },
-  "notes": []
+  "notes": [],
+  "calibration": "glb.stats-calibrated.v1"
 }

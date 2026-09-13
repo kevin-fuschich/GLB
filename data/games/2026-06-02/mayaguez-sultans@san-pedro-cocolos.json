@@ -105,7 +105,7 @@
         "3B": 0,
         "RBI": 1,
         "BB": 0,
-        "K": 0,
+        "K": 1,
         "HR": 0,
         "SB": 0
       },
@@ -114,14 +114,14 @@
         "name": "Nils Adebayo",
         "position": "2B",
         "AB": 3,
-        "R": 0,
-        "H": 0,
+        "R": 1,
+        "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 1,
         "BB": 0,
         "K": 0,
-        "HR": 0,
+        "HR": 1,
         "SB": 0
       },
       {
@@ -129,13 +129,13 @@
         "name": "Jae-min Seok",
         "position": "SS",
         "AB": 3,
-        "R": 3,
+        "R": 2,
         "H": 0,
         "2B": 0,
         "3B": 0,
         "RBI": 1,
         "BB": 0,
-        "K": 1,
+        "K": 0,
         "HR": 0,
         "SB": 0
       },
@@ -145,12 +145,12 @@
         "position": "3B",
         "AB": 3,
         "R": 0,
-        "H": 1,
+        "H": 2,
         "2B": 1,
         "3B": 0,
         "RBI": 1,
         "BB": 0,
-        "K": 2,
+        "K": 1,
         "HR": 0,
         "SB": 1
       },
@@ -165,7 +165,7 @@
         "3B": 0,
         "RBI": 1,
         "BB": 0,
-        "K": 3,
+        "K": 0,
         "HR": 0,
         "SB": 0
       },
@@ -175,12 +175,12 @@
         "position": "CF",
         "AB": 4,
         "R": 1,
-        "H": 3,
+        "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 2,
         "BB": 1,
-        "K": 1,
+        "K": 3,
         "HR": 0,
         "SB": 0
       },
@@ -210,7 +210,7 @@
         "H": 1,
         "2B": 1,
         "3B": 0,
-        "RBI": 1,
+        "RBI": 0,
         "BB": 0,
         "K": 1,
         "HR": 0,
@@ -227,7 +227,7 @@
         "3B": 0,
         "RBI": 0,
         "BB": 0,
-        "K": 2,
+        "K": 1,
         "HR": 0,
         "SB": 0
       },
@@ -240,9 +240,9 @@
         "H": 1,
         "2B": 0,
         "3B": 0,
-        "RBI": 0,
+        "RBI": 1,
         "BB": 0,
-        "K": 2,
+        "K": 0,
         "HR": 1,
         "SB": 0
       },
@@ -255,10 +255,10 @@
         "H": 1,
         "2B": 0,
         "3B": 0,
-        "RBI": 0,
+        "RBI": 1,
         "BB": 1,
-        "K": 0,
-        "HR": 0,
+        "K": 2,
+        "HR": 1,
         "SB": 0
       },
       {
@@ -272,7 +272,7 @@
         "3B": 1,
         "RBI": 0,
         "BB": 0,
-        "K": 1,
+        "K": 0,
         "HR": 0,
         "SB": 0
       },
@@ -287,7 +287,7 @@
         "3B": 0,
         "RBI": 0,
         "BB": 1,
-        "K": 1,
+        "K": 0,
         "HR": 0,
         "SB": 0
       },
@@ -300,7 +300,7 @@
         "H": 1,
         "2B": 1,
         "3B": 0,
-        "RBI": 2,
+        "RBI": 1,
         "BB": 1,
         "K": 1,
         "HR": 0,
@@ -317,7 +317,7 @@
         "3B": 0,
         "RBI": 1,
         "BB": 1,
-        "K": 0,
+        "K": 1,
         "HR": 0,
         "SB": 0
       }
@@ -326,61 +326,62 @@
   "pitching": {
     "away": [
       {
-        "player": "dario-vukovic",
-        "name": "Dario Vukovic",
+        "player": "adewale-bamidele",
+        "name": "Adewale Bamidele",
         "IP_outs": 16,
         "H": 3,
         "R": 2,
         "ER": 2,
         "BB": 2,
-        "K": 7,
+        "K": 4,
         "HR": 1,
         "IP": 5.1
       },
       {
-        "player": "rafiq-qureshi",
-        "name": "Rafiq Qureshi",
+        "player": "tomasz-wierzbicki",
+        "name": "Tomasz Wierzbicki",
         "IP_outs": 11,
         "H": 3,
         "R": 2,
         "ER": 2,
         "BB": 2,
-        "K": 1,
-        "HR": 0,
+        "K": 2,
+        "HR": 1,
         "IP": 3.2
       }
     ],
     "home": [
       {
-        "player": "ivo-korolenko",
-        "name": "Ivo Korolenko",
+        "player": "kenji-morishita",
+        "name": "Kenji Morishita",
         "IP_outs": 15,
         "H": 5,
         "R": 2,
         "ER": 2,
         "BB": 1,
-        "K": 4,
+        "K": 3,
         "HR": 0,
         "IP": 5
       },
       {
-        "player": "marek-zielinski",
-        "name": "Marek Zielinski",
+        "player": "isaac-rendell",
+        "name": "Isaac Rendell",
         "IP_outs": 12,
         "H": 2,
         "R": 5,
         "ER": 5,
         "BB": 0,
-        "K": 3,
-        "HR": 0,
+        "K": 2,
+        "HR": 1,
         "IP": 4
       }
     ]
   },
   "decisions": {
-    "W": "dario-vukovic",
-    "L": "ivo-korolenko",
-    "SV": "rafiq-qureshi"
+    "W": "adewale-bamidele",
+    "L": "kenji-morishita",
+    "SV": "tomasz-wierzbicki"
   },
-  "notes": []
+  "notes": [],
+  "calibration": "glb.stats-calibrated.v1"
 }

@@ -90,7 +90,7 @@
         "3B": 0,
         "RBI": 0,
         "BB": 0,
-        "K": 1,
+        "K": 2,
         "HR": 0,
         "SB": 0
       },
@@ -100,12 +100,12 @@
         "position": "1B",
         "AB": 4,
         "R": 1,
-        "H": 1,
+        "H": 0,
         "2B": 0,
         "3B": 0,
         "RBI": 1,
         "BB": 1,
-        "K": 0,
+        "K": 1,
         "HR": 0,
         "SB": 0
       },
@@ -115,12 +115,12 @@
         "position": "2B",
         "AB": 4,
         "R": 0,
-        "H": 0,
+        "H": 1,
         "2B": 0,
         "3B": 0,
-        "RBI": 2,
+        "RBI": 1,
         "BB": 0,
-        "K": 0,
+        "K": 2,
         "HR": 0,
         "SB": 0
       },
@@ -130,12 +130,12 @@
         "position": "SS",
         "AB": 4,
         "R": 0,
-        "H": 0,
+        "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
         "BB": 1,
-        "K": 3,
+        "K": 0,
         "HR": 0,
         "SB": 0
       },
@@ -145,7 +145,7 @@
         "position": "3B",
         "AB": 4,
         "R": 1,
-        "H": 0,
+        "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
@@ -160,12 +160,12 @@
         "position": "LF",
         "AB": 4,
         "R": 1,
-        "H": 1,
+        "H": 0,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
         "BB": 0,
-        "K": 2,
+        "K": 1,
         "HR": 0,
         "SB": 0
       },
@@ -175,13 +175,13 @@
         "position": "CF",
         "AB": 5,
         "R": 1,
-        "H": 2,
+        "H": 1,
         "2B": 0,
         "3B": 0,
-        "RBI": 0,
+        "RBI": 1,
         "BB": 0,
-        "K": 1,
-        "HR": 0,
+        "K": 2,
+        "HR": 1,
         "SB": 0
       },
       {
@@ -195,7 +195,7 @@
         "3B": 0,
         "RBI": 0,
         "BB": 0,
-        "K": 1,
+        "K": 0,
         "HR": 0,
         "SB": 0
       },
@@ -210,7 +210,7 @@
         "3B": 0,
         "RBI": 1,
         "BB": 0,
-        "K": 2,
+        "K": 1,
         "HR": 0,
         "SB": 0
       }
@@ -222,7 +222,7 @@
         "position": "C",
         "AB": 4,
         "R": 0,
-        "H": 0,
+        "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
@@ -242,7 +242,7 @@
         "3B": 0,
         "RBI": 0,
         "BB": 0,
-        "K": 2,
+        "K": 1,
         "HR": 0,
         "SB": 0
       },
@@ -257,7 +257,7 @@
         "3B": 0,
         "RBI": 2,
         "BB": 0,
-        "K": 1,
+        "K": 2,
         "HR": 0,
         "SB": 0
       },
@@ -267,12 +267,12 @@
         "position": "SS",
         "AB": 3,
         "R": 1,
-        "H": 1,
+        "H": 0,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
         "BB": 0,
-        "K": 1,
+        "K": 0,
         "HR": 0,
         "SB": 0
       },
@@ -287,7 +287,7 @@
         "3B": 0,
         "RBI": 0,
         "BB": 2,
-        "K": 1,
+        "K": 2,
         "HR": 0,
         "SB": 0
       },
@@ -297,12 +297,12 @@
         "position": "CF",
         "AB": 4,
         "R": 0,
-        "H": 0,
+        "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
         "BB": 0,
-        "K": 1,
+        "K": 0,
         "HR": 0,
         "SB": 0
       },
@@ -317,8 +317,8 @@
         "3B": 0,
         "RBI": 2,
         "BB": 0,
-        "K": 2,
-        "HR": 0,
+        "K": 1,
+        "HR": 1,
         "SB": 0
       },
       {
@@ -327,12 +327,12 @@
         "position": "RF",
         "AB": 4,
         "R": 2,
-        "H": 2,
+        "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 1,
         "BB": 0,
-        "K": 1,
+        "K": 2,
         "HR": 0,
         "SB": 1
       }
@@ -341,61 +341,62 @@
   "pitching": {
     "away": [
       {
-        "player": "tomas-zepeda",
-        "name": "Tomás Zepeda",
+        "player": "diego-verdugo",
+        "name": "Diego Verdugo",
         "IP_outs": 16,
         "H": 5,
         "R": 5,
         "ER": 5,
         "BB": 0,
-        "K": 5,
-        "HR": 0,
+        "K": 6,
+        "HR": 1,
         "IP": 5.1
       },
       {
-        "player": "julian-ochoa",
-        "name": "Julián Ochoa",
+        "player": "mauricio-cota",
+        "name": "Mauricio Cota",
         "IP_outs": 11,
         "H": 3,
         "R": 0,
         "ER": 0,
         "BB": 3,
-        "K": 5,
+        "K": 3,
         "HR": 0,
         "IP": 3.2
       }
     ],
     "home": [
       {
-        "player": "nikhil-jadhav",
-        "name": "Nikhil Jadhav",
+        "player": "ronan-kaczmarek",
+        "name": "Ronan Kaczmarek",
         "IP_outs": 19,
         "H": 3,
         "R": 3,
         "ER": 3,
         "BB": 2,
         "K": 6,
-        "HR": 0,
+        "HR": 1,
         "IP": 6.1
       },
       {
-        "player": "lazaro-bracamonte",
-        "name": "Lázaro Bracamonte",
+        "player": "jae-min-gwak",
+        "name": "Jae-min Gwak",
         "IP_outs": 8,
         "H": 1,
         "R": 1,
         "ER": 1,
         "BB": 0,
-        "K": 5,
+        "K": 4,
         "HR": 0,
         "IP": 2.2
       }
     ]
   },
   "decisions": {
-    "W": "nikhil-jadhav",
-    "L": "tomas-zepeda",
-    "SV": "lazaro-bracamonte"
+    "W": "ronan-kaczmarek",
+    "L": "diego-verdugo",
+    "SV": "jae-min-gwak"
   },
-  "notes": []
+  "notes": [],
+  "calibration": "glb.stats-calibrated.v1"
 }

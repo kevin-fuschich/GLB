@@ -27,6 +27,9 @@ jobs:
       - name: Generate deterministic preview
         run: node tools/generate-season-v3.js
 
+      - name: Validate preview reconciliation
+        run: node tools/validate-stat-preview.js
+
       - name: Analyze statistical environment
         run: node tools/analyze-stat-preview.js
 

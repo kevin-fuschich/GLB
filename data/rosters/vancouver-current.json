@@ -13,7 +13,7 @@
     { "name": "Eamon Kerr", "slug": "eamon-kerr", "position": "1B", "bats": "L", "throws": "R", "age": 32, "photo": "eamon-kerr.jpg" },
     { "name": "Soraya Jafari", "slug": "soraya-jafari", "position": "2B", "bats": "S", "throws": "R", "age": 26, "photo": "soraya-jafari.jpg" },
     { "name": "Alejo Santillán", "slug": "alejo-santillan", "position": "SS", "bats": "R", "throws": "R", "age": 23, "photo": "alejo-santillan.jpg" },
-    { "name": "Tomás Velasco", "slug": "tomas-velasco", "position": "3B", "bats": "R", "throws": "R", "age": 28, "photo": "tomas-velasco.jpg" },
+    { "name": "Roman Velasco", "slug": "roman-velasco", "position": "3B", "bats": "R", "throws": "R", "age": 28, "photo": "roman-velasco.jpg" },
     { "name": "Taj Adelman", "slug": "taj-adelman", "position": "LF", "bats": "L", "throws": "L", "age": 27, "photo": "taj-adelman.jpg" },
     { "name": "Marcell Lind", "slug": "marcell-lind", "position": "CF", "bats": "R", "throws": "R", "age": 25, "photo": "marcell-lind.jpg" },
     { "name": "Oziel Narváez", "slug": "oziel-narvaez", "position": "RF", "bats": "R", "throws": "R", "age": 30, "photo": "oziel-narvaez.jpg" }

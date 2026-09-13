@@ -62,15 +62,16 @@
         fetchJSON('data/season/games.json'), fetchJSON('data/season/player-stats.json'), fetchJSON('current/leaders.json')
       ]);
       for (const team of Object.values(teams.divisions).flat()) names.set(team.slug, team.team);
-      const progress = Math.round(100 * games.length / (names.size * 162 / 2));
-      $$('.header-meta').forEach(el => el.textContent = `Season 1 · ${progress}% complete`);
+      const clubRows = Object.values(standings.divisions).flat();
+      const seasonComplete = clubRows.every(row => row.w + row.l >= 162);
+      const stretchRun = clubRows.every(row => row.w + row.l >= 120);
       if (page === 'standings') {
         const sections = $$('.standings-block .division');
         for (const [section, division] of sections.map(s => [s, s.querySelector('h2').id.startsWith('pacific') ? 'Pacific' : 'Americas'])) {
           teamRows(section.querySelector('tbody'), standings.divisions[division]);
         }
         const meta = $('.page-meta');
-        if (meta) meta.replaceChildren(cell('span', `${games.length} official games`), cell('span', `As of ${dateText(standings.as_of)}`), cell('span', 'Season 1'));
+        if (meta) meta.replaceChildren(cell('span', 'Regular Season'), cell('span', `As of ${dateText(standings.as_of)}`));
         const rail = $('.mini-table tbody');
         if (rail) rail.replaceChildren(...Object.entries(standings.divisions).map(([division, rows]) => {
           const tr = document.createElement('tr');
@@ -118,22 +119,63 @@
             cell('div', `${row.w}–${row.l} · ${row.pct} · ${row.diff} run differential`, 'team-meta'));
           return a;
         }));
+        const heroKicker = $('.hero-kicker');
+        if (heroKicker) heroKicker.textContent = seasonComplete ? 'Regular Season Complete' : stretchRun ? 'The Stretch Run' : 'Season 1';
         const heroCopy = $('.hero-deck');
-        if (heroCopy) heroCopy.textContent = `${games.length} official games recorded through ${dateText(standings.as_of)}. Explore the season results and club standings.`;
-        const heroTitle = $('.hero-title'); if (heroTitle) heroTitle.textContent = 'Global League Baseball Season 1';
-        const headlines = $$('.news-headline');
-        if (headlines[0]) headlines[0].textContent = `${games.length} games recorded in the inaugural season`;
-        if (headlines[1]) headlines[1].textContent = 'Club standings and player leaders updated';
-        if (headlines[2]) headlines[2].textContent = 'Explore box scores from across the league';
-        const newsMeta = document.querySelectorAll('.news-meta');
-        if (newsMeta[0]) newsMeta[0].textContent = `${games.length} official games through ${dateText(standings.as_of)}`;
-        if (newsMeta[2]) newsMeta[2].textContent = `Results through ${dateText(standings.as_of)} are in the archive`;
+        if (heroCopy) heroCopy.textContent = seasonComplete
+          ? 'The regular season is in the books. Explore the final standings, scores, and player leaders.'
+          : stretchRun
+            ? 'The stretch run is on. Follow the latest scores, division races, and players shaping Season 1.'
+            : 'Follow the latest scores, division races, and players shaping Season 1.';
+        const stories = document.querySelectorAll('.news-list .news-item');
+        const setStory = (index, tag, headline, meta, href) => {
+          const card = stories[index];
+          if (!card) return;
+          card.href = href;
+          card.querySelector('.news-tag').textContent = tag;
+          card.querySelector('.news-headline').textContent = headline;
+          card.querySelector('.news-meta').textContent = meta;
+        };
+        const race = Object.entries(standings.divisions).map(([division, rows]) => ({
+          division, leader: rows[0], chaser: rows[1], gap: Number(rows[1]?.gb)
+        })).filter(item => item.chaser && Number.isFinite(item.gap))
+          .sort((a, b) => a.gap - b.gap)[0];
+        if (race) {
+          const headline = seasonComplete
+            ? `${race.leader.team} finishes atop the ${race.division}`
+            : race.gap === 0
+              ? `${race.leader.team} and ${race.chaser.team} are level atop the ${race.division}`
+              : race.gap <= 6
+                ? `${race.chaser.team} trails ${race.leader.team} by ${race.gap} ${race.gap === 1 ? 'game' : 'games'}`
+                : `${race.leader.team} leads the ${race.division} by ${race.gap} games`;
+          setStory(0, 'Division Race', headline,
+            `${race.division} · ${race.leader.w}–${race.leader.l} to ${race.chaser.w}–${race.chaser.l}`,
+            'standings.html');
+        }
+        const form = clubRows.map(row => {
+          const recent = games.filter(g => g.home === row.slug || g.away === row.slug).slice(-10);
+          return { row, played: recent.length, wins: recent.filter(g =>
+            g[g.home === row.slug ? 'homeScore' : 'awayScore'] >
+            g[g.home === row.slug ? 'awayScore' : 'homeScore']).length };
+        }).filter(item => item.played >= 5)
+          .sort((a, b) => b.wins - a.wins || b.row.w - a.row.w)[0];
+        if (form) setStory(1, 'Recent Form',
+          `${form.row.team} wins ${form.wins} of its last ${form.played}`,
+          `${form.row.w}–${form.row.l} this season · See the club`,
+          `team.html?team=${encodeURIComponent(form.row.slug)}`);
+        const homerLeader = leaders.batting?.HR?.[0];
+        if (homerLeader) setStory(2, 'Player Watch',
+          Number(leaders.batting.HR?.[1]?.value) === Number(homerLeader.value)
+            ? `${homerLeader.player} shares the GLB home-run lead at ${homerLeader.value}`
+            : `${homerLeader.player} leads GLB with ${homerLeader.value} home runs`,
+          `${homerLeader.team} · Season 1`,
+          `player.html?team=${encodeURIComponent(homerLeader.team_slug)}&player=${encodeURIComponent(homerLeader.player_slug)}`);
       }
       if (page === 'schedule') {
         const sheet = $('.record-sheet');
         $('#season-loading')?.remove();
         $$('.date-group').forEach(el => el.remove());
-        const detail = $('.meta-detail'); if (detail) detail.textContent = `Season 1 · ${games.length} final games through ${dateText(standings.as_of)}`;
+        const detail = $('.meta-detail'); if (detail) detail.textContent = `Season 1 · Results through ${dateText(standings.as_of)}`;
         const controls = document.createElement('div'); controls.className = 'season-controls';
         const select = document.createElement('select'); select.setAttribute('aria-label', 'Select month');
         const months = [...new Set(games.map(g => g.date.slice(0, 7)))];
@@ -180,7 +222,7 @@
           return a;
         }));
         select.addEventListener('change', render); render();
-        $('#as-of').textContent = `${games.length} official games · through ${dateText(standings.as_of)}`;
+        $('#as-of').textContent = `Results through ${dateText(standings.as_of)}`;
       }
       if (page === 'stats') {
         $('#as-of').textContent = `${stats.length} players with recorded stats · through ${dateText(standings.as_of)}`;

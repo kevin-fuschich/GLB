@@ -22,7 +22,7 @@ jobs:
           node-version: '24'
 
       - name: Generate deterministic preview
-        run: node tools/generate-season.js
+        run: node tools/generate-season-v2.js
 
       - name: Analyze statistical environment
         run: node tools/analyze-stat-preview.js

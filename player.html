@@ -1,12 +1,10 @@
-<!-- FULL UPDATED player.html -->
-<!-- Paste over the existing file -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>GLB Player File</title>
+<link rel="stylesheet" href="player-cards.css">
 <style>
 :root{
   --ink:#111;
@@ -65,6 +63,11 @@ a{color:inherit}
   border-radius:22px;
   overflow:hidden;
   min-height:360px;
+  display:grid;
+  place-items:center;
+  color:#153653;
+  font-size:86px;
+  font-weight:900;
 }
 .player-photo img{
   width:100%;
@@ -182,35 +185,12 @@ p{line-height:1.58;color:#343a40}
   width:max-content;
 }
 
-.cards-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:16px;
-}
-.fake-card{
-  min-height:280px;
-  border:2px dashed #b8c0cc;
-  border-radius:16px;
-  background:#fafafa;
-  padding:16px;
-  display:flex;
-  flex-direction:column;
-  justify-content:space-between;
-}
-.fake-card-top{font-weight:900;color:var(--navy);letter-spacing:.08em}
-.fake-card-image{
-  flex:1;
-  margin:14px 0;
-  border:1px dashed #c9d0da;
-  border-radius:12px;
-  background:#f1f3f5;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  color:var(--muted);
-  font-size:13px;
-}
-.fake-card-name{font-weight:900}
+.card-display{max-width:320px;margin:0 auto}
+.stat-table-wrap{overflow-x:auto}
+.stat-table{border-collapse:collapse;min-width:100%;font-size:14px}
+.stat-table th,.stat-table td{padding:9px 8px;text-align:right;border-bottom:1px solid var(--line);white-space:nowrap}
+.stat-table th:first-child,.stat-table td:first-child{text-align:left}
+.stat-note{font-size:13px;color:var(--muted);margin:13px 0 0}
 
 .record-list{display:grid;gap:14px}
 .record-item{border-top:1px solid var(--line);padding-top:14px}
@@ -268,7 +248,7 @@ p{line-height:1.58;color:#343a40}
 
 @media(max-width:900px){
   .hero-inner,main,.footer-inner{grid-template-columns:1fr}
-  .meta-grid,.cards-grid{grid-template-columns:1fr}
+  .meta-grid{grid-template-columns:1fr}
   h1{font-size:42px}
 }
 @media(max-width:800px){
@@ -340,8 +320,18 @@ p{line-height:1.58;color:#343a40}
     </section>
 
     <section class="card" id="seasonStats">
-      <div class="card-head"><h2>2026 Season Statistics</h2></div>
+      <div class="card-head"><h2>Season by Season</h2></div>
       <div class="card-body" id="seasonStatBody">Loading official season line…</div>
+    </section>
+
+    <section class="card" id="careerStats">
+      <div class="card-head"><h2>Recorded Career Statistics</h2></div>
+      <div class="card-body" id="careerStatBody">Loading career totals…</div>
+    </section>
+
+    <section class="card" id="playerCardSection">
+      <div class="card-head"><h2>Player Card</h2></div>
+      <div class="card-body"><div class="card-display" id="playerCard">Loading card…</div></div>
     </section>
 
     <section class="card">
@@ -372,31 +362,6 @@ p{line-height:1.58;color:#343a40}
             Submit for Review
           </button>
         </form>
-      </div>
-    </section>
-
-    <section class="card">
-      <div class="card-head">
-        <h2>Cards</h2>
-      </div>
-      <div class="card-body">
-        <div class="cards-grid">
-          <div class="fake-card">
-            <div class="fake-card-top">GLB CARD 01</div>
-            <div class="fake-card-image">Card image placeholder</div>
-            <div class="fake-card-name" id="cardNameOne">Player Card</div>
-          </div>
-          <div class="fake-card">
-            <div class="fake-card-top">GLB CARD 02</div>
-            <div class="fake-card-image">Card image placeholder</div>
-            <div class="fake-card-name" id="cardNameTwo">Player Card</div>
-          </div>
-          <div class="fake-card">
-            <div class="fake-card-top">GLB CARD 03</div>
-            <div class="fake-card-image">Card image placeholder</div>
-            <div class="fake-card-name" id="cardNameThree">Player Card</div>
-          </div>
-        </div>
       </div>
     </section>
 
@@ -472,6 +437,7 @@ p{line-height:1.58;color:#343a40}
   </div>
 </footer>
 
+<script src="scripts/player-cards.js?v=20260913a"></script>
 <script>
 const params = new URLSearchParams(window.location.search);
 
@@ -643,6 +609,23 @@ function renderBio(playerName, playerBio, contributors){
   setText("sideStatus","Open");
 }
 
+function statTable(rows, keys, withYear){
+  const wrap=document.createElement('div');wrap.className='stat-table-wrap';
+  const table=document.createElement('table');table.className='stat-table';
+  const thead=document.createElement('thead'),head=document.createElement('tr');
+  if(withYear){const th=document.createElement('th');th.textContent='Year';head.append(th)}
+  for(const key of keys){const th=document.createElement('th');th.textContent=key;head.append(th)}
+  thead.append(head);table.append(thead);
+  const tbody=document.createElement('tbody');
+  for(const entry of rows){
+    const tr=document.createElement('tr');
+    if(withYear){const td=document.createElement('td');td.textContent=entry.year;tr.append(td)}
+    for(const key of keys){const td=document.createElement('td');td.textContent=entry.group?.[key] ?? '—';tr.append(td)}
+    tbody.append(tr);
+  }
+  table.append(tbody);wrap.append(table);return wrap;
+}
+
 async function loadPlayer(){
   try {
     const registryResponse = await fetch('data/teams/teams.json', {cache:'no-store'});
@@ -684,10 +667,6 @@ async function loadPlayer(){
   setText("sideClub", team.teamName);
   setText("sideCode", claimCode);
 
-  setText("cardNameOne", `${playerName} Card`);
-  setText("cardNameTwo", `${playerName} Card`);
-  setText("cardNameThree", `${playerName} Card`);
-
   setValue("bioRecordTypeField", "Player Biography");
   setValue("bioPlayerField", playerName);
   setValue("bioTeamField", team.teamName);
@@ -701,37 +680,39 @@ async function loadPlayer(){
     photoWrap.textContent = playerName.split(/\s+/).slice(0,2).map(word=>word[0]).join('');
     photoWrap.setAttribute('aria-label', `${playerName} portrait unavailable`);
   };
-  const portrait = teamSlug === 'spokane-alloys' ? `assets/images/players/spokane-alloys/spokane-${playerSlug}.png` :
-    teamSlug === 'albuquerque-aeros' ? `assets/teams/albuquerque-aeros/images/players/albuquerque-${playerSlug}.png` : null;
+  const portrait = GLBPlayerCards.photoPath({teamSlug,slug:playerSlug});
   if(portrait){img.onerror = showInitials; img.src = portrait;} else showInitials();
 
   const teamLink = document.getElementById("teamLink");
   teamLink.href = team.teamPage;
   teamLink.textContent = `View ${team.teamName} →`;
 
-  const statsResponse = await fetch('data/season/player-stats.json', {cache:'no-store'});
-  if(!statsResponse.ok) throw new Error('Season statistics unavailable');
-  const seasonStats = await statsResponse.json();
-  const stat = seasonStats.find(row => row.team_slug === teamSlug && row.player === playerSlug);
-  const body = document.getElementById('seasonStatBody');
-  body.replaceChildren();
-  if(!stat){body.textContent = 'No player line recorded in official box scores yet.';return;}
-  const isPitcher = ['SP','RP','CL'].includes(player.position);
-  const group = stat[isPitcher ? 'pitching' : 'batting'];
-  const keys = isPitcher ? ['G','IP','W','L','SV','K','ERA','WHIP'] : ['G','AB','R','H','2B','3B','HR','RBI','BB','K','SB','AVG','OPS'];
-  const table = document.createElement('table');
-  table.style.cssText='width:100%;border-collapse:collapse;display:block;overflow-x:auto';
-  const header=document.createElement('tr'),row=document.createElement('tr');
-  for(const key of keys){
-    const th=document.createElement('th'); th.textContent=key; th.style.padding='8px';
-    const td=document.createElement('td'); td.textContent=group[key] ?? '—'; td.style.padding='8px';
-    header.append(th);row.append(td);
+  const seasons = await GLBPlayerCards.loadSeasons();
+  const record = GLBPlayerCards.careerFor(playerSlug, seasons);
+  document.getElementById('playerCard').replaceChildren(GLBPlayerCards.createCard({
+    ...player,slug:playerSlug,name:playerName,teamSlug,teamName:team.teamName
+  },record,{link:false}));
+  const body=document.getElementById('seasonStatBody');
+  const careerBody=document.getElementById('careerStatBody');
+  body.replaceChildren();careerBody.replaceChildren();
+  if(!record){
+    body.textContent='No player line recorded in official box scores yet.';
+    careerBody.textContent='Career totals will appear after an official player line is recorded.';
+    return;
   }
-  table.append(header,row);body.append(table);
-  const note=document.createElement('p');note.textContent='Official totals through the latest recorded game. Opening Day score-only games do not contribute player lines.';body.append(note);
+  const isPitcher = ['SP','RP','CL'].includes(player.position);
+  const keys = isPitcher ? ['G','IP','W','L','SV','K','ERA','WHIP'] : ['G','AB','R','H','2B','3B','HR','RBI','BB','K','SB','AVG','OPS'];
+  const groupName=isPitcher?'pitching':'batting';
+  body.append(statTable(record.seasons.map(row=>({year:row.year,group:row[groupName]})),keys,true));
+  careerBody.append(statTable([{group:record[groupName]}],keys,false));
+  const note=document.createElement('p');note.className='stat-note';
+  note.textContent=`Recorded career totals include ${[...new Set(record.seasons.map(row=>row.year))].join(', ')}. Games without player lines do not contribute individual statistics.`;
+  careerBody.append(note);
   } catch(error) {
     const body=document.getElementById('seasonStatBody');
     body.textContent=error.message;
+    document.getElementById('careerStatBody').textContent=error.message;
+    document.getElementById('playerCard').textContent='Player card unavailable.';
     console.error(error);
   }
 }

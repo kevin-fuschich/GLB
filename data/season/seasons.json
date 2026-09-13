@@ -1,0 +1,6 @@
+{
+  "schema": "glb.season-index.v1",
+  "seasons": [
+    { "year": 2026, "player_stats_path": "data/season/player-stats.json" }
+  ]
+}

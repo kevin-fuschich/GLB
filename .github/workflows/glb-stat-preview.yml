@@ -25,7 +25,7 @@ jobs:
         run: node tools/validate-roster-uniqueness.js
 
       - name: Generate deterministic preview
-        run: node tools/generate-season-v2.js
+        run: node tools/generate-season-v3.js
 
       - name: Analyze statistical environment
         run: node tools/analyze-stat-preview.js

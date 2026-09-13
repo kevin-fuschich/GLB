@@ -34,3 +34,19 @@ jobs:
 
       - name: Dry-run 75 percent season backfill
         run: node tools/backfill-season.js --percent 75 --dry-run
+
+      - name: Generate 75 percent season snapshot
+        if: github.event_name == 'push'
+        run: |
+          node tools/backfill-season.js --percent 75
+          node tools/rebuild-derived.js
+
+      - name: Upload generated league snapshot
+        if: github.event_name == 'push'
+        uses: actions/upload-artifact@v4
+        with:
+          name: glb-75-percent-snapshot
+          path: |
+            data/games
+            data/season
+            current

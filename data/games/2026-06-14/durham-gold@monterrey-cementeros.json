@@ -1,0 +1,386 @@
+{
+  "schema": "glb.boxscore.v1",
+  "game_id": "2026-06-14_durham-gold@monterrey-cementeros",
+  "date": "2026-06-14",
+  "away": {
+    "slug": "durham-gold",
+    "name": "Durham Gold"
+  },
+  "home": {
+    "slug": "monterrey-cementeros",
+    "name": "Monterrey Cementeros"
+  },
+  "status": "Final",
+  "attendance": 20859,
+  "linescore": {
+    "innings": [
+      {
+        "inning": 1,
+        "away": 1,
+        "home": 0
+      },
+      {
+        "inning": 2,
+        "away": 0,
+        "home": 0
+      },
+      {
+        "inning": 3,
+        "away": 0,
+        "home": 0
+      },
+      {
+        "inning": 4,
+        "away": 0,
+        "home": 1
+      },
+      {
+        "inning": 5,
+        "away": 0,
+        "home": 0
+      },
+      {
+        "inning": 6,
+        "away": 0,
+        "home": 1
+      },
+      {
+        "inning": 7,
+        "away": 0,
+        "home": 0
+      },
+      {
+        "inning": 8,
+        "away": 0,
+        "home": 1
+      },
+      {
+        "inning": 9,
+        "away": 0,
+        "home": 0
+      }
+    ],
+    "totals": {
+      "away": {
+        "R": 1,
+        "H": 11,
+        "E": 2
+      },
+      "home": {
+        "R": 3,
+        "H": 7,
+        "E": 1
+      }
+    }
+  },
+  "final": {
+    "away": 1,
+    "home": 3
+  },
+  "batting": {
+    "away": [
+      {
+        "player": "ethan-bowen",
+        "name": "Ethan Bowen",
+        "position": "C",
+        "AB": 3,
+        "R": 1,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 1,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "marcelo-ibarra",
+        "name": "Marcelo Ibarra",
+        "position": "1B",
+        "AB": 4,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 2,
+        "K": 1,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "joshua-kent",
+        "name": "Joshua Kent",
+        "position": "2B",
+        "AB": 3,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 1,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "omar-salcedo",
+        "name": "Omar Salcedo",
+        "position": "SS",
+        "AB": 3,
+        "R": 0,
+        "H": 1,
+        "2B": 1,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "tyrell-winston",
+        "name": "Tyrell Winston",
+        "position": "3B",
+        "AB": 3,
+        "R": 0,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 3,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "aaron-fletcher",
+        "name": "Aaron Fletcher",
+        "position": "CF",
+        "AB": 5,
+        "R": 0,
+        "H": 2,
+        "2B": 1,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 1,
+        "K": 1,
+        "HR": 0,
+        "SB": 1
+      },
+      {
+        "player": "mateo-rios",
+        "name": "Mateo Ríos",
+        "position": "LF",
+        "AB": 3,
+        "R": 0,
+        "H": 3,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 1,
+        "HR": 0,
+        "SB": 1
+      },
+      {
+        "player": "calvin-ross",
+        "name": "Calvin Ross",
+        "position": "RF",
+        "AB": 5,
+        "R": 0,
+        "H": 3,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 2,
+        "HR": 0,
+        "SB": 0
+      }
+    ],
+    "home": [
+      {
+        "player": "julian-sauri",
+        "name": "Julián Sauri",
+        "position": "C",
+        "AB": 4,
+        "R": 0,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 2,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "eamon-kilrea",
+        "name": "Eamon Kilrea",
+        "position": "1B",
+        "AB": 5,
+        "R": 0,
+        "H": 3,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 0,
+        "K": 1,
+        "HR": 0,
+        "SB": 1
+      },
+      {
+        "player": "thiago-pereyra",
+        "name": "Thiago Pereyra",
+        "position": "2B",
+        "AB": 3,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 2,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "kofi-mensah",
+        "name": "Kofi Mensah",
+        "position": "SS",
+        "AB": 4,
+        "R": 2,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 3,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "luka-vukovic",
+        "name": "Luka Vuković",
+        "position": "3B",
+        "AB": 5,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 1,
+        "K": 2,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "seiji-fukumori",
+        "name": "Seiji Fukumori",
+        "position": "CF",
+        "AB": 4,
+        "R": 1,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "andres-cazares",
+        "name": "Andrés Cázares",
+        "position": "LF",
+        "AB": 5,
+        "R": 0,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 0,
+        "K": 1,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "micah-lunsford",
+        "name": "Micah Lunsford",
+        "position": "RF",
+        "AB": 3,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 1,
+        "HR": 0,
+        "SB": 1
+      }
+    ]
+  },
+  "pitching": {
+    "away": [
+      {
+        "player": "antonio-beltran",
+        "name": "Antonio Beltrán",
+        "IP_outs": 16,
+        "H": 4,
+        "R": 2,
+        "ER": 2,
+        "BB": 1,
+        "K": 5,
+        "HR": 0,
+        "IP": 5.1
+      },
+      {
+        "player": "noah-pryce",
+        "name": "Noah Pryce",
+        "IP_outs": 11,
+        "H": 3,
+        "R": 1,
+        "ER": 1,
+        "BB": 0,
+        "K": 7,
+        "HR": 0,
+        "IP": 3.2
+      }
+    ],
+    "home": [
+      {
+        "player": "masato-yanagisawa",
+        "name": "Masato Yanagisawa",
+        "IP_outs": 19,
+        "H": 0,
+        "R": 0,
+        "ER": 0,
+        "BB": 2,
+        "K": 7,
+        "HR": 0,
+        "IP": 6.1
+      },
+      {
+        "player": "niko-kouris",
+        "name": "Niko Kouris",
+        "IP_outs": 8,
+        "H": 11,
+        "R": 1,
+        "ER": 1,
+        "BB": 3,
+        "K": 1,
+        "HR": 0,
+        "IP": 2.2
+      }
+    ]
+  },
+  "decisions": {
+    "W": "masato-yanagisawa",
+    "L": "antonio-beltran",
+    "SV": "niko-kouris"
+  },
+  "notes": []
+}

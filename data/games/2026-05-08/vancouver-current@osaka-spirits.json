@@ -1,0 +1,386 @@
+{
+  "schema": "glb.boxscore.v1",
+  "game_id": "2026-05-08_vancouver-current@osaka-spirits",
+  "date": "2026-05-08",
+  "away": {
+    "slug": "vancouver-current",
+    "name": "Vancouver Current"
+  },
+  "home": {
+    "slug": "osaka-spirits",
+    "name": "Osaka Spirits"
+  },
+  "status": "Final",
+  "attendance": 24874,
+  "linescore": {
+    "innings": [
+      {
+        "inning": 1,
+        "away": 0,
+        "home": 0
+      },
+      {
+        "inning": 2,
+        "away": 1,
+        "home": 0
+      },
+      {
+        "inning": 3,
+        "away": 1,
+        "home": 2
+      },
+      {
+        "inning": 4,
+        "away": 0,
+        "home": 0
+      },
+      {
+        "inning": 5,
+        "away": 0,
+        "home": 0
+      },
+      {
+        "inning": 6,
+        "away": 1,
+        "home": 0
+      },
+      {
+        "inning": 7,
+        "away": 2,
+        "home": 0
+      },
+      {
+        "inning": 8,
+        "away": 1,
+        "home": 2
+      },
+      {
+        "inning": 9,
+        "away": 0,
+        "home": 1
+      }
+    ],
+    "totals": {
+      "away": {
+        "R": 6,
+        "H": 9,
+        "E": 2
+      },
+      "home": {
+        "R": 5,
+        "H": 11,
+        "E": 2
+      }
+    }
+  },
+  "final": {
+    "away": 6,
+    "home": 5
+  },
+  "batting": {
+    "away": [
+      {
+        "player": "silas-boudreau",
+        "name": "Silas Boudreau",
+        "position": "C",
+        "AB": 3,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 0,
+        "K": 1,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "eamon-kerr",
+        "name": "Eamon Kerr",
+        "position": "1B",
+        "AB": 3,
+        "R": 0,
+        "H": 2,
+        "2B": 0,
+        "3B": 1,
+        "RBI": 2,
+        "BB": 0,
+        "K": 3,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "soraya-jafari",
+        "name": "Soraya Jafari",
+        "position": "2B",
+        "AB": 4,
+        "R": 1,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 0,
+        "K": 1,
+        "HR": 1,
+        "SB": 0
+      },
+      {
+        "player": "alejo-santillan",
+        "name": "Alejo Santillán",
+        "position": "SS",
+        "AB": 4,
+        "R": 1,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 1,
+        "K": 1,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "roman-velasco",
+        "name": "Roman Velasco",
+        "position": "3B",
+        "AB": 3,
+        "R": 0,
+        "H": 3,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 0,
+        "HR": 1,
+        "SB": 0
+      },
+      {
+        "player": "taj-adelman",
+        "name": "Taj Adelman",
+        "position": "LF",
+        "AB": 3,
+        "R": 1,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 0,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "marcell-lind",
+        "name": "Marcell Lind",
+        "position": "CF",
+        "AB": 4,
+        "R": 1,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 1,
+        "K": 3,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "oziel-narvaez",
+        "name": "Oziel Narváez",
+        "position": "RF",
+        "AB": 3,
+        "R": 2,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 2,
+        "HR": 0,
+        "SB": 0
+      }
+    ],
+    "home": [
+      {
+        "player": "marcelino-quispe",
+        "name": "Marcelino Quispe",
+        "position": "C",
+        "AB": 4,
+        "R": 1,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 1,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "thabo-mkhize",
+        "name": "Thabo Mkhize",
+        "position": "1B",
+        "AB": 3,
+        "R": 1,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 2,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "arman-daryan",
+        "name": "Arman Daryan",
+        "position": "2B",
+        "AB": 4,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 4,
+        "BB": 1,
+        "K": 3,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "kenjiro-suganuma",
+        "name": "Kenjiro Suganuma",
+        "position": "SS",
+        "AB": 4,
+        "R": 2,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 1,
+        "K": 1,
+        "HR": 1,
+        "SB": 0
+      },
+      {
+        "player": "dariusz-kwiatkowski",
+        "name": "Dariusz Kwiatkowski",
+        "position": "3B",
+        "AB": 4,
+        "R": 0,
+        "H": 4,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "nikhil-bhandari",
+        "name": "Nikhil Bhandari",
+        "position": "CF",
+        "AB": 5,
+        "R": 1,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "thiago-ramires",
+        "name": "Thiago Ramires",
+        "position": "LF",
+        "AB": 3,
+        "R": 0,
+        "H": 2,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 3,
+        "HR": 0,
+        "SB": 1
+      },
+      {
+        "player": "yusef-el-badri",
+        "name": "Yusef El-Badri",
+        "position": "RF",
+        "AB": 3,
+        "R": 0,
+        "H": 2,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 1,
+        "K": 2,
+        "HR": 0,
+        "SB": 1
+      }
+    ]
+  },
+  "pitching": {
+    "away": [
+      {
+        "player": "maksim-zorya",
+        "name": "Maksim Zorya",
+        "IP_outs": 20,
+        "H": 7,
+        "R": 1,
+        "ER": 1,
+        "BB": 1,
+        "K": 10,
+        "HR": 0,
+        "IP": 6.2
+      },
+      {
+        "player": "kofi-ansah",
+        "name": "Kofi Ansah",
+        "IP_outs": 7,
+        "H": 4,
+        "R": 4,
+        "ER": 4,
+        "BB": 4,
+        "K": 0,
+        "HR": 1,
+        "IP": 2.1
+      }
+    ],
+    "home": [
+      {
+        "player": "kofi-boateng",
+        "name": "Kofi Boateng",
+        "IP_outs": 21,
+        "H": 7,
+        "R": 1,
+        "ER": 1,
+        "BB": 0,
+        "K": 9,
+        "HR": 2,
+        "IP": 7
+      },
+      {
+        "player": "mateo-zubillaga",
+        "name": "Mateo Zubillaga",
+        "IP_outs": 6,
+        "H": 2,
+        "R": 5,
+        "ER": 5,
+        "BB": 2,
+        "K": 2,
+        "HR": 0,
+        "IP": 2
+      }
+    ]
+  },
+  "decisions": {
+    "W": "maksim-zorya",
+    "L": "kofi-boateng",
+    "SV": "kofi-ansah"
+  },
+  "notes": []
+}

@@ -1,0 +1,386 @@
+{
+  "schema": "glb.boxscore.v1",
+  "game_id": "2026-04-12_monterrey-cementeros@st-paul-frost",
+  "date": "2026-04-12",
+  "away": {
+    "slug": "monterrey-cementeros",
+    "name": "Monterrey Cementeros"
+  },
+  "home": {
+    "slug": "st-paul-frost",
+    "name": "St. Paul Frost"
+  },
+  "status": "Final",
+  "attendance": 33850,
+  "linescore": {
+    "innings": [
+      {
+        "inning": 1,
+        "away": 0,
+        "home": 1
+      },
+      {
+        "inning": 2,
+        "away": 1,
+        "home": 0
+      },
+      {
+        "inning": 3,
+        "away": 0,
+        "home": 0
+      },
+      {
+        "inning": 4,
+        "away": 0,
+        "home": 0
+      },
+      {
+        "inning": 5,
+        "away": 1,
+        "home": 0
+      },
+      {
+        "inning": 6,
+        "away": 0,
+        "home": 0
+      },
+      {
+        "inning": 7,
+        "away": 1,
+        "home": 0
+      },
+      {
+        "inning": 8,
+        "away": 1,
+        "home": 1
+      },
+      {
+        "inning": 9,
+        "away": 0,
+        "home": 0
+      }
+    ],
+    "totals": {
+      "away": {
+        "R": 4,
+        "H": 7,
+        "E": 2
+      },
+      "home": {
+        "R": 2,
+        "H": 6,
+        "E": 2
+      }
+    }
+  },
+  "final": {
+    "away": 4,
+    "home": 2
+  },
+  "batting": {
+    "away": [
+      {
+        "player": "julian-sauri",
+        "name": "Julián Sauri",
+        "position": "C",
+        "AB": 5,
+        "R": 0,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "eamon-kilrea",
+        "name": "Eamon Kilrea",
+        "position": "1B",
+        "AB": 5,
+        "R": 2,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 0,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "thiago-pereyra",
+        "name": "Thiago Pereyra",
+        "position": "2B",
+        "AB": 4,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 2,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "kofi-mensah",
+        "name": "Kofi Mensah",
+        "position": "SS",
+        "AB": 4,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 1,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "luka-vukovic",
+        "name": "Luka Vuković",
+        "position": "3B",
+        "AB": 3,
+        "R": 1,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 1,
+        "K": 3,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "seiji-fukumori",
+        "name": "Seiji Fukumori",
+        "position": "CF",
+        "AB": 4,
+        "R": 1,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 0,
+        "K": 0,
+        "HR": 0,
+        "SB": 1
+      },
+      {
+        "player": "andres-cazares",
+        "name": "Andrés Cázares",
+        "position": "LF",
+        "AB": 5,
+        "R": 0,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 2,
+        "K": 1,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "micah-lunsford",
+        "name": "Micah Lunsford",
+        "position": "RF",
+        "AB": 3,
+        "R": 0,
+        "H": 2,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 1,
+        "K": 2,
+        "HR": 0,
+        "SB": 0
+      }
+    ],
+    "home": [
+      {
+        "player": "evan-morrissey",
+        "name": "Evan Morrissey",
+        "position": "C",
+        "AB": 3,
+        "R": 0,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 2,
+        "BB": 0,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "javier-lucero",
+        "name": "Javier Lucero",
+        "position": "1B",
+        "AB": 4,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "owen-hartnell",
+        "name": "Owen Hartnell",
+        "position": "2B",
+        "AB": 4,
+        "R": 2,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 2,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "masato-kobori",
+        "name": "Masato Kobori",
+        "position": "SS",
+        "AB": 4,
+        "R": 0,
+        "H": 3,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "trevor-yates",
+        "name": "Trevor Yates",
+        "position": "3B",
+        "AB": 3,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 1,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "malik-jefferson",
+        "name": "Malik Jefferson",
+        "position": "CF",
+        "AB": 3,
+        "R": 0,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 0,
+        "HR": 0,
+        "SB": 1
+      },
+      {
+        "player": "rodrigo-fuentes",
+        "name": "Rodrigo Fuentes",
+        "position": "LF",
+        "AB": 5,
+        "R": 0,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 2,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "jake-lanier",
+        "name": "Jake Lanier",
+        "position": "RF",
+        "AB": 3,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 1,
+        "K": 2,
+        "HR": 0,
+        "SB": 0
+      }
+    ]
+  },
+  "pitching": {
+    "away": [
+      {
+        "player": "masato-yanagisawa",
+        "name": "Masato Yanagisawa",
+        "IP_outs": 20,
+        "H": 3,
+        "R": 0,
+        "ER": 0,
+        "BB": 1,
+        "K": 7,
+        "HR": 0,
+        "IP": 6.2
+      },
+      {
+        "player": "bashir-el-khatib",
+        "name": "Bashir El-Khatib",
+        "IP_outs": 7,
+        "H": 3,
+        "R": 2,
+        "ER": 2,
+        "BB": 0,
+        "K": 0,
+        "HR": 0,
+        "IP": 2.1
+      }
+    ],
+    "home": [
+      {
+        "player": "miguel-alcazar",
+        "name": "Miguel Alcázar",
+        "IP_outs": 19,
+        "H": 7,
+        "R": 4,
+        "ER": 4,
+        "BB": 1,
+        "K": 5,
+        "HR": 0,
+        "IP": 6.1
+      },
+      {
+        "player": "antonio-velez",
+        "name": "Antonio Vélez",
+        "IP_outs": 8,
+        "H": 0,
+        "R": 0,
+        "ER": 0,
+        "BB": 3,
+        "K": 4,
+        "HR": 0,
+        "IP": 2.2
+      }
+    ]
+  },
+  "decisions": {
+    "W": "masato-yanagisawa",
+    "L": "miguel-alcazar",
+    "SV": "bashir-el-khatib"
+  },
+  "notes": []
+}

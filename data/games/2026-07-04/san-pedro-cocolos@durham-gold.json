@@ -1,0 +1,386 @@
+{
+  "schema": "glb.boxscore.v1",
+  "game_id": "2026-07-04_san-pedro-cocolos@durham-gold",
+  "date": "2026-07-04",
+  "away": {
+    "slug": "san-pedro-cocolos",
+    "name": "San Pedro Cocolos"
+  },
+  "home": {
+    "slug": "durham-gold",
+    "name": "Durham Gold"
+  },
+  "status": "Final",
+  "attendance": 23149,
+  "linescore": {
+    "innings": [
+      {
+        "inning": 1,
+        "away": 0,
+        "home": 1
+      },
+      {
+        "inning": 2,
+        "away": 1,
+        "home": 0
+      },
+      {
+        "inning": 3,
+        "away": 1,
+        "home": 1
+      },
+      {
+        "inning": 4,
+        "away": 0,
+        "home": 1
+      },
+      {
+        "inning": 5,
+        "away": 0,
+        "home": 0
+      },
+      {
+        "inning": 6,
+        "away": 0,
+        "home": 0
+      },
+      {
+        "inning": 7,
+        "away": 0,
+        "home": 0
+      },
+      {
+        "inning": 8,
+        "away": 1,
+        "home": 1
+      },
+      {
+        "inning": 9,
+        "away": 0,
+        "home": 0
+      }
+    ],
+    "totals": {
+      "away": {
+        "R": 3,
+        "H": 6,
+        "E": 1
+      },
+      "home": {
+        "R": 4,
+        "H": 11,
+        "E": 0
+      }
+    }
+  },
+  "final": {
+    "away": 3,
+    "home": 4
+  },
+  "batting": {
+    "away": [
+      {
+        "player": "matias-serey",
+        "name": "Matías Serey",
+        "position": "C",
+        "AB": 5,
+        "R": 1,
+        "H": 3,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 0,
+        "HR": 1,
+        "SB": 1
+      },
+      {
+        "player": "caleb-vanhoorn",
+        "name": "Caleb VanHoorn",
+        "position": "1B",
+        "AB": 5,
+        "R": 1,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "omar-benyahia",
+        "name": "Omar Benyahia",
+        "position": "2B",
+        "AB": 5,
+        "R": 0,
+        "H": 1,
+        "2B": 1,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 0,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "ryo-kawabata",
+        "name": "Ryo Kawabata",
+        "position": "SS",
+        "AB": 3,
+        "R": 0,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 2,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "darius-kofi",
+        "name": "Darius Kofi",
+        "position": "3B",
+        "AB": 3,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 2,
+        "K": 1,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "miguel-encarnacion",
+        "name": "Miguel Encarnación",
+        "position": "CF",
+        "AB": 5,
+        "R": 0,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 1,
+        "K": 1,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "victor-sundqvist",
+        "name": "Victor Sundqvist",
+        "position": "LF",
+        "AB": 3,
+        "R": 0,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 1,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "naveen-iyer",
+        "name": "Naveen Iyer",
+        "position": "RF",
+        "AB": 3,
+        "R": 1,
+        "H": 1,
+        "2B": 1,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 1,
+        "HR": 0,
+        "SB": 0
+      }
+    ],
+    "home": [
+      {
+        "player": "ethan-bowen",
+        "name": "Ethan Bowen",
+        "position": "C",
+        "AB": 5,
+        "R": 1,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 1,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "marcelo-ibarra",
+        "name": "Marcelo Ibarra",
+        "position": "1B",
+        "AB": 4,
+        "R": 0,
+        "H": 2,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 0,
+        "K": 3,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "joshua-kent",
+        "name": "Joshua Kent",
+        "position": "2B",
+        "AB": 5,
+        "R": 1,
+        "H": 4,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 0,
+        "K": 2,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "omar-salcedo",
+        "name": "Omar Salcedo",
+        "position": "SS",
+        "AB": 3,
+        "R": 0,
+        "H": 2,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 1,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "tyrell-winston",
+        "name": "Tyrell Winston",
+        "position": "3B",
+        "AB": 3,
+        "R": 1,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 2,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "aaron-fletcher",
+        "name": "Aaron Fletcher",
+        "position": "CF",
+        "AB": 3,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 2,
+        "BB": 1,
+        "K": 3,
+        "HR": 1,
+        "SB": 0
+      },
+      {
+        "player": "mateo-rios",
+        "name": "Mateo Ríos",
+        "position": "LF",
+        "AB": 5,
+        "R": 1,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 0,
+        "HR": 1,
+        "SB": 0
+      },
+      {
+        "player": "calvin-ross",
+        "name": "Calvin Ross",
+        "position": "RF",
+        "AB": 5,
+        "R": 0,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 1,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      }
+    ]
+  },
+  "pitching": {
+    "away": [
+      {
+        "player": "souleymane-diallo",
+        "name": "Souleymane Diallo",
+        "IP_outs": 18,
+        "H": 9,
+        "R": 3,
+        "ER": 3,
+        "BB": 1,
+        "K": 5,
+        "HR": 0,
+        "IP": 6
+      },
+      {
+        "player": "teo-arellano",
+        "name": "Teo Arellano",
+        "IP_outs": 9,
+        "H": 2,
+        "R": 1,
+        "ER": 1,
+        "BB": 2,
+        "K": 6,
+        "HR": 2,
+        "IP": 3
+      }
+    ],
+    "home": [
+      {
+        "player": "kenji-nomura",
+        "name": "Kenji Nomura",
+        "IP_outs": 16,
+        "H": 6,
+        "R": 3,
+        "ER": 3,
+        "BB": 1,
+        "K": 5,
+        "HR": 0,
+        "IP": 5.1
+      },
+      {
+        "player": "luis-carreno",
+        "name": "Luis Carreño",
+        "IP_outs": 11,
+        "H": 0,
+        "R": 0,
+        "ER": 0,
+        "BB": 3,
+        "K": 0,
+        "HR": 1,
+        "IP": 3.2
+      }
+    ]
+  },
+  "decisions": {
+    "W": "kenji-nomura",
+    "L": "souleymane-diallo",
+    "SV": null
+  },
+  "notes": []
+}

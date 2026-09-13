@@ -1,0 +1,386 @@
+{
+  "schema": "glb.boxscore.v1",
+  "game_id": "2026-06-29_mayaguez-sultans@birmingham-vulcans",
+  "date": "2026-06-29",
+  "away": {
+    "slug": "mayaguez-sultans",
+    "name": "Mayagüez Sultans"
+  },
+  "home": {
+    "slug": "birmingham-vulcans",
+    "name": "Birmingham Vulcans"
+  },
+  "status": "Final",
+  "attendance": 22282,
+  "linescore": {
+    "innings": [
+      {
+        "inning": 1,
+        "away": 1,
+        "home": 0
+      },
+      {
+        "inning": 2,
+        "away": 0,
+        "home": 1
+      },
+      {
+        "inning": 3,
+        "away": 2,
+        "home": 1
+      },
+      {
+        "inning": 4,
+        "away": 0,
+        "home": 1
+      },
+      {
+        "inning": 5,
+        "away": 0,
+        "home": 0
+      },
+      {
+        "inning": 6,
+        "away": 0,
+        "home": 0
+      },
+      {
+        "inning": 7,
+        "away": 3,
+        "home": 0
+      },
+      {
+        "inning": 8,
+        "away": 0,
+        "home": 0
+      },
+      {
+        "inning": 9,
+        "away": 0,
+        "home": 0
+      }
+    ],
+    "totals": {
+      "away": {
+        "R": 6,
+        "H": 6,
+        "E": 1
+      },
+      "home": {
+        "R": 3,
+        "H": 8,
+        "E": 1
+      }
+    }
+  },
+  "final": {
+    "away": 6,
+    "home": 3
+  },
+  "batting": {
+    "away": [
+      {
+        "player": "tomer-barzilai",
+        "name": "Tomer Barzilai",
+        "position": "C",
+        "AB": 3,
+        "R": 1,
+        "H": 2,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "enzo-carvajal",
+        "name": "Enzo Carvajal",
+        "position": "1B",
+        "AB": 3,
+        "R": 1,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 0,
+        "K": 1,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "nils-adebayo",
+        "name": "Nils Adebayo",
+        "position": "2B",
+        "AB": 4,
+        "R": 1,
+        "H": 2,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 3,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "jae-min-seok",
+        "name": "Jae-min Seok",
+        "position": "SS",
+        "AB": 5,
+        "R": 1,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 0,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "pavel-hrynko",
+        "name": "Pavel Hrynko",
+        "position": "3B",
+        "AB": 5,
+        "R": 0,
+        "H": 1,
+        "2B": 1,
+        "3B": 0,
+        "RBI": 2,
+        "BB": 2,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "malik-doumbia",
+        "name": "Malik Doumbia",
+        "position": "LF",
+        "AB": 4,
+        "R": 0,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 0,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "cesar-iglesiarias",
+        "name": "César Iglesiarias",
+        "position": "CF",
+        "AB": 5,
+        "R": 2,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 0,
+        "K": 1,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "ari-kasprzyk",
+        "name": "Ari Kasprzyk",
+        "position": "RF",
+        "AB": 5,
+        "R": 0,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 1,
+        "K": 1,
+        "HR": 0,
+        "SB": 1
+      }
+    ],
+    "home": [
+      {
+        "player": "owen-keller",
+        "name": "Owen Keller",
+        "position": "C",
+        "AB": 3,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 1,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "malik-johnson",
+        "name": "Malik Johnson",
+        "position": "1B",
+        "AB": 5,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 1,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "nico-valente",
+        "name": "Nico Valente",
+        "position": "2B",
+        "AB": 4,
+        "R": 1,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 0,
+        "K": 1,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "julian-santoro",
+        "name": "Julian Santoro",
+        "position": "SS",
+        "AB": 5,
+        "R": 0,
+        "H": 2,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "caleb-hawkins",
+        "name": "Caleb Hawkins",
+        "position": "3B",
+        "AB": 3,
+        "R": 1,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 1,
+        "K": 0,
+        "HR": 1,
+        "SB": 0
+      },
+      {
+        "player": "isaac-morrow",
+        "name": "Isaac Morrow",
+        "position": "CF",
+        "AB": 5,
+        "R": 1,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 0,
+        "K": 1,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "dante-rios",
+        "name": "Dante Rios",
+        "position": "LF",
+        "AB": 4,
+        "R": 0,
+        "H": 2,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 1,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "cole-ramsey",
+        "name": "Cole Ramsey",
+        "position": "RF",
+        "AB": 3,
+        "R": 0,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 0,
+        "K": 1,
+        "HR": 0,
+        "SB": 0
+      }
+    ]
+  },
+  "pitching": {
+    "away": [
+      {
+        "player": "dario-vukovic",
+        "name": "Dario Vukovic",
+        "IP_outs": 18,
+        "H": 1,
+        "R": 1,
+        "ER": 1,
+        "BB": 2,
+        "K": 5,
+        "HR": 0,
+        "IP": 6
+      },
+      {
+        "player": "rafiq-qureshi",
+        "name": "Rafiq Qureshi",
+        "IP_outs": 9,
+        "H": 7,
+        "R": 2,
+        "ER": 2,
+        "BB": 0,
+        "K": 0,
+        "HR": 1,
+        "IP": 3
+      }
+    ],
+    "home": [
+      {
+        "player": "hassan-al-saleh",
+        "name": "Hassan Al-Saleh",
+        "IP_outs": 15,
+        "H": 3,
+        "R": 6,
+        "ER": 6,
+        "BB": 2,
+        "K": 2,
+        "HR": 0,
+        "IP": 5
+      },
+      {
+        "player": "reese-walker",
+        "name": "Reese Walker",
+        "IP_outs": 12,
+        "H": 3,
+        "R": 0,
+        "ER": 0,
+        "BB": 1,
+        "K": 4,
+        "HR": 0,
+        "IP": 4
+      }
+    ]
+  },
+  "decisions": {
+    "W": "dario-vukovic",
+    "L": "hassan-al-saleh",
+    "SV": "rafiq-qureshi"
+  },
+  "notes": []
+}

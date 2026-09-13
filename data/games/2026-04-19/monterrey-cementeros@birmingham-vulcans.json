@@ -1,0 +1,386 @@
+{
+  "schema": "glb.boxscore.v1",
+  "game_id": "2026-04-19_monterrey-cementeros@birmingham-vulcans",
+  "date": "2026-04-19",
+  "away": {
+    "slug": "monterrey-cementeros",
+    "name": "Monterrey Cementeros"
+  },
+  "home": {
+    "slug": "birmingham-vulcans",
+    "name": "Birmingham Vulcans"
+  },
+  "status": "Final",
+  "attendance": 27469,
+  "linescore": {
+    "innings": [
+      {
+        "inning": 1,
+        "away": 0,
+        "home": 0
+      },
+      {
+        "inning": 2,
+        "away": 0,
+        "home": 0
+      },
+      {
+        "inning": 3,
+        "away": 0,
+        "home": 0
+      },
+      {
+        "inning": 4,
+        "away": 2,
+        "home": 1
+      },
+      {
+        "inning": 5,
+        "away": 0,
+        "home": 0
+      },
+      {
+        "inning": 6,
+        "away": 0,
+        "home": 0
+      },
+      {
+        "inning": 7,
+        "away": 0,
+        "home": 0
+      },
+      {
+        "inning": 8,
+        "away": 0,
+        "home": 0
+      },
+      {
+        "inning": 9,
+        "away": 2,
+        "home": 0
+      }
+    ],
+    "totals": {
+      "away": {
+        "R": 4,
+        "H": 4,
+        "E": 2
+      },
+      "home": {
+        "R": 1,
+        "H": 7,
+        "E": 0
+      }
+    }
+  },
+  "final": {
+    "away": 4,
+    "home": 1
+  },
+  "batting": {
+    "away": [
+      {
+        "player": "julian-sauri",
+        "name": "Julián Sauri",
+        "position": "C",
+        "AB": 5,
+        "R": 1,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 3,
+        "HR": 0,
+        "SB": 1
+      },
+      {
+        "player": "eamon-kilrea",
+        "name": "Eamon Kilrea",
+        "position": "1B",
+        "AB": 4,
+        "R": 0,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 0,
+        "K": 2,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "thiago-pereyra",
+        "name": "Thiago Pereyra",
+        "position": "2B",
+        "AB": 5,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 1,
+        "K": 2,
+        "HR": 1,
+        "SB": 0
+      },
+      {
+        "player": "kofi-mensah",
+        "name": "Kofi Mensah",
+        "position": "SS",
+        "AB": 5,
+        "R": 1,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 0,
+        "K": 1,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "luka-vukovic",
+        "name": "Luka Vuković",
+        "position": "3B",
+        "AB": 5,
+        "R": 0,
+        "H": 2,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 3,
+        "HR": 1,
+        "SB": 1
+      },
+      {
+        "player": "seiji-fukumori",
+        "name": "Seiji Fukumori",
+        "position": "CF",
+        "AB": 5,
+        "R": 0,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 1,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "andres-cazares",
+        "name": "Andrés Cázares",
+        "position": "LF",
+        "AB": 3,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 1,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "micah-lunsford",
+        "name": "Micah Lunsford",
+        "position": "RF",
+        "AB": 4,
+        "R": 2,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 1,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      }
+    ],
+    "home": [
+      {
+        "player": "owen-keller",
+        "name": "Owen Keller",
+        "position": "C",
+        "AB": 4,
+        "R": 0,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 0,
+        "K": 2,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "malik-johnson",
+        "name": "Malik Johnson",
+        "position": "1B",
+        "AB": 5,
+        "R": 0,
+        "H": 2,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 2,
+        "K": 0,
+        "HR": 1,
+        "SB": 0
+      },
+      {
+        "player": "nico-valente",
+        "name": "Nico Valente",
+        "position": "2B",
+        "AB": 4,
+        "R": 0,
+        "H": 1,
+        "2B": 1,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 1,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "julian-santoro",
+        "name": "Julian Santoro",
+        "position": "SS",
+        "AB": 5,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 1,
+        "RBI": 0,
+        "BB": 0,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "caleb-hawkins",
+        "name": "Caleb Hawkins",
+        "position": "3B",
+        "AB": 4,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 2,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "isaac-morrow",
+        "name": "Isaac Morrow",
+        "position": "CF",
+        "AB": 3,
+        "R": 0,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "dante-rios",
+        "name": "Dante Rios",
+        "position": "LF",
+        "AB": 3,
+        "R": 1,
+        "H": 2,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 1,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "cole-ramsey",
+        "name": "Cole Ramsey",
+        "position": "RF",
+        "AB": 5,
+        "R": 0,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      }
+    ]
+  },
+  "pitching": {
+    "away": [
+      {
+        "player": "masato-yanagisawa",
+        "name": "Masato Yanagisawa",
+        "IP_outs": 18,
+        "H": 3,
+        "R": 0,
+        "ER": 0,
+        "BB": 2,
+        "K": 5,
+        "HR": 1,
+        "IP": 6
+      },
+      {
+        "player": "niko-kouris",
+        "name": "Niko Kouris",
+        "IP_outs": 9,
+        "H": 4,
+        "R": 1,
+        "ER": 1,
+        "BB": 0,
+        "K": 1,
+        "HR": 0,
+        "IP": 3
+      }
+    ],
+    "home": [
+      {
+        "player": "thierry-boucher",
+        "name": "Thierry Boucher",
+        "IP_outs": 15,
+        "H": 0,
+        "R": 4,
+        "ER": 4,
+        "BB": 2,
+        "K": 9,
+        "HR": 0,
+        "IP": 5
+      },
+      {
+        "player": "reese-walker",
+        "name": "Reese Walker",
+        "IP_outs": 12,
+        "H": 4,
+        "R": 0,
+        "ER": 0,
+        "BB": 1,
+        "K": 3,
+        "HR": 2,
+        "IP": 4
+      }
+    ]
+  },
+  "decisions": {
+    "W": "masato-yanagisawa",
+    "L": "thierry-boucher",
+    "SV": "niko-kouris"
+  },
+  "notes": []
+}

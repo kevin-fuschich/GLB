@@ -1,0 +1,386 @@
+{
+  "schema": "glb.boxscore.v1",
+  "game_id": "2026-05-24_st-paul-frost@spokane-alloys",
+  "date": "2026-05-24",
+  "away": {
+    "slug": "st-paul-frost",
+    "name": "St. Paul Frost"
+  },
+  "home": {
+    "slug": "spokane-alloys",
+    "name": "Spokane Alloys"
+  },
+  "status": "Final",
+  "attendance": 14111,
+  "linescore": {
+    "innings": [
+      {
+        "inning": 1,
+        "away": 1,
+        "home": 1
+      },
+      {
+        "inning": 2,
+        "away": 0,
+        "home": 0
+      },
+      {
+        "inning": 3,
+        "away": 1,
+        "home": 2
+      },
+      {
+        "inning": 4,
+        "away": 0,
+        "home": 0
+      },
+      {
+        "inning": 5,
+        "away": 0,
+        "home": 0
+      },
+      {
+        "inning": 6,
+        "away": 2,
+        "home": 0
+      },
+      {
+        "inning": 7,
+        "away": 0,
+        "home": 0
+      },
+      {
+        "inning": 8,
+        "away": 1,
+        "home": 1
+      },
+      {
+        "inning": 9,
+        "away": 0,
+        "home": 0
+      }
+    ],
+    "totals": {
+      "away": {
+        "R": 5,
+        "H": 5,
+        "E": 0
+      },
+      "home": {
+        "R": 4,
+        "H": 10,
+        "E": 1
+      }
+    }
+  },
+  "final": {
+    "away": 5,
+    "home": 4
+  },
+  "batting": {
+    "away": [
+      {
+        "player": "evan-morrissey",
+        "name": "Evan Morrissey",
+        "position": "C",
+        "AB": 5,
+        "R": 1,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 2,
+        "BB": 0,
+        "K": 1,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "javier-lucero",
+        "name": "Javier Lucero",
+        "position": "1B",
+        "AB": 4,
+        "R": 0,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 1,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "owen-hartnell",
+        "name": "Owen Hartnell",
+        "position": "2B",
+        "AB": 3,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 2,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "masato-kobori",
+        "name": "Masato Kobori",
+        "position": "SS",
+        "AB": 3,
+        "R": 1,
+        "H": 2,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 2,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "trevor-yates",
+        "name": "Trevor Yates",
+        "position": "3B",
+        "AB": 3,
+        "R": 1,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 0,
+        "K": 1,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "malik-jefferson",
+        "name": "Malik Jefferson",
+        "position": "CF",
+        "AB": 4,
+        "R": 0,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 0,
+        "K": 1,
+        "HR": 0,
+        "SB": 1
+      },
+      {
+        "player": "rodrigo-fuentes",
+        "name": "Rodrigo Fuentes",
+        "position": "LF",
+        "AB": 5,
+        "R": 2,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "jake-lanier",
+        "name": "Jake Lanier",
+        "position": "RF",
+        "AB": 5,
+        "R": 0,
+        "H": 1,
+        "2B": 1,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 0,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      }
+    ],
+    "home": [
+      {
+        "player": "nikolai-dobrynin",
+        "name": "Nikolai Dobrynin",
+        "position": "C",
+        "AB": 4,
+        "R": 1,
+        "H": 3,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 0,
+        "HR": 0,
+        "SB": 1
+      },
+      {
+        "player": "evan-carroll-iv",
+        "name": "Evan Carroll IV",
+        "position": "1B",
+        "AB": 3,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 0,
+        "K": 2,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "marco-delvecchio",
+        "name": "Marco DelVecchio",
+        "position": "2B",
+        "AB": 3,
+        "R": 1,
+        "H": 2,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 0,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "tomasz-kubas",
+        "name": "Tomasz Kubas",
+        "position": "SS",
+        "AB": 5,
+        "R": 1,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 1,
+        "HR": 1,
+        "SB": 0
+      },
+      {
+        "player": "andres-mireles",
+        "name": "Andrés Mireles",
+        "position": "3B",
+        "AB": 5,
+        "R": 0,
+        "H": 2,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 1,
+        "K": 1,
+        "HR": 1,
+        "SB": 0
+      },
+      {
+        "player": "wyatt-hollander",
+        "name": "Wyatt Hollander",
+        "position": "CF",
+        "AB": 5,
+        "R": 0,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 0,
+        "K": 1,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "luis-quinones",
+        "name": "Luis Quiñones",
+        "position": "LF",
+        "AB": 4,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 0,
+        "HR": 0,
+        "SB": 1
+      },
+      {
+        "player": "pieter-van-wyk",
+        "name": "Pieter van Wyk",
+        "position": "RF",
+        "AB": 3,
+        "R": 1,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      }
+    ]
+  },
+  "pitching": {
+    "away": [
+      {
+        "player": "caleb-warnock",
+        "name": "Caleb Warnock",
+        "IP_outs": 19,
+        "H": 3,
+        "R": 3,
+        "ER": 3,
+        "BB": 0,
+        "K": 2,
+        "HR": 2,
+        "IP": 6.1
+      },
+      {
+        "player": "lukas-horvat",
+        "name": "Lukáš Horvat",
+        "IP_outs": 8,
+        "H": 7,
+        "R": 1,
+        "ER": 1,
+        "BB": 1,
+        "K": 3,
+        "HR": 0,
+        "IP": 2.2
+      }
+    ],
+    "home": [
+      {
+        "player": "kellan-brynden",
+        "name": "Kellan Brynden",
+        "IP_outs": 16,
+        "H": 1,
+        "R": 3,
+        "ER": 3,
+        "BB": 0,
+        "K": 7,
+        "HR": 0,
+        "IP": 5.1
+      },
+      {
+        "player": "yaw-mensah",
+        "name": "Yaw Mensah",
+        "IP_outs": 11,
+        "H": 4,
+        "R": 2,
+        "ER": 2,
+        "BB": 1,
+        "K": 0,
+        "HR": 0,
+        "IP": 3.2
+      }
+    ]
+  },
+  "decisions": {
+    "W": "caleb-warnock",
+    "L": "kellan-brynden",
+    "SV": "lukas-horvat"
+  },
+  "notes": []
+}

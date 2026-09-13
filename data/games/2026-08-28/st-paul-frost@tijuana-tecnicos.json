@@ -1,0 +1,401 @@
+{
+  "schema": "glb.boxscore.v1",
+  "game_id": "2026-08-28_st-paul-frost@tijuana-tecnicos",
+  "date": "2026-08-28",
+  "away": {
+    "slug": "st-paul-frost",
+    "name": "St. Paul Frost"
+  },
+  "home": {
+    "slug": "tijuana-tecnicos",
+    "name": "Tijuana Tecnicos"
+  },
+  "status": "Final",
+  "attendance": 13442,
+  "linescore": {
+    "innings": [
+      {
+        "inning": 1,
+        "away": 0,
+        "home": 0
+      },
+      {
+        "inning": 2,
+        "away": 1,
+        "home": 0
+      },
+      {
+        "inning": 3,
+        "away": 0,
+        "home": 0
+      },
+      {
+        "inning": 4,
+        "away": 0,
+        "home": 0
+      },
+      {
+        "inning": 5,
+        "away": 0,
+        "home": 0
+      },
+      {
+        "inning": 6,
+        "away": 0,
+        "home": 0
+      },
+      {
+        "inning": 7,
+        "away": 0,
+        "home": 0
+      },
+      {
+        "inning": 8,
+        "away": 0,
+        "home": 0
+      },
+      {
+        "inning": 9,
+        "away": 0,
+        "home": 0
+      }
+    ],
+    "totals": {
+      "away": {
+        "R": 1,
+        "H": 6,
+        "E": 1
+      },
+      "home": {
+        "R": 0,
+        "H": 10,
+        "E": 2
+      }
+    }
+  },
+  "final": {
+    "away": 1,
+    "home": 0
+  },
+  "batting": {
+    "away": [
+      {
+        "player": "evan-morrissey",
+        "name": "Evan Morrissey",
+        "position": "C",
+        "AB": 5,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 1,
+        "HR": 0,
+        "SB": 1
+      },
+      {
+        "player": "javier-lucero",
+        "name": "Javier Lucero",
+        "position": "1B",
+        "AB": 4,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 3,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "owen-hartnell",
+        "name": "Owen Hartnell",
+        "position": "2B",
+        "AB": 3,
+        "R": 0,
+        "H": 1,
+        "2B": 1,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 1,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "masato-kobori",
+        "name": "Masato Kobori",
+        "position": "SS",
+        "AB": 5,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 2,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "trevor-yates",
+        "name": "Trevor Yates",
+        "position": "3B",
+        "AB": 4,
+        "R": 1,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 2,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "malik-jefferson",
+        "name": "Malik Jefferson",
+        "position": "CF",
+        "AB": 5,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 1,
+        "K": 1,
+        "HR": 1,
+        "SB": 0
+      },
+      {
+        "player": "rodrigo-fuentes",
+        "name": "Rodrigo Fuentes",
+        "position": "LF",
+        "AB": 4,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 1,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "jake-lanier",
+        "name": "Jake Lanier",
+        "position": "RF",
+        "AB": 3,
+        "R": 0,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 0,
+        "K": 1,
+        "HR": 0,
+        "SB": 0
+      }
+    ],
+    "home": [
+      {
+        "player": "sergio-hinojosa",
+        "name": "Sergio Hinojosa",
+        "position": "C",
+        "AB": 5,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 3,
+        "HR": 0,
+        "SB": 1
+      },
+      {
+        "player": "bruno-valdes",
+        "name": "Bruno Valdés",
+        "position": "1B",
+        "AB": 4,
+        "R": 0,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 1,
+        "HR": 0,
+        "SB": 1
+      },
+      {
+        "player": "matias-camarena",
+        "name": "Matías Camarena",
+        "position": "2B",
+        "AB": 5,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 1,
+        "K": 2,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "nicolas-paredes",
+        "name": "Nicolás Paredes",
+        "position": "SS",
+        "AB": 3,
+        "R": 0,
+        "H": 3,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 1,
+        "K": 1,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "adrian-fierro",
+        "name": "Adrián Fierro",
+        "position": "3B",
+        "AB": 3,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 1,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "emilio-barron",
+        "name": "Emilio Barrón",
+        "position": "LF",
+        "AB": 4,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "gael-marrufo",
+        "name": "Gael Marrufo",
+        "position": "CF",
+        "AB": 5,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "cristobal-saucedo",
+        "name": "Cristóbal Saucedo",
+        "position": "RF",
+        "AB": 5,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 1,
+        "K": 1,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "hector-belmonte",
+        "name": "Héctor Belmonte",
+        "position": "DH",
+        "AB": 3,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 1,
+        "K": 3,
+        "HR": 0,
+        "SB": 0
+      }
+    ]
+  },
+  "pitching": {
+    "away": [
+      {
+        "player": "tae-ho-choi",
+        "name": "Tae-ho Choi",
+        "IP_outs": 16,
+        "H": 3,
+        "R": 0,
+        "ER": 0,
+        "BB": 2,
+        "K": 9,
+        "HR": 0,
+        "IP": 5.1
+      },
+      {
+        "player": "antonio-velez",
+        "name": "Antonio Vélez",
+        "IP_outs": 11,
+        "H": 7,
+        "R": 0,
+        "ER": 0,
+        "BB": 2,
+        "K": 3,
+        "HR": 0,
+        "IP": 3.2
+      }
+    ],
+    "home": [
+      {
+        "player": "tomas-zepeda",
+        "name": "Tomás Zepeda",
+        "IP_outs": 20,
+        "H": 4,
+        "R": 1,
+        "ER": 1,
+        "BB": 1,
+        "K": 7,
+        "HR": 1,
+        "IP": 6.2
+      },
+      {
+        "player": "ivan-lizarraga",
+        "name": "Iván Lizárraga",
+        "IP_outs": 7,
+        "H": 2,
+        "R": 0,
+        "ER": 0,
+        "BB": 0,
+        "K": 5,
+        "HR": 0,
+        "IP": 2.1
+      }
+    ]
+  },
+  "decisions": {
+    "W": "tae-ho-choi",
+    "L": "tomas-zepeda",
+    "SV": "antonio-velez"
+  },
+  "notes": []
+}

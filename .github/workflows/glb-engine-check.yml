@@ -1,0 +1,52 @@
+name: GLB Engine Check
+
+on:
+  push:
+    branches:
+      - glb-engine-foundation
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  validate-engine:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Syntax check simulator
+        run: node --check tools/simulate-day.js
+
+      - name: Syntax check derivation engine
+        run: node --check tools/rebuild-derived.js
+
+      - name: Syntax check backfill engine
+        run: node --check tools/backfill-season.js
+
+      - name: Validate canonical rosters
+        run: node tools/generate-season.js
+
+      - name: Dry-run 75 percent season backfill
+        run: node tools/backfill-season.js --percent 75 --dry-run
+
+      - name: Generate 75 percent season snapshot
+        if: github.event_name == 'push'
+        run: |
+          node tools/backfill-season.js --percent 75
+          node tools/rebuild-derived.js
+
+      - name: Upload generated league snapshot
+        if: github.event_name == 'push'
+        uses: actions/upload-artifact@v4
+        with:
+          name: glb-75-percent-snapshot
+          path: |
+            data/games
+            data/season
+            current

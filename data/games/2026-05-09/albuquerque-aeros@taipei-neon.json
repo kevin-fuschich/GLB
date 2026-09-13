@@ -1,0 +1,401 @@
+{
+  "schema": "glb.boxscore.v1",
+  "game_id": "2026-05-09_albuquerque-aeros@taipei-neon",
+  "date": "2026-05-09",
+  "away": {
+    "slug": "albuquerque-aeros",
+    "name": "Albuquerque Aeros"
+  },
+  "home": {
+    "slug": "taipei-neon",
+    "name": "Taipei Neon"
+  },
+  "status": "Final",
+  "attendance": 17958,
+  "linescore": {
+    "innings": [
+      {
+        "inning": 1,
+        "away": 1,
+        "home": 2
+      },
+      {
+        "inning": 2,
+        "away": 1,
+        "home": 0
+      },
+      {
+        "inning": 3,
+        "away": 0,
+        "home": 0
+      },
+      {
+        "inning": 4,
+        "away": 1,
+        "home": 0
+      },
+      {
+        "inning": 5,
+        "away": 1,
+        "home": 0
+      },
+      {
+        "inning": 6,
+        "away": 1,
+        "home": 1
+      },
+      {
+        "inning": 7,
+        "away": 0,
+        "home": 0
+      },
+      {
+        "inning": 8,
+        "away": 0,
+        "home": 1
+      },
+      {
+        "inning": 9,
+        "away": 0,
+        "home": 0
+      }
+    ],
+    "totals": {
+      "away": {
+        "R": 5,
+        "H": 8,
+        "E": 2
+      },
+      "home": {
+        "R": 4,
+        "H": 5,
+        "E": 1
+      }
+    }
+  },
+  "final": {
+    "away": 5,
+    "home": 4
+  },
+  "batting": {
+    "away": [
+      {
+        "player": "rui-damas",
+        "name": "Rui Damas",
+        "position": "C",
+        "AB": 3,
+        "R": 2,
+        "H": 2,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 2,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "tobias-vandenberg",
+        "name": "Tobias Vandenberg",
+        "position": "1B",
+        "AB": 4,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "kofi-agyeman",
+        "name": "Kofi Agyeman",
+        "position": "2B",
+        "AB": 4,
+        "R": 0,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 3,
+        "BB": 0,
+        "K": 1,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "iker-zubizarreta",
+        "name": "Iker Zubizarreta",
+        "position": "SS",
+        "AB": 4,
+        "R": 0,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 1,
+        "K": 2,
+        "HR": 0,
+        "SB": 1
+      },
+      {
+        "player": "carmine-sforza",
+        "name": "Carmine Sforza",
+        "position": "3B",
+        "AB": 3,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 0,
+        "K": 1,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "adama-kouyate",
+        "name": "Adama Kouyaté",
+        "position": "CF",
+        "AB": 3,
+        "R": 1,
+        "H": 1,
+        "2B": 1,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 1,
+        "K": 0,
+        "HR": 0,
+        "SB": 1
+      },
+      {
+        "player": "elior-ben-ami",
+        "name": "Elior Ben-Ami",
+        "position": "LF",
+        "AB": 4,
+        "R": 1,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 2,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "paolo-ventresca",
+        "name": "Paolo Ventresca",
+        "position": "RF",
+        "AB": 5,
+        "R": 1,
+        "H": 2,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      }
+    ],
+    "home": [
+      {
+        "player": "kaito-ueda",
+        "name": "Kaito Ueda",
+        "position": "CF",
+        "AB": 5,
+        "R": 2,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 1,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "han-wei-tseng",
+        "name": "Han-wei Tseng",
+        "position": "2B",
+        "AB": 3,
+        "R": 0,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 2,
+        "BB": 0,
+        "K": 1,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "martin-echevarria",
+        "name": "Martín Echevarría",
+        "position": "1B",
+        "AB": 4,
+        "R": 0,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "dariusz-wierzbik",
+        "name": "Dariusz Wierzbik",
+        "position": "SS",
+        "AB": 4,
+        "R": 1,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "adebayo-olumide",
+        "name": "Adebayo Olumide",
+        "position": "3B",
+        "AB": 4,
+        "R": 0,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "owen-rasmusson",
+        "name": "Owen Rasmusson",
+        "position": "C",
+        "AB": 5,
+        "R": 1,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 1,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "eric-lawson",
+        "name": "Eric Lawson",
+        "position": "LF",
+        "AB": 5,
+        "R": 0,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 2,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "jose-ramirez-tpe",
+        "name": "Jose Ramirez",
+        "position": "RF",
+        "AB": 3,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 1,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "david-morales-tpe",
+        "name": "David Morales",
+        "position": "DH",
+        "AB": 3,
+        "R": 0,
+        "H": 2,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 2,
+        "BB": 0,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      }
+    ]
+  },
+  "pitching": {
+    "away": [
+      {
+        "player": "pieter-vanvleuten",
+        "name": "Pieter VanVleuten",
+        "IP_outs": 18,
+        "H": 3,
+        "R": 1,
+        "ER": 1,
+        "BB": 1,
+        "K": 3,
+        "HR": 0,
+        "IP": 6
+      },
+      {
+        "player": "lazaro-bracamonte",
+        "name": "Lázaro Bracamonte",
+        "IP_outs": 9,
+        "H": 2,
+        "R": 3,
+        "ER": 3,
+        "BB": 0,
+        "K": 2,
+        "HR": 0,
+        "IP": 3
+      }
+    ],
+    "home": [
+      {
+        "player": "eitan-ben-sasson",
+        "name": "Eitan Ben-Sasson",
+        "IP_outs": 21,
+        "H": 1,
+        "R": 4,
+        "ER": 4,
+        "BB": 1,
+        "K": 5,
+        "HR": 0,
+        "IP": 7
+      },
+      {
+        "player": "miguel-santos-tpe",
+        "name": "Miguel Santos",
+        "IP_outs": 6,
+        "H": 7,
+        "R": 1,
+        "ER": 1,
+        "BB": 1,
+        "K": 3,
+        "HR": 0,
+        "IP": 2
+      }
+    ]
+  },
+  "decisions": {
+    "W": "pieter-vanvleuten",
+    "L": "eitan-ben-sasson",
+    "SV": "lazaro-bracamonte"
+  },
+  "notes": []
+}

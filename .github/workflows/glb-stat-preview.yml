@@ -21,6 +21,9 @@ jobs:
         with:
           node-version: '24'
 
+      - name: Validate unique player identities
+        run: node tools/validate-roster-uniqueness.js
+
       - name: Generate deterministic preview
         run: node tools/generate-season-v2.js
 

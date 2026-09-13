@@ -1,0 +1,28 @@
+{
+  "schema": "glb.backfill-manifest.v1",
+  "season": 2026,
+  "target_percent": 75,
+  "target_games_per_team": 122,
+  "official_games": 976,
+  "teams": 16,
+  "team_game_count_min": 122,
+  "team_game_count_max": 122,
+  "season_player_stat_records": 242,
+  "leaders_per_category": 10,
+  "standings_reconciled": true,
+  "player_stat_integrity_errors": 0,
+  "as_of": "2026-08-28",
+  "workflow_run_id": 34737303337,
+  "artifact_id": 10311233470,
+  "artifact_name": "glb-75-percent-snapshot",
+  "artifact_sha256": "fea65254f8b3165c7aa6ce6a7e1687cb954ddbe5b0487f96bee3d17c5efa55df",
+  "artifact_expires_at": "2026-12-12T04:11:22Z",
+  "validation": {
+    "javascript_syntax": "passed",
+    "canonical_rosters": "passed",
+    "dry_run_75_percent": "passed",
+    "full_generation": "passed",
+    "artifact_upload": "passed"
+  },
+  "note": "This manifest describes the validated generated snapshot. The canonical repository data remains box-score-first; generated game files should be committed from this validated snapshot before the snapshot is treated as live repository state."
+}

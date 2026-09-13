@@ -1,0 +1,49 @@
+name: Commit 75 Percent Snapshot
+
+on:
+  push:
+    branches:
+      - glb-engine-foundation
+    paths:
+      - .github/workflows/commit-75-snapshot.yml
+
+permissions:
+  contents: write
+  actions: read
+
+jobs:
+  commit-snapshot:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out branch
+        uses: actions/checkout@v4
+        with:
+          ref: glb-engine-foundation
+          fetch-depth: 0
+
+      - name: Download validated 75 percent snapshot
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p /tmp/glb75
+          gh run download 34737399581 \
+            --repo "$GITHUB_REPOSITORY" \
+            --name glb-75-percent-snapshot \
+            --dir /tmp/glb75
+
+      - name: Install snapshot into repository
+        run: |
+          rsync -a /tmp/glb75/current/ current/
+          rsync -a /tmp/glb75/data/ data/
+
+      - name: Commit validated snapshot
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add current data
+          if git diff --cached --quiet; then
+            echo "No snapshot changes to commit."
+            exit 0
+          fi
+          git commit -m "Commit validated 75 percent season snapshot"
+          git push origin HEAD:glb-engine-foundation

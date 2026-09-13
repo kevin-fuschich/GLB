@@ -36,6 +36,9 @@ jobs:
       - name: Build public player stat views
         run: node tools/build-public-stat-views.js
 
+      - name: Validate population completeness
+        run: node tools/validate-population-layer.js
+
       - name: Validate preview reconciliation
         run: node tools/validate-stat-preview.js
 

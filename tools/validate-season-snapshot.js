@@ -39,11 +39,19 @@ for (const game of games) {
     const sum = k => box.batting[side].reduce((n, row) => n + Number(row[k] || 0), 0);
     if (sum('R') !== game[`${side}Score`]) errors.push(`Batting runs mismatch: ${key} ${side}`);
     if (sum('H') !== box.linescore.totals[side].H) errors.push(`Batting hits mismatch: ${key} ${side}`);
+    const opponent = side === 'away' ? 'home' : 'away';
+    for (const stat of ['K', 'HR']) {
+      const allowed = box.pitching[opponent].reduce((n, row) => n + Number(row[stat] || 0), 0);
+      if (sum(stat) !== allowed) errors.push(`Batting/pitching ${stat} mismatch: ${key} ${side}`);
+    }
     for (const row of [...box.batting[side], ...box.pitching[side]])
       if (!rosters.get(team).has(row.player)) errors.push(`Unknown player: ${key} ${row.player}`);
-    for (const row of box.batting[side])
+    for (const row of box.batting[side]) {
       if (row.H < (row.HR || 0) + (row['2B'] || 0) + (row['3B'] || 0))
         errors.push(`Extra-base hits exceed hits: ${key} ${row.player}`);
+      if (row.H + row.K > row.AB || row.R < row.HR || row.RBI < row.HR)
+        errors.push(`Impossible batting line: ${key} ${row.player}`);
+    }
   }
 }
 for (const game of locked.games) {

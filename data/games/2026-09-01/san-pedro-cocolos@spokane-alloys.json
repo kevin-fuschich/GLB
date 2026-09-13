@@ -88,7 +88,7 @@
         "H": 1,
         "2B": 0,
         "3B": 0,
-        "RBI": 1,
+        "RBI": 0,
         "BB": 0,
         "K": 2,
         "HR": 0,
@@ -105,7 +105,7 @@
         "3B": 0,
         "RBI": 1,
         "BB": 0,
-        "K": 3,
+        "K": 0,
         "HR": 0,
         "SB": 0
       },
@@ -120,7 +120,7 @@
         "3B": 0,
         "RBI": 0,
         "BB": 0,
-        "K": 2,
+        "K": 4,
         "HR": 0,
         "SB": 0
       },
@@ -130,7 +130,7 @@
         "position": "SS",
         "AB": 4,
         "R": 0,
-        "H": 0,
+        "H": 2,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
@@ -144,14 +144,14 @@
         "name": "Darius Kofi",
         "position": "3B",
         "AB": 3,
-        "R": 0,
-        "H": 0,
+        "R": 1,
+        "H": 2,
         "2B": 0,
         "3B": 0,
-        "RBI": 0,
+        "RBI": 1,
         "BB": 1,
-        "K": 0,
-        "HR": 0,
+        "K": 1,
+        "HR": 1,
         "SB": 0
       },
       {
@@ -175,7 +175,7 @@
         "position": "LF",
         "AB": 4,
         "R": 0,
-        "H": 3,
+        "H": 0,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
@@ -189,13 +189,13 @@
         "name": "Naveen Iyer",
         "position": "RF",
         "AB": 3,
-        "R": 2,
-        "H": 2,
+        "R": 1,
+        "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 1,
         "BB": 1,
-        "K": 1,
+        "K": 0,
         "HR": 0,
         "SB": 0
       }
@@ -207,6 +207,36 @@
         "position": "C",
         "AB": 3,
         "R": 0,
+        "H": 2,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 1,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "evan-carroll-iv",
+        "name": "Evan Carroll IV",
+        "position": "1B",
+        "AB": 5,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 2,
+        "HR": 0,
+        "SB": 1
+      },
+      {
+        "player": "marco-delvecchio",
+        "name": "Marco DelVecchio",
+        "position": "2B",
+        "AB": 5,
+        "R": 0,
         "H": 1,
         "2B": 0,
         "3B": 0,
@@ -217,47 +247,17 @@
         "SB": 0
       },
       {
-        "player": "evan-carroll-iv",
-        "name": "Evan Carroll IV",
-        "position": "1B",
-        "AB": 5,
-        "R": 0,
-        "H": 0,
-        "2B": 0,
-        "3B": 0,
-        "RBI": 0,
-        "BB": 0,
-        "K": 0,
-        "HR": 0,
-        "SB": 1
-      },
-      {
-        "player": "marco-delvecchio",
-        "name": "Marco DelVecchio",
-        "position": "2B",
-        "AB": 5,
-        "R": 0,
-        "H": 0,
-        "2B": 0,
-        "3B": 0,
-        "RBI": 0,
-        "BB": 1,
-        "K": 0,
-        "HR": 0,
-        "SB": 0
-      },
-      {
         "player": "tomasz-kubas",
         "name": "Tomasz Kubas",
         "position": "SS",
         "AB": 4,
         "R": 0,
-        "H": 2,
+        "H": 0,
         "2B": 0,
         "3B": 0,
         "RBI": 1,
         "BB": 0,
-        "K": 3,
+        "K": 1,
         "HR": 0,
         "SB": 0
       },
@@ -272,7 +272,7 @@
         "3B": 0,
         "RBI": 0,
         "BB": 0,
-        "K": 2,
+        "K": 1,
         "HR": 0,
         "SB": 0
       },
@@ -282,12 +282,12 @@
         "position": "CF",
         "AB": 5,
         "R": 0,
-        "H": 2,
+        "H": 0,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
         "BB": 0,
-        "K": 2,
+        "K": 3,
         "HR": 0,
         "SB": 0
       },
@@ -302,7 +302,7 @@
         "3B": 0,
         "RBI": 0,
         "BB": 0,
-        "K": 1,
+        "K": 0,
         "HR": 0,
         "SB": 0
       },
@@ -312,7 +312,7 @@
         "position": "RF",
         "AB": 3,
         "R": 0,
-        "H": 1,
+        "H": 2,
         "2B": 1,
         "3B": 0,
         "RBI": 0,
@@ -326,8 +326,8 @@
   "pitching": {
     "away": [
       {
-        "player": "enzo-valera",
-        "name": "Enzo Valera",
+        "player": "ivo-korolenko",
+        "name": "Ivo Korolenko",
         "IP_outs": 17,
         "H": 6,
         "R": 1,
@@ -338,29 +338,29 @@
         "IP": 5.2
       },
       {
-        "player": "teo-arellano",
-        "name": "Teo Arellano",
+        "player": "isaac-rendell",
+        "name": "Isaac Rendell",
         "IP_outs": 10,
         "H": 1,
         "R": 0,
         "ER": 0,
         "BB": 3,
-        "K": 4,
+        "K": 3,
         "HR": 0,
         "IP": 3.1
       }
     ],
     "home": [
       {
-        "player": "lukas-havel",
-        "name": "Lukas Havel",
+        "player": "kellan-brynden",
+        "name": "Kellan Brynden",
         "IP_outs": 20,
         "H": 8,
         "R": 3,
         "ER": 3,
         "BB": 2,
         "K": 8,
-        "HR": 0,
+        "HR": 1,
         "IP": 6.2
       },
       {
@@ -371,16 +371,17 @@
         "R": 0,
         "ER": 0,
         "BB": 0,
-        "K": 3,
+        "K": 2,
         "HR": 0,
         "IP": 2.1
       }
     ]
   },
   "decisions": {
-    "W": "enzo-valera",
-    "L": "lukas-havel",
-    "SV": "teo-arellano"
+    "W": "ivo-korolenko",
+    "L": "kellan-brynden",
+    "SV": "isaac-rendell"
   },
-  "notes": []
+  "notes": [],
+  "calibration": "glb.stats-calibrated.v1"
 }

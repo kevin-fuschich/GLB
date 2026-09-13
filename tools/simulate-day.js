@@ -1,9 +1,11 @@
 const fs = require('fs');
 const path = require('path');
+const { distributeWeighted, loadRatings } = require('./season-model');
 
 const ROOT = path.join(__dirname, '..');
 const TEAMS_PATH = path.join(ROOT, 'data', 'teams', 'teams.json');
 const GAMES_DIR = path.join(ROOT, 'data', 'games');
+const ratings = loadRatings();
 
 function readJson(filePath) {
   return JSON.parse(fs.readFileSync(filePath, 'utf8'));
@@ -94,44 +96,41 @@ function buildLineScore(rng, awayRuns, homeRuns) {
 
 function buildBatting(rng, hitters, runs) {
   const n = hitters.length;
-  const totalHits = Math.max(runs, randInt(rng, 4, 11));
+  const ab = hitters.map(() => 3 + randInt(rng, 0, 2));
+  const totalHits = Math.max(runs, randInt(rng, 6, 12));
   const totalWalks = randInt(rng, 1, 5);
-  const totalKs = randInt(rng, 4, 12);
-  const totalHR = Math.min(totalHits, runs, randInt(rng, 0, Math.min(3, runs)));
+  const totalKs = Math.min(randInt(rng, 4, 11) + (rng() < 0.10 ? randInt(rng, 3, 5) : 0),
+    ab.reduce((sum, value) => sum + value, 0) - totalHits);
+  const totalHR = Math.min(totalHits, runs, randInt(rng, 0, Math.min(3, runs)) + (rng() < 0.52 ? 1 : 0));
   const totalExtra = Math.max(0, totalHits - totalHR);
   const totalDoubles = Math.min(totalExtra, randInt(rng, 0, 3));
   const totalTriples = Math.min(totalExtra - totalDoubles, rng() < 0.16 ? 1 : 0);
   const totalSB = randInt(rng, 0, 2);
 
-  const hits = distributeTotal(rng, totalHits, n, 4);
+  const hits = distributeWeighted(rng, totalHits, ab, hitters.map(p => ratings[p.slug]?.hit || 1));
   const walks = distributeTotal(rng, totalWalks, n, 3);
-  const strikeouts = distributeTotal(rng, totalKs, n, 3);
-  const homers = distributeTotal(rng, totalHR, n, 2);
-  const doubles = distributeTotal(rng, totalDoubles, n, 2);
-  const triples = distributeTotal(rng, totalTriples, n, 1);
-  const runVals = distributeTotal(rng, runs, n, 4);
-  const rbiVals = distributeTotal(rng, runs, n, 5);
+  const strikeouts = distributeWeighted(rng, totalKs, ab.map((value, i) => value - hits[i]), hitters.map(() => 1));
+  const homers = distributeWeighted(rng, totalHR, hits, hitters.map(p => ratings[p.slug]?.power || 1));
+  const doubles = distributeWeighted(rng, totalDoubles, hits.map((h, i) => h - homers[i]), hitters.map(() => 1));
+  const triples = distributeWeighted(rng, totalTriples, hits.map((h, i) => h - homers[i] - doubles[i]), hitters.map(() => 1));
+  const extraRuns = distributeTotal(rng, runs - totalHR, n, 4);
+  const extraRbi = distributeTotal(rng, runs - totalHR, n, 5);
   const steals = distributeTotal(rng, totalSB, n, 2);
 
   return hitters.map((player, i) => {
-    const ab = Math.max(hits[i], 3 + randInt(rng, 0, 2));
-    const h = Math.min(hits[i], ab);
-    let hr = Math.min(homers[i], h);
-    let twoB = Math.min(doubles[i], Math.max(0, h - hr));
-    let threeB = Math.min(triples[i], Math.max(0, h - hr - twoB));
     return {
       player: player.slug,
       name: player.name,
       position: player.position,
-      AB: ab,
-      R: runVals[i],
-      H: h,
-      '2B': twoB,
-      '3B': threeB,
-      RBI: rbiVals[i],
+      AB: ab[i],
+      R: homers[i] + extraRuns[i],
+      H: hits[i],
+      '2B': doubles[i],
+      '3B': triples[i],
+      RBI: homers[i] + extraRbi[i],
       BB: walks[i],
-      K: Math.min(strikeouts[i], ab),
-      HR: hr,
+      K: strikeouts[i],
+      HR: homers[i],
       SB: steals[i]
     };
   });
@@ -143,7 +142,7 @@ function sumBatting(lines, key) {
 
 function buildPitching(rng, roster, opponentBatting, opponentRuns, starterIndex) {
   const starter = roster.starters[starterIndex % roster.starters.length];
-  const reliever = roster.relievers[randInt(rng, 0, roster.relievers.length - 1)];
+  const reliever = roster.relievers[starterIndex % roster.relievers.length];
   const starterOuts = randInt(rng, 15, 21);
   const relieverOuts = 27 - starterOuts;
   const hits = sumBatting(opponentBatting, 'H');
@@ -155,7 +154,8 @@ function buildPitching(rng, roster, opponentBatting, opponentRuns, starterIndex)
   const starterHits = hits === 0 ? 0 : randInt(rng, 0, hits);
   const starterWalks = walks === 0 ? 0 : randInt(rng, 0, walks);
   const starterHR = homers === 0 ? 0 : randInt(rng, 0, homers);
-  const starterKs = ks === 0 ? 0 : randInt(rng, Math.floor(ks * 0.45), ks);
+  const share = (starterIndex % roster.starters.length === 0 ? 0.74 : 0.68) + (rng() < 0.12 ? 0.20 : 0);
+  const starterKs = Math.min(ks, Math.floor(ks * share + rng()));
 
   return [
     {
@@ -205,7 +205,7 @@ function chooseDecisions(homeWon, awayPitching, homePitching, rng) {
   return { W: winner, L: loser, SV: save };
 }
 
-function simulateGame(date, awayTeam, homeTeam, awayRoster, homeRoster, gameIndex = 0) {
+function simulateGame(date, awayTeam, homeTeam, awayRoster, homeRoster, awayIndex = 0, homeIndex = 0) {
   const rng = mulberry32(hashString(`${date}|${awayTeam.slug}|${homeTeam.slug}`));
   let awayRuns = simulateRuns(rng);
   let homeRuns = simulateRuns(rng);
@@ -216,8 +216,8 @@ function simulateGame(date, awayTeam, homeTeam, awayRoster, homeRoster, gameInde
 
   const awayBatting = buildBatting(rng, awayRoster.hitters, awayRuns);
   const homeBatting = buildBatting(rng, homeRoster.hitters, homeRuns);
-  const awayPitching = finalizePitching(buildPitching(rng, awayRoster, homeBatting, homeRuns, gameIndex));
-  const homePitching = finalizePitching(buildPitching(rng, homeRoster, awayBatting, awayRuns, gameIndex));
+  const awayPitching = finalizePitching(buildPitching(rng, awayRoster, homeBatting, homeRuns, awayIndex));
+  const homePitching = finalizePitching(buildPitching(rng, homeRoster, awayBatting, awayRuns, homeIndex));
   const homeWon = homeRuns > awayRuns;
   const decisions = chooseDecisions(homeWon, awayPitching, homePitching, rng);
   const innings = buildLineScore(rng, awayRuns, homeRuns);
@@ -250,6 +250,16 @@ function simulateSlate(date, games, options = {}) {
   const bySlug = new Map(teams.map(team => [team.slug, team]));
   const used = new Set();
   const results = [];
+  const counts = new Map(teams.map(team => [team.slug, 0]));
+  for (const day of fs.readdirSync(GAMES_DIR, { withFileTypes: true })) {
+    if (!day.isDirectory() || !/^\d{4}-\d{2}-\d{2}$/.test(day.name)) continue;
+    for (const file of fs.readdirSync(path.join(GAMES_DIR, day.name))) {
+      if (!file.endsWith('.json') || !file.includes('@')) continue;
+      const [away, home] = file.slice(0, -5).split('@');
+      if (counts.has(away)) counts.set(away, counts.get(away) + 1);
+      if (counts.has(home)) counts.set(home, counts.get(home) + 1);
+    }
+  }
 
   if (!Array.isArray(games) || games.length === 0) {
     throw new Error('Slate must contain a non-empty games array.');
@@ -266,7 +276,7 @@ function simulateSlate(date, games, options = {}) {
 
     const awayRoster = loadRoster(away);
     const homeRoster = loadRoster(home);
-    const box = simulateGame(date, away, home, awayRoster, homeRoster, index);
+    const box = simulateGame(date, away, home, awayRoster, homeRoster, counts.get(away.slug), counts.get(home.slug));
     const out = path.join(GAMES_DIR, date, `${away.slug}@${home.slug}.json`);
     if (fs.existsSync(out) && !options.overwrite) {
       throw new Error(`Refusing to overwrite existing official game: ${out}`);

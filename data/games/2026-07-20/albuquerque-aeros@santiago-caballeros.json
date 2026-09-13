@@ -90,7 +90,7 @@
         "3B": 0,
         "RBI": 0,
         "BB": 0,
-        "K": 2,
+        "K": 1,
         "HR": 0,
         "SB": 0
       },
@@ -105,7 +105,7 @@
         "3B": 0,
         "RBI": 0,
         "BB": 0,
-        "K": 3,
+        "K": 4,
         "HR": 0,
         "SB": 0
       },
@@ -120,7 +120,7 @@
         "3B": 0,
         "RBI": 0,
         "BB": 1,
-        "K": 0,
+        "K": 1,
         "HR": 0,
         "SB": 0
       },
@@ -130,12 +130,12 @@
         "position": "SS",
         "AB": 3,
         "R": 0,
-        "H": 0,
+        "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
         "BB": 1,
-        "K": 1,
+        "K": 0,
         "HR": 0,
         "SB": 0
       },
@@ -150,7 +150,7 @@
         "3B": 0,
         "RBI": 0,
         "BB": 1,
-        "K": 1,
+        "K": 0,
         "HR": 0,
         "SB": 0
       },
@@ -160,13 +160,13 @@
         "position": "CF",
         "AB": 3,
         "R": 1,
-        "H": 2,
+        "H": 1,
         "2B": 0,
         "3B": 0,
-        "RBI": 0,
+        "RBI": 1,
         "BB": 2,
         "K": 0,
-        "HR": 0,
+        "HR": 1,
         "SB": 0
       },
       {
@@ -180,7 +180,7 @@
         "3B": 0,
         "RBI": 0,
         "BB": 0,
-        "K": 2,
+        "K": 0,
         "HR": 0,
         "SB": 0
       },
@@ -193,9 +193,9 @@
         "H": 0,
         "2B": 0,
         "3B": 0,
-        "RBI": 1,
+        "RBI": 0,
         "BB": 0,
-        "K": 1,
+        "K": 2,
         "HR": 0,
         "SB": 1
       }
@@ -207,12 +207,12 @@
         "position": "C",
         "AB": 4,
         "R": 0,
-        "H": 2,
+        "H": 1,
         "2B": 1,
         "3B": 0,
         "RBI": 0,
         "BB": 0,
-        "K": 1,
+        "K": 2,
         "HR": 0,
         "SB": 0
       },
@@ -227,7 +227,7 @@
         "3B": 0,
         "RBI": 0,
         "BB": 0,
-        "K": 0,
+        "K": 1,
         "HR": 0,
         "SB": 0
       },
@@ -237,12 +237,12 @@
         "position": "2B",
         "AB": 3,
         "R": 0,
-        "H": 0,
+        "H": 2,
         "2B": 0,
         "3B": 0,
         "RBI": 1,
         "BB": 0,
-        "K": 1,
+        "K": 0,
         "HR": 0,
         "SB": 0
       },
@@ -252,7 +252,7 @@
         "position": "SS",
         "AB": 5,
         "R": 0,
-        "H": 2,
+        "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
@@ -267,7 +267,7 @@
         "position": "3B",
         "AB": 4,
         "R": 0,
-        "H": 3,
+        "H": 2,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
@@ -297,12 +297,12 @@
         "position": "CF",
         "AB": 4,
         "R": 0,
-        "H": 1,
+        "H": 3,
         "2B": 1,
         "3B": 0,
         "RBI": 0,
         "BB": 1,
-        "K": 1,
+        "K": 0,
         "HR": 0,
         "SB": 0
       },
@@ -312,12 +312,12 @@
         "position": "RF",
         "AB": 4,
         "R": 0,
-        "H": 2,
+        "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 1,
         "BB": 0,
-        "K": 1,
+        "K": 0,
         "HR": 0,
         "SB": 1
       }
@@ -333,54 +333,55 @@
         "R": 0,
         "ER": 0,
         "BB": 0,
-        "K": 2,
+        "K": 3,
         "HR": 0,
         "IP": 5.2
       },
       {
-        "player": "jae-min-gwak",
-        "name": "Jae-min Gwak",
+        "player": "lazaro-bracamonte",
+        "name": "Lázaro Bracamonte",
         "IP_outs": 10,
         "H": 10,
         "R": 2,
         "ER": 2,
         "BB": 1,
-        "K": 3,
+        "K": 1,
         "HR": 0,
         "IP": 3.1
       }
     ],
     "home": [
       {
-        "player": "mateo-arancibia",
-        "name": "Mateo Arancibia",
+        "player": "samson-ndlovu",
+        "name": "Samson Ndlovu",
         "IP_outs": 15,
         "H": 0,
         "R": 0,
         "ER": 0,
         "BB": 5,
-        "K": 8,
-        "HR": 0,
+        "K": 7,
+        "HR": 1,
         "IP": 5
       },
       {
-        "player": "emin-kocak",
-        "name": "Emin Koçak",
+        "player": "joaquim-silveira",
+        "name": "Joaquim Silveira",
         "IP_outs": 12,
         "H": 4,
         "R": 1,
         "ER": 1,
         "BB": 0,
-        "K": 2,
+        "K": 1,
         "HR": 0,
         "IP": 4
       }
     ]
   },
   "decisions": {
-    "W": "mateo-arancibia",
+    "W": "samson-ndlovu",
     "L": "satoshi-kurobane",
-    "SV": "emin-kocak"
+    "SV": "joaquim-silveira"
   },
-  "notes": []
+  "notes": [],
+  "calibration": "glb.stats-calibrated.v1"
 }

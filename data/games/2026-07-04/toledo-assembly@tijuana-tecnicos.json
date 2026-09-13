@@ -90,7 +90,7 @@
         "3B": 0,
         "RBI": 1,
         "BB": 3,
-        "K": 0,
+        "K": 3,
         "HR": 0,
         "SB": 0
       },
@@ -99,13 +99,13 @@
         "name": "Caleb Ardoin",
         "position": "1B",
         "AB": 5,
-        "R": 2,
+        "R": 1,
         "H": 2,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
         "BB": 0,
-        "K": 2,
+        "K": 1,
         "HR": 0,
         "SB": 0
       },
@@ -114,8 +114,8 @@
         "name": "Samir Benyahia",
         "position": "2B",
         "AB": 4,
-        "R": 0,
-        "H": 1,
+        "R": 1,
+        "H": 2,
         "2B": 0,
         "3B": 0,
         "RBI": 1,
@@ -135,7 +135,7 @@
         "3B": 0,
         "RBI": 1,
         "BB": 1,
-        "K": 2,
+        "K": 1,
         "HR": 1,
         "SB": 0
       },
@@ -150,7 +150,7 @@
         "3B": 0,
         "RBI": 0,
         "BB": 0,
-        "K": 3,
+        "K": 1,
         "HR": 0,
         "SB": 0
       },
@@ -160,12 +160,12 @@
         "position": "LF",
         "AB": 5,
         "R": 1,
-        "H": 1,
+        "H": 2,
         "2B": 0,
         "3B": 0,
-        "RBI": 0,
+        "RBI": 1,
         "BB": 0,
-        "K": 3,
+        "K": 1,
         "HR": 1,
         "SB": 0
       },
@@ -175,10 +175,10 @@
         "position": "CF",
         "AB": 3,
         "R": 0,
-        "H": 2,
+        "H": 0,
         "2B": 0,
         "3B": 0,
-        "RBI": 2,
+        "RBI": 1,
         "BB": 1,
         "K": 0,
         "HR": 0,
@@ -195,7 +195,7 @@
         "3B": 0,
         "RBI": 1,
         "BB": 0,
-        "K": 1,
+        "K": 2,
         "HR": 0,
         "SB": 0
       }
@@ -212,7 +212,7 @@
         "3B": 0,
         "RBI": 0,
         "BB": 0,
-        "K": 1,
+        "K": 0,
         "HR": 0,
         "SB": 0
       },
@@ -227,7 +227,7 @@
         "3B": 0,
         "RBI": 1,
         "BB": 0,
-        "K": 1,
+        "K": 0,
         "HR": 0,
         "SB": 0
       },
@@ -237,7 +237,7 @@
         "position": "2B",
         "AB": 4,
         "R": 0,
-        "H": 1,
+        "H": 3,
         "2B": 1,
         "3B": 0,
         "RBI": 1,
@@ -252,12 +252,12 @@
         "position": "SS",
         "AB": 3,
         "R": 1,
-        "H": 0,
+        "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
         "BB": 0,
-        "K": 2,
+        "K": 1,
         "HR": 0,
         "SB": 0
       },
@@ -267,7 +267,7 @@
         "position": "3B",
         "AB": 4,
         "R": 0,
-        "H": 2,
+        "H": 0,
         "2B": 0,
         "3B": 0,
         "RBI": 2,
@@ -282,7 +282,7 @@
         "position": "LF",
         "AB": 5,
         "R": 0,
-        "H": 2,
+        "H": 0,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
@@ -302,8 +302,8 @@
         "3B": 0,
         "RBI": 1,
         "BB": 0,
-        "K": 0,
-        "HR": 0,
+        "K": 1,
+        "HR": 1,
         "SB": 0
       },
       {
@@ -312,12 +312,12 @@
         "position": "RF",
         "AB": 4,
         "R": 1,
-        "H": 0,
+        "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
         "BB": 1,
-        "K": 0,
+        "K": 1,
         "HR": 0,
         "SB": 0
       },
@@ -341,15 +341,15 @@
   "pitching": {
     "away": [
       {
-        "player": "teemu-salonen",
-        "name": "Teemu Salonen",
+        "player": "caius-dobrescu",
+        "name": "Caius Dobrescu",
         "IP_outs": 18,
         "H": 7,
         "R": 4,
         "ER": 4,
         "BB": 1,
-        "K": 4,
-        "HR": 0,
+        "K": 3,
+        "HR": 1,
         "IP": 6
       },
       {
@@ -367,15 +367,15 @@
     ],
     "home": [
       {
-        "player": "tomas-zepeda",
-        "name": "Tomás Zepeda",
+        "player": "esteban-arce",
+        "name": "Esteban Arce",
         "IP_outs": 20,
         "H": 6,
         "R": 5,
         "ER": 5,
         "BB": 0,
         "K": 6,
-        "HR": 3,
+        "HR": 2,
         "IP": 6.2
       },
       {
@@ -386,16 +386,17 @@
         "R": 1,
         "ER": 1,
         "BB": 5,
-        "K": 5,
-        "HR": 0,
+        "K": 3,
+        "HR": 1,
         "IP": 2.1
       }
     ]
   },
   "decisions": {
-    "W": "teemu-salonen",
-    "L": "tomas-zepeda",
+    "W": "caius-dobrescu",
+    "L": "esteban-arce",
     "SV": "jun-seo-kang"
   },
-  "notes": []
+  "notes": [],
+  "calibration": "glb.stats-calibrated.v1"
 }

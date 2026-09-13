@@ -20,6 +20,9 @@ jobs:
       - name: Syntax check simulator
         run: node --check tools/simulate-day.js
 
+      - name: Syntax check season calibration
+        run: node --check tools/calibrate-season.js
+
       - name: Syntax check derivation engine
         run: node --check tools/rebuild-derived.js
 

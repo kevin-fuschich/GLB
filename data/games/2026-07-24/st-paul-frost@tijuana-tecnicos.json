@@ -90,7 +90,7 @@
         "3B": 0,
         "RBI": 0,
         "BB": 0,
-        "K": 0,
+        "K": 1,
         "HR": 0,
         "SB": 1
       },
@@ -120,7 +120,7 @@
         "3B": 0,
         "RBI": 0,
         "BB": 0,
-        "K": 2,
+        "K": 0,
         "HR": 0,
         "SB": 0
       },
@@ -135,7 +135,7 @@
         "3B": 0,
         "RBI": 0,
         "BB": 1,
-        "K": 2,
+        "K": 1,
         "HR": 0,
         "SB": 0
       },
@@ -150,7 +150,7 @@
         "3B": 0,
         "RBI": 1,
         "BB": 0,
-        "K": 2,
+        "K": 1,
         "HR": 0,
         "SB": 0
       },
@@ -160,7 +160,7 @@
         "position": "CF",
         "AB": 5,
         "R": 0,
-        "H": 0,
+        "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
@@ -180,7 +180,7 @@
         "3B": 0,
         "RBI": 1,
         "BB": 1,
-        "K": 1,
+        "K": 2,
         "HR": 0,
         "SB": 1
       },
@@ -190,7 +190,7 @@
         "position": "RF",
         "AB": 3,
         "R": 0,
-        "H": 2,
+        "H": 1,
         "2B": 1,
         "3B": 0,
         "RBI": 1,
@@ -207,7 +207,7 @@
         "position": "C",
         "AB": 4,
         "R": 0,
-        "H": 0,
+        "H": 2,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
@@ -222,7 +222,7 @@
         "position": "1B",
         "AB": 3,
         "R": 1,
-        "H": 2,
+        "H": 0,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
@@ -237,7 +237,7 @@
         "position": "2B",
         "AB": 4,
         "R": 1,
-        "H": 2,
+        "H": 0,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
@@ -267,7 +267,7 @@
         "position": "3B",
         "AB": 5,
         "R": 0,
-        "H": 1,
+        "H": 2,
         "2B": 1,
         "3B": 0,
         "RBI": 0,
@@ -282,12 +282,12 @@
         "position": "LF",
         "AB": 4,
         "R": 0,
-        "H": 0,
+        "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 1,
         "BB": 0,
-        "K": 2,
+        "K": 1,
         "HR": 0,
         "SB": 0
       },
@@ -317,7 +317,7 @@
         "3B": 0,
         "RBI": 0,
         "BB": 0,
-        "K": 0,
+        "K": 1,
         "HR": 0,
         "SB": 0
       },
@@ -332,7 +332,7 @@
         "3B": 0,
         "RBI": 0,
         "BB": 1,
-        "K": 2,
+        "K": 1,
         "HR": 0,
         "SB": 0
       }
@@ -341,20 +341,20 @@
   "pitching": {
     "away": [
       {
-        "player": "tae-ho-choi",
-        "name": "Tae-ho Choi",
+        "player": "miguel-alcazar",
+        "name": "Miguel Alcázar",
         "IP_outs": 16,
         "H": 6,
         "R": 0,
         "ER": 0,
         "BB": 1,
-        "K": 3,
+        "K": 2,
         "HR": 0,
         "IP": 5.1
       },
       {
-        "player": "darius-collins",
-        "name": "Darius Collins",
+        "player": "antonio-velez",
+        "name": "Antonio Vélez",
         "IP_outs": 11,
         "H": 2,
         "R": 2,
@@ -374,13 +374,13 @@
         "R": 2,
         "ER": 2,
         "BB": 0,
-        "K": 7,
+        "K": 5,
         "HR": 0,
         "IP": 6.2
       },
       {
-        "player": "julian-ochoa",
-        "name": "Julián Ochoa",
+        "player": "ivan-lizarraga",
+        "name": "Iván Lizárraga",
         "IP_outs": 7,
         "H": 1,
         "R": 2,
@@ -393,9 +393,10 @@
     ]
   },
   "decisions": {
-    "W": "tae-ho-choi",
+    "W": "miguel-alcazar",
     "L": "tomas-zepeda",
-    "SV": "darius-collins"
+    "SV": "antonio-velez"
   },
-  "notes": []
+  "notes": [],
+  "calibration": "glb.stats-calibrated.v1"
 }

@@ -1,0 +1,522 @@
+{
+  "adama-kouyate": {
+    "hit": 0.9215,
+    "power": 0.8487
+  },
+  "carmine-sforza": {
+    "hit": 0.9318,
+    "power": 1.336
+  },
+  "elior-ben-ami": {
+    "hit": 1.1261,
+    "power": 0.806
+  },
+  "iker-zubizarreta": {
+    "hit": 0.8184,
+    "power": 0.8708
+  },
+  "kofi-agyeman": {
+    "hit": 1.2936,
+    "power": 0.972
+  },
+  "paolo-ventresca": {
+    "hit": 0.9241,
+    "power": 1.0576
+  },
+  "rui-damas": {
+    "hit": 1.1184,
+    "power": 0.8643
+  },
+  "tobias-vandenberg": {
+    "hit": 1.1084,
+    "power": 0.4721
+  },
+  "caleb-hawkins": {
+    "hit": 0.9879,
+    "power": 1.1533
+  },
+  "cole-ramsey": {
+    "hit": 1.1773,
+    "power": 1.9706
+  },
+  "dante-rios": {
+    "hit": 1.2557,
+    "power": 1.3288
+  },
+  "isaac-morrow": {
+    "hit": 0.9884,
+    "power": 0.7138
+  },
+  "julian-santoro": {
+    "hit": 0.9738,
+    "power": 1.3147
+  },
+  "malik-johnson": {
+    "hit": 1.0297,
+    "power": 0.6981
+  },
+  "nico-valente": {
+    "hit": 0.9622,
+    "power": 1.2712
+  },
+  "owen-keller": {
+    "hit": 0.8581,
+    "power": 0.8627
+  },
+  "aaron-fletcher": {
+    "hit": 1.0084,
+    "power": 0.9845
+  },
+  "calvin-ross": {
+    "hit": 1.0752,
+    "power": 1.2267
+  },
+  "ethan-bowen": {
+    "hit": 0.9413,
+    "power": 1.5742
+  },
+  "joshua-kent": {
+    "hit": 1.1279,
+    "power": 0.939
+  },
+  "marcelo-ibarra": {
+    "hit": 1.0886,
+    "power": 1.0843
+  },
+  "mateo-rios": {
+    "hit": 0.8819,
+    "power": 0.8724
+  },
+  "omar-salcedo": {
+    "hit": 1.1052,
+    "power": 0.8708
+  },
+  "tyrell-winston": {
+    "hit": 1.0195,
+    "power": 0.7826
+  },
+  "anwar-elamin": {
+    "hit": 1.1529,
+    "power": 0.968
+  },
+  "eamon-kilbride": {
+    "hit": 1.0385,
+    "power": 0.9465
+  },
+  "hiroshi-kawabata": {
+    "hit": 1.0273,
+    "power": 1.8207
+  },
+  "jonah-kershaw": {
+    "hit": 1.073,
+    "power": 0.8487
+  },
+  "luis-eccheri": {
+    "hit": 0.7648,
+    "power": 0.8825
+  },
+  "malachi-quartey": {
+    "hit": 0.9954,
+    "power": 0.8946
+  },
+  "raul-sestayo": {
+    "hit": 0.9738,
+    "power": 0.5811
+  },
+  "soren-ahlgren": {
+    "hit": 0.8638,
+    "power": 0.9782
+  },
+  "andre-wallace": {
+    "hit": 0.9048,
+    "power": 1.0392
+  },
+  "blake-harrison": {
+    "hit": 0.9657,
+    "power": 1.3043
+  },
+  "dominic-russo": {
+    "hit": 0.8587,
+    "power": 0.964
+  },
+  "jalen-brooks": {
+    "hit": 0.9509,
+    "power": 1.5515
+  },
+  "mateo-fernandez": {
+    "hit": 1.2336,
+    "power": 0.7975
+  },
+  "noah-bianchi": {
+    "hit": 1.1397,
+    "power": 1.2111
+  },
+  "rafael-costa": {
+    "hit": 1.1938,
+    "power": 1.0529
+  },
+  "tomas-rivas": {
+    "hit": 1.0855,
+    "power": 1.0623
+  },
+  "ari-kasprzyk": {
+    "hit": 1.0403,
+    "power": 0.792
+  },
+  "cesar-iglesiarias": {
+    "hit": 0.982,
+    "power": 1.3252
+  },
+  "enzo-carvajal": {
+    "hit": 1.2128,
+    "power": 1.5978
+  },
+  "jae-min-seok": {
+    "hit": 1.0985,
+    "power": 1.2491
+  },
+  "malik-doumbia": {
+    "hit": 1.1591,
+    "power": 0.9561
+  },
+  "nils-adebayo": {
+    "hit": 0.892,
+    "power": 1.3968
+  },
+  "pavel-hrynko": {
+    "hit": 1.003,
+    "power": 0.8503
+  },
+  "tomer-barzilai": {
+    "hit": 1.1647,
+    "power": 1.1426
+  },
+  "andres-cazares": {
+    "hit": 0.999,
+    "power": 1.0945
+  },
+  "eamon-kilrea": {
+    "hit": 0.8865,
+    "power": 0.6444
+  },
+  "julian-sauri": {
+    "hit": 0.9666,
+    "power": 1.3783
+  },
+  "kofi-mensah": {
+    "hit": 1.1871,
+    "power": 0.7063
+  },
+  "luka-vukovic": {
+    "hit": 0.8432,
+    "power": 0.9409
+  },
+  "micah-lunsford": {
+    "hit": 1.0823,
+    "power": 0.958
+  },
+  "seiji-fukumori": {
+    "hit": 1.3305,
+    "power": 1.7628
+  },
+  "thiago-pereyra": {
+    "hit": 1.0727,
+    "power": 2.1285
+  },
+  "arman-daryan": {
+    "hit": 1.1767,
+    "power": 2.3799
+  },
+  "dariusz-kwiatkowski": {
+    "hit": 1.2176,
+    "power": 1.5303
+  },
+  "kenjiro-suganuma": {
+    "hit": 0.9693,
+    "power": 0.8859
+  },
+  "marcelino-quispe": {
+    "hit": 0.83,
+    "power": 1.2941
+  },
+  "nikhil-bhandari": {
+    "hit": 0.9899,
+    "power": 0.8627
+  },
+  "thabo-mkhize": {
+    "hit": 1.1321,
+    "power": 1.0671
+  },
+  "thiago-ramires": {
+    "hit": 1.2963,
+    "power": 0.966
+  },
+  "yusef-el-badri": {
+    "hit": 0.8437,
+    "power": 0.7032
+  },
+  "caleb-vanhoorn": {
+    "hit": 1.0039,
+    "power": 0.7866
+  },
+  "darius-kofi": {
+    "hit": 0.9975,
+    "power": 0.968
+  },
+  "matias-serey": {
+    "hit": 1.2696,
+    "power": 1.072
+  },
+  "miguel-encarnacion": {
+    "hit": 0.9579,
+    "power": 0.9317
+  },
+  "naveen-iyer": {
+    "hit": 1.0986,
+    "power": 0.6402
+  },
+  "omar-benyahia": {
+    "hit": 1.2696,
+    "power": 1.0217
+  },
+  "ryo-kawabata": {
+    "hit": 0.9604,
+    "power": 1.06
+  },
+  "victor-sundqvist": {
+    "hit": 1.1761,
+    "power": 0.7775
+  },
+  "adebayo-oluwaseyi": {
+    "hit": 1.0619,
+    "power": 1.2267
+  },
+  "dalton-reyes": {
+    "hit": 0.8124,
+    "power": 0.6394
+  },
+  "damian-velasquez": {
+    "hit": 1.1115,
+    "power": 0.6336
+  },
+  "eamon-quillan": {
+    "hit": 0.9532,
+    "power": 0.8757
+  },
+  "kiyoshi-senda": {
+    "hit": 1.0426,
+    "power": 0.5674
+  },
+  "maksim-berezan": {
+    "hit": 1.0755,
+    "power": 1.0843
+  },
+  "noam-finkel": {
+    "hit": 0.7618,
+    "power": 0.9541
+  },
+  "raul-castillo": {
+    "hit": 0.8796,
+    "power": 0.4274
+  },
+  "andres-mireles": {
+    "hit": 0.8518,
+    "power": 2.785
+  },
+  "evan-carroll-iv": {
+    "hit": 1.4302,
+    "power": 0.8791
+  },
+  "luis-quinones": {
+    "hit": 0.9082,
+    "power": 0.7906
+  },
+  "marco-delvecchio": {
+    "hit": 1.2639,
+    "power": 1.1156
+  },
+  "nikolai-dobrynin": {
+    "hit": 0.9084,
+    "power": 0.7674
+  },
+  "pieter-van-wyk": {
+    "hit": 0.9906,
+    "power": 2.328
+  },
+  "tomasz-kubas": {
+    "hit": 0.9307,
+    "power": 1.0971
+  },
+  "wyatt-hollander": {
+    "hit": 1.0953,
+    "power": 0.7879
+  },
+  "evan-morrissey": {
+    "hit": 1.3581,
+    "power": 1.5883
+  },
+  "jake-lanier": {
+    "hit": 0.8779,
+    "power": 0.9446
+  },
+  "javier-lucero": {
+    "hit": 0.9413,
+    "power": 1.7408
+  },
+  "malik-jefferson": {
+    "hit": 0.8618,
+    "power": 1.1588
+  },
+  "masato-kobori": {
+    "hit": 1.0521,
+    "power": 1.1075
+  },
+  "owen-hartnell": {
+    "hit": 1.0545,
+    "power": 0.8457
+  },
+  "rodrigo-fuentes": {
+    "hit": 1.0155,
+    "power": 1.0769
+  },
+  "trevor-yates": {
+    "hit": 0.9947,
+    "power": 0.7116
+  },
+  "adebayo-olumide": {
+    "hit": 0.9912,
+    "power": 0.792
+  },
+  "dariusz-wierzbik": {
+    "hit": 0.9341,
+    "power": 0.7106
+  },
+  "david-morales-tpe": {
+    "hit": 0.9131,
+    "power": 0.7261
+  },
+  "eric-lawson": {
+    "hit": 0.6942,
+    "power": 0.9353
+  },
+  "han-wei-tseng": {
+    "hit": 0.7545,
+    "power": 0.9561
+  },
+  "jose-ramirez-tpe": {
+    "hit": 0.8273,
+    "power": 0.5166
+  },
+  "kaito-ueda": {
+    "hit": 0.8044,
+    "power": 1.1347
+  },
+  "martin-echevarria": {
+    "hit": 0.9012,
+    "power": 1.412
+  },
+  "owen-rasmusson": {
+    "hit": 1.0103,
+    "power": 0.96
+  },
+  "adrian-fierro": {
+    "hit": 0.6829,
+    "power": 1.1643
+  },
+  "bruno-valdes": {
+    "hit": 0.8222,
+    "power": 0.7826
+  },
+  "cristobal-saucedo": {
+    "hit": 0.8585,
+    "power": 1.1023
+  },
+  "emilio-barron": {
+    "hit": 0.8641,
+    "power": 0.6893
+  },
+  "gael-marrufo": {
+    "hit": 0.9746,
+    "power": 0.96
+  },
+  "hector-belmonte": {
+    "hit": 0.5946,
+    "power": 0.9824
+  },
+  "matias-camarena": {
+    "hit": 1.2532,
+    "power": 0.8675
+  },
+  "nicolas-paredes": {
+    "hit": 0.7856,
+    "power": 0.4742
+  },
+  "sergio-hinojosa": {
+    "hit": 0.9156,
+    "power": 0.8964
+  },
+  "caleb-ardoin": {
+    "hit": 1.0381,
+    "power": 1.2908
+  },
+  "evan-trelawny": {
+    "hit": 0.9239,
+    "power": 0.8503
+  },
+  "jasper-quade": {
+    "hit": 1.0249,
+    "power": 0.6444
+  },
+  "kwame-ofori": {
+    "hit": 1.1961,
+    "power": 1.3288
+  },
+  "mateo-acebedo": {
+    "hit": 0.8884,
+    "power": 0.9909
+  },
+  "niko-velkovic": {
+    "hit": 1.0593,
+    "power": 1.6321
+  },
+  "omar-nazzal": {
+    "hit": 1.1864,
+    "power": 1.2809
+  },
+  "samir-benyahia": {
+    "hit": 0.881,
+    "power": 1.2941
+  },
+  "alejo-santillan": {
+    "hit": 1.2157,
+    "power": 0.9561
+  },
+  "eamon-kerr": {
+    "hit": 1.3632,
+    "power": 0.9335
+  },
+  "marcell-lind": {
+    "hit": 0.8321,
+    "power": 1.2975
+  },
+  "oziel-narvaez": {
+    "hit": 1.0632,
+    "power": 0.78
+  },
+  "roman-velasco": {
+    "hit": 0.8889,
+    "power": 1.4642
+  },
+  "silas-boudreau": {
+    "hit": 0.9866,
+    "power": 0.8413
+  },
+  "soraya-jafari": {
+    "hit": 1.1711,
+    "power": 2.0116
+  },
+  "taj-adelman": {
+    "hit": 1.19,
+    "power": 0.5879
+  }
+}

@@ -1,0 +1,39 @@
+name: GLB Daily Season
+
+on:
+  schedule:
+    # 6 a.m. New York in daylight/standard time. The runner skips the 5 a.m. tick.
+    - cron: '0 10 * * *'
+    - cron: '0 11 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: glb-daily-season
+  cancel-in-progress: false
+
+jobs:
+  simulate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Run due season dates
+        run: node tools/run-daily.js
+      - name: Publish official box scores and derived tables
+        run: |
+          git add data/games data/season/games.json data/season/player-stats.json current/standings.json current/leaders.json current/today.json
+          if git diff --cached --quiet; then
+            echo 'No games were due.'
+            exit 0
+          fi
+          git config user.name 'GLB Season Bot'
+          git config user.email 'glb-season-bot@users.noreply.github.com'
+          git commit -m "Record scheduled GLB games"
+          git push origin HEAD:main

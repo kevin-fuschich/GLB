@@ -1,0 +1,1489 @@
+{
+  "schema": "glb.remaining-schedule.v1",
+  "season": 2026,
+  "starting_games_per_club": 122,
+  "target_games_per_club": 162,
+  "generated_from_through": "2026-08-28",
+  "days": [
+    {
+      "date": "2026-08-29",
+      "games": [
+        {
+          "away": "albuquerque-aeros",
+          "home": "fresno-yield"
+        },
+        {
+          "away": "birmingham-vulcans",
+          "home": "louisville-naturals"
+        },
+        {
+          "away": "durham-gold",
+          "home": "spokane-alloys"
+        },
+        {
+          "away": "san-pedro-cocolos",
+          "home": "mayaguez-sultans"
+        },
+        {
+          "away": "monterrey-cementeros",
+          "home": "osaka-spirits"
+        },
+        {
+          "away": "tijuana-tecnicos",
+          "home": "santiago-caballeros"
+        },
+        {
+          "away": "st-paul-frost",
+          "home": "taipei-neon"
+        },
+        {
+          "away": "toledo-assembly",
+          "home": "vancouver-current"
+        }
+      ]
+    },
+    {
+      "date": "2026-08-30",
+      "games": [
+        {
+          "away": "louisville-naturals",
+          "home": "albuquerque-aeros"
+        },
+        {
+          "away": "birmingham-vulcans",
+          "home": "fresno-yield"
+        },
+        {
+          "away": "mayaguez-sultans",
+          "home": "durham-gold"
+        },
+        {
+          "away": "monterrey-cementeros",
+          "home": "santiago-caballeros"
+        },
+        {
+          "away": "osaka-spirits",
+          "home": "spokane-alloys"
+        },
+        {
+          "away": "san-pedro-cocolos",
+          "home": "st-paul-frost"
+        },
+        {
+          "away": "taipei-neon",
+          "home": "toledo-assembly"
+        },
+        {
+          "away": "tijuana-tecnicos",
+          "home": "vancouver-current"
+        }
+      ]
+    },
+    {
+      "date": "2026-08-31",
+      "games": [
+        {
+          "away": "mayaguez-sultans",
+          "home": "albuquerque-aeros"
+        },
+        {
+          "away": "monterrey-cementeros",
+          "home": "birmingham-vulcans"
+        },
+        {
+          "away": "durham-gold",
+          "home": "louisville-naturals"
+        },
+        {
+          "away": "osaka-spirits",
+          "home": "fresno-yield"
+        },
+        {
+          "away": "san-pedro-cocolos",
+          "home": "santiago-caballeros"
+        },
+        {
+          "away": "spokane-alloys",
+          "home": "st-paul-frost"
+        },
+        {
+          "away": "vancouver-current",
+          "home": "taipei-neon"
+        },
+        {
+          "away": "tijuana-tecnicos",
+          "home": "toledo-assembly"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-01",
+      "games": [
+        {
+          "away": "albuquerque-aeros",
+          "home": "monterrey-cementeros"
+        },
+        {
+          "away": "birmingham-vulcans",
+          "home": "mayaguez-sultans"
+        },
+        {
+          "away": "osaka-spirits",
+          "home": "durham-gold"
+        },
+        {
+          "away": "fresno-yield",
+          "home": "louisville-naturals"
+        },
+        {
+          "away": "san-pedro-cocolos",
+          "home": "spokane-alloys"
+        },
+        {
+          "away": "santiago-caballeros",
+          "home": "toledo-assembly"
+        },
+        {
+          "away": "st-paul-frost",
+          "home": "vancouver-current"
+        },
+        {
+          "away": "taipei-neon",
+          "home": "tijuana-tecnicos"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-02",
+      "games": [
+        {
+          "away": "osaka-spirits",
+          "home": "albuquerque-aeros"
+        },
+        {
+          "away": "birmingham-vulcans",
+          "home": "san-pedro-cocolos"
+        },
+        {
+          "away": "durham-gold",
+          "home": "monterrey-cementeros"
+        },
+        {
+          "away": "fresno-yield",
+          "home": "mayaguez-sultans"
+        },
+        {
+          "away": "louisville-naturals",
+          "home": "santiago-caballeros"
+        },
+        {
+          "away": "spokane-alloys",
+          "home": "taipei-neon"
+        },
+        {
+          "away": "toledo-assembly",
+          "home": "st-paul-frost"
+        },
+        {
+          "away": "vancouver-current",
+          "home": "tijuana-tecnicos"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-03",
+      "games": [
+        {
+          "away": "albuquerque-aeros",
+          "home": "san-pedro-cocolos"
+        },
+        {
+          "away": "osaka-spirits",
+          "home": "birmingham-vulcans"
+        },
+        {
+          "away": "santiago-caballeros",
+          "home": "durham-gold"
+        },
+        {
+          "away": "monterrey-cementeros",
+          "home": "fresno-yield"
+        },
+        {
+          "away": "louisville-naturals",
+          "home": "mayaguez-sultans"
+        },
+        {
+          "away": "tijuana-tecnicos",
+          "home": "spokane-alloys"
+        },
+        {
+          "away": "taipei-neon",
+          "home": "st-paul-frost"
+        },
+        {
+          "away": "vancouver-current",
+          "home": "toledo-assembly"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-05",
+      "games": [
+        {
+          "away": "santiago-caballeros",
+          "home": "albuquerque-aeros"
+        },
+        {
+          "away": "spokane-alloys",
+          "home": "birmingham-vulcans"
+        },
+        {
+          "away": "durham-gold",
+          "home": "san-pedro-cocolos"
+        },
+        {
+          "away": "st-paul-frost",
+          "home": "fresno-yield"
+        },
+        {
+          "away": "louisville-naturals",
+          "home": "monterrey-cementeros"
+        },
+        {
+          "away": "mayaguez-sultans",
+          "home": "taipei-neon"
+        },
+        {
+          "away": "tijuana-tecnicos",
+          "home": "osaka-spirits"
+        },
+        {
+          "away": "toledo-assembly",
+          "home": "vancouver-current"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-06",
+      "games": [
+        {
+          "away": "albuquerque-aeros",
+          "home": "spokane-alloys"
+        },
+        {
+          "away": "birmingham-vulcans",
+          "home": "santiago-caballeros"
+        },
+        {
+          "away": "st-paul-frost",
+          "home": "durham-gold"
+        },
+        {
+          "away": "fresno-yield",
+          "home": "san-pedro-cocolos"
+        },
+        {
+          "away": "louisville-naturals",
+          "home": "osaka-spirits"
+        },
+        {
+          "away": "mayaguez-sultans",
+          "home": "tijuana-tecnicos"
+        },
+        {
+          "away": "monterrey-cementeros",
+          "home": "taipei-neon"
+        },
+        {
+          "away": "vancouver-current",
+          "home": "toledo-assembly"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-07",
+      "games": [
+        {
+          "away": "st-paul-frost",
+          "home": "albuquerque-aeros"
+        },
+        {
+          "away": "taipei-neon",
+          "home": "birmingham-vulcans"
+        },
+        {
+          "away": "durham-gold",
+          "home": "spokane-alloys"
+        },
+        {
+          "away": "fresno-yield",
+          "home": "santiago-caballeros"
+        },
+        {
+          "away": "san-pedro-cocolos",
+          "home": "louisville-naturals"
+        },
+        {
+          "away": "toledo-assembly",
+          "home": "mayaguez-sultans"
+        },
+        {
+          "away": "monterrey-cementeros",
+          "home": "tijuana-tecnicos"
+        },
+        {
+          "away": "osaka-spirits",
+          "home": "vancouver-current"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-08",
+      "games": [
+        {
+          "away": "taipei-neon",
+          "home": "albuquerque-aeros"
+        },
+        {
+          "away": "birmingham-vulcans",
+          "home": "st-paul-frost"
+        },
+        {
+          "away": "tijuana-tecnicos",
+          "home": "durham-gold"
+        },
+        {
+          "away": "toledo-assembly",
+          "home": "fresno-yield"
+        },
+        {
+          "away": "vancouver-current",
+          "home": "louisville-naturals"
+        },
+        {
+          "away": "mayaguez-sultans",
+          "home": "santiago-caballeros"
+        },
+        {
+          "away": "spokane-alloys",
+          "home": "monterrey-cementeros"
+        },
+        {
+          "away": "san-pedro-cocolos",
+          "home": "osaka-spirits"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-09",
+      "games": [
+        {
+          "away": "albuquerque-aeros",
+          "home": "tijuana-tecnicos"
+        },
+        {
+          "away": "toledo-assembly",
+          "home": "birmingham-vulcans"
+        },
+        {
+          "away": "durham-gold",
+          "home": "taipei-neon"
+        },
+        {
+          "away": "fresno-yield",
+          "home": "vancouver-current"
+        },
+        {
+          "away": "louisville-naturals",
+          "home": "st-paul-frost"
+        },
+        {
+          "away": "mayaguez-sultans",
+          "home": "spokane-alloys"
+        },
+        {
+          "away": "osaka-spirits",
+          "home": "monterrey-cementeros"
+        },
+        {
+          "away": "santiago-caballeros",
+          "home": "san-pedro-cocolos"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-10",
+      "games": [
+        {
+          "away": "albuquerque-aeros",
+          "home": "toledo-assembly"
+        },
+        {
+          "away": "tijuana-tecnicos",
+          "home": "birmingham-vulcans"
+        },
+        {
+          "away": "vancouver-current",
+          "home": "durham-gold"
+        },
+        {
+          "away": "taipei-neon",
+          "home": "fresno-yield"
+        },
+        {
+          "away": "mayaguez-sultans",
+          "home": "louisville-naturals"
+        },
+        {
+          "away": "monterrey-cementeros",
+          "home": "st-paul-frost"
+        },
+        {
+          "away": "santiago-caballeros",
+          "home": "osaka-spirits"
+        },
+        {
+          "away": "spokane-alloys",
+          "home": "san-pedro-cocolos"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-12",
+      "games": [
+        {
+          "away": "vancouver-current",
+          "home": "albuquerque-aeros"
+        },
+        {
+          "away": "durham-gold",
+          "home": "birmingham-vulcans"
+        },
+        {
+          "away": "fresno-yield",
+          "home": "tijuana-tecnicos"
+        },
+        {
+          "away": "louisville-naturals",
+          "home": "taipei-neon"
+        },
+        {
+          "away": "st-paul-frost",
+          "home": "mayaguez-sultans"
+        },
+        {
+          "away": "monterrey-cementeros",
+          "home": "toledo-assembly"
+        },
+        {
+          "away": "santiago-caballeros",
+          "home": "osaka-spirits"
+        },
+        {
+          "away": "san-pedro-cocolos",
+          "home": "spokane-alloys"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-13",
+      "games": [
+        {
+          "away": "birmingham-vulcans",
+          "home": "albuquerque-aeros"
+        },
+        {
+          "away": "toledo-assembly",
+          "home": "durham-gold"
+        },
+        {
+          "away": "louisville-naturals",
+          "home": "fresno-yield"
+        },
+        {
+          "away": "mayaguez-sultans",
+          "home": "vancouver-current"
+        },
+        {
+          "away": "san-pedro-cocolos",
+          "home": "monterrey-cementeros"
+        },
+        {
+          "away": "osaka-spirits",
+          "home": "st-paul-frost"
+        },
+        {
+          "away": "spokane-alloys",
+          "home": "santiago-caballeros"
+        },
+        {
+          "away": "taipei-neon",
+          "home": "tijuana-tecnicos"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-14",
+      "games": [
+        {
+          "away": "durham-gold",
+          "home": "albuquerque-aeros"
+        },
+        {
+          "away": "birmingham-vulcans",
+          "home": "vancouver-current"
+        },
+        {
+          "away": "fresno-yield",
+          "home": "mayaguez-sultans"
+        },
+        {
+          "away": "tijuana-tecnicos",
+          "home": "louisville-naturals"
+        },
+        {
+          "away": "santiago-caballeros",
+          "home": "monterrey-cementeros"
+        },
+        {
+          "away": "osaka-spirits",
+          "home": "taipei-neon"
+        },
+        {
+          "away": "san-pedro-cocolos",
+          "home": "toledo-assembly"
+        },
+        {
+          "away": "st-paul-frost",
+          "home": "spokane-alloys"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-15",
+      "games": [
+        {
+          "away": "albuquerque-aeros",
+          "home": "fresno-yield"
+        },
+        {
+          "away": "louisville-naturals",
+          "home": "birmingham-vulcans"
+        },
+        {
+          "away": "mayaguez-sultans",
+          "home": "durham-gold"
+        },
+        {
+          "away": "monterrey-cementeros",
+          "home": "vancouver-current"
+        },
+        {
+          "away": "toledo-assembly",
+          "home": "osaka-spirits"
+        },
+        {
+          "away": "taipei-neon",
+          "home": "san-pedro-cocolos"
+        },
+        {
+          "away": "spokane-alloys",
+          "home": "santiago-caballeros"
+        },
+        {
+          "away": "tijuana-tecnicos",
+          "home": "st-paul-frost"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-16",
+      "games": [
+        {
+          "away": "albuquerque-aeros",
+          "home": "louisville-naturals"
+        },
+        {
+          "away": "fresno-yield",
+          "home": "birmingham-vulcans"
+        },
+        {
+          "away": "monterrey-cementeros",
+          "home": "durham-gold"
+        },
+        {
+          "away": "osaka-spirits",
+          "home": "mayaguez-sultans"
+        },
+        {
+          "away": "san-pedro-cocolos",
+          "home": "tijuana-tecnicos"
+        },
+        {
+          "away": "vancouver-current",
+          "home": "santiago-caballeros"
+        },
+        {
+          "away": "spokane-alloys",
+          "home": "toledo-assembly"
+        },
+        {
+          "away": "st-paul-frost",
+          "home": "taipei-neon"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-17",
+      "games": [
+        {
+          "away": "mayaguez-sultans",
+          "home": "albuquerque-aeros"
+        },
+        {
+          "away": "birmingham-vulcans",
+          "home": "monterrey-cementeros"
+        },
+        {
+          "away": "durham-gold",
+          "home": "fresno-yield"
+        },
+        {
+          "away": "toledo-assembly",
+          "home": "louisville-naturals"
+        },
+        {
+          "away": "spokane-alloys",
+          "home": "osaka-spirits"
+        },
+        {
+          "away": "vancouver-current",
+          "home": "san-pedro-cocolos"
+        },
+        {
+          "away": "st-paul-frost",
+          "home": "santiago-caballeros"
+        },
+        {
+          "away": "tijuana-tecnicos",
+          "home": "taipei-neon"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-19",
+      "games": [
+        {
+          "away": "monterrey-cementeros",
+          "home": "albuquerque-aeros"
+        },
+        {
+          "away": "birmingham-vulcans",
+          "home": "mayaguez-sultans"
+        },
+        {
+          "away": "louisville-naturals",
+          "home": "durham-gold"
+        },
+        {
+          "away": "osaka-spirits",
+          "home": "fresno-yield"
+        },
+        {
+          "away": "st-paul-frost",
+          "home": "san-pedro-cocolos"
+        },
+        {
+          "away": "taipei-neon",
+          "home": "santiago-caballeros"
+        },
+        {
+          "away": "vancouver-current",
+          "home": "spokane-alloys"
+        },
+        {
+          "away": "toledo-assembly",
+          "home": "tijuana-tecnicos"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-20",
+      "games": [
+        {
+          "away": "albuquerque-aeros",
+          "home": "osaka-spirits"
+        },
+        {
+          "away": "san-pedro-cocolos",
+          "home": "birmingham-vulcans"
+        },
+        {
+          "away": "santiago-caballeros",
+          "home": "durham-gold"
+        },
+        {
+          "away": "fresno-yield",
+          "home": "monterrey-cementeros"
+        },
+        {
+          "away": "st-paul-frost",
+          "home": "louisville-naturals"
+        },
+        {
+          "away": "spokane-alloys",
+          "home": "mayaguez-sultans"
+        },
+        {
+          "away": "taipei-neon",
+          "home": "toledo-assembly"
+        },
+        {
+          "away": "tijuana-tecnicos",
+          "home": "vancouver-current"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-21",
+      "games": [
+        {
+          "away": "san-pedro-cocolos",
+          "home": "albuquerque-aeros"
+        },
+        {
+          "away": "osaka-spirits",
+          "home": "birmingham-vulcans"
+        },
+        {
+          "away": "durham-gold",
+          "home": "spokane-alloys"
+        },
+        {
+          "away": "santiago-caballeros",
+          "home": "fresno-yield"
+        },
+        {
+          "away": "monterrey-cementeros",
+          "home": "louisville-naturals"
+        },
+        {
+          "away": "mayaguez-sultans",
+          "home": "st-paul-frost"
+        },
+        {
+          "away": "vancouver-current",
+          "home": "taipei-neon"
+        },
+        {
+          "away": "tijuana-tecnicos",
+          "home": "toledo-assembly"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-22",
+      "games": [
+        {
+          "away": "santiago-caballeros",
+          "home": "albuquerque-aeros"
+        },
+        {
+          "away": "birmingham-vulcans",
+          "home": "spokane-alloys"
+        },
+        {
+          "away": "durham-gold",
+          "home": "osaka-spirits"
+        },
+        {
+          "away": "fresno-yield",
+          "home": "san-pedro-cocolos"
+        },
+        {
+          "away": "taipei-neon",
+          "home": "louisville-naturals"
+        },
+        {
+          "away": "monterrey-cementeros",
+          "home": "mayaguez-sultans"
+        },
+        {
+          "away": "toledo-assembly",
+          "home": "st-paul-frost"
+        },
+        {
+          "away": "vancouver-current",
+          "home": "tijuana-tecnicos"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-23",
+      "games": [
+        {
+          "away": "albuquerque-aeros",
+          "home": "spokane-alloys"
+        },
+        {
+          "away": "santiago-caballeros",
+          "home": "birmingham-vulcans"
+        },
+        {
+          "away": "san-pedro-cocolos",
+          "home": "durham-gold"
+        },
+        {
+          "away": "st-paul-frost",
+          "home": "fresno-yield"
+        },
+        {
+          "away": "louisville-naturals",
+          "home": "osaka-spirits"
+        },
+        {
+          "away": "taipei-neon",
+          "home": "mayaguez-sultans"
+        },
+        {
+          "away": "tijuana-tecnicos",
+          "home": "monterrey-cementeros"
+        },
+        {
+          "away": "toledo-assembly",
+          "home": "vancouver-current"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-24",
+      "games": [
+        {
+          "away": "albuquerque-aeros",
+          "home": "st-paul-frost"
+        },
+        {
+          "away": "birmingham-vulcans",
+          "home": "taipei-neon"
+        },
+        {
+          "away": "durham-gold",
+          "home": "tijuana-tecnicos"
+        },
+        {
+          "away": "spokane-alloys",
+          "home": "fresno-yield"
+        },
+        {
+          "away": "louisville-naturals",
+          "home": "san-pedro-cocolos"
+        },
+        {
+          "away": "mayaguez-sultans",
+          "home": "santiago-caballeros"
+        },
+        {
+          "away": "toledo-assembly",
+          "home": "monterrey-cementeros"
+        },
+        {
+          "away": "osaka-spirits",
+          "home": "vancouver-current"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-26",
+      "games": [
+        {
+          "away": "taipei-neon",
+          "home": "albuquerque-aeros"
+        },
+        {
+          "away": "st-paul-frost",
+          "home": "birmingham-vulcans"
+        },
+        {
+          "away": "durham-gold",
+          "home": "toledo-assembly"
+        },
+        {
+          "away": "fresno-yield",
+          "home": "tijuana-tecnicos"
+        },
+        {
+          "away": "santiago-caballeros",
+          "home": "louisville-naturals"
+        },
+        {
+          "away": "san-pedro-cocolos",
+          "home": "mayaguez-sultans"
+        },
+        {
+          "away": "spokane-alloys",
+          "home": "monterrey-cementeros"
+        },
+        {
+          "away": "osaka-spirits",
+          "home": "vancouver-current"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-27",
+      "games": [
+        {
+          "away": "tijuana-tecnicos",
+          "home": "albuquerque-aeros"
+        },
+        {
+          "away": "birmingham-vulcans",
+          "home": "toledo-assembly"
+        },
+        {
+          "away": "st-paul-frost",
+          "home": "durham-gold"
+        },
+        {
+          "away": "fresno-yield",
+          "home": "taipei-neon"
+        },
+        {
+          "away": "vancouver-current",
+          "home": "louisville-naturals"
+        },
+        {
+          "away": "mayaguez-sultans",
+          "home": "monterrey-cementeros"
+        },
+        {
+          "away": "osaka-spirits",
+          "home": "san-pedro-cocolos"
+        },
+        {
+          "away": "santiago-caballeros",
+          "home": "spokane-alloys"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-28",
+      "games": [
+        {
+          "away": "albuquerque-aeros",
+          "home": "toledo-assembly"
+        },
+        {
+          "away": "tijuana-tecnicos",
+          "home": "birmingham-vulcans"
+        },
+        {
+          "away": "taipei-neon",
+          "home": "durham-gold"
+        },
+        {
+          "away": "vancouver-current",
+          "home": "fresno-yield"
+        },
+        {
+          "away": "louisville-naturals",
+          "home": "mayaguez-sultans"
+        },
+        {
+          "away": "monterrey-cementeros",
+          "home": "st-paul-frost"
+        },
+        {
+          "away": "osaka-spirits",
+          "home": "santiago-caballeros"
+        },
+        {
+          "away": "spokane-alloys",
+          "home": "san-pedro-cocolos"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-29",
+      "games": [
+        {
+          "away": "albuquerque-aeros",
+          "home": "vancouver-current"
+        },
+        {
+          "away": "birmingham-vulcans",
+          "home": "durham-gold"
+        },
+        {
+          "away": "toledo-assembly",
+          "home": "fresno-yield"
+        },
+        {
+          "away": "louisville-naturals",
+          "home": "tijuana-tecnicos"
+        },
+        {
+          "away": "mayaguez-sultans",
+          "home": "osaka-spirits"
+        },
+        {
+          "away": "monterrey-cementeros",
+          "home": "taipei-neon"
+        },
+        {
+          "away": "san-pedro-cocolos",
+          "home": "santiago-caballeros"
+        },
+        {
+          "away": "spokane-alloys",
+          "home": "st-paul-frost"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-30",
+      "games": [
+        {
+          "away": "albuquerque-aeros",
+          "home": "birmingham-vulcans"
+        },
+        {
+          "away": "durham-gold",
+          "home": "vancouver-current"
+        },
+        {
+          "away": "fresno-yield",
+          "home": "louisville-naturals"
+        },
+        {
+          "away": "tijuana-tecnicos",
+          "home": "mayaguez-sultans"
+        },
+        {
+          "away": "monterrey-cementeros",
+          "home": "osaka-spirits"
+        },
+        {
+          "away": "taipei-neon",
+          "home": "san-pedro-cocolos"
+        },
+        {
+          "away": "toledo-assembly",
+          "home": "santiago-caballeros"
+        },
+        {
+          "away": "st-paul-frost",
+          "home": "spokane-alloys"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-01",
+      "games": [
+        {
+          "away": "durham-gold",
+          "home": "albuquerque-aeros"
+        },
+        {
+          "away": "vancouver-current",
+          "home": "birmingham-vulcans"
+        },
+        {
+          "away": "fresno-yield",
+          "home": "mayaguez-sultans"
+        },
+        {
+          "away": "louisville-naturals",
+          "home": "toledo-assembly"
+        },
+        {
+          "away": "san-pedro-cocolos",
+          "home": "monterrey-cementeros"
+        },
+        {
+          "away": "st-paul-frost",
+          "home": "osaka-spirits"
+        },
+        {
+          "away": "santiago-caballeros",
+          "home": "tijuana-tecnicos"
+        },
+        {
+          "away": "taipei-neon",
+          "home": "spokane-alloys"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-03",
+      "games": [
+        {
+          "away": "albuquerque-aeros",
+          "home": "fresno-yield"
+        },
+        {
+          "away": "birmingham-vulcans",
+          "home": "louisville-naturals"
+        },
+        {
+          "away": "mayaguez-sultans",
+          "home": "durham-gold"
+        },
+        {
+          "away": "vancouver-current",
+          "home": "monterrey-cementeros"
+        },
+        {
+          "away": "osaka-spirits",
+          "home": "taipei-neon"
+        },
+        {
+          "away": "tijuana-tecnicos",
+          "home": "san-pedro-cocolos"
+        },
+        {
+          "away": "santiago-caballeros",
+          "home": "st-paul-frost"
+        },
+        {
+          "away": "toledo-assembly",
+          "home": "spokane-alloys"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-04",
+      "games": [
+        {
+          "away": "louisville-naturals",
+          "home": "albuquerque-aeros"
+        },
+        {
+          "away": "birmingham-vulcans",
+          "home": "fresno-yield"
+        },
+        {
+          "away": "durham-gold",
+          "home": "monterrey-cementeros"
+        },
+        {
+          "away": "mayaguez-sultans",
+          "home": "toledo-assembly"
+        },
+        {
+          "away": "tijuana-tecnicos",
+          "home": "osaka-spirits"
+        },
+        {
+          "away": "san-pedro-cocolos",
+          "home": "vancouver-current"
+        },
+        {
+          "away": "santiago-caballeros",
+          "home": "taipei-neon"
+        },
+        {
+          "away": "spokane-alloys",
+          "home": "st-paul-frost"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-05",
+      "games": [
+        {
+          "away": "albuquerque-aeros",
+          "home": "mayaguez-sultans"
+        },
+        {
+          "away": "monterrey-cementeros",
+          "home": "birmingham-vulcans"
+        },
+        {
+          "away": "fresno-yield",
+          "home": "durham-gold"
+        },
+        {
+          "away": "louisville-naturals",
+          "home": "osaka-spirits"
+        },
+        {
+          "away": "toledo-assembly",
+          "home": "san-pedro-cocolos"
+        },
+        {
+          "away": "vancouver-current",
+          "home": "santiago-caballeros"
+        },
+        {
+          "away": "spokane-alloys",
+          "home": "tijuana-tecnicos"
+        },
+        {
+          "away": "taipei-neon",
+          "home": "st-paul-frost"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-06",
+      "games": [
+        {
+          "away": "monterrey-cementeros",
+          "home": "albuquerque-aeros"
+        },
+        {
+          "away": "birmingham-vulcans",
+          "home": "mayaguez-sultans"
+        },
+        {
+          "away": "durham-gold",
+          "home": "louisville-naturals"
+        },
+        {
+          "away": "fresno-yield",
+          "home": "osaka-spirits"
+        },
+        {
+          "away": "san-pedro-cocolos",
+          "home": "st-paul-frost"
+        },
+        {
+          "away": "santiago-caballeros",
+          "home": "tijuana-tecnicos"
+        },
+        {
+          "away": "vancouver-current",
+          "home": "spokane-alloys"
+        },
+        {
+          "away": "taipei-neon",
+          "home": "toledo-assembly"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "games": [
+        {
+          "away": "osaka-spirits",
+          "home": "albuquerque-aeros"
+        },
+        {
+          "away": "birmingham-vulcans",
+          "home": "san-pedro-cocolos"
+        },
+        {
+          "away": "durham-gold",
+          "home": "santiago-caballeros"
+        },
+        {
+          "away": "fresno-yield",
+          "home": "monterrey-cementeros"
+        },
+        {
+          "away": "louisville-naturals",
+          "home": "spokane-alloys"
+        },
+        {
+          "away": "mayaguez-sultans",
+          "home": "vancouver-current"
+        },
+        {
+          "away": "st-paul-frost",
+          "home": "tijuana-tecnicos"
+        },
+        {
+          "away": "toledo-assembly",
+          "home": "taipei-neon"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-08",
+      "games": [
+        {
+          "away": "albuquerque-aeros",
+          "home": "san-pedro-cocolos"
+        },
+        {
+          "away": "osaka-spirits",
+          "home": "birmingham-vulcans"
+        },
+        {
+          "away": "spokane-alloys",
+          "home": "durham-gold"
+        },
+        {
+          "away": "fresno-yield",
+          "home": "santiago-caballeros"
+        },
+        {
+          "away": "monterrey-cementeros",
+          "home": "louisville-naturals"
+        },
+        {
+          "away": "mayaguez-sultans",
+          "home": "st-paul-frost"
+        },
+        {
+          "away": "taipei-neon",
+          "home": "vancouver-current"
+        },
+        {
+          "away": "tijuana-tecnicos",
+          "home": "toledo-assembly"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-10",
+      "games": [
+        {
+          "away": "albuquerque-aeros",
+          "home": "santiago-caballeros"
+        },
+        {
+          "away": "birmingham-vulcans",
+          "home": "spokane-alloys"
+        },
+        {
+          "away": "durham-gold",
+          "home": "osaka-spirits"
+        },
+        {
+          "away": "san-pedro-cocolos",
+          "home": "fresno-yield"
+        },
+        {
+          "away": "st-paul-frost",
+          "home": "louisville-naturals"
+        },
+        {
+          "away": "mayaguez-sultans",
+          "home": "taipei-neon"
+        },
+        {
+          "away": "monterrey-cementeros",
+          "home": "tijuana-tecnicos"
+        },
+        {
+          "away": "vancouver-current",
+          "home": "toledo-assembly"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-11",
+      "games": [
+        {
+          "away": "spokane-alloys",
+          "home": "albuquerque-aeros"
+        },
+        {
+          "away": "santiago-caballeros",
+          "home": "birmingham-vulcans"
+        },
+        {
+          "away": "san-pedro-cocolos",
+          "home": "durham-gold"
+        },
+        {
+          "away": "st-paul-frost",
+          "home": "fresno-yield"
+        },
+        {
+          "away": "louisville-naturals",
+          "home": "taipei-neon"
+        },
+        {
+          "away": "tijuana-tecnicos",
+          "home": "mayaguez-sultans"
+        },
+        {
+          "away": "toledo-assembly",
+          "home": "monterrey-cementeros"
+        },
+        {
+          "away": "osaka-spirits",
+          "home": "vancouver-current"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-12",
+      "games": [
+        {
+          "away": "albuquerque-aeros",
+          "home": "st-paul-frost"
+        },
+        {
+          "away": "birmingham-vulcans",
+          "home": "taipei-neon"
+        },
+        {
+          "away": "durham-gold",
+          "home": "tijuana-tecnicos"
+        },
+        {
+          "away": "fresno-yield",
+          "home": "spokane-alloys"
+        },
+        {
+          "away": "louisville-naturals",
+          "home": "san-pedro-cocolos"
+        },
+        {
+          "away": "mayaguez-sultans",
+          "home": "santiago-caballeros"
+        },
+        {
+          "away": "monterrey-cementeros",
+          "home": "vancouver-current"
+        },
+        {
+          "away": "toledo-assembly",
+          "home": "osaka-spirits"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-13",
+      "games": [
+        {
+          "away": "taipei-neon",
+          "home": "albuquerque-aeros"
+        },
+        {
+          "away": "st-paul-frost",
+          "home": "birmingham-vulcans"
+        },
+        {
+          "away": "durham-gold",
+          "home": "toledo-assembly"
+        },
+        {
+          "away": "tijuana-tecnicos",
+          "home": "fresno-yield"
+        },
+        {
+          "away": "santiago-caballeros",
+          "home": "louisville-naturals"
+        },
+        {
+          "away": "san-pedro-cocolos",
+          "home": "mayaguez-sultans"
+        },
+        {
+          "away": "spokane-alloys",
+          "home": "monterrey-cementeros"
+        },
+        {
+          "away": "osaka-spirits",
+          "home": "vancouver-current"
+        }
+      ]
+    }
+  ]
+}

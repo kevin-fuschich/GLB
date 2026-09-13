@@ -339,6 +339,11 @@ p{line-height:1.58;color:#343a40}
       </div>
     </section>
 
+    <section class="card" id="seasonStats">
+      <div class="card-head"><h2>2026 Season Statistics</h2></div>
+      <div class="card-body" id="seasonStatBody">Loading official season line…</div>
+    </section>
+
     <section class="card">
       <div class="card-head">
         <h2>Contribute to This Record</h2>
@@ -523,7 +528,7 @@ const teamSlug =
   PLAYER_TEAM_INDEX[playerSlug] ||
   "spokane-alloys";
 
-const team = TEAMS[teamSlug] || {
+let team = TEAMS[teamSlug] || {
   teamName: titleCaseFromSlug(teamSlug),
   cityPrefix: teamSlug.split("-")[0],
   teamPage: `team.html?team=${teamSlug}`
@@ -639,7 +644,15 @@ function renderBio(playerName, playerBio, contributors){
 }
 
 async function loadPlayer(){
-  const rosterPlayer = await getRosterPlayer();
+  try {
+    const registryResponse = await fetch('data/teams/teams.json', {cache:'no-store'});
+    if(!registryResponse.ok) throw new Error('Team registry unavailable');
+    const registry = await registryResponse.json();
+    const activeTeam = Object.values(registry.divisions).flat().find(entry => entry.slug === teamSlug);
+    if(!activeTeam) throw new Error('Club not found in active league registry');
+    team = {teamName:activeTeam.team,cityPrefix:teamSlug.split('-')[0],teamPage:`team.html?team=${encodeURIComponent(teamSlug)}`};
+    const rosterPlayer = await getRosterPlayer();
+    if(!rosterPlayer && !PLAYER_OVERRIDES[playerSlug]) throw new Error('Player not found on this club’s active roster');
 
   const player = {
     name: titleCaseFromSlug(playerSlug),
@@ -681,16 +694,46 @@ async function loadPlayer(){
   setValue("bioCodeField", claimCode);
 
   const img = document.getElementById("playerPhoto");
-  img.src = playerImagePath();
   img.alt = `${playerName} portrait`;
-  img.onerror = function(){
-    this.onerror = null;
-    this.src = "https://placehold.co/800x800/e8edf2/5f6b7a?text=Player+Photo";
+  const photoWrap = img.parentElement;
+  const showInitials = () => {
+    img.remove();
+    photoWrap.textContent = playerName.split(/\s+/).slice(0,2).map(word=>word[0]).join('');
+    photoWrap.setAttribute('aria-label', `${playerName} portrait unavailable`);
   };
+  const portrait = teamSlug === 'spokane-alloys' ? `assets/images/players/spokane-alloys/spokane-${playerSlug}.png` :
+    teamSlug === 'albuquerque-aeros' ? `assets/teams/albuquerque-aeros/images/players/albuquerque-${playerSlug}.png` : null;
+  if(portrait){img.onerror = showInitials; img.src = portrait;} else showInitials();
 
   const teamLink = document.getElementById("teamLink");
   teamLink.href = team.teamPage;
   teamLink.textContent = `View ${team.teamName} →`;
+
+  const statsResponse = await fetch('data/season/player-stats.json', {cache:'no-store'});
+  if(!statsResponse.ok) throw new Error('Season statistics unavailable');
+  const seasonStats = await statsResponse.json();
+  const stat = seasonStats.find(row => row.team_slug === teamSlug && row.player === playerSlug);
+  const body = document.getElementById('seasonStatBody');
+  body.replaceChildren();
+  if(!stat){body.textContent = 'No player line recorded in official box scores yet.';return;}
+  const isPitcher = ['SP','RP','CL'].includes(player.position);
+  const group = stat[isPitcher ? 'pitching' : 'batting'];
+  const keys = isPitcher ? ['G','IP','W','L','SV','K','ERA','WHIP'] : ['G','AB','R','H','2B','3B','HR','RBI','BB','K','SB','AVG','OPS'];
+  const table = document.createElement('table');
+  table.style.cssText='width:100%;border-collapse:collapse;display:block;overflow-x:auto';
+  const header=document.createElement('tr'),row=document.createElement('tr');
+  for(const key of keys){
+    const th=document.createElement('th'); th.textContent=key; th.style.padding='8px';
+    const td=document.createElement('td'); td.textContent=group[key] ?? '—'; td.style.padding='8px';
+    header.append(th);row.append(td);
+  }
+  table.append(header,row);body.append(table);
+  const note=document.createElement('p');note.textContent='Official totals through the latest recorded game. Opening Day score-only games do not contribute player lines.';body.append(note);
+  } catch(error) {
+    const body=document.getElementById('seasonStatBody');
+    body.textContent=error.message;
+    console.error(error);
+  }
 }
 
 loadPlayer();

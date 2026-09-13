@@ -125,6 +125,9 @@
         if (headlines[0]) headlines[0].textContent = `${games.length} games recorded in the inaugural season`;
         if (headlines[1]) headlines[1].textContent = 'Club standings and player leaders updated';
         if (headlines[2]) headlines[2].textContent = 'Explore box scores from across the league';
+        const newsMeta = $('.news-meta');
+        if (newsMeta[0]) newsMeta[0].textContent = `${games.length} official games through ${dateText(standings.as_of)}`;
+        if (newsMeta[2]) newsMeta[2].textContent = `Results through ${dateText(standings.as_of)} are in the archive`;
       }
       if (page === 'schedule') {
         const sheet = $('.record-sheet');

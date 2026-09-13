@@ -1,0 +1,386 @@
+{
+  "schema": "glb.boxscore.v1",
+  "game_id": "2026-08-04_vancouver-current@st-paul-frost",
+  "date": "2026-08-04",
+  "away": {
+    "slug": "vancouver-current",
+    "name": "Vancouver Current"
+  },
+  "home": {
+    "slug": "st-paul-frost",
+    "name": "St. Paul Frost"
+  },
+  "status": "Final",
+  "attendance": 16365,
+  "linescore": {
+    "innings": [
+      {
+        "inning": 1,
+        "away": 0,
+        "home": 0
+      },
+      {
+        "inning": 2,
+        "away": 1,
+        "home": 1
+      },
+      {
+        "inning": 3,
+        "away": 0,
+        "home": 0
+      },
+      {
+        "inning": 4,
+        "away": 1,
+        "home": 1
+      },
+      {
+        "inning": 5,
+        "away": 0,
+        "home": 0
+      },
+      {
+        "inning": 6,
+        "away": 1,
+        "home": 1
+      },
+      {
+        "inning": 7,
+        "away": 0,
+        "home": 2
+      },
+      {
+        "inning": 8,
+        "away": 0,
+        "home": 0
+      },
+      {
+        "inning": 9,
+        "away": 0,
+        "home": 0
+      }
+    ],
+    "totals": {
+      "away": {
+        "R": 3,
+        "H": 8,
+        "E": 0
+      },
+      "home": {
+        "R": 5,
+        "H": 9,
+        "E": 0
+      }
+    }
+  },
+  "final": {
+    "away": 3,
+    "home": 5
+  },
+  "batting": {
+    "away": [
+      {
+        "player": "silas-boudreau",
+        "name": "Silas Boudreau",
+        "position": "C",
+        "AB": 4,
+        "R": 1,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "eamon-kerr",
+        "name": "Eamon Kerr",
+        "position": "1B",
+        "AB": 5,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 1,
+        "K": 0,
+        "HR": 1,
+        "SB": 1
+      },
+      {
+        "player": "soraya-jafari",
+        "name": "Soraya Jafari",
+        "position": "2B",
+        "AB": 4,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 2,
+        "HR": 1,
+        "SB": 0
+      },
+      {
+        "player": "alejo-santillan",
+        "name": "Alejo Santillán",
+        "position": "SS",
+        "AB": 5,
+        "R": 1,
+        "H": 1,
+        "2B": 1,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 1,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "roman-velasco",
+        "name": "Roman Velasco",
+        "position": "3B",
+        "AB": 5,
+        "R": 1,
+        "H": 2,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 1,
+        "K": 0,
+        "HR": 0,
+        "SB": 1
+      },
+      {
+        "player": "taj-adelman",
+        "name": "Taj Adelman",
+        "position": "LF",
+        "AB": 5,
+        "R": 0,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 3,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "marcell-lind",
+        "name": "Marcell Lind",
+        "position": "CF",
+        "AB": 3,
+        "R": 0,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 1,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "oziel-narvaez",
+        "name": "Oziel Narváez",
+        "position": "RF",
+        "AB": 4,
+        "R": 0,
+        "H": 2,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 2,
+        "BB": 3,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      }
+    ],
+    "home": [
+      {
+        "player": "evan-morrissey",
+        "name": "Evan Morrissey",
+        "position": "C",
+        "AB": 5,
+        "R": 1,
+        "H": 1,
+        "2B": 0,
+        "3B": 1,
+        "RBI": 1,
+        "BB": 0,
+        "K": 2,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "javier-lucero",
+        "name": "Javier Lucero",
+        "position": "1B",
+        "AB": 3,
+        "R": 0,
+        "H": 2,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 2,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "owen-hartnell",
+        "name": "Owen Hartnell",
+        "position": "2B",
+        "AB": 5,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 1,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "masato-kobori",
+        "name": "Masato Kobori",
+        "position": "SS",
+        "AB": 5,
+        "R": 1,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 1,
+        "K": 2,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "trevor-yates",
+        "name": "Trevor Yates",
+        "position": "3B",
+        "AB": 5,
+        "R": 1,
+        "H": 2,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 1,
+        "K": 0,
+        "HR": 1,
+        "SB": 0
+      },
+      {
+        "player": "malik-jefferson",
+        "name": "Malik Jefferson",
+        "position": "CF",
+        "AB": 3,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 0,
+        "K": 2,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "rodrigo-fuentes",
+        "name": "Rodrigo Fuentes",
+        "position": "LF",
+        "AB": 5,
+        "R": 0,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 1,
+        "K": 1,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "jake-lanier",
+        "name": "Jake Lanier",
+        "position": "RF",
+        "AB": 5,
+        "R": 2,
+        "H": 1,
+        "2B": 1,
+        "3B": 0,
+        "RBI": 3,
+        "BB": 0,
+        "K": 2,
+        "HR": 0,
+        "SB": 0
+      }
+    ]
+  },
+  "pitching": {
+    "away": [
+      {
+        "player": "iseul-kang",
+        "name": "Iseul Kang",
+        "IP_outs": 15,
+        "H": 9,
+        "R": 0,
+        "ER": 0,
+        "BB": 1,
+        "K": 5,
+        "HR": 1,
+        "IP": 5
+      },
+      {
+        "player": "kofi-ansah",
+        "name": "Kofi Ansah",
+        "IP_outs": 12,
+        "H": 0,
+        "R": 5,
+        "ER": 5,
+        "BB": 2,
+        "K": 7,
+        "HR": 0,
+        "IP": 4
+      }
+    ],
+    "home": [
+      {
+        "player": "caleb-warnock",
+        "name": "Caleb Warnock",
+        "IP_outs": 18,
+        "H": 2,
+        "R": 0,
+        "ER": 0,
+        "BB": 0,
+        "K": 5,
+        "HR": 1,
+        "IP": 6
+      },
+      {
+        "player": "darius-collins",
+        "name": "Darius Collins",
+        "IP_outs": 9,
+        "H": 6,
+        "R": 3,
+        "ER": 3,
+        "BB": 5,
+        "K": 2,
+        "HR": 1,
+        "IP": 3
+      }
+    ]
+  },
+  "decisions": {
+    "W": "caleb-warnock",
+    "L": "iseul-kang",
+    "SV": "darius-collins"
+  },
+  "notes": []
+}

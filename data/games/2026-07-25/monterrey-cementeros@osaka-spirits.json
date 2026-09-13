@@ -1,0 +1,386 @@
+{
+  "schema": "glb.boxscore.v1",
+  "game_id": "2026-07-25_monterrey-cementeros@osaka-spirits",
+  "date": "2026-07-25",
+  "away": {
+    "slug": "monterrey-cementeros",
+    "name": "Monterrey Cementeros"
+  },
+  "home": {
+    "slug": "osaka-spirits",
+    "name": "Osaka Spirits"
+  },
+  "status": "Final",
+  "attendance": 22937,
+  "linescore": {
+    "innings": [
+      {
+        "inning": 1,
+        "away": 0,
+        "home": 1
+      },
+      {
+        "inning": 2,
+        "away": 0,
+        "home": 1
+      },
+      {
+        "inning": 3,
+        "away": 1,
+        "home": 0
+      },
+      {
+        "inning": 4,
+        "away": 1,
+        "home": 0
+      },
+      {
+        "inning": 5,
+        "away": 1,
+        "home": 0
+      },
+      {
+        "inning": 6,
+        "away": 0,
+        "home": 0
+      },
+      {
+        "inning": 7,
+        "away": 2,
+        "home": 1
+      },
+      {
+        "inning": 8,
+        "away": 1,
+        "home": 0
+      },
+      {
+        "inning": 9,
+        "away": 0,
+        "home": 1
+      }
+    ],
+    "totals": {
+      "away": {
+        "R": 6,
+        "H": 6,
+        "E": 1
+      },
+      "home": {
+        "R": 4,
+        "H": 9,
+        "E": 1
+      }
+    }
+  },
+  "final": {
+    "away": 6,
+    "home": 4
+  },
+  "batting": {
+    "away": [
+      {
+        "player": "julian-sauri",
+        "name": "Julián Sauri",
+        "position": "C",
+        "AB": 5,
+        "R": 1,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 1,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "eamon-kilrea",
+        "name": "Eamon Kilrea",
+        "position": "1B",
+        "AB": 5,
+        "R": 0,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 1,
+        "K": 1,
+        "HR": 0,
+        "SB": 1
+      },
+      {
+        "player": "thiago-pereyra",
+        "name": "Thiago Pereyra",
+        "position": "2B",
+        "AB": 4,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 2,
+        "K": 0,
+        "HR": 1,
+        "SB": 0
+      },
+      {
+        "player": "kofi-mensah",
+        "name": "Kofi Mensah",
+        "position": "SS",
+        "AB": 3,
+        "R": 1,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 1,
+        "K": 1,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "luka-vukovic",
+        "name": "Luka Vuković",
+        "position": "3B",
+        "AB": 4,
+        "R": 1,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 3,
+        "BB": 0,
+        "K": 2,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "seiji-fukumori",
+        "name": "Seiji Fukumori",
+        "position": "CF",
+        "AB": 4,
+        "R": 1,
+        "H": 3,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 1,
+        "K": 3,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "andres-cazares",
+        "name": "Andrés Cázares",
+        "position": "LF",
+        "AB": 5,
+        "R": 1,
+        "H": 1,
+        "2B": 1,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 0,
+        "K": 2,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "micah-lunsford",
+        "name": "Micah Lunsford",
+        "position": "RF",
+        "AB": 5,
+        "R": 1,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 0,
+        "K": 2,
+        "HR": 0,
+        "SB": 0
+      }
+    ],
+    "home": [
+      {
+        "player": "marcelino-quispe",
+        "name": "Marcelino Quispe",
+        "position": "C",
+        "AB": 3,
+        "R": 0,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 1,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "thabo-mkhize",
+        "name": "Thabo Mkhize",
+        "position": "1B",
+        "AB": 4,
+        "R": 0,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 3,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "arman-daryan",
+        "name": "Arman Daryan",
+        "position": "2B",
+        "AB": 5,
+        "R": 0,
+        "H": 3,
+        "2B": 1,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 0,
+        "K": 1,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "kenjiro-suganuma",
+        "name": "Kenjiro Suganuma",
+        "position": "SS",
+        "AB": 4,
+        "R": 0,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 0,
+        "K": 2,
+        "HR": 0,
+        "SB": 1
+      },
+      {
+        "player": "dariusz-kwiatkowski",
+        "name": "Dariusz Kwiatkowski",
+        "position": "3B",
+        "AB": 4,
+        "R": 3,
+        "H": 3,
+        "2B": 1,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 1,
+        "K": 1,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "nikhil-bhandari",
+        "name": "Nikhil Bhandari",
+        "position": "CF",
+        "AB": 5,
+        "R": 1,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 0,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "thiago-ramires",
+        "name": "Thiago Ramires",
+        "position": "LF",
+        "AB": 3,
+        "R": 0,
+        "H": 2,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 1,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "yusef-el-badri",
+        "name": "Yusef El-Badri",
+        "position": "RF",
+        "AB": 5,
+        "R": 0,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 2,
+        "HR": 0,
+        "SB": 0
+      }
+    ]
+  },
+  "pitching": {
+    "away": [
+      {
+        "player": "masato-yanagisawa",
+        "name": "Masato Yanagisawa",
+        "IP_outs": 20,
+        "H": 5,
+        "R": 2,
+        "ER": 2,
+        "BB": 1,
+        "K": 11,
+        "HR": 0,
+        "IP": 6.2
+      },
+      {
+        "player": "rowan-treadwell",
+        "name": "Rowan Treadwell",
+        "IP_outs": 7,
+        "H": 4,
+        "R": 2,
+        "ER": 2,
+        "BB": 0,
+        "K": 0,
+        "HR": 0,
+        "IP": 2.1
+      }
+    ],
+    "home": [
+      {
+        "player": "enzo-dalmau",
+        "name": "Enzo Dalmau",
+        "IP_outs": 18,
+        "H": 2,
+        "R": 2,
+        "ER": 2,
+        "BB": 1,
+        "K": 8,
+        "HR": 0,
+        "IP": 6
+      },
+      {
+        "player": "jae-min-goh",
+        "name": "Jae-min Goh",
+        "IP_outs": 9,
+        "H": 4,
+        "R": 4,
+        "ER": 4,
+        "BB": 4,
+        "K": 4,
+        "HR": 1,
+        "IP": 3
+      }
+    ]
+  },
+  "decisions": {
+    "W": "masato-yanagisawa",
+    "L": "enzo-dalmau",
+    "SV": null
+  },
+  "notes": []
+}

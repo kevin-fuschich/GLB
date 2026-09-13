@@ -1,0 +1,401 @@
+{
+  "schema": "glb.boxscore.v1",
+  "game_id": "2026-07-19_tijuana-tecnicos@albuquerque-aeros",
+  "date": "2026-07-19",
+  "away": {
+    "slug": "tijuana-tecnicos",
+    "name": "Tijuana Tecnicos"
+  },
+  "home": {
+    "slug": "albuquerque-aeros",
+    "name": "Albuquerque Aeros"
+  },
+  "status": "Final",
+  "attendance": 19692,
+  "linescore": {
+    "innings": [
+      {
+        "inning": 1,
+        "away": 0,
+        "home": 0
+      },
+      {
+        "inning": 2,
+        "away": 0,
+        "home": 2
+      },
+      {
+        "inning": 3,
+        "away": 0,
+        "home": 0
+      },
+      {
+        "inning": 4,
+        "away": 0,
+        "home": 0
+      },
+      {
+        "inning": 5,
+        "away": 0,
+        "home": 0
+      },
+      {
+        "inning": 6,
+        "away": 0,
+        "home": 0
+      },
+      {
+        "inning": 7,
+        "away": 0,
+        "home": 2
+      },
+      {
+        "inning": 8,
+        "away": 0,
+        "home": 0
+      },
+      {
+        "inning": 9,
+        "away": 0,
+        "home": 0
+      }
+    ],
+    "totals": {
+      "away": {
+        "R": 0,
+        "H": 10,
+        "E": 2
+      },
+      "home": {
+        "R": 4,
+        "H": 11,
+        "E": 1
+      }
+    }
+  },
+  "final": {
+    "away": 0,
+    "home": 4
+  },
+  "batting": {
+    "away": [
+      {
+        "player": "sergio-hinojosa",
+        "name": "Sergio Hinojosa",
+        "position": "C",
+        "AB": 3,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 1,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "bruno-valdes",
+        "name": "Bruno Valdés",
+        "position": "1B",
+        "AB": 3,
+        "R": 0,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "matias-camarena",
+        "name": "Matías Camarena",
+        "position": "2B",
+        "AB": 3,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 1,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "nicolas-paredes",
+        "name": "Nicolás Paredes",
+        "position": "SS",
+        "AB": 3,
+        "R": 0,
+        "H": 2,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 1,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "adrian-fierro",
+        "name": "Adrián Fierro",
+        "position": "3B",
+        "AB": 3,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 1,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "emilio-barron",
+        "name": "Emilio Barrón",
+        "position": "LF",
+        "AB": 3,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "gael-marrufo",
+        "name": "Gael Marrufo",
+        "position": "CF",
+        "AB": 5,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "cristobal-saucedo",
+        "name": "Cristóbal Saucedo",
+        "position": "RF",
+        "AB": 4,
+        "R": 0,
+        "H": 2,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 1,
+        "K": 0,
+        "HR": 0,
+        "SB": 2
+      },
+      {
+        "player": "hector-belmonte",
+        "name": "Héctor Belmonte",
+        "position": "DH",
+        "AB": 5,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 2,
+        "HR": 0,
+        "SB": 0
+      }
+    ],
+    "home": [
+      {
+        "player": "rui-damas",
+        "name": "Rui Damas",
+        "position": "C",
+        "AB": 4,
+        "R": 1,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 0,
+        "HR": 1,
+        "SB": 0
+      },
+      {
+        "player": "tobias-vandenberg",
+        "name": "Tobias Vandenberg",
+        "position": "1B",
+        "AB": 4,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 1,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "kofi-agyeman",
+        "name": "Kofi Agyeman",
+        "position": "2B",
+        "AB": 4,
+        "R": 0,
+        "H": 1,
+        "2B": 1,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 1,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "iker-zubizarreta",
+        "name": "Iker Zubizarreta",
+        "position": "SS",
+        "AB": 5,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 0,
+        "K": 1,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "carmine-sforza",
+        "name": "Carmine Sforza",
+        "position": "3B",
+        "AB": 4,
+        "R": 1,
+        "H": 4,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 3,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "adama-kouyate",
+        "name": "Adama Kouyaté",
+        "position": "CF",
+        "AB": 5,
+        "R": 2,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 0,
+        "K": 1,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "elior-ben-ami",
+        "name": "Elior Ben-Ami",
+        "position": "LF",
+        "AB": 5,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 1,
+        "K": 1,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "paolo-ventresca",
+        "name": "Paolo Ventresca",
+        "position": "RF",
+        "AB": 3,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 0,
+        "K": 3,
+        "HR": 1,
+        "SB": 0
+      }
+    ]
+  },
+  "pitching": {
+    "away": [
+      {
+        "player": "tomas-zepeda",
+        "name": "Tomás Zepeda",
+        "IP_outs": 15,
+        "H": 10,
+        "R": 0,
+        "ER": 0,
+        "BB": 2,
+        "K": 8,
+        "HR": 0,
+        "IP": 5
+      },
+      {
+        "player": "julian-ochoa",
+        "name": "Julián Ochoa",
+        "IP_outs": 12,
+        "H": 1,
+        "R": 4,
+        "ER": 4,
+        "BB": 1,
+        "K": 1,
+        "HR": 2,
+        "IP": 4
+      }
+    ],
+    "home": [
+      {
+        "player": "nikhil-jadhav",
+        "name": "Nikhil Jadhav",
+        "IP_outs": 20,
+        "H": 9,
+        "R": 0,
+        "ER": 0,
+        "BB": 2,
+        "K": 3,
+        "HR": 0,
+        "IP": 6.2
+      },
+      {
+        "player": "eamon-quirke",
+        "name": "Eamon Quirke",
+        "IP_outs": 7,
+        "H": 1,
+        "R": 0,
+        "ER": 0,
+        "BB": 0,
+        "K": 2,
+        "HR": 0,
+        "IP": 2.1
+      }
+    ]
+  },
+  "decisions": {
+    "W": "nikhil-jadhav",
+    "L": "tomas-zepeda",
+    "SV": null
+  },
+  "notes": []
+}

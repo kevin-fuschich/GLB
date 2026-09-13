@@ -1,0 +1,401 @@
+{
+  "schema": "glb.boxscore.v1",
+  "game_id": "2026-06-27_louisville-naturals@tijuana-tecnicos",
+  "date": "2026-06-27",
+  "away": {
+    "slug": "louisville-naturals",
+    "name": "Louisville Naturals"
+  },
+  "home": {
+    "slug": "tijuana-tecnicos",
+    "name": "Tijuana Tecnicos"
+  },
+  "status": "Final",
+  "attendance": 14623,
+  "linescore": {
+    "innings": [
+      {
+        "inning": 1,
+        "away": 3,
+        "home": 1
+      },
+      {
+        "inning": 2,
+        "away": 0,
+        "home": 0
+      },
+      {
+        "inning": 3,
+        "away": 0,
+        "home": 1
+      },
+      {
+        "inning": 4,
+        "away": 1,
+        "home": 2
+      },
+      {
+        "inning": 5,
+        "away": 0,
+        "home": 0
+      },
+      {
+        "inning": 6,
+        "away": 0,
+        "home": 0
+      },
+      {
+        "inning": 7,
+        "away": 0,
+        "home": 0
+      },
+      {
+        "inning": 8,
+        "away": 0,
+        "home": 1
+      },
+      {
+        "inning": 9,
+        "away": 0,
+        "home": 1
+      }
+    ],
+    "totals": {
+      "away": {
+        "R": 4,
+        "H": 9,
+        "E": 0
+      },
+      "home": {
+        "R": 6,
+        "H": 6,
+        "E": 2
+      }
+    }
+  },
+  "final": {
+    "away": 4,
+    "home": 6
+  },
+  "batting": {
+    "away": [
+      {
+        "player": "noah-bianchi",
+        "name": "Noah Bianchi",
+        "position": "C",
+        "AB": 4,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 2,
+        "BB": 0,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "mateo-fernandez",
+        "name": "Mateo Fernández",
+        "position": "1B",
+        "AB": 5,
+        "R": 1,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "jalen-brooks",
+        "name": "Jalen Brooks",
+        "position": "2B",
+        "AB": 4,
+        "R": 1,
+        "H": 2,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 1,
+        "HR": 1,
+        "SB": 1
+      },
+      {
+        "player": "rafael-costa",
+        "name": "Rafael Costa",
+        "position": "SS",
+        "AB": 4,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 1,
+        "K": 1,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "dominic-russo",
+        "name": "Dominic Russo",
+        "position": "3B",
+        "AB": 3,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 1,
+        "HR": 0,
+        "SB": 1
+      },
+      {
+        "player": "andre-wallace",
+        "name": "Andre Wallace",
+        "position": "CF",
+        "AB": 4,
+        "R": 2,
+        "H": 1,
+        "2B": 1,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 1,
+        "K": 2,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "tomas-rivas",
+        "name": "Tomás Rivas",
+        "position": "LF",
+        "AB": 5,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 0,
+        "K": 2,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "blake-harrison",
+        "name": "Blake Harrison",
+        "position": "RF",
+        "AB": 3,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 1,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      }
+    ],
+    "home": [
+      {
+        "player": "sergio-hinojosa",
+        "name": "Sergio Hinojosa",
+        "position": "C",
+        "AB": 5,
+        "R": 1,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 1,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "bruno-valdes",
+        "name": "Bruno Valdés",
+        "position": "1B",
+        "AB": 4,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 0,
+        "HR": 1,
+        "SB": 0
+      },
+      {
+        "player": "matias-camarena",
+        "name": "Matías Camarena",
+        "position": "2B",
+        "AB": 5,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 1,
+        "HR": 0,
+        "SB": 1
+      },
+      {
+        "player": "nicolas-paredes",
+        "name": "Nicolás Paredes",
+        "position": "SS",
+        "AB": 3,
+        "R": 0,
+        "H": 2,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "adrian-fierro",
+        "name": "Adrián Fierro",
+        "position": "3B",
+        "AB": 3,
+        "R": 1,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 2,
+        "BB": 0,
+        "K": 1,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "emilio-barron",
+        "name": "Emilio Barrón",
+        "position": "LF",
+        "AB": 4,
+        "R": 1,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 1,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "gael-marrufo",
+        "name": "Gael Marrufo",
+        "position": "CF",
+        "AB": 4,
+        "R": 1,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 1,
+        "K": 1,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "cristobal-saucedo",
+        "name": "Cristóbal Saucedo",
+        "position": "RF",
+        "AB": 3,
+        "R": 0,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 0,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "hector-belmonte",
+        "name": "Héctor Belmonte",
+        "position": "DH",
+        "AB": 4,
+        "R": 2,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 1,
+        "K": 1,
+        "HR": 0,
+        "SB": 0
+      }
+    ]
+  },
+  "pitching": {
+    "away": [
+      {
+        "player": "calvin-rhodes",
+        "name": "Calvin Rhodes",
+        "IP_outs": 16,
+        "H": 0,
+        "R": 1,
+        "ER": 1,
+        "BB": 4,
+        "K": 3,
+        "HR": 1,
+        "IP": 5.1
+      },
+      {
+        "player": "kieran-walsh",
+        "name": "Kieran Walsh",
+        "IP_outs": 11,
+        "H": 6,
+        "R": 5,
+        "ER": 5,
+        "BB": 0,
+        "K": 1,
+        "HR": 0,
+        "IP": 3.2
+      }
+    ],
+    "home": [
+      {
+        "player": "tomas-zepeda",
+        "name": "Tomás Zepeda",
+        "IP_outs": 18,
+        "H": 2,
+        "R": 0,
+        "ER": 0,
+        "BB": 2,
+        "K": 5,
+        "HR": 0,
+        "IP": 6
+      },
+      {
+        "player": "mauricio-cota",
+        "name": "Mauricio Cota",
+        "IP_outs": 9,
+        "H": 7,
+        "R": 4,
+        "ER": 4,
+        "BB": 1,
+        "K": 2,
+        "HR": 1,
+        "IP": 3
+      }
+    ]
+  },
+  "decisions": {
+    "W": "tomas-zepeda",
+    "L": "calvin-rhodes",
+    "SV": "mauricio-cota"
+  },
+  "notes": []
+}

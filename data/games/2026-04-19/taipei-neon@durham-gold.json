@@ -1,0 +1,401 @@
+{
+  "schema": "glb.boxscore.v1",
+  "game_id": "2026-04-19_taipei-neon@durham-gold",
+  "date": "2026-04-19",
+  "away": {
+    "slug": "taipei-neon",
+    "name": "Taipei Neon"
+  },
+  "home": {
+    "slug": "durham-gold",
+    "name": "Durham Gold"
+  },
+  "status": "Final",
+  "attendance": 12586,
+  "linescore": {
+    "innings": [
+      {
+        "inning": 1,
+        "away": 0,
+        "home": 0
+      },
+      {
+        "inning": 2,
+        "away": 0,
+        "home": 0
+      },
+      {
+        "inning": 3,
+        "away": 0,
+        "home": 0
+      },
+      {
+        "inning": 4,
+        "away": 0,
+        "home": 0
+      },
+      {
+        "inning": 5,
+        "away": 1,
+        "home": 1
+      },
+      {
+        "inning": 6,
+        "away": 1,
+        "home": 0
+      },
+      {
+        "inning": 7,
+        "away": 0,
+        "home": 0
+      },
+      {
+        "inning": 8,
+        "away": 0,
+        "home": 1
+      },
+      {
+        "inning": 9,
+        "away": 0,
+        "home": 1
+      }
+    ],
+    "totals": {
+      "away": {
+        "R": 2,
+        "H": 9,
+        "E": 1
+      },
+      "home": {
+        "R": 3,
+        "H": 5,
+        "E": 0
+      }
+    }
+  },
+  "final": {
+    "away": 2,
+    "home": 3
+  },
+  "batting": {
+    "away": [
+      {
+        "player": "kaito-ueda",
+        "name": "Kaito Ueda",
+        "position": "CF",
+        "AB": 4,
+        "R": 0,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 1,
+        "K": 2,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "han-wei-tseng",
+        "name": "Han-wei Tseng",
+        "position": "2B",
+        "AB": 3,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "martin-echevarria",
+        "name": "Martín Echevarría",
+        "position": "1B",
+        "AB": 5,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "dariusz-wierzbik",
+        "name": "Dariusz Wierzbik",
+        "position": "SS",
+        "AB": 5,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 0,
+        "K": 2,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "adebayo-olumide",
+        "name": "Adebayo Olumide",
+        "position": "3B",
+        "AB": 5,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 2,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "owen-rasmusson",
+        "name": "Owen Rasmusson",
+        "position": "C",
+        "AB": 5,
+        "R": 1,
+        "H": 2,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 1,
+        "HR": 0,
+        "SB": 1
+      },
+      {
+        "player": "eric-lawson",
+        "name": "Eric Lawson",
+        "position": "LF",
+        "AB": 5,
+        "R": 1,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "jose-ramirez-tpe",
+        "name": "Jose Ramirez",
+        "position": "RF",
+        "AB": 3,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 1,
+        "K": 1,
+        "HR": 0,
+        "SB": 1
+      },
+      {
+        "player": "david-morales-tpe",
+        "name": "David Morales",
+        "position": "DH",
+        "AB": 3,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      }
+    ],
+    "home": [
+      {
+        "player": "ethan-bowen",
+        "name": "Ethan Bowen",
+        "position": "C",
+        "AB": 3,
+        "R": 0,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 0,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "marcelo-ibarra",
+        "name": "Marcelo Ibarra",
+        "position": "1B",
+        "AB": 3,
+        "R": 0,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 2,
+        "K": 2,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "joshua-kent",
+        "name": "Joshua Kent",
+        "position": "2B",
+        "AB": 5,
+        "R": 0,
+        "H": 2,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 2,
+        "HR": 1,
+        "SB": 1
+      },
+      {
+        "player": "omar-salcedo",
+        "name": "Omar Salcedo",
+        "position": "SS",
+        "AB": 5,
+        "R": 1,
+        "H": 1,
+        "2B": 1,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 0,
+        "K": 2,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "tyrell-winston",
+        "name": "Tyrell Winston",
+        "position": "3B",
+        "AB": 3,
+        "R": 2,
+        "H": 1,
+        "2B": 1,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 1,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "aaron-fletcher",
+        "name": "Aaron Fletcher",
+        "position": "CF",
+        "AB": 4,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 2,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "mateo-rios",
+        "name": "Mateo Ríos",
+        "position": "LF",
+        "AB": 3,
+        "R": 0,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "calvin-ross",
+        "name": "Calvin Ross",
+        "position": "RF",
+        "AB": 5,
+        "R": 0,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 0,
+        "K": 3,
+        "HR": 0,
+        "SB": 0
+      }
+    ]
+  },
+  "pitching": {
+    "away": [
+      {
+        "player": "eitan-ben-sasson",
+        "name": "Eitan Ben-Sasson",
+        "IP_outs": 18,
+        "H": 4,
+        "R": 2,
+        "ER": 2,
+        "BB": 0,
+        "K": 12,
+        "HR": 1,
+        "IP": 6
+      },
+      {
+        "player": "miguel-santos-tpe",
+        "name": "Miguel Santos",
+        "IP_outs": 9,
+        "H": 1,
+        "R": 1,
+        "ER": 1,
+        "BB": 2,
+        "K": 0,
+        "HR": 0,
+        "IP": 3
+      }
+    ],
+    "home": [
+      {
+        "player": "isaac-friedel",
+        "name": "Isaac Friedel",
+        "IP_outs": 19,
+        "H": 3,
+        "R": 1,
+        "ER": 1,
+        "BB": 1,
+        "K": 5,
+        "HR": 0,
+        "IP": 6.1
+      },
+      {
+        "player": "devin-marsh",
+        "name": "Devin Marsh",
+        "IP_outs": 8,
+        "H": 6,
+        "R": 1,
+        "ER": 1,
+        "BB": 1,
+        "K": 3,
+        "HR": 0,
+        "IP": 2.2
+      }
+    ]
+  },
+  "decisions": {
+    "W": "isaac-friedel",
+    "L": "eitan-ben-sasson",
+    "SV": "devin-marsh"
+  },
+  "notes": []
+}

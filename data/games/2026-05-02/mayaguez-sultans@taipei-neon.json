@@ -1,0 +1,401 @@
+{
+  "schema": "glb.boxscore.v1",
+  "game_id": "2026-05-02_mayaguez-sultans@taipei-neon",
+  "date": "2026-05-02",
+  "away": {
+    "slug": "mayaguez-sultans",
+    "name": "Mayagüez Sultans"
+  },
+  "home": {
+    "slug": "taipei-neon",
+    "name": "Taipei Neon"
+  },
+  "status": "Final",
+  "attendance": 29586,
+  "linescore": {
+    "innings": [
+      {
+        "inning": 1,
+        "away": 1,
+        "home": 1
+      },
+      {
+        "inning": 2,
+        "away": 1,
+        "home": 1
+      },
+      {
+        "inning": 3,
+        "away": 1,
+        "home": 0
+      },
+      {
+        "inning": 4,
+        "away": 1,
+        "home": 0
+      },
+      {
+        "inning": 5,
+        "away": 0,
+        "home": 1
+      },
+      {
+        "inning": 6,
+        "away": 2,
+        "home": 0
+      },
+      {
+        "inning": 7,
+        "away": 0,
+        "home": 1
+      },
+      {
+        "inning": 8,
+        "away": 1,
+        "home": 0
+      },
+      {
+        "inning": 9,
+        "away": 0,
+        "home": 0
+      }
+    ],
+    "totals": {
+      "away": {
+        "R": 7,
+        "H": 7,
+        "E": 1
+      },
+      "home": {
+        "R": 4,
+        "H": 4,
+        "E": 2
+      }
+    }
+  },
+  "final": {
+    "away": 7,
+    "home": 4
+  },
+  "batting": {
+    "away": [
+      {
+        "player": "tomer-barzilai",
+        "name": "Tomer Barzilai",
+        "position": "C",
+        "AB": 4,
+        "R": 2,
+        "H": 2,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 0,
+        "K": 2,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "enzo-carvajal",
+        "name": "Enzo Carvajal",
+        "position": "1B",
+        "AB": 4,
+        "R": 2,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 1,
+        "K": 2,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "nils-adebayo",
+        "name": "Nils Adebayo",
+        "position": "2B",
+        "AB": 3,
+        "R": 0,
+        "H": 2,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 1,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "jae-min-seok",
+        "name": "Jae-min Seok",
+        "position": "SS",
+        "AB": 4,
+        "R": 0,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 1,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "pavel-hrynko",
+        "name": "Pavel Hrynko",
+        "position": "3B",
+        "AB": 4,
+        "R": 2,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 1,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "malik-doumbia",
+        "name": "Malik Doumbia",
+        "position": "LF",
+        "AB": 4,
+        "R": 0,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 2,
+        "BB": 0,
+        "K": 2,
+        "HR": 0,
+        "SB": 1
+      },
+      {
+        "player": "cesar-iglesiarias",
+        "name": "César Iglesiarias",
+        "position": "CF",
+        "AB": 4,
+        "R": 1,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 1,
+        "K": 1,
+        "HR": 1,
+        "SB": 0
+      },
+      {
+        "player": "ari-kasprzyk",
+        "name": "Ari Kasprzyk",
+        "position": "RF",
+        "AB": 5,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 0,
+        "K": 1,
+        "HR": 0,
+        "SB": 1
+      }
+    ],
+    "home": [
+      {
+        "player": "kaito-ueda",
+        "name": "Kaito Ueda",
+        "position": "CF",
+        "AB": 4,
+        "R": 0,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 1,
+        "K": 2,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "han-wei-tseng",
+        "name": "Han-wei Tseng",
+        "position": "2B",
+        "AB": 3,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 2,
+        "HR": 1,
+        "SB": 0
+      },
+      {
+        "player": "martin-echevarria",
+        "name": "Martín Echevarría",
+        "position": "1B",
+        "AB": 5,
+        "R": 0,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 0,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "dariusz-wierzbik",
+        "name": "Dariusz Wierzbik",
+        "position": "SS",
+        "AB": 3,
+        "R": 0,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 0,
+        "K": 1,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "adebayo-olumide",
+        "name": "Adebayo Olumide",
+        "position": "3B",
+        "AB": 5,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 1,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "owen-rasmusson",
+        "name": "Owen Rasmusson",
+        "position": "C",
+        "AB": 4,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 1,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "eric-lawson",
+        "name": "Eric Lawson",
+        "position": "LF",
+        "AB": 5,
+        "R": 0,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 1,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "jose-ramirez-tpe",
+        "name": "Jose Ramirez",
+        "position": "RF",
+        "AB": 5,
+        "R": 2,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 0,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "david-morales-tpe",
+        "name": "David Morales",
+        "position": "DH",
+        "AB": 3,
+        "R": 2,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 0,
+        "K": 1,
+        "HR": 0,
+        "SB": 0
+      }
+    ]
+  },
+  "pitching": {
+    "away": [
+      {
+        "player": "dario-vukovic",
+        "name": "Dario Vukovic",
+        "IP_outs": 20,
+        "H": 2,
+        "R": 0,
+        "ER": 0,
+        "BB": 1,
+        "K": 5,
+        "HR": 0,
+        "IP": 6.2
+      },
+      {
+        "player": "seamus-keary",
+        "name": "Seamus Keary",
+        "IP_outs": 7,
+        "H": 2,
+        "R": 4,
+        "ER": 4,
+        "BB": 1,
+        "K": 3,
+        "HR": 1,
+        "IP": 2.1
+      }
+    ],
+    "home": [
+      {
+        "player": "hiroto-kuzumi",
+        "name": "Hiroto Kuzumi",
+        "IP_outs": 17,
+        "H": 7,
+        "R": 3,
+        "ER": 3,
+        "BB": 2,
+        "K": 5,
+        "HR": 1,
+        "IP": 5.2
+      },
+      {
+        "player": "idris-el-amin",
+        "name": "Idris El-Amin",
+        "IP_outs": 10,
+        "H": 0,
+        "R": 4,
+        "ER": 4,
+        "BB": 2,
+        "K": 4,
+        "HR": 0,
+        "IP": 3.1
+      }
+    ]
+  },
+  "decisions": {
+    "W": "dario-vukovic",
+    "L": "hiroto-kuzumi",
+    "SV": "seamus-keary"
+  },
+  "notes": []
+}

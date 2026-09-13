@@ -1,0 +1,386 @@
+{
+  "schema": "glb.boxscore.v1",
+  "game_id": "2026-05-10_fresno-yield@mayaguez-sultans",
+  "date": "2026-05-10",
+  "away": {
+    "slug": "fresno-yield",
+    "name": "Fresno Yield"
+  },
+  "home": {
+    "slug": "mayaguez-sultans",
+    "name": "Mayagüez Sultans"
+  },
+  "status": "Final",
+  "attendance": 20474,
+  "linescore": {
+    "innings": [
+      {
+        "inning": 1,
+        "away": 0,
+        "home": 0
+      },
+      {
+        "inning": 2,
+        "away": 1,
+        "home": 0
+      },
+      {
+        "inning": 3,
+        "away": 0,
+        "home": 1
+      },
+      {
+        "inning": 4,
+        "away": 0,
+        "home": 0
+      },
+      {
+        "inning": 5,
+        "away": 1,
+        "home": 0
+      },
+      {
+        "inning": 6,
+        "away": 0,
+        "home": 1
+      },
+      {
+        "inning": 7,
+        "away": 1,
+        "home": 1
+      },
+      {
+        "inning": 8,
+        "away": 0,
+        "home": 0
+      },
+      {
+        "inning": 9,
+        "away": 1,
+        "home": 0
+      }
+    ],
+    "totals": {
+      "away": {
+        "R": 4,
+        "H": 5,
+        "E": 2
+      },
+      "home": {
+        "R": 3,
+        "H": 7,
+        "E": 2
+      }
+    }
+  },
+  "final": {
+    "away": 4,
+    "home": 3
+  },
+  "batting": {
+    "away": [
+      {
+        "player": "luis-eccheri",
+        "name": "Luis Eccheri",
+        "position": "C",
+        "AB": 4,
+        "R": 1,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "jonah-kershaw",
+        "name": "Jonah Kershaw",
+        "position": "1B",
+        "AB": 4,
+        "R": 2,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "soren-ahlgren",
+        "name": "Søren Ahlgren",
+        "position": "2B",
+        "AB": 3,
+        "R": 0,
+        "H": 1,
+        "2B": 1,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 1,
+        "K": 1,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "raul-sestayo",
+        "name": "Raúl Sestayo",
+        "position": "SS",
+        "AB": 3,
+        "R": 0,
+        "H": 2,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 2,
+        "BB": 0,
+        "K": 2,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "eamon-kilbride",
+        "name": "Eamon Kilbride",
+        "position": "3B",
+        "AB": 4,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 0,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "malachi-quartey",
+        "name": "Malachi Quartey",
+        "position": "CF",
+        "AB": 5,
+        "R": 1,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "hiroshi-kawabata",
+        "name": "Hiroshi Kawabata",
+        "position": "LF",
+        "AB": 4,
+        "R": 0,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "anwar-elamin",
+        "name": "Anwar Elamin",
+        "position": "RF",
+        "AB": 5,
+        "R": 0,
+        "H": 1,
+        "2B": 1,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 0,
+        "K": 2,
+        "HR": 0,
+        "SB": 0
+      }
+    ],
+    "home": [
+      {
+        "player": "tomer-barzilai",
+        "name": "Tomer Barzilai",
+        "position": "C",
+        "AB": 5,
+        "R": 0,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 1,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "enzo-carvajal",
+        "name": "Enzo Carvajal",
+        "position": "1B",
+        "AB": 4,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 3,
+        "HR": 1,
+        "SB": 0
+      },
+      {
+        "player": "nils-adebayo",
+        "name": "Nils Adebayo",
+        "position": "2B",
+        "AB": 5,
+        "R": 1,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 2,
+        "K": 1,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "jae-min-seok",
+        "name": "Jae-min Seok",
+        "position": "SS",
+        "AB": 5,
+        "R": 1,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 2,
+        "BB": 0,
+        "K": 1,
+        "HR": 1,
+        "SB": 0
+      },
+      {
+        "player": "pavel-hrynko",
+        "name": "Pavel Hrynko",
+        "position": "3B",
+        "AB": 3,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 1,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "malik-doumbia",
+        "name": "Malik Doumbia",
+        "position": "LF",
+        "AB": 4,
+        "R": 0,
+        "H": 3,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "cesar-iglesiarias",
+        "name": "César Iglesiarias",
+        "position": "CF",
+        "AB": 5,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 0,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "ari-kasprzyk",
+        "name": "Ari Kasprzyk",
+        "position": "RF",
+        "AB": 4,
+        "R": 1,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 3,
+        "HR": 0,
+        "SB": 0
+      }
+    ]
+  },
+  "pitching": {
+    "away": [
+      {
+        "player": "roman-villasenor",
+        "name": "Román Villaseñor",
+        "IP_outs": 16,
+        "H": 5,
+        "R": 0,
+        "ER": 0,
+        "BB": 2,
+        "K": 10,
+        "HR": 0,
+        "IP": 5.1
+      },
+      {
+        "player": "ibrahim-koroma",
+        "name": "Ibrahim Koroma",
+        "IP_outs": 11,
+        "H": 2,
+        "R": 3,
+        "ER": 3,
+        "BB": 0,
+        "K": 0,
+        "HR": 2,
+        "IP": 3.2
+      }
+    ],
+    "home": [
+      {
+        "player": "dario-vukovic",
+        "name": "Dario Vukovic",
+        "IP_outs": 18,
+        "H": 1,
+        "R": 3,
+        "ER": 3,
+        "BB": 0,
+        "K": 4,
+        "HR": 0,
+        "IP": 6
+      },
+      {
+        "player": "rafiq-qureshi",
+        "name": "Rafiq Qureshi",
+        "IP_outs": 9,
+        "H": 4,
+        "R": 1,
+        "ER": 1,
+        "BB": 1,
+        "K": 1,
+        "HR": 0,
+        "IP": 3
+      }
+    ]
+  },
+  "decisions": {
+    "W": "roman-villasenor",
+    "L": "dario-vukovic",
+    "SV": null
+  },
+  "notes": []
+}

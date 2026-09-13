@@ -1,0 +1,401 @@
+{
+  "schema": "glb.boxscore.v1",
+  "game_id": "2026-07-09_taipei-neon@osaka-spirits",
+  "date": "2026-07-09",
+  "away": {
+    "slug": "taipei-neon",
+    "name": "Taipei Neon"
+  },
+  "home": {
+    "slug": "osaka-spirits",
+    "name": "Osaka Spirits"
+  },
+  "status": "Final",
+  "attendance": 32843,
+  "linescore": {
+    "innings": [
+      {
+        "inning": 1,
+        "away": 0,
+        "home": 0
+      },
+      {
+        "inning": 2,
+        "away": 0,
+        "home": 0
+      },
+      {
+        "inning": 3,
+        "away": 0,
+        "home": 0
+      },
+      {
+        "inning": 4,
+        "away": 0,
+        "home": 0
+      },
+      {
+        "inning": 5,
+        "away": 0,
+        "home": 0
+      },
+      {
+        "inning": 6,
+        "away": 0,
+        "home": 1
+      },
+      {
+        "inning": 7,
+        "away": 0,
+        "home": 0
+      },
+      {
+        "inning": 8,
+        "away": 0,
+        "home": 1
+      },
+      {
+        "inning": 9,
+        "away": 0,
+        "home": 1
+      }
+    ],
+    "totals": {
+      "away": {
+        "R": 0,
+        "H": 7,
+        "E": 1
+      },
+      "home": {
+        "R": 3,
+        "H": 6,
+        "E": 0
+      }
+    }
+  },
+  "final": {
+    "away": 0,
+    "home": 3
+  },
+  "batting": {
+    "away": [
+      {
+        "player": "kaito-ueda",
+        "name": "Kaito Ueda",
+        "position": "CF",
+        "AB": 3,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 3,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "han-wei-tseng",
+        "name": "Han-wei Tseng",
+        "position": "2B",
+        "AB": 4,
+        "R": 0,
+        "H": 2,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 1,
+        "K": 3,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "martin-echevarria",
+        "name": "Martín Echevarría",
+        "position": "1B",
+        "AB": 5,
+        "R": 0,
+        "H": 2,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 1,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "dariusz-wierzbik",
+        "name": "Dariusz Wierzbik",
+        "position": "SS",
+        "AB": 4,
+        "R": 0,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 1,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "adebayo-olumide",
+        "name": "Adebayo Olumide",
+        "position": "3B",
+        "AB": 3,
+        "R": 0,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 2,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "owen-rasmusson",
+        "name": "Owen Rasmusson",
+        "position": "C",
+        "AB": 3,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 1,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "eric-lawson",
+        "name": "Eric Lawson",
+        "position": "LF",
+        "AB": 5,
+        "R": 0,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 0,
+        "HR": 0,
+        "SB": 2
+      },
+      {
+        "player": "jose-ramirez-tpe",
+        "name": "Jose Ramirez",
+        "position": "RF",
+        "AB": 5,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 1,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "david-morales-tpe",
+        "name": "David Morales",
+        "position": "DH",
+        "AB": 5,
+        "R": 0,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 1,
+        "HR": 0,
+        "SB": 0
+      }
+    ],
+    "home": [
+      {
+        "player": "marcelino-quispe",
+        "name": "Marcelino Quispe",
+        "position": "C",
+        "AB": 4,
+        "R": 0,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 2,
+        "K": 1,
+        "HR": 0,
+        "SB": 1
+      },
+      {
+        "player": "thabo-mkhize",
+        "name": "Thabo Mkhize",
+        "position": "1B",
+        "AB": 3,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 2,
+        "BB": 0,
+        "K": 2,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "arman-daryan",
+        "name": "Arman Daryan",
+        "position": "2B",
+        "AB": 5,
+        "R": 0,
+        "H": 2,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 2,
+        "HR": 1,
+        "SB": 0
+      },
+      {
+        "player": "kenjiro-suganuma",
+        "name": "Kenjiro Suganuma",
+        "position": "SS",
+        "AB": 3,
+        "R": 2,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 2,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "dariusz-kwiatkowski",
+        "name": "Dariusz Kwiatkowski",
+        "position": "3B",
+        "AB": 4,
+        "R": 1,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 0,
+        "HR": 0,
+        "SB": 1
+      },
+      {
+        "player": "nikhil-bhandari",
+        "name": "Nikhil Bhandari",
+        "position": "CF",
+        "AB": 3,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "thiago-ramires",
+        "name": "Thiago Ramires",
+        "position": "LF",
+        "AB": 3,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 2,
+        "K": 3,
+        "HR": 1,
+        "SB": 0
+      },
+      {
+        "player": "yusef-el-badri",
+        "name": "Yusef El-Badri",
+        "position": "RF",
+        "AB": 5,
+        "R": 0,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 2,
+        "HR": 0,
+        "SB": 0
+      }
+    ]
+  },
+  "pitching": {
+    "away": [
+      {
+        "player": "eitan-ben-sasson",
+        "name": "Eitan Ben-Sasson",
+        "IP_outs": 16,
+        "H": 5,
+        "R": 0,
+        "ER": 0,
+        "BB": 4,
+        "K": 7,
+        "HR": 2,
+        "IP": 5.1
+      },
+      {
+        "player": "miguel-santos-tpe",
+        "name": "Miguel Santos",
+        "IP_outs": 11,
+        "H": 1,
+        "R": 3,
+        "ER": 3,
+        "BB": 0,
+        "K": 5,
+        "HR": 0,
+        "IP": 3.2
+      }
+    ],
+    "home": [
+      {
+        "player": "kofi-boateng",
+        "name": "Kofi Boateng",
+        "IP_outs": 19,
+        "H": 3,
+        "R": 0,
+        "ER": 0,
+        "BB": 0,
+        "K": 9,
+        "HR": 0,
+        "IP": 6.1
+      },
+      {
+        "player": "mateo-zubillaga",
+        "name": "Mateo Zubillaga",
+        "IP_outs": 8,
+        "H": 4,
+        "R": 0,
+        "ER": 0,
+        "BB": 2,
+        "K": 3,
+        "HR": 0,
+        "IP": 2.2
+      }
+    ]
+  },
+  "decisions": {
+    "W": "kofi-boateng",
+    "L": "eitan-ben-sasson",
+    "SV": "mateo-zubillaga"
+  },
+  "notes": []
+}

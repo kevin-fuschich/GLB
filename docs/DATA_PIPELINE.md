@@ -15,7 +15,7 @@ This file defines the 16 active clubs, division membership, team slugs, abbrevia
 ### Rosters
 `data/rosters/<team-slug>.json`
 
-These files are the active roster source. Files under `data/teams/roster/` are legacy material and must not be used by new engine code.
+These files are the active roster source. Earlier, conflicting roster drafts have been preserved under `archive/legacy-data/data/teams/roster/` for reference only. They are not active league rosters.
 
 ### Official games
 `data/games/YYYY-MM-DD/*.json`
@@ -143,8 +143,9 @@ The April 8 legacy official files are currently score-only. Their W/L and run to
 As richer simulated box scores accumulate, player totals and leaders will populate automatically.
 
 ## Legacy / Non-Canonical Files
-The following existing paths may remain for compatibility while the engine is migrated, but new code must not treat them as authoritative:
-- `data/teams/roster/`
+The following paths are not authoritative; new code must not use them. Conflicting old rosters and a player stat sample from an unrecognized game are stored under `archive/legacy-data/`:
+- `archive/legacy-data/data/teams/roster/`
+- `archive/legacy-data/data/season/player-game-stats.json`
 - root `Schedule.json`
 - root `standings.json`
 - root `stats.json`

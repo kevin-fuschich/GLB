@@ -55,45 +55,39 @@ The simulator:
 - loads official team metadata and canonical rosters
 - uses a deterministic seed based on date + matchup
 - generates a final score and inning linescore
-- generates player batting lines, including doubles and triples
+- generates player batting lines
 - generates pitcher lines and W/L/SV decisions
 - writes one `glb.boxscore.v1` file per game under `data/games/YYYY-MM-DD/`
 - refuses to overwrite an existing official game
 
 Simulation produces box scores, not standings or leaderboards.
 
-## League-wide backfill
+## Season Backfill
 
-To populate the league globally instead of team by team, use:
+Use:
 
 ```bash
 node tools/backfill-season.js --percent 75
 ```
 
-A 75% target means approximately 122 official games per club in a 162-game season.
+For a 162-game season, 75% targets approximately 122 games per club.
 
-The backfill driver:
-- counts existing official box scores first
-- preserves all existing official games
-- plans only the games each club still needs to reach the target
-- favors less-used opponents when selecting matchups
-- balances home assignments as it proceeds
-- inserts a recovery/travel day after each six generated game days
-- creates full player-level box scores through the same daily simulator
-- writes the generated plan to `data/season/generated-schedule.json`
-- runs the derived-data rebuild after simulation finishes
+The backfill engine:
+- preserves existing official games
+- counts games already played by each club
+- schedules only the games needed to reach the target
+- favors less-used opponents
+- balances home and away assignments
+- generates rich `glb.boxscore.v1` files through the same simulator used for daily games
+- rebuilds derived records after generation
 
-Useful alternatives:
+Preview without writing games:
 
 ```bash
 node tools/backfill-season.js --percent 75 --dry-run
-node tools/backfill-season.js --target-games 100 --dry-run
-node tools/backfill-season.js --target-games 162
 ```
 
-The dry-run performs schedule planning without writing games.
-
-The old `data/schedule.json` and root `Schedule.json` are legacy stubs and are not used to drive the new engine. Daily files under `data/days/` are treated as presentation/index material rather than an independent source of truth.
+The 75% dry-run, JavaScript syntax checks, and canonical roster validation passed in GitHub Actions on the engine branch before generation was enabled.
 
 ## Derived Outputs
 
@@ -146,24 +140,19 @@ Older score-only box scores remain valid for standings but cannot create player 
 
 The April 8 legacy official files are currently score-only. Their W/L and run totals remain authoritative, but the old manually entered league-leader values were removed because they could not be traced to official player lines.
 
-As richer simulated box scores accumulate, player totals and leaders populate automatically.
+As richer simulated box scores accumulate, player totals and leaders will populate automatically.
 
 ## Legacy / Non-Canonical Files
 The following existing paths may remain for compatibility while the engine is migrated, but new code must not treat them as authoritative:
 - `data/teams/roster/`
 - root `Schedule.json`
-- `data/schedule.json`
 - root `standings.json`
 - root `stats.json`
 - `data/standings.json`
 - `data/player-game-stats.json`
+- `data/schedule.json` (legacy presentation stub)
 
-## Validation
-
-`.github/workflows/glb-engine-check.yml` validates:
-- JavaScript syntax for the simulator, derivation engine, and backfill engine
-- canonical roster readiness
-- a dry-run of the 75% season backfill planner
+`data/days/` is a presentation/index layer and must not override official box scores.
 
 ## Rule
 If derived data conflicts with an official box score, the box score wins.

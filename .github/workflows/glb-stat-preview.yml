@@ -33,6 +33,9 @@ jobs:
       - name: Build player population layer
         run: node tools/build-player-population.js
 
+      - name: Build public player stat views
+        run: node tools/build-public-stat-views.js
+
       - name: Validate preview reconciliation
         run: node tools/validate-stat-preview.js
 

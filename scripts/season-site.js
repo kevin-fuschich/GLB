@@ -12,6 +12,11 @@
   });
   const names = new Map();
   const label = slug => names.get(slug) || slug;
+  const teamLink = (slug, className) => {
+    const a = cell('a', label(slug), className);
+    a.href = `team.html?team=${encodeURIComponent(slug)}`;
+    return a;
+  };
   const boxLink = game => `box.html?date=${encodeURIComponent(game.date)}&game=${encodeURIComponent(`${game.away}@${game.home}`)}`;
   const cell = (tag, value, className) => {
     const el = document.createElement(tag);
@@ -36,17 +41,18 @@
     }));
   }
   function scoreCard(game) {
-    const a = document.createElement('a');
-    a.className = 'score-cell'; a.href = boxLink(game);
+    const card = document.createElement('div');
+    card.className = 'score-cell';
     const top = document.createElement('div'); top.className = 'score-top';
-    top.append(cell('span', `${game.date} · Final`), cell('span', 'Box', 'score-status'));
-    a.append(top);
+    const box = cell('a', 'Box', 'score-status'); box.href = boxLink(game);
+    top.append(cell('span', `${game.date} · Final`), box);
+    card.append(top);
     for (const side of ['away', 'home']) {
       const line = document.createElement('div'); line.className = 'team-line';
-      line.append(cell('span', label(game[side]), 'team-name'), cell('span', game[`${side}Score`], 'team-score'));
-      a.append(line);
+      line.append(teamLink(game[side], 'team-name team-page-link'), cell('span', game[`${side}Score`], 'team-score'));
+      card.append(line);
     }
-    return a;
+    return card;
   }
   function showError(message) {
     const target = $('#season-status') || $('main') || $('body');
@@ -105,7 +111,10 @@
         const tbody = $('.mini-standings tbody');
         if (tbody) tbody.replaceChildren(...standings.divisions.Pacific.slice(0, 4).map((row, i) => {
           const tr = document.createElement('tr');
-          tr.append(cell('td', row.team, i === 0 ? 'leader' : ''), cell('td', row.w), cell('td', row.l), cell('td', row.pct));
+          const teamCell = document.createElement('td');
+          if (i === 0) teamCell.className = 'leader';
+          teamCell.append(teamLink(row.slug, 'team-page-link'));
+          tr.append(teamCell, cell('td', row.w), cell('td', row.l), cell('td', row.pct));
           return tr;
         }));
         const module = $('.modules .card');
@@ -114,11 +123,14 @@
           if (title) title.textContent = 'Latest Results';
           const list = module.querySelector('.schedule-list');
           if (list) list.replaceChildren(...games.slice(-3).reverse().map(g => {
-            const a = document.createElement('a'); a.className = 'schedule-item'; a.href = boxLink(g);
-            a.append(cell('span', dateText(g.date), 'schedule-date'),
-              cell('h3', `${label(g.away)} at ${label(g.home)}`, 'schedule-matchup'),
-              cell('div', `${g.awayScore}–${g.homeScore} · Final`, 'schedule-meta'));
-            return a;
+            const item = document.createElement('div'); item.className = 'schedule-item';
+            const matchup = document.createElement('h3'); matchup.className = 'schedule-matchup';
+            matchup.append(teamLink(g.away, 'team-page-link'), document.createTextNode(' at '), teamLink(g.home, 'team-page-link'));
+            const result = document.createElement('div'); result.className = 'schedule-meta';
+            const box = cell('a', 'Box score', 'box-link'); box.href = boxLink(g);
+            result.append(document.createTextNode(`${g.awayScore}–${g.homeScore} · Final · `), box);
+            item.append(cell('span', dateText(g.date), 'schedule-date'), matchup, result);
+            return item;
           }));
         }
         const story = $('.story-list');
@@ -294,8 +306,10 @@
               const tr = document.createElement('tr');
               const linkTd = document.createElement('td'); linkTd.className = 'col-link';
               const a = cell('a', 'Box', 'box-link'); a.href = boxLink(game); linkTd.append(a);
-              tr.append(cell('td', 'Final', 'col-time'), cell('td', label(game.away), 'col-team col-team-away'),
-                cell('td', '@', 'col-at'), cell('td', label(game.home), 'col-team'),
+              const awayTd = document.createElement('td'); awayTd.className = 'col-team col-team-away'; awayTd.append(teamLink(game.away, 'team-page-link'));
+              const homeTd = document.createElement('td'); homeTd.className = 'col-team'; homeTd.append(teamLink(game.home, 'team-page-link'));
+              tr.append(cell('td', 'Final', 'col-time'), awayTd,
+                cell('td', '@', 'col-at'), homeTd,
                 cell('td', `${game.awayScore}–${game.homeScore}`, 'col-result'), linkTd);
               tbody.append(tr);
             }
@@ -313,9 +327,12 @@
         select.value = months.at(-1);
         const list = $('#game-list');
         const render = () => list.replaceChildren(...games.filter(g => g.date.startsWith(select.value)).reverse().map(g => {
-          const a = document.createElement('a'); a.className = 'result'; a.href = boxLink(g);
-          a.append(cell('time', dateText(g.date)), cell('strong', `${label(g.away)} ${g.awayScore} · ${label(g.home)} ${g.homeScore}`), cell('span', 'Box score →'));
-          return a;
+          const result = document.createElement('div'); result.className = 'result';
+          const score = document.createElement('strong');
+          score.append(teamLink(g.away, 'team-page-link'), document.createTextNode(` ${g.awayScore} · `), teamLink(g.home, 'team-page-link'), document.createTextNode(` ${g.homeScore}`));
+          const box = cell('a', 'Box score →'); box.href = boxLink(g);
+          result.append(cell('time', dateText(g.date)), score, box);
+          return result;
         }));
         select.addEventListener('change', render); render();
         $('#as-of').textContent = `Results through ${dateText(standings.as_of)}`;
@@ -351,7 +368,7 @@
         if (!/^2026-\d\d-\d\d$/.test(date || '') || !/^[a-z0-9-]+@[a-z0-9-]+$/.test(matchup || '')) throw new Error('Invalid box-score link');
         const g = await fetchJSON(`data/games/${date}/${matchup}.json`);
         const [away, home] = matchup.split('@');
-        $('#game-title').textContent = `${label(away)} at ${label(home)}`;
+        $('#game-title').replaceChildren(teamLink(away, 'team-page-link'), document.createTextNode(' at '), teamLink(home, 'team-page-link'));
         $('#as-of').textContent = `${dateText(date)} · Final · ${g.final.away}–${g.final.home}`;
         const inningRows = Array.isArray(g.linescore?.innings) ? g.linescore.innings :
           Array.isArray(g.linescore?.away) && Array.isArray(g.linescore?.home) ?
@@ -360,20 +377,21 @@
           $('#inning-head').replaceChildren(cell('th','Team'),...inningRows.map(i=>cell('th',i.inning)),cell('th','R'),cell('th','H'),cell('th','E'));
           $('#inning-body').replaceChildren(...['away','home'].map(side=>{
             const tr=document.createElement('tr');
-            tr.append(cell('th',label(side==='away'?away:home)),...inningRows.map(i=>cell('td',i[side])),
+            const teamHead = document.createElement('th'); teamHead.append(teamLink(side === 'away' ? away : home, 'team-page-link'));
+            tr.append(teamHead,...inningRows.map(i=>cell('td',i[side])),
               cell('td',g.final[side]),cell('td',g.linescore.totals?.[side]?.H ?? '—'),cell('td',g.linescore.totals?.[side]?.E ?? '—')); return tr;
           }));
         } else {
           $('#inning-head').replaceChildren(cell('th','Team'),cell('th','R'));
           $('#inning-body').replaceChildren(...['away','home'].map(side=>{
-            const tr=document.createElement('tr'); tr.append(cell('th',label(side==='away'?away:home)),cell('td',g.final[side])); return tr;
+            const tr=document.createElement('tr'); const teamHead=document.createElement('th'); teamHead.append(teamLink(side === 'away' ? away : home, 'team-page-link')); tr.append(teamHead,cell('td',g.final[side])); return tr;
           }));
         }
         for (const kind of ['batting','pitching']) {
           const container = $(`#${kind}`);
           if (!g[kind]) { container.textContent = 'Player lines were not recorded for this Opening Day game.'; continue; }
           for (const side of ['away','home']) {
-            const heading = cell('h3',label(side==='away'?away:home));
+            const heading = document.createElement('h3'); heading.append(teamLink(side === 'away' ? away : home, 'team-page-link'));
             const table=document.createElement('table'); const head=document.createElement('tr');
             const keys=kind==='batting' ? ['AB','R','H','2B','3B','HR','RBI','BB','K','SB'] : ['IP','H','R','ER','BB','K','HR'];
             head.append(cell('th','Player'),...keys.map(k=>cell('th',k)));

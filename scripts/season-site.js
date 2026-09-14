@@ -86,7 +86,22 @@
       }
       if (page === 'home') {
         const strip = $('.scores-row');
-        if (strip) strip.replaceChildren(...games.slice(-4).reverse().map(scoreCard));
+        if (strip) {
+          const latestDate = games.at(-1)?.date;
+          const slate = latestDate ? games.filter(game => game.date === latestDate) : [];
+          if (slate.length) {
+            const cards = slate.map(scoreCard);
+            const copy = cards.map(card => {
+              const duplicate = card.cloneNode(true);
+              duplicate.classList.add('ticker-copy');
+              duplicate.setAttribute('aria-hidden', 'true');
+              duplicate.tabIndex = -1;
+              return duplicate;
+            });
+            strip.replaceChildren(...cards, ...copy);
+            strip.style.setProperty('--ticker-duration', `${Math.max(25, slate.length * 7)}s`);
+          } else strip.replaceChildren(cell('span', 'No recent results'));
+        }
         const tbody = $('.mini-standings tbody');
         if (tbody) tbody.replaceChildren(...standings.divisions.Pacific.slice(0, 4).map((row, i) => {
           const tr = document.createElement('tr');

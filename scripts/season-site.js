@@ -189,9 +189,9 @@
             },
             {
               image: 'assets/teams/spokane-alloys/images/stadium/club-spokane-alloys-mascot.png',
-              kicker: 'From the Ownership Office', title: 'The mascot remains on the stadium payroll',
-              deck: 'Ownership lists the mascot under stadium operations and declines to specify how many people are authorized to wear the suit.',
-              href: 'club-spokane-alloys.html', link: 'Open the Spokane File'
+              kicker: 'Stadium Operations', title: 'The mascot remains on the stadium payroll',
+              deck: 'The mascot is listed under stadium operations. The number of approved operators is not disclosed.',
+              href: 'club-spokane-alloys.html', link: 'Visit Spokane'
             }
           ];
           slides.slice(1).forEach(slide => { const preload = new Image(); preload.src = slide.image; });

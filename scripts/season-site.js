@@ -144,6 +144,83 @@
           : stretchRun
             ? 'The stretch run is on. Follow the latest scores, division races, and players shaping the league.'
             : 'Follow the latest scores, division races, and players shaping the league.';
+        const heroMedia = $('.hero-media');
+        const heroTitle = $('.hero-title');
+        const heroControls = $('.hero-controls');
+        if (heroMedia && heroTitle && heroCopy && heroKicker && heroControls) {
+          const race = Object.entries(standings.divisions).map(([division, rows]) => ({
+            division, leader: rows[0], chaser: rows[1], gap: Number(rows[1]?.gb)
+          })).filter(item => item.chaser && Number.isFinite(item.gap))
+            .sort((a, b) => a.gap - b.gap)[0];
+          const lastDate = games.at(-1)?.date;
+          const lastSlate = games.filter(game => game.date === lastDate);
+          const lastGame = lastSlate.at(-1);
+          const slug = lastGame && (lastGame.homeScore > lastGame.awayScore ? lastGame.home : lastGame.away);
+          const winnerRuns = lastGame && Math.max(lastGame.homeScore, lastGame.awayScore);
+          const loserRuns = lastGame && Math.min(lastGame.homeScore, lastGame.awayScore);
+          const slugLoser = lastGame && (slug === lastGame.home ? lastGame.away : lastGame.home);
+          const homer = leaders.batting?.HR?.[0];
+          const slides = [
+            {
+              image: 'images/hero/hero-01.png', kicker: seasonComplete ? 'Final Standings' : 'Division Race',
+              title: race ? (race.gap === 0 ? `${race.leader.team} and ${race.chaser.team} are level` : `${race.leader.team} ${seasonComplete ? 'finishes atop' : 'leads'} the ${race.division}`) : 'The Race Across GLB',
+              deck: race ? (race.gap === 0 ? `The ${race.division} race is tied at the top. Explore the full standings.` : `${race.chaser.team} ${seasonComplete ? 'finished' : 'sits'} ${race.gap} ${race.gap === 1 ? 'game' : 'games'} back. Explore the full standings.`) : 'Follow the teams shaping the league standings.',
+              href: 'standings.html', link: 'View Standings'
+            },
+            {
+              image: 'images/hero/hero-02.png', kicker: 'Latest Results',
+              title: lastGame ? `${label(slug)} takes the latest matchup` : 'Around the Diamond',
+              deck: lastGame ? `${label(slug)} ${winnerRuns}, ${label(slugLoser)} ${loserRuns} · ${dateText(lastDate)}. Catch up on ${lastSlate.length === 1 ? 'the game' : 'all ' + lastSlate.length + ' games'} from the latest slate.` : 'See the latest results across GLB.',
+              href: lastGame ? boxLink(lastGame) : 'scores.html', link: lastGame ? 'View Box Score' : 'See All Scores'
+            },
+            {
+              image: 'images/hero/hero-03.png', kicker: 'Player Watch',
+              title: homer ? `${homer.player} leads GLB with ${homer.value} home runs` : 'Meet the League Leaders',
+              deck: homer ? `${homer.team} slugger tops the home-run chart. See the hitters and pitchers setting the pace.` : 'See the hitters and pitchers setting the pace.',
+              href: 'stats.html', link: 'Player Stats'
+            }
+          ];
+          slides.slice(1).forEach(slide => { const preload = new Image(); preload.src = slide.image; });
+          let active = 0;
+          let changeTimer;
+          const heroLink = $('.hero-links .hero-link');
+          const buttons = slides.map((slide, index) => {
+            const button = document.createElement('button');
+            button.type = 'button';
+            button.textContent = index + 1;
+            button.setAttribute('aria-label', `Show featured story ${index + 1}: ${slide.kicker}`);
+            button.addEventListener('click', () => showSlide(index));
+            return button;
+          });
+          heroControls.replaceChildren(...buttons);
+          function showSlide(index) {
+            active = index;
+            const slide = slides[index];
+            clearTimeout(changeTimer);
+            heroMedia.classList.add('hero-changing');
+            changeTimer = setTimeout(() => {
+              heroMedia.style.backgroundImage = `linear-gradient(to top, rgba(0,0,0,0.65), rgba(0,0,0,0.12)), url("${slide.image}")`;
+              heroKicker.textContent = slide.kicker;
+              heroTitle.textContent = slide.title;
+              heroCopy.textContent = slide.deck;
+              if (heroLink) { heroLink.href = slide.href; heroLink.textContent = slide.link; }
+              buttons.forEach((button, i) => button.setAttribute('aria-current', i === index ? 'true' : 'false'));
+              heroMedia.classList.remove('hero-changing');
+            }, window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 0 : 220);
+          }
+          showSlide(0);
+          if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            let rotation;
+            const start = () => { if (!rotation) rotation = setInterval(() => showSlide((active + 1) % slides.length), 8000); };
+            const stop = () => { clearInterval(rotation); rotation = null; };
+            heroMedia.addEventListener('mouseenter', stop);
+            heroMedia.addEventListener('mouseleave', start);
+            heroMedia.addEventListener('focusin', stop);
+            heroMedia.addEventListener('focusout', event => { if (!heroMedia.contains(event.relatedTarget)) start(); });
+            document.addEventListener('visibilitychange', () => document.hidden ? stop() : start());
+            start();
+          }
+        }
         const stories = document.querySelectorAll('.news-list .news-item');
         const setStory = (index, tag, headline, meta, href) => {
           const card = stories[index];

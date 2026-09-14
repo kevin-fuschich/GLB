@@ -178,6 +178,12 @@
               title: homer ? `${homer.player} leads GLB with ${homer.value} home runs` : 'Meet the League Leaders',
               deck: homer ? `${homer.team} slugger tops the home-run chart. See the hitters and pitchers setting the pace.` : 'See the hitters and pitchers setting the pace.',
               href: 'stats.html', link: 'Player Stats'
+            },
+            {
+              image: 'assets/teams/spokane-alloys/images/stadium/club-spokane-alloys-mascot.png',
+              kicker: 'Club Culture', title: 'Meet the Spokane Alloys mascot',
+              deck: 'A familiar face at OGWA Stadium. Step inside the world the Alloys have built around the game.',
+              href: 'club-spokane-alloys.html', link: 'Explore the Alloys'
             }
           ];
           slides.slice(1).forEach(slide => { const preload = new Image(); preload.src = slide.image; });

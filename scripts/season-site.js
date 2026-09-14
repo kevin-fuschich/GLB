@@ -189,9 +189,9 @@
             },
             {
               image: 'assets/teams/spokane-alloys/images/stadium/club-spokane-alloys-mascot.png',
-              kicker: 'Club Culture', title: 'Meet the Spokane Alloys mascot',
-              deck: 'A familiar face at OGWA Stadium. Step inside the world the Alloys have built around the game.',
-              href: 'club-spokane-alloys.html', link: 'Explore the Alloys'
+              kicker: 'From the Ownership Office', title: 'The mascot remains on the stadium payroll',
+              deck: 'Ownership lists the mascot under stadium operations and declines to specify how many people are authorized to wear the suit.',
+              href: 'club-spokane-alloys.html', link: 'Open the Spokane File'
             }
           ];
           slides.slice(1).forEach(slide => { const preload = new Image(); preload.src = slide.image; });

@@ -15,7 +15,7 @@
   document.getElementById('club-division').textContent=`${found.division} Division · ${found.abbr} · As of ${standings.as_of}`;
   const summary=document.getElementById('club-record');
   for(const [label,value] of [['Record',`${record.w}–${record.l}`],['Win %',record.pct],['Runs',record.rs],['Allowed',record.ra],['Diff',record.diff]]){const block=document.createElement('div');block.append(text('strong',value),text('span',label));summary.append(block)}
-  const clubLink=text('a','Explore club culture →');clubLink.href=`club-${encodeURIComponent(slug)}.html`;
+  const clubLink=text('a','Open club file →');clubLink.href=`club-${encodeURIComponent(slug)}.html`;
   document.getElementById('club-links').append(clubLink);
   const totals=new Map(stats.filter(row=>row.team_slug===slug).map(row=>[row.player,row]));
   const container=document.getElementById('roster');

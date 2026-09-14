@@ -1,4 +1,19 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>GLB Team</title><link rel="stylesheet" href="team-page.css"></head><body><header><nav><a href="index.html">GLB Home</a><a href="teams.html">All Teams</a><a href="standings.html">Standings</a><a href="stats.html">Player Stats</a><a href="scores.html">Scores</a></nav><h1 id="club-name">Club Profile</h1><div id="club-division">Loading official club record…</div></header><main id="profile"><section class="panel"><h2>2026 Season</h2><div class="summary" id="club-record"></div><p id="club-links"></p></section><section class="panel"><h2>Active Roster</h2><p class="muted">Player lines include only games with recorded batting and pitching detail.</p><div id="roster" class="roster"></div></section><section class="panel"><h2>Recent Results</h2><div id="club-games"></div></section></main><script>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>GLB Team</title><link rel="stylesheet" href="team-page.css"></head><body>
+<header class="site-header">
+<div class="container topbar">
+<a href="index.html" class="brand"><span class="brand-mark">GLB</span><span class="brand-sub">Global League Baseball</span></a>
+<nav class="nav-links" aria-label="Primary"><a href="index.html">Home</a><a href="scores.html">Scores</a><a href="standings.html">Standings</a><a href="schedule.html">Schedule</a><a href="teams.html" class="active">Teams</a><a href="players.html">Players</a><a href="stats.html">Stats</a><a href="news.html">News</a></nav>
+<span class="header-meta">Team Record</span>
+<button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">☰</button>
+</div>
+<nav class="mobile-menu" id="mobileMenu"><a href="index.html">Home</a><a href="scores.html">Scores</a><a href="standings.html">Standings</a><a href="schedule.html">Schedule</a><a href="teams.html">Teams</a><a href="players.html">Players</a><a href="stats.html">Stats</a><a href="news.html">News</a></nav>
+</header>
+<main id="profile">
+<section class="team-hero">
+<img class="team-hero-image" src="assets/spokane-alloys-hero.PNG" alt="">
+<div class="team-hero-shade"></div>
+<div class="team-hero-inner"><div class="team-kicker">Official Team Record</div><h1 id="club-name">Team Profile</h1><div id="club-division">Loading official team record…</div></div>
+</section><section class="panel"><h2>2026 Season</h2><div class="summary" id="club-record"></div><p id="club-links"></p></section><section class="panel"><h2>Active Roster</h2><p class="muted">Player lines include only games with recorded batting and pitching detail.</p><div id="roster" class="roster"></div></section><section class="panel"><h2>Recent Results</h2><div id="club-games"></div></section></main><script>
 (async()=>{
  const qs=new URLSearchParams(location.search),slug=qs.get('team');
  const text=(tag,value)=>{const el=document.createElement(tag);el.textContent=String(value??'—');return el};
@@ -29,4 +44,4 @@
    a.append(text('time',game.date),text('strong',`${game.away===slug?'at '+teamNames.get(game.home):'vs '+teamNames.get(game.away)} · ${game.awayScore}–${game.homeScore}`),text('span','Box →'));list.append(a)}
  }catch(error){const p=text('p',error.message);p.setAttribute('role','alert');document.getElementById('profile').replaceChildren(p);console.error(error)}
 })();
-</script><script src="scripts/glb-ticker.js"></script></body></html>
+</script><script src="scripts/glb-ticker.js"></script><script>const navToggle=document.getElementById('navToggle'),mobileMenu=document.getElementById('mobileMenu');navToggle.addEventListener('click',()=>{const open=mobileMenu.classList.toggle('open');navToggle.setAttribute('aria-expanded',open?'true':'false')});</script></body></html>

@@ -155,28 +155,24 @@
           const lastDate = games.at(-1)?.date;
           const lastSlate = games.filter(game => game.date === lastDate);
           const lastGame = lastSlate.at(-1);
-          const slug = lastGame && (lastGame.homeScore > lastGame.awayScore ? lastGame.home : lastGame.away);
-          const winnerRuns = lastGame && Math.max(lastGame.homeScore, lastGame.awayScore);
-          const loserRuns = lastGame && Math.min(lastGame.homeScore, lastGame.awayScore);
-          const slugLoser = lastGame && (slug === lastGame.home ? lastGame.away : lastGame.home);
           const homer = leaders.batting?.HR?.[0];
           const slides = [
             {
               image: 'images/hero/hero-01.png', kicker: seasonComplete ? 'Final Standings' : 'Division Race',
-              title: race ? (race.gap === 0 ? `${race.leader.team} and ${race.chaser.team} are level` : `${race.leader.team} ${seasonComplete ? 'finishes atop' : 'leads'} the ${race.division}`) : 'The Race Across GLB',
-              deck: race ? (race.gap === 0 ? `The ${race.division} race is tied at the top. Explore the full standings.` : `${race.chaser.team} ${seasonComplete ? 'finished' : 'sits'} ${race.gap} ${race.gap === 1 ? 'game' : 'games'} back. Explore the full standings.`) : 'Follow the teams shaping the league standings.',
+              title: seasonComplete ? 'The division races are decided' : 'The division race is on',
+              deck: race ? (race.gap === 0 ? `The ${race.division} is tied at the top. Explore the standings.` : `The closest race is in the ${race.division}, with ${race.gap} ${race.gap === 1 ? 'game' : 'games'} separating the top two clubs.`) : 'Explore the GLB standings.',
               href: 'standings.html', link: 'View Standings'
             },
             {
               image: 'images/hero/hero-02.png', kicker: 'Latest Results',
-              title: lastGame ? `${label(slug)} takes the latest matchup` : 'Around the Diamond',
-              deck: lastGame ? `${label(slug)} ${winnerRuns}, ${label(slugLoser)} ${loserRuns} · ${dateText(lastDate)}. Catch up on ${lastSlate.length === 1 ? 'the game' : 'all ' + lastSlate.length + ' games'} from the latest slate.` : 'See the latest results across GLB.',
-              href: lastGame ? boxLink(lastGame) : 'scores.html', link: lastGame ? 'View Box Score' : 'See All Scores'
+              title: 'The latest slate is in',
+              deck: lastGame ? `${lastSlate.length} ${lastSlate.length === 1 ? 'game' : 'games'} from ${dateText(lastDate)}. See every final score and box score.` : 'See the latest results across GLB.',
+              href: 'scores.html', link: 'See All Scores'
             },
             {
               image: 'images/hero/hero-03.png', kicker: 'Player Watch',
-              title: homer ? `${homer.player} leads GLB with ${homer.value} home runs` : 'Meet the League Leaders',
-              deck: homer ? `${homer.team} slugger tops the home-run chart. See the hitters and pitchers setting the pace.` : 'See the hitters and pitchers setting the pace.',
+              title: 'The home-run chase',
+              deck: homer ? `The league leader has ${homer.value} home runs. See the hitters and pitchers setting the pace.` : 'See the hitters and pitchers setting the pace.',
               href: 'stats.html', link: 'Player Stats'
             },
             {

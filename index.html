@@ -343,6 +343,18 @@
       text-decoration:underline;
     }
 
+    .hero-media{transition:opacity .22s ease;}
+    .hero-media.hero-changing{opacity:.55;}
+    .hero-controls{display:flex;align-items:center;gap:9px;margin-top:18px;}
+    .hero-controls button{
+      appearance:none;width:30px;height:30px;border:1px solid rgba(255,255,255,.62);
+      border-radius:50%;background:rgba(0,0,0,.32);color:#fff;
+      font:700 12px var(--font-sans);cursor:pointer;
+    }
+    .hero-controls button[aria-current="true"]{background:#fff;color:var(--navy);border-color:#fff;}
+    .hero-controls button:focus-visible{outline:2px solid #fff;outline-offset:3px;}
+    @media (prefers-reduced-motion: reduce){.hero-media{transition:none;}}
+
     /* SIDE RAIL */
     .rail-section{
       padding:18px 18px 16px;
@@ -758,6 +770,7 @@
               <p class="hero-deck">
                 Follow the latest scores, division races, and players shaping the league.
               </p>
+              <div class="hero-controls" role="group" aria-label="Featured stories"></div>
             </div>
           </div>
           <div class="hero-links">
@@ -903,6 +916,6 @@
     });
   </script>
 
-  <script src="scripts/season-site.js?v=20260914ticker"></script>
+  <script src="scripts/season-site.js?v=20260914hero"></script>
 </body>
 </html>

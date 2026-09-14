@@ -56,6 +56,13 @@
       return `assets/images/players/durham-gold/durham-${player.slug}.jpg`;
     return null;
   }
+  // Action photos are card artwork; roster portraits remain the player-file portraits.
+  function cardPhotoPath(player) {
+    if (player.teamSlug === 'durham-gold' &&
+        ['mateo-rios', 'devin-marsh', 'calvin-ross'].includes(player.slug))
+      return `assets/images/players/durham-gold/durham-${player.slug}-action.jpg`;
+    return photoPath(player);
+  }
   function text(tag, value, className) {
     const element = document.createElement(tag);
     element.textContent = String(value ?? '—');
@@ -67,12 +74,12 @@
     card.className = 'glb-player-card';
     if (link) card.href = `player.html?team=${encodeURIComponent(player.teamSlug)}&player=${encodeURIComponent(player.slug)}`;
     card.setAttribute('aria-label', `${player.name}, ${player.position}, ${player.teamName} player card`);
-    const palette = player.teamSlug === 'durham-gold' ? ['#18283d', '#d9ad65'] :
+    const palette = player.teamSlug === 'durham-gold' ? ['#1f3a5f', '#c9a227'] :
       palettes[[...player.teamSlug].reduce((sum, char) => sum + char.charCodeAt(0), 0) % palettes.length];
     card.style.setProperty('--player-deep', palette[0]);
     card.style.setProperty('--player-accent', palette[1]);
     const top = text('div', '', 'glb-player-card__top');
-    top.append(text('span', 'GLB', 'glb-player-card__mark'), text('span', 'Player Card', 'glb-player-card__edition'));
+    top.append(text('span', 'GLB', 'glb-player-card__mark'), text('span', '2026 • Official Series', 'glb-player-card__edition'));
     const portrait = text('div', '', 'glb-player-card__portrait');
     const initials = () => {
       const badge = portrait.querySelector('.glb-player-card__position');
@@ -80,7 +87,7 @@
         .map(part => part[0]).join(''), 'glb-player-card__initials'));
       if (badge) portrait.append(badge);
     };
-    const source = photoPath(player);
+    const source = cardPhotoPath(player);
     if (source) {
       const img = document.createElement('img');
       img.src = source;
@@ -104,9 +111,9 @@
       stats.append(item);
     }
     card.append(top, portrait, identity, stats,
-      text('div', 'Recorded career totals', 'glb-player-card__footer'));
+      text('div', 'Recorded career totals • GLB', 'glb-player-card__footer'));
     return card;
   }
 
-  window.GLBPlayerCards = { loadSeasons, careerFor, createCard, photoPath };
+  window.GLBPlayerCards = { loadSeasons, careerFor, createCard, photoPath, cardPhotoPath };
 })();

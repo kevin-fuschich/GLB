@@ -231,6 +231,31 @@
       flex-shrink:0;
     }
 
+    /* Continuous home-page scoreboard */
+    .scores-strip{overflow:hidden;}
+    .scores-strip .score-ticker{overflow:hidden;}
+    .scores-strip .scores-row{
+      display:flex;
+      width:max-content;
+      min-width:100%;
+      gap:0;
+      animation:score-scroll var(--ticker-duration, 48s) linear infinite;
+    }
+    .scores-strip .scores-row:hover,
+    .scores-strip .scores-row:focus-within{animation-play-state:paused;}
+    .scores-strip .score-cell{
+      display:block;
+      flex:0 0 245px;
+      border-right:1px solid var(--border);
+    }
+    .scores-strip .score-cell:last-child{border-right:1px solid var(--border);}
+    @keyframes score-scroll{to{transform:translateX(-50%);}}
+    @media (prefers-reduced-motion: reduce){
+      .scores-strip .score-ticker{overflow-x:auto;}
+      .scores-strip .scores-row{animation:none;}
+      .scores-strip .scores-row .ticker-copy{display:none;}
+    }
+
     /* PAGE */
     .page{
       padding:22px 0 36px;
@@ -716,9 +741,8 @@
   </header>
 
   <section class="scores-strip" aria-label="Recent scores">
-    <div class="container">
-      <div class="scores-row"><p>Loading recent results…</p>
-      </div>
+    <div class="score-ticker">
+      <div class="scores-row"><p>Loading recent results…</p></div>
     </div>
   </section>
 

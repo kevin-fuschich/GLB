@@ -249,7 +249,7 @@
       border-right:1px solid var(--border);
     }
     .scores-strip .score-cell:last-child{border-right:1px solid var(--border);}
-    @keyframes score-scroll{to{transform:translateX(-50%);}}
+    @keyframes score-scroll{from{transform:translateX(-50%);}to{transform:translateX(0);}}
     @media (prefers-reduced-motion: reduce){
       .scores-strip .score-ticker{overflow-x:auto;}
       .scores-strip .scores-row{animation:none;}

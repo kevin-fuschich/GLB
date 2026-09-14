@@ -1,6 +1,4 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>GLB Club</title><link rel="stylesheet" href="season.css"><style>
-.summary{display:flex;gap:25px;flex-wrap:wrap;margin-top:12px}.summary strong{display:block;font:1.7rem Georgia,serif}.roster{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}.player{border:1px solid var(--line);padding:14px;color:var(--ink);text-decoration:none;background:#fff}.player:hover{background:#f0ede5}.player span{display:block;color:#526273;font-size:.9rem}.result{font-size:.95rem}
-</style></head><body><header><nav><a href="index.html">GLB Home</a><a href="teams.html">All Teams</a><a href="standings.html">Standings</a><a href="stats.html">Player Stats</a><a href="scores.html">Scores</a></nav><h1 id="club-name">Club Profile</h1><div id="club-division">Loading official club record…</div></header><main id="profile"><section class="panel"><h2>2026 Season</h2><div class="summary" id="club-record"></div><p id="club-links"></p></section><section class="panel"><h2>Active Roster</h2><p class="muted">Player lines include only games with recorded batting and pitching detail.</p><div id="roster" class="roster"></div></section><section class="panel"><h2>Recent Results</h2><div id="club-games"></div></section></main><script>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>GLB Team</title><link rel="stylesheet" href="team-page.css"></head><body><header><nav><a href="index.html">GLB Home</a><a href="teams.html">All Teams</a><a href="standings.html">Standings</a><a href="stats.html">Player Stats</a><a href="scores.html">Scores</a></nav><h1 id="club-name">Club Profile</h1><div id="club-division">Loading official club record…</div></header><main id="profile"><section class="panel"><h2>2026 Season</h2><div class="summary" id="club-record"></div><p id="club-links"></p></section><section class="panel"><h2>Active Roster</h2><p class="muted">Player lines include only games with recorded batting and pitching detail.</p><div id="roster" class="roster"></div></section><section class="panel"><h2>Recent Results</h2><div id="club-games"></div></section></main><script>
 (async()=>{
  const qs=new URLSearchParams(location.search),slug=qs.get('team');
  const text=(tag,value)=>{const el=document.createElement(tag);el.textContent=String(value??'—');return el};
@@ -11,7 +9,7 @@
   if(!found)throw Error('Select a club from the team directory.');
   const roster=await get(found.roster_path),record=Object.values(standings.divisions).flat().find(row=>row.slug===slug);
   const teamNames=new Map(Object.values(registry.divisions).flat().map(t=>[t.slug,t.team]));
-  document.title=`GLB — ${found.team}`;document.getElementById('club-name').textContent=found.team;
+  document.title=`${found.team} | Global League Baseball`;document.body.classList.toggle('spokane',slug==='spokane-alloys');document.getElementById('club-name').textContent=found.team;
   document.getElementById('club-division').textContent=`${found.division} Division · ${found.abbr} · As of ${standings.as_of}`;
   const summary=document.getElementById('club-record');
   for(const [label,value] of [['Record',`${record.w}–${record.l}`],['Win %',record.pct],['Runs',record.rs],['Allowed',record.ra],['Diff',record.diff]]){const block=document.createElement('div');block.append(text('strong',value),text('span',label));summary.append(block)}
@@ -20,7 +18,8 @@
   const totals=new Map(stats.filter(row=>row.team_slug===slug).map(row=>[row.player,row]));
   const container=document.getElementById('roster');
   for(const player of roster.players){const a=document.createElement('a');a.className='player';a.href=`player.html?team=${encodeURIComponent(slug)}&player=${encodeURIComponent(player.slug)}`;
-   a.append(text('strong',player.name),text('span',`${player.position} · Age ${player.age}`));
+   const prefix=slug.split('-')[0],portrait=document.createElement('img');portrait.alt=player.name;portrait.src=`assets/images/players/${slug}/${prefix}-${player.slug}.png`;portrait.addEventListener('error',()=>portrait.remove());
+   a.append(portrait,text('strong',player.name),text('span',`${player.position} · Age ${player.age}`));
    const row=totals.get(player.slug);const pitching=['SP','RP','CL'].includes(player.position);
    a.append(text('span',row?(pitching?`${row.pitching.W} W · ${row.pitching.K} K · ${row.pitching.ERA??'—'} ERA`:`${row.batting.H} H · ${row.batting.HR} HR · ${row.batting.AVG} AVG`):'No recorded season line'));
    container.append(a)}
@@ -30,4 +29,4 @@
    a.append(text('time',game.date),text('strong',`${game.away===slug?'at '+teamNames.get(game.home):'vs '+teamNames.get(game.away)} · ${game.awayScore}–${game.homeScore}`),text('span','Box →'));list.append(a)}
  }catch(error){const p=text('p',error.message);p.setAttribute('role','alert');document.getElementById('profile').replaceChildren(p);console.error(error)}
 })();
-</script></body></html>
+</script><script src="scripts/glb-ticker.js"></script></body></html>

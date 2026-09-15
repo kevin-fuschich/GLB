@@ -255,6 +255,8 @@ p{line-height:1.58;color:#343a40}
   .header-inner{flex-direction:column;align-items:flex-start}
   .nav{gap:14px}
 }
+
+.card-claim-form{display:grid;gap:10px;max-width:310px;margin:18px auto 0;padding:14px;border:1px solid #d9dee5;border-radius:10px;background:#f8fafb}.card-claim-form strong{color:#13283f}.card-claim-form input{padding:10px;border:1px solid #cfd7e0;border-radius:7px}.card-claim-form button{padding:10px;border:0;border-radius:7px;background:#13283f;color:#fff;font-weight:800}.card-claim-form small{color:#5f6b7a}
 </style>
 </head>
 
@@ -689,9 +691,11 @@ async function loadPlayer(){
 
   const seasons = await GLBPlayerCards.loadSeasons();
   const record = GLBPlayerCards.careerFor(playerSlug, seasons);
-  document.getElementById('playerCard').replaceChildren(GLBPlayerCards.createCard({
-    ...player,slug:playerSlug,name:playerName,teamSlug,teamName:team.teamName
-  },record,{link:false}));
+  const cardHost=document.getElementById('playerCard');
+  cardHost.replaceChildren(GLBPlayerCards.createCard({...player,slug:playerSlug,name:playerName,teamSlug,teamName:team.teamName},record,{link:false}));
+  const claim=document.createElement('form'); claim.className='card-claim-form'; claim.action='https://formspree.io/f/mzezpeap'; claim.method='POST';
+  claim.innerHTML='<strong>Claim this card</strong><input type="hidden" name="card_id"><input type="hidden" name="player_name"><input name="user_id" required placeholder="Your USERID"><input name="email" type="email" required placeholder="Your email"><button type="submit">Submit claim</button><small>Claims are reviewed before a unique serial is assigned.</small>';
+  claim.elements.card_id.value='SPK-'+String(Object.keys(PLAYER_TEAM_INDEX).indexOf(playerSlug)+1).padStart(2,'0'); claim.elements.player_name.value=playerName; cardHost.append(claim);
   const body=document.getElementById('seasonStatBody');
   const careerBody=document.getElementById('careerStatBody');
   body.replaceChildren();careerBody.replaceChildren();

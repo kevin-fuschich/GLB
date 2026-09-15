@@ -393,7 +393,7 @@ padding:18px;
 background:#e9edf2;
 }
 
-.player-card{
+.player-card{cursor:pointer;perspective:1000px;min-height:310px;}
 position:relative;
 overflow:hidden;
 min-width:0;
@@ -404,6 +404,8 @@ box-shadow:0 5px 12px #0b1e3330, inset 0 1px 0 #ffffff20;
 color:#fff;
 }
 
+ .player-card-back{display:none;}
+.player-card.flipped .player-card-front{display:none}.player-card.flipped .player-card-back{display:block}
 .player-card::after{
 content:"";
 position:absolute;
@@ -1234,13 +1236,16 @@ document.querySelectorAll(".roster-table tbody tr").forEach((row,index)=>{
   const cells=[...row.querySelectorAll(":scope > td")];
   const card=document.createElement("article");
   card.className="player-card";
+  const front=document.createElement("div"); front.className="player-card-front";
   const img=document.createElement("img"); img.className="player-card-image"; img.src=image.src; img.alt=image.alt;
   const body=document.createElement("div"); body.className="player-card-body";
   const top=document.createElement("div"); top.className="player-card-topline"; top.append(Object.assign(document.createElement("span"),{textContent:`SPK-${String(index+1).padStart(2,"0")}`}),Object.assign(document.createElement("span"),{textContent:cells[1].textContent.trim()}));
   const title=document.createElement("h3"); title.className="player-card-name"; title.textContent=name.textContent.trim();
   const subtitle=document.createElement("div"); subtitle.className="player-card-role"; subtitle.textContent=role.textContent.trim();
   const meta=document.createElement("div"); meta.className="player-card-meta"; meta.append(Object.assign(document.createElement("span"),{textContent:`B/T ${cells[2].textContent.trim()}`}),Object.assign(document.createElement("span"),{textContent:`Age ${cells[3].textContent.trim()}`}));
-  body.append(top,title,subtitle,meta); card.append(img,body); playerCards.append(card);
+  body.append(top,title,subtitle,meta); front.append(img,body);
+  const back=document.createElement("div"); back.className="player-card-back player-card-body"; back.innerHTML=`<div class="player-card-topline"><span>GLB / SPO</span><span>Official Card</span></div><h3 class="player-card-name">${name.textContent.trim()}</h3><p class="player-card-role">Spokane Alloys · ${role.textContent.trim()}</p><p class="player-card-role" style="margin-top:18px">Active roster card. Career statistics and player notes will be added as the league record develops.</p><div class="player-card-meta"><span>SPK-${String(index+1).padStart(2,"0")}</span><span>© GLB</span></div>`;
+  card.append(front,back); card.addEventListener("click",()=>card.classList.toggle("flipped")); playerCards.append(card);
 });
 
 const navToggle=document.getElementById("navToggle");

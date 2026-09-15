@@ -695,7 +695,7 @@ async function loadPlayer(){
   cardHost.replaceChildren(GLBPlayerCards.createCard({...player,slug:playerSlug,name:playerName,teamSlug,teamName:team.teamName},record,{link:false}));
   const claim=document.createElement('form'); claim.className='card-claim-form'; claim.action='https://formspree.io/f/mzezpeap'; claim.method='POST';
   claim.innerHTML='<strong>Claim this card</strong><input type="hidden" name="card_id"><input type="hidden" name="player_name"><input name="user_id" required placeholder="Your USERID"><input name="email" type="email" required placeholder="Your email"><button type="submit">Submit claim</button><small>Claims are reviewed before a unique serial is assigned.</small>';
-  claim.elements.card_id.value='SPK-'+String(Object.keys(PLAYER_TEAM_INDEX).indexOf(playerSlug)+1).padStart(2,'0'); claim.elements.player_name.value=playerName; cardHost.append(claim);
+  const SPOKANE_CARD_NUMBERS={"kellan-brynden":1,"oskar-svanholm":2,"mateusz-kasprowicz":3,"diego-alvarez-mora":4,"lukas-havel":5,"caleb-reidman":6,"sergio-ibarra-lugo":7,"yaw-mensah":8,"nikolai-dobrynin":9,"evan-carroll-iv":10,"marco-delvecchio":11,"tomasz-kubas":12,"andres-mireles":13,"wyatt-hollander":14,"luis-quinones":15,"pieter-van-wyk":16}; claim.elements.card_id.value=teamSlug==='spokane-alloys'&&SPOKANE_CARD_NUMBERS[playerSlug]? 'SPK-'+String(SPOKANE_CARD_NUMBERS[playerSlug]).padStart(2,'0') : teamSlug.toUpperCase().slice(0,3)+'-'+playerSlug.toUpperCase(); claim.elements.player_name.value=playerName; cardHost.append(claim);
   const body=document.getElementById('seasonStatBody');
   const careerBody=document.getElementById('careerStatBody');
   body.replaceChildren();careerBody.replaceChildren();

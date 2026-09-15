@@ -1,0 +1,23 @@
+{
+  "schema": "glb.player-card-registry.v1",
+  "team_slug": "spokane-alloys",
+  "team_name": "Spokane Alloys",
+  "cards": [
+    {
+      "card_id": "SPK-01-CURRENT",
+      "type": "player",
+      "edition": "current",
+      "player_slug": "kellan-brynden",
+      "serial_template": "SPK-01-{USERID}-{CLAIMSEQ}"
+    },
+    {
+      "card_id": "SPK-02-CURRENT",
+      "type": "player",
+      "edition": "current",
+      "player_slug": "oskar-svanholm",
+      "serial_template": "SPK-02-{USERID}-{CLAIMSEQ}"
+    }
+  ],
+  "artifact_cards": [],
+  "notes": "Add past, special-edition, and team artifact cards as assets and records are approved."
+}

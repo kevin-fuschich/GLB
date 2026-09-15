@@ -103,8 +103,10 @@
       item.append(text('strong', value ?? '—'), text('span', label));
       stats.append(item);
     }
-    card.append(top, portrait, identity, stats,
-      text('div', 'Recorded career totals', 'glb-player-card__footer'));
+    const front=document.createElement('div'); front.className='glb-player-card__front'; front.append(top, portrait, identity, stats, text('div','Recorded career totals','glb-player-card__footer'));
+    const back=document.createElement('div'); back.className='glb-player-card__back';
+    back.append(text('div','GLB · '+player.teamName,'glb-player-card__backmark'),text('h3',player.name,'glb-player-card__backname'),text('p',player.position+' · '+(record?.seasons?.length||1)+' recorded season(s)','glb-player-card__backcopy'),text('p','Official card record · '+player.teamName,'glb-player-card__backcopy'),text('div',player.teamSlug==='spokane-alloys'?'SPK-'+String(['kellan-brynden','oskar-svanholm','mateusz-kasprowicz','diego-alvarez-mora','lukas-havel','caleb-reidman','sergio-ibarra-lugo','yaw-mensah','nikolai-dobrynin','evan-carroll-iv','marco-delvecchio','tomasz-kubas','andres-mireles','wyatt-hollander','luis-quinones','pieter-van-wyk'].indexOf(player.slug)+1).padStart(2,'0'):'GLB-'+player.slug.toUpperCase(),'glb-player-card__serial'),text('div','Tap to return to front','glb-player-card__fliphint'));
+    card.replaceChildren(front,back); card.addEventListener('click',e=>{if(e.target.closest('a'))return;e.preventDefault();card.classList.toggle('is-flipped')});
     return card;
   }
 

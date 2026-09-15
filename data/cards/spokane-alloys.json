@@ -16,6 +16,104 @@
       "edition": "current",
       "player_slug": "oskar-svanholm",
       "serial_template": "SPK-02-{USERID}-{CLAIMSEQ}"
+    },
+    {
+      "card_id": "SPK-03-CURRENT",
+      "type": "player",
+      "edition": "current",
+      "player_slug": "mateusz-kasprowicz",
+      "serial_template": "SPK-03-{USERID}-{CLAIMSEQ}"
+    },
+    {
+      "card_id": "SPK-04-CURRENT",
+      "type": "player",
+      "edition": "current",
+      "player_slug": "diego-alvarez-mora",
+      "serial_template": "SPK-04-{USERID}-{CLAIMSEQ}"
+    },
+    {
+      "card_id": "SPK-05-CURRENT",
+      "type": "player",
+      "edition": "current",
+      "player_slug": "lukas-havel",
+      "serial_template": "SPK-05-{USERID}-{CLAIMSEQ}"
+    },
+    {
+      "card_id": "SPK-06-CURRENT",
+      "type": "player",
+      "edition": "current",
+      "player_slug": "caleb-reidman",
+      "serial_template": "SPK-06-{USERID}-{CLAIMSEQ}"
+    },
+    {
+      "card_id": "SPK-07-CURRENT",
+      "type": "player",
+      "edition": "current",
+      "player_slug": "sergio-ibarra-lugo",
+      "serial_template": "SPK-07-{USERID}-{CLAIMSEQ}"
+    },
+    {
+      "card_id": "SPK-08-CURRENT",
+      "type": "player",
+      "edition": "current",
+      "player_slug": "yaw-mensah",
+      "serial_template": "SPK-08-{USERID}-{CLAIMSEQ}"
+    },
+    {
+      "card_id": "SPK-09-CURRENT",
+      "type": "player",
+      "edition": "current",
+      "player_slug": "nikolai-dobrynin",
+      "serial_template": "SPK-09-{USERID}-{CLAIMSEQ}"
+    },
+    {
+      "card_id": "SPK-10-CURRENT",
+      "type": "player",
+      "edition": "current",
+      "player_slug": "evan-carroll-iv",
+      "serial_template": "SPK-10-{USERID}-{CLAIMSEQ}"
+    },
+    {
+      "card_id": "SPK-11-CURRENT",
+      "type": "player",
+      "edition": "current",
+      "player_slug": "marco-delvecchio",
+      "serial_template": "SPK-11-{USERID}-{CLAIMSEQ}"
+    },
+    {
+      "card_id": "SPK-12-CURRENT",
+      "type": "player",
+      "edition": "current",
+      "player_slug": "tomasz-kubas",
+      "serial_template": "SPK-12-{USERID}-{CLAIMSEQ}"
+    },
+    {
+      "card_id": "SPK-13-CURRENT",
+      "type": "player",
+      "edition": "current",
+      "player_slug": "andres-mireles",
+      "serial_template": "SPK-13-{USERID}-{CLAIMSEQ}"
+    },
+    {
+      "card_id": "SPK-14-CURRENT",
+      "type": "player",
+      "edition": "current",
+      "player_slug": "wyatt-hollander",
+      "serial_template": "SPK-14-{USERID}-{CLAIMSEQ}"
+    },
+    {
+      "card_id": "SPK-15-CURRENT",
+      "type": "player",
+      "edition": "current",
+      "player_slug": "luis-quinones",
+      "serial_template": "SPK-15-{USERID}-{CLAIMSEQ}"
+    },
+    {
+      "card_id": "SPK-16-CURRENT",
+      "type": "player",
+      "edition": "current",
+      "player_slug": "pieter-van-wyk",
+      "serial_template": "SPK-16-{USERID}-{CLAIMSEQ}"
     }
   ],
   "artifact_cards": [],

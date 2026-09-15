@@ -257,6 +257,7 @@ p{line-height:1.58;color:#343a40}
 }
 
 .card-claim-form{display:grid;gap:10px;max-width:310px;margin:18px auto 0;padding:14px;border:1px solid #d9dee5;border-radius:10px;background:#f8fafb}.card-claim-form strong{color:#13283f}.card-claim-form input{padding:10px;border:1px solid #cfd7e0;border-radius:7px}.card-claim-form button{padding:10px;border:0;border-radius:7px;background:#13283f;color:#fff;font-weight:800}.card-claim-form small{color:#5f6b7a}
+.glb-player-card{position:relative;transform-style:preserve-3d;transition:transform .45s ease;cursor:pointer}.glb-player-card.is-flipped{transform:rotateY(180deg)}.glb-player-card__front,.glb-player-card__back{backface-visibility:hidden}.glb-player-card__back{position:absolute;inset:0;transform:rotateY(180deg);display:flex;flex-direction:column;justify-content:center;align-items:center;padding:24px;text-align:center;background:linear-gradient(145deg,#172f4b,#091827);color:#fff}.glb-player-card__backmark{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:#b9d8d0}.glb-player-card__backname{margin:18px 0 8px;font-size:24px}.glb-player-card__backcopy{margin:6px 0;color:#d9e3ed;font-size:12px}.glb-player-card__serial{margin-top:28px;padding-top:12px;border-top:1px solid #ffffff35;font-weight:800;letter-spacing:1px}.glb-player-card__fliphint{margin-top:24px;font-size:10px;text-transform:uppercase;color:#efb36d}.glb-player-card__front{height:100%}
 </style>
 </head>
 
@@ -439,7 +440,7 @@ p{line-height:1.58;color:#343a40}
   </div>
 </footer>
 
-<script src="scripts/player-cards.js?v=20260913b"></script>
+<script src="scripts/player-cards.js?v=20260915a"></script>
 <script>
 const params = new URLSearchParams(window.location.search);
 

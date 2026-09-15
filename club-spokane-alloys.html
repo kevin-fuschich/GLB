@@ -433,6 +433,47 @@ color:var(--alloys);
 
 /* DONK */
 
+.donk-brand{
+position:relative;
+overflow:hidden;
+display:grid;
+place-items:center;
+margin:-2px 0 22px;
+padding:28px 22px 24px;
+border:1px solid #b76e7959;
+border-radius:14px;
+background:
+radial-gradient(circle at 50% 35%,#4b27354d 0%,transparent 52%),
+linear-gradient(145deg,#07090d 0%,#11131a 55%,#090a0f 100%);
+box-shadow:inset 0 1px 0 #ffffff12,0 12px 28px #30111c14;
+}
+
+.donk-brand::after{
+content:"";
+position:absolute;
+inset:0;
+pointer-events:none;
+background:linear-gradient(110deg,transparent 28%,#ffffff0d 48%,transparent 68%);
+}
+
+.donk-logo{
+position:relative;
+z-index:1;
+width:min(100%,660px);
+filter:drop-shadow(0 10px 18px #00000080);
+}
+
+.donk-descriptor{
+position:relative;
+z-index:1;
+margin-top:12px;
+color:#ead8dc;
+font-size:10px;
+font-weight:900;
+letter-spacing:3.2px;
+text-transform:uppercase;
+}
+
 .donk-intro{
 margin:0 0 13px;
 font-size:16px;
@@ -891,6 +932,15 @@ The resulting property schedule includes baseball, a monthly two-piece, reusable
 </div>
 
 <div class="card-body">
+
+<div class="donk-brand" aria-label="DONK Custom Car Competition">
+<img
+  class="donk-logo"
+  src="assets/teams/spokane-alloys/images/club/donk-wordmark-opal-rose.webp"
+  alt="DONK"
+>
+<div class="donk-descriptor">Custom Car Competition</div>
+</div>
 
 <p class="donk-intro">
 DONK operates independently of Global League Baseball. Under a venue agreement, selected circuit events are staged at GLB parks after the baseball schedule clears. Competition is divided into separate disciplines; a driver may win a category without winning the event.

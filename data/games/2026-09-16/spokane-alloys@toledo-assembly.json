@@ -1,0 +1,386 @@
+{
+  "schema": "glb.boxscore.v1",
+  "game_id": "2026-09-16_spokane-alloys@toledo-assembly",
+  "date": "2026-09-16",
+  "away": {
+    "slug": "spokane-alloys",
+    "name": "Spokane Alloys"
+  },
+  "home": {
+    "slug": "toledo-assembly",
+    "name": "Toledo Assembly"
+  },
+  "status": "Final",
+  "attendance": 18012,
+  "linescore": {
+    "innings": [
+      {
+        "inning": 1,
+        "away": 1,
+        "home": 0
+      },
+      {
+        "inning": 2,
+        "away": 0,
+        "home": 1
+      },
+      {
+        "inning": 3,
+        "away": 0,
+        "home": 0
+      },
+      {
+        "inning": 4,
+        "away": 2,
+        "home": 0
+      },
+      {
+        "inning": 5,
+        "away": 0,
+        "home": 3
+      },
+      {
+        "inning": 6,
+        "away": 1,
+        "home": 1
+      },
+      {
+        "inning": 7,
+        "away": 0,
+        "home": 2
+      },
+      {
+        "inning": 8,
+        "away": 0,
+        "home": 0
+      },
+      {
+        "inning": 9,
+        "away": 0,
+        "home": 1
+      }
+    ],
+    "totals": {
+      "away": {
+        "R": 4,
+        "H": 11,
+        "E": 2
+      },
+      "home": {
+        "R": 8,
+        "H": 12,
+        "E": 1
+      }
+    }
+  },
+  "final": {
+    "away": 4,
+    "home": 8
+  },
+  "batting": {
+    "away": [
+      {
+        "player": "nikolai-dobrynin",
+        "name": "Nikolai Dobrynin",
+        "position": "C",
+        "AB": 5,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 2,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "evan-carroll-iv",
+        "name": "Evan Carroll IV",
+        "position": "1B",
+        "AB": 3,
+        "R": 1,
+        "H": 3,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 1,
+        "K": 0,
+        "HR": 1,
+        "SB": 0
+      },
+      {
+        "player": "marco-delvecchio",
+        "name": "Marco DelVecchio",
+        "position": "2B",
+        "AB": 4,
+        "R": 0,
+        "H": 2,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "tomasz-kubas",
+        "name": "Tomasz Kubas",
+        "position": "SS",
+        "AB": 4,
+        "R": 1,
+        "H": 1,
+        "2B": 1,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 3,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "andres-mireles",
+        "name": "Andrés Mireles",
+        "position": "3B",
+        "AB": 4,
+        "R": 1,
+        "H": 2,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 2,
+        "BB": 0,
+        "K": 0,
+        "HR": 1,
+        "SB": 0
+      },
+      {
+        "player": "wyatt-hollander",
+        "name": "Wyatt Hollander",
+        "position": "CF",
+        "AB": 5,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 2,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "luis-quinones",
+        "name": "Luis Quiñones",
+        "position": "LF",
+        "AB": 5,
+        "R": 0,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 1,
+        "K": 1,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "pieter-van-wyk",
+        "name": "Pieter van Wyk",
+        "position": "RF",
+        "AB": 3,
+        "R": 1,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 2,
+        "K": 0,
+        "HR": 1,
+        "SB": 0
+      }
+    ],
+    "home": [
+      {
+        "player": "omar-nazzal",
+        "name": "Omar Nazzal",
+        "position": "C",
+        "AB": 5,
+        "R": 2,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 0,
+        "K": 1,
+        "HR": 1,
+        "SB": 0
+      },
+      {
+        "player": "caleb-ardoin",
+        "name": "Caleb Ardoin",
+        "position": "1B",
+        "AB": 5,
+        "R": 2,
+        "H": 2,
+        "2B": 2,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 1,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "samir-benyahia",
+        "name": "Samir Benyahia",
+        "position": "2B",
+        "AB": 3,
+        "R": 0,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 1,
+        "K": 1,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "evan-trelawny",
+        "name": "Evan Trelawny",
+        "position": "SS",
+        "AB": 4,
+        "R": 1,
+        "H": 1,
+        "2B": 1,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 2,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "kwame-ofori",
+        "name": "Kwame Ofori",
+        "position": "3B",
+        "AB": 5,
+        "R": 1,
+        "H": 3,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 1,
+        "K": 0,
+        "HR": 1,
+        "SB": 2
+      },
+      {
+        "player": "mateo-acebedo",
+        "name": "Mateo Acebedo",
+        "position": "LF",
+        "AB": 3,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 0,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "niko-velkovic",
+        "name": "Niko Velković",
+        "position": "CF",
+        "AB": 4,
+        "R": 1,
+        "H": 2,
+        "2B": 0,
+        "3B": 1,
+        "RBI": 4,
+        "BB": 2,
+        "K": 1,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "jasper-quade",
+        "name": "Jasper Quade",
+        "position": "RF",
+        "AB": 5,
+        "R": 1,
+        "H": 2,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 1,
+        "HR": 0,
+        "SB": 0
+      }
+    ]
+  },
+  "pitching": {
+    "away": [
+      {
+        "player": "diego-alvarez-mora",
+        "name": "Diego Álvarez Mora",
+        "IP_outs": 17,
+        "H": 7,
+        "R": 6,
+        "ER": 6,
+        "BB": 0,
+        "K": 4,
+        "HR": 0,
+        "IP": 5.2
+      },
+      {
+        "player": "caleb-reidman",
+        "name": "Caleb Reidman",
+        "IP_outs": 10,
+        "H": 5,
+        "R": 2,
+        "ER": 2,
+        "BB": 5,
+        "K": 2,
+        "HR": 2,
+        "IP": 3.1
+      }
+    ],
+    "home": [
+      {
+        "player": "zahir-kamara",
+        "name": "Zahir Kamara",
+        "IP_outs": 19,
+        "H": 7,
+        "R": 3,
+        "ER": 3,
+        "BB": 0,
+        "K": 6,
+        "HR": 0,
+        "IP": 6.1
+      },
+      {
+        "player": "renan-vidigal",
+        "name": "Renan Vidigal",
+        "IP_outs": 8,
+        "H": 4,
+        "R": 1,
+        "ER": 1,
+        "BB": 4,
+        "K": 2,
+        "HR": 3,
+        "IP": 2.2
+      }
+    ]
+  },
+  "decisions": {
+    "W": "zahir-kamara",
+    "L": "diego-alvarez-mora",
+    "SV": null
+  },
+  "notes": []
+}

@@ -11198,5 +11198,85 @@
     "awayScore": 3,
     "status": "final",
     "source": "data/games/2026-09-17/vancouver-current@san-pedro-cocolos.json"
+  },
+  {
+    "id": "2026-09-19_birmingham-vulcans@mayaguez-sultans",
+    "date": "2026-09-19",
+    "home": "mayaguez-sultans",
+    "away": "birmingham-vulcans",
+    "homeScore": 1,
+    "awayScore": 2,
+    "status": "final",
+    "source": "data/games/2026-09-19/birmingham-vulcans@mayaguez-sultans.json"
+  },
+  {
+    "id": "2026-09-19_louisville-naturals@durham-gold",
+    "date": "2026-09-19",
+    "home": "durham-gold",
+    "away": "louisville-naturals",
+    "homeScore": 3,
+    "awayScore": 4,
+    "status": "final",
+    "source": "data/games/2026-09-19/louisville-naturals@durham-gold.json"
+  },
+  {
+    "id": "2026-09-19_monterrey-cementeros@albuquerque-aeros",
+    "date": "2026-09-19",
+    "home": "albuquerque-aeros",
+    "away": "monterrey-cementeros",
+    "homeScore": 1,
+    "awayScore": 8,
+    "status": "final",
+    "source": "data/games/2026-09-19/monterrey-cementeros@albuquerque-aeros.json"
+  },
+  {
+    "id": "2026-09-19_osaka-spirits@fresno-yield",
+    "date": "2026-09-19",
+    "home": "fresno-yield",
+    "away": "osaka-spirits",
+    "homeScore": 2,
+    "awayScore": 4,
+    "status": "final",
+    "source": "data/games/2026-09-19/osaka-spirits@fresno-yield.json"
+  },
+  {
+    "id": "2026-09-19_st-paul-frost@san-pedro-cocolos",
+    "date": "2026-09-19",
+    "home": "san-pedro-cocolos",
+    "away": "st-paul-frost",
+    "homeScore": 3,
+    "awayScore": 2,
+    "status": "final",
+    "source": "data/games/2026-09-19/st-paul-frost@san-pedro-cocolos.json"
+  },
+  {
+    "id": "2026-09-19_taipei-neon@santiago-caballeros",
+    "date": "2026-09-19",
+    "home": "santiago-caballeros",
+    "away": "taipei-neon",
+    "homeScore": 4,
+    "awayScore": 3,
+    "status": "final",
+    "source": "data/games/2026-09-19/taipei-neon@santiago-caballeros.json"
+  },
+  {
+    "id": "2026-09-19_toledo-assembly@tijuana-tecnicos",
+    "date": "2026-09-19",
+    "home": "tijuana-tecnicos",
+    "away": "toledo-assembly",
+    "homeScore": 4,
+    "awayScore": 7,
+    "status": "final",
+    "source": "data/games/2026-09-19/toledo-assembly@tijuana-tecnicos.json"
+  },
+  {
+    "id": "2026-09-19_vancouver-current@spokane-alloys",
+    "date": "2026-09-19",
+    "home": "spokane-alloys",
+    "away": "vancouver-current",
+    "homeScore": 6,
+    "awayScore": 2,
+    "status": "final",
+    "source": "data/games/2026-09-19/vancouver-current@spokane-alloys.json"
   }
 ]

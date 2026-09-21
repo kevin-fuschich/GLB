@@ -50,9 +50,9 @@ function loadTeams() {
 function loadRoster(team) {
   const filePath = path.join(ROOT, team.roster_path);
   const roster = readJson(filePath);
-  const hitters = roster.players.filter(p => !['SP', 'RP'].includes(p.position));
+  const hitters = roster.players.filter(p => !['SP', 'RP', 'CL'].includes(p.position));
   const starters = roster.players.filter(p => p.position === 'SP');
-  const relievers = roster.players.filter(p => p.position === 'RP');
+  const relievers = roster.players.filter(p => ['RP', 'CL'].includes(p.position));
 
   if (hitters.length < 8 || starters.length < 1 || relievers.length < 1) {
     throw new Error(`${team.slug}: roster is not simulation-ready`);

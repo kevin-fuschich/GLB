@@ -11,7 +11,7 @@
     "name": "San Pedro Cocolos"
   },
   "status": "Final",
-  "attendance": 26413,
+  "attendance": 29161,
   "linescore": {
     "innings": [
       {
@@ -41,12 +41,12 @@
       },
       {
         "inning": 6,
-        "away": 0,
+        "away": 1,
         "home": 0
       },
       {
         "inning": 7,
-        "away": 1,
+        "away": 0,
         "home": 0
       },
       {
@@ -63,13 +63,13 @@
     "totals": {
       "away": {
         "R": 1,
-        "H": 7,
+        "H": 11,
         "E": 2
       },
       "home": {
         "R": 0,
-        "H": 10,
-        "E": 0
+        "H": 11,
+        "E": 2
       }
     }
   },
@@ -83,29 +83,29 @@
         "player": "tomer-barzilai",
         "name": "Tomer Barzilai",
         "position": "C",
-        "AB": 3,
-        "R": 0,
-        "H": 0,
+        "AB": 4,
+        "R": 1,
+        "H": 2,
         "2B": 0,
         "3B": 0,
-        "RBI": 0,
+        "RBI": 1,
         "BB": 0,
         "K": 1,
-        "HR": 0,
+        "HR": 1,
         "SB": 0
       },
       {
         "player": "enzo-carvajal",
         "name": "Enzo Carvajal",
         "position": "1B",
-        "AB": 5,
+        "AB": 4,
         "R": 0,
-        "H": 1,
+        "H": 2,
         "2B": 0,
-        "3B": 0,
+        "3B": 1,
         "RBI": 0,
-        "BB": 2,
-        "K": 0,
+        "BB": 1,
+        "K": 1,
         "HR": 0,
         "SB": 0
       },
@@ -120,9 +120,9 @@
         "3B": 0,
         "RBI": 0,
         "BB": 0,
-        "K": 0,
+        "K": 2,
         "HR": 0,
-        "SB": 0
+        "SB": 1
       },
       {
         "player": "jae-min-seok",
@@ -135,44 +135,14 @@
         "3B": 0,
         "RBI": 0,
         "BB": 0,
-        "K": 2,
+        "K": 0,
         "HR": 0,
-        "SB": 0
+        "SB": 1
       },
       {
         "player": "pavel-hrynko",
         "name": "Pavel Hrynko",
         "position": "3B",
-        "AB": 3,
-        "R": 0,
-        "H": 0,
-        "2B": 0,
-        "3B": 0,
-        "RBI": 0,
-        "BB": 0,
-        "K": 0,
-        "HR": 0,
-        "SB": 0
-      },
-      {
-        "player": "malik-doumbia",
-        "name": "Malik Doumbia",
-        "position": "LF",
-        "AB": 4,
-        "R": 0,
-        "H": 0,
-        "2B": 0,
-        "3B": 0,
-        "RBI": 0,
-        "BB": 0,
-        "K": 1,
-        "HR": 0,
-        "SB": 0
-      },
-      {
-        "player": "cesar-iglesiarias",
-        "name": "César Iglesiarias",
-        "position": "CF",
         "AB": 3,
         "R": 0,
         "H": 1,
@@ -185,18 +155,48 @@
         "SB": 0
       },
       {
+        "player": "malik-doumbia",
+        "name": "Malik Doumbia",
+        "position": "LF",
+        "AB": 5,
+        "R": 0,
+        "H": 2,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 2,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "cesar-iglesiarias",
+        "name": "César Iglesiarias",
+        "position": "CF",
+        "AB": 3,
+        "R": 0,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 1,
+        "HR": 0,
+        "SB": 0
+      },
+      {
         "player": "ari-kasprzyk",
         "name": "Ari Kasprzyk",
         "position": "RF",
         "AB": 3,
-        "R": 1,
-        "H": 2,
+        "R": 0,
+        "H": 1,
         "2B": 0,
         "3B": 0,
-        "RBI": 1,
-        "BB": 0,
-        "K": 1,
-        "HR": 1,
+        "RBI": 0,
+        "BB": 1,
+        "K": 0,
+        "HR": 0,
         "SB": 0
       }
     ],
@@ -222,52 +222,7 @@
         "position": "1B",
         "AB": 3,
         "R": 0,
-        "H": 2,
-        "2B": 0,
-        "3B": 0,
-        "RBI": 0,
-        "BB": 0,
-        "K": 0,
-        "HR": 0,
-        "SB": 0
-      },
-      {
-        "player": "omar-benyahia",
-        "name": "Omar Benyahia",
-        "position": "2B",
-        "AB": 5,
-        "R": 0,
-        "H": 1,
-        "2B": 0,
-        "3B": 0,
-        "RBI": 0,
-        "BB": 0,
-        "K": 2,
-        "HR": 0,
-        "SB": 0
-      },
-      {
-        "player": "ryo-kawabata",
-        "name": "Ryo Kawabata",
-        "position": "SS",
-        "AB": 3,
-        "R": 0,
         "H": 0,
-        "2B": 0,
-        "3B": 0,
-        "RBI": 0,
-        "BB": 0,
-        "K": 0,
-        "HR": 0,
-        "SB": 0
-      },
-      {
-        "player": "darius-kofi",
-        "name": "Darius Kofi",
-        "position": "3B",
-        "AB": 5,
-        "R": 0,
-        "H": 2,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
@@ -277,24 +232,54 @@
         "SB": 0
       },
       {
-        "player": "miguel-encarnacion",
-        "name": "Miguel Encarnación",
-        "position": "CF",
-        "AB": 3,
+        "player": "omar-benyahia",
+        "name": "Omar Benyahia",
+        "position": "2B",
+        "AB": 5,
+        "R": 0,
+        "H": 3,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 1,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "ryo-kawabata",
+        "name": "Ryo Kawabata",
+        "position": "SS",
+        "AB": 5,
         "R": 0,
         "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
-        "BB": 0,
-        "K": 0,
+        "BB": 1,
+        "K": 2,
         "HR": 0,
         "SB": 0
       },
       {
-        "player": "victor-sundqvist",
-        "name": "Victor Sundqvist",
-        "position": "LF",
+        "player": "darius-kofi",
+        "name": "Darius Kofi",
+        "position": "3B",
+        "AB": 5,
+        "R": 0,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 1,
+        "K": 2,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "miguel-encarnacion",
+        "name": "Miguel Encarnación",
+        "position": "CF",
         "AB": 5,
         "R": 0,
         "H": 1,
@@ -304,7 +289,22 @@
         "BB": 0,
         "K": 2,
         "HR": 0,
-        "SB": 1
+        "SB": 0
+      },
+      {
+        "player": "victor-sundqvist",
+        "name": "Victor Sundqvist",
+        "position": "LF",
+        "AB": 3,
+        "R": 0,
+        "H": 2,
+        "2B": 1,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
       },
       {
         "player": "naveen-iyer",
@@ -312,12 +312,12 @@
         "position": "RF",
         "AB": 4,
         "R": 0,
-        "H": 1,
+        "H": 2,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
-        "BB": 0,
-        "K": 1,
+        "BB": 1,
+        "K": 0,
         "HR": 0,
         "SB": 0
       }
@@ -328,52 +328,52 @@
       {
         "player": "adewale-bamidele",
         "name": "Adewale Bamidele",
-        "IP_outs": 18,
-        "H": 4,
+        "IP_outs": 20,
+        "H": 1,
         "R": 0,
         "ER": 0,
-        "BB": 1,
-        "K": 4,
+        "BB": 4,
+        "K": 6,
         "HR": 0,
-        "IP": 6
+        "IP": 6.2
       },
       {
         "player": "tomasz-wierzbicki",
         "name": "Tomasz Wierzbicki",
-        "IP_outs": 9,
-        "H": 6,
+        "IP_outs": 7,
+        "H": 10,
         "R": 0,
         "ER": 0,
         "BB": 0,
         "K": 2,
         "HR": 0,
-        "IP": 3
+        "IP": 2.1
       }
     ],
     "home": [
       {
         "player": "kenji-morishita",
         "name": "Kenji Morishita",
-        "IP_outs": 19,
-        "H": 4,
+        "IP_outs": 15,
+        "H": 9,
         "R": 0,
         "ER": 0,
-        "BB": 0,
+        "BB": 3,
         "K": 5,
         "HR": 0,
-        "IP": 6.1
+        "IP": 5
       },
       {
         "player": "isaac-rendell",
         "name": "Isaac Rendell",
-        "IP_outs": 8,
-        "H": 3,
+        "IP_outs": 12,
+        "H": 2,
         "R": 1,
         "ER": 1,
-        "BB": 2,
+        "BB": 1,
         "K": 2,
         "HR": 1,
-        "IP": 2.2
+        "IP": 4
       }
     ]
   },
@@ -382,6 +382,5 @@
     "L": "kenji-morishita",
     "SV": "tomasz-wierzbicki"
   },
-  "notes": [],
-  "calibration": "glb.stats-calibrated.v1"
+  "notes": []
 }

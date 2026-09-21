@@ -11,7 +11,7 @@
     "name": "Osaka Spirits"
   },
   "status": "Final",
-  "attendance": 24799,
+  "attendance": 25514,
   "linescore": {
     "innings": [
       {
@@ -21,18 +21,18 @@
       },
       {
         "inning": 2,
-        "away": 0,
+        "away": 2,
         "home": 0
       },
       {
         "inning": 3,
-        "away": 0,
-        "home": 1
+        "away": 1,
+        "home": 0
       },
       {
         "inning": 4,
         "away": 0,
-        "home": 1
+        "home": 0
       },
       {
         "inning": 5,
@@ -41,13 +41,13 @@
       },
       {
         "inning": 6,
-        "away": 2,
-        "home": 0
+        "away": 1,
+        "home": 1
       },
       {
         "inning": 7,
-        "away": 3,
-        "home": 0
+        "away": 1,
+        "home": 2
       },
       {
         "inning": 8,
@@ -57,14 +57,14 @@
       {
         "inning": 9,
         "away": 0,
-        "home": 1
+        "home": 0
       }
     ],
     "totals": {
       "away": {
         "R": 5,
-        "H": 9,
-        "E": 2
+        "H": 10,
+        "E": 1
       },
       "home": {
         "R": 3,
@@ -83,6 +83,21 @@
         "player": "ethan-bowen",
         "name": "Ethan Bowen",
         "position": "C",
+        "AB": 5,
+        "R": 2,
+        "H": 2,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 2,
+        "BB": 0,
+        "K": 0,
+        "HR": 2,
+        "SB": 0
+      },
+      {
+        "player": "marcelo-ibarra",
+        "name": "Marcelo Ibarra",
+        "position": "1B",
         "AB": 3,
         "R": 1,
         "H": 1,
@@ -90,23 +105,8 @@
         "3B": 0,
         "RBI": 1,
         "BB": 0,
-        "K": 0,
+        "K": 2,
         "HR": 1,
-        "SB": 0
-      },
-      {
-        "player": "marcelo-ibarra",
-        "name": "Marcelo Ibarra",
-        "position": "1B",
-        "AB": 4,
-        "R": 0,
-        "H": 2,
-        "2B": 0,
-        "3B": 0,
-        "RBI": 0,
-        "BB": 0,
-        "K": 0,
-        "HR": 0,
         "SB": 0
       },
       {
@@ -114,13 +114,13 @@
         "name": "Joshua Kent",
         "position": "2B",
         "AB": 3,
-        "R": 1,
-        "H": 0,
+        "R": 0,
+        "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
-        "BB": 0,
-        "K": 1,
+        "BB": 1,
+        "K": 0,
         "HR": 0,
         "SB": 0
       },
@@ -128,29 +128,29 @@
         "player": "omar-salcedo",
         "name": "Omar Salcedo",
         "position": "SS",
-        "AB": 3,
-        "R": 1,
-        "H": 2,
+        "AB": 4,
+        "R": 0,
+        "H": 1,
         "2B": 0,
         "3B": 0,
-        "RBI": 1,
-        "BB": 1,
-        "K": 0,
+        "RBI": 0,
+        "BB": 2,
+        "K": 2,
         "HR": 0,
-        "SB": 0
+        "SB": 1
       },
       {
         "player": "tyrell-winston",
         "name": "Tyrell Winston",
         "position": "3B",
-        "AB": 3,
-        "R": 1,
-        "H": 0,
-        "2B": 0,
+        "AB": 4,
+        "R": 0,
+        "H": 3,
+        "2B": 1,
         "3B": 0,
-        "RBI": 1,
+        "RBI": 0,
         "BB": 1,
-        "K": 2,
+        "K": 0,
         "HR": 0,
         "SB": 0
       },
@@ -158,10 +158,10 @@
         "player": "aaron-fletcher",
         "name": "Aaron Fletcher",
         "position": "CF",
-        "AB": 5,
-        "R": 0,
-        "H": 1,
-        "2B": 1,
+        "AB": 3,
+        "R": 1,
+        "H": 0,
+        "2B": 0,
         "3B": 0,
         "RBI": 0,
         "BB": 0,
@@ -173,10 +173,10 @@
         "player": "mateo-rios",
         "name": "Mateo Ríos",
         "position": "LF",
-        "AB": 5,
+        "AB": 3,
         "R": 0,
-        "H": 0,
-        "2B": 0,
+        "H": 1,
+        "2B": 1,
         "3B": 0,
         "RBI": 1,
         "BB": 0,
@@ -190,13 +190,13 @@
         "position": "RF",
         "AB": 4,
         "R": 1,
-        "H": 3,
+        "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 1,
-        "BB": 0,
-        "K": 0,
-        "HR": 0,
+        "BB": 1,
+        "K": 1,
+        "HR": 1,
         "SB": 0
       }
     ],
@@ -205,14 +205,14 @@
         "player": "marcelino-quispe",
         "name": "Marcelino Quispe",
         "position": "C",
-        "AB": 3,
+        "AB": 5,
         "R": 0,
-        "H": 0,
+        "H": 1,
         "2B": 0,
         "3B": 0,
-        "RBI": 0,
-        "BB": 1,
-        "K": 2,
+        "RBI": 1,
+        "BB": 0,
+        "K": 1,
         "HR": 0,
         "SB": 0
       },
@@ -220,7 +220,7 @@
         "player": "thabo-mkhize",
         "name": "Thabo Mkhize",
         "position": "1B",
-        "AB": 4,
+        "AB": 3,
         "R": 0,
         "H": 0,
         "2B": 0,
@@ -235,29 +235,29 @@
         "player": "arman-daryan",
         "name": "Arman Daryan",
         "position": "2B",
-        "AB": 3,
-        "R": 0,
+        "AB": 4,
+        "R": 1,
         "H": 2,
-        "2B": 0,
+        "2B": 1,
         "3B": 0,
-        "RBI": 0,
-        "BB": 2,
+        "RBI": 1,
+        "BB": 0,
         "K": 0,
-        "HR": 0,
+        "HR": 1,
         "SB": 0
       },
       {
         "player": "kenjiro-suganuma",
         "name": "Kenjiro Suganuma",
         "position": "SS",
-        "AB": 3,
-        "R": 0,
-        "H": 1,
+        "AB": 4,
+        "R": 1,
+        "H": 0,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
-        "BB": 1,
-        "K": 0,
+        "BB": 0,
+        "K": 1,
         "HR": 0,
         "SB": 0
       },
@@ -265,29 +265,29 @@
         "player": "dariusz-kwiatkowski",
         "name": "Dariusz Kwiatkowski",
         "position": "3B",
-        "AB": 5,
-        "R": 1,
+        "AB": 4,
+        "R": 0,
         "H": 2,
         "2B": 0,
         "3B": 0,
-        "RBI": 2,
-        "BB": 0,
-        "K": 0,
-        "HR": 1,
+        "RBI": 0,
+        "BB": 1,
+        "K": 1,
+        "HR": 0,
         "SB": 0
       },
       {
         "player": "nikhil-bhandari",
         "name": "Nikhil Bhandari",
         "position": "CF",
-        "AB": 4,
-        "R": 1,
+        "AB": 5,
+        "R": 0,
         "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
         "BB": 0,
-        "K": 3,
+        "K": 2,
         "HR": 0,
         "SB": 0
       },
@@ -304,20 +304,20 @@
         "BB": 0,
         "K": 0,
         "HR": 1,
-        "SB": 1
+        "SB": 0
       },
       {
         "player": "yusef-el-badri",
         "name": "Yusef El-Badri",
         "position": "RF",
-        "AB": 3,
+        "AB": 5,
         "R": 0,
         "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
-        "BB": 1,
-        "K": 1,
+        "BB": 0,
+        "K": 0,
         "HR": 0,
         "SB": 0
       }
@@ -328,52 +328,52 @@
       {
         "player": "isaac-friedel",
         "name": "Isaac Friedel",
-        "IP_outs": 19,
+        "IP_outs": 16,
         "H": 3,
-        "R": 0,
-        "ER": 0,
-        "BB": 0,
-        "K": 5,
-        "HR": 2,
-        "IP": 6.1
+        "R": 3,
+        "ER": 3,
+        "BB": 1,
+        "K": 4,
+        "HR": 0,
+        "IP": 5.1
       },
       {
         "player": "noah-pryce",
         "name": "Noah Pryce",
-        "IP_outs": 8,
+        "IP_outs": 11,
         "H": 6,
-        "R": 3,
-        "ER": 3,
-        "BB": 5,
+        "R": 0,
+        "ER": 0,
+        "BB": 0,
         "K": 2,
-        "HR": 0,
-        "IP": 2.2
+        "HR": 2,
+        "IP": 3.2
       }
     ],
     "home": [
       {
         "player": "luka-kovacevic",
         "name": "Luka Kovačević",
-        "IP_outs": 17,
-        "H": 2,
-        "R": 0,
-        "ER": 0,
-        "BB": 0,
-        "K": 4,
-        "HR": 0,
-        "IP": 5.2
+        "IP_outs": 15,
+        "H": 1,
+        "R": 2,
+        "ER": 2,
+        "BB": 4,
+        "K": 5,
+        "HR": 2,
+        "IP": 5
       },
       {
         "player": "mateo-zubillaga",
         "name": "Mateo Zubillaga",
-        "IP_outs": 10,
-        "H": 7,
-        "R": 5,
-        "ER": 5,
-        "BB": 2,
-        "K": 1,
-        "HR": 1,
-        "IP": 3.1
+        "IP_outs": 12,
+        "H": 9,
+        "R": 3,
+        "ER": 3,
+        "BB": 1,
+        "K": 2,
+        "HR": 2,
+        "IP": 4
       }
     ]
   },
@@ -382,6 +382,5 @@
     "L": "luka-kovacevic",
     "SV": "noah-pryce"
   },
-  "notes": [],
-  "calibration": "glb.stats-calibrated.v1"
+  "notes": []
 }

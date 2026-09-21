@@ -1,0 +1,401 @@
+{
+  "schema": "glb.boxscore.v1",
+  "game_id": "2026-09-10_santiago-caballeros@vancouver-current",
+  "date": "2026-09-10",
+  "away": {
+    "slug": "santiago-caballeros",
+    "name": "Santiago Caballeros"
+  },
+  "home": {
+    "slug": "vancouver-current",
+    "name": "Vancouver Current"
+  },
+  "status": "Final",
+  "attendance": 32086,
+  "linescore": {
+    "innings": [
+      {
+        "inning": 1,
+        "away": 0,
+        "home": 1
+      },
+      {
+        "inning": 2,
+        "away": 0,
+        "home": 0
+      },
+      {
+        "inning": 3,
+        "away": 1,
+        "home": 1
+      },
+      {
+        "inning": 4,
+        "away": 0,
+        "home": 0
+      },
+      {
+        "inning": 5,
+        "away": 0,
+        "home": 1
+      },
+      {
+        "inning": 6,
+        "away": 0,
+        "home": 0
+      },
+      {
+        "inning": 7,
+        "away": 0,
+        "home": 0
+      },
+      {
+        "inning": 8,
+        "away": 1,
+        "home": 1
+      },
+      {
+        "inning": 9,
+        "away": 1,
+        "home": 0
+      }
+    ],
+    "totals": {
+      "away": {
+        "R": 3,
+        "H": 9,
+        "E": 0
+      },
+      "home": {
+        "R": 4,
+        "H": 9,
+        "E": 2
+      }
+    }
+  },
+  "final": {
+    "away": 3,
+    "home": 4
+  },
+  "batting": {
+    "away": [
+      {
+        "player": "damian-velasquez",
+        "name": "Damián Velásquez",
+        "position": "C",
+        "AB": 4,
+        "R": 0,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "noam-finkel",
+        "name": "Noam Finkel",
+        "position": "1B",
+        "AB": 4,
+        "R": 1,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 1,
+        "K": 0,
+        "HR": 1,
+        "SB": 1
+      },
+      {
+        "player": "raul-castillo",
+        "name": "Raúl Castillo",
+        "position": "2B",
+        "AB": 3,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 1,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "maksim-berezan",
+        "name": "Maksim Berezan",
+        "position": "SS",
+        "AB": 5,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 2,
+        "HR": 0,
+        "SB": 1
+      },
+      {
+        "player": "eamon-quillan",
+        "name": "Eamon Quillan",
+        "position": "3B",
+        "AB": 4,
+        "R": 0,
+        "H": 2,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 2,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "kiyoshi-senda",
+        "name": "Kiyoshi Senda",
+        "position": "LF",
+        "AB": 5,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 2,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "dalton-reyes",
+        "name": "Dalton Reyes",
+        "position": "CF",
+        "AB": 4,
+        "R": 1,
+        "H": 2,
+        "2B": 1,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 0,
+        "K": 0,
+        "HR": 1,
+        "SB": 0
+      },
+      {
+        "player": "adebayo-oluwaseyi",
+        "name": "Adebayo Oluwaseyi",
+        "position": "RF",
+        "AB": 5,
+        "R": 1,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 1,
+        "K": 2,
+        "HR": 1,
+        "SB": 0
+      }
+    ],
+    "home": [
+      {
+        "player": "ryan-mcallister",
+        "name": "Ryan McAllister",
+        "position": "C",
+        "AB": 5,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 2,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "julio-paredes",
+        "name": "Julio Paredes",
+        "position": "1B",
+        "AB": 5,
+        "R": 0,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 0,
+        "K": 3,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "jae-hyun-lee",
+        "name": "Jae-hyun Lee",
+        "position": "2B",
+        "AB": 4,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 3,
+        "HR": 0,
+        "SB": 1
+      },
+      {
+        "player": "tomas-guerrero",
+        "name": "Tomás Guerrero",
+        "position": "3B",
+        "AB": 4,
+        "R": 2,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "nicolas-rojas",
+        "name": "Nicolás Rojas",
+        "position": "SS",
+        "AB": 5,
+        "R": 1,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 1,
+        "K": 1,
+        "HR": 1,
+        "SB": 0
+      },
+      {
+        "player": "connor-walsh",
+        "name": "Connor Walsh",
+        "position": "LF",
+        "AB": 4,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 0,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "miguel-soto",
+        "name": "Miguel Soto",
+        "position": "CF",
+        "AB": 3,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 0,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "kazuya-nishimura",
+        "name": "Kazuya Nishimura",
+        "position": "RF",
+        "AB": 4,
+        "R": 0,
+        "H": 2,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 1,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "evan-brooks",
+        "name": "Evan Brooks",
+        "position": "DH",
+        "AB": 3,
+        "R": 1,
+        "H": 1,
+        "2B": 1,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 1,
+        "HR": 0,
+        "SB": 1
+      }
+    ]
+  },
+  "pitching": {
+    "away": [
+      {
+        "player": "kenji-hoshino",
+        "name": "Kenji Hoshino",
+        "IP_outs": 17,
+        "H": 3,
+        "R": 2,
+        "ER": 2,
+        "BB": 0,
+        "K": 7,
+        "HR": 0,
+        "IP": 5.2
+      },
+      {
+        "player": "tyrese-warnock",
+        "name": "Tyrese Warnock",
+        "IP_outs": 10,
+        "H": 6,
+        "R": 2,
+        "ER": 2,
+        "BB": 2,
+        "K": 3,
+        "HR": 1,
+        "IP": 3.1
+      }
+    ],
+    "home": [
+      {
+        "player": "trevor-caldwell",
+        "name": "Trevor Caldwell",
+        "IP_outs": 17,
+        "H": 2,
+        "R": 1,
+        "ER": 1,
+        "BB": 1,
+        "K": 6,
+        "HR": 2,
+        "IP": 5.2
+      },
+      {
+        "player": "carlos-medina",
+        "name": "Carlos Medina",
+        "IP_outs": 10,
+        "H": 7,
+        "R": 2,
+        "ER": 2,
+        "BB": 4,
+        "K": 0,
+        "HR": 1,
+        "IP": 3.1
+      }
+    ]
+  },
+  "decisions": {
+    "W": "trevor-caldwell",
+    "L": "kenji-hoshino",
+    "SV": "carlos-medina"
+  },
+  "notes": []
+}

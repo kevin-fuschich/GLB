@@ -11,13 +11,13 @@
     "name": "Osaka Spirits"
   },
   "status": "Final",
-  "attendance": 23324,
+  "attendance": 14560,
   "linescore": {
     "innings": [
       {
         "inning": 1,
-        "away": 0,
-        "home": 0
+        "away": 1,
+        "home": 1
       },
       {
         "inning": 2,
@@ -31,8 +31,8 @@
       },
       {
         "inning": 4,
-        "away": 0,
-        "home": 2
+        "away": 1,
+        "home": 1
       },
       {
         "inning": 5,
@@ -42,34 +42,34 @@
       {
         "inning": 6,
         "away": 0,
-        "home": 2
-      },
-      {
-        "inning": 7,
-        "away": 2,
-        "home": 0
-      },
-      {
-        "inning": 8,
-        "away": 1,
         "home": 1
       },
       {
-        "inning": 9,
+        "inning": 7,
+        "away": 0,
+        "home": 1
+      },
+      {
+        "inning": 8,
         "away": 0,
         "home": 0
+      },
+      {
+        "inning": 9,
+        "away": 1,
+        "home": 1
       }
     ],
     "totals": {
       "away": {
         "R": 5,
-        "H": 8,
-        "E": 0
+        "H": 11,
+        "E": 1
       },
       "home": {
         "R": 6,
-        "H": 9,
-        "E": 2
+        "H": 12,
+        "E": 1
       }
     }
   },
@@ -83,57 +83,57 @@
         "player": "sergio-hinojosa",
         "name": "Sergio Hinojosa",
         "position": "C",
-        "AB": 3,
-        "R": 0,
-        "H": 0,
+        "AB": 4,
+        "R": 1,
+        "H": 1,
         "2B": 0,
         "3B": 0,
-        "RBI": 2,
-        "BB": 0,
-        "K": 1,
-        "HR": 0,
+        "RBI": 1,
+        "BB": 1,
+        "K": 3,
+        "HR": 1,
         "SB": 0
       },
       {
         "player": "bruno-valdes",
         "name": "Bruno Valdés",
         "position": "1B",
-        "AB": 5,
-        "R": 1,
-        "H": 2,
-        "2B": 0,
-        "3B": 0,
-        "RBI": 1,
-        "BB": 0,
-        "K": 2,
-        "HR": 1,
-        "SB": 0
-      },
-      {
-        "player": "matias-camarena",
-        "name": "Matías Camarena",
-        "position": "2B",
-        "AB": 3,
-        "R": 0,
-        "H": 0,
-        "2B": 0,
-        "3B": 0,
-        "RBI": 0,
-        "BB": 0,
-        "K": 0,
-        "HR": 0,
-        "SB": 1
-      },
-      {
-        "player": "nicolas-paredes",
-        "name": "Nicolás Paredes",
-        "position": "SS",
         "AB": 3,
         "R": 0,
         "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
+        "BB": 0,
+        "K": 1,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "matias-camarena",
+        "name": "Matías Camarena",
+        "position": "2B",
+        "AB": 4,
+        "R": 1,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 0,
+        "K": 1,
+        "HR": 1,
+        "SB": 0
+      },
+      {
+        "player": "nicolas-paredes",
+        "name": "Nicolás Paredes",
+        "position": "SS",
+        "AB": 4,
+        "R": 1,
+        "H": 3,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 1,
         "BB": 0,
         "K": 1,
         "HR": 0,
@@ -143,29 +143,29 @@
         "player": "adrian-fierro",
         "name": "Adrián Fierro",
         "position": "3B",
-        "AB": 5,
-        "R": 1,
+        "AB": 3,
+        "R": 0,
         "H": 0,
         "2B": 0,
         "3B": 0,
-        "RBI": 1,
-        "BB": 1,
-        "K": 1,
+        "RBI": 0,
+        "BB": 0,
+        "K": 3,
         "HR": 0,
-        "SB": 0
+        "SB": 1
       },
       {
         "player": "emilio-barron",
         "name": "Emilio Barrón",
         "position": "LF",
-        "AB": 3,
-        "R": 1,
-        "H": 1,
-        "2B": 0,
+        "AB": 5,
+        "R": 0,
+        "H": 2,
+        "2B": 1,
         "3B": 0,
-        "RBI": 1,
-        "BB": 0,
-        "K": 1,
+        "RBI": 0,
+        "BB": 1,
+        "K": 0,
         "HR": 0,
         "SB": 0
       },
@@ -173,7 +173,7 @@
         "player": "gael-marrufo",
         "name": "Gael Marrufo",
         "position": "CF",
-        "AB": 3,
+        "AB": 4,
         "R": 0,
         "H": 2,
         "2B": 0,
@@ -188,15 +188,15 @@
         "player": "cristobal-saucedo",
         "name": "Cristóbal Saucedo",
         "position": "RF",
-        "AB": 5,
-        "R": 1,
+        "AB": 3,
+        "R": 2,
         "H": 1,
         "2B": 0,
         "3B": 0,
-        "RBI": 0,
+        "RBI": 2,
         "BB": 0,
         "K": 1,
-        "HR": 0,
+        "HR": 1,
         "SB": 0
       },
       {
@@ -204,13 +204,13 @@
         "name": "Héctor Belmonte",
         "position": "DH",
         "AB": 3,
-        "R": 1,
-        "H": 1,
+        "R": 0,
+        "H": 0,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
         "BB": 0,
-        "K": 0,
+        "K": 1,
         "HR": 0,
         "SB": 0
       }
@@ -220,14 +220,14 @@
         "player": "marcelino-quispe",
         "name": "Marcelino Quispe",
         "position": "C",
-        "AB": 5,
+        "AB": 4,
         "R": 1,
-        "H": 2,
+        "H": 0,
         "2B": 0,
         "3B": 0,
-        "RBI": 1,
+        "RBI": 0,
         "BB": 1,
-        "K": 0,
+        "K": 3,
         "HR": 0,
         "SB": 0
       },
@@ -235,14 +235,14 @@
         "player": "thabo-mkhize",
         "name": "Thabo Mkhize",
         "position": "1B",
-        "AB": 3,
+        "AB": 5,
         "R": 0,
-        "H": 0,
+        "H": 2,
         "2B": 0,
         "3B": 0,
-        "RBI": 1,
-        "BB": 0,
-        "K": 0,
+        "RBI": 2,
+        "BB": 1,
+        "K": 2,
         "HR": 0,
         "SB": 0
       },
@@ -250,53 +250,23 @@
         "player": "arman-daryan",
         "name": "Arman Daryan",
         "position": "2B",
-        "AB": 4,
-        "R": 1,
-        "H": 2,
+        "AB": 3,
+        "R": 0,
+        "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 1,
-        "BB": 0,
+        "BB": 1,
         "K": 1,
-        "HR": 1,
-        "SB": 1
+        "HR": 0,
+        "SB": 0
       },
       {
         "player": "kenjiro-suganuma",
         "name": "Kenjiro Suganuma",
         "position": "SS",
         "AB": 5,
-        "R": 1,
-        "H": 2,
-        "2B": 0,
-        "3B": 0,
-        "RBI": 1,
-        "BB": 1,
-        "K": 2,
-        "HR": 0,
-        "SB": 0
-      },
-      {
-        "player": "dariusz-kwiatkowski",
-        "name": "Dariusz Kwiatkowski",
-        "position": "3B",
-        "AB": 3,
-        "R": 0,
-        "H": 0,
-        "2B": 0,
-        "3B": 0,
-        "RBI": 0,
-        "BB": 0,
-        "K": 0,
-        "HR": 0,
-        "SB": 0
-      },
-      {
-        "player": "nikhil-bhandari",
-        "name": "Nikhil Bhandari",
-        "position": "CF",
-        "AB": 3,
-        "R": 0,
+        "R": 3,
         "H": 2,
         "2B": 1,
         "3B": 0,
@@ -307,16 +277,46 @@
         "SB": 0
       },
       {
-        "player": "thiago-ramires",
-        "name": "Thiago Ramires",
-        "position": "LF",
-        "AB": 4,
-        "R": 0,
+        "player": "dariusz-kwiatkowski",
+        "name": "Dariusz Kwiatkowski",
+        "position": "3B",
+        "AB": 3,
+        "R": 1,
         "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
-        "BB": 1,
+        "BB": 0,
+        "K": 0,
+        "HR": 0,
+        "SB": 1
+      },
+      {
+        "player": "nikhil-bhandari",
+        "name": "Nikhil Bhandari",
+        "position": "CF",
+        "AB": 5,
+        "R": 1,
+        "H": 2,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 2,
+        "BB": 0,
+        "K": 3,
+        "HR": 1,
+        "SB": 0
+      },
+      {
+        "player": "thiago-ramires",
+        "name": "Thiago Ramires",
+        "position": "LF",
+        "AB": 5,
+        "R": 0,
+        "H": 2,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
         "K": 1,
         "HR": 0,
         "SB": 0
@@ -325,16 +325,16 @@
         "player": "yusef-el-badri",
         "name": "Yusef El-Badri",
         "position": "RF",
-        "AB": 3,
-        "R": 3,
-        "H": 0,
-        "2B": 0,
+        "AB": 5,
+        "R": 0,
+        "H": 2,
+        "2B": 1,
         "3B": 0,
-        "RBI": 1,
+        "RBI": 0,
         "BB": 1,
         "K": 1,
         "HR": 0,
-        "SB": 0
+        "SB": 1
       }
     ]
   },
@@ -343,52 +343,52 @@
       {
         "player": "tomas-zepeda",
         "name": "Tomás Zepeda",
-        "IP_outs": 18,
-        "H": 5,
-        "R": 3,
-        "ER": 3,
-        "BB": 0,
-        "K": 4,
+        "IP_outs": 21,
+        "H": 2,
+        "R": 4,
+        "ER": 4,
+        "BB": 2,
+        "K": 8,
         "HR": 1,
-        "IP": 6
+        "IP": 7
       },
       {
         "player": "ivan-lizarraga",
         "name": "Iván Lizárraga",
-        "IP_outs": 9,
-        "H": 4,
-        "R": 3,
-        "ER": 3,
-        "BB": 5,
-        "K": 1,
+        "IP_outs": 6,
+        "H": 10,
+        "R": 2,
+        "ER": 2,
+        "BB": 3,
+        "K": 3,
         "HR": 0,
-        "IP": 3
+        "IP": 2
       }
     ],
     "home": [
       {
         "player": "rowan-cahir",
         "name": "Rowan Cahir",
-        "IP_outs": 16,
+        "IP_outs": 19,
         "H": 6,
-        "R": 1,
-        "ER": 1,
-        "BB": 0,
-        "K": 5,
-        "HR": 1,
-        "IP": 5.1
+        "R": 2,
+        "ER": 2,
+        "BB": 1,
+        "K": 8,
+        "HR": 2,
+        "IP": 6.1
       },
       {
         "player": "mateo-zubillaga",
         "name": "Mateo Zubillaga",
-        "IP_outs": 11,
-        "H": 2,
-        "R": 4,
-        "ER": 4,
+        "IP_outs": 8,
+        "H": 5,
+        "R": 3,
+        "ER": 3,
         "BB": 1,
-        "K": 2,
-        "HR": 0,
-        "IP": 3.2
+        "K": 3,
+        "HR": 1,
+        "IP": 2.2
       }
     ]
   },
@@ -397,6 +397,5 @@
     "L": "tomas-zepeda",
     "SV": "mateo-zubillaga"
   },
-  "notes": [],
-  "calibration": "glb.stats-calibrated.v1"
+  "notes": []
 }

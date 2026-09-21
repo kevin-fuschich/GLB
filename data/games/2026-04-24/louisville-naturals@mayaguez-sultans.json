@@ -11,7 +11,7 @@
     "name": "Mayagüez Sultans"
   },
   "status": "Final",
-  "attendance": 32888,
+  "attendance": 16047,
   "linescore": {
     "innings": [
       {
@@ -27,7 +27,7 @@
       {
         "inning": 3,
         "away": 0,
-        "home": 1
+        "home": 0
       },
       {
         "inning": 4,
@@ -37,16 +37,16 @@
       {
         "inning": 5,
         "away": 0,
-        "home": 0
+        "home": 1
       },
       {
         "inning": 6,
-        "away": 1,
-        "home": 0
+        "away": 0,
+        "home": 2
       },
       {
         "inning": 7,
-        "away": 1,
+        "away": 0,
         "home": 0
       },
       {
@@ -56,20 +56,20 @@
       },
       {
         "inning": 9,
-        "away": 0,
-        "home": 2
+        "away": 2,
+        "home": 0
       }
     ],
     "totals": {
       "away": {
         "R": 3,
-        "H": 5,
-        "E": 0
+        "H": 9,
+        "E": 1
       },
       "home": {
         "R": 5,
-        "H": 5,
-        "E": 1
+        "H": 9,
+        "E": 2
       }
     }
   },
@@ -83,24 +83,9 @@
         "player": "noah-bianchi",
         "name": "Noah Bianchi",
         "position": "C",
-        "AB": 4,
-        "R": 0,
-        "H": 1,
-        "2B": 0,
-        "3B": 0,
-        "RBI": 0,
-        "BB": 0,
-        "K": 1,
-        "HR": 0,
-        "SB": 0
-      },
-      {
-        "player": "mateo-fernandez",
-        "name": "Mateo Fernández",
-        "position": "1B",
         "AB": 3,
-        "R": 0,
-        "H": 0,
+        "R": 1,
+        "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
@@ -110,57 +95,72 @@
         "SB": 0
       },
       {
-        "player": "jalen-brooks",
-        "name": "Jalen Brooks",
-        "position": "2B",
-        "AB": 4,
-        "R": 1,
-        "H": 0,
+        "player": "mateo-fernandez",
+        "name": "Mateo Fernández",
+        "position": "1B",
+        "AB": 5,
+        "R": 0,
+        "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
-        "BB": 2,
+        "BB": 0,
         "K": 0,
         "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "jalen-brooks",
+        "name": "Jalen Brooks",
+        "position": "2B",
+        "AB": 3,
+        "R": 1,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 2,
+        "BB": 0,
+        "K": 1,
+        "HR": 1,
         "SB": 0
       },
       {
         "player": "rafael-costa",
         "name": "Rafael Costa",
         "position": "SS",
-        "AB": 4,
-        "R": 1,
-        "H": 1,
-        "2B": 0,
+        "AB": 3,
+        "R": 0,
+        "H": 2,
+        "2B": 1,
         "3B": 0,
-        "RBI": 1,
-        "BB": 0,
-        "K": 0,
-        "HR": 1,
-        "SB": 0
+        "RBI": 0,
+        "BB": 1,
+        "K": 1,
+        "HR": 0,
+        "SB": 1
       },
       {
         "player": "dominic-russo",
         "name": "Dominic Russo",
         "position": "3B",
-        "AB": 4,
+        "AB": 3,
         "R": 0,
         "H": 0,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
-        "BB": 2,
+        "BB": 1,
         "K": 0,
         "HR": 0,
-        "SB": 1
+        "SB": 0
       },
       {
         "player": "andre-wallace",
         "name": "Andre Wallace",
         "position": "CF",
-        "AB": 3,
+        "AB": 5,
         "R": 0,
-        "H": 1,
+        "H": 2,
         "2B": 0,
         "3B": 0,
         "RBI": 1,
@@ -175,12 +175,12 @@
         "position": "LF",
         "AB": 4,
         "R": 1,
-        "H": 0,
+        "H": 2,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
         "BB": 0,
-        "K": 1,
+        "K": 0,
         "HR": 0,
         "SB": 0
       },
@@ -188,13 +188,13 @@
         "player": "blake-harrison",
         "name": "Blake Harrison",
         "position": "RF",
-        "AB": 5,
+        "AB": 4,
         "R": 0,
-        "H": 2,
+        "H": 0,
         "2B": 0,
         "3B": 0,
-        "RBI": 1,
-        "BB": 0,
+        "RBI": 0,
+        "BB": 1,
         "K": 0,
         "HR": 0,
         "SB": 0
@@ -207,12 +207,12 @@
         "position": "C",
         "AB": 3,
         "R": 2,
-        "H": 1,
+        "H": 2,
         "2B": 0,
         "3B": 0,
-        "RBI": 1,
+        "RBI": 0,
         "BB": 0,
-        "K": 0,
+        "K": 1,
         "HR": 0,
         "SB": 0
       },
@@ -224,25 +224,25 @@
         "R": 1,
         "H": 1,
         "2B": 0,
-        "3B": 1,
-        "RBI": 0,
+        "3B": 0,
+        "RBI": 1,
         "BB": 0,
-        "K": 0,
-        "HR": 0,
+        "K": 2,
+        "HR": 1,
         "SB": 0
       },
       {
         "player": "nils-adebayo",
         "name": "Nils Adebayo",
         "position": "2B",
-        "AB": 4,
-        "R": 1,
+        "AB": 3,
+        "R": 0,
         "H": 1,
         "2B": 0,
         "3B": 0,
-        "RBI": 2,
-        "BB": 0,
-        "K": 0,
+        "RBI": 0,
+        "BB": 2,
+        "K": 2,
         "HR": 0,
         "SB": 0
       },
@@ -252,37 +252,7 @@
         "position": "SS",
         "AB": 5,
         "R": 0,
-        "H": 0,
-        "2B": 0,
-        "3B": 0,
-        "RBI": 1,
-        "BB": 0,
-        "K": 0,
-        "HR": 0,
-        "SB": 0
-      },
-      {
-        "player": "pavel-hrynko",
-        "name": "Pavel Hrynko",
-        "position": "3B",
-        "AB": 5,
-        "R": 0,
-        "H": 0,
-        "2B": 0,
-        "3B": 0,
-        "RBI": 0,
-        "BB": 2,
-        "K": 1,
-        "HR": 0,
-        "SB": 0
-      },
-      {
-        "player": "malik-doumbia",
-        "name": "Malik Doumbia",
-        "position": "LF",
-        "AB": 3,
-        "R": 0,
-        "H": 0,
+        "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 1,
@@ -292,15 +262,45 @@
         "SB": 0
       },
       {
-        "player": "cesar-iglesiarias",
-        "name": "César Iglesiarias",
-        "position": "CF",
-        "AB": 3,
+        "player": "pavel-hrynko",
+        "name": "Pavel Hrynko",
+        "position": "3B",
+        "AB": 4,
         "R": 1,
+        "H": 1,
+        "2B": 1,
+        "3B": 0,
+        "RBI": 2,
+        "BB": 0,
+        "K": 1,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "malik-doumbia",
+        "name": "Malik Doumbia",
+        "position": "LF",
+        "AB": 5,
+        "R": 0,
         "H": 2,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
+        "BB": 0,
+        "K": 1,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "cesar-iglesiarias",
+        "name": "César Iglesiarias",
+        "position": "CF",
+        "AB": 5,
+        "R": 1,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 1,
         "BB": 0,
         "K": 1,
         "HR": 0,
@@ -316,7 +316,7 @@
         "2B": 0,
         "3B": 0,
         "RBI": 0,
-        "BB": 1,
+        "BB": 0,
         "K": 1,
         "HR": 0,
         "SB": 0
@@ -326,62 +326,61 @@
   "pitching": {
     "away": [
       {
-        "player": "santiago-correa",
-        "name": "Santiago Correa",
-        "IP_outs": 15,
+        "player": "darius-okonkwo",
+        "name": "Darius Okonkwo",
+        "IP_outs": 16,
+        "H": 6,
+        "R": 4,
+        "ER": 4,
+        "BB": 3,
+        "K": 8,
+        "HR": 0,
+        "IP": 5.1
+      },
+      {
+        "player": "kieran-walsh",
+        "name": "Kieran Walsh",
+        "IP_outs": 11,
         "H": 3,
         "R": 1,
         "ER": 1,
         "BB": 0,
         "K": 3,
-        "HR": 0,
-        "IP": 5
-      },
-      {
-        "player": "luis-delgado",
-        "name": "Luis Delgado",
-        "IP_outs": 12,
-        "H": 2,
-        "R": 4,
-        "ER": 4,
-        "BB": 4,
-        "K": 2,
-        "HR": 0,
-        "IP": 4
+        "HR": 1,
+        "IP": 3.2
       }
     ],
     "home": [
       {
         "player": "lucian-ionescu",
         "name": "Lucian Ionescu",
-        "IP_outs": 20,
-        "H": 2,
-        "R": 2,
-        "ER": 2,
-        "BB": 5,
+        "IP_outs": 21,
+        "H": 9,
+        "R": 0,
+        "ER": 0,
+        "BB": 1,
         "K": 2,
-        "HR": 1,
-        "IP": 6.2
+        "HR": 0,
+        "IP": 7
       },
       {
         "player": "rafiq-qureshi",
         "name": "Rafiq Qureshi",
-        "IP_outs": 7,
-        "H": 3,
-        "R": 1,
-        "ER": 1,
-        "BB": 0,
+        "IP_outs": 6,
+        "H": 0,
+        "R": 3,
+        "ER": 3,
+        "BB": 3,
         "K": 2,
-        "HR": 0,
-        "IP": 2.1
+        "HR": 1,
+        "IP": 2
       }
     ]
   },
   "decisions": {
     "W": "lucian-ionescu",
-    "L": "santiago-correa",
+    "L": "darius-okonkwo",
     "SV": "rafiq-qureshi"
   },
-  "notes": [],
-  "calibration": "glb.stats-calibrated.v1"
+  "notes": []
 }

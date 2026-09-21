@@ -11,7 +11,7 @@
     "name": "Monterrey Cementeros"
   },
   "status": "Final",
-  "attendance": 18149,
+  "attendance": 17437,
   "linescore": {
     "innings": [
       {
@@ -22,12 +22,12 @@
       {
         "inning": 2,
         "away": 0,
-        "home": 0
+        "home": 1
       },
       {
         "inning": 3,
         "away": 0,
-        "home": 0
+        "home": 2
       },
       {
         "inning": 4,
@@ -42,7 +42,7 @@
       {
         "inning": 6,
         "away": 0,
-        "home": 2
+        "home": 0
       },
       {
         "inning": 7,
@@ -51,25 +51,25 @@
       },
       {
         "inning": 8,
-        "away": 0,
-        "home": 1
+        "away": 1,
+        "home": 0
       },
       {
         "inning": 9,
-        "away": 1,
+        "away": 0,
         "home": 1
       }
     ],
     "totals": {
       "away": {
         "R": 1,
-        "H": 5,
+        "H": 9,
         "E": 0
       },
       "home": {
         "R": 5,
-        "H": 10,
-        "E": 0
+        "H": 9,
+        "E": 2
       }
     }
   },
@@ -83,14 +83,14 @@
         "player": "nikolai-dobrynin",
         "name": "Nikolai Dobrynin",
         "position": "C",
-        "AB": 4,
+        "AB": 3,
         "R": 0,
-        "H": 0,
-        "2B": 0,
+        "H": 1,
+        "2B": 1,
         "3B": 0,
         "RBI": 0,
-        "BB": 1,
-        "K": 0,
+        "BB": 0,
+        "K": 1,
         "HR": 0,
         "SB": 0
       },
@@ -98,9 +98,9 @@
         "player": "evan-carroll-iv",
         "name": "Evan Carroll IV",
         "position": "1B",
-        "AB": 3,
+        "AB": 4,
         "R": 0,
-        "H": 1,
+        "H": 2,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
@@ -113,9 +113,9 @@
         "player": "marco-delvecchio",
         "name": "Marco DelVecchio",
         "position": "2B",
-        "AB": 3,
+        "AB": 5,
         "R": 0,
-        "H": 0,
+        "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
@@ -131,11 +131,11 @@
         "AB": 3,
         "R": 0,
         "H": 1,
-        "2B": 0,
+        "2B": 1,
         "3B": 0,
         "RBI": 0,
-        "BB": 0,
-        "K": 2,
+        "BB": 1,
+        "K": 1,
         "HR": 0,
         "SB": 0
       },
@@ -143,29 +143,29 @@
         "player": "andres-mireles",
         "name": "Andrés Mireles",
         "position": "3B",
-        "AB": 5,
-        "R": 0,
-        "H": 0,
+        "AB": 3,
+        "R": 1,
+        "H": 1,
         "2B": 0,
         "3B": 0,
-        "RBI": 0,
-        "BB": 0,
-        "K": 2,
-        "HR": 0,
-        "SB": 1
+        "RBI": 1,
+        "BB": 1,
+        "K": 1,
+        "HR": 1,
+        "SB": 0
       },
       {
         "player": "wyatt-hollander",
         "name": "Wyatt Hollander",
         "position": "CF",
-        "AB": 5,
+        "AB": 3,
         "R": 0,
         "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
         "BB": 0,
-        "K": 1,
+        "K": 0,
         "HR": 0,
         "SB": 0
       },
@@ -174,15 +174,15 @@
         "name": "Luis Quiñones",
         "position": "LF",
         "AB": 5,
-        "R": 1,
-        "H": 2,
-        "2B": 0,
+        "R": 0,
+        "H": 1,
+        "2B": 1,
         "3B": 0,
-        "RBI": 1,
-        "BB": 1,
-        "K": 1,
-        "HR": 1,
-        "SB": 1
+        "RBI": 0,
+        "BB": 0,
+        "K": 4,
+        "HR": 0,
+        "SB": 0
       },
       {
         "player": "pieter-van-wyk",
@@ -190,7 +190,7 @@
         "position": "RF",
         "AB": 4,
         "R": 0,
-        "H": 0,
+        "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
@@ -205,14 +205,14 @@
         "player": "julian-sauri",
         "name": "Julián Sauri",
         "position": "C",
-        "AB": 5,
-        "R": 0,
-        "H": 2,
+        "AB": 3,
+        "R": 2,
+        "H": 0,
         "2B": 0,
         "3B": 0,
-        "RBI": 0,
+        "RBI": 1,
         "BB": 0,
-        "K": 1,
+        "K": 0,
         "HR": 0,
         "SB": 0
       },
@@ -225,8 +225,8 @@
         "H": 1,
         "2B": 0,
         "3B": 0,
-        "RBI": 1,
-        "BB": 1,
+        "RBI": 0,
+        "BB": 0,
         "K": 1,
         "HR": 0,
         "SB": 0
@@ -235,14 +235,14 @@
         "player": "thiago-pereyra",
         "name": "Thiago Pereyra",
         "position": "2B",
-        "AB": 3,
+        "AB": 4,
         "R": 0,
-        "H": 0,
+        "H": 1,
         "2B": 0,
         "3B": 0,
-        "RBI": 0,
-        "BB": 1,
-        "K": 1,
+        "RBI": 1,
+        "BB": 0,
+        "K": 0,
         "HR": 0,
         "SB": 0
       },
@@ -250,29 +250,29 @@
         "player": "kofi-mensah",
         "name": "Kofi Mensah",
         "position": "SS",
-        "AB": 5,
-        "R": 1,
-        "H": 1,
+        "AB": 4,
+        "R": 0,
+        "H": 0,
         "2B": 0,
         "3B": 0,
         "RBI": 1,
         "BB": 0,
         "K": 1,
-        "HR": 1,
+        "HR": 0,
         "SB": 0
       },
       {
         "player": "luka-vukovic",
         "name": "Luka Vuković",
         "position": "3B",
-        "AB": 4,
+        "AB": 5,
         "R": 1,
-        "H": 3,
+        "H": 2,
         "2B": 0,
         "3B": 0,
-        "RBI": 1,
-        "BB": 1,
-        "K": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 2,
         "HR": 0,
         "SB": 0
       },
@@ -282,12 +282,12 @@
         "position": "CF",
         "AB": 4,
         "R": 1,
-        "H": 1,
-        "2B": 1,
+        "H": 2,
+        "2B": 0,
         "3B": 0,
         "RBI": 1,
-        "BB": 0,
-        "K": 1,
+        "BB": 1,
+        "K": 0,
         "HR": 0,
         "SB": 0
       },
@@ -296,27 +296,27 @@
         "name": "Andrés Cázares",
         "position": "LF",
         "AB": 4,
-        "R": 0,
+        "R": 1,
         "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 1,
         "BB": 0,
-        "K": 1,
-        "HR": 0,
+        "K": 2,
+        "HR": 1,
         "SB": 0
       },
       {
         "player": "micah-lunsford",
         "name": "Micah Lunsford",
         "position": "RF",
-        "AB": 5,
-        "R": 2,
-        "H": 1,
+        "AB": 4,
+        "R": 0,
+        "H": 2,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
-        "BB": 0,
+        "BB": 1,
         "K": 0,
         "HR": 0,
         "SB": 0
@@ -329,7 +329,7 @@
         "player": "lukas-havel",
         "name": "Lukas Havel",
         "IP_outs": 20,
-        "H": 6,
+        "H": 5,
         "R": 3,
         "ER": 3,
         "BB": 0,
@@ -344,7 +344,7 @@
         "H": 4,
         "R": 2,
         "ER": 2,
-        "BB": 3,
+        "BB": 2,
         "K": 2,
         "HR": 0,
         "IP": 2.1
@@ -354,26 +354,26 @@
       {
         "player": "arjun-bhatnagar",
         "name": "Arjun Bhatnagar",
-        "IP_outs": 17,
-        "H": 1,
-        "R": 1,
-        "ER": 1,
+        "IP_outs": 18,
+        "H": 5,
+        "R": 0,
+        "ER": 0,
         "BB": 1,
-        "K": 7,
-        "HR": 0,
-        "IP": 5.2
+        "K": 8,
+        "HR": 1,
+        "IP": 6
       },
       {
         "player": "bashir-el-khatib",
         "name": "Bashir El-Khatib",
-        "IP_outs": 10,
+        "IP_outs": 9,
         "H": 4,
-        "R": 0,
-        "ER": 0,
+        "R": 1,
+        "ER": 1,
         "BB": 1,
         "K": 3,
-        "HR": 1,
-        "IP": 3.1
+        "HR": 0,
+        "IP": 3
       }
     ]
   },
@@ -382,6 +382,5 @@
     "L": "lukas-havel",
     "SV": null
   },
-  "notes": [],
-  "calibration": "glb.stats-calibrated.v1"
+  "notes": []
 }

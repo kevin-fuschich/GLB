@@ -11,7 +11,7 @@
     "name": "Birmingham Vulcans"
   },
   "status": "Final",
-  "attendance": 31995,
+  "attendance": 20978,
   "linescore": {
     "innings": [
       {
@@ -26,50 +26,50 @@
       },
       {
         "inning": 3,
-        "away": 0,
+        "away": 1,
         "home": 0
       },
       {
         "inning": 4,
-        "away": 2,
-        "home": 1
+        "away": 1,
+        "home": 0
       },
       {
         "inning": 5,
         "away": 0,
-        "home": 1
+        "home": 0
       },
       {
         "inning": 6,
-        "away": 0,
-        "home": 0
+        "away": 1,
+        "home": 2
       },
       {
         "inning": 7,
-        "away": 1,
-        "home": 1
-      },
-      {
-        "inning": 8,
-        "away": 1,
+        "away": 0,
         "home": 0
       },
       {
-        "inning": 9,
+        "inning": 8,
         "away": 0,
+        "home": 1
+      },
+      {
+        "inning": 9,
+        "away": 1,
         "home": 0
       }
     ],
     "totals": {
       "away": {
         "R": 4,
-        "H": 9,
-        "E": 1
+        "H": 6,
+        "E": 2
       },
       "home": {
         "R": 3,
-        "H": 9,
-        "E": 1
+        "H": 12,
+        "E": 2
       }
     }
   },
@@ -84,43 +84,43 @@
         "name": "Omar Nazzal",
         "position": "C",
         "AB": 5,
-        "R": 0,
+        "R": 1,
         "H": 1,
         "2B": 0,
         "3B": 0,
-        "RBI": 0,
+        "RBI": 1,
         "BB": 0,
         "K": 2,
-        "HR": 0,
+        "HR": 1,
         "SB": 0
       },
       {
         "player": "caleb-ardoin",
         "name": "Caleb Ardoin",
         "position": "1B",
-        "AB": 4,
-        "R": 2,
-        "H": 2,
+        "AB": 5,
+        "R": 1,
+        "H": 1,
         "2B": 0,
         "3B": 0,
-        "RBI": 2,
+        "RBI": 1,
         "BB": 0,
-        "K": 0,
-        "HR": 2,
+        "K": 2,
+        "HR": 1,
         "SB": 0
       },
       {
         "player": "samir-benyahia",
         "name": "Samir Benyahia",
         "position": "2B",
-        "AB": 5,
+        "AB": 4,
         "R": 0,
         "H": 0,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
         "BB": 1,
-        "K": 2,
+        "K": 1,
         "HR": 0,
         "SB": 0
       },
@@ -128,16 +128,16 @@
         "player": "evan-trelawny",
         "name": "Evan Trelawny",
         "position": "SS",
-        "AB": 3,
+        "AB": 5,
         "R": 0,
-        "H": 1,
-        "2B": 1,
+        "H": 0,
+        "2B": 0,
         "3B": 0,
         "RBI": 0,
         "BB": 0,
-        "K": 1,
+        "K": 0,
         "HR": 0,
-        "SB": 1
+        "SB": 0
       },
       {
         "player": "kwame-ofori",
@@ -150,7 +150,7 @@
         "3B": 0,
         "RBI": 0,
         "BB": 0,
-        "K": 0,
+        "K": 2,
         "HR": 0,
         "SB": 0
       },
@@ -158,9 +158,9 @@
         "player": "mateo-acebedo",
         "name": "Mateo Acebedo",
         "position": "LF",
-        "AB": 5,
+        "AB": 3,
         "R": 0,
-        "H": 1,
+        "H": 0,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
@@ -173,9 +173,41 @@
         "player": "niko-velkovic",
         "name": "Niko Velković",
         "position": "CF",
+        "AB": 4,
+        "R": 2,
+        "H": 2,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 2,
+        "BB": 0,
+        "K": 0,
+        "HR": 2,
+        "SB": 1
+      },
+      {
+        "player": "jasper-quade",
+        "name": "Jasper Quade",
+        "position": "RF",
         "AB": 5,
-        "R": 1,
+        "R": 0,
         "H": 1,
+        "2B": 1,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 0,
+        "HR": 0,
+        "SB": 1
+      }
+    ],
+    "home": [
+      {
+        "player": "owen-keller",
+        "name": "Owen Keller",
+        "position": "C",
+        "AB": 5,
+        "R": 0,
+        "H": 2,
         "2B": 0,
         "3B": 0,
         "RBI": 1,
@@ -185,49 +217,17 @@
         "SB": 0
       },
       {
-        "player": "jasper-quade",
-        "name": "Jasper Quade",
-        "position": "RF",
-        "AB": 5,
+        "player": "malik-johnson",
+        "name": "Malik Johnson",
+        "position": "1B",
+        "AB": 3,
         "R": 1,
         "H": 2,
-        "2B": 0,
-        "3B": 0,
-        "RBI": 1,
-        "BB": 2,
-        "K": 1,
-        "HR": 1,
-        "SB": 0
-      }
-    ],
-    "home": [
-      {
-        "player": "owen-keller",
-        "name": "Owen Keller",
-        "position": "C",
-        "AB": 4,
-        "R": 0,
-        "H": 0,
         "2B": 0,
         "3B": 0,
         "RBI": 1,
         "BB": 0,
-        "K": 3,
-        "HR": 0,
-        "SB": 0
-      },
-      {
-        "player": "malik-johnson",
-        "name": "Malik Johnson",
-        "position": "1B",
-        "AB": 5,
-        "R": 1,
-        "H": 2,
-        "2B": 0,
-        "3B": 0,
-        "RBI": 1,
-        "BB": 1,
-        "K": 2,
+        "K": 1,
         "HR": 0,
         "SB": 0
       },
@@ -235,14 +235,14 @@
         "player": "nico-valente",
         "name": "Nico Valente",
         "position": "2B",
-        "AB": 5,
+        "AB": 4,
         "R": 0,
         "H": 2,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
         "BB": 0,
-        "K": 1,
+        "K": 0,
         "HR": 0,
         "SB": 0
       },
@@ -252,26 +252,26 @@
         "position": "SS",
         "AB": 5,
         "R": 0,
-        "H": 0,
+        "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
-        "BB": 0,
-        "K": 1,
+        "BB": 1,
+        "K": 2,
         "HR": 0,
-        "SB": 1
+        "SB": 2
       },
       {
         "player": "caleb-hawkins",
         "name": "Caleb Hawkins",
         "position": "3B",
-        "AB": 5,
+        "AB": 4,
         "R": 0,
-        "H": 1,
-        "2B": 1,
+        "H": 2,
+        "2B": 0,
         "3B": 0,
         "RBI": 1,
-        "BB": 1,
+        "BB": 0,
         "K": 1,
         "HR": 0,
         "SB": 0
@@ -287,7 +287,7 @@
         "3B": 0,
         "RBI": 0,
         "BB": 0,
-        "K": 1,
+        "K": 3,
         "HR": 0,
         "SB": 0
       },
@@ -297,12 +297,12 @@
         "position": "LF",
         "AB": 3,
         "R": 1,
-        "H": 2,
-        "2B": 1,
+        "H": 1,
+        "2B": 0,
         "3B": 0,
         "RBI": 0,
-        "BB": 0,
-        "K": 0,
+        "BB": 1,
+        "K": 1,
         "HR": 0,
         "SB": 0
       },
@@ -316,8 +316,8 @@
         "2B": 0,
         "3B": 0,
         "RBI": 0,
-        "BB": 0,
-        "K": 1,
+        "BB": 1,
+        "K": 2,
         "HR": 0,
         "SB": 0
       }
@@ -329,11 +329,11 @@
         "player": "teemu-salonen",
         "name": "Teemu Salonen",
         "IP_outs": 19,
-        "H": 6,
-        "R": 1,
-        "ER": 1,
-        "BB": 2,
-        "K": 7,
+        "H": 12,
+        "R": 2,
+        "ER": 2,
+        "BB": 4,
+        "K": 6,
         "HR": 0,
         "IP": 6.1
       },
@@ -341,11 +341,11 @@
         "player": "jun-seo-kang",
         "name": "Jun-seo Kang",
         "IP_outs": 8,
-        "H": 3,
-        "R": 2,
-        "ER": 2,
+        "H": 0,
+        "R": 1,
+        "ER": 1,
         "BB": 0,
-        "K": 3,
+        "K": 4,
         "HR": 0,
         "IP": 2.2
       }
@@ -354,34 +354,33 @@
       {
         "player": "emilio-duarte",
         "name": "Emilio Duarte",
-        "IP_outs": 19,
-        "H": 2,
-        "R": 1,
-        "ER": 1,
-        "BB": 4,
+        "IP_outs": 18,
+        "H": 4,
+        "R": 2,
+        "ER": 2,
+        "BB": 0,
         "K": 5,
         "HR": 3,
-        "IP": 6.1
+        "IP": 6
       },
       {
         "player": "micah-torrence",
         "name": "Micah Torrence",
-        "IP_outs": 8,
-        "H": 7,
-        "R": 3,
-        "ER": 3,
-        "BB": 0,
-        "K": 1,
-        "HR": 0,
-        "IP": 2.2
+        "IP_outs": 9,
+        "H": 2,
+        "R": 2,
+        "ER": 2,
+        "BB": 1,
+        "K": 2,
+        "HR": 1,
+        "IP": 3
       }
     ]
   },
   "decisions": {
     "W": "teemu-salonen",
     "L": "emilio-duarte",
-    "SV": null
+    "SV": "jun-seo-kang"
   },
-  "notes": [],
-  "calibration": "glb.stats-calibrated.v1"
+  "notes": []
 }

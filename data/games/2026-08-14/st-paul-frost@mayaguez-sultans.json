@@ -11,22 +11,22 @@
     "name": "Mayagüez Sultans"
   },
   "status": "Final",
-  "attendance": 21090,
+  "attendance": 31057,
   "linescore": {
     "innings": [
       {
         "inning": 1,
-        "away": 0,
-        "home": 1
+        "away": 1,
+        "home": 3
       },
       {
         "inning": 2,
         "away": 0,
-        "home": 0
+        "home": 2
       },
       {
         "inning": 3,
-        "away": 3,
+        "away": 1,
         "home": 0
       },
       {
@@ -37,7 +37,7 @@
       {
         "inning": 5,
         "away": 0,
-        "home": 3
+        "home": 0
       },
       {
         "inning": 6,
@@ -51,25 +51,25 @@
       },
       {
         "inning": 8,
-        "away": 1,
+        "away": 0,
         "home": 0
       },
       {
         "inning": 9,
-        "away": 0,
-        "home": 1
+        "away": 2,
+        "home": 0
       }
     ],
     "totals": {
       "away": {
         "R": 6,
-        "H": 9,
+        "H": 6,
         "E": 2
       },
       "home": {
         "R": 5,
-        "H": 9,
-        "E": 0
+        "H": 8,
+        "E": 2
       }
     }
   },
@@ -84,30 +84,30 @@
         "name": "Evan Morrissey",
         "position": "C",
         "AB": 5,
-        "R": 1,
-        "H": 2,
-        "2B": 1,
+        "R": 2,
+        "H": 1,
+        "2B": 0,
         "3B": 0,
-        "RBI": 0,
-        "BB": 2,
-        "K": 2,
-        "HR": 0,
+        "RBI": 2,
+        "BB": 0,
+        "K": 0,
+        "HR": 1,
         "SB": 0
       },
       {
         "player": "javier-lucero",
         "name": "Javier Lucero",
         "position": "1B",
-        "AB": 3,
+        "AB": 5,
         "R": 1,
         "H": 1,
         "2B": 0,
         "3B": 0,
-        "RBI": 1,
+        "RBI": 2,
         "BB": 0,
-        "K": 0,
-        "HR": 0,
-        "SB": 1
+        "K": 1,
+        "HR": 1,
+        "SB": 0
       },
       {
         "player": "owen-hartnell",
@@ -115,37 +115,22 @@
         "position": "2B",
         "AB": 5,
         "R": 2,
-        "H": 3,
+        "H": 0,
         "2B": 0,
         "3B": 0,
-        "RBI": 2,
-        "BB": 1,
-        "K": 1,
-        "HR": 2,
+        "RBI": 1,
+        "BB": 0,
+        "K": 3,
+        "HR": 0,
         "SB": 0
       },
       {
         "player": "masato-kobori",
         "name": "Masato Kobori",
         "position": "SS",
-        "AB": 4,
+        "AB": 5,
         "R": 0,
-        "H": 1,
-        "2B": 0,
-        "3B": 0,
-        "RBI": 1,
-        "BB": 0,
-        "K": 2,
-        "HR": 0,
-        "SB": 0
-      },
-      {
-        "player": "trevor-yates",
-        "name": "Trevor Yates",
-        "position": "3B",
-        "AB": 3,
-        "R": 0,
-        "H": 1,
+        "H": 2,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
@@ -155,10 +140,25 @@
         "SB": 0
       },
       {
+        "player": "trevor-yates",
+        "name": "Trevor Yates",
+        "position": "3B",
+        "AB": 4,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      },
+      {
         "player": "malik-jefferson",
         "name": "Malik Jefferson",
         "position": "CF",
-        "AB": 5,
+        "AB": 4,
         "R": 1,
         "H": 0,
         "2B": 0,
@@ -167,13 +167,28 @@
         "BB": 0,
         "K": 3,
         "HR": 0,
-        "SB": 1
+        "SB": 0
       },
       {
         "player": "rodrigo-fuentes",
         "name": "Rodrigo Fuentes",
         "position": "LF",
         "AB": 5,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 1,
+        "K": 2,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "jake-lanier",
+        "name": "Jake Lanier",
+        "position": "RF",
+        "AB": 3,
         "R": 0,
         "H": 0,
         "2B": 0,
@@ -183,21 +198,6 @@
         "K": 1,
         "HR": 0,
         "SB": 0
-      },
-      {
-        "player": "jake-lanier",
-        "name": "Jake Lanier",
-        "position": "RF",
-        "AB": 3,
-        "R": 1,
-        "H": 1,
-        "2B": 0,
-        "3B": 0,
-        "RBI": 1,
-        "BB": 0,
-        "K": 0,
-        "HR": 1,
-        "SB": 0
       }
     ],
     "home": [
@@ -205,25 +205,25 @@
         "player": "tomer-barzilai",
         "name": "Tomer Barzilai",
         "position": "C",
-        "AB": 5,
-        "R": 1,
-        "H": 2,
+        "AB": 3,
+        "R": 0,
+        "H": 0,
         "2B": 0,
         "3B": 0,
-        "RBI": 1,
+        "RBI": 0,
         "BB": 0,
         "K": 1,
-        "HR": 1,
+        "HR": 0,
         "SB": 0
       },
       {
         "player": "enzo-carvajal",
         "name": "Enzo Carvajal",
         "position": "1B",
-        "AB": 4,
-        "R": 0,
+        "AB": 3,
+        "R": 1,
         "H": 1,
-        "2B": 1,
+        "2B": 0,
         "3B": 0,
         "RBI": 0,
         "BB": 0,
@@ -236,8 +236,8 @@
         "name": "Nils Adebayo",
         "position": "2B",
         "AB": 4,
-        "R": 1,
-        "H": 2,
+        "R": 2,
+        "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
@@ -250,14 +250,14 @@
         "player": "jae-min-seok",
         "name": "Jae-min Seok",
         "position": "SS",
-        "AB": 5,
-        "R": 1,
-        "H": 0,
-        "2B": 0,
+        "AB": 3,
+        "R": 0,
+        "H": 1,
+        "2B": 1,
         "3B": 0,
         "RBI": 1,
         "BB": 1,
-        "K": 1,
+        "K": 2,
         "HR": 0,
         "SB": 0
       },
@@ -266,28 +266,28 @@
         "name": "Pavel Hrynko",
         "position": "3B",
         "AB": 4,
-        "R": 1,
-        "H": 1,
+        "R": 0,
+        "H": 0,
         "2B": 0,
         "3B": 0,
-        "RBI": 1,
+        "RBI": 2,
         "BB": 0,
         "K": 2,
         "HR": 0,
-        "SB": 1
+        "SB": 0
       },
       {
         "player": "malik-doumbia",
         "name": "Malik Doumbia",
         "position": "LF",
-        "AB": 3,
+        "AB": 5,
         "R": 0,
         "H": 1,
         "2B": 0,
         "3B": 0,
-        "RBI": 1,
-        "BB": 1,
-        "K": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 2,
         "HR": 0,
         "SB": 0
       },
@@ -296,15 +296,15 @@
         "name": "César Iglesiarias",
         "position": "CF",
         "AB": 3,
-        "R": 1,
-        "H": 1,
+        "R": 2,
+        "H": 3,
         "2B": 1,
         "3B": 0,
-        "RBI": 1,
-        "BB": 0,
+        "RBI": 2,
+        "BB": 1,
         "K": 0,
-        "HR": 0,
-        "SB": 1
+        "HR": 1,
+        "SB": 0
       },
       {
         "player": "ari-kasprzyk",
@@ -316,7 +316,7 @@
         "2B": 0,
         "3B": 0,
         "RBI": 0,
-        "BB": 1,
+        "BB": 0,
         "K": 2,
         "HR": 0,
         "SB": 0
@@ -328,52 +328,52 @@
       {
         "player": "nolan-brix",
         "name": "Nolan Brix",
-        "IP_outs": 15,
-        "H": 6,
-        "R": 5,
-        "ER": 5,
-        "BB": 2,
-        "K": 4,
+        "IP_outs": 18,
+        "H": 5,
+        "R": 4,
+        "ER": 4,
+        "BB": 1,
+        "K": 7,
         "HR": 1,
-        "IP": 5
+        "IP": 6
       },
       {
         "player": "antonio-velez",
         "name": "Antonio Vélez",
-        "IP_outs": 12,
+        "IP_outs": 9,
         "H": 3,
-        "R": 0,
-        "ER": 0,
+        "R": 1,
+        "ER": 1,
         "BB": 1,
         "K": 3,
         "HR": 0,
-        "IP": 4
+        "IP": 3
       }
     ],
     "home": [
       {
         "player": "ismail-benjeloun",
         "name": "Ismail Benjeloun",
-        "IP_outs": 15,
-        "H": 0,
-        "R": 1,
-        "ER": 1,
-        "BB": 0,
-        "K": 6,
-        "HR": 2,
-        "IP": 5
+        "IP_outs": 19,
+        "H": 4,
+        "R": 4,
+        "ER": 4,
+        "BB": 2,
+        "K": 9,
+        "HR": 1,
+        "IP": 6.1
       },
       {
         "player": "rafiq-qureshi",
         "name": "Rafiq Qureshi",
-        "IP_outs": 12,
-        "H": 9,
-        "R": 5,
-        "ER": 5,
-        "BB": 4,
-        "K": 4,
+        "IP_outs": 8,
+        "H": 2,
+        "R": 2,
+        "ER": 2,
+        "BB": 0,
+        "K": 2,
         "HR": 1,
-        "IP": 4
+        "IP": 2.2
       }
     ]
   },
@@ -382,6 +382,5 @@
     "L": "ismail-benjeloun",
     "SV": null
   },
-  "notes": [],
-  "calibration": "glb.stats-calibrated.v1"
+  "notes": []
 }

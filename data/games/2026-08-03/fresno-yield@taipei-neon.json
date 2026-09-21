@@ -11,18 +11,18 @@
     "name": "Taipei Neon"
   },
   "status": "Final",
-  "attendance": 31247,
+  "attendance": 21826,
   "linescore": {
     "innings": [
       {
         "inning": 1,
         "away": 0,
-        "home": 0
+        "home": 1
       },
       {
         "inning": 2,
         "away": 0,
-        "home": 1
+        "home": 0
       },
       {
         "inning": 3,
@@ -32,11 +32,11 @@
       {
         "inning": 4,
         "away": 0,
-        "home": 1
+        "home": 0
       },
       {
         "inning": 5,
-        "away": 1,
+        "away": 0,
         "home": 0
       },
       {
@@ -47,11 +47,11 @@
       {
         "inning": 7,
         "away": 0,
-        "home": 0
+        "home": 1
       },
       {
         "inning": 8,
-        "away": 0,
+        "away": 1,
         "home": 0
       },
       {
@@ -63,12 +63,12 @@
     "totals": {
       "away": {
         "R": 1,
-        "H": 6,
-        "E": 2
+        "H": 8,
+        "E": 0
       },
       "home": {
         "R": 2,
-        "H": 8,
+        "H": 12,
         "E": 2
       }
     }
@@ -83,14 +83,14 @@
         "player": "luis-eccheri",
         "name": "Luis Eccheri",
         "position": "C",
-        "AB": 3,
+        "AB": 4,
         "R": 0,
-        "H": 0,
-        "2B": 0,
+        "H": 2,
+        "2B": 1,
         "3B": 0,
         "RBI": 0,
-        "BB": 1,
-        "K": 0,
+        "BB": 0,
+        "K": 1,
         "HR": 0,
         "SB": 0
       },
@@ -99,113 +99,6 @@
         "name": "Jonah Kershaw",
         "position": "1B",
         "AB": 5,
-        "R": 0,
-        "H": 2,
-        "2B": 0,
-        "3B": 0,
-        "RBI": 0,
-        "BB": 0,
-        "K": 2,
-        "HR": 0,
-        "SB": 0
-      },
-      {
-        "player": "soren-ahlgren",
-        "name": "Søren Ahlgren",
-        "position": "2B",
-        "AB": 3,
-        "R": 1,
-        "H": 0,
-        "2B": 0,
-        "3B": 0,
-        "RBI": 0,
-        "BB": 1,
-        "K": 0,
-        "HR": 0,
-        "SB": 0
-      },
-      {
-        "player": "raul-sestayo",
-        "name": "Raúl Sestayo",
-        "position": "SS",
-        "AB": 4,
-        "R": 0,
-        "H": 2,
-        "2B": 1,
-        "3B": 0,
-        "RBI": 0,
-        "BB": 0,
-        "K": 2,
-        "HR": 0,
-        "SB": 1
-      },
-      {
-        "player": "eamon-kilbride",
-        "name": "Eamon Kilbride",
-        "position": "3B",
-        "AB": 3,
-        "R": 0,
-        "H": 0,
-        "2B": 0,
-        "3B": 0,
-        "RBI": 0,
-        "BB": 1,
-        "K": 1,
-        "HR": 0,
-        "SB": 1
-      },
-      {
-        "player": "malachi-quartey",
-        "name": "Malachi Quartey",
-        "position": "CF",
-        "AB": 3,
-        "R": 0,
-        "H": 0,
-        "2B": 0,
-        "3B": 0,
-        "RBI": 1,
-        "BB": 1,
-        "K": 0,
-        "HR": 0,
-        "SB": 0
-      },
-      {
-        "player": "hiroshi-kawabata",
-        "name": "Hiroshi Kawabata",
-        "position": "LF",
-        "AB": 4,
-        "R": 0,
-        "H": 0,
-        "2B": 0,
-        "3B": 0,
-        "RBI": 0,
-        "BB": 1,
-        "K": 1,
-        "HR": 0,
-        "SB": 0
-      },
-      {
-        "player": "anwar-elamin",
-        "name": "Anwar Elamin",
-        "position": "RF",
-        "AB": 3,
-        "R": 0,
-        "H": 2,
-        "2B": 0,
-        "3B": 0,
-        "RBI": 0,
-        "BB": 0,
-        "K": 0,
-        "HR": 0,
-        "SB": 0
-      }
-    ],
-    "home": [
-      {
-        "player": "kaito-ueda",
-        "name": "Kaito Ueda",
-        "position": "CF",
-        "AB": 3,
         "R": 0,
         "H": 1,
         "2B": 0,
@@ -217,12 +110,119 @@
         "SB": 0
       },
       {
+        "player": "soren-ahlgren",
+        "name": "Søren Ahlgren",
+        "position": "2B",
+        "AB": 4,
+        "R": 1,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 1,
+        "K": 0,
+        "HR": 1,
+        "SB": 0
+      },
+      {
+        "player": "raul-sestayo",
+        "name": "Raúl Sestayo",
+        "position": "SS",
+        "AB": 3,
+        "R": 0,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 1,
+        "K": 1,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "eamon-kilbride",
+        "name": "Eamon Kilbride",
+        "position": "3B",
+        "AB": 4,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 1,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "malachi-quartey",
+        "name": "Malachi Quartey",
+        "position": "CF",
+        "AB": 4,
+        "R": 0,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 1,
+        "K": 1,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "hiroshi-kawabata",
+        "name": "Hiroshi Kawabata",
+        "position": "LF",
+        "AB": 5,
+        "R": 0,
+        "H": 2,
+        "2B": 1,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "anwar-elamin",
+        "name": "Anwar Elamin",
+        "position": "RF",
+        "AB": 4,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 1,
+        "HR": 0,
+        "SB": 0
+      }
+    ],
+    "home": [
+      {
+        "player": "kaito-ueda",
+        "name": "Kaito Ueda",
+        "position": "CF",
+        "AB": 3,
+        "R": 0,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 2,
+        "HR": 0,
+        "SB": 0
+      },
+      {
         "player": "han-wei-tseng",
         "name": "Han-wei Tseng",
         "position": "2B",
         "AB": 4,
         "R": 0,
-        "H": 0,
+        "H": 2,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
@@ -235,15 +235,15 @@
         "player": "martin-echevarria",
         "name": "Martín Echevarría",
         "position": "1B",
-        "AB": 3,
-        "R": 0,
+        "AB": 5,
+        "R": 1,
         "H": 1,
-        "2B": 1,
+        "2B": 0,
         "3B": 0,
         "RBI": 2,
-        "BB": 2,
-        "K": 0,
-        "HR": 0,
+        "BB": 0,
+        "K": 3,
+        "HR": 1,
         "SB": 0
       },
       {
@@ -252,51 +252,6 @@
         "position": "SS",
         "AB": 3,
         "R": 0,
-        "H": 0,
-        "2B": 0,
-        "3B": 0,
-        "RBI": 0,
-        "BB": 1,
-        "K": 1,
-        "HR": 0,
-        "SB": 0
-      },
-      {
-        "player": "adebayo-olumide",
-        "name": "Adebayo Olumide",
-        "position": "3B",
-        "AB": 5,
-        "R": 1,
-        "H": 2,
-        "2B": 0,
-        "3B": 0,
-        "RBI": 0,
-        "BB": 0,
-        "K": 1,
-        "HR": 0,
-        "SB": 0
-      },
-      {
-        "player": "owen-rasmusson",
-        "name": "Owen Rasmusson",
-        "position": "C",
-        "AB": 3,
-        "R": 0,
-        "H": 0,
-        "2B": 0,
-        "3B": 0,
-        "RBI": 0,
-        "BB": 1,
-        "K": 1,
-        "HR": 0,
-        "SB": 0
-      },
-      {
-        "player": "eric-lawson",
-        "name": "Eric Lawson",
-        "position": "LF",
-        "AB": 4,
-        "R": 1,
         "H": 2,
         "2B": 0,
         "3B": 0,
@@ -307,12 +262,57 @@
         "SB": 0
       },
       {
-        "player": "jose-ramirez-tpe",
-        "name": "Jose Ramirez",
-        "position": "RF",
+        "player": "adebayo-olumide",
+        "name": "Adebayo Olumide",
+        "position": "3B",
+        "AB": 5,
+        "R": 0,
+        "H": 3,
+        "2B": 2,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 1,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "owen-rasmusson",
+        "name": "Owen Rasmusson",
+        "position": "C",
+        "AB": 4,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "eric-lawson",
+        "name": "Eric Lawson",
+        "position": "LF",
         "AB": 5,
         "R": 0,
         "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 1,
+        "K": 1,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "jose-ramirez-tpe",
+        "name": "Jose Ramirez",
+        "position": "RF",
+        "AB": 3,
+        "R": 1,
+        "H": 0,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
@@ -327,12 +327,12 @@
         "position": "DH",
         "AB": 4,
         "R": 0,
-        "H": 1,
-        "2B": 0,
+        "H": 2,
+        "2B": 1,
         "3B": 0,
         "RBI": 0,
-        "BB": 1,
-        "K": 0,
+        "BB": 0,
+        "K": 1,
         "HR": 0,
         "SB": 0
       }
@@ -341,62 +341,61 @@
   "pitching": {
     "away": [
       {
-        "player": "roman-villasenor",
-        "name": "Román Villaseñor",
-        "IP_outs": 16,
-        "H": 7,
+        "player": "cedric-wainwright",
+        "name": "Cedric Wainwright",
+        "IP_outs": 20,
+        "H": 2,
         "R": 2,
         "ER": 2,
         "BB": 1,
-        "K": 3,
-        "HR": 0,
-        "IP": 5.1
+        "K": 5,
+        "HR": 1,
+        "IP": 6.2
       },
       {
-        "player": "mateo-azarcon",
-        "name": "Mateo Azarcón",
-        "IP_outs": 11,
-        "H": 1,
+        "player": "dusan-marevic",
+        "name": "Dušan Marević",
+        "IP_outs": 7,
+        "H": 10,
         "R": 0,
         "ER": 0,
-        "BB": 4,
-        "K": 1,
+        "BB": 1,
+        "K": 2,
         "HR": 0,
-        "IP": 3.2
+        "IP": 2.1
       }
     ],
     "home": [
       {
         "player": "hiroto-kuzumi",
         "name": "Hiroto Kuzumi",
-        "IP_outs": 18,
-        "H": 4,
+        "IP_outs": 19,
+        "H": 7,
         "R": 1,
         "ER": 1,
-        "BB": 3,
+        "BB": 2,
         "K": 4,
-        "HR": 0,
-        "IP": 6
+        "HR": 1,
+        "IP": 6.1
       },
       {
         "player": "idris-el-amin",
         "name": "Idris El-Amin",
-        "IP_outs": 9,
-        "H": 2,
+        "IP_outs": 8,
+        "H": 1,
         "R": 0,
         "ER": 0,
-        "BB": 2,
+        "BB": 1,
         "K": 2,
         "HR": 0,
-        "IP": 3
+        "IP": 2.2
       }
     ]
   },
   "decisions": {
     "W": "hiroto-kuzumi",
-    "L": "roman-villasenor",
-    "SV": "idris-el-amin"
+    "L": "cedric-wainwright",
+    "SV": null
   },
-  "notes": [],
-  "calibration": "glb.stats-calibrated.v1"
+  "notes": []
 }

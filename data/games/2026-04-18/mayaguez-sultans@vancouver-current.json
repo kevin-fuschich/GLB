@@ -11,23 +11,23 @@
     "name": "Vancouver Current"
   },
   "status": "Final",
-  "attendance": 17987,
+  "attendance": 24121,
   "linescore": {
     "innings": [
       {
         "inning": 1,
         "away": 0,
-        "home": 1
+        "home": 0
       },
       {
         "inning": 2,
-        "away": 1,
+        "away": 0,
         "home": 0
       },
       {
         "inning": 3,
-        "away": 0,
-        "home": 0
+        "away": 1,
+        "home": 1
       },
       {
         "inning": 4,
@@ -36,18 +36,18 @@
       },
       {
         "inning": 5,
-        "away": 0,
-        "home": 1
+        "away": 1,
+        "home": 0
       },
       {
         "inning": 6,
         "away": 0,
-        "home": 0
+        "home": 1
       },
       {
         "inning": 7,
-        "away": 1,
-        "home": 0
+        "away": 0,
+        "home": 1
       },
       {
         "inning": 8,
@@ -57,7 +57,7 @@
       {
         "inning": 9,
         "away": 0,
-        "home": 1
+        "home": 0
       }
     ],
     "totals": {
@@ -68,7 +68,7 @@
       },
       "home": {
         "R": 3,
-        "H": 4,
+        "H": 12,
         "E": 0
       }
     }
@@ -83,30 +83,30 @@
         "player": "tomer-barzilai",
         "name": "Tomer Barzilai",
         "position": "C",
-        "AB": 3,
-        "R": 1,
-        "H": 1,
+        "AB": 4,
+        "R": 2,
+        "H": 2,
         "2B": 0,
         "3B": 0,
-        "RBI": 1,
-        "BB": 1,
+        "RBI": 2,
+        "BB": 0,
         "K": 1,
-        "HR": 1,
+        "HR": 2,
         "SB": 0
       },
       {
         "player": "enzo-carvajal",
         "name": "Enzo Carvajal",
         "position": "1B",
-        "AB": 4,
-        "R": 1,
-        "H": 2,
+        "AB": 5,
+        "R": 0,
+        "H": 0,
         "2B": 0,
         "3B": 0,
-        "RBI": 1,
-        "BB": 1,
+        "RBI": 0,
+        "BB": 0,
         "K": 0,
-        "HR": 1,
+        "HR": 0,
         "SB": 0
       },
       {
@@ -119,10 +119,10 @@
         "2B": 0,
         "3B": 0,
         "RBI": 0,
-        "BB": 1,
-        "K": 1,
+        "BB": 0,
+        "K": 0,
         "HR": 0,
-        "SB": 1
+        "SB": 0
       },
       {
         "player": "jae-min-seok",
@@ -133,10 +133,10 @@
         "H": 1,
         "2B": 0,
         "3B": 0,
-        "RBI": 0,
-        "BB": 1,
-        "K": 0,
-        "HR": 0,
+        "RBI": 1,
+        "BB": 0,
+        "K": 1,
+        "HR": 1,
         "SB": 0
       },
       {
@@ -149,8 +149,8 @@
         "2B": 0,
         "3B": 0,
         "RBI": 0,
-        "BB": 0,
-        "K": 0,
+        "BB": 1,
+        "K": 1,
         "HR": 0,
         "SB": 0
       },
@@ -158,23 +158,8 @@
         "player": "malik-doumbia",
         "name": "Malik Doumbia",
         "position": "LF",
-        "AB": 3,
+        "AB": 4,
         "R": 0,
-        "H": 0,
-        "2B": 0,
-        "3B": 0,
-        "RBI": 1,
-        "BB": 0,
-        "K": 1,
-        "HR": 0,
-        "SB": 0
-      },
-      {
-        "player": "cesar-iglesiarias",
-        "name": "César Iglesiarias",
-        "position": "CF",
-        "AB": 3,
-        "R": 1,
         "H": 1,
         "2B": 0,
         "3B": 0,
@@ -182,6 +167,21 @@
         "BB": 0,
         "K": 0,
         "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "cesar-iglesiarias",
+        "name": "César Iglesiarias",
+        "position": "CF",
+        "AB": 4,
+        "R": 1,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 0,
+        "K": 0,
+        "HR": 1,
         "SB": 0
       },
       {
@@ -191,9 +191,9 @@
         "AB": 5,
         "R": 0,
         "H": 1,
-        "2B": 1,
+        "2B": 0,
         "3B": 0,
-        "RBI": 1,
+        "RBI": 0,
         "BB": 0,
         "K": 1,
         "HR": 0,
@@ -202,100 +202,10 @@
     ],
     "home": [
       {
-        "player": "silas-boudreau",
-        "name": "Silas Boudreau",
+        "player": "ryan-mcallister",
+        "name": "Ryan McAllister",
         "position": "C",
-        "AB": 5,
-        "R": 0,
-        "H": 1,
-        "2B": 0,
-        "3B": 0,
-        "RBI": 0,
-        "BB": 0,
-        "K": 2,
-        "HR": 0,
-        "SB": 0
-      },
-      {
-        "player": "eamon-kerr",
-        "name": "Eamon Kerr",
-        "position": "1B",
         "AB": 4,
-        "R": 0,
-        "H": 0,
-        "2B": 0,
-        "3B": 0,
-        "RBI": 0,
-        "BB": 0,
-        "K": 0,
-        "HR": 0,
-        "SB": 0
-      },
-      {
-        "player": "soraya-jafari",
-        "name": "Soraya Jafari",
-        "position": "2B",
-        "AB": 4,
-        "R": 2,
-        "H": 1,
-        "2B": 0,
-        "3B": 0,
-        "RBI": 0,
-        "BB": 0,
-        "K": 1,
-        "HR": 0,
-        "SB": 0
-      },
-      {
-        "player": "alejo-santillan",
-        "name": "Alejo Santillán",
-        "position": "SS",
-        "AB": 3,
-        "R": 1,
-        "H": 0,
-        "2B": 0,
-        "3B": 0,
-        "RBI": 0,
-        "BB": 0,
-        "K": 2,
-        "HR": 0,
-        "SB": 0
-      },
-      {
-        "player": "roman-velasco",
-        "name": "Roman Velasco",
-        "position": "3B",
-        "AB": 4,
-        "R": 0,
-        "H": 0,
-        "2B": 0,
-        "3B": 0,
-        "RBI": 1,
-        "BB": 2,
-        "K": 2,
-        "HR": 0,
-        "SB": 0
-      },
-      {
-        "player": "taj-adelman",
-        "name": "Taj Adelman",
-        "position": "LF",
-        "AB": 4,
-        "R": 0,
-        "H": 0,
-        "2B": 0,
-        "3B": 0,
-        "RBI": 2,
-        "BB": 0,
-        "K": 3,
-        "HR": 0,
-        "SB": 0
-      },
-      {
-        "player": "marcell-lind",
-        "name": "Marcell Lind",
-        "position": "CF",
-        "AB": 3,
         "R": 0,
         "H": 1,
         "2B": 1,
@@ -307,8 +217,98 @@
         "SB": 0
       },
       {
-        "player": "oziel-narvaez",
-        "name": "Oziel Narváez",
+        "player": "julio-paredes",
+        "name": "Julio Paredes",
+        "position": "1B",
+        "AB": 3,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "jae-hyun-lee",
+        "name": "Jae-hyun Lee",
+        "position": "2B",
+        "AB": 3,
+        "R": 1,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 0,
+        "K": 1,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "tomas-guerrero",
+        "name": "Tomás Guerrero",
+        "position": "3B",
+        "AB": 5,
+        "R": 1,
+        "H": 2,
+        "2B": 1,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 1,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "nicolas-rojas",
+        "name": "Nicolás Rojas",
+        "position": "SS",
+        "AB": 3,
+        "R": 0,
+        "H": 2,
+        "2B": 1,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 0,
+        "K": 1,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "connor-walsh",
+        "name": "Connor Walsh",
+        "position": "LF",
+        "AB": 3,
+        "R": 1,
+        "H": 2,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 0,
+        "K": 0,
+        "HR": 1,
+        "SB": 0
+      },
+      {
+        "player": "miguel-soto",
+        "name": "Miguel Soto",
+        "position": "CF",
+        "AB": 4,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 0,
+        "HR": 0,
+        "SB": 2
+      },
+      {
+        "player": "kazuya-nishimura",
+        "name": "Kazuya Nishimura",
         "position": "RF",
         "AB": 3,
         "R": 0,
@@ -317,9 +317,24 @@
         "3B": 0,
         "RBI": 0,
         "BB": 0,
+        "K": 1,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "evan-brooks",
+        "name": "Evan Brooks",
+        "position": "DH",
+        "AB": 5,
+        "R": 0,
+        "H": 2,
+        "2B": 0,
+        "3B": 1,
+        "RBI": 0,
+        "BB": 0,
         "K": 0,
         "HR": 0,
-        "SB": 1
+        "SB": 0
       }
     ]
   },
@@ -328,60 +343,59 @@
       {
         "player": "lucian-ionescu",
         "name": "Lucian Ionescu",
-        "IP_outs": 16,
-        "H": 3,
-        "R": 0,
-        "ER": 0,
-        "BB": 0,
-        "K": 8,
+        "IP_outs": 21,
+        "H": 8,
+        "R": 3,
+        "ER": 3,
+        "BB": 1,
+        "K": 3,
         "HR": 0,
-        "IP": 5.1
+        "IP": 7
       },
       {
         "player": "tomasz-wierzbicki",
         "name": "Tomasz Wierzbicki",
-        "IP_outs": 11,
-        "H": 1,
-        "R": 3,
-        "ER": 3,
-        "BB": 3,
-        "K": 3,
-        "HR": 0,
-        "IP": 3.2
+        "IP_outs": 6,
+        "H": 4,
+        "R": 0,
+        "ER": 0,
+        "BB": 0,
+        "K": 2,
+        "HR": 1,
+        "IP": 2
       }
     ],
     "home": [
       {
-        "player": "raine-talukder",
-        "name": "Raine Talukder",
-        "IP_outs": 16,
-        "H": 3,
-        "R": 3,
-        "ER": 3,
-        "BB": 3,
-        "K": 3,
-        "HR": 1,
-        "IP": 5.1
+        "player": "hiroto-yamane",
+        "name": "Hiroto Yamane",
+        "IP_outs": 15,
+        "H": 6,
+        "R": 0,
+        "ER": 0,
+        "BB": 0,
+        "K": 2,
+        "HR": 0,
+        "IP": 5
       },
       {
-        "player": "yohei-arakida",
-        "name": "Yohei Arakida",
-        "IP_outs": 11,
-        "H": 4,
-        "R": 1,
-        "ER": 1,
+        "player": "roberto-salazar",
+        "name": "Roberto Salazar",
+        "IP_outs": 12,
+        "H": 1,
+        "R": 4,
+        "ER": 4,
         "BB": 1,
-        "K": 1,
-        "HR": 1,
-        "IP": 3.2
+        "K": 2,
+        "HR": 4,
+        "IP": 4
       }
     ]
   },
   "decisions": {
     "W": "lucian-ionescu",
-    "L": "raine-talukder",
+    "L": "hiroto-yamane",
     "SV": "tomasz-wierzbicki"
   },
-  "notes": [],
-  "calibration": "glb.stats-calibrated.v1"
+  "notes": []
 }

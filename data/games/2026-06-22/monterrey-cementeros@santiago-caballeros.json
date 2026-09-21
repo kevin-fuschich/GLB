@@ -11,7 +11,7 @@
     "name": "Santiago Caballeros"
   },
   "status": "Final",
-  "attendance": 14792,
+  "attendance": 27423,
   "linescore": {
     "innings": [
       {
@@ -21,27 +21,27 @@
       },
       {
         "inning": 2,
-        "away": 0,
-        "home": 1
+        "away": 1,
+        "home": 2
       },
       {
         "inning": 3,
-        "away": 1,
+        "away": 0,
         "home": 0
       },
       {
         "inning": 4,
+        "away": 1,
+        "home": 0
+      },
+      {
+        "inning": 5,
         "away": 0,
         "home": 1
       },
       {
-        "inning": 5,
-        "away": 1,
-        "home": 1
-      },
-      {
         "inning": 6,
-        "away": 1,
+        "away": 0,
         "home": 0
       },
       {
@@ -56,20 +56,20 @@
       },
       {
         "inning": 9,
-        "away": 0,
+        "away": 1,
         "home": 1
       }
     ],
     "totals": {
       "away": {
         "R": 3,
-        "H": 4,
+        "H": 10,
         "E": 2
       },
       "home": {
         "R": 4,
-        "H": 5,
-        "E": 0
+        "H": 9,
+        "E": 1
       }
     }
   },
@@ -83,12 +83,12 @@
         "player": "julian-sauri",
         "name": "Julián Sauri",
         "position": "C",
-        "AB": 4,
-        "R": 0,
-        "H": 0,
+        "AB": 3,
+        "R": 1,
+        "H": 2,
         "2B": 0,
         "3B": 0,
-        "RBI": 0,
+        "RBI": 1,
         "BB": 0,
         "K": 0,
         "HR": 0,
@@ -101,41 +101,41 @@
         "AB": 3,
         "R": 0,
         "H": 1,
-        "2B": 1,
+        "2B": 0,
         "3B": 0,
         "RBI": 0,
-        "BB": 1,
-        "K": 0,
+        "BB": 0,
+        "K": 1,
         "HR": 0,
-        "SB": 0
+        "SB": 1
       },
       {
         "player": "thiago-pereyra",
         "name": "Thiago Pereyra",
         "position": "2B",
-        "AB": 5,
-        "R": 1,
-        "H": 1,
+        "AB": 4,
+        "R": 0,
+        "H": 2,
         "2B": 0,
         "3B": 0,
         "RBI": 1,
         "BB": 0,
-        "K": 1,
-        "HR": 1,
+        "K": 0,
+        "HR": 0,
         "SB": 0
       },
       {
         "player": "kofi-mensah",
         "name": "Kofi Mensah",
         "position": "SS",
-        "AB": 5,
+        "AB": 4,
         "R": 0,
-        "H": 0,
+        "H": 2,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
         "BB": 0,
-        "K": 1,
+        "K": 0,
         "HR": 0,
         "SB": 0
       },
@@ -143,39 +143,39 @@
         "player": "luka-vukovic",
         "name": "Luka Vuković",
         "position": "3B",
-        "AB": 3,
+        "AB": 5,
         "R": 0,
         "H": 1,
-        "2B": 0,
+        "2B": 1,
         "3B": 0,
-        "RBI": 1,
+        "RBI": 0,
         "BB": 0,
-        "K": 0,
+        "K": 1,
         "HR": 0,
-        "SB": 0
+        "SB": 1
       },
       {
         "player": "seiji-fukumori",
         "name": "Seiji Fukumori",
         "position": "CF",
-        "AB": 5,
-        "R": 1,
-        "H": 1,
+        "AB": 4,
+        "R": 0,
+        "H": 0,
         "2B": 0,
         "3B": 0,
-        "RBI": 1,
-        "BB": 0,
-        "K": 3,
-        "HR": 1,
+        "RBI": 0,
+        "BB": 1,
+        "K": 2,
+        "HR": 0,
         "SB": 0
       },
       {
         "player": "andres-cazares",
         "name": "Andrés Cázares",
         "position": "LF",
-        "AB": 3,
-        "R": 1,
-        "H": 0,
+        "AB": 4,
+        "R": 0,
+        "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
@@ -188,16 +188,16 @@
         "player": "micah-lunsford",
         "name": "Micah Lunsford",
         "position": "RF",
-        "AB": 3,
-        "R": 0,
-        "H": 0,
+        "AB": 5,
+        "R": 2,
+        "H": 1,
         "2B": 0,
         "3B": 0,
-        "RBI": 0,
-        "BB": 1,
+        "RBI": 1,
+        "BB": 0,
         "K": 1,
-        "HR": 0,
-        "SB": 1
+        "HR": 1,
+        "SB": 0
       }
     ],
     "home": [
@@ -210,11 +210,11 @@
         "H": 0,
         "2B": 0,
         "3B": 0,
-        "RBI": 0,
+        "RBI": 1,
         "BB": 0,
-        "K": 4,
+        "K": 2,
         "HR": 0,
-        "SB": 0
+        "SB": 1
       },
       {
         "player": "noam-finkel",
@@ -222,11 +222,11 @@
         "position": "1B",
         "AB": 5,
         "R": 0,
-        "H": 0,
+        "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
-        "BB": 2,
+        "BB": 0,
         "K": 2,
         "HR": 0,
         "SB": 0
@@ -235,14 +235,14 @@
         "player": "raul-castillo",
         "name": "Raúl Castillo",
         "position": "2B",
-        "AB": 4,
-        "R": 0,
-        "H": 0,
+        "AB": 5,
+        "R": 1,
+        "H": 1,
         "2B": 0,
         "3B": 0,
-        "RBI": 0,
+        "RBI": 1,
         "BB": 0,
-        "K": 2,
+        "K": 1,
         "HR": 0,
         "SB": 0
       },
@@ -250,16 +250,16 @@
         "player": "maksim-berezan",
         "name": "Maksim Berezan",
         "position": "SS",
-        "AB": 4,
+        "AB": 3,
         "R": 0,
-        "H": 1,
+        "H": 2,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
         "BB": 0,
-        "K": 1,
+        "K": 0,
         "HR": 0,
-        "SB": 0
+        "SB": 1
       },
       {
         "player": "eamon-quillan",
@@ -267,26 +267,26 @@
         "position": "3B",
         "AB": 4,
         "R": 2,
-        "H": 2,
+        "H": 1,
         "2B": 0,
         "3B": 0,
-        "RBI": 2,
-        "BB": 1,
-        "K": 0,
-        "HR": 2,
-        "SB": 1
+        "RBI": 0,
+        "BB": 3,
+        "K": 2,
+        "HR": 0,
+        "SB": 0
       },
       {
         "player": "kiyoshi-senda",
         "name": "Kiyoshi Senda",
         "position": "LF",
         "AB": 4,
-        "R": 0,
-        "H": 0,
-        "2B": 0,
+        "R": 1,
+        "H": 1,
+        "2B": 1,
         "3B": 0,
         "RBI": 0,
-        "BB": 1,
+        "BB": 0,
         "K": 0,
         "HR": 0,
         "SB": 0
@@ -296,29 +296,29 @@
         "name": "Dalton Reyes",
         "position": "CF",
         "AB": 5,
-        "R": 1,
-        "H": 1,
-        "2B": 0,
+        "R": 0,
+        "H": 2,
+        "2B": 2,
         "3B": 0,
         "RBI": 1,
-        "BB": 0,
+        "BB": 1,
         "K": 1,
-        "HR": 1,
+        "HR": 0,
         "SB": 0
       },
       {
         "player": "adebayo-oluwaseyi",
         "name": "Adebayo Oluwaseyi",
         "position": "RF",
-        "AB": 5,
-        "R": 1,
+        "AB": 3,
+        "R": 0,
         "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 1,
         "BB": 0,
         "K": 0,
-        "HR": 1,
+        "HR": 0,
         "SB": 0
       }
     ]
@@ -328,52 +328,52 @@
       {
         "player": "cole-wexler",
         "name": "Cole Wexler",
-        "IP_outs": 16,
-        "H": 0,
-        "R": 2,
-        "ER": 2,
-        "BB": 4,
-        "K": 7,
-        "HR": 2,
-        "IP": 5.1
+        "IP_outs": 21,
+        "H": 7,
+        "R": 4,
+        "ER": 4,
+        "BB": 1,
+        "K": 6,
+        "HR": 0,
+        "IP": 7
       },
       {
         "player": "bashir-el-khatib",
         "name": "Bashir El-Khatib",
-        "IP_outs": 11,
-        "H": 5,
-        "R": 2,
-        "ER": 2,
-        "BB": 0,
-        "K": 3,
-        "HR": 2,
-        "IP": 3.2
+        "IP_outs": 6,
+        "H": 2,
+        "R": 0,
+        "ER": 0,
+        "BB": 3,
+        "K": 2,
+        "HR": 0,
+        "IP": 2
       }
     ],
     "home": [
       {
         "player": "mateo-arancibia",
         "name": "Mateo Arancibia",
-        "IP_outs": 16,
-        "H": 3,
-        "R": 3,
-        "ER": 3,
+        "IP_outs": 20,
+        "H": 9,
+        "R": 1,
+        "ER": 1,
         "BB": 1,
         "K": 4,
-        "HR": 1,
-        "IP": 5.1
+        "HR": 0,
+        "IP": 6.2
       },
       {
         "player": "joaquim-silveira",
         "name": "Joaquim Silveira",
-        "IP_outs": 11,
+        "IP_outs": 7,
         "H": 1,
-        "R": 0,
-        "ER": 0,
-        "BB": 1,
-        "K": 2,
+        "R": 2,
+        "ER": 2,
+        "BB": 0,
+        "K": 1,
         "HR": 1,
-        "IP": 3.2
+        "IP": 2.1
       }
     ]
   },
@@ -382,6 +382,5 @@
     "L": "cole-wexler",
     "SV": "joaquim-silveira"
   },
-  "notes": [],
-  "calibration": "glb.stats-calibrated.v1"
+  "notes": []
 }

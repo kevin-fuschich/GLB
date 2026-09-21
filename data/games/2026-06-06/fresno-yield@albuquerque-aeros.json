@@ -11,7 +11,7 @@
     "name": "Albuquerque Aeros"
   },
   "status": "Final",
-  "attendance": 18046,
+  "attendance": 25207,
   "linescore": {
     "innings": [
       {
@@ -42,7 +42,7 @@
       {
         "inning": 6,
         "away": 0,
-        "home": 1
+        "home": 0
       },
       {
         "inning": 7,
@@ -52,7 +52,7 @@
       {
         "inning": 8,
         "away": 0,
-        "home": 0
+        "home": 1
       },
       {
         "inning": 9,
@@ -63,13 +63,13 @@
     "totals": {
       "away": {
         "R": 0,
-        "H": 5,
+        "H": 9,
         "E": 1
       },
       "home": {
         "R": 1,
-        "H": 7,
-        "E": 1
+        "H": 12,
+        "E": 2
       }
     }
   },
@@ -83,14 +83,14 @@
         "player": "luis-eccheri",
         "name": "Luis Eccheri",
         "position": "C",
-        "AB": 5,
+        "AB": 3,
         "R": 0,
-        "H": 1,
+        "H": 0,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
         "BB": 0,
-        "K": 1,
+        "K": 0,
         "HR": 0,
         "SB": 0
       },
@@ -101,11 +101,11 @@
         "AB": 4,
         "R": 0,
         "H": 1,
-        "2B": 0,
+        "2B": 1,
         "3B": 0,
         "RBI": 0,
         "BB": 0,
-        "K": 2,
+        "K": 0,
         "HR": 0,
         "SB": 0
       },
@@ -113,10 +113,10 @@
         "player": "soren-ahlgren",
         "name": "Søren Ahlgren",
         "position": "2B",
-        "AB": 4,
+        "AB": 5,
         "R": 0,
-        "H": 1,
-        "2B": 0,
+        "H": 3,
+        "2B": 1,
         "3B": 0,
         "RBI": 0,
         "BB": 0,
@@ -130,11 +130,11 @@
         "position": "SS",
         "AB": 4,
         "R": 0,
-        "H": 0,
-        "2B": 0,
+        "H": 1,
+        "2B": 1,
         "3B": 0,
         "RBI": 0,
-        "BB": 1,
+        "BB": 0,
         "K": 1,
         "HR": 0,
         "SB": 0
@@ -143,16 +143,16 @@
         "player": "eamon-kilbride",
         "name": "Eamon Kilbride",
         "position": "3B",
-        "AB": 5,
+        "AB": 3,
         "R": 0,
         "H": 1,
         "2B": 0,
-        "3B": 0,
+        "3B": 1,
         "RBI": 0,
         "BB": 0,
         "K": 1,
         "HR": 0,
-        "SB": 1
+        "SB": 0
       },
       {
         "player": "malachi-quartey",
@@ -165,7 +165,7 @@
         "3B": 0,
         "RBI": 0,
         "BB": 0,
-        "K": 0,
+        "K": 1,
         "HR": 0,
         "SB": 0
       },
@@ -173,16 +173,16 @@
         "player": "hiroshi-kawabata",
         "name": "Hiroshi Kawabata",
         "position": "LF",
-        "AB": 4,
+        "AB": 5,
         "R": 0,
-        "H": 0,
+        "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
         "BB": 1,
-        "K": 1,
+        "K": 2,
         "HR": 0,
-        "SB": 1
+        "SB": 0
       },
       {
         "player": "anwar-elamin",
@@ -190,12 +190,12 @@
         "position": "RF",
         "AB": 3,
         "R": 0,
-        "H": 0,
+        "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
-        "BB": 1,
-        "K": 1,
+        "BB": 0,
+        "K": 0,
         "HR": 0,
         "SB": 0
       }
@@ -206,9 +206,39 @@
         "name": "Rui Damas",
         "position": "C",
         "AB": 3,
-        "R": 0,
+        "R": 1,
         "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 0,
+        "K": 0,
+        "HR": 1,
+        "SB": 0
+      },
+      {
+        "player": "tobias-vandenberg",
+        "name": "Tobias Vandenberg",
+        "position": "1B",
+        "AB": 4,
+        "R": 0,
+        "H": 2,
         "2B": 1,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 0,
+        "HR": 0,
+        "SB": 1
+      },
+      {
+        "player": "kofi-agyeman",
+        "name": "Kofi Agyeman",
+        "position": "2B",
+        "AB": 4,
+        "R": 0,
+        "H": 3,
+        "2B": 0,
         "3B": 0,
         "RBI": 0,
         "BB": 1,
@@ -217,9 +247,9 @@
         "SB": 0
       },
       {
-        "player": "tobias-vandenberg",
-        "name": "Tobias Vandenberg",
-        "position": "1B",
+        "player": "iker-zubizarreta",
+        "name": "Iker Zubizarreta",
+        "position": "SS",
         "AB": 5,
         "R": 0,
         "H": 1,
@@ -229,50 +259,20 @@
         "BB": 0,
         "K": 2,
         "HR": 0,
-        "SB": 1
-      },
-      {
-        "player": "kofi-agyeman",
-        "name": "Kofi Agyeman",
-        "position": "2B",
-        "AB": 5,
-        "R": 0,
-        "H": 2,
-        "2B": 1,
-        "3B": 0,
-        "RBI": 0,
-        "BB": 0,
-        "K": 2,
-        "HR": 0,
-        "SB": 0
-      },
-      {
-        "player": "iker-zubizarreta",
-        "name": "Iker Zubizarreta",
-        "position": "SS",
-        "AB": 3,
-        "R": 0,
-        "H": 0,
-        "2B": 0,
-        "3B": 0,
-        "RBI": 0,
-        "BB": 0,
-        "K": 0,
-        "HR": 0,
         "SB": 0
       },
       {
         "player": "carmine-sforza",
         "name": "Carmine Sforza",
         "position": "3B",
-        "AB": 3,
+        "AB": 4,
         "R": 0,
-        "H": 0,
+        "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
         "BB": 0,
-        "K": 1,
+        "K": 0,
         "HR": 0,
         "SB": 0
       },
@@ -280,24 +280,24 @@
         "player": "adama-kouyate",
         "name": "Adama Kouyaté",
         "position": "CF",
-        "AB": 3,
+        "AB": 5,
         "R": 0,
-        "H": 2,
-        "2B": 1,
-        "3B": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 1,
         "RBI": 0,
-        "BB": 0,
+        "BB": 1,
         "K": 0,
         "HR": 0,
-        "SB": 1
+        "SB": 0
       },
       {
         "player": "elior-ben-ami",
         "name": "Elior Ben-Ami",
         "position": "LF",
-        "AB": 3,
+        "AB": 4,
         "R": 0,
-        "H": 0,
+        "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
@@ -311,77 +311,76 @@
         "name": "Paolo Ventresca",
         "position": "RF",
         "AB": 5,
-        "R": 1,
-        "H": 1,
-        "2B": 0,
+        "R": 0,
+        "H": 2,
+        "2B": 2,
         "3B": 0,
-        "RBI": 1,
-        "BB": 1,
-        "K": 0,
-        "HR": 1,
-        "SB": 0
+        "RBI": 0,
+        "BB": 0,
+        "K": 1,
+        "HR": 0,
+        "SB": 1
       }
     ]
   },
   "pitching": {
     "away": [
       {
-        "player": "roman-villasenor",
-        "name": "Román Villaseñor",
-        "IP_outs": 20,
-        "H": 7,
-        "R": 0,
-        "ER": 0,
-        "BB": 0,
-        "K": 5,
-        "HR": 1,
-        "IP": 6.2
-      },
-      {
-        "player": "dusan-marevic",
-        "name": "Dušan Marević",
-        "IP_outs": 7,
-        "H": 0,
+        "player": "cedric-wainwright",
+        "name": "Cedric Wainwright",
+        "IP_outs": 16,
+        "H": 3,
         "R": 1,
         "ER": 1,
+        "BB": 0,
+        "K": 2,
+        "HR": 1,
+        "IP": 5.1
+      },
+      {
+        "player": "ibrahim-koroma",
+        "name": "Ibrahim Koroma",
+        "IP_outs": 11,
+        "H": 9,
+        "R": 0,
+        "ER": 0,
         "BB": 2,
-        "K": 1,
+        "K": 2,
         "HR": 0,
-        "IP": 2.1
+        "IP": 3.2
       }
     ],
     "home": [
       {
         "player": "pieter-vanvleuten",
         "name": "Pieter VanVleuten",
-        "IP_outs": 16,
-        "H": 3,
+        "IP_outs": 18,
+        "H": 5,
         "R": 0,
         "ER": 0,
-        "BB": 1,
-        "K": 5,
+        "BB": 0,
+        "K": 4,
         "HR": 0,
-        "IP": 5.1
+        "IP": 6
       },
       {
         "player": "eamon-quirke",
         "name": "Eamon Quirke",
-        "IP_outs": 11,
-        "H": 2,
+        "IP_outs": 9,
+        "H": 4,
         "R": 0,
         "ER": 0,
-        "BB": 2,
-        "K": 3,
+        "BB": 1,
+        "K": 2,
         "HR": 0,
-        "IP": 3.2
+        "IP": 3
       }
     ]
   },
   "decisions": {
     "W": "pieter-vanvleuten",
-    "L": "roman-villasenor",
-    "SV": "eamon-quirke"
+    "L": "cedric-wainwright",
+    "SV": null
   },
-  "notes": [],
-  "calibration": "glb.stats-calibrated.v1"
+  "notes": []
 }

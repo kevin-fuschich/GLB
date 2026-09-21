@@ -11,13 +11,13 @@
     "name": "Louisville Naturals"
   },
   "status": "Final",
-  "attendance": 13234,
+  "attendance": 19434,
   "linescore": {
     "innings": [
       {
         "inning": 1,
-        "away": 1,
-        "home": 1
+        "away": 0,
+        "home": 2
       },
       {
         "inning": 2,
@@ -32,11 +32,11 @@
       {
         "inning": 4,
         "away": 0,
-        "home": 1
+        "home": 0
       },
       {
         "inning": 5,
-        "away": 0,
+        "away": 1,
         "home": 0
       },
       {
@@ -68,8 +68,8 @@
       },
       "home": {
         "R": 4,
-        "H": 4,
-        "E": 1
+        "H": 12,
+        "E": 0
       }
     }
   },
@@ -83,9 +83,24 @@
         "player": "rui-damas",
         "name": "Rui Damas",
         "position": "C",
+        "AB": 3,
+        "R": 0,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 1,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "tobias-vandenberg",
+        "name": "Tobias Vandenberg",
+        "position": "1B",
         "AB": 4,
         "R": 0,
-        "H": 1,
+        "H": 0,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
@@ -95,32 +110,17 @@
         "SB": 0
       },
       {
-        "player": "tobias-vandenberg",
-        "name": "Tobias Vandenberg",
-        "position": "1B",
-        "AB": 4,
-        "R": 1,
-        "H": 1,
-        "2B": 0,
-        "3B": 0,
-        "RBI": 1,
-        "BB": 0,
-        "K": 2,
-        "HR": 1,
-        "SB": 0
-      },
-      {
         "player": "kofi-agyeman",
         "name": "Kofi Agyeman",
         "position": "2B",
-        "AB": 3,
+        "AB": 4,
         "R": 0,
         "H": 2,
         "2B": 0,
         "3B": 0,
-        "RBI": 0,
-        "BB": 2,
-        "K": 1,
+        "RBI": 1,
+        "BB": 0,
+        "K": 0,
         "HR": 0,
         "SB": 0
       },
@@ -128,9 +128,9 @@
         "player": "iker-zubizarreta",
         "name": "Iker Zubizarreta",
         "position": "SS",
-        "AB": 5,
+        "AB": 3,
         "R": 0,
-        "H": 0,
+        "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
@@ -143,28 +143,28 @@
         "player": "carmine-sforza",
         "name": "Carmine Sforza",
         "position": "3B",
-        "AB": 3,
-        "R": 0,
-        "H": 0,
+        "AB": 4,
+        "R": 1,
+        "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
         "BB": 0,
         "K": 1,
         "HR": 0,
-        "SB": 1
+        "SB": 0
       },
       {
         "player": "adama-kouyate",
         "name": "Adama Kouyaté",
         "position": "CF",
-        "AB": 5,
+        "AB": 4,
         "R": 0,
         "H": 0,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
-        "BB": 1,
+        "BB": 0,
         "K": 1,
         "HR": 0,
         "SB": 0
@@ -173,14 +173,14 @@
         "player": "elior-ben-ami",
         "name": "Elior Ben-Ami",
         "position": "LF",
-        "AB": 3,
+        "AB": 5,
         "R": 0,
         "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
         "BB": 0,
-        "K": 0,
+        "K": 1,
         "HR": 0,
         "SB": 1
       },
@@ -194,7 +194,7 @@
         "2B": 0,
         "3B": 0,
         "RBI": 0,
-        "BB": 0,
+        "BB": 2,
         "K": 0,
         "HR": 0,
         "SB": 0
@@ -205,15 +205,15 @@
         "player": "noah-bianchi",
         "name": "Noah Bianchi",
         "position": "C",
-        "AB": 4,
+        "AB": 3,
         "R": 1,
         "H": 1,
         "2B": 0,
         "3B": 0,
-        "RBI": 1,
+        "RBI": 0,
         "BB": 0,
         "K": 1,
-        "HR": 1,
+        "HR": 0,
         "SB": 0
       },
       {
@@ -222,38 +222,8 @@
         "position": "1B",
         "AB": 5,
         "R": 0,
-        "H": 1,
-        "2B": 0,
-        "3B": 0,
-        "RBI": 0,
-        "BB": 1,
-        "K": 3,
-        "HR": 0,
-        "SB": 0
-      },
-      {
-        "player": "jalen-brooks",
-        "name": "Jalen Brooks",
-        "position": "2B",
-        "AB": 5,
-        "R": 1,
-        "H": 0,
-        "2B": 0,
-        "3B": 0,
-        "RBI": 0,
-        "BB": 0,
-        "K": 2,
-        "HR": 0,
-        "SB": 0
-      },
-      {
-        "player": "rafael-costa",
-        "name": "Rafael Costa",
-        "position": "SS",
-        "AB": 5,
-        "R": 0,
         "H": 2,
-        "2B": 1,
+        "2B": 0,
         "3B": 0,
         "RBI": 0,
         "BB": 0,
@@ -262,12 +232,42 @@
         "SB": 0
       },
       {
+        "player": "jalen-brooks",
+        "name": "Jalen Brooks",
+        "position": "2B",
+        "AB": 3,
+        "R": 1,
+        "H": 2,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 1,
+        "K": 0,
+        "HR": 1,
+        "SB": 0
+      },
+      {
+        "player": "rafael-costa",
+        "name": "Rafael Costa",
+        "position": "SS",
+        "AB": 5,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 0,
+        "K": 1,
+        "HR": 0,
+        "SB": 0
+      },
+      {
         "player": "dominic-russo",
         "name": "Dominic Russo",
         "position": "3B",
-        "AB": 5,
-        "R": 1,
-        "H": 0,
+        "AB": 3,
+        "R": 0,
+        "H": 2,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
@@ -282,12 +282,12 @@
         "position": "CF",
         "AB": 4,
         "R": 1,
-        "H": 0,
-        "2B": 0,
+        "H": 2,
+        "2B": 1,
         "3B": 0,
-        "RBI": 1,
+        "RBI": 0,
         "BB": 1,
-        "K": 0,
+        "K": 1,
         "HR": 0,
         "SB": 0
       },
@@ -297,12 +297,12 @@
         "position": "LF",
         "AB": 5,
         "R": 0,
-        "H": 0,
+        "H": 2,
         "2B": 0,
         "3B": 0,
-        "RBI": 1,
-        "BB": 1,
-        "K": 0,
+        "RBI": 2,
+        "BB": 0,
+        "K": 1,
         "HR": 0,
         "SB": 0
       },
@@ -310,14 +310,14 @@
         "player": "blake-harrison",
         "name": "Blake Harrison",
         "position": "RF",
-        "AB": 3,
-        "R": 0,
+        "AB": 4,
+        "R": 1,
         "H": 0,
         "2B": 0,
         "3B": 0,
-        "RBI": 1,
+        "RBI": 0,
         "BB": 0,
-        "K": 2,
+        "K": 0,
         "HR": 0,
         "SB": 0
       }
@@ -328,60 +328,59 @@
       {
         "player": "satoshi-kurobane",
         "name": "Satoshi Kurobane",
-        "IP_outs": 19,
-        "H": 3,
-        "R": 3,
-        "ER": 3,
+        "IP_outs": 21,
+        "H": 7,
+        "R": 4,
+        "ER": 4,
         "BB": 2,
-        "K": 6,
-        "HR": 1,
-        "IP": 6.1
+        "K": 4,
+        "HR": 0,
+        "IP": 7
       },
       {
         "player": "jae-min-gwak",
         "name": "Jae-min Gwak",
-        "IP_outs": 8,
-        "H": 1,
-        "R": 1,
-        "ER": 1,
-        "BB": 1,
-        "K": 2,
-        "HR": 0,
-        "IP": 2.2
+        "IP_outs": 6,
+        "H": 5,
+        "R": 0,
+        "ER": 0,
+        "BB": 0,
+        "K": 0,
+        "HR": 1,
+        "IP": 2
       }
     ],
     "home": [
       {
-        "player": "santiago-correa",
-        "name": "Santiago Correa",
-        "IP_outs": 21,
-        "H": 3,
-        "R": 0,
-        "ER": 0,
-        "BB": 3,
-        "K": 3,
-        "HR": 1,
-        "IP": 7
-      },
-      {
-        "player": "evan-sutter",
-        "name": "Evan Sutter",
-        "IP_outs": 6,
-        "H": 3,
+        "player": "darius-okonkwo",
+        "name": "Darius Okonkwo",
+        "IP_outs": 19,
+        "H": 4,
         "R": 1,
         "ER": 1,
-        "BB": 1,
-        "K": 2,
+        "BB": 2,
+        "K": 3,
         "HR": 0,
-        "IP": 2
+        "IP": 6.1
+      },
+      {
+        "player": "luis-delgado",
+        "name": "Luis Delgado",
+        "IP_outs": 8,
+        "H": 2,
+        "R": 0,
+        "ER": 0,
+        "BB": 1,
+        "K": 1,
+        "HR": 0,
+        "IP": 2.2
       }
     ]
   },
   "decisions": {
-    "W": "santiago-correa",
+    "W": "darius-okonkwo",
     "L": "satoshi-kurobane",
-    "SV": "evan-sutter"
+    "SV": "luis-delgado"
   },
-  "notes": [],
-  "calibration": "glb.stats-calibrated.v1"
+  "notes": []
 }

@@ -11,12 +11,12 @@
     "name": "St. Paul Frost"
   },
   "status": "Final",
-  "attendance": 20311,
+  "attendance": 30953,
   "linescore": {
     "innings": [
       {
         "inning": 1,
-        "away": 1,
+        "away": 0,
         "home": 0
       },
       {
@@ -27,22 +27,22 @@
       {
         "inning": 3,
         "away": 0,
-        "home": 1
+        "home": 0
       },
       {
         "inning": 4,
-        "away": 2,
+        "away": 1,
         "home": 0
       },
       {
         "inning": 5,
-        "away": 0,
-        "home": 0
+        "away": 1,
+        "home": 1
       },
       {
         "inning": 6,
-        "away": 1,
-        "home": 0
+        "away": 0,
+        "home": 2
       },
       {
         "inning": 7,
@@ -51,25 +51,25 @@
       },
       {
         "inning": 8,
-        "away": 0,
+        "away": 2,
         "home": 0
       },
       {
         "inning": 9,
         "away": 0,
-        "home": 2
+        "home": 0
       }
     ],
     "totals": {
       "away": {
         "R": 4,
-        "H": 6,
-        "E": 0
+        "H": 9,
+        "E": 1
       },
       "home": {
         "R": 3,
-        "H": 6,
-        "E": 2
+        "H": 8,
+        "E": 1
       }
     }
   },
@@ -83,25 +83,40 @@
         "player": "damian-velasquez",
         "name": "Damián Velásquez",
         "position": "C",
-        "AB": 3,
+        "AB": 4,
         "R": 0,
         "H": 1,
         "2B": 0,
         "3B": 0,
-        "RBI": 0,
+        "RBI": 1,
         "BB": 0,
-        "K": 2,
+        "K": 0,
         "HR": 0,
-        "SB": 1
+        "SB": 0
       },
       {
         "player": "noam-finkel",
         "name": "Noam Finkel",
         "position": "1B",
-        "AB": 3,
+        "AB": 4,
         "R": 0,
         "H": 1,
-        "2B": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 1,
+        "K": 1,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "raul-castillo",
+        "name": "Raúl Castillo",
+        "position": "2B",
+        "AB": 5,
+        "R": 1,
+        "H": 2,
+        "2B": 0,
         "3B": 0,
         "RBI": 1,
         "BB": 2,
@@ -110,42 +125,12 @@
         "SB": 0
       },
       {
-        "player": "raul-castillo",
-        "name": "Raúl Castillo",
-        "position": "2B",
-        "AB": 3,
-        "R": 0,
-        "H": 1,
-        "2B": 1,
-        "3B": 0,
-        "RBI": 1,
-        "BB": 0,
-        "K": 0,
-        "HR": 0,
-        "SB": 0
-      },
-      {
         "player": "maksim-berezan",
         "name": "Maksim Berezan",
         "position": "SS",
-        "AB": 5,
-        "R": 1,
-        "H": 2,
-        "2B": 0,
-        "3B": 0,
-        "RBI": 0,
-        "BB": 0,
-        "K": 2,
-        "HR": 0,
-        "SB": 0
-      },
-      {
-        "player": "eamon-quillan",
-        "name": "Eamon Quillan",
-        "position": "3B",
         "AB": 3,
         "R": 0,
-        "H": 0,
+        "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
@@ -155,16 +140,31 @@
         "SB": 0
       },
       {
+        "player": "eamon-quillan",
+        "name": "Eamon Quillan",
+        "position": "3B",
+        "AB": 5,
+        "R": 0,
+        "H": 2,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      },
+      {
         "player": "kiyoshi-senda",
         "name": "Kiyoshi Senda",
         "position": "LF",
-        "AB": 5,
+        "AB": 4,
         "R": 1,
         "H": 1,
         "2B": 0,
         "3B": 0,
-        "RBI": 1,
-        "BB": 1,
+        "RBI": 0,
+        "BB": 0,
         "K": 2,
         "HR": 0,
         "SB": 0
@@ -173,8 +173,8 @@
         "player": "dalton-reyes",
         "name": "Dalton Reyes",
         "position": "CF",
-        "AB": 5,
-        "R": 2,
+        "AB": 4,
+        "R": 0,
         "H": 0,
         "2B": 0,
         "3B": 0,
@@ -188,15 +188,15 @@
         "player": "adebayo-oluwaseyi",
         "name": "Adebayo Oluwaseyi",
         "position": "RF",
-        "AB": 4,
-        "R": 0,
-        "H": 0,
+        "AB": 3,
+        "R": 2,
+        "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 1,
         "BB": 0,
-        "K": 2,
-        "HR": 0,
+        "K": 0,
+        "HR": 1,
         "SB": 0
       }
     ],
@@ -206,14 +206,14 @@
         "name": "Evan Morrissey",
         "position": "C",
         "AB": 3,
-        "R": 0,
-        "H": 1,
-        "2B": 1,
+        "R": 1,
+        "H": 2,
+        "2B": 0,
         "3B": 0,
-        "RBI": 0,
-        "BB": 2,
+        "RBI": 1,
+        "BB": 0,
         "K": 0,
-        "HR": 0,
+        "HR": 1,
         "SB": 0
       },
       {
@@ -221,21 +221,21 @@
         "name": "Javier Lucero",
         "position": "1B",
         "AB": 3,
-        "R": 0,
+        "R": 1,
         "H": 1,
-        "2B": 1,
+        "2B": 0,
         "3B": 0,
         "RBI": 1,
-        "BB": 0,
+        "BB": 1,
         "K": 1,
-        "HR": 0,
-        "SB": 0
+        "HR": 1,
+        "SB": 1
       },
       {
         "player": "owen-hartnell",
         "name": "Owen Hartnell",
         "position": "2B",
-        "AB": 4,
+        "AB": 5,
         "R": 0,
         "H": 1,
         "2B": 0,
@@ -252,12 +252,12 @@
         "position": "SS",
         "AB": 3,
         "R": 0,
-        "H": 0,
-        "2B": 0,
+        "H": 1,
+        "2B": 1,
         "3B": 0,
         "RBI": 0,
-        "BB": 0,
-        "K": 2,
+        "BB": 1,
+        "K": 1,
         "HR": 0,
         "SB": 0
       },
@@ -265,36 +265,6 @@
         "player": "trevor-yates",
         "name": "Trevor Yates",
         "position": "3B",
-        "AB": 4,
-        "R": 1,
-        "H": 2,
-        "2B": 0,
-        "3B": 0,
-        "RBI": 0,
-        "BB": 0,
-        "K": 0,
-        "HR": 0,
-        "SB": 0
-      },
-      {
-        "player": "malik-jefferson",
-        "name": "Malik Jefferson",
-        "position": "CF",
-        "AB": 3,
-        "R": 1,
-        "H": 0,
-        "2B": 0,
-        "3B": 0,
-        "RBI": 1,
-        "BB": 0,
-        "K": 1,
-        "HR": 0,
-        "SB": 1
-      },
-      {
-        "player": "rodrigo-fuentes",
-        "name": "Rodrigo Fuentes",
-        "position": "LF",
         "AB": 5,
         "R": 1,
         "H": 1,
@@ -302,22 +272,52 @@
         "3B": 0,
         "RBI": 1,
         "BB": 0,
-        "K": 3,
+        "K": 0,
         "HR": 1,
+        "SB": 0
+      },
+      {
+        "player": "malik-jefferson",
+        "name": "Malik Jefferson",
+        "position": "CF",
+        "AB": 5,
+        "R": 0,
+        "H": 1,
+        "2B": 1,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 1,
+        "K": 2,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "rodrigo-fuentes",
+        "name": "Rodrigo Fuentes",
+        "position": "LF",
+        "AB": 4,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 1,
+        "RBI": 0,
+        "BB": 0,
+        "K": 0,
+        "HR": 0,
         "SB": 0
       },
       {
         "player": "jake-lanier",
         "name": "Jake Lanier",
         "position": "RF",
-        "AB": 4,
+        "AB": 3,
         "R": 0,
         "H": 0,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
-        "BB": 0,
-        "K": 2,
+        "BB": 2,
+        "K": 0,
         "HR": 0,
         "SB": 0
       }
@@ -328,60 +328,59 @@
       {
         "player": "aron-videla",
         "name": "Arón Videla",
-        "IP_outs": 21,
+        "IP_outs": 19,
         "H": 2,
-        "R": 3,
-        "ER": 3,
-        "BB": 0,
-        "K": 7,
-        "HR": 1,
-        "IP": 7
+        "R": 2,
+        "ER": 2,
+        "BB": 1,
+        "K": 3,
+        "HR": 2,
+        "IP": 6.1
       },
       {
         "player": "tyrese-warnock",
         "name": "Tyrese Warnock",
-        "IP_outs": 6,
-        "H": 4,
-        "R": 0,
-        "ER": 0,
-        "BB": 2,
-        "K": 2,
-        "HR": 0,
-        "IP": 2
+        "IP_outs": 8,
+        "H": 6,
+        "R": 1,
+        "ER": 1,
+        "BB": 4,
+        "K": 1,
+        "HR": 1,
+        "IP": 2.2
       }
     ],
     "home": [
       {
         "player": "caleb-warnock",
         "name": "Caleb Warnock",
-        "IP_outs": 21,
-        "H": 4,
-        "R": 2,
-        "ER": 2,
-        "BB": 1,
-        "K": 8,
-        "HR": 0,
-        "IP": 7
+        "IP_outs": 15,
+        "H": 6,
+        "R": 3,
+        "ER": 3,
+        "BB": 2,
+        "K": 4,
+        "HR": 1,
+        "IP": 5
       },
       {
         "player": "darius-collins",
         "name": "Darius Collins",
-        "IP_outs": 6,
-        "H": 2,
-        "R": 2,
-        "ER": 2,
-        "BB": 2,
-        "K": 2,
+        "IP_outs": 12,
+        "H": 3,
+        "R": 1,
+        "ER": 1,
+        "BB": 1,
+        "K": 1,
         "HR": 0,
-        "IP": 2
+        "IP": 4
       }
     ]
   },
   "decisions": {
     "W": "aron-videla",
     "L": "caleb-warnock",
-    "SV": null
+    "SV": "tyrese-warnock"
   },
-  "notes": [],
-  "calibration": "glb.stats-calibrated.v1"
+  "notes": []
 }

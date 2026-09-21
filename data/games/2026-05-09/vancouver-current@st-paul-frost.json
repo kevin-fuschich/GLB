@@ -11,7 +11,7 @@
     "name": "St. Paul Frost"
   },
   "status": "Final",
-  "attendance": 25969,
+  "attendance": 16988,
   "linescore": {
     "innings": [
       {
@@ -41,7 +41,7 @@
       },
       {
         "inning": 6,
-        "away": 1,
+        "away": 2,
         "home": 0
       },
       {
@@ -51,7 +51,7 @@
       },
       {
         "inning": 8,
-        "away": 1,
+        "away": 0,
         "home": 0
       },
       {
@@ -68,7 +68,7 @@
       },
       "home": {
         "R": 0,
-        "H": 5,
+        "H": 10,
         "E": 0
       }
     }
@@ -80,9 +80,39 @@
   "batting": {
     "away": [
       {
-        "player": "silas-boudreau",
-        "name": "Silas Boudreau",
+        "player": "ryan-mcallister",
+        "name": "Ryan McAllister",
         "position": "C",
+        "AB": 4,
+        "R": 0,
+        "H": 2,
+        "2B": 1,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "julio-paredes",
+        "name": "Julio Paredes",
+        "position": "1B",
+        "AB": 3,
+        "R": 1,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 1,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "jae-hyun-lee",
+        "name": "Jae-hyun Lee",
+        "position": "2B",
         "AB": 5,
         "R": 0,
         "H": 0,
@@ -95,9 +125,39 @@
         "SB": 0
       },
       {
-        "player": "eamon-kerr",
-        "name": "Eamon Kerr",
-        "position": "1B",
+        "player": "tomas-guerrero",
+        "name": "Tomás Guerrero",
+        "position": "3B",
+        "AB": 5,
+        "R": 0,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 1,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "nicolas-rojas",
+        "name": "Nicolás Rojas",
+        "position": "SS",
+        "AB": 4,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "connor-walsh",
+        "name": "Connor Walsh",
+        "position": "LF",
         "AB": 5,
         "R": 0,
         "H": 1,
@@ -105,98 +165,53 @@
         "3B": 0,
         "RBI": 0,
         "BB": 0,
-        "K": 1,
+        "K": 0,
         "HR": 0,
-        "SB": 2
+        "SB": 0
       },
       {
-        "player": "soraya-jafari",
-        "name": "Soraya Jafari",
-        "position": "2B",
-        "AB": 3,
+        "player": "miguel-soto",
+        "name": "Miguel Soto",
+        "position": "CF",
+        "AB": 5,
         "R": 0,
         "H": 1,
         "2B": 1,
         "3B": 0,
         "RBI": 0,
         "BB": 0,
-        "K": 2,
+        "K": 3,
         "HR": 0,
-        "SB": 0
+        "SB": 1
       },
       {
-        "player": "alejo-santillan",
-        "name": "Alejo Santillán",
-        "position": "SS",
-        "AB": 5,
-        "R": 0,
-        "H": 1,
-        "2B": 0,
-        "3B": 0,
-        "RBI": 0,
-        "BB": 0,
-        "K": 1,
-        "HR": 0,
-        "SB": 0
-      },
-      {
-        "player": "roman-velasco",
-        "name": "Roman Velasco",
-        "position": "3B",
-        "AB": 3,
+        "player": "kazuya-nishimura",
+        "name": "Kazuya Nishimura",
+        "position": "RF",
+        "AB": 4,
         "R": 0,
         "H": 0,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
         "BB": 1,
-        "K": 0,
+        "K": 2,
         "HR": 0,
         "SB": 0
       },
       {
-        "player": "taj-adelman",
-        "name": "Taj Adelman",
-        "position": "LF",
+        "player": "evan-brooks",
+        "name": "Evan Brooks",
+        "position": "DH",
         "AB": 5,
-        "R": 1,
-        "H": 3,
+        "R": 2,
+        "H": 2,
         "2B": 0,
         "3B": 0,
-        "RBI": 1,
-        "BB": 0,
-        "K": 0,
-        "HR": 1,
-        "SB": 0
-      },
-      {
-        "player": "marcell-lind",
-        "name": "Marcell Lind",
-        "position": "CF",
-        "AB": 5,
-        "R": 1,
-        "H": 1,
-        "2B": 0,
-        "3B": 0,
-        "RBI": 2,
-        "BB": 0,
+        "RBI": 3,
+        "BB": 1,
         "K": 1,
-        "HR": 1,
-        "SB": 0
-      },
-      {
-        "player": "oziel-narvaez",
-        "name": "Oziel Narváez",
-        "position": "RF",
-        "AB": 5,
-        "R": 1,
-        "H": 0,
-        "2B": 0,
-        "3B": 0,
-        "RBI": 0,
-        "BB": 0,
-        "K": 1,
-        "HR": 0,
+        "HR": 2,
         "SB": 0
       }
     ],
@@ -205,14 +220,14 @@
         "player": "evan-morrissey",
         "name": "Evan Morrissey",
         "position": "C",
-        "AB": 4,
+        "AB": 5,
         "R": 0,
-        "H": 1,
+        "H": 2,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
-        "BB": 1,
-        "K": 0,
+        "BB": 0,
+        "K": 1,
         "HR": 0,
         "SB": 0
       },
@@ -220,14 +235,14 @@
         "player": "javier-lucero",
         "name": "Javier Lucero",
         "position": "1B",
-        "AB": 5,
+        "AB": 3,
         "R": 0,
-        "H": 1,
+        "H": 0,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
-        "BB": 2,
-        "K": 1,
+        "BB": 0,
+        "K": 2,
         "HR": 0,
         "SB": 0
       },
@@ -235,9 +250,9 @@
         "player": "owen-hartnell",
         "name": "Owen Hartnell",
         "position": "2B",
-        "AB": 4,
+        "AB": 5,
         "R": 0,
-        "H": 2,
+        "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
@@ -252,12 +267,12 @@
         "position": "SS",
         "AB": 4,
         "R": 0,
-        "H": 0,
-        "2B": 0,
+        "H": 3,
+        "2B": 1,
         "3B": 0,
         "RBI": 0,
         "BB": 0,
-        "K": 2,
+        "K": 0,
         "HR": 0,
         "SB": 0
       },
@@ -267,7 +282,7 @@
         "position": "3B",
         "AB": 3,
         "R": 0,
-        "H": 0,
+        "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
@@ -286,8 +301,8 @@
         "2B": 0,
         "3B": 0,
         "RBI": 0,
-        "BB": 1,
-        "K": 1,
+        "BB": 0,
+        "K": 0,
         "HR": 0,
         "SB": 0
       },
@@ -297,12 +312,12 @@
         "position": "LF",
         "AB": 3,
         "R": 0,
-        "H": 0,
-        "2B": 0,
+        "H": 1,
+        "2B": 1,
         "3B": 0,
         "RBI": 0,
-        "BB": 0,
-        "K": 1,
+        "BB": 1,
+        "K": 0,
         "HR": 0,
         "SB": 0
       },
@@ -312,40 +327,40 @@
         "position": "RF",
         "AB": 4,
         "R": 0,
-        "H": 1,
+        "H": 2,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
         "BB": 0,
         "K": 0,
         "HR": 0,
-        "SB": 1
+        "SB": 0
       }
     ]
   },
   "pitching": {
     "away": [
       {
-        "player": "dane-winslow",
-        "name": "Dane Winslow",
+        "player": "hiroto-yamane",
+        "name": "Hiroto Yamane",
         "IP_outs": 21,
-        "H": 1,
+        "H": 3,
         "R": 0,
         "ER": 0,
-        "BB": 5,
-        "K": 4,
+        "BB": 2,
+        "K": 3,
         "HR": 0,
         "IP": 7
       },
       {
-        "player": "yohei-arakida",
-        "name": "Yohei Arakida",
+        "player": "roberto-salazar",
+        "name": "Roberto Salazar",
         "IP_outs": 6,
-        "H": 4,
+        "H": 7,
         "R": 0,
         "ER": 0,
         "BB": 0,
-        "K": 2,
+        "K": 1,
         "HR": 0,
         "IP": 2
       }
@@ -358,9 +373,9 @@
         "H": 4,
         "R": 3,
         "ER": 3,
-        "BB": 0,
-        "K": 6,
-        "HR": 1,
+        "BB": 1,
+        "K": 7,
+        "HR": 0,
         "IP": 5.1
       },
       {
@@ -371,17 +386,16 @@
         "R": 0,
         "ER": 0,
         "BB": 1,
-        "K": 2,
-        "HR": 1,
+        "K": 3,
+        "HR": 2,
         "IP": 3.2
       }
     ]
   },
   "decisions": {
-    "W": "dane-winslow",
+    "W": "hiroto-yamane",
     "L": "miguel-alcazar",
-    "SV": "yohei-arakida"
+    "SV": null
   },
-  "notes": [],
-  "calibration": "glb.stats-calibrated.v1"
+  "notes": []
 }

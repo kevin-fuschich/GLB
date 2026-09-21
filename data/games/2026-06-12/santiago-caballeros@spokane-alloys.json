@@ -11,23 +11,23 @@
     "name": "Spokane Alloys"
   },
   "status": "Final",
-  "attendance": 12853,
+  "attendance": 20491,
   "linescore": {
     "innings": [
       {
         "inning": 1,
-        "away": 0,
+        "away": 1,
         "home": 0
       },
       {
         "inning": 2,
-        "away": 0,
-        "home": 1
+        "away": 1,
+        "home": 0
       },
       {
         "inning": 3,
         "away": 1,
-        "home": 1
+        "home": 0
       },
       {
         "inning": 4,
@@ -41,7 +41,7 @@
       },
       {
         "inning": 6,
-        "away": 2,
+        "away": 0,
         "home": 1
       },
       {
@@ -51,25 +51,25 @@
       },
       {
         "inning": 8,
-        "away": 1,
+        "away": 0,
         "home": 0
       },
       {
         "inning": 9,
-        "away": 0,
-        "home": 0
+        "away": 1,
+        "home": 2
       }
     ],
     "totals": {
       "away": {
         "R": 4,
-        "H": 7,
+        "H": 12,
         "E": 2
       },
       "home": {
         "R": 3,
         "H": 7,
-        "E": 2
+        "E": 0
       }
     }
   },
@@ -85,12 +85,12 @@
         "position": "C",
         "AB": 4,
         "R": 0,
-        "H": 1,
+        "H": 3,
         "2B": 0,
         "3B": 0,
-        "RBI": 2,
-        "BB": 2,
-        "K": 1,
+        "RBI": 0,
+        "BB": 0,
+        "K": 0,
         "HR": 0,
         "SB": 0
       },
@@ -98,15 +98,15 @@
         "player": "noam-finkel",
         "name": "Noam Finkel",
         "position": "1B",
-        "AB": 4,
-        "R": 1,
-        "H": 0,
+        "AB": 5,
+        "R": 2,
+        "H": 3,
         "2B": 0,
         "3B": 0,
-        "RBI": 1,
-        "BB": 0,
+        "RBI": 2,
+        "BB": 1,
         "K": 0,
-        "HR": 0,
+        "HR": 2,
         "SB": 0
       },
       {
@@ -114,28 +114,28 @@
         "name": "Raúl Castillo",
         "position": "2B",
         "AB": 3,
-        "R": 0,
-        "H": 2,
+        "R": 1,
+        "H": 1,
         "2B": 0,
         "3B": 0,
-        "RBI": 0,
+        "RBI": 1,
         "BB": 0,
-        "K": 0,
-        "HR": 0,
+        "K": 2,
+        "HR": 1,
         "SB": 0
       },
       {
         "player": "maksim-berezan",
         "name": "Maksim Berezan",
         "position": "SS",
-        "AB": 4,
+        "AB": 3,
         "R": 0,
         "H": 0,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
-        "BB": 1,
-        "K": 0,
+        "BB": 0,
+        "K": 3,
         "HR": 0,
         "SB": 0
       },
@@ -143,38 +143,38 @@
         "player": "eamon-quillan",
         "name": "Eamon Quillan",
         "position": "3B",
-        "AB": 4,
-        "R": 1,
-        "H": 1,
+        "AB": 3,
+        "R": 0,
+        "H": 0,
         "2B": 0,
         "3B": 0,
-        "RBI": 1,
+        "RBI": 0,
         "BB": 0,
-        "K": 0,
-        "HR": 1,
+        "K": 3,
+        "HR": 0,
         "SB": 0
       },
       {
         "player": "kiyoshi-senda",
         "name": "Kiyoshi Senda",
         "position": "LF",
-        "AB": 5,
+        "AB": 3,
         "R": 0,
-        "H": 1,
+        "H": 0,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
-        "BB": 1,
-        "K": 2,
+        "BB": 0,
+        "K": 0,
         "HR": 0,
-        "SB": 0
+        "SB": 1
       },
       {
         "player": "dalton-reyes",
         "name": "Dalton Reyes",
         "position": "CF",
         "AB": 4,
-        "R": 1,
+        "R": 0,
         "H": 2,
         "2B": 0,
         "3B": 0,
@@ -190,13 +190,13 @@
         "position": "RF",
         "AB": 4,
         "R": 1,
-        "H": 0,
+        "H": 3,
         "2B": 0,
         "3B": 0,
-        "RBI": 0,
+        "RBI": 1,
         "BB": 0,
-        "K": 0,
-        "HR": 0,
+        "K": 1,
+        "HR": 1,
         "SB": 1
       }
     ],
@@ -205,13 +205,13 @@
         "player": "nikolai-dobrynin",
         "name": "Nikolai Dobrynin",
         "position": "C",
-        "AB": 5,
+        "AB": 4,
         "R": 0,
-        "H": 2,
+        "H": 0,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
-        "BB": 1,
+        "BB": 0,
         "K": 1,
         "HR": 0,
         "SB": 0
@@ -223,10 +223,10 @@
         "AB": 4,
         "R": 0,
         "H": 1,
-        "2B": 0,
+        "2B": 1,
         "3B": 0,
         "RBI": 0,
-        "BB": 1,
+        "BB": 2,
         "K": 1,
         "HR": 0,
         "SB": 1
@@ -236,28 +236,28 @@
         "name": "Marco DelVecchio",
         "position": "2B",
         "AB": 3,
-        "R": 2,
+        "R": 1,
         "H": 2,
-        "2B": 0,
+        "2B": 1,
         "3B": 0,
-        "RBI": 2,
-        "BB": 0,
+        "RBI": 1,
+        "BB": 1,
         "K": 0,
-        "HR": 2,
+        "HR": 1,
         "SB": 0
       },
       {
         "player": "tomasz-kubas",
         "name": "Tomasz Kubas",
         "position": "SS",
-        "AB": 4,
+        "AB": 5,
         "R": 0,
-        "H": 0,
-        "2B": 0,
+        "H": 1,
+        "2B": 1,
         "3B": 0,
         "RBI": 0,
-        "BB": 1,
-        "K": 1,
+        "BB": 0,
+        "K": 0,
         "HR": 0,
         "SB": 0
       },
@@ -265,7 +265,7 @@
         "player": "andres-mireles",
         "name": "Andrés Mireles",
         "position": "3B",
-        "AB": 3,
+        "AB": 5,
         "R": 0,
         "H": 0,
         "2B": 0,
@@ -280,14 +280,14 @@
         "player": "wyatt-hollander",
         "name": "Wyatt Hollander",
         "position": "CF",
-        "AB": 5,
+        "AB": 3,
         "R": 0,
         "H": 0,
         "2B": 0,
         "3B": 0,
-        "RBI": 1,
-        "BB": 0,
-        "K": 1,
+        "RBI": 0,
+        "BB": 1,
+        "K": 0,
         "HR": 0,
         "SB": 0
       },
@@ -295,15 +295,15 @@
         "player": "luis-quinones",
         "name": "Luis Quiñones",
         "position": "LF",
-        "AB": 3,
+        "AB": 5,
         "R": 1,
         "H": 2,
-        "2B": 1,
-        "3B": 0,
-        "RBI": 0,
+        "2B": 0,
+        "3B": 1,
+        "RBI": 1,
         "BB": 0,
         "K": 0,
-        "HR": 0,
+        "HR": 1,
         "SB": 0
       },
       {
@@ -311,14 +311,14 @@
         "name": "Pieter van Wyk",
         "position": "RF",
         "AB": 4,
-        "R": 0,
-        "H": 0,
+        "R": 1,
+        "H": 1,
         "2B": 0,
         "3B": 0,
-        "RBI": 0,
+        "RBI": 1,
         "BB": 1,
         "K": 1,
-        "HR": 0,
+        "HR": 1,
         "SB": 1
       }
     ]
@@ -328,52 +328,52 @@
       {
         "player": "aron-videla",
         "name": "Arón Videla",
-        "IP_outs": 18,
-        "H": 7,
-        "R": 0,
-        "ER": 0,
-        "BB": 0,
-        "K": 4,
-        "HR": 1,
-        "IP": 6
+        "IP_outs": 16,
+        "H": 4,
+        "R": 2,
+        "ER": 2,
+        "BB": 2,
+        "K": 3,
+        "HR": 2,
+        "IP": 5.1
       },
       {
         "player": "joaquim-silveira",
         "name": "Joaquim Silveira",
-        "IP_outs": 9,
-        "H": 0,
-        "R": 3,
-        "ER": 3,
-        "BB": 4,
-        "K": 2,
+        "IP_outs": 11,
+        "H": 3,
+        "R": 1,
+        "ER": 1,
+        "BB": 3,
+        "K": 1,
         "HR": 1,
-        "IP": 3
+        "IP": 3.2
       }
     ],
     "home": [
       {
         "player": "oskar-svanholm",
         "name": "Oskar Svanholm",
-        "IP_outs": 20,
-        "H": 6,
-        "R": 3,
-        "ER": 3,
+        "IP_outs": 17,
+        "H": 9,
+        "R": 2,
+        "ER": 2,
         "BB": 1,
-        "K": 2,
-        "HR": 1,
-        "IP": 6.2
+        "K": 7,
+        "HR": 2,
+        "IP": 5.2
       },
       {
         "player": "yaw-mensah",
         "name": "Yaw Mensah",
-        "IP_outs": 7,
-        "H": 1,
-        "R": 1,
-        "ER": 1,
-        "BB": 3,
-        "K": 2,
-        "HR": 0,
-        "IP": 2.1
+        "IP_outs": 10,
+        "H": 3,
+        "R": 2,
+        "ER": 2,
+        "BB": 0,
+        "K": 3,
+        "HR": 2,
+        "IP": 3.1
       }
     ]
   },
@@ -382,6 +382,5 @@
     "L": "oskar-svanholm",
     "SV": "joaquim-silveira"
   },
-  "notes": [],
-  "calibration": "glb.stats-calibrated.v1"
+  "notes": []
 }

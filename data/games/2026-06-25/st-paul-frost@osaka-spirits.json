@@ -11,13 +11,13 @@
     "name": "Osaka Spirits"
   },
   "status": "Final",
-  "attendance": 15462,
+  "attendance": 13405,
   "linescore": {
     "innings": [
       {
         "inning": 1,
         "away": 0,
-        "home": 1
+        "home": 0
       },
       {
         "inning": 2,
@@ -27,17 +27,17 @@
       {
         "inning": 3,
         "away": 0,
-        "home": 1
+        "home": 0
       },
       {
         "inning": 4,
         "away": 0,
-        "home": 0
+        "home": 2
       },
       {
         "inning": 5,
         "away": 0,
-        "home": 1
+        "home": 0
       },
       {
         "inning": 6,
@@ -52,7 +52,7 @@
       {
         "inning": 8,
         "away": 0,
-        "home": 0
+        "home": 1
       },
       {
         "inning": 9,
@@ -63,12 +63,12 @@
     "totals": {
       "away": {
         "R": 0,
-        "H": 11,
+        "H": 9,
         "E": 2
       },
       "home": {
         "R": 3,
-        "H": 4,
+        "H": 7,
         "E": 0
       }
     }
@@ -86,13 +86,13 @@
         "AB": 5,
         "R": 0,
         "H": 2,
-        "2B": 1,
+        "2B": 0,
         "3B": 0,
         "RBI": 0,
-        "BB": 1,
+        "BB": 0,
         "K": 0,
         "HR": 0,
-        "SB": 0
+        "SB": 1
       },
       {
         "player": "javier-lucero",
@@ -100,22 +100,7 @@
         "position": "1B",
         "AB": 5,
         "R": 0,
-        "H": 2,
-        "2B": 0,
-        "3B": 0,
-        "RBI": 0,
-        "BB": 1,
-        "K": 2,
-        "HR": 0,
-        "SB": 0
-      },
-      {
-        "player": "owen-hartnell",
-        "name": "Owen Hartnell",
-        "position": "2B",
-        "AB": 5,
-        "R": 0,
-        "H": 2,
+        "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
@@ -125,12 +110,27 @@
         "SB": 0
       },
       {
+        "player": "owen-hartnell",
+        "name": "Owen Hartnell",
+        "position": "2B",
+        "AB": 4,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 1,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      },
+      {
         "player": "masato-kobori",
         "name": "Masato Kobori",
         "position": "SS",
-        "AB": 3,
+        "AB": 5,
         "R": 0,
-        "H": 2,
+        "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
@@ -143,13 +143,13 @@
         "player": "trevor-yates",
         "name": "Trevor Yates",
         "position": "3B",
-        "AB": 3,
+        "AB": 5,
         "R": 0,
-        "H": 0,
+        "H": 2,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
-        "BB": 2,
+        "BB": 0,
         "K": 1,
         "HR": 0,
         "SB": 0
@@ -158,14 +158,14 @@
         "player": "malik-jefferson",
         "name": "Malik Jefferson",
         "position": "CF",
-        "AB": 5,
+        "AB": 3,
         "R": 0,
         "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
         "BB": 0,
-        "K": 3,
+        "K": 0,
         "HR": 0,
         "SB": 0
       },
@@ -175,7 +175,7 @@
         "position": "LF",
         "AB": 3,
         "R": 0,
-        "H": 1,
+        "H": 0,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
@@ -188,14 +188,14 @@
         "player": "jake-lanier",
         "name": "Jake Lanier",
         "position": "RF",
-        "AB": 3,
+        "AB": 5,
         "R": 0,
         "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
         "BB": 1,
-        "K": 0,
+        "K": 1,
         "HR": 0,
         "SB": 0
       }
@@ -210,8 +210,8 @@
         "H": 0,
         "2B": 0,
         "3B": 0,
-        "RBI": 0,
-        "BB": 0,
+        "RBI": 1,
+        "BB": 1,
         "K": 1,
         "HR": 0,
         "SB": 0
@@ -221,6 +221,36 @@
         "name": "Thabo Mkhize",
         "position": "1B",
         "AB": 5,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "arman-daryan",
+        "name": "Arman Daryan",
+        "position": "2B",
+        "AB": 5,
+        "R": 1,
+        "H": 3,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 0,
+        "K": 2,
+        "HR": 1,
+        "SB": 0
+      },
+      {
+        "player": "kenjiro-suganuma",
+        "name": "Kenjiro Suganuma",
+        "position": "SS",
+        "AB": 5,
         "R": 1,
         "H": 1,
         "2B": 0,
@@ -232,62 +262,32 @@
         "SB": 0
       },
       {
-        "player": "arman-daryan",
-        "name": "Arman Daryan",
-        "position": "2B",
-        "AB": 3,
-        "R": 1,
-        "H": 1,
-        "2B": 0,
-        "3B": 0,
-        "RBI": 1,
-        "BB": 1,
-        "K": 0,
-        "HR": 1,
-        "SB": 0
-      },
-      {
-        "player": "kenjiro-suganuma",
-        "name": "Kenjiro Suganuma",
-        "position": "SS",
-        "AB": 4,
-        "R": 0,
-        "H": 0,
-        "2B": 0,
-        "3B": 0,
-        "RBI": 0,
-        "BB": 0,
-        "K": 2,
-        "HR": 0,
-        "SB": 0
-      },
-      {
         "player": "dariusz-kwiatkowski",
         "name": "Dariusz Kwiatkowski",
         "position": "3B",
         "AB": 3,
         "R": 0,
         "H": 1,
-        "2B": 1,
+        "2B": 0,
         "3B": 0,
-        "RBI": 1,
+        "RBI": 0,
         "BB": 0,
         "K": 0,
         "HR": 0,
-        "SB": 1
+        "SB": 0
       },
       {
         "player": "nikhil-bhandari",
         "name": "Nikhil Bhandari",
         "position": "CF",
-        "AB": 5,
+        "AB": 3,
         "R": 0,
         "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
-        "BB": 1,
-        "K": 0,
+        "BB": 0,
+        "K": 1,
         "HR": 0,
         "SB": 0
       },
@@ -295,7 +295,7 @@
         "player": "thiago-ramires",
         "name": "Thiago Ramires",
         "position": "LF",
-        "AB": 4,
+        "AB": 5,
         "R": 1,
         "H": 0,
         "2B": 0,
@@ -310,7 +310,7 @@
         "player": "yusef-el-badri",
         "name": "Yusef El-Badri",
         "position": "RF",
-        "AB": 4,
+        "AB": 3,
         "R": 0,
         "H": 0,
         "2B": 0,
@@ -319,7 +319,7 @@
         "BB": 0,
         "K": 1,
         "HR": 0,
-        "SB": 1
+        "SB": 0
       }
     ]
   },
@@ -328,52 +328,52 @@
       {
         "player": "miguel-alcazar",
         "name": "Miguel Alcázar",
-        "IP_outs": 20,
-        "H": 0,
-        "R": 1,
-        "ER": 1,
-        "BB": 2,
-        "K": 3,
-        "HR": 2,
-        "IP": 6.2
+        "IP_outs": 15,
+        "H": 3,
+        "R": 2,
+        "ER": 2,
+        "BB": 1,
+        "K": 4,
+        "HR": 1,
+        "IP": 5
       },
       {
         "player": "darius-collins",
         "name": "Darius Collins",
-        "IP_outs": 7,
+        "IP_outs": 12,
         "H": 4,
-        "R": 2,
-        "ER": 2,
+        "R": 1,
+        "ER": 1,
         "BB": 0,
         "K": 2,
-        "HR": 0,
-        "IP": 2.1
+        "HR": 1,
+        "IP": 4
       }
     ],
     "home": [
       {
         "player": "enzo-dalmau",
         "name": "Enzo Dalmau",
-        "IP_outs": 15,
-        "H": 9,
-        "R": 0,
-        "ER": 0,
-        "BB": 5,
-        "K": 5,
-        "HR": 0,
-        "IP": 5
-      },
-      {
-        "player": "sandeep-nayar",
-        "name": "Sandeep Nayar",
-        "IP_outs": 12,
-        "H": 2,
+        "IP_outs": 16,
+        "H": 6,
         "R": 0,
         "ER": 0,
         "BB": 0,
         "K": 3,
         "HR": 0,
-        "IP": 4
+        "IP": 5.1
+      },
+      {
+        "player": "sandeep-nayar",
+        "name": "Sandeep Nayar",
+        "IP_outs": 11,
+        "H": 3,
+        "R": 0,
+        "ER": 0,
+        "BB": 2,
+        "K": 1,
+        "HR": 0,
+        "IP": 3.2
       }
     ]
   },
@@ -382,6 +382,5 @@
     "L": "miguel-alcazar",
     "SV": "sandeep-nayar"
   },
-  "notes": [],
-  "calibration": "glb.stats-calibrated.v1"
+  "notes": []
 }

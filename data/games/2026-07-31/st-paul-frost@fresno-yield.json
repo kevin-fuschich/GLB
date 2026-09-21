@@ -11,13 +11,13 @@
     "name": "Fresno Yield"
   },
   "status": "Final",
-  "attendance": 18131,
+  "attendance": 23714,
   "linescore": {
     "innings": [
       {
         "inning": 1,
         "away": 1,
-        "home": 1
+        "home": 0
       },
       {
         "inning": 2,
@@ -26,7 +26,7 @@
       },
       {
         "inning": 3,
-        "away": 0,
+        "away": 2,
         "home": 0
       },
       {
@@ -36,7 +36,7 @@
       },
       {
         "inning": 5,
-        "away": 1,
+        "away": 0,
         "home": 0
       },
       {
@@ -51,8 +51,8 @@
       },
       {
         "inning": 8,
-        "away": 2,
-        "home": 0
+        "away": 1,
+        "home": 1
       },
       {
         "inning": 9,
@@ -63,13 +63,13 @@
     "totals": {
       "away": {
         "R": 6,
-        "H": 7,
-        "E": 0
+        "H": 6,
+        "E": 2
       },
       "home": {
         "R": 1,
-        "H": 5,
-        "E": 0
+        "H": 6,
+        "E": 2
       }
     }
   },
@@ -85,56 +85,56 @@
         "position": "C",
         "AB": 4,
         "R": 0,
-        "H": 2,
-        "2B": 1,
+        "H": 0,
+        "2B": 0,
         "3B": 0,
-        "RBI": 0,
+        "RBI": 1,
         "BB": 0,
         "K": 1,
         "HR": 0,
-        "SB": 1
+        "SB": 0
       },
       {
         "player": "javier-lucero",
         "name": "Javier Lucero",
         "position": "1B",
-        "AB": 4,
-        "R": 1,
-        "H": 2,
+        "AB": 3,
+        "R": 0,
+        "H": 0,
         "2B": 0,
         "3B": 0,
-        "RBI": 1,
+        "RBI": 0,
         "BB": 1,
         "K": 1,
-        "HR": 1,
+        "HR": 0,
         "SB": 0
       },
       {
         "player": "owen-hartnell",
         "name": "Owen Hartnell",
         "position": "2B",
-        "AB": 4,
-        "R": 0,
-        "H": 0,
+        "AB": 5,
+        "R": 3,
+        "H": 2,
         "2B": 0,
         "3B": 0,
-        "RBI": 1,
+        "RBI": 0,
         "BB": 0,
-        "K": 1,
+        "K": 0,
         "HR": 0,
-        "SB": 0
+        "SB": 1
       },
       {
         "player": "masato-kobori",
         "name": "Masato Kobori",
         "position": "SS",
-        "AB": 4,
+        "AB": 5,
         "R": 0,
         "H": 0,
         "2B": 0,
         "3B": 0,
-        "RBI": 1,
-        "BB": 0,
+        "RBI": 0,
+        "BB": 1,
         "K": 2,
         "HR": 0,
         "SB": 0
@@ -143,28 +143,28 @@
         "player": "trevor-yates",
         "name": "Trevor Yates",
         "position": "3B",
-        "AB": 4,
-        "R": 1,
-        "H": 1,
+        "AB": 5,
+        "R": 2,
+        "H": 2,
         "2B": 0,
         "3B": 0,
-        "RBI": 0,
-        "BB": 0,
+        "RBI": 3,
+        "BB": 1,
         "K": 1,
-        "HR": 0,
-        "SB": 0
+        "HR": 2,
+        "SB": 1
       },
       {
         "player": "malik-jefferson",
         "name": "Malik Jefferson",
         "position": "CF",
-        "AB": 3,
-        "R": 1,
-        "H": 0,
+        "AB": 4,
+        "R": 0,
+        "H": 1,
         "2B": 0,
         "3B": 0,
-        "RBI": 1,
-        "BB": 0,
+        "RBI": 0,
+        "BB": 1,
         "K": 1,
         "HR": 0,
         "SB": 0
@@ -178,25 +178,25 @@
         "H": 1,
         "2B": 0,
         "3B": 0,
-        "RBI": 1,
+        "RBI": 2,
         "BB": 0,
-        "K": 1,
+        "K": 2,
         "HR": 1,
-        "SB": 1
+        "SB": 0
       },
       {
         "player": "jake-lanier",
         "name": "Jake Lanier",
         "position": "RF",
-        "AB": 4,
-        "R": 2,
-        "H": 1,
+        "AB": 3,
+        "R": 0,
+        "H": 0,
         "2B": 0,
         "3B": 0,
-        "RBI": 1,
-        "BB": 0,
+        "RBI": 0,
+        "BB": 1,
         "K": 2,
-        "HR": 1,
+        "HR": 0,
         "SB": 0
       }
     ],
@@ -205,67 +205,7 @@
         "player": "luis-eccheri",
         "name": "Luis Eccheri",
         "position": "C",
-        "AB": 5,
-        "R": 0,
-        "H": 2,
-        "2B": 1,
-        "3B": 0,
-        "RBI": 0,
-        "BB": 0,
-        "K": 0,
-        "HR": 0,
-        "SB": 0
-      },
-      {
-        "player": "jonah-kershaw",
-        "name": "Jonah Kershaw",
-        "position": "1B",
-        "AB": 5,
-        "R": 0,
-        "H": 0,
-        "2B": 0,
-        "3B": 0,
-        "RBI": 0,
-        "BB": 1,
-        "K": 0,
-        "HR": 0,
-        "SB": 0
-      },
-      {
-        "player": "soren-ahlgren",
-        "name": "Søren Ahlgren",
-        "position": "2B",
-        "AB": 3,
-        "R": 0,
-        "H": 0,
-        "2B": 0,
-        "3B": 0,
-        "RBI": 0,
-        "BB": 0,
-        "K": 0,
-        "HR": 0,
-        "SB": 0
-      },
-      {
-        "player": "raul-sestayo",
-        "name": "Raúl Sestayo",
-        "position": "SS",
-        "AB": 5,
-        "R": 0,
-        "H": 1,
-        "2B": 1,
-        "3B": 0,
-        "RBI": 0,
-        "BB": 1,
-        "K": 0,
-        "HR": 0,
-        "SB": 0
-      },
-      {
-        "player": "eamon-kilbride",
-        "name": "Eamon Kilbride",
-        "position": "3B",
-        "AB": 5,
+        "AB": 4,
         "R": 0,
         "H": 1,
         "2B": 0,
@@ -277,17 +217,77 @@
         "SB": 0
       },
       {
+        "player": "jonah-kershaw",
+        "name": "Jonah Kershaw",
+        "position": "1B",
+        "AB": 4,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 1,
+        "K": 1,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "soren-ahlgren",
+        "name": "Søren Ahlgren",
+        "position": "2B",
+        "AB": 3,
+        "R": 1,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 1,
+        "K": 1,
+        "HR": 1,
+        "SB": 0
+      },
+      {
+        "player": "raul-sestayo",
+        "name": "Raúl Sestayo",
+        "position": "SS",
+        "AB": 5,
+        "R": 0,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 1,
+        "K": 1,
+        "HR": 0,
+        "SB": 1
+      },
+      {
+        "player": "eamon-kilbride",
+        "name": "Eamon Kilbride",
+        "position": "3B",
+        "AB": 4,
+        "R": 0,
+        "H": 2,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 1,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      },
+      {
         "player": "malachi-quartey",
         "name": "Malachi Quartey",
         "position": "CF",
-        "AB": 4,
+        "AB": 3,
         "R": 0,
         "H": 0,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
         "BB": 0,
-        "K": 0,
+        "K": 2,
         "HR": 0,
         "SB": 0
       },
@@ -296,14 +296,14 @@
         "name": "Hiroshi Kawabata",
         "position": "LF",
         "AB": 4,
-        "R": 1,
-        "H": 1,
+        "R": 0,
+        "H": 0,
         "2B": 0,
         "3B": 0,
-        "RBI": 1,
+        "RBI": 0,
         "BB": 0,
-        "K": 2,
-        "HR": 1,
+        "K": 3,
+        "HR": 0,
         "SB": 0
       },
       {
@@ -312,11 +312,11 @@
         "position": "RF",
         "AB": 3,
         "R": 0,
-        "H": 0,
-        "2B": 0,
+        "H": 1,
+        "2B": 1,
         "3B": 0,
         "RBI": 0,
-        "BB": 1,
+        "BB": 0,
         "K": 1,
         "HR": 0,
         "SB": 0
@@ -328,60 +328,59 @@
       {
         "player": "ryan-keswick",
         "name": "Ryan Keswick",
-        "IP_outs": 21,
-        "H": 0,
-        "R": 0,
-        "ER": 0,
+        "IP_outs": 15,
+        "H": 5,
+        "R": 1,
+        "ER": 1,
         "BB": 3,
-        "K": 3,
-        "HR": 1,
-        "IP": 7
+        "K": 7,
+        "HR": 0,
+        "IP": 5
       },
       {
         "player": "antonio-velez",
         "name": "Antonio Vélez",
-        "IP_outs": 6,
-        "H": 5,
-        "R": 1,
-        "ER": 1,
-        "BB": 1,
-        "K": 1,
-        "HR": 0,
-        "IP": 2
+        "IP_outs": 12,
+        "H": 1,
+        "R": 0,
+        "ER": 0,
+        "BB": 2,
+        "K": 3,
+        "HR": 1,
+        "IP": 4
       }
     ],
     "home": [
       {
-        "player": "kenji-takamori",
-        "name": "Kenji Takamori",
-        "IP_outs": 17,
+        "player": "arinze-nwokoye",
+        "name": "Arinze Nwokoye",
+        "IP_outs": 15,
         "H": 4,
-        "R": 5,
-        "ER": 5,
-        "BB": 0,
-        "K": 7,
-        "HR": 2,
-        "IP": 5.2
+        "R": 6,
+        "ER": 6,
+        "BB": 3,
+        "K": 6,
+        "HR": 3,
+        "IP": 5
       },
       {
-        "player": "mateo-azarcon",
-        "name": "Mateo Azarcón",
-        "IP_outs": 10,
-        "H": 3,
-        "R": 1,
-        "ER": 1,
-        "BB": 1,
-        "K": 3,
-        "HR": 1,
-        "IP": 3.1
+        "player": "dusan-marevic",
+        "name": "Dušan Marević",
+        "IP_outs": 12,
+        "H": 2,
+        "R": 0,
+        "ER": 0,
+        "BB": 2,
+        "K": 4,
+        "HR": 0,
+        "IP": 4
       }
     ]
   },
   "decisions": {
     "W": "ryan-keswick",
-    "L": "kenji-takamori",
+    "L": "arinze-nwokoye",
     "SV": null
   },
-  "notes": [],
-  "calibration": "glb.stats-calibrated.v1"
+  "notes": []
 }

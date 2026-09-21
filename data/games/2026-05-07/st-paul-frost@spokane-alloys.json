@@ -11,22 +11,22 @@
     "name": "Spokane Alloys"
   },
   "status": "Final",
-  "attendance": 26256,
+  "attendance": 32793,
   "linescore": {
     "innings": [
       {
         "inning": 1,
-        "away": 0,
+        "away": 1,
         "home": 0
       },
       {
         "inning": 2,
-        "away": 1,
-        "home": 1
+        "away": 0,
+        "home": 0
       },
       {
         "inning": 3,
-        "away": 2,
+        "away": 0,
         "home": 0
       },
       {
@@ -41,7 +41,7 @@
       },
       {
         "inning": 6,
-        "away": 0,
+        "away": 1,
         "home": 0
       },
       {
@@ -52,23 +52,23 @@
       {
         "inning": 8,
         "away": 0,
-        "home": 0
+        "home": 1
       },
       {
         "inning": 9,
-        "away": 0,
+        "away": 1,
         "home": 0
       }
     ],
     "totals": {
       "away": {
         "R": 3,
-        "H": 11,
+        "H": 9,
         "E": 0
       },
       "home": {
         "R": 2,
-        "H": 5,
+        "H": 7,
         "E": 0
       }
     }
@@ -83,25 +83,25 @@
         "player": "evan-morrissey",
         "name": "Evan Morrissey",
         "position": "C",
-        "AB": 3,
-        "R": 0,
-        "H": 2,
+        "AB": 5,
+        "R": 1,
+        "H": 3,
         "2B": 0,
         "3B": 0,
         "RBI": 1,
         "BB": 0,
-        "K": 0,
-        "HR": 0,
+        "K": 1,
+        "HR": 1,
         "SB": 0
       },
       {
         "player": "javier-lucero",
         "name": "Javier Lucero",
         "position": "1B",
-        "AB": 5,
+        "AB": 4,
         "R": 1,
-        "H": 1,
-        "2B": 1,
+        "H": 0,
+        "2B": 0,
         "3B": 0,
         "RBI": 0,
         "BB": 0,
@@ -114,26 +114,26 @@
         "name": "Owen Hartnell",
         "position": "2B",
         "AB": 3,
-        "R": 1,
+        "R": 0,
         "H": 1,
-        "2B": 0,
+        "2B": 1,
         "3B": 0,
-        "RBI": 0,
+        "RBI": 1,
         "BB": 0,
-        "K": 0,
+        "K": 1,
         "HR": 0,
-        "SB": 1
+        "SB": 0
       },
       {
         "player": "masato-kobori",
         "name": "Masato Kobori",
         "position": "SS",
-        "AB": 4,
-        "R": 1,
+        "AB": 3,
+        "R": 0,
         "H": 1,
         "2B": 0,
         "3B": 0,
-        "RBI": 2,
+        "RBI": 0,
         "BB": 0,
         "K": 1,
         "HR": 0,
@@ -143,14 +143,14 @@
         "player": "trevor-yates",
         "name": "Trevor Yates",
         "position": "3B",
-        "AB": 3,
+        "AB": 5,
         "R": 0,
         "H": 2,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
-        "BB": 1,
-        "K": 0,
+        "BB": 0,
+        "K": 3,
         "HR": 0,
         "SB": 0
       },
@@ -158,9 +158,9 @@
         "player": "malik-jefferson",
         "name": "Malik Jefferson",
         "position": "CF",
-        "AB": 3,
-        "R": 0,
-        "H": 1,
+        "AB": 5,
+        "R": 1,
+        "H": 0,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
@@ -175,29 +175,29 @@
         "position": "LF",
         "AB": 5,
         "R": 0,
-        "H": 1,
-        "2B": 0,
+        "H": 2,
+        "2B": 1,
         "3B": 0,
-        "RBI": 0,
+        "RBI": 1,
         "BB": 1,
         "K": 2,
         "HR": 0,
-        "SB": 0
+        "SB": 1
       },
       {
         "player": "jake-lanier",
         "name": "Jake Lanier",
         "position": "RF",
-        "AB": 5,
+        "AB": 3,
         "R": 0,
-        "H": 2,
+        "H": 0,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
         "BB": 0,
-        "K": 0,
+        "K": 1,
         "HR": 0,
-        "SB": 1
+        "SB": 0
       }
     ],
     "home": [
@@ -205,14 +205,14 @@
         "player": "nikolai-dobrynin",
         "name": "Nikolai Dobrynin",
         "position": "C",
-        "AB": 5,
+        "AB": 3,
         "R": 0,
-        "H": 1,
+        "H": 0,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
-        "BB": 1,
-        "K": 1,
+        "BB": 0,
+        "K": 0,
         "HR": 0,
         "SB": 0
       },
@@ -222,12 +222,12 @@
         "position": "1B",
         "AB": 5,
         "R": 0,
-        "H": 1,
+        "H": 2,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
-        "BB": 1,
-        "K": 3,
+        "BB": 0,
+        "K": 0,
         "HR": 0,
         "SB": 0
       },
@@ -235,12 +235,12 @@
         "player": "marco-delvecchio",
         "name": "Marco DelVecchio",
         "position": "2B",
-        "AB": 3,
-        "R": 0,
+        "AB": 5,
+        "R": 1,
         "H": 0,
         "2B": 0,
         "3B": 0,
-        "RBI": 1,
+        "RBI": 0,
         "BB": 0,
         "K": 1,
         "HR": 0,
@@ -250,14 +250,14 @@
         "player": "tomasz-kubas",
         "name": "Tomasz Kubas",
         "position": "SS",
-        "AB": 4,
+        "AB": 3,
         "R": 0,
-        "H": 0,
+        "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
         "BB": 0,
-        "K": 1,
+        "K": 0,
         "HR": 0,
         "SB": 0
       },
@@ -265,14 +265,14 @@
         "player": "andres-mireles",
         "name": "Andrés Mireles",
         "position": "3B",
-        "AB": 3,
+        "AB": 4,
         "R": 0,
-        "H": 0,
-        "2B": 0,
+        "H": 1,
+        "2B": 1,
         "3B": 0,
         "RBI": 0,
         "BB": 0,
-        "K": 1,
+        "K": 0,
         "HR": 0,
         "SB": 0
       },
@@ -280,14 +280,14 @@
         "player": "wyatt-hollander",
         "name": "Wyatt Hollander",
         "position": "CF",
-        "AB": 3,
+        "AB": 5,
         "R": 0,
         "H": 0,
         "2B": 0,
         "3B": 0,
         "RBI": 1,
-        "BB": 1,
-        "K": 1,
+        "BB": 0,
+        "K": 3,
         "HR": 0,
         "SB": 0
       },
@@ -295,14 +295,14 @@
         "player": "luis-quinones",
         "name": "Luis Quiñones",
         "position": "LF",
-        "AB": 3,
-        "R": 1,
-        "H": 0,
-        "2B": 0,
+        "AB": 5,
+        "R": 0,
+        "H": 2,
+        "2B": 1,
         "3B": 0,
         "RBI": 0,
         "BB": 1,
-        "K": 2,
+        "K": 0,
         "HR": 0,
         "SB": 0
       },
@@ -310,14 +310,14 @@
         "player": "pieter-van-wyk",
         "name": "Pieter van Wyk",
         "position": "RF",
-        "AB": 5,
+        "AB": 3,
         "R": 1,
-        "H": 3,
+        "H": 1,
         "2B": 0,
         "3B": 0,
-        "RBI": 0,
-        "BB": 1,
-        "K": 1,
+        "RBI": 1,
+        "BB": 0,
+        "K": 0,
         "HR": 0,
         "SB": 1
       }
@@ -328,60 +328,59 @@
       {
         "player": "nolan-brix",
         "name": "Nolan Brix",
-        "IP_outs": 21,
+        "IP_outs": 20,
         "H": 3,
         "R": 0,
         "ER": 0,
-        "BB": 2,
-        "K": 7,
+        "BB": 0,
+        "K": 3,
         "HR": 0,
-        "IP": 7
+        "IP": 6.2
       },
       {
         "player": "darius-collins",
         "name": "Darius Collins",
-        "IP_outs": 6,
-        "H": 2,
+        "IP_outs": 7,
+        "H": 4,
         "R": 2,
         "ER": 2,
-        "BB": 3,
-        "K": 4,
+        "BB": 1,
+        "K": 1,
         "HR": 0,
-        "IP": 2
+        "IP": 2.1
       }
     ],
     "home": [
       {
         "player": "kellan-brynden",
         "name": "Kellan Brynden",
-        "IP_outs": 19,
-        "H": 0,
+        "IP_outs": 20,
+        "H": 8,
         "R": 3,
         "ER": 3,
-        "BB": 2,
-        "K": 4,
-        "HR": 0,
-        "IP": 6.1
+        "BB": 0,
+        "K": 8,
+        "HR": 1,
+        "IP": 6.2
       },
       {
         "player": "sergio-ibarra-lugo",
         "name": "Sergio Ibarra Lugo",
-        "IP_outs": 8,
-        "H": 11,
+        "IP_outs": 7,
+        "H": 1,
         "R": 0,
         "ER": 0,
-        "BB": 0,
-        "K": 1,
+        "BB": 1,
+        "K": 3,
         "HR": 0,
-        "IP": 2.2
+        "IP": 2.1
       }
     ]
   },
   "decisions": {
     "W": "nolan-brix",
     "L": "kellan-brynden",
-    "SV": null
+    "SV": "darius-collins"
   },
-  "notes": [],
-  "calibration": "glb.stats-calibrated.v1"
+  "notes": []
 }

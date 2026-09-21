@@ -11,7 +11,7 @@
     "name": "Taipei Neon"
   },
   "status": "Final",
-  "attendance": 12340,
+  "attendance": 20153,
   "linescore": {
     "innings": [
       {
@@ -31,13 +31,13 @@
       },
       {
         "inning": 4,
-        "away": 0,
-        "home": 0
+        "away": 1,
+        "home": 1
       },
       {
         "inning": 5,
         "away": 1,
-        "home": 0
+        "home": 1
       },
       {
         "inning": 6,
@@ -46,29 +46,29 @@
       },
       {
         "inning": 7,
-        "away": 1,
+        "away": 0,
         "home": 0
       },
       {
         "inning": 8,
         "away": 0,
-        "home": 1
+        "home": 0
       },
       {
         "inning": 9,
         "away": 0,
-        "home": 1
+        "home": 0
       }
     ],
     "totals": {
       "away": {
         "R": 4,
-        "H": 5,
-        "E": 0
+        "H": 10,
+        "E": 2
       },
       "home": {
         "R": 2,
-        "H": 7,
+        "H": 8,
         "E": 1
       }
     }
@@ -83,29 +83,29 @@
         "player": "evan-morrissey",
         "name": "Evan Morrissey",
         "position": "C",
-        "AB": 5,
-        "R": 0,
+        "AB": 3,
+        "R": 1,
         "H": 2,
         "2B": 0,
-        "3B": 1,
-        "RBI": 0,
+        "3B": 0,
+        "RBI": 1,
         "BB": 0,
-        "K": 0,
-        "HR": 0,
+        "K": 1,
+        "HR": 1,
         "SB": 0
       },
       {
         "player": "javier-lucero",
         "name": "Javier Lucero",
         "position": "1B",
-        "AB": 4,
-        "R": 1,
-        "H": 0,
+        "AB": 5,
+        "R": 0,
+        "H": 1,
         "2B": 0,
         "3B": 0,
-        "RBI": 1,
-        "BB": 2,
-        "K": 2,
+        "RBI": 0,
+        "BB": 1,
+        "K": 1,
         "HR": 0,
         "SB": 0
       },
@@ -113,15 +113,15 @@
         "player": "owen-hartnell",
         "name": "Owen Hartnell",
         "position": "2B",
-        "AB": 4,
+        "AB": 5,
         "R": 1,
         "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 1,
-        "BB": 0,
-        "K": 0,
-        "HR": 0,
+        "BB": 1,
+        "K": 2,
+        "HR": 1,
         "SB": 0
       },
       {
@@ -129,27 +129,27 @@
         "name": "Masato Kobori",
         "position": "SS",
         "AB": 5,
-        "R": 0,
-        "H": 0,
+        "R": 2,
+        "H": 2,
         "2B": 0,
         "3B": 0,
         "RBI": 1,
         "BB": 1,
-        "K": 1,
-        "HR": 0,
-        "SB": 2
+        "K": 0,
+        "HR": 1,
+        "SB": 1
       },
       {
         "player": "trevor-yates",
         "name": "Trevor Yates",
         "position": "3B",
-        "AB": 4,
-        "R": 1,
+        "AB": 3,
+        "R": 0,
         "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
-        "BB": 2,
+        "BB": 0,
         "K": 1,
         "HR": 0,
         "SB": 0
@@ -158,14 +158,14 @@
         "player": "malik-jefferson",
         "name": "Malik Jefferson",
         "position": "CF",
-        "AB": 5,
+        "AB": 3,
         "R": 0,
         "H": 1,
         "2B": 0,
         "3B": 0,
-        "RBI": 1,
+        "RBI": 0,
         "BB": 0,
-        "K": 2,
+        "K": 1,
         "HR": 0,
         "SB": 0
       },
@@ -173,9 +173,9 @@
         "player": "rodrigo-fuentes",
         "name": "Rodrigo Fuentes",
         "position": "LF",
-        "AB": 3,
-        "R": 1,
-        "H": 0,
+        "AB": 5,
+        "R": 0,
+        "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
@@ -188,14 +188,14 @@
         "player": "jake-lanier",
         "name": "Jake Lanier",
         "position": "RF",
-        "AB": 5,
+        "AB": 4,
         "R": 0,
-        "H": 0,
+        "H": 1,
         "2B": 0,
         "3B": 0,
-        "RBI": 0,
-        "BB": 0,
-        "K": 3,
+        "RBI": 1,
+        "BB": 1,
+        "K": 0,
         "HR": 0,
         "SB": 0
       }
@@ -206,14 +206,14 @@
         "name": "Kaito Ueda",
         "position": "CF",
         "AB": 4,
-        "R": 2,
+        "R": 0,
         "H": 2,
-        "2B": 0,
+        "2B": 2,
         "3B": 0,
-        "RBI": 2,
+        "RBI": 0,
         "BB": 0,
         "K": 0,
-        "HR": 2,
+        "HR": 0,
         "SB": 0
       },
       {
@@ -226,8 +226,8 @@
         "2B": 0,
         "3B": 0,
         "RBI": 0,
-        "BB": 1,
-        "K": 1,
+        "BB": 0,
+        "K": 0,
         "HR": 0,
         "SB": 0
       },
@@ -235,14 +235,14 @@
         "player": "martin-echevarria",
         "name": "Martín Echevarría",
         "position": "1B",
-        "AB": 5,
-        "R": 0,
+        "AB": 3,
+        "R": 1,
         "H": 0,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
         "BB": 0,
-        "K": 0,
+        "K": 1,
         "HR": 0,
         "SB": 0
       },
@@ -250,14 +250,14 @@
         "player": "dariusz-wierzbik",
         "name": "Dariusz Wierzbik",
         "position": "SS",
-        "AB": 4,
+        "AB": 5,
         "R": 0,
-        "H": 0,
+        "H": 2,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
         "BB": 0,
-        "K": 0,
+        "K": 2,
         "HR": 0,
         "SB": 0
       },
@@ -265,12 +265,12 @@
         "player": "adebayo-olumide",
         "name": "Adebayo Olumide",
         "position": "3B",
-        "AB": 4,
+        "AB": 3,
         "R": 0,
         "H": 1,
         "2B": 0,
-        "3B": 0,
-        "RBI": 0,
+        "3B": 1,
+        "RBI": 1,
         "BB": 0,
         "K": 1,
         "HR": 0,
@@ -280,14 +280,14 @@
         "player": "owen-rasmusson",
         "name": "Owen Rasmusson",
         "position": "C",
-        "AB": 4,
+        "AB": 5,
         "R": 0,
         "H": 0,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
         "BB": 0,
-        "K": 1,
+        "K": 2,
         "HR": 0,
         "SB": 0
       },
@@ -295,7 +295,22 @@
         "player": "eric-lawson",
         "name": "Eric Lawson",
         "position": "LF",
-        "AB": 5,
+        "AB": 4,
+        "R": 0,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 1,
+        "K": 3,
+        "HR": 0,
+        "SB": 2
+      },
+      {
+        "player": "jose-ramirez-tpe",
+        "name": "Jose Ramirez",
+        "position": "RF",
+        "AB": 3,
         "R": 0,
         "H": 1,
         "2B": 0,
@@ -307,32 +322,17 @@
         "SB": 0
       },
       {
-        "player": "jose-ramirez-tpe",
-        "name": "Jose Ramirez",
-        "position": "RF",
-        "AB": 4,
-        "R": 0,
-        "H": 1,
-        "2B": 0,
-        "3B": 0,
-        "RBI": 0,
-        "BB": 0,
-        "K": 0,
-        "HR": 0,
-        "SB": 0
-      },
-      {
         "player": "david-morales-tpe",
         "name": "David Morales",
         "position": "DH",
-        "AB": 5,
-        "R": 0,
+        "AB": 3,
+        "R": 1,
         "H": 1,
         "2B": 0,
         "3B": 0,
-        "RBI": 0,
+        "RBI": 1,
         "BB": 0,
-        "K": 0,
+        "K": 1,
         "HR": 0,
         "SB": 0
       }
@@ -343,52 +343,52 @@
       {
         "player": "ryan-keswick",
         "name": "Ryan Keswick",
-        "IP_outs": 15,
-        "H": 2,
-        "R": 1,
-        "ER": 1,
-        "BB": 1,
-        "K": 2,
-        "HR": 1,
-        "IP": 5
+        "IP_outs": 17,
+        "H": 1,
+        "R": 0,
+        "ER": 0,
+        "BB": 0,
+        "K": 8,
+        "HR": 0,
+        "IP": 5.2
       },
       {
         "player": "lukas-horvat",
         "name": "Lukáš Horvat",
-        "IP_outs": 12,
-        "H": 5,
-        "R": 1,
-        "ER": 1,
-        "BB": 0,
-        "K": 2,
-        "HR": 1,
-        "IP": 4
+        "IP_outs": 10,
+        "H": 7,
+        "R": 2,
+        "ER": 2,
+        "BB": 1,
+        "K": 3,
+        "HR": 0,
+        "IP": 3.1
       }
     ],
     "home": [
       {
         "player": "eitan-ben-sasson",
         "name": "Eitan Ben-Sasson",
-        "IP_outs": 20,
-        "H": 1,
-        "R": 1,
-        "ER": 1,
-        "BB": 0,
+        "IP_outs": 15,
+        "H": 3,
+        "R": 2,
+        "ER": 2,
+        "BB": 4,
         "K": 7,
-        "HR": 0,
-        "IP": 6.2
+        "HR": 3,
+        "IP": 5
       },
       {
         "player": "idris-el-amin",
         "name": "Idris El-Amin",
-        "IP_outs": 7,
-        "H": 4,
-        "R": 3,
-        "ER": 3,
-        "BB": 5,
-        "K": 4,
+        "IP_outs": 12,
+        "H": 7,
+        "R": 2,
+        "ER": 2,
+        "BB": 0,
+        "K": 1,
         "HR": 0,
-        "IP": 2.1
+        "IP": 4
       }
     ]
   },
@@ -397,6 +397,5 @@
     "L": "eitan-ben-sasson",
     "SV": "lukas-horvat"
   },
-  "notes": [],
-  "calibration": "glb.stats-calibrated.v1"
+  "notes": []
 }

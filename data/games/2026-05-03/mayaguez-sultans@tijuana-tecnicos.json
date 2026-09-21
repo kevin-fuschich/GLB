@@ -11,7 +11,7 @@
     "name": "Tijuana Tecnicos"
   },
   "status": "Final",
-  "attendance": 19682,
+  "attendance": 33081,
   "linescore": {
     "innings": [
       {
@@ -21,7 +21,7 @@
       },
       {
         "inning": 2,
-        "away": 1,
+        "away": 0,
         "home": 0
       },
       {
@@ -32,7 +32,7 @@
       {
         "inning": 4,
         "away": 1,
-        "home": 0
+        "home": 1
       },
       {
         "inning": 5,
@@ -46,8 +46,8 @@
       },
       {
         "inning": 7,
-        "away": 0,
-        "home": 1
+        "away": 1,
+        "home": 0
       },
       {
         "inning": 8,
@@ -63,13 +63,13 @@
     "totals": {
       "away": {
         "R": 4,
-        "H": 9,
-        "E": 2
+        "H": 7,
+        "E": 1
       },
       "home": {
         "R": 3,
-        "H": 6,
-        "E": 1
+        "H": 9,
+        "E": 0
       }
     }
   },
@@ -84,24 +84,9 @@
         "name": "Tomer Barzilai",
         "position": "C",
         "AB": 5,
-        "R": 0,
-        "H": 0,
-        "2B": 0,
-        "3B": 0,
-        "RBI": 0,
-        "BB": 0,
-        "K": 0,
-        "HR": 0,
-        "SB": 0
-      },
-      {
-        "player": "enzo-carvajal",
-        "name": "Enzo Carvajal",
-        "position": "1B",
-        "AB": 4,
         "R": 1,
         "H": 2,
-        "2B": 0,
+        "2B": 1,
         "3B": 0,
         "RBI": 1,
         "BB": 0,
@@ -110,18 +95,33 @@
         "SB": 0
       },
       {
+        "player": "enzo-carvajal",
+        "name": "Enzo Carvajal",
+        "position": "1B",
+        "AB": 4,
+        "R": 0,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 1,
+        "K": 1,
+        "HR": 0,
+        "SB": 0
+      },
+      {
         "player": "nils-adebayo",
         "name": "Nils Adebayo",
         "position": "2B",
-        "AB": 5,
-        "R": 1,
-        "H": 4,
+        "AB": 3,
+        "R": 0,
+        "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 1,
         "BB": 0,
-        "K": 0,
-        "HR": 1,
+        "K": 2,
+        "HR": 0,
         "SB": 0
       },
       {
@@ -129,14 +129,14 @@
         "name": "Jae-min Seok",
         "position": "SS",
         "AB": 5,
-        "R": 0,
-        "H": 1,
+        "R": 2,
+        "H": 2,
         "2B": 0,
         "3B": 0,
-        "RBI": 0,
-        "BB": 1,
-        "K": 0,
-        "HR": 0,
+        "RBI": 2,
+        "BB": 0,
+        "K": 1,
+        "HR": 2,
         "SB": 0
       },
       {
@@ -148,9 +148,9 @@
         "H": 0,
         "2B": 0,
         "3B": 0,
-        "RBI": 1,
-        "BB": 1,
-        "K": 1,
+        "RBI": 0,
+        "BB": 0,
+        "K": 2,
         "HR": 0,
         "SB": 0
       },
@@ -158,22 +158,7 @@
         "player": "malik-doumbia",
         "name": "Malik Doumbia",
         "position": "LF",
-        "AB": 4,
-        "R": 1,
-        "H": 1,
-        "2B": 0,
-        "3B": 0,
-        "RBI": 1,
-        "BB": 0,
-        "K": 1,
-        "HR": 1,
-        "SB": 0
-      },
-      {
-        "player": "cesar-iglesiarias",
-        "name": "César Iglesiarias",
-        "position": "CF",
-        "AB": 3,
+        "AB": 5,
         "R": 0,
         "H": 0,
         "2B": 0,
@@ -182,22 +167,37 @@
         "BB": 1,
         "K": 0,
         "HR": 0,
-        "SB": 1
+        "SB": 0
+      },
+      {
+        "player": "cesar-iglesiarias",
+        "name": "César Iglesiarias",
+        "position": "CF",
+        "AB": 4,
+        "R": 1,
+        "H": 2,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 2,
+        "K": 1,
+        "HR": 0,
+        "SB": 0
       },
       {
         "player": "ari-kasprzyk",
         "name": "Ari Kasprzyk",
         "position": "RF",
-        "AB": 5,
-        "R": 1,
-        "H": 1,
+        "AB": 3,
+        "R": 0,
+        "H": 0,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
         "BB": 0,
-        "K": 1,
+        "K": 3,
         "HR": 0,
-        "SB": 0
+        "SB": 1
       }
     ],
     "home": [
@@ -206,23 +206,23 @@
         "name": "Sergio Hinojosa",
         "position": "C",
         "AB": 5,
-        "R": 1,
-        "H": 2,
+        "R": 2,
+        "H": 3,
         "2B": 0,
         "3B": 0,
-        "RBI": 1,
+        "RBI": 2,
         "BB": 1,
         "K": 1,
-        "HR": 1,
+        "HR": 2,
         "SB": 0
       },
       {
         "player": "bruno-valdes",
         "name": "Bruno Valdés",
         "position": "1B",
-        "AB": 4,
+        "AB": 5,
         "R": 0,
-        "H": 0,
+        "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
@@ -237,11 +237,11 @@
         "position": "2B",
         "AB": 5,
         "R": 0,
-        "H": 1,
-        "2B": 1,
+        "H": 0,
+        "2B": 0,
         "3B": 0,
         "RBI": 0,
-        "BB": 0,
+        "BB": 2,
         "K": 1,
         "HR": 0,
         "SB": 0
@@ -252,14 +252,14 @@
         "position": "SS",
         "AB": 5,
         "R": 0,
-        "H": 1,
+        "H": 0,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
         "BB": 1,
         "K": 0,
         "HR": 0,
-        "SB": 0
+        "SB": 1
       },
       {
         "player": "adrian-fierro",
@@ -267,11 +267,11 @@
         "position": "3B",
         "AB": 3,
         "R": 0,
-        "H": 1,
+        "H": 2,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
-        "BB": 1,
+        "BB": 0,
         "K": 1,
         "HR": 0,
         "SB": 0
@@ -280,14 +280,14 @@
         "player": "emilio-barron",
         "name": "Emilio Barrón",
         "position": "LF",
-        "AB": 3,
+        "AB": 4,
         "R": 0,
-        "H": 0,
-        "2B": 0,
+        "H": 1,
+        "2B": 1,
         "3B": 0,
         "RBI": 0,
         "BB": 0,
-        "K": 2,
+        "K": 0,
         "HR": 0,
         "SB": 0
       },
@@ -295,13 +295,13 @@
         "player": "gael-marrufo",
         "name": "Gael Marrufo",
         "position": "CF",
-        "AB": 5,
+        "AB": 3,
         "R": 0,
         "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
-        "BB": 1,
+        "BB": 0,
         "K": 1,
         "HR": 0,
         "SB": 0
@@ -311,15 +311,15 @@
         "name": "Cristóbal Saucedo",
         "position": "RF",
         "AB": 5,
-        "R": 1,
+        "R": 0,
         "H": 0,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
-        "BB": 1,
-        "K": 2,
+        "BB": 0,
+        "K": 4,
         "HR": 0,
-        "SB": 0
+        "SB": 1
       },
       {
         "player": "hector-belmonte",
@@ -327,13 +327,13 @@
         "position": "DH",
         "AB": 4,
         "R": 1,
-        "H": 0,
+        "H": 1,
         "2B": 0,
         "3B": 0,
-        "RBI": 2,
+        "RBI": 1,
         "BB": 0,
         "K": 2,
-        "HR": 0,
+        "HR": 1,
         "SB": 0
       }
     ]
@@ -343,26 +343,26 @@
       {
         "player": "kaito-natsume",
         "name": "Kaito Natsume",
-        "IP_outs": 15,
-        "H": 0,
-        "R": 3,
-        "ER": 3,
+        "IP_outs": 20,
+        "H": 8,
+        "R": 0,
+        "ER": 0,
         "BB": 0,
-        "K": 7,
+        "K": 6,
         "HR": 0,
-        "IP": 5
+        "IP": 6.2
       },
       {
         "player": "seamus-keary",
         "name": "Seamus Keary",
-        "IP_outs": 12,
-        "H": 6,
-        "R": 0,
-        "ER": 0,
-        "BB": 5,
-        "K": 3,
-        "HR": 1,
-        "IP": 4
+        "IP_outs": 7,
+        "H": 1,
+        "R": 3,
+        "ER": 3,
+        "BB": 4,
+        "K": 4,
+        "HR": 3,
+        "IP": 2.1
       }
     ],
     "home": [
@@ -373,8 +373,8 @@
         "H": 1,
         "R": 3,
         "ER": 3,
-        "BB": 1,
-        "K": 3,
+        "BB": 2,
+        "K": 8,
         "HR": 2,
         "IP": 6.2
       },
@@ -382,11 +382,11 @@
         "player": "mauricio-cota",
         "name": "Mauricio Cota",
         "IP_outs": 7,
-        "H": 8,
+        "H": 6,
         "R": 1,
         "ER": 1,
         "BB": 2,
-        "K": 1,
+        "K": 3,
         "HR": 1,
         "IP": 2.1
       }
@@ -395,8 +395,7 @@
   "decisions": {
     "W": "kaito-natsume",
     "L": "diego-verdugo",
-    "SV": null
+    "SV": "seamus-keary"
   },
-  "notes": [],
-  "calibration": "glb.stats-calibrated.v1"
+  "notes": []
 }

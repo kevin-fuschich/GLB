@@ -11,13 +11,13 @@
     "name": "Taipei Neon"
   },
   "status": "Final",
-  "attendance": 26799,
+  "attendance": 18227,
   "linescore": {
     "innings": [
       {
         "inning": 1,
         "away": 0,
-        "home": 1
+        "home": 0
       },
       {
         "inning": 2,
@@ -27,12 +27,12 @@
       {
         "inning": 3,
         "away": 0,
-        "home": 1
+        "home": 0
       },
       {
         "inning": 4,
         "away": 0,
-        "home": 0
+        "home": 1
       },
       {
         "inning": 5,
@@ -57,19 +57,19 @@
       {
         "inning": 9,
         "away": 0,
-        "home": 0
+        "home": 1
       }
     ],
     "totals": {
       "away": {
         "R": 0,
-        "H": 11,
-        "E": 1
+        "H": 9,
+        "E": 0
       },
       "home": {
         "R": 2,
-        "H": 4,
-        "E": 0
+        "H": 6,
+        "E": 2
       }
     }
   },
@@ -83,37 +83,37 @@
         "player": "marcelino-quispe",
         "name": "Marcelino Quispe",
         "position": "C",
-        "AB": 4,
+        "AB": 5,
         "R": 0,
         "H": 0,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
-        "BB": 0,
-        "K": 0,
+        "BB": 1,
+        "K": 2,
         "HR": 0,
-        "SB": 1
+        "SB": 0
       },
       {
         "player": "thabo-mkhize",
         "name": "Thabo Mkhize",
         "position": "1B",
-        "AB": 3,
+        "AB": 5,
         "R": 0,
         "H": 2,
-        "2B": 0,
+        "2B": 1,
         "3B": 0,
         "RBI": 0,
-        "BB": 2,
+        "BB": 0,
         "K": 1,
         "HR": 0,
-        "SB": 1
+        "SB": 0
       },
       {
         "player": "arman-daryan",
         "name": "Arman Daryan",
         "position": "2B",
-        "AB": 5,
+        "AB": 3,
         "R": 0,
         "H": 1,
         "2B": 0,
@@ -130,7 +130,7 @@
         "position": "SS",
         "AB": 3,
         "R": 0,
-        "H": 1,
+        "H": 0,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
@@ -143,14 +143,14 @@
         "player": "dariusz-kwiatkowski",
         "name": "Dariusz Kwiatkowski",
         "position": "3B",
-        "AB": 4,
+        "AB": 3,
         "R": 0,
-        "H": 0,
+        "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
         "BB": 0,
-        "K": 0,
+        "K": 1,
         "HR": 0,
         "SB": 0
       },
@@ -158,14 +158,14 @@
         "player": "nikhil-bhandari",
         "name": "Nikhil Bhandari",
         "position": "CF",
-        "AB": 3,
+        "AB": 5,
         "R": 0,
         "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
         "BB": 1,
-        "K": 0,
+        "K": 1,
         "HR": 0,
         "SB": 0
       },
@@ -175,7 +175,7 @@
         "position": "LF",
         "AB": 5,
         "R": 0,
-        "H": 4,
+        "H": 2,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
@@ -194,8 +194,8 @@
         "2B": 0,
         "3B": 0,
         "RBI": 0,
-        "BB": 1,
-        "K": 2,
+        "BB": 0,
+        "K": 1,
         "HR": 0,
         "SB": 0
       }
@@ -205,14 +205,14 @@
         "player": "kaito-ueda",
         "name": "Kaito Ueda",
         "position": "CF",
-        "AB": 3,
+        "AB": 5,
         "R": 1,
-        "H": 0,
-        "2B": 0,
+        "H": 1,
+        "2B": 1,
         "3B": 0,
         "RBI": 0,
-        "BB": 2,
-        "K": 2,
+        "BB": 0,
+        "K": 1,
         "HR": 0,
         "SB": 0
       },
@@ -226,8 +226,8 @@
         "2B": 0,
         "3B": 0,
         "RBI": 0,
-        "BB": 0,
-        "K": 1,
+        "BB": 1,
+        "K": 0,
         "HR": 0,
         "SB": 0
       },
@@ -237,27 +237,27 @@
         "position": "1B",
         "AB": 3,
         "R": 0,
-        "H": 0,
-        "2B": 0,
+        "H": 1,
+        "2B": 1,
         "3B": 0,
         "RBI": 0,
         "BB": 0,
         "K": 1,
         "HR": 0,
-        "SB": 1
+        "SB": 0
       },
       {
         "player": "dariusz-wierzbik",
         "name": "Dariusz Wierzbik",
         "position": "SS",
-        "AB": 5,
-        "R": 1,
-        "H": 2,
+        "AB": 4,
+        "R": 0,
+        "H": 0,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
-        "BB": 0,
-        "K": 0,
+        "BB": 1,
+        "K": 1,
         "HR": 0,
         "SB": 0
       },
@@ -267,27 +267,27 @@
         "position": "3B",
         "AB": 5,
         "R": 0,
-        "H": 1,
-        "2B": 0,
+        "H": 2,
+        "2B": 1,
         "3B": 0,
         "RBI": 0,
-        "BB": 1,
-        "K": 3,
+        "BB": 0,
+        "K": 1,
         "HR": 0,
-        "SB": 1
+        "SB": 0
       },
       {
         "player": "owen-rasmusson",
         "name": "Owen Rasmusson",
         "position": "C",
-        "AB": 5,
+        "AB": 3,
         "R": 0,
-        "H": 0,
+        "H": 1,
         "2B": 0,
-        "3B": 0,
+        "3B": 1,
         "RBI": 0,
-        "BB": 0,
-        "K": 1,
+        "BB": 1,
+        "K": 0,
         "HR": 0,
         "SB": 0
       },
@@ -296,28 +296,28 @@
         "name": "Eric Lawson",
         "position": "LF",
         "AB": 5,
-        "R": 0,
-        "H": 0,
+        "R": 1,
+        "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 1,
-        "BB": 0,
+        "BB": 1,
         "K": 1,
-        "HR": 0,
+        "HR": 1,
         "SB": 0
       },
       {
         "player": "jose-ramirez-tpe",
         "name": "Jose Ramirez",
         "position": "RF",
-        "AB": 4,
+        "AB": 5,
         "R": 0,
-        "H": 1,
-        "2B": 1,
+        "H": 0,
+        "2B": 0,
         "3B": 0,
-        "RBI": 1,
-        "BB": 1,
-        "K": 1,
+        "RBI": 0,
+        "BB": 0,
+        "K": 2,
         "HR": 0,
         "SB": 0
       },
@@ -325,16 +325,16 @@
         "player": "david-morales-tpe",
         "name": "David Morales",
         "position": "DH",
-        "AB": 4,
+        "AB": 5,
         "R": 0,
         "H": 0,
         "2B": 0,
         "3B": 0,
-        "RBI": 0,
+        "RBI": 1,
         "BB": 0,
-        "K": 1,
+        "K": 0,
         "HR": 0,
-        "SB": 0
+        "SB": 2
       }
     ]
   },
@@ -343,60 +343,59 @@
       {
         "player": "luka-kovacevic",
         "name": "Luka Kovačević",
-        "IP_outs": 21,
+        "IP_outs": 20,
         "H": 4,
-        "R": 2,
-        "ER": 2,
+        "R": 1,
+        "ER": 1,
         "BB": 1,
-        "K": 8,
-        "HR": 0,
-        "IP": 7
+        "K": 5,
+        "HR": 1,
+        "IP": 6.2
       },
       {
         "player": "sandeep-nayar",
         "name": "Sandeep Nayar",
-        "IP_outs": 6,
-        "H": 0,
-        "R": 0,
-        "ER": 0,
+        "IP_outs": 7,
+        "H": 2,
+        "R": 1,
+        "ER": 1,
         "BB": 3,
-        "K": 3,
+        "K": 2,
         "HR": 0,
-        "IP": 2
+        "IP": 2.1
       }
     ],
     "home": [
       {
         "player": "joaquin-iturriaga",
         "name": "Joaquín Iturriaga",
-        "IP_outs": 18,
-        "H": 8,
+        "IP_outs": 17,
+        "H": 7,
         "R": 0,
         "ER": 0,
-        "BB": 1,
-        "K": 2,
+        "BB": 0,
+        "K": 5,
         "HR": 0,
-        "IP": 6
+        "IP": 5.2
       },
       {
         "player": "miguel-santos-tpe",
         "name": "Miguel Santos",
-        "IP_outs": 9,
-        "H": 3,
+        "IP_outs": 10,
+        "H": 2,
         "R": 0,
         "ER": 0,
-        "BB": 3,
+        "BB": 2,
         "K": 2,
         "HR": 0,
-        "IP": 3
+        "IP": 3.1
       }
     ]
   },
   "decisions": {
     "W": "joaquin-iturriaga",
     "L": "luka-kovacevic",
-    "SV": null
+    "SV": "miguel-santos-tpe"
   },
-  "notes": [],
-  "calibration": "glb.stats-calibrated.v1"
+  "notes": []
 }

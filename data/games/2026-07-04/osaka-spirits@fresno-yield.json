@@ -11,18 +11,18 @@
     "name": "Fresno Yield"
   },
   "status": "Final",
-  "attendance": 25774,
+  "attendance": 29814,
   "linescore": {
     "innings": [
       {
         "inning": 1,
-        "away": 1,
-        "home": 0
+        "away": 0,
+        "home": 1
       },
       {
         "inning": 2,
         "away": 0,
-        "home": 0
+        "home": 2
       },
       {
         "inning": 3,
@@ -36,12 +36,12 @@
       },
       {
         "inning": 5,
-        "away": 1,
+        "away": 0,
         "home": 0
       },
       {
         "inning": 6,
-        "away": 0,
+        "away": 1,
         "home": 0
       },
       {
@@ -52,23 +52,23 @@
       {
         "inning": 8,
         "away": 0,
-        "home": 1
+        "home": 0
       },
       {
         "inning": 9,
-        "away": 0,
-        "home": 2
+        "away": 1,
+        "home": 0
       }
     ],
     "totals": {
       "away": {
         "R": 2,
-        "H": 5,
-        "E": 0
+        "H": 8,
+        "E": 2
       },
       "home": {
         "R": 3,
-        "H": 4,
+        "H": 12,
         "E": 0
       }
     }
@@ -83,36 +83,6 @@
         "player": "marcelino-quispe",
         "name": "Marcelino Quispe",
         "position": "C",
-        "AB": 4,
-        "R": 0,
-        "H": 0,
-        "2B": 0,
-        "3B": 0,
-        "RBI": 0,
-        "BB": 0,
-        "K": 1,
-        "HR": 0,
-        "SB": 0
-      },
-      {
-        "player": "thabo-mkhize",
-        "name": "Thabo Mkhize",
-        "position": "1B",
-        "AB": 5,
-        "R": 0,
-        "H": 0,
-        "2B": 0,
-        "3B": 0,
-        "RBI": 0,
-        "BB": 1,
-        "K": 1,
-        "HR": 0,
-        "SB": 0
-      },
-      {
-        "player": "arman-daryan",
-        "name": "Arman Daryan",
-        "position": "2B",
         "AB": 3,
         "R": 0,
         "H": 1,
@@ -125,48 +95,78 @@
         "SB": 0
       },
       {
-        "player": "kenjiro-suganuma",
-        "name": "Kenjiro Suganuma",
-        "position": "SS",
-        "AB": 4,
+        "player": "thabo-mkhize",
+        "name": "Thabo Mkhize",
+        "position": "1B",
+        "AB": 3,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "arman-daryan",
+        "name": "Arman Daryan",
+        "position": "2B",
+        "AB": 5,
         "R": 0,
         "H": 0,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
         "BB": 0,
-        "K": 1,
+        "K": 2,
         "HR": 0,
         "SB": 1
+      },
+      {
+        "player": "kenjiro-suganuma",
+        "name": "Kenjiro Suganuma",
+        "position": "SS",
+        "AB": 4,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 1,
+        "HR": 0,
+        "SB": 0
       },
       {
         "player": "dariusz-kwiatkowski",
         "name": "Dariusz Kwiatkowski",
         "position": "3B",
         "AB": 5,
-        "R": 0,
+        "R": 1,
         "H": 2,
-        "2B": 1,
+        "2B": 0,
         "3B": 0,
-        "RBI": 0,
+        "RBI": 1,
         "BB": 0,
-        "K": 0,
-        "HR": 0,
-        "SB": 1
+        "K": 1,
+        "HR": 1,
+        "SB": 0
       },
       {
         "player": "nikhil-bhandari",
         "name": "Nikhil Bhandari",
         "position": "CF",
-        "AB": 5,
-        "R": 1,
-        "H": 1,
+        "AB": 4,
+        "R": 0,
+        "H": 0,
         "2B": 0,
         "3B": 0,
-        "RBI": 1,
-        "BB": 0,
+        "RBI": 0,
+        "BB": 1,
         "K": 2,
-        "HR": 1,
+        "HR": 0,
         "SB": 0
       },
       {
@@ -175,7 +175,7 @@
         "position": "LF",
         "AB": 5,
         "R": 1,
-        "H": 1,
+        "H": 2,
         "2B": 0,
         "3B": 0,
         "RBI": 1,
@@ -188,14 +188,14 @@
         "player": "yusef-el-badri",
         "name": "Yusef El-Badri",
         "position": "RF",
-        "AB": 5,
+        "AB": 3,
         "R": 0,
-        "H": 0,
+        "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
-        "BB": 1,
-        "K": 3,
+        "BB": 0,
+        "K": 0,
         "HR": 0,
         "SB": 0
       }
@@ -207,12 +207,12 @@
         "position": "C",
         "AB": 4,
         "R": 0,
-        "H": 0,
+        "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
-        "BB": 1,
-        "K": 3,
+        "BB": 0,
+        "K": 1,
         "HR": 0,
         "SB": 0
       },
@@ -221,29 +221,29 @@
         "name": "Jonah Kershaw",
         "position": "1B",
         "AB": 5,
-        "R": 1,
-        "H": 2,
+        "R": 2,
+        "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 1,
-        "BB": 0,
-        "K": 0,
-        "HR": 1,
+        "BB": 1,
+        "K": 2,
+        "HR": 0,
         "SB": 0
       },
       {
         "player": "soren-ahlgren",
         "name": "Søren Ahlgren",
         "position": "2B",
-        "AB": 4,
-        "R": 1,
-        "H": 2,
+        "AB": 5,
+        "R": 0,
+        "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 1,
-        "BB": 0,
-        "K": 1,
-        "HR": 1,
+        "BB": 1,
+        "K": 2,
+        "HR": 0,
         "SB": 0
       },
       {
@@ -252,7 +252,7 @@
         "position": "SS",
         "AB": 5,
         "R": 0,
-        "H": 0,
+        "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
@@ -267,11 +267,11 @@
         "position": "3B",
         "AB": 5,
         "R": 0,
-        "H": 0,
+        "H": 3,
         "2B": 0,
         "3B": 0,
-        "RBI": 1,
-        "BB": 1,
+        "RBI": 0,
+        "BB": 0,
         "K": 1,
         "HR": 0,
         "SB": 0
@@ -282,10 +282,10 @@
         "position": "CF",
         "AB": 3,
         "R": 0,
-        "H": 0,
+        "H": 1,
         "2B": 0,
         "3B": 0,
-        "RBI": 0,
+        "RBI": 1,
         "BB": 0,
         "K": 1,
         "HR": 0,
@@ -295,14 +295,14 @@
         "player": "hiroshi-kawabata",
         "name": "Hiroshi Kawabata",
         "position": "LF",
-        "AB": 3,
-        "R": 1,
-        "H": 0,
+        "AB": 4,
+        "R": 0,
+        "H": 2,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
-        "BB": 0,
-        "K": 0,
+        "BB": 1,
+        "K": 2,
         "HR": 0,
         "SB": 0
       },
@@ -310,14 +310,14 @@
         "player": "anwar-elamin",
         "name": "Anwar Elamin",
         "position": "RF",
-        "AB": 3,
-        "R": 0,
-        "H": 0,
+        "AB": 5,
+        "R": 1,
+        "H": 2,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
-        "BB": 0,
-        "K": 1,
+        "BB": 1,
+        "K": 0,
         "HR": 0,
         "SB": 0
       }
@@ -328,60 +328,59 @@
       {
         "player": "rowan-cahir",
         "name": "Rowan Cahir",
-        "IP_outs": 21,
-        "H": 0,
-        "R": 2,
-        "ER": 2,
+        "IP_outs": 18,
+        "H": 3,
+        "R": 0,
+        "ER": 0,
         "BB": 0,
-        "K": 6,
-        "HR": 1,
-        "IP": 7
+        "K": 8,
+        "HR": 0,
+        "IP": 6
       },
       {
         "player": "jae-min-goh",
         "name": "Jae-min Goh",
-        "IP_outs": 6,
-        "H": 4,
-        "R": 1,
-        "ER": 1,
-        "BB": 2,
+        "IP_outs": 9,
+        "H": 9,
+        "R": 3,
+        "ER": 3,
+        "BB": 4,
         "K": 3,
-        "HR": 1,
-        "IP": 2
+        "HR": 0,
+        "IP": 3
       }
     ],
     "home": [
       {
-        "player": "silas-torgersen",
-        "name": "Silas Torgersen",
-        "IP_outs": 15,
-        "H": 5,
+        "player": "roman-villasenor",
+        "name": "Román Villaseñor",
+        "IP_outs": 16,
+        "H": 1,
         "R": 1,
         "ER": 1,
         "BB": 0,
-        "K": 7,
-        "HR": 1,
-        "IP": 5
+        "K": 6,
+        "HR": 0,
+        "IP": 5.1
       },
       {
-        "player": "dusan-marevic",
-        "name": "Dušan Marević",
-        "IP_outs": 12,
-        "H": 0,
+        "player": "ibrahim-koroma",
+        "name": "Ibrahim Koroma",
+        "IP_outs": 11,
+        "H": 7,
         "R": 1,
         "ER": 1,
-        "BB": 2,
-        "K": 3,
-        "HR": 1,
-        "IP": 4
+        "BB": 1,
+        "K": 2,
+        "HR": 2,
+        "IP": 3.2
       }
     ]
   },
   "decisions": {
-    "W": "silas-torgersen",
+    "W": "roman-villasenor",
     "L": "rowan-cahir",
-    "SV": "dusan-marevic"
+    "SV": null
   },
-  "notes": [],
-  "calibration": "glb.stats-calibrated.v1"
+  "notes": []
 }

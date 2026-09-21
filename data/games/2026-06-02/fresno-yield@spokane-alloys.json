@@ -11,28 +11,28 @@
     "name": "Spokane Alloys"
   },
   "status": "Final",
-  "attendance": 14835,
+  "attendance": 33097,
   "linescore": {
     "innings": [
       {
         "inning": 1,
+        "away": 0,
+        "home": 3
+      },
+      {
+        "inning": 2,
         "away": 1,
         "home": 0
       },
       {
-        "inning": 2,
-        "away": 0,
-        "home": 1
-      },
-      {
         "inning": 3,
-        "away": 1,
-        "home": 2
+        "away": 0,
+        "home": 0
       },
       {
         "inning": 4,
         "away": 0,
-        "home": 2
+        "home": 1
       },
       {
         "inning": 5,
@@ -42,12 +42,12 @@
       {
         "inning": 6,
         "away": 0,
-        "home": 1
+        "home": 0
       },
       {
         "inning": 7,
         "away": 0,
-        "home": 0
+        "home": 2
       },
       {
         "inning": 8,
@@ -56,20 +56,20 @@
       },
       {
         "inning": 9,
-        "away": 0,
+        "away": 1,
         "home": 1
       }
     ],
     "totals": {
       "away": {
         "R": 3,
-        "H": 10,
-        "E": 2
+        "H": 11,
+        "E": 0
       },
       "home": {
         "R": 7,
-        "H": 10,
-        "E": 2
+        "H": 7,
+        "E": 1
       }
     }
   },
@@ -83,13 +83,13 @@
         "player": "luis-eccheri",
         "name": "Luis Eccheri",
         "position": "C",
-        "AB": 4,
-        "R": 1,
+        "AB": 5,
+        "R": 0,
         "H": 0,
         "2B": 0,
         "3B": 0,
-        "RBI": 1,
-        "BB": 0,
+        "RBI": 0,
+        "BB": 1,
         "K": 1,
         "HR": 0,
         "SB": 0
@@ -98,14 +98,14 @@
         "player": "jonah-kershaw",
         "name": "Jonah Kershaw",
         "position": "1B",
-        "AB": 5,
-        "R": 0,
-        "H": 3,
+        "AB": 3,
+        "R": 1,
+        "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
         "BB": 0,
-        "K": 0,
+        "K": 1,
         "HR": 0,
         "SB": 0
       },
@@ -116,41 +116,41 @@
         "AB": 5,
         "R": 0,
         "H": 2,
-        "2B": 0,
+        "2B": 2,
         "3B": 0,
         "RBI": 0,
         "BB": 0,
-        "K": 0,
+        "K": 1,
         "HR": 0,
-        "SB": 0
+        "SB": 1
       },
       {
         "player": "raul-sestayo",
         "name": "Raúl Sestayo",
         "position": "SS",
-        "AB": 4,
-        "R": 1,
-        "H": 0,
+        "AB": 3,
+        "R": 0,
+        "H": 2,
         "2B": 0,
-        "3B": 0,
+        "3B": 1,
         "RBI": 1,
-        "BB": 0,
-        "K": 3,
+        "BB": 2,
+        "K": 1,
         "HR": 0,
-        "SB": 1
+        "SB": 0
       },
       {
         "player": "eamon-kilbride",
         "name": "Eamon Kilbride",
         "position": "3B",
-        "AB": 5,
+        "AB": 3,
         "R": 0,
-        "H": 1,
+        "H": 0,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
-        "BB": 1,
-        "K": 1,
+        "BB": 0,
+        "K": 3,
         "HR": 0,
         "SB": 0
       },
@@ -158,16 +158,16 @@
         "player": "malachi-quartey",
         "name": "Malachi Quartey",
         "position": "CF",
-        "AB": 4,
-        "R": 0,
+        "AB": 3,
+        "R": 1,
         "H": 2,
         "2B": 0,
         "3B": 0,
         "RBI": 1,
-        "BB": 0,
+        "BB": 1,
         "K": 1,
-        "HR": 0,
-        "SB": 1
+        "HR": 1,
+        "SB": 0
       },
       {
         "player": "hiroshi-kawabata",
@@ -175,12 +175,12 @@
         "position": "LF",
         "AB": 5,
         "R": 0,
-        "H": 0,
-        "2B": 0,
+        "H": 2,
+        "2B": 1,
         "3B": 0,
         "RBI": 0,
         "BB": 0,
-        "K": 2,
+        "K": 1,
         "HR": 0,
         "SB": 0
       },
@@ -188,15 +188,15 @@
         "player": "anwar-elamin",
         "name": "Anwar Elamin",
         "position": "RF",
-        "AB": 4,
+        "AB": 5,
         "R": 1,
         "H": 2,
         "2B": 0,
         "3B": 0,
-        "RBI": 0,
-        "BB": 0,
-        "K": 0,
-        "HR": 0,
+        "RBI": 1,
+        "BB": 1,
+        "K": 1,
+        "HR": 1,
         "SB": 0
       }
     ],
@@ -206,11 +206,11 @@
         "name": "Nikolai Dobrynin",
         "position": "C",
         "AB": 4,
-        "R": 0,
-        "H": 2,
+        "R": 1,
+        "H": 0,
         "2B": 0,
         "3B": 0,
-        "RBI": 0,
+        "RBI": 3,
         "BB": 0,
         "K": 0,
         "HR": 0,
@@ -220,14 +220,14 @@
         "player": "evan-carroll-iv",
         "name": "Evan Carroll IV",
         "position": "1B",
-        "AB": 4,
-        "R": 1,
-        "H": 2,
+        "AB": 3,
+        "R": 0,
+        "H": 0,
         "2B": 0,
         "3B": 0,
-        "RBI": 1,
-        "BB": 0,
-        "K": 0,
+        "RBI": 0,
+        "BB": 1,
+        "K": 1,
         "HR": 0,
         "SB": 0
       },
@@ -236,13 +236,13 @@
         "name": "Marco DelVecchio",
         "position": "2B",
         "AB": 4,
-        "R": 0,
+        "R": 1,
         "H": 1,
         "2B": 0,
         "3B": 0,
-        "RBI": 1,
-        "BB": 0,
-        "K": 0,
+        "RBI": 0,
+        "BB": 1,
+        "K": 3,
         "HR": 0,
         "SB": 0
       },
@@ -250,13 +250,13 @@
         "player": "tomasz-kubas",
         "name": "Tomasz Kubas",
         "position": "SS",
-        "AB": 3,
+        "AB": 4,
         "R": 2,
-        "H": 2,
+        "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 1,
-        "BB": 1,
+        "BB": 0,
         "K": 0,
         "HR": 1,
         "SB": 0
@@ -265,14 +265,14 @@
         "player": "andres-mireles",
         "name": "Andrés Mireles",
         "position": "3B",
-        "AB": 4,
-        "R": 0,
+        "AB": 5,
+        "R": 2,
         "H": 0,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
         "BB": 0,
-        "K": 2,
+        "K": 1,
         "HR": 0,
         "SB": 0
       },
@@ -281,44 +281,44 @@
         "name": "Wyatt Hollander",
         "position": "CF",
         "AB": 4,
-        "R": 1,
-        "H": 1,
-        "2B": 0,
+        "R": 0,
+        "H": 3,
+        "2B": 2,
         "3B": 0,
-        "RBI": 0,
+        "RBI": 1,
         "BB": 0,
-        "K": 1,
+        "K": 0,
         "HR": 0,
-        "SB": 0
+        "SB": 1
       },
       {
         "player": "luis-quinones",
         "name": "Luis Quiñones",
         "position": "LF",
-        "AB": 4,
-        "R": 2,
-        "H": 0,
+        "AB": 3,
+        "R": 1,
+        "H": 1,
         "2B": 0,
         "3B": 0,
-        "RBI": 2,
+        "RBI": 1,
         "BB": 0,
-        "K": 1,
-        "HR": 0,
-        "SB": 1
+        "K": 2,
+        "HR": 1,
+        "SB": 0
       },
       {
         "player": "pieter-van-wyk",
         "name": "Pieter van Wyk",
         "position": "RF",
-        "AB": 4,
-        "R": 1,
-        "H": 2,
+        "AB": 5,
+        "R": 0,
+        "H": 1,
         "2B": 0,
         "3B": 0,
-        "RBI": 2,
-        "BB": 1,
+        "RBI": 1,
+        "BB": 2,
         "K": 0,
-        "HR": 1,
+        "HR": 0,
         "SB": 0
       }
     ]
@@ -326,62 +326,61 @@
   "pitching": {
     "away": [
       {
-        "player": "kenji-takamori",
-        "name": "Kenji Takamori",
-        "IP_outs": 17,
-        "H": 7,
-        "R": 3,
-        "ER": 3,
-        "BB": 0,
-        "K": 3,
-        "HR": 2,
-        "IP": 5.2
+        "player": "arinze-nwokoye",
+        "name": "Arinze Nwokoye",
+        "IP_outs": 20,
+        "H": 4,
+        "R": 6,
+        "ER": 6,
+        "BB": 3,
+        "K": 4,
+        "HR": 0,
+        "IP": 6.2
       },
       {
-        "player": "dusan-marevic",
-        "name": "Dušan Marević",
-        "IP_outs": 10,
+        "player": "ibrahim-koroma",
+        "name": "Ibrahim Koroma",
+        "IP_outs": 7,
         "H": 3,
-        "R": 4,
-        "ER": 4,
-        "BB": 2,
-        "K": 1,
-        "HR": 0,
-        "IP": 3.1
+        "R": 1,
+        "ER": 1,
+        "BB": 1,
+        "K": 3,
+        "HR": 2,
+        "IP": 2.1
       }
     ],
     "home": [
       {
         "player": "diego-alvarez-mora",
         "name": "Diego Álvarez Mora",
-        "IP_outs": 19,
-        "H": 9,
-        "R": 3,
-        "ER": 3,
-        "BB": 1,
-        "K": 8,
+        "IP_outs": 17,
+        "H": 4,
+        "R": 2,
+        "ER": 2,
+        "BB": 2,
+        "K": 7,
         "HR": 0,
-        "IP": 6.1
+        "IP": 5.2
       },
       {
         "player": "caleb-reidman",
         "name": "Caleb Reidman",
-        "IP_outs": 8,
-        "H": 1,
-        "R": 0,
-        "ER": 0,
-        "BB": 0,
-        "K": 0,
-        "HR": 0,
-        "IP": 2.2
+        "IP_outs": 10,
+        "H": 7,
+        "R": 1,
+        "ER": 1,
+        "BB": 3,
+        "K": 3,
+        "HR": 2,
+        "IP": 3.1
       }
     ]
   },
   "decisions": {
     "W": "diego-alvarez-mora",
-    "L": "kenji-takamori",
+    "L": "arinze-nwokoye",
     "SV": null
   },
-  "notes": [],
-  "calibration": "glb.stats-calibrated.v1"
+  "notes": []
 }

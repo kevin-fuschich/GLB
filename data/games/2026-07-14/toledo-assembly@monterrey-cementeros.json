@@ -11,38 +11,38 @@
     "name": "Monterrey Cementeros"
   },
   "status": "Final",
-  "attendance": 27348,
+  "attendance": 28691,
   "linescore": {
     "innings": [
       {
         "inning": 1,
-        "away": 0,
+        "away": 1,
         "home": 0
       },
       {
         "inning": 2,
-        "away": 1,
+        "away": 0,
         "home": 0
       },
       {
         "inning": 3,
         "away": 0,
-        "home": 0
+        "home": 1
       },
       {
         "inning": 4,
-        "away": 2,
+        "away": 1,
         "home": 0
       },
       {
         "inning": 5,
-        "away": 0,
-        "home": 1
+        "away": 1,
+        "home": 0
       },
       {
         "inning": 6,
         "away": 0,
-        "home": 1
+        "home": 0
       },
       {
         "inning": 7,
@@ -57,18 +57,18 @@
       {
         "inning": 9,
         "away": 0,
-        "home": 0
+        "home": 1
       }
     ],
     "totals": {
       "away": {
         "R": 3,
-        "H": 6,
-        "E": 2
+        "H": 11,
+        "E": 1
       },
       "home": {
         "R": 2,
-        "H": 11,
+        "H": 10,
         "E": 2
       }
     }
@@ -83,14 +83,14 @@
         "player": "omar-nazzal",
         "name": "Omar Nazzal",
         "position": "C",
-        "AB": 4,
+        "AB": 3,
         "R": 0,
-        "H": 0,
-        "2B": 0,
+        "H": 1,
+        "2B": 1,
         "3B": 0,
         "RBI": 0,
-        "BB": 1,
-        "K": 2,
+        "BB": 0,
+        "K": 1,
         "HR": 0,
         "SB": 0
       },
@@ -99,57 +99,57 @@
         "name": "Caleb Ardoin",
         "position": "1B",
         "AB": 5,
-        "R": 0,
-        "H": 2,
+        "R": 1,
+        "H": 3,
         "2B": 0,
         "3B": 0,
         "RBI": 1,
         "BB": 1,
         "K": 1,
-        "HR": 0,
+        "HR": 1,
         "SB": 0
       },
       {
         "player": "samir-benyahia",
         "name": "Samir Benyahia",
         "position": "2B",
-        "AB": 4,
-        "R": 1,
-        "H": 1,
-        "2B": 0,
+        "AB": 5,
+        "R": 0,
+        "H": 2,
+        "2B": 1,
         "3B": 0,
-        "RBI": 1,
-        "BB": 0,
-        "K": 3,
-        "HR": 1,
+        "RBI": 0,
+        "BB": 1,
+        "K": 0,
+        "HR": 0,
         "SB": 0
       },
       {
         "player": "evan-trelawny",
         "name": "Evan Trelawny",
         "position": "SS",
-        "AB": 5,
+        "AB": 4,
         "R": 0,
         "H": 0,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
-        "BB": 1,
-        "K": 0,
+        "BB": 0,
+        "K": 1,
         "HR": 0,
-        "SB": 1
+        "SB": 0
       },
       {
         "player": "kwame-ofori",
         "name": "Kwame Ofori",
         "position": "3B",
-        "AB": 3,
+        "AB": 4,
         "R": 0,
         "H": 2,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
-        "BB": 1,
+        "BB": 0,
         "K": 0,
         "HR": 0,
         "SB": 0
@@ -158,14 +158,14 @@
         "player": "mateo-acebedo",
         "name": "Mateo Acebedo",
         "position": "LF",
-        "AB": 3,
+        "AB": 5,
         "R": 1,
         "H": 0,
         "2B": 0,
         "3B": 0,
-        "RBI": 0,
-        "BB": 1,
-        "K": 0,
+        "RBI": 1,
+        "BB": 0,
+        "K": 1,
         "HR": 0,
         "SB": 0
       },
@@ -173,8 +173,8 @@
         "player": "niko-velkovic",
         "name": "Niko Velković",
         "position": "CF",
-        "AB": 5,
-        "R": 1,
+        "AB": 4,
+        "R": 0,
         "H": 1,
         "2B": 0,
         "3B": 0,
@@ -189,14 +189,14 @@
         "name": "Jasper Quade",
         "position": "RF",
         "AB": 5,
-        "R": 0,
-        "H": 0,
+        "R": 1,
+        "H": 2,
         "2B": 0,
         "3B": 0,
         "RBI": 1,
         "BB": 0,
-        "K": 3,
-        "HR": 0,
+        "K": 0,
+        "HR": 1,
         "SB": 0
       }
     ],
@@ -205,14 +205,14 @@
         "player": "julian-sauri",
         "name": "Julián Sauri",
         "position": "C",
-        "AB": 3,
+        "AB": 4,
         "R": 1,
-        "H": 2,
+        "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 1,
         "BB": 1,
-        "K": 0,
+        "K": 1,
         "HR": 1,
         "SB": 0
       },
@@ -220,13 +220,13 @@
         "player": "eamon-kilrea",
         "name": "Eamon Kilrea",
         "position": "1B",
-        "AB": 3,
+        "AB": 5,
         "R": 0,
-        "H": 3,
+        "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
-        "BB": 1,
+        "BB": 0,
         "K": 0,
         "HR": 0,
         "SB": 0
@@ -235,29 +235,29 @@
         "player": "thiago-pereyra",
         "name": "Thiago Pereyra",
         "position": "2B",
-        "AB": 4,
+        "AB": 3,
         "R": 0,
-        "H": 2,
+        "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
         "BB": 0,
         "K": 1,
         "HR": 0,
-        "SB": 1
+        "SB": 0
       },
       {
         "player": "kofi-mensah",
         "name": "Kofi Mensah",
         "position": "SS",
-        "AB": 5,
+        "AB": 3,
         "R": 0,
         "H": 1,
-        "2B": 0,
+        "2B": 1,
         "3B": 0,
         "RBI": 0,
         "BB": 1,
-        "K": 0,
+        "K": 1,
         "HR": 0,
         "SB": 0
       },
@@ -265,30 +265,30 @@
         "player": "luka-vukovic",
         "name": "Luka Vuković",
         "position": "3B",
-        "AB": 4,
+        "AB": 5,
         "R": 0,
-        "H": 0,
+        "H": 2,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
-        "BB": 1,
-        "K": 2,
+        "BB": 3,
+        "K": 0,
         "HR": 0,
-        "SB": 0
+        "SB": 1
       },
       {
         "player": "seiji-fukumori",
         "name": "Seiji Fukumori",
         "position": "CF",
-        "AB": 4,
-        "R": 0,
-        "H": 0,
+        "AB": 5,
+        "R": 1,
+        "H": 2,
         "2B": 0,
-        "3B": 0,
-        "RBI": 0,
+        "3B": 1,
+        "RBI": 1,
         "BB": 0,
-        "K": 2,
-        "HR": 0,
+        "K": 0,
+        "HR": 1,
         "SB": 0
       },
       {
@@ -296,15 +296,15 @@
         "name": "Andrés Cázares",
         "position": "LF",
         "AB": 5,
-        "R": 1,
+        "R": 0,
         "H": 2,
-        "2B": 0,
+        "2B": 2,
         "3B": 0,
-        "RBI": 1,
+        "RBI": 0,
         "BB": 0,
-        "K": 1,
-        "HR": 1,
-        "SB": 1
+        "K": 0,
+        "HR": 0,
+        "SB": 0
       },
       {
         "player": "micah-lunsford",
@@ -312,7 +312,7 @@
         "position": "RF",
         "AB": 5,
         "R": 0,
-        "H": 1,
+        "H": 0,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
@@ -328,52 +328,52 @@
       {
         "player": "zahir-kamara",
         "name": "Zahir Kamara",
-        "IP_outs": 20,
-        "H": 6,
+        "IP_outs": 17,
+        "H": 1,
         "R": 2,
         "ER": 2,
-        "BB": 2,
-        "K": 5,
-        "HR": 2,
-        "IP": 6.2
+        "BB": 1,
+        "K": 3,
+        "HR": 1,
+        "IP": 5.2
       },
       {
         "player": "jun-seo-kang",
         "name": "Jun-seo Kang",
-        "IP_outs": 7,
-        "H": 5,
+        "IP_outs": 10,
+        "H": 9,
         "R": 0,
         "ER": 0,
-        "BB": 2,
-        "K": 2,
-        "HR": 0,
-        "IP": 2.1
+        "BB": 4,
+        "K": 1,
+        "HR": 1,
+        "IP": 3.1
       }
     ],
     "home": [
       {
         "player": "arjun-bhatnagar",
         "name": "Arjun Bhatnagar",
-        "IP_outs": 17,
-        "H": 5,
+        "IP_outs": 18,
+        "H": 8,
         "R": 3,
         "ER": 3,
-        "BB": 3,
-        "K": 7,
-        "HR": 1,
-        "IP": 5.2
+        "BB": 2,
+        "K": 3,
+        "HR": 2,
+        "IP": 6
       },
       {
         "player": "rowan-treadwell",
         "name": "Rowan Treadwell",
-        "IP_outs": 10,
-        "H": 1,
+        "IP_outs": 9,
+        "H": 3,
         "R": 0,
         "ER": 0,
-        "BB": 2,
-        "K": 3,
+        "BB": 0,
+        "K": 2,
         "HR": 0,
-        "IP": 3.1
+        "IP": 3
       }
     ]
   },
@@ -382,6 +382,5 @@
     "L": "arjun-bhatnagar",
     "SV": "jun-seo-kang"
   },
-  "notes": [],
-  "calibration": "glb.stats-calibrated.v1"
+  "notes": []
 }

@@ -11,7 +11,7 @@
     "name": "Monterrey Cementeros"
   },
   "status": "Final",
-  "attendance": 32531,
+  "attendance": 25916,
   "linescore": {
     "innings": [
       {
@@ -46,30 +46,30 @@
       },
       {
         "inning": 7,
-        "away": 1,
+        "away": 0,
         "home": 0
       },
       {
         "inning": 8,
-        "away": 0,
-        "home": 1
+        "away": 1,
+        "home": 0
       },
       {
         "inning": 9,
         "away": 0,
-        "home": 0
+        "home": 1
       }
     ],
     "totals": {
       "away": {
         "R": 3,
-        "H": 9,
+        "H": 10,
         "E": 1
       },
       "home": {
         "R": 4,
-        "H": 10,
-        "E": 1
+        "H": 6,
+        "E": 0
       }
     }
   },
@@ -80,28 +80,13 @@
   "batting": {
     "away": [
       {
-        "player": "silas-boudreau",
-        "name": "Silas Boudreau",
+        "player": "ryan-mcallister",
+        "name": "Ryan McAllister",
         "position": "C",
-        "AB": 3,
-        "R": 0,
-        "H": 1,
-        "2B": 0,
-        "3B": 0,
-        "RBI": 0,
-        "BB": 1,
-        "K": 0,
-        "HR": 0,
-        "SB": 0
-      },
-      {
-        "player": "eamon-kerr",
-        "name": "Eamon Kerr",
-        "position": "1B",
-        "AB": 3,
+        "AB": 4,
         "R": 0,
         "H": 2,
-        "2B": 0,
+        "2B": 1,
         "3B": 0,
         "RBI": 0,
         "BB": 0,
@@ -110,87 +95,117 @@
         "SB": 0
       },
       {
-        "player": "soraya-jafari",
-        "name": "Soraya Jafari",
-        "position": "2B",
-        "AB": 3,
-        "R": 1,
-        "H": 1,
-        "2B": 0,
-        "3B": 0,
-        "RBI": 0,
-        "BB": 1,
-        "K": 1,
-        "HR": 0,
-        "SB": 0
-      },
-      {
-        "player": "alejo-santillan",
-        "name": "Alejo Santillán",
-        "position": "SS",
+        "player": "julio-paredes",
+        "name": "Julio Paredes",
+        "position": "1B",
         "AB": 4,
         "R": 0,
-        "H": 1,
+        "H": 0,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
-        "BB": 0,
-        "K": 0,
-        "HR": 0,
-        "SB": 0
-      },
-      {
-        "player": "roman-velasco",
-        "name": "Roman Velasco",
-        "position": "3B",
-        "AB": 4,
-        "R": 0,
-        "H": 1,
-        "2B": 0,
-        "3B": 0,
-        "RBI": 0,
-        "BB": 2,
-        "K": 1,
-        "HR": 0,
-        "SB": 0
-      },
-      {
-        "player": "taj-adelman",
-        "name": "Taj Adelman",
-        "position": "LF",
-        "AB": 4,
-        "R": 1,
-        "H": 1,
-        "2B": 0,
-        "3B": 0,
-        "RBI": 1,
-        "BB": 0,
-        "K": 0,
-        "HR": 1,
-        "SB": 0
-      },
-      {
-        "player": "marcell-lind",
-        "name": "Marcell Lind",
-        "position": "CF",
-        "AB": 5,
-        "R": 1,
-        "H": 1,
-        "2B": 0,
-        "3B": 0,
-        "RBI": 1,
         "BB": 0,
         "K": 3,
         "HR": 0,
         "SB": 0
       },
       {
-        "player": "oziel-narvaez",
-        "name": "Oziel Narváez",
-        "position": "RF",
-        "AB": 5,
+        "player": "jae-hyun-lee",
+        "name": "Jae-hyun Lee",
+        "position": "2B",
+        "AB": 4,
         "R": 0,
         "H": 1,
+        "2B": 1,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 1,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "tomas-guerrero",
+        "name": "Tomás Guerrero",
+        "position": "3B",
+        "AB": 3,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 2,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "nicolas-rojas",
+        "name": "Nicolás Rojas",
+        "position": "SS",
+        "AB": 3,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 1,
+        "HR": 0,
+        "SB": 1
+      },
+      {
+        "player": "connor-walsh",
+        "name": "Connor Walsh",
+        "position": "LF",
+        "AB": 5,
+        "R": 2,
+        "H": 3,
+        "2B": 1,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 1,
+        "K": 0,
+        "HR": 1,
+        "SB": 0
+      },
+      {
+        "player": "miguel-soto",
+        "name": "Miguel Soto",
+        "position": "CF",
+        "AB": 3,
+        "R": 0,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 1,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "kazuya-nishimura",
+        "name": "Kazuya Nishimura",
+        "position": "RF",
+        "AB": 5,
+        "R": 1,
+        "H": 2,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 1,
+        "K": 2,
+        "HR": 1,
+        "SB": 0
+      },
+      {
+        "player": "evan-brooks",
+        "name": "Evan Brooks",
+        "position": "DH",
+        "AB": 3,
+        "R": 0,
+        "H": 0,
         "2B": 0,
         "3B": 0,
         "RBI": 1,
@@ -212,7 +227,7 @@
         "3B": 0,
         "RBI": 0,
         "BB": 0,
-        "K": 1,
+        "K": 0,
         "HR": 0,
         "SB": 0
       },
@@ -222,12 +237,12 @@
         "position": "1B",
         "AB": 4,
         "R": 1,
-        "H": 1,
+        "H": 0,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
-        "BB": 0,
-        "K": 0,
+        "BB": 1,
+        "K": 3,
         "HR": 0,
         "SB": 0
       },
@@ -236,44 +251,44 @@
         "name": "Thiago Pereyra",
         "position": "2B",
         "AB": 4,
-        "R": 0,
-        "H": 1,
+        "R": 1,
+        "H": 0,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
         "BB": 0,
         "K": 0,
         "HR": 0,
-        "SB": 2
+        "SB": 0
       },
       {
         "player": "kofi-mensah",
         "name": "Kofi Mensah",
         "position": "SS",
-        "AB": 5,
-        "R": 1,
-        "H": 3,
+        "AB": 4,
+        "R": 0,
+        "H": 1,
         "2B": 0,
         "3B": 0,
-        "RBI": 1,
+        "RBI": 2,
         "BB": 1,
-        "K": 0,
-        "HR": 1,
+        "K": 1,
+        "HR": 0,
         "SB": 0
       },
       {
         "player": "luka-vukovic",
         "name": "Luka Vuković",
         "position": "3B",
-        "AB": 5,
-        "R": 2,
-        "H": 1,
+        "AB": 3,
+        "R": 0,
+        "H": 0,
         "2B": 0,
         "3B": 0,
-        "RBI": 2,
-        "BB": 0,
+        "RBI": 0,
+        "BB": 2,
         "K": 1,
-        "HR": 1,
+        "HR": 0,
         "SB": 0
       },
       {
@@ -283,11 +298,11 @@
         "AB": 5,
         "R": 0,
         "H": 1,
-        "2B": 0,
+        "2B": 1,
         "3B": 0,
         "RBI": 0,
-        "BB": 1,
-        "K": 1,
+        "BB": 0,
+        "K": 0,
         "HR": 0,
         "SB": 0
       },
@@ -296,14 +311,14 @@
         "name": "Andrés Cázares",
         "position": "LF",
         "AB": 3,
-        "R": 0,
-        "H": 1,
-        "2B": 0,
+        "R": 1,
+        "H": 2,
+        "2B": 1,
         "3B": 0,
-        "RBI": 0,
+        "RBI": 1,
         "BB": 0,
-        "K": 2,
-        "HR": 0,
+        "K": 0,
+        "HR": 1,
         "SB": 0
       },
       {
@@ -311,14 +326,14 @@
         "name": "Micah Lunsford",
         "position": "RF",
         "AB": 4,
-        "R": 0,
+        "R": 1,
         "H": 2,
-        "2B": 2,
+        "2B": 1,
         "3B": 0,
         "RBI": 1,
-        "BB": 0,
-        "K": 0,
-        "HR": 0,
+        "BB": 1,
+        "K": 2,
+        "HR": 1,
         "SB": 0
       }
     ]
@@ -326,62 +341,61 @@
   "pitching": {
     "away": [
       {
-        "player": "maksim-zorya",
-        "name": "Maksim Zorya",
-        "IP_outs": 17,
-        "H": 9,
-        "R": 2,
-        "ER": 2,
+        "player": "andres-valdes",
+        "name": "Andrés Valdés",
+        "IP_outs": 19,
+        "H": 2,
+        "R": 4,
+        "ER": 4,
         "BB": 0,
-        "K": 4,
-        "HR": 2,
-        "IP": 5.2
+        "K": 7,
+        "HR": 1,
+        "IP": 6.1
       },
       {
-        "player": "nico-penfold",
-        "name": "Nico Penfold",
-        "IP_outs": 10,
-        "H": 1,
-        "R": 2,
-        "ER": 2,
-        "BB": 2,
-        "K": 1,
-        "HR": 0,
-        "IP": 3.1
+        "player": "logan-price",
+        "name": "Logan Price",
+        "IP_outs": 8,
+        "H": 4,
+        "R": 0,
+        "ER": 0,
+        "BB": 5,
+        "K": 0,
+        "HR": 1,
+        "IP": 2.2
       }
     ],
     "home": [
       {
         "player": "dariusz-chmiel",
         "name": "Dariusz Chmiel",
-        "IP_outs": 21,
-        "H": 4,
+        "IP_outs": 17,
+        "H": 5,
         "R": 1,
         "ER": 1,
-        "BB": 2,
-        "K": 4,
+        "BB": 0,
+        "K": 7,
         "HR": 1,
-        "IP": 7
+        "IP": 5.2
       },
       {
         "player": "bashir-el-khatib",
         "name": "Bashir El-Khatib",
-        "IP_outs": 6,
+        "IP_outs": 10,
         "H": 5,
         "R": 2,
         "ER": 2,
-        "BB": 2,
-        "K": 2,
-        "HR": 0,
-        "IP": 2
+        "BB": 3,
+        "K": 3,
+        "HR": 1,
+        "IP": 3.1
       }
     ]
   },
   "decisions": {
     "W": "dariusz-chmiel",
-    "L": "maksim-zorya",
-    "SV": "bashir-el-khatib"
+    "L": "andres-valdes",
+    "SV": null
   },
-  "notes": [],
-  "calibration": "glb.stats-calibrated.v1"
+  "notes": []
 }

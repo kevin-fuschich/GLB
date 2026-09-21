@@ -11,23 +11,23 @@
     "name": "Mayagüez Sultans"
   },
   "status": "Final",
-  "attendance": 33762,
+  "attendance": 17062,
   "linescore": {
     "innings": [
       {
         "inning": 1,
-        "away": 4,
-        "home": 1
-      },
-      {
-        "inning": 2,
         "away": 1,
         "home": 2
       },
       {
+        "inning": 2,
+        "away": 2,
+        "home": 0
+      },
+      {
         "inning": 3,
         "away": 0,
-        "home": 0
+        "home": 1
       },
       {
         "inning": 4,
@@ -46,30 +46,30 @@
       },
       {
         "inning": 7,
-        "away": 0,
-        "home": 1
+        "away": 1,
+        "home": 0
       },
       {
         "inning": 8,
-        "away": 1,
+        "away": 2,
         "home": 1
       },
       {
         "inning": 9,
         "away": 0,
-        "home": 0
+        "home": 1
       }
     ],
     "totals": {
       "away": {
         "R": 6,
-        "H": 8,
-        "E": 0
+        "H": 12,
+        "E": 2
       },
       "home": {
         "R": 7,
-        "H": 7,
-        "E": 2
+        "H": 10,
+        "E": 0
       }
     }
   },
@@ -84,13 +84,13 @@
         "name": "Kaito Ueda",
         "position": "CF",
         "AB": 4,
-        "R": 1,
+        "R": 0,
         "H": 0,
         "2B": 0,
         "3B": 0,
-        "RBI": 0,
-        "BB": 1,
-        "K": 0,
+        "RBI": 1,
+        "BB": 0,
+        "K": 1,
         "HR": 0,
         "SB": 1
       },
@@ -98,15 +98,15 @@
         "player": "han-wei-tseng",
         "name": "Han-wei Tseng",
         "position": "2B",
-        "AB": 3,
-        "R": 0,
-        "H": 0,
-        "2B": 0,
+        "AB": 5,
+        "R": 2,
+        "H": 2,
+        "2B": 1,
         "3B": 0,
         "RBI": 1,
         "BB": 0,
-        "K": 2,
-        "HR": 0,
+        "K": 1,
+        "HR": 1,
         "SB": 0
       },
       {
@@ -117,10 +117,10 @@
         "R": 0,
         "H": 1,
         "2B": 0,
-        "3B": 0,
-        "RBI": 1,
+        "3B": 1,
+        "RBI": 0,
         "BB": 0,
-        "K": 1,
+        "K": 2,
         "HR": 0,
         "SB": 0
       },
@@ -128,13 +128,13 @@
         "player": "dariusz-wierzbik",
         "name": "Dariusz Wierzbik",
         "position": "SS",
-        "AB": 4,
-        "R": 2,
+        "AB": 3,
+        "R": 1,
         "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 1,
-        "BB": 1,
+        "BB": 0,
         "K": 2,
         "HR": 1,
         "SB": 0
@@ -143,14 +143,14 @@
         "player": "adebayo-olumide",
         "name": "Adebayo Olumide",
         "position": "3B",
-        "AB": 3,
+        "AB": 5,
         "R": 1,
-        "H": 1,
-        "2B": 0,
+        "H": 3,
+        "2B": 1,
         "3B": 0,
-        "RBI": 1,
+        "RBI": 0,
         "BB": 0,
-        "K": 1,
+        "K": 0,
         "HR": 0,
         "SB": 0
       },
@@ -158,29 +158,29 @@
         "player": "owen-rasmusson",
         "name": "Owen Rasmusson",
         "position": "C",
-        "AB": 5,
-        "R": 0,
+        "AB": 3,
+        "R": 1,
         "H": 2,
-        "2B": 1,
+        "2B": 0,
         "3B": 0,
-        "RBI": 1,
-        "BB": 0,
+        "RBI": 2,
+        "BB": 1,
         "K": 0,
-        "HR": 0,
-        "SB": 0
+        "HR": 1,
+        "SB": 1
       },
       {
         "player": "eric-lawson",
         "name": "Eric Lawson",
         "position": "LF",
-        "AB": 3,
+        "AB": 4,
         "R": 1,
         "H": 1,
-        "2B": 1,
+        "2B": 0,
         "3B": 0,
-        "RBI": 0,
+        "RBI": 1,
         "BB": 1,
-        "K": 0,
+        "K": 1,
         "HR": 0,
         "SB": 0
       },
@@ -189,13 +189,13 @@
         "name": "Jose Ramirez",
         "position": "RF",
         "AB": 4,
-        "R": 1,
+        "R": 0,
         "H": 0,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
-        "BB": 1,
-        "K": 2,
+        "BB": 0,
+        "K": 1,
         "HR": 0,
         "SB": 0
       },
@@ -208,7 +208,7 @@
         "H": 2,
         "2B": 1,
         "3B": 0,
-        "RBI": 1,
+        "RBI": 0,
         "BB": 1,
         "K": 0,
         "HR": 0,
@@ -221,13 +221,13 @@
         "name": "Tomer Barzilai",
         "position": "C",
         "AB": 3,
-        "R": 0,
+        "R": 1,
         "H": 0,
         "2B": 0,
         "3B": 0,
         "RBI": 2,
         "BB": 0,
-        "K": 0,
+        "K": 1,
         "HR": 0,
         "SB": 0
       },
@@ -236,14 +236,14 @@
         "name": "Enzo Carvajal",
         "position": "1B",
         "AB": 4,
-        "R": 0,
-        "H": 1,
+        "R": 1,
+        "H": 3,
         "2B": 0,
         "3B": 0,
-        "RBI": 0,
+        "RBI": 1,
         "BB": 0,
-        "K": 1,
-        "HR": 0,
+        "K": 0,
+        "HR": 1,
         "SB": 0
       },
       {
@@ -251,13 +251,13 @@
         "name": "Nils Adebayo",
         "position": "2B",
         "AB": 4,
-        "R": 0,
-        "H": 2,
+        "R": 1,
+        "H": 3,
         "2B": 0,
         "3B": 0,
         "RBI": 1,
         "BB": 0,
-        "K": 1,
+        "K": 0,
         "HR": 0,
         "SB": 0
       },
@@ -265,8 +265,8 @@
         "player": "jae-min-seok",
         "name": "Jae-min Seok",
         "position": "SS",
-        "AB": 4,
-        "R": 2,
+        "AB": 5,
+        "R": 1,
         "H": 0,
         "2B": 0,
         "3B": 0,
@@ -274,7 +274,7 @@
         "BB": 0,
         "K": 1,
         "HR": 0,
-        "SB": 1
+        "SB": 0
       },
       {
         "player": "pavel-hrynko",
@@ -285,9 +285,9 @@
         "H": 0,
         "2B": 0,
         "3B": 0,
-        "RBI": 0,
-        "BB": 1,
-        "K": 1,
+        "RBI": 1,
+        "BB": 0,
+        "K": 2,
         "HR": 0,
         "SB": 0
       },
@@ -295,13 +295,13 @@
         "player": "malik-doumbia",
         "name": "Malik Doumbia",
         "position": "LF",
-        "AB": 5,
+        "AB": 4,
         "R": 2,
-        "H": 2,
+        "H": 1,
         "2B": 0,
         "3B": 0,
-        "RBI": 2,
-        "BB": 0,
+        "RBI": 0,
+        "BB": 1,
         "K": 2,
         "HR": 0,
         "SB": 0
@@ -310,13 +310,13 @@
         "player": "cesar-iglesiarias",
         "name": "César Iglesiarias",
         "position": "CF",
-        "AB": 3,
-        "R": 2,
-        "H": 0,
+        "AB": 4,
+        "R": 1,
+        "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 1,
-        "BB": 0,
+        "BB": 1,
         "K": 0,
         "HR": 0,
         "SB": 0
@@ -325,16 +325,16 @@
         "player": "ari-kasprzyk",
         "name": "Ari Kasprzyk",
         "position": "RF",
-        "AB": 3,
-        "R": 1,
+        "AB": 5,
+        "R": 0,
         "H": 2,
-        "2B": 1,
+        "2B": 0,
         "3B": 0,
         "RBI": 1,
         "BB": 0,
-        "K": 0,
+        "K": 2,
         "HR": 0,
-        "SB": 0
+        "SB": 1
       }
     ]
   },
@@ -343,52 +343,52 @@
       {
         "player": "tsai-ming-hao",
         "name": "Tsai Ming Hao",
-        "IP_outs": 21,
-        "H": 7,
-        "R": 3,
-        "ER": 3,
+        "IP_outs": 18,
+        "H": 2,
+        "R": 7,
+        "ER": 7,
         "BB": 0,
-        "K": 4,
+        "K": 5,
         "HR": 0,
-        "IP": 7
+        "IP": 6
       },
       {
         "player": "miguel-santos-tpe",
         "name": "Miguel Santos",
-        "IP_outs": 6,
-        "H": 0,
-        "R": 4,
-        "ER": 4,
-        "BB": 1,
-        "K": 2,
-        "HR": 0,
-        "IP": 2
+        "IP_outs": 9,
+        "H": 8,
+        "R": 0,
+        "ER": 0,
+        "BB": 2,
+        "K": 3,
+        "HR": 1,
+        "IP": 3
       }
     ],
     "home": [
       {
         "player": "dario-vukovic",
         "name": "Dario Vukovic",
-        "IP_outs": 16,
-        "H": 3,
-        "R": 0,
-        "ER": 0,
-        "BB": 3,
-        "K": 6,
-        "HR": 1,
-        "IP": 5.1
+        "IP_outs": 17,
+        "H": 6,
+        "R": 4,
+        "ER": 4,
+        "BB": 1,
+        "K": 5,
+        "HR": 0,
+        "IP": 5.2
       },
       {
         "player": "tomasz-wierzbicki",
         "name": "Tomasz Wierzbicki",
-        "IP_outs": 11,
-        "H": 5,
-        "R": 6,
-        "ER": 6,
+        "IP_outs": 10,
+        "H": 6,
+        "R": 2,
+        "ER": 2,
         "BB": 2,
-        "K": 2,
-        "HR": 0,
-        "IP": 3.2
+        "K": 3,
+        "HR": 3,
+        "IP": 3.1
       }
     ]
   },
@@ -397,6 +397,5 @@
     "L": "tsai-ming-hao",
     "SV": "tomasz-wierzbicki"
   },
-  "notes": [],
-  "calibration": "glb.stats-calibrated.v1"
+  "notes": []
 }

@@ -11,33 +11,33 @@
     "name": "Monterrey Cementeros"
   },
   "status": "Final",
-  "attendance": 12596,
+  "attendance": 20438,
   "linescore": {
     "innings": [
       {
         "inning": 1,
-        "away": 1,
-        "home": 0
-      },
-      {
-        "inning": 2,
-        "away": 2,
-        "home": 1
-      },
-      {
-        "inning": 3,
-        "away": 1,
-        "home": 0
-      },
-      {
-        "inning": 4,
         "away": 0,
         "home": 1
       },
       {
+        "inning": 2,
+        "away": 1,
+        "home": 0
+      },
+      {
+        "inning": 3,
+        "away": 0,
+        "home": 1
+      },
+      {
+        "inning": 4,
+        "away": 0,
+        "home": 2
+      },
+      {
         "inning": 5,
         "away": 1,
-        "home": 1
+        "home": 0
       },
       {
         "inning": 6,
@@ -46,12 +46,12 @@
       },
       {
         "inning": 7,
-        "away": 0,
-        "home": 2
+        "away": 2,
+        "home": 1
       },
       {
         "inning": 8,
-        "away": 0,
+        "away": 1,
         "home": 2
       },
       {
@@ -64,12 +64,12 @@
       "away": {
         "R": 5,
         "H": 6,
-        "E": 2
+        "E": 1
       },
       "home": {
         "R": 7,
-        "H": 7,
-        "E": 2
+        "H": 10,
+        "E": 1
       }
     }
   },
@@ -84,28 +84,28 @@
         "name": "Kaito Ueda",
         "position": "CF",
         "AB": 3,
-        "R": 0,
-        "H": 0,
+        "R": 1,
+        "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 1,
         "BB": 0,
         "K": 1,
-        "HR": 0,
+        "HR": 1,
         "SB": 0
       },
       {
         "player": "han-wei-tseng",
         "name": "Han-wei Tseng",
         "position": "2B",
-        "AB": 5,
+        "AB": 3,
         "R": 0,
-        "H": 1,
+        "H": 0,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
         "BB": 0,
-        "K": 1,
+        "K": 0,
         "HR": 0,
         "SB": 0
       },
@@ -113,21 +113,6 @@
         "player": "martin-echevarria",
         "name": "Martín Echevarría",
         "position": "1B",
-        "AB": 4,
-        "R": 1,
-        "H": 0,
-        "2B": 0,
-        "3B": 0,
-        "RBI": 0,
-        "BB": 1,
-        "K": 0,
-        "HR": 0,
-        "SB": 0
-      },
-      {
-        "player": "dariusz-wierzbik",
-        "name": "Dariusz Wierzbik",
-        "position": "SS",
         "AB": 3,
         "R": 1,
         "H": 1,
@@ -140,17 +125,32 @@
         "SB": 0
       },
       {
+        "player": "dariusz-wierzbik",
+        "name": "Dariusz Wierzbik",
+        "position": "SS",
+        "AB": 3,
+        "R": 1,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 2,
+        "BB": 1,
+        "K": 0,
+        "HR": 1,
+        "SB": 0
+      },
+      {
         "player": "adebayo-olumide",
         "name": "Adebayo Olumide",
         "position": "3B",
-        "AB": 4,
+        "AB": 3,
         "R": 0,
         "H": 0,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
         "BB": 0,
-        "K": 1,
+        "K": 0,
         "HR": 0,
         "SB": 0
       },
@@ -160,12 +160,12 @@
         "position": "C",
         "AB": 5,
         "R": 0,
-        "H": 1,
+        "H": 0,
         "2B": 0,
         "3B": 0,
-        "RBI": 2,
-        "BB": 0,
-        "K": 0,
+        "RBI": 0,
+        "BB": 1,
+        "K": 1,
         "HR": 0,
         "SB": 0
       },
@@ -180,7 +180,7 @@
         "3B": 0,
         "RBI": 0,
         "BB": 0,
-        "K": 1,
+        "K": 0,
         "HR": 0,
         "SB": 0
       },
@@ -189,13 +189,13 @@
         "name": "Jose Ramirez",
         "position": "RF",
         "AB": 4,
-        "R": 1,
-        "H": 1,
+        "R": 0,
+        "H": 0,
         "2B": 0,
         "3B": 0,
-        "RBI": 1,
-        "BB": 0,
-        "K": 0,
+        "RBI": 0,
+        "BB": 1,
+        "K": 1,
         "HR": 0,
         "SB": 0
       },
@@ -203,16 +203,16 @@
         "player": "david-morales-tpe",
         "name": "David Morales",
         "position": "DH",
-        "AB": 3,
+        "AB": 4,
         "R": 1,
-        "H": 1,
+        "H": 2,
         "2B": 0,
-        "3B": 0,
-        "RBI": 0,
-        "BB": 1,
-        "K": 0,
-        "HR": 0,
-        "SB": 1
+        "3B": 1,
+        "RBI": 1,
+        "BB": 0,
+        "K": 1,
+        "HR": 1,
+        "SB": 0
       }
     ],
     "home": [
@@ -220,14 +220,14 @@
         "player": "julian-sauri",
         "name": "Julián Sauri",
         "position": "C",
-        "AB": 3,
-        "R": 0,
-        "H": 0,
-        "2B": 0,
+        "AB": 4,
+        "R": 2,
+        "H": 1,
+        "2B": 1,
         "3B": 0,
-        "RBI": 1,
+        "RBI": 0,
         "BB": 0,
-        "K": 1,
+        "K": 0,
         "HR": 0,
         "SB": 0
       },
@@ -235,21 +235,6 @@
         "player": "eamon-kilrea",
         "name": "Eamon Kilrea",
         "position": "1B",
-        "AB": 4,
-        "R": 0,
-        "H": 0,
-        "2B": 0,
-        "3B": 0,
-        "RBI": 1,
-        "BB": 1,
-        "K": 0,
-        "HR": 0,
-        "SB": 0
-      },
-      {
-        "player": "thiago-pereyra",
-        "name": "Thiago Pereyra",
-        "position": "2B",
         "AB": 3,
         "R": 0,
         "H": 0,
@@ -257,21 +242,36 @@
         "3B": 0,
         "RBI": 1,
         "BB": 0,
+        "K": 2,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "thiago-pereyra",
+        "name": "Thiago Pereyra",
+        "position": "2B",
+        "AB": 4,
+        "R": 3,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 0,
         "K": 0,
         "HR": 0,
-        "SB": 1
+        "SB": 0
       },
       {
         "player": "kofi-mensah",
         "name": "Kofi Mensah",
         "position": "SS",
-        "AB": 4,
-        "R": 1,
+        "AB": 3,
+        "R": 0,
         "H": 1,
         "2B": 0,
         "3B": 0,
-        "RBI": 0,
-        "BB": 0,
+        "RBI": 1,
+        "BB": 1,
         "K": 1,
         "HR": 0,
         "SB": 0
@@ -281,13 +281,13 @@
         "name": "Luka Vuković",
         "position": "3B",
         "AB": 3,
-        "R": 2,
+        "R": 1,
         "H": 0,
         "2B": 0,
         "3B": 0,
-        "RBI": 1,
-        "BB": 0,
-        "K": 0,
+        "RBI": 0,
+        "BB": 1,
+        "K": 1,
         "HR": 0,
         "SB": 0
       },
@@ -295,14 +295,14 @@
         "player": "seiji-fukumori",
         "name": "Seiji Fukumori",
         "position": "CF",
-        "AB": 4,
-        "R": 2,
-        "H": 1,
-        "2B": 0,
+        "AB": 5,
+        "R": 0,
+        "H": 3,
+        "2B": 1,
         "3B": 0,
-        "RBI": 1,
-        "BB": 0,
-        "K": 0,
+        "RBI": 2,
+        "BB": 2,
+        "K": 1,
         "HR": 0,
         "SB": 0
       },
@@ -312,28 +312,28 @@
         "position": "LF",
         "AB": 5,
         "R": 1,
-        "H": 2,
-        "2B": 1,
+        "H": 3,
+        "2B": 0,
         "3B": 0,
-        "RBI": 1,
+        "RBI": 0,
         "BB": 0,
         "K": 0,
         "HR": 0,
-        "SB": 1
+        "SB": 0
       },
       {
         "player": "micah-lunsford",
         "name": "Micah Lunsford",
         "position": "RF",
-        "AB": 5,
-        "R": 1,
-        "H": 3,
+        "AB": 3,
+        "R": 0,
+        "H": 2,
         "2B": 0,
         "3B": 0,
-        "RBI": 1,
-        "BB": 0,
-        "K": 2,
-        "HR": 1,
+        "RBI": 2,
+        "BB": 1,
+        "K": 0,
+        "HR": 0,
         "SB": 0
       }
     ]
@@ -343,60 +343,59 @@
       {
         "player": "tsai-ming-hao",
         "name": "Tsai Ming Hao",
-        "IP_outs": 16,
-        "H": 2,
-        "R": 7,
-        "ER": 7,
-        "BB": 0,
-        "K": 2,
-        "HR": 1,
-        "IP": 5.1
+        "IP_outs": 17,
+        "H": 5,
+        "R": 0,
+        "ER": 0,
+        "BB": 3,
+        "K": 4,
+        "HR": 0,
+        "IP": 5.2
       },
       {
         "player": "miguel-santos-tpe",
         "name": "Miguel Santos",
-        "IP_outs": 11,
+        "IP_outs": 10,
         "H": 5,
-        "R": 0,
-        "ER": 0,
-        "BB": 1,
-        "K": 2,
+        "R": 7,
+        "ER": 7,
+        "BB": 2,
+        "K": 1,
         "HR": 0,
-        "IP": 3.2
+        "IP": 3.1
       }
     ],
     "home": [
       {
         "player": "masato-yanagisawa",
         "name": "Masato Yanagisawa",
-        "IP_outs": 19,
-        "H": 6,
+        "IP_outs": 15,
+        "H": 5,
         "R": 2,
         "ER": 2,
         "BB": 0,
         "K": 2,
         "HR": 1,
-        "IP": 6.1
+        "IP": 5
       },
       {
         "player": "niko-kouris",
         "name": "Niko Kouris",
-        "IP_outs": 8,
-        "H": 0,
+        "IP_outs": 12,
+        "H": 1,
         "R": 3,
         "ER": 3,
-        "BB": 2,
+        "BB": 3,
         "K": 2,
-        "HR": 0,
-        "IP": 2.2
+        "HR": 3,
+        "IP": 4
       }
     ]
   },
   "decisions": {
     "W": "masato-yanagisawa",
     "L": "tsai-ming-hao",
-    "SV": null
+    "SV": "niko-kouris"
   },
-  "notes": [],
-  "calibration": "glb.stats-calibrated.v1"
+  "notes": []
 }

@@ -11,47 +11,47 @@
     "name": "Osaka Spirits"
   },
   "status": "Final",
-  "attendance": 16020,
+  "attendance": 28471,
   "linescore": {
     "innings": [
       {
         "inning": 1,
-        "away": 1,
-        "home": 0
+        "away": 0,
+        "home": 2
       },
       {
         "inning": 2,
-        "away": 1,
-        "home": 0
+        "away": 0,
+        "home": 2
       },
       {
         "inning": 3,
-        "away": 0,
+        "away": 1,
         "home": 0
       },
       {
         "inning": 4,
-        "away": 0,
+        "away": 1,
         "home": 0
       },
       {
         "inning": 5,
         "away": 0,
-        "home": 2
+        "home": 0
       },
       {
         "inning": 6,
         "away": 0,
-        "home": 1
+        "home": 0
       },
       {
         "inning": 7,
-        "away": 1,
-        "home": 1
+        "away": 0,
+        "home": 0
       },
       {
         "inning": 8,
-        "away": 0,
+        "away": 1,
         "home": 0
       },
       {
@@ -63,13 +63,13 @@
     "totals": {
       "away": {
         "R": 3,
-        "H": 7,
+        "H": 11,
         "E": 1
       },
       "home": {
         "R": 4,
-        "H": 7,
-        "E": 2
+        "H": 9,
+        "E": 1
       }
     }
   },
@@ -83,22 +83,7 @@
         "player": "rui-damas",
         "name": "Rui Damas",
         "position": "C",
-        "AB": 5,
-        "R": 0,
-        "H": 1,
-        "2B": 1,
-        "3B": 0,
-        "RBI": 0,
-        "BB": 0,
-        "K": 2,
-        "HR": 0,
-        "SB": 0
-      },
-      {
-        "player": "tobias-vandenberg",
-        "name": "Tobias Vandenberg",
-        "position": "1B",
-        "AB": 5,
+        "AB": 4,
         "R": 0,
         "H": 0,
         "2B": 0,
@@ -106,6 +91,21 @@
         "RBI": 0,
         "BB": 1,
         "K": 1,
+        "HR": 0,
+        "SB": 1
+      },
+      {
+        "player": "tobias-vandenberg",
+        "name": "Tobias Vandenberg",
+        "position": "1B",
+        "AB": 5,
+        "R": 0,
+        "H": 4,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 0,
         "HR": 0,
         "SB": 0
       },
@@ -115,19 +115,34 @@
         "position": "2B",
         "AB": 5,
         "R": 1,
-        "H": 0,
+        "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 1,
         "BB": 0,
         "K": 1,
-        "HR": 0,
+        "HR": 1,
         "SB": 0
       },
       {
         "player": "iker-zubizarreta",
         "name": "Iker Zubizarreta",
         "position": "SS",
+        "AB": 4,
+        "R": 0,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 2,
+        "K": 2,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "carmine-sforza",
+        "name": "Carmine Sforza",
+        "position": "3B",
         "AB": 3,
         "R": 1,
         "H": 2,
@@ -136,21 +151,6 @@
         "RBI": 1,
         "BB": 1,
         "K": 0,
-        "HR": 1,
-        "SB": 1
-      },
-      {
-        "player": "carmine-sforza",
-        "name": "Carmine Sforza",
-        "position": "3B",
-        "AB": 5,
-        "R": 1,
-        "H": 1,
-        "2B": 0,
-        "3B": 0,
-        "RBI": 1,
-        "BB": 1,
-        "K": 3,
         "HR": 1,
         "SB": 0
       },
@@ -167,12 +167,119 @@
         "BB": 0,
         "K": 0,
         "HR": 0,
-        "SB": 0
+        "SB": 1
       },
       {
         "player": "elior-ben-ami",
         "name": "Elior Ben-Ami",
         "position": "LF",
+        "AB": 4,
+        "R": 1,
+        "H": 2,
+        "2B": 1,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 1,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "paolo-ventresca",
+        "name": "Paolo Ventresca",
+        "position": "RF",
+        "AB": 3,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      }
+    ],
+    "home": [
+      {
+        "player": "marcelino-quispe",
+        "name": "Marcelino Quispe",
+        "position": "C",
+        "AB": 4,
+        "R": 1,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 0,
+        "K": 0,
+        "HR": 1,
+        "SB": 0
+      },
+      {
+        "player": "thabo-mkhize",
+        "name": "Thabo Mkhize",
+        "position": "1B",
+        "AB": 3,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "arman-daryan",
+        "name": "Arman Daryan",
+        "position": "2B",
+        "AB": 5,
+        "R": 1,
+        "H": 2,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 2,
+        "BB": 1,
+        "K": 1,
+        "HR": 1,
+        "SB": 1
+      },
+      {
+        "player": "kenjiro-suganuma",
+        "name": "Kenjiro Suganuma",
+        "position": "SS",
+        "AB": 4,
+        "R": 1,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 1,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "dariusz-kwiatkowski",
+        "name": "Dariusz Kwiatkowski",
+        "position": "3B",
+        "AB": 5,
+        "R": 1,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 2,
+        "K": 1,
+        "HR": 1,
+        "SB": 0
+      },
+      {
+        "player": "nikhil-bhandari",
+        "name": "Nikhil Bhandari",
+        "position": "CF",
         "AB": 3,
         "R": 0,
         "H": 0,
@@ -185,27 +292,10 @@
         "SB": 0
       },
       {
-        "player": "paolo-ventresca",
-        "name": "Paolo Ventresca",
-        "position": "RF",
+        "player": "thiago-ramires",
+        "name": "Thiago Ramires",
+        "position": "LF",
         "AB": 5,
-        "R": 0,
-        "H": 2,
-        "2B": 0,
-        "3B": 0,
-        "RBI": 0,
-        "BB": 2,
-        "K": 1,
-        "HR": 0,
-        "SB": 0
-      }
-    ],
-    "home": [
-      {
-        "player": "marcelino-quispe",
-        "name": "Marcelino Quispe",
-        "position": "C",
-        "AB": 4,
         "R": 0,
         "H": 1,
         "2B": 0,
@@ -217,107 +307,17 @@
         "SB": 0
       },
       {
-        "player": "thabo-mkhize",
-        "name": "Thabo Mkhize",
-        "position": "1B",
-        "AB": 3,
-        "R": 0,
-        "H": 0,
-        "2B": 0,
-        "3B": 0,
-        "RBI": 0,
-        "BB": 1,
-        "K": 0,
-        "HR": 0,
-        "SB": 0
-      },
-      {
-        "player": "arman-daryan",
-        "name": "Arman Daryan",
-        "position": "2B",
-        "AB": 4,
-        "R": 2,
-        "H": 2,
-        "2B": 0,
-        "3B": 0,
-        "RBI": 2,
-        "BB": 0,
-        "K": 1,
-        "HR": 2,
-        "SB": 0
-      },
-      {
-        "player": "kenjiro-suganuma",
-        "name": "Kenjiro Suganuma",
-        "position": "SS",
-        "AB": 5,
-        "R": 0,
-        "H": 0,
-        "2B": 0,
-        "3B": 0,
-        "RBI": 0,
-        "BB": 1,
-        "K": 0,
-        "HR": 0,
-        "SB": 0
-      },
-      {
-        "player": "dariusz-kwiatkowski",
-        "name": "Dariusz Kwiatkowski",
-        "position": "3B",
-        "AB": 4,
-        "R": 0,
-        "H": 2,
-        "2B": 1,
-        "3B": 0,
-        "RBI": 0,
-        "BB": 0,
-        "K": 0,
-        "HR": 0,
-        "SB": 0
-      },
-      {
-        "player": "nikhil-bhandari",
-        "name": "Nikhil Bhandari",
-        "position": "CF",
-        "AB": 5,
-        "R": 1,
-        "H": 2,
-        "2B": 0,
-        "3B": 0,
-        "RBI": 1,
-        "BB": 0,
-        "K": 0,
-        "HR": 1,
-        "SB": 1
-      },
-      {
-        "player": "thiago-ramires",
-        "name": "Thiago Ramires",
-        "position": "LF",
-        "AB": 3,
-        "R": 1,
-        "H": 0,
-        "2B": 0,
-        "3B": 0,
-        "RBI": 1,
-        "BB": 1,
-        "K": 1,
-        "HR": 0,
-        "SB": 0
-      },
-      {
         "player": "yusef-el-badri",
         "name": "Yusef El-Badri",
         "position": "RF",
         "AB": 5,
         "R": 0,
-        "H": 0,
-        "2B": 0,
+        "H": 3,
+        "2B": 2,
         "3B": 0,
         "RBI": 0,
-        "BB": 1,
-        "K": 1,
+        "BB": 0,
+        "K": 0,
         "HR": 0,
         "SB": 0
       }
@@ -329,11 +329,11 @@
         "player": "ronan-kaczmarek",
         "name": "Ronan Kaczmarek",
         "IP_outs": 21,
-        "H": 4,
+        "H": 7,
         "R": 2,
         "ER": 2,
-        "BB": 4,
-        "K": 3,
+        "BB": 0,
+        "K": 4,
         "HR": 2,
         "IP": 7
       },
@@ -341,10 +341,10 @@
         "player": "lazaro-bracamonte",
         "name": "Lázaro Bracamonte",
         "IP_outs": 6,
-        "H": 3,
+        "H": 2,
         "R": 2,
         "ER": 2,
-        "BB": 0,
+        "BB": 3,
         "K": 1,
         "HR": 1,
         "IP": 2
@@ -354,26 +354,26 @@
       {
         "player": "kofi-boateng",
         "name": "Kofi Boateng",
-        "IP_outs": 15,
-        "H": 6,
-        "R": 1,
-        "ER": 1,
-        "BB": 2,
-        "K": 6,
+        "IP_outs": 18,
+        "H": 10,
+        "R": 2,
+        "ER": 2,
+        "BB": 5,
+        "K": 3,
         "HR": 1,
-        "IP": 5
+        "IP": 6
       },
       {
         "player": "mateo-zubillaga",
         "name": "Mateo Zubillaga",
-        "IP_outs": 12,
+        "IP_outs": 9,
         "H": 1,
-        "R": 2,
-        "ER": 2,
-        "BB": 3,
-        "K": 3,
+        "R": 1,
+        "ER": 1,
+        "BB": 0,
+        "K": 1,
         "HR": 1,
-        "IP": 4
+        "IP": 3
       }
     ]
   },
@@ -382,6 +382,5 @@
     "L": "ronan-kaczmarek",
     "SV": "mateo-zubillaga"
   },
-  "notes": [],
-  "calibration": "glb.stats-calibrated.v1"
+  "notes": []
 }

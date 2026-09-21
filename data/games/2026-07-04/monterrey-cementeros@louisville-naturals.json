@@ -11,13 +11,13 @@
     "name": "Louisville Naturals"
   },
   "status": "Final",
-  "attendance": 25589,
+  "attendance": 25384,
   "linescore": {
     "innings": [
       {
         "inning": 1,
         "away": 0,
-        "home": 0
+        "home": 1
       },
       {
         "inning": 2,
@@ -26,7 +26,7 @@
       },
       {
         "inning": 3,
-        "away": 0,
+        "away": 1,
         "home": 0
       },
       {
@@ -36,8 +36,8 @@
       },
       {
         "inning": 5,
-        "away": 1,
-        "home": 1
+        "away": 0,
+        "home": 0
       },
       {
         "inning": 6,
@@ -51,25 +51,25 @@
       },
       {
         "inning": 8,
-        "away": 0,
+        "away": 1,
         "home": 0
       },
       {
         "inning": 9,
-        "away": 1,
+        "away": 0,
         "home": 0
       }
     ],
     "totals": {
       "away": {
         "R": 4,
-        "H": 10,
+        "H": 7,
         "E": 1
       },
       "home": {
         "R": 1,
-        "H": 5,
-        "E": 1
+        "H": 6,
+        "E": 0
       }
     }
   },
@@ -86,26 +86,26 @@
         "AB": 5,
         "R": 0,
         "H": 2,
-        "2B": 0,
+        "2B": 1,
         "3B": 0,
         "RBI": 0,
         "BB": 0,
-        "K": 0,
+        "K": 3,
         "HR": 0,
-        "SB": 0
+        "SB": 1
       },
       {
         "player": "eamon-kilrea",
         "name": "Eamon Kilrea",
         "position": "1B",
-        "AB": 3,
+        "AB": 4,
         "R": 0,
         "H": 1,
         "2B": 1,
         "3B": 0,
-        "RBI": 0,
+        "RBI": 1,
         "BB": 1,
-        "K": 0,
+        "K": 2,
         "HR": 0,
         "SB": 0
       },
@@ -115,12 +115,12 @@
         "position": "2B",
         "AB": 3,
         "R": 1,
-        "H": 1,
+        "H": 0,
         "2B": 0,
         "3B": 0,
-        "RBI": 1,
-        "BB": 0,
-        "K": 0,
+        "RBI": 0,
+        "BB": 1,
+        "K": 1,
         "HR": 0,
         "SB": 0
       },
@@ -128,14 +128,14 @@
         "player": "kofi-mensah",
         "name": "Kofi Mensah",
         "position": "SS",
-        "AB": 3,
-        "R": 1,
+        "AB": 5,
+        "R": 0,
         "H": 1,
         "2B": 0,
-        "3B": 0,
-        "RBI": 0,
+        "3B": 1,
+        "RBI": 1,
         "BB": 0,
-        "K": 1,
+        "K": 3,
         "HR": 0,
         "SB": 0
       },
@@ -143,15 +143,15 @@
         "player": "luka-vukovic",
         "name": "Luka Vuković",
         "position": "3B",
-        "AB": 5,
-        "R": 0,
+        "AB": 4,
+        "R": 1,
         "H": 1,
         "2B": 0,
         "3B": 0,
-        "RBI": 0,
+        "RBI": 1,
         "BB": 0,
         "K": 1,
-        "HR": 0,
+        "HR": 1,
         "SB": 0
       },
       {
@@ -161,7 +161,7 @@
         "AB": 4,
         "R": 1,
         "H": 2,
-        "2B": 1,
+        "2B": 0,
         "3B": 0,
         "RBI": 1,
         "BB": 2,
@@ -173,15 +173,15 @@
         "player": "andres-cazares",
         "name": "Andrés Cázares",
         "position": "LF",
-        "AB": 5,
-        "R": 1,
-        "H": 1,
+        "AB": 3,
+        "R": 0,
+        "H": 0,
         "2B": 0,
         "3B": 0,
-        "RBI": 1,
-        "BB": 0,
+        "RBI": 0,
+        "BB": 1,
         "K": 1,
-        "HR": 1,
+        "HR": 0,
         "SB": 0
       },
       {
@@ -189,13 +189,13 @@
         "name": "Micah Lunsford",
         "position": "RF",
         "AB": 5,
-        "R": 0,
-        "H": 1,
+        "R": 1,
+        "H": 0,
         "2B": 0,
         "3B": 0,
-        "RBI": 1,
+        "RBI": 0,
         "BB": 0,
-        "K": 1,
+        "K": 3,
         "HR": 0,
         "SB": 0
       }
@@ -205,16 +205,16 @@
         "player": "noah-bianchi",
         "name": "Noah Bianchi",
         "position": "C",
-        "AB": 3,
+        "AB": 4,
         "R": 0,
-        "H": 0,
-        "2B": 0,
+        "H": 2,
+        "2B": 1,
         "3B": 0,
         "RBI": 0,
-        "BB": 0,
+        "BB": 1,
         "K": 0,
         "HR": 0,
-        "SB": 1
+        "SB": 0
       },
       {
         "player": "mateo-fernandez",
@@ -222,28 +222,28 @@
         "position": "1B",
         "AB": 3,
         "R": 0,
-        "H": 1,
+        "H": 0,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
         "BB": 1,
-        "K": 1,
+        "K": 0,
         "HR": 0,
-        "SB": 0
+        "SB": 1
       },
       {
         "player": "jalen-brooks",
         "name": "Jalen Brooks",
         "position": "2B",
-        "AB": 5,
-        "R": 0,
+        "AB": 3,
+        "R": 1,
         "H": 1,
         "2B": 0,
         "3B": 0,
-        "RBI": 0,
+        "RBI": 1,
         "BB": 0,
-        "K": 1,
-        "HR": 0,
+        "K": 0,
+        "HR": 1,
         "SB": 0
       },
       {
@@ -251,27 +251,27 @@
         "name": "Rafael Costa",
         "position": "SS",
         "AB": 4,
-        "R": 1,
-        "H": 1,
+        "R": 0,
+        "H": 0,
         "2B": 0,
         "3B": 0,
-        "RBI": 1,
+        "RBI": 0,
         "BB": 1,
         "K": 1,
-        "HR": 1,
+        "HR": 0,
         "SB": 0
       },
       {
         "player": "dominic-russo",
         "name": "Dominic Russo",
         "position": "3B",
-        "AB": 5,
+        "AB": 3,
         "R": 0,
         "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
-        "BB": 0,
+        "BB": 1,
         "K": 1,
         "HR": 0,
         "SB": 0
@@ -280,14 +280,14 @@
         "player": "andre-wallace",
         "name": "Andre Wallace",
         "position": "CF",
-        "AB": 3,
+        "AB": 4,
         "R": 0,
-        "H": 0,
+        "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
-        "BB": 0,
-        "K": 0,
+        "BB": 1,
+        "K": 1,
         "HR": 0,
         "SB": 0
       },
@@ -295,9 +295,9 @@
         "player": "tomas-rivas",
         "name": "Tomás Rivas",
         "position": "LF",
-        "AB": 4,
+        "AB": 3,
         "R": 0,
-        "H": 1,
+        "H": 0,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
@@ -310,16 +310,16 @@
         "player": "blake-harrison",
         "name": "Blake Harrison",
         "position": "RF",
-        "AB": 4,
+        "AB": 3,
         "R": 0,
-        "H": 0,
+        "H": 1,
         "2B": 0,
-        "3B": 0,
+        "3B": 1,
         "RBI": 0,
         "BB": 0,
-        "K": 1,
+        "K": 0,
         "HR": 0,
-        "SB": 0
+        "SB": 1
       }
     ]
   },
@@ -328,60 +328,59 @@
       {
         "player": "cole-wexler",
         "name": "Cole Wexler",
-        "IP_outs": 19,
-        "H": 4,
+        "IP_outs": 18,
+        "H": 6,
         "R": 1,
         "ER": 1,
-        "BB": 1,
-        "K": 4,
+        "BB": 5,
+        "K": 3,
         "HR": 1,
-        "IP": 6.1
+        "IP": 6
       },
       {
         "player": "rowan-treadwell",
         "name": "Rowan Treadwell",
-        "IP_outs": 8,
-        "H": 1,
+        "IP_outs": 9,
+        "H": 0,
         "R": 0,
         "ER": 0,
-        "BB": 1,
-        "K": 2,
+        "BB": 0,
+        "K": 1,
         "HR": 0,
-        "IP": 2.2
+        "IP": 3
       }
     ],
     "home": [
       {
-        "player": "darius-okonkwo",
-        "name": "Darius Okonkwo",
-        "IP_outs": 21,
-        "H": 2,
-        "R": 4,
-        "ER": 4,
-        "BB": 2,
-        "K": 3,
-        "HR": 2,
-        "IP": 7
+        "player": "gabriel-ionescu",
+        "name": "Gabriel Ionescu",
+        "IP_outs": 16,
+        "H": 4,
+        "R": 2,
+        "ER": 2,
+        "BB": 3,
+        "K": 11,
+        "HR": 1,
+        "IP": 5.1
       },
       {
-        "player": "kieran-walsh",
-        "name": "Kieran Walsh",
-        "IP_outs": 6,
-        "H": 8,
-        "R": 0,
-        "ER": 0,
-        "BB": 1,
-        "K": 1,
-        "HR": 0,
-        "IP": 2
+        "player": "evan-sutter",
+        "name": "Evan Sutter",
+        "IP_outs": 11,
+        "H": 3,
+        "R": 2,
+        "ER": 2,
+        "BB": 2,
+        "K": 3,
+        "HR": 1,
+        "IP": 3.2
       }
     ]
   },
   "decisions": {
     "W": "cole-wexler",
-    "L": "darius-okonkwo",
-    "SV": null
+    "L": "gabriel-ionescu",
+    "SV": "rowan-treadwell"
   },
-  "notes": [],
-  "calibration": "glb.stats-calibrated.v1"
+  "notes": []
 }

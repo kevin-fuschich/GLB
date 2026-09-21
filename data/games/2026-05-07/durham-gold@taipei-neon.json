@@ -11,48 +11,48 @@
     "name": "Taipei Neon"
   },
   "status": "Final",
-  "attendance": 26755,
+  "attendance": 22323,
   "linescore": {
     "innings": [
       {
         "inning": 1,
         "away": 2,
-        "home": 0
+        "home": 2
       },
       {
         "inning": 2,
         "away": 1,
-        "home": 1
+        "home": 0
       },
       {
         "inning": 3,
-        "away": 1,
-        "home": 0
+        "away": 0,
+        "home": 1
       },
       {
         "inning": 4,
-        "away": 2,
-        "home": 0
+        "away": 1,
+        "home": 2
       },
       {
         "inning": 5,
-        "away": 1,
+        "away": 2,
         "home": 2
       },
       {
         "inning": 6,
-        "away": 0,
-        "home": 3
+        "away": 1,
+        "home": 2
       },
       {
         "inning": 7,
         "away": 0,
-        "home": 2
+        "home": 0
       },
       {
         "inning": 8,
         "away": 0,
-        "home": 2
+        "home": 1
       },
       {
         "inning": 9,
@@ -64,12 +64,12 @@
       "away": {
         "R": 7,
         "H": 7,
-        "E": 0
+        "E": 2
       },
       "home": {
         "R": 11,
         "H": 11,
-        "E": 2
+        "E": 1
       }
     }
   },
@@ -84,29 +84,29 @@
         "name": "Ethan Bowen",
         "position": "C",
         "AB": 3,
-        "R": 2,
+        "R": 1,
         "H": 2,
-        "2B": 0,
-        "3B": 0,
-        "RBI": 2,
+        "2B": 1,
+        "3B": 1,
+        "RBI": 0,
         "BB": 0,
         "K": 0,
-        "HR": 2,
+        "HR": 0,
         "SB": 0
       },
       {
         "player": "marcelo-ibarra",
         "name": "Marcelo Ibarra",
         "position": "1B",
-        "AB": 4,
-        "R": 0,
-        "H": 3,
-        "2B": 1,
+        "AB": 3,
+        "R": 1,
+        "H": 1,
+        "2B": 0,
         "3B": 0,
         "RBI": 1,
-        "BB": 0,
-        "K": 1,
-        "HR": 0,
+        "BB": 1,
+        "K": 0,
+        "HR": 1,
         "SB": 0
       },
       {
@@ -115,12 +115,12 @@
         "position": "2B",
         "AB": 4,
         "R": 1,
-        "H": 1,
-        "2B": 1,
+        "H": 0,
+        "2B": 0,
         "3B": 0,
-        "RBI": 1,
-        "BB": 0,
-        "K": 1,
+        "RBI": 2,
+        "BB": 1,
+        "K": 0,
         "HR": 0,
         "SB": 0
       },
@@ -130,13 +130,13 @@
         "position": "SS",
         "AB": 5,
         "R": 1,
-        "H": 0,
+        "H": 2,
         "2B": 0,
         "3B": 0,
-        "RBI": 0,
+        "RBI": 1,
         "BB": 0,
         "K": 1,
-        "HR": 0,
+        "HR": 1,
         "SB": 0
       },
       {
@@ -144,43 +144,43 @@
         "name": "Tyrell Winston",
         "position": "3B",
         "AB": 5,
-        "R": 1,
-        "H": 0,
+        "R": 0,
+        "H": 1,
         "2B": 0,
         "3B": 0,
-        "RBI": 0,
-        "BB": 1,
-        "K": 2,
+        "RBI": 1,
+        "BB": 0,
+        "K": 1,
         "HR": 0,
-        "SB": 1
+        "SB": 0
       },
       {
         "player": "aaron-fletcher",
         "name": "Aaron Fletcher",
         "position": "CF",
-        "AB": 5,
+        "AB": 3,
         "R": 0,
         "H": 0,
         "2B": 0,
         "3B": 0,
-        "RBI": 0,
+        "RBI": 1,
         "BB": 0,
         "K": 0,
         "HR": 0,
-        "SB": 0
+        "SB": 1
       },
       {
         "player": "mateo-rios",
         "name": "Mateo Ríos",
         "position": "LF",
-        "AB": 3,
-        "R": 1,
+        "AB": 4,
+        "R": 2,
         "H": 0,
         "2B": 0,
         "3B": 0,
-        "RBI": 2,
+        "RBI": 1,
         "BB": 0,
-        "K": 0,
+        "K": 1,
         "HR": 0,
         "SB": 0
       },
@@ -188,16 +188,16 @@
         "player": "calvin-ross",
         "name": "Calvin Ross",
         "position": "RF",
-        "AB": 4,
+        "AB": 3,
         "R": 1,
         "H": 1,
         "2B": 1,
         "3B": 0,
-        "RBI": 1,
-        "BB": 0,
+        "RBI": 0,
+        "BB": 1,
         "K": 1,
         "HR": 0,
-        "SB": 0
+        "SB": 1
       }
     ],
     "home": [
@@ -220,14 +220,14 @@
         "player": "han-wei-tseng",
         "name": "Han-wei Tseng",
         "position": "2B",
-        "AB": 3,
-        "R": 0,
-        "H": 3,
+        "AB": 4,
+        "R": 2,
+        "H": 1,
         "2B": 0,
         "3B": 0,
-        "RBI": 2,
+        "RBI": 1,
         "BB": 0,
-        "K": 0,
+        "K": 1,
         "HR": 0,
         "SB": 0
       },
@@ -235,28 +235,28 @@
         "player": "martin-echevarria",
         "name": "Martín Echevarría",
         "position": "1B",
-        "AB": 5,
-        "R": 2,
-        "H": 2,
+        "AB": 3,
+        "R": 0,
+        "H": 0,
         "2B": 0,
         "3B": 0,
-        "RBI": 1,
+        "RBI": 2,
         "BB": 0,
-        "K": 1,
-        "HR": 1,
+        "K": 2,
+        "HR": 0,
         "SB": 0
       },
       {
         "player": "dariusz-wierzbik",
         "name": "Dariusz Wierzbik",
         "position": "SS",
-        "AB": 4,
+        "AB": 3,
         "R": 0,
         "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 1,
-        "BB": 0,
+        "BB": 1,
         "K": 0,
         "HR": 0,
         "SB": 0
@@ -265,14 +265,14 @@
         "player": "adebayo-olumide",
         "name": "Adebayo Olumide",
         "position": "3B",
-        "AB": 4,
-        "R": 1,
+        "AB": 5,
+        "R": 0,
         "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
         "BB": 0,
-        "K": 2,
+        "K": 0,
         "HR": 0,
         "SB": 0
       },
@@ -280,8 +280,8 @@
         "player": "owen-rasmusson",
         "name": "Owen Rasmusson",
         "position": "C",
-        "AB": 5,
-        "R": 2,
+        "AB": 4,
+        "R": 1,
         "H": 1,
         "2B": 0,
         "3B": 0,
@@ -295,39 +295,24 @@
         "player": "eric-lawson",
         "name": "Eric Lawson",
         "position": "LF",
-        "AB": 5,
-        "R": 1,
-        "H": 0,
-        "2B": 0,
+        "AB": 3,
+        "R": 3,
+        "H": 2,
+        "2B": 1,
         "3B": 0,
-        "RBI": 2,
-        "BB": 1,
-        "K": 2,
-        "HR": 0,
+        "RBI": 1,
+        "BB": 0,
+        "K": 0,
+        "HR": 1,
         "SB": 0
       },
       {
         "player": "jose-ramirez-tpe",
         "name": "Jose Ramirez",
         "position": "RF",
-        "AB": 5,
+        "AB": 4,
         "R": 1,
-        "H": 1,
-        "2B": 0,
-        "3B": 0,
-        "RBI": 2,
-        "BB": 0,
-        "K": 1,
-        "HR": 1,
-        "SB": 0
-      },
-      {
-        "player": "david-morales-tpe",
-        "name": "David Morales",
-        "position": "DH",
-        "AB": 3,
-        "R": 3,
-        "H": 1,
+        "H": 2,
         "2B": 0,
         "3B": 0,
         "RBI": 1,
@@ -335,6 +320,21 @@
         "K": 0,
         "HR": 0,
         "SB": 1
+      },
+      {
+        "player": "david-morales-tpe",
+        "name": "David Morales",
+        "position": "DH",
+        "AB": 4,
+        "R": 3,
+        "H": 2,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 3,
+        "BB": 0,
+        "K": 2,
+        "HR": 2,
+        "SB": 0
       }
     ]
   },
@@ -343,52 +343,52 @@
       {
         "player": "antonio-beltran",
         "name": "Antonio Beltrán",
-        "IP_outs": 15,
-        "H": 4,
-        "R": 11,
-        "ER": 11,
+        "IP_outs": 18,
+        "H": 11,
+        "R": 7,
+        "ER": 7,
         "BB": 1,
         "K": 6,
-        "HR": 2,
-        "IP": 5
+        "HR": 3,
+        "IP": 6
       },
       {
         "player": "luis-carreno",
         "name": "Luis Carreño",
-        "IP_outs": 12,
-        "H": 7,
-        "R": 0,
-        "ER": 0,
+        "IP_outs": 9,
+        "H": 0,
+        "R": 4,
+        "ER": 4,
         "BB": 0,
-        "K": 3,
+        "K": 2,
         "HR": 0,
-        "IP": 4
+        "IP": 3
       }
     ],
     "home": [
       {
         "player": "hiroto-kuzumi",
         "name": "Hiroto Kuzumi",
-        "IP_outs": 18,
+        "IP_outs": 15,
         "H": 3,
-        "R": 0,
-        "ER": 0,
-        "BB": 0,
-        "K": 5,
+        "R": 7,
+        "ER": 7,
+        "BB": 3,
+        "K": 2,
         "HR": 1,
-        "IP": 6
+        "IP": 5
       },
       {
         "player": "idris-el-amin",
         "name": "Idris El-Amin",
-        "IP_outs": 9,
+        "IP_outs": 12,
         "H": 4,
-        "R": 7,
-        "ER": 7,
-        "BB": 1,
-        "K": 1,
+        "R": 0,
+        "ER": 0,
+        "BB": 0,
+        "K": 2,
         "HR": 1,
-        "IP": 3
+        "IP": 4
       }
     ]
   },
@@ -397,6 +397,5 @@
     "L": "antonio-beltran",
     "SV": null
   },
-  "notes": [],
-  "calibration": "glb.stats-calibrated.v1"
+  "notes": []
 }

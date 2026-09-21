@@ -11,12 +11,12 @@
     "name": "Tijuana Tecnicos"
   },
   "status": "Final",
-  "attendance": 14475,
+  "attendance": 18532,
   "linescore": {
     "innings": [
       {
         "inning": 1,
-        "away": 1,
+        "away": 0,
         "home": 1
       },
       {
@@ -26,8 +26,8 @@
       },
       {
         "inning": 3,
-        "away": 1,
-        "home": 0
+        "away": 0,
+        "home": 1
       },
       {
         "inning": 4,
@@ -36,40 +36,40 @@
       },
       {
         "inning": 5,
-        "away": 0,
-        "home": 1
+        "away": 2,
+        "home": 0
       },
       {
         "inning": 6,
         "away": 1,
-        "home": 0
+        "home": 1
       },
       {
         "inning": 7,
         "away": 0,
-        "home": 2
+        "home": 1
       },
       {
         "inning": 8,
         "away": 0,
-        "home": 0
+        "home": 1
       },
       {
         "inning": 9,
         "away": 0,
-        "home": 1
+        "home": 0
       }
     ],
     "totals": {
       "away": {
         "R": 4,
-        "H": 10,
+        "H": 11,
         "E": 2
       },
       "home": {
         "R": 6,
-        "H": 9,
-        "E": 2
+        "H": 7,
+        "E": 0
       }
     }
   },
@@ -84,38 +84,8 @@
         "name": "Nikolai Dobrynin",
         "position": "C",
         "AB": 5,
-        "R": 0,
-        "H": 2,
-        "2B": 0,
-        "3B": 0,
-        "RBI": 0,
-        "BB": 0,
-        "K": 1,
-        "HR": 0,
-        "SB": 0
-      },
-      {
-        "player": "evan-carroll-iv",
-        "name": "Evan Carroll IV",
-        "position": "1B",
-        "AB": 5,
-        "R": 0,
-        "H": 2,
-        "2B": 0,
-        "3B": 0,
-        "RBI": 0,
-        "BB": 0,
-        "K": 1,
-        "HR": 0,
-        "SB": 0
-      },
-      {
-        "player": "marco-delvecchio",
-        "name": "Marco DelVecchio",
-        "position": "2B",
-        "AB": 3,
         "R": 1,
-        "H": 2,
+        "H": 3,
         "2B": 0,
         "3B": 0,
         "RBI": 1,
@@ -125,17 +95,47 @@
         "SB": 0
       },
       {
-        "player": "tomasz-kubas",
-        "name": "Tomasz Kubas",
-        "position": "SS",
+        "player": "evan-carroll-iv",
+        "name": "Evan Carroll IV",
+        "position": "1B",
         "AB": 3,
-        "R": 0,
+        "R": 1,
+        "H": 3,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 0,
+        "K": 0,
+        "HR": 1,
+        "SB": 0
+      },
+      {
+        "player": "marco-delvecchio",
+        "name": "Marco DelVecchio",
+        "position": "2B",
+        "AB": 5,
+        "R": 1,
         "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
         "BB": 0,
-        "K": 1,
+        "K": 3,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "tomasz-kubas",
+        "name": "Tomasz Kubas",
+        "position": "SS",
+        "AB": 5,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 1,
+        "BB": 0,
+        "K": 2,
         "HR": 0,
         "SB": 0
       },
@@ -144,27 +144,27 @@
         "name": "Andrés Mireles",
         "position": "3B",
         "AB": 3,
-        "R": 3,
-        "H": 3,
+        "R": 1,
+        "H": 2,
         "2B": 0,
         "3B": 0,
-        "RBI": 3,
+        "RBI": 1,
         "BB": 1,
-        "K": 0,
-        "HR": 3,
+        "K": 1,
+        "HR": 1,
         "SB": 0
       },
       {
         "player": "wyatt-hollander",
         "name": "Wyatt Hollander",
         "position": "CF",
-        "AB": 5,
+        "AB": 3,
         "R": 0,
         "H": 0,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
-        "BB": 1,
+        "BB": 0,
         "K": 2,
         "HR": 0,
         "SB": 0
@@ -180,7 +180,7 @@
         "3B": 0,
         "RBI": 0,
         "BB": 0,
-        "K": 1,
+        "K": 0,
         "HR": 0,
         "SB": 0
       },
@@ -188,14 +188,14 @@
         "player": "pieter-van-wyk",
         "name": "Pieter van Wyk",
         "position": "RF",
-        "AB": 5,
+        "AB": 3,
         "R": 0,
-        "H": 0,
+        "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
         "BB": 0,
-        "K": 4,
+        "K": 0,
         "HR": 0,
         "SB": 0
       }
@@ -205,29 +205,29 @@
         "player": "sergio-hinojosa",
         "name": "Sergio Hinojosa",
         "position": "C",
-        "AB": 4,
-        "R": 0,
+        "AB": 5,
+        "R": 1,
         "H": 1,
-        "2B": 0,
-        "3B": 1,
+        "2B": 1,
+        "3B": 0,
         "RBI": 0,
         "BB": 0,
         "K": 2,
         "HR": 0,
-        "SB": 0
+        "SB": 1
       },
       {
         "player": "bruno-valdes",
         "name": "Bruno Valdés",
         "position": "1B",
-        "AB": 3,
+        "AB": 5,
         "R": 1,
-        "H": 1,
+        "H": 2,
         "2B": 0,
-        "3B": 0,
-        "RBI": 1,
+        "3B": 1,
+        "RBI": 2,
         "BB": 1,
-        "K": 0,
+        "K": 1,
         "HR": 1,
         "SB": 0
       },
@@ -235,12 +235,12 @@
         "player": "matias-camarena",
         "name": "Matías Camarena",
         "position": "2B",
-        "AB": 5,
-        "R": 1,
-        "H": 2,
-        "2B": 1,
+        "AB": 3,
+        "R": 0,
+        "H": 0,
+        "2B": 0,
         "3B": 0,
-        "RBI": 1,
+        "RBI": 2,
         "BB": 0,
         "K": 0,
         "HR": 0,
@@ -251,11 +251,11 @@
         "name": "Nicolás Paredes",
         "position": "SS",
         "AB": 3,
-        "R": 0,
+        "R": 1,
         "H": 1,
         "2B": 0,
         "3B": 0,
-        "RBI": 1,
+        "RBI": 0,
         "BB": 0,
         "K": 1,
         "HR": 0,
@@ -265,14 +265,14 @@
         "player": "adrian-fierro",
         "name": "Adrián Fierro",
         "position": "3B",
-        "AB": 4,
-        "R": 1,
-        "H": 1,
+        "AB": 3,
+        "R": 0,
+        "H": 0,
         "2B": 0,
         "3B": 0,
         "RBI": 1,
-        "BB": 1,
-        "K": 3,
+        "BB": 2,
+        "K": 2,
         "HR": 0,
         "SB": 0
       },
@@ -280,15 +280,15 @@
         "player": "emilio-barron",
         "name": "Emilio Barrón",
         "position": "LF",
-        "AB": 3,
+        "AB": 5,
         "R": 1,
-        "H": 1,
-        "2B": 0,
+        "H": 2,
+        "2B": 2,
         "3B": 0,
         "RBI": 1,
         "BB": 0,
-        "K": 0,
-        "HR": 1,
+        "K": 1,
+        "HR": 0,
         "SB": 0
       },
       {
@@ -300,9 +300,9 @@
         "H": 0,
         "2B": 0,
         "3B": 0,
-        "RBI": 1,
+        "RBI": 0,
         "BB": 0,
-        "K": 2,
+        "K": 0,
         "HR": 0,
         "SB": 0
       },
@@ -316,8 +316,8 @@
         "2B": 0,
         "3B": 0,
         "RBI": 0,
-        "BB": 0,
-        "K": 1,
+        "BB": 1,
+        "K": 0,
         "HR": 0,
         "SB": 0
       },
@@ -327,12 +327,12 @@
         "position": "DH",
         "AB": 5,
         "R": 0,
-        "H": 1,
+        "H": 0,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
-        "BB": 0,
-        "K": 1,
+        "BB": 1,
+        "K": 4,
         "HR": 0,
         "SB": 0
       }
@@ -343,60 +343,59 @@
       {
         "player": "diego-alvarez-mora",
         "name": "Diego Álvarez Mora",
-        "IP_outs": 19,
-        "H": 1,
+        "IP_outs": 20,
+        "H": 2,
         "R": 2,
         "ER": 2,
-        "BB": 2,
-        "K": 7,
-        "HR": 1,
-        "IP": 6.1
+        "BB": 0,
+        "K": 8,
+        "HR": 0,
+        "IP": 6.2
       },
       {
         "player": "yaw-mensah",
         "name": "Yaw Mensah",
-        "IP_outs": 8,
-        "H": 8,
+        "IP_outs": 7,
+        "H": 5,
         "R": 4,
         "ER": 4,
-        "BB": 0,
+        "BB": 5,
         "K": 3,
         "HR": 1,
-        "IP": 2.2
+        "IP": 2.1
       }
     ],
     "home": [
       {
         "player": "esteban-arce",
         "name": "Esteban Arce",
-        "IP_outs": 18,
-        "H": 1,
+        "IP_outs": 21,
+        "H": 4,
         "R": 2,
         "ER": 2,
-        "BB": 1,
-        "K": 8,
-        "HR": 3,
-        "IP": 6
+        "BB": 0,
+        "K": 6,
+        "HR": 2,
+        "IP": 7
       },
       {
         "player": "ivan-lizarraga",
         "name": "Iván Lizárraga",
-        "IP_outs": 9,
-        "H": 9,
+        "IP_outs": 6,
+        "H": 7,
         "R": 2,
         "ER": 2,
         "BB": 1,
         "K": 3,
         "HR": 1,
-        "IP": 3
+        "IP": 2
       }
     ]
   },
   "decisions": {
     "W": "esteban-arce",
     "L": "diego-alvarez-mora",
-    "SV": "ivan-lizarraga"
+    "SV": null
   },
-  "notes": [],
-  "calibration": "glb.stats-calibrated.v1"
+  "notes": []
 }

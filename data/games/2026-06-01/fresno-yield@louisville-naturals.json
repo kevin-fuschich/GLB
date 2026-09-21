@@ -11,7 +11,7 @@
     "name": "Louisville Naturals"
   },
   "status": "Final",
-  "attendance": 22735,
+  "attendance": 31407,
   "linescore": {
     "innings": [
       {
@@ -21,55 +21,55 @@
       },
       {
         "inning": 2,
-        "away": 1,
-        "home": 0
+        "away": 0,
+        "home": 1
       },
       {
         "inning": 3,
-        "away": 1,
-        "home": 1
+        "away": 2,
+        "home": 0
       },
       {
         "inning": 4,
         "away": 1,
-        "home": 1
+        "home": 0
       },
       {
         "inning": 5,
-        "away": 0,
+        "away": 1,
         "home": 0
       },
       {
         "inning": 6,
-        "away": 1,
+        "away": 0,
         "home": 0
       },
       {
         "inning": 7,
-        "away": 1,
-        "home": 2
+        "away": 2,
+        "home": 1
       },
       {
         "inning": 8,
-        "away": 1,
-        "home": 0
+        "away": 0,
+        "home": 1
       },
       {
         "inning": 9,
         "away": 0,
-        "home": 0
+        "home": 1
       }
     ],
     "totals": {
       "away": {
         "R": 6,
-        "H": 9,
-        "E": 0
+        "H": 7,
+        "E": 2
       },
       "home": {
         "R": 4,
-        "H": 9,
-        "E": 2
+        "H": 6,
+        "E": 0
       }
     }
   },
@@ -83,14 +83,14 @@
         "player": "luis-eccheri",
         "name": "Luis Eccheri",
         "position": "C",
-        "AB": 5,
-        "R": 1,
+        "AB": 4,
+        "R": 0,
         "H": 0,
         "2B": 0,
         "3B": 0,
         "RBI": 1,
-        "BB": 0,
-        "K": 0,
+        "BB": 1,
+        "K": 1,
         "HR": 0,
         "SB": 0
       },
@@ -98,43 +98,43 @@
         "player": "jonah-kershaw",
         "name": "Jonah Kershaw",
         "position": "1B",
-        "AB": 4,
+        "AB": 5,
         "R": 1,
         "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 2,
-        "BB": 1,
-        "K": 0,
+        "BB": 0,
+        "K": 1,
         "HR": 1,
-        "SB": 1
+        "SB": 0
       },
       {
         "player": "soren-ahlgren",
         "name": "Søren Ahlgren",
         "position": "2B",
-        "AB": 3,
+        "AB": 4,
         "R": 1,
-        "H": 3,
-        "2B": 1,
+        "H": 1,
+        "2B": 0,
         "3B": 0,
         "RBI": 1,
-        "BB": 0,
-        "K": 0,
-        "HR": 0,
-        "SB": 0
+        "BB": 2,
+        "K": 2,
+        "HR": 1,
+        "SB": 1
       },
       {
         "player": "raul-sestayo",
         "name": "Raúl Sestayo",
         "position": "SS",
         "AB": 3,
-        "R": 0,
-        "H": 1,
+        "R": 1,
+        "H": 0,
         "2B": 0,
         "3B": 0,
-        "RBI": 1,
-        "BB": 0,
+        "RBI": 0,
+        "BB": 1,
         "K": 1,
         "HR": 0,
         "SB": 1
@@ -143,14 +143,14 @@
         "player": "eamon-kilbride",
         "name": "Eamon Kilbride",
         "position": "3B",
-        "AB": 3,
+        "AB": 4,
         "R": 0,
         "H": 0,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
         "BB": 0,
-        "K": 1,
+        "K": 0,
         "HR": 0,
         "SB": 0
       },
@@ -158,14 +158,14 @@
         "player": "malachi-quartey",
         "name": "Malachi Quartey",
         "position": "CF",
-        "AB": 4,
+        "AB": 5,
         "R": 1,
         "H": 0,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
-        "BB": 2,
-        "K": 0,
+        "BB": 1,
+        "K": 1,
         "HR": 0,
         "SB": 0
       },
@@ -173,15 +173,15 @@
         "player": "hiroshi-kawabata",
         "name": "Hiroshi Kawabata",
         "position": "LF",
-        "AB": 4,
+        "AB": 5,
         "R": 1,
-        "H": 1,
-        "2B": 0,
+        "H": 2,
+        "2B": 1,
         "3B": 0,
-        "RBI": 0,
+        "RBI": 1,
         "BB": 0,
         "K": 2,
-        "HR": 0,
+        "HR": 1,
         "SB": 0
       },
       {
@@ -191,12 +191,12 @@
         "AB": 5,
         "R": 1,
         "H": 3,
-        "2B": 0,
+        "2B": 1,
         "3B": 0,
         "RBI": 1,
-        "BB": 2,
+        "BB": 0,
         "K": 1,
-        "HR": 0,
+        "HR": 1,
         "SB": 0
       }
     ],
@@ -205,14 +205,14 @@
         "player": "noah-bianchi",
         "name": "Noah Bianchi",
         "position": "C",
-        "AB": 5,
-        "R": 1,
-        "H": 2,
-        "2B": 1,
+        "AB": 4,
+        "R": 0,
+        "H": 0,
+        "2B": 0,
         "3B": 0,
-        "RBI": 1,
+        "RBI": 0,
         "BB": 0,
-        "K": 1,
+        "K": 3,
         "HR": 0,
         "SB": 0
       },
@@ -220,14 +220,14 @@
         "player": "mateo-fernandez",
         "name": "Mateo Fernández",
         "position": "1B",
-        "AB": 4,
+        "AB": 5,
         "R": 1,
         "H": 1,
         "2B": 0,
-        "3B": 0,
-        "RBI": 0,
+        "3B": 1,
+        "RBI": 1,
         "BB": 1,
-        "K": 0,
+        "K": 1,
         "HR": 0,
         "SB": 0
       },
@@ -235,29 +235,29 @@
         "player": "jalen-brooks",
         "name": "Jalen Brooks",
         "position": "2B",
-        "AB": 3,
-        "R": 1,
-        "H": 0,
+        "AB": 4,
+        "R": 0,
+        "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 1,
-        "BB": 0,
-        "K": 1,
+        "BB": 1,
+        "K": 2,
         "HR": 0,
-        "SB": 0
+        "SB": 1
       },
       {
         "player": "rafael-costa",
         "name": "Rafael Costa",
         "position": "SS",
-        "AB": 3,
+        "AB": 4,
         "R": 0,
-        "H": 2,
-        "2B": 0,
+        "H": 1,
+        "2B": 1,
         "3B": 0,
         "RBI": 0,
-        "BB": 1,
-        "K": 0,
+        "BB": 0,
+        "K": 1,
         "HR": 0,
         "SB": 0
       },
@@ -265,29 +265,29 @@
         "player": "dominic-russo",
         "name": "Dominic Russo",
         "position": "3B",
-        "AB": 5,
-        "R": 1,
-        "H": 1,
+        "AB": 3,
+        "R": 0,
+        "H": 0,
         "2B": 0,
         "3B": 0,
         "RBI": 1,
         "BB": 0,
         "K": 1,
-        "HR": 1,
-        "SB": 0
+        "HR": 0,
+        "SB": 1
       },
       {
         "player": "andre-wallace",
         "name": "Andre Wallace",
         "position": "CF",
-        "AB": 5,
-        "R": 0,
+        "AB": 3,
+        "R": 1,
         "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
         "BB": 0,
-        "K": 0,
+        "K": 1,
         "HR": 0,
         "SB": 0
       },
@@ -295,24 +295,24 @@
         "player": "tomas-rivas",
         "name": "Tomás Rivas",
         "position": "LF",
-        "AB": 4,
-        "R": 0,
-        "H": 2,
+        "AB": 5,
+        "R": 1,
+        "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 1,
         "BB": 0,
         "K": 0,
-        "HR": 0,
+        "HR": 1,
         "SB": 0
       },
       {
         "player": "blake-harrison",
         "name": "Blake Harrison",
         "position": "RF",
-        "AB": 3,
-        "R": 0,
-        "H": 0,
+        "AB": 4,
+        "R": 1,
+        "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
@@ -326,62 +326,61 @@
   "pitching": {
     "away": [
       {
-        "player": "cedric-wainwright",
-        "name": "Cedric Wainwright",
+        "player": "kenji-takamori",
+        "name": "Kenji Takamori",
         "IP_outs": 18,
-        "H": 4,
-        "R": 1,
-        "ER": 1,
-        "BB": 0,
-        "K": 3,
-        "HR": 1,
+        "H": 3,
+        "R": 0,
+        "ER": 0,
+        "BB": 2,
+        "K": 7,
+        "HR": 0,
         "IP": 6
       },
       {
-        "player": "mateo-azarcon",
-        "name": "Mateo Azarcón",
+        "player": "dusan-marevic",
+        "name": "Dušan Marević",
         "IP_outs": 9,
-        "H": 5,
-        "R": 3,
-        "ER": 3,
-        "BB": 2,
-        "K": 1,
-        "HR": 0,
+        "H": 3,
+        "R": 4,
+        "ER": 4,
+        "BB": 0,
+        "K": 3,
+        "HR": 1,
         "IP": 3
       }
     ],
     "home": [
       {
-        "player": "mateo-alvarez",
-        "name": "Mateo Álvarez",
-        "IP_outs": 16,
-        "H": 9,
+        "player": "calvin-rhodes",
+        "name": "Calvin Rhodes",
+        "IP_outs": 18,
+        "H": 1,
         "R": 5,
         "ER": 5,
-        "BB": 3,
-        "K": 3,
-        "HR": 0,
-        "IP": 5.1
+        "BB": 5,
+        "K": 6,
+        "HR": 3,
+        "IP": 6
       },
       {
-        "player": "luis-delgado",
-        "name": "Luis Delgado",
-        "IP_outs": 11,
-        "H": 0,
+        "player": "kieran-walsh",
+        "name": "Kieran Walsh",
+        "IP_outs": 9,
+        "H": 6,
         "R": 1,
         "ER": 1,
-        "BB": 2,
-        "K": 2,
+        "BB": 0,
+        "K": 3,
         "HR": 1,
-        "IP": 3.2
+        "IP": 3
       }
     ]
   },
   "decisions": {
-    "W": "cedric-wainwright",
-    "L": "mateo-alvarez",
-    "SV": "mateo-azarcon"
+    "W": "kenji-takamori",
+    "L": "calvin-rhodes",
+    "SV": "dusan-marevic"
   },
-  "notes": [],
-  "calibration": "glb.stats-calibrated.v1"
+  "notes": []
 }

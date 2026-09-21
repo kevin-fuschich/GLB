@@ -11,7 +11,7 @@
     "name": "Durham Gold"
   },
   "status": "Final",
-  "attendance": 12586,
+  "attendance": 26118,
   "linescore": {
     "innings": [
       {
@@ -31,8 +31,8 @@
       },
       {
         "inning": 4,
-        "away": 0,
-        "home": 0
+        "away": 1,
+        "home": 2
       },
       {
         "inning": 5,
@@ -41,7 +41,7 @@
       },
       {
         "inning": 6,
-        "away": 1,
+        "away": 0,
         "home": 0
       },
       {
@@ -52,24 +52,24 @@
       {
         "inning": 8,
         "away": 0,
-        "home": 1
+        "home": 0
       },
       {
         "inning": 9,
         "away": 0,
-        "home": 1
+        "home": 0
       }
     ],
     "totals": {
       "away": {
         "R": 2,
-        "H": 9,
-        "E": 1
+        "H": 7,
+        "E": 2
       },
       "home": {
         "R": 3,
-        "H": 5,
-        "E": 0
+        "H": 11,
+        "E": 2
       }
     }
   },
@@ -83,22 +83,22 @@
         "player": "kaito-ueda",
         "name": "Kaito Ueda",
         "position": "CF",
-        "AB": 4,
-        "R": 1,
+        "AB": 5,
+        "R": 0,
         "H": 1,
         "2B": 0,
         "3B": 0,
-        "RBI": 1,
+        "RBI": 0,
         "BB": 1,
-        "K": 1,
-        "HR": 1,
+        "K": 0,
+        "HR": 0,
         "SB": 0
       },
       {
         "player": "han-wei-tseng",
         "name": "Han-wei Tseng",
         "position": "2B",
-        "AB": 3,
+        "AB": 4,
         "R": 0,
         "H": 0,
         "2B": 0,
@@ -113,9 +113,9 @@
         "player": "martin-echevarria",
         "name": "Martín Echevarría",
         "position": "1B",
-        "AB": 5,
+        "AB": 4,
         "R": 0,
-        "H": 2,
+        "H": 0,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
@@ -128,7 +128,7 @@
         "player": "dariusz-wierzbik",
         "name": "Dariusz Wierzbik",
         "position": "SS",
-        "AB": 5,
+        "AB": 3,
         "R": 0,
         "H": 1,
         "2B": 0,
@@ -143,7 +143,7 @@
         "player": "adebayo-olumide",
         "name": "Adebayo Olumide",
         "position": "3B",
-        "AB": 5,
+        "AB": 3,
         "R": 0,
         "H": 1,
         "2B": 0,
@@ -158,29 +158,29 @@
         "player": "owen-rasmusson",
         "name": "Owen Rasmusson",
         "position": "C",
-        "AB": 5,
-        "R": 0,
-        "H": 1,
-        "2B": 0,
+        "AB": 4,
+        "R": 1,
+        "H": 3,
+        "2B": 1,
         "3B": 0,
-        "RBI": 0,
-        "BB": 0,
-        "K": 1,
-        "HR": 0,
-        "SB": 1
+        "RBI": 1,
+        "BB": 1,
+        "K": 0,
+        "HR": 1,
+        "SB": 0
       },
       {
         "player": "eric-lawson",
         "name": "Eric Lawson",
         "position": "LF",
         "AB": 5,
-        "R": 1,
-        "H": 1,
+        "R": 0,
+        "H": 0,
         "2B": 0,
         "3B": 0,
-        "RBI": 0,
-        "BB": 0,
-        "K": 0,
+        "RBI": 1,
+        "BB": 1,
+        "K": 1,
         "HR": 0,
         "SB": 0
       },
@@ -188,24 +188,24 @@
         "player": "jose-ramirez-tpe",
         "name": "Jose Ramirez",
         "position": "RF",
-        "AB": 3,
+        "AB": 4,
         "R": 0,
-        "H": 0,
+        "H": 1,
         "2B": 0,
         "3B": 0,
-        "RBI": 1,
-        "BB": 1,
+        "RBI": 0,
+        "BB": 0,
         "K": 2,
         "HR": 0,
-        "SB": 1
+        "SB": 0
       },
       {
         "player": "david-morales-tpe",
         "name": "David Morales",
         "position": "DH",
-        "AB": 3,
-        "R": 0,
-        "H": 2,
+        "AB": 5,
+        "R": 1,
+        "H": 0,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
@@ -220,14 +220,14 @@
         "player": "ethan-bowen",
         "name": "Ethan Bowen",
         "position": "C",
-        "AB": 3,
-        "R": 0,
-        "H": 0,
-        "2B": 0,
+        "AB": 5,
+        "R": 1,
+        "H": 1,
+        "2B": 1,
         "3B": 0,
         "RBI": 0,
         "BB": 0,
-        "K": 0,
+        "K": 1,
         "HR": 0,
         "SB": 0
       },
@@ -237,12 +237,12 @@
         "position": "1B",
         "AB": 3,
         "R": 0,
-        "H": 0,
+        "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
-        "BB": 2,
-        "K": 1,
+        "BB": 0,
+        "K": 0,
         "HR": 0,
         "SB": 0
       },
@@ -250,30 +250,30 @@
         "player": "joshua-kent",
         "name": "Joshua Kent",
         "position": "2B",
-        "AB": 5,
+        "AB": 3,
         "R": 1,
         "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 1,
-        "BB": 0,
-        "K": 3,
+        "BB": 1,
+        "K": 1,
         "HR": 1,
-        "SB": 1
+        "SB": 0
       },
       {
         "player": "omar-salcedo",
         "name": "Omar Salcedo",
         "position": "SS",
-        "AB": 5,
-        "R": 1,
+        "AB": 3,
+        "R": 0,
         "H": 2,
-        "2B": 1,
+        "2B": 0,
         "3B": 0,
-        "RBI": 1,
-        "BB": 0,
-        "K": 0,
-        "HR": 1,
+        "RBI": 0,
+        "BB": 1,
+        "K": 1,
+        "HR": 0,
         "SB": 0
       },
       {
@@ -281,38 +281,8 @@
         "name": "Tyrell Winston",
         "position": "3B",
         "AB": 3,
-        "R": 1,
-        "H": 1,
-        "2B": 1,
-        "3B": 0,
-        "RBI": 0,
-        "BB": 0,
-        "K": 0,
-        "HR": 0,
-        "SB": 0
-      },
-      {
-        "player": "aaron-fletcher",
-        "name": "Aaron Fletcher",
-        "position": "CF",
-        "AB": 4,
         "R": 0,
         "H": 1,
-        "2B": 0,
-        "3B": 0,
-        "RBI": 0,
-        "BB": 0,
-        "K": 1,
-        "HR": 0,
-        "SB": 0
-      },
-      {
-        "player": "mateo-rios",
-        "name": "Mateo Ríos",
-        "position": "LF",
-        "AB": 3,
-        "R": 0,
-        "H": 0,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
@@ -322,18 +292,48 @@
         "SB": 0
       },
       {
+        "player": "aaron-fletcher",
+        "name": "Aaron Fletcher",
+        "position": "CF",
+        "AB": 5,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 1,
+        "K": 2,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "mateo-rios",
+        "name": "Mateo Ríos",
+        "position": "LF",
+        "AB": 4,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      },
+      {
         "player": "calvin-ross",
         "name": "Calvin Ross",
         "position": "RF",
         "AB": 5,
-        "R": 0,
-        "H": 0,
+        "R": 1,
+        "H": 3,
         "2B": 0,
         "3B": 0,
-        "RBI": 1,
+        "RBI": 2,
         "BB": 0,
-        "K": 4,
-        "HR": 0,
+        "K": 0,
+        "HR": 1,
         "SB": 0
       }
     ]
@@ -343,52 +343,52 @@
       {
         "player": "joaquin-iturriaga",
         "name": "Joaquín Iturriaga",
-        "IP_outs": 18,
-        "H": 4,
-        "R": 2,
-        "ER": 2,
-        "BB": 0,
-        "K": 7,
-        "HR": 1,
-        "IP": 6
+        "IP_outs": 21,
+        "H": 5,
+        "R": 0,
+        "ER": 0,
+        "BB": 1,
+        "K": 5,
+        "HR": 2,
+        "IP": 7
       },
       {
         "player": "miguel-santos-tpe",
         "name": "Miguel Santos",
-        "IP_outs": 9,
-        "H": 1,
-        "R": 1,
-        "ER": 1,
+        "IP_outs": 6,
+        "H": 6,
+        "R": 3,
+        "ER": 3,
         "BB": 2,
-        "K": 4,
-        "HR": 1,
-        "IP": 3
+        "K": 2,
+        "HR": 0,
+        "IP": 2
       }
     ],
     "home": [
       {
         "player": "isaac-friedel",
         "name": "Isaac Friedel",
-        "IP_outs": 19,
-        "H": 3,
-        "R": 1,
-        "ER": 1,
-        "BB": 1,
+        "IP_outs": 18,
+        "H": 1,
+        "R": 2,
+        "ER": 2,
+        "BB": 3,
         "K": 5,
-        "HR": 0,
-        "IP": 6.1
+        "HR": 1,
+        "IP": 6
       },
       {
         "player": "luis-carreno",
         "name": "Luis Carreño",
-        "IP_outs": 8,
+        "IP_outs": 9,
         "H": 6,
-        "R": 1,
-        "ER": 1,
-        "BB": 1,
-        "K": 2,
-        "HR": 1,
-        "IP": 2.2
+        "R": 0,
+        "ER": 0,
+        "BB": 0,
+        "K": 1,
+        "HR": 0,
+        "IP": 3
       }
     ]
   },
@@ -397,6 +397,5 @@
     "L": "joaquin-iturriaga",
     "SV": "luis-carreno"
   },
-  "notes": [],
-  "calibration": "glb.stats-calibrated.v1"
+  "notes": []
 }

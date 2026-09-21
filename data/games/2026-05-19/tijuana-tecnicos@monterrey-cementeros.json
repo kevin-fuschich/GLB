@@ -11,12 +11,12 @@
     "name": "Monterrey Cementeros"
   },
   "status": "Final",
-  "attendance": 14427,
+  "attendance": 28179,
   "linescore": {
     "innings": [
       {
         "inning": 1,
-        "away": 0,
+        "away": 1,
         "home": 1
       },
       {
@@ -26,8 +26,8 @@
       },
       {
         "inning": 3,
-        "away": 1,
-        "home": 1
+        "away": 0,
+        "home": 2
       },
       {
         "inning": 4,
@@ -36,7 +36,7 @@
       },
       {
         "inning": 5,
-        "away": 2,
+        "away": 3,
         "home": 0
       },
       {
@@ -46,8 +46,8 @@
       },
       {
         "inning": 7,
-        "away": 2,
-        "home": 2
+        "away": 1,
+        "home": 1
       },
       {
         "inning": 8,
@@ -63,13 +63,13 @@
     "totals": {
       "away": {
         "R": 8,
-        "H": 8,
-        "E": 0
+        "H": 11,
+        "E": 2
       },
       "home": {
         "R": 7,
         "H": 7,
-        "E": 2
+        "E": 0
       }
     }
   },
@@ -83,13 +83,13 @@
         "player": "sergio-hinojosa",
         "name": "Sergio Hinojosa",
         "position": "C",
-        "AB": 5,
-        "R": 0,
-        "H": 2,
+        "AB": 3,
+        "R": 2,
+        "H": 3,
         "2B": 0,
         "3B": 0,
         "RBI": 1,
-        "BB": 1,
+        "BB": 0,
         "K": 0,
         "HR": 0,
         "SB": 0
@@ -98,13 +98,13 @@
         "player": "bruno-valdes",
         "name": "Bruno Valdés",
         "position": "1B",
-        "AB": 3,
+        "AB": 5,
         "R": 0,
-        "H": 0,
+        "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
-        "BB": 1,
+        "BB": 0,
         "K": 0,
         "HR": 0,
         "SB": 0
@@ -113,13 +113,13 @@
         "player": "matias-camarena",
         "name": "Matías Camarena",
         "position": "2B",
-        "AB": 4,
-        "R": 1,
-        "H": 1,
+        "AB": 5,
+        "R": 0,
+        "H": 2,
         "2B": 0,
         "3B": 0,
-        "RBI": 0,
-        "BB": 0,
+        "RBI": 1,
+        "BB": 1,
         "K": 1,
         "HR": 0,
         "SB": 0
@@ -128,14 +128,14 @@
         "player": "nicolas-paredes",
         "name": "Nicolás Paredes",
         "position": "SS",
-        "AB": 3,
-        "R": 0,
+        "AB": 5,
+        "R": 1,
         "H": 0,
         "2B": 0,
         "3B": 0,
-        "RBI": 1,
-        "BB": 2,
-        "K": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 2,
         "HR": 0,
         "SB": 0
       },
@@ -143,14 +143,14 @@
         "player": "adrian-fierro",
         "name": "Adrián Fierro",
         "position": "3B",
-        "AB": 5,
+        "AB": 4,
         "R": 1,
-        "H": 0,
+        "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 2,
-        "BB": 1,
-        "K": 2,
+        "BB": 0,
+        "K": 1,
         "HR": 0,
         "SB": 0
       },
@@ -159,13 +159,13 @@
         "name": "Emilio Barrón",
         "position": "LF",
         "AB": 3,
-        "R": 1,
-        "H": 1,
+        "R": 0,
+        "H": 0,
         "2B": 0,
         "3B": 0,
         "RBI": 1,
         "BB": 0,
-        "K": 1,
+        "K": 0,
         "HR": 0,
         "SB": 0
       },
@@ -175,13 +175,13 @@
         "position": "CF",
         "AB": 3,
         "R": 1,
-        "H": 2,
+        "H": 0,
         "2B": 0,
         "3B": 0,
-        "RBI": 1,
-        "BB": 0,
-        "K": 1,
-        "HR": 1,
+        "RBI": 0,
+        "BB": 3,
+        "K": 0,
+        "HR": 0,
         "SB": 0
       },
       {
@@ -195,23 +195,23 @@
         "3B": 0,
         "RBI": 2,
         "BB": 0,
-        "K": 0,
-        "HR": 2,
-        "SB": 0
+        "K": 2,
+        "HR": 1,
+        "SB": 1
       },
       {
         "player": "hector-belmonte",
         "name": "Héctor Belmonte",
         "position": "DH",
         "AB": 5,
-        "R": 2,
-        "H": 0,
+        "R": 1,
+        "H": 2,
         "2B": 0,
         "3B": 0,
-        "RBI": 0,
+        "RBI": 1,
         "BB": 0,
-        "K": 3,
-        "HR": 0,
+        "K": 1,
+        "HR": 1,
         "SB": 0
       }
     ],
@@ -220,14 +220,14 @@
         "player": "julian-sauri",
         "name": "Julián Sauri",
         "position": "C",
-        "AB": 4,
-        "R": 1,
+        "AB": 3,
+        "R": 0,
         "H": 0,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
         "BB": 0,
-        "K": 2,
+        "K": 1,
         "HR": 0,
         "SB": 0
       },
@@ -235,14 +235,14 @@
         "player": "eamon-kilrea",
         "name": "Eamon Kilrea",
         "position": "1B",
-        "AB": 5,
+        "AB": 3,
         "R": 2,
         "H": 1,
         "2B": 0,
         "3B": 0,
-        "RBI": 2,
+        "RBI": 1,
         "BB": 0,
-        "K": 1,
+        "K": 2,
         "HR": 0,
         "SB": 0
       },
@@ -256,24 +256,24 @@
         "2B": 0,
         "3B": 0,
         "RBI": 1,
-        "BB": 2,
-        "K": 1,
+        "BB": 1,
+        "K": 0,
         "HR": 0,
-        "SB": 1
+        "SB": 0
       },
       {
         "player": "kofi-mensah",
         "name": "Kofi Mensah",
         "position": "SS",
         "AB": 5,
-        "R": 1,
+        "R": 2,
         "H": 2,
         "2B": 0,
         "3B": 0,
-        "RBI": 1,
+        "RBI": 3,
         "BB": 0,
-        "K": 0,
-        "HR": 0,
+        "K": 2,
+        "HR": 1,
         "SB": 0
       },
       {
@@ -282,12 +282,12 @@
         "position": "3B",
         "AB": 3,
         "R": 1,
-        "H": 0,
+        "H": 1,
         "2B": 0,
         "3B": 0,
-        "RBI": 1,
-        "BB": 0,
-        "K": 0,
+        "RBI": 0,
+        "BB": 1,
+        "K": 1,
         "HR": 0,
         "SB": 0
       },
@@ -295,14 +295,14 @@
         "player": "seiji-fukumori",
         "name": "Seiji Fukumori",
         "position": "CF",
-        "AB": 5,
-        "R": 0,
-        "H": 2,
+        "AB": 4,
+        "R": 1,
+        "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 1,
         "BB": 0,
-        "K": 1,
+        "K": 0,
         "HR": 0,
         "SB": 0
       },
@@ -312,12 +312,12 @@
         "position": "LF",
         "AB": 4,
         "R": 0,
-        "H": 1,
+        "H": 0,
         "2B": 0,
         "3B": 0,
-        "RBI": 0,
-        "BB": 0,
-        "K": 0,
+        "RBI": 1,
+        "BB": 1,
+        "K": 1,
         "HR": 0,
         "SB": 0
       },
@@ -325,12 +325,12 @@
         "player": "micah-lunsford",
         "name": "Micah Lunsford",
         "position": "RF",
-        "AB": 5,
-        "R": 2,
-        "H": 1,
+        "AB": 4,
+        "R": 1,
+        "H": 2,
         "2B": 0,
         "3B": 0,
-        "RBI": 1,
+        "RBI": 0,
         "BB": 1,
         "K": 1,
         "HR": 0,
@@ -343,60 +343,59 @@
       {
         "player": "tomas-zepeda",
         "name": "Tomás Zepeda",
-        "IP_outs": 15,
-        "H": 2,
-        "R": 5,
-        "ER": 5,
+        "IP_outs": 21,
+        "H": 6,
+        "R": 4,
+        "ER": 4,
         "BB": 0,
-        "K": 4,
+        "K": 5,
         "HR": 0,
-        "IP": 5
+        "IP": 7
       },
       {
         "player": "julian-ochoa",
         "name": "Julián Ochoa",
-        "IP_outs": 12,
-        "H": 5,
-        "R": 2,
-        "ER": 2,
-        "BB": 3,
-        "K": 2,
-        "HR": 0,
-        "IP": 4
+        "IP_outs": 6,
+        "H": 1,
+        "R": 3,
+        "ER": 3,
+        "BB": 4,
+        "K": 3,
+        "HR": 1,
+        "IP": 2
       }
     ],
     "home": [
       {
         "player": "emilio-zendejas",
         "name": "Emilio Zendejas",
-        "IP_outs": 17,
-        "H": 1,
-        "R": 3,
-        "ER": 3,
-        "BB": 4,
-        "K": 6,
+        "IP_outs": 16,
+        "H": 7,
+        "R": 0,
+        "ER": 0,
+        "BB": 1,
+        "K": 5,
         "HR": 1,
-        "IP": 5.2
+        "IP": 5.1
       },
       {
         "player": "rowan-treadwell",
         "name": "Rowan Treadwell",
-        "IP_outs": 10,
-        "H": 7,
-        "R": 5,
-        "ER": 5,
-        "BB": 1,
+        "IP_outs": 11,
+        "H": 4,
+        "R": 8,
+        "ER": 8,
+        "BB": 3,
         "K": 2,
-        "HR": 2,
-        "IP": 3.1
+        "HR": 1,
+        "IP": 3.2
       }
     ]
   },
   "decisions": {
     "W": "tomas-zepeda",
     "L": "emilio-zendejas",
-    "SV": "julian-ochoa"
+    "SV": null
   },
-  "notes": [],
-  "calibration": "glb.stats-calibrated.v1"
+  "notes": []
 }

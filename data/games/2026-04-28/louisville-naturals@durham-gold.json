@@ -11,7 +11,7 @@
     "name": "Durham Gold"
   },
   "status": "Final",
-  "attendance": 15772,
+  "attendance": 31245,
   "linescore": {
     "innings": [
       {
@@ -21,8 +21,8 @@
       },
       {
         "inning": 2,
-        "away": 2,
-        "home": 0
+        "away": 1,
+        "home": 1
       },
       {
         "inning": 3,
@@ -36,13 +36,13 @@
       },
       {
         "inning": 5,
-        "away": 1,
+        "away": 2,
         "home": 0
       },
       {
         "inning": 6,
         "away": 0,
-        "home": 1
+        "home": 0
       },
       {
         "inning": 7,
@@ -51,12 +51,12 @@
       },
       {
         "inning": 8,
-        "away": 1,
+        "away": 0,
         "home": 1
       },
       {
         "inning": 9,
-        "away": 0,
+        "away": 1,
         "home": 0
       }
     ],
@@ -64,12 +64,12 @@
       "away": {
         "R": 5,
         "H": 6,
-        "E": 0
+        "E": 1
       },
       "home": {
         "R": 3,
-        "H": 9,
-        "E": 1
+        "H": 10,
+        "E": 0
       }
     }
   },
@@ -83,14 +83,14 @@
         "player": "noah-bianchi",
         "name": "Noah Bianchi",
         "position": "C",
-        "AB": 5,
+        "AB": 3,
         "R": 1,
-        "H": 2,
+        "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 1,
         "BB": 0,
-        "K": 2,
+        "K": 1,
         "HR": 1,
         "SB": 0
       },
@@ -98,9 +98,9 @@
         "player": "mateo-fernandez",
         "name": "Mateo Fernández",
         "position": "1B",
-        "AB": 3,
-        "R": 1,
-        "H": 1,
+        "AB": 5,
+        "R": 0,
+        "H": 0,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
@@ -113,13 +113,13 @@
         "player": "jalen-brooks",
         "name": "Jalen Brooks",
         "position": "2B",
-        "AB": 4,
+        "AB": 5,
         "R": 1,
         "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 1,
-        "BB": 0,
+        "BB": 1,
         "K": 0,
         "HR": 1,
         "SB": 0
@@ -128,16 +128,16 @@
         "player": "rafael-costa",
         "name": "Rafael Costa",
         "position": "SS",
-        "AB": 3,
+        "AB": 5,
         "R": 1,
-        "H": 0,
-        "2B": 0,
+        "H": 1,
+        "2B": 1,
         "3B": 0,
         "RBI": 0,
         "BB": 0,
         "K": 2,
         "HR": 0,
-        "SB": 1
+        "SB": 0
       },
       {
         "player": "dominic-russo",
@@ -145,13 +145,13 @@
         "position": "3B",
         "AB": 5,
         "R": 1,
-        "H": 0,
+        "H": 1,
         "2B": 0,
         "3B": 0,
-        "RBI": 0,
-        "BB": 1,
-        "K": 1,
-        "HR": 0,
+        "RBI": 2,
+        "BB": 0,
+        "K": 0,
+        "HR": 1,
         "SB": 0
       },
       {
@@ -160,12 +160,12 @@
         "position": "CF",
         "AB": 4,
         "R": 0,
-        "H": 0,
-        "2B": 0,
+        "H": 1,
+        "2B": 1,
         "3B": 0,
         "RBI": 1,
-        "BB": 2,
-        "K": 1,
+        "BB": 1,
+        "K": 0,
         "HR": 0,
         "SB": 0
       },
@@ -173,29 +173,29 @@
         "player": "tomas-rivas",
         "name": "Tomás Rivas",
         "position": "LF",
-        "AB": 5,
+        "AB": 4,
         "R": 0,
         "H": 1,
-        "2B": 1,
+        "2B": 0,
         "3B": 0,
-        "RBI": 1,
+        "RBI": 0,
         "BB": 0,
         "K": 1,
         "HR": 0,
-        "SB": 0
+        "SB": 1
       },
       {
         "player": "blake-harrison",
         "name": "Blake Harrison",
         "position": "RF",
-        "AB": 3,
-        "R": 0,
-        "H": 1,
+        "AB": 4,
+        "R": 1,
+        "H": 0,
         "2B": 0,
         "3B": 0,
-        "RBI": 1,
+        "RBI": 0,
         "BB": 1,
-        "K": 1,
+        "K": 0,
         "HR": 0,
         "SB": 0
       }
@@ -207,27 +207,27 @@
         "position": "C",
         "AB": 3,
         "R": 1,
-        "H": 2,
+        "H": 0,
         "2B": 0,
         "3B": 0,
-        "RBI": 1,
+        "RBI": 0,
         "BB": 0,
-        "K": 0,
-        "HR": 1,
+        "K": 2,
+        "HR": 0,
         "SB": 0
       },
       {
         "player": "marcelo-ibarra",
         "name": "Marcelo Ibarra",
         "position": "1B",
-        "AB": 3,
-        "R": 1,
-        "H": 0,
+        "AB": 4,
+        "R": 0,
+        "H": 2,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
         "BB": 0,
-        "K": 1,
+        "K": 2,
         "HR": 0,
         "SB": 0
       },
@@ -236,28 +236,28 @@
         "name": "Joshua Kent",
         "position": "2B",
         "AB": 5,
-        "R": 0,
-        "H": 4,
+        "R": 1,
+        "H": 1,
         "2B": 0,
         "3B": 0,
-        "RBI": 0,
+        "RBI": 1,
         "BB": 0,
-        "K": 0,
+        "K": 1,
         "HR": 0,
-        "SB": 1
+        "SB": 0
       },
       {
         "player": "omar-salcedo",
         "name": "Omar Salcedo",
         "position": "SS",
-        "AB": 5,
-        "R": 1,
+        "AB": 3,
+        "R": 0,
         "H": 0,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
         "BB": 1,
-        "K": 1,
+        "K": 2,
         "HR": 0,
         "SB": 0
       },
@@ -265,7 +265,7 @@
         "player": "tyrell-winston",
         "name": "Tyrell Winston",
         "position": "3B",
-        "AB": 3,
+        "AB": 4,
         "R": 0,
         "H": 2,
         "2B": 0,
@@ -280,14 +280,14 @@
         "player": "aaron-fletcher",
         "name": "Aaron Fletcher",
         "position": "CF",
-        "AB": 4,
+        "AB": 3,
         "R": 0,
-        "H": 0,
+        "H": 1,
         "2B": 0,
         "3B": 0,
-        "RBI": 0,
-        "BB": 1,
-        "K": 1,
+        "RBI": 1,
+        "BB": 0,
+        "K": 0,
         "HR": 0,
         "SB": 0
       },
@@ -297,12 +297,12 @@
         "position": "LF",
         "AB": 5,
         "R": 0,
-        "H": 0,
+        "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
         "BB": 0,
-        "K": 0,
+        "K": 1,
         "HR": 0,
         "SB": 0
       },
@@ -310,78 +310,77 @@
         "player": "calvin-ross",
         "name": "Calvin Ross",
         "position": "RF",
-        "AB": 5,
-        "R": 0,
-        "H": 1,
-        "2B": 0,
+        "AB": 4,
+        "R": 1,
+        "H": 3,
+        "2B": 1,
         "3B": 0,
-        "RBI": 2,
+        "RBI": 1,
         "BB": 0,
         "K": 1,
-        "HR": 0,
-        "SB": 0
+        "HR": 1,
+        "SB": 1
       }
     ]
   },
   "pitching": {
     "away": [
       {
-        "player": "calvin-rhodes",
-        "name": "Calvin Rhodes",
-        "IP_outs": 21,
-        "H": 5,
+        "player": "santiago-correa",
+        "name": "Santiago Correa",
+        "IP_outs": 16,
+        "H": 9,
         "R": 1,
         "ER": 1,
         "BB": 1,
-        "K": 2,
-        "HR": 0,
-        "IP": 7
+        "K": 6,
+        "HR": 1,
+        "IP": 5.1
       },
       {
-        "player": "kieran-walsh",
-        "name": "Kieran Walsh",
-        "IP_outs": 6,
-        "H": 4,
+        "player": "evan-sutter",
+        "name": "Evan Sutter",
+        "IP_outs": 11,
+        "H": 1,
         "R": 2,
         "ER": 2,
-        "BB": 1,
-        "K": 2,
-        "HR": 1,
-        "IP": 2
+        "BB": 0,
+        "K": 3,
+        "HR": 0,
+        "IP": 3.2
       }
     ],
     "home": [
       {
         "player": "isaac-friedel",
         "name": "Isaac Friedel",
-        "IP_outs": 21,
-        "H": 2,
-        "R": 5,
-        "ER": 5,
-        "BB": 4,
-        "K": 7,
-        "HR": 1,
-        "IP": 7
+        "IP_outs": 19,
+        "H": 0,
+        "R": 3,
+        "ER": 3,
+        "BB": 3,
+        "K": 4,
+        "HR": 3,
+        "IP": 6.1
       },
       {
         "player": "devin-marsh",
         "name": "Devin Marsh",
-        "IP_outs": 6,
-        "H": 4,
-        "R": 0,
-        "ER": 0,
+        "IP_outs": 8,
+        "H": 6,
+        "R": 2,
+        "ER": 2,
         "BB": 0,
-        "K": 3,
-        "HR": 1,
-        "IP": 2
+        "K": 2,
+        "HR": 0,
+        "IP": 2.2
       }
     ]
   },
   "decisions": {
-    "W": "calvin-rhodes",
+    "W": "santiago-correa",
     "L": "isaac-friedel",
-    "SV": "kieran-walsh"
+    "SV": null
   },
-  "notes": [],
-  "calibration": "glb.stats-calibrated.v1"
+  "notes": []
 }

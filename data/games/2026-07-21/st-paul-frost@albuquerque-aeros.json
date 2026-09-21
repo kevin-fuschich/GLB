@@ -11,7 +11,7 @@
     "name": "Albuquerque Aeros"
   },
   "status": "Final",
-  "attendance": 15999,
+  "attendance": 30218,
   "linescore": {
     "innings": [
       {
@@ -21,8 +21,8 @@
       },
       {
         "inning": 2,
-        "away": 1,
-        "home": 0
+        "away": 0,
+        "home": 1
       },
       {
         "inning": 3,
@@ -51,8 +51,8 @@
       },
       {
         "inning": 8,
-        "away": 0,
-        "home": 1
+        "away": 1,
+        "home": 0
       },
       {
         "inning": 9,
@@ -63,13 +63,13 @@
     "totals": {
       "away": {
         "R": 2,
-        "H": 5,
-        "E": 2
+        "H": 7,
+        "E": 0
       },
       "home": {
         "R": 4,
-        "H": 6,
-        "E": 1
+        "H": 9,
+        "E": 2
       }
     }
   },
@@ -86,7 +86,7 @@
         "AB": 3,
         "R": 0,
         "H": 1,
-        "2B": 1,
+        "2B": 0,
         "3B": 0,
         "RBI": 0,
         "BB": 0,
@@ -98,15 +98,15 @@
         "player": "javier-lucero",
         "name": "Javier Lucero",
         "position": "1B",
-        "AB": 5,
-        "R": 0,
-        "H": 1,
-        "2B": 1,
+        "AB": 3,
+        "R": 2,
+        "H": 2,
+        "2B": 0,
         "3B": 0,
-        "RBI": 0,
+        "RBI": 2,
         "BB": 0,
         "K": 0,
-        "HR": 0,
+        "HR": 2,
         "SB": 0
       },
       {
@@ -115,22 +115,7 @@
         "position": "2B",
         "AB": 3,
         "R": 0,
-        "H": 2,
-        "2B": 1,
-        "3B": 0,
-        "RBI": 0,
-        "BB": 0,
-        "K": 0,
-        "HR": 0,
-        "SB": 0
-      },
-      {
-        "player": "masato-kobori",
-        "name": "Masato Kobori",
-        "position": "SS",
-        "AB": 3,
-        "R": 0,
-        "H": 0,
+        "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
@@ -140,24 +125,9 @@
         "SB": 0
       },
       {
-        "player": "trevor-yates",
-        "name": "Trevor Yates",
-        "position": "3B",
-        "AB": 3,
-        "R": 1,
-        "H": 1,
-        "2B": 0,
-        "3B": 0,
-        "RBI": 1,
-        "BB": 1,
-        "K": 0,
-        "HR": 1,
-        "SB": 0
-      },
-      {
-        "player": "malik-jefferson",
-        "name": "Malik Jefferson",
-        "position": "CF",
+        "player": "masato-kobori",
+        "name": "Masato Kobori",
+        "position": "SS",
         "AB": 4,
         "R": 0,
         "H": 0,
@@ -170,12 +140,42 @@
         "SB": 0
       },
       {
+        "player": "trevor-yates",
+        "name": "Trevor Yates",
+        "position": "3B",
+        "AB": 5,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      },
+      {
+        "player": "malik-jefferson",
+        "name": "Malik Jefferson",
+        "position": "CF",
+        "AB": 4,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 1,
+        "RBI": 0,
+        "BB": 1,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      },
+      {
         "player": "rodrigo-fuentes",
         "name": "Rodrigo Fuentes",
         "position": "LF",
-        "AB": 5,
-        "R": 1,
-        "H": 0,
+        "AB": 3,
+        "R": 0,
+        "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
@@ -188,13 +188,13 @@
         "player": "jake-lanier",
         "name": "Jake Lanier",
         "position": "RF",
-        "AB": 5,
+        "AB": 3,
         "R": 0,
         "H": 0,
         "2B": 0,
         "3B": 0,
-        "RBI": 1,
-        "BB": 0,
+        "RBI": 0,
+        "BB": 1,
         "K": 0,
         "HR": 0,
         "SB": 0
@@ -205,14 +205,14 @@
         "player": "rui-damas",
         "name": "Rui Damas",
         "position": "C",
-        "AB": 3,
+        "AB": 5,
         "R": 0,
         "H": 1,
         "2B": 0,
         "3B": 0,
-        "RBI": 1,
-        "BB": 2,
-        "K": 0,
+        "RBI": 0,
+        "BB": 1,
+        "K": 2,
         "HR": 0,
         "SB": 0
       },
@@ -220,14 +220,14 @@
         "player": "tobias-vandenberg",
         "name": "Tobias Vandenberg",
         "position": "1B",
-        "AB": 5,
+        "AB": 3,
         "R": 0,
         "H": 1,
         "2B": 0,
         "3B": 0,
-        "RBI": 1,
-        "BB": 2,
-        "K": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 1,
         "HR": 0,
         "SB": 0
       },
@@ -235,15 +235,15 @@
         "player": "kofi-agyeman",
         "name": "Kofi Agyeman",
         "position": "2B",
-        "AB": 4,
-        "R": 0,
-        "H": 0,
+        "AB": 5,
+        "R": 1,
+        "H": 1,
         "2B": 0,
         "3B": 0,
-        "RBI": 0,
-        "BB": 1,
+        "RBI": 1,
+        "BB": 0,
         "K": 1,
-        "HR": 0,
+        "HR": 1,
         "SB": 0
       },
       {
@@ -251,13 +251,13 @@
         "name": "Iker Zubizarreta",
         "position": "SS",
         "AB": 3,
-        "R": 2,
-        "H": 1,
+        "R": 1,
+        "H": 2,
         "2B": 0,
         "3B": 0,
         "RBI": 1,
-        "BB": 0,
-        "K": 0,
+        "BB": 1,
+        "K": 1,
         "HR": 1,
         "SB": 0
       },
@@ -266,14 +266,14 @@
         "name": "Carmine Sforza",
         "position": "3B",
         "AB": 4,
-        "R": 1,
-        "H": 1,
+        "R": 0,
+        "H": 0,
         "2B": 0,
         "3B": 0,
-        "RBI": 1,
+        "RBI": 0,
         "BB": 0,
         "K": 2,
-        "HR": 1,
+        "HR": 0,
         "SB": 0
       },
       {
@@ -285,7 +285,7 @@
         "H": 1,
         "2B": 0,
         "3B": 0,
-        "RBI": 0,
+        "RBI": 1,
         "BB": 0,
         "K": 1,
         "HR": 0,
@@ -295,22 +295,22 @@
         "player": "elior-ben-ami",
         "name": "Elior Ben-Ami",
         "position": "LF",
-        "AB": 3,
-        "R": 0,
-        "H": 0,
+        "AB": 4,
+        "R": 1,
+        "H": 2,
         "2B": 0,
         "3B": 0,
-        "RBI": 0,
+        "RBI": 1,
         "BB": 0,
         "K": 0,
-        "HR": 0,
+        "HR": 1,
         "SB": 0
       },
       {
         "player": "paolo-ventresca",
         "name": "Paolo Ventresca",
         "position": "RF",
-        "AB": 4,
+        "AB": 3,
         "R": 0,
         "H": 1,
         "2B": 0,
@@ -328,26 +328,26 @@
       {
         "player": "nolan-brix",
         "name": "Nolan Brix",
-        "IP_outs": 17,
+        "IP_outs": 16,
         "H": 2,
         "R": 3,
         "ER": 3,
-        "BB": 5,
-        "K": 3,
-        "HR": 1,
-        "IP": 5.2
+        "BB": 1,
+        "K": 6,
+        "HR": 2,
+        "IP": 5.1
       },
       {
         "player": "lukas-horvat",
         "name": "Lukáš Horvat",
-        "IP_outs": 10,
-        "H": 4,
+        "IP_outs": 11,
+        "H": 7,
         "R": 1,
         "ER": 1,
-        "BB": 0,
-        "K": 1,
+        "BB": 1,
+        "K": 2,
         "HR": 1,
-        "IP": 3.1
+        "IP": 3.2
       }
     ],
     "home": [
@@ -355,12 +355,12 @@
         "player": "idris-kourouma",
         "name": "Idris Kourouma",
         "IP_outs": 16,
-        "H": 2,
+        "H": 4,
         "R": 2,
         "ER": 2,
-        "BB": 1,
+        "BB": 0,
         "K": 3,
-        "HR": 0,
+        "HR": 2,
         "IP": 5.1
       },
       {
@@ -370,9 +370,9 @@
         "H": 3,
         "R": 0,
         "ER": 0,
-        "BB": 0,
+        "BB": 2,
         "K": 1,
-        "HR": 1,
+        "HR": 0,
         "IP": 3.2
       }
     ]
@@ -380,8 +380,7 @@
   "decisions": {
     "W": "idris-kourouma",
     "L": "nolan-brix",
-    "SV": null
+    "SV": "eamon-quirke"
   },
-  "notes": [],
-  "calibration": "glb.stats-calibrated.v1"
+  "notes": []
 }

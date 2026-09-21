@@ -11,28 +11,28 @@
     "name": "Durham Gold"
   },
   "status": "Final",
-  "attendance": 23566,
+  "attendance": 24868,
   "linescore": {
     "innings": [
       {
         "inning": 1,
         "away": 0,
-        "home": 1
+        "home": 0
       },
       {
         "inning": 2,
         "away": 0,
-        "home": 0
+        "home": 2
       },
       {
         "inning": 3,
-        "away": 0,
+        "away": 1,
         "home": 0
       },
       {
         "inning": 4,
         "away": 0,
-        "home": 1
+        "home": 0
       },
       {
         "inning": 5,
@@ -41,34 +41,34 @@
       },
       {
         "inning": 6,
-        "away": 1,
-        "home": 0
+        "away": 0,
+        "home": 1
       },
       {
         "inning": 7,
         "away": 0,
-        "home": 1
-      },
-      {
-        "inning": 8,
-        "away": 0,
         "home": 0
       },
       {
-        "inning": 9,
+        "inning": 8,
         "away": 1,
         "home": 1
+      },
+      {
+        "inning": 9,
+        "away": 0,
+        "home": 0
       }
     ],
     "totals": {
       "away": {
         "R": 2,
-        "H": 7,
+        "H": 6,
         "E": 2
       },
       "home": {
         "R": 4,
-        "H": 10,
+        "H": 8,
         "E": 2
       }
     }
@@ -85,12 +85,12 @@
         "position": "C",
         "AB": 4,
         "R": 0,
-        "H": 1,
+        "H": 0,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
         "BB": 0,
-        "K": 1,
+        "K": 0,
         "HR": 0,
         "SB": 0
       },
@@ -100,12 +100,12 @@
         "position": "1B",
         "AB": 5,
         "R": 0,
-        "H": 2,
+        "H": 0,
         "2B": 0,
         "3B": 0,
-        "RBI": 1,
+        "RBI": 0,
         "BB": 0,
-        "K": 0,
+        "K": 2,
         "HR": 0,
         "SB": 0
       },
@@ -113,59 +113,59 @@
         "player": "kofi-agyeman",
         "name": "Kofi Agyeman",
         "position": "2B",
-        "AB": 3,
+        "AB": 4,
         "R": 1,
         "H": 1,
         "2B": 0,
         "3B": 0,
-        "RBI": 1,
+        "RBI": 0,
         "BB": 0,
-        "K": 1,
-        "HR": 1,
+        "K": 2,
+        "HR": 0,
         "SB": 0
       },
       {
         "player": "iker-zubizarreta",
         "name": "Iker Zubizarreta",
         "position": "SS",
-        "AB": 5,
+        "AB": 3,
         "R": 0,
-        "H": 1,
+        "H": 0,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
-        "BB": 2,
-        "K": 1,
+        "BB": 0,
+        "K": 0,
         "HR": 0,
-        "SB": 1
+        "SB": 0
       },
       {
         "player": "carmine-sforza",
         "name": "Carmine Sforza",
         "position": "3B",
         "AB": 4,
-        "R": 0,
-        "H": 0,
+        "R": 1,
+        "H": 1,
         "2B": 0,
         "3B": 0,
-        "RBI": 0,
-        "BB": 1,
+        "RBI": 1,
+        "BB": 2,
         "K": 1,
-        "HR": 0,
-        "SB": 0
+        "HR": 1,
+        "SB": 1
       },
       {
         "player": "adama-kouyate",
         "name": "Adama Kouyaté",
         "position": "CF",
         "AB": 5,
-        "R": 1,
-        "H": 0,
+        "R": 0,
+        "H": 2,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
-        "BB": 0,
-        "K": 1,
+        "BB": 2,
+        "K": 2,
         "HR": 0,
         "SB": 0
       },
@@ -173,14 +173,14 @@
         "player": "elior-ben-ami",
         "name": "Elior Ben-Ami",
         "position": "LF",
-        "AB": 4,
+        "AB": 5,
         "R": 0,
-        "H": 1,
-        "2B": 0,
+        "H": 2,
+        "2B": 1,
         "3B": 0,
         "RBI": 0,
         "BB": 0,
-        "K": 2,
+        "K": 0,
         "HR": 0,
         "SB": 0
       },
@@ -188,16 +188,16 @@
         "player": "paolo-ventresca",
         "name": "Paolo Ventresca",
         "position": "RF",
-        "AB": 5,
+        "AB": 3,
         "R": 0,
-        "H": 1,
-        "2B": 1,
+        "H": 0,
+        "2B": 0,
         "3B": 0,
-        "RBI": 0,
-        "BB": 2,
-        "K": 1,
+        "RBI": 1,
+        "BB": 1,
+        "K": 2,
         "HR": 0,
-        "SB": 1
+        "SB": 0
       }
     ],
     "home": [
@@ -205,15 +205,15 @@
         "player": "ethan-bowen",
         "name": "Ethan Bowen",
         "position": "C",
-        "AB": 3,
-        "R": 0,
-        "H": 1,
+        "AB": 5,
+        "R": 1,
+        "H": 2,
         "2B": 0,
         "3B": 0,
-        "RBI": 0,
-        "BB": 2,
-        "K": 2,
-        "HR": 0,
+        "RBI": 1,
+        "BB": 1,
+        "K": 1,
+        "HR": 1,
         "SB": 0
       },
       {
@@ -222,29 +222,29 @@
         "position": "1B",
         "AB": 5,
         "R": 0,
-        "H": 1,
+        "H": 0,
         "2B": 0,
         "3B": 0,
-        "RBI": 0,
-        "BB": 0,
-        "K": 0,
+        "RBI": 1,
+        "BB": 1,
+        "K": 2,
         "HR": 0,
-        "SB": 1
+        "SB": 0
       },
       {
         "player": "joshua-kent",
         "name": "Joshua Kent",
         "position": "2B",
-        "AB": 4,
-        "R": 1,
+        "AB": 5,
+        "R": 0,
         "H": 2,
         "2B": 0,
         "3B": 0,
-        "RBI": 1,
+        "RBI": 0,
         "BB": 0,
-        "K": 0,
-        "HR": 1,
-        "SB": 0
+        "K": 2,
+        "HR": 0,
+        "SB": 1
       },
       {
         "player": "omar-salcedo",
@@ -252,7 +252,7 @@
         "position": "SS",
         "AB": 3,
         "R": 0,
-        "H": 2,
+        "H": 0,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
@@ -266,36 +266,21 @@
         "name": "Tyrell Winston",
         "position": "3B",
         "AB": 5,
-        "R": 0,
-        "H": 0,
+        "R": 1,
+        "H": 1,
         "2B": 0,
         "3B": 0,
-        "RBI": 0,
+        "RBI": 1,
         "BB": 1,
         "K": 1,
-        "HR": 0,
+        "HR": 1,
         "SB": 0
       },
       {
         "player": "aaron-fletcher",
         "name": "Aaron Fletcher",
         "position": "CF",
-        "AB": 4,
-        "R": 1,
-        "H": 1,
-        "2B": 0,
-        "3B": 0,
-        "RBI": 1,
-        "BB": 2,
-        "K": 0,
-        "HR": 0,
-        "SB": 0
-      },
-      {
-        "player": "mateo-rios",
-        "name": "Mateo Ríos",
-        "position": "LF",
-        "AB": 4,
+        "AB": 5,
         "R": 1,
         "H": 2,
         "2B": 0,
@@ -307,6 +292,21 @@
         "SB": 0
       },
       {
+        "player": "mateo-rios",
+        "name": "Mateo Ríos",
+        "position": "LF",
+        "AB": 4,
+        "R": 0,
+        "H": 0,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 0,
+        "HR": 0,
+        "SB": 0
+      },
+      {
         "player": "calvin-ross",
         "name": "Calvin Ross",
         "position": "RF",
@@ -315,11 +315,11 @@
         "H": 1,
         "2B": 0,
         "3B": 0,
-        "RBI": 1,
-        "BB": 0,
-        "K": 0,
-        "HR": 1,
-        "SB": 1
+        "RBI": 0,
+        "BB": 1,
+        "K": 2,
+        "HR": 0,
+        "SB": 0
       }
     ]
   },
@@ -329,24 +329,24 @@
         "player": "pieter-vanvleuten",
         "name": "Pieter VanVleuten",
         "IP_outs": 19,
-        "H": 9,
-        "R": 1,
-        "ER": 1,
-        "BB": 1,
-        "K": 3,
-        "HR": 2,
+        "H": 0,
+        "R": 2,
+        "ER": 2,
+        "BB": 3,
+        "K": 7,
+        "HR": 1,
         "IP": 6.1
       },
       {
         "player": "eamon-quirke",
         "name": "Eamon Quirke",
         "IP_outs": 8,
-        "H": 1,
-        "R": 3,
-        "ER": 3,
-        "BB": 4,
-        "K": 1,
-        "HR": 1,
+        "H": 8,
+        "R": 2,
+        "ER": 2,
+        "BB": 1,
+        "K": 2,
+        "HR": 2,
         "IP": 2.2
       }
     ],
@@ -354,34 +354,33 @@
       {
         "player": "isaac-friedel",
         "name": "Isaac Friedel",
-        "IP_outs": 16,
+        "IP_outs": 19,
         "H": 1,
         "R": 2,
         "ER": 2,
-        "BB": 1,
-        "K": 5,
-        "HR": 1,
-        "IP": 5.1
+        "BB": 5,
+        "K": 6,
+        "HR": 0,
+        "IP": 6.1
       },
       {
         "player": "devin-marsh",
         "name": "Devin Marsh",
-        "IP_outs": 11,
-        "H": 6,
+        "IP_outs": 8,
+        "H": 5,
         "R": 0,
         "ER": 0,
-        "BB": 4,
+        "BB": 0,
         "K": 3,
-        "HR": 0,
-        "IP": 3.2
+        "HR": 1,
+        "IP": 2.2
       }
     ]
   },
   "decisions": {
     "W": "isaac-friedel",
     "L": "pieter-vanvleuten",
-    "SV": null
+    "SV": "devin-marsh"
   },
-  "notes": [],
-  "calibration": "glb.stats-calibrated.v1"
+  "notes": []
 }

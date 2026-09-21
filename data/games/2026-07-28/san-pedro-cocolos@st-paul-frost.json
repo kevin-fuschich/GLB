@@ -11,7 +11,7 @@
     "name": "St. Paul Frost"
   },
   "status": "Final",
-  "attendance": 23684,
+  "attendance": 26381,
   "linescore": {
     "innings": [
       {
@@ -22,7 +22,7 @@
       {
         "inning": 2,
         "away": 0,
-        "home": 1
+        "home": 0
       },
       {
         "inning": 3,
@@ -37,7 +37,7 @@
       {
         "inning": 5,
         "away": 0,
-        "home": 0
+        "home": 1
       },
       {
         "inning": 6,
@@ -63,13 +63,13 @@
     "totals": {
       "away": {
         "R": 0,
-        "H": 6,
-        "E": 1
+        "H": 12,
+        "E": 2
       },
       "home": {
         "R": 2,
-        "H": 4,
-        "E": 0
+        "H": 10,
+        "E": 2
       }
     }
   },
@@ -83,14 +83,14 @@
         "player": "matias-serey",
         "name": "Matías Serey",
         "position": "C",
-        "AB": 5,
+        "AB": 3,
         "R": 0,
-        "H": 3,
+        "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
-        "BB": 2,
-        "K": 0,
+        "BB": 0,
+        "K": 2,
         "HR": 0,
         "SB": 0
       },
@@ -98,14 +98,14 @@
         "player": "caleb-vanhoorn",
         "name": "Caleb VanHoorn",
         "position": "1B",
-        "AB": 4,
+        "AB": 5,
         "R": 0,
-        "H": 0,
+        "H": 2,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
-        "BB": 1,
-        "K": 0,
+        "BB": 0,
+        "K": 2,
         "HR": 0,
         "SB": 0
       },
@@ -115,12 +115,12 @@
         "position": "2B",
         "AB": 5,
         "R": 0,
-        "H": 2,
+        "H": 3,
         "2B": 1,
         "3B": 0,
         "RBI": 0,
-        "BB": 0,
-        "K": 2,
+        "BB": 1,
+        "K": 0,
         "HR": 0,
         "SB": 0
       },
@@ -128,22 +128,22 @@
         "player": "ryo-kawabata",
         "name": "Ryo Kawabata",
         "position": "SS",
-        "AB": 3,
+        "AB": 4,
         "R": 0,
-        "H": 0,
-        "2B": 0,
+        "H": 1,
+        "2B": 1,
         "3B": 0,
         "RBI": 0,
-        "BB": 0,
+        "BB": 2,
         "K": 2,
         "HR": 0,
-        "SB": 1
+        "SB": 0
       },
       {
         "player": "darius-kofi",
         "name": "Darius Kofi",
         "position": "3B",
-        "AB": 3,
+        "AB": 5,
         "R": 0,
         "H": 0,
         "2B": 0,
@@ -164,10 +164,10 @@
         "2B": 0,
         "3B": 0,
         "RBI": 0,
-        "BB": 2,
-        "K": 1,
+        "BB": 1,
+        "K": 0,
         "HR": 0,
-        "SB": 1
+        "SB": 0
       },
       {
         "player": "victor-sundqvist",
@@ -175,11 +175,11 @@
         "position": "LF",
         "AB": 5,
         "R": 0,
-        "H": 0,
+        "H": 4,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
-        "BB": 0,
+        "BB": 1,
         "K": 1,
         "HR": 0,
         "SB": 0
@@ -188,14 +188,14 @@
         "player": "naveen-iyer",
         "name": "Naveen Iyer",
         "position": "RF",
-        "AB": 4,
+        "AB": 5,
         "R": 0,
         "H": 0,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
         "BB": 0,
-        "K": 2,
+        "K": 1,
         "HR": 0,
         "SB": 0
       }
@@ -205,9 +205,9 @@
         "player": "evan-morrissey",
         "name": "Evan Morrissey",
         "position": "C",
-        "AB": 5,
+        "AB": 4,
         "R": 0,
-        "H": 1,
+        "H": 0,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
@@ -220,14 +220,14 @@
         "player": "javier-lucero",
         "name": "Javier Lucero",
         "position": "1B",
-        "AB": 4,
+        "AB": 5,
         "R": 0,
-        "H": 0,
-        "2B": 0,
+        "H": 3,
+        "2B": 1,
         "3B": 0,
-        "RBI": 1,
-        "BB": 0,
-        "K": 2,
+        "RBI": 0,
+        "BB": 1,
+        "K": 1,
         "HR": 0,
         "SB": 0
       },
@@ -235,29 +235,29 @@
         "player": "owen-hartnell",
         "name": "Owen Hartnell",
         "position": "2B",
-        "AB": 4,
-        "R": 2,
-        "H": 1,
+        "AB": 3,
+        "R": 0,
+        "H": 2,
         "2B": 0,
         "3B": 0,
-        "RBI": 1,
-        "BB": 0,
+        "RBI": 0,
+        "BB": 1,
         "K": 1,
-        "HR": 1,
+        "HR": 0,
         "SB": 0
       },
       {
         "player": "masato-kobori",
         "name": "Masato Kobori",
         "position": "SS",
-        "AB": 5,
+        "AB": 3,
         "R": 0,
-        "H": 0,
+        "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
         "BB": 0,
-        "K": 0,
+        "K": 2,
         "HR": 0,
         "SB": 0
       },
@@ -265,14 +265,14 @@
         "player": "trevor-yates",
         "name": "Trevor Yates",
         "position": "3B",
-        "AB": 5,
+        "AB": 3,
         "R": 0,
         "H": 0,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
-        "BB": 0,
-        "K": 2,
+        "BB": 1,
+        "K": 1,
         "HR": 0,
         "SB": 0
       },
@@ -281,14 +281,14 @@
         "name": "Malik Jefferson",
         "position": "CF",
         "AB": 4,
-        "R": 0,
-        "H": 1,
+        "R": 1,
+        "H": 2,
         "2B": 0,
         "3B": 0,
-        "RBI": 0,
-        "BB": 0,
+        "RBI": 1,
+        "BB": 1,
         "K": 1,
-        "HR": 0,
+        "HR": 1,
         "SB": 0
       },
       {
@@ -296,28 +296,28 @@
         "name": "Rodrigo Fuentes",
         "position": "LF",
         "AB": 5,
-        "R": 0,
-        "H": 0,
+        "R": 1,
+        "H": 2,
         "2B": 0,
         "3B": 0,
-        "RBI": 0,
+        "RBI": 1,
         "BB": 1,
         "K": 0,
-        "HR": 0,
+        "HR": 1,
         "SB": 0
       },
       {
         "player": "jake-lanier",
         "name": "Jake Lanier",
         "position": "RF",
-        "AB": 3,
+        "AB": 5,
         "R": 0,
-        "H": 1,
+        "H": 0,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
         "BB": 0,
-        "K": 0,
+        "K": 3,
         "HR": 0,
         "SB": 0
       }
@@ -328,60 +328,59 @@
       {
         "player": "ivo-korolenko",
         "name": "Ivo Korolenko",
-        "IP_outs": 20,
-        "H": 1,
+        "IP_outs": 19,
+        "H": 4,
         "R": 1,
         "ER": 1,
-        "BB": 0,
-        "K": 5,
-        "HR": 0,
-        "IP": 6.2
+        "BB": 1,
+        "K": 7,
+        "HR": 2,
+        "IP": 6.1
       },
       {
         "player": "isaac-rendell",
         "name": "Isaac Rendell",
-        "IP_outs": 7,
-        "H": 3,
+        "IP_outs": 8,
+        "H": 6,
         "R": 1,
         "ER": 1,
-        "BB": 1,
-        "K": 2,
-        "HR": 1,
-        "IP": 2.1
+        "BB": 4,
+        "K": 3,
+        "HR": 0,
+        "IP": 2.2
       }
     ],
     "home": [
       {
         "player": "caleb-warnock",
         "name": "Caleb Warnock",
-        "IP_outs": 21,
-        "H": 0,
+        "IP_outs": 17,
+        "H": 11,
         "R": 0,
         "ER": 0,
-        "BB": 5,
-        "K": 7,
+        "BB": 4,
+        "K": 6,
         "HR": 0,
-        "IP": 7
+        "IP": 5.2
       },
       {
         "player": "lukas-horvat",
         "name": "Lukáš Horvat",
-        "IP_outs": 6,
-        "H": 6,
+        "IP_outs": 10,
+        "H": 1,
         "R": 0,
         "ER": 0,
-        "BB": 0,
-        "K": 2,
+        "BB": 1,
+        "K": 3,
         "HR": 0,
-        "IP": 2
+        "IP": 3.1
       }
     ]
   },
   "decisions": {
     "W": "caleb-warnock",
     "L": "ivo-korolenko",
-    "SV": null
+    "SV": "lukas-horvat"
   },
-  "notes": [],
-  "calibration": "glb.stats-calibrated.v1"
+  "notes": []
 }

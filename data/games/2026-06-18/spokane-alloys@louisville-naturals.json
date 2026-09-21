@@ -11,65 +11,65 @@
     "name": "Louisville Naturals"
   },
   "status": "Final",
-  "attendance": 19707,
+  "attendance": 14624,
   "linescore": {
     "innings": [
       {
         "inning": 1,
-        "away": 0,
-        "home": 0
+        "away": 1,
+        "home": 1
       },
       {
         "inning": 2,
-        "away": 1,
-        "home": 0
-      },
-      {
-        "inning": 3,
-        "away": 0,
-        "home": 0
-      },
-      {
-        "inning": 4,
         "away": 0,
         "home": 2
       },
       {
-        "inning": 5,
+        "inning": 3,
         "away": 1,
+        "home": 0
+      },
+      {
+        "inning": 4,
+        "away": 1,
+        "home": 0
+      },
+      {
+        "inning": 5,
+        "away": 0,
         "home": 0
       },
       {
         "inning": 6,
         "away": 0,
-        "home": 1
+        "home": 0
       },
       {
         "inning": 7,
-        "away": 2,
+        "away": 1,
         "home": 0
       },
       {
         "inning": 8,
-        "away": 1,
+        "away": 0,
         "home": 1
       },
       {
         "inning": 9,
-        "away": 0,
+        "away": 1,
         "home": 0
       }
     ],
     "totals": {
       "away": {
         "R": 5,
-        "H": 5,
-        "E": 2
+        "H": 7,
+        "E": 0
       },
       "home": {
         "R": 4,
-        "H": 4,
-        "E": 1
+        "H": 9,
+        "E": 2
       }
     }
   },
@@ -83,44 +83,44 @@
         "player": "nikolai-dobrynin",
         "name": "Nikolai Dobrynin",
         "position": "C",
-        "AB": 5,
-        "R": 1,
-        "H": 0,
+        "AB": 3,
+        "R": 2,
+        "H": 3,
         "2B": 0,
         "3B": 0,
-        "RBI": 0,
-        "BB": 0,
-        "K": 2,
-        "HR": 0,
-        "SB": 0
+        "RBI": 1,
+        "BB": 1,
+        "K": 0,
+        "HR": 1,
+        "SB": 1
       },
       {
         "player": "evan-carroll-iv",
         "name": "Evan Carroll IV",
         "position": "1B",
-        "AB": 4,
+        "AB": 3,
         "R": 0,
-        "H": 0,
+        "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
-        "BB": 1,
-        "K": 2,
+        "BB": 0,
+        "K": 0,
         "HR": 0,
-        "SB": 1
+        "SB": 0
       },
       {
         "player": "marco-delvecchio",
         "name": "Marco DelVecchio",
         "position": "2B",
-        "AB": 4,
+        "AB": 5,
         "R": 0,
-        "H": 0,
+        "H": 2,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
         "BB": 0,
-        "K": 1,
+        "K": 0,
         "HR": 0,
         "SB": 0
       },
@@ -129,11 +129,11 @@
         "name": "Tomasz Kubas",
         "position": "SS",
         "AB": 3,
-        "R": 1,
-        "H": 1,
+        "R": 0,
+        "H": 0,
         "2B": 0,
         "3B": 0,
-        "RBI": 1,
+        "RBI": 0,
         "BB": 0,
         "K": 0,
         "HR": 0,
@@ -150,7 +150,7 @@
         "3B": 0,
         "RBI": 0,
         "BB": 0,
-        "K": 2,
+        "K": 3,
         "HR": 0,
         "SB": 0
       },
@@ -160,11 +160,11 @@
         "position": "CF",
         "AB": 5,
         "R": 0,
-        "H": 1,
-        "2B": 1,
+        "H": 0,
+        "2B": 0,
         "3B": 0,
-        "RBI": 0,
-        "BB": 0,
+        "RBI": 3,
+        "BB": 1,
         "K": 2,
         "HR": 0,
         "SB": 0
@@ -173,15 +173,15 @@
         "player": "luis-quinones",
         "name": "Luis Quiñones",
         "position": "LF",
-        "AB": 5,
+        "AB": 4,
         "R": 1,
-        "H": 2,
+        "H": 0,
         "2B": 0,
         "3B": 0,
         "RBI": 1,
         "BB": 0,
-        "K": 0,
-        "HR": 1,
+        "K": 1,
+        "HR": 0,
         "SB": 0
       },
       {
@@ -193,9 +193,9 @@
         "H": 0,
         "2B": 0,
         "3B": 0,
-        "RBI": 3,
+        "RBI": 0,
         "BB": 0,
-        "K": 0,
+        "K": 3,
         "HR": 0,
         "SB": 0
       }
@@ -205,29 +205,29 @@
         "player": "noah-bianchi",
         "name": "Noah Bianchi",
         "position": "C",
-        "AB": 5,
+        "AB": 3,
         "R": 1,
-        "H": 2,
+        "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 1,
         "BB": 0,
-        "K": 1,
-        "HR": 1,
+        "K": 2,
+        "HR": 0,
         "SB": 0
       },
       {
         "player": "mateo-fernandez",
         "name": "Mateo Fernández",
         "position": "1B",
-        "AB": 3,
+        "AB": 4,
         "R": 0,
         "H": 1,
-        "2B": 1,
+        "2B": 0,
         "3B": 0,
         "RBI": 0,
         "BB": 0,
-        "K": 2,
+        "K": 1,
         "HR": 0,
         "SB": 0
       },
@@ -237,12 +237,12 @@
         "position": "2B",
         "AB": 3,
         "R": 0,
-        "H": 0,
+        "H": 1,
         "2B": 0,
         "3B": 0,
-        "RBI": 0,
+        "RBI": 2,
         "BB": 0,
-        "K": 1,
+        "K": 0,
         "HR": 0,
         "SB": 0
       },
@@ -250,14 +250,14 @@
         "player": "rafael-costa",
         "name": "Rafael Costa",
         "position": "SS",
-        "AB": 3,
+        "AB": 5,
         "R": 0,
         "H": 0,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
-        "BB": 1,
-        "K": 1,
+        "BB": 0,
+        "K": 0,
         "HR": 0,
         "SB": 0
       },
@@ -267,42 +267,42 @@
         "position": "3B",
         "AB": 5,
         "R": 1,
-        "H": 1,
-        "2B": 0,
+        "H": 2,
+        "2B": 1,
         "3B": 0,
         "RBI": 1,
         "BB": 0,
-        "K": 0,
-        "HR": 0,
-        "SB": 1
+        "K": 3,
+        "HR": 1,
+        "SB": 0
       },
       {
         "player": "andre-wallace",
         "name": "Andre Wallace",
         "position": "CF",
         "AB": 4,
-        "R": 1,
-        "H": 0,
+        "R": 0,
+        "H": 2,
         "2B": 0,
         "3B": 0,
-        "RBI": 1,
-        "BB": 0,
+        "RBI": 0,
+        "BB": 1,
         "K": 0,
         "HR": 0,
-        "SB": 0
+        "SB": 2
       },
       {
         "player": "tomas-rivas",
         "name": "Tomás Rivas",
         "position": "LF",
-        "AB": 5,
+        "AB": 3,
         "R": 1,
-        "H": 0,
+        "H": 1,
         "2B": 0,
         "3B": 0,
-        "RBI": 1,
-        "BB": 0,
-        "K": 1,
+        "RBI": 0,
+        "BB": 1,
+        "K": 0,
         "HR": 0,
         "SB": 0
       },
@@ -310,14 +310,14 @@
         "player": "blake-harrison",
         "name": "Blake Harrison",
         "position": "RF",
-        "AB": 4,
-        "R": 0,
-        "H": 0,
-        "2B": 0,
+        "AB": 3,
+        "R": 1,
+        "H": 1,
+        "2B": 1,
         "3B": 0,
         "RBI": 0,
         "BB": 0,
-        "K": 0,
+        "K": 1,
         "HR": 0,
         "SB": 0
       }
@@ -328,60 +328,59 @@
       {
         "player": "oskar-svanholm",
         "name": "Oskar Svanholm",
-        "IP_outs": 20,
-        "H": 1,
-        "R": 4,
-        "ER": 4,
+        "IP_outs": 21,
+        "H": 0,
+        "R": 1,
+        "ER": 1,
         "BB": 0,
-        "K": 4,
+        "K": 5,
         "HR": 1,
-        "IP": 6.2
+        "IP": 7
       },
       {
         "player": "sergio-ibarra-lugo",
         "name": "Sergio Ibarra Lugo",
-        "IP_outs": 7,
-        "H": 3,
-        "R": 0,
-        "ER": 0,
-        "BB": 1,
+        "IP_outs": 6,
+        "H": 9,
+        "R": 3,
+        "ER": 3,
+        "BB": 2,
         "K": 2,
         "HR": 0,
-        "IP": 2.1
+        "IP": 2
       }
     ],
     "home": [
       {
-        "player": "gabriel-ionescu",
-        "name": "Gabriel Ionescu",
-        "IP_outs": 19,
-        "H": 2,
-        "R": 5,
-        "ER": 5,
-        "BB": 0,
-        "K": 7,
+        "player": "mateo-alvarez",
+        "name": "Mateo Álvarez",
+        "IP_outs": 16,
+        "H": 6,
+        "R": 4,
+        "ER": 4,
+        "BB": 2,
+        "K": 6,
         "HR": 1,
-        "IP": 6.1
+        "IP": 5.1
       },
       {
-        "player": "evan-sutter",
-        "name": "Evan Sutter",
-        "IP_outs": 8,
-        "H": 3,
-        "R": 0,
-        "ER": 0,
-        "BB": 1,
-        "K": 2,
+        "player": "luis-delgado",
+        "name": "Luis Delgado",
+        "IP_outs": 11,
+        "H": 1,
+        "R": 1,
+        "ER": 1,
+        "BB": 0,
+        "K": 3,
         "HR": 0,
-        "IP": 2.2
+        "IP": 3.2
       }
     ]
   },
   "decisions": {
     "W": "oskar-svanholm",
-    "L": "gabriel-ionescu",
-    "SV": null
+    "L": "mateo-alvarez",
+    "SV": "sergio-ibarra-lugo"
   },
-  "notes": [],
-  "calibration": "glb.stats-calibrated.v1"
+  "notes": []
 }

@@ -11,7 +11,7 @@
     "name": "Taipei Neon"
   },
   "status": "Final",
-  "attendance": 16468,
+  "attendance": 30274,
   "linescore": {
     "innings": [
       {
@@ -21,7 +21,7 @@
       },
       {
         "inning": 2,
-        "away": 0,
+        "away": 2,
         "home": 0
       },
       {
@@ -36,17 +36,17 @@
       },
       {
         "inning": 5,
-        "away": 2,
+        "away": 0,
         "home": 0
       },
       {
         "inning": 6,
-        "away": 1,
+        "away": 0,
         "home": 0
       },
       {
         "inning": 7,
-        "away": 0,
+        "away": 1,
         "home": 0
       },
       {
@@ -63,13 +63,13 @@
     "totals": {
       "away": {
         "R": 3,
-        "H": 9,
+        "H": 10,
         "E": 1
       },
       "home": {
         "R": 0,
-        "H": 6,
-        "E": 0
+        "H": 8,
+        "E": 2
       }
     }
   },
@@ -83,44 +83,44 @@
         "player": "tomer-barzilai",
         "name": "Tomer Barzilai",
         "position": "C",
-        "AB": 4,
-        "R": 0,
-        "H": 0,
+        "AB": 5,
+        "R": 1,
+        "H": 2,
         "2B": 0,
         "3B": 0,
-        "RBI": 0,
+        "RBI": 1,
         "BB": 0,
-        "K": 2,
-        "HR": 0,
+        "K": 0,
+        "HR": 1,
         "SB": 0
       },
       {
         "player": "enzo-carvajal",
         "name": "Enzo Carvajal",
         "position": "1B",
-        "AB": 3,
+        "AB": 4,
         "R": 0,
-        "H": 1,
+        "H": 3,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
-        "BB": 0,
+        "BB": 1,
         "K": 0,
         "HR": 0,
-        "SB": 0
+        "SB": 1
       },
       {
         "player": "nils-adebayo",
         "name": "Nils Adebayo",
         "position": "2B",
-        "AB": 5,
+        "AB": 4,
         "R": 1,
         "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 1,
         "BB": 1,
-        "K": 2,
+        "K": 1,
         "HR": 1,
         "SB": 0
       },
@@ -130,12 +130,12 @@
         "position": "SS",
         "AB": 4,
         "R": 0,
-        "H": 2,
+        "H": 1,
         "2B": 1,
         "3B": 0,
         "RBI": 0,
         "BB": 1,
-        "K": 0,
+        "K": 1,
         "HR": 0,
         "SB": 0
       },
@@ -146,49 +146,49 @@
         "AB": 5,
         "R": 0,
         "H": 1,
-        "2B": 1,
+        "2B": 0,
         "3B": 0,
         "RBI": 0,
-        "BB": 0,
-        "K": 1,
+        "BB": 1,
+        "K": 4,
         "HR": 0,
-        "SB": 1
+        "SB": 0
       },
       {
         "player": "malik-doumbia",
         "name": "Malik Doumbia",
         "position": "LF",
         "AB": 3,
-        "R": 0,
+        "R": 1,
         "H": 1,
         "2B": 0,
         "3B": 0,
-        "RBI": 0,
-        "BB": 2,
+        "RBI": 1,
+        "BB": 0,
         "K": 1,
-        "HR": 0,
+        "HR": 1,
         "SB": 0
       },
       {
         "player": "cesar-iglesiarias",
         "name": "César Iglesiarias",
         "position": "CF",
-        "AB": 3,
-        "R": 2,
-        "H": 2,
+        "AB": 4,
+        "R": 0,
+        "H": 0,
         "2B": 0,
         "3B": 0,
-        "RBI": 2,
-        "BB": 0,
+        "RBI": 0,
+        "BB": 1,
         "K": 1,
-        "HR": 2,
+        "HR": 0,
         "SB": 0
       },
       {
         "player": "ari-kasprzyk",
         "name": "Ari Kasprzyk",
         "position": "RF",
-        "AB": 3,
+        "AB": 4,
         "R": 0,
         "H": 1,
         "2B": 0,
@@ -197,7 +197,7 @@
         "BB": 0,
         "K": 0,
         "HR": 0,
-        "SB": 0
+        "SB": 1
       }
     ],
     "home": [
@@ -205,14 +205,14 @@
         "player": "kaito-ueda",
         "name": "Kaito Ueda",
         "position": "CF",
-        "AB": 5,
+        "AB": 3,
         "R": 0,
-        "H": 0,
-        "2B": 0,
+        "H": 1,
+        "2B": 1,
         "3B": 0,
         "RBI": 0,
         "BB": 0,
-        "K": 1,
+        "K": 2,
         "HR": 0,
         "SB": 0
       },
@@ -226,7 +226,7 @@
         "2B": 0,
         "3B": 0,
         "RBI": 0,
-        "BB": 0,
+        "BB": 2,
         "K": 1,
         "HR": 0,
         "SB": 0
@@ -235,16 +235,16 @@
         "player": "martin-echevarria",
         "name": "Martín Echevarría",
         "position": "1B",
-        "AB": 5,
+        "AB": 3,
         "R": 0,
-        "H": 1,
+        "H": 2,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
         "BB": 0,
         "K": 0,
         "HR": 0,
-        "SB": 1
+        "SB": 0
       },
       {
         "player": "dariusz-wierzbik",
@@ -257,7 +257,7 @@
         "3B": 0,
         "RBI": 0,
         "BB": 0,
-        "K": 0,
+        "K": 1,
         "HR": 0,
         "SB": 0
       },
@@ -265,24 +265,9 @@
         "player": "adebayo-olumide",
         "name": "Adebayo Olumide",
         "position": "3B",
-        "AB": 5,
+        "AB": 3,
         "R": 0,
-        "H": 2,
-        "2B": 0,
-        "3B": 0,
-        "RBI": 0,
-        "BB": 0,
-        "K": 1,
-        "HR": 0,
-        "SB": 0
-      },
-      {
-        "player": "owen-rasmusson",
-        "name": "Owen Rasmusson",
-        "position": "C",
-        "AB": 4,
-        "R": 0,
-        "H": 2,
+        "H": 1,
         "2B": 1,
         "3B": 0,
         "RBI": 0,
@@ -292,12 +277,12 @@
         "SB": 0
       },
       {
-        "player": "eric-lawson",
-        "name": "Eric Lawson",
-        "position": "LF",
-        "AB": 5,
+        "player": "owen-rasmusson",
+        "name": "Owen Rasmusson",
+        "position": "C",
+        "AB": 3,
         "R": 0,
-        "H": 0,
+        "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
@@ -307,16 +292,31 @@
         "SB": 0
       },
       {
+        "player": "eric-lawson",
+        "name": "Eric Lawson",
+        "position": "LF",
+        "AB": 4,
+        "R": 0,
+        "H": 1,
+        "2B": 0,
+        "3B": 0,
+        "RBI": 0,
+        "BB": 0,
+        "K": 1,
+        "HR": 0,
+        "SB": 1
+      },
+      {
         "player": "jose-ramirez-tpe",
         "name": "Jose Ramirez",
         "position": "RF",
         "AB": 4,
         "R": 0,
-        "H": 1,
+        "H": 2,
         "2B": 1,
         "3B": 0,
         "RBI": 0,
-        "BB": 1,
+        "BB": 0,
         "K": 0,
         "HR": 0,
         "SB": 0
@@ -331,10 +331,10 @@
         "2B": 0,
         "3B": 0,
         "RBI": 0,
-        "BB": 0,
-        "K": 0,
+        "BB": 1,
+        "K": 2,
         "HR": 0,
-        "SB": 0
+        "SB": 1
       }
     ]
   },
@@ -343,60 +343,59 @@
       {
         "player": "dario-vukovic",
         "name": "Dario Vukovic",
-        "IP_outs": 18,
-        "H": 1,
+        "IP_outs": 16,
+        "H": 5,
         "R": 0,
         "ER": 0,
-        "BB": 0,
-        "K": 4,
+        "BB": 3,
+        "K": 7,
         "HR": 0,
-        "IP": 6
+        "IP": 5.1
       },
       {
         "player": "tomasz-wierzbicki",
         "name": "Tomasz Wierzbicki",
-        "IP_outs": 9,
-        "H": 5,
+        "IP_outs": 11,
+        "H": 3,
         "R": 0,
         "ER": 0,
-        "BB": 1,
-        "K": 1,
+        "BB": 0,
+        "K": 2,
         "HR": 0,
-        "IP": 3
+        "IP": 3.2
       }
     ],
     "home": [
       {
         "player": "eitan-ben-sasson",
         "name": "Eitan Ben-Sasson",
-        "IP_outs": 21,
-        "H": 9,
+        "IP_outs": 19,
+        "H": 2,
         "R": 2,
         "ER": 2,
-        "BB": 1,
-        "K": 4,
-        "HR": 2,
-        "IP": 7
+        "BB": 3,
+        "K": 6,
+        "HR": 0,
+        "IP": 6.1
       },
       {
         "player": "idris-el-amin",
         "name": "Idris El-Amin",
-        "IP_outs": 6,
-        "H": 0,
+        "IP_outs": 8,
+        "H": 8,
         "R": 1,
         "ER": 1,
-        "BB": 3,
-        "K": 3,
-        "HR": 1,
-        "IP": 2
+        "BB": 2,
+        "K": 2,
+        "HR": 3,
+        "IP": 2.2
       }
     ]
   },
   "decisions": {
     "W": "dario-vukovic",
     "L": "eitan-ben-sasson",
-    "SV": null
+    "SV": "tomasz-wierzbicki"
   },
-  "notes": [],
-  "calibration": "glb.stats-calibrated.v1"
+  "notes": []
 }

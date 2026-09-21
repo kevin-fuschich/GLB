@@ -1,0 +1,50 @@
+name: Rebuild Corrected Season
+
+on:
+  push:
+    branches:
+      - fix-vancouver-canon
+    paths:
+      - .github/workflows/rebuild-corrected-season.yml
+
+permissions:
+  contents: write
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out correction branch
+        uses: actions/checkout@v4
+        with:
+          ref: fix-vancouver-canon
+          fetch-depth: 0
+
+      - name: Preserve locked Opening Day and clear simulated season
+        run: |
+          find data/games -mindepth 1 -maxdepth 1 -type d ! -name '2026-04-08' -exec rm -rf {} +
+          rm -f data/season/generated-schedule.json
+          rm -f data/season/games.json
+          rm -f data/season/player-stats.json
+          rm -f current/standings.json
+          rm -f current/leaders.json
+
+      - name: Rebuild through 143 games per club
+        run: |
+          node tools/generate-season.js
+          node tools/backfill-season.js --target-games 143 --start-date 2026-04-09
+
+      - name: Validate corrected snapshot
+        run: node tools/validate-season-snapshot.js
+
+      - name: Commit corrected season
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data current
+          if git diff --cached --quiet; then
+            echo "No season changes to commit."
+            exit 0
+          fi
+          git commit -m "Rebuild season with corrected Vancouver roster"
+          git push origin HEAD:fix-vancouver-canon

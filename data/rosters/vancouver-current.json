@@ -1,149 +1,112 @@
 {
   "team": "Vancouver Current",
+  "coaching_staff": [
+    {
+      "role": "Manager",
+      "name": "Graham Holloway",
+      "birthplace": "Vancouver, British Columbia, Canada"
+    },
+    {
+      "role": "Pitching Coach",
+      "name": "Alejandro Fierro",
+      "birthplace": "Hermosillo, Sonora, Mexico"
+    },
+    {
+      "role": "Hitting Coach",
+      "name": "Sean McLeod",
+      "birthplace": "Victoria, British Columbia, Canada"
+    }
+  ],
   "players": [
     {
-      "name": "Iseul Kang",
-      "slug": "iseul-kang",
-      "position": "SP",
-      "bats": "R",
-      "throws": "R",
-      "age": 27,
-      "photo": "iseul-kang.jpg"
-    },
-    {
-      "name": "Dane Winslow",
-      "slug": "dane-winslow",
-      "position": "SP",
-      "bats": "L",
-      "throws": "L",
-      "age": 30,
-      "photo": "dane-winslow.jpg"
-    },
-    {
-      "name": "Maksim Zorya",
-      "slug": "maksim-zorya",
-      "position": "SP",
-      "bats": "R",
-      "throws": "R",
-      "age": 25,
-      "photo": "maksim-zorya.jpg"
-    },
-    {
-      "name": "Raine Talukder",
-      "slug": "raine-talukder",
-      "position": "SP",
-      "bats": "R",
-      "throws": "L",
-      "age": 29,
-      "photo": "raine-talukder.jpg"
-    },
-    {
-      "name": "Emilio Córdoba",
-      "slug": "emilio-cordoba",
-      "position": "SP",
-      "bats": "L",
-      "throws": "L",
-      "age": 26,
-      "photo": "emilio-cordoba.jpg"
-    },
-    {
-      "name": "Kofi Ansah",
-      "slug": "kofi-ansah",
-      "position": "RP",
-      "bats": "R",
-      "throws": "R",
-      "age": 28,
-      "photo": "kofi-ansah.jpg"
-    },
-    {
-      "name": "Nico Penfold",
-      "slug": "nico-penfold",
-      "position": "RP",
-      "bats": "L",
-      "throws": "R",
-      "age": 24,
-      "photo": "nico-penfold.jpg"
-    },
-    {
-      "name": "Yohei Arakida",
-      "slug": "yohei-arakida",
-      "position": "RP",
-      "bats": "R",
-      "throws": "R",
-      "age": 31,
-      "photo": "yohei-arakida.jpg"
-    },
-    {
-      "name": "Silas Boudreau",
-      "slug": "silas-boudreau",
+      "name": "Ryan McAllister",
+      "slug": "ryan-mcallister",
       "position": "C",
-      "bats": "R",
-      "throws": "R",
-      "age": 29,
-      "photo": "silas-boudreau.jpg"
+      "birthplace": "Surrey, British Columbia, Canada"
     },
     {
-      "name": "Eamon Kerr",
-      "slug": "eamon-kerr",
+      "name": "Julio Paredes",
+      "slug": "julio-paredes",
       "position": "1B",
-      "bats": "L",
-      "throws": "R",
-      "age": 32,
-      "photo": "eamon-kerr.jpg"
+      "birthplace": "Caracas, Venezuela"
     },
     {
-      "name": "Soraya Jafari",
-      "slug": "soraya-jafari",
+      "name": "Jae-hyun Lee",
+      "slug": "jae-hyun-lee",
       "position": "2B",
-      "bats": "S",
-      "throws": "R",
-      "age": 26,
-      "photo": "soraya-jafari.jpg"
+      "birthplace": "Seoul, South Korea"
     },
     {
-      "name": "Alejo Santillán",
-      "slug": "alejo-santillan",
-      "position": "SS",
-      "bats": "R",
-      "throws": "R",
-      "age": 23,
-      "photo": "alejo-santillan.jpg"
-    },
-    {
-      "name": "Roman Velasco",
-      "slug": "roman-velasco",
+      "name": "Tomás Guerrero",
+      "slug": "tomas-guerrero",
       "position": "3B",
-      "bats": "R",
-      "throws": "R",
-      "age": 28,
-      "photo": "roman-velasco.jpg"
+      "birthplace": "Guadalajara, Jalisco, Mexico"
     },
     {
-      "name": "Taj Adelman",
-      "slug": "taj-adelman",
+      "name": "Nicolás Rojas",
+      "slug": "nicolas-rojas",
+      "position": "SS",
+      "birthplace": "Valparaíso, Chile"
+    },
+    {
+      "name": "Connor Walsh",
+      "slug": "connor-walsh",
       "position": "LF",
-      "bats": "L",
-      "throws": "L",
-      "age": 27,
-      "photo": "taj-adelman.jpg"
+      "birthplace": "Burnaby, British Columbia, Canada"
     },
     {
-      "name": "Marcell Lind",
-      "slug": "marcell-lind",
+      "name": "Miguel Soto",
+      "slug": "miguel-soto",
       "position": "CF",
-      "bats": "R",
-      "throws": "R",
-      "age": 25,
-      "photo": "marcell-lind.jpg"
+      "birthplace": "San Juan, Puerto Rico"
     },
     {
-      "name": "Oziel Narváez",
-      "slug": "oziel-narvaez",
+      "name": "Kazuya Nishimura",
+      "slug": "kazuya-nishimura",
       "position": "RF",
-      "bats": "R",
-      "throws": "R",
-      "age": 30,
-      "photo": "oziel-narvaez.jpg"
+      "birthplace": "Osaka, Japan"
+    },
+    {
+      "name": "Evan Brooks",
+      "slug": "evan-brooks",
+      "position": "DH",
+      "birthplace": "Bellingham, Washington, USA"
+    },
+    {
+      "name": "Trevor Caldwell",
+      "slug": "trevor-caldwell",
+      "position": "SP",
+      "birthplace": "Kelowna, British Columbia, Canada"
+    },
+    {
+      "name": "Andrés Valdés",
+      "slug": "andres-valdes",
+      "position": "SP",
+      "birthplace": "Maracay, Venezuela"
+    },
+    {
+      "name": "Hiroto Yamane",
+      "slug": "hiroto-yamane",
+      "position": "SP",
+      "birthplace": "Hiroshima, Japan"
+    },
+    {
+      "name": "Carlos Medina",
+      "slug": "carlos-medina",
+      "position": "RP",
+      "birthplace": "Santiago, Dominican Republic"
+    },
+    {
+      "name": "Logan Price",
+      "slug": "logan-price",
+      "position": "RP",
+      "birthplace": "Kamloops, British Columbia, Canada"
+    },
+    {
+      "name": "Roberto Salazar",
+      "slug": "roberto-salazar",
+      "position": "CL",
+      "birthplace": "Mexicali, Baja California, Mexico"
     }
   ]
 }

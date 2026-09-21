@@ -6,6 +6,7 @@ on:
       - fix-vancouver-canon
     paths:
       - tools/calibrate-season.js
+      - .github/workflows/calibrate-corrected-season.yml
 
 permissions:
   contents: write

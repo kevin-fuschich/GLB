@@ -85,12 +85,12 @@
         "position": "C",
         "AB": 5,
         "R": 0,
-        "H": 2,
+        "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
         "BB": 0,
-        "K": 0,
+        "K": 1,
         "HR": 0,
         "SB": 0
       },
@@ -100,7 +100,7 @@
         "position": "1B",
         "AB": 5,
         "R": 0,
-        "H": 2,
+        "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
@@ -150,7 +150,7 @@
         "3B": 0,
         "RBI": 0,
         "BB": 0,
-        "K": 2,
+        "K": 1,
         "HR": 0,
         "SB": 0
       },
@@ -190,12 +190,12 @@
         "position": "RF",
         "AB": 4,
         "R": 0,
-        "H": 0,
+        "H": 2,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
         "BB": 0,
-        "K": 2,
+        "K": 1,
         "HR": 0,
         "SB": 0
       }
@@ -227,7 +227,7 @@
         "3B": 1,
         "RBI": 0,
         "BB": 1,
-        "K": 1,
+        "K": 0,
         "HR": 0,
         "SB": 1
       },
@@ -242,7 +242,7 @@
         "3B": 0,
         "RBI": 0,
         "BB": 0,
-        "K": 2,
+        "K": 1,
         "HR": 0,
         "SB": 0
       },
@@ -257,7 +257,7 @@
         "3B": 0,
         "RBI": 0,
         "BB": 1,
-        "K": 0,
+        "K": 3,
         "HR": 0,
         "SB": 0
       },
@@ -267,7 +267,7 @@
         "position": "3B",
         "AB": 4,
         "R": 0,
-        "H": 2,
+        "H": 1,
         "2B": 1,
         "3B": 0,
         "RBI": 0,
@@ -287,7 +287,7 @@
         "3B": 0,
         "RBI": 0,
         "BB": 0,
-        "K": 2,
+        "K": 0,
         "HR": 0,
         "SB": 1
       },
@@ -312,7 +312,7 @@
         "position": "RF",
         "AB": 4,
         "R": 0,
-        "H": 0,
+        "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
@@ -333,7 +333,7 @@
         "R": 0,
         "ER": 0,
         "BB": 2,
-        "K": 6,
+        "K": 5,
         "HR": 0,
         "IP": 7
       },
@@ -352,8 +352,8 @@
     ],
     "home": [
       {
-        "player": "silas-torgersen",
-        "name": "Silas Torgersen",
+        "player": "arinze-nwokoye",
+        "name": "Arinze Nwokoye",
         "IP_outs": 19,
         "H": 1,
         "R": 0,
@@ -364,14 +364,14 @@
         "IP": 6.1
       },
       {
-        "player": "dusan-marevic",
-        "name": "Dušan Marević",
+        "player": "mateo-azarcon",
+        "name": "Mateo Azarcón",
         "IP_outs": 8,
         "H": 10,
         "R": 1,
         "ER": 1,
         "BB": 1,
-        "K": 2,
+        "K": 1,
         "HR": 1,
         "IP": 2.2
       }
@@ -379,8 +379,9 @@
   },
   "decisions": {
     "W": "souleymane-diallo",
-    "L": "silas-torgersen",
+    "L": "arinze-nwokoye",
     "SV": "teo-arellano"
   },
-  "notes": []
+  "notes": [],
+  "calibration": "glb.stats-calibrated.v1"
 }

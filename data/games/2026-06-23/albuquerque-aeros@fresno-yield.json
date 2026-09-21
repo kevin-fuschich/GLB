@@ -90,7 +90,7 @@
         "3B": 0,
         "RBI": 0,
         "BB": 0,
-        "K": 0,
+        "K": 1,
         "HR": 0,
         "SB": 1
       },
@@ -99,14 +99,14 @@
         "name": "Tobias Vandenberg",
         "position": "1B",
         "AB": 5,
-        "R": 0,
+        "R": 1,
         "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 1,
         "BB": 0,
         "K": 0,
-        "HR": 0,
+        "HR": 1,
         "SB": 0
       },
       {
@@ -135,7 +135,7 @@
         "3B": 0,
         "RBI": 0,
         "BB": 1,
-        "K": 2,
+        "K": 0,
         "HR": 0,
         "SB": 0
       },
@@ -174,7 +174,7 @@
         "name": "Elior Ben-Ami",
         "position": "LF",
         "AB": 5,
-        "R": 1,
+        "R": 0,
         "H": 1,
         "2B": 1,
         "3B": 0,
@@ -195,7 +195,7 @@
         "3B": 0,
         "RBI": 0,
         "BB": 0,
-        "K": 2,
+        "K": 1,
         "HR": 0,
         "SB": 0
       }
@@ -207,12 +207,12 @@
         "position": "C",
         "AB": 5,
         "R": 0,
-        "H": 1,
+        "H": 3,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
         "BB": 1,
-        "K": 2,
+        "K": 0,
         "HR": 0,
         "SB": 0
       },
@@ -222,7 +222,7 @@
         "position": "1B",
         "AB": 4,
         "R": 0,
-        "H": 2,
+        "H": 1,
         "2B": 0,
         "3B": 0,
         "RBI": 0,
@@ -237,12 +237,12 @@
         "position": "2B",
         "AB": 3,
         "R": 2,
-        "H": 1,
+        "H": 2,
         "2B": 0,
         "3B": 0,
         "RBI": 1,
         "BB": 0,
-        "K": 1,
+        "K": 0,
         "HR": 1,
         "SB": 0
       },
@@ -257,7 +257,7 @@
         "3B": 0,
         "RBI": 0,
         "BB": 0,
-        "K": 0,
+        "K": 1,
         "HR": 0,
         "SB": 0
       },
@@ -267,12 +267,12 @@
         "position": "3B",
         "AB": 5,
         "R": 0,
-        "H": 2,
+        "H": 1,
         "2B": 1,
         "3B": 0,
         "RBI": 0,
         "BB": 0,
-        "K": 0,
+        "K": 1,
         "HR": 0,
         "SB": 0
       },
@@ -287,7 +287,7 @@
         "3B": 0,
         "RBI": 1,
         "BB": 0,
-        "K": 0,
+        "K": 1,
         "HR": 1,
         "SB": 0
       },
@@ -312,7 +312,7 @@
         "position": "RF",
         "AB": 3,
         "R": 0,
-        "H": 1,
+        "H": 0,
         "2B": 0,
         "3B": 0,
         "RBI": 1,
@@ -333,8 +333,8 @@
         "R": 3,
         "ER": 3,
         "BB": 1,
-        "K": 2,
-        "HR": 0,
+        "K": 3,
+        "HR": 2,
         "IP": 6.2
       },
       {
@@ -345,42 +345,43 @@
         "R": 0,
         "ER": 0,
         "BB": 1,
-        "K": 2,
-        "HR": 2,
+        "K": 1,
+        "HR": 0,
         "IP": 2.1
       }
     ],
     "home": [
       {
-        "player": "cedric-wainwright",
-        "name": "Cedric Wainwright",
+        "player": "roman-villasenor",
+        "name": "Román Villaseñor",
         "IP_outs": 15,
         "H": 3,
         "R": 1,
         "ER": 1,
         "BB": 0,
-        "K": 5,
+        "K": 3,
         "HR": 1,
         "IP": 5
       },
       {
-        "player": "ibrahim-koroma",
-        "name": "Ibrahim Koroma",
+        "player": "dusan-marevic",
+        "name": "Dušan Marević",
         "IP_outs": 12,
         "H": 6,
         "R": 1,
         "ER": 1,
         "BB": 1,
         "K": 2,
-        "HR": 0,
+        "HR": 1,
         "IP": 4
       }
     ]
   },
   "decisions": {
-    "W": "cedric-wainwright",
+    "W": "roman-villasenor",
     "L": "pieter-vanvleuten",
-    "SV": "ibrahim-koroma"
+    "SV": "dusan-marevic"
   },
-  "notes": []
+  "notes": [],
+  "calibration": "glb.stats-calibrated.v1"
 }

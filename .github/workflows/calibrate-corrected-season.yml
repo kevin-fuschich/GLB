@@ -1,0 +1,39 @@
+name: Calibrate Corrected Season
+
+on:
+  push:
+    branches:
+      - fix-vancouver-canon
+    paths:
+      - tools/calibrate-season.js
+
+permissions:
+  contents: write
+
+jobs:
+  calibrate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out correction branch
+        uses: actions/checkout@v4
+        with:
+          ref: fix-vancouver-canon
+          fetch-depth: 0
+
+      - name: Calibrate player lines
+        run: |
+          node tools/calibrate-season.js
+          node tools/rebuild-derived.js
+          node tools/validate-season-snapshot.js
+
+      - name: Commit calibrated season
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data current
+          if git diff --cached --quiet; then
+            echo "No calibration changes to commit."
+            exit 0
+          fi
+          git commit -m "Calibrate corrected season statistics"
+          git push origin HEAD:fix-vancouver-canon

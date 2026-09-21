@@ -10,7 +10,9 @@
 :root{
 --navy:#0b1e33;--navy2:#102843;--blue:#1d4f91;--border:#d9dee5;--bg:#f3f5f7;
 --card:#fff;--text:#111;--muted:#5f6b7a;--light:#dfe7f1;--alloys:#13283f;
---glass:#b9d8d0;--pale:#edf5f3;--max:1280px;
+--glass:#b9d8d0;--pale:#edf5f3;--max:1280px;--radius:14px;
+--font-sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+--font-serif:Georgia,"Times New Roman",serif;
 }
 
 *{box-sizing:border-box}
@@ -19,7 +21,8 @@ html,body{
 margin:0;
 background:var(--bg);
 color:var(--text);
-font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+font-family:var(--font-sans);
+-webkit-font-smoothing:antialiased;
 }
 
 img{display:block;max-width:100%}
@@ -58,17 +61,19 @@ align-items:center;
 }
 
 .brand-mark{
-font-weight:900;
+font-weight:800;
 font-size:24px;
 letter-spacing:1.4px;
+line-height:1;
 }
 
 .brand-sub,
 .header-meta{
 font-size:11px;
 text-transform:uppercase;
-letter-spacing:1px;
+letter-spacing:1.2px;
 color:var(--light);
+white-space:nowrap;
 }
 
 .nav-links{
@@ -80,7 +85,7 @@ flex:1;
 .nav-links a{
 padding:26px 16px 22px;
 font-size:13px;
-font-weight:700;
+font-weight:600;
 text-transform:uppercase;
 letter-spacing:.8px;
 border-bottom:4px solid transparent;
@@ -109,14 +114,17 @@ display:block;
 
 .mobile-menu a{
 display:block;
-padding:15px 20px;
+padding:16px 20px;
 border-top:1px solid #ffffff14;
 color:white;
-font-weight:700;
+font-size:13px;
+font-weight:600;
+text-transform:uppercase;
+letter-spacing:.8px;
 }
 
 .page{
-padding:28px 0 48px;
+padding:22px 0 48px;
 }
 
 .team-hero{
@@ -220,7 +228,7 @@ gap:22px;
 .card{
 background:var(--card);
 border:1px solid var(--border);
-border-radius:16px;
+border-radius:var(--radius);
 overflow:hidden;
 box-shadow:0 1px 2px #1018280a;
 }
@@ -393,18 +401,22 @@ padding:18px;
 background:#e9edf2;
 }
 
-.player-card{cursor:pointer;perspective:1000px;min-height:310px;}
+.player-card{
 position:relative;
 overflow:hidden;
 min-width:0;
+min-height:310px;
 border:1px solid #aeb9c6;
-border-radius:12px;
+border-radius:8px;
 background:linear-gradient(155deg,#162b43 0%,#0a1727 58%,#132d48 100%);
-box-shadow:0 5px 12px #0b1e3330, inset 0 1px 0 #ffffff20;
+box-shadow:0 5px 12px #0b1e3330,inset 0 1px 0 #ffffff20;
 color:#fff;
+cursor:pointer;
+perspective:1000px;
 }
 
- .player-card-back{display:none;}
+.player-card:focus-visible{outline:3px solid #7fb0ff;outline-offset:3px}
+.player-card-back{display:none;min-height:310px;}
 .player-card.flipped .player-card-front{display:none}.player-card.flipped .player-card-back{display:block}
 .player-card::after{
 content:"";
@@ -425,6 +437,7 @@ border-bottom:3px solid #ef8c32;
 .player-card-body{position:relative;z-index:1;padding:11px 12px 13px}
 .player-card-topline{display:flex;justify-content:space-between;gap:8px;color:#b9c8d8;font-size:9px;font-weight:850;letter-spacing:.8px;text-transform:uppercase}
 .player-card-name{margin:7px 0 3px;font-size:17px;line-height:1.05;color:#fff}
+.player-card-name a:hover{text-decoration:underline}
 .player-card-role{font-size:11px;color:#d1dce7}
 .card-claim{margin-top:14px;padding:8px 10px;border:1px solid #ef8c32;border-radius:7px;background:#ef8c32;color:#10243a;font-size:10px;font-weight:850;text-transform:uppercase;cursor:pointer}.card-claim:disabled{opacity:.7;cursor:default}.claim-status{min-height:14px;margin-top:8px;color:#f4c88f;font-size:10px;font-weight:750}
 .claim-form{display:grid;gap:8px;margin-top:12px;padding-top:10px;border-top:1px solid #ffffff24}.claim-form label{display:grid;gap:3px;color:#b9c8d8;font-size:9px;font-weight:800;text-transform:uppercase;letter-spacing:.5px}.claim-form input{width:100%;padding:7px;border:1px solid #ffffff35;border-radius:5px;background:#081628;color:#fff;font-size:11px}.claim-form button{padding:8px;border:0;border-radius:6px;background:#dfe7f1;color:#10243a;font-size:10px;font-weight:850;text-transform:uppercase}.player-card-meta{display:flex;gap:8px;margin-top:10px;padding-top:9px;border-top:1px solid #ffffff24;color:#b9c8d8;font-size:10px;font-weight:750;text-transform:uppercase;letter-spacing:.4px}
@@ -580,7 +593,7 @@ padding:46px 20px;
 
 .footer-logo{
 font-size:26px;
-font-weight:900;
+font-weight:800;
 }
 
 .footer-col h4{
@@ -640,43 +653,47 @@ color:#9fb6d1;
 </style>
 </head>
 
-<body>
+<body data-season-page="team">
 
 <header class="site-header">
 <div class="container">
 <div class="topbar">
 
-<a href="index.html" class="brand">
+<a href="index.html" class="brand" aria-label="Global League Baseball home">
 <div class="brand-mark">GLB</div>
 <div class="brand-sub">Global League Baseball</div>
 </a>
 
-<nav class="nav-links">
+<nav class="nav-links" aria-label="Primary">
 <a href="index.html">Home</a>
 <a href="scores.html">Scores</a>
 <a href="standings.html">Standings</a>
 <a href="schedule.html">Schedule</a>
 <a href="teams.html" class="active">Teams</a>
+<a href="players.html">Players</a>
 <a href="stats.html">Stats</a>
 <a href="news.html">News</a>
+<a href="donk-championships.html">Events</a>
 </nav>
 
 <div class="header-right">
 <div class="header-meta">Spokane Alloys</div>
-<button class="nav-toggle" id="navToggle">☰</button>
+<button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">☰</button>
 </div>
 
 </div>
 </div>
 
-<nav class="mobile-menu" id="mobileMenu">
+<nav class="mobile-menu" id="mobileMenu" aria-label="Mobile">
 <a href="index.html">Home</a>
 <a href="scores.html">Scores</a>
 <a href="standings.html">Standings</a>
 <a href="schedule.html">Schedule</a>
-<a href="teams.html">Teams</a>
+<a href="teams.html" class="active">Teams</a>
+<a href="players.html">Players</a>
 <a href="stats.html">Stats</a>
 <a href="news.html">News</a>
+<a href="donk-championships.html">Events</a>
 </nav>
 </header>
 
@@ -771,8 +788,8 @@ View Club Page →
 <section class="card">
 
 <div class="card-header">
-<h2 class="card-title">Spokane Player Cards</h2>
-<span class="card-label">16 Cards</span>
+<h2 class="card-title">Active Roster</h2>
+<span class="card-label">16 Players</span>
 </div>
 
 <div class="table-wrap">
@@ -919,7 +936,7 @@ View Club Page →
 
 <tr>
 <td><div class="player-cell">
-<img class="roster-pic" src="assets/images/players/spokane-alloys/spokane-luis-quinones.png" alt="Luis Quiñones">
+<img class="roster-pic" src="assets/teams/spokane-alloys/images/players/spokane-luis-quinones.png" alt="Luis Quiñones">
 <div><a class="player-name" href="player.html?player=luis-quinones">Luis Quiñones</a>
 <span class="player-role">Left fielder</span></div>
 </div></td>
@@ -1200,11 +1217,13 @@ Contribute to this record →
 <a href="scores.html">Scores</a>
 <a href="schedule.html">Schedule</a>
 <a href="stats.html">Stats</a>
+<a href="donk-championships.html">Events</a>
 </div>
 
 <div class="footer-col">
 <h4>Clubs</h4>
 <a href="teams.html">Teams</a>
+<a href="players.html">Player Cards</a>
 <a href="stadiums.html">Stadiums</a>
 <a href="rosters.html">Rosters</a>
 </div>
@@ -1230,6 +1249,24 @@ Contribute to this record →
 
 <script>
 const playerCards=document.getElementById("playerCards");
+const playerNotes=[
+  "Keeps a pocket notebook of every hitter who has ever broken a bat against him.",
+  "Builds small wooden radios during road trips and gives them to clubhouse attendants.",
+  "Once finished a rain-delay crossword in ink before the grounds crew removed the tarp.",
+  "Calls his mother after every start, but refuses to discuss baseball until she brings it up.",
+  "Carries one glove from his first professional season and has repaired it eleven times.",
+  "Can identify most Inland Northwest birds by sound and keeps a running list by ballpark.",
+  "Learned sleight of hand from an uncle and is banned from dealing clubhouse card games.",
+  "Orders the same breakfast in every city, then ranks each version in a private spreadsheet.",
+  "Restores old catcher’s masks and has never sold one from his collection.",
+  "Reads municipal planning documents on flights and remembers unusual zoning disputes.",
+  "Maintains a map of the best public staircases in every GLB city.",
+  "Was briefly the drummer in a wedding band and still carries sticks in his equipment bag.",
+  "Collects grocery-store receipts from memorable road wins and labels them by final score.",
+  "Practices photography from the dugout but rarely photographs the field itself.",
+  "Speaks to his bats in two languages and insists the conversations are strictly professional.",
+  "Has prepared the same pregame sandwich since age nineteen and cuts it into exact thirds."
+];
 document.querySelectorAll(".roster-table tbody tr").forEach((row,index)=>{
   const image=row.querySelector(".roster-pic");
   const name=row.querySelector(".player-name");
@@ -1237,26 +1274,41 @@ document.querySelectorAll(".roster-table tbody tr").forEach((row,index)=>{
   const cells=[...row.querySelectorAll(":scope > td")];
   const card=document.createElement("article");
   card.className="player-card";
+  card.tabIndex=0;
+  card.setAttribute("aria-label",`${name.textContent.trim()} player card. Press Enter to flip.`);
   const front=document.createElement("div"); front.className="player-card-front";
   const img=document.createElement("img"); img.className="player-card-image"; img.src=image.src; img.alt=image.alt;
   const body=document.createElement("div"); body.className="player-card-body";
   const top=document.createElement("div"); top.className="player-card-topline"; top.append(Object.assign(document.createElement("span"),{textContent:`SPK-${String(index+1).padStart(2,"0")}`}),Object.assign(document.createElement("span"),{textContent:cells[1].textContent.trim()}));
-  const title=document.createElement("h3"); title.className="player-card-name"; title.textContent=name.textContent.trim();
+  const title=document.createElement("h3"); title.className="player-card-name"; title.append(name.cloneNode(true));
   const subtitle=document.createElement("div"); subtitle.className="player-card-role"; subtitle.textContent=role.textContent.trim();
   const meta=document.createElement("div"); meta.className="player-card-meta"; meta.append(Object.assign(document.createElement("span"),{textContent:`B/T ${cells[2].textContent.trim()}`}),Object.assign(document.createElement("span"),{textContent:`Age ${cells[3].textContent.trim()}`}));
   body.append(top,title,subtitle,meta); front.append(img,body);
-  const back=document.createElement("div"); back.className="player-card-back player-card-body"; back.innerHTML=`<div class="player-card-topline"><span>GLB / SPO</span><span>Official Card</span></div><h3 class="player-card-name">${name.textContent.trim()}</h3><p class="player-card-role">Spokane Alloys · ${role.textContent.trim()}</p><p class="player-card-role" style="margin-top:18px">Active roster card. Career statistics and player notes will be added as the league record develops.</p><div class="player-card-meta"><span>SPK-${String(index+1).padStart(2,"0")}</span><span>© GLB</span></div>`;
-  card.append(front,back); card.addEventListener("click",(event)=>{ if(event.target.closest(".card-claim")) return; card.classList.toggle("flipped"); }); const claim=back.querySelector(".card-claim"); const form=back.querySelector(".claim-form"); const status=back.querySelector(".claim-status"); claim.addEventListener("click",()=>{ form.hidden=!form.hidden; if(!form.hidden){ form.elements.card_id.value=`SPK-${String(index+1).padStart(2,"0")}`; form.elements.player_name.value=name.textContent.trim(); form.elements.user_id.focus(); } }); form.addEventListener("submit",()=>{ status.textContent="Claim submitted for review."; claim.textContent="Submitted"; claim.disabled=true; }); playerCards.append(card);
+  const cardId=`SPK-${String(index+1).padStart(2,"0")}`;
+  const back=document.createElement("div");
+  back.className="player-card-back player-card-body";
+  back.innerHTML=`<div class="player-card-topline"><span>GLB / SPO</span><span>Official Card</span></div><h3 class="player-card-name">${name.textContent.trim()}</h3><p class="player-card-role">Spokane Alloys · ${role.textContent.trim()}</p><p class="player-card-role" style="margin-top:18px">${playerNotes[index]}</p><div class="player-card-meta"><span>${cardId}</span><span>© GLB</span></div><button class="card-claim" type="button">Claim this card</button><form class="claim-form" action="https://formspree.io/f/mzezpeap" method="POST" hidden><input type="hidden" name="card_id"><input type="hidden" name="player_name"><label>User ID<input name="user_id" required autocomplete="username"></label><label>Email<input name="email" type="email" required autocomplete="email"></label><button type="submit">Submit claim</button></form><div class="claim-status" aria-live="polite"></div>`;
+  const flip=()=>card.classList.toggle("flipped");
+  card.append(front,back);
+  card.addEventListener("click",event=>{if(!event.target.closest("a,button,input,form")) flip();});
+  card.addEventListener("keydown",event=>{if((event.key==="Enter"||event.key===" ")&&!event.target.closest("a,button,input,form")){event.preventDefault();flip();}});
+  const claim=back.querySelector(".card-claim");
+  const form=back.querySelector(".claim-form");
+  const status=back.querySelector(".claim-status");
+  claim.addEventListener("click",()=>{form.hidden=!form.hidden;if(!form.hidden){form.elements.card_id.value=cardId;form.elements.player_name.value=name.textContent.trim();form.elements.user_id.focus();}});
+  form.addEventListener("submit",()=>{status.textContent="Claim submitted for review.";claim.textContent="Submitted";claim.disabled=true;});
+  playerCards.append(card);
 });
 
 const navToggle=document.getElementById("navToggle");
 const mobileMenu=document.getElementById("mobileMenu");
 
-navToggle.addEventListener(
-"click",
-()=>mobileMenu.classList.toggle("open")
-);
+navToggle.addEventListener("click",()=>{
+  const isOpen=mobileMenu.classList.toggle("open");
+  navToggle.setAttribute("aria-expanded",isOpen?"true":"false");
+});
 </script>
 
-<script src="scripts/glb-ticker.js"></script>\n</body>
+<script src="scripts/glb-ticker.js"></script>
+</body>
 </html>

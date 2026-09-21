@@ -106,8 +106,8 @@ function main() {
       calibrateBatting(rng, box.batting.away, box.final.away, ratings);
       calibrateBatting(rng, box.batting.home, box.final.home, ratings);
       const oldAway = box.pitching.away[0].player, oldHome = box.pitching.home[0].player;
-      const awayRoster = { starters: rosters.get(away).players.filter(p => p.position === 'SP'), relievers: rosters.get(away).players.filter(p => p.position === 'RP') };
-      const homeRoster = { starters: rosters.get(home).players.filter(p => p.position === 'SP'), relievers: rosters.get(home).players.filter(p => p.position === 'RP') };
+      const awayRoster = { starters: rosters.get(away).players.filter(p => p.position === 'SP'), relievers: rosters.get(away).players.filter(p => ['RP', 'CL'].includes(p.position)) };
+      const homeRoster = { starters: rosters.get(home).players.filter(p => p.position === 'SP'), relievers: rosters.get(home).players.filter(p => ['RP', 'CL'].includes(p.position)) };
       calibratePitching(rng, box, 'away', awayRoster, awayIndex, oldAway);
       calibratePitching(rng, box, 'home', homeRoster, homeIndex, oldHome);
       box.calibration = 'glb.stats-calibrated.v1';

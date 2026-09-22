@@ -114,6 +114,76 @@
       "edition": "current",
       "player_slug": "pieter-van-wyk",
       "serial_template": "SPK-16-{USERID}-{CLAIMSEQ}"
+    },
+    {
+      "card_id": "SPK-17-CURRENT",
+      "type": "player",
+      "edition": "current",
+      "player_slug": "jonah-sato",
+      "serial_template": "SPK-17-{USERID}-{CLAIMSEQ}"
+    },
+    {
+      "card_id": "SPK-18-CURRENT",
+      "type": "player",
+      "edition": "current",
+      "player_slug": "rene-bouchard",
+      "serial_template": "SPK-18-{USERID}-{CLAIMSEQ}"
+    },
+    {
+      "card_id": "SPK-19-CURRENT",
+      "type": "player",
+      "edition": "current",
+      "player_slug": "malachi-boone",
+      "serial_template": "SPK-19-{USERID}-{CLAIMSEQ}"
+    },
+    {
+      "card_id": "SPK-20-CURRENT",
+      "type": "player",
+      "edition": "current",
+      "player_slug": "dae-hyun-park",
+      "serial_template": "SPK-20-{USERID}-{CLAIMSEQ}"
+    },
+    {
+      "card_id": "SPK-21-CURRENT",
+      "type": "player",
+      "edition": "current",
+      "player_slug": "tesfaye-mebrahtu",
+      "serial_template": "SPK-21-{USERID}-{CLAIMSEQ}"
+    },
+    {
+      "card_id": "SPK-22-CURRENT",
+      "type": "player",
+      "edition": "current",
+      "player_slug": "benoit-leduc",
+      "serial_template": "SPK-22-{USERID}-{CLAIMSEQ}"
+    },
+    {
+      "card_id": "SPK-23-CURRENT",
+      "type": "player",
+      "edition": "current",
+      "player_slug": "hamza-qureshi",
+      "serial_template": "SPK-23-{USERID}-{CLAIMSEQ}"
+    },
+    {
+      "card_id": "SPK-24-CURRENT",
+      "type": "player",
+      "edition": "current",
+      "player_slug": "ellis-wren",
+      "serial_template": "SPK-24-{USERID}-{CLAIMSEQ}"
+    },
+    {
+      "card_id": "SPK-25-CURRENT",
+      "type": "player",
+      "edition": "current",
+      "player_slug": "miguel-angel-serrano",
+      "serial_template": "SPK-25-{USERID}-{CLAIMSEQ}"
+    },
+    {
+      "card_id": "SPK-26-CURRENT",
+      "type": "player",
+      "edition": "current",
+      "player_slug": "branislav-vukovic",
+      "serial_template": "SPK-26-{USERID}-{CLAIMSEQ}"
     }
   ],
   "artifact_cards": [],

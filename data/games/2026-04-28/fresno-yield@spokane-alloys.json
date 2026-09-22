@@ -307,8 +307,8 @@
         "SB": 0
       },
       {
-        "player": "pieter-van-wyk",
-        "name": "Pieter van Wyk",
+        "player": "tesfaye-mebrahtu",
+        "name": "Tesfaye Mebrahtu",
         "position": "RF",
         "AB": 5,
         "R": 1,
@@ -364,16 +364,52 @@
         "IP": 5.2
       },
       {
+        "player": "miguel-angel-serrano",
+        "name": "Miguel Ángel Serrano",
+        "IP_outs": 1,
+        "H": 1,
+        "R": 0,
+        "ER": 0,
+        "BB": 0,
+        "K": 0,
+        "HR": 0,
+        "IP": 0.1
+      },
+      {
         "player": "caleb-reidman",
         "name": "Caleb Reidman",
-        "IP_outs": 10,
-        "H": 4,
-        "R": 2,
-        "ER": 2,
-        "BB": 2,
-        "K": 2,
+        "IP_outs": 3,
+        "H": 1,
+        "R": 1,
+        "ER": 1,
+        "BB": 1,
+        "K": 0,
         "HR": 1,
-        "IP": 3.1
+        "IP": 1
+      },
+      {
+        "player": "sergio-ibarra-lugo",
+        "name": "Sergio Ibarra Lugo",
+        "IP_outs": 3,
+        "H": 1,
+        "R": 0,
+        "ER": 0,
+        "BB": 1,
+        "K": 1,
+        "HR": 0,
+        "IP": 1
+      },
+      {
+        "player": "yaw-mensah",
+        "name": "Yaw Mensah",
+        "IP_outs": 3,
+        "H": 1,
+        "R": 1,
+        "ER": 1,
+        "BB": 0,
+        "K": 1,
+        "HR": 0,
+        "IP": 1
       }
     ]
   },

@@ -202,8 +202,8 @@
     ],
     "home": [
       {
-        "player": "nikolai-dobrynin",
-        "name": "Nikolai Dobrynin",
+        "player": "jonah-sato",
+        "name": "Jonah Sato",
         "position": "C",
         "AB": 4,
         "R": 0,
@@ -232,8 +232,8 @@
         "SB": 0
       },
       {
-        "player": "marco-delvecchio",
-        "name": "Marco DelVecchio",
+        "player": "malachi-boone",
+        "name": "Malachi Boone",
         "position": "2B",
         "AB": 3,
         "R": 1,
@@ -277,8 +277,8 @@
         "SB": 0
       },
       {
-        "player": "wyatt-hollander",
-        "name": "Wyatt Hollander",
+        "player": "dae-hyun-park",
+        "name": "Dae-Hyun Park",
         "position": "CF",
         "AB": 3,
         "R": 1,
@@ -364,16 +364,40 @@
         "IP": 6.1
       },
       {
-        "player": "sergio-ibarra-lugo",
-        "name": "Sergio Ibarra Lugo",
-        "IP_outs": 8,
+        "player": "caleb-reidman",
+        "name": "Caleb Reidman",
+        "IP_outs": 2,
         "H": 1,
         "R": 1,
         "ER": 1,
-        "BB": 1,
+        "BB": 0,
         "K": 0,
         "HR": 1,
-        "IP": 2.2
+        "IP": 0.2
+      },
+      {
+        "player": "sergio-ibarra-lugo",
+        "name": "Sergio Ibarra Lugo",
+        "IP_outs": 3,
+        "H": 0,
+        "R": 0,
+        "ER": 0,
+        "BB": 1,
+        "K": 0,
+        "HR": 0,
+        "IP": 1
+      },
+      {
+        "player": "branislav-vukovic",
+        "name": "Branislav \"Bran\" Vuković",
+        "IP_outs": 3,
+        "H": 0,
+        "R": 0,
+        "ER": 0,
+        "BB": 0,
+        "K": 0,
+        "HR": 0,
+        "IP": 1
       }
     ]
   },

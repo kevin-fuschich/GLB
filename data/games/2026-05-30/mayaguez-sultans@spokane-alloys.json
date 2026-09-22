@@ -202,8 +202,8 @@
     ],
     "home": [
       {
-        "player": "nikolai-dobrynin",
-        "name": "Nikolai Dobrynin",
+        "player": "jonah-sato",
+        "name": "Jonah Sato",
         "position": "C",
         "AB": 4,
         "R": 1,
@@ -364,16 +364,40 @@
         "IP": 6
       },
       {
-        "player": "caleb-reidman",
-        "name": "Caleb Reidman",
-        "IP_outs": 9,
-        "H": 2,
-        "R": 3,
-        "ER": 3,
-        "BB": 3,
+        "player": "hamza-qureshi",
+        "name": "Hamza Qureshi",
+        "IP_outs": 3,
+        "H": 1,
+        "R": 1,
+        "ER": 1,
+        "BB": 1,
+        "K": 0,
+        "HR": 0,
+        "IP": 1
+      },
+      {
+        "player": "ellis-wren",
+        "name": "Ellis Wren",
+        "IP_outs": 3,
+        "H": 1,
+        "R": 1,
+        "ER": 1,
+        "BB": 1,
         "K": 1,
         "HR": 0,
-        "IP": 3
+        "IP": 1
+      },
+      {
+        "player": "miguel-angel-serrano",
+        "name": "Miguel Ángel Serrano",
+        "IP_outs": 3,
+        "H": 0,
+        "R": 1,
+        "ER": 1,
+        "BB": 1,
+        "K": 0,
+        "HR": 0,
+        "IP": 1
       }
     ]
   },

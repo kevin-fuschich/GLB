@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 900" role="img" aria-labelledby="title desc">
+  <title id="title">Spokane Alloys portrait pending</title>
+  <desc id="desc">A temporary roster portrait panel in Spokane colors.</desc>
+  <rect width="720" height="900" fill="#102843"/>
+  <path d="M0 670 720 430v470H0Z" fill="#183e55"/>
+  <circle cx="360" cy="330" r="130" fill="#92b8ae" opacity=".75"/>
+  <path d="M155 805c28-171 111-257 205-257s177 86 205 257" fill="#92b8ae" opacity=".75"/>
+  <path d="M95 95h530M95 805h530" stroke="#d77b3c" stroke-width="8"/>
+  <text x="360" y="120" fill="#f2ead9" font-family="Arial,sans-serif" font-size="34" font-weight="700" text-anchor="middle" letter-spacing="8">SPOKANE ALLOYS</text>
+  <text x="360" y="855" fill="#f2ead9" font-family="Arial,sans-serif" font-size="25" font-weight="700" text-anchor="middle" letter-spacing="5">PORTRAIT PENDING</text>
+</svg>

@@ -338,16 +338,52 @@
         "IP": 5.1
       },
       {
-        "player": "caleb-reidman",
-        "name": "Caleb Reidman",
-        "IP_outs": 11,
-        "H": 1,
-        "R": 4,
-        "ER": 4,
+        "player": "hamza-qureshi",
+        "name": "Hamza Qureshi",
+        "IP_outs": 2,
+        "H": 0,
+        "R": 0,
+        "ER": 0,
         "BB": 0,
         "K": 1,
+        "HR": 0,
+        "IP": 0.2
+      },
+      {
+        "player": "ellis-wren",
+        "name": "Ellis Wren",
+        "IP_outs": 3,
+        "H": 0,
+        "R": 1,
+        "ER": 1,
+        "BB": 0,
+        "K": 0,
+        "HR": 0,
+        "IP": 1
+      },
+      {
+        "player": "miguel-angel-serrano",
+        "name": "Miguel Ángel Serrano",
+        "IP_outs": 3,
+        "H": 0,
+        "R": 1,
+        "ER": 1,
+        "BB": 0,
+        "K": 0,
+        "HR": 0,
+        "IP": 1
+      },
+      {
+        "player": "caleb-reidman",
+        "name": "Caleb Reidman",
+        "IP_outs": 3,
+        "H": 1,
+        "R": 2,
+        "ER": 2,
+        "BB": 0,
+        "K": 0,
         "HR": 1,
-        "IP": 3.2
+        "IP": 1
       }
     ],
     "home": [

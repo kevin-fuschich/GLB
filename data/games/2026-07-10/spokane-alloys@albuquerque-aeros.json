@@ -95,8 +95,8 @@
         "SB": 0
       },
       {
-        "player": "evan-carroll-iv",
-        "name": "Evan Carroll IV",
+        "player": "rene-bouchard",
+        "name": "René Bouchard",
         "position": "1B",
         "AB": 3,
         "R": 0,
@@ -338,16 +338,52 @@
         "IP": 5.1
       },
       {
-        "player": "yaw-mensah",
-        "name": "Yaw Mensah",
-        "IP_outs": 11,
+        "player": "benoit-leduc",
+        "name": "Benoît Leduc",
+        "IP_outs": 2,
         "H": 0,
         "R": 0,
         "ER": 0,
         "BB": 0,
-        "K": 2,
+        "K": 1,
         "HR": 0,
-        "IP": 3.2
+        "IP": 0.2
+      },
+      {
+        "player": "hamza-qureshi",
+        "name": "Hamza Qureshi",
+        "IP_outs": 3,
+        "H": 0,
+        "R": 0,
+        "ER": 0,
+        "BB": 0,
+        "K": 1,
+        "HR": 0,
+        "IP": 1
+      },
+      {
+        "player": "ellis-wren",
+        "name": "Ellis Wren",
+        "IP_outs": 3,
+        "H": 0,
+        "R": 0,
+        "ER": 0,
+        "BB": 0,
+        "K": 0,
+        "HR": 0,
+        "IP": 1
+      },
+      {
+        "player": "miguel-angel-serrano",
+        "name": "Miguel Ángel Serrano",
+        "IP_outs": 3,
+        "H": 0,
+        "R": 0,
+        "ER": 0,
+        "BB": 0,
+        "K": 0,
+        "HR": 0,
+        "IP": 1
       }
     ],
     "home": [

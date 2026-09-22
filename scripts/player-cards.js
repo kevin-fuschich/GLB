@@ -48,6 +48,11 @@
     ['#523625', '#dda572'], ['#243a62', '#a9bfe1'], ['#524135', '#e2c68c']
   ];
   function photoPath(player) {
+    const pendingSpokanePortraits = new Set(['jonah-sato','rene-bouchard','malachi-boone','dae-hyun-park','tesfaye-mebrahtu','hamza-qureshi','ellis-wren','miguel-angel-serrano','branislav-vukovic']);
+    if (player.teamSlug === 'spokane-alloys' && pendingSpokanePortraits.has(player.slug))
+      return 'assets/images/players/spokane-alloys/portrait-pending.svg';
+    if (player.teamSlug === 'spokane-alloys' && player.slug === 'benoit-leduc')
+      return 'assets/images/players/spokane-alloys/spokane-benoit-leduc.jpg';
     if (player.teamSlug === 'spokane-alloys')
       return `assets/images/players/spokane-alloys/spokane-${player.slug}.png`;
     if (player.teamSlug === 'albuquerque-aeros')
@@ -72,7 +77,7 @@
     card.style.setProperty('--player-deep', palette[0]);
     card.style.setProperty('--player-accent', palette[1]);
     const top = text('div', '', 'glb-player-card__top');
-    top.append(text('span', 'GLB', 'glb-player-card__mark'), text('span', 'Player Card', 'glb-player-card__edition'));
+    top.append(text('span', 'FIELDSTOCK', 'glb-player-card__mark'), text('span', '2026 Player Card', 'glb-player-card__edition'));
     const portrait = text('div', '', 'glb-player-card__portrait');
     const initials = () => {
       const badge = portrait.querySelector('.glb-player-card__position');
@@ -103,10 +108,13 @@
       item.append(text('strong', value ?? '—'), text('span', label));
       stats.append(item);
     }
-    const front=document.createElement('div'); front.className='glb-player-card__front'; front.append(top, portrait, identity, stats, text('div','Recorded career totals','glb-player-card__footer'));
+    const front=document.createElement('div'); front.className='glb-player-card__front'; front.append(top, portrait, identity, stats, text('div','Official 2026 season record','glb-player-card__footer'));
     const back=document.createElement('div'); back.className='glb-player-card__back';
     const notes={"kellan-brynden":"Keeps a notebook of every hotel ice machine he has ever trusted.","oskar-svanholm":"Can identify most Pacific Northwest birds by sound, but refuses to explain how.","mateusz-kasprowicz":"Carries a tiny level in his glove bag and checks the clubhouse tables before every start.","diego-alvarez-mora":"Makes elaborate grilled-cheese sandwiches for teammates after late arrivals.","lukas-havel":"Collects perfectly round stones and labels them by where he found them.","caleb-reidman":"Has never lost a game of Connect Four on a team flight.","sergio-ibarra-lugo":"Keeps a running list of the best vending-machine snacks in every visiting park.","yaw-mensah":"Ties one bright orange lace before every appearance, even when both laces are already tied.","nikolai-dobrynin":"Can repair a broken zipper with fishing line and a dugout sunflower-seed packet.","evan-carroll-iv":"Knows the exact weight of his favorite first-base mitt to the nearest gram.","marco-delvecchio":"Names every houseplant after a retired infielder.","tomasz-kubas":"Practices turning double plays with two paperback books when traveling.","andres-mireles":"Keeps a photo of every ballpark sunrise he has seen before batting practice.","wyatt-hollander":"Once played an entire road trip wearing mismatched socks and called it a career high point.","luis-quinones":"Makes a different playlist for every series, including one song chosen by the clubhouse cleaner.","pieter-van-wyk":"Builds miniature wooden scoreboards during the offseason."};
-    back.append(text('div','GLB · '+player.teamName,'glb-player-card__backmark'),text('h3',player.name,'glb-player-card__backname'),text('p',player.position+' · '+(record?.seasons?.length||1)+' recorded season(s)','glb-player-card__backcopy'),text('p',notes[player.slug]||'A distinctive presence in the Spokane Alloys record.','glb-player-card__backcopy'),text('p','Official card record · '+player.teamName,'glb-player-card__backcopy'),text('div',player.teamSlug==='spokane-alloys'?'SPK-'+String(['kellan-brynden','oskar-svanholm','mateusz-kasprowicz','diego-alvarez-mora','lukas-havel','caleb-reidman','sergio-ibarra-lugo','yaw-mensah','nikolai-dobrynin','evan-carroll-iv','marco-delvecchio','tomasz-kubas','andres-mireles','wyatt-hollander','luis-quinones','pieter-van-wyk'].indexOf(player.slug)+1).padStart(2,'0'):'GLB-'+player.slug.toUpperCase(),'glb-player-card__serial'),text('div','Tap to return to front','glb-player-card__fliphint'));
+    const spokaneCards=['kellan-brynden','oskar-svanholm','mateusz-kasprowicz','diego-alvarez-mora','lukas-havel','caleb-reidman','sergio-ibarra-lugo','yaw-mensah','nikolai-dobrynin','evan-carroll-iv','marco-delvecchio','tomasz-kubas','andres-mireles','wyatt-hollander','luis-quinones','pieter-van-wyk','jonah-sato','rene-bouchard','malachi-boone','dae-hyun-park','tesfaye-mebrahtu','benoit-leduc','hamza-qureshi','ellis-wren','miguel-angel-serrano','branislav-vukovic'];
+    const serial=player.teamSlug==='spokane-alloys'?'SPK-'+String(spokaneCards.indexOf(player.slug)+1).padStart(2,'0'):'GLB-'+player.slug.toUpperCase();
+    const identityLine=[player.height,player.weight?`${player.weight} lb`:null,player.birthplace].filter(Boolean).join(' · ');
+    back.append(text('div','FIELDSTOCK · '+player.teamName,'glb-player-card__backmark'),text('h3',player.name,'glb-player-card__backname'),text('p',player.position+' · '+(record?.seasons?.length||1)+' recorded season(s)','glb-player-card__backcopy'),text('p',identityLine||'Official Spokane Alloys player record','glb-player-card__backcopy'),text('p',player.field_note||notes[player.slug]||'A distinctive presence in the Spokane Alloys record.','glb-player-card__backcopy'),text('div',serial,'glb-player-card__serial'),text('div','Tap to return to front','glb-player-card__fliphint'));
     card.replaceChildren(front,back); card.addEventListener('click',e=>{if(e.target.closest('a'))return;e.preventDefault();card.classList.toggle('is-flipped')});
     return card;
   }

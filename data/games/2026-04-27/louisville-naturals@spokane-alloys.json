@@ -202,8 +202,8 @@
     ],
     "home": [
       {
-        "player": "nikolai-dobrynin",
-        "name": "Nikolai Dobrynin",
+        "player": "jonah-sato",
+        "name": "Jonah Sato",
         "position": "C",
         "AB": 5,
         "R": 0,
@@ -262,8 +262,8 @@
         "SB": 1
       },
       {
-        "player": "andres-mireles",
-        "name": "Andrés Mireles",
+        "player": "rene-bouchard",
+        "name": "René Bouchard",
         "position": "3B",
         "AB": 4,
         "R": 0,
@@ -292,8 +292,8 @@
         "SB": 0
       },
       {
-        "player": "luis-quinones",
-        "name": "Luis Quiñones",
+        "player": "dae-hyun-park",
+        "name": "Dae-Hyun Park",
         "position": "LF",
         "AB": 4,
         "R": 2,
@@ -364,16 +364,40 @@
         "IP": 6
       },
       {
-        "player": "yaw-mensah",
-        "name": "Yaw Mensah",
-        "IP_outs": 9,
+        "player": "benoit-leduc",
+        "name": "Benoît Leduc",
+        "IP_outs": 3,
+        "H": 0,
+        "R": 0,
+        "ER": 0,
+        "BB": 2,
+        "K": 1,
+        "HR": 0,
+        "IP": 1
+      },
+      {
+        "player": "hamza-qureshi",
+        "name": "Hamza Qureshi",
+        "IP_outs": 3,
         "H": 1,
         "R": 1,
         "ER": 1,
-        "BB": 5,
-        "K": 2,
+        "BB": 1,
+        "K": 1,
         "HR": 1,
-        "IP": 3
+        "IP": 1
+      },
+      {
+        "player": "ellis-wren",
+        "name": "Ellis Wren",
+        "IP_outs": 3,
+        "H": 0,
+        "R": 0,
+        "ER": 0,
+        "BB": 2,
+        "K": 0,
+        "HR": 0,
+        "IP": 1
       }
     ]
   },

@@ -247,8 +247,8 @@
         "SB": 0
       },
       {
-        "player": "tomasz-kubas",
-        "name": "Tomasz Kubas",
+        "player": "malachi-boone",
+        "name": "Malachi Boone",
         "position": "SS",
         "AB": 4,
         "R": 0,
@@ -364,16 +364,40 @@
         "IP": 6
       },
       {
+        "player": "miguel-angel-serrano",
+        "name": "Miguel Ángel Serrano",
+        "IP_outs": 3,
+        "H": 3,
+        "R": 1,
+        "ER": 1,
+        "BB": 0,
+        "K": 1,
+        "HR": 1,
+        "IP": 1
+      },
+      {
+        "player": "caleb-reidman",
+        "name": "Caleb Reidman",
+        "IP_outs": 3,
+        "H": 3,
+        "R": 0,
+        "ER": 0,
+        "BB": 1,
+        "K": 1,
+        "HR": 0,
+        "IP": 1
+      },
+      {
         "player": "sergio-ibarra-lugo",
         "name": "Sergio Ibarra Lugo",
-        "IP_outs": 9,
-        "H": 9,
-        "R": 2,
-        "ER": 2,
-        "BB": 2,
-        "K": 3,
-        "HR": 1,
-        "IP": 3
+        "IP_outs": 3,
+        "H": 3,
+        "R": 1,
+        "ER": 1,
+        "BB": 1,
+        "K": 1,
+        "HR": 0,
+        "IP": 1
       }
     ]
   },

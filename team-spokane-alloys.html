@@ -926,7 +926,7 @@ View Club Page →
 
 <div class="card-header">
 <h2 class="card-title">FIELDSTOCK Player Cards</h2>
-<span class="card-label">16-Card Base Set</span>
+<span class="card-label">26-Card Base Set</span>
 </div>
 
 <div class="table-wrap">
@@ -1088,6 +1088,17 @@ View Club Page →
 </div></td>
 <td>RF</td><td>R/R</td><td>30</td><td>Active</td>
 </tr>
+
+<tr><td><div class="player-cell"><img class="roster-pic" src="assets/images/players/spokane-alloys/portrait-pending.svg" alt="Jonah Sato portrait pending"><div><a class="player-name" href="player.html?team=spokane-alloys&amp;player=jonah-sato">Jonah Sato</a><span class="player-role">Catcher</span></div></div></td><td>C</td><td>R/R</td><td>26</td><td>Active</td></tr>
+<tr><td><div class="player-cell"><img class="roster-pic" src="assets/images/players/spokane-alloys/portrait-pending.svg" alt="René Bouchard portrait pending"><div><a class="player-name" href="player.html?team=spokane-alloys&amp;player=rene-bouchard">René Bouchard</a><span class="player-role">Corner infielder</span></div></div></td><td>IF</td><td>L/R</td><td>32</td><td>Active</td></tr>
+<tr><td><div class="player-cell"><img class="roster-pic" src="assets/images/players/spokane-alloys/portrait-pending.svg" alt="Malachi Boone portrait pending"><div><a class="player-name" href="player.html?team=spokane-alloys&amp;player=malachi-boone">Malachi Boone</a><span class="player-role">Utility infielder</span></div></div></td><td>IF</td><td>S/R</td><td>25</td><td>Active</td></tr>
+<tr><td><div class="player-cell"><img class="roster-pic" src="assets/images/players/spokane-alloys/portrait-pending.svg" alt="Dae-Hyun Park portrait pending"><div><a class="player-name" href="player.html?team=spokane-alloys&amp;player=dae-hyun-park">Dae-Hyun Park</a><span class="player-role">Outfielder</span></div></div></td><td>OF</td><td>L/R</td><td>23</td><td>Active</td></tr>
+<tr><td><div class="player-cell"><img class="roster-pic" src="assets/images/players/spokane-alloys/portrait-pending.svg" alt="Tesfaye Mebrahtu portrait pending"><div><a class="player-name" href="player.html?team=spokane-alloys&amp;player=tesfaye-mebrahtu">Tesfaye Mebrahtu</a><span class="player-role">Outfielder</span></div></div></td><td>OF</td><td>R/R</td><td>28</td><td>Active</td></tr>
+<tr><td><div class="player-cell"><img class="roster-pic" src="assets/images/players/spokane-alloys/spokane-benoit-leduc.jpg" alt="Benoît Leduc"><div><a class="player-name" href="player.html?team=spokane-alloys&amp;player=benoit-leduc">Benoît Leduc</a><span class="player-role">Relief pitcher</span></div></div></td><td>RP</td><td>L/L</td><td>29</td><td>Active</td></tr>
+<tr><td><div class="player-cell"><img class="roster-pic" src="assets/images/players/spokane-alloys/portrait-pending.svg" alt="Hamza Qureshi portrait pending"><div><a class="player-name" href="player.html?team=spokane-alloys&amp;player=hamza-qureshi">Hamza Qureshi</a><span class="player-role">Relief pitcher</span></div></div></td><td>RP</td><td>R/R</td><td>26</td><td>Active</td></tr>
+<tr><td><div class="player-cell"><img class="roster-pic" src="assets/images/players/spokane-alloys/portrait-pending.svg" alt="Ellis Wren portrait pending"><div><a class="player-name" href="player.html?team=spokane-alloys&amp;player=ellis-wren">Ellis Wren</a><span class="player-role">Relief pitcher</span></div></div></td><td>RP</td><td>R/R</td><td>34</td><td>Active</td></tr>
+<tr><td><div class="player-cell"><img class="roster-pic" src="assets/images/players/spokane-alloys/portrait-pending.svg" alt="Miguel Ángel Serrano portrait pending"><div><a class="player-name" href="player.html?team=spokane-alloys&amp;player=miguel-angel-serrano">Miguel Ángel Serrano</a><span class="player-role">Relief pitcher</span></div></div></td><td>RP</td><td>L/L</td><td>23</td><td>Active</td></tr>
+<tr><td><div class="player-cell"><img class="roster-pic" src="assets/images/players/spokane-alloys/portrait-pending.svg" alt="Branislav Vuković portrait pending"><div><a class="player-name" href="player.html?team=spokane-alloys&amp;player=branislav-vukovic">Branislav “Bran” Vuković</a><span class="player-role">Closer</span></div></div></td><td>CL</td><td>R/R</td><td>30</td><td>Active</td></tr>
 
 </tbody>
 </table>
@@ -1420,7 +1431,17 @@ const playerNotes=[
   "Collects grocery-store receipts from memorable road wins and labels them by final score.",
   "Practices photography from the dugout but rarely photographs the field itself.",
   "Speaks to his bats in two languages and insists the conversations are strictly professional.",
-  "Has prepared the same pregame sandwich since age nineteen and cuts it into exact thirds."
+  "Has prepared the same pregame sandwich since age nineteen and cuts it into exact thirds.",
+  "Keeps a pocket notebook of every foul ball that reaches the first-base camera well.",
+  "Re-laces his first baseman's mitt with the same awl he uses to repair fishing creels.",
+  "Can identify every Spokane infield hop by the sound it makes off the dirt.",
+  "Marks the warning-track depth in shoe lengths at every park before batting practice.",
+  "Judges fly-ball carry by watching the flags above the right-field light tower.",
+  "Counts bullpen warmup pitches in French and starts over whenever a ball touches the dirt.",
+  "Keeps the resin bag centered on the rubber between innings, even in an empty bullpen.",
+  "Carries a chipped lineup-card pencil from his first professional save.",
+  "Taps the bullpen gate twice before entering, a habit that began after a scoreless winter-league month.",
+  "Folds every completed save sheet into a tiny home plate before filing it away."
 ];
 document.querySelectorAll(".roster-table tbody tr").forEach((row,index)=>{
   const image=row.querySelector(".roster-pic");
@@ -1447,7 +1468,7 @@ document.querySelectorAll(".roster-table tbody tr").forEach((row,index)=>{
     const backImage=document.createElement("img");
     backImage.className="fieldstock-card-image";
     backImage.src=fieldstockCards[index].back;
-    backImage.alt=`Back of ${name.textContent.trim()}'s FIELDSTOCK ${cardId} baseball card with 2025 statistics`;
+    backImage.alt=`Back of ${name.textContent.trim()}'s FIELDSTOCK ${cardId} baseball card with 2026 statistics`;
     backImage.loading="lazy";
     backImage.decoding="async";
     back.append(backImage);

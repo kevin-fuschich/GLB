@@ -262,8 +262,8 @@
         "SB": 0
       },
       {
-        "player": "andres-mireles",
-        "name": "Andrés Mireles",
+        "player": "rene-bouchard",
+        "name": "René Bouchard",
         "position": "3B",
         "AB": 3,
         "R": 2,
@@ -364,16 +364,52 @@
         "IP": 5.2
       },
       {
-        "player": "yaw-mensah",
-        "name": "Yaw Mensah",
-        "IP_outs": 10,
-        "H": 2,
+        "player": "benoit-leduc",
+        "name": "Benoît Leduc",
+        "IP_outs": 1,
+        "H": 1,
+        "R": 0,
+        "ER": 0,
+        "BB": 0,
+        "K": 0,
+        "HR": 0,
+        "IP": 0.1
+      },
+      {
+        "player": "hamza-qureshi",
+        "name": "Hamza Qureshi",
+        "IP_outs": 3,
+        "H": 0,
+        "R": 0,
+        "ER": 0,
+        "BB": 0,
+        "K": 0,
+        "HR": 0,
+        "IP": 1
+      },
+      {
+        "player": "ellis-wren",
+        "name": "Ellis Wren",
+        "IP_outs": 3,
+        "H": 0,
         "R": 0,
         "ER": 0,
         "BB": 1,
+        "K": 0,
+        "HR": 0,
+        "IP": 1
+      },
+      {
+        "player": "miguel-angel-serrano",
+        "name": "Miguel Ángel Serrano",
+        "IP_outs": 3,
+        "H": 1,
+        "R": 0,
+        "ER": 0,
+        "BB": 0,
         "K": 1,
         "HR": 0,
-        "IP": 3.1
+        "IP": 1
       }
     ]
   },

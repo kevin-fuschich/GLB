@@ -338,16 +338,40 @@
         "IP": 6
       },
       {
-        "player": "caleb-reidman",
-        "name": "Caleb Reidman",
-        "IP_outs": 9,
-        "H": 2,
-        "R": 3,
-        "ER": 3,
+        "player": "yaw-mensah",
+        "name": "Yaw Mensah",
+        "IP_outs": 3,
+        "H": 1,
+        "R": 1,
+        "ER": 1,
+        "BB": 0,
+        "K": 0,
+        "HR": 0,
+        "IP": 1
+      },
+      {
+        "player": "benoit-leduc",
+        "name": "Benoît Leduc",
+        "IP_outs": 3,
+        "H": 1,
+        "R": 1,
+        "ER": 1,
         "BB": 0,
         "K": 1,
         "HR": 0,
-        "IP": 3
+        "IP": 1
+      },
+      {
+        "player": "hamza-qureshi",
+        "name": "Hamza Qureshi",
+        "IP_outs": 3,
+        "H": 0,
+        "R": 1,
+        "ER": 1,
+        "BB": 0,
+        "K": 0,
+        "HR": 0,
+        "IP": 1
       }
     ],
     "home": [

@@ -110,8 +110,8 @@
         "SB": 0
       },
       {
-        "player": "marco-delvecchio",
-        "name": "Marco DelVecchio",
+        "player": "malachi-boone",
+        "name": "Malachi Boone",
         "position": "2B",
         "AB": 5,
         "R": 1,
@@ -155,8 +155,8 @@
         "SB": 0
       },
       {
-        "player": "wyatt-hollander",
-        "name": "Wyatt Hollander",
+        "player": "dae-hyun-park",
+        "name": "Dae-Hyun Park",
         "position": "CF",
         "AB": 4,
         "R": 1,
@@ -338,16 +338,40 @@
         "IP": 6
       },
       {
-        "player": "sergio-ibarra-lugo",
-        "name": "Sergio Ibarra Lugo",
-        "IP_outs": 9,
-        "H": 5,
-        "R": 4,
-        "ER": 4,
-        "BB": 3,
-        "K": 2,
+        "player": "hamza-qureshi",
+        "name": "Hamza Qureshi",
+        "IP_outs": 3,
+        "H": 1,
+        "R": 1,
+        "ER": 1,
+        "BB": 1,
+        "K": 1,
         "HR": 0,
-        "IP": 3
+        "IP": 1
+      },
+      {
+        "player": "ellis-wren",
+        "name": "Ellis Wren",
+        "IP_outs": 3,
+        "H": 2,
+        "R": 1,
+        "ER": 1,
+        "BB": 1,
+        "K": 0,
+        "HR": 0,
+        "IP": 1
+      },
+      {
+        "player": "branislav-vukovic",
+        "name": "Branislav \"Bran\" Vuković",
+        "IP_outs": 3,
+        "H": 2,
+        "R": 2,
+        "ER": 2,
+        "BB": 1,
+        "K": 1,
+        "HR": 0,
+        "IP": 1
       }
     ],
     "home": [
@@ -380,7 +404,7 @@
   "decisions": {
     "W": "oskar-svanholm",
     "L": "gabriel-ionescu",
-    "SV": "sergio-ibarra-lugo"
+    "SV": "branislav-vukovic"
   },
   "notes": [],
   "calibration": "glb.stats-calibrated.v1"

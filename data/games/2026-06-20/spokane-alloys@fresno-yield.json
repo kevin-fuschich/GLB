@@ -185,8 +185,8 @@
         "SB": 1
       },
       {
-        "player": "pieter-van-wyk",
-        "name": "Pieter van Wyk",
+        "player": "tesfaye-mebrahtu",
+        "name": "Tesfaye Mebrahtu",
         "position": "RF",
         "AB": 5,
         "R": 0,
@@ -340,14 +340,50 @@
       {
         "player": "caleb-reidman",
         "name": "Caleb Reidman",
-        "IP_outs": 10,
-        "H": 2,
-        "R": 2,
-        "ER": 2,
-        "BB": 2,
-        "K": 3,
+        "IP_outs": 1,
+        "H": 0,
+        "R": 1,
+        "ER": 1,
+        "BB": 0,
+        "K": 1,
+        "HR": 0,
+        "IP": 0.1
+      },
+      {
+        "player": "sergio-ibarra-lugo",
+        "name": "Sergio Ibarra Lugo",
+        "IP_outs": 3,
+        "H": 1,
+        "R": 0,
+        "ER": 0,
+        "BB": 1,
+        "K": 1,
+        "HR": 0,
+        "IP": 1
+      },
+      {
+        "player": "yaw-mensah",
+        "name": "Yaw Mensah",
+        "IP_outs": 3,
+        "H": 1,
+        "R": 1,
+        "ER": 1,
+        "BB": 1,
+        "K": 0,
         "HR": 1,
-        "IP": 3.1
+        "IP": 1
+      },
+      {
+        "player": "branislav-vukovic",
+        "name": "Branislav \"Bran\" Vuković",
+        "IP_outs": 3,
+        "H": 0,
+        "R": 0,
+        "ER": 0,
+        "BB": 0,
+        "K": 1,
+        "HR": 0,
+        "IP": 1
       }
     ],
     "home": [
@@ -380,7 +416,7 @@
   "decisions": {
     "W": "diego-alvarez-mora",
     "L": "kenji-takamori",
-    "SV": "caleb-reidman"
+    "SV": "branislav-vukovic"
   },
   "notes": [],
   "calibration": "glb.stats-calibrated.v1"

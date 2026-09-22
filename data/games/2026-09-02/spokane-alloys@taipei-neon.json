@@ -170,8 +170,8 @@
         "SB": 1
       },
       {
-        "player": "luis-quinones",
-        "name": "Luis Quiñones",
+        "player": "dae-hyun-park",
+        "name": "Dae-Hyun Park",
         "position": "LF",
         "AB": 5,
         "R": 1,
@@ -353,16 +353,40 @@
         "IP": 6.2
       },
       {
-        "player": "caleb-reidman",
-        "name": "Caleb Reidman",
-        "IP_outs": 7,
-        "H": 5,
-        "R": 3,
-        "ER": 3,
-        "BB": 1,
-        "K": 1,
+        "player": "sergio-ibarra-lugo",
+        "name": "Sergio Ibarra Lugo",
+        "IP_outs": 1,
+        "H": 2,
+        "R": 2,
+        "ER": 2,
+        "BB": 0,
+        "K": 0,
         "HR": 1,
-        "IP": 2.1
+        "IP": 0.1
+      },
+      {
+        "player": "yaw-mensah",
+        "name": "Yaw Mensah",
+        "IP_outs": 3,
+        "H": 1,
+        "R": 1,
+        "ER": 1,
+        "BB": 0,
+        "K": 1,
+        "HR": 0,
+        "IP": 1
+      },
+      {
+        "player": "branislav-vukovic",
+        "name": "Branislav \"Bran\" Vuković",
+        "IP_outs": 3,
+        "H": 2,
+        "R": 0,
+        "ER": 0,
+        "BB": 1,
+        "K": 0,
+        "HR": 0,
+        "IP": 1
       }
     ],
     "home": [
@@ -395,7 +419,7 @@
   "decisions": {
     "W": "oskar-svanholm",
     "L": "eitan-ben-sasson",
-    "SV": "caleb-reidman"
+    "SV": "branislav-vukovic"
   },
   "notes": [],
   "calibration": "glb.stats-calibrated.v1"

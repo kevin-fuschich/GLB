@@ -125,8 +125,8 @@
         "SB": 0
       },
       {
-        "player": "tomasz-kubas",
-        "name": "Tomasz Kubas",
+        "player": "malachi-boone",
+        "name": "Malachi Boone",
         "position": "SS",
         "AB": 5,
         "R": 0,
@@ -155,8 +155,8 @@
         "SB": 0
       },
       {
-        "player": "wyatt-hollander",
-        "name": "Wyatt Hollander",
+        "player": "tesfaye-mebrahtu",
+        "name": "Tesfaye Mebrahtu",
         "position": "CF",
         "AB": 3,
         "R": 2,
@@ -340,14 +340,50 @@
       {
         "player": "sergio-ibarra-lugo",
         "name": "Sergio Ibarra Lugo",
-        "IP_outs": 12,
-        "H": 7,
-        "R": 3,
-        "ER": 3,
+        "IP_outs": 3,
+        "H": 2,
+        "R": 1,
+        "ER": 1,
         "BB": 0,
-        "K": 4,
+        "K": 1,
         "HR": 0,
-        "IP": 4
+        "IP": 1
+      },
+      {
+        "player": "yaw-mensah",
+        "name": "Yaw Mensah",
+        "IP_outs": 3,
+        "H": 2,
+        "R": 1,
+        "ER": 1,
+        "BB": 0,
+        "K": 1,
+        "HR": 0,
+        "IP": 1
+      },
+      {
+        "player": "benoit-leduc",
+        "name": "Benoît Leduc",
+        "IP_outs": 3,
+        "H": 1,
+        "R": 1,
+        "ER": 1,
+        "BB": 0,
+        "K": 1,
+        "HR": 0,
+        "IP": 1
+      },
+      {
+        "player": "hamza-qureshi",
+        "name": "Hamza Qureshi",
+        "IP_outs": 3,
+        "H": 2,
+        "R": 0,
+        "ER": 0,
+        "BB": 0,
+        "K": 1,
+        "HR": 0,
+        "IP": 1
       }
     ],
     "home": [

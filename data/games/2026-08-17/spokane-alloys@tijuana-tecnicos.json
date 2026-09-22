@@ -80,8 +80,8 @@
   "batting": {
     "away": [
       {
-        "player": "nikolai-dobrynin",
-        "name": "Nikolai Dobrynin",
+        "player": "jonah-sato",
+        "name": "Jonah Sato",
         "position": "C",
         "AB": 5,
         "R": 0,
@@ -140,8 +140,8 @@
         "SB": 0
       },
       {
-        "player": "andres-mireles",
-        "name": "Andrés Mireles",
+        "player": "rene-bouchard",
+        "name": "René Bouchard",
         "position": "3B",
         "AB": 4,
         "R": 2,
@@ -155,8 +155,8 @@
         "SB": 0
       },
       {
-        "player": "wyatt-hollander",
-        "name": "Wyatt Hollander",
+        "player": "tesfaye-mebrahtu",
+        "name": "Tesfaye Mebrahtu",
         "position": "CF",
         "AB": 4,
         "R": 0,
@@ -353,16 +353,52 @@
         "IP": 5
       },
       {
-        "player": "yaw-mensah",
-        "name": "Yaw Mensah",
-        "IP_outs": 12,
-        "H": 9,
-        "R": 3,
-        "ER": 3,
+        "player": "miguel-angel-serrano",
+        "name": "Miguel Ángel Serrano",
+        "IP_outs": 3,
+        "H": 2,
+        "R": 1,
+        "ER": 1,
+        "BB": 0,
+        "K": 0,
+        "HR": 0,
+        "IP": 1
+      },
+      {
+        "player": "caleb-reidman",
+        "name": "Caleb Reidman",
+        "IP_outs": 3,
+        "H": 2,
+        "R": 1,
+        "ER": 1,
+        "BB": 0,
+        "K": 0,
+        "HR": 0,
+        "IP": 1
+      },
+      {
+        "player": "sergio-ibarra-lugo",
+        "name": "Sergio Ibarra Lugo",
+        "IP_outs": 3,
+        "H": 2,
+        "R": 1,
+        "ER": 1,
+        "BB": 0,
+        "K": 0,
+        "HR": 0,
+        "IP": 1
+      },
+      {
+        "player": "branislav-vukovic",
+        "name": "Branislav \"Bran\" Vuković",
+        "IP_outs": 3,
+        "H": 3,
+        "R": 0,
+        "ER": 0,
         "BB": 0,
         "K": 1,
         "HR": 0,
-        "IP": 4
+        "IP": 1
       }
     ],
     "home": [
@@ -395,7 +431,7 @@
   "decisions": {
     "W": "diego-alvarez-mora",
     "L": "rafael-montoya",
-    "SV": "yaw-mensah"
+    "SV": "branislav-vukovic"
   },
   "notes": [],
   "calibration": "glb.stats-calibrated.v1"

@@ -338,16 +338,40 @@
         "IP": 6.2
       },
       {
-        "player": "caleb-reidman",
-        "name": "Caleb Reidman",
-        "IP_outs": 7,
-        "H": 2,
+        "player": "yaw-mensah",
+        "name": "Yaw Mensah",
+        "IP_outs": 1,
+        "H": 1,
         "R": 0,
         "ER": 0,
-        "BB": 4,
-        "K": 2,
+        "BB": 2,
+        "K": 0,
         "HR": 0,
-        "IP": 2.1
+        "IP": 0.1
+      },
+      {
+        "player": "benoit-leduc",
+        "name": "Benoît Leduc",
+        "IP_outs": 3,
+        "H": 1,
+        "R": 0,
+        "ER": 0,
+        "BB": 1,
+        "K": 1,
+        "HR": 0,
+        "IP": 1
+      },
+      {
+        "player": "branislav-vukovic",
+        "name": "Branislav \"Bran\" Vuković",
+        "IP_outs": 3,
+        "H": 0,
+        "R": 0,
+        "ER": 0,
+        "BB": 1,
+        "K": 1,
+        "HR": 0,
+        "IP": 1
       }
     ],
     "home": [
@@ -380,7 +404,7 @@
   "decisions": {
     "W": "kellan-brynden",
     "L": "ismail-benjeloun",
-    "SV": "caleb-reidman"
+    "SV": "branislav-vukovic"
   },
   "notes": [],
   "calibration": "glb.stats-calibrated.v1"

@@ -364,16 +364,28 @@
         "IP": 7
       },
       {
-        "player": "caleb-reidman",
-        "name": "Caleb Reidman",
-        "IP_outs": 6,
+        "player": "hamza-qureshi",
+        "name": "Hamza Qureshi",
+        "IP_outs": 3,
         "H": 0,
         "R": 1,
         "ER": 1,
         "BB": 0,
+        "K": 0,
+        "HR": 0,
+        "IP": 1
+      },
+      {
+        "player": "ellis-wren",
+        "name": "Ellis Wren",
+        "IP_outs": 3,
+        "H": 0,
+        "R": 0,
+        "ER": 0,
+        "BB": 0,
         "K": 1,
         "HR": 0,
-        "IP": 2
+        "IP": 1
       }
     ]
   },

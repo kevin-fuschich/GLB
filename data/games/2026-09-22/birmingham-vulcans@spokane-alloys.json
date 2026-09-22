@@ -262,8 +262,8 @@
         "SB": 0
       },
       {
-        "player": "andres-mireles",
-        "name": "Andrés Mireles",
+        "player": "rene-bouchard",
+        "name": "René Bouchard",
         "position": "3B",
         "AB": 4,
         "R": 0,
@@ -277,8 +277,8 @@
         "SB": 0
       },
       {
-        "player": "wyatt-hollander",
-        "name": "Wyatt Hollander",
+        "player": "tesfaye-mebrahtu",
+        "name": "Tesfaye Mebrahtu",
         "position": "CF",
         "AB": 4,
         "R": 0,
@@ -364,16 +364,40 @@
         "IP": 6.1
       },
       {
+        "player": "caleb-reidman",
+        "name": "Caleb Reidman",
+        "IP_outs": 2,
+        "H": 0,
+        "R": 0,
+        "ER": 0,
+        "BB": 0,
+        "K": 1,
+        "HR": 0,
+        "IP": 0.2
+      },
+      {
+        "player": "sergio-ibarra-lugo",
+        "name": "Sergio Ibarra Lugo",
+        "IP_outs": 3,
+        "H": 0,
+        "R": 0,
+        "ER": 0,
+        "BB": 0,
+        "K": 1,
+        "HR": 0,
+        "IP": 1
+      },
+      {
         "player": "yaw-mensah",
         "name": "Yaw Mensah",
-        "IP_outs": 8,
+        "IP_outs": 3,
         "H": 1,
         "R": 0,
         "ER": 0,
         "BB": 1,
-        "K": 3,
+        "K": 1,
         "HR": 0,
-        "IP": 2.2
+        "IP": 1
       }
     ]
   },

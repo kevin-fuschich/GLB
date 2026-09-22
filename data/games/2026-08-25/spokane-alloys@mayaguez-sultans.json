@@ -338,16 +338,28 @@
         "IP": 7
       },
       {
-        "player": "caleb-reidman",
-        "name": "Caleb Reidman",
-        "IP_outs": 6,
+        "player": "sergio-ibarra-lugo",
+        "name": "Sergio Ibarra Lugo",
+        "IP_outs": 3,
         "H": 1,
+        "R": 0,
+        "ER": 0,
+        "BB": 0,
+        "K": 1,
+        "HR": 0,
+        "IP": 1
+      },
+      {
+        "player": "yaw-mensah",
+        "name": "Yaw Mensah",
+        "IP_outs": 3,
+        "H": 0,
         "R": 1,
         "ER": 1,
         "BB": 0,
-        "K": 2,
+        "K": 1,
         "HR": 0,
-        "IP": 2
+        "IP": 1
       }
     ],
     "home": [

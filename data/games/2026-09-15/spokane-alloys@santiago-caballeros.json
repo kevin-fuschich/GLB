@@ -80,8 +80,8 @@
   "batting": {
     "away": [
       {
-        "player": "nikolai-dobrynin",
-        "name": "Nikolai Dobrynin",
+        "player": "jonah-sato",
+        "name": "Jonah Sato",
         "position": "C",
         "AB": 4,
         "R": 1,
@@ -140,8 +140,8 @@
         "SB": 0
       },
       {
-        "player": "andres-mireles",
-        "name": "Andrés Mireles",
+        "player": "rene-bouchard",
+        "name": "René Bouchard",
         "position": "3B",
         "AB": 5,
         "R": 1,
@@ -170,8 +170,8 @@
         "SB": 0
       },
       {
-        "player": "luis-quinones",
-        "name": "Luis Quiñones",
+        "player": "dae-hyun-park",
+        "name": "Dae-Hyun Park",
         "position": "LF",
         "AB": 4,
         "R": 1,
@@ -340,14 +340,38 @@
       {
         "player": "yaw-mensah",
         "name": "Yaw Mensah",
-        "IP_outs": 7,
-        "H": 2,
+        "IP_outs": 1,
+        "H": 1,
         "R": 1,
         "ER": 1,
         "BB": 0,
-        "K": 3,
+        "K": 1,
         "HR": 0,
-        "IP": 2.1
+        "IP": 0.1
+      },
+      {
+        "player": "benoit-leduc",
+        "name": "Benoît Leduc",
+        "IP_outs": 3,
+        "H": 1,
+        "R": 0,
+        "ER": 0,
+        "BB": 0,
+        "K": 1,
+        "HR": 0,
+        "IP": 1
+      },
+      {
+        "player": "branislav-vukovic",
+        "name": "Branislav \"Bran\" Vuković",
+        "IP_outs": 3,
+        "H": 0,
+        "R": 0,
+        "ER": 0,
+        "BB": 0,
+        "K": 1,
+        "HR": 0,
+        "IP": 1
       }
     ],
     "home": [
@@ -380,7 +404,7 @@
   "decisions": {
     "W": "mateusz-kasprowicz",
     "L": "kenji-hoshino",
-    "SV": "yaw-mensah"
+    "SV": "branislav-vukovic"
   },
   "notes": []
 }

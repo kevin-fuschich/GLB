@@ -202,8 +202,8 @@
     ],
     "home": [
       {
-        "player": "nikolai-dobrynin",
-        "name": "Nikolai Dobrynin",
+        "player": "jonah-sato",
+        "name": "Jonah Sato",
         "position": "C",
         "AB": 3,
         "R": 0,
@@ -292,8 +292,8 @@
         "SB": 0
       },
       {
-        "player": "luis-quinones",
-        "name": "Luis Quiñones",
+        "player": "dae-hyun-park",
+        "name": "Dae-Hyun Park",
         "position": "LF",
         "AB": 4,
         "R": 0,
@@ -366,14 +366,50 @@
       {
         "player": "caleb-reidman",
         "name": "Caleb Reidman",
-        "IP_outs": 12,
+        "IP_outs": 3,
         "H": 0,
         "R": 0,
         "ER": 0,
-        "BB": 4,
+        "BB": 1,
+        "K": 0,
+        "HR": 0,
+        "IP": 1
+      },
+      {
+        "player": "sergio-ibarra-lugo",
+        "name": "Sergio Ibarra Lugo",
+        "IP_outs": 3,
+        "H": 0,
+        "R": 0,
+        "ER": 0,
+        "BB": 1,
         "K": 1,
         "HR": 0,
-        "IP": 4
+        "IP": 1
+      },
+      {
+        "player": "yaw-mensah",
+        "name": "Yaw Mensah",
+        "IP_outs": 3,
+        "H": 0,
+        "R": 0,
+        "ER": 0,
+        "BB": 1,
+        "K": 0,
+        "HR": 0,
+        "IP": 1
+      },
+      {
+        "player": "benoit-leduc",
+        "name": "Benoît Leduc",
+        "IP_outs": 3,
+        "H": 0,
+        "R": 0,
+        "ER": 0,
+        "BB": 1,
+        "K": 0,
+        "HR": 0,
+        "IP": 1
       }
     ]
   },

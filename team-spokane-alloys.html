@@ -1384,6 +1384,13 @@ Contribute to this record →
 
 <script>
 const playerCards=document.getElementById("playerCards");
+const fieldstockCards=[
+  {front:"assets/images/cards/fieldstock/spk-01-kellan-brynden-front.webp",back:"assets/images/cards/fieldstock/spk-01-kellan-brynden-back.webp"},
+  {front:"assets/images/cards/fieldstock/spk-02-oskar-svanholm-front.webp",back:"assets/images/cards/fieldstock/spk-02-oskar-svanholm-back.webp"},
+  {front:"assets/images/cards/fieldstock/spk-03-mateusz-kasprowicz-front.webp",back:"assets/images/cards/fieldstock/spk-03-mateusz-kasprowicz-back.webp"},
+  {front:"assets/images/cards/fieldstock/spk-04-diego-alvarez-mora-front.webp",back:"assets/images/cards/fieldstock/spk-04-diego-alvarez-mora-back.webp"},
+  {front:"assets/images/cards/fieldstock/spk-05-lukas-havel-front.webp",back:"assets/images/cards/fieldstock/spk-05-lukas-havel-back.webp"}
+];
 const playerNotes=[
   "Keeps a small vial of mound dirt from every ballpark where he earns a win. Each is labeled with the final pitch and given to his father after the season.",
   "Builds small wooden radios during road trips and gives them to clubhouse attendants.",
@@ -1414,20 +1421,20 @@ document.querySelectorAll(".roster-table tbody tr").forEach((row,index)=>{
   const cardId=`SPK-${String(index+1).padStart(2,"0")}`;
   const front=document.createElement("div"); front.className="player-card-front";
   const back=document.createElement("div");
-  if(index===0){
+  if(fieldstockCards[index]){
     card.classList.add("player-card--fieldstock");
     const frontImage=document.createElement("img");
     frontImage.className="fieldstock-card-image";
-    frontImage.src="assets/images/cards/fieldstock/spk-01-kellan-brynden-front.webp";
-    frontImage.alt="Front of Kellan Brynden's FIELDSTOCK SPK-01 baseball card";
+    frontImage.src=fieldstockCards[index].front;
+    frontImage.alt=`Front of ${name.textContent.trim()}'s FIELDSTOCK ${cardId} baseball card`;
     frontImage.loading="lazy";
     frontImage.decoding="async";
     front.append(frontImage);
     back.className="player-card-back";
     const backImage=document.createElement("img");
     backImage.className="fieldstock-card-image";
-    backImage.src="assets/images/cards/fieldstock/spk-01-kellan-brynden-back.webp";
-    backImage.alt="Back of Kellan Brynden's FIELDSTOCK SPK-01 baseball card with 2025 statistics";
+    backImage.src=fieldstockCards[index].back;
+    backImage.alt=`Back of ${name.textContent.trim()}'s FIELDSTOCK ${cardId} baseball card with 2025 statistics`;
     backImage.loading="lazy";
     backImage.decoding="async";
     back.append(backImage);

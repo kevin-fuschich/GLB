@@ -524,6 +524,8 @@ text-align:center;
 text-shadow:0 1px 3px #000;
 }
 .player-card--fieldstock .claim-status:empty{display:none}
+.player-card--fieldstock .claim-key{display:block;margin-top:5px;padding:7px;border:1px solid #b66b28;background:#fffaf0;color:#0b1e33;font:700 8px/1.35 ui-monospace,SFMono-Regular,Menlo,monospace;overflow-wrap:anywhere;text-transform:none}
+.player-card--fieldstock .claim-copy{margin-top:5px;padding:6px 8px;border:0;border-radius:1px;background:#df7827;color:#0b1e33;font-size:8px;font-weight:850;text-transform:uppercase;cursor:pointer}
 
 .player-card-front::before{
 content:"";
@@ -1389,7 +1391,18 @@ const fieldstockCards=[
   {front:"assets/images/cards/fieldstock/spk-02-oskar-svanholm-front.webp",back:"assets/images/cards/fieldstock/spk-02-oskar-svanholm-back.webp"},
   {front:"assets/images/cards/fieldstock/spk-03-mateusz-kasprowicz-front.webp",back:"assets/images/cards/fieldstock/spk-03-mateusz-kasprowicz-back.webp"},
   {front:"assets/images/cards/fieldstock/spk-04-diego-alvarez-mora-front.webp",back:"assets/images/cards/fieldstock/spk-04-diego-alvarez-mora-back.webp"},
-  {front:"assets/images/cards/fieldstock/spk-05-lukas-havel-front.webp",back:"assets/images/cards/fieldstock/spk-05-lukas-havel-back.webp"}
+  {front:"assets/images/cards/fieldstock/spk-05-lukas-havel-front.webp",back:"assets/images/cards/fieldstock/spk-05-lukas-havel-back.webp"},
+  {front:"assets/images/cards/fieldstock/spk-06-caleb-reidman-front.webp",back:"assets/images/cards/fieldstock/spk-06-caleb-reidman-back.webp"},
+  {front:"assets/images/cards/fieldstock/spk-07-sergio-ibarra-lugo-front.webp",back:"assets/images/cards/fieldstock/spk-07-sergio-ibarra-lugo-back.webp"},
+  {front:"assets/images/cards/fieldstock/spk-08-yaw-mensah-front.webp",back:"assets/images/cards/fieldstock/spk-08-yaw-mensah-back.webp"},
+  {front:"assets/images/cards/fieldstock/spk-09-nikolai-dobrynin-front.webp",back:"assets/images/cards/fieldstock/spk-09-nikolai-dobrynin-back.webp"},
+  {front:"assets/images/cards/fieldstock/spk-10-evan-carroll-iv-front.webp",back:"assets/images/cards/fieldstock/spk-10-evan-carroll-iv-back.webp"},
+  {front:"assets/images/cards/fieldstock/spk-11-marco-delvecchio-front.webp",back:"assets/images/cards/fieldstock/spk-11-marco-delvecchio-back.webp"},
+  {front:"assets/images/cards/fieldstock/spk-12-tomasz-kubas-front.webp",back:"assets/images/cards/fieldstock/spk-12-tomasz-kubas-back.webp"},
+  {front:"assets/images/cards/fieldstock/spk-13-andres-mireles-front.webp",back:"assets/images/cards/fieldstock/spk-13-andres-mireles-back.webp"},
+  {front:"assets/images/cards/fieldstock/spk-14-wyatt-hollander-front.webp",back:"assets/images/cards/fieldstock/spk-14-wyatt-hollander-back.webp"},
+  {front:"assets/images/cards/fieldstock/spk-15-luis-quinones-front.webp",back:"assets/images/cards/fieldstock/spk-15-luis-quinones-back.webp"},
+  {front:"assets/images/cards/fieldstock/spk-16-pieter-van-wyk-front.webp",back:"assets/images/cards/fieldstock/spk-16-pieter-van-wyk-back.webp"}
 ];
 const playerNotes=[
   "Keeps a small vial of mound dirt from every ballpark where he earns a win. Each is labeled with the final pitch and given to his father after the season.",
@@ -1449,7 +1462,7 @@ document.querySelectorAll(".roster-table tbody tr").forEach((row,index)=>{
     back.className="player-card-back player-card-body";
     back.innerHTML=`<div class="player-card-topline"><span>GLB / SPO</span><span>Player Card</span></div><h3 class="player-card-name">${name.textContent.trim()}</h3><p class="player-card-role">Spokane Alloys · ${role.textContent.trim()}</p><p class="player-card-role" style="margin-top:18px">${playerNotes[index]}</p><div class="player-card-meta"><span>${cardId}</span><span>© GLB</span></div>`;
   }
-  back.insertAdjacentHTML("beforeend",`<button class="card-claim" type="button">Claim + write the back</button><form class="claim-form" action="https://formspree.io/f/mzezpeap" method="POST" hidden><input type="hidden" name="_subject" value="FIELDSTOCK card claim + bio submission"><input type="hidden" name="submission_type" value="player_card"><input type="hidden" name="artifact_type" value="FIELDSTOCK Player Card"><input type="hidden" name="card_id"><input type="hidden" name="player_name"><input type="hidden" name="current_card_bio"><label>User ID<input name="user_id" required autocomplete="username"></label><label>Email<input name="email" type="email" required autocomplete="email"></label><label>Proposed weird bio line<textarea name="proposed_card_bio" maxlength="180" rows="3" required placeholder="Keep it weird, baseball-adjacent, and one line."></textarea></label><p class="claim-form-note">Claims and bio lines are reviewed before they become part of the GLB record.</p><button type="submit">Submit claim + bio</button></form><div class="claim-status" aria-live="polite"></div>`);
+  back.insertAdjacentHTML("beforeend",`<button class="card-claim" type="button">Claim + write the back</button><form class="claim-form" action="https://formspree.io/f/mzezpeap" method="POST" hidden><input type="hidden" name="_subject" value="FIELDSTOCK card claim + bio submission"><input type="hidden" name="submission_type" value="player_card"><input type="hidden" name="artifact_type" value="FIELDSTOCK Player Card"><input type="hidden" name="card_id"><input type="hidden" name="player_name"><input type="hidden" name="current_card_bio"><input type="hidden" name="claim_key"><label>User ID<input name="user_id" required autocomplete="username"></label><label>Email<input name="email" type="email" required autocomplete="email"></label><label>Proposed weird bio line<textarea name="proposed_card_bio" maxlength="180" rows="3" required placeholder="Keep it weird, baseball-adjacent, and one line."></textarea></label><p class="claim-form-note">Claims and bio lines are reviewed before they become part of the GLB record.</p><button type="submit">Submit claim + bio</button></form><div class="claim-status" aria-live="polite"></div>`);
   const flip=()=>card.classList.toggle("flipped");
   card.append(front,back);
   card.addEventListener("click",event=>{if(!event.target.closest("a,button,input,form")) flip();});
@@ -1458,7 +1471,39 @@ document.querySelectorAll(".roster-table tbody tr").forEach((row,index)=>{
   const form=back.querySelector(".claim-form");
   const status=back.querySelector(".claim-status");
   claim.addEventListener("click",()=>{form.hidden=!form.hidden;if(!form.hidden){form.elements.card_id.value=cardId;form.elements.player_name.value=name.textContent.trim();form.elements.current_card_bio.value=playerNotes[index];form.elements.user_id.focus();}});
-  form.addEventListener("submit",()=>{status.textContent="Claim and bio submitted for review.";claim.textContent="Submitted";claim.disabled=true;});
+  form.addEventListener("submit",async event=>{
+    event.preventDefault();
+    const bytes=new Uint8Array(20);
+    crypto.getRandomValues(bytes);
+    const token=Array.from(bytes,byte=>byte.toString(16).padStart(2,"0").toUpperCase()).join("").match(/.{1,8}/g).join("-");
+    const claimKey=`FST-${cardId.replace("-","")}-${token}`;
+    form.elements.claim_key.value=claimKey;
+    const submit=form.querySelector('button[type="submit"]');
+    submit.disabled=true;
+    submit.textContent="Submitting…";
+    status.textContent="Submitting claim…";
+    try{
+      const response=await fetch(form.action,{method:"POST",body:new FormData(form),headers:{Accept:"application/json"}});
+      if(!response.ok) throw new Error("Claim submission failed");
+      form.hidden=true;
+      claim.textContent="Claim submitted";
+      claim.disabled=true;
+      status.textContent="Claim received. Save this private FIELDSTOCK Claim Key:";
+      const code=document.createElement("code");
+      code.className="claim-key";
+      code.textContent=claimKey;
+      const copy=document.createElement("button");
+      copy.className="claim-copy";
+      copy.type="button";
+      copy.textContent="Copy claim key";
+      copy.addEventListener("click",async()=>{await navigator.clipboard.writeText(claimKey);copy.textContent="Copied";});
+      status.append(code,copy);
+    }catch(error){
+      submit.disabled=false;
+      submit.textContent="Submit claim + bio";
+      status.textContent="The claim could not be submitted. Please try again.";
+    }
+  });
   playerCards.append(card);
 });
 

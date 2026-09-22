@@ -575,7 +575,7 @@ box-shadow:inset 0 0 0 1px #fff8;
 .player-card-role{font-size:11px;line-height:1.45;color:#425364}
 .player-card-back .player-card-role{font-family:var(--font-serif);font-size:12px;color:#27394b}
 .card-claim{margin-top:auto;padding:9px 10px;border:1px solid #0b1e33;border-radius:2px;background:#0b1e33;color:#fff;font-size:9px;font-weight:850;letter-spacing:.5px;text-transform:uppercase;cursor:pointer}.card-claim:disabled{opacity:.7;cursor:default}.claim-status{min-height:13px;margin-top:6px;color:#92511f;font-size:9px;font-weight:750}
-.claim-form{display:grid;gap:6px;margin-top:8px;padding-top:8px;border-top:1px solid #0b1e3330}.claim-form[hidden]{display:none}.claim-form label{display:grid;gap:2px;color:#34495f;font-size:8px;font-weight:800;text-transform:uppercase;letter-spacing:.5px}.claim-form input{width:100%;padding:6px;border:1px solid #7d8790;border-radius:1px;background:#fffdf8;color:#0b1e33;font-size:10px}.claim-form button{padding:7px;border:0;border-radius:1px;background:#df7827;color:#0b1e33;font-size:9px;font-weight:850;text-transform:uppercase}.player-card-meta{display:flex;justify-content:space-between;gap:8px;margin-top:8px;padding-top:7px;border-top:1px solid #0b1e3329;color:#526170;font-size:9px;font-weight:800;text-transform:uppercase;letter-spacing:.4px}
+.claim-form{display:grid;gap:6px;margin-top:8px;padding-top:8px;border-top:1px solid #0b1e3330}.claim-form[hidden]{display:none}.claim-form label{display:grid;gap:2px;color:#34495f;font-size:8px;font-weight:800;text-transform:uppercase;letter-spacing:.5px}.claim-form input,.claim-form textarea{width:100%;padding:6px;border:1px solid #7d8790;border-radius:1px;background:#fffdf8;color:#0b1e33;font:10px/1.35 var(--font-sans);resize:none}.claim-form textarea{min-height:54px}.claim-form-note{margin:0;color:#576675;font-size:8px;line-height:1.35}.claim-form button{padding:7px;border:0;border-radius:1px;background:#df7827;color:#0b1e33;font-size:9px;font-weight:850;text-transform:uppercase}.player-card-meta{display:flex;justify-content:space-between;gap:8px;margin-top:8px;padding-top:7px;border-top:1px solid #0b1e3329;color:#526170;font-size:9px;font-weight:800;text-transform:uppercase;letter-spacing:.4px}
 
 .story-copy{
 margin:0;
@@ -1442,7 +1442,7 @@ document.querySelectorAll(".roster-table tbody tr").forEach((row,index)=>{
     back.className="player-card-back player-card-body";
     back.innerHTML=`<div class="player-card-topline"><span>GLB / SPO</span><span>Player Card</span></div><h3 class="player-card-name">${name.textContent.trim()}</h3><p class="player-card-role">Spokane Alloys · ${role.textContent.trim()}</p><p class="player-card-role" style="margin-top:18px">${playerNotes[index]}</p><div class="player-card-meta"><span>${cardId}</span><span>© GLB</span></div>`;
   }
-  back.insertAdjacentHTML("beforeend",`<button class="card-claim" type="button">Claim this card</button><form class="claim-form" action="https://formspree.io/f/mzezpeap" method="POST" hidden><input type="hidden" name="card_id"><input type="hidden" name="player_name"><label>User ID<input name="user_id" required autocomplete="username"></label><label>Email<input name="email" type="email" required autocomplete="email"></label><button type="submit">Submit claim</button></form><div class="claim-status" aria-live="polite"></div>`);
+  back.insertAdjacentHTML("beforeend",`<button class="card-claim" type="button">Claim + write the back</button><form class="claim-form" action="https://formspree.io/f/mzezpeap" method="POST" hidden><input type="hidden" name="_subject" value="FIELDSTOCK card claim + bio submission"><input type="hidden" name="submission_type" value="player_card"><input type="hidden" name="artifact_type" value="FIELDSTOCK Player Card"><input type="hidden" name="card_id"><input type="hidden" name="player_name"><input type="hidden" name="current_card_bio"><label>User ID<input name="user_id" required autocomplete="username"></label><label>Email<input name="email" type="email" required autocomplete="email"></label><label>Proposed weird bio line<textarea name="proposed_card_bio" maxlength="180" rows="3" required placeholder="Keep it weird, baseball-adjacent, and one line."></textarea></label><p class="claim-form-note">Claims and bio lines are reviewed before they become part of the GLB record.</p><button type="submit">Submit claim + bio</button></form><div class="claim-status" aria-live="polite"></div>`);
   const flip=()=>card.classList.toggle("flipped");
   card.append(front,back);
   card.addEventListener("click",event=>{if(!event.target.closest("a,button,input,form")) flip();});
@@ -1450,8 +1450,8 @@ document.querySelectorAll(".roster-table tbody tr").forEach((row,index)=>{
   const claim=back.querySelector(".card-claim");
   const form=back.querySelector(".claim-form");
   const status=back.querySelector(".claim-status");
-  claim.addEventListener("click",()=>{form.hidden=!form.hidden;if(!form.hidden){form.elements.card_id.value=cardId;form.elements.player_name.value=name.textContent.trim();form.elements.user_id.focus();}});
-  form.addEventListener("submit",()=>{status.textContent="Claim submitted for review.";claim.textContent="Submitted";claim.disabled=true;});
+  claim.addEventListener("click",()=>{form.hidden=!form.hidden;if(!form.hidden){form.elements.card_id.value=cardId;form.elements.player_name.value=name.textContent.trim();form.elements.current_card_bio.value=playerNotes[index];form.elements.user_id.focus();}});
+  form.addEventListener("submit",()=>{status.textContent="Claim and bio submitted for review.";claim.textContent="Submitted";claim.disabled=true;});
   playerCards.append(card);
 });
 

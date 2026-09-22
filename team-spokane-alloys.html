@@ -467,6 +467,64 @@ transform:rotateY(180deg);
 .player-card.flipped .player-card-front{transform:rotateY(180deg)}
 .player-card.flipped .player-card-back{transform:rotateY(360deg)}
 
+.player-card--fieldstock .player-card-front,
+.player-card--fieldstock .player-card-back{
+padding:0;
+border:0;
+background:#292b2c;
+box-shadow:0 16px 22px #24364b38,0 3px 5px #24364b33;
+}
+
+.player-card--fieldstock .player-card-front::before,
+.player-card--fieldstock .player-card-front::after{display:none}
+
+.fieldstock-card-image{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+.player-card--fieldstock .card-claim{
+position:absolute;
+left:50%;
+bottom:10px;
+z-index:4;
+width:max-content;
+margin:0;
+padding:7px 12px;
+border:1px solid #d7b76a;
+background:#0b1e33e8;
+color:#fff;
+transform:translateX(-50%);
+box-shadow:0 3px 9px #0007;
+}
+
+.player-card--fieldstock .claim-form{
+position:absolute;
+right:12px;
+bottom:12px;
+left:12px;
+z-index:5;
+margin:0;
+padding:10px;
+border:1px solid #d7b76a;
+background:#f7f2e6f5;
+box-shadow:0 6px 18px #0008;
+}
+
+.player-card--fieldstock .claim-status{
+position:absolute;
+right:12px;
+bottom:12px;
+left:12px;
+z-index:6;
+margin:0;
+color:#fff;
+text-align:center;
+text-shadow:0 1px 3px #000;
+}
+.player-card--fieldstock .claim-status:empty{display:none}
+
 .player-card-front::before{
 content:"";
 position:absolute;
@@ -865,8 +923,8 @@ View Club Page →
 <section class="card">
 
 <div class="card-header">
-<h2 class="card-title">Official Player Cards</h2>
-<span class="card-label">16-Card Team Set</span>
+<h2 class="card-title">FIELDSTOCK Player Cards</h2>
+<span class="card-label">16-Card Base Set</span>
 </div>
 
 <div class="table-wrap">
@@ -1327,7 +1385,7 @@ Contribute to this record →
 <script>
 const playerCards=document.getElementById("playerCards");
 const playerNotes=[
-  "Keeps a pocket notebook of every hitter who has ever broken a bat against him.",
+  "Keeps a small vial of mound dirt from every ballpark where he earns a win. Each is labeled with the final pitch and given to his father after the season.",
   "Builds small wooden radios during road trips and gives them to clubhouse attendants.",
   "Once finished a rain-delay crossword in ink before the grounds crew removed the tarp.",
   "Calls his mother after every start, but refuses to discuss baseball until she brings it up.",
@@ -1353,18 +1411,38 @@ document.querySelectorAll(".roster-table tbody tr").forEach((row,index)=>{
   card.className="player-card";
   card.tabIndex=0;
   card.setAttribute("aria-label",`${name.textContent.trim()} player card. Press Enter to flip.`);
-  const front=document.createElement("div"); front.className="player-card-front";
-  const img=document.createElement("img"); img.className="player-card-image"; img.src=image.src; img.alt=image.alt;
-  const body=document.createElement("div"); body.className="player-card-body";
-  const top=document.createElement("div"); top.className="player-card-topline"; top.append(Object.assign(document.createElement("span"),{textContent:`SPK-${String(index+1).padStart(2,"0")}`}),Object.assign(document.createElement("span"),{textContent:cells[1].textContent.trim()}));
-  const title=document.createElement("h3"); title.className="player-card-name"; title.append(name.cloneNode(true));
-  const subtitle=document.createElement("div"); subtitle.className="player-card-role"; subtitle.textContent=role.textContent.trim();
-  const meta=document.createElement("div"); meta.className="player-card-meta"; meta.append(Object.assign(document.createElement("span"),{textContent:`B/T ${cells[2].textContent.trim()}`}),Object.assign(document.createElement("span"),{textContent:`Age ${cells[3].textContent.trim()}`}));
-  body.append(top,title,subtitle,meta); front.append(img,body);
   const cardId=`SPK-${String(index+1).padStart(2,"0")}`;
+  const front=document.createElement("div"); front.className="player-card-front";
   const back=document.createElement("div");
-  back.className="player-card-back player-card-body";
-  back.innerHTML=`<div class="player-card-topline"><span>GLB / SPO</span><span>Official Card</span></div><h3 class="player-card-name">${name.textContent.trim()}</h3><p class="player-card-role">Spokane Alloys · ${role.textContent.trim()}</p><p class="player-card-role" style="margin-top:18px">${playerNotes[index]}</p><div class="player-card-meta"><span>${cardId}</span><span>© GLB</span></div><button class="card-claim" type="button">Claim this card</button><form class="claim-form" action="https://formspree.io/f/mzezpeap" method="POST" hidden><input type="hidden" name="card_id"><input type="hidden" name="player_name"><label>User ID<input name="user_id" required autocomplete="username"></label><label>Email<input name="email" type="email" required autocomplete="email"></label><button type="submit">Submit claim</button></form><div class="claim-status" aria-live="polite"></div>`;
+  if(index===0){
+    card.classList.add("player-card--fieldstock");
+    const frontImage=document.createElement("img");
+    frontImage.className="fieldstock-card-image";
+    frontImage.src="assets/images/cards/fieldstock/spk-01-kellan-brynden-front.webp";
+    frontImage.alt="Front of Kellan Brynden's FIELDSTOCK SPK-01 baseball card";
+    frontImage.loading="lazy";
+    frontImage.decoding="async";
+    front.append(frontImage);
+    back.className="player-card-back";
+    const backImage=document.createElement("img");
+    backImage.className="fieldstock-card-image";
+    backImage.src="assets/images/cards/fieldstock/spk-01-kellan-brynden-back.webp";
+    backImage.alt="Back of Kellan Brynden's FIELDSTOCK SPK-01 baseball card with 2025 statistics";
+    backImage.loading="lazy";
+    backImage.decoding="async";
+    back.append(backImage);
+  }else{
+    const img=document.createElement("img"); img.className="player-card-image"; img.src=image.src; img.alt=image.alt;
+    const body=document.createElement("div"); body.className="player-card-body";
+    const top=document.createElement("div"); top.className="player-card-topline"; top.append(Object.assign(document.createElement("span"),{textContent:cardId}),Object.assign(document.createElement("span"),{textContent:cells[1].textContent.trim()}));
+    const title=document.createElement("h3"); title.className="player-card-name"; title.append(name.cloneNode(true));
+    const subtitle=document.createElement("div"); subtitle.className="player-card-role"; subtitle.textContent=role.textContent.trim();
+    const meta=document.createElement("div"); meta.className="player-card-meta"; meta.append(Object.assign(document.createElement("span"),{textContent:`B/T ${cells[2].textContent.trim()}`}),Object.assign(document.createElement("span"),{textContent:`Age ${cells[3].textContent.trim()}`}));
+    body.append(top,title,subtitle,meta); front.append(img,body);
+    back.className="player-card-back player-card-body";
+    back.innerHTML=`<div class="player-card-topline"><span>GLB / SPO</span><span>Player Card</span></div><h3 class="player-card-name">${name.textContent.trim()}</h3><p class="player-card-role">Spokane Alloys · ${role.textContent.trim()}</p><p class="player-card-role" style="margin-top:18px">${playerNotes[index]}</p><div class="player-card-meta"><span>${cardId}</span><span>© GLB</span></div>`;
+  }
+  back.insertAdjacentHTML("beforeend",`<button class="card-claim" type="button">Claim this card</button><form class="claim-form" action="https://formspree.io/f/mzezpeap" method="POST" hidden><input type="hidden" name="card_id"><input type="hidden" name="player_name"><label>User ID<input name="user_id" required autocomplete="username"></label><label>Email<input name="email" type="email" required autocomplete="email"></label><button type="submit">Submit claim</button></form><div class="claim-status" aria-live="polite"></div>`);
   const flip=()=>card.classList.toggle("flipped");
   card.append(front,back);
   card.addEventListener("click",event=>{if(!event.target.closest("a,button,input,form")) flip();});

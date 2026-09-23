@@ -141,6 +141,8 @@
       "type": "player",
       "edition": "current",
       "player_slug": "dae-hyun-park",
+      "rookie": true,
+      "rookie_year": 2026,
       "serial_template": "SPK-20-{USERID}-{CLAIMSEQ}"
     },
     {
@@ -176,6 +178,8 @@
       "type": "player",
       "edition": "current",
       "player_slug": "miguel-angel-serrano",
+      "rookie": true,
+      "rookie_year": 2026,
       "serial_template": "SPK-25-{USERID}-{CLAIMSEQ}"
     },
     {

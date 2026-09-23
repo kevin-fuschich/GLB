@@ -198,6 +198,8 @@
       "weight": 183,
       "dob": "2003-03-18",
       "birthplace": "Busan, South Korea",
+      "rookie": true,
+      "rookie_year": 2026,
       "field_note": "Marks the warning track depth in shoe lengths at every park before batting practice.",
       "photo": "dae-hyun-park.jpg"
     },
@@ -268,6 +270,8 @@
       "weight": 195,
       "dob": "2003-06-06",
       "birthplace": "Maracaibo, Venezuela",
+      "rookie": true,
+      "rookie_year": 2026,
       "field_note": "Taps the bullpen gate twice before entering, a habit that began after a scoreless winter-league month.",
       "photo": "miguel-angel-serrano.jpg"
     },

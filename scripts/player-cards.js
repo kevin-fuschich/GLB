@@ -48,7 +48,10 @@
     ['#523625', '#dda572'], ['#243a62', '#a9bfe1'], ['#524135', '#e2c68c']
   ];
   function photoPath(player) {
-    const pendingSpokanePortraits = new Set(['jonah-sato','rene-bouchard','malachi-boone','dae-hyun-park','tesfaye-mebrahtu','hamza-qureshi','ellis-wren','miguel-angel-serrano','branislav-vukovic']);
+    const expansionSpokanePortraits = new Set(['jonah-sato','rene-bouchard','malachi-boone','tesfaye-mebrahtu','hamza-qureshi','ellis-wren','branislav-vukovic']);
+    if (player.teamSlug === 'spokane-alloys' && expansionSpokanePortraits.has(player.slug))
+      return `assets/images/players/spokane-alloys/${player.slug}.jpg`;
+    const pendingSpokanePortraits = new Set(['dae-hyun-park','miguel-angel-serrano']);
     if (player.teamSlug === 'spokane-alloys' && pendingSpokanePortraits.has(player.slug))
       return 'assets/images/players/spokane-alloys/portrait-pending.svg';
     if (player.teamSlug === 'spokane-alloys' && player.slug === 'benoit-leduc')

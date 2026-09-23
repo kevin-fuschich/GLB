@@ -748,23 +748,18 @@ async function loadPlayer(){
     cardHost.replaceChildren(GLBPlayerCards.createCard({...player,slug:playerSlug,name:playerName,teamSlug,teamName:team.teamName},record,{link:false}));
   }
   const claim=document.createElement('form'); claim.className='card-claim-form'; claim.action='https://formspree.io/f/mzezpeap'; claim.method='POST';
-  claim.innerHTML='<strong>Request this card</strong><input type="hidden" name="card_id"><input type="hidden" name="player_name"><input type="hidden" name="claim_key"><input name="user_id" required minlength="3" maxlength="24" pattern="[A-Za-z0-9_-]{3,24}" title="3–24 letters, numbers, underscores, or hyphens" placeholder="Your USER ID"><input name="email" type="email" required placeholder="Your email"><textarea name="proposed_card_bio" maxlength="180" required placeholder="A weird, grounded baseball factoid about this player"></textarea><button type="submit">Submit request</button><small>Ownership and factoids appear after review. Keep your private receipt key.</small><div class="claim-response" aria-live="polite"></div>';
+  claim.innerHTML='<strong>Request this card</strong><input type="hidden" name="card_id"><input type="hidden" name="player_name"><input name="user_id" required minlength="3" maxlength="24" pattern="[A-Za-z0-9_-]{3,24}" title="3–24 letters, numbers, underscores, or hyphens" placeholder="Your USER ID"><input name="email" type="email" required placeholder="Your email"><textarea name="proposed_card_bio" maxlength="180" required placeholder="A weird, grounded baseball factoid about this player"></textarea><button type="submit">Submit request</button><small>If approved, your private ownership key will be sent to your email.</small><div class="claim-response" aria-live="polite"></div>';
   claim.elements.card_id.value=teamSlug==='spokane-alloys'&&cardNumber? 'SPK-'+String(cardNumber).padStart(2,'0') : teamSlug.toUpperCase().slice(0,3)+'-'+playerSlug.toUpperCase();
   claim.elements.player_name.value=playerName;
   claim.addEventListener('submit',async event=>{
     event.preventDefault();
-    const bytes=new Uint8Array(20);crypto.getRandomValues(bytes);
-    const token=Array.from(bytes,byte=>byte.toString(16).padStart(2,'0').toUpperCase()).join('').match(/.{1,8}/g).join('-');
-    const claimKey=`FST-${claim.elements.card_id.value}-${claim.elements.user_id.value.toUpperCase()}-${token}`;
-    claim.elements.claim_key.value=claimKey;
     const button=claim.querySelector('button'),response=claim.querySelector('.claim-response');
     button.disabled=true;button.textContent='Submitting…';response.textContent='';
     try{
       const result=await fetch(claim.action,{method:'POST',body:new FormData(claim),headers:{Accept:'application/json'}});
       if(!result.ok) throw new Error('Submission failed');
       claim.querySelectorAll('input,textarea,button,small,strong').forEach(element=>element.hidden=true);
-      response.textContent='Request received, pending review. Save this private receipt key:';
-      const receipt=document.createElement('code');receipt.className='claim-receipt';receipt.textContent=claimKey;response.append(receipt);
+      response.textContent='Request received. If approved, your ownership key will be sent by email.';
     }catch(error){button.disabled=false;button.textContent='Submit request';response.textContent='The request could not be submitted. Please try again.'}
   });
   cardHost.append(claim);

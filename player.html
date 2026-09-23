@@ -256,7 +256,7 @@ p{line-height:1.58;color:#343a40}
   .nav{gap:14px}
 }
 
-.card-claim-form{display:grid;gap:10px;max-width:310px;margin:18px auto 0;padding:14px;border:1px solid #d9dee5;border-radius:10px;background:#f8fafb}.card-claim-form strong{color:#13283f}.card-claim-form input{padding:10px;border:1px solid #cfd7e0;border-radius:7px}.card-claim-form button{padding:10px;border:0;border-radius:7px;background:#13283f;color:#fff;font-weight:800}.card-claim-form small{color:#5f6b7a}
+.card-claim-form{display:grid;gap:10px;max-width:310px;margin:18px auto 0;padding:14px;border:1px solid #d9dee5;border-radius:10px;background:#f8fafb}.card-claim-form strong{color:#13283f}.card-claim-form input,.card-claim-form textarea{width:100%;padding:10px;border:1px solid #cfd7e0;border-radius:7px;font:inherit}.card-claim-form textarea{min-height:85px;resize:vertical}.card-claim-form button{padding:10px;border:0;border-radius:7px;background:#13283f;color:#fff;font-weight:800}.card-claim-form small{color:#5f6b7a}
 .glb-player-card{position:relative;transform-style:preserve-3d;transition:transform .45s ease;cursor:pointer}.glb-player-card.is-flipped{transform:rotateY(180deg)}.glb-player-card__front,.glb-player-card__back{backface-visibility:hidden}.glb-player-card__back{position:absolute;inset:0;transform:rotateY(180deg);display:flex;flex-direction:column;justify-content:center;align-items:center;padding:24px;text-align:center;background:linear-gradient(145deg,#172f4b,#091827);color:#fff}.glb-player-card__backmark{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:#b9d8d0}.glb-player-card__backname{margin:18px 0 8px;font-size:24px}.glb-player-card__backcopy{margin:6px 0;color:#d9e3ed;font-size:12px}.glb-player-card__serial{margin-top:28px;padding-top:12px;border-top:1px solid #ffffff35;font-weight:800;letter-spacing:1px}.glb-player-card__fliphint{margin-top:24px;font-size:10px;text-transform:uppercase;color:#efb36d}.glb-player-card__front{height:100%}
 .glb-player-card{width:min(360px,100%);aspect-ratio:2.5/3.5;border:10px solid #f1ead8;border-radius:0;background:#f1ead8;box-shadow:0 10px 24px #0b1e3340,0 0 0 2px #13283f, inset 0 0 0 2px #b98b45;overflow:hidden}.glb-player-card__front{padding:10px;background:#f1ead8;border:2px solid var(--player-accent);display:flex;flex-direction:column}.glb-player-card__top{padding:5px 7px;background:var(--player-deep);color:#fff}.glb-player-card__portrait{flex:1;min-height:0;border:5px solid var(--player-accent);border-bottom:0;border-radius:0}.glb-player-card__portrait img{width:100%;height:100%;object-fit:cover}.glb-player-card__identity{padding:8px 10px;background:#fff;color:var(--player-deep);border:2px solid var(--player-accent)}.glb-player-card__name{font-size:21px!important}.glb-player-card__stats{background:#fff; border:2px solid var(--player-accent);border-top:0}.glb-player-card__footer{background:var(--player-deep);color:#fff!important}.glb-player-card__back{margin:0;border:2px solid var(--player-accent);background:repeating-linear-gradient(0deg,#102843,#102843 8px,#163a54 8px,#163a54 10px)}
 .glb-player-card{background:#eee5cf!important;border:8px solid #eee5cf!important;box-shadow:0 14px 28px #0b1e3355,0 2px 3px #0005,0 0 0 1px #8b7859!important;transform:rotate(-.6deg);transition:transform .35s ease,box-shadow .35s ease!important}.glb-player-card:hover{transform:rotate(0) translateY(-4px);box-shadow:0 20px 34px #0b1e3366,0 3px 5px #0006,0 0 0 1px #8b7859!important}.glb-player-card__front,.glb-player-card__back{background-image:linear-gradient(115deg,#ffffff20,transparent 35%,#00000008),repeating-linear-gradient(0deg,#eee5cf 0,#eee5cf 2px,#e9dfc7 3px);border:1px solid #8c7754!important}.glb-player-card__portrait{box-shadow:inset 0 0 0 2px #fff8,0 2px 4px #0004}.glb-player-card__identity{background:#f7f1df!important;box-shadow:inset 0 1px #fff9}.glb-player-card__stats{background:#f7f1df!important}.glb-player-card__back{background-color:#173650!important;background-image:repeating-linear-gradient(45deg,#ffffff08 0,#ffffff08 1px,transparent 1px,transparent 6px),linear-gradient(145deg,#173650,#0a1a2a)!important}
@@ -748,26 +748,34 @@ async function loadPlayer(){
     cardHost.replaceChildren(GLBPlayerCards.createCard({...player,slug:playerSlug,name:playerName,teamSlug,teamName:team.teamName},record,{link:false}));
   }
   const claim=document.createElement('form'); claim.className='card-claim-form'; claim.action='https://formspree.io/f/mzezpeap'; claim.method='POST';
-  claim.innerHTML='<strong>Claim this card</strong><input type="hidden" name="card_id"><input type="hidden" name="player_name"><input type="hidden" name="claim_key"><input name="user_id" required placeholder="Your USER ID"><input name="email" type="email" required placeholder="Your email"><button type="submit">Submit claim</button><small>Claims are reviewed before they enter the FIELDSTOCK record.</small><div class="claim-response" aria-live="polite"></div>';
+  claim.innerHTML='<strong>Request this card</strong><input type="hidden" name="card_id"><input type="hidden" name="player_name"><input type="hidden" name="claim_key"><input name="user_id" required minlength="3" maxlength="24" pattern="[A-Za-z0-9_-]{3,24}" title="3–24 letters, numbers, underscores, or hyphens" placeholder="Your USER ID"><input name="email" type="email" required placeholder="Your email"><textarea name="proposed_card_bio" maxlength="180" required placeholder="A weird, grounded baseball factoid about this player"></textarea><button type="submit">Submit request</button><small>Ownership and factoids appear after review. Keep your private receipt key.</small><div class="claim-response" aria-live="polite"></div>';
   claim.elements.card_id.value=teamSlug==='spokane-alloys'&&cardNumber? 'SPK-'+String(cardNumber).padStart(2,'0') : teamSlug.toUpperCase().slice(0,3)+'-'+playerSlug.toUpperCase();
   claim.elements.player_name.value=playerName;
   claim.addEventListener('submit',async event=>{
     event.preventDefault();
     const bytes=new Uint8Array(20);crypto.getRandomValues(bytes);
     const token=Array.from(bytes,byte=>byte.toString(16).padStart(2,'0').toUpperCase()).join('').match(/.{1,8}/g).join('-');
-    const claimKey=`FST-${claim.elements.card_id.value.replace('-','')}-${token}`;
+    const claimKey=`FST-${claim.elements.card_id.value}-${claim.elements.user_id.value.toUpperCase()}-${token}`;
     claim.elements.claim_key.value=claimKey;
     const button=claim.querySelector('button'),response=claim.querySelector('.claim-response');
     button.disabled=true;button.textContent='Submitting…';response.textContent='';
     try{
       const result=await fetch(claim.action,{method:'POST',body:new FormData(claim),headers:{Accept:'application/json'}});
       if(!result.ok) throw new Error('Submission failed');
-      claim.querySelectorAll('input,button,small,strong').forEach(element=>element.hidden=true);
-      response.textContent='Claim received. Save this private FIELDSTOCK Claim Key:';
+      claim.querySelectorAll('input,textarea,button,small,strong').forEach(element=>element.hidden=true);
+      response.textContent='Request received, pending review. Save this private receipt key:';
       const receipt=document.createElement('code');receipt.className='claim-receipt';receipt.textContent=claimKey;response.append(receipt);
-    }catch(error){button.disabled=false;button.textContent='Submit claim';response.textContent='The claim could not be submitted. Please try again.'}
+    }catch(error){button.disabled=false;button.textContent='Submit request';response.textContent='The request could not be submitted. Please try again.'}
   });
   cardHost.append(claim);
+  try{
+    const response=await fetch('data/cards/approved-claims.json',{cache:'no-store'});
+    if(response.ok){
+      const registry=await response.json();
+      const owner=registry.schema==='glb.approved-card-claims.v1'&&registry.claims?.[claim.elements.card_id.value]?.user_id;
+      if(owner){claim.replaceChildren(Object.assign(document.createElement('strong'),{textContent:`Claimed by ${owner}`}));}
+    }
+  }catch(error){console.warn('Approved claims unavailable',error)}
   const body=document.getElementById('seasonStatBody');
   const careerBody=document.getElementById('careerStatBody');
   body.replaceChildren();careerBody.replaceChildren();

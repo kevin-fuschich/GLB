@@ -818,6 +818,25 @@ line-height:1.5;
 color:var(--muted);
 }
 
+.wayfinding-intro{margin:0 0 16px;color:#465869;font-size:14px;line-height:1.55}
+.wayfinding-map{position:relative;overflow:hidden;border:1px solid #a8bec4;border-radius:10px;background:#102c3e}
+.wayfinding-map svg{display:block;width:100%;height:auto}
+.wayfinding-map .map-point{cursor:pointer}
+.wayfinding-map .map-point circle{fill:#e6f7ec;stroke:#102c3e;stroke-width:3}
+.wayfinding-map .map-point text{fill:#102c3e;font:800 14px Arial,sans-serif;text-anchor:middle;dominant-baseline:central;pointer-events:none}
+.wayfinding-map .map-point:hover circle,.wayfinding-map .map-point:focus circle,.wayfinding-map .map-point.active circle{fill:#eead5d;stroke:#fff}
+.wayfinding-map .map-point:focus{outline:none}
+.wayfinding-map .map-point:focus-visible circle{stroke:#fff;stroke-width:5}
+.map-key{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:14px}
+.map-key button{padding:10px 12px;border:1px solid var(--border);border-radius:7px;background:#f7faf9;color:#193347;text-align:left;font:700 12px/1.35 var(--font-sans);cursor:pointer}
+.map-key button:hover,.map-key button:focus-visible,.map-key button.active{border-color:#287779;background:#e2f1ed;outline-offset:2px}
+.map-key b{display:inline-grid;place-items:center;width:20px;height:20px;margin-right:8px;border-radius:50%;background:#1b5965;color:white;font-size:10px}
+.map-detail{min-height:76px;margin-top:14px;padding:14px;border-left:4px solid #74b9ad;background:#eef6f3;color:#273e4d}
+.map-detail strong{display:block;margin-bottom:4px;color:#122e41}
+.map-detail p{margin:0;font-size:13px;line-height:1.5}
+.map-disclaimer{margin:12px 0 0;color:#667481;font-size:11px;line-height:1.4}
+@media(max-width:680px){.map-key{grid-template-columns:1fr}.wayfinding-map svg{min-width:540px}.wayfinding-map{overflow-x:auto}}
+
 
 /* FOOTER */
 
@@ -1110,6 +1129,60 @@ The resulting property schedule includes baseball, a monthly two-piece, reusable
 
 </div>
 
+</section>
+
+
+<section class="card" id="ogwa-map" aria-labelledby="ogwa-map-title">
+<div class="card-header">
+<h2 class="card-title" id="ogwa-map-title">OGWA Stadium Map</h2>
+<span class="card-label">Game-day wayfinding</span>
+</div>
+<div class="card-body">
+<p class="wayfinding-intro">Start at the Home Plate Gate or enter from the riverwalk. The Rain Wall marks the main concourse; select a numbered stop for directions.</p>
+<div class="wayfinding-map">
+<svg viewBox="0 0 800 600" role="img" aria-label="Illustrated OGWA Stadium map with field, seating, concourse, gates, Rain Wall, riverwalk and eight numbered wayfinding stops">
+<defs><pattern id="map-grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#ffffff12"/></pattern></defs>
+<rect width="800" height="600" fill="#102c3e"/><rect width="800" height="600" fill="url(#map-grid)"/>
+<path d="M0 33 Q165 12 340 45 T800 30 L800 116 Q570 142 401 108 T0 122Z" fill="#487d88"/>
+<path d="M0 90 Q245 62 404 94 T800 88" fill="none" stroke="#b3dcd4" stroke-width="10" opacity=".85"/>
+<text x="38" y="55" fill="#e7f5f1" font-size="16" font-weight="800" letter-spacing="3">SPOKANE RIVER / RIVERWALK</text>
+<path d="M95 177 Q400 95 705 177 L720 410 Q682 534 400 547 Q118 534 80 410Z" fill="#48616c" stroke="#8fb5b5" stroke-width="4"/>
+<path d="M135 207 Q400 137 665 207 L675 394 Q627 487 400 495 Q173 487 125 394Z" fill="#d9b978" stroke="#243d48" stroke-width="5"/>
+<path d="M165 226 Q400 163 635 226 L640 380 Q588 452 400 454 Q212 452 160 380Z" fill="#173a46" stroke="#f1ddad" stroke-width="3"/>
+<path d="M205 254 Q400 205 595 254 L595 369 Q555 410 400 415 Q245 410 205 369Z" fill="#68884c"/>
+<path d="M400 386 L286 300 L400 230 L514 300Z" fill="#b28156" stroke="#eee4be" stroke-width="4"/>
+<path d="M400 379 L310 300 L400 245 L490 300Z" fill="#6f9658" stroke="#e9d6ac" stroke-width="3"/>
+<circle cx="400" cy="369" r="5" fill="#fff4d5"/><circle cx="310" cy="300" r="4" fill="#fff4d5"/><circle cx="400" cy="245" r="4" fill="#fff4d5"/><circle cx="490" cy="300" r="4" fill="#fff4d5"/>
+<path d="M136 210 Q400 131 664 210 L675 393 Q624 490 400 495 Q176 490 125 393Z" fill="none" stroke="#c2e6d9" stroke-width="24" stroke-dasharray="5 7"/>
+<text x="331" y="204" fill="#e8f4ee" font-size="15" font-weight="800" letter-spacing="2">OUTFIELD SEATING</text>
+<text x="244" y="448" fill="#f7eed8" font-size="15" font-weight="800">FIRST BASE SEATING</text>
+<text x="414" y="448" fill="#f7eed8" font-size="15" font-weight="800">THIRD BASE SEATING</text>
+<text x="331" y="520" fill="#f7eed8" font-size="13" font-weight="800" letter-spacing="2">MAIN CONCOURSE</text>
+<text x="38" y="580" fill="#b7d5d1" font-size="12" letter-spacing="2">OGWA • SPOKANE ALLOYS</text>
+<text x="643" y="580" fill="#b7d5d1" font-size="12">RIVER ↑</text>
+<g class="map-point active" role="button" tabindex="0" data-stop="gate" aria-label="1 Home Plate Gate"><circle cx="400" cy="552" r="18"/><text x="400" y="552">1</text></g>
+<g class="map-point" role="button" tabindex="0" data-stop="river" aria-label="2 Riverwalk Gate"><circle cx="598" cy="156" r="18"/><text x="598" y="156">2</text></g>
+<g class="map-point" role="button" tabindex="0" data-stop="rain" aria-label="3 Rain Wall"><circle cx="171" cy="468" r="18"/><text x="171" y="468">3</text></g>
+<g class="map-point" role="button" tabindex="0" data-stop="seats" aria-label="4 Seating and concourse"><circle cx="608" cy="391" r="18"/><text x="608" y="391">4</text></g>
+<g class="map-point" role="button" tabindex="0" data-stop="food" aria-label="5 Concessions"><circle cx="119" cy="328" r="18"/><text x="119" y="328">5</text></g>
+<g class="map-point" role="button" tabindex="0" data-stop="restrooms" aria-label="6 Restrooms"><circle cx="677" cy="315" r="18"/><text x="677" y="315">6</text></g>
+<g class="map-point" role="button" tabindex="0" data-stop="access" aria-label="7 Accessible route"><circle cx="541" cy="506" r="18"/><text x="541" y="506">7</text></g>
+<g class="map-point" role="button" tabindex="0" data-stop="store" aria-label="8 Team Store"><circle cx="269" cy="511" r="18"/><text x="269" y="511">8</text></g>
+</svg>
+</div>
+<div class="map-key" aria-label="Map landmarks">
+<button class="active" type="button" data-stop="gate"><b>1</b>Home Plate Gate</button>
+<button type="button" data-stop="river"><b>2</b>Riverwalk Gate</button>
+<button type="button" data-stop="rain"><b>3</b>Rain Wall</button>
+<button type="button" data-stop="seats"><b>4</b>Seating &amp; concourse</button>
+<button type="button" data-stop="food"><b>5</b>Concessions</button>
+<button type="button" data-stop="restrooms"><b>6</b>Restrooms</button>
+<button type="button" data-stop="access"><b>7</b>Accessible route</button>
+<button type="button" data-stop="store"><b>8</b>Team Store</button>
+</div>
+<div class="map-detail" role="status" aria-live="polite"><strong id="map-detail-title">Home Plate Gate</strong><p id="map-detail-copy">The main entrance opens onto the home plate end of the concourse. From here, follow the sea-glass wayfinding toward the Rain Wall and seating.</p></div>
+<p class="map-disclaimer">Illustrated club map. Locations and access details are part of the GLB world and may change as the stadium record develops.</p>
+</div>
 </section>
 
 
@@ -1521,13 +1594,14 @@ A recurring reusable-bottle giveaway issued under OGWA Stadium’s sea-glass bra
 
 <img
   class="mascot-image"
-  src="assets/teams/spokane-alloys/images/stadium/club-spokane-alloys-mascot.png"
-  alt="Spokane Alloys mascot"
+  src="assets/teams/spokane-alloys/images/stadium/foundry-guardian-fans.webp"
+  alt="The Spokane Alloys' steel Foundry Guardian high-fives fans along the field at OGWA Stadium"
 >
 
 <p class="small-caption">
 The mascot is listed under stadium operations. The number of approved operators is not disclosed.
 </p>
+<p class="story-copy" style="font-size:13px;margin-top:12px">The Foundry Guardian works the field rail during games, meeting fans between the stands and the warning track. Its plated steel shell carries the club’s navy and copper colors; the operator roster remains an internal stadium record.</p>
 
 </div>
 
@@ -1706,3 +1780,43 @@ Official league site providing scores, standings, schedules, club information, a
 <script>
 
 const navToggle=document.getElementById("navToggle");
+const mobileMenu=document.getElementById("mobileMenu");
+if(navToggle && mobileMenu){
+  navToggle.addEventListener("click",()=>{
+    const open=mobileMenu.classList.toggle("open");
+    navToggle.setAttribute("aria-expanded",String(open));
+  });
+}
+
+const mapStops={
+  gate:["Home Plate Gate","The main entrance opens onto the home plate end of the concourse. From here, follow the sea-glass wayfinding toward the Rain Wall and seating."],
+  river:["Riverwalk Gate","The riverside entrance connects the stadium to the Spokane Riverwalk and the outfield side of the main concourse."],
+  rain:["Rain Wall","The stadium’s refill wall is the main orientation point on the west concourse. OGWA Bottle Night distribution begins nearby."],
+  seats:["Seating & concourse","The main concourse loops around the field. First base and third base seating branch from the home plate end; outfield seating faces the river."],
+  food:["Concessions","Concession counters sit along the west concourse, between the Rain Wall and outfield seating."],
+  restrooms:["Restrooms","Restrooms are marked on the east concourse, opposite the Rain Wall. Follow the concourse in either direction from the Home Plate Gate."],
+  access:["Accessible route","The accessible concourse route begins at the Home Plate Gate and connects the main seating areas, Rain Wall and Riverwalk Gate."],
+  store:["Team Store","Find Alloys merchandise and OGWA Stadium goods on the main concourse near the Home Plate Gate."]
+};
+const map=document.getElementById("ogwa-map");
+if(map){
+  const selectStop=(key)=>{
+    const stop=mapStops[key];
+    if(!stop)return;
+    map.querySelectorAll("[data-stop]").forEach(el=>el.classList.toggle("active",el.dataset.stop===key));
+    map.querySelector("#map-detail-title").textContent=stop[0];
+    map.querySelector("#map-detail-copy").textContent=stop[1];
+  };
+  map.querySelectorAll("[data-stop]").forEach(el=>{
+    el.addEventListener("click",()=>selectStop(el.dataset.stop));
+    if(el.getAttribute("role")==="button"){
+      el.addEventListener("keydown",event=>{
+        if(event.key==="Enter" || event.key===" "){event.preventDefault();selectStop(el.dataset.stop);}
+      });
+    }
+  });
+}
+</script>
+<script src="scripts/glb-ticker.js"></script>
+</body>
+</html>

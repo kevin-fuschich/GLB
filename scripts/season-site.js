@@ -188,7 +188,7 @@
               href: 'stats.html', link: 'Player Stats'
             },
             {
-              image: 'assets/teams/spokane-alloys/images/stadium/club-spokane-alloys-mascot.png',
+              image: 'assets/teams/spokane-alloys/images/stadium/foundry-guardian-fans.webp',
               kicker: 'Stadium Operations', title: 'The mascot remains on the stadium payroll',
               deck: 'The mascot is listed under stadium operations. The number of approved operators is not disclosed.',
               href: 'club-spokane-alloys.html', link: 'Visit Spokane'

@@ -480,6 +480,11 @@ const TEAMS = {
     teamName: "Albuquerque Aeros",
     cityPrefix: "albuquerque",
     teamPage: "team.html?team=albuquerque-aeros"
+  },
+  "vancouver-current": {
+    teamName: "Vancouver Current",
+    cityPrefix: "vancouver",
+    teamPage: "team-vancouver-current.html"
   }
 };
 
@@ -721,22 +726,41 @@ async function loadPlayer(){
   const seasons = await GLBPlayerCards.loadSeasons();
   const record = GLBPlayerCards.careerFor(playerSlug, seasons);
   const cardHost=document.getElementById('playerCard');
-  const SPOKANE_CARD_NUMBERS={"kellan-brynden":1,"oskar-svanholm":2,"mateusz-kasprowicz":3,"diego-alvarez-mora":4,"lukas-havel":5,"caleb-reidman":6,"sergio-ibarra-lugo":7,"yaw-mensah":8,"nikolai-dobrynin":9,"evan-carroll-iv":10,"marco-delvecchio":11,"tomasz-kubas":12,"andres-mireles":13,"wyatt-hollander":14,"luis-quinones":15,"pieter-van-wyk":16,"jonah-sato":17,"rene-bouchard":18,"malachi-boone":19,"dae-hyun-park":20,"tesfaye-mebrahtu":21,"benoit-leduc":22,"hamza-qureshi":23,"ellis-wren":24,"miguel-angel-serrano":25,"branislav-vukovic":26};
-  const cardNumber=SPOKANE_CARD_NUMBERS[playerSlug];
-  if(teamSlug==='spokane-alloys'&&cardNumber){
-    const prefix=`spk-${String(cardNumber).padStart(2,'0')}-${playerSlug}`;
+  const FIELDSTOCK = {
+    'spokane-alloys': {
+      prefix:'spk',
+      cards:{"kellan-brynden":1,"oskar-svanholm":2,"mateusz-kasprowicz":3,"diego-alvarez-mora":4,"lukas-havel":5,"caleb-reidman":6,"sergio-ibarra-lugo":7,"yaw-mensah":8,"nikolai-dobrynin":9,"evan-carroll-iv":10,"marco-delvecchio":11,"tomasz-kubas":12,"andres-mireles":13,"wyatt-hollander":14,"luis-quinones":15,"pieter-van-wyk":16,"jonah-sato":17,"rene-bouchard":18,"malachi-boone":19,"dae-hyun-park":20,"tesfaye-mebrahtu":21,"benoit-leduc":22,"hamza-qureshi":23,"ellis-wren":24,"miguel-angel-serrano":25,"branislav-vukovic":26}
+    },
+    'vancouver-current': {
+      prefix:'van',
+      cards:{"iseul-kang":1,"nico-penfold":2,"silas-boudreau":3,"eamon-kerr":4,"soraya-jafari":5,"alejo-santillan":6,"taj-adelman":7,"oziel-narvaez":8},
+      claimable:new Set(['iseul-kang','alejo-santillan'])
+    }
+  };
+  const fieldstockTeam=FIELDSTOCK[teamSlug];
+  const cardNumber=fieldstockTeam?.cards?.[playerSlug];
+  const cardId=fieldstockTeam&&cardNumber
+    ? fieldstockTeam.prefix.toUpperCase()+'-'+String(cardNumber).padStart(2,'0')
+    : teamSlug.toUpperCase().slice(0,3)+'-'+playerSlug.toUpperCase();
+  const claimable=!fieldstockTeam?.claimable || fieldstockTeam.claimable.has(playerSlug);
+
+  if(fieldstockTeam&&cardNumber){
+    const prefix=fieldstockTeam.prefix+'-'+String(cardNumber).padStart(2,'0')+'-'+playerSlug;
     const physical=document.createElement('article');
     physical.className='fieldstock-player-card';
     physical.tabIndex=0;
-    physical.setAttribute('aria-label',`${playerName} FIELDSTOCK card. Press Enter to flip.`);
+    physical.setAttribute('aria-label',playerName+' FIELDSTOCK card. Press Enter to flip.');
     const front=document.createElement('img');
     front.className='fieldstock-player-card__face';
-    front.src=`assets/images/cards/fieldstock/${prefix}-front.webp`;
-    front.alt=`Front of ${playerName}'s FIELDSTOCK SPK-${String(cardNumber).padStart(2,'0')} card`;
+    front.src='assets/images/cards/fieldstock/'+prefix+'-front.webp';
+    front.alt='Front of '+playerName+' FIELDSTOCK '+cardId+' card';
     const back=document.createElement('img');
     back.className='fieldstock-player-card__face fieldstock-player-card__back';
-    back.src=`assets/images/cards/fieldstock/${prefix}-back.webp`;
-    back.alt=`Back of ${playerName}'s FIELDSTOCK card`;
+    back.src='assets/images/cards/fieldstock/'+prefix+'-back.webp';
+    back.alt='Back of '+playerName+' FIELDSTOCK card';
+    const fallBack=()=>cardHost.replaceChildren(GLBPlayerCards.createCard({...player,slug:playerSlug,name:playerName,teamSlug,teamName:team.teamName},record,{link:false}));
+    front.addEventListener('error',fallBack,{once:true});
+    back.addEventListener('error',fallBack,{once:true});
     physical.append(front,back);
     physical.addEventListener('click',()=>physical.classList.toggle('is-flipped'));
     physical.addEventListener('keydown',event=>{if(event.key==='Enter'||event.key===' '){event.preventDefault();physical.classList.toggle('is-flipped')}});
@@ -747,30 +771,38 @@ async function loadPlayer(){
   }else{
     cardHost.replaceChildren(GLBPlayerCards.createCard({...player,slug:playerSlug,name:playerName,teamSlug,teamName:team.teamName},record,{link:false}));
   }
-  const claim=document.createElement('form'); claim.className='card-claim-form'; claim.action='https://formspree.io/f/mzezpeap'; claim.method='POST';
-  claim.innerHTML='<strong>Request this card</strong><input type="hidden" name="card_id"><input type="hidden" name="player_name"><input name="user_id" required minlength="3" maxlength="24" pattern="[A-Za-z0-9_-]{3,24}" title="3–24 letters, numbers, underscores, or hyphens" placeholder="Your USER ID"><input name="email" type="email" required placeholder="Your email"><textarea name="proposed_card_bio" maxlength="180" required placeholder="A memorable, grounded baseball factoid about this player"></textarea><button type="submit">Submit request</button><small>If approved, your private ownership key will be sent to your email.</small><div class="claim-response" aria-live="polite"></div>';
-  claim.elements.card_id.value=teamSlug==='spokane-alloys'&&cardNumber? 'SPK-'+String(cardNumber).padStart(2,'0') : teamSlug.toUpperCase().slice(0,3)+'-'+playerSlug.toUpperCase();
-  claim.elements.player_name.value=playerName;
-  claim.addEventListener('submit',async event=>{
-    event.preventDefault();
-    const button=claim.querySelector('button'),response=claim.querySelector('.claim-response');
-    button.disabled=true;button.textContent='Submitting…';response.textContent='';
+
+  if(claimable){
+    const claim=document.createElement('form'); claim.className='card-claim-form'; claim.action='https://formspree.io/f/mzezpeap'; claim.method='POST';
+    claim.innerHTML='<strong>Request this card</strong><input type="hidden" name="card_id"><input type="hidden" name="player_name"><input name="user_id" required minlength="3" maxlength="24" pattern="[A-Za-z0-9_-]{3,24}" title="3–24 letters, numbers, underscores, or hyphens" placeholder="Your USER ID"><input name="email" type="email" required placeholder="Your email"><textarea name="proposed_card_bio" maxlength="180" required placeholder="A memorable, grounded baseball factoid about this player"></textarea><button type="submit">Submit request</button><small>If your request is approved, your unique 16-digit FIELDSTOCK code will be sent to your email.</small><div class="claim-response" aria-live="polite"></div>';
+    claim.elements.card_id.value=cardId;
+    claim.elements.player_name.value=playerName;
+    claim.addEventListener('submit',async event=>{
+      event.preventDefault();
+      const button=claim.querySelector('button'),response=claim.querySelector('.claim-response');
+      button.disabled=true;button.textContent='Submitting…';response.textContent='';
+      try{
+        const result=await fetch(claim.action,{method:'POST',body:new FormData(claim),headers:{Accept:'application/json'}});
+        if(!result.ok) throw new Error('Submission failed');
+        claim.querySelectorAll('input,textarea,button,small,strong').forEach(element=>element.hidden=true);
+        response.textContent='Request received. If approved, your unique 16-digit FIELDSTOCK code will be sent by email.';
+      }catch(error){button.disabled=false;button.textContent='Submit request';response.textContent='The request could not be submitted. Please try again.'}
+    });
+    cardHost.append(claim);
     try{
-      const result=await fetch(claim.action,{method:'POST',body:new FormData(claim),headers:{Accept:'application/json'}});
-      if(!result.ok) throw new Error('Submission failed');
-      claim.querySelectorAll('input,textarea,button,small,strong').forEach(element=>element.hidden=true);
-      response.textContent='Request received. If approved, your ownership key will be sent by email.';
-    }catch(error){button.disabled=false;button.textContent='Submit request';response.textContent='The request could not be submitted. Please try again.'}
-  });
-  cardHost.append(claim);
-  try{
-    const response=await fetch('data/cards/approved-claims.json',{cache:'no-store'});
-    if(response.ok){
-      const registry=await response.json();
-      const owner=registry.schema==='glb.approved-card-claims.v1'&&registry.claims?.[claim.elements.card_id.value]?.user_id;
-      if(owner){claim.replaceChildren(Object.assign(document.createElement('strong'),{textContent:`Claimed by ${owner}`}));}
-    }
-  }catch(error){console.warn('Approved claims unavailable',error)}
+      const response=await fetch('data/cards/approved-claims.json',{cache:'no-store'});
+      if(response.ok){
+        const registry=await response.json();
+        const owner=registry.schema==='glb.approved-card-claims.v1'&&registry.claims?.[cardId]?.user_id;
+        if(owner){claim.replaceChildren(Object.assign(document.createElement('strong'),{textContent:'Claimed by '+owner}));}
+      }
+    }catch(error){console.warn('Approved claims unavailable',error)}
+  }else{
+    const pending=document.createElement('div');
+    pending.className='card-claim-form';
+    pending.innerHTML='<strong>CLAIMS OPENING SOON</strong><small>This FIELDSTOCK card is part of the Vancouver Current archive, but claims are not open for this card yet.</small>';
+    cardHost.append(pending);
+  }
   const body=document.getElementById('seasonStatBody');
   const careerBody=document.getElementById('careerStatBody');
   body.replaceChildren();careerBody.replaceChildren();

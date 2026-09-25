@@ -62,6 +62,8 @@
       return `assets/teams/albuquerque-aeros/images/players/albuquerque-${player.slug}${player.slug === 'carmine-sforza' ? '.pthinnng' : ''}.png`;
     if (player.teamSlug === 'durham-gold')
       return `assets/images/players/durham-gold/durham-${player.slug}.jpg`;
+    if (player.teamSlug === 'vancouver-current')
+      return `assets/images/players/vancouver-current/vancouver-${player.slug}.png`;
     return null;
   }
   function text(tag, value, className) {

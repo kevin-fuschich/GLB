@@ -1441,7 +1441,7 @@ Spokane, Washington · OGWA Stadium · Club code SPO
 
 <div class="card-header">
 <h2 class="card-title">FIELDSTOCK Player Cards</h2>
-<span class="card-label">26-Card Base Set</span>
+<span class="card-label">26-Card Base Set · 3 Claims Open</span>
 </div>
 
 <div class="table-wrap">
@@ -1623,7 +1623,7 @@ Spokane, Washington · OGWA Stadium · Club code SPO
 </div>
 
 <div class="roster-note">
-Spokane Alloys · Official active roster. Select a card to turn it over.
+Spokane Alloys · FIELDSTOCK launch set. Claims are open for SPK-01, SPK-02, and SPK-03. Remaining cards are opening soon. Select a card to turn it over.
 </div>
 
 </section>
@@ -2417,17 +2417,25 @@ document.querySelectorAll(".roster-table tbody tr").forEach((row,index)=>{
     back.className="player-card-back player-card-body";
     back.innerHTML=`<div class="player-card-topline"><span>GLB / SPO</span><span>Player Card</span></div><h3 class="player-card-name">${name.textContent.trim()}</h3><p class="player-card-role">Spokane Alloys · ${role.textContent.trim()}</p><p class="player-card-role" style="margin-top:18px">${playerNotes[index]}</p><div class="player-card-meta"><span>${cardId}</span><span>© GLB</span></div>`;
   }
-  back.insertAdjacentHTML("beforeend",`<button class="card-claim" type="button">Request claim + submit a factoid</button><form class="claim-form" action="https://formspree.io/f/mzezpeap" method="POST" hidden><input type="hidden" name="_subject" value="FIELDSTOCK card claim + factoid submission"><input type="hidden" name="submission_type" value="player_card"><input type="hidden" name="artifact_type" value="FIELDSTOCK Player Card"><input type="hidden" name="card_id"><input type="hidden" name="player_name"><input type="hidden" name="current_card_bio"><label>User ID<input name="user_id" required minlength="3" maxlength="24" pattern="[A-Za-z0-9_-]{3,24}" title="3–24 letters, numbers, underscores, or hyphens" autocomplete="username"></label><label>Email<input name="email" type="email" required autocomplete="email"></label><label>Baseball factoid for this player<textarea name="proposed_card_bio" maxlength="180" rows="3" required placeholder="Keep it weird, grounded, and baseball-adjacent."></textarea></label><p class="claim-form-note">This is a request. If approved, watch your email for a message from the GLB Card Registry with your private ownership key.</p><button type="submit">Submit request</button></form><div class="claim-status" aria-live="polite"></div>`);
+  const claimableNow=index<3;
+  if(claimableNow){
+    back.insertAdjacentHTML("beforeend",`<button class="card-claim" type="button">Request claim + submit a factoid</button><form class="claim-form" action="https://formspree.io/f/mzezpeap" method="POST" hidden><input type="hidden" name="_subject" value="FIELDSTOCK card claim + factoid submission"><input type="hidden" name="submission_type" value="player_card"><input type="hidden" name="artifact_type" value="FIELDSTOCK Player Card"><input type="hidden" name="card_id"><input type="hidden" name="player_name"><input type="hidden" name="current_card_bio"><label>User ID<input name="user_id" required minlength="3" maxlength="24" pattern="[A-Za-z0-9_-]{3,24}" title="3–24 letters, numbers, underscores, or hyphens" autocomplete="username"></label><label>Email<input name="email" type="email" required autocomplete="email"></label><label>Baseball factoid for this player<textarea name="proposed_card_bio" maxlength="180" rows="3" required placeholder="Keep it weird, grounded, and baseball-adjacent."></textarea></label><p class="claim-form-note">This is a request. If approved, watch your email for a message from the GLB Card Registry with your private ownership key.</p><button type="submit">Submit request</button></form><div class="claim-status" aria-live="polite"></div>`);
+  }else{
+    back.insertAdjacentHTML("beforeend",`<button class="card-claim" type="button" disabled>Opening Soon</button><div class="claim-status" aria-live="polite"></div>`);
+  }
+
   const flip=()=>card.classList.toggle("flipped");
   card.append(front,back);
   card.addEventListener("click",event=>{if(!event.target.closest("a,button,input,form")) flip();});
   card.addEventListener("keydown",event=>{if((event.key==="Enter"||event.key===" ")&&!event.target.closest("a,button,input,form")){event.preventDefault();flip();}});
+
   const claim=back.querySelector(".card-claim");
   const form=back.querySelector(".claim-form");
   const status=back.querySelector(".claim-status");
   const pendingKey=`glb-fieldstock-pending-${cardId}`;
 
   function setPendingState(){
+    if(!claimableNow||!form) return;
     card.classList.add("is-pending");
     form.hidden=true;
     claim.textContent="Pending Review";
@@ -2435,38 +2443,41 @@ document.querySelectorAll(".roster-table tbody tr").forEach((row,index)=>{
     status.textContent="Claim received by the GLB Card Registry. Watch your email for a decision.";
   }
 
-  if(localStorage.getItem(pendingKey)==="1"){
+  if(claimableNow&&localStorage.getItem(pendingKey)==="1"){
     setPendingState();
   }
 
-  claim.addEventListener("click",()=>{
-    if(card.classList.contains("is-pending")||card.classList.contains("is-claimed")) return;
-    form.hidden=!form.hidden;
-    if(!form.hidden){
-      form.elements.card_id.value=cardId;
-      form.elements.player_name.value=name.textContent.trim();
-      form.elements.current_card_bio.value=playerNotes[index];
-      form.elements.user_id.focus();
-    }
-  });
+  if(claimableNow&&form){
+    claim.addEventListener("click",()=>{
+      if(card.classList.contains("is-pending")||card.classList.contains("is-claimed")) return;
+      form.hidden=!form.hidden;
+      if(!form.hidden){
+        form.elements.card_id.value=cardId;
+        form.elements.player_name.value=name.textContent.trim();
+        form.elements.current_card_bio.value=playerNotes[index];
+        form.elements.user_id.focus();
+      }
+    });
 
-  form.addEventListener("submit",async event=>{
-    event.preventDefault();
-    const submit=form.querySelector('button[type="submit"]');
-    submit.disabled=true;
-    submit.textContent="Submitting…";
-    status.textContent="Submitting claim…";
-    try{
-      const response=await fetch(form.action,{method:"POST",body:new FormData(form),headers:{Accept:"application/json"}});
-      if(!response.ok) throw new Error("Claim submission failed");
-      localStorage.setItem(pendingKey,"1");
-      setPendingState();
-    }catch(error){
-      submit.disabled=false;
-      submit.textContent="Submit request";
-      status.textContent="The claim could not be submitted. Please try again.";
-    }
-  });
+    form.addEventListener("submit",async event=>{
+      event.preventDefault();
+      const submit=form.querySelector('button[type="submit"]');
+      submit.disabled=true;
+      submit.textContent="Submitting…";
+      status.textContent="Submitting claim…";
+      try{
+        const response=await fetch(form.action,{method:"POST",body:new FormData(form),headers:{Accept:"application/json"}});
+        if(!response.ok) throw new Error("Claim submission failed");
+        localStorage.setItem(pendingKey,"1");
+        setPendingState();
+      }catch(error){
+        submit.disabled=false;
+        submit.textContent="Submit request";
+        status.textContent="The claim could not be submitted. Please try again.";
+      }
+    });
+  }
+
   playerCards.append(card);
 });
 

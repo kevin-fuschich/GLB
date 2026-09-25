@@ -519,11 +519,30 @@ bottom:12px;
 left:12px;
 z-index:6;
 margin:0;
+padding:8px 10px;
+border:1px solid #d7b76a;
+border-radius:2px;
+background:#0b1e33f2;
 color:#fff;
+font-size:9px;
+font-weight:800;
+line-height:1.35;
+letter-spacing:.25px;
 text-align:center;
-text-shadow:0 1px 3px #000;
+text-shadow:none;
+box-shadow:0 4px 12px #0007;
 }
 .player-card--fieldstock .claim-status:empty{display:none}
+.player-card--fieldstock.is-pending .card-claim{
+background:#0b1e33f2;
+border-color:#d7b76a;
+color:#fff;
+opacity:1;
+}
+.player-card--fieldstock.is-pending .claim-status{
+bottom:50px;
+}
+.player-card--fieldstock.is-claimed .claim-status{display:none}
 
 .player-card-front::before{
 content:"";
@@ -2406,7 +2425,31 @@ document.querySelectorAll(".roster-table tbody tr").forEach((row,index)=>{
   const claim=back.querySelector(".card-claim");
   const form=back.querySelector(".claim-form");
   const status=back.querySelector(".claim-status");
-  claim.addEventListener("click",()=>{form.hidden=!form.hidden;if(!form.hidden){form.elements.card_id.value=cardId;form.elements.player_name.value=name.textContent.trim();form.elements.current_card_bio.value=playerNotes[index];form.elements.user_id.focus();}});
+  const pendingKey=`glb-fieldstock-pending-${cardId}`;
+
+  function setPendingState(){
+    card.classList.add("is-pending");
+    form.hidden=true;
+    claim.textContent="Pending Review";
+    claim.disabled=true;
+    status.textContent="Claim received by the GLB Card Registry. Watch your email for a decision.";
+  }
+
+  if(localStorage.getItem(pendingKey)==="1"){
+    setPendingState();
+  }
+
+  claim.addEventListener("click",()=>{
+    if(card.classList.contains("is-pending")||card.classList.contains("is-claimed")) return;
+    form.hidden=!form.hidden;
+    if(!form.hidden){
+      form.elements.card_id.value=cardId;
+      form.elements.player_name.value=name.textContent.trim();
+      form.elements.current_card_bio.value=playerNotes[index];
+      form.elements.user_id.focus();
+    }
+  });
+
   form.addEventListener("submit",async event=>{
     event.preventDefault();
     const submit=form.querySelector('button[type="submit"]');
@@ -2416,10 +2459,8 @@ document.querySelectorAll(".roster-table tbody tr").forEach((row,index)=>{
     try{
       const response=await fetch(form.action,{method:"POST",body:new FormData(form),headers:{Accept:"application/json"}});
       if(!response.ok) throw new Error("Claim submission failed");
-      form.hidden=true;
-      claim.textContent="Request submitted";
-      claim.disabled=true;
-      status.textContent="Claim submitted to the GLB Card Registry. Watch your email for a message from GLB after review.";
+      localStorage.setItem(pendingKey,"1");
+      setPendingState();
     }catch(error){
       submit.disabled=false;
       submit.textContent="Submit request";
@@ -2439,9 +2480,15 @@ fetch("data/cards/approved-claims.json",{cache:"no-store"}).then(response=>{
     const owner=registry.claims?.[cardId]?.user_id;
     if(!owner) return;
     const button=card.querySelector(".card-claim");
+    const cardIdKey=`glb-fieldstock-pending-${cardId}`;
+    localStorage.removeItem(cardIdKey);
+    card.classList.remove("is-pending");
+    card.classList.add("is-claimed");
     button.textContent=`Claimed by ${owner}`;
     button.disabled=true;
-    card.querySelector(".claim-form").remove();
+    card.querySelector(".claim-form")?.remove();
+    const status=card.querySelector(".claim-status");
+    if(status) status.textContent="";
   });
 }).catch(error=>console.warn(error));
 

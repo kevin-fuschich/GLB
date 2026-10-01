@@ -1,7 +1,14 @@
 {
-  "as_of": "2026-09-30",
+  "as_of": "2026-10-01",
   "batting": {
     "AVG": [
+      {
+        "player": "Evan Carroll IV",
+        "player_slug": "evan-carroll-iv",
+        "team": "Spokane Alloys",
+        "team_slug": "spokane-alloys",
+        "value": ".308"
+      },
       {
         "player": "Evan Morrissey",
         "player_slug": "evan-morrissey",
@@ -10,32 +17,32 @@
         "value": ".307"
       },
       {
-        "player": "Evan Carroll IV",
-        "player_slug": "evan-carroll-iv",
-        "team": "Spokane Alloys",
-        "team_slug": "spokane-alloys",
-        "value": ".306"
-      },
-      {
         "player": "Alejo Santillán",
         "player_slug": "alejo-santillan",
         "team": "Vancouver Current",
         "team_slug": "vancouver-current",
-        "value": ".299"
+        "value": ".297"
       },
       {
         "player": "Kofi Agyeman",
         "player_slug": "kofi-agyeman",
         "team": "Albuquerque Aeros",
         "team_slug": "albuquerque-aeros",
-        "value": ".290"
+        "value": ".292"
       },
       {
-        "player": "Dante Rios",
-        "player_slug": "dante-rios",
-        "team": "Birmingham Vulcans",
-        "team_slug": "birmingham-vulcans",
-        "value": ".287"
+        "player": "Matías Camarena",
+        "player_slug": "matias-camarena",
+        "team": "Tijuana Tecnicos",
+        "team_slug": "tijuana-tecnicos",
+        "value": ".286"
+      },
+      {
+        "player": "Omar Benyahia",
+        "player_slug": "omar-benyahia",
+        "team": "San Pedro Cocolos",
+        "team_slug": "san-pedro-cocolos",
+        "value": ".286"
       },
       {
         "player": "René Bouchard",
@@ -45,18 +52,11 @@
         "value": ".286"
       },
       {
-        "player": "Matías Camarena",
-        "player_slug": "matias-camarena",
-        "team": "Tijuana Tecnicos",
-        "team_slug": "tijuana-tecnicos",
+        "player": "Dante Rios",
+        "player_slug": "dante-rios",
+        "team": "Birmingham Vulcans",
+        "team_slug": "birmingham-vulcans",
         "value": ".285"
-      },
-      {
-        "player": "Omar Benyahia",
-        "player_slug": "omar-benyahia",
-        "team": "San Pedro Cocolos",
-        "team_slug": "san-pedro-cocolos",
-        "value": ".284"
       },
       {
         "player": "Seiji Fukumori",
@@ -66,10 +66,10 @@
         "value": ".284"
       },
       {
-        "player": "Maksim Berezan",
-        "player_slug": "maksim-berezan",
-        "team": "Santiago Caballeros",
-        "team_slug": "santiago-caballeros",
+        "player": "Thiago Ramires",
+        "player_slug": "thiago-ramires",
+        "team": "Osaka Spirits",
+        "team_slug": "osaka-spirits",
         "value": ".282"
       }
     ],
@@ -110,17 +110,24 @@
         "value": "35"
       },
       {
-        "player": "Adebayo Oluwaseyi",
-        "player_slug": "adebayo-oluwaseyi",
-        "team": "Santiago Caballeros",
-        "team_slug": "santiago-caballeros",
-        "value": "33"
-      },
-      {
         "player": "Evan Morrissey",
         "player_slug": "evan-morrissey",
         "team": "St. Paul Frost",
         "team_slug": "st-paul-frost",
+        "value": "34"
+      },
+      {
+        "player": "Javier Lucero",
+        "player_slug": "javier-lucero",
+        "team": "St. Paul Frost",
+        "team_slug": "st-paul-frost",
+        "value": "34"
+      },
+      {
+        "player": "Adebayo Oluwaseyi",
+        "player_slug": "adebayo-oluwaseyi",
+        "team": "Santiago Caballeros",
+        "team_slug": "santiago-caballeros",
         "value": "33"
       },
       {
@@ -135,13 +142,6 @@
         "player_slug": "blake-harrison",
         "team": "Louisville Naturals",
         "team_slug": "louisville-naturals",
-        "value": "32"
-      },
-      {
-        "player": "Gael Marrufo",
-        "player_slug": "gael-marrufo",
-        "team": "Tijuana Tecnicos",
-        "team_slug": "tijuana-tecnicos",
         "value": "32"
       }
     ],
@@ -158,7 +158,7 @@
         "player_slug": "thiago-ramires",
         "team": "Osaka Spirits",
         "team_slug": "osaka-spirits",
-        "value": "86"
+        "value": "87"
       },
       {
         "player": "Cole Ramsey",
@@ -196,6 +196,13 @@
         "value": "82"
       },
       {
+        "player": "Javier Lucero",
+        "player_slug": "javier-lucero",
+        "team": "St. Paul Frost",
+        "team_slug": "st-paul-frost",
+        "value": "82"
+      },
+      {
         "player": "Malik Doumbia",
         "player_slug": "malik-doumbia",
         "team": "Mayagüez Sultans",
@@ -208,13 +215,6 @@
         "team": "Monterrey Cementeros",
         "team_slug": "monterrey-cementeros",
         "value": "82"
-      },
-      {
-        "player": "Jake Lanier",
-        "player_slug": "jake-lanier",
-        "team": "St. Paul Frost",
-        "team_slug": "st-paul-frost",
-        "value": "81"
       }
     ],
     "OPS": [
@@ -223,70 +223,70 @@
         "player_slug": "evan-morrissey",
         "team": "St. Paul Frost",
         "team_slug": "st-paul-frost",
-        "value": "0.887"
+        "value": "0.890"
       },
       {
         "player": "René Bouchard",
         "player_slug": "rene-bouchard",
         "team": "Spokane Alloys",
         "team_slug": "spokane-alloys",
-        "value": "0.876"
+        "value": "0.872"
       },
       {
         "player": "Cole Ramsey",
         "player_slug": "cole-ramsey",
         "team": "Birmingham Vulcans",
         "team_slug": "birmingham-vulcans",
-        "value": "0.853"
-      },
-      {
-        "player": "Thiago Pereyra",
-        "player_slug": "thiago-pereyra",
-        "team": "Monterrey Cementeros",
-        "team_slug": "monterrey-cementeros",
-        "value": "0.847"
+        "value": "0.849"
       },
       {
         "player": "Arman Daryan",
         "player_slug": "arman-daryan",
         "team": "Osaka Spirits",
         "team_slug": "osaka-spirits",
-        "value": "0.842"
+        "value": "0.844"
       },
       {
-        "player": "Seiji Fukumori",
-        "player_slug": "seiji-fukumori",
+        "player": "Thiago Pereyra",
+        "player_slug": "thiago-pereyra",
         "team": "Monterrey Cementeros",
         "team_slug": "monterrey-cementeros",
-        "value": "0.832"
+        "value": "0.844"
       },
       {
         "player": "Enzo Carvajal",
         "player_slug": "enzo-carvajal",
         "team": "Mayagüez Sultans",
         "team_slug": "mayaguez-sultans",
-        "value": "0.831"
+        "value": "0.836"
+      },
+      {
+        "player": "Seiji Fukumori",
+        "player_slug": "seiji-fukumori",
+        "team": "Monterrey Cementeros",
+        "team_slug": "monterrey-cementeros",
+        "value": "0.830"
       },
       {
         "player": "Evan Carroll IV",
         "player_slug": "evan-carroll-iv",
         "team": "Spokane Alloys",
         "team_slug": "spokane-alloys",
-        "value": "0.816"
+        "value": "0.825"
       },
       {
         "player": "Kofi Agyeman",
         "player_slug": "kofi-agyeman",
         "team": "Albuquerque Aeros",
         "team_slug": "albuquerque-aeros",
-        "value": "0.815"
+        "value": "0.821"
       },
       {
-        "player": "Alejo Santillán",
-        "player_slug": "alejo-santillan",
-        "team": "Vancouver Current",
-        "team_slug": "vancouver-current",
-        "value": "0.809"
+        "player": "Javier Lucero",
+        "player_slug": "javier-lucero",
+        "team": "St. Paul Frost",
+        "team_slug": "st-paul-frost",
+        "value": "0.814"
       }
     ],
     "R": [
@@ -295,7 +295,7 @@
         "player_slug": "martin-echevarria",
         "team": "Taipei Neon",
         "team_slug": "taipei-neon",
-        "value": "89"
+        "value": "90"
       },
       {
         "player": "Seiji Fukumori",
@@ -323,7 +323,14 @@
         "player_slug": "arman-daryan",
         "team": "Osaka Spirits",
         "team_slug": "osaka-spirits",
-        "value": "84"
+        "value": "85"
+      },
+      {
+        "player": "Mateo Ríos",
+        "player_slug": "mateo-rios",
+        "team": "Durham Gold",
+        "team_slug": "durham-gold",
+        "value": "85"
       },
       {
         "player": "Niko Velković",
@@ -333,11 +340,11 @@
         "value": "84"
       },
       {
-        "player": "Mateo Ríos",
-        "player_slug": "mateo-rios",
-        "team": "Durham Gold",
-        "team_slug": "durham-gold",
-        "value": "83"
+        "player": "Evan Morrissey",
+        "player_slug": "evan-morrissey",
+        "team": "St. Paul Frost",
+        "team_slug": "st-paul-frost",
+        "value": "82"
       },
       {
         "player": "Yusef El-Badri",
@@ -347,17 +354,10 @@
         "value": "82"
       },
       {
-        "player": "Evan Morrissey",
-        "player_slug": "evan-morrissey",
-        "team": "St. Paul Frost",
-        "team_slug": "st-paul-frost",
-        "value": "81"
-      },
-      {
-        "player": "Jake Lanier",
-        "player_slug": "jake-lanier",
-        "team": "St. Paul Frost",
-        "team_slug": "st-paul-frost",
+        "player": "Calvin Ross",
+        "player_slug": "calvin-ross",
+        "team": "Durham Gold",
+        "team_slug": "durham-gold",
         "value": "81"
       }
     ],
@@ -458,18 +458,18 @@
         "value": "1.75"
       },
       {
+        "player": "Nolan Garrity",
+        "player_slug": "nolan-garrity",
+        "team": "San Pedro Cocolos",
+        "team_slug": "san-pedro-cocolos",
+        "value": "2.00"
+      },
+      {
         "player": "Tae-ho Choi",
         "player_slug": "tae-ho-choi",
         "team": "St. Paul Frost",
         "team_slug": "st-paul-frost",
         "value": "2.02"
-      },
-      {
-        "player": "Nolan Garrity",
-        "player_slug": "nolan-garrity",
-        "team": "San Pedro Cocolos",
-        "team_slug": "san-pedro-cocolos",
-        "value": "2.03"
       },
       {
         "player": "Kofi Boateng",
@@ -479,13 +479,6 @@
         "value": "2.07"
       },
       {
-        "player": "Kenji Nomura",
-        "player_slug": "kenji-nomura",
-        "team": "Durham Gold",
-        "team_slug": "durham-gold",
-        "value": "2.11"
-      },
-      {
         "player": "Mateusz Kasprowicz",
         "player_slug": "mateusz-kasprowicz",
         "team": "Spokane Alloys",
@@ -493,11 +486,11 @@
         "value": "2.11"
       },
       {
-        "player": "Enzo Dalmau",
-        "player_slug": "enzo-dalmau",
-        "team": "Osaka Spirits",
-        "team_slug": "osaka-spirits",
-        "value": "2.12"
+        "player": "Kenji Nomura",
+        "player_slug": "kenji-nomura",
+        "team": "Durham Gold",
+        "team_slug": "durham-gold",
+        "value": "2.13"
       },
       {
         "player": "Caius Dobrescu",
@@ -505,6 +498,13 @@
         "team": "Toledo Assembly",
         "team_slug": "toledo-assembly",
         "value": "2.15"
+      },
+      {
+        "player": "Rafael Montoya",
+        "player_slug": "rafael-montoya",
+        "team": "Tijuana Tecnicos",
+        "team_slug": "tijuana-tecnicos",
+        "value": "2.19"
       }
     ],
     "WHIP": [
@@ -551,6 +551,13 @@
         "value": "0.79"
       },
       {
+        "player": "Kenji Nomura",
+        "player_slug": "kenji-nomura",
+        "team": "Durham Gold",
+        "team_slug": "durham-gold",
+        "value": "0.79"
+      },
+      {
         "player": "Hassan Al-Saleh",
         "player_slug": "hassan-al-saleh",
         "team": "Birmingham Vulcans",
@@ -570,13 +577,6 @@
         "team": "Taipei Neon",
         "team_slug": "taipei-neon",
         "value": "0.80"
-      },
-      {
-        "player": "Kenji Nomura",
-        "player_slug": "kenji-nomura",
-        "team": "Durham Gold",
-        "team_slug": "durham-gold",
-        "value": "0.81"
       }
     ],
     "K": [
@@ -616,11 +616,25 @@
         "value": "195"
       },
       {
+        "player": "Tomás Zepeda",
+        "player_slug": "tomas-zepeda",
+        "team": "Tijuana Tecnicos",
+        "team_slug": "tijuana-tecnicos",
+        "value": "188"
+      },
+      {
         "player": "Isaac Friedel",
         "player_slug": "isaac-friedel",
         "team": "Durham Gold",
         "team_slug": "durham-gold",
         "value": "187"
+      },
+      {
+        "player": "Tsai Ming Hao",
+        "player_slug": "tsai-ming-hao",
+        "team": "Taipei Neon",
+        "team_slug": "taipei-neon",
+        "value": "186"
       },
       {
         "player": "Arón Videla",
@@ -635,20 +649,6 @@
         "team": "Durham Gold",
         "team_slug": "durham-gold",
         "value": "184"
-      },
-      {
-        "player": "Antonio Beltrán",
-        "player_slug": "antonio-beltran",
-        "team": "Durham Gold",
-        "team_slug": "durham-gold",
-        "value": "182"
-      },
-      {
-        "player": "Tomás Zepeda",
-        "player_slug": "tomas-zepeda",
-        "team": "Tijuana Tecnicos",
-        "team_slug": "tijuana-tecnicos",
-        "value": "182"
       }
     ],
     "SO": [
@@ -688,11 +688,25 @@
         "value": "195"
       },
       {
+        "player": "Tomás Zepeda",
+        "player_slug": "tomas-zepeda",
+        "team": "Tijuana Tecnicos",
+        "team_slug": "tijuana-tecnicos",
+        "value": "188"
+      },
+      {
         "player": "Isaac Friedel",
         "player_slug": "isaac-friedel",
         "team": "Durham Gold",
         "team_slug": "durham-gold",
         "value": "187"
+      },
+      {
+        "player": "Tsai Ming Hao",
+        "player_slug": "tsai-ming-hao",
+        "team": "Taipei Neon",
+        "team_slug": "taipei-neon",
+        "value": "186"
       },
       {
         "player": "Arón Videla",
@@ -707,20 +721,6 @@
         "team": "Durham Gold",
         "team_slug": "durham-gold",
         "value": "184"
-      },
-      {
-        "player": "Antonio Beltrán",
-        "player_slug": "antonio-beltran",
-        "team": "Durham Gold",
-        "team_slug": "durham-gold",
-        "value": "182"
-      },
-      {
-        "player": "Tomás Zepeda",
-        "player_slug": "tomas-zepeda",
-        "team": "Tijuana Tecnicos",
-        "team_slug": "tijuana-tecnicos",
-        "value": "182"
       }
     ],
     "SV": [
@@ -753,11 +753,25 @@
         "value": "19"
       },
       {
+        "player": "Mateo Zubillaga",
+        "player_slug": "mateo-zubillaga",
+        "team": "Osaka Spirits",
+        "team_slug": "osaka-spirits",
+        "value": "17"
+      },
+      {
         "player": "Miguel Santos",
         "player_slug": "miguel-santos-tpe",
         "team": "Taipei Neon",
         "team_slug": "taipei-neon",
         "value": "17"
+      },
+      {
+        "player": "Iván Lizárraga",
+        "player_slug": "ivan-lizarraga",
+        "team": "Tijuana Tecnicos",
+        "team_slug": "tijuana-tecnicos",
+        "value": "16"
       },
       {
         "player": "Jae-min Gwak",
@@ -779,20 +793,6 @@
         "team": "Vancouver Current",
         "team_slug": "vancouver-current",
         "value": "16"
-      },
-      {
-        "player": "Mateo Zubillaga",
-        "player_slug": "mateo-zubillaga",
-        "team": "Osaka Spirits",
-        "team_slug": "osaka-spirits",
-        "value": "16"
-      },
-      {
-        "player": "Renan Vidigal",
-        "player_slug": "renan-vidigal",
-        "team": "Toledo Assembly",
-        "team_slug": "toledo-assembly",
-        "value": "16"
       }
     ],
     "W": [
@@ -801,7 +801,7 @@
         "player_slug": "kenji-nomura",
         "team": "Durham Gold",
         "team_slug": "durham-gold",
-        "value": "25"
+        "value": "26"
       },
       {
         "player": "Esteban Arce",

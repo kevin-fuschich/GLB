@@ -1,184 +1,184 @@
 {
-  "as_of": "2026-10-03",
+  "as_of": "2026-10-04",
   "divisions": {
     "Americas": [
       {
         "team": "St. Paul Frost",
         "slug": "st-paul-frost",
-        "w": 85,
+        "w": 86,
         "l": 68,
-        "pct": ".556",
+        "pct": ".558",
         "gb": "-",
-        "rs": 595,
-        "ra": 507,
-        "diff": "+88"
+        "rs": 600,
+        "ra": 511,
+        "diff": "+89"
       },
       {
         "team": "Durham Gold",
         "slug": "durham-gold",
         "w": 85,
-        "l": 68,
-        "pct": ".556",
-        "gb": "0",
-        "rs": 580,
-        "ra": 526,
-        "diff": "+54"
+        "l": 69,
+        "pct": ".552",
+        "gb": "1",
+        "rs": 583,
+        "ra": 531,
+        "diff": "+52"
       },
       {
         "team": "Albuquerque Aeros",
         "slug": "albuquerque-aeros",
-        "w": 82,
+        "w": 83,
         "l": 71,
-        "pct": ".536",
+        "pct": ".539",
         "gb": "3",
-        "rs": 530,
-        "ra": 530,
-        "diff": "0"
+        "rs": 537,
+        "ra": 532,
+        "diff": "+5"
       },
       {
         "team": "Toledo Assembly",
         "slug": "toledo-assembly",
-        "w": 77,
+        "w": 78,
         "l": 76,
-        "pct": ".503",
+        "pct": ".506",
         "gb": "8",
-        "rs": 557,
-        "ra": 593,
-        "diff": "-36"
+        "rs": 563,
+        "ra": 594,
+        "diff": "-31"
+      },
+      {
+        "team": "Birmingham Vulcans",
+        "slug": "birmingham-vulcans",
+        "w": 73,
+        "l": 81,
+        "pct": ".474",
+        "gb": "13",
+        "rs": 559,
+        "ra": 583,
+        "diff": "-24"
       },
       {
         "team": "Spokane Alloys",
         "slug": "spokane-alloys",
         "w": 73,
-        "l": 80,
-        "pct": ".477",
-        "gb": "12",
-        "rs": 551,
-        "ra": 583,
-        "diff": "-32"
-      },
-      {
-        "team": "Birmingham Vulcans",
-        "slug": "birmingham-vulcans",
-        "w": 72,
         "l": 81,
-        "pct": ".471",
+        "pct": ".474",
         "gb": "13",
-        "rs": 554,
-        "ra": 580,
-        "diff": "-26"
+        "rs": 555,
+        "ra": 588,
+        "diff": "-33"
       },
       {
         "team": "Fresno Yield",
         "slug": "fresno-yield",
         "w": 71,
-        "l": 82,
-        "pct": ".464",
-        "gb": "14",
-        "rs": 497,
-        "ra": 556,
-        "diff": "-59"
+        "l": 83,
+        "pct": ".461",
+        "gb": "15",
+        "rs": 500,
+        "ra": 561,
+        "diff": "-61"
       },
       {
         "team": "Louisville Naturals",
         "slug": "louisville-naturals",
         "w": 70,
-        "l": 83,
-        "pct": ".458",
-        "gb": "15",
-        "rs": 513,
-        "ra": 572,
-        "diff": "-59"
+        "l": 84,
+        "pct": ".455",
+        "gb": "16",
+        "rs": 515,
+        "ra": 579,
+        "diff": "-64"
       }
     ],
     "Pacific": [
       {
         "team": "Osaka Spirits",
         "slug": "osaka-spirits",
-        "w": 83,
+        "w": 84,
         "l": 70,
-        "pct": ".542",
+        "pct": ".545",
         "gb": "-",
-        "rs": 587,
+        "rs": 588,
         "ra": 496,
-        "diff": "+91"
+        "diff": "+92"
       },
       {
         "team": "Mayagüez Sultans",
         "slug": "mayaguez-sultans",
         "w": 83,
-        "l": 70,
-        "pct": ".542",
-        "gb": "0",
-        "rs": 562,
-        "ra": 500,
-        "diff": "+62"
+        "l": 71,
+        "pct": ".539",
+        "gb": "1",
+        "rs": 563,
+        "ra": 506,
+        "diff": "+57"
+      },
+      {
+        "team": "Monterrey Cementeros",
+        "slug": "monterrey-cementeros",
+        "w": 80,
+        "l": 74,
+        "pct": ".519",
+        "gb": "4",
+        "rs": 576,
+        "ra": 567,
+        "diff": "+9"
       },
       {
         "team": "Taipei Neon",
         "slug": "taipei-neon",
         "w": 80,
-        "l": 73,
-        "pct": ".523",
-        "gb": "3",
-        "rs": 576,
-        "ra": 571,
-        "diff": "+5"
-      },
-      {
-        "team": "Monterrey Cementeros",
-        "slug": "monterrey-cementeros",
-        "w": 79,
         "l": 74,
-        "pct": ".516",
+        "pct": ".519",
         "gb": "4",
-        "rs": 571,
-        "ra": 564,
-        "diff": "+7"
+        "rs": 578,
+        "ra": 574,
+        "diff": "+4"
       },
       {
         "team": "Tijuana Tecnicos",
         "slug": "tijuana-tecnicos",
         "w": 78,
-        "l": 75,
-        "pct": ".510",
-        "gb": "5",
+        "l": 76,
+        "pct": ".506",
+        "gb": "6",
         "rs": 594,
-        "ra": 576,
-        "diff": "+18"
+        "ra": 577,
+        "diff": "+17"
       },
       {
         "team": "Vancouver Current",
         "slug": "vancouver-current",
-        "w": 76,
+        "w": 77,
         "l": 77,
-        "pct": ".497",
+        "pct": ".500",
         "gb": "7",
-        "rs": 559,
-        "ra": 526,
-        "diff": "+33"
+        "rs": 564,
+        "ra": 530,
+        "diff": "+34"
+      },
+      {
+        "team": "Santiago Caballeros",
+        "slug": "santiago-caballeros",
+        "w": 66,
+        "l": 88,
+        "pct": ".429",
+        "gb": "18",
+        "rs": 481,
+        "ra": 595,
+        "diff": "-114"
       },
       {
         "team": "San Pedro Cocolos",
         "slug": "san-pedro-cocolos",
         "w": 65,
-        "l": 88,
-        "pct": ".425",
-        "gb": "18",
-        "rs": 513,
-        "ra": 544,
-        "diff": "-31"
-      },
-      {
-        "team": "Santiago Caballeros",
-        "slug": "santiago-caballeros",
-        "w": 65,
-        "l": 88,
-        "pct": ".425",
-        "gb": "18",
-        "rs": 478,
-        "ra": 593,
-        "diff": "-115"
+        "l": 89,
+        "pct": ".422",
+        "gb": "19",
+        "rs": 517,
+        "ra": 549,
+        "diff": "-32"
       }
     ]
   }

@@ -1,8 +1,14 @@
 GLB CLUB PAGE SPECIFICATION
 
-Version: 1.0
+Version: 1.1
 Status: LOCKED
-Applies to: All club-[city].html pages
+Applies to: Standalone club-[city].html pages; combined club pages follow the exception below.
+
+⸻
+
+Combined Club Page Exception
+
+Spokane Alloys and Vancouver Current use a single team-[city]-[name].html page for the official record and club material. Spokane is the layout reference: shared league header and footer, hero, section navigation, season snapshot, latest result, player cards, stadium, mascot, game voices, traditions, and club entertainment. Each club retains its own colors, names, artwork, and features. Existing standalone club URLs redirect to the combined page. The standalone section restrictions below do not apply to these combined pages.
 
 ⸻
 
@@ -206,5 +212,6 @@ If a choice isn’t covered here, don’t invent one.
 
 ⸻
 
-End of Specification — v1.0
+End of Specification — v1.1
 :::
+

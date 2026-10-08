@@ -62,9 +62,22 @@
       return `assets/teams/albuquerque-aeros/images/players/albuquerque-${player.slug}${player.slug === 'carmine-sforza' ? '.pthinnng' : ''}.png`;
     if (player.teamSlug === 'durham-gold')
       return `assets/images/players/durham-gold/durham-${player.slug}.jpg`;
-    if (player.teamSlug === 'vancouver-current')
-      return `assets/images/players/vancouver-current/vancouver-${player.slug}.png`;
+    if (player.teamSlug === 'vancouver-current') return null;
     return null;
+  }
+  // Display original recovered artwork without altering the source image.
+  const recoveredVancouver = {'nico-penfold':47,'silas-boudreau':418,'eamon-kerr':797,'alejo-santillan':1185};
+  function recoveredPortrait(player) {
+    const x = player.teamSlug === 'vancouver-current' ? recoveredVancouver[player.slug] : undefined;
+    if (x === undefined) return null;
+    const frame = document.createElement('span');
+    frame.style.cssText = 'display:block;position:relative;overflow:hidden;width:100%;aspect-ratio:300/335;';
+    frame.setAttribute('role','img'); frame.setAttribute('aria-label',player.name || player.slug);
+    const image=document.createElement('img');
+    image.src='assets/images/players/vancouver-current/restored-fieldstock-sheet.png';
+    image.alt='';
+    image.style.cssText=`position:absolute!important;width:512%!important;max-width:none!important;height:auto!important;left:${-x/3}%;top:${-40/3.35}%;`;
+    frame.append(image);return frame;
   }
   function text(tag, value, className) {
     const element = document.createElement(tag);
@@ -90,8 +103,9 @@
         .map(part => part[0]).join(''), 'glb-player-card__initials'));
       if (badge) portrait.append(badge);
     };
+    const recovered = recoveredPortrait(player);
     const source = photoPath(player);
-    if (source) {
+    if (recovered) { portrait.append(recovered); } else if (source) {
       const img = document.createElement('img');
       img.src = source;
       img.alt = `${player.name} portrait`;
@@ -124,5 +138,5 @@
     return card;
   }
 
-  window.GLBPlayerCards = { loadSeasons, careerFor, createCard, photoPath };
+  window.GLBPlayerCards = { loadSeasons, careerFor, createCard, photoPath, recoveredPortrait };
 })();

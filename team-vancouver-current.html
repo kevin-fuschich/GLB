@@ -1468,7 +1468,7 @@ text-transform:uppercase;
 </div>
 </div>
 
-</footer><script>
+</footer><script src="scripts/player-cards.js?v=20261008-images"></script><script>
 const roleMap={SP:"Starting pitcher",RP:"Relief pitcher",C:"Catcher","1B":"First baseman","2B":"Second baseman",SS:"Shortstop","3B":"Third baseman",LF:"Left fielder",CF:"Center fielder",RF:"Right fielder"};
 const fieldstockSeries01={"iseul-kang":"VAN-01","nico-penfold":"VAN-02","silas-boudreau":"VAN-03","eamon-kerr":"VAN-04","roman-velasco":"VAN-05","alejo-santillan":"VAN-06","taj-adelman":"VAN-07","oziel-narvaez":"VAN-08"};
 const initials=n=>n.split(/\s+/).map(x=>x[0]).slice(0,2).join("").toUpperCase();
@@ -1484,15 +1484,22 @@ try{
   const tr=document.createElement("tr");
   const prefix="vancouver";
   tr.innerHTML=`<td><div class="player"><img class="portrait" src="assets/images/players/vancouver-current/${prefix}-${p.slug}.png" alt="${p.name}"><span class="initials">${initials(p.name)}</span><div><a class="pname" href="player.html?team=vancouver-current&player=${p.slug}">${p.name}</a><span class="prole">${roleMap[p.position]||p.position}</span></div></div></td><td>${p.position}</td><td>${p.bats}/${p.throws}</td><td>${p.age}</td><td>Active</td>`;
-  const img=tr.querySelector(".portrait"),fallback=tr.querySelector(".initials");img.addEventListener("error",()=>{img.style.display="none";fallback.style.display="flex"});body.append(tr);
+  const img=tr.querySelector(".portrait"),fallback=tr.querySelector(".initials");
+  const recovered=GLBPlayerCards.recoveredPortrait({...p,teamSlug:'vancouver-current'});
+  img.remove();
+  if(recovered){recovered.style.width='46px';recovered.style.flexShrink='0';fallback.replaceWith(recovered)}
+  else {fallback.style.display='flex';fallback.title='Portrait pending'}
+  body.append(tr);
 
   const card=document.createElement("article");
   card.className="player-card";
   card.tabIndex=0;
   card.setAttribute("aria-label",p.name+" player card. Press Enter to flip.");
   const front=document.createElement("div"); front.className="player-card-front";
-  const photo=document.createElement("img"); photo.className="player-card-photo"; photo.src="assets/images/players/vancouver-current/vancouver-"+p.slug+".png"; photo.alt=p.name; photo.loading="lazy";
-  photo.addEventListener("error",()=>{photo.remove();});
+  const photo=GLBPlayerCards.recoveredPortrait({...p,teamSlug:'vancouver-current'}) || document.createElement('div');
+  photo.className='player-card-photo';
+  if(!photo.childElementCount){photo.textContent=initials(p.name);photo.style.cssText='display:flex;align-items:center;justify-content:center;font-size:48px;color:#164f67;background:#dfe9ed;';photo.setAttribute('aria-label',p.name+' portrait pending');}
+
   const frontBody=document.createElement("div"); frontBody.className="player-card-body";
   const fieldstockId=fieldstockSeries01[p.slug]||"VAN · ROSTER";
   frontBody.innerHTML='<div class="player-card-topline"><span>'+fieldstockId+'</span><span>FIELDSTOCK</span></div><h3 class="player-card-name"><a href="player.html?team=vancouver-current&player='+p.slug+'">'+p.name+'</a></h3><div class="player-card-role">Vancouver Current · '+(roleMap[p.position]||p.position)+'</div><div class="player-card-meta"><span>B/T '+p.bats+'/'+p.throws+'</span><span>Age '+p.age+'</span></div>';

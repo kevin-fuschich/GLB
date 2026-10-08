@@ -464,7 +464,7 @@ p{line-height:1.58;color:#343a40}
   </div>
 </footer>
 
-<script src="scripts/player-cards.js?v=20260915a"></script>
+<script src="scripts/player-cards.js?v=20261008-images"></script>
 <script>
 const params = new URLSearchParams(window.location.search);
 
@@ -665,7 +665,7 @@ async function loadPlayer(){
     const registry = await registryResponse.json();
     const activeTeam = Object.values(registry.divisions).flat().find(entry => entry.slug === teamSlug);
     if(!activeTeam) throw new Error('Club not found in active league registry');
-    team = {teamName:activeTeam.team,cityPrefix:teamSlug.split('-')[0],teamPage:teamSlug==='spokane-alloys'?'team-spokane-alloys.html':`team.html?team=${encodeURIComponent(teamSlug)}`};
+    team = {teamName:activeTeam.team,cityPrefix:teamSlug.split('-')[0],teamPage:['spokane-alloys','vancouver-current'].includes(teamSlug)?`team-${teamSlug}.html`:`team.html?team=${encodeURIComponent(teamSlug)}`};
     const rosterPlayer = await getRosterPlayer();
     if(!rosterPlayer && !PLAYER_OVERRIDES[playerSlug]) throw new Error('Player not found on this club’s active roster');
 
@@ -717,7 +717,9 @@ async function loadPlayer(){
     photoWrap.setAttribute('aria-label', `${playerName} portrait unavailable`);
   };
   const portrait = GLBPlayerCards.photoPath({teamSlug,slug:playerSlug});
-  if(portrait){img.onerror = showInitials; img.src = portrait;} else showInitials();
+  const recoveredPortrait=GLBPlayerCards.recoveredPortrait({...player,slug:playerSlug,teamSlug});
+  if(recoveredPortrait){img.replaceWith(recoveredPortrait)}
+  else if(portrait){img.onerror = showInitials; img.src = portrait;} else showInitials();
 
   const teamLink = document.getElementById("teamLink");
   teamLink.href = team.teamPage;
@@ -745,7 +747,7 @@ async function loadPlayer(){
     : teamSlug.toUpperCase().slice(0,3)+'-'+playerSlug.toUpperCase();
   const claimable=!fieldstockTeam?.claimable || fieldstockTeam.claimable.has(playerSlug);
 
-  if(fieldstockTeam&&cardNumber){
+  if(teamSlug === 'spokane-alloys' && fieldstockTeam&&cardNumber){
     const prefix=fieldstockTeam.prefix+'-'+String(cardNumber).padStart(2,'0')+'-'+playerSlug;
     const physical=document.createElement('article');
     physical.className='fieldstock-player-card';

@@ -79,7 +79,7 @@
     image.style.cssText=`position:absolute!important;width:512%!important;max-width:none!important;height:auto!important;left:${-x/3}%;top:${-40/3.35}%;`;
     frame.append(image);return frame;
   }
-  const monterreyCards = {'emilio-zendejas':1,'andres-cazares':15};
+  const monterreyCards = {'emilio-zendejas':1,'masato-yanagisawa':2,'kofi-mensah':12,'andres-cazares':15};
   function cardFront(player) {
     return player.teamSlug === 'monterrey-cementeros' && monterreyCards[player.slug]
       ? 'assets/images/cards/fieldstock/mty-'+String(monterreyCards[player.slug]).padStart(2,'0')+'-'+player.slug+'-front.png' : null;

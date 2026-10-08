@@ -665,7 +665,7 @@ async function loadPlayer(){
     const registry = await registryResponse.json();
     const activeTeam = Object.values(registry.divisions).flat().find(entry => entry.slug === teamSlug);
     if(!activeTeam) throw new Error('Club not found in active league registry');
-    team = {teamName:activeTeam.team,cityPrefix:teamSlug.split('-')[0],teamPage:['spokane-alloys','vancouver-current'].includes(teamSlug)?`team-${teamSlug}.html`:`team.html?team=${encodeURIComponent(teamSlug)}`};
+    team = {teamName:activeTeam.team,cityPrefix:teamSlug.split('-')[0],teamPage:['spokane-alloys','vancouver-current','monterrey-cementeros'].includes(teamSlug)?`team-${teamSlug}.html`:`team.html?team=${encodeURIComponent(teamSlug)}`};
     const rosterPlayer = await getRosterPlayer();
     if(!rosterPlayer && !PLAYER_OVERRIDES[playerSlug]) throw new Error('Player not found on this club’s active roster');
 
@@ -745,7 +745,7 @@ async function loadPlayer(){
   const cardId=fieldstockTeam&&cardNumber
     ? fieldstockTeam.prefix.toUpperCase()+'-'+String(cardNumber).padStart(2,'0')
     : teamSlug.toUpperCase().slice(0,3)+'-'+playerSlug.toUpperCase();
-  const claimable=!fieldstockTeam?.claimable || fieldstockTeam.claimable.has(playerSlug);
+  const claimable=teamSlug!=='monterrey-cementeros' && (!fieldstockTeam?.claimable || fieldstockTeam.claimable.has(playerSlug));
 
   if(teamSlug === 'spokane-alloys' && fieldstockTeam&&cardNumber){
     const prefix=fieldstockTeam.prefix+'-'+String(cardNumber).padStart(2,'0')+'-'+playerSlug;
@@ -803,7 +803,7 @@ async function loadPlayer(){
   }else{
     const pending=document.createElement('div');
     pending.className='card-claim-form';
-    pending.innerHTML='<strong>CLAIMS OPENING SOON</strong><small>This FIELDSTOCK card is part of the Vancouver Current archive, but claims are not open for this card yet.</small>';
+    pending.innerHTML='<strong>CLAIMS OPENING SOON</strong><small>This FIELDSTOCK card is part of the club archive, but claims are not open for this card yet.</small>';
     cardHost.append(pending);
   }
   const body=document.getElementById('seasonStatBody');
@@ -836,3 +836,4 @@ loadPlayer();
 
 <script src="scripts/glb-ticker.js"></script>\n</body>
 </html>
+

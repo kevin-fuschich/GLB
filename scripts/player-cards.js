@@ -79,6 +79,11 @@
     image.style.cssText=`position:absolute!important;width:512%!important;max-width:none!important;height:auto!important;left:${-x/3}%;top:${-40/3.35}%;`;
     frame.append(image);return frame;
   }
+  const monterreyCards = {'emilio-zendejas':1,'andres-cazares':15};
+  function cardFront(player) {
+    return player.teamSlug === 'monterrey-cementeros' && monterreyCards[player.slug]
+      ? 'assets/images/cards/fieldstock/mty-'+String(monterreyCards[player.slug]).padStart(2,'0')+'-'+player.slug+'-front.png' : null;
+  }
   function text(tag, value, className) {
     const element = document.createElement(tag);
     element.textContent = String(value ?? '—');
@@ -134,10 +139,27 @@
     const serial=player.teamSlug==='spokane-alloys'?'SPK-'+String(spokaneCards.indexOf(player.slug)+1).padStart(2,'0'):'GLB-'+player.slug.toUpperCase();
     const identityLine=[player.height,player.weight?`${player.weight} lb`:null,player.birthplace].filter(Boolean).join(' · ');
     back.append(text('div','FIELDSTOCK · '+player.teamName,'glb-player-card__backmark'),text('h3',player.name,'glb-player-card__backname'),text('p',player.position+' · '+(record?.seasons?.length||1)+' recorded season(s)','glb-player-card__backcopy'),text('p',identityLine||'Official '+player.teamName+' player record','glb-player-card__backcopy'),text('p',player.field_note||notes[player.slug]||'Additional player notes are opening soon.','glb-player-card__backcopy'),text('div',serial,'glb-player-card__serial'),text('div','Tap to return to front','glb-player-card__fliphint'));
+    const physicalFront = cardFront(player);
+    if (physicalFront) {
+      card.style.setProperty('border','0','important');
+      card.style.setProperty('background','#fffaf1','important');
+      front.style.cssText='padding:0;border:0!important;background:none;display:block;height:100%';
+      const art=document.createElement('img');art.src=physicalFront;art.alt=player.name+' physical FIELDSTOCK card front';art.style.cssText='display:block;width:100%;height:100%;object-fit:contain';
+      front.replaceChildren(art);
+      back.style.setProperty('background','#fffaf1','important');
+      back.style.color='#6b294c';
+      for(const child of back.children)child.style.color='#6b294c';
+      back.querySelector('.glb-player-card__serial').textContent='MTY-'+String(monterreyCards[player.slug]).padStart(2,'0');
+      const statLine=metrics.map(([label,value])=>(value??'—')+' '+label).join(' · ');
+      back.insertBefore(text('p','Recorded totals · '+statLine,'glb-player-card__backcopy'),back.querySelector('.glb-player-card__serial'));
+      back.lastElementChild.textContent='Public preview · Tap to return to front';
+      card.tabIndex=0;
+      card.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();card.classList.toggle('is-flipped')}});
+    }
     card.replaceChildren(front,back); card.addEventListener('click',e=>{if(e.target.closest('a'))return;e.preventDefault();card.classList.toggle('is-flipped')});
     return card;
   }
 
-  window.GLBPlayerCards = { loadSeasons, careerFor, createCard, photoPath, recoveredPortrait };
+  window.GLBPlayerCards = { loadSeasons, careerFor, createCard, photoPath, recoveredPortrait, cardFront };
 })();
 

@@ -266,6 +266,9 @@ p{line-height:1.58;color:#343a40}
 .fieldstock-player-card__back{transform:rotateY(180deg)}
 .fieldstock-flip-note{margin:12px 0 0;text-align:center;color:#667085;font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.08em}
 .claim-receipt{display:block;margin-top:8px;padding:9px;border:1px solid #d29a55;background:#fffaf0;font:700 10px/1.45 ui-monospace,SFMono-Regular,Menlo,monospace;overflow-wrap:anywhere}
+.glb-player-card.is-flipped{transform:rotateY(180deg) rotate(.6deg)!important}
+.glb-player-card.is-flipped:hover{transform:rotateY(180deg) translateY(-4px)!important}
+@media(prefers-reduced-motion:reduce){.glb-player-card{transition:none!important}}
 </style>
 </head>
 
@@ -357,7 +360,7 @@ p{line-height:1.58;color:#343a40}
     </section>
 
     <section class="card" id="playerCardSection">
-      <div class="card-head"><h2>FIELDSTOCK Player Card</h2></div>
+      <div class="card-head"><h2>Player Card</h2></div>
       <div class="card-body"><div class="card-display" id="playerCard">Loading card…</div></div>
     </section>
 
@@ -464,7 +467,7 @@ p{line-height:1.58;color:#343a40}
   </div>
 </footer>
 
-<script src="scripts/player-cards.js?v=20261008-mty-four"></script>
+<script src="scripts/player-cards.js?v=20261009-mty-reverse"></script>
 <script>
 const params = new URLSearchParams(window.location.search);
 

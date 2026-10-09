@@ -152,7 +152,24 @@
       back.querySelector('.glb-player-card__serial').textContent='MTY-'+String(monterreyCards[player.slug]).padStart(2,'0');
       const statLine=metrics.map(([label,value])=>(value??'—')+' '+label).join(' · ');
       back.insertBefore(text('p','Recorded totals · '+statLine,'glb-player-card__backcopy'),back.querySelector('.glb-player-card__serial'));
-      back.lastElementChild.textContent='Public preview · Tap to return to front';
+      const clubNotes = {
+        'emilio-zendejas':'Marks every bullpen session in a pocket scorebook; a clean inning earns a small pink square.',
+        'masato-yanagisawa':'Rehearses his pickoff footwork on the hotel carpet using two rolled-up socks as bases.',
+        'kofi-mensah':'Keeps a tally of every double play turned with a different second baseman.',
+        'andres-cazares':'Labels batting-practice bats by the outfield gap he is trying to reach that day.'
+      };
+      back.children[4].textContent=player.field_note||clubNotes[player.slug];
+      back.firstElementChild.textContent=player.teamName;
+      back.firstElementChild.style.cssText='color:#6b294c;font-size:10px;letter-spacing:1px';
+      const season=record?.seasons?.find(row=>Number(row.year)===2026);
+      const seasonStats=pitcher?season?.pitching:season?.batting;
+      const seasonLine=(pitcher?['IP','K','ERA']:['AVG','HR','RBI'])
+        .map(label=>(seasonStats?.[label]??'—')+' '+label).join(' · ');
+      back.querySelector('.glb-player-card__serial').previousElementSibling.textContent='2026 · '+seasonLine;
+      back.lastElementChild.textContent='FIELDSTOCK · Public preview · Tap to return';
+      back.lastElementChild.style.cssText='color:#876b77;font-size:8px;letter-spacing:.4px';
+      card.style.setProperty('--player-deep','#6b294c');
+      card.style.setProperty('--player-accent','#e84b91');
       card.tabIndex=0;
       card.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();card.classList.toggle('is-flipped')}});
     }

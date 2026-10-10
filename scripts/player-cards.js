@@ -79,7 +79,7 @@
     image.style.cssText=`position:absolute!important;width:512%!important;max-width:none!important;height:auto!important;left:${-x/3}%;top:${-40/3.35}%;`;
     frame.append(image);return frame;
   }
-  const tijuanaCards = {"rafael-montoya":1,"diego-verdugo":2,"julian-ochoa":7,"sergio-hinojosa":8,"bruno-valdes":9,"matias-camarena":10,"nicolas-paredes":11,"gael-marrufo":14};
+  const tijuanaCards = {"rafael-montoya":1,"diego-verdugo":2,"esteban-arce":3,"tomas-zepeda":4,"mauricio-cota":5,"ivan-lizarraga":6,"julian-ochoa":7,"sergio-hinojosa":8,"bruno-valdes":9,"matias-camarena":10,"nicolas-paredes":11,"adrian-fierro":12,"emilio-barron":13,"gael-marrufo":14,"cristobal-saucedo":15,"hector-belmonte":16};
   const monterreyCards = {'emilio-zendejas':1,'masato-yanagisawa':2,'kofi-mensah':12,'andres-cazares':15};
   function cardFront(player) {
     if(player.teamSlug === 'tijuana-tecnicos' && tijuanaCards[player.slug]) return 'assets/images/cards/fieldstock/tij-'+String(tijuanaCards[player.slug]).padStart(2,'0')+'-'+player.slug+'-front.webp';
@@ -188,4 +188,5 @@
 
   window.GLBPlayerCards = { loadSeasons, careerFor, createCard, photoPath, recoveredPortrait, cardFront };
 })();
+
 

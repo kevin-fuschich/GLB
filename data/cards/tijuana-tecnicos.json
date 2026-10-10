@@ -32,7 +32,9 @@
       "player_slug": "esteban-arce",
       "name": "Esteban Arce",
       "claimable": false,
-      "serial_template": "TIJ-03-{USERID}-{CLAIMSEQ}"
+      "serial_template": "TIJ-03-{USERID}-{CLAIMSEQ}",
+      "front": "assets/images/cards/fieldstock/tij-03-esteban-arce-front.webp",
+      "back": "assets/images/cards/fieldstock/tij-03-esteban-arce-back.svg"
     },
     {
       "card_id": "TIJ-04-CURRENT",
@@ -41,7 +43,9 @@
       "player_slug": "tomas-zepeda",
       "name": "Tomás Zepeda",
       "claimable": false,
-      "serial_template": "TIJ-04-{USERID}-{CLAIMSEQ}"
+      "serial_template": "TIJ-04-{USERID}-{CLAIMSEQ}",
+      "front": "assets/images/cards/fieldstock/tij-04-tomas-zepeda-front.webp",
+      "back": "assets/images/cards/fieldstock/tij-04-tomas-zepeda-back.svg"
     },
     {
       "card_id": "TIJ-05-CURRENT",
@@ -50,7 +54,9 @@
       "player_slug": "mauricio-cota",
       "name": "Mauricio Cota",
       "claimable": false,
-      "serial_template": "TIJ-05-{USERID}-{CLAIMSEQ}"
+      "serial_template": "TIJ-05-{USERID}-{CLAIMSEQ}",
+      "front": "assets/images/cards/fieldstock/tij-05-mauricio-cota-front.webp",
+      "back": "assets/images/cards/fieldstock/tij-05-mauricio-cota-back.svg"
     },
     {
       "card_id": "TIJ-06-CURRENT",
@@ -59,7 +65,9 @@
       "player_slug": "ivan-lizarraga",
       "name": "Iván Lizárraga",
       "claimable": false,
-      "serial_template": "TIJ-06-{USERID}-{CLAIMSEQ}"
+      "serial_template": "TIJ-06-{USERID}-{CLAIMSEQ}",
+      "front": "assets/images/cards/fieldstock/tij-06-ivan-lizarraga-front.webp",
+      "back": "assets/images/cards/fieldstock/tij-06-ivan-lizarraga-back.svg"
     },
     {
       "card_id": "TIJ-07-CURRENT",
@@ -123,7 +131,9 @@
       "player_slug": "adrian-fierro",
       "name": "Adrián Fierro",
       "claimable": false,
-      "serial_template": "TIJ-12-{USERID}-{CLAIMSEQ}"
+      "serial_template": "TIJ-12-{USERID}-{CLAIMSEQ}",
+      "front": "assets/images/cards/fieldstock/tij-12-adrian-fierro-front.webp",
+      "back": "assets/images/cards/fieldstock/tij-12-adrian-fierro-back.svg"
     },
     {
       "card_id": "TIJ-13-CURRENT",
@@ -132,7 +142,9 @@
       "player_slug": "emilio-barron",
       "name": "Emilio Barrón",
       "claimable": false,
-      "serial_template": "TIJ-13-{USERID}-{CLAIMSEQ}"
+      "serial_template": "TIJ-13-{USERID}-{CLAIMSEQ}",
+      "front": "assets/images/cards/fieldstock/tij-13-emilio-barron-front.webp",
+      "back": "assets/images/cards/fieldstock/tij-13-emilio-barron-back.svg"
     },
     {
       "card_id": "TIJ-14-CURRENT",
@@ -152,7 +164,9 @@
       "player_slug": "cristobal-saucedo",
       "name": "Cristóbal Saucedo",
       "claimable": false,
-      "serial_template": "TIJ-15-{USERID}-{CLAIMSEQ}"
+      "serial_template": "TIJ-15-{USERID}-{CLAIMSEQ}",
+      "front": "assets/images/cards/fieldstock/tij-15-cristobal-saucedo-front.webp",
+      "back": "assets/images/cards/fieldstock/tij-15-cristobal-saucedo-back.svg"
     },
     {
       "card_id": "TIJ-16-CURRENT",
@@ -161,7 +175,9 @@
       "player_slug": "hector-belmonte",
       "name": "Héctor Belmonte",
       "claimable": false,
-      "serial_template": "TIJ-16-{USERID}-{CLAIMSEQ}"
+      "serial_template": "TIJ-16-{USERID}-{CLAIMSEQ}",
+      "front": "assets/images/cards/fieldstock/tij-16-hector-belmonte-front.webp",
+      "back": "assets/images/cards/fieldstock/tij-16-hector-belmonte-back.svg"
     },
     {
       "card_id": "TIJ-CHISPI-CURRENT",

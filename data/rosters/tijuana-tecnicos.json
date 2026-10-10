@@ -42,7 +42,16 @@
       "position": "SP",
       "bats": "R",
       "throws": "R",
-      "age": 25
+      "age": 25,
+      "dob": "2001-01-29",
+      "birthplace": "Tecate, Baja California",
+      "height": "6′2″",
+      "weight": 202,
+      "field_note": "Rebuilds the same paper strike-zone chart before every start, even when the old one is clean.",
+      "bio": "Esteban Arce plays SP for the Tijuana Técnicos. Rebuilds the same paper strike-zone chart before every start, even when the old one is clean.",
+      "rookie": false,
+      "card_front": "assets/images/cards/fieldstock/tij-03-esteban-arce-front.webp",
+      "card_back": "assets/images/cards/fieldstock/tij-03-esteban-arce-back.svg"
     },
     {
       "name": "Tomás Zepeda",
@@ -50,7 +59,16 @@
       "position": "SP",
       "bats": "R",
       "throws": "R",
-      "age": 29
+      "age": 29,
+      "dob": "1997-06-13",
+      "birthplace": "Durango, Durango",
+      "height": "6′6″",
+      "weight": 218,
+      "field_note": "Counts every warmup pitch under his breath; the catcher knows to wait for number twelve.",
+      "bio": "Tomás Zepeda plays SP for the Tijuana Técnicos. Counts every warmup pitch under his breath; the catcher knows to wait for number twelve.",
+      "rookie": false,
+      "card_front": "assets/images/cards/fieldstock/tij-04-tomas-zepeda-front.webp",
+      "card_back": "assets/images/cards/fieldstock/tij-04-tomas-zepeda-back.svg"
     },
     {
       "name": "Mauricio Cota",
@@ -58,7 +76,16 @@
       "position": "RP",
       "bats": "R",
       "throws": "R",
-      "age": 26
+      "age": 26,
+      "dob": "2000-09-02",
+      "birthplace": "Mazatlán, Sinaloa",
+      "height": "5′11″",
+      "weight": 203,
+      "field_note": "Carries three identical rosin bags and can tell which one belongs in his bullpen jacket.",
+      "bio": "Mauricio Cota plays RP for the Tijuana Técnicos. Carries three identical rosin bags and can tell which one belongs in his bullpen jacket.",
+      "rookie": false,
+      "card_front": "assets/images/cards/fieldstock/tij-05-mauricio-cota-front.webp",
+      "card_back": "assets/images/cards/fieldstock/tij-05-mauricio-cota-back.svg"
     },
     {
       "name": "Iván Lizárraga",
@@ -66,7 +93,16 @@
       "position": "RP",
       "bats": "L",
       "throws": "L",
-      "age": 28
+      "age": 28,
+      "dob": "1998-04-23",
+      "birthplace": "Los Mochis, Sinaloa",
+      "height": "6′1″",
+      "weight": 188,
+      "field_note": "Writes one word inside his cap after each appearance; nobody has persuaded him to show the list.",
+      "bio": "Iván Lizárraga plays RP for the Tijuana Técnicos. Writes one word inside his cap after each appearance; nobody has persuaded him to show the list.",
+      "rookie": false,
+      "card_front": "assets/images/cards/fieldstock/tij-06-ivan-lizarraga-front.webp",
+      "card_back": "assets/images/cards/fieldstock/tij-06-ivan-lizarraga-back.svg"
     },
     {
       "name": "Julián Ochoa",
@@ -159,7 +195,16 @@
       "position": "3B",
       "bats": "R",
       "throws": "R",
-      "age": 28
+      "age": 28,
+      "dob": "1998-07-19",
+      "birthplace": "Chihuahua, Chihuahua",
+      "height": "6′2″",
+      "weight": 221,
+      "field_note": "Keeps a notebook of the first hard ground ball hit at him in every new park.",
+      "bio": "Adrián Fierro plays 3B for the Tijuana Técnicos. Keeps a notebook of the first hard ground ball hit at him in every new park.",
+      "rookie": false,
+      "card_front": "assets/images/cards/fieldstock/tij-12-adrian-fierro-front.webp",
+      "card_back": "assets/images/cards/fieldstock/tij-12-adrian-fierro-back.svg"
     },
     {
       "name": "Emilio Barrón",
@@ -167,7 +212,16 @@
       "position": "LF",
       "bats": "L",
       "throws": "L",
-      "age": 26
+      "age": 26,
+      "dob": "2000-02-08",
+      "birthplace": "Morelia, Michoacán",
+      "height": "6′0″",
+      "weight": 192,
+      "field_note": "Marks the handle of his practice bat with a tiny stripe matching the day’s outfield wind.",
+      "bio": "Emilio Barrón plays LF for the Tijuana Técnicos. Marks the handle of his practice bat with a tiny stripe matching the day’s outfield wind.",
+      "rookie": false,
+      "card_front": "assets/images/cards/fieldstock/tij-13-emilio-barron-front.webp",
+      "card_back": "assets/images/cards/fieldstock/tij-13-emilio-barron-back.svg"
     },
     {
       "name": "Gael Marrufo",
@@ -192,7 +246,16 @@
       "position": "RF",
       "bats": "R",
       "throws": "R",
-      "age": 30
+      "age": 30,
+      "dob": "1996-03-04",
+      "birthplace": "San Luis Potosí, San Luis Potosí",
+      "height": "6′3″",
+      "weight": 210,
+      "field_note": "Practices the right-field wall route once before every home game, even when no ball is in play.",
+      "bio": "Cristóbal Saucedo plays RF for the Tijuana Técnicos. Practices the right-field wall route once before every home game, even when no ball is in play.",
+      "rookie": false,
+      "card_front": "assets/images/cards/fieldstock/tij-15-cristobal-saucedo-front.webp",
+      "card_back": "assets/images/cards/fieldstock/tij-15-cristobal-saucedo-back.svg"
     },
     {
       "name": "Héctor Belmonte",
@@ -200,7 +263,16 @@
       "position": "DH",
       "bats": "L",
       "throws": "R",
-      "age": 32
+      "age": 32,
+      "dob": "1994-05-10",
+      "birthplace": "Monterrey, Nuevo León",
+      "height": "6′1″",
+      "weight": 230,
+      "field_note": "Tapes a fresh batting-glove repair before each series and insists the old patch stays underneath.",
+      "bio": "Héctor Belmonte plays DH for the Tijuana Técnicos. Tapes a fresh batting-glove repair before each series and insists the old patch stays underneath.",
+      "rookie": false,
+      "card_front": "assets/images/cards/fieldstock/tij-16-hector-belmonte-front.webp",
+      "card_back": "assets/images/cards/fieldstock/tij-16-hector-belmonte-back.svg"
     }
   ]
 }

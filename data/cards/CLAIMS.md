@@ -26,3 +26,7 @@ Record the key securely outside this public repository and send it to the approv
 Publish the updated JSON with the site. The team and player pages then show the approved user ID and close that card's request form. Never put email addresses or ownership keys in the public JSON. Edit the card's player note separately after approving the submitted factoid.
 
 This is editorial approval on a static site, not automatic ownership enforcement. Requests submitted before the published registry updates may overlap; review them in arrival order.
+
+## Monterrey launch
+
+Only MTY-01 (Emilio Zendejas), MTY-02 (Masato Yanagisawa), and MTY-POLVO are open. Other entries remain opening soon. Requests use the same Formspree inbox and public approved registry. Run `node scripts/issue-card-claim-key.js MTY-01 example_user` or `node scripts/issue-card-claim-key.js MTY-POLVO example_user` only after review. Monterrey approval generates a private 16-digit numeric FIELDSTOCK code; deliver it privately after acceptance. Public user ID attribution remains separate from the secret code. Do not commit the code or claimant email.

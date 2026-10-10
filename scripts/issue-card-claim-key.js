@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 // Run only after editorial approval. Deliver the key privately; never commit it.
-const { randomBytes } = require('node:crypto');
+const { randomBytes, randomInt } = require('node:crypto');
 const { readFileSync, writeFileSync, renameSync } = require('node:fs');
 const { resolve } = require('node:path');
 
@@ -12,7 +12,7 @@ if (!/^[A-Z]{3}-[A-Z0-9-]+$/.test(cardId || '') ||
 }
 
 const claimsPath = resolve(process.env.GLB_APPROVED_CLAIMS_PATH || 'data/cards/approved-claims.json');
-const cardsPath = resolve(process.env.GLB_CARD_REGISTRY_PATH || 'data/cards/spokane-alloys.json');
+const cardsPath = resolve(process.env.GLB_CARD_REGISTRY_PATH || (cardId.startsWith('MTY-') ? 'data/cards/monterrey-cementeros.json' : 'data/cards/spokane-alloys.json'));
 const registry = JSON.parse(readFileSync(claimsPath, 'utf8'));
 const cards = JSON.parse(readFileSync(cardsPath, 'utf8'));
 
@@ -20,9 +20,9 @@ if (registry.schema !== 'glb.approved-card-claims.v1' || !registry.claims) {
   throw new Error('Approved-claims registry has an unexpected schema.');
 }
 
-const validCardIds = new Set(cards.cards.map(card => card.card_id.replace(/-CURRENT$/, '')));
+const validCardIds = new Set(cards.cards.filter(card => card.claimable !== false).map(card => card.card_id.replace(/-CURRENT$/, '')));
 if (!validCardIds.has(cardId)) {
-  throw new Error(`${cardId} is not a current Spokane FIELDSTOCK card.`);
+  throw new Error(`${cardId} is not an available FIELDSTOCK artifact.`);
 }
 
 if (registry.claims[cardId]) {
@@ -30,7 +30,9 @@ if (registry.claims[cardId]) {
 }
 
 const token = randomBytes(20).toString('hex').toUpperCase().match(/.{8}/g).join('-');
-const key = `FST-${cardId}-${userId.toUpperCase()}-${token}`;
+const key = cardId.startsWith('MTY-')
+  ? String(randomInt(1, 10)) + Array.from({length:15}, () => randomInt(0, 10)).join('')
+  : `FST-${cardId}-${userId.toUpperCase()}-${token}`;
 
 registry.claims[cardId] = {
   user_id: userId,

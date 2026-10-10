@@ -1,0 +1,51 @@
+{
+  "schema": "glb.player-card-registry.v1",
+  "team_slug": "monterrey-cementeros",
+  "team_name": "Monterrey Cementeros",
+  "cards": [
+    {
+      "card_id": "MTY-01-CURRENT",
+      "type": "player",
+      "edition": "current",
+      "player_slug": "emilio-zendejas",
+      "name": "Emilio Zendejas",
+      "claimable": true,
+      "serial_template": "MTY-01-{USERID}-{CLAIMSEQ}"
+    },
+    {
+      "card_id": "MTY-02-CURRENT",
+      "type": "player",
+      "edition": "current",
+      "player_slug": "masato-yanagisawa",
+      "name": "Masato Yanagisawa",
+      "claimable": true,
+      "serial_template": "MTY-02-{USERID}-{CLAIMSEQ}"
+    },
+    {
+      "card_id": "MTY-15-CURRENT",
+      "type": "player",
+      "edition": "current",
+      "player_slug": "andres-cazares",
+      "name": "Andrés Cázares",
+      "claimable": false,
+      "serial_template": "MTY-15-{USERID}-{CLAIMSEQ}"
+    },
+    {
+      "card_id": "MTY-12-CURRENT",
+      "type": "player",
+      "edition": "current",
+      "player_slug": "kofi-mensah",
+      "name": "Kofi Mensah",
+      "claimable": false,
+      "serial_template": "MTY-12-{USERID}-{CLAIMSEQ}"
+    },
+    {
+      "card_id": "MTY-POLVO-CURRENT",
+      "type": "mascot",
+      "edition": "current",
+      "name": "Polvo",
+      "claimable": true,
+      "serial_template": "MTY-POLVO-{USERID}-{CLAIMSEQ}"
+    }
+  ]
+}

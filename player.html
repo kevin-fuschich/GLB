@@ -467,7 +467,7 @@ p{line-height:1.58;color:#343a40}
   </div>
 </footer>
 
-<script src="scripts/player-cards.js?v=20261010-tijuana-series01-complete"></script>
+<script src="scripts/player-cards.js?v=20261010-tijuana-roster-v2"></script>
 <script>
 const params = new URLSearchParams(window.location.search);
 
@@ -762,11 +762,11 @@ async function loadPlayer(){
     physical.setAttribute('aria-label',playerName+' FIELDSTOCK card. Press Enter to flip.');
     const front=document.createElement('img');
     front.className='fieldstock-player-card__face';
-    front.src='assets/images/cards/fieldstock/'+prefix+'-front.webp';
+    front.src=teamSlug==='tijuana-tecnicos'?GLBPlayerCards.cardFront({...player,teamSlug,slug:playerSlug}):'assets/images/cards/fieldstock/'+prefix+'-front.webp';
     front.alt='Front of '+playerName+' FIELDSTOCK '+cardId+' card';
     const back=document.createElement('img');
     back.className='fieldstock-player-card__face fieldstock-player-card__back';
-    back.src='assets/images/cards/fieldstock/'+prefix+(teamSlug==='tijuana-tecnicos'?'-back.svg':'-back.webp');
+    back.src=teamSlug==='tijuana-tecnicos'?player.card_back:'assets/images/cards/fieldstock/'+prefix+'-back.webp';
     back.alt='Back of '+playerName+' FIELDSTOCK card';
     const fallBack=()=>cardHost.replaceChildren(GLBPlayerCards.createCard({...player,slug:playerSlug,name:playerName,teamSlug,teamName:team.teamName},record,{link:false}));
     front.addEventListener('error',fallBack,{once:true});
@@ -843,5 +843,6 @@ loadPlayer();
 
 <script src="scripts/glb-ticker.js"></script>\n</body>
 </html>
+
 
 

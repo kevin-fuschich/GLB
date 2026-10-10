@@ -17,7 +17,8 @@
       "bio": "Rafael Montoya plays SP for the Tijuana Técnicos. Marks the first pitch of every inning in a pocket scorebook after his start.",
       "rookie": false,
       "card_front": "assets/images/cards/fieldstock/tij-01-rafael-montoya-front.webp",
-      "card_back": "assets/images/cards/fieldstock/tij-01-rafael-montoya-back.svg"
+      "card_back": "assets/images/cards/fieldstock/tij-01-rafael-montoya-back.svg",
+      "nationality": "Mexico"
     },
     {
       "name": "Diego Verdugo",
@@ -34,41 +35,44 @@
       "bio": "Diego Verdugo plays SP for the Tijuana Técnicos. Labels each pitching grip with a different colored dot on his practice balls.",
       "rookie": false,
       "card_front": "assets/images/cards/fieldstock/tij-02-diego-verdugo-front.webp",
-      "card_back": "assets/images/cards/fieldstock/tij-02-diego-verdugo-back.svg"
+      "card_back": "assets/images/cards/fieldstock/tij-02-diego-verdugo-back.svg",
+      "nationality": "Mexico"
     },
     {
-      "name": "Esteban Arce",
+      "name": "Owen Mercer",
       "slug": "esteban-arce",
       "position": "SP",
       "bats": "R",
       "throws": "R",
       "age": 25,
       "dob": "2001-01-29",
-      "birthplace": "Tecate, Baja California",
+      "birthplace": "London, Ontario, Canada",
       "height": "6′2″",
       "weight": 202,
       "field_note": "Rebuilds the same paper strike-zone chart before every start, even when the old one is clean.",
-      "bio": "Esteban Arce plays SP for the Tijuana Técnicos. Rebuilds the same paper strike-zone chart before every start, even when the old one is clean.",
+      "bio": "Owen Mercer, born in London, Ontario, Canada, plays SP for the Tijuana Técnicos. Rebuilds the same paper strike-zone chart before every start, even when the old one is clean.",
       "rookie": false,
-      "card_front": "assets/images/cards/fieldstock/tij-03-esteban-arce-front.webp",
-      "card_back": "assets/images/cards/fieldstock/tij-03-esteban-arce-back.svg"
+      "card_front": "assets/images/cards/fieldstock/tij-03-esteban-arce-front-v2.webp",
+      "card_back": "assets/images/cards/fieldstock/tij-03-esteban-arce-back-v2.svg",
+      "nationality": "Canada"
     },
     {
-      "name": "Tomás Zepeda",
+      "name": "Darius Cole",
       "slug": "tomas-zepeda",
       "position": "SP",
       "bats": "R",
       "throws": "R",
       "age": 29,
       "dob": "1997-06-13",
-      "birthplace": "Durango, Durango",
+      "birthplace": "Atlanta, Georgia, USA",
       "height": "6′6″",
       "weight": 218,
       "field_note": "Counts every warmup pitch under his breath; the catcher knows to wait for number twelve.",
-      "bio": "Tomás Zepeda plays SP for the Tijuana Técnicos. Counts every warmup pitch under his breath; the catcher knows to wait for number twelve.",
+      "bio": "Darius Cole, born in Atlanta, Georgia, USA, plays SP for the Tijuana Técnicos. Counts every warmup pitch under his breath; the catcher knows to wait for number twelve.",
       "rookie": false,
-      "card_front": "assets/images/cards/fieldstock/tij-04-tomas-zepeda-front.webp",
-      "card_back": "assets/images/cards/fieldstock/tij-04-tomas-zepeda-back.svg"
+      "card_front": "assets/images/cards/fieldstock/tij-04-tomas-zepeda-front-v2.webp",
+      "card_back": "assets/images/cards/fieldstock/tij-04-tomas-zepeda-back-v2.svg",
+      "nationality": "United States"
     },
     {
       "name": "Mauricio Cota",
@@ -85,7 +89,8 @@
       "bio": "Mauricio Cota plays RP for the Tijuana Técnicos. Carries three identical rosin bags and can tell which one belongs in his bullpen jacket.",
       "rookie": false,
       "card_front": "assets/images/cards/fieldstock/tij-05-mauricio-cota-front.webp",
-      "card_back": "assets/images/cards/fieldstock/tij-05-mauricio-cota-back.svg"
+      "card_back": "assets/images/cards/fieldstock/tij-05-mauricio-cota-back.svg",
+      "nationality": "Mexico"
     },
     {
       "name": "Iván Lizárraga",
@@ -102,7 +107,8 @@
       "bio": "Iván Lizárraga plays RP for the Tijuana Técnicos. Writes one word inside his cap after each appearance; nobody has persuaded him to show the list.",
       "rookie": false,
       "card_front": "assets/images/cards/fieldstock/tij-06-ivan-lizarraga-front.webp",
-      "card_back": "assets/images/cards/fieldstock/tij-06-ivan-lizarraga-back.svg"
+      "card_back": "assets/images/cards/fieldstock/tij-06-ivan-lizarraga-back.svg",
+      "nationality": "Mexico"
     },
     {
       "name": "Julián Ochoa",
@@ -119,24 +125,26 @@
       "bio": "Julián Ochoa plays RP for the Tijuana Técnicos. Times his bullpen warmups with an old kitchen timer taped inside his glove bag.",
       "rookie": true,
       "card_front": "assets/images/cards/fieldstock/tij-07-julian-ochoa-front.webp",
-      "card_back": "assets/images/cards/fieldstock/tij-07-julian-ochoa-back.svg"
+      "card_back": "assets/images/cards/fieldstock/tij-07-julian-ochoa-back.svg",
+      "nationality": "Mexico"
     },
     {
-      "name": "Sergio Hinojosa",
+      "name": "Kenji Takahashi",
       "slug": "sergio-hinojosa",
       "position": "C",
       "bats": "R",
       "throws": "R",
       "age": 31,
       "dob": "1995-01-18",
-      "birthplace": "Hermosillo, Sonora",
+      "birthplace": "Yokohama, Japan",
       "height": "5′11″",
       "weight": 224,
       "field_note": "Keeps a spare catcher’s thumb guard tucked behind the lineup card.",
-      "bio": "Sergio Hinojosa plays C for the Tijuana Técnicos. Keeps a spare catcher’s thumb guard tucked behind the lineup card.",
+      "bio": "Kenji Takahashi, born in Yokohama, Japan, plays C for the Tijuana Técnicos. Keeps a spare catcher’s thumb guard tucked behind the lineup card.",
       "rookie": false,
-      "card_front": "assets/images/cards/fieldstock/tij-08-sergio-hinojosa-front.webp",
-      "card_back": "assets/images/cards/fieldstock/tij-08-sergio-hinojosa-back.svg"
+      "card_front": "assets/images/cards/fieldstock/tij-08-sergio-hinojosa-front-v2.webp",
+      "card_back": "assets/images/cards/fieldstock/tij-08-sergio-hinojosa-back-v2.svg",
+      "nationality": "Japan"
     },
     {
       "name": "Bruno Valdés",
@@ -153,41 +161,44 @@
       "bio": "Bruno Valdés plays 1B for the Tijuana Técnicos. Writes the weight of every new first-base mitt on its storage bag.",
       "rookie": false,
       "card_front": "assets/images/cards/fieldstock/tij-09-bruno-valdes-front.webp",
-      "card_back": "assets/images/cards/fieldstock/tij-09-bruno-valdes-back.svg"
+      "card_back": "assets/images/cards/fieldstock/tij-09-bruno-valdes-back.svg",
+      "nationality": "Mexico"
     },
     {
-      "name": "Matías Camarena",
+      "name": "Min-jae Park",
       "slug": "matias-camarena",
       "position": "2B",
       "bats": "S",
       "throws": "R",
       "age": 25,
       "dob": "2001-04-07",
-      "birthplace": "Guadalajara, Jalisco",
+      "birthplace": "Busan, South Korea",
       "height": "5′10″",
       "weight": 178,
       "field_note": "Practices double-play footwork along the seam between two clubhouse floor tiles.",
-      "bio": "Matías Camarena plays 2B for the Tijuana Técnicos. Practices double-play footwork along the seam between two clubhouse floor tiles.",
+      "bio": "Min-jae Park, born in Busan, South Korea, plays 2B for the Tijuana Técnicos. Practices double-play footwork along the seam between two clubhouse floor tiles.",
       "rookie": false,
-      "card_front": "assets/images/cards/fieldstock/tij-10-matias-camarena-front.webp",
-      "card_back": "assets/images/cards/fieldstock/tij-10-matias-camarena-back.svg"
+      "card_front": "assets/images/cards/fieldstock/tij-10-matias-camarena-front-v2.webp",
+      "card_back": "assets/images/cards/fieldstock/tij-10-matias-camarena-back-v2.svg",
+      "nationality": "South Korea"
     },
     {
-      "name": "Nicolás Paredes",
+      "name": "Sipho Maseko",
       "slug": "nicolas-paredes",
       "position": "SS",
       "bats": "R",
       "throws": "R",
       "age": 27,
       "dob": "1999-08-16",
-      "birthplace": "Ciudad Obregón, Sonora",
+      "birthplace": "Durban, South Africa",
       "height": "6′0″",
       "weight": 184,
       "field_note": "Draws each visiting infield’s unusual bounces on the back of his scouting sheet.",
-      "bio": "Nicolás Paredes plays SS for the Tijuana Técnicos. Draws each visiting infield’s unusual bounces on the back of his scouting sheet.",
+      "bio": "Sipho Maseko, born in Durban, South Africa, plays SS for the Tijuana Técnicos. Draws each visiting infield’s unusual bounces on the back of his scouting sheet.",
       "rookie": false,
-      "card_front": "assets/images/cards/fieldstock/tij-11-nicolas-paredes-front.webp",
-      "card_back": "assets/images/cards/fieldstock/tij-11-nicolas-paredes-back.svg"
+      "card_front": "assets/images/cards/fieldstock/tij-11-nicolas-paredes-front-v2.webp",
+      "card_back": "assets/images/cards/fieldstock/tij-11-nicolas-paredes-back-v2.svg",
+      "nationality": "South Africa"
     },
     {
       "name": "Adrián Fierro",
@@ -204,7 +215,8 @@
       "bio": "Adrián Fierro plays 3B for the Tijuana Técnicos. Keeps a notebook of the first hard ground ball hit at him in every new park.",
       "rookie": false,
       "card_front": "assets/images/cards/fieldstock/tij-12-adrian-fierro-front.webp",
-      "card_back": "assets/images/cards/fieldstock/tij-12-adrian-fierro-back.svg"
+      "card_back": "assets/images/cards/fieldstock/tij-12-adrian-fierro-back.svg",
+      "nationality": "Mexico"
     },
     {
       "name": "Emilio Barrón",
@@ -221,7 +233,8 @@
       "bio": "Emilio Barrón plays LF for the Tijuana Técnicos. Marks the handle of his practice bat with a tiny stripe matching the day’s outfield wind.",
       "rookie": false,
       "card_front": "assets/images/cards/fieldstock/tij-13-emilio-barron-front.webp",
-      "card_back": "assets/images/cards/fieldstock/tij-13-emilio-barron-back.svg"
+      "card_back": "assets/images/cards/fieldstock/tij-13-emilio-barron-back.svg",
+      "nationality": "Mexico"
     },
     {
       "name": "Gael Marrufo",
@@ -238,24 +251,26 @@
       "bio": "Gael Marrufo plays CF for the Tijuana Técnicos. Checks the center-field wind with a strip of lime ribbon before batting practice.",
       "rookie": true,
       "card_front": "assets/images/cards/fieldstock/tij-14-gael-marrufo-front.webp",
-      "card_back": "assets/images/cards/fieldstock/tij-14-gael-marrufo-back.svg"
+      "card_back": "assets/images/cards/fieldstock/tij-14-gael-marrufo-back.svg",
+      "nationality": "Mexico"
     },
     {
-      "name": "Cristóbal Saucedo",
+      "name": "Renzo Figueroa",
       "slug": "cristobal-saucedo",
       "position": "RF",
       "bats": "R",
       "throws": "R",
       "age": 30,
       "dob": "1996-03-04",
-      "birthplace": "San Luis Potosí, San Luis Potosí",
+      "birthplace": "Ponce, Puerto Rico",
       "height": "6′3″",
       "weight": 210,
       "field_note": "Practices the right-field wall route once before every home game, even when no ball is in play.",
-      "bio": "Cristóbal Saucedo plays RF for the Tijuana Técnicos. Practices the right-field wall route once before every home game, even when no ball is in play.",
+      "bio": "Renzo Figueroa, born in Ponce, Puerto Rico, plays RF for the Tijuana Técnicos. Practices the right-field wall route once before every home game, even when no ball is in play.",
       "rookie": false,
-      "card_front": "assets/images/cards/fieldstock/tij-15-cristobal-saucedo-front.webp",
-      "card_back": "assets/images/cards/fieldstock/tij-15-cristobal-saucedo-back.svg"
+      "card_front": "assets/images/cards/fieldstock/tij-15-cristobal-saucedo-front-v2.webp",
+      "card_back": "assets/images/cards/fieldstock/tij-15-cristobal-saucedo-back-v2.svg",
+      "nationality": "Puerto Rico"
     },
     {
       "name": "Héctor Belmonte",
@@ -272,7 +287,8 @@
       "bio": "Héctor Belmonte plays DH for the Tijuana Técnicos. Tapes a fresh batting-glove repair before each series and insists the old patch stays underneath.",
       "rookie": false,
       "card_front": "assets/images/cards/fieldstock/tij-16-hector-belmonte-front.webp",
-      "card_back": "assets/images/cards/fieldstock/tij-16-hector-belmonte-back.svg"
+      "card_back": "assets/images/cards/fieldstock/tij-16-hector-belmonte-back.svg",
+      "nationality": "Mexico"
     }
   ]
 }

@@ -30,22 +30,22 @@
       "type": "player",
       "edition": "current",
       "player_slug": "esteban-arce",
-      "name": "Esteban Arce",
+      "name": "Owen Mercer",
       "claimable": false,
       "serial_template": "TIJ-03-{USERID}-{CLAIMSEQ}",
-      "front": "assets/images/cards/fieldstock/tij-03-esteban-arce-front.webp",
-      "back": "assets/images/cards/fieldstock/tij-03-esteban-arce-back.svg"
+      "front": "assets/images/cards/fieldstock/tij-03-esteban-arce-front-v2.webp",
+      "back": "assets/images/cards/fieldstock/tij-03-esteban-arce-back-v2.svg"
     },
     {
       "card_id": "TIJ-04-CURRENT",
       "type": "player",
       "edition": "current",
       "player_slug": "tomas-zepeda",
-      "name": "Tomás Zepeda",
+      "name": "Darius Cole",
       "claimable": false,
       "serial_template": "TIJ-04-{USERID}-{CLAIMSEQ}",
-      "front": "assets/images/cards/fieldstock/tij-04-tomas-zepeda-front.webp",
-      "back": "assets/images/cards/fieldstock/tij-04-tomas-zepeda-back.svg"
+      "front": "assets/images/cards/fieldstock/tij-04-tomas-zepeda-front-v2.webp",
+      "back": "assets/images/cards/fieldstock/tij-04-tomas-zepeda-back-v2.svg"
     },
     {
       "card_id": "TIJ-05-CURRENT",
@@ -85,11 +85,11 @@
       "type": "player",
       "edition": "current",
       "player_slug": "sergio-hinojosa",
-      "name": "Sergio Hinojosa",
+      "name": "Kenji Takahashi",
       "claimable": false,
       "serial_template": "TIJ-08-{USERID}-{CLAIMSEQ}",
-      "front": "assets/images/cards/fieldstock/tij-08-sergio-hinojosa-front.webp",
-      "back": "assets/images/cards/fieldstock/tij-08-sergio-hinojosa-back.svg"
+      "front": "assets/images/cards/fieldstock/tij-08-sergio-hinojosa-front-v2.webp",
+      "back": "assets/images/cards/fieldstock/tij-08-sergio-hinojosa-back-v2.svg"
     },
     {
       "card_id": "TIJ-09-CURRENT",
@@ -107,22 +107,22 @@
       "type": "player",
       "edition": "current",
       "player_slug": "matias-camarena",
-      "name": "Matías Camarena",
+      "name": "Min-jae Park",
       "claimable": false,
       "serial_template": "TIJ-10-{USERID}-{CLAIMSEQ}",
-      "front": "assets/images/cards/fieldstock/tij-10-matias-camarena-front.webp",
-      "back": "assets/images/cards/fieldstock/tij-10-matias-camarena-back.svg"
+      "front": "assets/images/cards/fieldstock/tij-10-matias-camarena-front-v2.webp",
+      "back": "assets/images/cards/fieldstock/tij-10-matias-camarena-back-v2.svg"
     },
     {
       "card_id": "TIJ-11-CURRENT",
       "type": "player",
       "edition": "current",
       "player_slug": "nicolas-paredes",
-      "name": "Nicolás Paredes",
+      "name": "Sipho Maseko",
       "claimable": false,
       "serial_template": "TIJ-11-{USERID}-{CLAIMSEQ}",
-      "front": "assets/images/cards/fieldstock/tij-11-nicolas-paredes-front.webp",
-      "back": "assets/images/cards/fieldstock/tij-11-nicolas-paredes-back.svg"
+      "front": "assets/images/cards/fieldstock/tij-11-nicolas-paredes-front-v2.webp",
+      "back": "assets/images/cards/fieldstock/tij-11-nicolas-paredes-back-v2.svg"
     },
     {
       "card_id": "TIJ-12-CURRENT",
@@ -162,11 +162,11 @@
       "type": "player",
       "edition": "current",
       "player_slug": "cristobal-saucedo",
-      "name": "Cristóbal Saucedo",
+      "name": "Renzo Figueroa",
       "claimable": false,
       "serial_template": "TIJ-15-{USERID}-{CLAIMSEQ}",
-      "front": "assets/images/cards/fieldstock/tij-15-cristobal-saucedo-front.webp",
-      "back": "assets/images/cards/fieldstock/tij-15-cristobal-saucedo-back.svg"
+      "front": "assets/images/cards/fieldstock/tij-15-cristobal-saucedo-front-v2.webp",
+      "back": "assets/images/cards/fieldstock/tij-15-cristobal-saucedo-back-v2.svg"
     },
     {
       "card_id": "TIJ-16-CURRENT",

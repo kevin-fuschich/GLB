@@ -293,7 +293,7 @@
     "home": [
       {
         "player": "sergio-hinojosa",
-        "name": "Sergio Hinojosa",
+        "name": "Kenji Takahashi",
         "position": "C",
         "AB": 3,
         "R": 1,
@@ -323,7 +323,7 @@
       },
       {
         "player": "matias-camarena",
-        "name": "Matías Camarena",
+        "name": "Min-jae Park",
         "position": "2B",
         "AB": 4,
         "R": 0,
@@ -338,7 +338,7 @@
       },
       {
         "player": "nicolas-paredes",
-        "name": "Nicolás Paredes",
+        "name": "Sipho Maseko",
         "position": "SS",
         "AB": 3,
         "R": 0,
@@ -398,7 +398,7 @@
       },
       {
         "player": "cristobal-saucedo",
-        "name": "Cristóbal Saucedo",
+        "name": "Renzo Figueroa",
         "position": "RF",
         "AB": 5,
         "R": 0,
@@ -458,7 +458,7 @@
     "home": [
       {
         "player": "esteban-arce",
-        "name": "Esteban Arce",
+        "name": "Owen Mercer",
         "IP_outs": 21,
         "H": 1,
         "R": 0,

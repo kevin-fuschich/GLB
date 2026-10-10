@@ -8285,7 +8285,7 @@
   },
   {
     "player": "cristobal-saucedo",
-    "name": "Cristóbal Saucedo",
+    "name": "Renzo Figueroa",
     "team": "Tijuana Tecnicos",
     "team_slug": "tijuana-tecnicos",
     "position": "RF",
@@ -8399,7 +8399,7 @@
   },
   {
     "player": "esteban-arce",
-    "name": "Esteban Arce",
+    "name": "Owen Mercer",
     "team": "Tijuana Tecnicos",
     "team_slug": "tijuana-tecnicos",
     "position": "SP",
@@ -8589,7 +8589,7 @@
   },
   {
     "player": "matias-camarena",
-    "name": "Matías Camarena",
+    "name": "Min-jae Park",
     "team": "Tijuana Tecnicos",
     "team_slug": "tijuana-tecnicos",
     "position": "2B",
@@ -8665,7 +8665,7 @@
   },
   {
     "player": "nicolas-paredes",
-    "name": "Nicolás Paredes",
+    "name": "Sipho Maseko",
     "team": "Tijuana Tecnicos",
     "team_slug": "tijuana-tecnicos",
     "position": "SS",
@@ -8741,7 +8741,7 @@
   },
   {
     "player": "sergio-hinojosa",
-    "name": "Sergio Hinojosa",
+    "name": "Kenji Takahashi",
     "team": "Tijuana Tecnicos",
     "team_slug": "tijuana-tecnicos",
     "position": "C",
@@ -8779,7 +8779,7 @@
   },
   {
     "player": "tomas-zepeda",
-    "name": "Tomás Zepeda",
+    "name": "Darius Cole",
     "team": "Tijuana Tecnicos",
     "team_slug": "tijuana-tecnicos",
     "position": "SP",
@@ -10032,3 +10032,4 @@
     }
   }
 ]
+

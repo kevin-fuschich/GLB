@@ -81,8 +81,9 @@
   }
   const tijuanaCards = {"rafael-montoya":1,"diego-verdugo":2,"esteban-arce":3,"tomas-zepeda":4,"mauricio-cota":5,"ivan-lizarraga":6,"julian-ochoa":7,"sergio-hinojosa":8,"bruno-valdes":9,"matias-camarena":10,"nicolas-paredes":11,"adrian-fierro":12,"emilio-barron":13,"gael-marrufo":14,"cristobal-saucedo":15,"hector-belmonte":16};
   const monterreyCards = {'emilio-zendejas':1,'masato-yanagisawa':2,'kofi-mensah':12,'andres-cazares':15};
+  const tijuanaCardArt = {"esteban-arce": "assets/images/cards/fieldstock/tij-03-esteban-arce-front-v2.webp", "tomas-zepeda": "assets/images/cards/fieldstock/tij-04-tomas-zepeda-front-v2.webp", "sergio-hinojosa": "assets/images/cards/fieldstock/tij-08-sergio-hinojosa-front-v2.webp", "matias-camarena": "assets/images/cards/fieldstock/tij-10-matias-camarena-front-v2.webp", "nicolas-paredes": "assets/images/cards/fieldstock/tij-11-nicolas-paredes-front-v2.webp", "cristobal-saucedo": "assets/images/cards/fieldstock/tij-15-cristobal-saucedo-front-v2.webp"};
   function cardFront(player) {
-    if(player.teamSlug === 'tijuana-tecnicos' && tijuanaCards[player.slug]) return 'assets/images/cards/fieldstock/tij-'+String(tijuanaCards[player.slug]).padStart(2,'0')+'-'+player.slug+'-front.webp';
+    if(player.teamSlug === 'tijuana-tecnicos' && tijuanaCards[player.slug]) return tijuanaCardArt[player.slug] || player.card_front || 'assets/images/cards/fieldstock/tij-'+String(tijuanaCards[player.slug]).padStart(2,'0')+'-'+player.slug+'-front.webp';
     return player.teamSlug === 'monterrey-cementeros' && monterreyCards[player.slug]
       ? 'assets/images/cards/fieldstock/mty-'+String(monterreyCards[player.slug]).padStart(2,'0')+'-'+player.slug+'-front.png' : null;
   }
@@ -146,7 +147,7 @@
       card.style.setProperty('border','0','important');
       front.style.cssText='padding:0;border:0!important;background:none;display:block;height:100%';
       const art=document.createElement('img');art.src=physicalFront;art.alt=player.name+' FIELDSTOCK card front';art.style.cssText='width:100%;height:100%;object-fit:contain';front.replaceChildren(art);
-      const reverse=document.createElement('img');reverse.src=player.card_back||physicalFront.replace('-front.webp','-back.svg');reverse.alt=player.name+' FIELDSTOCK card back';reverse.style.cssText='width:100%;height:100%;object-fit:contain';
+      const reverse=document.createElement('img');reverse.src=player.card_back||physicalFront.replace(/-front(-v\d+)?\.webp$/, '-back$1.svg');reverse.alt=player.name+' FIELDSTOCK card back';reverse.style.cssText='width:100%;height:100%;object-fit:contain';
       back.style.cssText='padding:0;border:0!important;background:none';back.replaceChildren(reverse);
       card.tabIndex=0;card.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();card.classList.toggle('is-flipped')}});
     } else if (physicalFront) {
@@ -188,5 +189,6 @@
 
   window.GLBPlayerCards = { loadSeasons, careerFor, createCard, photoPath, recoveredPortrait, cardFront };
 })();
+
 
 

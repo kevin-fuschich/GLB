@@ -1,0 +1,159 @@
+{
+  "schema": "glb.player-card-registry.v1",
+  "team_slug": "tijuana-tecnicos",
+  "team_name": "Tijuana Técnicos",
+  "cards": [
+    {
+      "card_id": "TIJ-01-CURRENT",
+      "type": "player",
+      "edition": "current",
+      "player_slug": "rafael-montoya",
+      "name": "Rafael Montoya",
+      "claimable": true,
+      "serial_template": "TIJ-01-{USERID}-{CLAIMSEQ}"
+    },
+    {
+      "card_id": "TIJ-02-CURRENT",
+      "type": "player",
+      "edition": "current",
+      "player_slug": "diego-verdugo",
+      "name": "Diego Verdugo",
+      "claimable": false,
+      "serial_template": "TIJ-02-{USERID}-{CLAIMSEQ}"
+    },
+    {
+      "card_id": "TIJ-03-CURRENT",
+      "type": "player",
+      "edition": "current",
+      "player_slug": "esteban-arce",
+      "name": "Esteban Arce",
+      "claimable": false,
+      "serial_template": "TIJ-03-{USERID}-{CLAIMSEQ}"
+    },
+    {
+      "card_id": "TIJ-04-CURRENT",
+      "type": "player",
+      "edition": "current",
+      "player_slug": "tomas-zepeda",
+      "name": "Tomás Zepeda",
+      "claimable": false,
+      "serial_template": "TIJ-04-{USERID}-{CLAIMSEQ}"
+    },
+    {
+      "card_id": "TIJ-05-CURRENT",
+      "type": "player",
+      "edition": "current",
+      "player_slug": "mauricio-cota",
+      "name": "Mauricio Cota",
+      "claimable": false,
+      "serial_template": "TIJ-05-{USERID}-{CLAIMSEQ}"
+    },
+    {
+      "card_id": "TIJ-06-CURRENT",
+      "type": "player",
+      "edition": "current",
+      "player_slug": "ivan-lizarraga",
+      "name": "Iván Lizárraga",
+      "claimable": false,
+      "serial_template": "TIJ-06-{USERID}-{CLAIMSEQ}"
+    },
+    {
+      "card_id": "TIJ-07-CURRENT",
+      "type": "player",
+      "edition": "current",
+      "player_slug": "julian-ochoa",
+      "name": "Julián Ochoa",
+      "claimable": false,
+      "serial_template": "TIJ-07-{USERID}-{CLAIMSEQ}"
+    },
+    {
+      "card_id": "TIJ-08-CURRENT",
+      "type": "player",
+      "edition": "current",
+      "player_slug": "sergio-hinojosa",
+      "name": "Sergio Hinojosa",
+      "claimable": false,
+      "serial_template": "TIJ-08-{USERID}-{CLAIMSEQ}"
+    },
+    {
+      "card_id": "TIJ-09-CURRENT",
+      "type": "player",
+      "edition": "current",
+      "player_slug": "bruno-valdes",
+      "name": "Bruno Valdés",
+      "claimable": false,
+      "serial_template": "TIJ-09-{USERID}-{CLAIMSEQ}"
+    },
+    {
+      "card_id": "TIJ-10-CURRENT",
+      "type": "player",
+      "edition": "current",
+      "player_slug": "matias-camarena",
+      "name": "Matías Camarena",
+      "claimable": false,
+      "serial_template": "TIJ-10-{USERID}-{CLAIMSEQ}"
+    },
+    {
+      "card_id": "TIJ-11-CURRENT",
+      "type": "player",
+      "edition": "current",
+      "player_slug": "nicolas-paredes",
+      "name": "Nicolás Paredes",
+      "claimable": false,
+      "serial_template": "TIJ-11-{USERID}-{CLAIMSEQ}"
+    },
+    {
+      "card_id": "TIJ-12-CURRENT",
+      "type": "player",
+      "edition": "current",
+      "player_slug": "adrian-fierro",
+      "name": "Adrián Fierro",
+      "claimable": false,
+      "serial_template": "TIJ-12-{USERID}-{CLAIMSEQ}"
+    },
+    {
+      "card_id": "TIJ-13-CURRENT",
+      "type": "player",
+      "edition": "current",
+      "player_slug": "emilio-barron",
+      "name": "Emilio Barrón",
+      "claimable": false,
+      "serial_template": "TIJ-13-{USERID}-{CLAIMSEQ}"
+    },
+    {
+      "card_id": "TIJ-14-CURRENT",
+      "type": "player",
+      "edition": "current",
+      "player_slug": "gael-marrufo",
+      "name": "Gael Marrufo",
+      "claimable": true,
+      "serial_template": "TIJ-14-{USERID}-{CLAIMSEQ}"
+    },
+    {
+      "card_id": "TIJ-15-CURRENT",
+      "type": "player",
+      "edition": "current",
+      "player_slug": "cristobal-saucedo",
+      "name": "Cristóbal Saucedo",
+      "claimable": false,
+      "serial_template": "TIJ-15-{USERID}-{CLAIMSEQ}"
+    },
+    {
+      "card_id": "TIJ-16-CURRENT",
+      "type": "player",
+      "edition": "current",
+      "player_slug": "hector-belmonte",
+      "name": "Héctor Belmonte",
+      "claimable": false,
+      "serial_template": "TIJ-16-{USERID}-{CLAIMSEQ}"
+    },
+    {
+      "card_id": "TIJ-CHISPI-CURRENT",
+      "type": "mascot",
+      "edition": "current",
+      "name": "Chispi",
+      "claimable": true,
+      "serial_template": "TIJ-CHISPI-{USERID}-{CLAIMSEQ}"
+    }
+  ]
+}

@@ -10,7 +10,9 @@
       "player_slug": "rafael-montoya",
       "name": "Rafael Montoya",
       "claimable": true,
-      "serial_template": "TIJ-01-{USERID}-{CLAIMSEQ}"
+      "serial_template": "TIJ-01-{USERID}-{CLAIMSEQ}",
+      "front": "assets/images/cards/fieldstock/tij-01-rafael-montoya-front.webp",
+      "back": "assets/images/cards/fieldstock/tij-01-rafael-montoya-back.svg"
     },
     {
       "card_id": "TIJ-02-CURRENT",
@@ -19,7 +21,9 @@
       "player_slug": "diego-verdugo",
       "name": "Diego Verdugo",
       "claimable": false,
-      "serial_template": "TIJ-02-{USERID}-{CLAIMSEQ}"
+      "serial_template": "TIJ-02-{USERID}-{CLAIMSEQ}",
+      "front": "assets/images/cards/fieldstock/tij-02-diego-verdugo-front.webp",
+      "back": "assets/images/cards/fieldstock/tij-02-diego-verdugo-back.svg"
     },
     {
       "card_id": "TIJ-03-CURRENT",
@@ -64,7 +68,9 @@
       "player_slug": "julian-ochoa",
       "name": "Julián Ochoa",
       "claimable": false,
-      "serial_template": "TIJ-07-{USERID}-{CLAIMSEQ}"
+      "serial_template": "TIJ-07-{USERID}-{CLAIMSEQ}",
+      "front": "assets/images/cards/fieldstock/tij-07-julian-ochoa-front.webp",
+      "back": "assets/images/cards/fieldstock/tij-07-julian-ochoa-back.svg"
     },
     {
       "card_id": "TIJ-08-CURRENT",
@@ -73,7 +79,9 @@
       "player_slug": "sergio-hinojosa",
       "name": "Sergio Hinojosa",
       "claimable": false,
-      "serial_template": "TIJ-08-{USERID}-{CLAIMSEQ}"
+      "serial_template": "TIJ-08-{USERID}-{CLAIMSEQ}",
+      "front": "assets/images/cards/fieldstock/tij-08-sergio-hinojosa-front.webp",
+      "back": "assets/images/cards/fieldstock/tij-08-sergio-hinojosa-back.svg"
     },
     {
       "card_id": "TIJ-09-CURRENT",
@@ -82,7 +90,9 @@
       "player_slug": "bruno-valdes",
       "name": "Bruno Valdés",
       "claimable": false,
-      "serial_template": "TIJ-09-{USERID}-{CLAIMSEQ}"
+      "serial_template": "TIJ-09-{USERID}-{CLAIMSEQ}",
+      "front": "assets/images/cards/fieldstock/tij-09-bruno-valdes-front.webp",
+      "back": "assets/images/cards/fieldstock/tij-09-bruno-valdes-back.svg"
     },
     {
       "card_id": "TIJ-10-CURRENT",
@@ -91,7 +101,9 @@
       "player_slug": "matias-camarena",
       "name": "Matías Camarena",
       "claimable": false,
-      "serial_template": "TIJ-10-{USERID}-{CLAIMSEQ}"
+      "serial_template": "TIJ-10-{USERID}-{CLAIMSEQ}",
+      "front": "assets/images/cards/fieldstock/tij-10-matias-camarena-front.webp",
+      "back": "assets/images/cards/fieldstock/tij-10-matias-camarena-back.svg"
     },
     {
       "card_id": "TIJ-11-CURRENT",
@@ -100,7 +112,9 @@
       "player_slug": "nicolas-paredes",
       "name": "Nicolás Paredes",
       "claimable": false,
-      "serial_template": "TIJ-11-{USERID}-{CLAIMSEQ}"
+      "serial_template": "TIJ-11-{USERID}-{CLAIMSEQ}",
+      "front": "assets/images/cards/fieldstock/tij-11-nicolas-paredes-front.webp",
+      "back": "assets/images/cards/fieldstock/tij-11-nicolas-paredes-back.svg"
     },
     {
       "card_id": "TIJ-12-CURRENT",
@@ -127,7 +141,9 @@
       "player_slug": "gael-marrufo",
       "name": "Gael Marrufo",
       "claimable": true,
-      "serial_template": "TIJ-14-{USERID}-{CLAIMSEQ}"
+      "serial_template": "TIJ-14-{USERID}-{CLAIMSEQ}",
+      "front": "assets/images/cards/fieldstock/tij-14-gael-marrufo-front.webp",
+      "back": "assets/images/cards/fieldstock/tij-14-gael-marrufo-back.svg"
     },
     {
       "card_id": "TIJ-15-CURRENT",

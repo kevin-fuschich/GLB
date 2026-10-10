@@ -79,8 +79,10 @@
     image.style.cssText=`position:absolute!important;width:512%!important;max-width:none!important;height:auto!important;left:${-x/3}%;top:${-40/3.35}%;`;
     frame.append(image);return frame;
   }
+  const tijuanaCards = {"rafael-montoya":1,"diego-verdugo":2,"julian-ochoa":7,"sergio-hinojosa":8,"bruno-valdes":9,"matias-camarena":10,"nicolas-paredes":11,"gael-marrufo":14};
   const monterreyCards = {'emilio-zendejas':1,'masato-yanagisawa':2,'kofi-mensah':12,'andres-cazares':15};
   function cardFront(player) {
+    if(player.teamSlug === 'tijuana-tecnicos' && tijuanaCards[player.slug]) return 'assets/images/cards/fieldstock/tij-'+String(tijuanaCards[player.slug]).padStart(2,'0')+'-'+player.slug+'-front.webp';
     return player.teamSlug === 'monterrey-cementeros' && monterreyCards[player.slug]
       ? 'assets/images/cards/fieldstock/mty-'+String(monterreyCards[player.slug]).padStart(2,'0')+'-'+player.slug+'-front.png' : null;
   }
@@ -140,7 +142,14 @@
     const identityLine=[player.height,player.weight?`${player.weight} lb`:null,player.birthplace].filter(Boolean).join(' · ');
     back.append(text('div','FIELDSTOCK · '+player.teamName,'glb-player-card__backmark'),text('h3',player.name,'glb-player-card__backname'),text('p',player.position+' · '+(record?.seasons?.length||1)+' recorded season(s)','glb-player-card__backcopy'),text('p',identityLine||'Official '+player.teamName+' player record','glb-player-card__backcopy'),text('p',player.field_note||notes[player.slug]||'Additional player notes are opening soon.','glb-player-card__backcopy'),text('div',serial,'glb-player-card__serial'),text('div','Tap to return to front','glb-player-card__fliphint'));
     const physicalFront = cardFront(player);
-    if (physicalFront) {
+    if (physicalFront && player.teamSlug === 'tijuana-tecnicos') {
+      card.style.setProperty('border','0','important');
+      front.style.cssText='padding:0;border:0!important;background:none;display:block;height:100%';
+      const art=document.createElement('img');art.src=physicalFront;art.alt=player.name+' FIELDSTOCK card front';art.style.cssText='width:100%;height:100%;object-fit:contain';front.replaceChildren(art);
+      const reverse=document.createElement('img');reverse.src=player.card_back||physicalFront.replace('-front.webp','-back.svg');reverse.alt=player.name+' FIELDSTOCK card back';reverse.style.cssText='width:100%;height:100%;object-fit:contain';
+      back.style.cssText='padding:0;border:0!important;background:none';back.replaceChildren(reverse);
+      card.tabIndex=0;card.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();card.classList.toggle('is-flipped')}});
+    } else if (physicalFront) {
       card.style.setProperty('border','0','important');
       card.style.setProperty('background','#fffaf1','important');
       front.style.cssText='padding:0;border:0!important;background:none;display:block;height:100%';

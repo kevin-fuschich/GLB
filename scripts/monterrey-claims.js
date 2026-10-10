@@ -14,8 +14,10 @@
       const serial=document.createElement('small');serial.textContent=id+' · '+(artifact.type==='mascot'?'Mascot artifact':'Player card');
       const status=document.createElement('p');status.className='mty-claim-status';status.setAttribute('role','status');
       entry.append(title,serial,status);
+      const links=[...document.querySelectorAll('[data-claim-link]')].filter(link=>link.dataset.claimLink===id);
+      const updateLinks=text=>{for(const link of links)link.textContent=text;};
       const owner=approved.claims?.[id]?.user_id;
-      if(owner){status.textContent='Claimed by '+owner;host.append(entry);continue;}
+      if(owner){updateLinks('Claimed by '+owner);status.textContent='Claimed by '+owner;host.append(entry);continue;}
       if(!artifact.claimable){status.textContent='Opening Soon';host.append(entry);continue;}
       const button=document.createElement('button');button.type='button';button.textContent='Request claim';
       const form=document.createElement('form');form.hidden=true;form.action='https://formspree.io/f/mzezpeap';form.method='POST';
@@ -24,7 +26,7 @@
         const input=document.createElement('input');input.type='hidden';input.name=name;input.value=value;form.append(input);
       }
       const key='glb-fieldstock-pending-'+id;
-      const setPending=()=>{form.hidden=true;button.disabled=true;button.textContent='Pending Review';status.textContent='Request received. Watch your email for the review decision.';};
+      const setPending=()=>{updateLinks('Pending Review');form.hidden=true;button.disabled=true;button.textContent='Pending Review';status.textContent='Request received. Watch your email for the review decision.';};
       try{if(localStorage.getItem(key)==='1')setPending();}catch{}
       button.addEventListener('click',()=>{form.hidden=!form.hidden;if(!form.hidden)form.elements.user_id.focus();});
       form.addEventListener('submit',async event=>{

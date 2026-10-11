@@ -270,7 +270,7 @@ p{line-height:1.58;color:#343a40}
 .glb-player-card.is-flipped:hover{transform:rotateY(180deg) translateY(-4px)!important}
 @media(prefers-reduced-motion:reduce){.glb-player-card{transition:none!important}}
 </style>
-<link rel="stylesheet" href="tijuana-cards.css?v=20261011"></head>
+<link rel="stylesheet" href="tijuana-cards.css?v=20261011-physical-flips"></head>
 
 <body>
 
@@ -467,7 +467,7 @@ p{line-height:1.58;color:#343a40}
   </div>
 </footer>
 
-<script src="scripts/player-cards.js?v=20261011-tijuana-sides"></script>
+<script src="scripts/player-cards.js?v=20261011-physical-flips"></script>
 <script>
 const params = new URLSearchParams(window.location.search);
 
@@ -721,7 +721,7 @@ async function loadPlayer(){
   };
   const portrait = GLBPlayerCards.photoPath({teamSlug,slug:playerSlug});
   const recoveredPortrait=GLBPlayerCards.recoveredPortrait({...player,slug:playerSlug,teamSlug});
-  const physicalPreview=GLBPlayerCards.cardFront({teamSlug,slug:playerSlug});
+  const physicalPreview=GLBPlayerCards.cardFront({...player,teamSlug,slug:playerSlug});
   if(physicalPreview){img.src=physicalPreview;img.alt=playerName+' FIELDSTOCK card preview';img.style.cssText='object-fit:contain;min-height:0;height:auto';photoWrap.style.cssText='border-radius:0;background:transparent;min-height:0';}
   else if(recoveredPortrait){img.replaceWith(recoveredPortrait)}
   else if(portrait){img.onerror = showInitials; img.src = portrait;} else showInitials();
@@ -758,7 +758,7 @@ async function loadPlayer(){
     : teamSlug.toUpperCase().slice(0,3)+'-'+playerSlug.toUpperCase();
   const claimable= (!fieldstockTeam?.claimable || fieldstockTeam.claimable.has(playerSlug));
 
-  if(teamSlug==='tijuana-tecnicos' && fieldstockTeam&&cardNumber){
+  if(['tijuana-tecnicos','monterrey-cementeros'].includes(teamSlug) && fieldstockTeam&&cardNumber){
     cardHost.replaceChildren(GLBPlayerCards.createPhysicalCard({...player,teamSlug,slug:playerSlug},{link:false}));
   }else if(teamSlug==='spokane-alloys' && fieldstockTeam&&cardNumber){
     const prefix=fieldstockTeam.prefix+'-'+String(cardNumber).padStart(2,'0')+'-'+playerSlug;

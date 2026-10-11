@@ -10,7 +10,9 @@
       "player_slug": "emilio-zendejas",
       "name": "Emilio Zendejas",
       "claimable": true,
-      "serial_template": "MTY-01-{USERID}-{CLAIMSEQ}"
+      "serial_template": "MTY-01-{USERID}-{CLAIMSEQ}",
+      "front": "assets/images/cards/fieldstock/mty-01-emilio-zendejas-front-photo.webp",
+      "back": "assets/images/cards/fieldstock/mty-01-emilio-zendejas-back-photo.webp"
     },
     {
       "card_id": "MTY-02-CURRENT",
@@ -19,7 +21,9 @@
       "player_slug": "masato-yanagisawa",
       "name": "Masato Yanagisawa",
       "claimable": true,
-      "serial_template": "MTY-02-{USERID}-{CLAIMSEQ}"
+      "serial_template": "MTY-02-{USERID}-{CLAIMSEQ}",
+      "front": "assets/images/cards/fieldstock/mty-02-masato-yanagisawa-front-photo.webp",
+      "back": "assets/images/cards/fieldstock/mty-02-masato-yanagisawa-back-photo.webp"
     },
     {
       "card_id": "MTY-15-CURRENT",
@@ -28,7 +32,9 @@
       "player_slug": "andres-cazares",
       "name": "Andrés Cázares",
       "claimable": false,
-      "serial_template": "MTY-15-{USERID}-{CLAIMSEQ}"
+      "serial_template": "MTY-15-{USERID}-{CLAIMSEQ}",
+      "front": "assets/images/cards/fieldstock/mty-15-andres-cazares-front-photo.webp",
+      "back": "assets/images/cards/fieldstock/mty-15-andres-cazares-back-photo.webp"
     },
     {
       "card_id": "MTY-12-CURRENT",
@@ -37,7 +43,9 @@
       "player_slug": "kofi-mensah",
       "name": "Kofi Mensah",
       "claimable": false,
-      "serial_template": "MTY-12-{USERID}-{CLAIMSEQ}"
+      "serial_template": "MTY-12-{USERID}-{CLAIMSEQ}",
+      "front": "assets/images/cards/fieldstock/mty-12-kofi-mensah-front-photo.webp",
+      "back": "assets/images/cards/fieldstock/mty-12-kofi-mensah-back-photo.webp"
     },
     {
       "card_id": "MTY-POLVO-CURRENT",

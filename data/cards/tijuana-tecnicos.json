@@ -22,7 +22,7 @@
       "name": "Diego Verdugo",
       "claimable": false,
       "serial_template": "TIJ-02-{USERID}-{CLAIMSEQ}",
-      "front": "assets/images/cards/fieldstock/tij-02-diego-verdugo-front.webp",
+      "front": "assets/images/cards/fieldstock/tij-02-diego-verdugo-front-v3.webp",
       "back": "assets/images/cards/fieldstock/tij-02-diego-verdugo-back.svg"
     },
     {
@@ -66,7 +66,7 @@
       "name": "Iván Lizárraga",
       "claimable": false,
       "serial_template": "TIJ-06-{USERID}-{CLAIMSEQ}",
-      "front": "assets/images/cards/fieldstock/tij-06-ivan-lizarraga-front.webp",
+      "front": "assets/images/cards/fieldstock/tij-06-ivan-lizarraga-front-v3.webp",
       "back": "assets/images/cards/fieldstock/tij-06-ivan-lizarraga-back.svg"
     },
     {
@@ -77,7 +77,7 @@
       "name": "Julián Ochoa",
       "claimable": false,
       "serial_template": "TIJ-07-{USERID}-{CLAIMSEQ}",
-      "front": "assets/images/cards/fieldstock/tij-07-julian-ochoa-front.webp",
+      "front": "assets/images/cards/fieldstock/tij-07-julian-ochoa-front-v3.webp",
       "back": "assets/images/cards/fieldstock/tij-07-julian-ochoa-back.svg"
     },
     {
@@ -88,7 +88,7 @@
       "name": "Kenji Takahashi",
       "claimable": false,
       "serial_template": "TIJ-08-{USERID}-{CLAIMSEQ}",
-      "front": "assets/images/cards/fieldstock/tij-08-sergio-hinojosa-front-v2.webp",
+      "front": "assets/images/cards/fieldstock/tij-08-sergio-hinojosa-front-v3.webp",
       "back": "assets/images/cards/fieldstock/tij-08-sergio-hinojosa-back-v2.svg"
     },
     {
@@ -99,7 +99,7 @@
       "name": "Bruno Valdés",
       "claimable": false,
       "serial_template": "TIJ-09-{USERID}-{CLAIMSEQ}",
-      "front": "assets/images/cards/fieldstock/tij-09-bruno-valdes-front.webp",
+      "front": "assets/images/cards/fieldstock/tij-09-bruno-valdes-front-v2.webp",
       "back": "assets/images/cards/fieldstock/tij-09-bruno-valdes-back.svg"
     },
     {
@@ -189,3 +189,4 @@
     }
   ]
 }
+

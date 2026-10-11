@@ -270,7 +270,7 @@ p{line-height:1.58;color:#343a40}
 .glb-player-card.is-flipped:hover{transform:rotateY(180deg) translateY(-4px)!important}
 @media(prefers-reduced-motion:reduce){.glb-player-card{transition:none!important}}
 </style>
-</head>
+<link rel="stylesheet" href="tijuana-cards.css?v=20261011"></head>
 
 <body>
 
@@ -467,7 +467,7 @@ p{line-height:1.58;color:#343a40}
   </div>
 </footer>
 
-<script src="scripts/player-cards.js?v=20261010-tijuana-roster-v2"></script>
+<script src="scripts/player-cards.js?v=20261011-tijuana-sides"></script>
 <script>
 const params = new URLSearchParams(window.location.search);
 
@@ -730,8 +730,12 @@ async function loadPlayer(){
   teamLink.href = team.teamPage;
   teamLink.textContent = `View ${team.teamName} →`;
 
-  const seasons = await GLBPlayerCards.loadSeasons();
-  const record = GLBPlayerCards.careerFor(playerSlug, seasons);
+  let record=null;
+  let statsError='';
+  try{
+    const seasons=await GLBPlayerCards.loadSeasons();
+    record=GLBPlayerCards.careerFor(playerSlug,seasons);
+  }catch(error){statsError='Statistics could not load. Please refresh.';console.warn(error)}
   const cardHost=document.getElementById('playerCard');
   const FIELDSTOCK = {
     'tijuana-tecnicos': {prefix:'tij',cards:{"rafael-montoya":1,"diego-verdugo":2,"esteban-arce":3,"tomas-zepeda":4,"mauricio-cota":5,"ivan-lizarraga":6,"julian-ochoa":7,"sergio-hinojosa":8,"bruno-valdes":9,"matias-camarena":10,"nicolas-paredes":11,"adrian-fierro":12,"emilio-barron":13,"gael-marrufo":14,"cristobal-saucedo":15,"hector-belmonte":16},claimable:new Set(['rafael-montoya','gael-marrufo'])},
@@ -754,7 +758,9 @@ async function loadPlayer(){
     : teamSlug.toUpperCase().slice(0,3)+'-'+playerSlug.toUpperCase();
   const claimable= (!fieldstockTeam?.claimable || fieldstockTeam.claimable.has(playerSlug));
 
-  if(['spokane-alloys','tijuana-tecnicos'].includes(teamSlug) && fieldstockTeam&&cardNumber){
+  if(teamSlug==='tijuana-tecnicos' && fieldstockTeam&&cardNumber){
+    cardHost.replaceChildren(GLBPlayerCards.createPhysicalCard({...player,teamSlug,slug:playerSlug},{link:false}));
+  }else if(teamSlug==='spokane-alloys' && fieldstockTeam&&cardNumber){
     const prefix=fieldstockTeam.prefix+'-'+String(cardNumber).padStart(2,'0')+'-'+playerSlug;
     const physical=document.createElement('article');
     physical.className='fieldstock-player-card';
@@ -817,8 +823,8 @@ async function loadPlayer(){
   const careerBody=document.getElementById('careerStatBody');
   body.replaceChildren();careerBody.replaceChildren();
   if(!record){
-    body.textContent='No player line recorded in official box scores yet.';
-    careerBody.textContent='Career totals will appear after an official player line is recorded.';
+    body.textContent=statsError||'No player line recorded in official box scores yet.';
+    careerBody.textContent=statsError||'Career totals will appear after an official player line is recorded.';
     return;
   }
   const isPitcher = ['SP','RP','CL'].includes(player.position);
@@ -843,6 +849,7 @@ loadPlayer();
 
 <script src="scripts/glb-ticker.js"></script>\n</body>
 </html>
+
 
 
 

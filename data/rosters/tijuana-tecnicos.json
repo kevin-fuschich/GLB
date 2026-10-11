@@ -34,7 +34,7 @@
       "field_note": "Labels each pitching grip with a different colored dot on his practice balls.",
       "bio": "Diego Verdugo plays SP for the Tijuana Técnicos. Labels each pitching grip with a different colored dot on his practice balls.",
       "rookie": false,
-      "card_front": "assets/images/cards/fieldstock/tij-02-diego-verdugo-front.webp",
+      "card_front": "assets/images/cards/fieldstock/tij-02-diego-verdugo-front-v3.webp",
       "card_back": "assets/images/cards/fieldstock/tij-02-diego-verdugo-back.svg",
       "nationality": "Mexico"
     },
@@ -106,7 +106,7 @@
       "field_note": "Writes one word inside his cap after each appearance; nobody has persuaded him to show the list.",
       "bio": "Iván Lizárraga plays RP for the Tijuana Técnicos. Writes one word inside his cap after each appearance; nobody has persuaded him to show the list.",
       "rookie": false,
-      "card_front": "assets/images/cards/fieldstock/tij-06-ivan-lizarraga-front.webp",
+      "card_front": "assets/images/cards/fieldstock/tij-06-ivan-lizarraga-front-v3.webp",
       "card_back": "assets/images/cards/fieldstock/tij-06-ivan-lizarraga-back.svg",
       "nationality": "Mexico"
     },
@@ -124,7 +124,7 @@
       "field_note": "Times his bullpen warmups with an old kitchen timer taped inside his glove bag.",
       "bio": "Julián Ochoa plays RP for the Tijuana Técnicos. Times his bullpen warmups with an old kitchen timer taped inside his glove bag.",
       "rookie": true,
-      "card_front": "assets/images/cards/fieldstock/tij-07-julian-ochoa-front.webp",
+      "card_front": "assets/images/cards/fieldstock/tij-07-julian-ochoa-front-v3.webp",
       "card_back": "assets/images/cards/fieldstock/tij-07-julian-ochoa-back.svg",
       "nationality": "Mexico"
     },
@@ -142,7 +142,7 @@
       "field_note": "Keeps a spare catcher’s thumb guard tucked behind the lineup card.",
       "bio": "Kenji Takahashi, born in Yokohama, Japan, plays C for the Tijuana Técnicos. Keeps a spare catcher’s thumb guard tucked behind the lineup card.",
       "rookie": false,
-      "card_front": "assets/images/cards/fieldstock/tij-08-sergio-hinojosa-front-v2.webp",
+      "card_front": "assets/images/cards/fieldstock/tij-08-sergio-hinojosa-front-v3.webp",
       "card_back": "assets/images/cards/fieldstock/tij-08-sergio-hinojosa-back-v2.svg",
       "nationality": "Japan"
     },
@@ -160,7 +160,7 @@
       "field_note": "Writes the weight of every new first-base mitt on its storage bag.",
       "bio": "Bruno Valdés plays 1B for the Tijuana Técnicos. Writes the weight of every new first-base mitt on its storage bag.",
       "rookie": false,
-      "card_front": "assets/images/cards/fieldstock/tij-09-bruno-valdes-front.webp",
+      "card_front": "assets/images/cards/fieldstock/tij-09-bruno-valdes-front-v2.webp",
       "card_back": "assets/images/cards/fieldstock/tij-09-bruno-valdes-back.svg",
       "nationality": "Mexico"
     },
@@ -292,3 +292,4 @@
     }
   ]
 }
+

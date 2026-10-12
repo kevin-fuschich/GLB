@@ -12798,5 +12798,85 @@
     "awayScore": 9,
     "status": "final",
     "source": "data/games/2026-10-11/toledo-assembly@monterrey-cementeros.json"
+  },
+  {
+    "id": "2026-10-12_albuquerque-aeros@st-paul-frost",
+    "date": "2026-10-12",
+    "home": "st-paul-frost",
+    "away": "albuquerque-aeros",
+    "homeScore": 0,
+    "awayScore": 1,
+    "status": "final",
+    "source": "data/games/2026-10-12/albuquerque-aeros@st-paul-frost.json"
+  },
+  {
+    "id": "2026-10-12_birmingham-vulcans@taipei-neon",
+    "date": "2026-10-12",
+    "home": "taipei-neon",
+    "away": "birmingham-vulcans",
+    "homeScore": 2,
+    "awayScore": 4,
+    "status": "final",
+    "source": "data/games/2026-10-12/birmingham-vulcans@taipei-neon.json"
+  },
+  {
+    "id": "2026-10-12_durham-gold@tijuana-tecnicos",
+    "date": "2026-10-12",
+    "home": "tijuana-tecnicos",
+    "away": "durham-gold",
+    "homeScore": 0,
+    "awayScore": 4,
+    "status": "final",
+    "source": "data/games/2026-10-12/durham-gold@tijuana-tecnicos.json"
+  },
+  {
+    "id": "2026-10-12_fresno-yield@spokane-alloys",
+    "date": "2026-10-12",
+    "home": "spokane-alloys",
+    "away": "fresno-yield",
+    "homeScore": 4,
+    "awayScore": 0,
+    "status": "final",
+    "source": "data/games/2026-10-12/fresno-yield@spokane-alloys.json"
+  },
+  {
+    "id": "2026-10-12_louisville-naturals@san-pedro-cocolos",
+    "date": "2026-10-12",
+    "home": "san-pedro-cocolos",
+    "away": "louisville-naturals",
+    "homeScore": 1,
+    "awayScore": 2,
+    "status": "final",
+    "source": "data/games/2026-10-12/louisville-naturals@san-pedro-cocolos.json"
+  },
+  {
+    "id": "2026-10-12_mayaguez-sultans@santiago-caballeros",
+    "date": "2026-10-12",
+    "home": "santiago-caballeros",
+    "away": "mayaguez-sultans",
+    "homeScore": 2,
+    "awayScore": 3,
+    "status": "final",
+    "source": "data/games/2026-10-12/mayaguez-sultans@santiago-caballeros.json"
+  },
+  {
+    "id": "2026-10-12_monterrey-cementeros@vancouver-current",
+    "date": "2026-10-12",
+    "home": "vancouver-current",
+    "away": "monterrey-cementeros",
+    "homeScore": 4,
+    "awayScore": 5,
+    "status": "final",
+    "source": "data/games/2026-10-12/monterrey-cementeros@vancouver-current.json"
+  },
+  {
+    "id": "2026-10-12_toledo-assembly@osaka-spirits",
+    "date": "2026-10-12",
+    "home": "osaka-spirits",
+    "away": "toledo-assembly",
+    "homeScore": 2,
+    "awayScore": 1,
+    "status": "final",
+    "source": "data/games/2026-10-12/toledo-assembly@osaka-spirits.json"
   }
 ]

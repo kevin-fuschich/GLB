@@ -1,0 +1,60 @@
+:root{--coral:#f26f60;--cream:#f5f0e7;--ink:#242326;--muted:#64616a;--light:#dfe7f1}
+html{scroll-behavior:smooth;scroll-padding-top:100px}
+body{background:#f2f0eb}
+main{grid-template-columns:minmax(0,1.5fr) minmax(300px,1fr);gap:24px}
+main>.full,main>.team-hero,main>.section-nav{grid-column:1/-1}
+main>.panel{grid-column:auto}
+main>.panel.full{grid-column:1/-1}
+.team-hero,.team-hero-inner{min-height:520px}
+.team-hero-image{object-position:center}
+.team-hero-shade{background:linear-gradient(0deg,#171519e8,transparent 75%),linear-gradient(90deg,#17151955,transparent)}
+.team-hero-inner{padding:40px}
+.team-hero h1{font-size:clamp(48px,7vw,86px);letter-spacing:-3px}
+.team-hero p{margin:8px 0 0;color:var(--cream)}
+.team-kicker{color:#fff0e7}
+.section-nav{display:flex;gap:8px;flex-wrap:wrap;padding:0 0 3px}
+.section-nav a{padding:9px 14px;border:1px solid #d4cfca;border-radius:30px;background:var(--cream);font-weight:650;font-size:12px}
+.section-nav a:hover{background:var(--ink);color:white}
+a:focus-visible,button:focus-visible{outline:3px solid #a33b32;outline-offset:4px}
+.panel{border-color:#d9d4cd;border-radius:12px}
+.section-heading{padding:25px 28px 20px}
+.eyebrow{display:block;font-size:10px;letter-spacing:1.4px;text-transform:uppercase;font-weight:750;color:#7b453f}
+.section-heading h2{padding:0;margin:8px 0 0;border:0;font-size:clamp(22px,3vw,30px);letter-spacing:-.6px;line-height:1.2}
+.copy{padding:0 28px 28px}
+.copy p{max-width:850px;font-size:16px;line-height:1.75;margin:0 0 15px}
+.copy p:last-child{margin-bottom:0}
+.copy h3{margin:0 0 10px;font-size:20px}
+.copy.columns{display:grid;grid-template-columns:1fr 1fr;gap:32px;padding-top:28px}
+.copy.columns .eyebrow{margin-bottom:12px}
+.feature{display:grid;grid-template-columns:1.15fr 1fr;align-items:center}
+.feature>img{width:100%;height:auto;display:block}
+.feature .copy{padding:28px}
+.feature .copy p{font-size:15px}
+figure{margin:0}
+figure img{display:block;width:100%;height:auto}
+figcaption{padding:12px 28px;font-size:12px;color:var(--muted);background:#f8f6f2}
+.panel>.summary{margin:0 28px!important}
+.summary>div{background:#f8f6f2;border-color:#e0dbd4}
+.summary strong{color:var(--ink)}
+#season .copy{padding-top:18px}
+.text-link{font-size:13px;text-decoration:underline;text-underline-offset:4px}
+.table-wrap{overflow-x:auto;padding:0 20px}
+table{width:100%;border-collapse:collapse;white-space:nowrap;font-size:14px}
+th{text-align:left;font-size:10px;text-transform:uppercase;letter-spacing:1px;color:var(--muted)}
+th,td{padding:12px 8px;border-bottom:1px solid #e6e2db}
+td a{font-weight:650;text-decoration:underline;text-decoration-color:#d4c7bd;text-underline-offset:4px}
+td a:hover{color:#9a3c32}
+.panel>p.muted{margin:18px 28px 24px;font-size:12px}
+.copy .muted{font-size:12px!important;line-height:1.6}
+#recent-results{margin:0 28px 25px!important}
+#recent-results .result{display:grid;grid-template-columns:1fr auto;gap:4px 12px;padding:14px 0;border-bottom:1px solid #e6e2db;border-radius:0;background:none}
+.result time{grid-column:1/-1;font-size:10px;color:var(--muted)}
+.result strong{font-size:13px}
+.result span{font-size:13px;font-weight:750}
+.button{display:inline-block;padding:12px 20px;border-radius:30px;background:var(--ink);color:var(--cream);font-size:13px;font-weight:750;margin:2px 0 18px}
+.button:hover{background:#873c34}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media(max-width:1000px){.header-meta{display:none}.nav-links a{padding-left:10px;padding-right:10px}}
+@media(max-width:920px){main{grid-template-columns:1fr}.nav-links{display:none}.nav-toggle{display:block}.feature{grid-template-columns:1fr}.brand-sub{font-size:9px}.feature>img{max-height:600px;object-fit:cover}.team-hero,.team-hero-inner{min-height:420px}}
+@media(max-width:600px){main{padding:16px 14px 40px;gap:16px}.team-hero-inner{padding:24px}.team-hero,.team-hero-inner{min-height:360px}.team-hero h1{letter-spacing:-2px}.section-heading{padding:22px 20px 18px}.copy{padding:0 20px 22px}.copy.columns{grid-template-columns:1fr;gap:25px;padding:22px 20px}.feature .copy{padding:22px 20px}.summary{grid-template-columns:repeat(2,minmax(0,1fr))!important}.panel>.summary{margin:0 20px!important}.summary strong{font-size:24px!important}.copy p{font-size:15px}.section-nav a{padding:8px 11px}figcaption{padding:12px 20px}#recent-results{margin-left:20px!important;margin-right:20px!important}.footer-main{gap:20px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}

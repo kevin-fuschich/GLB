@@ -47,7 +47,9 @@
     ['#163a54', '#7ac0ca'], ['#422e52', '#d6a6d1'], ['#2b443f', '#a9c494'],
     ['#523625', '#dda572'], ['#243a62', '#a9bfe1'], ['#524135', '#e2c68c']
   ];
+  const taipeiCards = {"kaito-ueda":1,"adebayo-olumide":2,"han-wei-tseng":3,"martin-echevarria":4,"dariusz-wierzbik":5,"owen-rasmusson":6,"eric-lawson":7,"jose-ramirez-tpe":8,"david-morales-tpe":9,"hiroto-kuzumi":10,"joaquin-iturriaga":11,"eitan-ben-sasson":12,"tsai-ming-hao":13,"idris-el-amin":14,"miguel-santos-tpe":15};
   function photoPath(player) {
+    if (player.teamSlug === 'taipei-neon' && ['kaito-ueda','adebayo-olumide'].includes(player.slug)) return `assets/teams/taipei-neon/images/players/${player.slug}.webp`;
     const expansionSpokanePortraits = new Set(['jonah-sato','rene-bouchard','malachi-boone','tesfaye-mebrahtu','hamza-qureshi','ellis-wren','branislav-vukovic']);
     if (player.teamSlug === 'spokane-alloys' && expansionSpokanePortraits.has(player.slug))
       return `assets/images/players/spokane-alloys/${player.slug}.jpg`;
@@ -83,6 +85,7 @@
   const monterreyCards = {'emilio-zendejas':1,'masato-yanagisawa':2,'kofi-mensah':12,'andres-cazares':15};
   const tijuanaCardArt = {"rafael-montoya": "assets/images/cards/fieldstock/tij-01-rafael-montoya-front-photo.webp", "diego-verdugo": "assets/images/cards/fieldstock/tij-02-diego-verdugo-front-photo.webp", "esteban-arce": "assets/images/cards/fieldstock/tij-03-esteban-arce-front-photo.webp", "tomas-zepeda": "assets/images/cards/fieldstock/tij-04-tomas-zepeda-front-photo.webp", "mauricio-cota": "assets/images/cards/fieldstock/tij-05-mauricio-cota-front-photo.webp", "ivan-lizarraga": "assets/images/cards/fieldstock/tij-06-ivan-lizarraga-front-photo.webp", "julian-ochoa": "assets/images/cards/fieldstock/tij-07-julian-ochoa-front-photo.webp", "sergio-hinojosa": "assets/images/cards/fieldstock/tij-08-sergio-hinojosa-front-photo.webp", "bruno-valdes": "assets/images/cards/fieldstock/tij-09-bruno-valdes-front-photo.webp", "matias-camarena": "assets/images/cards/fieldstock/tij-10-matias-camarena-front-photo.webp", "nicolas-paredes": "assets/images/cards/fieldstock/tij-11-nicolas-paredes-front-photo.webp", "adrian-fierro": "assets/images/cards/fieldstock/tij-12-adrian-fierro-front-photo.webp", "emilio-barron": "assets/images/cards/fieldstock/tij-13-emilio-barron-front-photo.webp", "gael-marrufo": "assets/images/cards/fieldstock/tij-14-gael-marrufo-front-photo.webp", "cristobal-saucedo": "assets/images/cards/fieldstock/tij-15-cristobal-saucedo-front-photo.webp", "hector-belmonte": "assets/images/cards/fieldstock/tij-16-hector-belmonte-front-photo.webp"};
   function cardFront(player) {
+    if (player.teamSlug === 'taipei-neon' && taipeiCards[player.slug]) return player.card_front || 'assets/images/cards/fieldstock/tpe-'+String(taipeiCards[player.slug]).padStart(2,'0')+'-'+player.slug+'-front.webp';
     if(player.teamSlug === 'tijuana-tecnicos' && tijuanaCards[player.slug]) return player.card_front || tijuanaCardArt[player.slug] || 'assets/images/cards/fieldstock/tij-'+String(tijuanaCards[player.slug]).padStart(2,'0')+'-'+player.slug+'-front.webp';
     return player.teamSlug === 'monterrey-cementeros' && monterreyCards[player.slug]
       ? player.card_front || 'assets/images/cards/fieldstock/mty-'+String(monterreyCards[player.slug]).padStart(2,'0')+'-'+player.slug+'-front-photo.webp' : null;
@@ -96,9 +99,11 @@
   function createPhysicalCard(player, { link = true } = {}) {
     const card = text('article', '', 'tij-physical-card');
     const monterrey = player.teamSlug === 'monterrey-cementeros';
+    const taipei = player.teamSlug === 'taipei-neon';
     if (monterrey) card.classList.add('mty-physical-card');
-    const number = (monterrey ? monterreyCards : tijuanaCards)[player.slug];
-    const code = (monterrey ? 'MTY-' : 'TIJ-') + String(number).padStart(2, '0');
+    if (taipei) card.classList.add('tpe-physical-card');
+    const number = (taipei ? taipeiCards : monterrey ? monterreyCards : tijuanaCards)[player.slug];
+    const code = (taipei ? 'TPE-' : monterrey ? 'MTY-' : 'TIJ-') + String(number).padStart(2, '0');
     const button = document.createElement('button');
     button.type = 'button'; button.className = 'tij-card-flipper';
     const inner = text('span', '', 'tij-card-inner');
@@ -136,7 +141,7 @@
     return card;
   }
   function createCard(player, record, { link = true } = {}) {
-    if ((player.teamSlug === 'tijuana-tecnicos' && tijuanaCards[player.slug]) || (player.teamSlug === 'monterrey-cementeros' && monterreyCards[player.slug])) return createPhysicalCard(player, {link});
+    if ((player.teamSlug === 'taipei-neon' && taipeiCards[player.slug]) || (player.teamSlug === 'tijuana-tecnicos' && tijuanaCards[player.slug]) || (player.teamSlug === 'monterrey-cementeros' && monterreyCards[player.slug])) return createPhysicalCard(player, {link});
     const card = document.createElement(link ? 'a' : 'article');
     card.className = 'glb-player-card';
     if (link) card.href = `player.html?team=${encodeURIComponent(player.teamSlug)}&player=${encodeURIComponent(player.slug)}`;

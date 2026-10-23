@@ -270,7 +270,7 @@ p{line-height:1.58;color:#343a40}
 .glb-player-card.is-flipped:hover{transform:rotateY(180deg) translateY(-4px)!important}
 @media(prefers-reduced-motion:reduce){.glb-player-card{transition:none!important}}
 </style>
-<link rel="stylesheet" href="tijuana-cards.css?v=20261011-physical-flips"></head>
+<link rel="stylesheet" href="taipei-cards.css"><link rel="stylesheet" href="tijuana-cards.css?v=20261011-physical-flips"></head>
 
 <body>
 
@@ -467,7 +467,8 @@ p{line-height:1.58;color:#343a40}
   </div>
 </footer>
 
-<script src="scripts/player-cards.js?v=20261011-physical-flips"></script>
+<script src="scripts/player-cards.js?v=20261023-taipei"></script>
+<script src="scripts/taipei-cards.js?v=20261023"></script>
 <script>
 const params = new URLSearchParams(window.location.search);
 
@@ -668,7 +669,7 @@ async function loadPlayer(){
     const registry = await registryResponse.json();
     const activeTeam = Object.values(registry.divisions).flat().find(entry => entry.slug === teamSlug);
     if(!activeTeam) throw new Error('Club not found in active league registry');
-    team = {teamName:activeTeam.team,cityPrefix:teamSlug.split('-')[0],teamPage:['spokane-alloys','vancouver-current','monterrey-cementeros','tijuana-tecnicos'].includes(teamSlug)?`team-${teamSlug}.html`:`team.html?team=${encodeURIComponent(teamSlug)}`};
+    team = {teamName:activeTeam.team,cityPrefix:teamSlug.split('-')[0],teamPage:['spokane-alloys','vancouver-current','monterrey-cementeros','tijuana-tecnicos','taipei-neon'].includes(teamSlug)?`team-${teamSlug}.html`:`team.html?team=${encodeURIComponent(teamSlug)}`};
     const rosterPlayer = await getRosterPlayer();
     if(!rosterPlayer && !PLAYER_OVERRIDES[playerSlug]) throw new Error('Player not found on this club’s active roster');
 
@@ -738,6 +739,7 @@ async function loadPlayer(){
   }catch(error){statsError='Statistics could not load. Please refresh.';console.warn(error)}
   const cardHost=document.getElementById('playerCard');
   const FIELDSTOCK = {
+    'taipei-neon': {prefix:'tpe',cards:{"kaito-ueda":1,"adebayo-olumide":2,"han-wei-tseng":3,"martin-echevarria":4,"dariusz-wierzbik":5,"owen-rasmusson":6,"eric-lawson":7,"jose-ramirez-tpe":8,"david-morales-tpe":9,"hiroto-kuzumi":10,"joaquin-iturriaga":11,"eitan-ben-sasson":12,"tsai-ming-hao":13,"idris-el-amin":14,"miguel-santos-tpe":15},claimable:new Set(['kaito-ueda','adebayo-olumide'])},
     'tijuana-tecnicos': {prefix:'tij',cards:{"rafael-montoya":1,"diego-verdugo":2,"esteban-arce":3,"tomas-zepeda":4,"mauricio-cota":5,"ivan-lizarraga":6,"julian-ochoa":7,"sergio-hinojosa":8,"bruno-valdes":9,"matias-camarena":10,"nicolas-paredes":11,"adrian-fierro":12,"emilio-barron":13,"gael-marrufo":14,"cristobal-saucedo":15,"hector-belmonte":16},claimable:new Set(['rafael-montoya','gael-marrufo'])},
     'monterrey-cementeros': {prefix:'mty',cards:{'emilio-zendejas':1,'masato-yanagisawa':2,'kofi-mensah':12,'andres-cazares':15},claimable:new Set(['emilio-zendejas','masato-yanagisawa'])},
     'spokane-alloys': {
@@ -758,7 +760,7 @@ async function loadPlayer(){
     : teamSlug.toUpperCase().slice(0,3)+'-'+playerSlug.toUpperCase();
   const claimable= (!fieldstockTeam?.claimable || fieldstockTeam.claimable.has(playerSlug));
 
-  if(['tijuana-tecnicos','monterrey-cementeros'].includes(teamSlug) && fieldstockTeam&&cardNumber){
+  if(['tijuana-tecnicos','monterrey-cementeros','taipei-neon'].includes(teamSlug) && fieldstockTeam&&cardNumber){
     cardHost.replaceChildren(GLBPlayerCards.createPhysicalCard({...player,teamSlug,slug:playerSlug},{link:false}));
   }else if(teamSlug==='spokane-alloys' && fieldstockTeam&&cardNumber){
     const prefix=fieldstockTeam.prefix+'-'+String(cardNumber).padStart(2,'0')+'-'+playerSlug;
@@ -788,7 +790,9 @@ async function loadPlayer(){
     cardHost.replaceChildren(GLBPlayerCards.createCard({...player,slug:playerSlug,name:playerName,teamSlug,teamName:team.teamName},record,{link:false}));
   }
 
-  if(claimable){
+  if(teamSlug==='taipei-neon'){
+    cardHost.append(await TaipeiFieldstock.createClaimPanel(player));
+  }else if(claimable){
     const claim=document.createElement('form'); claim.className='card-claim-form'; claim.action='https://formspree.io/f/mzezpeap'; claim.method='POST';
     claim.innerHTML='<strong>Request this card</strong><input type="hidden" name="card_id"><input type="hidden" name="player_name"><input name="user_id" required minlength="3" maxlength="24" pattern="[A-Za-z0-9_-]{3,24}" title="3–24 letters, numbers, underscores, or hyphens" placeholder="Your USER ID"><input name="email" type="email" required placeholder="Your email"><textarea name="proposed_card_bio" maxlength="180" required placeholder="A memorable, grounded baseball factoid about this player"></textarea><button type="submit">Submit request</button><small>If your request is approved, your unique 16-digit FIELDSTOCK code will be sent to your email.</small><div class="claim-response" aria-live="polite"></div>';
     claim.elements.card_id.value=cardId;

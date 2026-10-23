@@ -8,7 +8,7 @@
       "TPE-01",
       "TPE-02"
     ],
-    "mascot": "opening_soon",
+    "mascot": "open_for_contribution",
     "private_code_issued": "after_editorial_approval",
     "public_preview": "watermarked"
   },
@@ -853,5 +853,11 @@
       },
       "factoid": "Taps the bullpen latch once for each out he needs before taking the mound."
     }
-  ]
+  ],
+  "mascot": {
+    "artifact_id": "GLB-TPE-MASCOT-0001",
+    "name": "Glow",
+    "contribution_url": "contribute.html?team=taipei-neon&type=mascot&artifact=Glow%20%28GLB-TPE-MASCOT-0001%29",
+    "approval_required": true
+  }
 }

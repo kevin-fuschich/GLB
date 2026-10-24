@@ -25,3 +25,5 @@
 @media(prefers-reduced-motion:reduce){.vello-sound-ring:before{opacity:.65;box-shadow:none}.vello-sound-rings{filter:none}}
 .vello-sound-native{display:block;width:100%;margin:20px 0 16px;min-height:48px;color-scheme:dark}
 .vello-sound .vello-audio-link{color:#ffc0b5;text-decoration:underline;text-underline-offset:3px;font-size:12px}
+
+.team-hero-sound{display:inline-flex;align-items:center;gap:16px;margin-top:22px;padding:12px 19px;border:1px solid #f7b0a5;border-radius:30px;background:#18171cd9;color:#fff2e9;font-size:13px;font-weight:700;line-height:1.4;min-height:44px;text-decoration:none}.team-hero-sound:hover{background:#f7b0a5;color:#20191c}.team-hero-sound:focus-visible{outline:3px solid #fff2dc;outline-offset:5px}

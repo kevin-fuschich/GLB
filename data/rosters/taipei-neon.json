@@ -132,9 +132,10 @@
       "bio": "Photographs the outfield light towers at every park before his first game there.",
       "factoid": "Photographs the outfield light towers at every park before his first game there.",
       "card_id": "TPE-07",
-      "card_front": "assets/images/cards/fieldstock/tpe-07-eric-lawson-front.webp",
+      "card_front": "assets/images/cards/fieldstock/tpe-07-eric-lawson-front-action.webp",
       "card_back": "assets/images/cards/fieldstock/tpe-07-eric-lawson-back.webp",
-      "claim_open": false
+      "claim_open": false,
+      "card_front_alt": "Eric Lawson tracks a fly ball in Taipei’s gray road uniform, with his glove on his right hand"
     },
     {
       "name": "Jose Ramirez",
@@ -263,9 +264,10 @@
       "bio": "Stores his pitch-grip sketches in the empty sleeves of his card binder.",
       "factoid": "Stores his pitch-grip sketches in the empty sleeves of his card binder.",
       "card_id": "TPE-14",
-      "card_front": "assets/images/cards/fieldstock/tpe-14-idris-el-amin-front.webp",
+      "card_front": "assets/images/cards/fieldstock/tpe-14-idris-el-amin-front-bullpen.webp",
       "card_back": "assets/images/cards/fieldstock/tpe-14-idris-el-amin-back.webp",
-      "claim_open": false
+      "claim_open": false,
+      "card_front_alt": "Left-handed reliever Idris El-Amin warms up in the bullpen wearing Taipei’s black alternate jersey"
     },
     {
       "name": "Miguel Santos",

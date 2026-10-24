@@ -89,16 +89,73 @@
     });
     return panel;
   }
-  window.TaipeiFieldstock={createClaimPanel};
+  let releaseRequest;
+  const release = () => releaseRequest ||= read('data/cards/taipei-neon-series-01.json').then(value => {
+    if (value.schema !== 'glb.fieldstock-release.v1') throw Error('Unknown release schema');
+    return value;
+  });
+  async function createCardDetails(player) {
+    const details = create('details', undefined, 'tpe-card-details');
+    details.append(create('summary', 'Card details & 2026 line'));
+    try {
+      const collection = await release();
+      const card = collection.cards.find(card => card.card_id === player.card_id && card.player_slug === player.slug);
+      if (!card) throw Error('Card record unavailable');
+      const bio = card.biography;
+      const facts = create('dl', undefined, 'tpe-card-facts');
+      for (const [label, value] of [
+        ['Born', bio.dob], ['Birthplace', bio.birthplace], ['Height', bio.height],
+        ['Weight', bio.weight + ' lb'], ['Bats / throws', bio.bats + ' / ' + bio.throws],
+        ['Card', card.card_id]
+      ]) facts.append(create('dt', label), create('dd', value));
+      details.append(facts);
+      const pitcher = ['SP', 'RP', 'CL'].includes(player.position);
+      const group = card.stats[pitcher ? 'pitching' : 'batting'];
+      const keys = pitcher ? ['G','IP','W','L','SV','K','ERA','WHIP'] : ['G','AB','H','HR','RBI','SB','AVG','OPS'];
+      const stats = create('dl', undefined, 'tpe-card-stats');
+      stats.setAttribute('aria-label', collection.season + ' season statistics');
+      for (const key of keys) {
+        const item = create('div');
+        item.append(create('dt', key), create('dd', group[key] ?? '—'));
+        stats.append(item);
+      }
+      details.append(create('h4', collection.season + ' season'), stats, create('p', card.factoid, 'tpe-card-factoid'));
+    } catch {
+      details.append(create('p', 'Card details could not load. Open the player file or refresh to try again.'));
+    }
+    return details;
+  }
+  function renderRoster(roster) {
+    const body = document.getElementById('taipeiRosterRows');
+    if (!body) return;
+    const rows = roster.players.map(player => {
+      const row = create('tr'), name = create('td');
+      const file = create('a', player.name);
+      file.href = 'player.html?team=taipei-neon&player=' + encodeURIComponent(player.slug);
+      name.append(file);
+      row.append(name, create('td', player.position), create('td', player.bats + '/' + player.throws),
+        create('td', String(player.age)), create('td', player.birthplace));
+      const cell = create('td'), link = create('a', player.card_id);
+      link.href = '#card-' + player.card_id.toLowerCase();
+      link.setAttribute('aria-label', 'View ' + player.name + ' card ' + player.card_id);
+      cell.append(link); row.append(cell);
+      return row;
+    });
+    body.replaceChildren(...rows);
+  }
+  window.TaipeiFieldstock={createClaimPanel,createCardDetails};
   async function initialize() {
     const host=document.getElementById('taipeiCards');
     if(!host)return;
     try {
       const roster=await read('data/rosters/taipei-neon.json');
+      renderRoster(roster);
       const cards=await Promise.all(roster.players.map(async player => {
         const article=create('article',undefined,'tpe-card-entry');
         article.dataset.cardId=player.card_id;
+        article.id='card-'+player.card_id.toLowerCase();
         article.append(GLBPlayerCards.createPhysicalCard({...player,teamSlug:'taipei-neon'},{link:true}));
+        article.append(await createCardDetails(player));
         article.append(await createClaimPanel(player));
         return article;
       }));

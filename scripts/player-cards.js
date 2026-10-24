@@ -113,7 +113,7 @@
     front.loading = back.loading = 'lazy';
     front.src = cardFront(player);
     back.src = player.card_back || front.src.replace(/-front-photo\.webp$/, '-back-photo.webp');
-    front.alt = 'Photograph of ' + player.name + ' ' + code + ' physical card front';
+    front.alt = (player.card_front_alt || 'Photograph of ' + player.name) + ' · ' + code + ' physical card front';
     back.alt = 'Photograph of ' + player.name + ' ' + code + ' physical card back, with biography and 2026 statistics';
     const hint = text('p', '', 'tij-card-flip-note');
     const status = text('p', '', 'tij-card-error');

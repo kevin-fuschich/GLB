@@ -54,9 +54,10 @@
       "bio": "Keeps a notebook of double-play feeds, drawn from his partner’s point of view.",
       "factoid": "Keeps a notebook of double-play feeds, drawn from his partner’s point of view.",
       "card_id": "TPE-03",
-      "card_front": "assets/images/cards/fieldstock/tpe-03-han-wei-tseng-front.webp",
+      "card_front": "assets/images/cards/fieldstock/tpe-03-han-wei-tseng-front-action.webp",
       "card_back": "assets/images/cards/fieldstock/tpe-03-han-wei-tseng-back.webp",
-      "claim_open": false
+      "claim_open": false,
+      "card_front_alt": "Han-wei Tseng turning a double play near second base"
     },
     {
       "name": "Martín Echevarría",
@@ -73,9 +74,10 @@
       "bio": "Writes the count inside the brim of his practice cap before each batting session.",
       "factoid": "Writes the count inside the brim of his practice cap before each batting session.",
       "card_id": "TPE-04",
-      "card_front": "assets/images/cards/fieldstock/tpe-04-martin-echevarria-front.webp",
+      "card_front": "assets/images/cards/fieldstock/tpe-04-martin-echevarria-front-action.webp",
       "card_back": "assets/images/cards/fieldstock/tpe-04-martin-echevarria-back.webp",
-      "claim_open": false
+      "claim_open": false,
+      "card_front_alt": "Martín Echevarría set to hit from the left side"
     },
     {
       "name": "Dariusz Wierzbik",
@@ -111,9 +113,10 @@
       "bio": "Records a one-line scouting note on every umpire’s called third strike.",
       "factoid": "Records a one-line scouting note on every umpire’s called third strike.",
       "card_id": "TPE-06",
-      "card_front": "assets/images/cards/fieldstock/tpe-06-owen-rasmusson-front.webp",
+      "card_front": "assets/images/cards/fieldstock/tpe-06-owen-rasmusson-front-action.webp",
       "card_back": "assets/images/cards/fieldstock/tpe-06-owen-rasmusson-back.webp",
-      "claim_open": false
+      "claim_open": false,
+      "card_front_alt": "Owen Rasmusson receiving a pitch in full catching gear"
     },
     {
       "name": "Eric Lawson",
@@ -184,9 +187,10 @@
       "bio": "Keeps the ball from every scoreless start and records the temperature on the seam.",
       "factoid": "Keeps the ball from every scoreless start and records the temperature on the seam.",
       "card_id": "TPE-10",
-      "card_front": "assets/images/cards/fieldstock/tpe-10-hiroto-kuzumi-front.webp",
+      "card_front": "assets/images/cards/fieldstock/tpe-10-hiroto-kuzumi-front-action.webp",
       "card_back": "assets/images/cards/fieldstock/tpe-10-hiroto-kuzumi-back.webp",
-      "claim_open": false
+      "claim_open": false,
+      "card_front_alt": "Hiroto Kuzumi delivering a right-handed pitch from the mound"
     },
     {
       "name": "Joaquín Iturriaga",

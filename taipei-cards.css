@@ -14,3 +14,21 @@
 .tpe-claim-panel :focus-visible,.tpe-physical-card :focus-visible{outline:3px solid #a33b32;outline-offset:3px}
 @media(max-width:1000px){.tpe-card-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:560px){.tpe-card-grid{grid-template-columns:1fr;padding:0 20px 22px}}
+
+/* Readable companion to the printed reverse. */
+.tpe-card-entry{scroll-margin-top:110px}
+.tpe-card-entry:target{outline:3px solid #a33b32;outline-offset:4px}
+.tpe-card-details{margin:14px auto 0;max-width:440px;color:#242326;font:13px/1.6 -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}
+.tpe-card-details summary{cursor:pointer;font-weight:700;padding:8px 0}
+.tpe-card-facts{display:grid;grid-template-columns:max-content minmax(0,1fr);gap:5px 12px;margin:12px 0}
+.tpe-card-facts dt{font-weight:700}
+.tpe-card-facts dd{margin:0;overflow-wrap:anywhere}
+.tpe-card-details h4{margin:16px 0 8px}
+.tpe-card-stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;margin:0;background:#e1d8d0;border:1px solid #e1d8d0}
+.tpe-card-stats>div{background:#fff;padding:9px 5px;text-align:center}
+.tpe-card-stats dt{font-size:10px;font-weight:600}
+.tpe-card-stats dd{font-size:14px;font-weight:750;margin:0}
+.tpe-card-factoid{font-size:13px!important;line-height:1.6!important;margin:14px 0!important}
+.tpe-card-details :focus-visible{outline:3px solid #a33b32;outline-offset:3px}
+#roster td:nth-child(5){white-space:normal;min-width:150px}
+#roster td:last-child a{white-space:nowrap}

@@ -270,7 +270,7 @@ p{line-height:1.58;color:#343a40}
 .glb-player-card.is-flipped:hover{transform:rotateY(180deg) translateY(-4px)!important}
 @media(prefers-reduced-motion:reduce){.glb-player-card{transition:none!important}}
 </style>
-<link rel="stylesheet" href="taipei-cards.css"><link rel="stylesheet" href="tijuana-cards.css?v=20261011-physical-flips"></head>
+<link rel="stylesheet" href="taipei-cards.css?v=20261024-roster"><link rel="stylesheet" href="tijuana-cards.css?v=20261011-physical-flips"></head>
 
 <body>
 
@@ -467,8 +467,8 @@ p{line-height:1.58;color:#343a40}
   </div>
 </footer>
 
-<script src="scripts/player-cards.js?v=20261023-taipei"></script>
-<script src="scripts/taipei-cards.js?v=20261023"></script>
+<script src="scripts/player-cards.js?v=20261024-roster"></script>
+<script src="scripts/taipei-cards.js?v=20261024-roster"></script>
 <script>
 const params = new URLSearchParams(window.location.search);
 
@@ -791,6 +791,7 @@ async function loadPlayer(){
   }
 
   if(teamSlug==='taipei-neon'){
+    cardHost.append(await TaipeiFieldstock.createCardDetails(player));
     cardHost.append(await TaipeiFieldstock.createClaimPanel(player));
   }else if(claimable){
     const claim=document.createElement('form'); claim.className='card-claim-form'; claim.action='https://formspree.io/f/mzezpeap'; claim.method='POST';

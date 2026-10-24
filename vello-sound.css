@@ -23,3 +23,5 @@
 .vello-sound p.vello-sound-note{font-size:11px;color:#c6b6b2;margin:14px 0 0}
 @media(max-width:600px){.vello-sound{margin:0 20px 22px;padding:22px 18px}.vello-sound h3{font-size:24px}.vello-sound-controls{gap:14px}.vello-sound-play{width:100%}.vello-sound-rings{padding-top:28px}}
 @media(prefers-reduced-motion:reduce){.vello-sound-ring:before{opacity:.65;box-shadow:none}.vello-sound-rings{filter:none}}
+.vello-sound-native{display:block;width:100%;margin:20px 0 16px;min-height:48px;color-scheme:dark}
+.vello-sound .vello-audio-link{color:#ffc0b5;text-decoration:underline;text-underline-offset:3px;font-size:12px}

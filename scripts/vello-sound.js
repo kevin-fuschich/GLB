@@ -58,62 +58,30 @@
   }
   if(typeof module === 'object' && module.exports)module.exports={DURATION,EVENTS,render};
   if(!root.document)return;
-  const host = root.document.getElementById('vello-sound');
+  const host=root.document.getElementById('vello-sound');
   if(!host)return;
-  const button=host.querySelector('[data-sound-play]');
+  const audio=host.querySelector('[data-sound-audio]');
   const status=host.querySelector('[data-sound-status]');
-  const progress=host.querySelector('progress');
-  const clock=host.querySelector('[data-sound-clock]');
-  const volume=host.querySelector('[data-sound-volume]');
   const rings=[...host.querySelectorAll('[data-sound-ring]')];
-  const AudioContext=root.AudioContext||root.webkitAudioContext;
-  if(!AudioContext){button.disabled=true;status.textContent='Audio is unavailable in this browser. The First Circuit moves three notes from left to center to right, followed by percussion.';return;}
-  let context,master,buffer,source,frame=0,run=0,starting=false,startedAt=0;
-  function reset(message) {
-    const old=source;source=null;starting=false;run++;
-    if(old){old.onended=null;try {master.gain.cancelScheduledValues(context.currentTime);master.gain.setTargetAtTime(0,context.currentTime,0.008);old.stop(context.currentTime+0.04);} catch {}}
-    root.cancelAnimationFrame(frame);
-    host.classList.remove('is-playing');
-    rings.forEach(ring=>ring.style.setProperty('--pulse','0'));
-    progress.value=0;clock.textContent='0:00 / 0:15';
-    button.textContent='Play the First Circuit';button.setAttribute('aria-pressed','false');
-    if(message)status.textContent=message;
-  }
-  function update(token) {
-    if(token!==run||!source)return;
-    const elapsed=Math.max(0,context.currentTime-startedAt);
-    progress.value=Math.min(DURATION,elapsed);
-    clock.textContent='0:'+String(Math.min(15,Math.floor(elapsed))).padStart(2,'0')+' / 0:15';
-    const phase=elapsed<3.6?'Three notes · Left, center, right.':elapsed<10.3?'The response · Percussion follows the circuit.':'The return · Three notes settle together.';
+  let frame=0;
+  const lightsOff=()=>{root.cancelAnimationFrame(frame);rings.forEach(r=>r.style.setProperty('--pulse','0'));};
+  function draw(){
+    const time=audio.currentTime;
+    const phase=time<3.6?'Three notes · Left, center, right.':time<10.3?'The response · Percussion follows the circuit.':'The return · Three notes settle together.';
     if(status.textContent!==phase)status.textContent=phase;
     rings.forEach((ring,index)=>{
       let pulse=0;
-      for(const event of EVENTS){const age=elapsed-event.time;if(event.ring===index&&age>=0&&age<0.85)pulse=Math.max(pulse,Math.exp(-age*5));}
+      for(const event of EVENTS){const age=time-event.time;if(event.ring===index&&age>=0&&age<0.85)pulse=Math.max(pulse,Math.exp(-age*5));}
       ring.style.setProperty('--pulse',pulse.toFixed(3));
     });
-    if(elapsed<DURATION)frame=root.requestAnimationFrame(()=>update(token));
+    if(!audio.paused&&!audio.ended)frame=root.requestAnimationFrame(draw);
   }
-  button.addEventListener('click',async()=>{
-    if(source||starting){reset('Stopped. Play again whenever you like.');return;}
-    const token=++run;starting=true;
-    button.textContent='Stop the First Circuit';button.setAttribute('aria-pressed','true');
-    status.textContent='Preparing the First Circuit…';
-    try {
-      // Creation and resume are initiated inside the user gesture for mobile browsers.
-      if(!context){context=new AudioContext();master=context.createGain();master.connect(context.destination);context.addEventListener('statechange',()=>{if(source&&context.state!=='running')reset('Audio paused. Tap play to start again.');});}
-      await context.resume();
-      if(token!==run)return;
-      if(context.state!=='running')throw Error('Audio could not start');
-      if(!buffer){const channels=render(context.sampleRate);buffer=context.createBuffer(2,channels[0].length,context.sampleRate);channels.forEach((channel,index)=>buffer.getChannelData(index).set(channel));}
-      const current=context.createBufferSource();current.buffer=buffer;current.connect(master);
-      master.gain.cancelScheduledValues(context.currentTime);master.gain.setValueAtTime(Number(volume.value)/100,context.currentTime);
-      source=current;starting=false;startedAt=context.currentTime;
-      current.onended=()=>{if(source===current&&token===run)reset('The circuit is complete. Play again to hear it travel.');};
-      current.start();host.classList.add('is-playing');update(token);
-    } catch {if(token===run)reset('Audio could not start. Tap play to try again.');}
-  });
-  volume.addEventListener('input',()=>{if(context&&master&&source){master.gain.cancelScheduledValues(context.currentTime);master.gain.setTargetAtTime(Number(volume.value)/100,context.currentTime,0.025);}});
-  root.document.addEventListener('visibilitychange',()=>{if(root.document.hidden&&(source||starting))reset('Stopped while the page was away. Tap play to start again.');});
-  root.addEventListener('pagehide',()=>{reset();if(context&&context.state!=='closed')context.close().catch(()=>{});});
-  root.addEventListener('pageshow',()=>{if(context?.state==='closed'){context=null;master=null;buffer=null;}});
+  audio.addEventListener('play',()=>{host.classList.add('is-playing');lightsOff();draw();});
+  audio.addEventListener('pause',()=>{lightsOff();host.classList.remove('is-playing');if(!audio.ended)status.textContent='Paused. Press play to continue.';});
+  audio.addEventListener('ended',()=>{lightsOff();host.classList.remove('is-playing');status.textContent='The circuit is complete. Play again to hear it travel.';});
+  audio.addEventListener('seeking',lightsOff);
+  audio.addEventListener('seeked',()=>{if(!audio.paused)draw();});
+  audio.addEventListener('error',()=>{lightsOff();status.textContent='The audio could not load here. Use the direct audio link below to open it in your player.';});
+  root.document.addEventListener('visibilitychange',()=>{if(root.document.hidden&&!audio.paused)audio.pause();});
+  root.addEventListener('pagehide',()=>{audio.pause();lightsOff();});
 })(typeof window === 'undefined' ? globalThis : window);

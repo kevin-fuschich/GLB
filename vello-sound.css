@@ -1,0 +1,25 @@
+.vello-sound{margin:0 28px 28px;padding:28px;border-radius:10px;background:#19181c;color:#f5f0e7;border:1px solid #42343a}
+.vello-sound .eyebrow{color:#f9a599}
+.vello-sound h3{font-size:26px;letter-spacing:-.5px;margin:10px 0}
+.vello-sound p{max-width:640px;font-size:15px;line-height:1.65;margin:0 0 18px;color:#ded5d0}
+.vello-sound-rings{display:flex;align-items:center;justify-content:center;gap:clamp(12px,4vw,52px);padding:34px 0 40px}
+.vello-sound-ring{--pulse:0;position:relative;display:block;width:clamp(58px,14vw,132px);aspect-ratio:1;border:clamp(9px,2vw,20px) solid #2e2b30;border-radius:50%;box-shadow:0 10px 20px #0007,inset 0 0 0 1px #52464b;background:#141316}
+.vello-sound-ring:before{content:"";position:absolute;inset:-4px;border:3px solid #f26f60;border-radius:50%;opacity:calc(.3 + var(--pulse)*.7);box-shadow:0 0 calc(2px + var(--pulse)*25px) #f26f60,inset 0 0 calc(2px + var(--pulse)*16px) #f26f6077}
+.vello-sound-ring span{position:absolute;top:calc(100% + 30px);left:50%;transform:translateX(-50%);font-size:10px;letter-spacing:1px;text-transform:uppercase;color:#e1c9c4}
+.vello-sound-controls{display:flex;flex-wrap:wrap;align-items:center;gap:18px 24px;margin-top:15px}
+.vello-sound-play{border:1px solid #ffb4a8;border-radius:30px;background:#f5a093;color:#21191b;padding:13px 22px;font:700 14px/1.3 -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;cursor:pointer;min-height:46px}
+.vello-sound-play:hover{background:#ffc0b5}
+.vello-sound-play:disabled{opacity:.6;cursor:default}
+.vello-sound-volume{display:flex;align-items:center;gap:10px;color:#ded5d0;font-size:12px}
+.vello-sound-volume input{width:110px;min-height:32px;accent-color:#f5a093}
+.vello-sound :focus-visible{outline:3px solid #fff2dc;outline-offset:5px}
+.vello-sound-timeline{display:flex;align-items:center;gap:14px;margin:22px 0 12px}
+.vello-sound progress{display:block;flex:1;min-width:0;height:5px;border:0;border-radius:5px;overflow:hidden;appearance:none;background:#484047;color:#f5a093}
+.vello-sound progress::-webkit-progress-bar{background:#484047}
+.vello-sound progress::-webkit-progress-value{background:#f5a093}
+.vello-sound progress::-moz-progress-bar{background:#f5a093}
+.vello-sound-clock{font-size:11px;color:#ded5d0;font-variant-numeric:tabular-nums;white-space:nowrap}
+.vello-sound p.vello-sound-status{font-size:13px;color:#fff1e9;min-height:2.5em;margin:0}
+.vello-sound p.vello-sound-note{font-size:11px;color:#c6b6b2;margin:14px 0 0}
+@media(max-width:600px){.vello-sound{margin:0 20px 22px;padding:22px 18px}.vello-sound h3{font-size:24px}.vello-sound-controls{gap:14px}.vello-sound-play{width:100%}.vello-sound-rings{padding-top:28px}}
+@media(prefers-reduced-motion:reduce){.vello-sound-ring:before{opacity:.65;box-shadow:none}.vello-sound-rings{filter:none}}

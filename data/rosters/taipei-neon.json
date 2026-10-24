@@ -16,9 +16,10 @@
       "bio": "Marks each park’s warning-track depth in shoe lengths before batting practice.",
       "factoid": "Marks each park’s warning-track depth in shoe lengths before batting practice.",
       "card_id": "TPE-01",
-      "card_front": "assets/images/cards/fieldstock/tpe-01-kaito-ueda-front.webp",
+      "card_front": "assets/images/cards/fieldstock/tpe-01-kaito-ueda-front-v3.webp",
       "card_back": "assets/images/cards/fieldstock/tpe-01-kaito-ueda-back.webp",
-      "claim_open": true
+      "claim_open": true,
+      "card_front_alt": "Kaito Ueda in left profile with a bat at the on-deck circle"
     },
     {
       "name": "Adebayo Olumide",
@@ -35,9 +36,10 @@
       "bio": "Re-laces teammates’ gloves on road trips and labels each repair with the ballpark.",
       "factoid": "Re-laces teammates’ gloves on road trips and labels each repair with the ballpark.",
       "card_id": "TPE-02",
-      "card_front": "assets/images/cards/fieldstock/tpe-02-adebayo-olumide-front.webp",
+      "card_front": "assets/images/cards/fieldstock/tpe-02-adebayo-olumide-front-v3.webp",
       "card_back": "assets/images/cards/fieldstock/tpe-02-adebayo-olumide-back.webp",
-      "claim_open": true
+      "claim_open": true,
+      "card_front_alt": "Adebayo Olumide smiles directly at the camera with his cap off and black alternate jersey"
     },
     {
       "name": "Han-wei Tseng",
@@ -94,9 +96,10 @@
       "bio": "Collects broken bat handles and uses them to make replacement fungo knobs.",
       "factoid": "Collects broken bat handles and uses them to make replacement fungo knobs.",
       "card_id": "TPE-05",
-      "card_front": "assets/images/cards/fieldstock/tpe-05-dariusz-wierzbik-front.webp",
+      "card_front": "assets/images/cards/fieldstock/tpe-05-dariusz-wierzbik-front-v3.webp",
       "card_back": "assets/images/cards/fieldstock/tpe-05-dariusz-wierzbik-back.webp",
-      "claim_open": false
+      "claim_open": false,
+      "card_front_alt": "Dariusz Wierzbik looks down while fastening his batting glove beside the dugout steps"
     },
     {
       "name": "Owen Rasmusson",
@@ -151,9 +154,10 @@
       "bio": "Has used the same pine-tar rag since his first professional home run.",
       "factoid": "Has used the same pine-tar rag since his first professional home run.",
       "card_id": "TPE-08",
-      "card_front": "assets/images/cards/fieldstock/tpe-08-jose-ramirez-tpe-front.webp",
+      "card_front": "assets/images/cards/fieldstock/tpe-08-jose-ramirez-tpe-front-v3.webp",
       "card_back": "assets/images/cards/fieldstock/tpe-08-jose-ramirez-tpe-back.webp",
-      "claim_open": false
+      "claim_open": false,
+      "card_front_alt": "Jose Ramirez follows through on a right-handed swing and watches the ball"
     },
     {
       "name": "David Morales",
@@ -169,9 +173,10 @@
       "bio": "Counts batting-practice swings with brass tokens kept in an old rosin tin.",
       "factoid": "Counts batting-practice swings with brass tokens kept in an old rosin tin.",
       "card_id": "TPE-09",
-      "card_front": "assets/images/cards/fieldstock/tpe-09-david-morales-tpe-front.webp",
+      "card_front": "assets/images/cards/fieldstock/tpe-09-david-morales-tpe-front-v3.webp",
       "card_back": "assets/images/cards/fieldstock/tpe-09-david-morales-tpe-back.webp",
-      "claim_open": false
+      "claim_open": false,
+      "card_front_alt": "David Morales laughs with a teammate from the dugout bench, cap off"
     },
     {
       "name": "Hiroto Kuzumi",
@@ -208,9 +213,10 @@
       "bio": "Carries a folded diagram of his first professional mound in his glove bag.",
       "factoid": "Carries a folded diagram of his first professional mound in his glove bag.",
       "card_id": "TPE-11",
-      "card_front": "assets/images/cards/fieldstock/tpe-11-joaquin-iturriaga-front.webp",
+      "card_front": "assets/images/cards/fieldstock/tpe-11-joaquin-iturriaga-front-v3.webp",
       "card_back": "assets/images/cards/fieldstock/tpe-11-joaquin-iturriaga-back.webp",
-      "claim_open": false
+      "claim_open": false,
+      "card_front_alt": "Joaquín Iturriaga seen from behind in the bullpen, holding the ball in his right hand"
     },
     {
       "name": "Eitan Ben-Sasson",
@@ -227,9 +233,10 @@
       "bio": "Writes one sentence about each start on the back of his lineup-card copy.",
       "factoid": "Writes one sentence about each start on the back of his lineup-card copy.",
       "card_id": "TPE-12",
-      "card_front": "assets/images/cards/fieldstock/tpe-12-eitan-ben-sasson-front.webp",
+      "card_front": "assets/images/cards/fieldstock/tpe-12-eitan-ben-sasson-front-v3.webp",
       "card_back": "assets/images/cards/fieldstock/tpe-12-eitan-ben-sasson-back.webp",
-      "claim_open": false
+      "claim_open": false,
+      "card_front_alt": "Eitan Ben-Sasson looks directly at the camera in a black warmup top with his cap off"
     },
     {
       "name": "Tsai Ming Hao",
@@ -245,9 +252,10 @@
       "bio": "Replaces the bullpen’s worn chalk lines himself before his scheduled starts.",
       "factoid": "Replaces the bullpen’s worn chalk lines himself before his scheduled starts.",
       "card_id": "TPE-13",
-      "card_front": "assets/images/cards/fieldstock/tpe-13-tsai-ming-hao-front.webp",
+      "card_front": "assets/images/cards/fieldstock/tpe-13-tsai-ming-hao-front-v3.webp",
       "card_back": "assets/images/cards/fieldstock/tpe-13-tsai-ming-hao-back.webp",
-      "claim_open": false
+      "claim_open": false,
+      "card_front_alt": "Tsai Ming Hao lifts his knee during a pitching windup on the mound"
     },
     {
       "name": "Idris El-Amin",
@@ -283,9 +291,10 @@
       "bio": "Taps the bullpen latch once for each out he needs before taking the mound.",
       "factoid": "Taps the bullpen latch once for each out he needs before taking the mound.",
       "card_id": "TPE-15",
-      "card_front": "assets/images/cards/fieldstock/tpe-15-miguel-santos-tpe-front.webp",
+      "card_front": "assets/images/cards/fieldstock/tpe-15-miguel-santos-tpe-front-v3.webp",
       "card_back": "assets/images/cards/fieldstock/tpe-15-miguel-santos-tpe-back.webp",
-      "claim_open": false
+      "claim_open": false,
+      "card_front_alt": "Miguel Santos sits on the bullpen bench with his cap off, looking left"
     }
   ]
 }

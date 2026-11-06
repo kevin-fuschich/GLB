@@ -10,7 +10,7 @@
     ],
     "mascot": "open_for_contribution",
     "private_code_issued": "after_editorial_approval",
-    "public_preview": "watermarked"
+    "public_artwork": "unwatermarked"
   },
   "cards": [
     {
@@ -129,8 +129,8 @@
       "card_id": "TPE-03",
       "player_slug": "han-wei-tseng",
       "player_name": "Han-wei Tseng",
-      "front": "assets/images/cards/fieldstock/tpe-03-han-wei-tseng-front-action.webp",
-      "back": "assets/images/cards/fieldstock/tpe-03-han-wei-tseng-back.webp",
+      "front": "assets/images/cards/fieldstock/tpe-03-han-wei-tseng-front-action-clean.webp",
+      "back": "assets/images/cards/fieldstock/tpe-03-han-wei-tseng-back-clean.webp",
       "claim_open": false,
       "season": 2026,
       "stats": {
@@ -185,8 +185,8 @@
       "card_id": "TPE-04",
       "player_slug": "martin-echevarria",
       "player_name": "Martín Echevarría",
-      "front": "assets/images/cards/fieldstock/tpe-04-martin-echevarria-front-action.webp",
-      "back": "assets/images/cards/fieldstock/tpe-04-martin-echevarria-back.webp",
+      "front": "assets/images/cards/fieldstock/tpe-04-martin-echevarria-front-action-clean.webp",
+      "back": "assets/images/cards/fieldstock/tpe-04-martin-echevarria-back-clean.webp",
       "claim_open": false,
       "season": 2026,
       "stats": {
@@ -241,8 +241,8 @@
       "card_id": "TPE-05",
       "player_slug": "dariusz-wierzbik",
       "player_name": "Dariusz Wierzbik",
-      "front": "assets/images/cards/fieldstock/tpe-05-dariusz-wierzbik-front-v3.webp",
-      "back": "assets/images/cards/fieldstock/tpe-05-dariusz-wierzbik-back.webp",
+      "front": "assets/images/cards/fieldstock/tpe-05-dariusz-wierzbik-front-v3-clean.webp",
+      "back": "assets/images/cards/fieldstock/tpe-05-dariusz-wierzbik-back-clean.webp",
       "claim_open": false,
       "season": 2026,
       "stats": {
@@ -297,8 +297,8 @@
       "card_id": "TPE-06",
       "player_slug": "owen-rasmusson",
       "player_name": "Owen Rasmusson",
-      "front": "assets/images/cards/fieldstock/tpe-06-owen-rasmusson-front-action.webp",
-      "back": "assets/images/cards/fieldstock/tpe-06-owen-rasmusson-back.webp",
+      "front": "assets/images/cards/fieldstock/tpe-06-owen-rasmusson-front-action-clean.webp",
+      "back": "assets/images/cards/fieldstock/tpe-06-owen-rasmusson-back-clean.webp",
       "claim_open": false,
       "season": 2026,
       "stats": {
@@ -353,8 +353,8 @@
       "card_id": "TPE-07",
       "player_slug": "eric-lawson",
       "player_name": "Eric Lawson",
-      "front": "assets/images/cards/fieldstock/tpe-07-eric-lawson-front-action.webp",
-      "back": "assets/images/cards/fieldstock/tpe-07-eric-lawson-back.webp",
+      "front": "assets/images/cards/fieldstock/tpe-07-eric-lawson-front-action-clean.webp",
+      "back": "assets/images/cards/fieldstock/tpe-07-eric-lawson-back-clean.webp",
       "claim_open": false,
       "season": 2026,
       "stats": {
@@ -409,8 +409,8 @@
       "card_id": "TPE-08",
       "player_slug": "jose-ramirez-tpe",
       "player_name": "Jose Ramirez",
-      "front": "assets/images/cards/fieldstock/tpe-08-jose-ramirez-tpe-front-v3.webp",
-      "back": "assets/images/cards/fieldstock/tpe-08-jose-ramirez-tpe-back.webp",
+      "front": "assets/images/cards/fieldstock/tpe-08-jose-ramirez-tpe-front-v3-clean.webp",
+      "back": "assets/images/cards/fieldstock/tpe-08-jose-ramirez-tpe-back-clean.webp",
       "claim_open": false,
       "season": 2026,
       "stats": {
@@ -465,8 +465,8 @@
       "card_id": "TPE-09",
       "player_slug": "david-morales-tpe",
       "player_name": "David Morales",
-      "front": "assets/images/cards/fieldstock/tpe-09-david-morales-tpe-front-v3.webp",
-      "back": "assets/images/cards/fieldstock/tpe-09-david-morales-tpe-back.webp",
+      "front": "assets/images/cards/fieldstock/tpe-09-david-morales-tpe-front-v3-clean.webp",
+      "back": "assets/images/cards/fieldstock/tpe-09-david-morales-tpe-back-clean.webp",
       "claim_open": false,
       "season": 2026,
       "stats": {
@@ -521,8 +521,8 @@
       "card_id": "TPE-10",
       "player_slug": "hiroto-kuzumi",
       "player_name": "Hiroto Kuzumi",
-      "front": "assets/images/cards/fieldstock/tpe-10-hiroto-kuzumi-front-action.webp",
-      "back": "assets/images/cards/fieldstock/tpe-10-hiroto-kuzumi-back.webp",
+      "front": "assets/images/cards/fieldstock/tpe-10-hiroto-kuzumi-front-action-clean.webp",
+      "back": "assets/images/cards/fieldstock/tpe-10-hiroto-kuzumi-back-clean.webp",
       "claim_open": false,
       "season": 2026,
       "stats": {
@@ -577,8 +577,8 @@
       "card_id": "TPE-11",
       "player_slug": "joaquin-iturriaga",
       "player_name": "Joaquín Iturriaga",
-      "front": "assets/images/cards/fieldstock/tpe-11-joaquin-iturriaga-front-v3.webp",
-      "back": "assets/images/cards/fieldstock/tpe-11-joaquin-iturriaga-back.webp",
+      "front": "assets/images/cards/fieldstock/tpe-11-joaquin-iturriaga-front-v3-clean.webp",
+      "back": "assets/images/cards/fieldstock/tpe-11-joaquin-iturriaga-back-clean.webp",
       "claim_open": false,
       "season": 2026,
       "stats": {
@@ -633,8 +633,8 @@
       "card_id": "TPE-12",
       "player_slug": "eitan-ben-sasson",
       "player_name": "Eitan Ben-Sasson",
-      "front": "assets/images/cards/fieldstock/tpe-12-eitan-ben-sasson-front-v3.webp",
-      "back": "assets/images/cards/fieldstock/tpe-12-eitan-ben-sasson-back.webp",
+      "front": "assets/images/cards/fieldstock/tpe-12-eitan-ben-sasson-front-v3-clean.webp",
+      "back": "assets/images/cards/fieldstock/tpe-12-eitan-ben-sasson-back-clean.webp",
       "claim_open": false,
       "season": 2026,
       "stats": {
@@ -689,8 +689,8 @@
       "card_id": "TPE-13",
       "player_slug": "tsai-ming-hao",
       "player_name": "Tsai Ming Hao",
-      "front": "assets/images/cards/fieldstock/tpe-13-tsai-ming-hao-front-v3.webp",
-      "back": "assets/images/cards/fieldstock/tpe-13-tsai-ming-hao-back.webp",
+      "front": "assets/images/cards/fieldstock/tpe-13-tsai-ming-hao-front-v3-clean.webp",
+      "back": "assets/images/cards/fieldstock/tpe-13-tsai-ming-hao-back-clean.webp",
       "claim_open": false,
       "season": 2026,
       "stats": {
@@ -745,8 +745,8 @@
       "card_id": "TPE-14",
       "player_slug": "idris-el-amin",
       "player_name": "Idris El-Amin",
-      "front": "assets/images/cards/fieldstock/tpe-14-idris-el-amin-front-bullpen.webp",
-      "back": "assets/images/cards/fieldstock/tpe-14-idris-el-amin-back.webp",
+      "front": "assets/images/cards/fieldstock/tpe-14-idris-el-amin-front-bullpen-clean.webp",
+      "back": "assets/images/cards/fieldstock/tpe-14-idris-el-amin-back-clean.webp",
       "claim_open": false,
       "season": 2026,
       "stats": {
@@ -801,8 +801,8 @@
       "card_id": "TPE-15",
       "player_slug": "miguel-santos-tpe",
       "player_name": "Miguel Santos",
-      "front": "assets/images/cards/fieldstock/tpe-15-miguel-santos-tpe-front-v3.webp",
-      "back": "assets/images/cards/fieldstock/tpe-15-miguel-santos-tpe-back.webp",
+      "front": "assets/images/cards/fieldstock/tpe-15-miguel-santos-tpe-front-v3-clean.webp",
+      "back": "assets/images/cards/fieldstock/tpe-15-miguel-santos-tpe-back-clean.webp",
       "claim_open": false,
       "season": 2026,
       "stats": {

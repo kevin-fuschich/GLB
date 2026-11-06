@@ -361,7 +361,7 @@ p{line-height:1.58;color:#343a40}
 
     <section class="card" id="playerCardSection">
       <div class="card-head"><h2>Player Card</h2></div>
-      <div class="card-body"><div class="card-display" id="playerCard">Loading card…</div></div>
+      <div class="card-body"><p id="playerCardClaimGuide" hidden></p><div class="card-display" id="playerCard">Loading card…</div></div>
     </section>
 
     <section class="card">
@@ -759,6 +759,10 @@ async function loadPlayer(){
     ? fieldstockTeam.prefix.toUpperCase()+'-'+String(cardNumber).padStart(2,'0')
     : teamSlug.toUpperCase().slice(0,3)+'-'+playerSlug.toUpperCase();
   const claimable= (!fieldstockTeam?.claimable || fieldstockTeam.claimable.has(playerSlug));
+  const cardClaimGuide=document.getElementById('playerCardClaimGuide');
+  const numericClaimCode=['taipei-neon','monterrey-cementeros','tijuana-tecnicos'].includes(teamSlug);
+  cardClaimGuide.textContent='Select the card to flip it over. '+(numericClaimCode ? "To claim an open card, add a detail of your own and send it to GLB for review. If approved, GLB will publish your contribution with your user ID and send you a unique, private 16-digit code for the card." : "To claim an open card, add a detail of your own and send it to GLB for review. If approved, GLB will publish your contribution with your user ID and send you a private FIELDSTOCK code for the card.");
+  cardClaimGuide.hidden=false;
 
   if(['tijuana-tecnicos','monterrey-cementeros','taipei-neon'].includes(teamSlug) && fieldstockTeam&&cardNumber){
     cardHost.replaceChildren(GLBPlayerCards.createPhysicalCard({...player,teamSlug,slug:playerSlug},{link:false}));

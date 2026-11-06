@@ -17,8 +17,8 @@
       "card_id": "TPE-01",
       "player_slug": "kaito-ueda",
       "player_name": "Kaito Ueda",
-      "front": "assets/images/cards/fieldstock/tpe-01-kaito-ueda-front-v3.webp",
-      "back": "assets/images/cards/fieldstock/tpe-01-kaito-ueda-back.webp",
+      "front": "assets/images/cards/fieldstock/tpe-01-kaito-ueda-front-v3-clean.webp",
+      "back": "assets/images/cards/fieldstock/tpe-01-kaito-ueda-back-clean.webp",
       "claim_open": true,
       "season": 2026,
       "stats": {
@@ -73,8 +73,8 @@
       "card_id": "TPE-02",
       "player_slug": "adebayo-olumide",
       "player_name": "Adebayo Olumide",
-      "front": "assets/images/cards/fieldstock/tpe-02-adebayo-olumide-front-v3.webp",
-      "back": "assets/images/cards/fieldstock/tpe-02-adebayo-olumide-back.webp",
+      "front": "assets/images/cards/fieldstock/tpe-02-adebayo-olumide-front-v3-clean.webp",
+      "back": "assets/images/cards/fieldstock/tpe-02-adebayo-olumide-back-clean.webp",
       "claim_open": true,
       "season": 2026,
       "stats": {

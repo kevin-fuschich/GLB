@@ -42,12 +42,12 @@
       return panel;
     }
     if(pending.get(id)) {
-      state.textContent='Pending review · Watch your email for a decision.';
+      state.textContent='Request submitted on this device · Watch your email for a decision.';
       return panel;
     }
-    state.textContent='Open for claim';
+    state.textContent='Open for contributions';
     const details=create('details');
-    details.append(create('summary','Request this card + contribute a factoid'));
+    details.append(create('summary','Contribute to this card'));
     const form=create('form');
     form.action='https://formspree.io/f/mzezpeap';form.method='POST';
     for(const [name,value] of Object.entries({
@@ -64,13 +64,13 @@
       if(type!=='textarea')field.type=type;
       label.append(field);form.append(label);return field;
     };
-    const user=label('User ID','user_id','text');
-    user.minLength=3;user.maxLength=24;user.pattern='[A-Za-z0-9_-]{3,24}';
+    const user=label('Public contributor ID','user_id','text');
+    user.minLength=3;user.maxLength=24;user.pattern='[A-Za-z0-9_\\-]{3,24}';
     user.title='3–24 letters, numbers, underscores, or hyphens';user.autocomplete='username';
-    label('Email','email','email').autocomplete='email';
+    label('Email (private)','email','email').autocomplete='email';
     const fact=label('A grounded baseball factoid for this player','proposed_card_bio','textarea');
     fact.maxLength=180;fact.rows=3;
-    form.append(create('p','Requests and proposed factoids receive editorial review. If approved, your unique private 16-digit FIELDSTOCK code is sent by email. This form does not issue a code.','tpe-claim-note'));
+    form.append(create('p','If approved, your contributor ID appears on the card and we email you a private 16-digit FIELDSTOCK code. Your email and code stay private.','tpe-claim-note'));
     const button=create('button','Submit request');button.type='submit';
     const response=create('p');response.setAttribute('role','status');response.setAttribute('aria-live','polite');
     form.append(button,response);details.append(form);panel.append(details);
@@ -81,7 +81,7 @@
       try {
         const r=await fetch(form.action,{method:'POST',body:new FormData(form),headers:{Accept:'application/json'}});
         if(!r.ok)throw Error('Submission failed');
-        pending.set(id);details.remove();state.textContent='Pending review · Watch your email for a decision.';
+        pending.set(id);details.remove();state.textContent='Request submitted on this device · Watch your email for a decision.';
       } catch {
         button.disabled=false;button.textContent='Submit request';
         response.textContent='The request could not be submitted. Please try again.';

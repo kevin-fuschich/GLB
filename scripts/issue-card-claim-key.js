@@ -7,12 +7,16 @@ const { resolve } = require('node:path');
 const [cardId, userId] = process.argv.slice(2);
 if (!/^[A-Z]{3}-[A-Z0-9-]+$/.test(cardId || '') ||
     !/^[A-Za-z0-9_-]{3,24}$/.test(userId || '')) {
-  console.error('Usage: node scripts/issue-card-claim-key.js SPK-01 user_id');
+  console.error('Usage: node scripts/issue-card-claim-key.js TPE-01 user_id');
   process.exit(1);
 }
 
 const claimsPath = resolve(process.env.GLB_APPROVED_CLAIMS_PATH || 'data/cards/approved-claims.json');
-const cardsPath = resolve(process.env.GLB_CARD_REGISTRY_PATH || (cardId.startsWith('MTY-') ? 'data/cards/monterrey-cementeros.json' : 'data/cards/spokane-alloys.json'));
+const isTaipei = cardId.startsWith('TPE-');
+const defaultCardsPath = isTaipei ? 'data/cards/taipei-neon-series-01.json'
+  : cardId.startsWith('MTY-') ? 'data/cards/monterrey-cementeros.json'
+  : 'data/cards/spokane-alloys.json';
+const cardsPath = resolve(process.env.GLB_CARD_REGISTRY_PATH || defaultCardsPath);
 const registry = JSON.parse(readFileSync(claimsPath, 'utf8'));
 const cards = JSON.parse(readFileSync(cardsPath, 'utf8'));
 
@@ -20,7 +24,12 @@ if (registry.schema !== 'glb.approved-card-claims.v1' || !registry.claims) {
   throw new Error('Approved-claims registry has an unexpected schema.');
 }
 
-const validCardIds = new Set(cards.cards.filter(card => card.claimable !== false).map(card => card.card_id.replace(/-CURRENT$/, '')));
+if (isTaipei && (cards.schema !== 'glb.fieldstock-release.v1' || cards.team_slug !== 'taipei-neon')) {
+  throw new Error('Taipei release has an unexpected schema or club.');
+}
+const validCardIds = new Set(cards.cards
+  .filter(card => isTaipei ? card.claim_open === true : card.claimable !== false)
+  .map(card => card.card_id.replace(/-CURRENT$/, '')));
 if (!validCardIds.has(cardId)) {
   throw new Error(`${cardId} is not an available FIELDSTOCK artifact.`);
 }
@@ -29,10 +38,9 @@ if (registry.claims[cardId]) {
   throw new Error(`${cardId} is already claimed by ${registry.claims[cardId].user_id}.`);
 }
 
-const token = randomBytes(20).toString('hex').toUpperCase().match(/.{8}/g).join('-');
-const key = cardId.startsWith('MTY-')
+const key = isTaipei || cardId.startsWith('MTY-')
   ? String(randomInt(1, 10)) + Array.from({length:15}, () => randomInt(0, 10)).join('')
-  : `FST-${cardId}-${userId.toUpperCase()}-${token}`;
+  : `FST-${cardId}-${userId.toUpperCase()}-${randomBytes(20).toString('hex').toUpperCase().match(/.{8}/g).join('-')}`;
 
 registry.claims[cardId] = {
   user_id: userId,

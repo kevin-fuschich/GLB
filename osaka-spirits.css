@@ -1,0 +1,30 @@
+.osaka-page{--osaka-accent:#9a3525;--osaka-slate:#293740}
+.osaka-page .team-hero,.osaka-page .team-hero-inner{min-height:clamp(335px,46vw,600px)}
+.osaka-page .team-hero-image{object-position:50% 48%}
+.osaka-page .team-hero-shade{background:linear-gradient(0deg,rgba(9,15,20,.89),rgba(9,15,20,.18) 44%,transparent 70%),linear-gradient(90deg,rgba(9,15,20,.26),transparent 56%)}
+.osaka-page .team-hero-inner p{margin:6px 0 0;color:#eef1f3;font-size:15px}
+.osaka-page .full,.osaka-section-nav{grid-column:1/-1}
+.osaka-section-nav{display:flex;flex-wrap:wrap;gap:5px 18px;padding:11px 15px;background:#fff;border:1px solid var(--line);border-radius:12px}
+.osaka-section-nav a{padding:8px 4px;font-weight:700;color:var(--osaka-slate)}
+.osaka-page a:focus-visible{outline:2px solid var(--osaka-accent);outline-offset:3px}
+.osaka-section-nav a:hover,.osaka-table a:hover,.osaka-link-row a:hover{text-decoration:underline}
+.osaka-page .panel{scroll-margin-top:120px}
+.osaka-meta{color:var(--osaka-accent);font-size:11px;letter-spacing:.08em;font-weight:750;text-transform:uppercase}
+.osaka-page .summary{margin-bottom:14px}
+.osaka-link-row a,.osaka-table a{color:var(--osaka-slate);font-weight:740}
+.osaka-table{padding:0 20px 18px}
+.osaka-table table{border-collapse:collapse;width:100%;text-align:left}
+.osaka-table caption{text-align:left;color:var(--muted);padding:12px 0}
+.osaka-table th,.osaka-table td{padding:9px 8px;border-bottom:1px solid var(--line)}
+.osaka-table th:first-child{padding-left:0}
+.osaka-table thead th{font-size:11px;text-transform:uppercase;letter-spacing:.06em}
+.osaka-page #recent-results,.osaka-copy{padding:12px 20px}
+.osaka-copy p{max-width:68ch}
+.osaka-columns{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.osaka-columns h3{margin:4px 0}
+.osaka-copy figure{margin:0 0 12px}
+.osaka-copy figure img{width:100%;height:auto;display:block;border-radius:8px}
+.site-footer{--light:#fff}
+@media(max-width:900px){.osaka-page #roster,.osaka-page #results{grid-column:1/-1}}
+@media(max-width:650px){.osaka-page .team-hero,.osaka-page .team-hero-inner{min-height:330px}.osaka-page .team-hero-image{object-position:57% center}.osaka-columns{grid-template-columns:1fr;gap:14px}.osaka-table{padding-inline:12px}.osaka-section-nav{gap:2px 11px}}
+#voices figure img{aspect-ratio:3/2;object-fit:cover;object-position:50% 27%}

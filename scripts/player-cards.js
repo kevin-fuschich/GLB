@@ -43,10 +43,6 @@
       position: first.position, seasons: rows, batting, pitching };
   }
 
-  const palettes = [
-    ['#163a54', '#7ac0ca'], ['#422e52', '#d6a6d1'], ['#2b443f', '#a9c494'],
-    ['#523625', '#dda572'], ['#243a62', '#a9bfe1'], ['#524135', '#e2c68c']
-  ];
   const taipeiCards = {"kaito-ueda":1,"adebayo-olumide":2,"han-wei-tseng":3,"martin-echevarria":4,"dariusz-wierzbik":5,"owen-rasmusson":6,"eric-lawson":7,"jose-ramirez-tpe":8,"david-morales-tpe":9,"hiroto-kuzumi":10,"joaquin-iturriaga":11,"eitan-ben-sasson":12,"tsai-ming-hao":13,"idris-el-amin":14,"miguel-santos-tpe":15};
   function photoPath(player) {
     if (player.teamSlug === 'taipei-neon' && ['kaito-ueda','adebayo-olumide'].includes(player.slug)) return `assets/teams/taipei-neon/images/players/${player.slug}.webp`;
@@ -85,6 +81,7 @@
   const monterreyCards = {'emilio-zendejas':1,'masato-yanagisawa':2,'kofi-mensah':12,'andres-cazares':15};
   const tijuanaCardArt = {"rafael-montoya": "assets/images/cards/fieldstock/tij-01-rafael-montoya-front-photo.webp", "diego-verdugo": "assets/images/cards/fieldstock/tij-02-diego-verdugo-front-photo.webp", "esteban-arce": "assets/images/cards/fieldstock/tij-03-esteban-arce-front-photo.webp", "tomas-zepeda": "assets/images/cards/fieldstock/tij-04-tomas-zepeda-front-photo.webp", "mauricio-cota": "assets/images/cards/fieldstock/tij-05-mauricio-cota-front-photo.webp", "ivan-lizarraga": "assets/images/cards/fieldstock/tij-06-ivan-lizarraga-front-photo.webp", "julian-ochoa": "assets/images/cards/fieldstock/tij-07-julian-ochoa-front-photo.webp", "sergio-hinojosa": "assets/images/cards/fieldstock/tij-08-sergio-hinojosa-front-photo.webp", "bruno-valdes": "assets/images/cards/fieldstock/tij-09-bruno-valdes-front-photo.webp", "matias-camarena": "assets/images/cards/fieldstock/tij-10-matias-camarena-front-photo.webp", "nicolas-paredes": "assets/images/cards/fieldstock/tij-11-nicolas-paredes-front-photo.webp", "adrian-fierro": "assets/images/cards/fieldstock/tij-12-adrian-fierro-front-photo.webp", "emilio-barron": "assets/images/cards/fieldstock/tij-13-emilio-barron-front-photo.webp", "gael-marrufo": "assets/images/cards/fieldstock/tij-14-gael-marrufo-front-photo.webp", "cristobal-saucedo": "assets/images/cards/fieldstock/tij-15-cristobal-saucedo-front-photo.webp", "hector-belmonte": "assets/images/cards/fieldstock/tij-16-hector-belmonte-front-photo.webp"};
   function cardFront(player) {
+    if (player.teamSlug === 'spokane-alloys' && player.card_id) return `assets/images/cards/fieldstock/${player.card_id.toLowerCase()}-${player.slug}-front.webp`;
     if (player.teamSlug === 'osaka-spirits') return player.card_front || null;
     if (player.teamSlug === 'taipei-neon' && taipeiCards[player.slug]) return player.card_front || 'assets/images/cards/fieldstock/tpe-'+String(taipeiCards[player.slug]).padStart(2,'0')+'-'+player.slug+'-front.webp';
     if(player.teamSlug === 'tijuana-tecnicos' && tijuanaCards[player.slug]) return player.card_front || tijuanaCardArt[player.slug] || 'assets/images/cards/fieldstock/tij-'+String(tijuanaCards[player.slug]).padStart(2,'0')+'-'+player.slug+'-front.webp';
@@ -97,148 +94,151 @@
     if (className) element.className = className;
     return element;
   }
-  function createPhysicalCard(player, { link = true } = {}) {
-    const card = text('article', '', 'tij-physical-card');
-    const monterrey = player.teamSlug === 'monterrey-cementeros';
-    const taipei = player.teamSlug === 'taipei-neon';
-    if (monterrey) card.classList.add('mty-physical-card');
-    if (taipei) card.classList.add('tpe-physical-card');
-    const number = (taipei ? taipeiCards : monterrey ? monterreyCards : tijuanaCards)[player.slug];
-    const code = player.teamSlug === 'osaka-spirits' ? player.card_id : (taipei ? 'TPE-' : monterrey ? 'MTY-' : 'TIJ-') + String(number).padStart(2, '0');
-    const button = document.createElement('button');
-    button.type = 'button'; button.className = 'tij-card-flipper';
-    const inner = text('span', '', 'tij-card-inner');
-    const front = document.createElement('img'), back = document.createElement('img');
-    front.className = 'tij-card-photo tij-card-photo--front';
-    back.className = 'tij-card-photo tij-card-photo--back';
-    front.loading = back.loading = 'lazy';
-    front.src = cardFront(player);
-    back.src = player.card_back || front.src.replace(/-front-photo\.webp$/, '-back-photo.webp');
-    front.alt = (player.card_front_alt || 'Photograph of ' + player.name) + ' · ' + code + ' physical card front';
-    back.alt = 'Photograph of ' + player.name + ' ' + code + ' physical card back, with player information and 2026 statistics';
-    const hint = text('p', '', 'tij-card-flip-note');
-    const status = text('p', '', 'tij-card-error');
-    status.setAttribute('role', 'status'); status.hidden = true;
-    let flipped = false;
-    const update = () => {
-      button.classList.toggle('is-flipped', flipped);
-      button.setAttribute('aria-pressed', String(flipped));
-      button.setAttribute('aria-label', player.name + ' ' + code + ' card. ' + (flipped ? 'Back shown. Activate to view front.' : 'Front shown. Activate to view back.'));
-      front.setAttribute('aria-hidden', String(flipped)); back.setAttribute('aria-hidden', String(!flipped));
-      hint.textContent = 'Tap card to flip · ' + (flipped ? 'Back shown' : 'Front shown');
-    };
-    button.addEventListener('click', () => { flipped = !flipped; update(); });
-    for (const image of [front, back]) image.addEventListener('error', () => {status.hidden = false;status.textContent = 'A card image could not load. Please refresh.';});
-    inner.append(front, back); button.append(inner); card.append(button, hint);
-    update();
-    const identity = text('div', '', 'tij-card-identity');
-    identity.append(text('strong', player.name), text('span', code + ' · ' + player.position + (player.rookie ? ' · Rookie' : '')));
-    card.append(identity, status);
-    if (link) {
-      const file = text('a', 'Player file →', 'tij-card-file');
-      file.href = 'player.html?team=' + encodeURIComponent(player.teamSlug) + '&player=' + encodeURIComponent(player.slug);
-      card.append(file);
-    }
-    return card;
+  const brandRoot = new URL('../assets/fieldstock/', document.currentScript.src).href;
+  const teamAccents = {
+    'durham-gold':'#d9ad65', 'spokane-alloys':'#8bbfc0', 'vancouver-current':'#65b1bf',
+    'taipei-neon':'#a594d9', 'osaka-spirits':'#9175b3',
+    'monterrey-cementeros':'#df81a1', 'tijuana-tecnicos':'#a5b95e'
+  };
+  const prefixes = {'spokane-alloys':'SPK','vancouver-current':'VAN','taipei-neon':'TPE',
+    'osaka-spirits':'OSA','tijuana-tecnicos':'TIJ','monterrey-cementeros':'MTY','durham-gold':'DUR','albuquerque-aeros':'ABQ',
+    'fresno-yield':'FRE','st-paul-frost':'STP','birmingham-vulcans':'BIR','toledo-assembly':'TOL',
+    'louisville-naturals':'LOU','san-pedro-cocolos':'SPD','santiago-caballeros':'SAN','mayaguez-sultans':'MAY'};
+  const rosterRequests = new Map();
+  let seasonRequest;
+  let designRequest;
+  async function readRoster(slug) {
+    if (!rosterRequests.has(slug)) rosterRequests.set(slug, fetch(`data/rosters/${slug}.json`)
+      .then(response => { if (!response.ok) throw Error('Roster unavailable'); return response.json(); }));
+    return rosterRequests.get(slug);
   }
-  function createCard(player, record, { link = true } = {}) {
-    if ((player.teamSlug === 'taipei-neon' && taipeiCards[player.slug]) || (player.teamSlug === 'tijuana-tecnicos' && tijuanaCards[player.slug]) || (player.teamSlug === 'monterrey-cementeros' && monterreyCards[player.slug])) return createPhysicalCard(player, {link});
-    const card = document.createElement(link ? 'a' : 'article');
-    card.className = 'glb-player-card';
-    if (link) card.href = `player.html?team=${encodeURIComponent(player.teamSlug)}&player=${encodeURIComponent(player.slug)}`;
-    card.setAttribute('aria-label', `${player.name}, ${player.position}, ${player.teamName} player card`);
-    const palette = player.teamSlug === 'durham-gold' ? ['#18283d', '#d9ad65'] :
-      palettes[[...player.teamSlug].reduce((sum, char) => sum + char.charCodeAt(0), 0) % palettes.length];
-    card.style.setProperty('--player-deep', palette[0]);
-    card.style.setProperty('--player-accent', palette[1]);
-    const top = text('div', '', 'glb-player-card__top');
-    top.append(text('span', 'FIELDSTOCK', 'glb-player-card__mark'), text('span', '2026 Player Card', 'glb-player-card__edition'));
-    const portrait = text('div', '', 'glb-player-card__portrait');
-    const initials = () => {
-      const badge = portrait.querySelector('.glb-player-card__position');
-      portrait.replaceChildren(text('span', player.name.split(/\s+/).slice(0, 2)
-        .map(part => part[0]).join(''), 'glb-player-card__initials'));
-      if (badge) portrait.append(badge);
-    };
+  function brand() {
+    const lockup = text('span', '', 'fs-brand');
+    for (const [file, className] of [['symbol.svg','fs-symbol'],['wordmark.svg','fs-wordmark']]) {
+      const image = document.createElement('img');
+      image.src = brandRoot + file; image.alt = ''; image.className = className;
+      lockup.append(image);
+    }
+    lockup.setAttribute('aria-label', 'FIELDSTOCK');
+    return lockup;
+  }
+  // Crop only the photograph out of older printed artwork at display time.
+  // Source files and their original card designs remain archival assets.
+  function photograph(player) {
     const recovered = recoveredPortrait(player);
-    const source = photoPath(player);
-    if (recovered) { portrait.append(recovered); } else if (source) {
-      const img = document.createElement('img');
-      img.src = source;
-      img.alt = `${player.name} portrait`;
-      img.loading = 'lazy';
-      img.onerror = initials;
-      portrait.append(img);
-    } else initials();
-    portrait.append(text('span', player.position, 'glb-player-card__position'));
-    const identity = text('div', '', 'glb-player-card__identity');
-    identity.append(text('span', player.teamName, 'glb-player-card__club'),
-      text('strong', player.name, 'glb-player-card__name'));
-    const stats = text('div', '', 'glb-player-card__stats');
-    const pitcher = ['SP', 'RP', 'CL'].includes(player.position);
-    const metrics = pitcher
-      ? [['IP', record?.pitching.IP], ['K', record?.pitching.K], [player.position === 'SP' ? 'W' : 'SV', player.position === 'SP' ? record?.pitching.W : record?.pitching.SV]]
-      : [['AVG', record?.batting.AVG], ['HR', record?.batting.HR], ['RBI', record?.batting.RBI]];
-    for (const [label, value] of metrics) {
-      const item = text('div', '', 'glb-player-card__stat');
-      item.append(text('strong', value ?? '—'), text('span', label));
-      stats.append(item);
+    if (recovered) return recovered;
+    const art = cardFront(player);
+    const portrait = photoPath(player);
+    const source = player.photo_source || (portrait?.endsWith('portrait-pending.svg') ? art : portrait || art);
+    if (!source) return text('span', player.name.split(/\s+/).map(part => part[0]).slice(0,2).join(''), 'fs-initials');
+    const image = document.createElement('img');
+    image.src = source; image.loading = 'lazy'; image.alt = player.card_front_alt || player.name;
+    image.className = 'fs-photo-image';
+    image.addEventListener('error', () => image.replaceWith(text('span', 'Photo pending', 'fs-initials')), {once:true});
+    if (source !== art && !player.photo_crop) return image;
+    const crops = {'spokane-alloys':[.15,.21,.70,.51], 'osaka-spirits':[.044,.083,.912,.728], 'taipei-neon':[.05,.10,.90,.68],
+      'tijuana-tecnicos':[.14,.17,.75,.62], 'monterrey-cementeros':[.135,.135,.73,.64]};
+    const crop = player.photo_crop || crops[player.teamSlug];
+    if (!crop) return image;
+    const svg = document.createElementNS('http://www.w3.org/2000/svg','svg');
+    svg.classList.add('fs-photo-image'); svg.setAttribute('preserveAspectRatio','xMidYMid slice');
+    svg.setAttribute('role','img'); svg.setAttribute('aria-label', image.alt);
+    const photo = document.createElementNS(svg.namespaceURI,'image');
+    photo.setAttribute('href',source);
+    image.addEventListener('load', () => {
+      const w=image.naturalWidth, h=image.naturalHeight;
+      svg.setAttribute('viewBox',`${crop[0]*w} ${crop[1]*h} ${crop[2]*w} ${crop[3]*h}`);
+      photo.setAttribute('width',w);photo.setAttribute('height',h);
+      svg.append(photo);
+    }, {once:true});
+    image.addEventListener('error', () => svg.replaceWith(text('span','Photo pending','fs-initials')), {once:true});
+    return svg;
+  }
+  function seasonTable(player, record) {
+    const pitcher = ['P','SP','RP','CL'].includes(player.position);
+    const keys = pitcher ? ['G','IP','W','L','SV','K','ERA'] : ['G','AB','H','HR','RBI','AVG','OPS'];
+    const table = document.createElement('table');table.className='fs-stats';
+    const caption=text('caption','2026 Season');table.append(caption);
+    const head=document.createElement('thead'), headings=document.createElement('tr');
+    for (const label of ['CLUB',...keys]) {const th=text('th',label);th.scope='col';headings.append(th);}
+    head.append(headings);table.append(head);
+    const body=document.createElement('tbody'), row=document.createElement('tr');
+    const season=record?.seasons?.find(row => Number(row.year)===2026);
+    const stats=season?.[pitcher?'pitching':'batting'];
+    row.append(text('td',prefixes[player.teamSlug] || player.teamSlug.slice(0,3).toUpperCase()));
+    for (const key of keys) {
+      let value=stats?.[key];
+      if (key==='IP' && value===undefined && stats?.OUTS!==undefined) value=`${Math.floor(stats.OUTS/3)}.${stats.OUTS%3}`;
+      row.append(text('td',value));
     }
-    const front=document.createElement('div'); front.className='glb-player-card__front'; front.append(top, portrait, identity, stats, text('div','Official 2026 season record','glb-player-card__footer'));
-    const back=document.createElement('div'); back.className='glb-player-card__back';
-    const notes={"kellan-brynden":"Keeps a notebook of every hotel ice machine he has ever trusted.","oskar-svanholm":"Can identify most Pacific Northwest birds by sound, but refuses to explain how.","mateusz-kasprowicz":"Carries a tiny level in his glove bag and checks the clubhouse tables before every start.","diego-alvarez-mora":"Makes elaborate grilled-cheese sandwiches for teammates after late arrivals.","lukas-havel":"Collects perfectly round stones and labels them by where he found them.","caleb-reidman":"Has never lost a game of Connect Four on a team flight.","sergio-ibarra-lugo":"Keeps a running list of the best vending-machine snacks in every visiting park.","yaw-mensah":"Ties one bright orange lace before every appearance, even when both laces are already tied.","nikolai-dobrynin":"Can repair a broken zipper with fishing line and a dugout sunflower-seed packet.","evan-carroll-iv":"Knows the exact weight of his favorite first-base mitt to the nearest gram.","marco-delvecchio":"Names every houseplant after a retired infielder.","tomasz-kubas":"Practices turning double plays with two paperback books when traveling.","andres-mireles":"Keeps a photo of every ballpark sunrise he has seen before batting practice.","wyatt-hollander":"Once played an entire road trip wearing mismatched socks and called it a career high point.","luis-quinones":"Makes a different playlist for every series, including one song chosen by the clubhouse cleaner.","pieter-van-wyk":"Builds miniature wooden scoreboards during the offseason."};
-    const spokaneCards=['kellan-brynden','oskar-svanholm','mateusz-kasprowicz','diego-alvarez-mora','lukas-havel','caleb-reidman','sergio-ibarra-lugo','yaw-mensah','nikolai-dobrynin','evan-carroll-iv','marco-delvecchio','tomasz-kubas','andres-mireles','wyatt-hollander','luis-quinones','pieter-van-wyk','jonah-sato','rene-bouchard','malachi-boone','dae-hyun-park','tesfaye-mebrahtu','benoit-leduc','hamza-qureshi','ellis-wren','miguel-angel-serrano','branislav-vukovic'];
-    const serial=player.teamSlug==='spokane-alloys'?'SPK-'+String(spokaneCards.indexOf(player.slug)+1).padStart(2,'0'):'GLB-'+player.slug.toUpperCase();
-    const identityLine=[player.height,player.weight?`${player.weight} lb`:null,player.birthplace].filter(Boolean).join(' · ');
-    back.append(text('div','FIELDSTOCK · '+player.teamName,'glb-player-card__backmark'),text('h3',player.name,'glb-player-card__backname'),text('p',player.position+' · '+(record?.seasons?.length||1)+' recorded season(s)','glb-player-card__backcopy'),text('p',identityLine||'Official '+player.teamName+' player record','glb-player-card__backcopy'),text('p',player.field_note||notes[player.slug]||'Additional player notes are opening soon.','glb-player-card__backcopy'),text('div',serial,'glb-player-card__serial'),text('div','Tap to return to front','glb-player-card__fliphint'));
-    const physicalFront = cardFront(player);
-    if (physicalFront && player.teamSlug === 'tijuana-tecnicos') {
-      card.style.setProperty('border','0','important');
-      front.style.cssText='padding:0;border:0!important;background:none;display:block;height:100%';
-      const art=document.createElement('img');art.src=physicalFront;art.alt=player.name+' FIELDSTOCK card front';art.style.cssText='width:100%;height:100%;object-fit:contain';front.replaceChildren(art);
-      const reverse=document.createElement('img');reverse.src=player.card_back||physicalFront.replace(/-front(-v\d+)?\.webp$/, '-back$1.svg');reverse.alt=player.name+' FIELDSTOCK card back';reverse.style.cssText='width:100%;height:100%;object-fit:contain';
-      back.style.cssText='padding:0;border:0!important;background:none';back.replaceChildren(reverse);
-      card.tabIndex=0;card.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();card.classList.toggle('is-flipped')}});
-    } else if (physicalFront) {
-      card.style.setProperty('border','0','important');
-      card.style.setProperty('background','#fffaf1','important');
-      front.style.cssText='padding:0;border:0!important;background:none;display:block;height:100%';
-      const art=document.createElement('img');art.src=physicalFront;art.alt=player.name+' physical FIELDSTOCK card front';art.style.cssText='display:block;width:100%;height:100%;object-fit:contain';
-      front.replaceChildren(art);
-      back.style.setProperty('background','#fffaf1','important');
-      back.style.color='#6b294c';
-      for(const child of back.children)child.style.color='#6b294c';
-      back.querySelector('.glb-player-card__serial').textContent='MTY-'+String(monterreyCards[player.slug]).padStart(2,'0');
-      const statLine=metrics.map(([label,value])=>(value??'—')+' '+label).join(' · ');
-      back.insertBefore(text('p','Recorded totals · '+statLine,'glb-player-card__backcopy'),back.querySelector('.glb-player-card__serial'));
-      const clubNotes = {
-        'emilio-zendejas':'Marks every bullpen session in a pocket scorebook; a clean inning earns a small pink square.',
-        'masato-yanagisawa':'Rehearses his pickoff footwork on the hotel carpet using two rolled-up socks as bases.',
-        'kofi-mensah':'Keeps a tally of every double play turned with a different second baseman.',
-        'andres-cazares':'Labels batting-practice bats by the outfield gap he is trying to reach that day.'
-      };
-      back.children[4].textContent=player.field_note||clubNotes[player.slug];
-      back.firstElementChild.textContent=player.teamName;
-      back.firstElementChild.style.cssText='color:#6b294c;font-size:10px;letter-spacing:1px';
-      const season=record?.seasons?.find(row=>Number(row.year)===2026);
-      const seasonStats=pitcher?season?.pitching:season?.batting;
-      const seasonLine=(pitcher?['IP','K','ERA']:['AVG','HR','RBI'])
-        .map(label=>(seasonStats?.[label]??'—')+' '+label).join(' · ');
-      back.querySelector('.glb-player-card__serial').previousElementSibling.textContent='2026 · '+seasonLine;
-      back.lastElementChild.textContent='FIELDSTOCK · Public preview · Tap to return';
-      back.lastElementChild.style.cssText='color:#876b77;font-size:8px;letter-spacing:.4px';
-      card.style.setProperty('--player-deep','#6b294c');
-      card.style.setProperty('--player-accent','#e84b91');
-      card.tabIndex=0;
-      card.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();card.classList.toggle('is-flipped')}});
+    body.append(row);table.append(body);return table;
+  }
+  function reverse(player, record, code) {
+    const back=text('div','','fs-face fs-back');
+    const header=text('div','','fs-back-header');header.append(brand(),text('span',code));
+    back.append(header,text('strong',player.name,'fs-back-name'),
+      text('div',`${player.teamName} / ${player.position}`,'fs-back-club'));
+    const facts=text('dl','','fs-facts');
+    for (const [label,value] of [['BORN',player.dob],['BIRTHPLACE',player.birthplace],
+      ['HT',player.height],['WT',player.weight ? `${player.weight} lb` : null],['BATS',player.bats],['THROWS',player.throws]]) {
+      const item=text('div','');item.append(text('dt',label),text('dd',value));facts.append(item);
     }
-    card.replaceChildren(front,back); card.addEventListener('click',e=>{if(e.target.closest('a'))return;e.preventDefault();card.classList.toggle('is-flipped')});
+    back.append(facts,seasonTable(player,record));
+    const report=text('section','','fs-report');
+    report.append(text('h4','PLAYER RECORD'),text('p',player.scouting_report || player.bio ||
+      `${player.position} · ${player.teamName}. Bats ${player.bats || '—'}, throws ${player.throws || '—'}.`));
+    const note=text('section','','fs-record');
+    note.append(text('h4','FROM THE RECORD'),text('p',player.factoid || player.field_note || 'Additional player details await contribution.'));
+    const footer=text('div','','fs-back-footer');footer.append(text('span','GLB'),text('span','◆'),text('span','FIELDSTOCK 2026'));
+    back.append(report,note,footer);return back;
+  }
+  function createCard(player, record, {link=true}={}) {
+    const card=text('article','','fs-card');
+    const button=document.createElement('button');button.type='button';button.className='fs-flipper';
+    const inner=text('span','','fs-inner');
+    let flipped=false;
+    const update=()=>{
+      button.classList.toggle('is-flipped',flipped);button.setAttribute('aria-pressed',String(flipped));
+      button.setAttribute('aria-label',`${player.name} FIELDSTOCK card. ${flipped?'Back':'Front'} shown. Activate to flip.`);
+      inner.children[0]?.setAttribute('aria-hidden',String(flipped));
+      inner.children[1]?.setAttribute('aria-hidden',String(!flipped));
+    };
+    const paint=(data,stats)=>{
+      const name=data.teamName || data.teamSlug.split('-').map(word=>word[0].toUpperCase()+word.slice(1)).join(' ');
+      data={...data,teamName:name};
+      const code=data.card_id || `${prefixes[data.teamSlug] || data.teamSlug.slice(0,3).toUpperCase()} · ${data.position}`;
+      card.style.setProperty('--fs-accent',teamAccents[data.teamSlug] || '#dfb65d');
+      const front=text('span','','fs-face fs-front');
+      const photo=text('span','','fs-photo');photo.append(photograph(data));
+      const mark=brand();mark.classList.add('fs-front-brand');
+      const plate=text('span','','fs-nameplate');
+      plate.append(text('strong',data.name,'fs-name'),text('span',`${name} • ${data.position}`,'fs-club'),text('span','2026','fs-year'));
+      front.append(photo,mark,plate);inner.replaceChildren(front,reverse(data,stats,code));update();
+    };
+    button.addEventListener('click',()=>{flipped=!flipped;update();});
+    button.append(inner);card.append(button,text('p','Select card to flip','fs-flip-note'));
+    if(link){const file=text('a','Player file →','fs-file');file.href=`player.html?team=${encodeURIComponent(player.teamSlug)}&player=${encodeURIComponent(player.slug)}`;card.append(file);}
+    paint(player,record);
+    // Read canonical roster details and one shared season request for all cards on the page.
+    const roster=readRoster(player.teamSlug).catch(()=>null);
+    seasonRequest ||= loadSeasons().catch(()=>null);
+    designRequest ||= fetch('data/cards/fieldstock-2026.json')
+      .then(response=>{if(!response.ok)throw Error('Design records unavailable');return response.json();}).catch(()=>null);
+    Promise.all([roster,seasonRequest,designRequest]).then(([roster,seasons,design])=>{
+      const index=roster?.players.findIndex(row=>row.slug===player.slug) ?? -1;
+      const canonical=index>=0 ? roster.players[index] : {};
+      const data={...design?.players?.[player.teamSlug+'/'+player.slug],...player,...canonical,teamName:roster?.team || player.teamName};
+      const numbered = player.teamSlug==='spokane-alloys' ||
+        (player.teamSlug==='vancouver-current' && index<8) ||
+        (player.teamSlug==='tijuana-tecnicos' && tijuanaCards[player.slug]) ||
+        (player.teamSlug==='monterrey-cementeros' && monterreyCards[player.slug]);
+      data.card_id ||= numbered && index>=0
+        ? `${prefixes[player.teamSlug]}-${String(index+1).padStart(2,'0')}`
+        : player.teamSlug.slice(0,3).toUpperCase()+'-'+player.slug.toUpperCase();
+      paint(data,seasons ? careerFor(player.slug,seasons) : record);
+    });
     return card;
   }
-
-  window.GLBPlayerCards = { loadSeasons, careerFor, createCard, photoPath, recoveredPortrait, cardFront, createPhysicalCard };
+  function createPhysicalCard(player,options) { return createCard(player,null,options); }
+  window.GLBPlayerCards = {loadSeasons,careerFor,createCard,photoPath,recoveredPortrait,cardFront,createPhysicalCard};
 })();
-
-
-
-

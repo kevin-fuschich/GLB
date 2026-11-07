@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Player Cards | GLB</title>
   <link rel="stylesheet" href="season.css">
-  <link rel="stylesheet" href="player-cards.css">
+
   <style>
     .filters{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:20px}
     .filters label{display:block;margin-bottom:6px;font-weight:700}
@@ -13,6 +13,7 @@
     .player-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:24px}
     .player-grid .glb-player-card{align-self:start}
   </style>
+<link rel="stylesheet" href="player-cards.css?v=fieldstock-2026-1">
 </head>
 <body>
   <header>
@@ -31,7 +32,7 @@
       <div class="player-grid" id="players"></div>
     </div>
   </main>
-  <script src="scripts/player-cards.js?v=20260913b"></script>
+  <script src="scripts/player-cards.js?v=fieldstock-2026-1"></script>
   <script>
     (async () => {
       const get = async path => {

@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>GLB Player File</title>
-<link rel="stylesheet" href="player-cards.css">
+
 <style>
 :root{
   --ink:#111;
@@ -270,7 +270,8 @@ p{line-height:1.58;color:#343a40}
 .glb-player-card.is-flipped:hover{transform:rotateY(180deg) translateY(-4px)!important}
 @media(prefers-reduced-motion:reduce){.glb-player-card{transition:none!important}}
 </style>
-<link rel="stylesheet" href="taipei-cards.css?v=20261024-roster"><link rel="stylesheet" href="tijuana-cards.css?v=20261011-physical-flips"></head>
+<link rel="stylesheet" href="taipei-cards.css?v=20261024-roster"><link rel="stylesheet" href="tijuana-cards.css?v=20261011-physical-flips"><link rel="stylesheet" href="player-cards.css?v=fieldstock-2026-1">
+</head>
 
 <body>
 
@@ -467,7 +468,7 @@ p{line-height:1.58;color:#343a40}
   </div>
 </footer>
 
-<script src="scripts/player-cards.js?v=osaka-01"></script>
+<script src="scripts/player-cards.js?v=fieldstock-2026-1"></script>
 <script src="scripts/taipei-cards.js?v=osaka-01"></script>
 <script>
 const params = new URLSearchParams(window.location.search);
@@ -765,35 +766,7 @@ async function loadPlayer(){
   cardClaimGuide.textContent='Select the card to flip it over. '+(numericClaimCode ? "To claim an open card, add a detail of your own and send it to GLB for review. If approved, GLB will publish your contribution with your user ID and send you a unique, private 16-digit code for the card." : "To claim an open card, add a detail of your own and send it to GLB for review. If approved, GLB will publish your contribution with your user ID and send you a private FIELDSTOCK code for the card.");
   cardClaimGuide.hidden=false;
 
-  if(osakaCard || (['tijuana-tecnicos','monterrey-cementeros','taipei-neon'].includes(teamSlug) && fieldstockTeam&&cardNumber)){
-    cardHost.replaceChildren(GLBPlayerCards.createPhysicalCard({...player,teamSlug,slug:playerSlug},{link:false}));
-  }else if(teamSlug==='spokane-alloys' && fieldstockTeam&&cardNumber){
-    const prefix=fieldstockTeam.prefix+'-'+String(cardNumber).padStart(2,'0')+'-'+playerSlug;
-    const physical=document.createElement('article');
-    physical.className='fieldstock-player-card';
-    physical.tabIndex=0;
-    physical.setAttribute('aria-label',playerName+' FIELDSTOCK card. Press Enter to flip.');
-    const front=document.createElement('img');
-    front.className='fieldstock-player-card__face';
-    front.src=teamSlug==='tijuana-tecnicos'?GLBPlayerCards.cardFront({...player,teamSlug,slug:playerSlug}):'assets/images/cards/fieldstock/'+prefix+'-front.webp';
-    front.alt='Front of '+playerName+' FIELDSTOCK '+cardId+' card';
-    const back=document.createElement('img');
-    back.className='fieldstock-player-card__face fieldstock-player-card__back';
-    back.src=teamSlug==='tijuana-tecnicos'?player.card_back:'assets/images/cards/fieldstock/'+prefix+'-back.webp';
-    back.alt='Back of '+playerName+' FIELDSTOCK card';
-    const fallBack=()=>cardHost.replaceChildren(GLBPlayerCards.createCard({...player,slug:playerSlug,name:playerName,teamSlug,teamName:team.teamName},record,{link:false}));
-    front.addEventListener('error',fallBack,{once:true});
-    back.addEventListener('error',fallBack,{once:true});
-    physical.append(front,back);
-    physical.addEventListener('click',()=>physical.classList.toggle('is-flipped'));
-    physical.addEventListener('keydown',event=>{if(event.key==='Enter'||event.key===' '){event.preventDefault();physical.classList.toggle('is-flipped')}});
-    const hint=document.createElement('p');
-    hint.className='fieldstock-flip-note';
-    hint.textContent='Select card to view reverse';
-    cardHost.replaceChildren(physical,hint);
-  }else{
-    cardHost.replaceChildren(GLBPlayerCards.createCard({...player,slug:playerSlug,name:playerName,teamSlug,teamName:team.teamName},record,{link:false}));
-  }
+  cardHost.replaceChildren(GLBPlayerCards.createCard({...player,slug:playerSlug,name:playerName,teamSlug,teamName:team.teamName,card_id:player.card_id || cardId},record,{link:false}));
 
   if(osakaCard){
     cardHost.append(await TaipeiFieldstock.createClaimPanel(player,{teamSlug,teamName:team.teamName}));

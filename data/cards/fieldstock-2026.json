@@ -1,0 +1,283 @@
+{
+  "schema": "glb.fieldstock-design-records.v1",
+  "season": 2026,
+  "source": "Biographical details and field notes transcribed from existing FIELDSTOCK backs and club pages. Season statistics use the season index.",
+  "players": {
+    "spokane-alloys/kellan-brynden": {
+      "field_note": "Keeps a small vial of mound dirt from every ballpark where he earns a win. Each is labeled with the final pitch and given to his father after the season.",
+      "dob": "1997-02-18",
+      "birthplace": "Missoula, Montana",
+      "height": "6′3″",
+      "weight": 212
+    },
+    "spokane-alloys/oskar-svanholm": {
+      "field_note": "Builds small wooden radios during road trips and gives them to clubhouse attendants.",
+      "dob": "1999-11-04",
+      "birthplace": "Malmö, Sweden",
+      "height": "6′1″",
+      "weight": 196
+    },
+    "spokane-alloys/mateusz-kasprowicz": {
+      "field_note": "Once finished a rain-delay crossword in ink before the grounds crew removed the tarp.",
+      "dob": "1995-03-21",
+      "birthplace": "Gdańsk, Poland",
+      "height": "6′4″",
+      "weight": 225
+    },
+    "spokane-alloys/diego-alvarez-mora": {
+      "field_note": "Calls his mother after every start, but refuses to discuss baseball until she brings it up.",
+      "dob": "1998-08-09",
+      "birthplace": "San José, Costa Rica",
+      "height": "6′2″",
+      "weight": 205
+    },
+    "spokane-alloys/lukas-havel": {
+      "field_note": "Carries one glove from his first professional season and has repaired it eleven times.",
+      "dob": "2002-05-16",
+      "birthplace": "Brno, Czechia",
+      "height": "6′6″",
+      "weight": 198
+    },
+    "spokane-alloys/caleb-reidman": {
+      "field_note": "Can identify most Inland Northwest birds by sound and keeps a running list by ballpark.",
+      "dob": "1998-01-27",
+      "birthplace": "Toledo, Ohio",
+      "height": "6′0″",
+      "weight": 228
+    },
+    "spokane-alloys/sergio-ibarra-lugo": {
+      "field_note": "Learned sleight of hand from an uncle and is banned from dealing clubhouse card games.",
+      "dob": "2001-09-12",
+      "birthplace": "Hermosillo, Mexico",
+      "height": "5′11″",
+      "weight": 214
+    },
+    "spokane-alloys/yaw-mensah": {
+      "field_note": "Orders the same breakfast in every city, then ranks each version in a private spreadsheet.",
+      "dob": "1994-12-03",
+      "birthplace": "Accra, Ghana",
+      "height": "6′2″",
+      "weight": 218
+    },
+    "spokane-alloys/nikolai-dobrynin": {
+      "field_note": "Restores old catcher’s masks and has never sold one from his collection.",
+      "dob": "1996-06-22",
+      "birthplace": "Novosibirsk, Russia",
+      "height": "6′1″",
+      "weight": 224
+    },
+    "spokane-alloys/evan-carroll-iv": {
+      "field_note": "Reads municipal planning documents on flights and remembers unusual zoning disputes.",
+      "dob": "1993-04-11",
+      "birthplace": "Lexington, Kentucky",
+      "height": "6′5″",
+      "weight": 245
+    },
+    "spokane-alloys/marco-delvecchio": {
+      "field_note": "Maintains a map of the best public staircases in every GLB city.",
+      "dob": "1999-07-29",
+      "birthplace": "Providence, Rhode Island",
+      "height": "5′9″",
+      "weight": 178
+    },
+    "spokane-alloys/tomasz-kubas": {
+      "field_note": "Was briefly the drummer in a wedding band and still carries sticks in his equipment bag.",
+      "dob": "2002-10-06",
+      "birthplace": "Kraków, Poland",
+      "height": "6′1″",
+      "weight": 188
+    },
+    "spokane-alloys/andres-mireles": {
+      "field_note": "Collects grocery-store receipts from memorable road wins and labels them by final score."
+    },
+    "spokane-alloys/wyatt-hollander": {
+      "field_note": "Practices photography from the dugout but rarely photographs the field itself.",
+      "dob": "2000-03-08",
+      "birthplace": "Yakima, Washington",
+      "height": "6′2″",
+      "weight": 194
+    },
+    "spokane-alloys/luis-quinones": {
+      "field_note": "Speaks to his bats in two languages and insists the conversations are strictly professional.",
+      "dob": "1998-09-23",
+      "birthplace": "San Juan, Puerto Rico",
+      "height": "6′0″",
+      "weight": 190
+    },
+    "spokane-alloys/pieter-van-wyk": {
+      "field_note": "Has prepared the same pregame sandwich since age nineteen and cuts it into exact thirds.",
+      "dob": "1996-02-02",
+      "birthplace": "Pretoria, South Africa",
+      "height": "6′3″",
+      "weight": 208
+    },
+    "spokane-alloys/jonah-sato": {
+      "field_note": "Keeps a pocket notebook of every foul ball that reaches the first-base camera well.",
+      "dob": "2000-07-14",
+      "birthplace": "Tacoma, Washington",
+      "height": "5′10″",
+      "weight": 192,
+      "photo_source": "assets/images/cards/fieldstock/spk-17-jonah-sato-front.webp",
+      "photo_crop": [
+        0.16,
+        0.22,
+        0.68,
+        0.49
+      ]
+    },
+    "spokane-alloys/rene-bouchard": {
+      "field_note": "Re-laces his first baseman's mitt with the same awl he uses to repair fishing creels.",
+      "dob": "1994-02-09",
+      "birthplace": "Quebec City, Quebec",
+      "height": "6′2″",
+      "weight": 224,
+      "photo_source": "assets/images/cards/fieldstock/spk-18-rene-bouchard-front.webp",
+      "photo_crop": [
+        0.16,
+        0.22,
+        0.68,
+        0.49
+      ]
+    },
+    "spokane-alloys/malachi-boone": {
+      "field_note": "Can identify every Spokane infield hop by the sound it makes off the dirt.",
+      "dob": "2001-05-22",
+      "birthplace": "Richmond, Virginia",
+      "height": "5′8″",
+      "weight": 176,
+      "photo_source": "assets/images/cards/fieldstock/spk-19-malachi-boone-front.webp",
+      "photo_crop": [
+        0.16,
+        0.22,
+        0.68,
+        0.49
+      ]
+    },
+    "spokane-alloys/dae-hyun-park": {
+      "field_note": "Marks the warning-track depth in shoe lengths at every park before batting practice.",
+      "dob": "2003-03-18",
+      "birthplace": "Busan, South Korea",
+      "height": "6′0″",
+      "weight": 183,
+      "photo_source": "assets/images/cards/fieldstock/spk-20-dae-hyun-park-front.webp",
+      "photo_crop": [
+        0.16,
+        0.22,
+        0.68,
+        0.49
+      ]
+    },
+    "spokane-alloys/tesfaye-mebrahtu": {
+      "field_note": "Judges fly-ball carry by watching the flags above the right-field light tower.",
+      "dob": "1998-08-30",
+      "birthplace": "Asmara, Eritrea",
+      "height": "6′1″",
+      "weight": 188,
+      "photo_source": "assets/images/cards/fieldstock/spk-21-tesfaye-mebrahtu-front.webp",
+      "photo_crop": [
+        0.16,
+        0.22,
+        0.68,
+        0.49
+      ]
+    },
+    "spokane-alloys/benoit-leduc": {
+      "field_note": "Counts bullpen warmup pitches in French and starts over whenever a ball touches the dirt.",
+      "dob": "1997-01-11",
+      "birthplace": "Trois-Rivières, Quebec",
+      "height": "6′3″",
+      "weight": 210,
+      "photo_source": "assets/images/cards/fieldstock/spk-22-benoit-leduc-front.webp",
+      "photo_crop": [
+        0.16,
+        0.22,
+        0.68,
+        0.49
+      ]
+    },
+    "spokane-alloys/hamza-qureshi": {
+      "field_note": "Keeps the resin bag centered on the rubber between innings, even in an empty bullpen.",
+      "dob": "2000-11-03",
+      "birthplace": "Mississauga, Ontario",
+      "height": "6′1″",
+      "weight": 203,
+      "photo_source": "assets/images/cards/fieldstock/spk-23-hamza-qureshi-front.webp",
+      "photo_crop": [
+        0.16,
+        0.22,
+        0.68,
+        0.49
+      ]
+    },
+    "spokane-alloys/ellis-wren": {
+      "field_note": "Carries a chipped lineup-card pencil from his first professional save.",
+      "dob": "1992-04-27",
+      "birthplace": "Eugene, Oregon",
+      "height": "5′11″",
+      "weight": 217,
+      "photo_source": "assets/images/cards/fieldstock/spk-24-ellis-wren-front.webp",
+      "photo_crop": [
+        0.16,
+        0.22,
+        0.68,
+        0.49
+      ]
+    },
+    "spokane-alloys/miguel-angel-serrano": {
+      "field_note": "Taps the bullpen gate twice before entering, a habit that began after a scoreless winter-league month.",
+      "dob": "2003-06-06",
+      "birthplace": "Maracaibo, Venezuela",
+      "height": "6′4″",
+      "weight": 195,
+      "photo_source": "assets/images/cards/fieldstock/spk-25-miguel-angel-serrano-front.webp",
+      "photo_crop": [
+        0.16,
+        0.22,
+        0.68,
+        0.49
+      ]
+    },
+    "spokane-alloys/branislav-vukovic": {
+      "field_note": "Folds every completed save sheet into a tiny home plate before filing it away.",
+      "dob": "1996-09-15",
+      "birthplace": "Belgrade, Serbia",
+      "height": "6′2″",
+      "weight": 226,
+      "photo_source": "assets/images/cards/fieldstock/spk-26-branislav-vukovic-front.webp",
+      "photo_crop": [
+        0.16,
+        0.22,
+        0.68,
+        0.49
+      ]
+    },
+    "monterrey-cementeros/emilio-zendejas": {
+      "dob": "1998-02-17",
+      "birthplace": "Monterrey, Nuevo León, México",
+      "height": "6′2″",
+      "weight": 210,
+      "field_note": "Marks every bullpen session in a pocket scorebook. A clean inning earns a small pink square."
+    },
+    "monterrey-cementeros/masato-yanagisawa": {
+      "dob": "2000-01-22",
+      "birthplace": "Nagoya, Japan",
+      "height": "6′1″",
+      "weight": 194,
+      "field_note": "Rehearses his pickoff footwork on the hotel carpet using two rolled-up socks as bases."
+    },
+    "monterrey-cementeros/kofi-mensah": {
+      "dob": "1999-04-11",
+      "birthplace": "Accra, Ghana",
+      "height": "6′0″",
+      "weight": 188,
+      "field_note": "Keeps a tally of every double play turned with a different second baseman."
+    },
+    "monterrey-cementeros/andres-cazares": {
+      "dob": "2003-05-06",
+      "birthplace": "Saltillo, Coahuila, México",
+      "height": "6′1″",
+      "weight": 195,
+      "field_note": "Labels batting-practice bats by the outfield gap he is trying to reach that day."
+    }
+  }
+}

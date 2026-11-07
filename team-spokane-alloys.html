@@ -1293,6 +1293,8 @@ text-transform:uppercase;
 @media(max-width:680px){.jump-nav{position:static}}
 
 </style>
+<link rel="stylesheet" href="player-cards.css?v=fieldstock-2026-1">
+<link rel="stylesheet" href="taipei-cards.css?v=fieldstock-2026-1">
 </head>
 
 <body data-season-page="team">
@@ -2319,189 +2321,25 @@ Contribute to this record →
 
 </footer>
 
+<script src="scripts/player-cards.js?v=fieldstock-2026-1"></script><script src="scripts/taipei-cards.js?v=20261106-contribute"></script>
 <script>
 const playerCards=document.getElementById("playerCards");
-const fieldstockCards=[
-  {front:"assets/images/cards/fieldstock/spk-01-kellan-brynden-front.webp",back:"assets/images/cards/fieldstock/spk-01-kellan-brynden-back.webp"},
-  {front:"assets/images/cards/fieldstock/spk-02-oskar-svanholm-front.webp",back:"assets/images/cards/fieldstock/spk-02-oskar-svanholm-back.webp"},
-  {front:"assets/images/cards/fieldstock/spk-03-mateusz-kasprowicz-front.webp",back:"assets/images/cards/fieldstock/spk-03-mateusz-kasprowicz-back.webp"},
-  {front:"assets/images/cards/fieldstock/spk-04-diego-alvarez-mora-front.webp",back:"assets/images/cards/fieldstock/spk-04-diego-alvarez-mora-back.webp"},
-  {front:"assets/images/cards/fieldstock/spk-05-lukas-havel-front.webp",back:"assets/images/cards/fieldstock/spk-05-lukas-havel-back.webp"},
-  {front:"assets/images/cards/fieldstock/spk-06-caleb-reidman-front.webp",back:"assets/images/cards/fieldstock/spk-06-caleb-reidman-back.webp"},
-  {front:"assets/images/cards/fieldstock/spk-07-sergio-ibarra-lugo-front.webp",back:"assets/images/cards/fieldstock/spk-07-sergio-ibarra-lugo-back.webp"},
-  {front:"assets/images/cards/fieldstock/spk-08-yaw-mensah-front.webp",back:"assets/images/cards/fieldstock/spk-08-yaw-mensah-back.webp"},
-  {front:"assets/images/cards/fieldstock/spk-09-nikolai-dobrynin-front.webp",back:"assets/images/cards/fieldstock/spk-09-nikolai-dobrynin-back.webp"},
-  {front:"assets/images/cards/fieldstock/spk-10-evan-carroll-iv-front.webp",back:"assets/images/cards/fieldstock/spk-10-evan-carroll-iv-back.webp"},
-  {front:"assets/images/cards/fieldstock/spk-11-marco-delvecchio-front.webp",back:"assets/images/cards/fieldstock/spk-11-marco-delvecchio-back.webp"},
-  {front:"assets/images/cards/fieldstock/spk-12-tomasz-kubas-front.webp",back:"assets/images/cards/fieldstock/spk-12-tomasz-kubas-back.webp"},
-  {front:"assets/images/cards/fieldstock/spk-13-andres-mireles-front.webp",back:"assets/images/cards/fieldstock/spk-13-andres-mireles-back.webp"},
-  {front:"assets/images/cards/fieldstock/spk-14-wyatt-hollander-front.webp",back:"assets/images/cards/fieldstock/spk-14-wyatt-hollander-back.webp"},
-  {front:"assets/images/cards/fieldstock/spk-15-luis-quinones-front.webp",back:"assets/images/cards/fieldstock/spk-15-luis-quinones-back.webp"},
-  {front:"assets/images/cards/fieldstock/spk-16-pieter-van-wyk-front.webp",back:"assets/images/cards/fieldstock/spk-16-pieter-van-wyk-back.webp"},
-  {front:"assets/images/cards/fieldstock/spk-17-jonah-sato-front.webp",back:"assets/images/cards/fieldstock/spk-17-jonah-sato-back.webp"},
-  {front:"assets/images/cards/fieldstock/spk-18-rene-bouchard-front.webp",back:"assets/images/cards/fieldstock/spk-18-rene-bouchard-back.webp"},
-  {front:"assets/images/cards/fieldstock/spk-19-malachi-boone-front.webp",back:"assets/images/cards/fieldstock/spk-19-malachi-boone-back.webp"},
-  {front:"assets/images/cards/fieldstock/spk-20-dae-hyun-park-front.webp",back:"assets/images/cards/fieldstock/spk-20-dae-hyun-park-back.webp"},
-  {front:"assets/images/cards/fieldstock/spk-21-tesfaye-mebrahtu-front.webp",back:"assets/images/cards/fieldstock/spk-21-tesfaye-mebrahtu-back.webp"},
-  {front:"assets/images/cards/fieldstock/spk-22-benoit-leduc-front.webp",back:"assets/images/cards/fieldstock/spk-22-benoit-leduc-back.webp"},
-  {front:"assets/images/cards/fieldstock/spk-23-hamza-qureshi-front.webp",back:"assets/images/cards/fieldstock/spk-23-hamza-qureshi-back.webp"},
-  {front:"assets/images/cards/fieldstock/spk-24-ellis-wren-front.webp",back:"assets/images/cards/fieldstock/spk-24-ellis-wren-back.webp"},
-  {front:"assets/images/cards/fieldstock/spk-25-miguel-angel-serrano-front.webp",back:"assets/images/cards/fieldstock/spk-25-miguel-angel-serrano-back.webp"},
-  {front:"assets/images/cards/fieldstock/spk-26-branislav-vukovic-front.webp",back:"assets/images/cards/fieldstock/spk-26-branislav-vukovic-back.webp"}
-];
-const playerNotes=[
-  "Keeps a small vial of mound dirt from every ballpark where he earns a win. Each is labeled with the final pitch and given to his father after the season.",
-  "Builds small wooden radios during road trips and gives them to clubhouse attendants.",
-  "Once finished a rain-delay crossword in ink before the grounds crew removed the tarp.",
-  "Calls his mother after every start, but refuses to discuss baseball until she brings it up.",
-  "Carries one glove from his first professional season and has repaired it eleven times.",
-  "Can identify most Inland Northwest birds by sound and keeps a running list by ballpark.",
-  "Learned sleight of hand from an uncle and is banned from dealing clubhouse card games.",
-  "Orders the same breakfast in every city, then ranks each version in a private spreadsheet.",
-  "Restores old catcher’s masks and has never sold one from his collection.",
-  "Reads municipal planning documents on flights and remembers unusual zoning disputes.",
-  "Maintains a map of the best public staircases in every GLB city.",
-  "Was briefly the drummer in a wedding band and still carries sticks in his equipment bag.",
-  "Collects grocery-store receipts from memorable road wins and labels them by final score.",
-  "Practices photography from the dugout but rarely photographs the field itself.",
-  "Speaks to his bats in two languages and insists the conversations are strictly professional.",
-  "Has prepared the same pregame sandwich since age nineteen and cuts it into exact thirds.",
-  "Keeps a pocket notebook of every foul ball that reaches the first-base camera well.",
-  "Re-laces his first baseman's mitt with the same awl he uses to repair fishing creels.",
-  "Can identify every Spokane infield hop by the sound it makes off the dirt.",
-  "Marks the warning-track depth in shoe lengths at every park before batting practice.",
-  "Judges fly-ball carry by watching the flags above the right-field light tower.",
-  "Counts bullpen warmup pitches in French and starts over whenever a ball touches the dirt.",
-  "Keeps the resin bag centered on the rubber between innings, even in an empty bullpen.",
-  "Carries a chipped lineup-card pencil from his first professional save.",
-  "Taps the bullpen gate twice before entering, a habit that began after a scoreless winter-league month.",
-  "Folds every completed save sheet into a tiny home plate before filing it away."
-];
-document.querySelectorAll(".roster-table tbody tr").forEach((row,index)=>{
-  const image=row.querySelector(".roster-pic");
-  const name=row.querySelector(".player-name");
-  const role=row.querySelector(".player-role");
-  const cells=[...row.querySelectorAll(":scope > td")];
-  const card=document.createElement("article");
-  card.className="player-card";
-  card.tabIndex=0;
-  card.setAttribute("aria-label",`${name.textContent.trim()} player card. Press Enter to flip.`);
-  const cardId=`SPK-${String(index+1).padStart(2,"0")}`;
-  const front=document.createElement("div"); front.className="player-card-front";
-  const back=document.createElement("div");
-  if(fieldstockCards[index]){
-    card.classList.add("player-card--fieldstock");
-    const frontImage=document.createElement("img");
-    frontImage.className="fieldstock-card-image";
-    frontImage.src=fieldstockCards[index].front;
-    frontImage.alt=`Front of ${name.textContent.trim()}'s FIELDSTOCK ${cardId} baseball card`;
-    frontImage.loading="lazy";
-    frontImage.decoding="async";
-    front.append(frontImage);
-    back.className="player-card-back";
-    const backImage=document.createElement("img");
-    backImage.className="fieldstock-card-image";
-    backImage.src=fieldstockCards[index].back;
-    backImage.alt=`Back of ${name.textContent.trim()}'s FIELDSTOCK ${cardId} baseball card with 2026 statistics`;
-    backImage.loading="lazy";
-    backImage.decoding="async";
-    back.append(backImage);
-  }else{
-    const img=document.createElement("img"); img.className="player-card-image"; img.src=image.src; img.alt=image.alt;
-    const body=document.createElement("div"); body.className="player-card-body";
-    const top=document.createElement("div"); top.className="player-card-topline"; top.append(Object.assign(document.createElement("span"),{textContent:cardId}),Object.assign(document.createElement("span"),{textContent:cells[1].textContent.trim()}));
-    const title=document.createElement("h3"); title.className="player-card-name"; title.append(name.cloneNode(true));
-    const subtitle=document.createElement("div"); subtitle.className="player-card-role"; subtitle.textContent=role.textContent.trim();
-    const meta=document.createElement("div"); meta.className="player-card-meta"; meta.append(Object.assign(document.createElement("span"),{textContent:`B/T ${cells[2].textContent.trim()}`}),Object.assign(document.createElement("span"),{textContent:`Age ${cells[3].textContent.trim()}`}));
-    body.append(top,title,subtitle,meta); front.append(img,body);
-    back.className="player-card-back player-card-body";
-    back.innerHTML=`<div class="player-card-topline"><span>GLB / SPO</span><span>Player Card</span></div><h3 class="player-card-name">${name.textContent.trim()}</h3><p class="player-card-role">Spokane Alloys · ${role.textContent.trim()}</p><p class="player-card-role" style="margin-top:18px">${playerNotes[index]}</p><div class="player-card-meta"><span>${cardId}</span><span>© GLB</span></div>`;
-  }
-  const claimableNow=index<3;
-  if(claimableNow){
-    back.insertAdjacentHTML("beforeend",`<button class="card-claim" type="button">Request claim + submit a factoid</button><form class="claim-form" action="https://formspree.io/f/mzezpeap" method="POST" hidden><input type="hidden" name="_subject" value="FIELDSTOCK card claim + factoid submission"><input type="hidden" name="submission_type" value="player_card"><input type="hidden" name="artifact_type" value="FIELDSTOCK Player Card"><input type="hidden" name="card_id"><input type="hidden" name="player_name"><input type="hidden" name="current_card_bio"><label>User ID<input name="user_id" required minlength="3" maxlength="24" pattern="[A-Za-z0-9_-]{3,24}" title="3–24 letters, numbers, underscores, or hyphens" autocomplete="username"></label><label>Email<input name="email" type="email" required autocomplete="email"></label><label>Baseball factoid for this player<textarea name="proposed_card_bio" maxlength="180" rows="3" required placeholder="Keep it memorable, grounded, and baseball-adjacent."></textarea></label><p class="claim-form-note">This is a request. If approved, watch your email for a message from the GLB Card Registry with your private ownership key.</p><button type="submit">Submit request</button></form><div class="claim-status" aria-live="polite"></div>`);
-  }else{
-    back.insertAdjacentHTML("beforeend",`<button class="card-claim" type="button" disabled>Opening Soon</button><div class="claim-status" aria-live="polite"></div>`);
-  }
-
-  const flip=()=>card.classList.toggle("flipped");
-  card.append(front,back);
-  card.addEventListener("click",event=>{if(!event.target.closest("a,button,input,form")) flip();});
-  card.addEventListener("keydown",event=>{if((event.key==="Enter"||event.key===" ")&&!event.target.closest("a,button,input,form")){event.preventDefault();flip();}});
-
-  const claim=back.querySelector(".card-claim");
-  const form=back.querySelector(".claim-form");
-  const status=back.querySelector(".claim-status");
-  const pendingKey=`glb-fieldstock-pending-${cardId}`;
-
-  function setPendingState(){
-    if(!claimableNow||!form) return;
-    card.classList.add("is-pending");
-    form.hidden=true;
-    claim.textContent="Pending Review";
-    claim.disabled=true;
-    status.textContent="Claim received by the GLB Card Registry. Watch your email for a decision.";
-  }
-
-  if(claimableNow&&localStorage.getItem(pendingKey)==="1"){
-    setPendingState();
-  }
-
-  if(claimableNow&&form){
-    claim.addEventListener("click",()=>{
-      if(card.classList.contains("is-pending")||card.classList.contains("is-claimed")) return;
-      form.hidden=!form.hidden;
-      if(!form.hidden){
-        form.elements.card_id.value=cardId;
-        form.elements.player_name.value=name.textContent.trim();
-        form.elements.current_card_bio.value=playerNotes[index];
-        form.elements.user_id.focus();
-      }
-    });
-
-    form.addEventListener("submit",async event=>{
-      event.preventDefault();
-      const submit=form.querySelector('button[type="submit"]');
-      submit.disabled=true;
-      submit.textContent="Submitting…";
-      status.textContent="Submitting claim…";
-      try{
-        const response=await fetch(form.action,{method:"POST",body:new FormData(form),headers:{Accept:"application/json"}});
-        if(!response.ok) throw new Error("Claim submission failed");
-        localStorage.setItem(pendingKey,"1");
-        setPendingState();
-      }catch(error){
-        submit.disabled=false;
-        submit.textContent="Submit request";
-        status.textContent="The claim could not be submitted. Please try again.";
-      }
-    });
-  }
-
-  playerCards.append(card);
-});
-
-fetch("data/cards/approved-claims.json",{cache:"no-store"}).then(response=>{
-  if(!response.ok) throw new Error("Approved claims unavailable");
-  return response.json();
-}).then(registry=>{
-  if(registry.schema!=="glb.approved-card-claims.v1") return;
-  document.querySelectorAll("#playerCards .player-card").forEach((card,index)=>{
-    const cardId=`SPK-${String(index+1).padStart(2,"0")}`;
-    const owner=registry.claims?.[cardId]?.user_id;
-    if(!owner) return;
-    const button=card.querySelector(".card-claim");
-    const cardIdKey=`glb-fieldstock-pending-${cardId}`;
-    localStorage.removeItem(cardIdKey);
-    card.classList.remove("is-pending");
-    card.classList.add("is-claimed");
-    button.textContent=`Claimed by ${owner}`;
-    button.disabled=true;
-    card.querySelector(".claim-form")?.remove();
-    const status=card.querySelector(".claim-status");
-    if(status) status.textContent="";
-  });
-}).catch(error=>console.warn(error));
+(async()=>{
+  try {
+    const response=await fetch('data/rosters/spokane-alloys.json');
+    if(!response.ok) throw Error('Roster unavailable');
+    const roster=await response.json();
+    const cards=await Promise.all(roster.players.map(async(p,index)=>{
+      const player={...p,teamSlug:'spokane-alloys',teamName:'Spokane Alloys',
+        card_id:'SPK-'+String(index+1).padStart(2,'0'),claim_open:index<3};
+      const entry=document.createElement('div');entry.className='tpe-card-entry';
+      entry.append(GLBPlayerCards.createCard(player));
+      entry.append(await TaipeiFieldstock.createClaimPanel(player,{teamSlug:'spokane-alloys',teamName:'Spokane Alloys'}));
+      return entry;
+    }));
+    playerCards.replaceChildren(...cards);
+  } catch {playerCards.textContent='The card collection could not load. Please refresh.';}
+})();
 
 async function loadSpokaneSeasonRecord(){
   try{

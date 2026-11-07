@@ -1338,7 +1338,8 @@ text-transform:uppercase;
 @media(max-width:760px){.towel-graphic{right:24px;top:30px;opacity:.28}.event-promo--bottle .event-promo-title{position:relative;z-index:2}}
 
 .wms-ad{margin:24px 0;display:block}.wms-ad-label{display:block;margin:0 0 7px;color:#62584d;font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase}.wms-ad a{display:block;overflow:hidden;background:#fffdf8;border:1px solid #7a4d2a45;box-shadow:0 4px 12px #17130f14}.wms-ad img{display:block;width:100%;height:auto}.wms-ad a:hover{box-shadow:0 7px 18px #17130f26}.wms-ad a:focus-visible{outline:3px solid #b84c2f;outline-offset:4px}.side-column .wms-ad{margin:0 0 24px}
-</style></head><body><header class="site-header">
+</style><link rel="stylesheet" href="player-cards.css?v=fieldstock-2026-1">
+</head><body><header class="site-header">
 <div class="container">
 <div class="topbar">
 
@@ -1473,7 +1474,7 @@ text-transform:uppercase;
 </div>
 </div>
 
-</footer><script src="scripts/player-cards.js?v=20261008-images"></script><script>
+</footer><script src="scripts/player-cards.js?v=fieldstock-2026-1"></script><script>
 const roleMap={SP:"Starting pitcher",RP:"Relief pitcher",C:"Catcher","1B":"First baseman","2B":"Second baseman",SS:"Shortstop","3B":"Third baseman",LF:"Left fielder",CF:"Center fielder",RF:"Right fielder"};
 const fieldstockSeries01={"iseul-kang":"VAN-01","nico-penfold":"VAN-02","silas-boudreau":"VAN-03","eamon-kerr":"VAN-04","roman-velasco":"VAN-05","alejo-santillan":"VAN-06","taj-adelman":"VAN-07","oziel-narvaez":"VAN-08"};
 const initials=n=>n.split(/\s+/).map(x=>x[0]).slice(0,2).join("").toUpperCase();
@@ -1496,25 +1497,7 @@ try{
   else {fallback.style.display='flex';fallback.title='Portrait pending'}
   body.append(tr);
 
-  const card=document.createElement("article");
-  card.className="player-card";
-  card.tabIndex=0;
-  card.setAttribute("aria-label",p.name+" player card. Press Enter to flip.");
-  const front=document.createElement("div"); front.className="player-card-front";
-  const photo=GLBPlayerCards.recoveredPortrait({...p,teamSlug:'vancouver-current'}) || document.createElement('div');
-  photo.className='player-card-photo';
-  if(!photo.childElementCount){photo.textContent=initials(p.name);photo.style.cssText='display:flex;align-items:center;justify-content:center;font-size:48px;color:#164f67;background:#dfe9ed;';photo.setAttribute('aria-label',p.name+' portrait pending');}
-
-  const frontBody=document.createElement("div"); frontBody.className="player-card-body";
-  const fieldstockId=fieldstockSeries01[p.slug]||"VAN · ROSTER";
-  frontBody.innerHTML='<div class="player-card-topline"><span>'+fieldstockId+'</span><span>FIELDSTOCK</span></div><h3 class="player-card-name"><a href="player.html?team=vancouver-current&player='+p.slug+'">'+p.name+'</a></h3><div class="player-card-role">Vancouver Current · '+(roleMap[p.position]||p.position)+'</div><div class="player-card-meta"><span>B/T '+p.bats+'/'+p.throws+'</span><span>Age '+p.age+'</span></div>';
-  front.append(photo,frontBody);
-  const back=document.createElement("div"); back.className="player-card-back";
-  back.innerHTML='<div class="player-card-topline"><span>'+fieldstockId+'</span><span>Player Record</span></div><h3 class="player-card-name">'+p.name+'</h3><p class="player-card-role">Vancouver Current · '+(roleMap[p.position]||p.position)+'</p><p class="player-card-role" style="margin-top:18px">Official Vancouver roster record. FIELDSTOCK Series 01 artwork is issued separately for selected players.</p><div class="player-card-meta"><span>VAN · '+p.position+'</span><span>© GLB</span></div>';
-  card.append(front,back);
-  const flip=()=>card.classList.toggle("flipped");
-  card.addEventListener("click",e=>{if(!e.target.closest("a")) flip()});
-  card.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();flip()}});
+  const card=GLBPlayerCards.createCard({...p,teamSlug:'vancouver-current',teamName:'Vancouver Current',card_id:fieldstockSeries01[p.slug]});
   document.getElementById("playerCards").append(card);
  });
  const rec=Object.values(standings.divisions).flat().find(x=>x.slug==="vancouver-current");

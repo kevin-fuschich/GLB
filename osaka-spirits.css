@@ -28,3 +28,11 @@
 @media(max-width:900px){.osaka-page #roster,.osaka-page #results{grid-column:1/-1}}
 @media(max-width:650px){.osaka-page .team-hero,.osaka-page .team-hero-inner{min-height:330px}.osaka-page .team-hero-image{object-position:57% center}.osaka-columns{grid-template-columns:1fr;gap:14px}.osaka-table{padding-inline:12px}.osaka-section-nav{gap:2px 11px}}
 #voices figure img{aspect-ratio:3/2;object-fit:cover;object-position:50% 27%}
+
+.osaka-page #giveaway{scroll-margin-top:120px}
+.osaka-donk-brand{display:flex;align-items:center;flex-wrap:wrap;gap:12px 24px;margin:0 0 20px}
+.osaka-donk-brand img{width:min(240px,100%);height:auto;display:block}
+.osaka-donk-facts{margin:8px 0 20px}
+.osaka-donk-facts>div{display:grid;grid-template-columns:90px minmax(0,1fr);gap:12px;padding:8px 0;border-bottom:1px solid var(--line)}
+.osaka-donk-facts dt{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em}
+.osaka-donk-facts dd{margin:0}

@@ -468,7 +468,7 @@ p{line-height:1.58;color:#343a40}
   </div>
 </footer>
 
-<script src="scripts/player-cards.js?v=fieldstock-2026-1"></script>
+<script src="scripts/player-cards.js?v=san-pedro-2026-1"></script>
 <script src="scripts/taipei-cards.js?v=osaka-01"></script>
 <script>
 const params = new URLSearchParams(window.location.search);
@@ -724,7 +724,11 @@ async function loadPlayer(){
   const portrait = GLBPlayerCards.photoPath({teamSlug,slug:playerSlug});
   const recoveredPortrait=GLBPlayerCards.recoveredPortrait({...player,slug:playerSlug,teamSlug});
   const physicalPreview=GLBPlayerCards.cardFront({...player,teamSlug,slug:playerSlug});
-  if(physicalPreview){img.src=physicalPreview;img.alt=playerName+' FIELDSTOCK card preview';img.style.cssText='object-fit:contain;min-height:0;height:auto';photoWrap.style.cssText='border-radius:0;background:transparent;min-height:0';}
+  if(teamSlug==='san-pedro-cocolos' && player.photo_source){
+    const photo=GLBPlayerCards.photograph({...player,teamSlug,slug:playerSlug});
+    photo.style.cssText='display:block;width:100%;height:100%;min-height:350px';
+    photoWrap.replaceChildren(photo);
+  }else if(physicalPreview){img.src=physicalPreview;img.alt=playerName+' FIELDSTOCK card preview';img.style.cssText='object-fit:contain;min-height:0;height:auto';photoWrap.style.cssText='border-radius:0;background:transparent;min-height:0';}
   else if(recoveredPortrait){img.replaceWith(recoveredPortrait)}
   else if(portrait){img.onerror = showInitials; img.src = portrait;} else showInitials();
 
@@ -756,19 +760,19 @@ async function loadPlayer(){
   };
   const fieldstockTeam=FIELDSTOCK[teamSlug];
   const cardNumber=fieldstockTeam?.cards?.[playerSlug];
-  const cardId=fieldstockTeam&&cardNumber
+  const cardId=player.card_id || (fieldstockTeam&&cardNumber
     ? fieldstockTeam.prefix.toUpperCase()+'-'+String(cardNumber).padStart(2,'0')
-    : teamSlug.toUpperCase().slice(0,3)+'-'+playerSlug.toUpperCase();
+    : teamSlug.toUpperCase().slice(0,3)+'-'+playerSlug.toUpperCase());
   const claimable= (!fieldstockTeam?.claimable || fieldstockTeam.claimable.has(playerSlug));
   const cardClaimGuide=document.getElementById('playerCardClaimGuide');
   const osakaCard=teamSlug==='osaka-spirits' && player.card_id && player.card_front && player.card_back;
-  const numericClaimCode=Boolean(osakaCard)||['taipei-neon','monterrey-cementeros','tijuana-tecnicos'].includes(teamSlug);
+  const numericClaimCode=Boolean(osakaCard)||['taipei-neon','monterrey-cementeros','tijuana-tecnicos','san-pedro-cocolos'].includes(teamSlug);
   cardClaimGuide.textContent='Select the card to flip it over. '+(numericClaimCode ? "To claim an open card, add a detail of your own and send it to GLB for review. If approved, GLB will publish your contribution with your user ID and send you a unique, private 16-digit code for the card." : "To claim an open card, add a detail of your own and send it to GLB for review. If approved, GLB will publish your contribution with your user ID and send you a private FIELDSTOCK code for the card.");
   cardClaimGuide.hidden=false;
 
   cardHost.replaceChildren(GLBPlayerCards.createCard({...player,slug:playerSlug,name:playerName,teamSlug,teamName:team.teamName,card_id:player.card_id || cardId},record,{link:false}));
 
-  if(osakaCard){
+  if(osakaCard || teamSlug==='san-pedro-cocolos'){
     cardHost.append(await TaipeiFieldstock.createClaimPanel(player,{teamSlug,teamName:team.teamName}));
   }else if(teamSlug==='taipei-neon'){
     cardHost.append(await TaipeiFieldstock.createCardDetails(player));

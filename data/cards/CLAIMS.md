@@ -30,3 +30,9 @@ This is editorial approval on a static site, not automatic ownership enforcement
 ## Monterrey launch
 
 Only MTY-01 (Emilio Zendejas), MTY-02 (Masato Yanagisawa), and MTY-POLVO are open. Other entries remain opening soon. Requests use the same Formspree inbox and public approved registry. Run `node scripts/issue-card-claim-key.js MTY-01 example_user` or `node scripts/issue-card-claim-key.js MTY-POLVO example_user` only after review. Monterrey approval generates a private 16-digit numeric FIELDSTOCK code; deliver it privately after acceptance. Public user ID attribution remains separate from the secret code. Do not commit the code or claimant email.
+
+## San Pedro 2026 collection
+
+Cards SPD-01 through SPD-16 are open for reviewed contributions. Club and player pages use the same card IDs, pending-request state and public approved registry. Requests arrive in the existing Formspree inbox.
+
+After editorial review, run `node scripts/issue-card-claim-key.js SPD-01 contributor_id` with the approved card and user ID. The command generates a private 16-digit numeric code and records public attribution. Deliver the code privately and publish the approved registry. Accept the factoid into the roster’s `field_note` separately so it appears on the shared card back. Never commit the code or claimant email.

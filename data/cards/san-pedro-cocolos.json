@@ -1,0 +1,136 @@
+{
+  "schema": "glb.player-card-registry.v1",
+  "team_slug": "san-pedro-cocolos",
+  "team_name": "San Pedro Cocolos",
+  "season": 2026,
+  "cards": [
+    {
+      "card_id": "SPD-01",
+      "type": "player",
+      "edition": "2026",
+      "player_slug": "ivo-korolenko",
+      "name": "Ivo Korolenko",
+      "claimable": true
+    },
+    {
+      "card_id": "SPD-02",
+      "type": "player",
+      "edition": "2026",
+      "player_slug": "nolan-garrity",
+      "name": "Nolan Garrity",
+      "claimable": true
+    },
+    {
+      "card_id": "SPD-03",
+      "type": "player",
+      "edition": "2026",
+      "player_slug": "kenji-morishita",
+      "name": "Kenji Morishita",
+      "claimable": true
+    },
+    {
+      "card_id": "SPD-04",
+      "type": "player",
+      "edition": "2026",
+      "player_slug": "souleymane-diallo",
+      "name": "Souleymane Diallo",
+      "claimable": true
+    },
+    {
+      "card_id": "SPD-05",
+      "type": "player",
+      "edition": "2026",
+      "player_slug": "enzo-valera",
+      "name": "Enzo Valera",
+      "claimable": true
+    },
+    {
+      "card_id": "SPD-06",
+      "type": "player",
+      "edition": "2026",
+      "player_slug": "marek-zielinski",
+      "name": "Marek Zielinski",
+      "claimable": true
+    },
+    {
+      "card_id": "SPD-07",
+      "type": "player",
+      "edition": "2026",
+      "player_slug": "teo-arellano",
+      "name": "Teo Arellano",
+      "claimable": true
+    },
+    {
+      "card_id": "SPD-08",
+      "type": "player",
+      "edition": "2026",
+      "player_slug": "isaac-rendell",
+      "name": "Isaac Rendell",
+      "claimable": true
+    },
+    {
+      "card_id": "SPD-09",
+      "type": "player",
+      "edition": "2026",
+      "player_slug": "matias-serey",
+      "name": "Matías Serey",
+      "claimable": true
+    },
+    {
+      "card_id": "SPD-10",
+      "type": "player",
+      "edition": "2026",
+      "player_slug": "caleb-vanhoorn",
+      "name": "Caleb VanHoorn",
+      "claimable": true
+    },
+    {
+      "card_id": "SPD-11",
+      "type": "player",
+      "edition": "2026",
+      "player_slug": "omar-benyahia",
+      "name": "Omar Benyahia",
+      "claimable": true
+    },
+    {
+      "card_id": "SPD-12",
+      "type": "player",
+      "edition": "2026",
+      "player_slug": "ryo-kawabata",
+      "name": "Ryo Kawabata",
+      "claimable": true
+    },
+    {
+      "card_id": "SPD-13",
+      "type": "player",
+      "edition": "2026",
+      "player_slug": "darius-kofi",
+      "name": "Darius Kofi",
+      "claimable": true
+    },
+    {
+      "card_id": "SPD-14",
+      "type": "player",
+      "edition": "2026",
+      "player_slug": "miguel-encarnacion",
+      "name": "Miguel Encarnación",
+      "claimable": true
+    },
+    {
+      "card_id": "SPD-15",
+      "type": "player",
+      "edition": "2026",
+      "player_slug": "victor-sundqvist",
+      "name": "Victor Sundqvist",
+      "claimable": true
+    },
+    {
+      "card_id": "SPD-16",
+      "type": "player",
+      "edition": "2026",
+      "player_slug": "naveen-iyer",
+      "name": "Naveen Iyer",
+      "claimable": true
+    }
+  ]
+}

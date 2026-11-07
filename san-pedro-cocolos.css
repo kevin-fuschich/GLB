@@ -1,0 +1,40 @@
+.san-pedro-page{--san-pedro-accent:#680d21;--san-pedro-slate:#293740}
+.san-pedro-page .team-hero,.san-pedro-page .team-hero-inner{min-height:clamp(335px,46vw,600px)}
+.san-pedro-page .team-hero-image{object-position:50% 48%}
+.san-pedro-page .team-hero-shade{background:linear-gradient(0deg,rgba(9,15,20,.89),rgba(9,15,20,.18) 44%,transparent 70%),linear-gradient(90deg,rgba(9,15,20,.26),transparent 56%)}
+.san-pedro-page .team-hero-inner p{margin:6px 0 0;color:#eef1f3;font-size:15px}
+.san-pedro-page .full,.san-pedro-section-nav{grid-column:1/-1}
+.san-pedro-section-nav{display:flex;flex-wrap:wrap;gap:5px 18px;padding:11px 15px;background:#fff;border:1px solid var(--line);border-radius:12px}
+.san-pedro-section-nav a{padding:8px 4px;font-weight:700;color:var(--san-pedro-slate)}
+.san-pedro-page a:focus-visible{outline:2px solid var(--san-pedro-accent);outline-offset:3px}
+.san-pedro-section-nav a:hover,.san-pedro-table a:hover,.san-pedro-link-row a:hover{text-decoration:underline}
+.san-pedro-page .panel{scroll-margin-top:120px}
+.san-pedro-meta{color:var(--san-pedro-accent);font-size:11px;letter-spacing:.08em;font-weight:750;text-transform:uppercase}
+.san-pedro-page .summary{margin-bottom:14px}
+.san-pedro-link-row a,.san-pedro-table a{color:var(--san-pedro-slate);font-weight:740}
+.san-pedro-table{padding:0 20px 18px}
+.san-pedro-table table{border-collapse:collapse;width:100%;text-align:left}
+.san-pedro-table caption{text-align:left;color:var(--muted);padding:12px 0}
+.san-pedro-table th,.san-pedro-table td{padding:9px 8px;border-bottom:1px solid var(--line)}
+.san-pedro-table th:first-child{padding-left:0}
+.san-pedro-table thead th{font-size:11px;text-transform:uppercase;letter-spacing:.06em}
+.san-pedro-page #recent-results,.san-pedro-copy{padding:12px 20px}
+.san-pedro-copy p{max-width:68ch}
+.san-pedro-columns{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.san-pedro-columns h3{margin:4px 0}
+.san-pedro-copy figure{margin:0 0 12px}
+.san-pedro-copy figure img{width:100%;height:auto;display:block;border-radius:8px}
+.site-footer{--light:#fff}
+@media(max-width:900px){.san-pedro-page #roster,.san-pedro-page #results{grid-column:1/-1}}
+@media(max-width:650px){.san-pedro-page .team-hero,.san-pedro-page .team-hero-inner{min-height:330px}.san-pedro-page .team-hero-image{object-position:57% center}.san-pedro-columns{grid-template-columns:1fr;gap:14px}.san-pedro-table{padding-inline:12px}.san-pedro-section-nav{gap:2px 11px}}
+
+.san-pedro-page #giveaway{scroll-margin-top:120px}
+.san-pedro-donk-brand{display:flex;align-items:center;flex-wrap:wrap;gap:12px 24px;margin:0 0 20px}
+.san-pedro-donk-brand img{width:min(240px,100%);height:auto;display:block}
+
+.san-pedro-page .team-hero-image{height:143%;top:-43%;object-fit:cover;object-position:50% 50%}
+.san-pedro-page .full{grid-column:1/-1}
+.san-pedro-page .tpe-card-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.san-pedro-link{font-weight:700;text-decoration:underline}
+@media(max-width:1000px){.san-pedro-page .tpe-card-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.san-pedro-page .tpe-card-grid{grid-template-columns:1fr}}

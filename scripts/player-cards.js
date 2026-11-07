@@ -96,7 +96,7 @@
   }
   const brandRoot = new URL('../assets/fieldstock/', document.currentScript.src).href;
   const teamAccents = {
-    'durham-gold':'#d9ad65', 'spokane-alloys':'#8bbfc0', 'vancouver-current':'#65b1bf',
+    'san-pedro-cocolos':'#ad873e', 'durham-gold':'#d9ad65', 'spokane-alloys':'#8bbfc0', 'vancouver-current':'#65b1bf',
     'taipei-neon':'#a594d9', 'osaka-spirits':'#9175b3',
     'monterrey-cementeros':'#df81a1', 'tijuana-tecnicos':'#a5b95e'
   };
@@ -141,7 +141,7 @@
     const crop = player.photo_crop || crops[player.teamSlug];
     if (!crop) return image;
     const svg = document.createElementNS('http://www.w3.org/2000/svg','svg');
-    svg.classList.add('fs-photo-image'); svg.setAttribute('preserveAspectRatio','xMidYMid slice');
+    svg.classList.add('fs-photo-image'); svg.setAttribute('preserveAspectRatio',player.teamSlug==='san-pedro-cocolos'?'xMidYMin slice':'xMidYMid slice');
     svg.setAttribute('role','img'); svg.setAttribute('aria-label', image.alt);
     const photo = document.createElementNS(svg.namespaceURI,'image');
     photo.setAttribute('href',source);
@@ -240,5 +240,5 @@
     return card;
   }
   function createPhysicalCard(player,options) { return createCard(player,null,options); }
-  window.GLBPlayerCards = {loadSeasons,careerFor,createCard,photoPath,recoveredPortrait,cardFront,createPhysicalCard};
+  window.GLBPlayerCards = {loadSeasons,careerFor,createCard,photoPath,recoveredPortrait,cardFront,createPhysicalCard,photograph};
 })();

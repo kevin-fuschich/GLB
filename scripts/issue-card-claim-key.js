@@ -15,6 +15,7 @@ const claimsPath = resolve(process.env.GLB_APPROVED_CLAIMS_PATH || 'data/cards/a
 const isTaipei = cardId.startsWith('TPE-');
 const defaultCardsPath = isTaipei ? 'data/cards/taipei-neon-series-01.json'
   : cardId.startsWith('MTY-') ? 'data/cards/monterrey-cementeros.json'
+  : cardId.startsWith('SPD-') ? 'data/cards/san-pedro-cocolos.json'
   : 'data/cards/spokane-alloys.json';
 const cardsPath = resolve(process.env.GLB_CARD_REGISTRY_PATH || defaultCardsPath);
 const registry = JSON.parse(readFileSync(claimsPath, 'utf8'));
@@ -38,7 +39,7 @@ if (registry.claims[cardId]) {
   throw new Error(`${cardId} is already claimed by ${registry.claims[cardId].user_id}.`);
 }
 
-const key = isTaipei || cardId.startsWith('MTY-')
+const key = isTaipei || cardId.startsWith('MTY-') || cardId.startsWith('SPD-')
   ? String(randomInt(1, 10)) + Array.from({length:15}, () => randomInt(0, 10)).join('')
   : `FST-${cardId}-${userId.toUpperCase()}-${randomBytes(20).toString('hex').toUpperCase().match(/.{8}/g).join('-')}`;
 

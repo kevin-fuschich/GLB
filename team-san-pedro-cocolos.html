@@ -1,300 +1,41 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>GLB Team Record – San Pedro Cocolos</title>
-
-<style>
-:root{
-  --paper:#ffffff;
-  --ink:#0f1214;
-  --meta:#666;
-  --line:#e0e0e0;
-
-  --sans:"Helvetica Neue", Helvetica, Arial, sans-serif;
-  --mono:"Courier New", Courier, monospace;
-}
-
-body{
-  background:#f4f4f4;
-  font-family:var(--sans);
-  color:var(--ink);
-  margin:0;
-  padding:40px 20px;
-}
-
-.sheet{
-  max-width:640px;
-  margin:0 auto;
-  background:var(--paper);
-  padding:40px;
-  border-top:5px solid var(--ink);
-  box-shadow:0 4px 20px rgba(0,0,0,.08);
-}
-
-/* HEADER */
-header{
-  display:flex;
-  justify-content:space-between;
-  align-items:flex-start;
-  padding-bottom:20px;
-  border-bottom:2px solid var(--ink);
-  margin-bottom:30px;
-}
-
-.header-text h1{
-  margin:0 0 6px 0;
-  font-size:22px;
-  font-weight:900;
-  text-transform:uppercase;
-}
-
-.header-meta{
-  font-size:13px;
-  color:var(--meta);
-}
-
-.team-logo{
-  height:120px; /* 100% larger */
-  width:auto;
-}
-
-/* TEAM PHOTO */
-.team-photo{
-  margin:30px 0;
-  border:1px solid var(--line);
-}
-.team-photo img{
-  width:100%;
-  display:block;
-}
-
-/* SECTION HEADERS */
-h2{
-  font-family:var(--mono);
-  font-size:13px;
-  text-transform:uppercase;
-  letter-spacing:.5px;
-  margin:40px 0 12px;
-  padding-bottom:6px;
-  border-bottom:1px solid var(--line);
-}
-
-/* TABLES */
-table{
-  width:100%;
-  border-collapse:collapse;
-  font-size:13px;
-}
-
-th{
-  font-size:11px;
-  color:var(--meta);
-  font-weight:600;
-  text-transform:uppercase;
-  padding:6px;
-  border-bottom:2px solid var(--ink);
-}
-
-td{
-  padding:8px 6px;
-  border-bottom:1px solid #f0f0f0;
-  vertical-align:middle;
-}
-
-.align-center{ text-align:center; }
-.align-right{ text-align:right; }
-
-/* ROSTER HEADSHOTS */
-.roster-pic{
-  width:48px;
-  height:48px;
-  object-fit:cover;
-  border-radius:6px;
-  border:1px solid var(--line);
-  display:block;
-}
-
-/* LINKS */
-a{ color:var(--ink); text-decoration:none; }
-a:hover{ text-decoration:underline; }
-
-/* FOOTER */
-footer{
-  margin-top:50px;
-  padding-top:18px;
-  border-top:1px solid var(--line);
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  font-family:var(--mono);
-  font-size:10px;
-  color:#777;
-}
-
-.glb-logo{
-  height:56px;
-  width:auto;
-}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>San Pedro Cocolos | Global League Baseball</title>
+  <meta name="description" content="San Pedro Cocolos at Estadio BEMBA. Roster, FIELDSTOCK cards, contributions, Candy Acuna and Placido Pojo’s DONK entry.">
+  <link rel="canonical" href="https://kevin-fuschich.github.io/GLB/team-san-pedro-cocolos.html">
+  <link rel="stylesheet" href="team-page.css?v=3">
+  <link rel="stylesheet" href="san-pedro-cocolos.css?v=20261107-cards">
+  <link rel="stylesheet" href="tijuana-cards.css">
+  <link rel="stylesheet" href="taipei-cards.css">
+<link rel="stylesheet" href="player-cards.css?v=fieldstock-2026-1">
 </head>
-
 <body>
-<div class="sheet">
-
-<header>
-  <div class="header-text">
-    <h1>San Pedro Cocolos</h1>
-    <div class="header-meta">San Pedro — Pacific Division</div>
-    <div class="header-meta">Team Record & Active Roster</div>
-  </div>
-
-  <img src="team-san-pedro-cocolos-logo.png" alt="San Pedro Cocolos Logo" class="team-logo">
+<header class="site-header">
+<div class="container topbar">
+<a href="index.html" class="brand"><span class="brand-mark">GLB</span><span class="brand-sub">Global League Baseball</span></a>
+<nav class="nav-links" aria-label="Primary"><a href="index.html">Home</a><a href="scores.html">Scores</a><a href="standings.html">Standings</a><a href="schedule.html">Schedule</a><a href="teams.html" class="active">Teams</a><a href="players.html">Players</a><a href="stats.html">Stats</a><a href="events.html">Events</a></nav>
+<span class="header-meta">San Pedro Cocolos</span>
+<button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">☰</button>
+</div>
+<nav class="mobile-menu" id="mobileMenu"><a href="index.html">Home</a><a href="scores.html">Scores</a><a href="standings.html">Standings</a><a href="schedule.html">Schedule</a><a href="teams.html">Teams</a><a href="players.html">Players</a><a href="stats.html">Stats</a><a href="events.html">Events</a></nav>
 </header>
-
-<!-- TEAM PHOTO (placeholder file you’ll add later) -->
-<div class="team-photo">
-  <img src="team-san-pedro-cocolos-photo.png" alt="San Pedro Cocolos Team Photo">
-</div>
-
-<h2>Season Snapshot</h2>
-<table>
-  <thead>
-    <tr>
-      <th>Record</th>
-      <th>Runs</th>
-      <th>Allowed</th>
-      <th>Diff</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>0–0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-  </tbody>
-</table>
-
-<h2>Active Roster</h2>
-<table>
-  <thead>
-    <tr>
-      <th>Pic</th>
-      <th>Player</th>
-      <th>Pos</th>
-      <th class="align-center">B/T</th>
-      <th class="align-right">Age</th>
-    </tr>
-  </thead>
-
-  <!-- PASTE/EDIT ROSTER ROWS INSIDE THIS TBODY -->
-  <tbody>
-
-    <!-- STARTING PITCHERS (5) -->
-    <tr data-player-id="spc-001">
-      <td><img class="roster-pic" src="player-san-pedro-ivo-korolenko.png" alt="Ivo Korolenko"></td>
-      <td>Ivo Korolenko</td><td>SP</td><td class="align-center">R/R</td><td class="align-right">29</td>
-    </tr>
-    <tr data-player-id="spc-002">
-      <td><img class="roster-pic" src="player-san-pedro-nolan-garrity.png" alt="Nolan Garrity"></td>
-      <td>Nolan Garrity</td><td>SP</td><td class="align-center">L/L</td><td class="align-right">27</td>
-    </tr>
-    <tr data-player-id="spc-003">
-      <td><img class="roster-pic" src="player-san-pedro-kenji-morishita.png" alt="Kenji Morishita"></td>
-      <td>Kenji Morishita</td><td>SP</td><td class="align-center">R/R</td><td class="align-right">25</td>
-    </tr>
-    <tr data-player-id="spc-004">
-      <td><img class="roster-pic" src="player-san-pedro-souleymane-diallo.png" alt="Souleymane Diallo"></td>
-      <td>Souleymane Diallo</td><td>SP</td><td class="align-center">R/R</td><td class="align-right">30</td>
-    </tr>
-    <tr data-player-id="spc-005">
-      <td><img class="roster-pic" src="player-san-pedro-enzo-carvajal.png" alt="Enzo Carvajal"></td>
-      <td>Enzo Carvajal</td><td>SP</td><td class="align-center">R/R</td><td class="align-right">26</td>
-    </tr>
-
-    <!-- RELIEVERS (3) -->
-    <tr data-player-id="spc-006">
-      <td><img class="roster-pic" src="player-san-pedro-marek-zielinski.png" alt="Marek Zielinski"></td>
-      <td>Marek Zielinski</td><td>RP</td><td class="align-center">R/R</td><td class="align-right">28</td>
-    </tr>
-    <tr data-player-id="spc-007">
-      <td><img class="roster-pic" src="player-san-pedro-teo-arellano.png" alt="Teo Arellano"></td>
-      <td>Teo Arellano</td><td>RP</td><td class="align-center">L/L</td><td class="align-right">24</td>
-    </tr>
-    <tr data-player-id="spc-008">
-      <td><img class="roster-pic" src="player-san-pedro-isaac-rendell.png" alt="Isaac Rendell"></td>
-      <td>Isaac Rendell</td><td>RP</td><td class="align-center">R/R</td><td class="align-right">31</td>
-    </tr>
-
-    <!-- CATCHER (1) -->
-    <tr data-player-id="spc-009">
-      <td><img class="roster-pic" src="player-san-pedro-matias-serey.png" alt="Matías Serey"></td>
-      <td>Matías Serey</td><td>C</td><td class="align-center">R/R</td><td class="align-right">28</td>
-    </tr>
-
-    <!-- INFIELDERS (4) -->
-    <tr data-player-id="spc-010">
-      <td><img class="roster-pic" src="player-san-pedro-caleb-vanhoorn.png" alt="Caleb VanHoorn"></td>
-      <td>Caleb VanHoorn</td><td>1B</td><td class="align-center">L/R</td><td class="align-right">32</td>
-    </tr>
-    <tr data-player-id="spc-011">
-      <td><img class="roster-pic" src="player-san-pedro-omar-benyahia.png" alt="Omar Benyahia"></td>
-      <td>Omar Benyahia</td><td>2B</td><td class="align-center">S/R</td><td class="align-right">23</td>
-    </tr>
-    <tr data-player-id="spc-012">
-      <td><img class="roster-pic" src="player-san-pedro-ryo-kawabata.png" alt="Ryo Kawabata"></td>
-      <td>Ryo Kawabata</td><td>SS</td><td class="align-center">R/R</td><td class="align-right">26</td>
-    </tr>
-    <tr data-player-id="spc-013">
-      <td><img class="roster-pic" src="player-san-pedro-darius-kofi.png" alt="Darius Kofi"></td>
-      <td>Darius Kofi</td><td>3B</td><td class="align-center">R/R</td><td class="align-right">29</td>
-    </tr>
-
-    <!-- OUTFIELDERS (3) -->
-    <tr data-player-id="spc-014">
-      <td><img class="roster-pic" src="player-san-pedro-miguel-encarnacion.png" alt="Miguel Encarnación"></td>
-      <td>Miguel Encarnación</td><td>CF</td><td class="align-center">R/R</td><td class="align-right">25</td>
-    </tr>
-    <tr data-player-id="spc-015">
-      <td><img class="roster-pic" src="player-san-pedro-victor-sundqvist.png" alt="Victor Sundqvist"></td>
-      <td>Victor Sundqvist</td><td>LF</td><td class="align-center">L/L</td><td class="align-right">27</td>
-    </tr>
-    <tr data-player-id="spc-016">
-      <td><img class="roster-pic" src="player-san-pedro-naveen-iyer.png" alt="Naveen Iyer"></td>
-      <td>Naveen Iyer</td><td>RF</td><td class="align-center">R/R</td><td class="align-right">30</td>
-    </tr>
-
-  </tbody>
-</table>
-
-<h2>Recent Games</h2>
-<table>
-  <thead>
-    <tr>
-      <th>Date</th>
-      <th>Opponent</th>
-      <th>Result</th>
-      <th class="align-right">Box</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>—</td>
-      <td>—</td>
-      <td>—</td>
-      <td class="align-right"><a href="boxscore.html">View</a></td>
-    </tr>
-  </tbody>
-</table>
-
-<footer>
-  <div>GLOBAL LEAGUE BASEBALL · TEAM RECORD</div>
-  <img src="GLB_white.png" alt="GLB" class="glb-logo">
-</footer>
-
-</div>
-<script src="scripts/glb-ticker.js"></script>\n</body>
-</html>
+<main id="profile" class="san-pedro-page">
+<section class="team-hero" aria-labelledby="club-name"><img class="team-hero-image" src="assets/teams/san-pedro-cocolos/images/bemba-ballpark-proof.webp" width="1536" height="1024" alt="Estadio BEMBA beside the waterfront, with port cranes beyond the outfield at sunset" fetchpriority="high"><div class="team-hero-shade"></div><div class="team-hero-inner"><div class="team-kicker">Global League Baseball · Pacific Division</div><h1 id="club-name">San Pedro Cocolos</h1><p>Estadio BEMBA · San Pedro de Macorís</p></div></section>
+<nav class="san-pedro-section-nav" aria-label="San Pedro sections"><a href="#season">Season</a><a href="#leaders">Team leaders</a><a href="#cards">Player cards</a><a href="#roster">Roster</a><a href="#stadium">Estadio BEMBA</a><a href="#giveaway">Cup Night</a><a href="#entertainment">Candy Acuna</a><a href="#donk">DONK</a><a href="#mascot">Mascot</a><a href="#traditions">In the stands</a></nav>
+<section class="panel full" id="season"><h2>Season snapshot</h2><p class="san-pedro-meta" id="record-date">2026 season · As of 2026-10-13</p><div class="summary"><div><strong id="stat-record">68–94</strong><span>Record</span></div><div><strong id="stat-pct">.420</strong><span>Win %</span></div><div><strong id="stat-runs">547</strong><span>Runs</span></div><div><strong id="stat-allowed">580</strong><span>Allowed</span></div><div><strong id="stat-diff">-33</strong><span>Difference</span></div></div><div class="san-pedro-copy"><p>The Cocolos play beside the waterfront at Estadio BEMBA. Cargo cranes stand beyond the outfield; the covered concrete stand holds the shade as the evening lights come on.</p><a class="san-pedro-link" href="standings.html">Pacific Division standings →</a></div></section>
+<section class="panel full" id="leaders"><h2>Team leaders</h2><div class="san-pedro-table"><table><caption>2026 recorded season statistics</caption><thead><tr><th scope="col">Category</th><th scope="col">Player</th><th scope="col">Mark</th></tr></thead><tbody id="clubLeaders"><tr><th scope="row">Home runs</th><td><a href="player.html?team=san-pedro-cocolos&amp;player=omar-benyahia">Omar Benyahia</a></td><td>27</td></tr><tr><th scope="row">Runs batted in</th><td><a href="player.html?team=san-pedro-cocolos&amp;player=naveen-iyer">Naveen Iyer</a></td><td>78</td></tr><tr><th scope="row">Stolen bases</th><td><a href="player.html?team=san-pedro-cocolos&amp;player=victor-sundqvist">Victor Sundqvist</a></td><td>25</td></tr><tr><th scope="row">Strikeouts</th><td><a href="player.html?team=san-pedro-cocolos&amp;player=enzo-valera">Enzo Valera</a></td><td>178</td></tr><tr><th scope="row">Wins</th><td><a href="player.html?team=san-pedro-cocolos&amp;player=nolan-garrity">Nolan Garrity</a></td><td>20</td></tr><tr><th scope="row">ERA · 100+ IP</th><td><a href="player.html?team=san-pedro-cocolos&amp;player=nolan-garrity">Nolan Garrity</a></td><td>2.03</td></tr></tbody></table></div></section>
+<section class="panel full" id="cards"><h2>FIELDSTOCK player cards</h2><div class="san-pedro-copy"><span class="san-pedro-meta">2026 collection · 16 players · SPD-01–SPD-16</span><p>Select a card to flip it over. To claim an open card, add a detail of your own and send it to GLB for review. If approved, GLB will publish your contribution with your user ID and send you a unique, private 16-digit code for the card.</p></div><div class="tpe-card-grid" id="sanPedroCards" aria-label="San Pedro Cocolos FIELDSTOCK collection"><p>Loading the card collection…</p></div><noscript><p class="san-pedro-copy">Enable JavaScript to flip cards and contribute. The active roster is listed below.</p></noscript></section>
+<section class="panel full" id="roster"><h2>Active roster</h2><div class="san-pedro-table"><table><caption>2026 San Pedro Cocolos · 16 players</caption><thead><tr><th scope="col">Player</th><th scope="col">Pos</th><th scope="col">B/T</th><th scope="col">Age</th><th scope="col">Card</th></tr></thead><tbody id="sanPedroRoster"><tr><th scope="row"><a href="player.html?team=san-pedro-cocolos&amp;player=ivo-korolenko">Ivo Korolenko</a></th><td>SP</td><td>R/R</td><td>29</td><td><a href="#card-spd-01">SPD-01</a></td></tr><tr><th scope="row"><a href="player.html?team=san-pedro-cocolos&amp;player=nolan-garrity">Nolan Garrity</a></th><td>SP</td><td>L/L</td><td>27</td><td><a href="#card-spd-02">SPD-02</a></td></tr><tr><th scope="row"><a href="player.html?team=san-pedro-cocolos&amp;player=kenji-morishita">Kenji Morishita</a></th><td>SP</td><td>R/R</td><td>25</td><td><a href="#card-spd-03">SPD-03</a></td></tr><tr><th scope="row"><a href="player.html?team=san-pedro-cocolos&amp;player=souleymane-diallo">Souleymane Diallo</a></th><td>SP</td><td>R/R</td><td>30</td><td><a href="#card-spd-04">SPD-04</a></td></tr><tr><th scope="row"><a href="player.html?team=san-pedro-cocolos&amp;player=enzo-valera">Enzo Valera</a></th><td>SP</td><td>R/R</td><td>26</td><td><a href="#card-spd-05">SPD-05</a></td></tr><tr><th scope="row"><a href="player.html?team=san-pedro-cocolos&amp;player=marek-zielinski">Marek Zielinski</a></th><td>RP</td><td>R/R</td><td>28</td><td><a href="#card-spd-06">SPD-06</a></td></tr><tr><th scope="row"><a href="player.html?team=san-pedro-cocolos&amp;player=teo-arellano">Teo Arellano</a></th><td>RP</td><td>L/L</td><td>24</td><td><a href="#card-spd-07">SPD-07</a></td></tr><tr><th scope="row"><a href="player.html?team=san-pedro-cocolos&amp;player=isaac-rendell">Isaac Rendell</a></th><td>RP</td><td>R/R</td><td>31</td><td><a href="#card-spd-08">SPD-08</a></td></tr><tr><th scope="row"><a href="player.html?team=san-pedro-cocolos&amp;player=matias-serey">Matías Serey</a></th><td>C</td><td>R/R</td><td>28</td><td><a href="#card-spd-09">SPD-09</a></td></tr><tr><th scope="row"><a href="player.html?team=san-pedro-cocolos&amp;player=caleb-vanhoorn">Caleb VanHoorn</a></th><td>1B</td><td>L/R</td><td>32</td><td><a href="#card-spd-10">SPD-10</a></td></tr><tr><th scope="row"><a href="player.html?team=san-pedro-cocolos&amp;player=omar-benyahia">Omar Benyahia</a></th><td>2B</td><td>S/R</td><td>23</td><td><a href="#card-spd-11">SPD-11</a></td></tr><tr><th scope="row"><a href="player.html?team=san-pedro-cocolos&amp;player=ryo-kawabata">Ryo Kawabata</a></th><td>SS</td><td>R/R</td><td>26</td><td><a href="#card-spd-12">SPD-12</a></td></tr><tr><th scope="row"><a href="player.html?team=san-pedro-cocolos&amp;player=darius-kofi">Darius Kofi</a></th><td>3B</td><td>R/R</td><td>29</td><td><a href="#card-spd-13">SPD-13</a></td></tr><tr><th scope="row"><a href="player.html?team=san-pedro-cocolos&amp;player=miguel-encarnacion">Miguel Encarnación</a></th><td>CF</td><td>R/R</td><td>25</td><td><a href="#card-spd-14">SPD-14</a></td></tr><tr><th scope="row"><a href="player.html?team=san-pedro-cocolos&amp;player=victor-sundqvist">Victor Sundqvist</a></th><td>LF</td><td>L/L</td><td>27</td><td><a href="#card-spd-15">SPD-15</a></td></tr><tr><th scope="row"><a href="player.html?team=san-pedro-cocolos&amp;player=naveen-iyer">Naveen Iyer</a></th><td>RF</td><td>R/R</td><td>30</td><td><a href="#card-spd-16">SPD-16</a></td></tr></tbody></table></div></section>
+<section class="panel full" id="results"><h2>Recent results</h2><div id="recent-results"><p>Loading recorded results…</p></div></section>
+<section class="panel full" id="stadium"><h2>Estadio BEMBA</h2><div class="san-pedro-copy"><figure><img src="assets/teams/san-pedro-cocolos/images/bemba-ballpark-proof.webp" width="1536" height="1024" alt="BEMBA guava-and-lime soda packaging and the waterfront ballpark bearing its name" loading="lazy"></figure><div class="san-pedro-columns"><article><span class="san-pedro-meta">Home ballpark · San Pedro de Macorís</span><h3>Baseball by the waterfront</h3><p>A low roof covers the home stand, and green walls frame the outfield. The ballpark keeps its concrete, port cranes and open evening sky as BEMBA’s burgundy lettering appears along the fascia and fence.</p></article><article><span class="san-pedro-meta">BEMBA · Refrescos con chispa</span><p>Guava soda over ice, with lime on the label. BEMBA’s cream packaging carries a burgundy wordmark, an orange citrus-and-bubbles symbol and a narrow lime-green stripe.</p></article></div></div></section>
+<section class="panel full" id="giveaway"><h2>BEMBA Cup Night</h2><div class="san-pedro-copy san-pedro-columns"><figure><img src="assets/teams/san-pedro-cocolos/images/bemba-cup-night.webp" width="1536" height="1024" alt="A concession attendant hands a fan a frosted reusable BEMBA cup at the stadium" loading="lazy"></figure><article><span class="san-pedro-meta">Park giveaway · Selected home dates</span><h3>Noche del Vaso BEMBA</h3><p>The giveaway is a frosted reusable stadium cup carrying the BEMBA wordmark and San Pedro Cocolos lettering. It stacks behind the concession counter and comes home with the night’s scorecard.</p><p class="san-pedro-meta">Dates and distribution details announced with the promotions schedule.</p></article></div></section>
+<section class="panel full" id="entertainment"><h2>Candy Acuna</h2><div class="san-pedro-copy"><figure><img src="assets/teams/san-pedro-cocolos/images/candy-acuna-live.webp" width="1536" height="1024" alt="Candy Acuna sings and plays a burgundy electric guitar with his band on the stadium concourse stage" loading="lazy"></figure><span class="san-pedro-meta">Resident singer-guitarist</span><h3>A tight groove. A rough guitar.</h3><p>Acuna leads from the microphone with his guitar still ringing. The band locks into funk and soul, then opens the sound with overdriven blues-rock guitar. Drums, bass, organ and horns follow his cues through sharp stops and long audience answers.</p><p>Ivory suit, burgundy shirt, dark curls and a broad mustache. On selected evenings after the final out, Candy and the band take the small concourse stage with the crowd close enough to sing back.</p></div></section>
+<section class="panel full" id="donk"><h2>DONK</h2><div class="san-pedro-copy"><div class="san-pedro-donk-brand"><img src="assets/teams/spokane-alloys/images/club/donk-wordmark-opal-rose.webp" alt="DONK" loading="lazy"><span class="san-pedro-meta">Custom car competition</span></div><figure><img src="assets/teams/san-pedro-cocolos/images/placido-pojo-bemba-c10.webp" width="1536" height="1024" alt="Placido Pojo drives the burgundy-and-ivory BEMBA Chevrolet C10 during a hydraulic height run outside Estadio BEMBA" loading="lazy"></figure><span class="san-pedro-meta">Driver entry · San Pedro</span><h3>Placido Pojo</h3><p>Pojo brings a 1972 Chevrolet C10 in burgundy and ivory, with polished chrome wheels and fine orange and lime-green pinstriping. BEMBA fills the door panels. A mustard work shirt and a steady hand on the switches are part of the sight from the rail.</p><p>DONK operates independently of Global League Baseball. Selected events use stadium venues under separate agreements. Hydraulic height runs take place on a dedicated paved lane, with spectators behind barriers and an official measuring rig beside the vehicle.</p></div></section>
+<section class="panel full" id="mascot"><h2>Along the rail</h2><div class="san-pedro-copy san-pedro-columns"><figure><img src="club-san-pedro-cocolos-mascot.png" width="1024" height="1372" alt="San Pedro’s sailor-bird mascot greets fans beside the field rail" loading="lazy"></figure><article><span class="san-pedro-meta">Club mascot</span><p>The sailor-bird mascot works the field rail between innings, stopping beside families and leaning into photographs. The white sailor cap and blue neckerchief remain visible through the crowd.</p><a class="san-pedro-link" href="contribute.html?team=san-pedro-cocolos&amp;type=mascot&amp;artifact=San%20Pedro%20sailor-bird">Contribute to this character →</a></article></div></section>
+<section class="panel full" id="traditions"><h2>In the stands</h2><div class="san-pedro-copy san-pedro-columns"><figure><img src="club-san-pedro-cocolos-fans.png" width="1328" height="582" alt="San Pedro supporters clap together with a hand drum in the covered stand" loading="lazy"></figure><article><span class="san-pedro-meta">From the covered stand</span><p>A hand drum starts a short phrase, and the next row answers with claps. The sound travels beneath the low roof while families pass cups and compare scorecards. The exchange finds room between innings, then settles as the next batter steps in.</p></article></div></section>
+</main>
+<footer class="site-footer"><div class="container footer-main"><div><div class="footer-logo">GLB</div><p>Global League Baseball</p><p>Official league site providing scores, standings, schedules, club information, and league bulletins.</p></div><div class="footer-col"><h4>League</h4><a href="standings.html">Standings</a><a href="scores.html">Scores</a><a href="schedule.html">Schedule</a><a href="stats.html">Stats</a></div><div class="footer-col"><h4>Clubs</h4><a href="teams.html">Teams</a><a href="#stadium">Estadio BEMBA</a><a href="#roster">Roster</a></div><div class="footer-col"><h4>League Life</h4><a href="events.html">Events</a><a href="contribute.html">Contribute</a><a href="artifacts.html">Artifacts</a></div></div><div class="footer-bottom"><div class="container footer-bottom-inner"><span>© 2026 Global League Baseball</span><span>San Pedro Cocolos</span><span>Official Team Record</span></div></div></footer>
+<script src="scripts/player-cards.js?v=san-pedro-2026-1"></script><script src="scripts/taipei-cards.js?v=osaka-01"></script><script src="scripts/san-pedro-cocolos.js?v=1"></script><script src="scripts/glb-ticker.js"></script></body></html>

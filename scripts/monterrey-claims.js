@@ -19,10 +19,10 @@
       const owner=approved.claims?.[id]?.user_id;
       if(owner){updateLinks('Claimed by '+owner);status.textContent='Claimed by '+owner;host.append(entry);continue;}
       if(!artifact.claimable){status.textContent='Opening Soon';host.append(entry);continue;}
-      const button=document.createElement('button');button.type='button';button.textContent='Request claim';
+      const button=document.createElement('button');button.type='button';button.textContent='Claim & craft';
       const form=document.createElement('form');form.hidden=true;form.action='https://formspree.io/f/mzezpeap';form.method='POST';
-      form.innerHTML='<label>USER ID<input name="user_id" required minlength="3" maxlength="24" pattern="[A-Za-z0-9_-]{3,24}" title="3–24 letters, numbers, underscores, or hyphens"></label><label>Email<input name="email" type="email" autocomplete="email" required></label><label>Proposed contribution<textarea name="proposed_card_bio" required maxlength="180"></textarea></label><small>A request is not acceptance. Your private 16-digit code is issued only after approval.</small><button type="submit">Submit request</button>';
-      for(const [name,value]of Object.entries({_subject:'Monterrey artifact claim + contribution',submission_type:artifact.type==='mascot'?'mascot_artifact':'player_card',artifact_type:artifact.type,card_id:id,artifact_id:id,player_name:artifact.type==='player'?artifact.name:'',artifact_name:artifact.name,team_slug:'monterrey-cementeros'})){
+      form.innerHTML='<label>Your public User ID<input name="user_id" required minlength="3" maxlength="24" pattern="[A-Za-z0-9_-]{3,24}" title="3–24 letters, numbers, underscores, or hyphens"></label><label>Email<input name="email" type="email" autocomplete="email" required></label><label>Proposed contribution<textarea name="proposed_card_bio" required maxlength="3000" rows="6"></textarea></label><small>The GLB Board reviews your submission. Accepted content is published with your User ID, and a private 16-character claim code is sent by email.</small><button type="submit">Submit to the GLB Board</button>';
+      for(const [name,value]of Object.entries({_subject:'Monterrey artifact claim + contribution',review_body:'GLB Board',submission_type:artifact.type==='mascot'?'mascot_artifact':'player_card',artifact_type:artifact.type,card_id:id,artifact_id:id,player_name:artifact.type==='player'?artifact.name:'',artifact_name:artifact.name,team_slug:'monterrey-cementeros'})){
         const input=document.createElement('input');input.type='hidden';input.name=name;input.value=value;form.append(input);
       }
       const key='glb-fieldstock-pending-'+id;

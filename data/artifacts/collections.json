@@ -1,0 +1,60 @@
+{
+  "schema": "glb.artifact-collections.v1",
+  "collections": [
+    {
+      "team_slug": "san-pedro-cocolos",
+      "team_name": "San Pedro Cocolos",
+      "source": "data/cards/san-pedro-cocolos.json",
+      "roster": "data/rosters/san-pedro-cocolos.json"
+    },
+    {
+      "team_slug": "osaka-spirits",
+      "team_name": "Osaka Spirits",
+      "source": "data/rosters/osaka-spirits.json",
+      "prefix": "OSA"
+    },
+    {
+      "team_slug": "taipei-neon",
+      "team_name": "Taipei Neon",
+      "source": "data/cards/taipei-neon-series-01.json",
+      "roster": "data/rosters/taipei-neon.json"
+    },
+    {
+      "team_slug": "spokane-alloys",
+      "team_name": "Spokane Alloys",
+      "source": "data/cards/spokane-alloys.json",
+      "roster": "data/rosters/spokane-alloys.json",
+      "open_ids": [
+        "SPK-01",
+        "SPK-02",
+        "SPK-03"
+      ]
+    },
+    {
+      "team_slug": "monterrey-cementeros",
+      "team_name": "Monterrey Cementeros",
+      "source": "data/cards/monterrey-cementeros.json",
+      "roster": "data/rosters/monterrey-cementeros.json"
+    },
+    {
+      "team_slug": "tijuana-tecnicos",
+      "team_name": "Tijuana Técnicos",
+      "source": "data/cards/tijuana-tecnicos.json",
+      "roster": "data/rosters/tijuana-tecnicos.json"
+    },
+    {
+      "team_slug": "vancouver-current",
+      "team_name": "Vancouver Current",
+      "source": "data/rosters/vancouver-current.json",
+      "card_ids": {
+        "iseul-kang": "VAN-01",
+        "alejo-santillan": "VAN-06"
+      },
+      "open_ids": [
+        "VAN-01",
+        "VAN-06"
+      ]
+    }
+  ],
+  "creative_source": "data/artifacts/creative-artifacts.json"
+}

@@ -1,0 +1,235 @@
+{
+  "schema": "glb.creative-artifacts.v1",
+  "artifacts": [
+    {
+      "artifact_id": "OSA-OKEO",
+      "name": "Okeo Okeo",
+      "type": "entertainer",
+      "team_slug": "osaka-spirits",
+      "team_name": "Osaka Spirits",
+      "section": "entertainment",
+      "prompt": "A performance, a backstage story or a new illusion that fits Okeo’s magic and mentalism.",
+      "claim_open": true
+    },
+    {
+      "artifact_id": "OSA-YOSHIKO",
+      "name": "Yoshiko Futaba",
+      "type": "donk_driver",
+      "team_slug": "osaka-spirits",
+      "team_name": "Osaka Spirits",
+      "section": "donk",
+      "prompt": "Her path to DONK, a competition moment or life with the crew.",
+      "claim_open": true
+    },
+    {
+      "artifact_id": "OSA-G-CLASS",
+      "name": "Yoshiko’s MUMBO JUMBO G-Class",
+      "type": "donk_vehicle",
+      "team_slug": "osaka-spirits",
+      "team_name": "Osaka Spirits",
+      "section": "donk",
+      "prompt": "A build story, a crew detail or a moment from the competition lane.",
+      "claim_open": true
+    },
+    {
+      "artifact_id": "OSA-POTARI",
+      "name": "Potari",
+      "type": "mascot",
+      "team_slug": "osaka-spirits",
+      "team_name": "Osaka Spirits",
+      "section": "mascot",
+      "prompt": "A sideline encounter, a character detail or a small story from the stands.",
+      "claim_open": true
+    },
+    {
+      "artifact_id": "OSA-SUMMONING",
+      "name": "The Summoning",
+      "type": "tradition",
+      "team_slug": "osaka-spirits",
+      "team_name": "Osaka Spirits",
+      "section": "traditions",
+      "prompt": "A fan’s memory, a ritual detail or a story about the seventh-inning tradition.",
+      "claim_open": true
+    },
+    {
+      "artifact_id": "OSA-STADIUM",
+      "name": "MUMBO JUMBO Stadium",
+      "type": "ballpark",
+      "team_slug": "osaka-spirits",
+      "team_name": "Osaka Spirits",
+      "section": "stadium",
+      "prompt": "A place inside the park, a game-night account or a piece of its history.",
+      "claim_open": true
+    },
+    {
+      "artifact_id": "SPD-CANDY",
+      "name": "Candy Acuna",
+      "type": "entertainer",
+      "team_slug": "san-pedro-cocolos",
+      "team_name": "San Pedro Cocolos",
+      "section": "entertainment",
+      "prompt": "A concert memory, a musical background or a detail from his residency.",
+      "claim_open": true
+    },
+    {
+      "artifact_id": "SPD-PLACIDO",
+      "name": "Placido Pojo",
+      "type": "donk_driver",
+      "team_slug": "san-pedro-cocolos",
+      "team_name": "San Pedro Cocolos",
+      "section": "donk",
+      "prompt": "A driver biography, a crew story or a competition memory.",
+      "claim_open": true
+    },
+    {
+      "artifact_id": "SPD-BEMBA-C10",
+      "name": "Placido’s BEMBA Chevy pickup",
+      "type": "donk_vehicle",
+      "team_slug": "san-pedro-cocolos",
+      "team_name": "San Pedro Cocolos",
+      "section": "donk",
+      "prompt": "The truck’s build, a garage story or a detail from a DONK event.",
+      "claim_open": true
+    },
+    {
+      "artifact_id": "SPD-MASCOT",
+      "name": "San Pedro’s sailor-bird mascot",
+      "type": "mascot",
+      "team_slug": "san-pedro-cocolos",
+      "team_name": "San Pedro Cocolos",
+      "section": "mascot",
+      "prompt": "A character detail, a fan encounter or a story from the rail.",
+      "claim_open": true
+    },
+    {
+      "artifact_id": "SPD-STADIUM",
+      "name": "Estadio BEMBA",
+      "type": "ballpark",
+      "team_slug": "san-pedro-cocolos",
+      "team_name": "San Pedro Cocolos",
+      "section": "stadium",
+      "prompt": "A waterfront ballpark memory, a concourse story or a corner of the park.",
+      "claim_open": true
+    },
+    {
+      "artifact_id": "SPD-CUP-NIGHT",
+      "name": "BEMBA Cup Night",
+      "type": "giveaway",
+      "team_slug": "san-pedro-cocolos",
+      "team_name": "San Pedro Cocolos",
+      "section": "giveaway",
+      "prompt": "A fan’s account of the giveaway or the story of a cup kept after the game.",
+      "claim_open": true
+    },
+    {
+      "artifact_id": "TPE-BENNY",
+      "name": "Benny Lo",
+      "type": "entertainer",
+      "team_slug": "taipei-neon",
+      "team_name": "Taipei Neon",
+      "section": "entertainer",
+      "prompt": "A song, a stage story or a fan’s account of the residency.",
+      "claim_open": true
+    },
+    {
+      "artifact_id": "GLB-TPE-MASCOT-0001",
+      "name": "Glow",
+      "type": "mascot",
+      "team_slug": "taipei-neon",
+      "team_name": "Taipei Neon",
+      "section": "mascot",
+      "prompt": "A character detail, a concourse encounter or a fan story.",
+      "claim_open": true
+    },
+    {
+      "artifact_id": "TPE-LO-NOTE",
+      "name": "The Lo Note",
+      "type": "tradition",
+      "team_slug": "taipei-neon",
+      "team_name": "Taipei Neon",
+      "section": "entertainer",
+      "prompt": "A karaoke contestant’s story, a performance memory or a detail from the contest.",
+      "claim_open": true
+    },
+    {
+      "artifact_id": "MTY-FUERA",
+      "name": "Fuera de Servicio",
+      "type": "entertainer",
+      "team_slug": "monterrey-cementeros",
+      "team_name": "Monterrey Cementeros",
+      "section": "residency",
+      "prompt": "A band history, a concert account or a story from a rehearsal.",
+      "claim_open": true
+    },
+    {
+      "artifact_id": "TIJ-QUOQUILA",
+      "name": "Quoquila",
+      "type": "entertainer",
+      "team_slug": "tijuana-tecnicos",
+      "team_name": "Tijuana Técnicos",
+      "section": "residency",
+      "prompt": "A performance account, a backstage detail or a story from the residency.",
+      "claim_open": true
+    },
+    {
+      "artifact_id": "TIJ-LUTIS",
+      "name": "Lutis Cujifrita",
+      "type": "donk_driver",
+      "team_slug": "tijuana-tecnicos",
+      "team_name": "Tijuana Técnicos",
+      "section": "donk",
+      "prompt": "Her driver biography, a crew story or a moment in the competition lane.",
+      "claim_open": true
+    },
+    {
+      "artifact_id": "TIJ-C10",
+      "name": "Lutis’s Chispa Móvil C10",
+      "type": "donk_vehicle",
+      "team_slug": "tijuana-tecnicos",
+      "team_name": "Tijuana Técnicos",
+      "section": "donk",
+      "prompt": "A build story or a garage detail for the violet 1972 Chevrolet C10.",
+      "claim_open": true
+    },
+    {
+      "artifact_id": "VAN-BEAVUS",
+      "name": "Beavus",
+      "type": "mascot",
+      "team_slug": "vancouver-current",
+      "team_name": "Vancouver Current",
+      "section": "mascot",
+      "prompt": "A character detail or an encounter at the park.",
+      "claim_open": true
+    },
+    {
+      "artifact_id": "VAN-COLD-PSYCH",
+      "name": "Cold Psych",
+      "type": "entertainer",
+      "team_slug": "vancouver-current",
+      "team_name": "Vancouver Current",
+      "section": "cold-psych",
+      "prompt": "A residency story, a performance account or a detail from the entertainer’s background.",
+      "claim_open": true
+    },
+    {
+      "artifact_id": "SPK-GUARDIAN",
+      "name": "Foundry Guardian",
+      "type": "mascot",
+      "team_slug": "spokane-alloys",
+      "team_name": "Spokane Alloys",
+      "section": "mascot",
+      "prompt": "A character detail, a field-level encounter or a fan’s memory.",
+      "claim_open": true
+    },
+    {
+      "artifact_id": "SPK-OGWA",
+      "name": "OGWA Stadium",
+      "type": "ballpark",
+      "team_slug": "spokane-alloys",
+      "team_name": "Spokane Alloys",
+      "section": "stadium",
+      "prompt": "A corner of the park, a game-night memory or a piece of its history.",
+      "claim_open": true
+    }
+  ]
+}

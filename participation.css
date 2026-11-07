@@ -1,0 +1,16 @@
+.glb-create-link{font-weight:800!important;text-decoration:underline!important;text-underline-offset:4px}
+.glb-participation{color:#142438;background:#fbf8ef;border:1px solid #d9d4c7;border-top:4px solid #b5914a;border-radius:10px;padding:clamp(22px,4vw,38px);margin:24px 0;font:16px/1.6 Arial,Helvetica,sans-serif;text-align:left}
+.glb-participation .glb-eyebrow{font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#6e5931}
+.glb-participation h2{font:700 clamp(26px,3vw,38px)/1.15 Georgia,serif;margin:10px 0 14px;color:#142438}
+.glb-participation p{max-width:760px;margin:10px 0 18px}
+.glb-participation a.glb-create-button{display:inline-block;background:#0b1e33;color:#fff;padding:12px 19px;border-radius:5px;text-decoration:none;font-weight:750}
+.glb-participation a.glb-create-button:hover{background:#234b70}
+.glb-participation a:focus-visible,.glb-create-link:focus-visible{outline:3px solid #bb8b34;outline-offset:4px}
+.glb-participation .glb-create-secondary{margin-left:18px;color:#183f65;font-weight:700}
+.glb-footer-create{padding:20px;text-align:center;font:14px/1.5 Arial,Helvetica,sans-serif;border-top:1px solid #d9dee5}
+.glb-footer-create a{color:inherit;font-weight:800}
+.glb-card-invitation a{font-weight:700}
+body .nav-links{flex-wrap:wrap}
+@media(max-width:600px){.glb-participation .glb-create-secondary{display:block;margin:14px 0 0}}
+.glb-artifact-invitation{margin:20px 0 0;padding-top:14px;border-top:1px solid #d9dee5;font:700 14px/1.5 Arial,Helvetica,sans-serif}
+.glb-artifact-invitation a{color:#17466c;text-decoration:underline;text-underline-offset:3px}

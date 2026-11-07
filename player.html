@@ -371,8 +371,9 @@ p{line-height:1.58;color:#343a40}
       </div>
       <div class="card-body">
         <p>
-          GLB person-records are maintained through reviewed public contributions.
-          Approved submissions may be added to the official archive with contributor credit.
+          Add a biography, a story or supporting material to this player’s record.
+          The GLB Board reviews submissions and publishes accepted content with your User ID.
+          To claim an open card, use Claim &amp; Craft in the Player Card section above.
         </p>
 
         <form class="bio-form" action="https://formspree.io/f/xjgzjlyn" method="POST">
@@ -381,8 +382,8 @@ p{line-height:1.58;color:#343a40}
           <input id="bioTeamField" name="club" type="text" readonly>
           <input id="bioCodeField" name="record_code" type="text" readonly>
 
-          <input name="contributor_name" type="text" placeholder="Your name">
-          <input name="contributor_email" type="email" placeholder="Your email">
+          <input name="user_id" type="text" placeholder="Your public User ID" required minlength="3" maxlength="24" pattern="[A-Za-z0-9_-]{3,24}">
+          <input name="email" type="email" placeholder="Your email (private)" required>
 
           <textarea
             name="suggested_bio"
@@ -390,7 +391,7 @@ p{line-height:1.58;color:#343a40}
           ></textarea>
 
           <button class="bio-submit" type="submit">
-            Submit for Review
+            Submit to the GLB Board
           </button>
         </form>
       </div>
@@ -469,7 +470,8 @@ p{line-height:1.58;color:#343a40}
 </footer>
 
 <script src="scripts/player-cards.js?v=san-pedro-2026-1"></script>
-<script src="scripts/taipei-cards.js?v=osaka-01"></script>
+<script src="scripts/artifact-catalog.js?v=20261107-claim-create"></script>
+<script src="scripts/taipei-cards.js?v=20261107-claim-create"></script>
 <script>
 const params = new URLSearchParams(window.location.search);
 
@@ -760,54 +762,23 @@ async function loadPlayer(){
   };
   const fieldstockTeam=FIELDSTOCK[teamSlug];
   const cardNumber=fieldstockTeam?.cards?.[playerSlug];
-  const cardId=player.card_id || (fieldstockTeam&&cardNumber
+  let artifact;
+  try {
+    const catalog=await GLBArtifacts.load();
+    artifact=catalog.artifacts.find(row=>row.team_slug===teamSlug && row.player_slug===playerSlug);
+  } catch(error) { console.warn('Artifact availability unavailable',error); }
+  const cardId=artifact?.id || player.card_id || (fieldstockTeam&&cardNumber
     ? fieldstockTeam.prefix.toUpperCase()+'-'+String(cardNumber).padStart(2,'0')
     : teamSlug.toUpperCase().slice(0,3)+'-'+playerSlug.toUpperCase());
-  const claimable= (!fieldstockTeam?.claimable || fieldstockTeam.claimable.has(playerSlug));
   const cardClaimGuide=document.getElementById('playerCardClaimGuide');
-  const osakaCard=teamSlug==='osaka-spirits' && player.card_id && player.card_front && player.card_back;
-  const numericClaimCode=Boolean(osakaCard)||['taipei-neon','monterrey-cementeros','tijuana-tecnicos','san-pedro-cocolos'].includes(teamSlug);
-  cardClaimGuide.textContent='Select the card to flip it over. '+(numericClaimCode ? "To claim an open card, add a detail of your own and send it to GLB for review. If approved, GLB will publish your contribution with your user ID and send you a unique, private 16-digit code for the card." : "To claim an open card, add a detail of your own and send it to GLB for review. If approved, GLB will publish your contribution with your user ID and send you a private FIELDSTOCK code for the card.");
+  cardClaimGuide.textContent='Claim a card and add content to make it your own! Player cards and other artifacts across GLB can be claimed, curated and crafted by you. Look for unclaimed artifacts, click to claim, craft your submission, and send it to the GLB Board for review. If accepted, you’ll receive a private 16-character claim code, and we’ll publish the artifact with your content and attribution to the User ID you provide. Select the card to flip it over. ';
+  const explore=document.createElement('a');explore.href='contribute.html';explore.textContent='Explore Claim & Create →';cardClaimGuide.append(explore);
   cardClaimGuide.hidden=false;
-
-  cardHost.replaceChildren(GLBPlayerCards.createCard({...player,slug:playerSlug,name:playerName,teamSlug,teamName:team.teamName,card_id:player.card_id || cardId},record,{link:false}));
-
-  if(osakaCard || teamSlug==='san-pedro-cocolos'){
-    cardHost.append(await TaipeiFieldstock.createClaimPanel(player,{teamSlug,teamName:team.teamName}));
-  }else if(teamSlug==='taipei-neon'){
-    cardHost.append(await TaipeiFieldstock.createCardDetails(player));
-    cardHost.append(await TaipeiFieldstock.createClaimPanel(player));
-  }else if(claimable){
-    const claim=document.createElement('form'); claim.className='card-claim-form'; claim.action='https://formspree.io/f/mzezpeap'; claim.method='POST';
-    claim.innerHTML='<strong>Request this card</strong><input type="hidden" name="card_id"><input type="hidden" name="player_name"><input name="user_id" required minlength="3" maxlength="24" pattern="[A-Za-z0-9_-]{3,24}" title="3–24 letters, numbers, underscores, or hyphens" placeholder="Your USER ID"><input name="email" type="email" required placeholder="Your email"><textarea name="proposed_card_bio" maxlength="180" required placeholder="A memorable, grounded baseball factoid about this player"></textarea><button type="submit">Submit request</button><small>If your request is approved, your unique 16-digit FIELDSTOCK code will be sent to your email.</small><div class="claim-response" aria-live="polite"></div>';
-    claim.elements.card_id.value=cardId;
-    claim.elements.player_name.value=playerName;
-    claim.addEventListener('submit',async event=>{
-      event.preventDefault();
-      const button=claim.querySelector('button'),response=claim.querySelector('.claim-response');
-      button.disabled=true;button.textContent='Submitting…';response.textContent='';
-      try{
-        const result=await fetch(claim.action,{method:'POST',body:new FormData(claim),headers:{Accept:'application/json'}});
-        if(!result.ok) throw new Error('Submission failed');
-        claim.querySelectorAll('input,textarea,button,small,strong').forEach(element=>element.hidden=true);
-        response.textContent='Request received. If approved, your unique 16-digit FIELDSTOCK code will be sent by email.';
-      }catch(error){button.disabled=false;button.textContent='Submit request';response.textContent='The request could not be submitted. Please try again.'}
-    });
-    cardHost.append(claim);
-    try{
-      const response=await fetch('data/cards/approved-claims.json',{cache:'no-store'});
-      if(response.ok){
-        const registry=await response.json();
-        const owner=registry.schema==='glb.approved-card-claims.v1'&&registry.claims?.[cardId]?.user_id;
-        if(owner){claim.replaceChildren(Object.assign(document.createElement('strong'),{textContent:'Claimed by '+owner}));}
-      }
-    }catch(error){console.warn('Approved claims unavailable',error)}
-  }else{
-    const pending=document.createElement('div');
-    pending.className='card-claim-form';
-    pending.innerHTML='<strong>CLAIMS OPENING SOON</strong><small>This FIELDSTOCK card is part of the club archive, but claims are not open for this card yet.</small>';
-    cardHost.append(pending);
-  }
+  const claimPlayer={...player,slug:playerSlug,name:playerName,teamSlug,teamName:team.teamName,
+    card_id:cardId,claim_open:artifact?.claim_open===true};
+  cardHost.replaceChildren(GLBPlayerCards.createCard(claimPlayer,record,{link:false}));
+  if(teamSlug==='taipei-neon')cardHost.append(await TaipeiFieldstock.createCardDetails(claimPlayer));
+  cardHost.append(await TaipeiFieldstock.createClaimPanel(claimPlayer,{teamSlug,teamName:team.teamName}));
   const body=document.getElementById('seasonStatBody');
   const careerBody=document.getElementById('careerStatBody');
   body.replaceChildren();careerBody.replaceChildren();
@@ -836,7 +807,8 @@ async function loadPlayer(){
 loadPlayer();
 </script>
 
-<script src="scripts/glb-ticker.js"></script>\n</body>
+<script src="scripts/glb-ticker.js"></script>\n<script src="scripts/participation.js?v=20261107-claim-create"></script>
+</body>
 </html>
 
 

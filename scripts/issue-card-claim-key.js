@@ -1,58 +1,35 @@
 #!/usr/bin/env node
-// Run only after editorial approval. Deliver the key privately; never commit it.
-const { randomBytes, randomInt } = require('node:crypto');
+// Run only after GLB Board acceptance. Deliver the code privately; never commit it.
+const { randomInt } = require('node:crypto');
 const { readFileSync, writeFileSync, renameSync } = require('node:fs');
 const { resolve } = require('node:path');
-
-const [cardId, userId] = process.argv.slice(2);
-if (!/^[A-Z]{3}-[A-Z0-9-]+$/.test(cardId || '') ||
-    !/^[A-Za-z0-9_-]{3,24}$/.test(userId || '')) {
-  console.error('Usage: node scripts/issue-card-claim-key.js TPE-01 user_id');
+const { collectionArtifacts, creativeArtifacts } = require('./artifact-catalog.js');
+const [artifactId, userId] = process.argv.slice(2);
+if (!/^[A-Z0-9]+(?:-[A-Z0-9]+)+$/.test(artifactId || '') || !/^[A-Za-z0-9_-]{3,24}$/.test(userId || '')) {
+  console.error('Usage: node scripts/issue-card-claim-key.js OSA-OKEO user_id');
   process.exit(1);
 }
-
+const read = path => JSON.parse(readFileSync(resolve(path), 'utf8'));
+const manifest = read('data/artifacts/collections.json');
+if (manifest.schema !== 'glb.artifact-collections.v1') throw Error('Unexpected artifact manifest.');
+const artifacts = manifest.collections.flatMap(collection => {
+  const source = read(collection.source);
+  return collectionArtifacts(collection, source, collection.roster ? read(collection.roster) : source);
+}).concat(creativeArtifacts(read(manifest.creative_source)));
+const artifact = artifacts.find(row => row.id === artifactId);
+if (!artifact?.claim_open) throw Error(`${artifactId} is not an open GLB artifact.`);
 const claimsPath = resolve(process.env.GLB_APPROVED_CLAIMS_PATH || 'data/cards/approved-claims.json');
-const isTaipei = cardId.startsWith('TPE-');
-const defaultCardsPath = isTaipei ? 'data/cards/taipei-neon-series-01.json'
-  : cardId.startsWith('MTY-') ? 'data/cards/monterrey-cementeros.json'
-  : cardId.startsWith('SPD-') ? 'data/cards/san-pedro-cocolos.json'
-  : 'data/cards/spokane-alloys.json';
-const cardsPath = resolve(process.env.GLB_CARD_REGISTRY_PATH || defaultCardsPath);
-const registry = JSON.parse(readFileSync(claimsPath, 'utf8'));
-const cards = JSON.parse(readFileSync(cardsPath, 'utf8'));
-
-if (registry.schema !== 'glb.approved-card-claims.v1' || !registry.claims) {
-  throw new Error('Approved-claims registry has an unexpected schema.');
-}
-
-if (isTaipei && (cards.schema !== 'glb.fieldstock-release.v1' || cards.team_slug !== 'taipei-neon')) {
-  throw new Error('Taipei release has an unexpected schema or club.');
-}
-const validCardIds = new Set(cards.cards
-  .filter(card => isTaipei ? card.claim_open === true : card.claimable !== false)
-  .map(card => card.card_id.replace(/-CURRENT$/, '')));
-if (!validCardIds.has(cardId)) {
-  throw new Error(`${cardId} is not an available FIELDSTOCK artifact.`);
-}
-
-if (registry.claims[cardId]) {
-  throw new Error(`${cardId} is already claimed by ${registry.claims[cardId].user_id}.`);
-}
-
-const key = isTaipei || cardId.startsWith('MTY-') || cardId.startsWith('SPD-')
-  ? String(randomInt(1, 10)) + Array.from({length:15}, () => randomInt(0, 10)).join('')
-  : `FST-${cardId}-${userId.toUpperCase()}-${randomBytes(20).toString('hex').toUpperCase().match(/.{8}/g).join('-')}`;
-
-registry.claims[cardId] = {
-  user_id: userId,
-  approved_at: new Date().toISOString()
-};
-
+const registry = read(claimsPath);
+if (registry.schema !== 'glb.approved-card-claims.v1' || !registry.claims) throw Error('Unexpected approved-claims registry.');
+if (registry.claims[artifactId]) throw Error(`${artifactId} is already claimed by ${registry.claims[artifactId].user_id}.`);
+// 16 cryptographically random characters; avoid ambiguous I, O, 0 and 1.
+const alphabet = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
+const code = Array.from({length:16}, () => alphabet[randomInt(alphabet.length)]).join('');
+registry.claims[artifactId] = {user_id:userId, approved_at:new Date().toISOString()};
 const temporaryPath = `${claimsPath}.tmp`;
-writeFileSync(temporaryPath, `${JSON.stringify(registry, null, 2)}\n`, { mode: 0o600 });
+writeFileSync(temporaryPath, `${JSON.stringify(registry, null, 2)}\n`, {mode:0o600});
 renameSync(temporaryPath, claimsPath);
-
-console.log(`Approved ${cardId} for ${userId}.`);
-console.log('Publish data/cards/approved-claims.json to close the public claim form.');
-console.log('Send this private ownership key to the claimant by email:');
-console.log(key);
+console.log(`Approved ${artifactId} for ${userId}.`);
+console.log('Publish the accepted content and data/cards/approved-claims.json together.');
+console.log('Send this private 16-character claim code to the claimant by email:');
+console.log(code);

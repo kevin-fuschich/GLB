@@ -1,38 +1,35 @@
-# FIELDSTOCK claim review
+# GLB Board claim review
 
-Spokane card requests arrive in the Formspree `mzezpeap` inbox. Submission creates a review request only. No key is generated or shown to the visitor at this stage.
+GLB invites visitors to claim, curate and craft player cards and other artifacts: mascots, entertainers, DONK drivers and vehicles, ballparks, fan traditions and giveaways. Submissions go to the existing Formspree `mzezpeap` inbox for GLB Board review. A request does not reserve an artifact, generate a code or publish content.
 
-To approve a request, compare its card ID, user ID, email, and factoid against other requests for that card. Once approved, run:
+## Availability
 
-```sh
-node scripts/issue-card-claim-key.js SPK-01 example_user
-```
+`data/artifacts/collections.json` points to the existing player-card registries and rosters. `data/artifacts/creative-artifacts.json` defines non-card artifacts, their current club-page records and prompts. `scripts/artifact-catalog.js` resolves these sources for both the public Claim & Create browser and the approval command.
 
-The approval command performs three actions together:
+The Board can open additional artifacts by adding a record with a stable artifact ID, a real existing-record link and `claim_open: true`. Preserve the existing identities and artwork when accepting new writing. Do not reopen an already attributed artifact without a separate editorial decision.
 
-1. Confirms that the card exists and is not already claimed.
-2. Adds the public user ID and approval time to `approved-claims.json`.
-3. Generates the private ownership key for delivery by email.
+## Accept a claim
 
-Record the key securely outside this public repository and send it to the approved claimant's submitted email address. The public record will look like this:
+1. Check the submitted artifact ID, public User ID, private email and proposed content. Compare competing requests for the same artifact and confirm that the content fits the existing record. Keep baseball rules intact.
+2. Edit the accepted content into its artifact's canonical record. For a player, this may include the biography and a shorter field note for the printed card back. For a mascot, entertainer, DONK entry, ballpark or tradition, update the corresponding club-page section. Add the accepted author's User ID beside the content.
+3. Run the approval helper locally, outside public CI:
+
+   ```sh
+   node scripts/issue-card-claim-key.js OSA-OKEO example_user
+   ```
+
+   Substitute the actual artifact ID and approved User ID. Examples include `SPD-01`, `MTY-POLVO`, `TIJ-LUTIS` and `SPD-BEMBA-C10`. The command rejects unknown, closed and already claimed artifacts. It records the public User ID and approval timestamp, and prints a cryptographically random private **16-character alphanumeric claim code**. Existing codes remain valid; do not reissue them just to change their format.
+
+4. Publish the accepted content and updated `data/cards/approved-claims.json` together. The browser removes the accepted artifact from the open list, and claim forms and club-page links show its public attribution.
+5. Record the code securely outside this public repository and send it privately to the claimant's submitted email address. Never put emails or codes in the public JSON, site, commits, pull requests or CI logs.
+
+The public registry contains attribution only:
 
 ```json
-"SPK-01": {
+"OSA-OKEO": {
   "user_id": "example_user",
-  "approved_at": "2026-09-23T15:30:00.000Z"
+  "approved_at": "2026-11-07T15:30:00.000Z"
 }
 ```
 
-Publish the updated JSON with the site. The team and player pages then show the approved user ID and close that card's request form. Never put email addresses or ownership keys in the public JSON. Edit the card's player note separately after approving the submitted factoid.
-
-This is editorial approval on a static site, not automatic ownership enforcement. Requests submitted before the published registry updates may overlap; review them in arrival order.
-
-## Monterrey launch
-
-Only MTY-01 (Emilio Zendejas), MTY-02 (Masato Yanagisawa), and MTY-POLVO are open. Other entries remain opening soon. Requests use the same Formspree inbox and public approved registry. Run `node scripts/issue-card-claim-key.js MTY-01 example_user` or `node scripts/issue-card-claim-key.js MTY-POLVO example_user` only after review. Monterrey approval generates a private 16-digit numeric FIELDSTOCK code; deliver it privately after acceptance. Public user ID attribution remains separate from the secret code. Do not commit the code or claimant email.
-
-## San Pedro 2026 collection
-
-Cards SPD-01 through SPD-16 are open for reviewed contributions. Club and player pages use the same card IDs, pending-request state and public approved registry. Requests arrive in the existing Formspree inbox.
-
-After editorial review, run `node scripts/issue-card-claim-key.js SPD-01 contributor_id` with the approved card and user ID. The command generates a private 16-digit numeric code and records public attribution. Deliver the code privately and publish the approved registry. Accept the factoid into the roster’s `field_note` separately so it appears on the shared card back. Never commit the code or claimant email.
+This remains a reviewed static-site workflow. The helper records acceptance; it does not send email or publish submitted copy automatically. Requests can overlap until the accepted registry is published. General contributions to an existing record remain welcome even when its artifact is claimed; a contribution does not automatically create a second claim.

@@ -45,14 +45,14 @@
       state.textContent='Request submitted on this device · Watch your email for a decision.';
       return panel;
     }
-    state.textContent='Open for contributions';
+    state.textContent='Unclaimed · Open for your contribution';
     const details=create('details');
-    details.append(create('summary','Contribute to this card'));
+    details.append(create('summary','Claim & craft this card'));
     const form=create('form');
     form.action='https://formspree.io/f/mzezpeap';form.method='POST';
     for(const [name,value] of Object.entries({
-      _subject:'FIELDSTOCK '+teamName+' card claim + factoid',submission_type:'player_card',
-      artifact_type:'FIELDSTOCK Player Card',artifact_id:id,card_id:id,player_name:player.name,
+      _subject:'FIELDSTOCK '+teamName+' card claim + contribution',submission_type:'player_card',
+      review_body:'GLB Board',artifact_type:'FIELDSTOCK Player Card',artifact_id:id,card_id:id,player_name:player.name,
       team_slug:teamSlug,release:teamName+' FIELDSTOCK Series 01',current_card_bio:player.factoid || player.bio || ''
     })) {
       const input=create('input');input.type='hidden';input.name=name;input.value=value;form.append(input);
@@ -64,14 +64,14 @@
       if(type!=='textarea')field.type=type;
       label.append(field);form.append(label);return field;
     };
-    const user=label('Public contributor ID','user_id','text');
+    const user=label('Your public User ID','user_id','text');
     user.minLength=3;user.maxLength=24;user.pattern='[A-Za-z0-9_\\-]{3,24}';
     user.title='3–24 letters, numbers, underscores, or hyphens';user.autocomplete='username';
     label('Email (private)','email','email').autocomplete='email';
-    const fact=label('A grounded baseball factoid for this player','proposed_card_bio','textarea');
-    fact.maxLength=180;fact.rows=3;
-    form.append(create('p','If approved, your contributor ID appears on the card and we email you a private 16-digit FIELDSTOCK code. Your email and code stay private.','tpe-claim-note'));
-    const button=create('button','Submit request');button.type='submit';
+    const fact=label('Your contribution — biography, story or baseball detail','proposed_card_bio','textarea');
+    fact.maxLength=3000;fact.rows=6;fact.placeholder='Add to this player’s story. Build on the existing record and keep baseball’s rules intact.';
+    form.append(create('p','The GLB Board reviews your submission. If accepted, we publish your content with your User ID and email you a private 16-character claim code. Your email and code stay private.','tpe-claim-note'));
+    const button=create('button','Submit to the GLB Board');button.type='submit';
     const response=create('p');response.setAttribute('role','status');response.setAttribute('aria-live','polite');
     form.append(button,response);details.append(form);panel.append(details);
     form.addEventListener('submit',async event => {
@@ -83,7 +83,7 @@
         if(!r.ok)throw Error('Submission failed');
         pending.set(id);details.remove();state.textContent='Request submitted on this device · Watch your email for a decision.';
       } catch {
-        button.disabled=false;button.textContent='Submit request';
+        button.disabled=false;button.textContent='Submit to the GLB Board';
         response.textContent='The request could not be submitted. Please try again.';
       }
     });

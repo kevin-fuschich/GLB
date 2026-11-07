@@ -85,6 +85,7 @@
   const monterreyCards = {'emilio-zendejas':1,'masato-yanagisawa':2,'kofi-mensah':12,'andres-cazares':15};
   const tijuanaCardArt = {"rafael-montoya": "assets/images/cards/fieldstock/tij-01-rafael-montoya-front-photo.webp", "diego-verdugo": "assets/images/cards/fieldstock/tij-02-diego-verdugo-front-photo.webp", "esteban-arce": "assets/images/cards/fieldstock/tij-03-esteban-arce-front-photo.webp", "tomas-zepeda": "assets/images/cards/fieldstock/tij-04-tomas-zepeda-front-photo.webp", "mauricio-cota": "assets/images/cards/fieldstock/tij-05-mauricio-cota-front-photo.webp", "ivan-lizarraga": "assets/images/cards/fieldstock/tij-06-ivan-lizarraga-front-photo.webp", "julian-ochoa": "assets/images/cards/fieldstock/tij-07-julian-ochoa-front-photo.webp", "sergio-hinojosa": "assets/images/cards/fieldstock/tij-08-sergio-hinojosa-front-photo.webp", "bruno-valdes": "assets/images/cards/fieldstock/tij-09-bruno-valdes-front-photo.webp", "matias-camarena": "assets/images/cards/fieldstock/tij-10-matias-camarena-front-photo.webp", "nicolas-paredes": "assets/images/cards/fieldstock/tij-11-nicolas-paredes-front-photo.webp", "adrian-fierro": "assets/images/cards/fieldstock/tij-12-adrian-fierro-front-photo.webp", "emilio-barron": "assets/images/cards/fieldstock/tij-13-emilio-barron-front-photo.webp", "gael-marrufo": "assets/images/cards/fieldstock/tij-14-gael-marrufo-front-photo.webp", "cristobal-saucedo": "assets/images/cards/fieldstock/tij-15-cristobal-saucedo-front-photo.webp", "hector-belmonte": "assets/images/cards/fieldstock/tij-16-hector-belmonte-front-photo.webp"};
   function cardFront(player) {
+    if (player.teamSlug === 'osaka-spirits') return player.card_front || null;
     if (player.teamSlug === 'taipei-neon' && taipeiCards[player.slug]) return player.card_front || 'assets/images/cards/fieldstock/tpe-'+String(taipeiCards[player.slug]).padStart(2,'0')+'-'+player.slug+'-front.webp';
     if(player.teamSlug === 'tijuana-tecnicos' && tijuanaCards[player.slug]) return player.card_front || tijuanaCardArt[player.slug] || 'assets/images/cards/fieldstock/tij-'+String(tijuanaCards[player.slug]).padStart(2,'0')+'-'+player.slug+'-front.webp';
     return player.teamSlug === 'monterrey-cementeros' && monterreyCards[player.slug]
@@ -103,7 +104,7 @@
     if (monterrey) card.classList.add('mty-physical-card');
     if (taipei) card.classList.add('tpe-physical-card');
     const number = (taipei ? taipeiCards : monterrey ? monterreyCards : tijuanaCards)[player.slug];
-    const code = (taipei ? 'TPE-' : monterrey ? 'MTY-' : 'TIJ-') + String(number).padStart(2, '0');
+    const code = player.teamSlug === 'osaka-spirits' ? player.card_id : (taipei ? 'TPE-' : monterrey ? 'MTY-' : 'TIJ-') + String(number).padStart(2, '0');
     const button = document.createElement('button');
     button.type = 'button'; button.className = 'tij-card-flipper';
     const inner = text('span', '', 'tij-card-inner');
@@ -114,7 +115,7 @@
     front.src = cardFront(player);
     back.src = player.card_back || front.src.replace(/-front-photo\.webp$/, '-back-photo.webp');
     front.alt = (player.card_front_alt || 'Photograph of ' + player.name) + ' · ' + code + ' physical card front';
-    back.alt = 'Photograph of ' + player.name + ' ' + code + ' physical card back, with biography and 2026 statistics';
+    back.alt = 'Photograph of ' + player.name + ' ' + code + ' physical card back, with player information and 2026 statistics';
     const hint = text('p', '', 'tij-card-flip-note');
     const status = text('p', '', 'tij-card-error');
     status.setAttribute('role', 'status'); status.hidden = true;

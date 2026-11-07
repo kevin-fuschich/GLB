@@ -21,7 +21,7 @@
     set(id) { try {localStorage.setItem('glb-fieldstock-pending-'+id,'1');} catch {} },
     clear(id) { try {localStorage.removeItem('glb-fieldstock-pending-'+id);} catch {} }
   };
-  async function createClaimPanel(player) {
+  async function createClaimPanel(player, { teamSlug = 'taipei-neon', teamName = 'Taipei Neon' } = {}) {
     const panel = create('div',undefined,'tpe-claim-panel');
     const state = create('p',undefined,'tpe-claim-state');
     state.setAttribute('role','status');state.setAttribute('aria-live','polite');
@@ -51,9 +51,9 @@
     const form=create('form');
     form.action='https://formspree.io/f/mzezpeap';form.method='POST';
     for(const [name,value] of Object.entries({
-      _subject:'FIELDSTOCK Taipei card claim + factoid',submission_type:'player_card',
+      _subject:'FIELDSTOCK '+teamName+' card claim + factoid',submission_type:'player_card',
       artifact_type:'FIELDSTOCK Player Card',artifact_id:id,card_id:id,player_name:player.name,
-      team_slug:'taipei-neon',release:'Taipei Neon FIELDSTOCK Series 01',current_card_bio:player.factoid || player.bio || ''
+      team_slug:teamSlug,release:teamName+' FIELDSTOCK Series 01',current_card_bio:player.factoid || player.bio || ''
     })) {
       const input=create('input');input.type='hidden';input.name=name;input.value=value;form.append(input);
     }

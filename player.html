@@ -467,8 +467,8 @@ p{line-height:1.58;color:#343a40}
   </div>
 </footer>
 
-<script src="scripts/player-cards.js?v=20261024-roster"></script>
-<script src="scripts/taipei-cards.js?v=20261106-contribute"></script>
+<script src="scripts/player-cards.js?v=osaka-01"></script>
+<script src="scripts/taipei-cards.js?v=osaka-01"></script>
 <script>
 const params = new URLSearchParams(window.location.search);
 
@@ -760,11 +760,12 @@ async function loadPlayer(){
     : teamSlug.toUpperCase().slice(0,3)+'-'+playerSlug.toUpperCase();
   const claimable= (!fieldstockTeam?.claimable || fieldstockTeam.claimable.has(playerSlug));
   const cardClaimGuide=document.getElementById('playerCardClaimGuide');
-  const numericClaimCode=['taipei-neon','monterrey-cementeros','tijuana-tecnicos'].includes(teamSlug);
+  const osakaCard=teamSlug==='osaka-spirits' && player.card_id && player.card_front && player.card_back;
+  const numericClaimCode=Boolean(osakaCard)||['taipei-neon','monterrey-cementeros','tijuana-tecnicos'].includes(teamSlug);
   cardClaimGuide.textContent='Select the card to flip it over. '+(numericClaimCode ? "To claim an open card, add a detail of your own and send it to GLB for review. If approved, GLB will publish your contribution with your user ID and send you a unique, private 16-digit code for the card." : "To claim an open card, add a detail of your own and send it to GLB for review. If approved, GLB will publish your contribution with your user ID and send you a private FIELDSTOCK code for the card.");
   cardClaimGuide.hidden=false;
 
-  if(['tijuana-tecnicos','monterrey-cementeros','taipei-neon'].includes(teamSlug) && fieldstockTeam&&cardNumber){
+  if(osakaCard || (['tijuana-tecnicos','monterrey-cementeros','taipei-neon'].includes(teamSlug) && fieldstockTeam&&cardNumber)){
     cardHost.replaceChildren(GLBPlayerCards.createPhysicalCard({...player,teamSlug,slug:playerSlug},{link:false}));
   }else if(teamSlug==='spokane-alloys' && fieldstockTeam&&cardNumber){
     const prefix=fieldstockTeam.prefix+'-'+String(cardNumber).padStart(2,'0')+'-'+playerSlug;
@@ -794,7 +795,9 @@ async function loadPlayer(){
     cardHost.replaceChildren(GLBPlayerCards.createCard({...player,slug:playerSlug,name:playerName,teamSlug,teamName:team.teamName},record,{link:false}));
   }
 
-  if(teamSlug==='taipei-neon'){
+  if(osakaCard){
+    cardHost.append(await TaipeiFieldstock.createClaimPanel(player,{teamSlug,teamName:team.teamName}));
+  }else if(teamSlug==='taipei-neon'){
     cardHost.append(await TaipeiFieldstock.createCardDetails(player));
     cardHost.append(await TaipeiFieldstock.createClaimPanel(player));
   }else if(claimable){

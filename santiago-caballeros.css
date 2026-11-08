@@ -1,0 +1,44 @@
+.santiago-page{--santiago-accent:#5e304c;--santiago-slate:#293740}
+.santiago-page .team-hero,.santiago-page .team-hero-inner{min-height:clamp(335px,46vw,600px)}
+.santiago-page .team-hero-image{object-position:50% 48%}
+.santiago-page .team-hero-shade{background:linear-gradient(0deg,rgba(9,15,20,.89),rgba(9,15,20,.18) 44%,transparent 70%),linear-gradient(90deg,rgba(9,15,20,.26),transparent 56%)}
+.santiago-page .team-hero-inner p{margin:6px 0 0;color:#eef1f3;font-size:15px}
+.santiago-page .full,.santiago-section-nav{grid-column:1/-1}
+.santiago-section-nav{display:flex;flex-wrap:wrap;gap:5px 18px;padding:11px 15px;background:#fff;border:1px solid var(--line);border-radius:12px}
+.santiago-section-nav a{padding:8px 4px;font-weight:700;color:var(--santiago-slate)}
+.santiago-page a:focus-visible{outline:2px solid var(--santiago-accent);outline-offset:3px}
+.santiago-section-nav a:hover,.santiago-table a:hover,.santiago-link-row a:hover{text-decoration:underline}
+.santiago-page .panel{scroll-margin-top:120px}
+.santiago-meta{color:var(--santiago-accent);font-size:11px;letter-spacing:.08em;font-weight:750;text-transform:uppercase}
+.santiago-page .summary{margin-bottom:14px}
+.santiago-link-row a,.santiago-table a{color:var(--santiago-slate);font-weight:740}
+.santiago-table{padding:0 20px 18px}
+.santiago-table table{border-collapse:collapse;width:100%;text-align:left}
+.santiago-table caption{text-align:left;color:var(--muted);padding:12px 0}
+.santiago-table th,.santiago-table td{padding:9px 8px;border-bottom:1px solid var(--line)}
+.santiago-table th:first-child{padding-left:0}
+.santiago-table thead th{font-size:11px;text-transform:uppercase;letter-spacing:.06em}
+.santiago-page #recent-results,.santiago-copy{padding:12px 20px}
+.santiago-copy p{max-width:68ch}
+.santiago-columns{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.santiago-columns h3{margin:4px 0}
+.santiago-copy figure{margin:0 0 12px}
+.santiago-copy figure img{width:100%;height:auto;display:block;border-radius:8px}
+.site-footer{--light:#fff}
+@media(max-width:900px){.santiago-page #roster,.santiago-page #results{grid-column:1/-1}}
+@media(max-width:650px){.santiago-page .team-hero,.santiago-page .team-hero-inner{min-height:330px}.santiago-page .team-hero-image{object-position:57% center}.santiago-columns{grid-template-columns:1fr;gap:14px}.santiago-table{padding-inline:12px}.santiago-section-nav{gap:2px 11px}}
+
+.santiago-page #giveaway{scroll-margin-top:120px}
+.santiago-donk-brand{display:flex;align-items:center;flex-wrap:wrap;gap:12px 24px;margin:0 0 20px}
+.santiago-donk-brand img{width:min(240px,100%);height:auto;display:block}
+
+.santiago-page .team-hero-image{height:100%;top:0;object-fit:cover;object-position:50% 50%}
+.santiago-page .full{grid-column:1/-1}
+.santiago-page .tpe-card-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.santiago-link{font-weight:700;text-decoration:underline}
+@media(max-width:1000px){.santiago-page .tpe-card-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.santiago-page .tpe-card-grid{grid-template-columns:1fr}}
+
+.santiago-page .voice-image{max-height:460px;object-fit:contain;background:#f3f5f7}.santiago-story-note{padding:16px;border-left:3px solid #d9b3a0;background:#fbf8f4;color:#4c5965}.santiago-table{overflow-x:auto}.santiago-link{font-weight:700;text-decoration:underline}
+
+.santiago-page .tpe-card-grid{grid-template-columns:repeat(3,minmax(0,1fr))}@media(max-width:1000px){.santiago-page .tpe-card-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:560px){.santiago-page .tpe-card-grid{grid-template-columns:1fr}}

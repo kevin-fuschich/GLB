@@ -543,7 +543,7 @@
       "type": "broadcaster",
       "team_slug": "santiago-caballeros",
       "team_name": "Santiago Caballeros",
-      "record_path": "club-santiago-caballeros.html",
+      "record_path": "team-santiago-caballeros.html",
       "section": "claim-san-broadcast",
       "role": "Play-by-play broadcaster",
       "prompt": "Write the biography, background or stories of Marisol Vega. Keep the established play-by-play broadcaster role and portrait.",
@@ -555,7 +555,7 @@
       "type": "announcer",
       "team_slug": "santiago-caballeros",
       "team_name": "Santiago Caballeros",
-      "record_path": "club-santiago-caballeros.html",
+      "record_path": "team-santiago-caballeros.html",
       "section": "claim-san-announcer",
       "role": "In-game announcer",
       "prompt": "Write the biography, background or stories of Rafa “El Timbre” Orellana. Keep the established in-game announcer role and portrait.",
@@ -703,6 +703,72 @@
       "section": "claim-van-announcer",
       "role": "In-game announcer",
       "prompt": "Write the biography, background or stories of Gavin Cho. Keep the established in-game announcer role and portrait.",
+      "claim_open": true
+    },
+    {
+      "artifact_id": "SAN-TUMBAO",
+      "name": "TUMBAO",
+      "type": "brand",
+      "team_slug": "santiago-caballeros",
+      "team_name": "Santiago Caballeros",
+      "record_path": "team-santiago-caballeros.html",
+      "section": "tumbao",
+      "prompt": "A story about the clothing, gear, customers or repair culture of TUMBAO. Preserve its name, logo and approved design.",
+      "claim_open": true
+    },
+    {
+      "artifact_id": "SAN-BLANKET",
+      "name": "TUMBAO Blanket Night",
+      "type": "giveaway",
+      "team_slug": "santiago-caballeros",
+      "team_name": "Santiago Caballeros",
+      "record_path": "team-santiago-caballeros.html",
+      "section": "giveaway",
+      "prompt": "A fan’s game-night account or the travels of a blanket brought back to the park.",
+      "claim_open": true
+    },
+    {
+      "artifact_id": "SAN-REPAIR-COUNTER",
+      "name": "The TUMBAO repair counter",
+      "type": "other",
+      "team_slug": "santiago-caballeros",
+      "team_name": "Santiago Caballeros",
+      "record_path": "team-santiago-caballeros.html",
+      "section": "repairs",
+      "prompt": "A repair ledger entry, a well-traveled piece of gear or a story connecting the people who bring it back.",
+      "claim_open": true
+    },
+    {
+      "artifact_id": "SAN-STADIUM",
+      "name": "Estadio de la Herradura",
+      "type": "ballpark",
+      "team_slug": "santiago-caballeros",
+      "team_name": "Santiago Caballeros",
+      "record_path": "team-santiago-caballeros.html",
+      "section": "stadium",
+      "prompt": "A game-night memory, a place inside the park or a piece of its history. The venue is in Santiago, Chile.",
+      "claim_open": true
+    },
+    {
+      "artifact_id": "SAN-CABALLO",
+      "name": "Caballo",
+      "type": "mascot",
+      "team_slug": "santiago-caballeros",
+      "team_name": "Santiago Caballeros",
+      "record_path": "team-santiago-caballeros.html",
+      "section": "mascot",
+      "prompt": "Write Caballo’s biography, history or fan encounters while preserving the name, horse-suit portrait and mascot role.",
+      "claim_open": true
+    },
+    {
+      "artifact_id": "SAN-LA-TRIBUNA",
+      "name": "La Tribuna",
+      "type": "tradition",
+      "team_slug": "santiago-caballeros",
+      "team_name": "Santiago Caballeros",
+      "record_path": "team-santiago-caballeros.html",
+      "section": "traditions",
+      "prompt": "A supporter’s memory, a family’s usual row or a story carried through a handheld radio.",
       "claim_open": true
     }
   ]

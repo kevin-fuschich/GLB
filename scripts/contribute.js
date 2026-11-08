@@ -4,7 +4,7 @@
   const teamFilter=document.getElementById('artifactClub');
   const typeFilter=document.getElementById('artifactKind');
   const el=(tag,text)=>{const node=document.createElement(tag);if(text)node.textContent=text;return node;};
-  const labels={brand:'Brand & business',player:'Player card',mascot:'Mascot',entertainer:'Entertainer',donk_driver:'DONK driver',donk_vehicle:'DONK vehicle',ballpark:'Ballpark',tradition:'Fan tradition',giveaway:'Giveaway'};
+  const labels={broadcaster:'Play-by-play broadcaster',announcer:'In-game announcer',brand:'Brand & business',player:'Player card',mascot:'Mascot',entertainer:'Entertainer',donk_driver:'DONK driver',donk_vehicle:'DONK vehicle',ballpark:'Ballpark',tradition:'Fan tradition',giveaway:'Giveaway'};
   const catalogRequest=GLBArtifacts.load();
   catalogRequest.then(({artifacts,claims,incomplete})=>{
     const open=artifacts.filter(artifact=>artifact.claim_open && !claims[artifact.id]);

@@ -37,3 +37,7 @@ This remains a reviewed static-site workflow. The helper records acceptance; it 
 ## Mayagüez launch
 
 MAY-01 through MAY-16 use the shared FIELDSTOCK front and back, canonical roster metadata and 2026 box-score-derived lines. Magixo, Laundry Bag Night, Inés Cordero, the Salt Court, El Sultán, the Lantern Section, Putana, Victor Lumelo and the 1964 Magixo Impala also have stable artifact records. The same Board review and private 16-character code process applies. Use the artifact’s exact MAY ID with the approval helper; the existing public registry handles attribution and closes approved claims.
+
+## Game voices across all 16 clubs
+
+Every club has separate BROADCAST and ANNOUNCER artifact IDs, for 32 claimable roles. Existing names, portraits and role descriptions are preserved; unnamed roles explicitly invite contributors to establish a name and biography. Creative records can set `record_path` so unfinished clubs link to their existing club dossier instead of a team page that lacks the profile. Profile links, the Claim & Create filters and the shared Board approval command use the same artifact IDs and registry. Do not fill in the biographies before contributors have the opportunity to write them.

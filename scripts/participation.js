@@ -27,7 +27,7 @@
 
 /* Put claims beside the people, places and objects they belong to. */
 (async () => {
-  const match=location.pathname.match(/team-([a-z0-9-]+)\.html$/);
+  const match=location.pathname.match(/(?:team|club)-([a-z0-9-]+)\.html$/);
   if(!match)return;
   try {
     const read=async path=>{const r=await fetch(path,{cache:'no-store'});if(!r.ok)throw Error(path);return r.json();};
@@ -44,7 +44,8 @@
         link.textContent='Claim & craft '+artifact.name+' →';p.append(link);
       }
       const body=section.querySelector('.card-body')||section;
-      body.append(p);
+      if(section.classList.contains('glb-voice-claim')) section.replaceChildren(p);
+      else body.append(p);
     }
   } catch { /* Keep the existing club record and contribution links available. */ }
 })();

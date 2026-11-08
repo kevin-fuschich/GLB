@@ -24,7 +24,7 @@
   function creativeArtifacts(source) {
     if (source.schema !== 'glb.creative-artifacts.v1') throw Error('Unknown creative artifact registry.');
     return source.artifacts.map(row => ({...row, id:row.artifact_id,
-      record_href:'team-'+row.team_slug+'.html#'+row.section,
+      record_href:(row.record_path || 'team-'+row.team_slug+'.html')+'#'+row.section,
       href:'contribute.html?team='+encodeURIComponent(row.team_slug)+'&type='+encodeURIComponent(row.type)+'&artifact='+encodeURIComponent(row.name)+'&artifact_id='+encodeURIComponent(row.artifact_id)+'#contribute'}));
   }
   if (typeof module === 'object' && module.exports) {

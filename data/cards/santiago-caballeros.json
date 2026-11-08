@@ -1,0 +1,136 @@
+{
+  "schema": "glb.player-card-registry.v1",
+  "team_slug": "santiago-caballeros",
+  "team_name": "Santiago Caballeros",
+  "season": 2026,
+  "cards": [
+    {
+      "card_id": "SAN-01",
+      "type": "player",
+      "edition": "2026",
+      "player_slug": "aron-videla",
+      "name": "Arón Videla",
+      "claimable": true
+    },
+    {
+      "card_id": "SAN-02",
+      "type": "player",
+      "edition": "2026",
+      "player_slug": "gideon-fairchild",
+      "name": "Gideon Fairchild",
+      "claimable": true
+    },
+    {
+      "card_id": "SAN-03",
+      "type": "player",
+      "edition": "2026",
+      "player_slug": "kenji-hoshino",
+      "name": "Kenji Hoshino",
+      "claimable": true
+    },
+    {
+      "card_id": "SAN-04",
+      "type": "player",
+      "edition": "2026",
+      "player_slug": "samson-ndlovu",
+      "name": "Samson Ndlovu",
+      "claimable": true
+    },
+    {
+      "card_id": "SAN-05",
+      "type": "player",
+      "edition": "2026",
+      "player_slug": "mateo-arancibia",
+      "name": "Mateo Arancibia",
+      "claimable": true
+    },
+    {
+      "card_id": "SAN-06",
+      "type": "player",
+      "edition": "2026",
+      "player_slug": "tyrese-warnock",
+      "name": "Tyrese Warnock",
+      "claimable": true
+    },
+    {
+      "card_id": "SAN-07",
+      "type": "player",
+      "edition": "2026",
+      "player_slug": "joaquim-silveira",
+      "name": "Joaquim Silveira",
+      "claimable": true
+    },
+    {
+      "card_id": "SAN-08",
+      "type": "player",
+      "edition": "2026",
+      "player_slug": "emin-kocak",
+      "name": "Emin Koçak",
+      "claimable": true
+    },
+    {
+      "card_id": "SAN-09",
+      "type": "player",
+      "edition": "2026",
+      "player_slug": "damian-velasquez",
+      "name": "Damián Velásquez",
+      "claimable": true
+    },
+    {
+      "card_id": "SAN-10",
+      "type": "player",
+      "edition": "2026",
+      "player_slug": "noam-finkel",
+      "name": "Noam Finkel",
+      "claimable": true
+    },
+    {
+      "card_id": "SAN-11",
+      "type": "player",
+      "edition": "2026",
+      "player_slug": "raul-castillo",
+      "name": "Raúl Castillo",
+      "claimable": true
+    },
+    {
+      "card_id": "SAN-12",
+      "type": "player",
+      "edition": "2026",
+      "player_slug": "maksim-berezan",
+      "name": "Maksim Berezan",
+      "claimable": true
+    },
+    {
+      "card_id": "SAN-13",
+      "type": "player",
+      "edition": "2026",
+      "player_slug": "eamon-quillan",
+      "name": "Eamon Quillan",
+      "claimable": true
+    },
+    {
+      "card_id": "SAN-14",
+      "type": "player",
+      "edition": "2026",
+      "player_slug": "kiyoshi-senda",
+      "name": "Kiyoshi Senda",
+      "claimable": true
+    },
+    {
+      "card_id": "SAN-15",
+      "type": "player",
+      "edition": "2026",
+      "player_slug": "dalton-reyes",
+      "name": "Dalton Reyes",
+      "claimable": true
+    },
+    {
+      "card_id": "SAN-16",
+      "type": "player",
+      "edition": "2026",
+      "player_slug": "adebayo-oluwaseyi",
+      "name": "Adebayo Oluwaseyi",
+      "claimable": true
+    }
+  ]
+}

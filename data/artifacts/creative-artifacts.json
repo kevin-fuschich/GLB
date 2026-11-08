@@ -770,6 +770,61 @@
       "section": "traditions",
       "prompt": "A supporter’s memory, a family’s usual row or a story carried through a handheld radio.",
       "claim_open": true
+    },
+    {
+      "artifact_id": "SAN-GATE",
+      "name": "Estadio de la Herradura front gate",
+      "type": "ballpark",
+      "team_slug": "santiago-caballeros",
+      "team_name": "Santiago Caballeros",
+      "record_path": "team-santiago-caballeros.html",
+      "section": "front-gate",
+      "prompt": "Write an arrival, encounter or small history connected to the Caballeros front gate.",
+      "claim_open": true
+    },
+    {
+      "artifact_id": "SAN-FOOD",
+      "name": "Estadio de la Herradura food concourse",
+      "type": "ballpark",
+      "team_slug": "santiago-caballeros",
+      "team_name": "Santiago Caballeros",
+      "record_path": "team-santiago-caballeros.html",
+      "section": "food",
+      "prompt": "Add a food counter story, a fan encounter or a detail from the concourse.",
+      "claim_open": true
+    },
+    {
+      "artifact_id": "SAN-CLIMBING-WALL",
+      "name": "TUMBAO climbing wall",
+      "type": "ballpark",
+      "team_slug": "santiago-caballeros",
+      "team_name": "Santiago Caballeros",
+      "record_path": "team-santiago-caballeros.html",
+      "section": "climbing",
+      "prompt": "Develop a climbing-wall moment, park ritual or story about the people who return to it.",
+      "claim_open": true
+    },
+    {
+      "artifact_id": "SAN-RENATO",
+      "name": "Renato Cifuentes",
+      "type": "donk_driver",
+      "team_slug": "santiago-caballeros",
+      "team_name": "Santiago Caballeros",
+      "record_path": "team-santiago-caballeros.html",
+      "section": "donk",
+      "prompt": "Develop Renato Cifuentes’s biography or a story connected to his GTO and the Santiago DONK lane.",
+      "claim_open": true
+    },
+    {
+      "artifact_id": "SAN-GTO",
+      "name": "Renato’s 1967 Pontiac GTO",
+      "type": "donk_vehicle",
+      "team_slug": "santiago-caballeros",
+      "team_name": "Santiago Caballeros",
+      "record_path": "team-santiago-caballeros.html",
+      "section": "donk",
+      "prompt": "Add a detail, history or story to the TUMBAO GTO without changing its established driver and appearance.",
+      "claim_open": true
     }
   ]
 }

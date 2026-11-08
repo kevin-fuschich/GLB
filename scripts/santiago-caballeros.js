@@ -44,3 +44,23 @@
     }
   }).catch(error => console.warn(error));
 })();
+
+(async()=>{
+  const host=document.getElementById('santiagoCards');
+  try{
+    const response=await fetch('data/rosters/santiago-caballeros.json',{cache:'no-store'});
+    if(!response.ok)throw Error('Roster unavailable');
+    const roster=await response.json();
+    let seasons=[];
+    try{seasons=await GLBPlayerCards.loadSeasons();}catch(error){console.warn(error);}
+    const cards=await Promise.all(roster.players.map(async player=>{
+      const entry=document.createElement('article');entry.className='tpe-card-entry';
+      entry.id='card-'+player.card_id.toLowerCase();entry.dataset.cardId=player.card_id;
+      entry.append(GLBPlayerCards.createCard({...player,teamSlug:'santiago-caballeros',teamName:roster.team},GLBPlayerCards.careerFor(player.slug,seasons)));
+      entry.append(await TaipeiFieldstock.createClaimPanel(player,{teamSlug:'santiago-caballeros',teamName:roster.team}));
+      return entry;
+    }));
+    host.replaceChildren(...cards);
+    if(location.hash.startsWith('#card-'))document.getElementById(location.hash.slice(1))?.scrollIntoView();
+  }catch(error){host.textContent='The card collection could not load. Please refresh.';console.warn(error);}
+})();

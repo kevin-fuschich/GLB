@@ -60,6 +60,12 @@
       "team_name": "Mayagüez Sultans",
       "source": "data/cards/mayaguez-sultans.json",
       "roster": "data/rosters/mayaguez-sultans.json"
+    },
+    {
+      "team_slug": "santiago-caballeros",
+      "team_name": "Santiago Caballeros",
+      "source": "data/cards/santiago-caballeros.json",
+      "roster": "data/rosters/santiago-caballeros.json"
     }
   ],
   "creative_source": "data/artifacts/creative-artifacts.json"

@@ -96,7 +96,7 @@
   }
   const brandRoot = new URL('../assets/fieldstock/', document.currentScript.src).href;
   const teamAccents = {
-    'mayaguez-sultans':'#e88975', 'san-pedro-cocolos':'#ad873e', 'durham-gold':'#d9ad65', 'spokane-alloys':'#8bbfc0', 'vancouver-current':'#65b1bf',
+    'santiago-caballeros':'#b67d60', 'mayaguez-sultans':'#e88975', 'san-pedro-cocolos':'#ad873e', 'durham-gold':'#d9ad65', 'spokane-alloys':'#8bbfc0', 'vancouver-current':'#65b1bf',
     'taipei-neon':'#a594d9', 'osaka-spirits':'#9175b3',
     'monterrey-cementeros':'#df81a1', 'tijuana-tecnicos':'#a5b95e'
   };
@@ -143,7 +143,7 @@
     // This sizing image stays detached; lazy loading would never intersect the viewport.
     image.loading = 'eager';
     const svg = document.createElementNS('http://www.w3.org/2000/svg','svg');
-    svg.classList.add('fs-photo-image'); svg.setAttribute('preserveAspectRatio',['san-pedro-cocolos','mayaguez-sultans'].includes(player.teamSlug)?'xMidYMin slice':'xMidYMid slice');
+    svg.classList.add('fs-photo-image'); svg.setAttribute('preserveAspectRatio',['san-pedro-cocolos','mayaguez-sultans','santiago-caballeros'].includes(player.teamSlug)?'xMidYMin slice':'xMidYMid slice');
     svg.setAttribute('role','img'); svg.setAttribute('aria-label', image.alt);
     const photo = document.createElementNS(svg.namespaceURI,'image');
     photo.setAttribute('href',source);

@@ -1,3 +1,9 @@
+## Ballpark walkthrough completion requirement · November 2026
+
+For every club, include distinct documentary images of the front gate, food concourse and fan activity area. Match the established stadium architecture, local setting and sponsor identity. Add relevant claimable artifacts. Existing clubs require an explicit image and placement review; do not presume completion. Santiago uses a TUMBAO climbing wall beside the gear repair counter.
+
+Player photographs: vary faces, builds and baseball situations. Prefer on-deck bat holds, dugout moments, fielding and credible pitching over generated batting swings. Reject awkward hands, bat grips, body mechanics and repeated faces before publishing. Keep FIELDSTOCK’s shared 2.5-by-3.5-inch design and detailed backs.
+
 GLB CLUB PAGE SPECIFICATION
 
 Version: 1.1

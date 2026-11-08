@@ -8,7 +8,23 @@
       "bats": "R",
       "throws": "R",
       "age": 29,
-      "photo": "aron-videla.jpg"
+      "photo": "aron-videla.jpg",
+      "dob": "1997-02-18",
+      "birthplace": "Valparaíso, Chile",
+      "height": "6′1″",
+      "weight": 205,
+      "scouting_report": "Works from a compact right-handed delivery.",
+      "field_note": "Turns the ball in his right hand between pitches.",
+      "card_id": "SAN-01",
+      "claim_open": true,
+      "photo_source": "assets/teams/santiago-caballeros/images/players/aron-videla.webp",
+      "photo_crop": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "card_front_alt": "Arón Videla, Santiago Caballeros SP"
     },
     {
       "name": "Gideon Fairchild",
@@ -17,7 +33,23 @@
       "bats": "L",
       "throws": "L",
       "age": 27,
-      "photo": "gideon-fairchild.jpg"
+      "photo": "gideon-fairchild.jpg",
+      "dob": "1999-03-09",
+      "birthplace": "Bristol, England",
+      "height": "6′4″",
+      "weight": 216,
+      "scouting_report": "A left-handed starter with a long reach.",
+      "field_note": "Usually watches the first inning from the end of the bench.",
+      "card_id": "SAN-02",
+      "claim_open": true,
+      "photo_source": "assets/teams/santiago-caballeros/images/players/gideon-fairchild.webp",
+      "photo_crop": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "card_front_alt": "Gideon Fairchild, Santiago Caballeros SP"
     },
     {
       "name": "Kenji Hoshino",
@@ -26,7 +58,23 @@
       "bats": "R",
       "throws": "R",
       "age": 25,
-      "photo": "kenji-hoshino.jpg"
+      "photo": "kenji-hoshino.jpg",
+      "dob": "2001-01-22",
+      "birthplace": "Sendai, Japan",
+      "height": "5′11″",
+      "weight": 210,
+      "scouting_report": "Repeats a short, balanced delivery.",
+      "field_note": "Keeps his warm-up throws on a steady count.",
+      "card_id": "SAN-03",
+      "claim_open": true,
+      "photo_source": "assets/teams/santiago-caballeros/images/players/kenji-hoshino.webp",
+      "photo_crop": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "card_front_alt": "Kenji Hoshino, Santiago Caballeros SP"
     },
     {
       "name": "Samson Ndlovu",
@@ -35,7 +83,23 @@
       "bats": "R",
       "throws": "R",
       "age": 31,
-      "photo": "samson-ndlovu.jpg"
+      "photo": "samson-ndlovu.jpg",
+      "dob": "1995-04-11",
+      "birthplace": "Bulawayo, Zimbabwe",
+      "height": "5′11″",
+      "weight": 204,
+      "scouting_report": "A right-handed starter who settles early into his set position.",
+      "field_note": "Smooths the landing spot before the inning starts.",
+      "card_id": "SAN-04",
+      "claim_open": true,
+      "photo_source": "assets/teams/santiago-caballeros/images/players/samson-ndlovu.webp",
+      "photo_crop": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "card_front_alt": "Samson Ndlovu, Santiago Caballeros SP"
     },
     {
       "name": "Mateo Arancibia",
@@ -44,7 +108,23 @@
       "bats": "R",
       "throws": "R",
       "age": 28,
-      "photo": "mateo-arancibia.jpg"
+      "photo": "mateo-arancibia.jpg",
+      "dob": "1998-02-27",
+      "birthplace": "Rancagua, Chile",
+      "height": "6′2″",
+      "weight": 188,
+      "scouting_report": "A right-handed starter with a relaxed arm action.",
+      "field_note": "A frequent presence at the dugout rail between innings.",
+      "card_id": "SAN-05",
+      "claim_open": true,
+      "photo_source": "assets/teams/santiago-caballeros/images/players/mateo-arancibia.webp",
+      "photo_crop": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "card_front_alt": "Mateo Arancibia, Santiago Caballeros SP"
     },
     {
       "name": "Tyrese Warnock",
@@ -53,7 +133,23 @@
       "bats": "R",
       "throws": "R",
       "age": 26,
-      "photo": "tyrese-warnock.jpg"
+      "photo": "tyrese-warnock.jpg",
+      "dob": "2000-05-06",
+      "birthplace": "Port of Spain, Trinidad and Tobago",
+      "height": "6′3″",
+      "weight": 184,
+      "scouting_report": "A right-handed reliever with a high release.",
+      "field_note": "Keeps a baseball in hand during the bullpen call.",
+      "card_id": "SAN-06",
+      "claim_open": true,
+      "photo_source": "assets/teams/santiago-caballeros/images/players/tyrese-warnock.webp",
+      "photo_crop": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "card_front_alt": "Tyrese Warnock, Santiago Caballeros RP"
     },
     {
       "name": "Joaquim Silveira",
@@ -62,7 +158,23 @@
       "bats": "L",
       "throws": "R",
       "age": 30,
-      "photo": "joaquim-silveira.jpg"
+      "photo": "joaquim-silveira.jpg",
+      "dob": "1996-01-15",
+      "birthplace": "Porto Alegre, Brazil",
+      "height": "5′10″",
+      "weight": 194,
+      "scouting_report": "A right-handed reliever who bats from the left side.",
+      "field_note": "Takes the dugout steps two at a time.",
+      "card_id": "SAN-07",
+      "claim_open": true,
+      "photo_source": "assets/teams/santiago-caballeros/images/players/joaquim-silveira.webp",
+      "photo_crop": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "card_front_alt": "Joaquim Silveira, Santiago Caballeros RP"
     },
     {
       "name": "Emin Koçak",
@@ -71,7 +183,23 @@
       "bats": "R",
       "throws": "R",
       "age": 24,
-      "photo": "emin-kocak.jpg"
+      "photo": "emin-kocak.jpg",
+      "dob": "2002-03-24",
+      "birthplace": "İzmir, Türkiye",
+      "height": "6′0″",
+      "weight": 181,
+      "scouting_report": "A right-handed reliever with a compact glove-side finish.",
+      "field_note": "Wears clear sports glasses under his cap.",
+      "card_id": "SAN-08",
+      "claim_open": true,
+      "photo_source": "assets/teams/santiago-caballeros/images/players/emin-kocak.webp",
+      "photo_crop": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "card_front_alt": "Emin Koçak, Santiago Caballeros RP"
     },
     {
       "name": "Damián Velásquez",
@@ -80,7 +208,23 @@
       "bats": "R",
       "throws": "R",
       "age": 28,
-      "photo": "damian-velasquez.jpg"
+      "photo": "damian-velasquez.jpg",
+      "dob": "1998-05-19",
+      "birthplace": "Maracay, Venezuela",
+      "height": "5′10″",
+      "weight": 190,
+      "scouting_report": "A compact catcher who presents a quiet target.",
+      "field_note": "Lifts his mask between bullpen pitches.",
+      "card_id": "SAN-09",
+      "claim_open": true,
+      "photo_source": "assets/teams/santiago-caballeros/images/players/damian-velasquez.webp",
+      "photo_crop": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "card_front_alt": "Damián Velásquez, Santiago Caballeros C"
     },
     {
       "name": "Noam Finkel",
@@ -89,7 +233,23 @@
       "bats": "L",
       "throws": "L",
       "age": 32,
-      "photo": "noam-finkel.jpg"
+      "photo": "noam-finkel.jpg",
+      "dob": "1994-02-08",
+      "birthplace": "Haifa, Israel",
+      "height": "6′3″",
+      "weight": 198,
+      "scouting_report": "A left-handed first baseman with a long reach.",
+      "field_note": "Rests the bat barrel on the dirt while waiting on deck.",
+      "card_id": "SAN-10",
+      "claim_open": true,
+      "photo_source": "assets/teams/santiago-caballeros/images/players/noam-finkel.webp",
+      "photo_crop": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "card_front_alt": "Noam Finkel, Santiago Caballeros 1B"
     },
     {
       "name": "Raúl Castillo",
@@ -98,7 +258,23 @@
       "bats": "S",
       "throws": "R",
       "age": 27,
-      "photo": "raul-castillo.jpg"
+      "photo": "raul-castillo.jpg",
+      "dob": "1999-04-03",
+      "birthplace": "Santo Domingo, Dominican Republic",
+      "height": "5′9″",
+      "weight": 174,
+      "scouting_report": "A switch-hitting second baseman with a compact frame.",
+      "field_note": "Stretches his shoulders with a bat before stepping in.",
+      "card_id": "SAN-11",
+      "claim_open": true,
+      "photo_source": "assets/teams/santiago-caballeros/images/players/raul-castillo.webp",
+      "photo_crop": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "card_front_alt": "Raúl Castillo, Santiago Caballeros 2B"
     },
     {
       "name": "Maksim Berezan",
@@ -107,7 +283,23 @@
       "bats": "R",
       "throws": "R",
       "age": 23,
-      "photo": "maksim-berezan.jpg"
+      "photo": "maksim-berezan.jpg",
+      "dob": "2003-01-29",
+      "birthplace": "Odesa, Ukraine",
+      "height": "6′0″",
+      "weight": 178,
+      "scouting_report": "A right-handed shortstop with a light first step.",
+      "field_note": "Waits near the dugout entrance with his bat upright.",
+      "card_id": "SAN-12",
+      "claim_open": true,
+      "photo_source": "assets/teams/santiago-caballeros/images/players/maksim-berezan.webp",
+      "photo_crop": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "card_front_alt": "Maksim Berezan, Santiago Caballeros SS"
     },
     {
       "name": "Eamon Quillan",
@@ -116,7 +308,23 @@
       "bats": "R",
       "throws": "R",
       "age": 29,
-      "photo": "eamon-quillan.jpg"
+      "photo": "eamon-quillan.jpg",
+      "dob": "1997-03-16",
+      "birthplace": "Cork, Ireland",
+      "height": "6′1″",
+      "weight": 186,
+      "scouting_report": "A right-handed third baseman with a lean frame.",
+      "field_note": "Jogs back to the bench with his glove at his waist.",
+      "card_id": "SAN-13",
+      "claim_open": true,
+      "photo_source": "assets/teams/santiago-caballeros/images/players/eamon-quillan.webp",
+      "photo_crop": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "card_front_alt": "Eamon Quillan, Santiago Caballeros 3B"
     },
     {
       "name": "Kiyoshi Senda",
@@ -125,7 +333,23 @@
       "bats": "L",
       "throws": "L",
       "age": 26,
-      "photo": "kiyoshi-senda.jpg"
+      "photo": "kiyoshi-senda.jpg",
+      "dob": "2000-02-12",
+      "birthplace": "Takamatsu, Japan",
+      "height": "5′11″",
+      "weight": 202,
+      "scouting_report": "A left-handed outfielder who throws from the left side.",
+      "field_note": "Carries his glove low between plays.",
+      "card_id": "SAN-14",
+      "claim_open": true,
+      "photo_source": "assets/teams/santiago-caballeros/images/players/kiyoshi-senda.webp",
+      "photo_crop": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "card_front_alt": "Kiyoshi Senda, Santiago Caballeros LF"
     },
     {
       "name": "Dalton Reyes",
@@ -134,7 +358,23 @@
       "bats": "R",
       "throws": "R",
       "age": 25,
-      "photo": "dalton-reyes.jpg"
+      "photo": "dalton-reyes.jpg",
+      "dob": "2001-04-23",
+      "birthplace": "Curaçao",
+      "height": "6′2″",
+      "weight": 185,
+      "scouting_report": "A right-handed center fielder with a long stride.",
+      "field_note": "Often sits forward on the bench watching the field.",
+      "card_id": "SAN-15",
+      "claim_open": true,
+      "photo_source": "assets/teams/santiago-caballeros/images/players/dalton-reyes.webp",
+      "photo_crop": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "card_front_alt": "Dalton Reyes, Santiago Caballeros CF"
     },
     {
       "name": "Adebayo Oluwaseyi",
@@ -143,7 +383,23 @@
       "bats": "R",
       "throws": "R",
       "age": 30,
-      "photo": "adebayo-oluwaseyi.jpg"
+      "photo": "adebayo-oluwaseyi.jpg",
+      "dob": "1996-05-14",
+      "birthplace": "Abeokuta, Nigeria",
+      "height": "6′2″",
+      "weight": 218,
+      "scouting_report": "A right-handed corner outfielder with a strong base.",
+      "field_note": "Checks his batting-glove straps before leaving the on-deck circle.",
+      "card_id": "SAN-16",
+      "claim_open": true,
+      "photo_source": "assets/teams/santiago-caballeros/images/players/adebayo-oluwaseyi.webp",
+      "photo_crop": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "card_front_alt": "Adebayo Oluwaseyi, Santiago Caballeros RF"
     }
   ]
 }

@@ -10,4 +10,6 @@ Giveaway: a warm color-blocked stadium blanket with heavy edge stitching, carryi
 
 Marisol Vega and Rafa “El Timbre” Orellana retain their names, roles, portraits and existing claim IDs. Caballo and La Tribuna retain their established identities. All new artifacts use the shared GLB Board review and private 16-character code workflow.
 
-This release establishes the combined page, sponsorship and giveaway. Santiago’s full player-card collection, DONK entry and resident entertainment remain subsequent work. Do not mark the whole club complete yet.
+The current release adds sixteen individual player photographs and standard FIELDSTOCK fronts/backs (SAN-01–SAN-16), Renato Cifuentes and his high-hop 1967 Pontiac GTO, the front gate, food concourse and TUMBAO climbing wall beside the repair counter. All sixteen cards and five new creative artifacts are open to contribution. Rejected four-player contact sheets and awkward batting followthroughs are not published. Preserve a conditioned, alert professional appearance and distinct faces.
+
+Resident entertainment remains subsequent work. Do not mark the whole club complete yet.

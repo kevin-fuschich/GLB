@@ -8,7 +8,22 @@
       "bats": "R",
       "throws": "R",
       "age": 29,
-      "photo": "dario-vukovic.jpg"
+      "photo": "dario-vukovic.jpg",
+      "dob": "1997-04-19",
+      "birthplace": "Belgrade, Serbia",
+      "height": "6′5″",
+      "weight": 186,
+      "scouting_report": "Uses a long stride and a high release, working the edges before climbing the zone.",
+      "field_note": "Keeps a folded paper scorecard from his first professional start inside his travel bag.",
+      "card_id": "MAY-01",
+      "claim_open": true,
+      "photo_source": "assets/teams/mayaguez-sultans/images/players-01.webp",
+      "photo_crop": [
+        0.00390625,
+        0.0026041666666666665,
+        0.4921875,
+        0.5078125
+      ]
     },
     {
       "name": "Kaito Natsume",
@@ -17,7 +32,22 @@
       "bats": "R",
       "throws": "R",
       "age": 26,
-      "photo": "kaito-natsume.jpg"
+      "photo": "kaito-natsume.jpg",
+      "dob": "2000-08-03",
+      "birthplace": "Morioka, Japan",
+      "height": "5′10″",
+      "weight": 238,
+      "scouting_report": "Repeats a compact delivery and changes pace without changing his arm speed.",
+      "field_note": "Can identify the clubhouse card players by the sound of their chairs moving.",
+      "card_id": "MAY-02",
+      "claim_open": true,
+      "photo_source": "assets/teams/mayaguez-sultans/images/players-01.webp",
+      "photo_crop": [
+        0.50390625,
+        0.0026041666666666665,
+        0.4921875,
+        0.5078125
+      ]
     },
     {
       "name": "Adewale Bamidele",
@@ -26,7 +56,22 @@
       "bats": "R",
       "throws": "R",
       "age": 31,
-      "photo": "adewale-bamidele.jpg"
+      "photo": "adewale-bamidele.jpg",
+      "dob": "1995-01-26",
+      "birthplace": "Ibadan, Nigeria",
+      "height": "6′3″",
+      "weight": 201,
+      "scouting_report": "Works quickly with a sinking fastball and fields his position with little wasted movement.",
+      "field_note": "Uses a different pencil for each month of his pitching notebook.",
+      "card_id": "MAY-03",
+      "claim_open": true,
+      "photo_source": "assets/teams/mayaguez-sultans/images/players-01.webp",
+      "photo_crop": [
+        0.00390625,
+        0.515625,
+        0.4921875,
+        0.4817708333333333
+      ]
     },
     {
       "name": "Lucian Ionescu",
@@ -35,7 +80,22 @@
       "bats": "L",
       "throws": "L",
       "age": 27,
-      "photo": "lucian-ionescu.jpg"
+      "photo": "lucian-ionescu.jpg",
+      "dob": "1999-06-14",
+      "birthplace": "Timișoara, Romania",
+      "height": "6′4″",
+      "weight": 185,
+      "scouting_report": "A left-hander who changes eye levels and holds runners with a short first move.",
+      "field_note": "Checks the wind by watching a loose thread on the bullpen flag.",
+      "card_id": "MAY-04",
+      "claim_open": true,
+      "photo_source": "assets/teams/mayaguez-sultans/images/players-01.webp",
+      "photo_crop": [
+        0.50390625,
+        0.515625,
+        0.4921875,
+        0.4817708333333333
+      ]
     },
     {
       "name": "Ismail Benjeloun",
@@ -44,7 +104,22 @@
       "bats": "R",
       "throws": "R",
       "age": 25,
-      "photo": "ismail-benjeloun.jpg"
+      "photo": "ismail-benjeloun.jpg",
+      "dob": "2001-03-08",
+      "birthplace": "Meknès, Morocco",
+      "height": "6′0″",
+      "weight": 190,
+      "scouting_report": "Pairs a firm fastball with a late-breaking slider and attacks the outer third.",
+      "field_note": "Repairs the torn pockets of his own warmup jackets.",
+      "card_id": "MAY-05",
+      "claim_open": true,
+      "photo_source": "assets/teams/mayaguez-sultans/images/players-02.webp",
+      "photo_crop": [
+        0.00390625,
+        0.0026041666666666665,
+        0.4921875,
+        0.4947916666666667
+      ]
     },
     {
       "name": "Seamus Keary",
@@ -53,7 +128,22 @@
       "bats": "R",
       "throws": "R",
       "age": 28,
-      "photo": "seamus-keary.jpg"
+      "photo": "seamus-keary.jpg",
+      "dob": "1998-09-21",
+      "birthplace": "Galway, Ireland",
+      "height": "6′2″",
+      "weight": 178,
+      "scouting_report": "Keeps a fast tempo in relief and works from the same release point with two pitches.",
+      "field_note": "Collects the little paper envelopes used to hold visiting-park meal vouchers.",
+      "card_id": "MAY-06",
+      "claim_open": true,
+      "photo_source": "assets/teams/mayaguez-sultans/images/players-02.webp",
+      "photo_crop": [
+        0.50390625,
+        0.0026041666666666665,
+        0.4921875,
+        0.4947916666666667
+      ]
     },
     {
       "name": "Rafiq Qureshi",
@@ -62,7 +152,22 @@
       "bats": "R",
       "throws": "R",
       "age": 24,
-      "photo": "rafiq-qureshi.jpg"
+      "photo": "rafiq-qureshi.jpg",
+      "dob": "2002-02-17",
+      "birthplace": "Multan, Pakistan",
+      "height": "5′10″",
+      "weight": 206,
+      "scouting_report": "Locates a riding fastball above the hands before using a changeup below the zone.",
+      "field_note": "His spare sports glasses travel in a case marked with the wrong uniform number.",
+      "card_id": "MAY-07",
+      "claim_open": true,
+      "photo_source": "assets/teams/mayaguez-sultans/images/players-02.webp",
+      "photo_crop": [
+        0.00390625,
+        0.5026041666666666,
+        0.4921875,
+        0.4947916666666667
+      ]
     },
     {
       "name": "Tomasz Wierzbicki",
@@ -71,7 +176,22 @@
       "bats": "L",
       "throws": "R",
       "age": 30,
-      "photo": "tomasz-wierzbicki.jpg"
+      "photo": "tomasz-wierzbicki.jpg",
+      "dob": "1996-05-30",
+      "birthplace": "Katowice, Poland",
+      "height": "6′1″",
+      "weight": 205,
+      "scouting_report": "A right-handed reliever who prefers soft contact and covers the first-base side cleanly.",
+      "field_note": "Counts the stitches across a baseball while waiting for the bullpen phone.",
+      "card_id": "MAY-08",
+      "claim_open": true,
+      "photo_source": "assets/teams/mayaguez-sultans/images/players-02.webp",
+      "photo_crop": [
+        0.50390625,
+        0.5026041666666666,
+        0.4921875,
+        0.4947916666666667
+      ]
     },
     {
       "name": "Tomer Barzilai",
@@ -80,7 +200,22 @@
       "bats": "R",
       "throws": "R",
       "age": 29,
-      "photo": "tomer-barzilai.jpg"
+      "photo": "tomer-barzilai.jpg",
+      "dob": "1997-07-12",
+      "birthplace": "Ashdod, Israel",
+      "height": "5′10″",
+      "weight": 220,
+      "scouting_report": "Sets a quiet target, blocks low pitches and makes direct throws from a compact transfer.",
+      "field_note": "Keeps a small brush for cleaning the dirt from the buckles of his chest protector.",
+      "card_id": "MAY-09",
+      "claim_open": true,
+      "photo_source": "assets/teams/mayaguez-sultans/images/players-03.webp",
+      "photo_crop": [
+        0.00390625,
+        0.0026041666666666665,
+        0.4921875,
+        0.4947916666666667
+      ]
     },
     {
       "name": "Enzo Carvajal",
@@ -89,7 +224,22 @@
       "bats": "L",
       "throws": "R",
       "age": 27,
-      "photo": "enzo-carvajal.jpg"
+      "photo": "enzo-carvajal.jpg",
+      "dob": "1999-04-06",
+      "birthplace": "Maracay, Venezuela",
+      "height": "6′5″",
+      "weight": 240,
+      "scouting_report": "A left-handed hitter with a patient first look and a long reach at first base.",
+      "field_note": "He and Inés disagree about whether a clean uniform counts as lucky.",
+      "card_id": "MAY-10",
+      "claim_open": true,
+      "photo_source": "assets/teams/mayaguez-sultans/images/players-03.webp",
+      "photo_crop": [
+        0.50390625,
+        0.0026041666666666665,
+        0.4921875,
+        0.4947916666666667
+      ]
     },
     {
       "name": "Nils Adebayo",
@@ -98,7 +248,22 @@
       "bats": "S",
       "throws": "R",
       "age": 23,
-      "photo": "nils-adebayo.jpg"
+      "photo": "nils-adebayo.jpg",
+      "dob": "2003-09-02",
+      "birthplace": "Malmö, Sweden",
+      "height": "6′1″",
+      "weight": 175,
+      "scouting_report": "A switch-hitting second baseman with quick feet and a short exchange on the double play.",
+      "field_note": "Draws unfamiliar ballparks from memory on the backs of bus receipts.",
+      "card_id": "MAY-11",
+      "claim_open": true,
+      "photo_source": "assets/teams/mayaguez-sultans/images/players-03.webp",
+      "photo_crop": [
+        0.00390625,
+        0.5026041666666666,
+        0.4921875,
+        0.4947916666666667
+      ]
     },
     {
       "name": "Jae-min Seok",
@@ -107,7 +272,22 @@
       "bats": "R",
       "throws": "R",
       "age": 26,
-      "photo": "jae-min-seok.jpg"
+      "photo": "jae-min-seok.jpg",
+      "dob": "2000-01-24",
+      "birthplace": "Daejeon, South Korea",
+      "height": "5′10″",
+      "weight": 181,
+      "scouting_report": "Keeps his hands inside the ball and takes direct routes to grounders in the hole.",
+      "field_note": "Taps his batting-glove straps in the same order before stepping into the box.",
+      "card_id": "MAY-12",
+      "claim_open": true,
+      "photo_source": "assets/teams/mayaguez-sultans/images/players-03.webp",
+      "photo_crop": [
+        0.50390625,
+        0.5026041666666666,
+        0.4921875,
+        0.4947916666666667
+      ]
     },
     {
       "name": "Pavel Hrynko",
@@ -116,7 +296,22 @@
       "bats": "R",
       "throws": "R",
       "age": 32,
-      "photo": "pavel-hrynko.jpg"
+      "photo": "pavel-hrynko.jpg",
+      "dob": "1994-08-16",
+      "birthplace": "Lviv, Ukraine",
+      "height": "6′4″",
+      "weight": 190,
+      "scouting_report": "A right-handed corner infielder who reads hard contact early and drives pitches to the gaps.",
+      "field_note": "Writes the names of borrowed bats on a strip of tape inside his locker.",
+      "card_id": "MAY-13",
+      "claim_open": true,
+      "photo_source": "assets/teams/mayaguez-sultans/images/players-04.webp",
+      "photo_crop": [
+        0.00390625,
+        0.0026041666666666665,
+        0.4921875,
+        0.4947916666666667
+      ]
     },
     {
       "name": "Malik Doumbia",
@@ -125,7 +320,22 @@
       "bats": "L",
       "throws": "L",
       "age": 24,
-      "photo": "malik-doumbia.jpg"
+      "photo": "malik-doumbia.jpg",
+      "dob": "2002-06-09",
+      "birthplace": "Bamako, Mali",
+      "height": "5′11″",
+      "weight": 198,
+      "scouting_report": "A left-handed outfielder who closes space with short first steps and throws on the run.",
+      "field_note": "Carries the team’s smallest travel chess set and insists all pieces are present.",
+      "card_id": "MAY-14",
+      "claim_open": true,
+      "photo_source": "assets/teams/mayaguez-sultans/images/players-04.webp",
+      "photo_crop": [
+        0.50390625,
+        0.0026041666666666665,
+        0.4921875,
+        0.4947916666666667
+      ]
     },
     {
       "name": "César Iglesiarias",
@@ -134,7 +344,22 @@
       "bats": "R",
       "throws": "R",
       "age": 28,
-      "photo": "cesar-iglesiarias.jpg"
+      "photo": "cesar-iglesiarias.jpg",
+      "dob": "1998-03-27",
+      "birthplace": "Aguadilla, Puerto Rico",
+      "height": "5′10″",
+      "weight": 193,
+      "scouting_report": "Uses the middle of the field at the plate and reads the ball off the bat in center.",
+      "field_note": "His family can spot his batting helmet by a small patch of missing paint.",
+      "card_id": "MAY-15",
+      "claim_open": true,
+      "photo_source": "assets/teams/mayaguez-sultans/images/players-04.webp",
+      "photo_crop": [
+        0.00390625,
+        0.5026041666666666,
+        0.4921875,
+        0.4947916666666667
+      ]
     },
     {
       "name": "Ari Kasprzyk",
@@ -143,7 +368,22 @@
       "bats": "R",
       "throws": "R",
       "age": 30,
-      "photo": "ari-kasprzyk.jpg"
+      "photo": "ari-kasprzyk.jpg",
+      "dob": "1996-10-04",
+      "birthplace": "Milwaukee, Wisconsin, USA",
+      "height": "6′0″",
+      "weight": 223,
+      "scouting_report": "A right-handed hitter with a level swing and a quick release from right field.",
+      "field_note": "Uses an old laundry bag to separate game cleats from everything else in his suitcase.",
+      "card_id": "MAY-16",
+      "claim_open": true,
+      "photo_source": "assets/teams/mayaguez-sultans/images/players-04.webp",
+      "photo_crop": [
+        0.50390625,
+        0.5026041666666666,
+        0.4921875,
+        0.4947916666666667
+      ]
     }
   ]
 }

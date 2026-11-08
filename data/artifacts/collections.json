@@ -54,6 +54,12 @@
         "VAN-01",
         "VAN-06"
       ]
+    },
+    {
+      "team_slug": "mayaguez-sultans",
+      "team_name": "Mayagüez Sultans",
+      "source": "data/cards/mayaguez-sultans.json",
+      "roster": "data/rosters/mayaguez-sultans.json"
     }
   ],
   "creative_source": "data/artifacts/creative-artifacts.json"

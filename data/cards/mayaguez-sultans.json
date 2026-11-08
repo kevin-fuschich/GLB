@@ -1,0 +1,136 @@
+{
+  "schema": "glb.player-card-registry.v1",
+  "team_slug": "mayaguez-sultans",
+  "team_name": "Mayagüez Sultans",
+  "season": 2026,
+  "cards": [
+    {
+      "card_id": "MAY-01",
+      "type": "player",
+      "edition": "2026",
+      "player_slug": "dario-vukovic",
+      "name": "Dario Vukovic",
+      "claimable": true
+    },
+    {
+      "card_id": "MAY-02",
+      "type": "player",
+      "edition": "2026",
+      "player_slug": "kaito-natsume",
+      "name": "Kaito Natsume",
+      "claimable": true
+    },
+    {
+      "card_id": "MAY-03",
+      "type": "player",
+      "edition": "2026",
+      "player_slug": "adewale-bamidele",
+      "name": "Adewale Bamidele",
+      "claimable": true
+    },
+    {
+      "card_id": "MAY-04",
+      "type": "player",
+      "edition": "2026",
+      "player_slug": "lucian-ionescu",
+      "name": "Lucian Ionescu",
+      "claimable": true
+    },
+    {
+      "card_id": "MAY-05",
+      "type": "player",
+      "edition": "2026",
+      "player_slug": "ismail-benjeloun",
+      "name": "Ismail Benjeloun",
+      "claimable": true
+    },
+    {
+      "card_id": "MAY-06",
+      "type": "player",
+      "edition": "2026",
+      "player_slug": "seamus-keary",
+      "name": "Seamus Keary",
+      "claimable": true
+    },
+    {
+      "card_id": "MAY-07",
+      "type": "player",
+      "edition": "2026",
+      "player_slug": "rafiq-qureshi",
+      "name": "Rafiq Qureshi",
+      "claimable": true
+    },
+    {
+      "card_id": "MAY-08",
+      "type": "player",
+      "edition": "2026",
+      "player_slug": "tomasz-wierzbicki",
+      "name": "Tomasz Wierzbicki",
+      "claimable": true
+    },
+    {
+      "card_id": "MAY-09",
+      "type": "player",
+      "edition": "2026",
+      "player_slug": "tomer-barzilai",
+      "name": "Tomer Barzilai",
+      "claimable": true
+    },
+    {
+      "card_id": "MAY-10",
+      "type": "player",
+      "edition": "2026",
+      "player_slug": "enzo-carvajal",
+      "name": "Enzo Carvajal",
+      "claimable": true
+    },
+    {
+      "card_id": "MAY-11",
+      "type": "player",
+      "edition": "2026",
+      "player_slug": "nils-adebayo",
+      "name": "Nils Adebayo",
+      "claimable": true
+    },
+    {
+      "card_id": "MAY-12",
+      "type": "player",
+      "edition": "2026",
+      "player_slug": "jae-min-seok",
+      "name": "Jae-min Seok",
+      "claimable": true
+    },
+    {
+      "card_id": "MAY-13",
+      "type": "player",
+      "edition": "2026",
+      "player_slug": "pavel-hrynko",
+      "name": "Pavel Hrynko",
+      "claimable": true
+    },
+    {
+      "card_id": "MAY-14",
+      "type": "player",
+      "edition": "2026",
+      "player_slug": "malik-doumbia",
+      "name": "Malik Doumbia",
+      "claimable": true
+    },
+    {
+      "card_id": "MAY-15",
+      "type": "player",
+      "edition": "2026",
+      "player_slug": "cesar-iglesiarias",
+      "name": "César Iglesiarias",
+      "claimable": true
+    },
+    {
+      "card_id": "MAY-16",
+      "type": "player",
+      "edition": "2026",
+      "player_slug": "ari-kasprzyk",
+      "name": "Ari Kasprzyk",
+      "claimable": true
+    }
+  ]
+}

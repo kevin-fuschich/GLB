@@ -1,0 +1,44 @@
+.mayaguez-page{--mayaguez-accent:#11666b;--mayaguez-slate:#293740}
+.mayaguez-page .team-hero,.mayaguez-page .team-hero-inner{min-height:clamp(335px,46vw,600px)}
+.mayaguez-page .team-hero-image{object-position:50% 48%}
+.mayaguez-page .team-hero-shade{background:linear-gradient(0deg,rgba(9,15,20,.89),rgba(9,15,20,.18) 44%,transparent 70%),linear-gradient(90deg,rgba(9,15,20,.26),transparent 56%)}
+.mayaguez-page .team-hero-inner p{margin:6px 0 0;color:#eef1f3;font-size:15px}
+.mayaguez-page .full,.mayaguez-section-nav{grid-column:1/-1}
+.mayaguez-section-nav{display:flex;flex-wrap:wrap;gap:5px 18px;padding:11px 15px;background:#fff;border:1px solid var(--line);border-radius:12px}
+.mayaguez-section-nav a{padding:8px 4px;font-weight:700;color:var(--mayaguez-slate)}
+.mayaguez-page a:focus-visible{outline:2px solid var(--mayaguez-accent);outline-offset:3px}
+.mayaguez-section-nav a:hover,.mayaguez-table a:hover,.mayaguez-link-row a:hover{text-decoration:underline}
+.mayaguez-page .panel{scroll-margin-top:120px}
+.mayaguez-meta{color:var(--mayaguez-accent);font-size:11px;letter-spacing:.08em;font-weight:750;text-transform:uppercase}
+.mayaguez-page .summary{margin-bottom:14px}
+.mayaguez-link-row a,.mayaguez-table a{color:var(--mayaguez-slate);font-weight:740}
+.mayaguez-table{padding:0 20px 18px}
+.mayaguez-table table{border-collapse:collapse;width:100%;text-align:left}
+.mayaguez-table caption{text-align:left;color:var(--muted);padding:12px 0}
+.mayaguez-table th,.mayaguez-table td{padding:9px 8px;border-bottom:1px solid var(--line)}
+.mayaguez-table th:first-child{padding-left:0}
+.mayaguez-table thead th{font-size:11px;text-transform:uppercase;letter-spacing:.06em}
+.mayaguez-page #recent-results,.mayaguez-copy{padding:12px 20px}
+.mayaguez-copy p{max-width:68ch}
+.mayaguez-columns{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.mayaguez-columns h3{margin:4px 0}
+.mayaguez-copy figure{margin:0 0 12px}
+.mayaguez-copy figure img{width:100%;height:auto;display:block;border-radius:8px}
+.site-footer{--light:#fff}
+@media(max-width:900px){.mayaguez-page #roster,.mayaguez-page #results{grid-column:1/-1}}
+@media(max-width:650px){.mayaguez-page .team-hero,.mayaguez-page .team-hero-inner{min-height:330px}.mayaguez-page .team-hero-image{object-position:57% center}.mayaguez-columns{grid-template-columns:1fr;gap:14px}.mayaguez-table{padding-inline:12px}.mayaguez-section-nav{gap:2px 11px}}
+
+.mayaguez-page #giveaway{scroll-margin-top:120px}
+.mayaguez-donk-brand{display:flex;align-items:center;flex-wrap:wrap;gap:12px 24px;margin:0 0 20px}
+.mayaguez-donk-brand img{width:min(240px,100%);height:auto;display:block}
+
+.mayaguez-page .team-hero-image{height:100%;top:0;object-fit:cover;object-position:50% 50%}
+.mayaguez-page .full{grid-column:1/-1}
+.mayaguez-page .tpe-card-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.mayaguez-link{font-weight:700;text-decoration:underline}
+@media(max-width:1000px){.mayaguez-page .tpe-card-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.mayaguez-page .tpe-card-grid{grid-template-columns:1fr}}
+
+.mayaguez-page .voice-image{max-height:460px;object-fit:contain;background:#f3f5f7}.mayaguez-story-note{padding:16px;border-left:3px solid #d9b3a0;background:#fbf8f4;color:#4c5965}.mayaguez-table{overflow-x:auto}.mayaguez-link{font-weight:700;text-decoration:underline}
+
+.mayaguez-page .tpe-card-grid{grid-template-columns:repeat(3,minmax(0,1fr))}@media(max-width:1000px){.mayaguez-page .tpe-card-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:560px){.mayaguez-page .tpe-card-grid{grid-template-columns:1fr}}

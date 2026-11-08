@@ -230,6 +230,96 @@
       "section": "stadium",
       "prompt": "A corner of the park, a game-night memory or a piece of its history.",
       "claim_open": true
+    },
+    {
+      "artifact_id": "MAY-MAGIXO",
+      "name": "Magixo",
+      "type": "brand",
+      "team_slug": "mayaguez-sultans",
+      "team_name": "Mayagüez Sultans",
+      "section": "magixo",
+      "prompt": "A neighborhood laundry story, an employee, a delivery route or an account of the brand’s beginnings.",
+      "claim_open": true
+    },
+    {
+      "artifact_id": "MAY-BAG-NIGHT",
+      "name": "Magixo Laundry Bag Night",
+      "type": "giveaway",
+      "team_slug": "mayaguez-sultans",
+      "team_name": "Mayagüez Sultans",
+      "section": "giveaway",
+      "prompt": "A fan’s giveaway-night account or the later travels of a bag taken home from the park.",
+      "claim_open": true
+    },
+    {
+      "artifact_id": "MAY-INES",
+      "name": "Inés Cordero",
+      "type": "other",
+      "team_slug": "mayaguez-sultans",
+      "team_name": "Mayagüez Sultans",
+      "section": "clubhouse",
+      "prompt": "The clubhouse laundry manager’s account, a laundry-room incident or the Magixo representative’s side of the stain dispute.",
+      "claim_open": true
+    },
+    {
+      "artifact_id": "MAY-STADIUM",
+      "name": "The Salt Court",
+      "type": "ballpark",
+      "team_slug": "mayaguez-sultans",
+      "team_name": "Mayagüez Sultans",
+      "section": "stadium",
+      "prompt": "A waterfront game-night account, a place inside the park or a piece of its history.",
+      "claim_open": true
+    },
+    {
+      "artifact_id": "MAY-SULTAN",
+      "name": "El Sultán",
+      "type": "mascot",
+      "team_slug": "mayaguez-sultans",
+      "team_name": "Mayagüez Sultans",
+      "section": "mascot",
+      "prompt": "A fan encounter, a character detail or a story from the mascot’s rounds along the rail.",
+      "claim_open": true
+    },
+    {
+      "artifact_id": "MAY-LANTERN",
+      "name": "The Lantern Section",
+      "type": "tradition",
+      "team_slug": "mayaguez-sultans",
+      "team_name": "Mayagüez Sultans",
+      "section": "traditions",
+      "prompt": "A supporter’s memory, a drum phrase or an account from a family’s usual row.",
+      "claim_open": true
+    },
+    {
+      "artifact_id": "MAY-PUTANA",
+      "name": "Putana",
+      "type": "entertainer",
+      "team_slug": "mayaguez-sultans",
+      "team_name": "Mayagüez Sultans",
+      "section": "entertainment",
+      "prompt": "A concert memory, a dance rehearsal or a story from the singer’s residency. Preserve her identity and performance style.",
+      "claim_open": true
+    },
+    {
+      "artifact_id": "MAY-VICTOR",
+      "name": "Victor Lumelo",
+      "type": "donk_driver",
+      "team_slug": "mayaguez-sultans",
+      "team_name": "Mayagüez Sultans",
+      "section": "donk",
+      "prompt": "A driver biography, a crew story or a moment from the hydraulic competition lane.",
+      "claim_open": true
+    },
+    {
+      "artifact_id": "MAY-IMPALA",
+      "name": "Victor’s Magixo Impala",
+      "type": "donk_vehicle",
+      "team_slug": "mayaguez-sultans",
+      "team_name": "Mayagüez Sultans",
+      "section": "donk",
+      "prompt": "A build story, a garage detail or the history of the cobalt-and-ivory 1964 Impala.",
+      "claim_open": true
     }
   ]
 }

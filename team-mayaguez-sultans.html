@@ -1,294 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GLB Team Record – Mayagüez Sultans</title>
-
-<style>
-:root{
-  --paper:#ffffff;
-  --ink:#0f1214;
-  --meta:#666;
-  --line:#e0e0e0;
-
-  --sans:"Helvetica Neue", Helvetica, Arial, sans-serif;
-  --mono:"Courier New", Courier, monospace;
-}
-
-body{
-  background:#f4f4f4;
-  font-family:var(--sans);
-  color:var(--ink);
-  margin:0;
-  padding:40px 20px;
-}
-
-.sheet{
-  max-width:640px;
-  margin:0 auto;
-  background:var(--paper);
-  padding:40px;
-  border-top:5px solid var(--ink);
-  box-shadow:0 4px 20px rgba(0,0,0,.08);
-}
-
-/* HEADER */
-header{
-  display:flex;
-  justify-content:space-between;
-  align-items:flex-start;
-  padding-bottom:20px;
-  border-bottom:2px solid var(--ink);
-  margin-bottom:30px;
-}
-
-.header-text h1{
-  margin:0 0 6px 0;
-  font-size:22px;
-  font-weight:900;
-  text-transform:uppercase;
-}
-
-.header-meta{
-  font-size:13px;
-  color:var(--meta);
-}
-
-.team-logo{
-  height:120px; /* 100% larger */
-  width:auto;
-}
-
-/* TEAM PHOTO */
-.team-photo{
-  margin:30px 0;
-  border:1px solid var(--line);
-}
-
-.team-photo img{
-  width:100%;
-  display:block;
-}
-
-/* SECTION HEADERS */
-h2{
-  font-family:var(--mono);
-  font-size:13px;
-  text-transform:uppercase;
-  letter-spacing:.5px;
-  margin:40px 0 12px;
-  padding-bottom:6px;
-  border-bottom:1px solid var(--line);
-}
-
-/* TABLES */
-table{
-  width:100%;
-  border-collapse:collapse;
-  font-size:13px;
-}
-
-th{
-  font-size:11px;
-  color:var(--meta);
-  font-weight:600;
-  text-transform:uppercase;
-  padding:6px;
-  border-bottom:2px solid var(--ink);
-}
-
-td{
-  padding:8px 6px;
-  border-bottom:1px solid #f0f0f0;
-}
-
-.align-center{ text-align:center; }
-.align-right{ text-align:right; }
-
-/* ROSTER HEADSHOTS */
-.roster-pic{
-  width:48px;
-  height:48px;
-  object-fit:cover;
-  border-radius:6px;
-  border:1px solid var(--line);
-  display:block;
-}
-
-/* FOOTER */
-footer{
-  margin-top:50px;
-  padding-top:18px;
-  border-top:1px solid var(--line);
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  font-family:var(--mono);
-  font-size:10px;
-  color:#777;
-}
-
-.glb-logo{
-  height:56px;
-  width:auto;
-}
-</style>
-</head>
-
-<body>
-<div class="sheet">
-
-<header>
-  <div class="header-text">
-    <h1>Mayagüez Sultans</h1>
-    <div class="header-meta">Mayagüez — Pacific Division</div>
-    <div class="header-meta">Team Record & Active Roster</div>
-  </div>
-
-  <img src="team-mayaguez-sultans-logo.png" alt="Mayagüez Sultans Logo" class="team-logo">
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mayagüez Sultans | Global League Baseball</title><meta name="description" content="The Mayagüez Sultans at the Salt Court, presented by Magixo. Official roster, results, team leaders, neighborhood laundries and Laundry Bag Night.">
+<link rel="canonical" href="https://kevin-fuschich.github.io/GLB/team-mayaguez-sultans.html"><link rel="stylesheet" href="team-page.css?v=3"><link rel="stylesheet" href="mayaguez-sultans.css?v=magixo-1"><link rel="stylesheet" href="player-cards.css?v=fieldstock-2026-1"><link rel="stylesheet" href="taipei-cards.css"></head><body>
+<header class="site-header">
+<div class="container topbar">
+<a href="index.html" class="brand"><span class="brand-mark">GLB</span><span class="brand-sub">Global League Baseball</span></a>
+<nav class="nav-links" aria-label="Primary"><a href="index.html">Home</a><a href="scores.html">Scores</a><a href="standings.html">Standings</a><a href="schedule.html">Schedule</a><a href="teams.html" class="active">Teams</a><a href="players.html">Players</a><a href="stats.html">Stats</a><a href="events.html">Events</a></nav>
+<span class="header-meta">Mayagüez Sultans</span>
+<button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">☰</button>
+</div>
+<nav class="mobile-menu" id="mobileMenu"><a href="index.html">Home</a><a href="scores.html">Scores</a><a href="standings.html">Standings</a><a href="schedule.html">Schedule</a><a href="teams.html">Teams</a><a href="players.html">Players</a><a href="stats.html">Stats</a><a href="events.html">Events</a></nav>
 </header>
-
-<!-- TEAM PHOTO -->
-<div class="team-photo">
-  <img src="team-mayaguez-sultans-photo.png" alt="Mayagüez Sultans Team Photo">
-</div>
-
-<h2>Season Snapshot</h2>
-<table>
-  <thead>
-    <tr>
-      <th>Record</th>
-      <th>Runs</th>
-      <th>Allowed</th>
-      <th>Diff</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>0–0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-  </tbody>
-</table>
-
-<h2>Active Roster</h2>
-<table>
-  <thead>
-    <tr>
-      <th>Pic</th>
-      <th>Player</th>
-      <th>Pos</th>
-      <th class="align-center">B/T</th>
-      <th class="align-right">Age</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <!-- SP (5) -->
-    <tr data-player-id="may-001">
-      <td><img class="roster-pic" src="player-mayaguez-dario-vukovic.png" alt="Dario Vukovic"></td>
-      <td>Dario Vukovic</td><td>SP</td><td class="align-center">R/R</td><td class="align-right">29</td>
-    </tr>
-    <tr data-player-id="may-002">
-      <td><img class="roster-pic" src="player-mayaguez-kaito-natsume.png" alt="Kaito Natsume"></td>
-      <td>Kaito Natsume</td><td>SP</td><td class="align-center">R/R</td><td class="align-right">26</td>
-    </tr>
-    <tr data-player-id="may-003">
-      <td><img class="roster-pic" src="player-mayaguez-adewale-bamidele.png" alt="Adewale Bamidele"></td>
-      <td>Adewale Bamidele</td><td>SP</td><td class="align-center">R/R</td><td class="align-right">31</td>
-    </tr>
-    <tr data-player-id="may-004">
-      <td><img class="roster-pic" src="player-mayaguez-lucian-ionescu.png" alt="Lucian Ionescu"></td>
-      <td>Lucian Ionescu</td><td>SP</td><td class="align-center">L/L</td><td class="align-right">27</td>
-    </tr>
-    <tr data-player-id="may-005">
-      <td><img class="roster-pic" src="player-mayaguez-ismail-benjeloun.png" alt="Ismail Benjeloun"></td>
-      <td>Ismail Benjeloun</td><td>SP</td><td class="align-center">R/R</td><td class="align-right">25</td>
-    </tr>
-
-    <!-- RP (3) -->
-    <tr data-player-id="may-006">
-      <td><img class="roster-pic" src="player-mayaguez-seamus-keary.png" alt="Seamus Keary"></td>
-      <td>Seamus Keary</td><td>RP</td><td class="align-center">R/R</td><td class="align-right">28</td>
-    </tr>
-    <tr data-player-id="may-007">
-      <td><img class="roster-pic" src="player-mayaguez-rafiq-qureshi.png" alt="Rafiq Qureshi"></td>
-      <td>Rafiq Qureshi</td><td>RP</td><td class="align-center">R/R</td><td class="align-right">24</td>
-    </tr>
-    <tr data-player-id="may-008">
-      <td><img class="roster-pic" src="player-mayaguez-tomasz-wierzbicki.png" alt="Tomasz Wierzbicki"></td>
-      <td>Tomasz Wierzbicki</td><td>RP</td><td class="align-center">L/R</td><td class="align-right">30</td>
-    </tr>
-
-    <!-- C (1) -->
-    <tr data-player-id="may-009">
-      <td><img class="roster-pic" src="player-mayaguez-tomer-barzilai.png" alt="Tomer Barzilai"></td>
-      <td>Tomer Barzilai</td><td>C</td><td class="align-center">R/R</td><td class="align-right">29</td>
-    </tr>
-
-    <!-- IF (4) -->
-    <tr data-player-id="may-010">
-      <td><img class="roster-pic" src="player-mayaguez-enzo-carvajal.png" alt="Enzo Carvajal"></td>
-      <td>Enzo Carvajal</td><td>1B</td><td class="align-center">L/R</td><td class="align-right">27</td>
-    </tr>
-    <tr data-player-id="may-011">
-      <td><img class="roster-pic" src="player-mayaguez-nils-adebayo.png" alt="Nils Adebayo"></td>
-      <td>Nils Adebayo</td><td>2B</td><td class="align-center">S/R</td><td class="align-right">23</td>
-    </tr>
-    <tr data-player-id="may-012">
-      <td><img class="roster-pic" src="player-mayaguez-jaemin-seok.png" alt="Jae-min Seok"></td>
-      <td>Jae-min Seok</td><td>SS</td><td class="align-center">R/R</td><td class="align-right">26</td>
-    </tr>
-    <tr data-player-id="may-013">
-      <td><img class="roster-pic" src="player-mayaguez-pavel-hrynko.png" alt="Pavel Hrynko"></td>
-      <td>Pavel Hrynko</td><td>3B</td><td class="align-center">R/R</td><td class="align-right">32</td>
-    </tr>
-
-    <!-- OF (3) -->
-    <tr data-player-id="may-014">
-      <td><img class="roster-pic" src="player-mayaguez-malik-doumbia.png" alt="Malik Doumbia"></td>
-      <td>Malik Doumbia</td><td>LF</td><td class="align-center">L/L</td><td class="align-right">24</td>
-    </tr>
-    <tr data-player-id="may-015">
-      <td><img class="roster-pic" src="player-mayaguez-cesar-iglesiarias.png" alt="César Iglesiarias"></td>
-      <td>César Iglesiarias</td><td>CF</td><td class="align-center">R/R</td><td class="align-right">28</td>
-    </tr>
-    <tr data-player-id="may-016">
-      <td><img class="roster-pic" src="player-mayaguez-ari-kasprzyk.png" alt="Ari Kasprzyk"></td>
-      <td>Ari Kasprzyk</td><td>RF</td><td class="align-center">R/R</td><td class="align-right">30</td>
-    </tr>
-  </tbody>
-</table>
-
-<h2>Recent Games</h2>
-<table>
-  <thead>
-    <tr>
-      <th>Date</th>
-      <th>Opponent</th>
-      <th>Result</th>
-      <th class="align-right">Box</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>—</td>
-      <td>—</td>
-      <td>—</td>
-      <td class="align-right"><a href="boxscore.html">View</a></td>
-    </tr>
-  </tbody>
-</table>
-
-<footer>
-  <div>GLOBAL LEAGUE BASEBALL · TEAM RECORD</div>
-  <img src="GLB_white.png" alt="GLB" class="glb-logo">
-</footer>
-
-</div>
-<script src="scripts/glb-ticker.js"></script>\n<script src="scripts/participation.js?v=20261107-claim-create"></script>
-</body>
-</html>
+<main id="profile" class="mayaguez-page">
+<section class="team-hero" aria-labelledby="club-name"><img class="team-hero-image" src="assets/teams/mayaguez-sultans/images/salt-court-magixo.webp" alt="Baseball at the waterfront Salt Court, with Magixo signage on the stand and the ocean beyond the outfield" width="1536" height="1024" fetchpriority="high"><div class="team-hero-shade"></div><div class="team-hero-inner"><div class="team-kicker">Global League Baseball · Pacific Division</div><h1 id="club-name">Mayagüez Sultans</h1><p>The Salt Court, presented by Magixo · Mayagüez, Puerto Rico</p></div></section>
+<nav class="mayaguez-section-nav" aria-label="Mayagüez sections"><a href="#season">Season</a><a href="#leaders">Team leaders</a><a href="#roster">Roster</a><a href="#cards">Player cards</a><a href="#results">Recent results</a><a href="#stadium">The Salt Court</a><a href="#magixo">Magixo</a><a href="#giveaway">Laundry Bag Night</a><a href="#clubhouse">The laundry room</a><a href="#entertainment">Putana</a><a href="#donk">DONK</a><a href="#voices">Game voices</a><a href="#mascot">El Sultán</a><a href="#traditions">The Lantern Section</a></nav>
+<section class="panel full" id="season"><h2>Season snapshot</h2><p class="mayaguez-meta" id="record-date">2026 season · As of 2026-10-13</p><div class="summary"><div><strong id="stat-record">88–74</strong><span>Record</span></div><div><strong id="stat-pct">.543</strong><span>Win %</span></div><div><strong id="stat-runs">592</strong><span>Runs</span></div><div><strong id="stat-allowed">538</strong><span>Allowed</span></div><div><strong id="stat-diff">+54</strong><span>Difference</span></div></div><div class="mayaguez-copy"><p>The Sultans play at the Salt Court, where concrete stands face the waterfront and teal rails carry the club’s coral trim. Magixo’s signs sit above the stands; the brand’s neighborhood laundries supply the cloth bags on giveaway nights.</p><p><strong>Manager</strong> Rafa “Caña” Delgado</p><a class="mayaguez-link" href="standings.html">Pacific Division standings →</a></div></section>
+<section class="panel full" id="leaders"><h2>Team leaders</h2><div class="mayaguez-table"><table><caption>2026 recorded season statistics</caption><thead><tr><th scope="col">Category</th><th scope="col">Player</th><th scope="col">Mark</th></tr></thead><tbody><tr><th scope="row">Home runs</th><td><a href="player.html?team=mayaguez-sultans&amp;player=enzo-carvajal">Enzo Carvajal</a></td><td>39</td></tr><tr><th scope="row">Runs batted in</th><td><a href="player.html?team=mayaguez-sultans&amp;player=malik-doumbia">Malik Doumbia</a></td><td>87</td></tr><tr><th scope="row">Stolen bases</th><td><a href="player.html?team=mayaguez-sultans&amp;player=cesar-iglesiarias">César Iglesiarias</a></td><td>31</td></tr><tr><th scope="row">Strikeouts</th><td><a href="player.html?team=mayaguez-sultans&amp;player=dario-vukovic">Dario Vukovic</a></td><td>187</td></tr><tr><th scope="row">Wins</th><td><a href="player.html?team=mayaguez-sultans&amp;player=dario-vukovic">Dario Vukovic</a></td><td>22</td></tr><tr><th scope="row">ERA · 100+ IP</th><td><a href="player.html?team=mayaguez-sultans&amp;player=dario-vukovic">Dario Vukovic</a></td><td>2.32</td></tr></tbody></table></div></section>
+<section class="panel full" id="roster"><h2>Active roster</h2><div class="mayaguez-table"><table><caption>2026 Mayagüez Sultans · 16 players</caption><thead><tr><th scope="col">Player</th><th scope="col">Pos</th><th scope="col">B/T</th><th scope="col">Age</th></tr></thead><tbody><tr><th scope="row"><a href="player.html?team=mayaguez-sultans&amp;player=dario-vukovic">Dario Vukovic</a></th><td>SP</td><td>R/R</td><td>29</td></tr><tr><th scope="row"><a href="player.html?team=mayaguez-sultans&amp;player=kaito-natsume">Kaito Natsume</a></th><td>SP</td><td>R/R</td><td>26</td></tr><tr><th scope="row"><a href="player.html?team=mayaguez-sultans&amp;player=adewale-bamidele">Adewale Bamidele</a></th><td>SP</td><td>R/R</td><td>31</td></tr><tr><th scope="row"><a href="player.html?team=mayaguez-sultans&amp;player=lucian-ionescu">Lucian Ionescu</a></th><td>SP</td><td>L/L</td><td>27</td></tr><tr><th scope="row"><a href="player.html?team=mayaguez-sultans&amp;player=ismail-benjeloun">Ismail Benjeloun</a></th><td>SP</td><td>R/R</td><td>25</td></tr><tr><th scope="row"><a href="player.html?team=mayaguez-sultans&amp;player=seamus-keary">Seamus Keary</a></th><td>RP</td><td>R/R</td><td>28</td></tr><tr><th scope="row"><a href="player.html?team=mayaguez-sultans&amp;player=rafiq-qureshi">Rafiq Qureshi</a></th><td>RP</td><td>R/R</td><td>24</td></tr><tr><th scope="row"><a href="player.html?team=mayaguez-sultans&amp;player=tomasz-wierzbicki">Tomasz Wierzbicki</a></th><td>RP</td><td>L/R</td><td>30</td></tr><tr><th scope="row"><a href="player.html?team=mayaguez-sultans&amp;player=tomer-barzilai">Tomer Barzilai</a></th><td>C</td><td>R/R</td><td>29</td></tr><tr><th scope="row"><a href="player.html?team=mayaguez-sultans&amp;player=enzo-carvajal">Enzo Carvajal</a></th><td>1B</td><td>L/R</td><td>27</td></tr><tr><th scope="row"><a href="player.html?team=mayaguez-sultans&amp;player=nils-adebayo">Nils Adebayo</a></th><td>2B</td><td>S/R</td><td>23</td></tr><tr><th scope="row"><a href="player.html?team=mayaguez-sultans&amp;player=jae-min-seok">Jae-min Seok</a></th><td>SS</td><td>R/R</td><td>26</td></tr><tr><th scope="row"><a href="player.html?team=mayaguez-sultans&amp;player=pavel-hrynko">Pavel Hrynko</a></th><td>3B</td><td>R/R</td><td>32</td></tr><tr><th scope="row"><a href="player.html?team=mayaguez-sultans&amp;player=malik-doumbia">Malik Doumbia</a></th><td>LF</td><td>L/L</td><td>24</td></tr><tr><th scope="row"><a href="player.html?team=mayaguez-sultans&amp;player=cesar-iglesiarias">César Iglesiarias</a></th><td>CF</td><td>R/R</td><td>28</td></tr><tr><th scope="row"><a href="player.html?team=mayaguez-sultans&amp;player=ari-kasprzyk">Ari Kasprzyk</a></th><td>RF</td><td>R/R</td><td>30</td></tr></tbody></table></div></section>
+<section class="panel full" id="cards"><h2>FIELDSTOCK player cards</h2><div class="mayaguez-copy"><span class="mayaguez-meta">2026 collection · 16 players · MAY-01–MAY-16</span><p><strong>Claim a card and add content to make it your own!</strong> Player cards and other artifacts across GLB can be claimed, curated and crafted by you. Look for unclaimed artifacts, click to claim, craft your submission, and send it to the GLB Board for review. If accepted, you’ll receive a private 16-character claim code, and we’ll publish the artifact with your content and attribution to the User ID you provide. <a href="contribute.html">Explore Claim &amp; Create →</a> Select a card to flip it over.</p></div><div class="tpe-card-grid" id="mayaguezCards" aria-label="Mayagüez Sultans FIELDSTOCK collection"><p>Loading the card collection…</p></div><noscript><p class="mayaguez-copy">Enable JavaScript to flip cards and submit a claim. The active roster is listed above.</p></noscript></section>
+<section class="panel full" id="results"><h2>Recent results</h2><div id="recent-results"><a class="result" href="box.html?date=2026-10-13&amp;game=san-pedro-cocolos@mayaguez-sultans"><time datetime="2026-10-13">2026-10-13</time><strong>vs. San Pedro Cocolos</strong><span>W 2–1 →</span></a><a class="result" href="box.html?date=2026-10-12&amp;game=mayaguez-sultans@santiago-caballeros"><time datetime="2026-10-12">2026-10-12</time><strong>at Santiago Caballeros</strong><span>W 3–2 →</span></a><a class="result" href="box.html?date=2026-10-11&amp;game=tijuana-tecnicos@mayaguez-sultans"><time datetime="2026-10-11">2026-10-11</time><strong>vs. Tijuana Tecnicos</strong><span>W 6–4 →</span></a><a class="result" href="box.html?date=2026-10-10&amp;game=mayaguez-sultans@taipei-neon"><time datetime="2026-10-10">2026-10-10</time><strong>at Taipei Neon</strong><span>L 2–6 →</span></a><a class="result" href="box.html?date=2026-10-08&amp;game=mayaguez-sultans@st-paul-frost"><time datetime="2026-10-08">2026-10-08</time><strong>at St. Paul Frost</strong><span>W 5–2 →</span></a></div></section>
+<section class="panel full" id="stadium"><h2>The Salt Court</h2><div class="mayaguez-copy"><figure><img src="assets/teams/mayaguez-sultans/images/salt-court-magixo.webp" alt="The Salt Court’s baseball diamond, waterfront stands and Magixo sponsorship at dusk" width="1536" height="1024" loading="lazy"></figure><span class="mayaguez-meta">Presented by Magixo · Waterfront baseball</span><p>Warm concrete, painted rails and an open view toward the water. Sea air moves through the stand as the floodlights come on. The Sultans’ teal and coral remain around the bowl; Magixo’s cobalt signs carry the name above the seats.</p><p>The park keeps its name. At the gate and on the scorecard, it reads <strong>The Salt Court, presented by Magixo.</strong></p></div></section>
+<section class="panel full" id="magixo"><h2>Magixo</h2><div class="mayaguez-copy"><figure><img src="assets/teams/mayaguez-sultans/images/magixo-brand-proof.webp" alt="Magixo’s cobalt wordmark and coral sparkle, detergent packaging and neighborhood laundry storefront" width="1536" height="1024" loading="lazy"></figure><div class="mayaguez-columns"><article><span class="mayaguez-meta">Detergente y lavandería</span><h3>From the shelf to the folding table</h3><p>Magixo makes detergent and runs neighborhood laundries. The same cobalt lettering appears on the bottle by the washing machine and the sign over the door. Coral panels, ivory labels and a small sparkle travel with it.</p><p>The shops handle family wash, work shirts and the occasional Sultans uniform brought in by someone who insists it belongs to a cousin.</p></article><article><span class="mayaguez-meta">Around Mayagüez</span><h3>Something to talk about while it dries</h3><p>A radio carries the game between wash cycles. On home dates, customers compare the lineup while sorting clothes; after the last out, the conversation moves to whoever left a pen in a pocket.</p><p>The bottles, shops, employees and customers all belong to the growing GLB record.</p></article></div></div></section>
+<section class="panel full" id="giveaway"><h2>Magixo Laundry Bag Night</h2><div class="mayaguez-copy mayaguez-columns"><figure><img src="assets/teams/mayaguez-sultans/images/magixo-laundry-bag-night.webp" alt="A Sultans fan carries an ivory Magixo laundry bag while an attendant distributes folded bags on the concourse" width="1536" height="1024" loading="lazy"></figure><article><span class="mayaguez-meta">Park giveaway · Selected home dates</span><h3>A bag that comes home with the scorecard</h3><p>An ivory cotton laundry bag, coral drawstring and cobalt Magixo print, with the Sultans name below. It is large enough for a real load of clothes and folds down for the trip to the park.</p><p>The bags are handed out at the concourse table. By the later innings, some hold jackets, some hold souvenirs, and at least one is being used to carry everyone else’s bags.</p><p class="mayaguez-meta">Dates and distribution details announced with the promotions schedule.</p></article></div></section>
+<section class="panel full" id="clubhouse"><h2>The laundry room</h2><div class="mayaguez-copy"><span class="mayaguez-meta">From the clubhouse · Inés Cordero</span><h3>Inés keeps the trousers.</h3><p>Magixo’s outfield board promises, <span lang="es">“Sale en el lavado.”</span> It comes out in the wash.</p><p>Clubhouse laundry manager <strong>Inés Cordero</strong> keeps a pair of gray uniform trousers beside the folding table. She has washed them three times. A red stripe of infield dirt still runs across one knee. When the local Magixo representative visits, she puts them on top of the clean pile.</p><p>He has requested a fresh test. Inés has asked him to slide into second base first.</p><p class="mayaguez-story-note">The stain, the sales visit and Inés’s account are starting points for contributors. There is room for the representative’s side of the story.</p></div></section>
+<section class="panel full" id="entertainment"><h2>Putana</h2><div class="mayaguez-copy"><figure><img src="assets/teams/mayaguez-sultans/images/putana-live.webp" alt="Putana sings and dances in teal and coral with four dancers and a live band on the Salt Court’s concourse stage" width="1536" height="1024" loading="lazy"></figure><span class="mayaguez-meta">Resident singer &amp; dancer · Concert evenings</span><h3>The voice carries. The dancers answer.</h3><p>Putana sings through the choreography, moving from a close microphone phrase into a full-band chorus without leaving the dancers behind. Percussion and keyboards set the pulse; four dancers trade places around her as the rhythm opens up.</p><p>A short black bob, teal stagewear, coral fringe and boots that keep time across the boards. Her show has glamour, flirtation and a crowd close enough to answer the chorus. The live band follows her cues through the final stop.</p><p>The residency uses the concourse stage on separate concert evenings. The baseball field remains ready for the next game.</p></div></section>
+<section class="panel full" id="donk"><h2>DONK</h2><div class="mayaguez-copy"><div class="mayaguez-donk-brand"><img src="assets/images/donk-wordmark-opal-rose.webp" alt="DONK" loading="lazy"><span class="mayaguez-meta">Custom car competition</span></div><figure><img src="assets/teams/mayaguez-sultans/images/victor-lumelo-magixo-impala.webp" alt="Victor Lumelo drives a cobalt-and-ivory Magixo 1964 Chevrolet Impala during a hydraulic height run outside the Salt Court" width="1536" height="1024" loading="lazy"></figure><span class="mayaguez-meta">Driver entry · Mayagüez</span><h3>Victor Lumelo</h3><p>Lumelo brings a <strong>1964 Chevrolet Impala two-door hardtop</strong> in cobalt blue with an ivory roof, fine coral pinstriping and polished chrome wheels. Magixo’s lettering fills the doors. The long body rises at the front as Victor works the hydraulic switches from the driver’s seat.</p><p>A cobalt work shirt, ivory collar and gold-rim glasses. Victor checks the chrome before each run, then folds his cloth back into the same pocket. The crew keeps a Magixo laundry bag for used polishing towels; nobody is allowed to mix them with the clean ones.</p><p>DONK operates independently of GLB. Selected events use stadium venues under separate agreements. Height runs take place on a dedicated paved lane, with spectators behind barriers and an official measuring rig beside the car.</p></div></section>
+<section class="panel full" id="voices"><h2>Game voices</h2><div class="mayaguez-copy mayaguez-columns"><article><figure><img class="voice-image" src="club-mayaguez-sultans-broadcast.png" alt="Marcos Velázquez at the broadcast microphone" loading="lazy"></figure><h3>Marcos Velázquez</h3><p><strong>Play-by-play.</strong> Velázquez keeps the count clear and leaves room for the crowd between pitches.</p></article><article><figure><img class="voice-image" src="club-mayaguez-sultans-announcer.png" alt="Lila Serrano, the Salt Court’s in-stadium announcer" loading="lazy"></figure><h3>Lila Serrano</h3><p><strong>In-stadium announcer.</strong> Serrano handles lineups, substitutions and the next announcement over the park’s public-address system.</p></article></div></section>
+<section class="panel full" id="mascot"><h2>El Sultán</h2><div class="mayaguez-copy mayaguez-columns"><figure><img src="club-mayaguez-sultans-mascot.png" alt="El Sultán in teal and coral greeting fans along the field rail" loading="lazy"></figure><article><span class="mayaguez-meta">Club mascot</span><p>El Sultán works the rail in teal and coral, stopping for high-fives and a formal bow before moving to the next row. The tall headpiece is visible above the crowd.</p><p>Families make space for photographs. The Lantern Section answers his arrival with a short drum phrase.</p></article></div></section>
+<section class="panel full" id="traditions"><h2>The Lantern Section</h2><div class="mayaguez-copy mayaguez-columns"><figure><img src="club-mayaguez-sultans-fans.png" alt="Sultans supporters with drums and flags in the stands" loading="lazy"></figure><article><span class="mayaguez-meta">In the stands</span><p>Drums, flags and families fill the Lantern Section. A short rhythm begins in one row and moves into the next; the response rises when the Sultans come back to the plate.</p><p>The conversation carries through the game, from the batting order to whose Magixo bag has already gone missing.</p></article></div></section>
+</main><footer class="site-footer"><div class="container footer-main"><div><div class="footer-logo">GLB</div><p>Global League Baseball</p><p>Official league site providing scores, standings, schedules, club information, and league bulletins.</p></div><div class="footer-col"><h4>League</h4><a href="standings.html">Standings</a><a href="scores.html">Scores</a><a href="schedule.html">Schedule</a><a href="stats.html">Stats</a></div><div class="footer-col"><h4>Clubs</h4><a href="teams.html">Teams</a><a href="#stadium">The Salt Court</a><a href="#roster">Roster</a><a href="#cards">Player cards</a></div><div class="footer-col"><h4>League Life</h4><a href="events.html">Events</a><a href="contribute.html">Contribute</a><a href="contribute.html#open-artifacts">Artifacts</a></div></div><div class="footer-bottom"><div class="container footer-bottom-inner"><span>© 2026 Global League Baseball</span><span>Mayagüez Sultans</span><span>Official Team Record</span></div></div></footer>
+<script src="scripts/player-cards.js?v=mayaguez-2026-1"></script><script src="scripts/taipei-cards.js?v=20261107-claim-create"></script><script src="scripts/mayaguez-sultans.js?v=magixo-1"></script><script src="scripts/glb-ticker.js"></script><script src="scripts/participation.js?v=20261107-claim-create"></script></body></html>

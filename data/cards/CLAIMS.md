@@ -33,3 +33,7 @@ The public registry contains attribution only:
 ```
 
 This remains a reviewed static-site workflow. The helper records acceptance; it does not send email or publish submitted copy automatically. Requests can overlap until the accepted registry is published. General contributions to an existing record remain welcome even when its artifact is claimed; a contribution does not automatically create a second claim.
+
+## Mayagüez launch
+
+MAY-01 through MAY-16 use the shared FIELDSTOCK front and back, canonical roster metadata and 2026 box-score-derived lines. Magixo, Laundry Bag Night, Inés Cordero, the Salt Court, El Sultán, the Lantern Section, Putana, Victor Lumelo and the 1964 Magixo Impala also have stable artifact records. The same Board review and private 16-character code process applies. Use the artifact’s exact MAY ID with the approval helper; the existing public registry handles attribution and closes approved claims.

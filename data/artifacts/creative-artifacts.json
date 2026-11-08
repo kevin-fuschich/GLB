@@ -825,6 +825,17 @@
       "section": "donk",
       "prompt": "Add a detail, history or story to the TUMBAO GTO without changing its established driver and appearance.",
       "claim_open": true
+    },
+    {
+      "artifact_id": "SAN-DRONES",
+      "name": "TUMBAO drone shows",
+      "type": "tradition",
+      "team_slug": "santiago-caballeros",
+      "team_name": "Santiago Caballeros",
+      "record_path": "team-santiago-caballeros.html",
+      "section": "drones",
+      "prompt": "Develop a new drone sequence, accompanying music or a story from a Santiago show. Keep the mountain setting and TUMBAO presentation.",
+      "claim_open": true
     }
   ]
 }

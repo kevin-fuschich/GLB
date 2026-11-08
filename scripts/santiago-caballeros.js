@@ -26,7 +26,7 @@
   Promise.all([get('data/season/games.json'), get('data/teams/teams.json')]).then(([games, registry]) => {
     const names = new Map(Object.values(registry.divisions).flat().map(team => [team.slug, team.team]));
     const rows = games.filter(game => (game.home === slug || game.away === slug) && game.status === 'final')
-      .sort((a, b) => a.date.localeCompare(b.date)).slice(-5).reverse();
+      .sort((a, b) => a.date.localeCompare(b.date)).slice(-3).reverse();
     if (!rows.length) return;
     const list = document.getElementById('recent-results');
     list.replaceChildren();
@@ -53,7 +53,10 @@
     const roster=await response.json();
     let seasons=[];
     try{seasons=await GLBPlayerCards.loadSeasons();}catch(error){console.warn(error);}
-    const cards=await Promise.all(roster.players.map(async player=>{
+    const featured=['aron-videla','damian-velasquez','noam-finkel','dalton-reyes'];
+    const players=featured.map(slug=>roster.players.find(player=>player.slug===slug)).filter(Boolean)
+      .concat(roster.players.filter(player=>!featured.includes(player.slug)));
+    const cards=await Promise.all(players.map(async player=>{
       const entry=document.createElement('article');entry.className='tpe-card-entry';
       entry.id='card-'+player.card_id.toLowerCase();entry.dataset.cardId=player.card_id;
       entry.append(GLBPlayerCards.createCard({...player,teamSlug:'santiago-caballeros',teamName:roster.team},GLBPlayerCards.careerFor(player.slug,seasons)));
@@ -61,6 +64,42 @@
       return entry;
     }));
     host.replaceChildren(...cards);
-    if(location.hash.startsWith('#card-'))document.getElementById(location.hash.slice(1))?.scrollIntoView();
+    const control=document.getElementById('viewAllCards');
+    let expanded=false;
+    const showCards=(all)=>{
+      expanded=all;
+      cards.forEach((entry,index)=>{entry.hidden=!all&&index>=4;});
+      control.setAttribute('aria-expanded',String(all));
+      control.textContent=all?'Show fewer cards':`View all ${cards.length} cards`;
+      document.getElementById('cardCount').textContent=all?`${cards.length} of ${cards.length} players`:`4 of ${cards.length} players`;
+    };
+    showCards(false);control.hidden=false;
+    control.addEventListener('click',()=>{
+      const activeIndex=cards.indexOf(document.activeElement?.closest('.tpe-card-entry'));
+      showCards(!expanded);
+      if(!expanded&&activeIndex>=4)control.focus();
+      if(!expanded)document.getElementById('cards').scrollIntoView({block:'start'});
+    });
+    const revealCard=()=>{
+      if(!location.hash.startsWith('#card-'))return;
+      const target=document.getElementById(location.hash.slice(1));
+      if(target&&host.contains(target)){
+        if(target.hidden)showCards(true);
+        requestAnimationFrame(()=>target.scrollIntoView({block:'start'}));
+      }
+    };
+    window.addEventListener('hashchange',revealCard);revealCard();
   }catch(error){host.textContent='The card collection could not load. Please refresh.';console.warn(error);}
+})();
+
+// Keep artifact links useful when their full records are folded away.
+(() => {
+  const revealRecord=()=>{
+    let id;try{id=decodeURIComponent(location.hash.slice(1));}catch{return;}
+    const target=document.getElementById(id);if(!target)return;
+    let node=target;
+    while(node){if(node.tagName==='DETAILS')node.open=true;node=node.parentElement;}
+    if(!id.startsWith('card-'))requestAnimationFrame(()=>target.scrollIntoView({block:'start'}));
+  };
+  window.addEventListener('hashchange',revealRecord);revealRecord();
 })();

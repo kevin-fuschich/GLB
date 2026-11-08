@@ -42,3 +42,60 @@
 .santiago-page .voice-image{max-height:460px;object-fit:contain;background:#f3f5f7}.santiago-story-note{padding:16px;border-left:3px solid #d9b3a0;background:#fbf8f4;color:#4c5965}.santiago-table{overflow-x:auto}.santiago-link{font-weight:700;text-decoration:underline}
 
 .santiago-page .tpe-card-grid{grid-template-columns:repeat(3,minmax(0,1fr))}@media(max-width:1000px){.santiago-page .tpe-card-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:560px){.santiago-page .tpe-card-grid{grid-template-columns:1fr}}
+
+/* Compact club overview: full records stay one selection away. */
+.santiago-page .team-hero,.santiago-page .team-hero-inner{min-height:clamp(280px,30vw,410px)}
+.santiago-section-nav{gap:4px 24px;padding:6px 16px}
+.santiago-page :focus-visible{outline:3px solid var(--santiago-accent);outline-offset:4px}
+.santiago-page .panel,.santiago-page details,.santiago-page .tpe-card-entry{scroll-margin-top:140px}
+.santiago-meta{display:block;font-size:10px}
+.santiago-page .summary{margin-top:14px!important;margin-bottom:12px}
+.santiago-page .summary>div{padding:12px}
+.santiago-intro{display:flex;justify-content:space-between;align-items:baseline;gap:20px}
+.santiago-intro p{margin:0 0 5px}
+.santiago-page .santiago-record{grid-column:auto}
+.santiago-record>summary{display:flex;align-items:center;justify-content:space-between;gap:12px;cursor:pointer;padding:17px 20px;list-style:none}
+.santiago-record>summary::-webkit-details-marker,.santiago-park-tile>summary::-webkit-details-marker{display:none}
+.santiago-record>summary>span{font-size:17px;font-weight:780}
+.santiago-record>summary>small{font-size:11px;color:var(--muted);text-align:right}
+.santiago-record>summary::after{content:'+';font-size:23px;color:var(--santiago-accent)}
+.santiago-record[open]>summary::after{content:'−'}
+.santiago-record[open]>summary{border-bottom:1px solid var(--line)}
+.santiago-page #recent-results{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;padding:4px 20px 10px}
+.santiago-page .result{grid-template-columns:1fr;gap:4px;border-bottom:0}
+.santiago-page .result span{grid-column:auto}
+.santiago-section-heading{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:17px 20px 0}
+.santiago-section-heading h2{padding:4px 0 0;border:0;font-size:23px}
+.santiago-count{font-size:12px;color:var(--muted);white-space:nowrap}
+.santiago-card-intro{margin:10px 20px 18px!important;color:var(--muted);font-size:13px;max-width:78ch}
+.santiago-card-intro a{text-decoration:underline;color:var(--santiago-slate)}
+.santiago-page .tpe-card-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;padding:0 20px 16px}
+.santiago-page .tpe-card-entry{padding:8px}
+.santiago-page .tpe-claim-panel{padding:8px;margin-top:8px;font-size:11px}
+.santiago-page .tpe-claim-state{font-size:10px;margin-bottom:5px}
+.santiago-page .tpe-claim-panel summary{font-size:11px}
+.santiago-page [hidden]{display:none!important}
+.santiago-card-actions{display:flex;justify-content:center;padding:0 20px 20px}
+.santiago-card-actions button{padding:11px 24px;border:1px solid var(--navy);border-radius:6px;background:var(--navy);color:white;font-family:inherit;font-size:13px;font-weight:700;cursor:pointer}
+.santiago-park-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;padding:0 20px 20px;align-items:start}
+.santiago-park-tile{min-width:0;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:#fff}
+.santiago-park-tile>summary{display:block;cursor:pointer;list-style:none}
+.santiago-park-tile>summary>img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;background:#e5e8eb}
+.santiago-tile-copy{display:block;padding:13px 14px}
+.santiago-tile-copy>strong{display:block;font-size:18px;line-height:1.25;margin:4px 0 7px}
+.santiago-tile-description{display:block;font-size:12px;color:var(--muted);min-height:36px}
+.santiago-tile-action{display:flex;justify-content:space-between;font-size:11px;font-weight:750;margin-top:12px;color:var(--santiago-accent)}
+.santiago-park-tile>summary:hover{background:#faf8f5}
+.santiago-park-tile[open]{grid-column:1/-1}
+.santiago-park-tile[open]>summary>img{aspect-ratio:auto;max-height:480px;object-fit:contain;background:#eef0f2}
+.santiago-park-tile[open] .santiago-tile-description{min-height:0}
+.santiago-park-tile[open] .santiago-tile-action{font-size:0}
+.santiago-park-tile[open] .santiago-tile-action::after{content:'Close −';font-size:12px}
+.santiago-feature-body{border-top:1px solid var(--line)}
+.santiago-park-tile>.glb-artifact-invitation{margin:0 20px 18px}
+@media(max-width:1000px){.santiago-page .tpe-card-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.santiago-intro{display:block}}
+@media(max-width:700px){.santiago-park-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.santiago-page #recent-results{grid-template-columns:1fr;gap:0}.santiago-page .result{grid-template-columns:74px minmax(0,1fr) auto;gap:8px}.santiago-page .result span{grid-column:auto}.santiago-page .santiago-record{grid-column:1/-1}}
+@media(max-width:450px){.santiago-page .team-hero,.santiago-page .team-hero-inner{min-height:290px}.santiago-page .team-hero h1{font-size:36px}.santiago-section-nav{gap:0;justify-content:space-between;padding:5px 10px}.santiago-section-nav a{font-size:11px}.santiago-page .summary{grid-template-columns:repeat(3,minmax(0,1fr))}.santiago-page .summary>div:first-child{grid-column:auto}.santiago-page .summary>div{padding:10px 8px}.santiago-page .summary strong{font-size:23px!important}.santiago-section-heading{padding-inline:14px}.santiago-section-heading h2{font-size:21px}.santiago-card-intro{margin-inline:14px!important}.santiago-page .tpe-card-grid{padding-inline:12px;gap:10px}.santiago-page .tpe-card-entry{padding:6px}.santiago-park-grid{padding:0 12px 12px;gap:10px}.santiago-tile-copy{padding:10px}.santiago-tile-copy>strong{font-size:15px}.santiago-tile-description{display:none}.santiago-tile-copy .santiago-meta{font-size:8px}.santiago-record>summary{padding-inline:14px}.santiago-record>summary>small{font-size:10px}.santiago-page .result{grid-template-columns:64px minmax(0,1fr)}.santiago-page .result span{grid-column:2}}
+.santiago-page .tpe-card-entry:has(.tpe-claim-panel details[open]){grid-column:1/-1;display:grid;grid-template-columns:minmax(200px,310px) minmax(0,1fr);gap:20px;align-items:start}
+.santiago-page .tpe-card-entry:has(.tpe-claim-panel details[open]) .tpe-claim-panel{width:100%;max-width:none;margin-top:0}
+@media(max-width:700px){.santiago-page .tpe-card-entry:has(.tpe-claim-panel details[open]){display:block}.santiago-page .tpe-card-entry:has(.tpe-claim-panel details[open]) .fs-card{max-width:290px;margin:auto}.santiago-page .tpe-card-entry:has(.tpe-claim-panel details[open]) .tpe-claim-panel{margin-top:12px}}

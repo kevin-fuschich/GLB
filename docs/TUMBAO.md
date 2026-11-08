@@ -12,4 +12,6 @@ Marisol Vega and Rafa “El Timbre” Orellana retain their names, roles, portra
 
 The current release adds sixteen individual player photographs and standard FIELDSTOCK fronts/backs (SAN-01–SAN-16), Renato Cifuentes and his high-hop 1967 Pontiac GTO, the front gate, food concourse and TUMBAO climbing wall beside the repair counter. All sixteen cards and five new creative artifacts are open to contribution. Rejected four-player contact sheets and awkward batting followthroughs are not published. Preserve a conditioned, alert professional appearance and distinct faces.
 
-Resident entertainment remains subsequent work. Do not mark the whole club complete yet.
+Santiago uses TUMBAO drone shows instead of a resident entertainer. Mountain contours and a galloping Caballero establish the first sequence; future sequences, music and stories remain open to contributors (SAN-DRONES). Dates are unannounced.
+
+The compact combined page shows four player cards initially, with a control for all sixteen. Roster and leader tables are expandable. Around-the-park tiles open their complete records and contextual claims; stable artifact and card anchors still open the relevant content. Apply this layout to other clubs only after review.

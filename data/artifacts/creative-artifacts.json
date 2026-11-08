@@ -93,12 +93,12 @@
     },
     {
       "artifact_id": "SPD-MASCOT",
-      "name": "San Pedro’s sailor-bird mascot",
+      "name": "Bolo",
       "type": "mascot",
       "team_slug": "san-pedro-cocolos",
       "team_name": "San Pedro Cocolos",
       "section": "mascot",
-      "prompt": "A character detail, a fan encounter or a story from the rail.",
+      "prompt": "A fan encounter, a harbor-master mishap or a story from Bolo’s rounds along the rail. Build on his sailor cap, blue neckerchief and solemn cap-rescue ceremony.",
       "claim_open": true
     },
     {

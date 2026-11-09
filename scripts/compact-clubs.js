@@ -13,7 +13,7 @@
     const heading=section.querySelector('h2');if(!heading||section.matches('.team-hero,.team-closer'))continue;
     const title=heading.textContent.trim();
     if(/season|snapshot|latest result|recent result|upcoming/i.test(title))continue;
-    if(section.querySelector('.tpe-card-grid,.player-card-grid,.fs-card')||/player cards|player records/i.test(title))continue;
+    if(section.querySelector('.tpe-card-grid,.player-card-grid,.tij-card-grid,#mtyCards,.fs-card')||/player cards|player records/i.test(title))continue;
     if(/roster|leader|official record|club file|club notes|artifact desk|contribut/i.test(title)){
       const details=make('details','glb-record-fold');details.append(make('summary','',title));
       const body=make('div','glb-fold-body');body.append(...section.childNodes);details.append(body);section.append(details);section.classList.add('glb-fold-section');continue;
@@ -35,16 +35,16 @@
   let scheduled=false;
   function enhanceLists(){
     scheduled=false;
-    for(const list of root.querySelectorAll('.tpe-card-grid,.player-card-grid,div.roster')){
+    for(const list of root.querySelectorAll('.tpe-card-grid,.player-card-grid,.tij-card-grid,#mtyCards,.mty-roster,div.roster')){
       if(list.closest('.glb-park-gallery')||list.children.length<=4)continue;
-      let entries=[...list.children].filter(e=>e.matches('.tpe-card-entry,.fs-card,.player,article'));
+      let entries=[...list.children].filter(e=>e.matches('.tpe-card-entry,.fs-card,.mty-player,.player,article'));
       if(entries.length<=4)continue;
       if(list.dataset.compactReady){list._glbRefresh(entries);continue;}
       list.dataset.compactReady='true';list.classList.add('glb-four-cards');
       let expanded=false;
-      const button=make('button','glb-view-all',`View all ${entries.length} ${list.matches('div.roster')?'players':'cards'}`);button.type='button';button.setAttribute('aria-expanded','false');
+      const button=make('button','glb-view-all',`View all ${entries.length} ${list.matches('div.roster,.mty-roster')?'players':'cards'}`);button.type='button';button.setAttribute('aria-expanded','false');
       if(!list.id)list.id='glb-player-collection';button.setAttribute('aria-controls',list.id);
-      const paint=all=>{expanded=all;entries.forEach((e,i)=>e.hidden=!all&&i>=4);button.setAttribute('aria-expanded',String(all));button.textContent=all?'Show fewer':`View all ${entries.length} ${list.matches('div.roster')?'players':'cards'}`;};
+      const paint=all=>{expanded=all;entries.forEach((e,i)=>e.hidden=!all&&i>=4);button.setAttribute('aria-expanded',String(all));button.textContent=all?'Show fewer':`View all ${entries.length} ${list.matches('div.roster,.mty-roster')?'players':'cards'}`;};
       list.after(button);paint(false);
       button.addEventListener('click',()=>{paint(!expanded);if(!expanded)list.scrollIntoView({block:'start'});});
       list._glbExpand=()=>paint(true);

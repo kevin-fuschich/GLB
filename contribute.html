@@ -19,6 +19,7 @@
 <p><strong>Claim a card and add content to make it your own!</strong> Player cards and other artifacts across GLB can be claimed, curated and crafted by you.</p>
 <p>Look for unclaimed artifacts, click to claim, craft your submission, and send it to the GLB Board for review. If accepted, you’ll receive a private 16-character claim code, and we’ll publish the artifact with your content and attribution to the User ID you provide.</p>
 <a class="primary-link" href="#open-artifacts">Find an open artifact →</a>
+<p><a href="how-it-works.html"><strong>New here? Here’s how GLB claim works →</strong></a></p>
 </section>
 <section class="steps" aria-label="How claiming works">
 <article><small>01 · CLAIM</small><h3>Find your starting point.</h3><p>Choose an artifact marked open. Explore player cards, mascots, entertainers, DONK drivers and vehicles, ballparks, fan traditions and giveaways.</p></article>
@@ -33,13 +34,13 @@
 <noscript><p>Enable JavaScript to browse current availability, or visit <a href="teams.html">a club page</a> and look for its open cards and artifacts.</p></noscript>
 </section>
 <section class="submission" id="contribute" aria-labelledby="contribution-title">
-<h2 id="contribution-title">Have more to add?</h2><p id="selectedArtifact" role="status"></p>
-<p>Use an open artifact’s claim form to claim it. For a longer story, artwork, supporting material or an idea for another artifact, send your contribution here. Include the artifact’s name or ID so the Board can connect it to the record.</p>
+<h2 id="contribution-title">Have an idea beyond the artifacts?</h2><p id="selectedArtifact" role="status"></p>
+<p>Have an idea for a new character, business, event, place or something GLB hasn’t imagined yet? Send it to the GLB Board here. You don’t need to choose an existing artifact. Tell us what you have in mind and where it fits — or leave room for us to figure that out together. You can also use this form for a longer story, artwork or supporting material.</p>
 <form id="contributionForm" action="https://formspree.io/f/mzezpeap" method="POST">
 <input type="hidden" name="artifact_id" value=""><input type="hidden" name="submission_type" value="GLB contribution"><input type="hidden" name="_subject" value="GLB Board · Creative contribution"><input type="hidden" name="review_body" value="GLB Board">
-<label>Club<select name="club" id="club" required><option value="">Choose a club</option></select></label>
+<label>Club<select name="club" id="club" required><option value="">Choose a club</option><option value="league-wide">League-wide / Not sure yet</option></select></label>
 <label>Artifact type<select name="artifact_type" id="type" required><option value="">Choose an artifact</option><option value="player">Player card</option><option value="mascot">Mascot</option><option value="ballpark">Ballpark</option><option value="entertainer">Entertainer</option><option value="donk_driver">DONK driver</option><option value="donk_vehicle">DONK vehicle</option><option value="donk">Other DONK story</option><option value="giveaway">Giveaway</option><option value="brand">Brand or business</option><option value="broadcaster">Play-by-play broadcaster</option><option value="announcer">In-game announcer</option><option value="tradition">Fan tradition</option><option value="other">Another artifact or story</option></select></label>
-<label>Artifact name or ID<input name="artifact" id="artifact" placeholder="Player name, card number, character or artifact" required maxlength="160"></label>
+<label>Artifact name or idea title<input name="artifact" id="artifact" placeholder="An existing artifact, or a name for your new idea" required maxlength="160"></label>
 <label>Your public User ID<input name="user_id" required minlength="3" maxlength="24" pattern="[A-Za-z0-9_-]{3,24}" title="3–24 letters, numbers, underscores, or hyphens" autocomplete="username" placeholder="How you want to be credited"></label>
 <label>Email (private)<input type="email" name="email" required autocomplete="email"></label>
 <label>Your contribution<textarea name="contribution" required minlength="30" maxlength="12000" placeholder="Craft a biography, story, tradition or another part of the GLB world."></textarea></label>

@@ -17,6 +17,12 @@
     link.className='glb-create-link'; nav.append(link); header.append(nav);
   }
   const footer = document.querySelector('body > footer');
+  if (footer && !footer.querySelector('a[href="how-it-works.html"]')) {
+    const p=document.createElement('p');
+    const a=document.createElement('a');a.href='how-it-works.html';a.textContent='Help build the universe! Here’s how GLB claim works →';
+    p.append(a);footer.append(p);
+  }
+
   if (footer && !footer.querySelector('a[href="contribute.html"]')) {
     const invitation = document.createElement('div'); invitation.className='glb-footer-create';
     invitation.append('Help build this world. ');

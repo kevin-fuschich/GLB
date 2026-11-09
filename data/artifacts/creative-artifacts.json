@@ -318,7 +318,7 @@
       "team_slug": "mayaguez-sultans",
       "team_name": "Mayagüez Sultans",
       "section": "donk",
-      "prompt": "A build story, a garage detail or the history of the cobalt-and-ivory 1964 Impala.",
+      "prompt": "A build story, a garage detail or a pregame lap from Victor’s pearlescent classic Impala, with purple-and-turquoise Magixo livery. Preserve the established car and driver.",
       "claim_open": true
     },
     {
@@ -835,6 +835,28 @@
       "record_path": "team-santiago-caballeros.html",
       "section": "drones",
       "prompt": "Develop a new drone sequence, accompanying music or a story from a Santiago show. Keep the mountain setting and TUMBAO presentation.",
+      "claim_open": true
+    },
+    {
+      "artifact_id": "MAY-SPIN-CYCLE",
+      "name": "Magixo Spin Cycle",
+      "type": "ballpark",
+      "section": "spin-cycle",
+      "prompt": "A family’s ride, the wheel operator’s story or a view of the game from a washer-drum gondola. Preserve the established attraction and Magixo identity.",
+      "team_slug": "mayaguez-sultans",
+      "team_name": "Mayagüez Sultans",
+      "record_path": "team-mayaguez-sultans.html",
+      "claim_open": true
+    },
+    {
+      "artifact_id": "MAY-BRAZO-GITANO",
+      "name": "Brazo gitano on the concourse",
+      "type": "tradition",
+      "section": "concourse",
+      "prompt": "Name the fictional stand or its vendor, tell a counter-side story, or add a family’s guava-and-cream-cheese game-night tradition. Keep the stand independent of real bakery brands.",
+      "team_slug": "mayaguez-sultans",
+      "team_name": "Mayagüez Sultans",
+      "record_path": "team-mayaguez-sultans.html",
       "claim_open": true
     }
   ]

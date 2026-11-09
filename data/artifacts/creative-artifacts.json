@@ -423,7 +423,7 @@
       "type": "broadcaster",
       "team_slug": "louisville-naturals",
       "team_name": "Louisville Naturals",
-      "record_path": "club-louisville-naturals.html",
+      "record_path": "team-louisville-naturals.html",
       "section": "claim-lou-broadcast",
       "role": "Play-by-play broadcaster",
       "prompt": "Write the biography, background or stories of Hank Mercer. Keep the established play-by-play broadcaster role and portrait.",
@@ -435,7 +435,7 @@
       "type": "announcer",
       "team_slug": "louisville-naturals",
       "team_name": "Louisville Naturals",
-      "record_path": "club-louisville-naturals.html",
+      "record_path": "team-louisville-naturals.html",
       "section": "claim-lou-announcer",
       "role": "In-game announcer",
       "prompt": "Write the biography, background or stories of Casey Wilder. Keep the established in-game announcer role and portrait.",
@@ -857,6 +857,83 @@
       "team_slug": "mayaguez-sultans",
       "team_name": "Mayagüez Sultans",
       "record_path": "team-mayaguez-sultans.html",
+      "claim_open": true
+    },
+    {
+      "artifact_id": "LOU-SESSIONS",
+      "name": "The Limestone Sessions",
+      "type": "entertainer",
+      "section": "entertainment",
+      "prompt": "Name the resident contemporary bluegrass crew, develop a musician or tell a porch-set story. Preserve the established five-piece acoustic lineup and candid setting.",
+      "team_slug": "louisville-naturals",
+      "team_name": "Louisville Naturals",
+      "record_path": "team-louisville-naturals.html",
+      "claim_open": true
+    },
+    {
+      "artifact_id": "LOU-BIG-SOFT",
+      "name": "BIG SOFT",
+      "type": "brand",
+      "section": "big-soft",
+      "prompt": "A bedding-company employee, product story or exceptionally strange piece of comfort marketing.",
+      "team_slug": "louisville-naturals",
+      "team_name": "Louisville Naturals",
+      "record_path": "team-louisville-naturals.html",
+      "claim_open": true
+    },
+    {
+      "artifact_id": "LOU-LANDING",
+      "name": "The Big Soft Landing",
+      "type": "ballpark",
+      "section": "landing",
+      "prompt": "A fan’s afternoon on the oversized sofas, a terrace attendant or a peculiar lounge tradition.",
+      "team_slug": "louisville-naturals",
+      "team_name": "Louisville Naturals",
+      "record_path": "team-louisville-naturals.html",
+      "claim_open": true
+    },
+    {
+      "artifact_id": "LOU-FLO",
+      "name": "Flo Troup",
+      "type": "donk_driver",
+      "section": "donk",
+      "prompt": "A driver biography, garage routine or competition story. Preserve Flo’s identity and deadpan bearing.",
+      "team_slug": "louisville-naturals",
+      "team_name": "Louisville Naturals",
+      "record_path": "team-louisville-naturals.html",
+      "claim_open": true
+    },
+    {
+      "artifact_id": "LOU-CADILLAC",
+      "name": "Flo’s BIG SOFT Cadillac",
+      "type": "donk_vehicle",
+      "section": "donk",
+      "prompt": "A build story or garage detail from the cream-and-burgundy quilted Cadillac Coupe de Ville.",
+      "team_slug": "louisville-naturals",
+      "team_name": "Louisville Naturals",
+      "record_path": "team-louisville-naturals.html",
+      "claim_open": true
+    },
+    {
+      "artifact_id": "LOU-SPRIG",
+      "name": "Sprig",
+      "type": "mascot",
+      "section": "mascot",
+      "prompt": "A mascot encounter or a moment from Sprig’s rounds around the park.",
+      "team_slug": "louisville-naturals",
+      "team_name": "Louisville Naturals",
+      "record_path": "team-louisville-naturals.html",
+      "claim_open": true
+    },
+    {
+      "artifact_id": "LOU-YARD-WALKERS",
+      "name": "The Yard Walkers",
+      "type": "tradition",
+      "section": "traditions",
+      "prompt": "A concourse ritual, familiar face or story from a supporter’s route around the Grounds.",
+      "team_slug": "louisville-naturals",
+      "team_name": "Louisville Naturals",
+      "record_path": "team-louisville-naturals.html",
       "claim_open": true
     }
   ]

@@ -968,6 +968,28 @@
       "team_name": "Triangle Gold",
       "record_path": "team-triangle-gold.html",
       "claim_open": true
+    },
+    {
+      "artifact_id": "TRI-WEEJIE",
+      "name": "WEEJIE",
+      "type": "brand",
+      "section": "weejie",
+      "prompt": "Develop a WEEJIE worker, founder, client or peculiar piece of advertising. Preserve its paid-work marketplace, electric-lime and deep-blue branding, and planchette symbol.",
+      "team_slug": "durham-gold",
+      "team_name": "Triangle Gold",
+      "record_path": "team-triangle-gold.html",
+      "claim_open": true
+    },
+    {
+      "artifact_id": "TRI-WEEJIE-BOARD",
+      "name": "WEEJIE Board",
+      "type": "ballpark",
+      "section": "weejie-board",
+      "prompt": "Tell a concourse story, write an in-world job listing or create a one-day signing announcement. Preserve the WEEJIE Board wordplay, digital job listings and planchette pointer.",
+      "team_slug": "durham-gold",
+      "team_name": "Triangle Gold",
+      "record_path": "team-triangle-gold.html",
+      "claim_open": true
     }
   ]
 }

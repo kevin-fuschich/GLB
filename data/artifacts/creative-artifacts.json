@@ -990,6 +990,28 @@
       "team_name": "Triangle Gold",
       "record_path": "team-triangle-gold.html",
       "claim_open": true
+    },
+    {
+      "artifact_id": "TRI-BOBBY",
+      "name": "Bobby Boulineau",
+      "type": "donk_driver",
+      "section": "donk",
+      "prompt": "Write a driver biography, garage story or competition moment for Bobby Boulineau. Preserve his practical builder-and-repairer background and WEEJIE-sponsored 1980 Ford Fairmont.",
+      "team_slug": "durham-gold",
+      "team_name": "Triangle Gold",
+      "record_path": "team-triangle-gold.html",
+      "claim_open": true
+    },
+    {
+      "artifact_id": "TRI-FAIRMONT",
+      "name": "Bobby’s WEEJIE 1980 Ford Fairmont",
+      "type": "donk_vehicle",
+      "section": "donk",
+      "prompt": "Develop a build detail or competition story for the 1980 Ford Fairmont. Preserve the deep-blue and electric-lime WEEJIE identity, polished wheels and spirit-board hood with its painted planchette.",
+      "team_slug": "durham-gold",
+      "team_name": "Triangle Gold",
+      "record_path": "team-triangle-gold.html",
+      "claim_open": true
     }
   ]
 }

@@ -46,3 +46,11 @@ main a:not(.button):not(.primary-link){color:#b1f4de}
 @media(prefers-reduced-motion:reduce){.artifact-art img{transition:none}}
 
 .artifact-art-player img{object-fit:contain;background:#091e30}
+#previewContribution{justify-self:start;background:transparent;color:#b1f4de;border-color:#70a99d}
+.contribution-preview{outline:none;margin:8px 0 14px}.contribution-preview[hidden]{display:none}
+.draft-record{overflow:hidden;border:1px solid #568a8d;border-radius:20px;background:radial-gradient(ellipse at top right,#20685e66,transparent 65%),#0a2235;box-shadow:0 22px 40px -24px #000}
+.draft-art{display:block;width:100%;max-height:330px;object-fit:cover}.draft-art-player{object-fit:contain;background:#061a29}
+.draft-copy{padding:clamp(22px,4vw,36px)}.draft-status{display:inline-block;border:1px solid #80b6a5;border-radius:100px;color:#b1f4de;padding:6px 12px;font-size:11px;font-weight:750;letter-spacing:.04em}
+.draft-copy .draft-meta{font-size:12px;color:#a9c7d6;margin:24px 0 8px}.draft-copy h3{font-size:clamp(25px,4vw,38px);line-height:1.1;margin:0 0 12px}.draft-copy .draft-credit{color:#b1f4de;font-size:13px;margin:0 0 24px}
+.draft-writing{white-space:pre-wrap;overflow-wrap:anywhere;font-size:17px;line-height:1.75;color:#e4eef5;border-top:1px solid #ffffff20;padding-top:24px}
+.submission .draft-notice{font-size:12px;color:#a9c7d6;margin:16px 0}.draft-edit{background:transparent;color:#b1f4de;border:1px solid #557a84;padding:10px 17px;font-size:13px}

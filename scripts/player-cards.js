@@ -101,7 +101,7 @@
     'monterrey-cementeros':'#df81a1', 'tijuana-tecnicos':'#a5b95e'
   };
   const prefixes = {'spokane-alloys':'SPK','vancouver-current':'VAN','taipei-neon':'TPE',
-    'osaka-spirits':'OSA','tijuana-tecnicos':'TIJ','monterrey-cementeros':'MTY','durham-gold':'DUR','albuquerque-aeros':'ABQ',
+    'osaka-spirits':'OSA','tijuana-tecnicos':'TIJ','monterrey-cementeros':'MTY','durham-gold':'TRI','albuquerque-aeros':'ABQ',
     'fresno-yield':'FRE','st-paul-frost':'STP','birmingham-vulcans':'BIR','toledo-assembly':'TOL',
     'louisville-naturals':'LOU','san-pedro-cocolos':'SPD','santiago-caballeros':'SAN','mayaguez-sultans':'MAY'};
   const rosterRequests = new Map();

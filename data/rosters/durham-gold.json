@@ -1,5 +1,5 @@
 {
-  "team": "Durham Gold",
+  "team": "Triangle Gold",
   "players": [
     {
       "name": "Caleb Rowan",
@@ -8,7 +8,18 @@
       "bats": "R",
       "throws": "R",
       "age": 29,
-      "photo": "caleb-rowan.jpg"
+      "photo": "caleb-rowan.jpg",
+      "card_id": "TRI-01",
+      "claim_open": true,
+      "photo_source": "assets/images/players/durham-gold/durham-caleb-rowan.jpg",
+      "card_front_alt": "Caleb Rowan, Triangle Gold SP, in navy and gold",
+      "dob": "1997-05-16",
+      "birthplace": "Greensboro, North Carolina",
+      "height": "6′3″",
+      "weight": 214,
+      "scouting_report": "Locates a four-seam fastball above the hands and finishes counts with a curve.",
+      "factoid": "Keeps the ticket from his first game at the Yard tucked inside a scorebook.",
+      "bio": "Locates a four-seam fastball above the hands and finishes counts with a curve."
     },
     {
       "name": "Antonio Beltrán",
@@ -17,7 +28,18 @@
       "bats": "L",
       "throws": "L",
       "age": 27,
-      "photo": "antonio-beltran.jpg"
+      "photo": "antonio-beltran.jpg",
+      "card_id": "TRI-02",
+      "claim_open": true,
+      "photo_source": "assets/images/players/durham-gold/durham-antonio-beltran.jpg",
+      "card_front_alt": "Antonio Beltrán, Triangle Gold SP, in navy and gold",
+      "dob": "1999-02-09",
+      "birthplace": "Hermosillo, Mexico",
+      "height": "6′1″",
+      "weight": 198,
+      "scouting_report": "A left-handed starter who pairs a running fastball with a changeup below the zone.",
+      "factoid": "His offseason catch partner is the cousin who first taught him to pitch.",
+      "bio": "A left-handed starter who pairs a running fastball with a changeup below the zone."
     },
     {
       "name": "Isaac Friedel",
@@ -26,7 +48,18 @@
       "bats": "R",
       "throws": "R",
       "age": 31,
-      "photo": "isaac-friedel.jpg"
+      "photo": "isaac-friedel.jpg",
+      "card_id": "TRI-03",
+      "claim_open": true,
+      "photo_source": "assets/images/players/durham-gold/durham-isaac-friedel.jpg",
+      "card_front_alt": "Isaac Friedel, Triangle Gold SP, in navy and gold",
+      "dob": "1995-08-24",
+      "birthplace": "Bremen, Germany",
+      "height": "6′4″",
+      "weight": 229,
+      "scouting_report": "Works deep into starts with a sinker and a short slider.",
+      "factoid": "Repairs the stitching on his own practice gloves.",
+      "bio": "Works deep into starts with a sinker and a short slider."
     },
     {
       "name": "Kenji Nomura",
@@ -35,7 +68,18 @@
       "bats": "R",
       "throws": "R",
       "age": 26,
-      "photo": "kenji-nomura.jpg"
+      "photo": "kenji-nomura.jpg",
+      "card_id": "TRI-04",
+      "claim_open": true,
+      "photo_source": "assets/images/players/durham-gold/durham-kenji-nomura.jpg",
+      "card_front_alt": "Kenji Nomura, Triangle Gold SP, in navy and gold",
+      "dob": "2000-06-11",
+      "birthplace": "Kobe, Japan",
+      "height": "5′11″",
+      "weight": 183,
+      "scouting_report": "Changes speeds with a split-finger fastball and a sharply located cutter.",
+      "factoid": "Carries a small travel watercolor set on road trips.",
+      "bio": "Changes speeds with a split-finger fastball and a sharply located cutter."
     },
     {
       "name": "Devin Marsh",
@@ -44,7 +88,18 @@
       "bats": "R",
       "throws": "R",
       "age": 28,
-      "photo": "devin-marsh.jpg"
+      "photo": "devin-marsh.jpg",
+      "card_id": "TRI-05",
+      "claim_open": true,
+      "photo_source": "assets/images/players/durham-gold/durham-devin-marsh.jpg",
+      "card_front_alt": "Devin Marsh, Triangle Gold RP, in navy and gold",
+      "dob": "1998-04-03",
+      "birthplace": "Norfolk, Virginia",
+      "height": "6′2″",
+      "weight": 221,
+      "scouting_report": "A right-handed reliever who challenges the upper part of the zone.",
+      "factoid": "Worked the early shift at a marina before his first professional contract.",
+      "bio": "A right-handed reliever who challenges the upper part of the zone."
     },
     {
       "name": "Luis Carreño",
@@ -53,7 +108,18 @@
       "bats": "L",
       "throws": "R",
       "age": 25,
-      "photo": "luis-carreno.jpg"
+      "photo": "luis-carreno.jpg",
+      "card_id": "TRI-06",
+      "claim_open": true,
+      "photo_source": "assets/images/players/durham-gold/durham-luis-carreno.jpg",
+      "card_front_alt": "Luis Carreño, Triangle Gold RP, in navy and gold",
+      "dob": "2001-09-18",
+      "birthplace": "Barquisimeto, Venezuela",
+      "height": "6′0″",
+      "weight": 192,
+      "scouting_report": "Changes eye levels with a riding fastball and a curve from the same release.",
+      "factoid": "Learned to keep score while listening to games with his aunt.",
+      "bio": "Changes eye levels with a riding fastball and a curve from the same release."
     },
     {
       "name": "Noah Pryce",
@@ -62,7 +128,18 @@
       "bats": "R",
       "throws": "R",
       "age": 30,
-      "photo": "noah-pryce.jpg"
+      "photo": "noah-pryce.jpg",
+      "card_id": "TRI-07",
+      "claim_open": true,
+      "photo_source": "assets/images/players/durham-gold/durham-noah-pryce.jpg",
+      "card_front_alt": "Noah Pryce, Triangle Gold RP, in navy and gold",
+      "dob": "1996-01-27",
+      "birthplace": "Cardiff, Wales",
+      "height": "6′3″",
+      "weight": 207,
+      "scouting_report": "Leans on fastball command and a late-breaking slider in short outings.",
+      "factoid": "Collects secondhand novels from the cities on the schedule.",
+      "bio": "Leans on fastball command and a late-breaking slider in short outings."
     },
     {
       "name": "Ethan Bowen",
@@ -71,7 +148,18 @@
       "bats": "R",
       "throws": "R",
       "age": 32,
-      "photo": "ethan-bowen.jpg"
+      "photo": "ethan-bowen.jpg",
+      "card_id": "TRI-08",
+      "claim_open": true,
+      "photo_source": "assets/images/players/durham-gold/durham-ethan-bowen.jpg",
+      "card_front_alt": "Ethan Bowen, Triangle Gold C, in navy and gold",
+      "dob": "1994-07-06",
+      "birthplace": "Tulsa, Oklahoma",
+      "height": "6′1″",
+      "weight": 233,
+      "scouting_report": "A patient right-handed hitter and deliberate receiver who studies opposing runners.",
+      "factoid": "Always checks the stitching on his backup mitt before a road trip.",
+      "bio": "A patient right-handed hitter and deliberate receiver who studies opposing runners."
     },
     {
       "name": "Marcelo Ibarra",
@@ -80,7 +168,18 @@
       "bats": "L",
       "throws": "R",
       "age": 28,
-      "photo": "marcelo-ibarra.jpg"
+      "photo": "marcelo-ibarra.jpg",
+      "card_id": "TRI-09",
+      "claim_open": true,
+      "photo_source": "assets/images/players/durham-gold/durham-marcelo-ibarra.jpg",
+      "card_front_alt": "Marcelo Ibarra, Triangle Gold 1B, in navy and gold",
+      "dob": "1998-03-30",
+      "birthplace": "Córdoba, Argentina",
+      "height": "6′4″",
+      "weight": 241,
+      "scouting_report": "A left-handed first baseman with gap power and a quiet setup.",
+      "factoid": "His first regular job was in his family’s upholstery shop.",
+      "bio": "A left-handed first baseman with gap power and a quiet setup."
     },
     {
       "name": "Joshua Kent",
@@ -89,7 +188,18 @@
       "bats": "S",
       "throws": "R",
       "age": 24,
-      "photo": "joshua-kent.jpg"
+      "photo": "joshua-kent.jpg",
+      "card_id": "TRI-10",
+      "claim_open": true,
+      "photo_source": "assets/images/players/durham-gold/durham-joshua-kent.jpg",
+      "card_front_alt": "Joshua Kent, Triangle Gold 2B, in navy and gold",
+      "dob": "2002-08-12",
+      "birthplace": "Chapel Hill, North Carolina",
+      "height": "5′10″",
+      "weight": 176,
+      "scouting_report": "A switch-hitting second baseman with quick hands around the bag.",
+      "factoid": "Still helps at the youth camp where he learned to turn two.",
+      "bio": "A switch-hitting second baseman with quick hands around the bag."
     },
     {
       "name": "Omar Salcedo",
@@ -98,7 +208,18 @@
       "bats": "R",
       "throws": "R",
       "age": 27,
-      "photo": "omar-salcedo.jpg"
+      "photo": "omar-salcedo.jpg",
+      "card_id": "TRI-11",
+      "claim_open": true,
+      "photo_source": "assets/images/players/durham-gold/durham-omar-salcedo.jpg",
+      "card_front_alt": "Omar Salcedo, Triangle Gold SS, in navy and gold",
+      "dob": "1999-05-22",
+      "birthplace": "Santo Domingo, Dominican Republic",
+      "height": "6′0″",
+      "weight": 188,
+      "scouting_report": "Fields on the move and makes accurate throws from several arm angles.",
+      "factoid": "Carries a battered domino case on long road trips.",
+      "bio": "Fields on the move and makes accurate throws from several arm angles."
     },
     {
       "name": "Tyrell Winston",
@@ -107,7 +228,18 @@
       "bats": "R",
       "throws": "R",
       "age": 29,
-      "photo": "tyrell-winston.jpg"
+      "photo": "tyrell-winston.jpg",
+      "card_id": "TRI-12",
+      "claim_open": true,
+      "photo_source": "assets/images/players/durham-gold/durham-tyrell-winston.jpg",
+      "card_front_alt": "Tyrell Winston, Triangle Gold 3B, in navy and gold",
+      "dob": "1997-04-15",
+      "birthplace": "Augusta, Georgia",
+      "height": "6′2″",
+      "weight": 216,
+      "scouting_report": "A strong-armed third baseman who drives fastballs to the pull side.",
+      "factoid": "Tunes old radios with his father during the winter.",
+      "bio": "A strong-armed third baseman who drives fastballs to the pull side."
     },
     {
       "name": "Aaron Fletcher",
@@ -116,7 +248,18 @@
       "bats": "L",
       "throws": "L",
       "age": 26,
-      "photo": "aaron-fletcher.jpg"
+      "photo": "aaron-fletcher.jpg",
+      "card_id": "TRI-13",
+      "claim_open": true,
+      "photo_source": "assets/images/players/durham-gold/durham-aaron-fletcher.jpg",
+      "card_front_alt": "Aaron Fletcher, Triangle Gold CF, in navy and gold",
+      "dob": "2000-09-04",
+      "birthplace": "Hamilton, Ontario",
+      "height": "6′1″",
+      "weight": 194,
+      "scouting_report": "A left-handed center fielder who takes direct routes and covers both gaps.",
+      "factoid": "Was a competitive swimmer before baseball became his main sport.",
+      "bio": "A left-handed center fielder who takes direct routes and covers both gaps."
     },
     {
       "name": "Mateo Ríos",
@@ -125,7 +268,18 @@
       "bats": "R",
       "throws": "R",
       "age": 23,
-      "photo": "mateo-rios.jpg"
+      "photo": "mateo-rios.jpg",
+      "card_id": "TRI-14",
+      "claim_open": true,
+      "photo_source": "assets/images/players/durham-gold/durham-mateo-rios.jpg",
+      "card_front_alt": "Mateo Ríos, Triangle Gold LF, in navy and gold",
+      "dob": "2003-06-28",
+      "birthplace": "Ponce, Puerto Rico",
+      "height": "6′0″",
+      "weight": 185,
+      "scouting_report": "Runs well in left field and attacks pitches on the inner half.",
+      "factoid": "His sister keeps the ball from his first professional hit.",
+      "bio": "Runs well in left field and attacks pitches on the inner half."
     },
     {
       "name": "Calvin Ross",
@@ -134,7 +288,18 @@
       "bats": "R",
       "throws": "R",
       "age": 31,
-      "photo": "calvin-ross.jpg"
+      "photo": "calvin-ross.jpg",
+      "card_id": "TRI-15",
+      "claim_open": true,
+      "photo_source": "assets/images/players/durham-gold/durham-calvin-ross.jpg",
+      "card_front_alt": "Calvin Ross, Triangle Gold RF, in navy and gold",
+      "dob": "1995-02-17",
+      "birthplace": "Spokane, Washington",
+      "height": "6′3″",
+      "weight": 222,
+      "scouting_report": "A right fielder with carry on his throws and a measured approach at the plate.",
+      "factoid": "Spends part of each offseason restoring an old aluminum fishing boat.",
+      "bio": "A right fielder with carry on his throws and a measured approach at the plate."
     }
   ]
 }

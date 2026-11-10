@@ -26,11 +26,11 @@
     }
     teamFilter.addEventListener('change',render);typeFilter.addEventListener('change',render);render();
   }).catch(()=>{status.textContent='Open artifacts could not load. Please refresh, or visit a club’s cards to check availability.';});
-  const clubs=['Albuquerque Aeros','Birmingham Vulcans','Durham Gold','Fresno Yield','Louisville Naturals','Mayagüez Sultans','Monterrey Cementeros','Osaka Spirits','San Pedro Cocolos','Santiago Caballeros','Spokane Alloys','St. Paul Frost','Taipei Neon','Tijuana Técnicos','Toledo Assembly','Vancouver Current'];
+  const clubs=['Albuquerque Aeros','Birmingham Vulcans','Triangle Gold','Fresno Yield','Louisville Naturals','Mayagüez Sultans','Monterrey Cementeros','Osaka Spirits','San Pedro Cocolos','Santiago Caballeros','Spokane Alloys','St. Paul Frost','Taipei Neon','Tijuana Técnicos','Toledo Assembly','Vancouver Current'];
   const select=document.getElementById('club');
-  for(const name of clubs){const option=el('option',name);option.value=name.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');select.append(option);}
+  for(const name of clubs){const option=el('option',name);option.value=name==='Triangle Gold'?'durham-gold':name.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');select.append(option);}
   const params=new URLSearchParams(location.search);
-  for(const [key,id] of [['team','club'],['club','club'],['type','type'],['artifact','artifact']])if(params.has(key))document.getElementById(id).value=params.get(key);
+  for(const [key,id] of [['team','club'],['club','club'],['type','type'],['artifact','artifact']])if(params.has(key))document.getElementById(id).value=params.get(key)==='triangle-gold'?'durham-gold':params.get(key);
   const form=document.getElementById('contributionForm');
   const artifactId=params.get('artifact_id');
   const selection=document.getElementById('selectedArtifact');

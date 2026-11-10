@@ -72,6 +72,12 @@
       "team_name": "Louisville Naturals",
       "source": "data/rosters/louisville-naturals.json",
       "prefix": "LOU"
+    },
+    {
+      "team_slug": "durham-gold",
+      "team_name": "Triangle Gold",
+      "source": "data/rosters/durham-gold.json",
+      "prefix": "TRI"
     }
   ],
   "creative_source": "data/artifacts/creative-artifacts.json"

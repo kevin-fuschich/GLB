@@ -39,7 +39,7 @@
     const read=async path=>{const r=await fetch(path,{cache:'no-store'});if(!r.ok)throw Error(path);return r.json();};
     const [creative,approved]=await Promise.all([read('data/artifacts/creative-artifacts.json'),read('data/cards/approved-claims.json')]);
     if(creative.schema!=='glb.creative-artifacts.v1'||approved.schema!=='glb.approved-card-claims.v1')return;
-    for(const artifact of creative.artifacts.filter(row=>row.team_slug===match[1]&&row.claim_open)) {
+    for(const artifact of creative.artifacts.filter(row=>row.team_slug===(document.body.dataset.team||match[1])&&row.claim_open)) {
       const section=document.getElementById(artifact.section);if(!section)continue;
       const owner=approved.claims?.[artifact.artifact_id]?.user_id;
       const p=document.createElement('p');p.className='glb-artifact-invitation';

@@ -374,8 +374,8 @@
       "name": "Reed",
       "type": "broadcaster",
       "team_slug": "durham-gold",
-      "team_name": "Durham Gold",
-      "record_path": "club-durham-gold.html",
+      "team_name": "Triangle Gold",
+      "record_path": "team-triangle-gold.html",
       "section": "claim-dur-broadcast",
       "role": "Play-by-play broadcaster",
       "prompt": "Write the biography, background or stories of Reed. Keep the established play-by-play broadcaster role and portrait.",
@@ -386,8 +386,8 @@
       "name": "June",
       "type": "announcer",
       "team_slug": "durham-gold",
-      "team_name": "Durham Gold",
-      "record_path": "club-durham-gold.html",
+      "team_name": "Triangle Gold",
+      "record_path": "team-triangle-gold.html",
       "section": "claim-dur-announcer",
       "role": "In-game announcer",
       "prompt": "Write the biography, background or stories of June. Keep the established in-game announcer role and portrait.",
@@ -934,6 +934,39 @@
       "team_slug": "louisville-naturals",
       "team_name": "Louisville Naturals",
       "record_path": "team-louisville-naturals.html",
+      "claim_open": true
+    },
+    {
+      "artifact_id": "TRI-NUG",
+      "name": "Nug",
+      "type": "mascot",
+      "section": "mascot",
+      "prompt": "A fan encounter or story from Nug’s rounds. Preserve the worn prospector costume, mining lamp and white mustache.",
+      "team_slug": "durham-gold",
+      "team_name": "Triangle Gold",
+      "record_path": "team-triangle-gold.html",
+      "claim_open": true
+    },
+    {
+      "artifact_id": "TRI-GILT-YARD",
+      "name": "The Gilt Yard",
+      "type": "ballpark",
+      "section": "stadium",
+      "prompt": "A corner of the Durham ballpark, a concourse story or a game-night memory.",
+      "team_slug": "durham-gold",
+      "team_name": "Triangle Gold",
+      "record_path": "team-triangle-gold.html",
+      "claim_open": true
+    },
+    {
+      "artifact_id": "TRI-SHINERS",
+      "name": "The Shiners",
+      "type": "tradition",
+      "section": "traditions",
+      "prompt": "A supporter’s story, a small good-luck ritual or a familiar face from the stands.",
+      "team_slug": "durham-gold",
+      "team_name": "Triangle Gold",
+      "record_path": "team-triangle-gold.html",
       "claim_open": true
     }
   ]

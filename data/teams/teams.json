@@ -41,9 +41,9 @@
         "roster_path": "data/rosters/toledo-assembly.json"
       },
       {
-        "team": "Durham Gold",
+        "team": "Triangle Gold",
         "slug": "durham-gold",
-        "abbr": "DUR",
+        "abbr": "TRI",
         "roster_path": "data/rosters/durham-gold.json"
       },
       {

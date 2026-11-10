@@ -11,15 +11,21 @@
       "photo": "caleb-rowan.jpg",
       "card_id": "TRI-01",
       "claim_open": true,
-      "photo_source": "assets/images/players/durham-gold/durham-caleb-rowan.jpg",
-      "card_front_alt": "Caleb Rowan, Triangle Gold SP, in navy and gold",
+      "photo_source": "assets/teams/triangle-gold/triangle-player-moments.webp",
+      "card_front_alt": "Caleb Rowan holds a ball and glove between bullpen pitches",
       "dob": "1997-05-16",
       "birthplace": "Greensboro, North Carolina",
       "height": "6′3″",
       "weight": 214,
       "scouting_report": "Locates a four-seam fastball above the hands and finishes counts with a curve.",
       "factoid": "Keeps the ticket from his first game at the Yard tucked inside a scorebook.",
-      "bio": "Locates a four-seam fastball above the hands and finishes counts with a curve."
+      "bio": "Locates a four-seam fastball above the hands and finishes counts with a curve.",
+      "photo_crop": [
+        0,
+        0,
+        0.5,
+        0.5
+      ]
     },
     {
       "name": "Antonio Beltrán",
@@ -151,15 +157,21 @@
       "photo": "ethan-bowen.jpg",
       "card_id": "TRI-08",
       "claim_open": true,
-      "photo_source": "assets/images/players/durham-gold/durham-ethan-bowen.jpg",
-      "card_front_alt": "Ethan Bowen, Triangle Gold C, in navy and gold",
+      "photo_source": "assets/teams/triangle-gold/triangle-player-moments.webp",
+      "card_front_alt": "Ethan Bowen rests in catcher’s gear on the dugout bench",
       "dob": "1994-07-06",
       "birthplace": "Tulsa, Oklahoma",
       "height": "6′1″",
       "weight": 233,
       "scouting_report": "A patient right-handed hitter and deliberate receiver who studies opposing runners.",
       "factoid": "Always checks the stitching on his backup mitt before a road trip.",
-      "bio": "A patient right-handed hitter and deliberate receiver who studies opposing runners."
+      "bio": "A patient right-handed hitter and deliberate receiver who studies opposing runners.",
+      "photo_crop": [
+        0.5,
+        0,
+        0.5,
+        0.5
+      ]
     },
     {
       "name": "Marcelo Ibarra",
@@ -211,15 +223,21 @@
       "photo": "omar-salcedo.jpg",
       "card_id": "TRI-11",
       "claim_open": true,
-      "photo_source": "assets/images/players/durham-gold/durham-omar-salcedo.jpg",
-      "card_front_alt": "Omar Salcedo, Triangle Gold SS, in navy and gold",
+      "photo_source": "assets/teams/triangle-gold/triangle-player-moments.webp",
+      "card_front_alt": "Omar Salcedo sets his glove low in an infield ready position",
       "dob": "1999-05-22",
       "birthplace": "Santo Domingo, Dominican Republic",
       "height": "6′0″",
       "weight": 188,
       "scouting_report": "Fields on the move and makes accurate throws from several arm angles.",
       "factoid": "Carries a battered domino case on long road trips.",
-      "bio": "Fields on the move and makes accurate throws from several arm angles."
+      "bio": "Fields on the move and makes accurate throws from several arm angles.",
+      "photo_crop": [
+        0,
+        0.5,
+        0.5,
+        0.5
+      ]
     },
     {
       "name": "Tyrell Winston",
@@ -271,15 +289,21 @@
       "photo": "mateo-rios.jpg",
       "card_id": "TRI-14",
       "claim_open": true,
-      "photo_source": "assets/images/players/durham-gold/durham-mateo-rios.jpg",
-      "card_front_alt": "Mateo Ríos, Triangle Gold LF, in navy and gold",
+      "photo_source": "assets/teams/triangle-gold/triangle-player-moments.webp",
+      "card_front_alt": "Mateo Ríos holds a bat upright in the on-deck circle",
       "dob": "2003-06-28",
       "birthplace": "Ponce, Puerto Rico",
       "height": "6′0″",
       "weight": 185,
       "scouting_report": "Runs well in left field and attacks pitches on the inner half.",
       "factoid": "His sister keeps the ball from his first professional hit.",
-      "bio": "Runs well in left field and attacks pitches on the inner half."
+      "bio": "Runs well in left field and attacks pitches on the inner half.",
+      "photo_crop": [
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ]
     },
     {
       "name": "Calvin Ross",

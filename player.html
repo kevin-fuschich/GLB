@@ -469,7 +469,7 @@ p{line-height:1.58;color:#343a40}
   </div>
 </footer>
 
-<script src="scripts/player-cards.js?v=santiago-2026-1"></script>
+<script src="scripts/player-cards.js?v=louisville-20261110"></script>
 <script src="scripts/artifact-catalog.js?v=20261107-claim-create"></script>
 <script src="scripts/taipei-cards.js?v=20261107-claim-create"></script>
 <script>
@@ -672,7 +672,7 @@ async function loadPlayer(){
     const registry = await registryResponse.json();
     const activeTeam = Object.values(registry.divisions).flat().find(entry => entry.slug === teamSlug);
     if(!activeTeam) throw new Error('Club not found in active league registry');
-    team = {teamName:activeTeam.team,cityPrefix:teamSlug.split('-')[0],teamPage:['spokane-alloys','vancouver-current','monterrey-cementeros','tijuana-tecnicos','taipei-neon'].includes(teamSlug)?`team-${teamSlug}.html`:`team.html?team=${encodeURIComponent(teamSlug)}`};
+    team = {teamName:activeTeam.team,cityPrefix:teamSlug.split('-')[0],teamPage:['spokane-alloys','vancouver-current','monterrey-cementeros','tijuana-tecnicos','taipei-neon','louisville-naturals'].includes(teamSlug)?`team-${teamSlug}.html`:`team.html?team=${encodeURIComponent(teamSlug)}`};
     const rosterPlayer = await getRosterPlayer();
     if(!rosterPlayer && !PLAYER_OVERRIDES[playerSlug]) throw new Error('Player not found on this club’s active roster');
 

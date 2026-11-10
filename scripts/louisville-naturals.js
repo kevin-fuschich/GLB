@@ -44,3 +44,57 @@
     }
   }).catch(error => console.warn(error));
 })();
+
+(async () => {
+  const host = document.getElementById('louisvilleCards');
+  if (!host) return;
+  try {
+    const response = await fetch('data/rosters/louisville-naturals.json', {cache:'no-store'});
+    if (!response.ok) throw Error('Roster unavailable');
+    const roster = await response.json();
+    let seasons = [];
+    try { seasons = await GLBPlayerCards.loadSeasons(); } catch (error) { console.warn(error); }
+    const featured = ['gabriel-ionescu','noah-bianchi','jalen-brooks','andre-wallace'];
+    const players = featured.map(slug => roster.players.find(player => player.slug === slug))
+      .concat(roster.players.filter(player => !featured.includes(player.slug)));
+    const entries = await Promise.all(players.map(async player => {
+      const article = document.createElement('article');
+      article.className = 'tpe-card-entry';
+      article.id = 'card-' + player.card_id.toLowerCase();
+      article.dataset.cardId = player.card_id;
+      const record = GLBPlayerCards.careerFor(player.slug, seasons);
+      article.append(GLBPlayerCards.createCard({...player, teamSlug:'louisville-naturals', teamName:roster.team}, record));
+      const details = document.createElement('details');
+      details.className = 'tpe-card-details';
+      const summary = document.createElement('summary');
+      summary.textContent = 'Read card details';
+      details.append(summary);
+      const facts = document.createElement('dl');
+      const season = record?.seasons.find(row => Number(row.year) === 2026);
+      const pitcher = ['SP','RP','CL'].includes(player.position);
+      const stats = season?.[pitcher ? 'pitching' : 'batting'];
+      const values = [
+        ['Card',player.card_id],['Born',player.dob],['Birthplace',player.birthplace],
+        ['Height / weight',`${player.height} / ${player.weight} lb`],['Bats / throws',`${player.bats} / ${player.throws}`],
+        ['2026 club',roster.team],
+        ...(pitcher ? ['G','IP','W','L','SV','K','ERA'] : ['G','AB','H','HR','RBI','AVG','OPS']).map(key => [key,stats?.[key] ?? '—'])
+      ];
+      for (const [label,value] of values) {
+        const term = document.createElement('dt'), description = document.createElement('dd');
+        term.textContent = label; description.textContent = String(value);
+        facts.append(term,description);
+      }
+      details.append(facts);
+      for (const copy of [player.scouting_report,player.factoid]) {
+        const paragraph = document.createElement('p'); paragraph.textContent = copy;
+        details.append(paragraph);
+      }
+      article.append(details, await TaipeiFieldstock.createClaimPanel(player,{teamSlug:'louisville-naturals',teamName:roster.team}));
+      return article;
+    }));
+    host.replaceChildren(...entries);
+  } catch (error) {
+    console.warn(error);
+    host.textContent = 'The card collection could not load. Please refresh or use the player links in the roster below.';
+  }
+})();

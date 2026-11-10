@@ -66,6 +66,12 @@
       "team_name": "Santiago Caballeros",
       "source": "data/cards/santiago-caballeros.json",
       "roster": "data/rosters/santiago-caballeros.json"
+    },
+    {
+      "team_slug": "louisville-naturals",
+      "team_name": "Louisville Naturals",
+      "source": "data/rosters/louisville-naturals.json",
+      "prefix": "LOU"
     }
   ],
   "creative_source": "data/artifacts/creative-artifacts.json"

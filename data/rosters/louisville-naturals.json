@@ -8,7 +8,24 @@
       "bats": "R",
       "throws": "R",
       "age": 29,
-      "photo": "gabriel-ionescu.jpg"
+      "photo": "gabriel-ionescu.jpg",
+      "card_id": "LOU-01",
+      "claim_open": true,
+      "dob": "1997-03-12",
+      "birthplace": "Cluj-Napoca, Romania",
+      "height": "6′3″",
+      "weight": 205,
+      "bio": "Works from a compact delivery and changes eye levels with his fastball.",
+      "scouting_report": "Works from a compact delivery and changes eye levels with his fastball.",
+      "factoid": "Keeps a paper notebook of each opposing lineup.",
+      "photo_source": "assets/teams/louisville-naturals/images/players/louisville-players-1.webp",
+      "photo_crop": [
+        0.0,
+        0.0,
+        0.5,
+        0.5
+      ],
+      "card_front_alt": "Gabriel Ionescu, Louisville Naturals SP, in a candid baseball photograph"
     },
     {
       "name": "Mateo Álvarez",
@@ -17,7 +34,24 @@
       "bats": "L",
       "throws": "L",
       "age": 27,
-      "photo": "mateo-alvarez.jpg"
+      "photo": "mateo-alvarez.jpg",
+      "card_id": "LOU-02",
+      "claim_open": true,
+      "dob": "1999-07-21",
+      "birthplace": "Maracaibo, Venezuela",
+      "height": "6′2″",
+      "weight": 212,
+      "bio": "Left-handed starter who pairs a running fastball with a low changeup.",
+      "scouting_report": "Left-handed starter who pairs a running fastball with a low changeup.",
+      "factoid": "Learned to repair gloves from his grandfather.",
+      "photo_source": "assets/teams/louisville-naturals/images/players/louisville-players-1.webp",
+      "photo_crop": [
+        0.5,
+        0.0,
+        0.5,
+        0.5
+      ],
+      "card_front_alt": "Mateo Álvarez, Louisville Naturals SP, in a candid baseball photograph"
     },
     {
       "name": "Calvin Rhodes",
@@ -26,7 +60,24 @@
       "bats": "R",
       "throws": "R",
       "age": 31,
-      "photo": "calvin-rhodes.jpg"
+      "photo": "calvin-rhodes.jpg",
+      "card_id": "LOU-03",
+      "claim_open": true,
+      "dob": "1995-02-06",
+      "birthplace": "Memphis, Tennessee",
+      "height": "6′4″",
+      "weight": 238,
+      "bio": "A durable starter who attacks the lower part of the strike zone.",
+      "scouting_report": "A durable starter who attacks the lower part of the strike zone.",
+      "factoid": "Plays bass guitar during the offseason.",
+      "photo_source": "assets/teams/louisville-naturals/images/players/louisville-players-1.webp",
+      "photo_crop": [
+        0.0,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "card_front_alt": "Calvin Rhodes, Louisville Naturals SP, in a candid baseball photograph"
     },
     {
       "name": "Santiago Correa",
@@ -35,7 +86,24 @@
       "bats": "R",
       "throws": "R",
       "age": 26,
-      "photo": "santiago-correa.jpg"
+      "photo": "santiago-correa.jpg",
+      "card_id": "LOU-04",
+      "claim_open": true,
+      "dob": "2000-06-18",
+      "birthplace": "Medellín, Colombia",
+      "height": "6′1″",
+      "weight": 190,
+      "bio": "Mixes a breaking ball with fastballs on both sides of the plate.",
+      "scouting_report": "Mixes a breaking ball with fastballs on both sides of the plate.",
+      "factoid": "Keeps ticket stubs from his first game at every new park.",
+      "photo_source": "assets/teams/louisville-naturals/images/players/louisville-players-1.webp",
+      "photo_crop": [
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "card_front_alt": "Santiago Correa, Louisville Naturals SP, in a candid baseball photograph"
     },
     {
       "name": "Darius Okonkwo",
@@ -44,7 +112,24 @@
       "bats": "R",
       "throws": "R",
       "age": 25,
-      "photo": "darius-okonkwo.jpg"
+      "photo": "darius-okonkwo.jpg",
+      "card_id": "LOU-05",
+      "claim_open": true,
+      "dob": "2001-04-09",
+      "birthplace": "Enugu, Nigeria",
+      "height": "6′5″",
+      "weight": 210,
+      "bio": "Uses his height to create a steep fastball angle and a late-breaking slider.",
+      "scouting_report": "Uses his height to create a steep fastball angle and a late-breaking slider.",
+      "factoid": "His first baseball glove was borrowed from a school teammate.",
+      "photo_source": "assets/teams/louisville-naturals/images/players/louisville-players-2.webp",
+      "photo_crop": [
+        0.0,
+        0.0,
+        0.5,
+        0.5
+      ],
+      "card_front_alt": "Darius Okonkwo, Louisville Naturals SP, in a candid baseball photograph"
     },
     {
       "name": "Evan Sutter",
@@ -53,7 +138,24 @@
       "bats": "R",
       "throws": "R",
       "age": 28,
-      "photo": "evan-sutter.jpg"
+      "photo": "evan-sutter.jpg",
+      "card_id": "LOU-06",
+      "claim_open": true,
+      "dob": "1998-08-14",
+      "birthplace": "Cedar Rapids, Iowa",
+      "height": "6′0″",
+      "weight": 220,
+      "bio": "A right-handed reliever who works quickly and challenges hitters inside.",
+      "scouting_report": "A right-handed reliever who works quickly and challenges hitters inside.",
+      "factoid": "Still uses the same canvas equipment bag he carried in college.",
+      "photo_source": "assets/teams/louisville-naturals/images/players/louisville-players-2.webp",
+      "photo_crop": [
+        0.5,
+        0.0,
+        0.5,
+        0.5
+      ],
+      "card_front_alt": "Evan Sutter, Louisville Naturals RP, in a candid baseball photograph"
     },
     {
       "name": "Luis Delgado",
@@ -62,7 +164,24 @@
       "bats": "L",
       "throws": "L",
       "age": 30,
-      "photo": "luis-delgado.jpg"
+      "photo": "luis-delgado.jpg",
+      "card_id": "LOU-07",
+      "claim_open": true,
+      "dob": "1996-01-30",
+      "birthplace": "San Juan, Puerto Rico",
+      "height": "6′1″",
+      "weight": 208,
+      "bio": "Left-handed bullpen option with a sweeping breaking ball and a controlled changeup.",
+      "scouting_report": "Left-handed bullpen option with a sweeping breaking ball and a controlled changeup.",
+      "factoid": "Keeps score when he watches games away from the park.",
+      "photo_source": "assets/teams/louisville-naturals/images/players/louisville-players-2.webp",
+      "photo_crop": [
+        0.0,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "card_front_alt": "Luis Delgado, Louisville Naturals RP, in a candid baseball photograph"
     },
     {
       "name": "Kieran Walsh",
@@ -71,7 +190,24 @@
       "bats": "R",
       "throws": "R",
       "age": 27,
-      "photo": "kieran-walsh.jpg"
+      "photo": "kieran-walsh.jpg",
+      "card_id": "LOU-08",
+      "claim_open": true,
+      "dob": "1999-05-03",
+      "birthplace": "Cork, Ireland",
+      "height": "6′2″",
+      "weight": 203,
+      "bio": "A right-handed reliever who leans on fastball command in late counts.",
+      "scouting_report": "A right-handed reliever who leans on fastball command in late counts.",
+      "factoid": "Grew up playing cricket before taking up baseball.",
+      "photo_source": "assets/teams/louisville-naturals/images/players/louisville-players-2.webp",
+      "photo_crop": [
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "card_front_alt": "Kieran Walsh, Louisville Naturals RP, in a candid baseball photograph"
     },
     {
       "name": "Noah Bianchi",
@@ -80,7 +216,24 @@
       "bats": "R",
       "throws": "R",
       "age": 29,
-      "photo": "noah-bianchi.jpg"
+      "photo": "noah-bianchi.jpg",
+      "card_id": "LOU-09",
+      "claim_open": true,
+      "dob": "1997-09-22",
+      "birthplace": "Rosario, Argentina",
+      "height": "6′0″",
+      "weight": 225,
+      "bio": "A steady receiver who studies pitch sequences and works low targets.",
+      "scouting_report": "A steady receiver who studies pitch sequences and works low targets.",
+      "factoid": "Writes his own shorthand notes between innings.",
+      "photo_source": "assets/teams/louisville-naturals/images/players/louisville-players-3.webp",
+      "photo_crop": [
+        0.0,
+        0.0,
+        0.5,
+        0.5
+      ],
+      "card_front_alt": "Noah Bianchi, Louisville Naturals C, in a candid baseball photograph"
     },
     {
       "name": "Mateo Fernández",
@@ -89,7 +242,24 @@
       "bats": "L",
       "throws": "R",
       "age": 32,
-      "photo": "mateo-fernandez.jpg"
+      "photo": "mateo-fernandez.jpg",
+      "card_id": "LOU-10",
+      "claim_open": true,
+      "dob": "1994-04-16",
+      "birthplace": "La Romana, Dominican Republic",
+      "height": "6′4″",
+      "weight": 242,
+      "bio": "A left-handed first baseman with a patient approach and power to the gaps.",
+      "scouting_report": "A left-handed first baseman with a patient approach and power to the gaps.",
+      "factoid": "Brought a worn first-base mitt from his first professional season.",
+      "photo_source": "assets/teams/louisville-naturals/images/players/louisville-players-3.webp",
+      "photo_crop": [
+        0.5,
+        0.0,
+        0.5,
+        0.5
+      ],
+      "card_front_alt": "Mateo Fernández, Louisville Naturals 1B, in a candid baseball photograph"
     },
     {
       "name": "Jalen Brooks",
@@ -98,7 +268,24 @@
       "bats": "S",
       "throws": "R",
       "age": 24,
-      "photo": "jalen-brooks.jpg"
+      "photo": "jalen-brooks.jpg",
+      "card_id": "LOU-11",
+      "claim_open": true,
+      "dob": "2002-07-08",
+      "birthplace": "Richmond, Virginia",
+      "height": "5′11″",
+      "weight": 178,
+      "bio": "Switch-hitting second baseman with quick feet and a compact swing.",
+      "scouting_report": "Switch-hitting second baseman with quick feet and a compact swing.",
+      "factoid": "His family keeps his first Little League scorebook.",
+      "photo_source": "assets/teams/louisville-naturals/images/players/louisville-players-3.webp",
+      "photo_crop": [
+        0.0,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "card_front_alt": "Jalen Brooks, Louisville Naturals 2B, in a candid baseball photograph"
     },
     {
       "name": "Rafael Costa",
@@ -107,7 +294,24 @@
       "bats": "R",
       "throws": "R",
       "age": 26,
-      "photo": "rafael-costa.jpg"
+      "photo": "rafael-costa.jpg",
+      "card_id": "LOU-12",
+      "claim_open": true,
+      "dob": "2000-02-27",
+      "birthplace": "Curitiba, Brazil",
+      "height": "6′0″",
+      "weight": 185,
+      "bio": "A shortstop with soft hands and a short right-handed swing.",
+      "scouting_report": "A shortstop with soft hands and a short right-handed swing.",
+      "factoid": "Learned to speak Spanish through conversations with his teammates.",
+      "photo_source": "assets/teams/louisville-naturals/images/players/louisville-players-3.webp",
+      "photo_crop": [
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "card_front_alt": "Rafael Costa, Louisville Naturals SS, in a candid baseball photograph"
     },
     {
       "name": "Dominic Russo",
@@ -116,7 +320,24 @@
       "bats": "R",
       "throws": "R",
       "age": 28,
-      "photo": "dominic-russo.jpg"
+      "photo": "dominic-russo.jpg",
+      "card_id": "LOU-13",
+      "claim_open": true,
+      "dob": "1998-06-11",
+      "birthplace": "Providence, Rhode Island",
+      "height": "6′1″",
+      "weight": 215,
+      "bio": "A third baseman who sets his feet early and drives pitches on the inner half.",
+      "scouting_report": "A third baseman who sets his feet early and drives pitches on the inner half.",
+      "factoid": "Keeps handwritten scouting cards in his back pocket.",
+      "photo_source": "assets/teams/louisville-naturals/images/players/louisville-players-4.webp",
+      "photo_crop": [
+        0.0,
+        0.0,
+        0.5,
+        0.5
+      ],
+      "card_front_alt": "Dominic Russo, Louisville Naturals 3B, in a candid baseball photograph"
     },
     {
       "name": "Andre Wallace",
@@ -125,7 +346,24 @@
       "bats": "R",
       "throws": "R",
       "age": 27,
-      "photo": "andre-wallace.jpg"
+      "photo": "andre-wallace.jpg",
+      "card_id": "LOU-14",
+      "claim_open": true,
+      "dob": "1999-10-02",
+      "birthplace": "Norfolk, Virginia",
+      "height": "6′3″",
+      "weight": 195,
+      "bio": "Covers center field with long strides and an early first step.",
+      "scouting_report": "Covers center field with long strides and an early first step.",
+      "factoid": "Played saxophone in his school band.",
+      "photo_source": "assets/teams/louisville-naturals/images/players/louisville-players-4.webp",
+      "photo_crop": [
+        0.5,
+        0.0,
+        0.5,
+        0.5
+      ],
+      "card_front_alt": "Andre Wallace, Louisville Naturals CF, in a candid baseball photograph"
     },
     {
       "name": "Tomás Rivas",
@@ -134,7 +372,24 @@
       "bats": "L",
       "throws": "L",
       "age": 25,
-      "photo": "tomas-rivas.jpg"
+      "photo": "tomas-rivas.jpg",
+      "card_id": "LOU-15",
+      "claim_open": true,
+      "dob": "2001-03-24",
+      "birthplace": "Barquisimeto, Venezuela",
+      "height": "5′11″",
+      "weight": 188,
+      "bio": "A left-handed outfielder who uses a short stroke to work line drives.",
+      "scouting_report": "A left-handed outfielder who uses a short stroke to work line drives.",
+      "factoid": "Travels with a small photo album from his first youth team.",
+      "photo_source": "assets/teams/louisville-naturals/images/players/louisville-players-4.webp",
+      "photo_crop": [
+        0.0,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "card_front_alt": "Tomás Rivas, Louisville Naturals LF, in a candid baseball photograph"
     },
     {
       "name": "Blake Harrison",
@@ -143,7 +398,24 @@
       "bats": "R",
       "throws": "R",
       "age": 31,
-      "photo": "blake-harrison.jpg"
+      "photo": "blake-harrison.jpg",
+      "card_id": "LOU-16",
+      "claim_open": true,
+      "dob": "1995-05-19",
+      "birthplace": "Spokane, Washington",
+      "height": "6′2″",
+      "weight": 218,
+      "bio": "A right fielder with a strong throwing arm and a level swing.",
+      "scouting_report": "A right fielder with a strong throwing arm and a level swing.",
+      "factoid": "Repairs and relaces his practice glove each winter.",
+      "photo_source": "assets/teams/louisville-naturals/images/players/louisville-players-4.webp",
+      "photo_crop": [
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "card_front_alt": "Blake Harrison, Louisville Naturals RF, in a candid baseball photograph"
     }
   ]
 }

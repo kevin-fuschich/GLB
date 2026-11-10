@@ -19,7 +19,7 @@
   function persist(){
     if(!ready||!enabled||sent||waiting)return;
     const values=collect();
-    if(!values.contribution.trim())return;
+    if(!values.contribution.trim()){if(saved){try{localStorage.removeItem(key);saved=null;paint();message.textContent='Draft cleared. Start writing to save a new draft on this device.';}catch{message.textContent='This browser could not update the saved draft.';}}return;}
     saved={version:1,artifact_id:id,updated_at:new Date().toISOString(),values};
     try{localStorage.setItem(key,JSON.stringify(saved));message.textContent='Draft saved on this device. Email is not saved.';paint();}
     catch{enabled=false;message.textContent='This browser could not save your draft. Keep this page open or copy your writing before leaving.';}

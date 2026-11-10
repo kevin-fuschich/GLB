@@ -28,3 +28,21 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 @media(max-width:650px){.intro,.hero{padding:28px 24px;margin:22px 0;border-radius:20px}.steps{gap:12px}.filters{padding:18px}.artifact-tile{padding:22px}}
 @media(prefers-reduced-motion:reduce){.artifact-tile{transition:none}}
 main a:not(.button):not(.primary-link){color:#b1f4de}
+/* Visual discovery: a small invitation, with room to keep exploring. */
+.artifact-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.artifact-tile{overflow:hidden;min-width:0;padding:0 0 24px;align-items:stretch}
+.artifact-tile>small,.artifact-tile>h3,.artifact-tile>p,.artifact-tile>a,.artifact-prompt{margin-left:22px;margin-right:22px}
+.artifact-art{position:relative;width:100%;aspect-ratio:1.6;background:#1a4154;overflow:hidden;margin-bottom:22px}
+.artifact-art img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.artifact-tile:hover .artifact-art img{transform:scale(1.035)}
+.artifact-art-fallback{display:flex;align-items:center;justify-content:center;background:radial-gradient(ellipse at 80% 10%,#408f8070,transparent 70%),linear-gradient(130deg,#1b3c59,#123341);font-size:24px;font-weight:700;letter-spacing:-.03em;color:#b1f4de}
+.artifact-prompt{padding-top:15px;border-top:1px solid #ffffff1c;margin-bottom:20px}
+.artifact-prompt small{color:#b1f4de;text-transform:uppercase;letter-spacing:.09em;font-size:10px;font-weight:700}
+.artifact-prompt p{font-size:14px;line-height:1.55;margin:8px 0 0}
+.artifact-tile>a{align-self:flex-start}.artifact-tile>a:not(.artifact-record-link){margin-top:auto}
+.artifact-more{display:block;margin:0 auto 45px}.artifact-more[hidden]{display:none}
+@media(max-width:900px){.artifact-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.artifact-grid{grid-template-columns:1fr;gap:22px}.artifact-art{aspect-ratio:1.65}}
+@media(prefers-reduced-motion:reduce){.artifact-art img{transition:none}}
+
+.artifact-art-player img{object-fit:contain;background:#091e30}

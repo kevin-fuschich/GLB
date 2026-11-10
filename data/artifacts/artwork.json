@@ -1,0 +1,438 @@
+{
+  "OSA-OKEO": {
+    "src": "assets/teams/osaka-spirits/images/okeo-okeo.webp",
+    "alt": "Okeo Okeo"
+  },
+  "OSA-YOSHIKO": {
+    "src": "assets/teams/osaka-spirits/images/yoshiko-futaba-mumbo-jumbo-g-class.webp",
+    "alt": "Yoshiko Futaba"
+  },
+  "OSA-G-CLASS": {
+    "src": "assets/teams/osaka-spirits/images/yoshiko-futaba-mumbo-jumbo-g-class.webp",
+    "alt": "Yoshiko\u2019s MUMBO JUMBO G-Class"
+  },
+  "OSA-POTARI": {
+    "src": "assets/teams/osaka-spirits/images/signal-ink-spirit.webp",
+    "alt": "Potari"
+  },
+  "OSA-SUMMONING": {
+    "src": "assets/teams/osaka-spirits/images/osaka-fans-the-summoning.webp",
+    "alt": "The Summoning"
+  },
+  "OSA-STADIUM": {
+    "src": "assets/teams/osaka-spirits/images/mumbo-jumbo-stadium-gates.webp",
+    "alt": "MUMBO JUMBO Stadium"
+  },
+  "SPD-CANDY": {
+    "src": "assets/teams/san-pedro-cocolos/images/candy-acuna-live.webp",
+    "alt": "Candy Acuna"
+  },
+  "SPD-PLACIDO": {
+    "src": "assets/teams/san-pedro-cocolos/images/placido-pojo-bemba-c10.webp",
+    "alt": "Placido Pojo"
+  },
+  "SPD-BEMBA-C10": {
+    "src": "assets/teams/san-pedro-cocolos/images/placido-pojo-bemba-c10.webp",
+    "alt": "Placido\u2019s BEMBA Chevy pickup"
+  },
+  "SPD-MASCOT": {
+    "src": "club-san-pedro-cocolos-mascot.png",
+    "alt": "Bolo"
+  },
+  "SPD-STADIUM": {
+    "src": "assets/teams/san-pedro-cocolos/images/bemba-ballpark-proof.webp",
+    "alt": "Estadio BEMBA"
+  },
+  "SPD-CUP-NIGHT": {
+    "src": "assets/teams/san-pedro-cocolos/images/bemba-cup-night.webp",
+    "alt": "BEMBA Cup Night"
+  },
+  "TPE-BENNY": {
+    "src": "assets/teams/taipei-neon/images/club/benny-lo-the-lo-note.webp",
+    "alt": "Benny Lo"
+  },
+  "GLB-TPE-MASCOT-0001": {
+    "src": "assets/teams/taipei-neon/images/club/glow-neon-v2.webp",
+    "alt": "Glow"
+  },
+  "TPE-LO-NOTE": {
+    "src": "assets/teams/taipei-neon/images/club/benny-lo-the-lo-note.webp",
+    "alt": "The Lo Note"
+  },
+  "MTY-FUERA": {
+    "src": "assets/teams/monterrey-cementeros/images/fuera-de-servicio-v1.webp",
+    "alt": "Fuera de Servicio"
+  },
+  "TIJ-QUOQUILA": {
+    "src": "assets/teams/tijuana-tecnicos/images/quoquila-v2.webp",
+    "alt": "Quoquila"
+  },
+  "TIJ-LUTIS": {
+    "src": "assets/teams/tijuana-tecnicos/images/lutis-cujifrita-c10-estadio-v2.webp",
+    "alt": "Lutis Cujifrita"
+  },
+  "TIJ-C10": {
+    "src": "assets/teams/tijuana-tecnicos/images/lutis-cujifrita-c10-estadio-v2.webp",
+    "alt": "Lutis\u2019s Chispa M\u00f3vil C10"
+  },
+  "VAN-BEAVUS": {
+    "src": "club-vancouver-current-mascot.png",
+    "alt": "Beavus"
+  },
+  "VAN-COLD-PSYCH": {
+    "src": "assets/teams/vancouver-current/images/club/cold-psych.png",
+    "alt": "Cold Psych"
+  },
+  "SPK-GUARDIAN": {
+    "src": "assets/teams/spokane-alloys/images/stadium/foundry-guardian-fans.webp",
+    "alt": "Foundry Guardian"
+  },
+  "SPK-OGWA": {
+    "src": "assets/teams/spokane-alloys/images/stadium/ogwa-aerial1.png",
+    "alt": "OGWA Stadium"
+  },
+  "MAY-MAGIXO": {
+    "src": "assets/teams/mayaguez-sultans/images/magixo-brand-proof.webp",
+    "alt": "Magixo"
+  },
+  "MAY-BAG-NIGHT": {
+    "src": "assets/teams/mayaguez-sultans/images/magixo-laundry-bag-night.webp",
+    "alt": "Magixo Laundry Bag Night"
+  },
+  "MAY-STADIUM": {
+    "src": "assets/teams/mayaguez-sultans/images/salt-court-magixo.webp",
+    "alt": "The Salt Court"
+  },
+  "MAY-SULTAN": {
+    "src": "club-mayaguez-sultans-mascot.png",
+    "alt": "El Sult\u00e1n"
+  },
+  "MAY-LANTERN": {
+    "src": "club-mayaguez-sultans-fans.png",
+    "alt": "The Lantern Section"
+  },
+  "MAY-PUTANA": {
+    "src": "assets/teams/mayaguez-sultans/images/putana-live.webp",
+    "alt": "Putana"
+  },
+  "MAY-VICTOR": {
+    "src": "assets/teams/mayaguez-sultans/images/impala-cruise.webp",
+    "alt": "Victor Lumelo"
+  },
+  "MAY-IMPALA": {
+    "src": "assets/teams/mayaguez-sultans/images/impala-cruise.webp",
+    "alt": "Victor\u2019s Magixo Impala"
+  },
+  "MAY-SPIN-CYCLE": {
+    "src": "assets/teams/mayaguez-sultans/images/spin-cycle.webp",
+    "alt": "Magixo Spin Cycle"
+  },
+  "MAY-BRAZO-GITANO": {
+    "src": "assets/teams/mayaguez-sultans/images/brazo-gitano-concourse.webp",
+    "alt": "Brazo gitano on the concourse"
+  },
+  "LOU-SESSIONS": {
+    "src": "assets/teams/louisville-naturals/images/limestone-sessions-candid.webp",
+    "alt": "The Limestone Sessions"
+  },
+  "LOU-LANDING": {
+    "src": "assets/teams/louisville-naturals/images/big-soft-landing-candid.webp",
+    "alt": "The Big Soft Landing"
+  },
+  "LOU-FLO": {
+    "src": "assets/teams/louisville-naturals/images/flo-troup-big-soft-cadillac.webp",
+    "alt": "Flo Troup"
+  },
+  "LOU-CADILLAC": {
+    "src": "assets/teams/louisville-naturals/images/flo-troup-big-soft-cadillac.webp",
+    "alt": "Flo\u2019s BIG SOFT Cadillac"
+  },
+  "LOU-YARD-WALKERS": {
+    "src": "assets/teams/louisville-naturals/images/yard-walkers-candid.webp",
+    "alt": "The Yard Walkers"
+  },
+  "TRI-NUG": {
+    "src": "assets/teams/triangle-gold/nug-concourse.webp",
+    "alt": "Nug"
+  },
+  "TRI-GILT-YARD": {
+    "src": "club-durham-gold-stadium.png",
+    "alt": "WEEJIE Park"
+  },
+  "TRI-SHINERS": {
+    "src": "assets/teams/triangle-gold/shiners-corner-weejie-park.webp",
+    "alt": "The Shiners"
+  },
+  "TRI-WEEJIE-BOARD": {
+    "src": "assets/teams/triangle-gold/weejie-board.webp",
+    "alt": "WEEJIE Board"
+  },
+  "TRI-BOBBY": {
+    "src": "assets/teams/triangle-gold/bobby-weejie-park.webp",
+    "alt": "Bobby Boulineau"
+  },
+  "TRI-FAIRMONT": {
+    "src": "assets/teams/triangle-gold/bobby-weejie-park.webp",
+    "alt": "Bobby\u2019s WEEJIE 1980 Ford Fairmont"
+  },
+  "TRI-HONEY-BOOKER": {
+    "src": "assets/teams/triangle-gold/honey-booker-stage.webp",
+    "alt": "Vernell \u201cHoney\u201d Booker"
+  },
+  "TRI-FRONT-GATE": {
+    "src": "assets/teams/triangle-gold/weejie-park-gate.webp",
+    "alt": "WEEJIE Park front gate"
+  },
+  "TRI-BRIGHT-LINE-KITCHEN": {
+    "src": "assets/teams/triangle-gold/bright-line-kitchen-concourse.webp",
+    "alt": "The Bright Line Kitchen"
+  },
+  "OSA-01": {
+    "src": "assets/images/cards/fieldstock/osa-01-hiroto-kurobane-back.webp",
+    "alt": "Hiroto Kurobane"
+  },
+  "OSA-02": {
+    "src": "assets/images/cards/fieldstock/osa-02-enzo-dalmau-back.webp",
+    "alt": "Enzo Dalmau"
+  },
+  "OSA-03": {
+    "src": "assets/images/cards/fieldstock/osa-03-kofi-boateng-back.webp",
+    "alt": "Kofi Boateng"
+  },
+  "OSA-04": {
+    "src": "assets/images/cards/fieldstock/osa-04-luka-kovacevic-back.webp",
+    "alt": "Luka Kova\u010devi\u0107"
+  },
+  "OSA-05": {
+    "src": "assets/images/cards/fieldstock/osa-05-rowan-cahir-back.webp",
+    "alt": "Rowan Cahir"
+  },
+  "OSA-06": {
+    "src": "assets/images/cards/fieldstock/osa-06-sandeep-nayar-back.webp",
+    "alt": "Sandeep Nayar"
+  },
+  "OSA-07": {
+    "src": "assets/images/cards/fieldstock/osa-07-mateo-zubillaga-back.webp",
+    "alt": "Mateo Zubillaga"
+  },
+  "OSA-08": {
+    "src": "assets/images/cards/fieldstock/osa-08-jae-min-goh-back.webp",
+    "alt": "Jae-min Goh"
+  },
+  "OSA-09": {
+    "src": "assets/images/cards/fieldstock/osa-09-marcelino-quispe-back.webp",
+    "alt": "Marcelino Quispe"
+  },
+  "OSA-10": {
+    "src": "assets/images/cards/fieldstock/osa-10-thabo-mkhize-back.webp",
+    "alt": "Thabo Mkhize"
+  },
+  "OSA-11": {
+    "src": "assets/images/cards/fieldstock/osa-11-arman-daryan-back.webp",
+    "alt": "Arman Daryan"
+  },
+  "OSA-12": {
+    "src": "assets/images/cards/fieldstock/osa-12-kenjiro-suganuma-back.webp",
+    "alt": "Kenjiro Suganuma"
+  },
+  "OSA-13": {
+    "src": "assets/images/cards/fieldstock/osa-13-dariusz-kwiatkowski-back.webp",
+    "alt": "Dariusz Kwiatkowski"
+  },
+  "OSA-14": {
+    "src": "assets/images/cards/fieldstock/osa-14-nikhil-bhandari-back.webp",
+    "alt": "Nikhil Bhandari"
+  },
+  "OSA-15": {
+    "src": "assets/images/cards/fieldstock/osa-15-thiago-ramires-back.webp",
+    "alt": "Thiago Ramires"
+  },
+  "OSA-16": {
+    "src": "assets/images/cards/fieldstock/osa-16-yusef-el-badri-back.webp",
+    "alt": "Yusef El-Badri"
+  },
+  "TPE-01": {
+    "src": "assets/teams/taipei-neon/images/players/kaito-ueda.webp",
+    "alt": "Kaito Ueda"
+  },
+  "TPE-02": {
+    "src": "assets/teams/taipei-neon/images/players/adebayo-olumide.webp",
+    "alt": "Adebayo Olumide"
+  },
+  "TPE-03": {
+    "src": "assets/images/cards/fieldstock/tpe-03-han-wei-tseng-front-action.webp",
+    "alt": "Han-wei Tseng"
+  },
+  "TPE-04": {
+    "src": "assets/images/cards/fieldstock/tpe-04-martin-echevarria-front-action.webp",
+    "alt": "Mart\u00edn Echevarr\u00eda"
+  },
+  "TPE-05": {
+    "src": "assets/images/cards/fieldstock/tpe-05-dariusz-wierzbik-back.webp",
+    "alt": "Dariusz Wierzbik"
+  },
+  "TPE-06": {
+    "src": "assets/images/cards/fieldstock/tpe-06-owen-rasmusson-front-action.webp",
+    "alt": "Owen Rasmusson"
+  },
+  "TPE-07": {
+    "src": "assets/images/cards/fieldstock/tpe-07-eric-lawson-front-action.webp",
+    "alt": "Eric Lawson"
+  },
+  "TPE-08": {
+    "src": "assets/images/cards/fieldstock/tpe-08-jose-ramirez-tpe-back.webp",
+    "alt": "Jose Ramirez"
+  },
+  "TPE-09": {
+    "src": "assets/images/cards/fieldstock/tpe-09-david-morales-tpe-back.webp",
+    "alt": "David Morales"
+  },
+  "TPE-10": {
+    "src": "assets/images/cards/fieldstock/tpe-10-hiroto-kuzumi-front-action.webp",
+    "alt": "Hiroto Kuzumi"
+  },
+  "TPE-11": {
+    "src": "assets/images/cards/fieldstock/tpe-11-joaquin-iturriaga-back.webp",
+    "alt": "Joaqu\u00edn Iturriaga"
+  },
+  "TPE-12": {
+    "src": "assets/images/cards/fieldstock/tpe-12-eitan-ben-sasson-back.webp",
+    "alt": "Eitan Ben-Sasson"
+  },
+  "TPE-13": {
+    "src": "assets/images/cards/fieldstock/tpe-13-tsai-ming-hao-back.webp",
+    "alt": "Tsai Ming Hao"
+  },
+  "TPE-14": {
+    "src": "assets/images/cards/fieldstock/tpe-14-idris-el-amin-back.webp",
+    "alt": "Idris El-Amin"
+  },
+  "TPE-15": {
+    "src": "assets/images/cards/fieldstock/tpe-15-miguel-santos-tpe-back.webp",
+    "alt": "Miguel Santos"
+  },
+  "SAN-01": {
+    "src": "assets/teams/santiago-caballeros/images/players/aron-videla.webp",
+    "alt": "Ar\u00f3n Videla"
+  },
+  "SAN-02": {
+    "src": "assets/teams/santiago-caballeros/images/players/gideon-fairchild.webp",
+    "alt": "Gideon Fairchild"
+  },
+  "SAN-03": {
+    "src": "assets/teams/santiago-caballeros/images/players/kenji-hoshino.webp",
+    "alt": "Kenji Hoshino"
+  },
+  "SAN-04": {
+    "src": "assets/teams/santiago-caballeros/images/players/samson-ndlovu.webp",
+    "alt": "Samson Ndlovu"
+  },
+  "SAN-05": {
+    "src": "assets/teams/santiago-caballeros/images/players/mateo-arancibia.webp",
+    "alt": "Mateo Arancibia"
+  },
+  "SAN-06": {
+    "src": "assets/teams/santiago-caballeros/images/players/tyrese-warnock.webp",
+    "alt": "Tyrese Warnock"
+  },
+  "SAN-07": {
+    "src": "assets/teams/santiago-caballeros/images/players/joaquim-silveira.webp",
+    "alt": "Joaquim Silveira"
+  },
+  "SAN-08": {
+    "src": "assets/teams/santiago-caballeros/images/players/emin-kocak.webp",
+    "alt": "Emin Ko\u00e7ak"
+  },
+  "SAN-09": {
+    "src": "assets/teams/santiago-caballeros/images/players/damian-velasquez.webp",
+    "alt": "Dami\u00e1n Vel\u00e1squez"
+  },
+  "SAN-10": {
+    "src": "assets/teams/santiago-caballeros/images/players/noam-finkel.webp",
+    "alt": "Noam Finkel"
+  },
+  "SAN-11": {
+    "src": "assets/teams/santiago-caballeros/images/players/raul-castillo.webp",
+    "alt": "Ra\u00fal Castillo"
+  },
+  "SAN-12": {
+    "src": "assets/teams/santiago-caballeros/images/players/maksim-berezan.webp",
+    "alt": "Maksim Berezan"
+  },
+  "SAN-13": {
+    "src": "assets/teams/santiago-caballeros/images/players/eamon-quillan.webp",
+    "alt": "Eamon Quillan"
+  },
+  "SAN-14": {
+    "src": "assets/teams/santiago-caballeros/images/players/kiyoshi-senda.webp",
+    "alt": "Kiyoshi Senda"
+  },
+  "SAN-15": {
+    "src": "assets/teams/santiago-caballeros/images/players/dalton-reyes.webp",
+    "alt": "Dalton Reyes"
+  },
+  "SAN-16": {
+    "src": "assets/teams/santiago-caballeros/images/players/adebayo-oluwaseyi.webp",
+    "alt": "Adebayo Oluwaseyi"
+  },
+  "TRI-01": {
+    "src": "assets/images/players/durham-gold/durham-caleb-rowan.jpg",
+    "alt": "Caleb Rowan"
+  },
+  "TRI-02": {
+    "src": "assets/images/players/durham-gold/durham-antonio-beltran.jpg",
+    "alt": "Antonio Beltr\u00e1n"
+  },
+  "TRI-03": {
+    "src": "assets/images/players/durham-gold/durham-isaac-friedel.jpg",
+    "alt": "Isaac Friedel"
+  },
+  "TRI-04": {
+    "src": "assets/images/players/durham-gold/durham-kenji-nomura.jpg",
+    "alt": "Kenji Nomura"
+  },
+  "TRI-05": {
+    "src": "assets/images/players/durham-gold/durham-devin-marsh.jpg",
+    "alt": "Devin Marsh"
+  },
+  "TRI-06": {
+    "src": "assets/images/players/durham-gold/durham-luis-carreno.jpg",
+    "alt": "Luis Carre\u00f1o"
+  },
+  "TRI-07": {
+    "src": "assets/images/players/durham-gold/durham-noah-pryce.jpg",
+    "alt": "Noah Pryce"
+  },
+  "TRI-08": {
+    "src": "assets/images/players/durham-gold/durham-ethan-bowen.jpg",
+    "alt": "Ethan Bowen"
+  },
+  "TRI-09": {
+    "src": "assets/images/players/durham-gold/durham-marcelo-ibarra.jpg",
+    "alt": "Marcelo Ibarra"
+  },
+  "TRI-10": {
+    "src": "assets/images/players/durham-gold/durham-joshua-kent.jpg",
+    "alt": "Joshua Kent"
+  },
+  "TRI-11": {
+    "src": "assets/images/players/durham-gold/durham-omar-salcedo.jpg",
+    "alt": "Omar Salcedo"
+  },
+  "TRI-12": {
+    "src": "assets/images/players/durham-gold/durham-tyrell-winston.jpg",
+    "alt": "Tyrell Winston"
+  },
+  "TRI-13": {
+    "src": "assets/images/players/durham-gold/durham-aaron-fletcher.jpg",
+    "alt": "Aaron Fletcher"
+  },
+  "TRI-14": {
+    "src": "assets/images/players/durham-gold/durham-mateo-rios.jpg",
+    "alt": "Mateo R\u00edos"
+  },
+  "TRI-15": {
+    "src": "assets/images/players/durham-gold/durham-calvin-ross.jpg",
+    "alt": "Calvin Ross"
+  }
+}

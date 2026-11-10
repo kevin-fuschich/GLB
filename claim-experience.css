@@ -1,0 +1,29 @@
+/* Shared visual language for GLB's creation experience. */
+:root{--claim-mint:#b1f4de;--claim-surface:#102b3d;--ink:#e4eef5;--line:#2c485a;--paper:#071b2b;--gold:#b1f4de;--red:#b1f4de}
+body{background:#071b2b;color:#e4eef5;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;-webkit-font-smoothing:antialiased}
+body>header,header{background:#091e30;border-bottom:1px solid #ffffff16}
+main{padding-bottom:40px}
+h1,h2,h3{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;letter-spacing:-.04em;color:#f4faff}
+h1{font-weight:740;line-height:1.02}h1 em{color:#b1f4de}
+.eyebrow,.steps small,.label{color:#a6dfd3}
+.intro,.hero{position:relative;isolation:isolate;overflow:hidden;max-width:none;padding:clamp(28px,5vw,64px);border:1px solid #345569;border-radius:24px;background:linear-gradient(100deg,#0b2337 20%,#0b2337e8 60%,#0b23373b),url('assets/teams/taipei-neon/images/stadium.webp') center/cover;margin:32px 0}
+.intro h1,.hero h1{max-width:760px;font-size:clamp(40px,6vw,76px)}
+.intro p,.hero p{max-width:680px;color:#c2d4df}.intro a:not(.primary-link){color:#b1f4de}
+.primary-link,.button,button{border:1px solid transparent;background:#b1f4de;color:#092b30;border-radius:100px;padding:13px 22px;font-weight:750;text-decoration:none}
+.primary-link:hover,.button:hover,button:hover{background:#d6ffee;color:#092b30}.button.light{background:transparent;color:#e4eef5;border-color:#6b8a9c}
+.steps{gap:16px}.steps article{padding:22px;background:#102b3d;border:1px solid #2c485a;border-radius:16px}.steps p{color:#bdcfdc}
+.artifact-tile{background:linear-gradient(145deg,#15364a,#0d2538);border:1px solid #345164;border-radius:16px;padding:24px;transition:transform .2s,border-color .2s;box-shadow:0 16px 28px -24px #000}
+.artifact-tile:hover{transform:translateY(-4px);border-color:#90d6c4}.artifact-tile small,.artifact-tile p{color:#abc3d2}.artifact-tile a,.artifact-tile a.artifact-record-link{color:#b1f4de}
+.filters{padding:22px;background:#102b3d;border:1px solid #2c485a;border-radius:16px}
+.submission{background:#102b3d;border-color:#345164;border-radius:22px}.submission p{color:#bdd0dd}
+input,select,textarea{background:#091f30;color:#e4eef5;border:1px solid #506b7d;border-radius:10px;color-scheme:dark}input::placeholder,textarea::placeholder{color:#819aa9}small,.muted{color:#acc1cf}
+.step{border-color:#2c485a}.step p{color:#bdd0dd}.number{background:#b1f4de;color:#092b30;border:0;border-radius:50%}
+.visual{background:radial-gradient(ellipse at top right,#23736a55,transparent 65%),#102b3d;border:1px solid #345164;border-radius:24px;box-shadow:none}
+.polaroid,.sheet,.review,.published{background:#19384b;color:#e4eef5;border:1px solid #4d6878;border-radius:16px;box-shadow:0 20px 35px #020c1944;transform:none}
+.polaroid strong,.published h3{color:#f4faff}.polaroid small,.example-label,.note,.field{color:#a7c2d2}.sheet blockquote{font-family:inherit;color:#e4eef5}.tag,.open,.credit{background:#b1f4de;color:#092b30;border:0;border-radius:100px}.tag{transform:none}.stamp{color:#b1f4de;border-color:#71ab9c;transform:none;border-radius:8px}.private{background:#0a2234;color:#bdd0dd;border-color:#365367}.private b{color:#b1f4de}.checks li{border-color:#365367}
+.faq{border-color:#2c485a}.faq details{background:#102b3d;border:1px solid #345164;border-radius:12px;padding:16px 20px;margin:10px 0}.faq details p{color:#bdd0dd}.faq summary{color:#f4faff}
+.finish{background:radial-gradient(ellipse at top right,#22796d77,transparent 70%),#102b3d;border:1px solid #3e6870;border-radius:24px}.finish .label{color:#b1f4de!important}
+footer{color:#abc3d2;border-color:#2c485a;background:#091e30}footer a{color:#b1f4de}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid #b1f4de;outline-offset:4px}
+@media(max-width:650px){.intro,.hero{padding:28px 24px;margin:22px 0;border-radius:20px}.steps{gap:12px}.filters{padding:18px}.artifact-tile{padding:22px}}
+@media(prefers-reduced-motion:reduce){.artifact-tile{transition:none}}

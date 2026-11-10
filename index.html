@@ -708,20 +708,9 @@
         gap:6px;
       }
     }
-    /* The invitation to build GLB is the homepage's primary callout. */
-    .glb-participation.glb-universe-invite{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:28px;background:#f0bd50;color:#0b1e33;border:3px solid #0b1e33;border-radius:12px;padding:clamp(22px,3vw,34px);margin:0 0 26px;box-shadow:6px 6px 0 #0b1e33;}
-    .glb-universe-invite .glb-eyebrow{color:#40300d;font-weight:900;letter-spacing:.12em;font-size:11px;}
-    .glb-universe-invite h2{font:800 clamp(30px,4vw,46px)/1.05 Georgia,serif;margin:10px 0 12px;color:#0b1e33;}
-    .glb-universe-invite p{font-size:16px;line-height:1.5;max-width:730px;margin:0;color:#192c3b;}
-    .glb-universe-actions{display:flex;flex-direction:column;gap:14px;align-items:flex-start;}
-    .glb-universe-primary{display:inline-flex;align-items:center;justify-content:space-between;gap:20px;background:#0b1e33;color:#fff!important;padding:17px 20px;border-radius:5px;font-size:16px;font-weight:900;line-height:1.35;max-width:330px;}
-    .glb-universe-primary span{font-size:25px;line-height:1;}
-    .glb-universe-primary:hover{background:#214c77;}
-    .glb-universe-secondary{color:#0b1e33!important;font-size:14px;font-weight:800;text-decoration:underline;text-underline-offset:4px;}
-    .glb-universe-invite a:focus-visible{outline:3px solid #9b3023;outline-offset:5px;}
-    @media(max-width:760px){.glb-participation.glb-universe-invite{grid-template-columns:1fr;gap:20px;box-shadow:4px 4px 0 #0b1e33;}.glb-universe-actions{width:100%;}.glb-universe-primary{width:100%;max-width:none;}}
   </style>
   <link rel="stylesheet" href="participation.css?v=20261107-claim-create">
+  <link rel="stylesheet" href="home-claim.css?v=20261110-1">
 </head>
 <body data-season-page="home">
 
@@ -774,10 +763,31 @@
   <main class="page">
     <div class="container">
       <section class="glb-participation glb-universe-invite" aria-labelledby="create-title">
-        <div><div class="glb-eyebrow">You’re up · Cooperative universe building</div>
-        <h2 id="create-title">Help build the universe!</h2>
-        <p>Claim a player, character or piece of the park. Add your story. Or pitch something bigger to the GLB Board for the commissioner’s desk.</p></div>
-        <div class="glb-universe-actions"><a class="glb-universe-primary" href="how-it-works.html">Here’s how GLB claim works <span aria-hidden="true">↗</span></a><a class="glb-universe-secondary" href="contribute.html#open-artifacts">Find an open artifact →</a></div>
+        <div class="claim-copy">
+          <div class="glb-eyebrow"><span class="claim-spark" aria-hidden="true"></span> A living world. Built together.</div>
+          <h2 id="create-title">The next part<br>is <em>yours.</em></h2>
+          <p>Claim a player, a character or a corner of the park. Create what happens next. Help shape the GLB universe.</p>
+          <div class="glb-universe-actions">
+            <a class="glb-universe-primary" href="contribute.html#open-artifacts">Find your first claim <span aria-hidden="true">→</span></a>
+            <a class="glb-universe-secondary" href="how-it-works.html">How it works <span aria-hidden="true">→</span></a>
+          </div>
+          <div class="claim-note">Your imagination. A place in the record.</div>
+        </div>
+        <div class="claim-world" aria-label="Explore the people and places of GLB">
+          <a class="claim-window claim-window-park" href="team-taipei-neon.html" aria-label="Explore Taipei Neon">
+            <img src="assets/teams/taipei-neon/images/stadium.webp" alt="The illuminated Taipei Neon ballpark" width="1536" height="1024">
+            <span class="claim-window-label"><small>Places to shape</small>Taipei after dark <span aria-hidden="true">→</span></span>
+          </a>
+          <a class="claim-window claim-window-player" href="team-triangle-gold.html#cards" aria-label="Explore Triangle Gold player cards">
+            <img src="assets/images/players/durham-gold/durham-mateo-rios.jpg" alt="Triangle Gold player Mateo Ríos" width="768" height="1024">
+            <span class="claim-window-label"><small>Players with a story</small>Write the next chapter <span aria-hidden="true">→</span></span>
+          </a>
+          <a class="claim-window claim-window-honey" href="team-triangle-gold.html#entertainment" aria-label="Meet Honey Booker">
+            <img src="assets/teams/triangle-gold/honey-booker-stage.webp" alt="Honey Booker performing on stage with his bass" width="1672" height="941">
+            <span class="claim-window-label"><small>Characters to create with</small>Meet Honey Booker <span aria-hidden="true">→</span></span>
+          </a>
+          <span class="claim-world-caption" aria-hidden="true">ONE LEAGUE. ENDLESS POSSIBILITIES.</span>
+        </div>
       </section>
       <div class="main-grid">
 

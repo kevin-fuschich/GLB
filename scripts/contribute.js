@@ -69,6 +69,7 @@
     try{
       const result=await fetch(form.action,{method:'POST',body:new FormData(form),headers:{Accept:'application/json'}});
       if(!result.ok)throw Error('Submission failed');
+      form.dispatchEvent(new Event('glb:contribution-sent'));
       response.textContent='Submission received for GLB Board review. Watch your email for a decision. A claim code is issued only after acceptance.';
       if(form.elements.artifact_id.value){try{localStorage.setItem('glb-fieldstock-pending-'+form.elements.artifact_id.value,'1');}catch{}}
       button.textContent='Submitted for Board review';

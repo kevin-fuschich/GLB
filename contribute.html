@@ -9,7 +9,7 @@
 <style>
 :root{--navy:#0b1e33;--ink:#152235;--line:#dce2e8}*{box-sizing:border-box}body{margin:0;background:#f2f5f7;color:var(--ink);font:16px/1.6 Arial,Helvetica,sans-serif}body>header{background:var(--navy);color:white;padding:22px max(22px,calc((100vw - 1100px)/2));display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}header a{color:white;text-decoration:none;font-weight:800}header nav{display:flex;gap:20px;flex-wrap:wrap}main{max-width:1100px;margin:35px auto;padding:0 22px}h1{font:700 clamp(38px,6vw,64px)/1.04 Georgia,serif;margin:12px 0 20px}h2{font:700 clamp(25px,4vw,34px)/1.2 Georgia,serif}p{max-width:780px}.intro{max-width:850px}.intro p{font-size:18px}.eyebrow{font-size:12px;letter-spacing:.13em;font-weight:800;text-transform:uppercase;color:#6b542c}.primary-link{display:inline-block;padding:12px 20px;background:var(--navy);color:white;text-decoration:none;font-weight:800;border-radius:6px}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin:30px 0 45px}.steps article{border-top:3px solid #b5914a;padding:15px 0}.steps h3{margin:5px 0;font-size:19px}.steps p{margin:8px 0}.steps small{font-weight:800;color:#6b542c}.filters{display:flex;gap:20px;flex-wrap:wrap}.filters label{flex:1;min-width:200px}.artifact-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:18px;margin:22px 0 45px}.artifact-tile{background:#fff;border:1px solid var(--line);border-radius:8px;padding:22px;display:flex;flex-direction:column;align-items:start}.artifact-tile small{font-size:12px;color:#586777}.artifact-tile h3{margin:10px 0 0;font-size:21px}.artifact-tile p{margin:5px 0 18px;color:#586777}.artifact-tile a{margin-top:auto;color:#173f65;font-weight:800}.artifact-tile a.artifact-record-link{margin-top:10px;font-size:13px;font-weight:400}.submission{background:white;border:1px solid var(--line);border-radius:12px;padding:clamp(20px,4vw,38px);margin:30px 0 45px}.submission h2{margin-top:0}form{display:grid;gap:20px;max-width:760px}label{display:grid;gap:6px;font-weight:700}input,select,textarea{font:inherit;padding:12px;border:1px solid #bfc9d4;border-radius:6px;width:100%;background:white;color:var(--ink)}textarea{min-height:220px;resize:vertical}small,.muted{color:#576576;font-size:14px}button{background:var(--navy);color:white;border:0;padding:14px 22px;border-radius:6px;font:inherit;font-weight:800;cursor:pointer}button:disabled{opacity:.6}button:hover{background:#214c77}a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid #b5914a;outline-offset:3px}.acknowledgment{display:flex;align-items:flex-start;gap:10px;font-weight:400}.acknowledgment input{width:auto;margin-top:6px}footer{padding:30px 22px;text-align:center;color:#586777;border-top:1px solid var(--line)}@media(max-width:650px){.steps{grid-template-columns:1fr;gap:5px}.intro p{font-size:17px}}
 </style>
-<link rel="stylesheet" href="claim-experience.css?v=20261110-preview">
+<link rel="stylesheet" href="claim-experience.css?v=20261110-drafts">
 </head>
 <body>
 <header><a href="index.html">GLOBAL LEAGUE BASEBALL</a><nav aria-label="Primary"><a href="teams.html">Teams</a><a href="players.html">Player Cards</a><a href="contribute.html" aria-current="page">Claim &amp; Create</a></nav></header>
@@ -38,6 +38,7 @@
 <h2 id="contribution-title">Have an idea beyond the artifacts?</h2><p id="selectedArtifact" role="status"></p>
 <p>Have an idea for a new character, business, event, place or something GLB hasn’t imagined yet? Send it to the GLB Board here. You don’t need to choose an existing artifact. Bigger ideas go to the Board for review and consideration for the commissioner’s desk. Tell us what you have in mind and where it fits — or leave room for us to figure that out together. You can also use this form for a longer story, artwork or supporting material.</p>
 <p><a href="how-it-works.html#pitch-tips"><strong>Give your pitch its best shot — see the quick tips →</strong></a></p>
+<div id="draftControls" class="draft-controls" aria-label="Saved contribution draft"></div>
 <form id="contributionForm" action="https://formspree.io/f/mzezpeap" method="POST">
 <input type="hidden" name="artifact_id" value=""><input type="hidden" name="submission_type" value="GLB contribution"><input type="hidden" name="_subject" value="GLB Board · Creative contribution"><input type="hidden" name="review_body" value="GLB Board">
 <label>Club<select name="club" id="club" required><option value="">Choose a club</option><option value="league-wide">League-wide / Not sure yet</option></select></label>
@@ -56,9 +57,10 @@
 </main>
 <footer>GLOBAL LEAGUE BASEBALL · Baseball rules stay sacred. Time bends instead.</footer>
 <script src="scripts/artifact-catalog.js?v=20261108-game-voices"></script>
-<script src="scripts/contribute.js?v=20261110-discovery"></script>
+<script src="scripts/contribute.js?v=20261110-drafts"></script>
 <script src="scripts/glb-ticker.js"></script>
 <script src="scripts/participation.js?v=20261107-claim-create"></script>
 <script src="scripts/contribution-preview.js?v=20261110"></script>
+<script src="scripts/contribution-drafts.js?v=20261110"></script>
 </body>
 </html>

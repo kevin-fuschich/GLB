@@ -54,3 +54,5 @@ main a:not(.button):not(.primary-link){color:#b1f4de}
 .draft-copy .draft-meta{font-size:12px;color:#a9c7d6;margin:24px 0 8px}.draft-copy h3{font-size:clamp(25px,4vw,38px);line-height:1.1;margin:0 0 12px}.draft-copy .draft-credit{color:#b1f4de;font-size:13px;margin:0 0 24px}
 .draft-writing{white-space:pre-wrap;overflow-wrap:anywhere;font-size:17px;line-height:1.75;color:#e4eef5;border-top:1px solid #ffffff20;padding-top:24px}
 .submission .draft-notice{font-size:12px;color:#a9c7d6;margin:16px 0}.draft-edit{background:transparent;color:#b1f4de;border:1px solid #557a84;padding:10px 17px;font-size:13px}
+.draft-controls{background:#0a2235;border:1px solid #3c6572;border-radius:14px;padding:16px 20px;margin:24px 0;max-width:760px}
+.submission .draft-controls p{font-size:13px;color:#b9d1dc;margin:0}.draft-controls-actions{display:flex;gap:12px;flex-wrap:wrap}.draft-controls-actions:empty{display:none}.draft-controls-actions button{font-size:12px;padding:9px 14px;margin-top:12px}.draft-controls-actions button:last-child{background:transparent;border-color:#597b89;color:#c8dee6}

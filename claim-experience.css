@@ -27,3 +27,4 @@ footer{color:#abc3d2;border-color:#2c485a;background:#091e30}footer a{color:#b1f
 a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid #b1f4de;outline-offset:4px}
 @media(max-width:650px){.intro,.hero{padding:28px 24px;margin:22px 0;border-radius:20px}.steps{gap:12px}.filters{padding:18px}.artifact-tile{padding:22px}}
 @media(prefers-reduced-motion:reduce){.artifact-tile{transition:none}}
+main a:not(.button):not(.primary-link){color:#b1f4de}

@@ -8,7 +8,24 @@
       "bats": "R",
       "throws": "R",
       "age": 30,
-      "photo": "hassan-al-saleh.jpg"
+      "photo": "hassan-al-saleh.jpg",
+      "card_id": "BIR-01",
+      "claim_open": true,
+      "dob": "1996-01-01",
+      "birthplace": "Amman, Jordan",
+      "height": "6′3″",
+      "weight": 218,
+      "bio": "A right-handed starter who works both edges with a sinker and short slider.",
+      "scouting_report": "A right-handed starter who works both edges with a sinker and short slider.",
+      "factoid": "Maps the best public chess tables in every road city.",
+      "photo_source": "assets/teams/birmingham-vulcans/images/player-atlas.webp",
+      "photo_crop": [
+        0.0,
+        0.0,
+        0.25,
+        0.25
+      ],
+      "card_front_alt": "Hassan Al-Saleh, Birmingham Vulcans SP, in a candid baseball photograph"
     },
     {
       "name": "Thierry Boucher",
@@ -17,7 +34,24 @@
       "bats": "L",
       "throws": "L",
       "age": 27,
-      "photo": "thierry-boucher.jpg"
+      "photo": "thierry-boucher.jpg",
+      "card_id": "BIR-02",
+      "claim_open": true,
+      "dob": "1999-04-02",
+      "birthplace": "Québec City, Canada",
+      "height": "6′2″",
+      "weight": 202,
+      "bio": "A left-handed starter whose changeup keeps right-handed hitters from sitting on the fastball.",
+      "scouting_report": "A left-handed starter whose changeup keeps right-handed hitters from sitting on the fastball.",
+      "factoid": "Repairs old transistor radios between road trips.",
+      "photo_source": "assets/teams/birmingham-vulcans/images/player-atlas.webp",
+      "photo_crop": [
+        0.25,
+        0.0,
+        0.25,
+        0.25
+      ],
+      "card_front_alt": "Thierry Boucher, Birmingham Vulcans SP, in a candid baseball photograph"
     },
     {
       "name": "Jared Whitlock",
@@ -26,7 +60,24 @@
       "bats": "R",
       "throws": "R",
       "age": 29,
-      "photo": "jared-whitlock.jpg"
+      "photo": "jared-whitlock.jpg",
+      "card_id": "BIR-03",
+      "claim_open": true,
+      "dob": "1997-07-03",
+      "birthplace": "Tulsa, Oklahoma",
+      "height": "6′4″",
+      "weight": 228,
+      "bio": "A durable starter who challenges the top of the zone before dropping in a curve.",
+      "scouting_report": "A durable starter who challenges the top of the zone before dropping in a curve.",
+      "factoid": "Carries a small tin of spare shirt buttons.",
+      "photo_source": "assets/teams/birmingham-vulcans/images/player-atlas.webp",
+      "photo_crop": [
+        0.5,
+        0.0,
+        0.25,
+        0.25
+      ],
+      "card_front_alt": "Jared Whitlock, Birmingham Vulcans SP, in a candid baseball photograph"
     },
     {
       "name": "Emilio Duarte",
@@ -35,7 +86,24 @@
       "bats": "R",
       "throws": "R",
       "age": 26,
-      "photo": "emilio-duarte.jpg"
+      "photo": "emilio-duarte.jpg",
+      "card_id": "BIR-04",
+      "claim_open": true,
+      "dob": "2000-10-04",
+      "birthplace": "Valencia, Venezuela",
+      "height": "6′1″",
+      "weight": 196,
+      "bio": "A quick-working right-hander who locates a two-seamer below the hands.",
+      "scouting_report": "A quick-working right-hander who locates a two-seamer below the hands.",
+      "factoid": "Keeps ticket stubs from minor league parks he has visited.",
+      "photo_source": "assets/teams/birmingham-vulcans/images/player-atlas.webp",
+      "photo_crop": [
+        0.75,
+        0.0,
+        0.25,
+        0.25
+      ],
+      "card_front_alt": "Emilio Duarte, Birmingham Vulcans SP, in a candid baseball photograph"
     },
     {
       "name": "Luka Petrovic",
@@ -44,7 +112,24 @@
       "bats": "L",
       "throws": "R",
       "age": 24,
-      "photo": "luka-petrovic.jpg"
+      "photo": "luka-petrovic.jpg",
+      "card_id": "BIR-05",
+      "claim_open": true,
+      "dob": "2002-02-05",
+      "birthplace": "Novi Sad, Serbia",
+      "height": "6′5″",
+      "weight": 215,
+      "bio": "A young starter learning to repeat a long stride and a late-breaking slider.",
+      "scouting_report": "A young starter learning to repeat a long stride and a late-breaking slider.",
+      "factoid": "Can identify most trees around the park by their leaves.",
+      "photo_source": "assets/teams/birmingham-vulcans/images/player-atlas.webp",
+      "photo_crop": [
+        0.0,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "card_front_alt": "Luka Petrovic, Birmingham Vulcans SP, in a candid baseball photograph"
     },
     {
       "name": "Micah Torrence",
@@ -53,7 +138,24 @@
       "bats": "R",
       "throws": "R",
       "age": 28,
-      "photo": "micah-torrence.jpg"
+      "photo": "micah-torrence.jpg",
+      "card_id": "BIR-06",
+      "claim_open": true,
+      "dob": "1998-05-06",
+      "birthplace": "Birmingham, Alabama",
+      "height": "6′2″",
+      "weight": 225,
+      "bio": "A reliever who attacks with a high fastball and a hard cutter.",
+      "scouting_report": "A reliever who attacks with a high fastball and a hard cutter.",
+      "factoid": "Brings a different homemade hot sauce to each homestand.",
+      "photo_source": "assets/teams/birmingham-vulcans/images/player-atlas.webp",
+      "photo_crop": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "card_front_alt": "Micah Torrence, Birmingham Vulcans RP, in a candid baseball photograph"
     },
     {
       "name": "Antonio Bela",
@@ -62,7 +164,24 @@
       "bats": "L",
       "throws": "L",
       "age": 25,
-      "photo": "antonio-bela.jpg"
+      "photo": "antonio-bela.jpg",
+      "card_id": "BIR-07",
+      "claim_open": true,
+      "dob": "2001-08-07",
+      "birthplace": "Porto, Portugal",
+      "height": "6′0″",
+      "weight": 190,
+      "bio": "A left-handed reliever who changes speeds and holds runners close.",
+      "scouting_report": "A left-handed reliever who changes speeds and holds runners close.",
+      "factoid": "Collects hand-painted ceramic roosters.",
+      "photo_source": "assets/teams/birmingham-vulcans/images/player-atlas.webp",
+      "photo_crop": [
+        0.5,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "card_front_alt": "Antonio Bela, Birmingham Vulcans RP, in a candid baseball photograph"
     },
     {
       "name": "Reese Walker",
@@ -71,7 +190,24 @@
       "bats": "R",
       "throws": "R",
       "age": 31,
-      "photo": "reese-walker.jpg"
+      "photo": "reese-walker.jpg",
+      "card_id": "BIR-08",
+      "claim_open": true,
+      "dob": "1995-11-08",
+      "birthplace": "Knoxville, Tennessee",
+      "height": "6′3″",
+      "weight": 222,
+      "bio": "A veteran reliever who uses a splitter when he needs a ground ball.",
+      "scouting_report": "A veteran reliever who uses a splitter when he needs a ground ball.",
+      "factoid": "Writes down the best diner pie in each road city.",
+      "photo_source": "assets/teams/birmingham-vulcans/images/player-atlas.webp",
+      "photo_crop": [
+        0.75,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "card_front_alt": "Reese Walker, Birmingham Vulcans RP, in a candid baseball photograph"
     },
     {
       "name": "Owen Keller",
@@ -80,7 +216,24 @@
       "bats": "R",
       "throws": "R",
       "age": 30,
-      "photo": "owen-keller.jpg"
+      "photo": "owen-keller.jpg",
+      "card_id": "BIR-09",
+      "claim_open": true,
+      "dob": "1996-03-09",
+      "birthplace": "Madison, Wisconsin",
+      "height": "6′0″",
+      "weight": 216,
+      "bio": "A catcher who sets a low target and blocks well to either side.",
+      "scouting_report": "A catcher who sets a low target and blocks well to either side.",
+      "factoid": "Makes wooden birdhouses during the offseason.",
+      "photo_source": "assets/teams/birmingham-vulcans/images/player-atlas.webp",
+      "photo_crop": [
+        0.0,
+        0.5,
+        0.25,
+        0.25
+      ],
+      "card_front_alt": "Owen Keller, Birmingham Vulcans C, in a candid baseball photograph"
     },
     {
       "name": "Malik Johnson",
@@ -89,7 +242,24 @@
       "bats": "L",
       "throws": "R",
       "age": 27,
-      "photo": "malik-johnson.jpg"
+      "photo": "malik-johnson.jpg",
+      "card_id": "BIR-10",
+      "claim_open": true,
+      "dob": "1999-06-10",
+      "birthplace": "Mobile, Alabama",
+      "height": "6′4″",
+      "weight": 238,
+      "bio": "A first baseman with patient at-bats and pull-side power.",
+      "scouting_report": "A first baseman with patient at-bats and pull-side power.",
+      "factoid": "Keeps a bowling scorebook going back eleven years.",
+      "photo_source": "assets/teams/birmingham-vulcans/images/player-atlas.webp",
+      "photo_crop": [
+        0.25,
+        0.5,
+        0.25,
+        0.25
+      ],
+      "card_front_alt": "Malik Johnson, Birmingham Vulcans 1B, in a candid baseball photograph"
     },
     {
       "name": "Nico Valente",
@@ -98,7 +268,24 @@
       "bats": "S",
       "throws": "R",
       "age": 26,
-      "photo": "nico-valente.jpg"
+      "photo": "nico-valente.jpg",
+      "card_id": "BIR-11",
+      "claim_open": true,
+      "dob": "2000-09-11",
+      "birthplace": "Bologna, Italy",
+      "height": "5′11″",
+      "weight": 185,
+      "bio": "A switch-hitting second baseman with quick hands around the bag.",
+      "scouting_report": "A switch-hitting second baseman with quick hands around the bag.",
+      "factoid": "Learned to sew so he could repair his own travel bag.",
+      "photo_source": "assets/teams/birmingham-vulcans/images/player-atlas.webp",
+      "photo_crop": [
+        0.5,
+        0.5,
+        0.25,
+        0.25
+      ],
+      "card_front_alt": "Nico Valente, Birmingham Vulcans 2B, in a candid baseball photograph"
     },
     {
       "name": "Julian Santoro",
@@ -107,7 +294,24 @@
       "bats": "R",
       "throws": "R",
       "age": 28,
-      "photo": "julian-santoro.jpg"
+      "photo": "julian-santoro.jpg",
+      "card_id": "BIR-12",
+      "claim_open": true,
+      "dob": "1998-01-12",
+      "birthplace": "Newark, New Jersey",
+      "height": "6′1″",
+      "weight": 195,
+      "bio": "A shortstop who reads the hop early and makes accurate throws on the move.",
+      "scouting_report": "A shortstop who reads the hop early and makes accurate throws on the move.",
+      "factoid": "Refuses to skip a museum with a model railway.",
+      "photo_source": "assets/teams/birmingham-vulcans/images/player-atlas.webp",
+      "photo_crop": [
+        0.75,
+        0.5,
+        0.25,
+        0.25
+      ],
+      "card_front_alt": "Julian Santoro, Birmingham Vulcans SS, in a candid baseball photograph"
     },
     {
       "name": "Caleb Hawkins",
@@ -116,7 +320,24 @@
       "bats": "R",
       "throws": "R",
       "age": 29,
-      "photo": "caleb-hawkins.jpg"
+      "photo": "caleb-hawkins.jpg",
+      "card_id": "BIR-13",
+      "claim_open": true,
+      "dob": "1997-04-13",
+      "birthplace": "Huntsville, Alabama",
+      "height": "6′2″",
+      "weight": 214,
+      "bio": "A third baseman with a quick first step and a level line-drive swing.",
+      "scouting_report": "A third baseman with a quick first step and a level line-drive swing.",
+      "factoid": "Maintains a balcony garden of unusually large peppers.",
+      "photo_source": "assets/teams/birmingham-vulcans/images/player-atlas.webp",
+      "photo_crop": [
+        0.0,
+        0.75,
+        0.25,
+        0.25
+      ],
+      "card_front_alt": "Caleb Hawkins, Birmingham Vulcans 3B, in a candid baseball photograph"
     },
     {
       "name": "Isaac Morrow",
@@ -125,7 +346,24 @@
       "bats": "L",
       "throws": "L",
       "age": 25,
-      "photo": "isaac-morrow.jpg"
+      "photo": "isaac-morrow.jpg",
+      "card_id": "BIR-14",
+      "claim_open": true,
+      "dob": "2001-07-14",
+      "birthplace": "Savannah, Georgia",
+      "height": "6′2″",
+      "weight": 198,
+      "bio": "A center fielder whose first step covers more ground than his stride suggests.",
+      "scouting_report": "A center fielder whose first step covers more ground than his stride suggests.",
+      "factoid": "Sketches water towers from the team bus.",
+      "photo_source": "assets/teams/birmingham-vulcans/images/player-atlas.webp",
+      "photo_crop": [
+        0.25,
+        0.75,
+        0.25,
+        0.25
+      ],
+      "card_front_alt": "Isaac Morrow, Birmingham Vulcans CF, in a candid baseball photograph"
     },
     {
       "name": "Dante Rios",
@@ -134,7 +372,24 @@
       "bats": "R",
       "throws": "R",
       "age": 24,
-      "photo": "dante-rios.jpg"
+      "photo": "dante-rios.jpg",
+      "card_id": "BIR-15",
+      "claim_open": true,
+      "dob": "2002-10-15",
+      "birthplace": "Ponce, Puerto Rico",
+      "height": "6′0″",
+      "weight": 193,
+      "bio": "A corner outfielder who works deep counts and throws through his cutoff man.",
+      "scouting_report": "A corner outfielder who works deep counts and throws through his cutoff man.",
+      "factoid": "Trades crossword puzzles with the clubhouse attendant.",
+      "photo_source": "assets/teams/birmingham-vulcans/images/player-atlas.webp",
+      "photo_crop": [
+        0.5,
+        0.75,
+        0.25,
+        0.25
+      ],
+      "card_front_alt": "Dante Rios, Birmingham Vulcans LF, in a candid baseball photograph"
     },
     {
       "name": "Cole Ramsey",
@@ -143,7 +398,24 @@
       "bats": "R",
       "throws": "R",
       "age": 32,
-      "photo": "cole-ramsey.jpg"
+      "photo": "cole-ramsey.jpg",
+      "card_id": "BIR-16",
+      "claim_open": true,
+      "dob": "1994-02-16",
+      "birthplace": "Spokane, Washington",
+      "height": "6′3″",
+      "weight": 220,
+      "bio": "A veteran right fielder who tracks the wall carefully and takes the extra base when it is there.",
+      "scouting_report": "A veteran right fielder who tracks the wall carefully and takes the extra base when it is there.",
+      "factoid": "Has a collection of motel postcards with no messages written on them.",
+      "photo_source": "assets/teams/birmingham-vulcans/images/player-atlas.webp",
+      "photo_crop": [
+        0.75,
+        0.75,
+        0.25,
+        0.25
+      ],
+      "card_front_alt": "Cole Ramsey, Birmingham Vulcans RF, in a candid baseball photograph"
     }
   ]
 }

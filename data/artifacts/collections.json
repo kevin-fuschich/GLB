@@ -78,6 +78,12 @@
       "team_name": "Triangle Gold",
       "source": "data/rosters/durham-gold.json",
       "prefix": "TRI"
+    },
+    {
+      "team_slug": "birmingham-vulcans",
+      "team_name": "Birmingham Vulcans",
+      "source": "data/rosters/birmingham-vulcans.json",
+      "prefix": "BIR"
     }
   ],
   "creative_source": "data/artifacts/creative-artifacts.json"

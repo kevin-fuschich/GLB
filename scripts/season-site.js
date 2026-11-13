@@ -356,7 +356,8 @@
             const playerLink = cell('a', player.name);
             playerLink.href = `player.html?team=${encodeURIComponent(player.team_slug)}&player=${encodeURIComponent(player.player)}`;
             playerCell.append(playerLink);
-            tr.append(cell('td', i+1), playerCell, cell('td',player.team),cell('td',player[group][key]));
+            const clubCell = document.createElement('td'); clubCell.append(teamLink(player.team_slug, 'team-page-link'));
+            tr.append(cell('td', i+1), playerCell, clubCell,cell('td',player[group][key]));
             return tr;
           }));
         };

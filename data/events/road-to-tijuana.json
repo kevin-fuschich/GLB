@@ -1,0 +1,95 @@
+{
+  "schema": "glb.event-archive.v1",
+  "title": "Road to Tijuana",
+  "description": "The Supreme Donk Championships travel through select GLB cities as a stadium event series built around custom cars, live judging, and city champions. Winners are crowned on-site and advance toward the circuit final in Tijuana.",
+  "champions": [
+    {
+      "city": "Durham",
+      "name": "NuMONEY",
+      "car": "Caprice Classic",
+      "theme": "Candy red / cream drip • Pall Mall theme",
+      "caption": "NuMONEY’s Caprice cleared the Durham mark under the lights and became the defining image of the circuit’s opening stop.",
+      "signature": "Measured Hop",
+      "win_type": "Highest Mark",
+      "original_image_reference": "../images/donk/durham-numoney.png",
+      "restored_image": "assets/events/road-to-tijuana/durham-numoney.webp"
+    },
+    {
+      "city": "Taipei",
+      "name": "Toi Boi Roi",
+      "car": "Impala",
+      "theme": "Banana yellow candy drip • Arcade jungle theme",
+      "caption": "Toi Boi Roi earned Best Style honors with a controlled tripod lean, chrome-heavy finish, and a nightlife build that owned the Taipei stop.",
+      "signature": "Tripod Lean",
+      "win_type": "Best Style",
+      "original_image_reference": "../images/donk/taipei-toi-boi-roi.png",
+      "restored_image": "assets/events/road-to-tijuana/taipei-toi-boi-roi.webp"
+    },
+    {
+      "city": "Atlanta",
+      "name": "Big Rell",
+      "car": "1974 Caprice Classic",
+      "theme": "Deep candy burgundy • Chrome-forward Southern build",
+      "caption": "Big Rell brought the most restrained and intimidating build of the circuit, winning Atlanta on presence, stance, and total authority.",
+      "signature": "Slow Lift Dominance",
+      "win_type": "Most Supreme",
+      "original_image_reference": "../images/donk/atlanta-big-rell.png",
+      "restored_image": null
+    },
+    {
+      "city": "Albuquerque",
+      "name": "Perk-O-Lata",
+      "car": "1985 Cadillac",
+      "theme": "Aqua / teal candy drip • Ton O’ Suds Carwash theme",
+      "caption": "The Albuquerque field belonged to Perk-O-Lata, whose glossy wash-cycle build turned a full concept into one of the circuit’s strongest identities.",
+      "signature": "Wash Cycle Bounce",
+      "win_type": "Best Theme",
+      "original_image_reference": "../images/donk/albuquerque-perk-o-lata.png",
+      "restored_image": "assets/events/road-to-tijuana/albuquerque-perk-o-lata.webp"
+    },
+    {
+      "city": "Louisville",
+      "name": "Clementine Latham",
+      "car": "1972 Plymouth Fury III",
+      "theme": "French’s Mustard theme • Ballpark condiment build",
+      "caption": "Clementine Latham stood out in the Naturals’ ballpark setting with a bold, playful build that still felt fully serious in execution.",
+      "signature": "Ballpark Theme",
+      "win_type": "Best Theme",
+      "original_image_reference": "../images/donk/louisville-clementine-latham.png",
+      "restored_image": "assets/events/road-to-tijuana/louisville-clementine-latham.webp"
+    },
+    {
+      "city": "Vancouver",
+      "name": "Michael Bonnehomme",
+      "car": "1980 Chevy Citation",
+      "theme": "Swedish Fish theme • Red and aqua city-night finish",
+      "caption": "Bonnehomme’s Citation gave Vancouver one of the circuit’s sharpest color stories, landing Best Style with a clean and playful build.",
+      "signature": "Color Split Identity",
+      "win_type": "Best Style",
+      "original_image_reference": "../images/donk/vancouver-michael-bonnehomme.png",
+      "restored_image": "assets/events/road-to-tijuana/vancouver-michael-bonnehomme.webp"
+    },
+    {
+      "city": "Fresno",
+      "name": "Daryl Deez",
+      "car": "1992 Chevy Caprice",
+      "theme": "Green Giant Green Beans theme • Heavy green field build",
+      "caption": "Veteran builder Daryl Deez brought full commitment to Fresno with a Green Giant Caprice that dominated on theme, tone, and crowd response.",
+      "signature": "Veteran Presence",
+      "win_type": "Best Theme",
+      "original_image_reference": "../images/donk/fresno-daryl-deez.png",
+      "restored_image": "assets/events/road-to-tijuana/fresno-daryl-deez.webp"
+    },
+    {
+      "city": "San Pedro",
+      "name": "Omar Azul",
+      "car": "1974 Chevy Caprice",
+      "theme": "Good & Plenty theme • Purple and white coastal finish",
+      "caption": "Omar Azul closed the field with a younger, composed build that gave San Pedro one of the circuit’s cleanest and most controlled statements.",
+      "signature": "Composed Swagger",
+      "win_type": "Best Style",
+      "original_image_reference": "../images/donk/san-pedro-omar-azul.png",
+      "restored_image": "assets/events/road-to-tijuana/san-pedro-omar-azul.webp"
+    }
+  ]
+}

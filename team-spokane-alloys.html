@@ -1297,7 +1297,7 @@ text-transform:uppercase;
 <link rel="stylesheet" href="taipei-cards.css?v=fieldstock-2026-1">
 <link rel="stylesheet" href="compact-clubs.css?v=1"><link rel="stylesheet" href="site-header.css?v=20261112">
 <script defer src="scripts/site-header.js?v=20261112"></script>
-</head>
+<style>.spokane-club-facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 28px}.spokane-about h3{font-size:15px;margin:22px 0 10px}.spokane-about .note-block{margin-top:20px}.spokane-about .card-body>p:last-child a{font-size:13px;font-weight:700}@media(max-width:600px){.spokane-club-facts{grid-template-columns:1fr}}</style></head>
 
 <body data-season-page="team">
 
@@ -1600,18 +1600,48 @@ Spokane Alloys · FIELDSTOCK launch set. Claims are open for SPK-01, SPK-02, and
 
 </section>
 
-<section class="card">
-<div class="card-header">
-<h2 class="card-title">Club File</h2>
-<span class="card-label">Spokane Club File</span>
+<section class="card spokane-about" id="club-details" data-compact="visible"><div class="card-header"><h2 class="card-title">About the Spokane Alloys</h2></div><div class="card-body"><p class="story-copy">
+One of Global League Baseball’s sixteen charter clubs, the Spokane Alloys play in the Americas Division at OGWA Stadium in the River District. The name refers to the Inland Northwest’s industrial, rail, and manufacturing history.
+</p><h3>Club facts</h3><div class="spokane-club-facts">
+
+<div class="file-row">
+<div class="file-key">Club</div>
+<div class="file-value">Spokane Alloys</div>
 </div>
 
-<div class="card-body">
-<p class="story-copy">
-One of Global League Baseball’s sixteen charter clubs, the Spokane Alloys play in the Americas Division at OGWA Stadium in the River District. The name refers to the Inland Northwest’s industrial, rail, and manufacturing history.
-</p>
+<div class="file-row">
+<div class="file-key">City</div>
+<div class="file-value">Spokane, Washington</div>
 </div>
-</section>
+
+<div class="file-row">
+<div class="file-key">Division</div>
+<div class="file-value">Americas Division</div>
+</div>
+
+<div class="file-row">
+<div class="file-key">Code</div>
+<div class="file-value">SPO</div>
+</div>
+
+<div class="file-row">
+<div class="file-key">Stadium</div>
+<div class="file-value">OGWA Stadium</div>
+</div>
+
+<div class="file-row">
+<div class="file-key">District</div>
+<div class="file-value">River District</div>
+</div>
+
+<div class="file-row">
+<div class="file-key">Status</div>
+<div class="file-value">Active</div>
+</div>
+</div><div class="note-block">
+<strong>Season complete</strong>
+<p>Spokane completed the 2026 schedule at 68–76. The club scored 515 runs and allowed 553.</p>
+</div><p><a href="contribute.html">Contribute to Spokane’s record →</a></p></div></section>
 
 <section class="card" id="stadium">
 <div class="card-header">
@@ -2158,86 +2188,13 @@ Some nights the stadium empties. Other nights the baseball field is only the fir
 
 <aside class="side-column">
 
-<section class="card">
-<div class="card-header">
-<h2 class="card-title">Club File</h2>
-</div>
-
-<div class="card-body">
-
-<div class="file-row">
-<div class="file-key">Club</div>
-<div class="file-value">Spokane Alloys</div>
-</div>
-
-<div class="file-row">
-<div class="file-key">City</div>
-<div class="file-value">Spokane, Washington</div>
-</div>
-
-<div class="file-row">
-<div class="file-key">Division</div>
-<div class="file-value">Americas Division</div>
-</div>
-
-<div class="file-row">
-<div class="file-key">Code</div>
-<div class="file-value">SPO</div>
-</div>
-
-<div class="file-row">
-<div class="file-key">Stadium</div>
-<div class="file-value">OGWA Stadium</div>
-</div>
-
-<div class="file-row">
-<div class="file-key">District</div>
-<div class="file-value">River District</div>
-</div>
-
-<div class="file-row">
-<div class="file-key">Status</div>
-<div class="file-value">Active</div>
-</div>
-
-</div>
-</section>
-
-<section class="card">
-<div class="card-header">
-<h2 class="card-title">Club Notes</h2>
-</div>
-
-<div class="card-body">
-<div class="note-block">
-<strong>Season complete</strong>
-<p>Spokane completed the 2026 schedule at 68–76. The club scored 515 runs and allowed 553.</p>
-</div>
-</div>
-</section>
 
 
 
-<section class="card">
-<div class="card-header">
-<h2 class="card-title">Official Record</h2>
-</div>
 
-<div class="card-body">
-<p class="story-copy" style="font-size:13px">
-This page is part of the official Global League Baseball team record. Corrections, additions, and archival material may be submitted for review.
-</p>
 
-<p>
-<a
-href="contribute.html"
-style="color:var(--blue);font-weight:800;font-size:12px"
->
-Contribute to this record →
-</a>
-</p>
-</div>
-</section>
+
+
 
 </aside>
 
@@ -2356,5 +2313,5 @@ const mobileMenu=document.getElementById("mobileMenu");
 
 <script src="scripts/glb-ticker.js"></script>
 <script src="scripts/participation.js?v=20261113-members"></script>
-<script src="scripts/compact-clubs.js?v=1"></script></body>
+<script src="scripts/compact-clubs.js?v=20261113-labels"></script></body>
 </html>

@@ -12,7 +12,7 @@
   for(const section of sections){
     const heading=section.querySelector('h2');if(!heading||section.matches('.team-hero,.team-closer'))continue;
     const title=heading.textContent.trim();
-    if(/season|snapshot|latest result|recent result|upcoming/i.test(title))continue;
+    if(section.dataset.compact==='visible'||/season|snapshot|latest result|recent result|upcoming/i.test(title))continue;
     if(section.querySelector('.tpe-card-grid,.player-card-grid,.tij-card-grid,#mtyCards,.fs-card')||/player cards|player records/i.test(title))continue;
     if(/roster|leader|official record|club file|club notes|artifact desk|contribut/i.test(title)){
       const details=make('details','glb-record-fold');details.append(make('summary','',title));

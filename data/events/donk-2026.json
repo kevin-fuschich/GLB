@@ -1,0 +1,296 @@
+{
+  "schema": "glb.donk-championship.v1",
+  "year": 2026,
+  "title": "Road to Tijuana",
+  "championship": "2026 DONK Championship",
+  "status": "complete",
+  "host_city": "Tijuana, Mexico",
+  "champion": "Toi Boi Roi",
+  "runner_up": "NuMONEY",
+  "final_date": "2026-11-12",
+  "format": "Eight-driver single elimination",
+  "entrants": [
+    {
+      "id": "numoney",
+      "city": "Durham",
+      "name": "NuMONEY",
+      "car": "Caprice Classic",
+      "theme": "Candy red / cream drip • Pall Mall theme",
+      "caption": "NuMONEY’s Caprice cleared the Durham mark under the lights and became the defining image of the circuit’s opening stop.",
+      "signature": "Measured Hop",
+      "win_type": "Highest Mark",
+      "original_image_reference": "../images/donk/durham-numoney.png",
+      "restored_image": "assets/events/road-to-tijuana/durham-numoney.webp"
+    },
+    {
+      "id": "toi-boi-roi",
+      "city": "Taipei",
+      "name": "Toi Boi Roi",
+      "car": "Impala",
+      "theme": "Banana yellow candy drip • Arcade jungle theme",
+      "caption": "Toi Boi Roi earned Best Style honors with a controlled tripod lean, chrome-heavy finish, and a nightlife build that owned the Taipei stop.",
+      "signature": "Tripod Lean",
+      "win_type": "Best Style",
+      "original_image_reference": "../images/donk/taipei-toi-boi-roi.png",
+      "restored_image": "assets/events/road-to-tijuana/taipei-toi-boi-roi.webp"
+    },
+    {
+      "id": "big-rell",
+      "city": "Atlanta",
+      "name": "Big Rell",
+      "car": "1974 Caprice Classic",
+      "theme": "Deep candy burgundy • Chrome-forward Southern build",
+      "caption": "Big Rell brought the most restrained and intimidating build of the circuit, winning Atlanta on presence, stance, and total authority.",
+      "signature": "Slow Lift Dominance",
+      "win_type": "Most Supreme",
+      "original_image_reference": "../images/donk/atlanta-big-rell.png",
+      "restored_image": null
+    },
+    {
+      "id": "perk-o-lata",
+      "city": "Albuquerque",
+      "name": "Perk-O-Lata",
+      "car": "1985 Cadillac",
+      "theme": "Aqua / teal candy drip • Ton O’ Suds Carwash theme",
+      "caption": "The Albuquerque field belonged to Perk-O-Lata, whose glossy wash-cycle build turned a full concept into one of the circuit’s strongest identities.",
+      "signature": "Wash Cycle Bounce",
+      "win_type": "Best Theme",
+      "original_image_reference": "../images/donk/albuquerque-perk-o-lata.png",
+      "restored_image": "assets/events/road-to-tijuana/albuquerque-perk-o-lata.webp"
+    },
+    {
+      "id": "clementine-latham",
+      "city": "Louisville",
+      "name": "Clementine Latham",
+      "car": "1972 Plymouth Fury III",
+      "theme": "French’s Mustard theme • Ballpark condiment build",
+      "caption": "Clementine Latham stood out in the Naturals’ ballpark setting with a bold, playful build that still felt fully serious in execution.",
+      "signature": "Ballpark Theme",
+      "win_type": "Best Theme",
+      "original_image_reference": "../images/donk/louisville-clementine-latham.png",
+      "restored_image": "assets/events/road-to-tijuana/louisville-clementine-latham.webp"
+    },
+    {
+      "id": "michael-bonnehomme",
+      "city": "Vancouver",
+      "name": "Michael Bonnehomme",
+      "car": "1980 Chevy Citation",
+      "theme": "Swedish Fish theme • Red and aqua city-night finish",
+      "caption": "Bonnehomme’s Citation gave Vancouver one of the circuit’s sharpest color stories, landing Best Style with a clean and playful build.",
+      "signature": "Color Split Identity",
+      "win_type": "Best Style",
+      "original_image_reference": "../images/donk/vancouver-michael-bonnehomme.png",
+      "restored_image": "assets/events/road-to-tijuana/vancouver-michael-bonnehomme.webp"
+    },
+    {
+      "id": "daryl-deez",
+      "city": "Fresno",
+      "name": "Daryl Deez",
+      "car": "1992 Chevy Caprice",
+      "theme": "Green Giant Green Beans theme • Heavy green field build",
+      "caption": "Veteran builder Daryl Deez brought full commitment to Fresno with a Green Giant Caprice that dominated on theme, tone, and crowd response.",
+      "signature": "Veteran Presence",
+      "win_type": "Best Theme",
+      "original_image_reference": "../images/donk/fresno-daryl-deez.png",
+      "restored_image": "assets/events/road-to-tijuana/fresno-daryl-deez.webp"
+    },
+    {
+      "id": "omar-azul",
+      "city": "San Pedro",
+      "name": "Omar Azul",
+      "car": "1974 Chevy Caprice",
+      "theme": "Good & Plenty theme • Purple and white coastal finish",
+      "caption": "Omar Azul closed the field with a younger, composed build that gave San Pedro one of the circuit’s cleanest and most controlled statements.",
+      "signature": "Composed Swagger",
+      "win_type": "Best Style",
+      "original_image_reference": "../images/donk/san-pedro-omar-azul.png",
+      "restored_image": "assets/events/road-to-tijuana/san-pedro-omar-azul.webp"
+    }
+  ],
+  "qualifiers": [
+    {
+      "date": "2026-10-17",
+      "city": "Durham",
+      "winner": "NuMONEY",
+      "award": "Highest Mark"
+    },
+    {
+      "date": "2026-10-18",
+      "city": "Taipei",
+      "winner": "Toi Boi Roi",
+      "award": "Best Style"
+    },
+    {
+      "date": "2026-10-24",
+      "city": "Atlanta",
+      "winner": "Big Rell",
+      "award": "Most Supreme"
+    },
+    {
+      "date": "2026-10-25",
+      "city": "Albuquerque",
+      "winner": "Perk-O-Lata",
+      "award": "Best Theme"
+    },
+    {
+      "date": "2026-10-31",
+      "city": "Louisville",
+      "winner": "Clementine Latham",
+      "award": "Best Theme"
+    },
+    {
+      "date": "2026-11-01",
+      "city": "Vancouver",
+      "winner": "Michael Bonnehomme",
+      "award": "Best Style"
+    },
+    {
+      "date": "2026-11-06",
+      "city": "Fresno",
+      "winner": "Daryl Deez",
+      "award": "Best Theme"
+    },
+    {
+      "date": "2026-11-07",
+      "city": "San Pedro",
+      "winner": "Omar Azul",
+      "award": "Best Style"
+    }
+  ],
+  "rounds": [
+    {
+      "name": "Quarterfinals",
+      "date": "2026-11-10",
+      "matches": [
+        {
+          "id": "QF1",
+          "a": "Toi Boi Roi",
+          "b": "Omar Azul",
+          "a_score": 95.6,
+          "b_score": 94.4,
+          "winner": "Toi Boi Roi",
+          "note": "Roi holds the Tripod Lean through the full count; Omar’s coastal build finishes just behind on control."
+        },
+        {
+          "id": "QF2",
+          "a": "Big Rell",
+          "b": "Michael Bonnehomme",
+          "a_score": 95.5,
+          "b_score": 94.8,
+          "winner": "Big Rell",
+          "note": "Big Rell’s slow lift and chrome-forward finish edge the red-and-aqua Citation."
+        },
+        {
+          "id": "QF3",
+          "a": "NuMONEY",
+          "b": "Daryl Deez",
+          "a_score": 96.2,
+          "b_score": 94.9,
+          "winner": "NuMONEY",
+          "note": "The Durham champion makes the height lane his own. Daryl’s Green Giant theme earns a long response from the crowd."
+        },
+        {
+          "id": "QF4",
+          "a": "Clementine Latham",
+          "b": "Perk-O-Lata",
+          "a_score": 95.1,
+          "b_score": 94.7,
+          "winner": "Clementine Latham",
+          "note": "The closest quarterfinal: Clementine’s Fury III wins on finish and a cleaner closing presentation."
+        }
+      ]
+    },
+    {
+      "name": "Semifinals",
+      "date": "2026-11-11",
+      "matches": [
+        {
+          "id": "SF1",
+          "a": "Toi Boi Roi",
+          "b": "Big Rell",
+          "a_score": 96.8,
+          "b_score": 96.0,
+          "winner": "Toi Boi Roi",
+          "feeds": [
+            "QF1",
+            "QF2"
+          ],
+          "note": "Roi lands his best controlled sequence of the circuit. Big Rell’s deliberate lift keeps it close until the final marks."
+        },
+        {
+          "id": "SF2",
+          "a": "NuMONEY",
+          "b": "Clementine Latham",
+          "a_score": 96.6,
+          "b_score": 95.3,
+          "winner": "NuMONEY",
+          "feeds": [
+            "QF3",
+            "QF4"
+          ],
+          "note": "NuMONEY advances behind the night’s strongest height run. Clementine leaves as a semifinalist with the crowd still calling for the mustard-yellow Fury."
+        }
+      ]
+    },
+    {
+      "name": "Championship final",
+      "date": "2026-11-12",
+      "matches": [
+        {
+          "id": "F",
+          "a": "Toi Boi Roi",
+          "b": "NuMONEY",
+          "a_score": 97.2,
+          "b_score": 96.4,
+          "winner": "Toi Boi Roi",
+          "feeds": [
+            "SF1",
+            "SF2"
+          ],
+          "note": "NuMONEY wins the height lane. Roi takes the overall title with a steadier held angle, cleaner recovery and a complete build presentation."
+        }
+      ]
+    }
+  ],
+  "criteria": [
+    {
+      "label": "Build & finish",
+      "maximum": 30
+    },
+    {
+      "label": "Control",
+      "maximum": 30
+    },
+    {
+      "label": "Identity",
+      "maximum": 25
+    },
+    {
+      "label": "Showmanship",
+      "maximum": 15
+    }
+  ],
+  "final_marks": [
+    {
+      "name": "Toi Boi Roi",
+      "scores": [
+        29.4,
+        29.5,
+        24.4,
+        13.9
+      ],
+      "total": 97.2
+    },
+    {
+      "name": "NuMONEY",
+      "scores": [
+        29.5,
+        28.7,
+        24.0,
+        14.2
+      ],
+      "total": 96.4
+    }
+  ],
+  "height_title": "NuMONEY"
+}

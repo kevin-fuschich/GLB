@@ -1,0 +1,80 @@
+{
+  "schema": "glb.donk-field.v1",
+  "year": 2027,
+  "status": "announced",
+  "champion": null,
+  "entries": [
+    {
+      "city": "Taipei",
+      "name": "Toi Boi Roi",
+      "car": "1996 Nissan Cefiro A32 · VELLO",
+      "record": "team-taipei-neon.html#donk"
+    },
+    {
+      "city": "Spokane",
+      "name": "Luthar Pineberry",
+      "car": "1986 Chevrolet Caprice Classic · OGWA",
+      "record": "team-spokane-alloys.html#donk"
+    },
+    {
+      "city": "Spokane",
+      "name": "Vic Katz",
+      "car": "1985 Chevrolet Citation · Star Castle",
+      "record": "team-spokane-alloys.html#donk"
+    },
+    {
+      "city": "Vancouver",
+      "name": "Ron Draper",
+      "car": "1974 Chevrolet Nova · WAP MOP SHOPPE",
+      "record": "team-vancouver-current.html#donk"
+    },
+    {
+      "city": "Monterrey",
+      "name": "Octavio “Tavo” Saldaña",
+      "car": "1974 Plymouth Fury III · Insurance Papi",
+      "record": "team-monterrey-cementeros.html#donk"
+    },
+    {
+      "city": "Osaka",
+      "name": "Yoshiko Futaba",
+      "car": "Mercedes-Benz G-Class · MUMBO JUMBO",
+      "record": "team-osaka-spirits.html#donk"
+    },
+    {
+      "city": "San Pedro",
+      "name": "Placido Pojo",
+      "car": "Chevy pickup · BEMBA",
+      "record": "team-san-pedro-cocolos.html#donk"
+    },
+    {
+      "city": "Tijuana",
+      "name": "Lutis Cujifrita",
+      "car": "Chispa Móvil C10",
+      "record": "team-tijuana-tecnicos.html#donk"
+    },
+    {
+      "city": "Mayagüez",
+      "name": "Victor Lumelo",
+      "car": "Chevrolet Impala · MAGIXO",
+      "record": "team-mayaguez-sultans.html#donk"
+    },
+    {
+      "city": "Santiago",
+      "name": "Renato Cifuentes",
+      "car": "1967 Pontiac GTO · TUMBAO",
+      "record": "team-santiago-caballeros.html#donk"
+    },
+    {
+      "city": "Louisville",
+      "name": "Flo Troup",
+      "car": "Cadillac · BIG SOFT",
+      "record": "team-louisville-naturals.html#donk"
+    },
+    {
+      "city": "Triangle",
+      "name": "Bobby Boulineau",
+      "car": "1980 Ford Fairmont · WEEJIE",
+      "record": "team-triangle-gold.html#donk"
+    }
+  ]
+}

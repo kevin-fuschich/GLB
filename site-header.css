@@ -1,0 +1,21 @@
+/* Shared league navigation. Scoped to prevent club/page styles changing the header. */
+body #glb-site-header{display:block;position:sticky;top:0;z-index:1000;width:100%;max-width:none;margin:0;padding:0;background:#0b1e33;color:#fff;border:0;border-bottom:1px solid #ffffff20;box-shadow:none;font:14px/1.4 Arial,Helvetica,sans-serif;text-align:left;letter-spacing:normal}
+#glb-site-header *{box-sizing:border-box}
+#glb-site-header .glb-header-bar{display:flex;align-items:center;justify-content:space-between;gap:24px;max-width:1440px;min-height:80px;margin:0 auto;padding:0 24px}
+#glb-site-header a{color:#fff;text-decoration:none;border:0;letter-spacing:normal}
+#glb-site-header .glb-header-brand{display:flex;align-items:center;gap:12px;flex-shrink:0;padding:0;font-weight:800}
+#glb-site-header .glb-header-mark{font:800 28px/1 Arial,Helvetica,sans-serif;letter-spacing:1px}
+#glb-site-header .glb-header-name{font:700 10px/1.35 Arial,Helvetica,sans-serif;letter-spacing:1px;text-transform:uppercase;color:#dfe7f1;white-space:nowrap}
+#glb-site-header .glb-header-nav{display:flex;align-items:center;justify-content:flex-end;gap:3px;flex-wrap:nowrap;margin:0;padding:0;background:none}
+#glb-site-header .glb-header-nav a{display:block;flex-shrink:0;padding:12px 9px;border-radius:4px;font:700 12px/1.4 Arial,Helvetica,sans-serif;white-space:nowrap}
+#glb-site-header a[aria-current="page"]{box-shadow:inset 0 -2px #9fe5cf}
+#glb-site-header .glb-header-nav a:hover,#glb-site-header #mobileMenu a:hover{background:#ffffff12}
+#glb-site-header a.glb-header-claim{background:#b7efda;color:#0b1e33;padding:12px 14px;font-weight:800;box-shadow:none}
+#glb-site-header a.glb-header-claim:hover{background:#d3f8e9}
+#glb-site-header #navToggle{display:none;align-items:center;gap:12px;width:auto;min-height:44px;margin:0;padding:8px 12px;border:1px solid #ffffff55;border-radius:4px;background:transparent;color:#fff;font:700 14px/1.4 Arial,Helvetica,sans-serif;cursor:pointer}
+#glb-site-header #mobileMenu{display:none;margin:0;padding:12px 24px 20px;background:#102843;border-top:1px solid #ffffff20}
+#glb-site-header #mobileMenu[hidden]{display:none!important}
+#glb-site-header #mobileMenu a{display:block;padding:12px;border-radius:4px;font:700 14px/1.4 Arial,Helvetica,sans-serif}
+#glb-site-header :is(a,button):focus-visible{outline:3px solid #9fe5cf;outline-offset:3px}
+@media(max-width:1250px){#glb-site-header .glb-header-nav{display:none}#glb-site-header #navToggle{display:flex}#glb-site-header #mobileMenu:not([hidden]){display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:5px}#glb-site-header .glb-header-bar{min-height:72px}}
+@media(max-width:480px){#glb-site-header .glb-header-bar{padding:0 18px;gap:12px}#glb-site-header #mobileMenu{padding:12px 18px 18px}#glb-site-header .glb-header-mark{font-size:26px}}

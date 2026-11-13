@@ -1,10 +1,6 @@
 (() => {
   const slug = 'mayaguez-sultans';
   const toggle = document.getElementById('navToggle');
-  toggle.addEventListener('click', () => {
-    const open = document.getElementById('mobileMenu').classList.toggle('open');
-    toggle.setAttribute('aria-expanded', String(open));
-  });
   const get = async path => {
     const response = await fetch(path, {cache: 'no-store'});
     if (!response.ok) throw new Error(`Unable to load ${path}`);

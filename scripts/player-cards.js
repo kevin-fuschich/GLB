@@ -65,9 +65,21 @@
   }
   // Display original recovered artwork without altering the source image.
   const recoveredVancouver = {'nico-penfold':47,'silas-boudreau':418,'eamon-kerr':797,'alejo-santillan':1185};
-  function recoveredPortrait(player) {
+  function recoveredPortrait(player, {photoOnly=false}={}) {
     const x = player.teamSlug === 'vancouver-current' ? recoveredVancouver[player.slug] : undefined;
     if (x === undefined) return null;
+    if (photoOnly) {
+      // Exclude the old printed wordmark and nameplate from the shared card face.
+      const svg=document.createElementNS('http://www.w3.org/2000/svg','svg');
+      svg.classList.add('fs-photo-image');
+      svg.setAttribute('viewBox',`${x} 84 300 283`);
+      svg.setAttribute('preserveAspectRatio','xMidYMid slice');
+      svg.setAttribute('role','img');svg.setAttribute('aria-label',player.name || player.slug);
+      const image=document.createElementNS(svg.namespaceURI,'image');
+      image.setAttribute('href','assets/images/players/vancouver-current/restored-fieldstock-sheet.png');
+      image.setAttribute('width','1536');image.setAttribute('height','1024');
+      svg.append(image);return svg;
+    }
     const frame = document.createElement('span');
     frame.style.cssText = 'display:block;position:relative;overflow:hidden;width:100%;aspect-ratio:300/335;';
     frame.setAttribute('role','img'); frame.setAttribute('aria-label',player.name || player.slug);
@@ -125,7 +137,7 @@
   // Crop only the photograph out of older printed artwork at display time.
   // Source files and their original card designs remain archival assets.
   function photograph(player) {
-    const recovered = recoveredPortrait(player);
+    const recovered = recoveredPortrait(player, {photoOnly:true});
     if (recovered) return recovered;
     const art = cardFront(player);
     const portrait = photoPath(player);

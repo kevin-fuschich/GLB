@@ -44,6 +44,12 @@
   }
 
   const taipeiCards = {"kaito-ueda":1,"adebayo-olumide":2,"han-wei-tseng":3,"martin-echevarria":4,"dariusz-wierzbik":5,"owen-rasmusson":6,"eric-lawson":7,"jose-ramirez-tpe":8,"david-morales-tpe":9,"hiroto-kuzumi":10,"joaquin-iturriaga":11,"eitan-ben-sasson":12,"tsai-ming-hao":13,"idris-el-amin":14,"miguel-santos-tpe":15};
+  const vancouverPortraits = {
+    'nico-penfold': {crop:[0,280/1536,1,1200/1536]},
+    'silas-boudreau': {},
+    'eamon-kerr': {},
+    'alejo-santillan': {crop:[0,300/1536,1,1200/1536]}
+  };
   function photoPath(player) {
     if (player.teamSlug === 'taipei-neon' && ['kaito-ueda','adebayo-olumide'].includes(player.slug)) return `assets/teams/taipei-neon/images/players/${player.slug}.webp`;
     const expansionSpokanePortraits = new Set(['jonah-sato','rene-bouchard','malachi-boone','tesfaye-mebrahtu','hamza-qureshi','ellis-wren','branislav-vukovic']);
@@ -60,12 +66,13 @@
       return `assets/teams/albuquerque-aeros/images/players/albuquerque-${player.slug}${player.slug === 'carmine-sforza' ? '.pthinnng' : ''}.png`;
     if (player.teamSlug === 'durham-gold')
       return `assets/images/players/durham-gold/durham-${player.slug}.jpg`;
-    if (player.teamSlug === 'vancouver-current') return null;
+    if (player.teamSlug === 'vancouver-current' && vancouverPortraits[player.slug]) return `assets/images/players/vancouver-current/${player.slug}-v2.webp`;
     return null;
   }
   // Display original recovered artwork without altering the source image.
   const recoveredVancouver = {'nico-penfold':47,'silas-boudreau':418,'eamon-kerr':797,'alejo-santillan':1185};
   function recoveredPortrait(player, {photoOnly=false}={}) {
+    if (player.teamSlug === 'vancouver-current' && vancouverPortraits[player.slug]) return null;
     const x = player.teamSlug === 'vancouver-current' ? recoveredVancouver[player.slug] : undefined;
     if (x === undefined) return null;
     if (photoOnly) {
@@ -137,6 +144,8 @@
   // Crop only the photograph out of older printed artwork at display time.
   // Source files and their original card designs remain archival assets.
   function photograph(player) {
+    const vancouver = player.teamSlug === 'vancouver-current' && vancouverPortraits[player.slug];
+    if (vancouver?.crop) player={...player,photo_crop:vancouver.crop};
     const recovered = recoveredPortrait(player, {photoOnly:true});
     if (recovered) return recovered;
     const art = cardFront(player);

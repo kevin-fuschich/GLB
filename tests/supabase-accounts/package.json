@@ -1,0 +1,1 @@
+{"name":"glb-supabase-permissions-checks","private":true,"type":"module","scripts":{"test":"node permissions.mjs"},"devDependencies":{"@electric-sql/pglite":"0.3.15"}}

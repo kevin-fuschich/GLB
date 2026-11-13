@@ -1,0 +1,48 @@
+import { PGlite } from '@electric-sql/pglite';
+import {readFile} from 'node:fs/promises';
+import assert from 'node:assert/strict';
+const db=new PGlite();
+await db.exec(`create role anon; create role authenticated; create role service_role bypassrls; create schema auth;
+create table auth.users(id uuid primary key,email text);
+create function auth.uid() returns uuid language sql stable as $$ select nullif(current_setting('request.jwt.claim.sub',true),'')::uuid $$;
+create function auth.role() returns text language sql stable as $$ select nullif(current_setting('request.jwt.claim.role',true),'') $$;
+grant usage on schema auth to anon,authenticated,service_role;`);
+const sql=await readFile(new URL('../../supabase/glb-accounts.sql',import.meta.url),'utf8');
+await db.exec(sql);await db.exec(sql);
+const a='00000000-0000-4000-8000-000000000001',b='00000000-0000-4000-8000-000000000002';
+await db.query(`insert into auth.users values($1,'a@example.invalid'),($2,'b@example.invalid')`,[a,b]);
+async function as(uid,role='authenticated'){
+ await db.exec('reset role');
+ await db.query("select set_config('request.jwt.claim.sub',$1,false),set_config('request.jwt.claim.role',$2,false)",[uid||'',role]);
+ if(role!=='editor')await db.exec('set role '+role);
+}
+async function denied(fn,label){let failed=false;try{await fn();}catch{failed=true;}assert(failed,label);}
+await as(null,'anon');assert.equal((await db.query('select public.glb_account_ready() as ready')).rows[0].ready,1);
+await denied(()=>db.query('select * from public.glb_claim_receipts'),'anonymous receipt access');
+await as(a);await db.query('insert into public.glb_profiles(id,user_id) values($1,$2)',[a,'alpha_01']);
+await denied(()=>db.query('insert into public.glb_profiles(id,user_id) values($1,$2)',[b,'forged_owner']),'profile ownership');
+const first=(await db.query(`select public.glb_submit('claim','TEST-01','Test artifact','league-wide','other','The immutable original test claim.','',true) as id`)).rows[0].id;
+await denied(()=>db.query('select public.glb_review_submission($1,true)',[first]),'non-Board self approval');
+await denied(()=>db.query("update public.glb_submissions set status='approved' where id=$1",[first]),'direct self approval');
+await as(null,'editor');await db.query('select public.glb_review_submission($1,true)',[first]);
+await as(b);await db.query('insert into public.glb_profiles(id,user_id) values($1,$2)',[b,'beta_02']);
+assert.equal((await db.query('select * from public.glb_profiles')).rows.length,1);
+assert.equal((await db.query('select * from public.glb_submissions')).rows.length,0);
+assert.equal((await db.query('select * from public.glb_claim_receipts')).rows.length,0);
+await denied(()=>db.query("select public.glb_set_collaboration('TEST-01',false)"),'another user toggles collaboration');
+await denied(()=>db.query("update public.glb_claims set body='Overwrite original'"),'original overwrite');
+const note=(await db.query(`select public.glb_submit('note','TEST-01','Test artifact','league-wide','other','A separate, additional test detail.','',false) as id`)).rows[0].id;
+await as(null,'editor');await db.query('select public.glb_review_submission($1,true)',[note]);
+await db.query("update public.glb_submissions set created_at=now()-interval '1 minute'");
+await as(b);
+const pending=(await db.query(`select public.glb_submit('note','TEST-01','Test artifact','league-wide','other','This pending note must be held if the owner closes collaboration.','',false) as id`)).rows[0].id;
+await as(a);await db.query("select public.glb_set_collaboration('TEST-01',false)");
+await as(null,'editor');await denied(()=>db.query('select public.glb_review_submission($1,true)',[pending]),'approve pending note after closure');
+await db.query("update public.glb_submissions set created_at=now()-interval '1 minute'");
+await as(b);await denied(()=>db.query(`select public.glb_submit('note','TEST-01','Test artifact','league-wide','other','New notes cannot be submitted while collaboration is closed.','',false)`),'new note after closure');
+await as(null,'anon');const claim=(await db.query("select * from public.glb_claims where artifact_id='TEST-01'")).rows[0];
+assert.equal(claim.body,'The immutable original test claim.');assert.equal(claim.user_id,'alpha_01');assert.equal(claim.collaboration_open,false);
+assert.equal((await db.query('select * from public.glb_notes')).rows.length,1);
+await as(a);const receipt=(await db.query('select claim_code from public.glb_claim_receipts')).rows[0].claim_code;assert.match(receipt,/^[A-F0-9]{16}$/);
+console.log('PASS: repeatable setup; private profiles/submissions/receipts; no self-approval; immutable original; owner-only collaboration; note approval; closed collaboration; retained approved notes; private 16-character receipt.');
+await db.close();

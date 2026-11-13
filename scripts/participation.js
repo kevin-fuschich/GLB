@@ -37,13 +37,15 @@
   if(!match)return;
   try {
     const read=async path=>{const r=await fetch(path,{cache:'no-store'});if(!r.ok)throw Error(path);return r.json();};
-    const [creative,approved]=await Promise.all([read('data/artifacts/creative-artifacts.json'),read('data/cards/approved-claims.json')]);
+    const [creative,approved,live]=await Promise.all([read('data/artifacts/creative-artifacts.json'),read('data/cards/approved-claims.json'),
+      fetch('https://uyjncyvlumakuqtfuicc.supabase.co/rest/v1/glb_claims?select=artifact_id,user_id',{headers:{apikey:'sb_publishable_VjJqbpi9zo2143JF1qq91A_0mAfJuUy'},cache:'no-store'}).then(r=>{if(!r.ok)throw Error();return r.json();})]);
+    approved.claims={...(approved.claims || {}),...Object.fromEntries(live.map(row=>[row.artifact_id,row]))};
     if(creative.schema!=='glb.creative-artifacts.v1'||approved.schema!=='glb.approved-card-claims.v1')return;
     for(const artifact of creative.artifacts.filter(row=>row.team_slug===(document.body.dataset.team||match[1])&&row.claim_open)) {
       const section=document.getElementById(artifact.section);if(!section)continue;
       const owner=approved.claims?.[artifact.artifact_id]?.user_id;
       const p=document.createElement('p');p.className='glb-artifact-invitation';
-      if(owner)p.textContent=artifact.name+' · Claimed by '+owner;
+      if(owner){const link=document.createElement('a');link.href='artifact.html?artifact_id='+encodeURIComponent(artifact.artifact_id);link.textContent=artifact.name+' · Claimed by '+owner+' · View record →';p.append(link);}
       else {
         const link=document.createElement('a');
         link.href='contribute.html?team='+encodeURIComponent(artifact.team_slug)+'&type='+encodeURIComponent(artifact.type)+'&artifact='+encodeURIComponent(artifact.name)+'&artifact_id='+encodeURIComponent(artifact.artifact_id)+'#contribute';

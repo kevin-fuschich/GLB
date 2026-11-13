@@ -19,20 +19,22 @@ async function as(uid,role='authenticated'){
 async function denied(fn,label){let failed=false;try{await fn();}catch{failed=true;}assert(failed,label);}
 await as(null,'anon');assert.equal((await db.query('select public.glb_account_ready() as ready')).rows[0].ready,1);
 await denied(()=>db.query('select * from public.glb_claim_receipts'),'anonymous receipt access');
-await as(a);await db.query('insert into public.glb_profiles(id,user_id) values($1,$2)',[a,'alpha_01']);
+await as(a);assert.equal((await db.query('select public.glb_is_board() as board')).rows[0].board,false);await db.query('insert into public.glb_profiles(id,user_id) values($1,$2)',[a,'alpha_01']);
 await denied(()=>db.query('insert into public.glb_profiles(id,user_id) values($1,$2)',[b,'forged_owner']),'profile ownership');
 const first=(await db.query(`select public.glb_submit('claim','TEST-01','Test artifact','league-wide','other','The immutable original test claim.','',true) as id`)).rows[0].id;
 await denied(()=>db.query('select public.glb_review_submission($1,true)',[first]),'non-Board self approval');
 await denied(()=>db.query("update public.glb_submissions set status='approved' where id=$1",[first]),'direct self approval');
-await as(null,'editor');await db.query('select public.glb_review_submission($1,true)',[first]);
-await as(b);await db.query('insert into public.glb_profiles(id,user_id) values($1,$2)',[b,'beta_02']);
+await as(null,'editor');await db.query('insert into glb_private.board_members(user_id) values($1)',[a]);
+await as(a);assert.equal((await db.query('select public.glb_is_board() as board')).rows[0].board,true);await db.query('select public.glb_review_submission($1,true)',[first]);
+await as(b);assert.equal((await db.query('select public.glb_is_board() as board')).rows[0].board,false);await db.query('insert into public.glb_profiles(id,user_id) values($1,$2)',[b,'beta_02']);
 assert.equal((await db.query('select * from public.glb_profiles')).rows.length,1);
 assert.equal((await db.query('select * from public.glb_submissions')).rows.length,0);
 assert.equal((await db.query('select * from public.glb_claim_receipts')).rows.length,0);
 await denied(()=>db.query("select public.glb_set_collaboration('TEST-01',false)"),'another user toggles collaboration');
 await denied(()=>db.query("update public.glb_claims set body='Overwrite original'"),'original overwrite');
 const note=(await db.query(`select public.glb_submit('note','TEST-01','Test artifact','league-wide','other','A separate, additional test detail.','',false) as id`)).rows[0].id;
-await as(null,'editor');await db.query('select public.glb_review_submission($1,true)',[note]);
+await as(a);assert.equal((await db.query('select * from public.glb_submissions')).rows.length,2);await db.query('select public.glb_review_submission($1,true)',[note]);
+await as(null,'editor');
 await db.query("update public.glb_submissions set created_at=now()-interval '1 minute'");
 await as(b);
 const pending=(await db.query(`select public.glb_submit('note','TEST-01','Test artifact','league-wide','other','This pending note must be held if the owner closes collaboration.','',false) as id`)).rows[0].id;

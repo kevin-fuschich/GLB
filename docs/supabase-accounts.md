@@ -8,17 +8,15 @@ The account page is `account.html`. The owner-only walkthrough is `account-setup
 2. Open `account-setup.html`, copy the complete `supabase/glb-accounts.sql`, paste into a new Supabase SQL Editor query and Run. This is additive and repeatable.
 3. Use Check account setup, then open `account.html` and request one sign-in link using the project owner's email. Follow the email, choose a public User ID, and check sign-out/sign-in.
 4. Supabase's default email sender is intended for testing and may limit recipient addresses and request rate. Before opening accounts to the public, configure a production SMTP sender in Supabase Authentication → Emails. Verify delivery and sender-domain records, then test with an ordinary external email address. Do not place SMTP credentials in GLB source.
-5. After the owner has signed in, assign Board access in Supabase SQL Editor using the owner's real sign-in email in place of the placeholder below. Do not commit that email.
+5. Once public User ID `kusama` is saved, open `board-setup.html`, copy `supabase/glb-board.sql` into a new SQL snippet and Run. It adds the Board role probe and assigns review access to that existing profile. The browser cannot assign Board access.
 
-```sql
-insert into glb_private.board_members(user_id)
-select id from auth.users where email = 'YOUR_SIGN_IN_EMAIL'
-on conflict do nothing;
-```
+## Member submissions and review
 
-## Release boundary
+`contribute.html` now uses `glb_submit` with identity derived by the database. Anonymous visitors may draft and preview, but must sign in and choose a public ID before submitting. Drafts exclude email and account identity. New submissions appear in the account's My submissions. Formspree receives a best-effort Board notification after the database confirms a receipt; notification failure never erases the saved submission. Earlier Formspree-only submissions are not silently attached to accounts.
 
-The existing contribution form continues to submit to Formspree. This change does not silently migrate it or attach earlier email submissions to accounts. No account navigation link is promoted across the site until the schema and real email round trip pass. Account-linked contribution submission, public rendering of database-approved records, and Board review UI must be connected in the next rollout stage; the database already supplies their permission-checked operations. Never infer original claim ownership from a typed email/User ID or from an old claim code.
+`board.html` shows pending submissions only for assigned Board accounts. Accept/Decline uses the existing permission-checked review RPC. Claim acceptance creates an immutable original, public `artifact.html?artifact_id=...` record, and private receipt in the claimant's account. Notes remain separate. Approved pitches still require manual editorial work to create new artifacts. No automatic decision email is sent by the browser.
+
+`artifact.html` displays only approved original claims and notes, with a contribution link when collaboration is open. Claim & Create lists open collaboration opportunities. Account navigation is enabled after the owner's real emailed-link flow and public ID save were confirmed. Production SMTP remains required before opening sign-in to ordinary external addresses.
 
 ## Database contract
 

@@ -1,45 +1,22 @@
-// Requests create a review item only. Ownership is read from the published registry.
+/* All claims use the shared account-bound submission form. */
 (async()=>{
-  const host=document.getElementById('mtyClaims');
-  if(!host)return;
-  const fetchJSON=async path=>{const response=await fetch(path,{cache:'no-store'});if(!response.ok)throw Error(path);return response.json();};
+  const host=document.getElementById('mtyClaims');if(!host)return;
+  const read=async path=>{const r=await fetch(path,{cache:'no-store'});if(!r.ok)throw Error();return r.json();};
   try{
-    const [artifacts,approved]=await Promise.all([fetchJSON('data/cards/monterrey-cementeros.json'),fetchJSON('data/cards/approved-claims.json')]);
-    if(approved.schema!=='glb.approved-card-claims.v1')throw Error('Unexpected claim registry');
+    const [collection,claims]=await Promise.all([read('data/cards/monterrey-cementeros.json'),
+      fetch('https://uyjncyvlumakuqtfuicc.supabase.co/rest/v1/glb_claims?select=artifact_id,user_id',{headers:{apikey:'sb_publishable_VjJqbpi9zo2143JF1qq91A_0mAfJuUy'},cache:'no-store'}).then(r=>{if(!r.ok)throw Error();return r.json();})]);
     host.replaceChildren();
-    for(const artifact of artifacts.cards){
-      const id=artifact.card_id.replace(/-CURRENT$/,'');
+    for(const artifact of collection.cards){
+      const id=artifact.card_id.replace(/-CURRENT$/,''),claim=claims.find(c=>c.artifact_id===id);
       const entry=document.createElement('article');entry.className='mty-claim';
       const title=document.createElement('h3');title.textContent=artifact.name;
-      const serial=document.createElement('small');serial.textContent=id+' · '+(artifact.type==='mascot'?'Mascot artifact':'Player card');
-      const status=document.createElement('p');status.className='mty-claim-status';status.setAttribute('role','status');
+      const serial=document.createElement('small');serial.textContent=id;
+      const status=document.createElement('p');status.textContent=claim?'Claimed by '+claim.user_id:artifact.claimable?'Unclaimed · Open for your contribution':'Opening soon';
       entry.append(title,serial,status);
-      const links=[...document.querySelectorAll('[data-claim-link]')].filter(link=>link.dataset.claimLink===id);
-      const updateLinks=text=>{for(const link of links)link.textContent=text;};
-      const owner=approved.claims?.[id]?.user_id;
-      if(owner){updateLinks('Claimed by '+owner);status.textContent='Claimed by '+owner;host.append(entry);continue;}
-      if(!artifact.claimable){status.textContent='Opening Soon';host.append(entry);continue;}
-      const button=document.createElement('button');button.type='button';button.textContent='Claim & craft';
-      const form=document.createElement('form');form.hidden=true;form.action='https://formspree.io/f/mzezpeap';form.method='POST';
-      form.innerHTML='<label>Your public User ID<input name="user_id" required minlength="3" maxlength="24" pattern="[A-Za-z0-9_-]{3,24}" title="3–24 letters, numbers, underscores, or hyphens"></label><label>Email<input name="email" type="email" autocomplete="email" required></label><label>Proposed contribution<textarea name="proposed_card_bio" required maxlength="3000" rows="6"></textarea></label><small>The GLB Board reviews your submission. Accepted content is published with your User ID, and a private 16-character claim code is sent by email.</small><button type="submit">Submit to the GLB Board</button>';
-      for(const [name,value]of Object.entries({_subject:'Monterrey artifact claim + contribution',review_body:'GLB Board',submission_type:artifact.type==='mascot'?'mascot_artifact':'player_card',artifact_type:artifact.type,card_id:id,artifact_id:id,player_name:artifact.type==='player'?artifact.name:'',artifact_name:artifact.name,team_slug:'monterrey-cementeros'})){
-        const input=document.createElement('input');input.type='hidden';input.name=name;input.value=value;form.append(input);
+      if(claim || artifact.claimable){const link=document.createElement('a');link.textContent=claim?'View public record →':'Claim & craft →';link.href=claim?'artifact.html?artifact_id='+encodeURIComponent(id):'contribute.html?'+new URLSearchParams({artifact_id:id,team:'monterrey-cementeros',type:artifact.type || 'player',artifact:artifact.name})+'#contribute';entry.append(link);
+        for(const other of document.querySelectorAll('[data-claim-link]'))if(other.dataset.claimLink===id){other.href=link.href;other.textContent=link.textContent;}
       }
-      const key='glb-fieldstock-pending-'+id;
-      const setPending=()=>{updateLinks('Pending Review');form.hidden=true;button.disabled=true;button.textContent='Pending Review';status.textContent='Request received. Watch your email for the review decision.';};
-      try{if(localStorage.getItem(key)==='1')setPending();}catch{}
-      button.addEventListener('click',()=>{form.hidden=!form.hidden;if(!form.hidden)form.elements.user_id.focus();});
-      form.addEventListener('submit',async event=>{
-        event.preventDefault();if(!form.reportValidity())return;
-        const submit=form.querySelector('[type="submit"]');submit.disabled=true;status.textContent='Submitting request…';
-        try{
-          const response=await fetch(form.action,{method:'POST',body:new FormData(form),headers:{Accept:'application/json'}});
-          if(!response.ok)throw Error('Submission failed');
-          try{localStorage.setItem(key,'1');}catch{}
-          setPending();
-        }catch{submit.disabled=false;status.textContent='The request could not be submitted. Please try again.';}
-      });
-      entry.append(button,form);host.append(entry);
+      host.append(entry);
     }
-  }catch{host.textContent='Artifact availability could not load. Please refresh before requesting a claim.';}
+  }catch{host.textContent='Artifact availability could not load. Refresh before requesting a claim.';}
 })();

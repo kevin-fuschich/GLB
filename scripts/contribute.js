@@ -49,30 +49,93 @@
   const form=document.getElementById('contributionForm');
   const artifactId=params.get('artifact_id');
   const selection=document.getElementById('selectedArtifact');
-  if(artifactId)catalogRequest.then(({artifacts,claims})=>{
+  const client=window.GLBAuth?.client;
+  let identity=null,accountRevision=0,selectionReady=!artifactId,selected=null;
+  const noteMode=params.get('mode')==='collaboration';
+  const accountStatus=document.getElementById('contributionAccount');
+  const signIn=document.getElementById('contributionSignIn');
+  const response=document.getElementById('contributionResponse');
+  const button=form.querySelector('button[type="submit"]');
+  const resumePath=location.pathname+location.search+'#contribute';
+  signIn.addEventListener('click',()=>{try{sessionStorage.setItem('glb-contribution-return',resumePath);}catch{}});
+  async function syncIdentity(user){
+    const ticket=++accountRevision;identity=null;form.elements.user_id.value='';form.elements.email.value='';
+    if(!user){accountStatus.textContent='You can browse and draft now. Sign in before submitting.';signIn.hidden=false;return;}
+    accountStatus.textContent='Loading your public User ID…';
+    try{
+      const {data,error}=await client.from('glb_profiles').select('user_id').eq('id',user.id).maybeSingle();
+      if(ticket!==accountRevision)return;
+      if(error)throw error;
+      if(!data){accountStatus.textContent='Choose your public User ID in your account before submitting.';signIn.textContent='Finish setting up your account →';signIn.hidden=false;return;}
+      identity={id:user.id,user_id:data.user_id,email:user.email};
+      form.elements.user_id.value=data.user_id;form.elements.email.value=user.email || '';
+      accountStatus.textContent='Submitting as '+data.user_id+'. Your email stays private.';signIn.hidden=true;
+    }catch{accountStatus.textContent='Your account could not be verified. Refresh to try again.';signIn.hidden=false;}
+  }
+  if(client){
+    client.auth.onAuthStateChange((event,session)=>{if(['SIGNED_IN','SIGNED_OUT','USER_UPDATED'].includes(event))setTimeout(()=>syncIdentity(session?.user || null),0);});
+    client.auth.getSession().then(({data,error})=>{if(error)throw error;return syncIdentity(data.session?.user || null);}).catch(()=>{accountStatus.textContent='Sign-in could not load. Refresh to try again.';});
+  }else accountStatus.textContent='Sign-in could not load. Refresh to try again.';
+  document.getElementById('collaborationChoice').hidden=!artifactId || noteMode;
+  if(artifactId)Promise.all([catalogRequest,GLBRecords.claims()]).then(([{artifacts,claims},live])=>{
+    const approved=live.find(row=>row.artifact_id===artifactId);
     const artifact=artifacts.find(row=>row.id===artifactId);
-    if(!artifact || !artifact.claim_open || claims[artifactId]){
-      selection.textContent='This artifact is no longer open for a claim. You can still send a contribution for Board review.';
-      return;
+    if(noteMode){
+      if(!approved?.collaboration_open)throw Error('This artifact is closed to collaboration.');
+      selected={id:approved.artifact_id,name:approved.artifact_name,team_slug:approved.club_slug,type:approved.artifact_type};
+    }else{
+      if(!artifact?.claim_open || claims[artifactId] || approved)throw Error('This artifact is no longer open for a claim.');
+      selected=artifact;
     }
-    form.elements.artifact_id.value=artifact.id;form.elements.submission_type.value='artifact_claim';
-    document.getElementById('club').value=artifact.team_slug;document.getElementById('type').value=artifact.type;
-    document.getElementById('artifact').value=artifact.name;
-    document.getElementById('contribution-title').textContent='Claim & craft: '+artifact.name;
-    selection.textContent=artifact.id+' · '+artifact.prompt;
-    form.elements.contribution.placeholder=artifact.prompt;
-  }).catch(()=>{selection.textContent='Availability could not be verified. Refresh or submit your idea for Board review.';});
+    form.elements.artifact_id.value=selected.id;
+    form.elements.submission_type.value=noteMode?'collaboration_note':'artifact_claim';
+    document.getElementById('club').value=selected.team_slug;document.getElementById('type').value=selected.type;
+    document.getElementById('artifact').value=selected.name;
+    document.getElementById('artifact').readOnly=true;document.getElementById('club').disabled=true;document.getElementById('type').disabled=true;
+    document.getElementById('ideaPitchText').hidden=true;document.getElementById('pitchTips').hidden=true;
+    document.getElementById('contribution-title').textContent=(noteMode?'Add a note: ':'Claim & craft: ')+selected.name;
+    selection.textContent=noteMode?'The original claim stays credited to '+approved.user_id+'. Your note needs its own Board approval.':selected.id+' · '+(selected.prompt || 'Add something of your own.');
+    if(selected.prompt)form.elements.contribution.placeholder=selected.prompt;
+    selectionReady=true;
+  }).catch(error=>{selection.textContent=error.message || 'Availability could not be verified. Refresh to try again.';button.disabled=true;});
+  // Approved originals and their notes have a public record, separate from private receipts.
+  GLBRecords.claims().then(rows=>{
+    const open=rows.filter(row=>row.collaboration_open);if(!open.length)return;
+    const section=el('section');section.id='collaborate';section.append(el('h2','Open for collaboration'),el('p','Add a separate note to an approved claim. The original stays credited to its creator.'));
+    for(const row of open){const p=el('p'),a=el('a',row.artifact_name+' · original by '+row.user_id+' →');a.href=GLBRecords.href(row.artifact_id);p.append(a);section.append(p);}
+    document.getElementById('open-artifacts').after(section);
+  }).catch(()=>{});
   form.addEventListener('submit',async event=>{
-    event.preventDefault();if(!form.reportValidity())return;
-    const button=form.querySelector('button[type="submit"]'),response=document.getElementById('contributionResponse');
+    event.preventDefault();
+    if(!identity){response.textContent='Sign in and choose your public User ID before submitting. Your draft stays on this device.';signIn.hidden=false;signIn.focus();return;}
+    if(!selectionReady){response.textContent='Artifact availability could not be verified. Please refresh.';return;}
+    if(!form.reportValidity())return;
+    const submitter={...identity};
     button.disabled=true;button.textContent='Submitting…';response.textContent='';
     try{
-      const result=await fetch(form.action,{method:'POST',body:new FormData(form),headers:{Accept:'application/json'}});
-      if(!result.ok)throw Error('Submission failed');
+      const {data:sessionData,error:sessionError}=await client.auth.getSession();
+      if(sessionError || sessionData.session?.user.id!==submitter.id)throw Error('Your sign-in has changed. Refresh before submitting.');
+      const {data,error}=await client.rpc('glb_submit',{
+        p_kind:noteMode?'note':selected?'claim':'pitch',p_artifact_id:selected?.id || '',
+        p_artifact_name:selected?.name || form.elements.artifact.value.trim(),
+        p_club_slug:selected?.team_slug || form.elements.club.value,
+        p_artifact_type:selected?.type || form.elements.artifact_type.value,
+        p_body:form.elements.contribution.value.trim(),p_supporting_link:form.elements.supporting_link.value.trim(),
+        p_collaboration:!!selected && !noteMode && form.elements.collaboration.checked
+      });
+      if(error)throw error;
+      if(!data)throw Error('No submission receipt was returned.');
       form.dispatchEvent(new Event('glb:contribution-sent'));
-      response.textContent='Submission received for GLB Board review. Watch your email for a decision. A claim code is issued only after acceptance.';
-      if(form.elements.artifact_id.value){try{localStorage.setItem('glb-fieldstock-pending-'+form.elements.artifact_id.value,'1');}catch{}}
+      response.replaceChildren(el('span','Saved for GLB Board review. '));
+      const accountLink=el('a','Track it in My submissions →');accountLink.href='account.html';response.append(accountLink);
       button.textContent='Submitted for Board review';
-    }catch{button.disabled=false;button.textContent='Submit to the GLB Board';response.textContent='Your submission could not be sent. Please try again.';}
+      // Notification is best-effort; the database receipt above is authoritative.
+      const notification=new FormData(form);notification.set('user_id',submitter.user_id);notification.set('email',submitter.email || '');notification.set('club',selected?.team_slug || form.elements.club.value);notification.set('artifact_type',selected?.type || form.elements.artifact_type.value);notification.set('artifact',selected?.name || form.elements.artifact.value);notification.set('glb_submission_id',data);
+      fetch(form.action,{method:'POST',body:notification,headers:{Accept:'application/json'}}).catch(()=>{});
+    }catch(error){
+      button.disabled=false;button.textContent='Submit to the GLB Board';
+      const message=String(error.message || '');
+      response.textContent=error.code==='23505'?'You already have a pending claim for this artifact. Check My submissions.':/already claimed|closed to collaboration|Please wait|Daily contribution limit|sign-in has changed/.test(message)?message:'Your submission could not be saved. Your draft is still here. Please try again.';
+    }
   });
 })();

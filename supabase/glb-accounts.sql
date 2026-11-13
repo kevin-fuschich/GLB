@@ -173,5 +173,9 @@ create or replace function public.glb_account_ready() returns integer
 language sql stable set search_path='' as $$ select 1; $$;
 revoke all on function public.glb_account_ready() from public;
 grant execute on function public.glb_account_ready() to anon,authenticated;
+create or replace function public.glb_is_board() returns boolean
+language sql stable security definer set search_path='' as $$ select glb_private.is_board(); $$;
+revoke all on function public.glb_is_board() from public;
+grant execute on function public.glb_is_board() to authenticated;
 commit;
 -- Setup is complete. No Board account is assigned until the owner signs in.

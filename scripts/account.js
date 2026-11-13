@@ -18,7 +18,7 @@
     $('signedOut').hidden=!!user || !ready; $('signedIn').hidden=!user;
     if(!user){$('accountHome').hidden=true;$('chooseUserId').hidden=true;$('privateEmail').textContent='';$('myClaims').replaceChildren();$('mySubmissions').replaceChildren();notice(ready?'':'GLB accounts are opening soon. Please check back.');return;}
     $('privateEmail').textContent=user.email+' · Private';
-    $('accountHome').hidden=true;$('chooseUserId').hidden=true;notice('Loading your account…');
+    $('accountHome').hidden=true;$('chooseUserId').hidden=true;$('boardLink').hidden=true;$('resumeContribution').hidden=true;notice('Loading your account…');
     try{
       const {data:profile,error}=await client.from('glb_profiles').select('user_id').eq('id',user.id).maybeSingle();
       if(ticket!==revision)return;
@@ -26,6 +26,8 @@
       notice('');
       if(!profile){$('chooseUserId').hidden=false;return;}
       $('publicId').textContent=profile.user_id;$('accountHome').hidden=false;
+      try{const path=sessionStorage.getItem('glb-contribution-return');if(path){const target=new URL(path,location.origin);if(target.origin===location.origin && target.pathname==='/contribute.html'){$('resumeContribution').href=target.pathname+target.search+target.hash;$('resumeContribution').hidden=false;}}}catch{}
+      client.rpc('glb_is_board').then(({data,error})=>{if(ticket===revision)$('boardLink').hidden=!!error || data!==true;}).catch(()=>{});
       const results=await Promise.all([
         client.from('glb_claims').select('artifact_id,artifact_name,body,collaboration_open,approved_at,submission_id').eq('owner_id',user.id).order('approved_at',{ascending:false}),
         client.from('glb_submissions').select('id,kind,artifact_name,status,created_at').eq('owner_id',user.id).order('created_at',{ascending:false}),
@@ -36,6 +38,7 @@
       const receipts=new Map(results[2].data.map(r=>[r.submission_id,r.claim_code]));
       $('myClaims').replaceChildren(...results[0].data.map(claim=>{
         const item=node('article',null,'record-item');item.append(node('div',claim.artifact_id,'record-meta'),node('h4',claim.artifact_name),node('p',claim.body));
+        const recordLink=node('a','View public record →');recordLink.href='artifact.html?artifact_id='+encodeURIComponent(claim.artifact_id);item.append(recordLink);
         const receipt=receipts.get(claim.submission_id);
         if(receipt){item.append(node('p','Your private claim code','fine'),node('div',receipt.match(/.{1,4}/g).join('-'),'receipt'));}
         const label=node('label',null,'collaboration-setting'),input=node('input');input.type='checkbox';input.checked=claim.collaboration_open;

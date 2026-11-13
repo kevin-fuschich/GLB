@@ -37,6 +37,11 @@
     return response.json();
   };
   let request;
+  const databaseClaims=async()=>{
+    const response=await fetch('https://uyjncyvlumakuqtfuicc.supabase.co/rest/v1/glb_claims?select=artifact_id,user_id,collaboration_open',{headers:{apikey:'sb_publishable_VjJqbpi9zo2143JF1qq91A_0mAfJuUy'},cache:'no-store'});
+    if(!response.ok)throw Error('Claim availability could not be verified');
+    return Object.fromEntries((await response.json()).map(row=>[row.artifact_id,row]));
+  };
   function load() {
     return request ||= Promise.all([read('data/artifacts/collections.json'), read('data/cards/approved-claims.json')])
       .then(async ([manifest, approved]) => {
@@ -45,9 +50,9 @@
           const [source, roster] = await Promise.all([read(collection.source), collection.roster ? read(collection.roster) : null]);
           return collectionArtifacts(collection, source, roster || source);
         }));
-        const creative = await read(manifest.creative_source).then(creativeArtifacts);
+        const [creative,liveClaims] = await Promise.all([read(manifest.creative_source).then(creativeArtifacts),databaseClaims()]);
         return {artifacts: [...creative, ...results.flatMap(result => result.status === 'fulfilled' ? result.value : [])],
-          claims: approved.claims || {}, incomplete: results.some(result => result.status === 'rejected')};
+          claims: {...(approved.claims || {}),...liveClaims}, incomplete: results.some(result => result.status === 'rejected')};
       });
   }
   root.GLBArtifacts = {collectionArtifacts, creativeArtifacts, load};

@@ -4,7 +4,7 @@ root=Path(__file__).resolve().parents[1]
 import os
 os.chdir(root)
 root=Path('.')
-links=[('index.html','Home'),('scores.html','Scores'),('standings.html','Standings'),('schedule.html','Schedule'),('teams.html','Teams'),('players.html','Players'),('stats.html','Stats'),('events/donk_championship.html','Events'),('how-it-works.html','How it works'),('contribute.html','Claim & Create')]
+links=[('index.html','Home'),('scores.html','Scores'),('standings.html','Standings'),('schedule.html','Schedule'),('teams.html','Teams'),('players.html','Players'),('stats.html','Stats'),('events/donk_championship.html','Events'),('how-it-works.html','How it works'),('account.html','Account'),('contribute.html','Claim & Create')]
 def active(name):
  if name.startswith(('team','club','mascot-')): return 'teams.html'
  if name=='player.html': return 'players.html'

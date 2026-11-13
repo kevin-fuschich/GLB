@@ -4,8 +4,8 @@
   const controls=document.getElementById('draftControls');
   if(!form||!controls)return;
   const id=new URLSearchParams(location.search).get('artifact_id')||'new-idea';
-  const key='glb-contribution-draft-v1:'+id;
-  const fields=['club','artifact_type','artifact','user_id','contribution','supporting_link'];
+  const key='glb-contribution-draft-v1:'+id+(new URLSearchParams(location.search).get('mode')==='collaboration'?':note':'');
+  const fields=id==='new-idea'?['club','artifact_type','artifact','contribution','supporting_link']:['contribution','supporting_link'];
   const make=(tag,text)=>{const n=document.createElement(tag);n.textContent=text;return n;};
   const message=make('p','Drafts save on this device. Email is not saved.');message.setAttribute('role','status');message.setAttribute('aria-live','polite');
   const actions=document.createElement('div');actions.className='draft-controls-actions';
@@ -27,7 +27,7 @@
   resume.addEventListener('click',()=>{
     if(!saved)return;
     for(const name of fields)if(typeof saved.values[name]==='string')form.elements[name].value=saved.values[name];
-    waiting=false;paint();message.textContent='Draft resumed. Changes save on this device. Re-enter your email before submitting.';
+    waiting=false;paint();message.textContent='Draft resumed. Changes save on this device. Your signed-in account supplies your public credit.';
     form.dispatchEvent(new Event('input',{bubbles:true}));form.elements.contribution.focus();
   });
   discard.addEventListener('click',()=>{

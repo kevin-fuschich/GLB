@@ -19,7 +19,7 @@
   const footer = document.querySelector('body > footer');
   if (footer && !footer.querySelector('a[href="how-it-works.html"]')) {
     const p=document.createElement('p');
-    const a=document.createElement('a');a.href='how-it-works.html';a.textContent='Help build the universe! Here’s how GLB claim works →';
+    const a=document.createElement('a');a.href='how-it-works.html';a.textContent='Help build the universe! Here’s how a claim works →';
     p.append(a);footer.append(p);
   }
 

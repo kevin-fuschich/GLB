@@ -89,7 +89,9 @@
     }
     form.elements.artifact_id.value=selected.id;
     form.elements.submission_type.value=noteMode?'collaboration_note':'artifact_claim';
-    document.getElementById('club').value=selected.team_slug;document.getElementById('type').value=selected.type;
+    const club=document.getElementById('club');
+    if(![...club.options].some(option=>option.value===selected.team_slug)){const option=el('option',selected.team_name || 'DONK circuit');option.value=selected.team_slug;club.append(option);}
+    club.value=selected.team_slug;document.getElementById('type').value=selected.type;
     document.getElementById('artifact').value=selected.name;
     document.getElementById('artifact').readOnly=true;document.getElementById('club').disabled=true;document.getElementById('type').disabled=true;
     document.getElementById('ideaPitchText').hidden=true;document.getElementById('pitchTips').hidden=true;

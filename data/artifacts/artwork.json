@@ -9,7 +9,7 @@
   },
   "OSA-G-CLASS": {
     "src": "assets/teams/osaka-spirits/images/yoshiko-futaba-mumbo-jumbo-g-class.webp",
-    "alt": "Yoshiko\u2019s MUMBO JUMBO G-Class"
+    "alt": "Yoshiko’s MUMBO JUMBO G-Class"
   },
   "OSA-POTARI": {
     "src": "assets/teams/osaka-spirits/images/signal-ink-spirit.webp",
@@ -33,7 +33,7 @@
   },
   "SPD-BEMBA-C10": {
     "src": "assets/teams/san-pedro-cocolos/images/placido-pojo-bemba-c10.webp",
-    "alt": "Placido\u2019s BEMBA Chevy pickup"
+    "alt": "Placido’s BEMBA Chevy pickup"
   },
   "SPD-MASCOT": {
     "src": "club-san-pedro-cocolos-mascot.png",
@@ -73,7 +73,7 @@
   },
   "TIJ-C10": {
     "src": "assets/teams/tijuana-tecnicos/images/lutis-cujifrita-c10-estadio-v2.webp",
-    "alt": "Lutis\u2019s Chispa M\u00f3vil C10"
+    "alt": "Lutis’s Chispa Móvil C10"
   },
   "VAN-BEAVUS": {
     "src": "club-vancouver-current-mascot.png",
@@ -105,7 +105,7 @@
   },
   "MAY-SULTAN": {
     "src": "club-mayaguez-sultans-mascot.png",
-    "alt": "El Sult\u00e1n"
+    "alt": "El Sultán"
   },
   "MAY-LANTERN": {
     "src": "club-mayaguez-sultans-fans.png",
@@ -121,7 +121,7 @@
   },
   "MAY-IMPALA": {
     "src": "assets/teams/mayaguez-sultans/images/impala-cruise.webp",
-    "alt": "Victor\u2019s Magixo Impala"
+    "alt": "Victor’s Magixo Impala"
   },
   "MAY-SPIN-CYCLE": {
     "src": "assets/teams/mayaguez-sultans/images/spin-cycle.webp",
@@ -145,7 +145,7 @@
   },
   "LOU-CADILLAC": {
     "src": "assets/teams/louisville-naturals/images/flo-troup-big-soft-cadillac.webp",
-    "alt": "Flo\u2019s BIG SOFT Cadillac"
+    "alt": "Flo’s BIG SOFT Cadillac"
   },
   "LOU-YARD-WALKERS": {
     "src": "assets/teams/louisville-naturals/images/yard-walkers-candid.webp",
@@ -173,11 +173,11 @@
   },
   "TRI-FAIRMONT": {
     "src": "assets/teams/triangle-gold/bobby-weejie-park.webp",
-    "alt": "Bobby\u2019s WEEJIE 1980 Ford Fairmont"
+    "alt": "Bobby’s WEEJIE 1980 Ford Fairmont"
   },
   "TRI-HONEY-BOOKER": {
     "src": "assets/teams/triangle-gold/honey-booker-stage.webp",
-    "alt": "Vernell \u201cHoney\u201d Booker"
+    "alt": "Vernell “Honey” Booker"
   },
   "TRI-FRONT-GATE": {
     "src": "assets/teams/triangle-gold/weejie-park-gate.webp",
@@ -201,7 +201,7 @@
   },
   "OSA-04": {
     "src": "assets/images/cards/fieldstock/osa-04-luka-kovacevic-back.webp",
-    "alt": "Luka Kova\u010devi\u0107"
+    "alt": "Luka Kovačević"
   },
   "OSA-05": {
     "src": "assets/images/cards/fieldstock/osa-05-rowan-cahir-back.webp",
@@ -265,7 +265,7 @@
   },
   "TPE-04": {
     "src": "assets/images/cards/fieldstock/tpe-04-martin-echevarria-front-action.webp",
-    "alt": "Mart\u00edn Echevarr\u00eda"
+    "alt": "Martín Echevarría"
   },
   "TPE-05": {
     "src": "assets/images/cards/fieldstock/tpe-05-dariusz-wierzbik-back.webp",
@@ -293,7 +293,7 @@
   },
   "TPE-11": {
     "src": "assets/images/cards/fieldstock/tpe-11-joaquin-iturriaga-back.webp",
-    "alt": "Joaqu\u00edn Iturriaga"
+    "alt": "Joaquín Iturriaga"
   },
   "TPE-12": {
     "src": "assets/images/cards/fieldstock/tpe-12-eitan-ben-sasson-back.webp",
@@ -313,7 +313,7 @@
   },
   "SAN-01": {
     "src": "assets/teams/santiago-caballeros/images/players/aron-videla.webp",
-    "alt": "Ar\u00f3n Videla"
+    "alt": "Arón Videla"
   },
   "SAN-02": {
     "src": "assets/teams/santiago-caballeros/images/players/gideon-fairchild.webp",
@@ -341,11 +341,11 @@
   },
   "SAN-08": {
     "src": "assets/teams/santiago-caballeros/images/players/emin-kocak.webp",
-    "alt": "Emin Ko\u00e7ak"
+    "alt": "Emin Koçak"
   },
   "SAN-09": {
     "src": "assets/teams/santiago-caballeros/images/players/damian-velasquez.webp",
-    "alt": "Dami\u00e1n Vel\u00e1squez"
+    "alt": "Damián Velásquez"
   },
   "SAN-10": {
     "src": "assets/teams/santiago-caballeros/images/players/noam-finkel.webp",
@@ -353,7 +353,7 @@
   },
   "SAN-11": {
     "src": "assets/teams/santiago-caballeros/images/players/raul-castillo.webp",
-    "alt": "Ra\u00fal Castillo"
+    "alt": "Raúl Castillo"
   },
   "SAN-12": {
     "src": "assets/teams/santiago-caballeros/images/players/maksim-berezan.webp",
@@ -381,7 +381,7 @@
   },
   "TRI-02": {
     "src": "assets/images/players/durham-gold/durham-antonio-beltran.jpg",
-    "alt": "Antonio Beltr\u00e1n"
+    "alt": "Antonio Beltrán"
   },
   "TRI-03": {
     "src": "assets/images/players/durham-gold/durham-isaac-friedel.jpg",
@@ -397,7 +397,7 @@
   },
   "TRI-06": {
     "src": "assets/images/players/durham-gold/durham-luis-carreno.jpg",
-    "alt": "Luis Carre\u00f1o"
+    "alt": "Luis Carreño"
   },
   "TRI-07": {
     "src": "assets/images/players/durham-gold/durham-noah-pryce.jpg",
@@ -429,10 +429,38 @@
   },
   "TRI-14": {
     "src": "assets/images/players/durham-gold/durham-mateo-rios.jpg",
-    "alt": "Mateo R\u00edos"
+    "alt": "Mateo Ríos"
   },
   "TRI-15": {
     "src": "assets/images/players/durham-gold/durham-calvin-ross.jpg",
     "alt": "Calvin Ross"
+  },
+  "DONK-NUMONEY": {
+    "src": "assets/events/road-to-tijuana/durham-numoney.webp",
+    "alt": "NuMONEY · 2026 DONK Championship"
+  },
+  "DONK-TOI-BOI-ROI": {
+    "src": "assets/events/road-to-tijuana/taipei-toi-boi-roi-vello-v2.webp",
+    "alt": "Toi Boi Roi · 2026 DONK Championship"
+  },
+  "DONK-PERK-O-LATA": {
+    "src": "assets/events/road-to-tijuana/albuquerque-perk-o-lata.webp",
+    "alt": "Perk-O-Lata · 2026 DONK Championship"
+  },
+  "DONK-CLEMENTINE-LATHAM": {
+    "src": "assets/events/road-to-tijuana/louisville-clementine-latham.webp",
+    "alt": "Clementine Latham · 2026 DONK Championship"
+  },
+  "DONK-MICHAEL-BONNEHOMME": {
+    "src": "assets/events/road-to-tijuana/vancouver-michael-bonnehomme.webp",
+    "alt": "Michael Bonnehomme · 2026 DONK Championship"
+  },
+  "DONK-DARYL-DEEZ": {
+    "src": "assets/events/road-to-tijuana/fresno-daryl-deez.webp",
+    "alt": "Daryl Deez · 2026 DONK Championship"
+  },
+  "DONK-OMAR-AZUL": {
+    "src": "assets/events/road-to-tijuana/san-pedro-omar-azul.webp",
+    "alt": "Omar Azul · 2026 DONK Championship"
   }
 }

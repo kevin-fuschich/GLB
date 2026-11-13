@@ -20,19 +20,22 @@
       "signature": "Measured Hop",
       "win_type": "Highest Mark",
       "original_image_reference": "../images/donk/durham-numoney.png",
-      "restored_image": "assets/events/road-to-tijuana/durham-numoney.webp"
+      "restored_image": "assets/events/road-to-tijuana/durham-numoney.webp",
+      "artifact_id": "DONK-NUMONEY"
     },
     {
       "id": "toi-boi-roi",
       "city": "Taipei",
       "name": "Toi Boi Roi",
       "car": "Impala",
-      "theme": "Banana yellow candy drip • Arcade jungle theme",
+      "theme": "Banana-yellow finish • VELLO audio build",
       "caption": "Toi Boi Roi earned Best Style honors with a controlled tripod lean, chrome-heavy finish, and a nightlife build that owned the Taipei stop.",
       "signature": "Tripod Lean",
       "win_type": "Best Style",
       "original_image_reference": "../images/donk/taipei-toi-boi-roi.png",
-      "restored_image": "assets/events/road-to-tijuana/taipei-toi-boi-roi.webp"
+      "restored_image": "assets/events/road-to-tijuana/taipei-toi-boi-roi-vello-v2.webp",
+      "artifact_id": "DONK-TOI-BOI-ROI",
+      "sponsor": "VELLO"
     },
     {
       "id": "big-rell",
@@ -44,7 +47,8 @@
       "signature": "Slow Lift Dominance",
       "win_type": "Most Supreme",
       "original_image_reference": "../images/donk/atlanta-big-rell.png",
-      "restored_image": null
+      "restored_image": null,
+      "artifact_id": "DONK-BIG-RELL"
     },
     {
       "id": "perk-o-lata",
@@ -56,7 +60,8 @@
       "signature": "Wash Cycle Bounce",
       "win_type": "Best Theme",
       "original_image_reference": "../images/donk/albuquerque-perk-o-lata.png",
-      "restored_image": "assets/events/road-to-tijuana/albuquerque-perk-o-lata.webp"
+      "restored_image": "assets/events/road-to-tijuana/albuquerque-perk-o-lata.webp",
+      "artifact_id": "DONK-PERK-O-LATA"
     },
     {
       "id": "clementine-latham",
@@ -68,7 +73,8 @@
       "signature": "Ballpark Theme",
       "win_type": "Best Theme",
       "original_image_reference": "../images/donk/louisville-clementine-latham.png",
-      "restored_image": "assets/events/road-to-tijuana/louisville-clementine-latham.webp"
+      "restored_image": "assets/events/road-to-tijuana/louisville-clementine-latham.webp",
+      "artifact_id": "DONK-CLEMENTINE-LATHAM"
     },
     {
       "id": "michael-bonnehomme",
@@ -80,7 +86,8 @@
       "signature": "Color Split Identity",
       "win_type": "Best Style",
       "original_image_reference": "../images/donk/vancouver-michael-bonnehomme.png",
-      "restored_image": "assets/events/road-to-tijuana/vancouver-michael-bonnehomme.webp"
+      "restored_image": "assets/events/road-to-tijuana/vancouver-michael-bonnehomme.webp",
+      "artifact_id": "DONK-MICHAEL-BONNEHOMME"
     },
     {
       "id": "daryl-deez",
@@ -92,7 +99,8 @@
       "signature": "Veteran Presence",
       "win_type": "Best Theme",
       "original_image_reference": "../images/donk/fresno-daryl-deez.png",
-      "restored_image": "assets/events/road-to-tijuana/fresno-daryl-deez.webp"
+      "restored_image": "assets/events/road-to-tijuana/fresno-daryl-deez.webp",
+      "artifact_id": "DONK-DARYL-DEEZ"
     },
     {
       "id": "omar-azul",
@@ -104,7 +112,8 @@
       "signature": "Composed Swagger",
       "win_type": "Best Style",
       "original_image_reference": "../images/donk/san-pedro-omar-azul.png",
-      "restored_image": "assets/events/road-to-tijuana/san-pedro-omar-azul.webp"
+      "restored_image": "assets/events/road-to-tijuana/san-pedro-omar-azul.webp",
+      "artifact_id": "DONK-OMAR-AZUL"
     }
   ],
   "qualifiers": [

@@ -1045,6 +1045,138 @@
       "team_name": "Triangle Gold",
       "record_path": "team-triangle-gold.html",
       "claim_open": true
+    },
+    {
+      "artifact_id": "DONK-NUMONEY",
+      "name": "NuMONEY",
+      "type": "donk_driver",
+      "team_slug": "durham-gold",
+      "team_name": "Durham",
+      "section": "driver-numoney",
+      "record_path": "events/donk_championship.html",
+      "prompt": "Add a driver detail, a crew story or a moment from the circuit. Keep the established car and championship results intact.",
+      "claim_open": true
+    },
+    {
+      "artifact_id": "DONK-TOI-BOI-ROI",
+      "name": "Toi Boi Roi",
+      "type": "donk_driver",
+      "team_slug": "taipei-neon",
+      "team_name": "Taipei",
+      "section": "driver-toi-boi-roi",
+      "record_path": "events/donk_championship.html",
+      "prompt": "Add a driver detail, a crew story or a moment from the circuit. Keep the established car and championship results intact.",
+      "claim_open": true
+    },
+    {
+      "artifact_id": "DONK-BIG-RELL",
+      "name": "Big Rell",
+      "type": "donk_driver",
+      "team_slug": "atlanta",
+      "team_name": "Atlanta",
+      "section": "driver-big-rell",
+      "record_path": "events/donk_championship.html",
+      "prompt": "Add a driver detail, a crew story or a moment from the circuit. Keep the established car and championship results intact.",
+      "claim_open": true
+    },
+    {
+      "artifact_id": "DONK-PERK-O-LATA",
+      "name": "Perk-O-Lata",
+      "type": "donk_driver",
+      "team_slug": "albuquerque-aeros",
+      "team_name": "Albuquerque",
+      "section": "driver-perk-o-lata",
+      "record_path": "events/donk_championship.html",
+      "prompt": "Add a driver detail, a crew story or a moment from the circuit. Keep the established car and championship results intact.",
+      "claim_open": true
+    },
+    {
+      "artifact_id": "DONK-CLEMENTINE-LATHAM",
+      "name": "Clementine Latham",
+      "type": "donk_driver",
+      "team_slug": "louisville-naturals",
+      "team_name": "Louisville",
+      "section": "driver-clementine-latham",
+      "record_path": "events/donk_championship.html",
+      "prompt": "Add a driver detail, a crew story or a moment from the circuit. Keep the established car and championship results intact.",
+      "claim_open": true
+    },
+    {
+      "artifact_id": "DONK-MICHAEL-BONNEHOMME",
+      "name": "Michael Bonnehomme",
+      "type": "donk_driver",
+      "team_slug": "vancouver-current",
+      "team_name": "Vancouver",
+      "section": "driver-michael-bonnehomme",
+      "record_path": "events/donk_championship.html",
+      "prompt": "Add a driver detail, a crew story or a moment from the circuit. Keep the established car and championship results intact.",
+      "claim_open": true
+    },
+    {
+      "artifact_id": "DONK-DARYL-DEEZ",
+      "name": "Daryl Deez",
+      "type": "donk_driver",
+      "team_slug": "fresno-yield",
+      "team_name": "Fresno",
+      "section": "driver-daryl-deez",
+      "record_path": "events/donk_championship.html",
+      "prompt": "Add a driver detail, a crew story or a moment from the circuit. Keep the established car and championship results intact.",
+      "claim_open": true
+    },
+    {
+      "artifact_id": "DONK-OMAR-AZUL",
+      "name": "Omar Azul",
+      "type": "donk_driver",
+      "team_slug": "san-pedro-cocolos",
+      "team_name": "San Pedro",
+      "section": "driver-omar-azul",
+      "record_path": "events/donk_championship.html",
+      "prompt": "Add a driver detail, a crew story or a moment from the circuit. Keep the established car and championship results intact.",
+      "claim_open": true
+    },
+    {
+      "artifact_id": "DONK-LUTHAR-PINEBERRY",
+      "name": "Luthar Pineberry",
+      "type": "donk_driver",
+      "team_slug": "spokane-alloys",
+      "team_name": "Spokane",
+      "section": "next-season",
+      "record_path": "events/donk_championship.html",
+      "prompt": "Add a driver detail, a crew story or a moment from the circuit. Keep the established car and championship results intact.",
+      "claim_open": true
+    },
+    {
+      "artifact_id": "DONK-VIC-KATZ",
+      "name": "Vic Katz",
+      "type": "donk_driver",
+      "team_slug": "spokane-alloys",
+      "team_name": "Spokane",
+      "section": "next-season",
+      "record_path": "events/donk_championship.html",
+      "prompt": "Add a driver detail, a crew story or a moment from the circuit. Keep the established car and championship results intact.",
+      "claim_open": true
+    },
+    {
+      "artifact_id": "DONK-RON-DRAPER",
+      "name": "Ron Draper",
+      "type": "donk_driver",
+      "team_slug": "vancouver-current",
+      "team_name": "Vancouver",
+      "section": "next-season",
+      "record_path": "events/donk_championship.html",
+      "prompt": "Add a driver detail, a crew story or a moment from the circuit. Keep the established car and championship results intact.",
+      "claim_open": true
+    },
+    {
+      "artifact_id": "DONK-OCTAVIO-TAVO-SALDA-A",
+      "name": "Octavio “Tavo” Saldaña",
+      "type": "donk_driver",
+      "team_slug": "monterrey-cementeros",
+      "team_name": "Monterrey",
+      "section": "next-season",
+      "record_path": "events/donk_championship.html",
+      "prompt": "Add a driver detail, a crew story or a moment from the circuit. Keep the established car and championship results intact.",
+      "claim_open": true
     }
   ]
 }

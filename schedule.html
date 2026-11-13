@@ -5,150 +5,45 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>GLB Official Schedule</title>
 <style>
-    :root {
-        --field-white: #ffffff;
-        --ink-navy: #002244;
-        --meta-grey: #555555;
-        --line-grey: #e0e0e0;
-        --font-serif: "Georgia", "Times New Roman", serif;
-        --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    :root { --ink-navy:#0b1e33; --meta-grey:#576576; --line-grey:#dce2e8; --font-serif:Georgia,"Times New Roman",serif; --font-sans:Arial,Helvetica,sans-serif; }
+    * { box-sizing:border-box; }
+    body { margin:0; padding:0; display:block; background:#f2f5f7; color:var(--ink-navy); font:16px/1.5 var(--font-sans); -webkit-font-smoothing:antialiased; }
+    .record-sheet { width:calc(100% - 48px); max-width:1000px; margin:36px auto 56px; padding:32px 40px; background:#fff; border:1px solid var(--line-grey); border-top:4px solid var(--ink-navy); border-radius:0 0 10px 10px; box-shadow:0 5px 24px #0b1e3308; }
+    .record-sheet > header { display:flex; align-items:center; justify-content:space-between; gap:20px; margin:0 0 26px; padding:0 0 22px; border-bottom:1px solid var(--line-grey); }
+    .meta-block { min-width:0; }
+    .page-title { margin:0 0 6px; font:700 clamp(26px,4vw,36px)/1.15 var(--font-serif); }
+    .meta-detail { color:var(--meta-grey); font-size:14px; }
+    .stamp-logo { width:60px; height:auto; flex-shrink:0; }
+    .record-sheet .season-controls { margin-bottom:24px; }
+    .record-sheet select { max-width:100%; min-height:44px; padding:10px 36px 10px 12px; border:1px solid #bfc9d4; border-radius:6px; background:#fff; color:var(--ink-navy); font:inherit; }
+    .date-group { margin-bottom:28px; }
+    .date-header { margin:0; padding:0 0 10px; border-bottom:2px solid var(--ink-navy); font:700 18px/1.4 var(--font-serif); }
+    .record-sheet table { width:100%; border-collapse:collapse; table-layout:fixed; font-size:14px; }
+    .record-sheet td { padding:14px 8px; border-bottom:1px solid #e9edf1; vertical-align:middle; color:var(--ink-navy); }
+    .record-sheet .col-time { width:64px; color:var(--meta-grey); font-size:12px; }
+    .record-sheet .col-at { width:32px; color:var(--meta-grey); text-align:center; }
+    .record-sheet .col-result { width:72px; text-align:center; font-weight:700; white-space:nowrap; font-variant-numeric:tabular-nums; }
+    .record-sheet .col-link { width:50px; text-align:right; }
+    .record-sheet .col-team-away { text-align:right; }
+    .record-sheet .team-page-link { color:var(--ink-navy); text-decoration:none; font-weight:600; overflow-wrap:anywhere; }
+    .record-sheet .box-link { display:inline-block; padding:8px 0; color:#245978; text-decoration:none; font-size:12px; }
+    .record-sheet a:hover { text-decoration:underline; }
+    .record-sheet a:focus-visible,.record-sheet select:focus-visible { outline:3px solid #3f9e83; outline-offset:3px; }
+    .record-sheet footer { margin-top:36px; padding-top:18px; border-top:1px solid var(--line-grey); color:var(--meta-grey); font-size:12px; }
+    @media(max-width:600px) {
+        .record-sheet { width:calc(100% - 24px); margin:24px auto 36px; padding:22px 16px; }
+        .record-sheet > header { gap:12px; }
+        .stamp-logo { width:46px; }
+        .meta-detail { font-size:12px; }
+        .date-header { font-size:16px; }
+        .record-sheet table { font-size:12px; line-height:1.45; }
+        .record-sheet td { padding:12px 4px; }
+        .record-sheet .col-time { width:38px; font-size:10px; }
+        .record-sheet .col-at { width:18px; font-size:10px; }
+        .record-sheet .col-result { width:42px; }
+        .record-sheet .col-link { width:34px; }
+        .record-sheet .box-link { font-size:11px; }
     }
-
-    body {
-        background-color: #f4f4f4;
-        font-family: var(--font-sans);
-        color: var(--ink-navy);
-        display: flex;
-        justify-content: center;
-        padding: 50px 20px;
-        margin: 0;
-        -webkit-font-smoothing: antialiased;
-    }
-
-    .record-sheet {
-        background-color: var(--field-white);
-        width: 100%;
-        max-width: 580px;
-        padding: 40px;
-        box-shadow: 0 2px 15px rgba(0,0,0,0.06);
-        border-top: 5px solid var(--ink-navy);
-    }
-
-    /* HEADER */
-    header {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        margin-bottom: 40px;
-        border-bottom: 1px solid var(--ink-navy);
-        padding-bottom: 20px;
-    }
-
-    .meta-block {
-        font-family: var(--font-serif);
-        font-size: 14px;
-        line-height: 1.5;
-        color: var(--ink-navy);
-    }
-
-    .page-title {
-        font-weight: bold;
-        color: var(--ink-navy);
-        font-size: 16px;
-        margin-bottom: 4px;
-        display: block;
-    }
-
-    .meta-detail {
-        color: var(--meta-grey);
-        font-style: italic;
-    }
-
-    .stamp-logo {
-        width: 60px;
-        height: auto;
-        opacity: 0.9;
-    }
-
-    /* SCHEDULE LIST */
-    .date-group {
-        margin-bottom: 25px;
-    }
-
-    .date-header {
-        font-family: var(--font-serif);
-        font-weight: bold;
-        font-size: 14px;
-        border-bottom: 1px solid var(--ink-navy);
-        margin-bottom: 0;
-        padding-bottom: 5px;
-        color: var(--ink-navy);
-        margin-top: 20px;
-    }
-
-    .date-group:first-of-type .date-header {
-        margin-top: 0;
-    }
-
-    table {
-        width: 100%;
-        border-collapse: collapse;
-        font-size: 13px;
-        table-layout: fixed;
-    }
-
-    /* HEADINGS */
-    th {
-        text-align: left;
-        font-weight: 600; /* Increased weight for archival feel */
-        color: var(--meta-grey);
-        font-size: 10px;
-        padding: 4px 8px;
-        border-bottom: 1px solid var(--line-grey);
-        text-transform: uppercase;
-        letter-spacing: 0.2px; /* Tightened tracking */
-    }
-
-    td {
-        padding: 10px 8px;
-        border-bottom: 1px solid #f0f0f0;
-        vertical-align: middle;
-        color: #111;
-    }
-
-    /* COLUMN SPECIFICS */
-    .col-time { width: 70px; color: #555; font-variant-numeric: tabular-nums; }
-    .col-at { width: 25px; color: #999; text-align: center; font-size: 11px; }
-    .col-result { width: 60px; text-align: center; font-weight: 500; }
-    .col-link { width: 40px; text-align: right; }
-
-    /* Team Columns */
-    .col-team { width: auto; }
-    .col-team-away { text-align: right; }
-
-    /* The "Box" Link */
-    a.box-link {
-        color: var(--ink-navy);
-        text-decoration: none;
-        font-size: 11px;
-        opacity: 0.7;
-        border-bottom: 1px solid transparent;
-    }
-
-    a.box-link:hover {
-        opacity: 1;
-        border-bottom: 1px solid var(--ink-navy);
-    }
-
-    /* FOOTER */
-    footer {
-        margin-top: 50px;
-        border-top: 1px solid var(--line-grey);
-        padding-top: 15px;
-        font-size: 10px;
-        color: var(--meta-grey);
-    }
-
 </style>
 <link rel="stylesheet" href="site-header.css?v=20261112">
 <script defer src="scripts/site-header.js?v=20261112"></script>
@@ -164,11 +59,11 @@
   <nav id="mobileMenu" aria-label="Mobile navigation" hidden><a href="index.html">Home</a><a href="scores.html">Scores</a><a href="standings.html">Standings</a><a href="schedule.html" aria-current="page">Schedule</a><a href="teams.html">Teams</a><a href="players.html">Players</a><a href="stats.html">Stats</a><a href="events/donk_championship.html">Events</a><a href="how-it-works.html">How it works</a><a href="account.html">Account</a><a href="contribute.html" class="glb-header-claim">Claim &amp; Create</a></nav>
 </header>
 
-<div class="record-sheet">
+<main class="record-sheet">
 
     <header>
         <div class="meta-block">
-            <span class="page-title">Official Schedule</span>
+            <h1 class="page-title">Official Schedule</h1>
             <div class="meta-detail">2026 · Official Games</div>
         </div>
         <img src="GLB_white.png" alt="GLB Seal" class="stamp-logo">
@@ -180,9 +75,10 @@
         Final scores from the official GLB game ledger.
     </footer>
 
-</div>
+</main>
 
   <script src="scripts/season-site.js?v=20260914teamlinks"></script>
-<script src="scripts/glb-ticker.js"></script>\n<script src="scripts/participation.js?v=20261113-members"></script>
+<script src="scripts/glb-ticker.js"></script>
+<script src="scripts/participation.js?v=20261113-members"></script>
 </body>
 </html>

@@ -1,0 +1,3 @@
+# Sponsor directory marks
+
+All sponsor cards use the same 144px logo panel with centered 104px artwork. Original Magixo and TUMBAO marks are framed directly from their approved brand proofs; WAP MOP SHOPPE uses its existing circular brand stamp. The inline SVG viewport clips the source art without changing it. The other six lightweight SVG lockups carry the colors and motifs already used in each sponsor's GLB artwork or HTML identity (including WEEJIE's navy/lime lockup). Preserve original brand case inside logos; directory names remain uppercase. Sponsors are sorted alphabetically in both the JSON and renderer.

@@ -11,11 +11,25 @@
  (async()=>{
   const [response,claims]=await Promise.all([fetch('data/sponsors.json',{cache:'no-store'}),GLBRecords.read('glb_claims',{select:'artifact_id,user_id,body',artifact_type:'eq.sponsor'})]);
   if(!response.ok)throw Error();const data=await response.json();if(data.schema!=='glb.sponsors.v1')throw Error();
+  data.sponsors.sort((a,b)=>a.name.localeCompare(b.name,'en',{sensitivity:'base'}));
   const owners=new Map(claims.map(c=>[c.artifact_id,c])),slug=new URLSearchParams(location.search).get('sponsor');
   if(!slug){
    host.append(el('p','GLOBAL LEAGUE BASEBALL','sponsor-kicker'),el('h1','About Our Sponsors'),el('p','Meet the brands in GLB. Explore their profiles and claim an available sponsor to help shape its story.','sponsor-deck'));
    const grid=el('div',undefined,'sponsor-grid');
-   for(const s of data.sponsors){const card=el('article',undefined,'sponsor-tile'),a=el('a',s.name);a.href=href(s);card.append(el('p','SPONSOR ENTITY','sponsor-kicker'),a,el('p',s.description));ownership(card,s,owners.get(s.artifact_id));grid.append(card);}host.append(grid);
+   for(const s of data.sponsors){
+     const card=el('article',undefined,'sponsor-tile'),a=el('a',s.name);a.href=href(s);a.className='sponsor-name';
+     const mark=el('a',undefined,'sponsor-logo');mark.href=href(s);mark.setAttribute('aria-label',s.name+' sponsor profile');
+     if(s.logo_crop){
+       const ns='http://www.w3.org/2000/svg',svg=document.createElementNS(ns,'svg'),title=document.createElementNS(ns,'title'),defs=document.createElementNS(ns,'defs'),clip=document.createElementNS(ns,'clipPath'),rect=document.createElementNS(ns,'rect'),group=document.createElementNS(ns,'g'),image=document.createElementNS(ns,'image');
+       svg.setAttribute('viewBox',s.logo_crop.join(' '));svg.setAttribute('role','img');svg.setAttribute('aria-label',s.name+' logo');title.textContent=s.name+' logo';clip.id='brand-clip-'+s.slug;
+       for(const [i,key]of ['x','y','width','height'].entries())rect.setAttribute(key,String(s.logo_crop[i]));
+       clip.append(rect);defs.append(clip);group.setAttribute('clip-path','url(#'+clip.id+')');
+       image.setAttribute('href',s.logo);image.setAttribute('width',String(s.logo_source_size[0]));image.setAttribute('height',String(s.logo_source_size[1]));group.append(image);svg.append(title,defs,group);mark.append(svg);
+     }else{
+       const image=el('img');image.src=s.logo;image.alt=s.name+' logo';image.width=360;image.height=160;image.loading='lazy';image.decoding='async';mark.append(image);
+     }
+     const description=el('p',s.description,'sponsor-description');card.append(mark,el('p','SPONSOR ENTITY','sponsor-kicker'),a,description);ownership(card,s,owners.get(s.artifact_id));grid.append(card);
+   }host.append(grid);
   }else{
    const s=data.sponsors.find(s=>s.slug===slug);if(!s){status.textContent='That sponsor profile is unavailable.';return;}
    const claim=owners.get(s.artifact_id);document.title=s.name+' | GLB sponsor profile';

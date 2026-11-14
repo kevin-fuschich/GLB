@@ -1306,13 +1306,13 @@
     },
     {
       "artifact_id": "SPONSOR-INSURANCE-PAPI",
-      "name": "Insurance Papi",
+      "name": "INSURANCE PAPI",
       "type": "sponsor",
       "team_slug": "league-wide",
       "team_name": "GLB sponsor entities",
       "section": "sponsor-profile",
       "record_path": "sponsors.html?sponsor=insurance-papi",
-      "prompt": "Claim the complete Insurance Papi sponsor entity. Develop its brand story, products, campaigns and sponsorship identity across GLB. All placements share this one entity claim.",
+      "prompt": "Claim the complete INSURANCE PAPI sponsor entity. Develop its brand story, products, campaigns and sponsorship identity across GLB. All placements share this one entity claim.",
       "claim_open": true
     },
     {

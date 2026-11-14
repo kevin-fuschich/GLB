@@ -5,9 +5,22 @@
   const dateText=(date,options={weekday:'long',month:'long',day:'numeric'})=>new Date(date+'T12:00:00Z').toLocaleDateString('en-US',{...options,timeZone:'UTC'});
   const shift=(date,n)=>{const d=new Date(date+'T12:00:00Z');d.setUTCDate(d.getUTCDate()+n);return d.toISOString().slice(0,10);};
   const validDate=date=>/^\d{4}-\d{2}-\d{2}$/.test(date||'')&&!Number.isNaN(Date.parse(date+'T12:00:00Z'))&&new Date(date+'T12:00:00Z').toISOString().slice(0,10)===date;
-  let games,clubs,dates,date,filter='',first,last;
+  let games,clubs,dates,date,filter='',first,last,photos=[];
   const read=async path=>{const r=await fetch(path,{cache:'no-store'});if(!r.ok)throw Error(path);return r.json();};
+  function renderPhoto(){
+    const figure=$('game-photo');figure.hidden=true;figure.replaceChildren();
+    const entry=photos.find(p=>p.date===date&&(!filter||p.home===filter||p.away===filter)&&games.some(g=>g.date===date&&g.home===p.home&&g.away===p.away&&g.status==='final'));
+    if(!entry)return;
+    const img=document.createElement('img');img.alt=entry.alt;img.src=entry.image;img.width=1536;img.height=1024;img.decoding='async';
+    img.onerror=()=>{if(figure.contains(img)){figure.hidden=true;figure.replaceChildren();}};
+    const caption=node('figcaption'),label=node('p','From the diamond','photo-label');
+    const text=node('p',entry.caption,'photo-caption');
+    const meta=node('p',dateText(date,{month:'long',day:'numeric',year:'numeric'}),'photo-meta');
+    const a=node('a','View box score →');a.href='box.html?'+new URLSearchParams({date,game:entry.away+'@'+entry.home});
+    meta.append(document.createTextNode(' · '),a);caption.append(label,text,meta);figure.append(img,caption);figure.hidden=false;
+  }
   function render(){
+    renderPhoto();
     $('score-date').value=date;$('previous-day').disabled=date<=first;$('next-day').disabled=date>=last;
     $('slate-date').textContent=dateText(date);
     const slate=games.filter(g=>g.date===date&&(!filter||g.home===filter||g.away===filter));
@@ -34,7 +47,7 @@
     const params=new URLSearchParams({date});if(filter)params.set('team',filter);history.replaceState(null,'','scores.html?'+params);
   }
   async function load(){try{
-    [games,clubs]=await Promise.all([read('data/season/games.json'),read('data/teams/teams.json')]);
+    [games,clubs,photos]=await Promise.all([read('data/season/games.json'),read('data/teams/teams.json'),read('data/score-photos.json').then(data=>Array.isArray(data)?data:[]).catch(()=>[])]);
     clubs=new Map(Object.values(clubs.divisions).flat().map(c=>[c.slug,c]));
     games=games.filter(g=>validDate(g.date));dates=[...new Set(games.map(g=>g.date))].sort();if(!dates.length)throw Error('No games');
     first=dates[0];last=dates.at(-1);const params=new URLSearchParams(location.search);date=validDate(params.get('date'))?params.get('date'):last;if(date<first||date>last)date=last;

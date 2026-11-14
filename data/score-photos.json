@@ -1,0 +1,26 @@
+[
+  {
+    "date": "2026-10-13",
+    "home": "vancouver-current",
+    "away": "osaka-spirits",
+    "image": "assets/scores/2026-10-13-osaka-vancouver.webp",
+    "alt": "Vancouver first baseman receives a throw as an Osaka runner approaches first base.",
+    "caption": "A play at first in Vancouver. The Spirits edged the Current, 6–5."
+  },
+  {
+    "date": "2026-10-12",
+    "home": "spokane-alloys",
+    "away": "fresno-yield",
+    "image": "assets/scores/2026-10-12-fresno-spokane.webp",
+    "alt": "Spokane pitcher follows through on a delivery at OGWA Stadium.",
+    "caption": "On the mound at OGWA. Spokane shut out Fresno, 4–0."
+  },
+  {
+    "date": "2026-10-11",
+    "home": "durham-gold",
+    "away": "san-pedro-cocolos",
+    "image": "assets/scores/2026-10-11-san-pedro-durham.webp",
+    "alt": "Gold outfielder runs toward a catch during the home game against San Pedro.",
+    "caption": "Tracking a fly ball against San Pedro. The Gold won a close one, 5–4."
+  }
+]

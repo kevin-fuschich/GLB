@@ -53,10 +53,10 @@
     {
       "id": "perk-o-lata",
       "city": "Albuquerque",
-      "name": "Perk-O-Lata",
+      "name": "Donny Miles",
       "car": "1985 Cadillac",
       "theme": "Aqua / teal candy drip • Ton O’ Suds Carwash theme",
-      "caption": "The Albuquerque field belonged to Perk-O-Lata, whose glossy wash-cycle build turned a full concept into one of the circuit’s strongest identities.",
+      "caption": "The Albuquerque field belonged to Donny Miles, whose glossy wash-cycle build turned a full concept into one of the circuit’s strongest identities.",
       "signature": "Wash Cycle Bounce",
       "win_type": "Best Theme",
       "original_image_reference": "../images/donk/albuquerque-perk-o-lata.png",
@@ -138,7 +138,7 @@
     {
       "date": "2026-10-25",
       "city": "Albuquerque",
-      "winner": "Perk-O-Lata",
+      "winner": "Donny Miles",
       "award": "Best Theme"
     },
     {
@@ -201,7 +201,7 @@
         {
           "id": "QF4",
           "a": "Clementine Latham",
-          "b": "Perk-O-Lata",
+          "b": "Donny Miles",
           "a_score": 95.1,
           "b_score": 94.7,
           "winner": "Clementine Latham",

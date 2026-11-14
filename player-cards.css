@@ -41,3 +41,24 @@
 .fs-card .fs-file{display:block;font-size:12px;text-align:center;color:#193951;text-decoration:underline;padding:5px}
 .fs-card>.tpe-claim-panel{margin-top:10px}
 @media(prefers-reduced-motion:reduce){.fs-inner{transition:none}}
+
+/* All FIELDSTOCK cards are photographed objects resting on the same tabletop.
+   The stock photograph supplies real paper edges, surface texture and contact shadow;
+   live printed layers retain canonical names, current stats and accessible flip behavior. */
+.fs-card:not(.donk-print-card) .fs-flipper{background:#bdb4a9 url('assets/fieldstock/physical-card-stock.webp') center/100% 100% no-repeat;isolation:isolate}
+.fs-card:not(.donk-print-card) .fs-inner{inset:8%;perspective:1200px}
+.fs-card:not(.donk-print-card) .fs-face{border:5px solid transparent;background:transparent;box-shadow:none}
+.fs-card:not(.donk-print-card) .fs-face::after{content:'';position:absolute;inset:0;pointer-events:none;z-index:5;background:linear-gradient(125deg,#ffffff35 0%,#ffffff06 29%,#00000003 62%,#ffffff12 100%);mix-blend-mode:soft-light}
+.fs-card:not(.donk-print-card) .fs-photo{border:1px solid #aa9b7d}
+.fs-card:not(.donk-print-card) .fs-photo-image{filter:saturate(.92) contrast(.97)}
+.fs-card:not(.donk-print-card) .fs-nameplate{background:transparent;color:#172433;border-top:3px double #af985e;padding:9px 23px 8px 6px}
+.fs-card:not(.donk-print-card) .fs-name{font-size:5.5cqw;font-style:italic}
+.fs-card:not(.donk-print-card) .fs-club{font-size:2.4cqw;color:#3a4350}
+.fs-card:not(.donk-print-card) .fs-year{color:#7b622d;right:3px}
+.fs-card:not(.donk-print-card) .fs-front-brand{position:relative;top:auto;left:auto;right:auto;display:flex;order:-1;flex:none;background:#172433;padding:5px 6px;border-bottom:4px solid #eee1c6;filter:none}
+.fs-card:not(.donk-print-card) .fs-front-brand .fs-symbol{width:25px!important;height:25px!important}
+.fs-card:not(.donk-print-card) .fs-front-brand .fs-wordmark{width:92px!important}
+.fs-card:not(.donk-print-card) .fs-back{background:transparent;gap:1.6cqw;padding:5px;font-size:2.6cqw}
+.fs-card:not(.donk-print-card) .fs-back-name{font-size:5.5cqw}
+.fs-card:not(.donk-print-card) .fs-back p{font-size:2.6cqw}
+.fs-card:not(.donk-print-card) .fs-back-footer{padding-top:4px;font-size:2.1cqw}

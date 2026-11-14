@@ -1,2 +1,24 @@
-/* The same physical print stock, proportion, foil marks and flip as GLB baseball. */
-.donk-event-brand{padding:12px 0 24px}.donk-event-brand img{width:250px;height:auto}.page .champion-grid{gap:26px 22px}.page .fieldstock-driver{padding:0;border:0;background:transparent;box-shadow:none;overflow:visible}.donk-print-card{--fs-accent:#d3b66c}.page .donk-print-card .fs-photo>img{width:100%;height:100%;object-fit:contain;background:#142333}.donk-print-card .fs-photo{padding:40px 0 30px;background:#142333}.donk-print-card .fs-nameplate{min-height:80px;background:#142333}.donk-print-card .fs-name{font-size:7.4cqw;line-height:1.02}.donk-print-card .fs-club{font-size:3cqw}.driver-series{position:absolute;top:47px;left:13px;right:13px;font-size:2.8cqw;letter-spacing:.16em;font-weight:bold;color:#d8bd7c;border-top:1px solid #d8bd7c;padding-top:8px}.donk-print-card .fs-front-brand{top:12px;left:12px;right:12px}.donk-print-card .fs-back{gap:2.7cqw}.driver-print-facts{margin:0;border-top:1px solid #a29680;font-size:3cqw}.driver-print-facts>div{display:grid;grid-template-columns:28% 1fr;gap:8px;border-bottom:1px solid #b9ac93;padding:6px 0}.driver-print-facts dt{font-size:2.5cqw;font-weight:bold}.driver-print-facts dd{margin:0}.driver-print-record{display:block;line-height:1.4;font-size:3cqw}.driver-print-record>strong{display:block;background:#142333;color:#d8bd7c;font-size:2.7cqw;letter-spacing:.08em;padding:5px;margin-bottom:7px}.page .fieldstock-driver>.driver-claim{margin-top:12px;border:1px solid #d5dfda;background:#fff;padding:14px}.page .fieldstock-driver .driver-action{font-size:11px}.page .donk-print-card .fs-flipper{min-height:0}.page .donk-print-card img.fs-wordmark{max-width:none}.donk-print-card .fs-back-name{font-size:6.5cqw}.donk-print-card .fs-back-club{font-size:2.6cqw}@media(max-width:540px){.donk-event-brand img{width:210px}.page .fieldstock-driver{max-width:350px}}
+/* FIELDSTOCK DONK: photographs of physical cards resting on a tabletop. */
+.donk-event-brand{padding:12px 0 24px}
+.donk-event-brand img{width:250px;height:auto}
+.page .champion-grid{gap:32px 24px}
+.page .fieldstock-driver{padding:0;border:0;background:transparent;box-shadow:none;overflow:visible}
+.page .donk-print-card{--fs-accent:#d3b66c;max-width:350px}
+.page .donk-print-card .fs-flipper{aspect-ratio:5/7;min-height:0;background:#bdb4a9 url('assets/fieldstock/physical-card-stock.webp') center/100% 100% no-repeat}
+.page .donk-print-card .fs-front{border:0;background:transparent;box-shadow:none}
+.page .donk-print-card .fs-front>img.driver-card-photograph{display:block;width:100%;height:100%;object-fit:contain;background:transparent;border:0;border-radius:0}
+.page .donk-print-card .driver-card-accessible{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.page .donk-print-card .fs-back{inset:8%;padding:7px;gap:1.8cqw;background:transparent;border:4px solid transparent;box-shadow:none}
+.page .donk-print-card .fs-back img{background:transparent}
+.page .donk-print-card img.fs-wordmark{max-width:none}
+.page .donk-print-card .fs-back-name{font-size:5.5cqw}
+.page .donk-print-card .fs-back-club{font-size:2.3cqw}
+.driver-print-facts{margin:0;border-top:1px solid #a29680;font-size:2.6cqw}
+.driver-print-facts>div{display:grid;grid-template-columns:28% 1fr;gap:7px;border-bottom:1px solid #b9ac93;padding:5px 0}
+.driver-print-facts dt{font-size:2.2cqw;font-weight:bold}
+.driver-print-facts dd{margin:0}
+.driver-print-record{display:block;line-height:1.4;font-size:2.6cqw}
+.driver-print-record>strong{display:block;background:#142333;color:#d8bd7c;font-size:2.4cqw;letter-spacing:.08em;padding:5px;margin-bottom:6px}
+.page .fieldstock-driver>.driver-claim{padding:12px 0 0;margin:4px auto 0;width:100%;max-width:350px;border:0;border-top:1px solid #cdd4d3;background:transparent}
+.page .fieldstock-driver .driver-action{font-size:11px}
+@media(max-width:540px){.donk-event-brand img{width:210px}.page .fieldstock-driver{max-width:350px}}

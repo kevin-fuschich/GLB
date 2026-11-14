@@ -201,7 +201,7 @@
             deck: 'The Spirits beat the Gold in six games to win the GLB Championship Series. The 2026 season is complete. Welcome to the offseason.',
             href: 'postseason.html', link: 'The championship record'
           };
-          slides[1] = {image:'images/hero/hero-02.png',kicker:'Offseason · 2027 ahead',title:'The games pause. The world keeps growing.',deck:'Explore the clubs, claim a card and add to the GLB record. The 2027 schedule has not been announced.',href:'contribute.html',link:'Claim & Create'};
+          slides[1] = {image:'images/hero/hero-02.png',kicker:'Offseason · 2027 ahead',title:'The season ends. Your part begins.',deck:'Claim a player, mascot, entertainer or DONK artifact. Add a story, make it yours and give it a place in your public showcase. The GLB world keeps growing through the offseason.',href:'contribute.html',link:'Claim & Create'};
           slides[2].kicker='2026 Final Leaders';slides[2].title='The season in numbers';slides[2].deck='The final regular-season batting and pitching leaders. Postseason results are recorded separately.';
           slides.slice(1).forEach(slide => { const preload = new Image(); preload.src = slide.image; });
           let active = 0;

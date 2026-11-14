@@ -12,7 +12,8 @@
         "BIG SOFT Landing",
         "Flo Troup’s Cadillac"
       ],
-      "logo": "assets/sponsors/logos/big-soft.svg"
+      "logo": "assets/sponsors/logos/big-soft.svg",
+      "about": "BIG SOFT makes mattresses, pillows and bedding, with an emphasis on oversized comfort."
     },
     {
       "slug": "insurance-papi",
@@ -25,7 +26,8 @@
         "Monterrey stadium naming rights",
         "Tavo Saldaña’s Plymouth Fury III"
       ],
-      "logo": "assets/sponsors/logos/insurance-papi-character-v1.webp"
+      "logo": "assets/sponsors/logos/insurance-papi-character-v1.webp",
+      "about": "INSURANCE PAPI is an insurance brand recognized by its little mustached character."
     },
     {
       "slug": "magixo",
@@ -49,7 +51,8 @@
       "logo_source_size": [
         1536,
         1024
-      ]
+      ],
+      "about": "MAGIXO makes laundry detergent and operates neighborhood laundries."
     },
     {
       "slug": "mumbo-jumbo",
@@ -62,7 +65,8 @@
         "MUMBO JUMBO Stadium",
         "Yoshiko Futaba’s G-Class"
       ],
-      "logo": "assets/sponsors/logos/mumbo-jumbo.svg"
+      "logo": "assets/sponsors/logos/mumbo-jumbo.svg",
+      "about": "MUMBO JUMBO is a stationery brand making notebooks and pens with Nano Ink technology."
     },
     {
       "slug": "propellant",
@@ -74,7 +78,8 @@
       "connections": [
         "Albuquerque sponsor advertising"
       ],
-      "logo": "assets/sponsors/logos/propellant.svg"
+      "logo": "assets/sponsors/logos/propellant.svg",
+      "about": "PROPELLANT is an energy brand identified by its hot-air-balloon emblem."
     },
     {
       "slug": "tumbao",
@@ -98,7 +103,8 @@
       "logo_source_size": [
         1536,
         1024
-      ]
+      ],
+      "about": "TUMBAO makes outdoor clothing and equipment, including weatherproof shells, packs, boots and blankets."
     },
     {
       "slug": "vello",
@@ -112,7 +118,8 @@
         "Ring Night",
         "Toi Boi Roi’s audio build"
       ],
-      "logo": "assets/sponsors/logos/vello.svg"
+      "logo": "assets/sponsors/logos/vello.svg",
+      "about": "VELLO makes immersive audio systems that combine multidimensional sound with light-based technology."
     },
     {
       "slug": "wap-mop-shoppe",
@@ -139,7 +146,8 @@
         2172,
         724
       ],
-      "logo_shape": "circle"
+      "logo_shape": "circle",
+      "about": "WAP MOP SHOPPE explores everyday cleanliness and personal care through practical field guides, useful products and a curious sense of humor."
     },
     {
       "slug": "weejie",
@@ -152,7 +160,8 @@
         "WEEJIE Park",
         "Bobby Boulineau’s 1980 Ford Fairmont"
       ],
-      "logo": "assets/sponsors/logos/weejie.svg"
+      "logo": "assets/sponsors/logos/weejie.svg",
+      "about": "WEEJIE connects people with nearby paid work. Businesses post the task, hours and pay; workers choose the jobs that fit."
     }
   ]
 }

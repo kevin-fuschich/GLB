@@ -2,8 +2,8 @@ import {PGlite} from '@electric-sql/pglite';
 import {readFile} from 'node:fs/promises';
 import assert from 'node:assert/strict';
 const db=new PGlite();
-await db.exec(`create role anon;create role authenticated;create role service_role bypassrls;create schema auth;
-create table auth.users(id uuid primary key,email text);create table auth.sessions(id uuid primary key,user_id uuid,created_at timestamptz default now());
+await db.exec(`create role anon;create role authenticated;create role service_role bypassrls;create schema auth;alter default privileges in schema public grant execute on functions to anon,authenticated;
+create table auth.users(id uuid primary key,email text);create table auth.sessions(id uuid primary key,user_id uuid,created_at timestamptz default now(),not_after timestamptz);
 create function auth.uid() returns uuid language sql stable as $$select nullif(current_setting('request.jwt.claim.sub',true),'')::uuid$$;
 create function auth.role() returns text language sql stable as $$select nullif(current_setting('request.jwt.claim.role',true),'')$$;grant usage on schema auth to authenticated,anon;`);
 for(const f of ['glb-accounts.sql','glb-collecting.sql','glb-collecting.sql'])await db.exec(await readFile(new URL('../../supabase/'+f,import.meta.url),'utf8'));
@@ -15,7 +15,7 @@ await db.exec(`insert into public.glb_sets(id,title,season,cards_per_pack) value
 insert into public.glb_editions(id,set_id,subject_id,name,variant,quantity,front_image) values('test-base','test','unknown-1999','Unknown player','Base',4,'test.webp');
 insert into glb_private.copies(edition_id,serial) select 'test-base',generate_series(1,4);
 update public.glb_sets set release_at=now() where id='test';`);
-async function as(u,role='authenticated'){await db.exec('reset role');await db.query("select set_config('request.jwt.claim.sub',$1,false),set_config('request.jwt.claims',$2,false)",[u||'',JSON.stringify({session_id:sid})]);await db.exec('set role '+role);}
+async function as(u,role='authenticated'){await db.exec('reset role');if(u)await db.query('update auth.sessions set user_id=$1',[u]);await db.query("select set_config('request.jwt.claim.sub',$1,false),set_config('request.jwt.claims',$2,false)",[u||'',JSON.stringify({session_id:sid})]);await db.exec('set role '+role);}
 async function denied(fn){await assert.rejects(fn);}
 await as(a);await db.query('select public.glb_collect_visit()');await db.query('select public.glb_collect_visit()');
 let packs=(await db.query('select * from public.glb_packs')).rows;assert.equal(packs.length,1);
@@ -29,8 +29,8 @@ await denied(()=>db.query('select * from glb_private.copies'));
 assert.equal((await db.query("select public.glb_request_transfer($1,'beta','bad') as v",[id])).rows[0].v,null);
 const transfer=(await db.query("select public.glb_request_transfer($1,'beta',$2) as v",[id,secret])).rows[0].v;assert.ok(transfer);
 await as(b);assert.equal((await db.query('select public.glb_card_secret($1) as v',[id])).rows[0].v,null);
-await denied(()=>db.query('select public.glb_accept_transfer($1)',[transfer]));
-await db.exec('reset role');await db.query('update auth.sessions set user_id=$1',[b]);
+await db.exec('reset role');await db.query("update auth.sessions set created_at=now()-interval '1 hour'");await as(b);await denied(()=>db.query('select public.glb_accept_transfer($1)',[transfer]));
+await db.exec('reset role');await db.query('update auth.sessions set user_id=$1,created_at=now()',[b]);
 await as(b);assert.equal((await db.query('select public.glb_accept_transfer($1) as v',[transfer])).rows[0].v,true);
 assert.notEqual((await db.query('select public.glb_card_secret($1) as v',[id])).rows[0].v,secret);
 assert.equal((await db.query('select public.glb_accept_transfer($1) as v',[transfer])).rows[0].v,false);

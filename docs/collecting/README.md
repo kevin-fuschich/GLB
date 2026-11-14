@@ -14,7 +14,7 @@ Public discovery counts are opened copies per edition. Individual serials identi
 
 - Welcome: one pack for an account with a public User ID.
 - Return visits: one pack at 3, 7 and 30 distinct UTC dates. Page refreshes and token refreshes cannot inflate the count.
-- Legitimate claim + approved claim: two separately labeled rewards after Board approval verifies legitimacy. Pending or declined submissions do not earn packs.
+- Legitimate claim + approved claim: two separately labeled rewards after Board approval verifies legitimacy. Pending or declined submissions do not earn packs. Approved rewards are reconciled on album visits without adding triggers to the existing review workflow.
 - Collaboration: one reward per approved note.
 - Unique reward keys prevent reissuance; additional rules can use the same ledger.
 
@@ -37,8 +37,10 @@ The registry establishes the recognized collectible owner within GLB. Copyright/
 5. Prepare the complete draft 2026 catalog and artwork. Validate every file and fact before setting release time.
 6. Deploy `album.html`, `album.css`, `scripts/album.js` and the account link together. Signed-out users are directed to sign in; unavailable backend never invents inventory or ownership.
 
-Local PGlite tests validate SQL permissions and sequential transactional behavior. They do not substitute for hosted concurrent-connection, session-provider or recovery testing. The schema and frontend are implemented; live database activation is a separate migration step requiring access to the GLB Supabase project.
+Local PGlite tests validate SQL permissions and sequential transactional behavior. They do not substitute for hosted concurrent-connection, session-provider or recovery testing. The additive schema is installed in the existing GLB Supabase project. Transaction-isolated hosted tests passed for opening, ownership privacy, transfer acceptance and rotation; all fixture rows were rolled back. Email reauthentication UX and simultaneous-connection load testing remain pre-release checks. Existing account functions and review triggers were preserved. No set is released by the setup.
 
 ## Player records and collectible snapshots
 
 Team and player pages display photographs, biographies and player claims, not collectible fronts. The shared profile renderer reads the canonical roster, season records and Board-approved claim contributions. Collectible editions live in the account album. Copy approved facts and artwork into a draft edition when producing a set; freeze that snapshot at release. Later player edits inform later releases and never rewrite an existing edition.
+
+Live setup: migration `fieldstock_additive_collections_v1`. Collection RPCs explicitly revoke inherited anonymous grants. Ownership mutations and secret reads verify that the server-issued session exists and has not expired. Approved contribution rewards reconcile when visiting the account or album; no trigger is added to the existing submissions table.

@@ -51,7 +51,7 @@ alter table glb_private.pack_cards enable row level security;
 alter table glb_private.transfers enable row level security;
 alter table glb_private.ownership_history enable row level security;
 alter table glb_private.visits enable row level security;
-revoke all on public.glb_sets,public.glb_editions,public.glb_packs from anon,authenticated;
+revoke all on public.glb_sets,public.glb_editions,public.glb_packs from public,anon,authenticated;
 revoke all on glb_private.copies,glb_private.pack_cards,glb_private.transfers,glb_private.ownership_history,glb_private.visits from public,anon,authenticated;
 grant select on public.glb_sets,public.glb_editions to anon,authenticated;
 grant select on public.glb_packs to authenticated;
@@ -62,6 +62,13 @@ create policy released_editions on public.glb_editions for select using(exists(s
 drop policy if exists own_packs on public.glb_packs;
 create policy own_packs on public.glb_packs for select to authenticated using(owner_id=(select auth.uid()));
 
+-- Verify the server-issued session on every ownership mutation and secret read.
+create or replace function glb_private.require_session() returns void language plpgsql stable security definer set search_path='' as $$
+declare sid uuid;
+begin
+ sid:=(nullif(current_setting('request.jwt.claims',true),'')::jsonb->>'session_id')::uuid;
+ if not exists(select 1 from auth.sessions where id=sid and user_id=auth.uid() and (not_after is null or not_after>now())) then raise exception 'Please sign in again'; end if;
+end; $$;
 create or replace function glb_private.guard_editions() returns trigger language plpgsql set search_path='' as $$
 begin
  if TG_TABLE_NAME='glb_sets' then
@@ -125,8 +132,9 @@ begin
  end if;
 end; $$;
 create or replace function public.glb_collect_visit() returns void language plpgsql security definer set search_path='' as $$
-declare uid uuid:=auth.uid(); n integer; credit record;
+declare uid uuid:=auth.uid(); n integer; credit record; contribution record;
 begin
+ perform glb_private.require_session();
  if uid is null or not exists(select 1 from public.glb_profiles where id=uid) then raise exception 'Sign in and choose a User ID'; end if;
  -- Serialize milestones for one account; repeated calls on one UTC date count once.
  perform pg_advisory_xact_lock(hashtextextended(uid::text,0));
@@ -136,29 +144,22 @@ begin
  if n>=3 then perform glb_private.award(uid,'visits-3','Visited on three different days'); end if;
  if n>=7 then perform glb_private.award(uid,'visits-7','Visited on seven different days'); end if;
  if n>=30 then perform glb_private.award(uid,'visits-30','Visited on thirty different days'); end if;
+ -- Read approved work; do not install triggers in the existing review workflow.
+ for contribution in select id,kind from public.glb_submissions where owner_id=uid and status='approved' and kind in ('claim','note') loop
+  if contribution.kind='claim' then
+   perform glb_private.award(uid,'valid-claim:'||contribution.id,'Verified claim submission');
+   perform glb_private.award(uid,'approved-claim:'||contribution.id,'Approved claim');
+  else
+   perform glb_private.award(uid,'collaboration:'||contribution.id,'Approved collaboration');
+  end if;
+ end loop;
  for credit in select * from glb_private.reward_credits r where r.owner_id=uid and not exists(select 1 from public.glb_packs p where p.owner_id=uid and p.reward_key=r.reward_key) loop
  perform glb_private.award(uid,credit.reward_key,credit.reason); end loop;
 end; $$;
--- Submitting alone is not proof of legitimacy. Board approval verifies the work;
--- a claim earns a submission-quality pack plus an approval pack, exactly once each.
-create or replace function glb_private.collect_contribution() returns trigger language plpgsql security definer set search_path='' as $$
-begin
- if new.status='approved' and old.status='pending' then
-  if new.kind='claim' then
-   perform glb_private.award(new.owner_id,'valid-claim:'||new.id,'Verified claim submission');
-   perform glb_private.award(new.owner_id,'approved-claim:'||new.id,'Approved claim');
-  elsif new.kind='note' then
-   perform glb_private.award(new.owner_id,'collaboration:'||new.id,'Approved collaboration');
-  end if;
- end if;
- return new;
-end; $$;
-drop trigger if exists collect_contribution on public.glb_submissions;
-create trigger collect_contribution after update on public.glb_submissions for each row execute function glb_private.collect_contribution();
-
 create or replace function public.glb_open_pack(p_pack uuid) returns jsonb language plpgsql security definer set search_path='' as $$
 declare p public.glb_packs; s public.glb_sets; draw record; n integer; code_value text;
 begin
+ perform glb_private.require_session();
  select * into p from public.glb_packs where id=p_pack and owner_id=auth.uid() for update;
  if not found then raise exception 'Pack unavailable'; end if;
  select * into s from public.glb_sets where id=p.set_id for update;
@@ -189,9 +190,11 @@ end; $$;
 create or replace function public.glb_my_album() returns jsonb language sql stable security definer set search_path='' as $$
  select coalesce(jsonb_agg(jsonb_build_object('copy_id',c.id,'edition_id',c.edition_id,'serial',c.serial,'opened_at',c.opened_at)),'[]') from glb_private.copies c where c.owner_id=auth.uid();
 $$;
-create or replace function public.glb_card_secret(p_copy uuid) returns text language sql stable security definer set search_path='' as $$
- select code from glb_private.copies where id=p_copy and owner_id=auth.uid();
-$$;
+create or replace function public.glb_card_secret(p_copy uuid) returns text language plpgsql stable security definer set search_path='' as $$
+begin
+ perform glb_private.require_session();
+ return (select code from glb_private.copies where id=p_copy and owner_id=auth.uid());
+end; $$;
 create or replace function public.glb_discovery() returns jsonb language sql stable security definer set search_path='' as $$
  select coalesce(jsonb_agg(jsonb_build_object('edition_id',e.id,'quantity',e.quantity,'discovered',(select count(*) from glb_private.copies c where c.edition_id=e.id and c.opened_at is not null))),'[]')
  from public.glb_editions e join public.glb_sets s on s.id=e.set_id where s.release_at<=now();
@@ -200,6 +203,7 @@ $$;
 create or replace function glb_private.recent_auth() returns void language plpgsql security definer set search_path='' as $$
 declare sid uuid;
 begin
+ perform glb_private.require_session();
  sid:=(nullif(current_setting('request.jwt.claims',true),'')::jsonb->>'session_id')::uuid;
  if not exists(select 1 from auth.sessions where id=sid and user_id=auth.uid() and created_at>=now()-interval '10 minutes') then raise exception 'Sign in again before transferring a card'; end if;
 end; $$;
@@ -244,6 +248,7 @@ begin
 end; $$;
 create or replace function public.glb_cancel_transfer(p_transfer uuid) returns boolean language plpgsql security definer set search_path='' as $$
 begin
+ perform glb_private.require_session();
  perform 1 from glb_private.copies c join glb_private.transfers t on t.copy_id=c.id where t.id=p_transfer and t.sender=auth.uid() for update of c;
  update glb_private.transfers set status='cancelled',completed_at=now() where id=p_transfer and sender=auth.uid() and status='pending';
  return found;
@@ -253,12 +258,17 @@ create or replace function public.glb_my_transfers() returns jsonb language sql 
  from glb_private.transfers t join public.glb_profiles a on a.id=t.sender join public.glb_profiles b on b.id=t.recipient where t.sender=auth.uid() or t.recipient=auth.uid();
 $$;
 create or replace function public.glb_collecting_ready() returns integer language sql stable set search_path='' as $$ select 1; $$;
-revoke all on function glb_private.card_code(),glb_private.freeze_release(),glb_private.guard_editions(),glb_private.check_inventory(),glb_private.award(uuid,text,text),glb_private.collect_contribution(),glb_private.recent_auth() from public,anon,authenticated;
-revoke all on function public.glb_open_pack(uuid),public.glb_collect_visit(),public.glb_my_album(),public.glb_card_secret(uuid),public.glb_discovery(),public.glb_request_transfer(uuid,text,text),public.glb_collecting_ready() from public;
+revoke all on function glb_private.card_code(),glb_private.freeze_release(),glb_private.guard_editions(),glb_private.check_inventory(),glb_private.award(uuid,text,text),glb_private.recent_auth(),glb_private.require_session() from public,anon,authenticated;
+revoke all on function public.glb_open_pack(uuid),public.glb_collect_visit(),public.glb_my_album(),public.glb_card_secret(uuid),public.glb_discovery(),public.glb_request_transfer(uuid,text,text),public.glb_collecting_ready() from public,anon,authenticated;
 grant execute on function public.glb_open_pack(uuid),public.glb_collect_visit(),public.glb_my_album(),public.glb_card_secret(uuid),public.glb_request_transfer(uuid,text,text) to authenticated;
-revoke all on function public.glb_accept_transfer(uuid),public.glb_cancel_transfer(uuid),public.glb_my_transfers() from public;
+revoke all on function public.glb_accept_transfer(uuid),public.glb_cancel_transfer(uuid),public.glb_my_transfers() from public,anon,authenticated;
 grant execute on function public.glb_accept_transfer(uuid),public.glb_cancel_transfer(uuid),public.glb_my_transfers() to authenticated;
 grant execute on function public.glb_discovery(),public.glb_collecting_ready() to anon,authenticated;
--- Restore pre-existing account function permissions after the private-schema revoke.
-grant execute on function glb_private.is_board() to authenticated;
+create index if not exists glb_editions_set on public.glb_editions(set_id);
+create index if not exists glb_copies_draw on glb_private.copies(edition_id) where owner_id is null;
+create index if not exists glb_copies_owner on glb_private.copies(owner_id) where owner_id is not null;
+create index if not exists glb_packs_reservations on public.glb_packs(set_id) where opened_at is null;
+create index if not exists glb_transfers_sender on glb_private.transfers(sender);
+create index if not exists glb_transfers_recipient on glb_private.transfers(recipient);
+create index if not exists glb_attempts_owner_time on glb_private.transfer_attempts(owner_id,attempted_at);
 commit;

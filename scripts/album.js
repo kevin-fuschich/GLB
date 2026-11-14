@@ -27,7 +27,7 @@
  async function load(){const ticket=++revision;
   try{const {data:{user},error}=await client.auth.getUser();if(error && error.name!=='AuthSessionMissingError')throw error;if(ticket!==revision)return;
    $('collection').hidden=true;if(!user){copies=[];$('pockets').replaceChildren();message('Sign in to earn packs, open them and access your album.');return;}
-   await rpc('glb_collecting_ready');await rpc('glb_collect_visit');
+   await rpc('glb_collecting_ready');const profile=await client.from('glb_profiles').select('user_id').eq('id',user.id).maybeSingle();if(profile.error)throw profile.error;if(!profile.data){message('Choose your public User ID on your account page to start collecting.');return;}await rpc('glb_collect_visit');
    const [setResult,editionResult,packResult,album,ledger,transfers]=await Promise.all([client.from('glb_sets').select('*'),client.from('glb_editions').select('*'),client.from('glb_packs').select('*').order('earned_at'),rpc('glb_my_album'),rpc('glb_discovery'),rpc('glb_my_transfers')]);
    if(ticket!==revision)return;for(const result of [setResult,editionResult,packResult])if(result.error)throw result.error;
    sets=new Map(setResult.data.map(s=>[s.id,s]));editions=new Map(editionResult.data.map(e=>[e.id,e]));copies=album.sort((a,b)=>a.edition_id.localeCompare(b.edition_id)||a.serial-b.serial);

@@ -215,7 +215,33 @@
     const footer=text('div','','fs-back-footer');footer.append(text('span','GLB'),text('span','◆'),text('span','FIELDSTOCK 2026'));
     back.append(report,note,footer);return back;
   }
+  let publicClaimsRequest;
+  function createPlayerProfile(player,record,{link=true}={}) {
+    const profile=text('article','','glb-player-profile');
+    const paint=(data,stats,claim)=>{
+      const photo=text('div','','glb-player-photo');photo.append(photograph(data));
+      const content=text('div','','glb-player-copy');content.append(text('p',data.position||'Player','glb-player-position'),text('h3',data.name));
+      const details=[data.birthplace,data.height,data.weight ? data.weight+' lb' : null].filter(Boolean);
+      if(details.length)content.append(text('p',details.join(' · '),'glb-player-vitals'));
+      content.append(text('p',data.bio||data.biography||data.factoid||data.field_note||'This player’s story is open for contributions.','glb-player-bio'));
+      if(claim?.body)content.append(text('p',claim.body,'glb-player-contribution'),text('small','Contribution by '+claim.user_id));
+      if(stats)content.append(seasonTable(data,stats));
+      if(link){const file=text('a','Full player record →');file.href=`player.html?team=${encodeURIComponent(data.teamSlug)}&player=${encodeURIComponent(data.slug)}`;content.append(file);}
+      profile.replaceChildren(photo,content);
+    };
+    paint(player,record);
+    seasonRequest ||= loadSeasons().catch(()=>null);
+    designRequest ||= fetch('data/cards/fieldstock-2026.json').then(r=>r.ok?r.json():null).catch(()=>null);
+    publicClaimsRequest ||= window.GLBRecords ? GLBRecords.claims().catch(()=>[]) : Promise.resolve([]);
+    Promise.all([readRoster(player.teamSlug).catch(()=>null),seasonRequest,designRequest,publicClaimsRequest]).then(([roster,seasons,design,claims])=>{
+      const canonical=roster?.players.find(p=>p.slug===player.slug)||{};
+      const data={...design?.players?.[player.teamSlug+'/'+player.slug],...player,...canonical};
+      paint(data,seasons?careerFor(player.slug,seasons):record,claims.find(c=>c.artifact_id===player.card_id));
+    });
+    return profile;
+  }
   function createCard(player, record, {link=true}={}) {
+    if(!location.pathname.endsWith('/album.html')) return createPlayerProfile(player,record,{link});
     const card=text('article','','fs-card');
     const button=document.createElement('button');button.type='button';button.className='fs-flipper';
     const inner=text('span','','fs-inner');

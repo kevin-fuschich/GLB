@@ -270,7 +270,7 @@ p{line-height:1.58;color:#343a40}
 .glb-player-card.is-flipped:hover{transform:rotateY(180deg) translateY(-4px)!important}
 @media(prefers-reduced-motion:reduce){.glb-player-card{transition:none!important}}
 </style>
-<link rel="stylesheet" href="taipei-cards.css?v=20261024-roster"><link rel="stylesheet" href="tijuana-cards.css?v=20261011-physical-flips"><link rel="stylesheet" href="player-cards.css?v=physical-20261114">
+<link rel="stylesheet" href="taipei-cards.css?v=20261024-roster"><link rel="stylesheet" href="tijuana-cards.css?v=20261011-physical-flips"><link rel="stylesheet" href="player-cards.css?v=profiles-20261114">
 <link rel="stylesheet" href="site-header.css?v=20261112">
 <script defer src="scripts/site-header.js?v=20261112"></script>
 </head>
@@ -466,9 +466,9 @@ p{line-height:1.58;color:#343a40}
   </div>
 </footer>
 
-<script src="scripts/player-cards.js?v=louisville-20261110"></script>
+<script src="scripts/glb-records.js?v=1"></script><script src="scripts/player-cards.js?v=profiles-20261114"></script>
 <script src="scripts/artifact-catalog.js?v=20261113-members"></script>
-<script src="scripts/taipei-cards.js?v=20261113-members"></script>
+<script src="scripts/taipei-cards.js?v=profiles-20261114"></script>
 <script>
 const params = new URLSearchParams(window.location.search);
 
@@ -768,7 +768,7 @@ async function loadPlayer(){
     ? fieldstockTeam.prefix.toUpperCase()+'-'+String(cardNumber).padStart(2,'0')
     : teamSlug.toUpperCase().slice(0,3)+'-'+playerSlug.toUpperCase());
   const cardClaimGuide=document.getElementById('playerCardClaimGuide');
-  cardClaimGuide.textContent='Claim a card and add content to make it your own! Player cards and other artifacts across GLB can be claimed, curated and crafted by you. Look for unclaimed artifacts, click to claim, craft your submission, and send it to the GLB Board for review. If accepted, you’ll receive a private 16-character claim code, and we’ll publish the artifact with your content and attribution to the User ID you provide. Select the card to flip it over. ';
+  cardClaimGuide.textContent='Claim a player and help build their story. Players and other artifacts across GLB can be claimed, curated and crafted by you. Look for unclaimed artifacts, click to claim, craft your submission, and send it to the GLB Board for review. Approved contributions appear in the player record with your public User ID. Collectible cards are earned separately in your account album. Select the card to flip it over. ';
   const explore=document.createElement('a');explore.href='contribute.html';explore.textContent='Explore Claim & Create →';cardClaimGuide.append(explore);
   cardClaimGuide.hidden=false;
   const claimPlayer={...player,slug:playerSlug,name:playerName,teamSlug,teamName:team.teamName,

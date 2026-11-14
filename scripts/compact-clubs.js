@@ -42,9 +42,9 @@
       if(list.dataset.compactReady){list._glbRefresh(entries);continue;}
       list.dataset.compactReady='true';list.classList.add('glb-four-cards');
       let expanded=false;
-      const button=make('button','glb-view-all',`View all ${entries.length} ${list.matches('div.roster,.mty-roster')?'players':'cards'}`);button.type='button';button.setAttribute('aria-expanded','false');
+      const button=make('button','glb-view-all',`View all ${entries.length} players`);button.type='button';button.setAttribute('aria-expanded','false');
       if(!list.id)list.id='glb-player-collection';button.setAttribute('aria-controls',list.id);
-      const paint=all=>{expanded=all;entries.forEach((e,i)=>e.hidden=!all&&i>=4);button.setAttribute('aria-expanded',String(all));button.textContent=all?'Show fewer':`View all ${entries.length} ${list.matches('div.roster,.mty-roster')?'players':'cards'}`;};
+      const paint=all=>{expanded=all;entries.forEach((e,i)=>e.hidden=!all&&i>=4);button.setAttribute('aria-expanded',String(all));button.textContent=all?'Show fewer':`View all ${entries.length} players`;};
       list.after(button);paint(false);
       button.addEventListener('click',()=>{paint(!expanded);if(!expanded)list.scrollIntoView({block:'start'});});
       list._glbExpand=()=>paint(true);

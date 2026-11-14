@@ -1,0 +1,27 @@
+{
+  "schema": "glb.marquee.v1",
+  "messages": [
+    {
+      "id": "2026-champions",
+      "kind": "result",
+      "text": "2026 GLB CHAMPIONS: Osaka Spirits (Osaka Spirits defeated Triangle Gold, 4-3)",
+      "href": "postseason.html",
+      "active": true,
+      "phases": [
+        "offseason"
+      ],
+      "priority": 100
+    },
+    {
+      "id": "offseason-claims",
+      "kind": "invitation",
+      "text": "CLAIM ARTIFACTS DURING THE OFFSEASON: Claim a player, mascot, entertainer and more.",
+      "href": "contribute.html",
+      "active": true,
+      "phases": [
+        "offseason"
+      ],
+      "priority": 90
+    }
+  ]
+}

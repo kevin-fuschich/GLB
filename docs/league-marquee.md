@@ -1,0 +1,3 @@
+# League marquee
+
+The shared site header displays this message strip throughout the year. Edit `data/marquee.json` to add news, updates, results or invitations. Each message has `id`, `kind`, `text`, `href`, `active` and optional `priority` (higher first), `phases`, `startsAt` and `endsAt` (ISO timestamps). Omit `phases` for a message that runs in any season phase. Expired or inactive messages are hidden. Outside the offseason, the strip also includes the latest completed slate from the canonical game indexes. It pauses on hover/focus and has pause/play controls; reduced-motion preferences disable animation.

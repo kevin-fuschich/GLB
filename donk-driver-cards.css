@@ -22,3 +22,25 @@
 .page .fieldstock-driver>.driver-claim{padding:12px 0 0;margin:4px auto 0;width:100%;max-width:350px;border:0;border-top:1px solid #cdd4d3;background:transparent}
 .page .fieldstock-driver .driver-action{font-size:11px}
 @media(max-width:540px){.donk-event-brand img{width:210px}.page .fieldstock-driver{max-width:350px}}
+
+/* The base series shares physical stock, with a quieter teal print treatment. */
+.donk-base-section{margin:46px 0 36px;scroll-margin-top:110px}
+.page .donk-base-card{--fs-accent:#9aa99d;max-width:350px}
+.page .donk-base-card .fs-front-brand{background:#284d4b;padding:5px 7px;border-bottom:3px solid #eee1c6}
+.donk-base-label{font:900 italic 7cqw Georgia,serif;letter-spacing:-.04em;color:#f2e5cc;line-height:1.1}
+.page .donk-base-card .fs-front-brand img.fs-wordmark{width:76px!important;max-width:40%}
+.page .donk-base-card .fs-photo{border-color:#71827a}
+.page .donk-base-card img.fs-photo-image{object-fit:cover;object-position:center;height:100%;filter:saturate(.85) contrast(.97)}
+.page .donk-base-card .fs-nameplate{min-height:20%;padding:8px 6px 20px;border-top:3px double #6f847b}
+.page .donk-base-card .fs-name{font-size:5.6cqw;font-style:normal;line-height:1.05;letter-spacing:-.025em}
+.page .donk-base-card .fs-nameplate::after{display:none}
+.page .donk-base-card .fs-club{font-size:2.7cqw;letter-spacing:.07em}
+.donk-base-number{display:block;position:absolute;bottom:5px;right:6px;font-size:2.5cqw;font-weight:bold;color:#53695f}
+.page .donk-base-card .fs-back-header{background:#284d4b;font-size:2.6cqw}
+.page .donk-base-card .fs-back-club{color:#142b29}
+.page .donk-base-card .driver-print-record>strong{background:#284d4b;color:#eee1c6}
+.page .donk-base-card .driver-print-facts{font-size:2.8cqw}
+.page .donk-base-card .driver-print-record{font-size:2.9cqw}
+.page .donk-base-entry>.driver-claim{max-width:350px;width:100%;margin:4px auto 0;padding:12px 0 0;background:transparent;border:0;border-top:1px solid #cdd4d3}
+.page .donk-base-entry .driver-action{font-size:11px}
+@media(prefers-reduced-motion:reduce){.donk-base-card .fs-inner{transition:none}}

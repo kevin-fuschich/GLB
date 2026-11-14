@@ -13,7 +13,9 @@
     .meta-block { min-width:0; }
     .page-title { margin:0 0 6px; font:700 clamp(26px,4vw,36px)/1.15 var(--font-serif); }
     .meta-detail { color:var(--meta-grey); font-size:14px; }
-    .stamp-logo { width:60px; height:auto; flex-shrink:0; }
+    .stamp-logo { display:flex; align-items:center; gap:9px; flex-shrink:0; color:var(--ink-navy); }
+    .stamp-logo strong { font:800 28px/1 Arial,Helvetica,sans-serif; letter-spacing:1px; }
+    .stamp-logo small { font:700 9px/1.35 Arial,Helvetica,sans-serif; letter-spacing:1px; text-transform:uppercase; }
     .record-sheet .season-controls { margin-bottom:24px; }
     .record-sheet select { max-width:100%; min-height:44px; padding:10px 36px 10px 12px; border:1px solid #bfc9d4; border-radius:6px; background:#fff; color:var(--ink-navy); font:inherit; }
     .date-group { margin-bottom:28px; }
@@ -33,7 +35,9 @@
     @media(max-width:600px) {
         .record-sheet { width:calc(100% - 24px); margin:24px auto 36px; padding:22px 16px; }
         .record-sheet > header { gap:12px; }
-        .stamp-logo { width:46px; }
+        .stamp-logo { gap:7px; }
+        .stamp-logo strong { font-size:26px; }
+        .stamp-logo small { font-size:7px; letter-spacing:.7px; }
         .meta-detail { font-size:12px; }
         .date-header { font-size:16px; }
         .record-sheet table { font-size:12px; line-height:1.45; }
@@ -66,7 +70,7 @@
             <h1 class="page-title">Official Schedule</h1>
             <div class="meta-detail">2026 · Official Games</div>
         </div>
-        <img src="GLB_white.png" alt="GLB Seal" class="stamp-logo">
+        <span class="stamp-logo" role="img" aria-label="Global League Baseball"><strong>GLB</strong><small>Global League<br>Baseball</small></span>
     </header>
     <p id="season-loading">Loading official schedule…</p>
 

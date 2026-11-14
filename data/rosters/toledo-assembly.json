@@ -8,7 +8,14 @@
       "bats": "R",
       "throws": "R",
       "age": 29,
-      "photo": "ion-vasilev.jpg"
+      "photo": "ion-vasilev.jpg",
+      "photo_source": "assets/teams/toledo-assembly/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0.0,
+        0.0,
+        0.25,
+        0.25
+      ]
     },
     {
       "name": "Farid Azeroual",
@@ -17,7 +24,14 @@
       "bats": "R",
       "throws": "R",
       "age": 27,
-      "photo": "farid-azeroual.jpg"
+      "photo": "farid-azeroual.jpg",
+      "photo_source": "assets/teams/toledo-assembly/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0.25,
+        0.0,
+        0.25,
+        0.25
+      ]
     },
     {
       "name": "Teemu Salonen",
@@ -26,7 +40,14 @@
       "bats": "L",
       "throws": "L",
       "age": 25,
-      "photo": "teemu-salonen.jpg"
+      "photo": "teemu-salonen.jpg",
+      "photo_source": "assets/teams/toledo-assembly/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0.5,
+        0.0,
+        0.25,
+        0.25
+      ]
     },
     {
       "name": "Zahir Kamara",
@@ -35,7 +56,14 @@
       "bats": "R",
       "throws": "R",
       "age": 31,
-      "photo": "zahir-kamara.jpg"
+      "photo": "zahir-kamara.jpg",
+      "photo_source": "assets/teams/toledo-assembly/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0.75,
+        0.0,
+        0.25,
+        0.25
+      ]
     },
     {
       "name": "Caius Dobrescu",
@@ -44,7 +72,14 @@
       "bats": "R",
       "throws": "R",
       "age": 24,
-      "photo": "caius-dobrescu.jpg"
+      "photo": "caius-dobrescu.jpg",
+      "photo_source": "assets/teams/toledo-assembly/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0.0,
+        0.25,
+        0.25,
+        0.25
+      ]
     },
     {
       "name": "Renan Vidigal",
@@ -53,7 +88,14 @@
       "bats": "R",
       "throws": "R",
       "age": 28,
-      "photo": "renan-vidigal.jpg"
+      "photo": "renan-vidigal.jpg",
+      "photo_source": "assets/teams/toledo-assembly/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ]
     },
     {
       "name": "Blaise Mathurin",
@@ -62,7 +104,14 @@
       "bats": "L",
       "throws": "R",
       "age": 26,
-      "photo": "blaise-mathurin.jpg"
+      "photo": "blaise-mathurin.jpg",
+      "photo_source": "assets/teams/toledo-assembly/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0.5,
+        0.25,
+        0.25,
+        0.25
+      ]
     },
     {
       "name": "Jun-seo Kang",
@@ -71,7 +120,14 @@
       "bats": "R",
       "throws": "R",
       "age": 30,
-      "photo": "jun-seo-kang.jpg"
+      "photo": "jun-seo-kang.jpg",
+      "photo_source": "assets/teams/toledo-assembly/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0.75,
+        0.25,
+        0.25,
+        0.25
+      ]
     },
     {
       "name": "Omar Nazzal",
@@ -80,7 +136,14 @@
       "bats": "R",
       "throws": "R",
       "age": 29,
-      "photo": "omar-nazzal.jpg"
+      "photo": "omar-nazzal.jpg",
+      "photo_source": "assets/teams/toledo-assembly/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0.0,
+        0.5,
+        0.25,
+        0.25
+      ]
     },
     {
       "name": "Caleb Ardoin",
@@ -89,7 +152,14 @@
       "bats": "L",
       "throws": "R",
       "age": 32,
-      "photo": "caleb-ardoin.jpg"
+      "photo": "caleb-ardoin.jpg",
+      "photo_source": "assets/teams/toledo-assembly/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0.25,
+        0.5,
+        0.25,
+        0.25
+      ]
     },
     {
       "name": "Samir Benyahia",
@@ -98,7 +168,14 @@
       "bats": "S",
       "throws": "R",
       "age": 23,
-      "photo": "samir-benyahia.jpg"
+      "photo": "samir-benyahia.jpg",
+      "photo_source": "assets/teams/toledo-assembly/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0.5,
+        0.5,
+        0.25,
+        0.25
+      ]
     },
     {
       "name": "Evan Trelawny",
@@ -107,7 +184,14 @@
       "bats": "R",
       "throws": "R",
       "age": 27,
-      "photo": "evan-trelawny.jpg"
+      "photo": "evan-trelawny.jpg",
+      "photo_source": "assets/teams/toledo-assembly/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0.75,
+        0.5,
+        0.25,
+        0.25
+      ]
     },
     {
       "name": "Kwame Ofori",
@@ -116,7 +200,14 @@
       "bats": "R",
       "throws": "R",
       "age": 28,
-      "photo": "kwame-ofori.jpg"
+      "photo": "kwame-ofori.jpg",
+      "photo_source": "assets/teams/toledo-assembly/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0.0,
+        0.75,
+        0.25,
+        0.25
+      ]
     },
     {
       "name": "Mateo Acebedo",
@@ -125,7 +216,14 @@
       "bats": "L",
       "throws": "L",
       "age": 24,
-      "photo": "mateo-acebedo.jpg"
+      "photo": "mateo-acebedo.jpg",
+      "photo_source": "assets/teams/toledo-assembly/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0.25,
+        0.75,
+        0.25,
+        0.25
+      ]
     },
     {
       "name": "Niko Velković",
@@ -134,7 +232,14 @@
       "bats": "R",
       "throws": "R",
       "age": 26,
-      "photo": "niko-velkovic.jpg"
+      "photo": "niko-velkovic.jpg",
+      "photo_source": "assets/teams/toledo-assembly/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0.5,
+        0.75,
+        0.25,
+        0.25
+      ]
     },
     {
       "name": "Jasper Quade",
@@ -143,7 +248,14 @@
       "bats": "R",
       "throws": "R",
       "age": 31,
-      "photo": "jasper-quade.jpg"
+      "photo": "jasper-quade.jpg",
+      "photo_source": "assets/teams/toledo-assembly/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0.75,
+        0.75,
+        0.25,
+        0.25
+      ]
     }
   ]
 }

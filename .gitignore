@@ -1,0 +1,3 @@
+data/collecting/*.json
+.openai/
+.qa-preview/

@@ -8,7 +8,14 @@
       "bats": "R",
       "throws": "R",
       "age": 29,
-      "photo": "caleb-warnock.jpg"
+      "photo": "caleb-warnock.jpg",
+      "photo_source": "assets/teams/st-paul-frost/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0.0,
+        0.0,
+        0.25,
+        0.25
+      ]
     },
     {
       "name": "Miguel Alcázar",
@@ -17,7 +24,14 @@
       "bats": "L",
       "throws": "R",
       "age": 27,
-      "photo": "miguel-alcazar.jpg"
+      "photo": "miguel-alcazar.jpg",
+      "photo_source": "assets/teams/st-paul-frost/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0.25,
+        0.0,
+        0.25,
+        0.25
+      ]
     },
     {
       "name": "Ryan Keswick",
@@ -26,7 +40,14 @@
       "bats": "R",
       "throws": "R",
       "age": 31,
-      "photo": "ryan-keswick.jpg"
+      "photo": "ryan-keswick.jpg",
+      "photo_source": "assets/teams/st-paul-frost/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0.5,
+        0.0,
+        0.25,
+        0.25
+      ]
     },
     {
       "name": "Tae-ho Choi",
@@ -35,7 +56,14 @@
       "bats": "R",
       "throws": "R",
       "age": 26,
-      "photo": "tae-ho-choi.jpg"
+      "photo": "tae-ho-choi.jpg",
+      "photo_source": "assets/teams/st-paul-frost/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0.75,
+        0.0,
+        0.25,
+        0.25
+      ]
     },
     {
       "name": "Nolan Brix",
@@ -44,7 +72,14 @@
       "bats": "L",
       "throws": "L",
       "age": 24,
-      "photo": "nolan-brix.jpg"
+      "photo": "nolan-brix.jpg",
+      "photo_source": "assets/teams/st-paul-frost/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0.0,
+        0.25,
+        0.25,
+        0.25
+      ]
     },
     {
       "name": "Darius Collins",
@@ -53,7 +88,14 @@
       "bats": "R",
       "throws": "R",
       "age": 28,
-      "photo": "darius-collins.jpg"
+      "photo": "darius-collins.jpg",
+      "photo_source": "assets/teams/st-paul-frost/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ]
     },
     {
       "name": "Antonio Vélez",
@@ -62,7 +104,14 @@
       "bats": "L",
       "throws": "R",
       "age": 25,
-      "photo": "antonio-velez.jpg"
+      "photo": "antonio-velez.jpg",
+      "photo_source": "assets/teams/st-paul-frost/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0.5,
+        0.25,
+        0.25,
+        0.25
+      ]
     },
     {
       "name": "Lukáš Horvat",
@@ -71,7 +120,14 @@
       "bats": "R",
       "throws": "R",
       "age": 32,
-      "photo": "lukas-horvat.jpg"
+      "photo": "lukas-horvat.jpg",
+      "photo_source": "assets/teams/st-paul-frost/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0.75,
+        0.25,
+        0.25,
+        0.25
+      ]
     },
     {
       "name": "Evan Morrissey",
@@ -80,7 +136,14 @@
       "bats": "R",
       "throws": "R",
       "age": 30,
-      "photo": "evan-morrissey.jpg"
+      "photo": "evan-morrissey.jpg",
+      "photo_source": "assets/teams/st-paul-frost/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0.0,
+        0.5,
+        0.25,
+        0.25
+      ]
     },
     {
       "name": "Javier Lucero",
@@ -89,7 +152,14 @@
       "bats": "L",
       "throws": "R",
       "age": 28,
-      "photo": "javier-lucero.jpg"
+      "photo": "javier-lucero.jpg",
+      "photo_source": "assets/teams/st-paul-frost/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0.25,
+        0.5,
+        0.25,
+        0.25
+      ]
     },
     {
       "name": "Owen Hartnell",
@@ -98,7 +168,14 @@
       "bats": "R",
       "throws": "R",
       "age": 26,
-      "photo": "owen-hartnell.jpg"
+      "photo": "owen-hartnell.jpg",
+      "photo_source": "assets/teams/st-paul-frost/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0.5,
+        0.5,
+        0.25,
+        0.25
+      ]
     },
     {
       "name": "Masato Kobori",
@@ -107,7 +184,14 @@
       "bats": "R",
       "throws": "R",
       "age": 24,
-      "photo": "masato-kobori.jpg"
+      "photo": "masato-kobori.jpg",
+      "photo_source": "assets/teams/st-paul-frost/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0.75,
+        0.5,
+        0.25,
+        0.25
+      ]
     },
     {
       "name": "Trevor Yates",
@@ -116,7 +200,14 @@
       "bats": "R",
       "throws": "R",
       "age": 31,
-      "photo": "trevor-yates.jpg"
+      "photo": "trevor-yates.jpg",
+      "photo_source": "assets/teams/st-paul-frost/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0.0,
+        0.75,
+        0.25,
+        0.25
+      ]
     },
     {
       "name": "Malik Jefferson",
@@ -125,7 +216,14 @@
       "bats": "R",
       "throws": "R",
       "age": 25,
-      "photo": "malik-jefferson.jpg"
+      "photo": "malik-jefferson.jpg",
+      "photo_source": "assets/teams/st-paul-frost/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0.25,
+        0.75,
+        0.25,
+        0.25
+      ]
     },
     {
       "name": "Rodrigo Fuentes",
@@ -134,7 +232,14 @@
       "bats": "L",
       "throws": "L",
       "age": 29,
-      "photo": "rodrigo-fuentes.jpg"
+      "photo": "rodrigo-fuentes.jpg",
+      "photo_source": "assets/teams/st-paul-frost/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0.5,
+        0.75,
+        0.25,
+        0.25
+      ]
     },
     {
       "name": "Jake Lanier",
@@ -143,7 +248,14 @@
       "bats": "R",
       "throws": "R",
       "age": 27,
-      "photo": "jake-lanier.jpg"
+      "photo": "jake-lanier.jpg",
+      "photo_source": "assets/teams/st-paul-frost/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0.75,
+        0.75,
+        0.25,
+        0.25
+      ]
     }
   ]
 }

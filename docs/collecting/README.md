@@ -44,3 +44,17 @@ Local PGlite tests validate SQL permissions and sequential transactional behavio
 Team and player pages display photographs, biographies and player claims, not collectible fronts. The shared profile renderer reads the canonical roster, season records and Board-approved claim contributions. Collectible editions live in the account album. Copy approved facts and artwork into a draft edition when producing a set; freeze that snapshot at release. Later player edits inform later releases and never rewrite an existing edition.
 
 Live setup: migration `fieldstock_additive_collections_v1`. Collection RPCs explicitly revoke inherited anonymous grants. Ownership mutations and secret reads verify that the server-issued session exists and has not expired. Approved contribution rewards reconcile when visiting the account or album; no trigger is added to the existing submissions table.
+
+## Deferred worldbuilding pages
+
+Public GLB Board and commissioner page: introduce the governing characters, with biography, portrait and possible collectible records. Keep this separate from the private review/checklist administration pages. Consider distinct in-universe inboxes for the commissioner and Board functions. Whether these are fictional addresses, forms or real routed inboxes is undecided. No inbox, address, forwarding or outbound mail is created by this note. Requested for later, not part of the current checklist work.
+
+## Private master checklist
+
+`checklist.html` is the Board's editorial workspace, backed by `glb_checklist_cards` and `glb_checklist_variants`. Apply `supabase/glb-checklist.sql` after collecting setup. Authenticated Board members can review biographies, inclusion, artwork paths and quantities; revisions reject stale saves. Scheduled/released sets freeze edits. This page cannot release or mint cards.
+
+The initial 2026 catalog contains 264 planned players and 112 candidate creative subjects. All 264 players have mapped source photography and existing season statistics; all 376 records have reviewable copy. Eight DONK front images are candidates for final artwork. All backs and remaining finished fronts still require production. Base /1000 is a provisional print proposal, not an approved rarity plan. Parallels are added individually before release.
+
+Operator scripts `scripts/build-checklist.py` and `scripts/fill-checklist-content.py` build private import material under ignored `data/collecting/`. Never commit or publish those JSON drafts, approved-contribution exports or QA fixtures. The authoritative working catalog lives in Supabase behind Board RLS. Import only explicit seed fields with `ON CONFLICT DO NOTHING` to preserve subsequent Board edits. Future seed generation should first export private draft/approved source records into that ignored directory. Final public releases use frozen edition snapshots.
+
+Validation: `node tests/supabase-accounts/checklist.mjs` uses a private local seed; `tests/supabase-accounts/hosted-checklist.sql` validates live Postgres in a transaction that rolls back all fixtures. Both cover non-Board isolation, revision conflicts and artwork/quantity constraints.

@@ -8,7 +8,14 @@
       "bats": "R",
       "throws": "R",
       "age": 27,
-      "photo": "iseul-kang.jpg"
+      "photo": "iseul-kang.jpg",
+      "photo_source": "assets/teams/vancouver-current/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0.0,
+        0.0,
+        0.25,
+        0.3333333333333333
+      ]
     },
     {
       "name": "Dane Winslow",
@@ -17,7 +24,14 @@
       "bats": "L",
       "throws": "L",
       "age": 30,
-      "photo": "dane-winslow.jpg"
+      "photo": "dane-winslow.jpg",
+      "photo_source": "assets/teams/vancouver-current/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0.25,
+        0.0,
+        0.25,
+        0.3333333333333333
+      ]
     },
     {
       "name": "Maksim Zorya",
@@ -26,7 +40,14 @@
       "bats": "R",
       "throws": "R",
       "age": 25,
-      "photo": "maksim-zorya.jpg"
+      "photo": "maksim-zorya.jpg",
+      "photo_source": "assets/teams/vancouver-current/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0.5,
+        0.0,
+        0.25,
+        0.3333333333333333
+      ]
     },
     {
       "name": "Raine Talukder",
@@ -35,7 +56,14 @@
       "bats": "R",
       "throws": "L",
       "age": 29,
-      "photo": "raine-talukder.jpg"
+      "photo": "raine-talukder.jpg",
+      "photo_source": "assets/teams/vancouver-current/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0.75,
+        0.0,
+        0.25,
+        0.3333333333333333
+      ]
     },
     {
       "name": "Emilio Córdoba",
@@ -44,7 +72,14 @@
       "bats": "L",
       "throws": "L",
       "age": 26,
-      "photo": "emilio-cordoba.jpg"
+      "photo": "emilio-cordoba.jpg",
+      "photo_source": "assets/teams/vancouver-current/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0.0,
+        0.3333333333333333,
+        0.25,
+        0.3333333333333333
+      ]
     },
     {
       "name": "Kofi Ansah",
@@ -53,7 +88,14 @@
       "bats": "R",
       "throws": "R",
       "age": 28,
-      "photo": "kofi-ansah.jpg"
+      "photo": "kofi-ansah.jpg",
+      "photo_source": "assets/teams/vancouver-current/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0.25,
+        0.3333333333333333,
+        0.25,
+        0.3333333333333333
+      ]
     },
     {
       "name": "Nico Penfold",
@@ -71,7 +113,14 @@
       "bats": "R",
       "throws": "R",
       "age": 31,
-      "photo": "yohei-arakida.jpg"
+      "photo": "yohei-arakida.jpg",
+      "photo_source": "assets/teams/vancouver-current/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0.5,
+        0.3333333333333333,
+        0.25,
+        0.3333333333333333
+      ]
     },
     {
       "name": "Silas Boudreau",
@@ -98,7 +147,14 @@
       "bats": "S",
       "throws": "R",
       "age": 26,
-      "photo": "soraya-jafari.jpg"
+      "photo": "soraya-jafari.jpg",
+      "photo_source": "assets/teams/vancouver-current/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0.75,
+        0.3333333333333333,
+        0.25,
+        0.3333333333333333
+      ]
     },
     {
       "name": "Alejo Santillán",
@@ -116,7 +172,14 @@
       "bats": "R",
       "throws": "R",
       "age": 28,
-      "photo": "roman-velasco.jpg"
+      "photo": "roman-velasco.jpg",
+      "photo_source": "assets/teams/vancouver-current/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0.0,
+        0.6666666666666666,
+        0.25,
+        0.3333333333333333
+      ]
     },
     {
       "name": "Taj Adelman",
@@ -125,7 +188,14 @@
       "bats": "L",
       "throws": "L",
       "age": 27,
-      "photo": "taj-adelman.jpg"
+      "photo": "taj-adelman.jpg",
+      "photo_source": "assets/teams/vancouver-current/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0.25,
+        0.6666666666666666,
+        0.25,
+        0.3333333333333333
+      ]
     },
     {
       "name": "Marcell Lind",
@@ -134,7 +204,14 @@
       "bats": "R",
       "throws": "R",
       "age": 25,
-      "photo": "marcell-lind.jpg"
+      "photo": "marcell-lind.jpg",
+      "photo_source": "assets/teams/vancouver-current/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0.5,
+        0.6666666666666666,
+        0.25,
+        0.3333333333333333
+      ]
     },
     {
       "name": "Oziel Narváez",
@@ -143,7 +220,14 @@
       "bats": "R",
       "throws": "R",
       "age": 30,
-      "photo": "oziel-narvaez.jpg"
+      "photo": "oziel-narvaez.jpg",
+      "photo_source": "assets/teams/vancouver-current/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0.75,
+        0.6666666666666666,
+        0.25,
+        0.3333333333333333
+      ]
     }
   ]
 }

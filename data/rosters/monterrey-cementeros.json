@@ -42,7 +42,14 @@
       "bats": "R",
       "throws": "R",
       "age": 31,
-      "photo": "dariusz-chmiel.jpg"
+      "photo": "dariusz-chmiel.jpg",
+      "photo_source": "assets/teams/monterrey-cementeros/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0.0,
+        0.0,
+        0.25,
+        0.3333333333333333
+      ]
     },
     {
       "name": "Arjun Bhatnagar",
@@ -51,7 +58,14 @@
       "bats": "L",
       "throws": "L",
       "age": 27,
-      "photo": "arjun-bhatnagar.jpg"
+      "photo": "arjun-bhatnagar.jpg",
+      "photo_source": "assets/teams/monterrey-cementeros/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0.25,
+        0.0,
+        0.25,
+        0.3333333333333333
+      ]
     },
     {
       "name": "Cole Wexler",
@@ -60,7 +74,14 @@
       "bats": "R",
       "throws": "R",
       "age": 29,
-      "photo": "cole-wexler.jpg"
+      "photo": "cole-wexler.jpg",
+      "photo_source": "assets/teams/monterrey-cementeros/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0.5,
+        0.0,
+        0.25,
+        0.3333333333333333
+      ]
     },
     {
       "name": "Niko Kouris",
@@ -69,7 +90,14 @@
       "bats": "R",
       "throws": "R",
       "age": 25,
-      "photo": "niko-kouris.jpg"
+      "photo": "niko-kouris.jpg",
+      "photo_source": "assets/teams/monterrey-cementeros/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0.75,
+        0.0,
+        0.25,
+        0.3333333333333333
+      ]
     },
     {
       "name": "Bashir El-Khatib",
@@ -78,7 +106,14 @@
       "bats": "R",
       "throws": "R",
       "age": 30,
-      "photo": "bashir-el-khatib.jpg"
+      "photo": "bashir-el-khatib.jpg",
+      "photo_source": "assets/teams/monterrey-cementeros/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0.0,
+        0.3333333333333333,
+        0.25,
+        0.3333333333333333
+      ]
     },
     {
       "name": "Rowan Treadwell",
@@ -87,7 +122,14 @@
       "bats": "L",
       "throws": "R",
       "age": 24,
-      "photo": "rowan-treadwell.jpg"
+      "photo": "rowan-treadwell.jpg",
+      "photo_source": "assets/teams/monterrey-cementeros/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0.25,
+        0.3333333333333333,
+        0.25,
+        0.3333333333333333
+      ]
     },
     {
       "name": "Julián Sauri",
@@ -96,7 +138,14 @@
       "bats": "R",
       "throws": "R",
       "age": 28,
-      "photo": "julian-sauri.jpg"
+      "photo": "julian-sauri.jpg",
+      "photo_source": "assets/teams/monterrey-cementeros/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0.5,
+        0.3333333333333333,
+        0.25,
+        0.3333333333333333
+      ]
     },
     {
       "name": "Eamon Kilrea",
@@ -105,7 +154,14 @@
       "bats": "L",
       "throws": "R",
       "age": 32,
-      "photo": "eamon-kilrea.jpg"
+      "photo": "eamon-kilrea.jpg",
+      "photo_source": "assets/teams/monterrey-cementeros/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0.75,
+        0.3333333333333333,
+        0.25,
+        0.3333333333333333
+      ]
     },
     {
       "name": "Thiago Pereyra",
@@ -114,7 +170,14 @@
       "bats": "S",
       "throws": "R",
       "age": 26,
-      "photo": "thiago-pereyra.jpg"
+      "photo": "thiago-pereyra.jpg",
+      "photo_source": "assets/teams/monterrey-cementeros/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0.0,
+        0.6666666666666666,
+        0.25,
+        0.3333333333333333
+      ]
     },
     {
       "name": "Kofi Mensah",
@@ -140,7 +203,14 @@
       "bats": "R",
       "throws": "R",
       "age": 29,
-      "photo": "luka-vukovic.jpg"
+      "photo": "luka-vukovic.jpg",
+      "photo_source": "assets/teams/monterrey-cementeros/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0.25,
+        0.6666666666666666,
+        0.25,
+        0.3333333333333333
+      ]
     },
     {
       "name": "Seiji Fukumori",
@@ -149,7 +219,14 @@
       "bats": "L",
       "throws": "L",
       "age": 25,
-      "photo": "seiji-fukumori.jpg"
+      "photo": "seiji-fukumori.jpg",
+      "photo_source": "assets/teams/monterrey-cementeros/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0.5,
+        0.6666666666666666,
+        0.25,
+        0.3333333333333333
+      ]
     },
     {
       "name": "Andrés Cázares",
@@ -175,7 +252,14 @@
       "bats": "R",
       "throws": "R",
       "age": 31,
-      "photo": "micah-lunsford.jpg"
+      "photo": "micah-lunsford.jpg",
+      "photo_source": "assets/teams/monterrey-cementeros/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0.75,
+        0.6666666666666666,
+        0.25,
+        0.3333333333333333
+      ]
     }
   ]
 }

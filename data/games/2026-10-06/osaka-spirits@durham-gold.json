@@ -1,0 +1,82 @@
+{
+  "schema": "glb.boxscore.v1",
+  "game_id": "2026-10-06_osaka-spirits@durham-gold",
+  "date": "2026-10-06",
+  "phase": "postseason",
+  "round": "GLB Championship Series",
+  "series": "FINAL",
+  "game_number": 6,
+  "away": {
+    "slug": "osaka-spirits",
+    "name": "Osaka Spirits"
+  },
+  "home": {
+    "slug": "durham-gold",
+    "name": "Triangle Gold"
+  },
+  "status": "Final",
+  "linescore": {
+    "innings": [
+      {
+        "inning": 1,
+        "away": 0,
+        "home": 0
+      },
+      {
+        "inning": 2,
+        "away": 1,
+        "home": 0
+      },
+      {
+        "inning": 3,
+        "away": 0,
+        "home": 0
+      },
+      {
+        "inning": 4,
+        "away": 1,
+        "home": 0
+      },
+      {
+        "inning": 5,
+        "away": 0,
+        "home": 1
+      },
+      {
+        "inning": 6,
+        "away": 0,
+        "home": 0
+      },
+      {
+        "inning": 7,
+        "away": 1,
+        "home": 0
+      },
+      {
+        "inning": 8,
+        "away": 0,
+        "home": 1
+      },
+      {
+        "inning": 9,
+        "away": 1,
+        "home": 1
+      }
+    ],
+    "totals": {
+      "away": {
+        "R": 4
+      },
+      "home": {
+        "R": 3
+      }
+    }
+  },
+  "final": {
+    "away": 4,
+    "home": 3
+  },
+  "notes": [
+    "Official postseason score and inning record. Individual player lines were not recorded."
+  ]
+}

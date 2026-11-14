@@ -22,7 +22,7 @@ for (const game of games) {
   if (day.has(game.away) || day.has(game.home)) errors.push(`Club plays twice: ${key}`);
   day.add(game.away); day.add(game.home); dailyTeams.set(game.date, day);
   if (!names.has(game.away) || !names.has(game.home)) { errors.push(`Unknown club: ${key}`); continue; }
-  const file = `data/games/${key}.json`;
+  const file = game.source || `data/games/${key}.json`;
   if (!fs.existsSync(path.join(root, file))) { errors.push(`No box score: ${key}`); continue; }
   const box = read(file);
   if (box.final?.away !== game.awayScore || box.final?.home !== game.homeScore)
@@ -56,7 +56,7 @@ for (const game of games) {
 }
 for (const game of locked.games) {
   const key = `${locked.date}/${game.away_slug}@${game.home_slug}`;
-  const found = games.find(g => `${g.date}/${g.away}@${g.home}` === key);
+  const found = games.find(g => `${g.sourceDate || g.date}/${g.away}@${g.home}` === key);
   if (!found || found.awayScore !== game.away_score || found.homeScore !== game.home_score)
     errors.push(`Locked Opening Day mismatch: ${key}`);
 }
@@ -68,7 +68,7 @@ for (const row of Object.values(standings.divisions).flat()) {
 for (const row of stats)
   if (!rosters.get(row.team_slug)?.has(row.player)) errors.push(`Unknown season stat player: ${row.team_slug}/${row.player}`);
 console.log(JSON.stringify({games: games.length, richGames: games.filter(g => {
-  const b = read(`data/games/${g.date}/${g.away}@${g.home}.json`);
+  const b = read(g.source || `data/games/${g.date}/${g.away}@${g.home}.json`);
   return Boolean(b.batting && b.pitching);
 }).length, teams: teams.length, playerStatRecords: stats.length, errors}, null, 2));
 if (errors.length) process.exitCode = 1;

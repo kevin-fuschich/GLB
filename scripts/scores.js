@@ -31,7 +31,7 @@
     for(const g of slate){
       const card=node('article',undefined,'game-card');const final=g.status==='final';
       card.setAttribute('aria-label',`${clubs.get(g.away)?.team||g.away} at ${clubs.get(g.home)?.team||g.home}`);
-      const top=node('div',undefined,'game-top');top.append(node('span',final?'Final':g.status==='scheduled'?'Scheduled':g.status||'Game','game-final'),node('span','GLB · '+date.slice(0,4)));card.append(top);
+      const top=node('div',undefined,'game-top');top.append(node('span',final?'Final':g.status==='scheduled'?'Scheduled':g.status||'Game','game-final'),node('span',g.phase==='postseason'?g.round+' · G'+g.gameNumber:'GLB · '+date.slice(0,4)));card.append(top);
       for(const side of ['away','home']){
         const slug=g[side],other=side==='away'?'home':'away',winner=final&&g[side+'Score']>g[other+'Score'];
         const row=node('div',undefined,'game-team'+(winner?' winner':'')),badge=node('span',(clubs.get(slug)?.team||slug).split(' ').map(s=>s[0]).join('').slice(0,3),'team-badge');
@@ -47,14 +47,14 @@
     const params=new URLSearchParams({date});if(filter)params.set('team',filter);history.replaceState(null,'','scores.html?'+params);
   }
   async function load(){try{
-    [games,clubs,photos]=await Promise.all([read('data/season/games.json'),read('data/teams/teams.json'),read('data/score-photos.json').then(data=>Array.isArray(data)?data:[]).catch(()=>[])]);
+    [games,clubs,photos]=await Promise.all([Promise.all([read('data/season/games.json'),read('data/season/postseason-2026.json')]).then(([regular,post])=>[...regular,...post.games]),read('data/teams/teams.json'),read('data/score-photos.json').then(data=>Array.isArray(data)?data:[]).catch(()=>[])]);
     clubs=new Map(Object.values(clubs.divisions).flat().map(c=>[c.slug,c]));
     games=games.filter(g=>validDate(g.date));dates=[...new Set(games.map(g=>g.date))].sort();if(!dates.length)throw Error('No games');
     first=dates[0];last=dates.at(-1);const params=new URLSearchParams(location.search);date=validDate(params.get('date'))?params.get('date'):last;if(date<first||date>last)date=last;
     filter=clubs.has(params.get('team'))?params.get('team'):'';
     for(const c of [...clubs.values()].sort((a,b)=>a.team.localeCompare(b.team))){const option=node('option',c.team);option.value=c.slug;$('score-team').append(option);}
     $('score-team').value=filter;$('score-date').min=first;$('score-date').max=last;
-    $('season-note').textContent=`2026 season archive · Results through ${dateText(last,{month:'long',day:'numeric',year:'numeric'})}.`;
+    $('season-note').textContent=`2026 complete · Offseason · Results through ${dateText(last,{month:'long',day:'numeric',year:'numeric'})}. Osaka Spirits are GLB champions.`;
     for(const id of ['score-date','score-team','latest-day'])$(id).disabled=false;
     $('previous-day').onclick=()=>{if(date>first){date=shift(date,-1);render();}};$('next-day').onclick=()=>{if(date<last){date=shift(date,1);render();}};
     $('latest-day').onclick=()=>{date=last;render();};

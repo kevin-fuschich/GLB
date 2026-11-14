@@ -19,13 +19,13 @@
   if (header) header.insertAdjacentElement("afterend",strip); else document.body.prepend(strip);
   const safe = value => String(value ?? "—").replace(/[&<>"']/g, char => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[char]));
   Promise.all([
-    fetch("data/season/games.json",{cache:"no-store"}).then(r=>r.json()),
+    Promise.all([fetch("data/season/games.json",{cache:"no-store"}).then(r=>r.json()),fetch("data/season/postseason-2026.json",{cache:"no-store"}).then(r=>r.json())]).then(([regular,post])=>[...regular,...post.games]),
     fetch("data/teams/teams.json",{cache:"no-store"}).then(r=>r.json())
   ]).then(([games,registry])=>{
     const teams=Object.values(registry.divisions).flat(), names=new Map(teams.map(team=>[team.slug,team.team]));
     const date=games.at(-1)?.date, slate=date?games.filter(game=>game.date===date):[];
     if(!slate.length) throw Error("No results");
-    const card=(game,copy)=>'<article class="glb-score-card'+(copy?' glb-score-copy':'')+'"'+(copy?' aria-hidden="true"':'')+'><span class="glb-score-date">'+safe(game.date)+' · '+safe(game.status||"Final")+'</span><a class="glb-score-team" href="team.html?team='+encodeURIComponent(game.away)+'">'+safe(names.get(game.away)||game.away)+'</a><strong class="glb-score-value">'+safe(game.awayScore)+'</strong><a class="glb-score-team" href="team.html?team='+encodeURIComponent(game.home)+'">'+safe(names.get(game.home)||game.home)+'</a><strong class="glb-score-value">'+safe(game.homeScore)+'</strong><a class="glb-score-box" href="box.html?date='+encodeURIComponent(game.date)+'&game='+encodeURIComponent(game.away+"@"+game.home)+'">Box score →</a></article>';
+    const card=(game,copy)=>'<article class="glb-score-card'+(copy?' glb-score-copy':'')+'"'+(copy?' aria-hidden="true"':'')+'><span class="glb-score-date">'+safe(game.date)+' · '+safe(game.phase==="postseason"?game.round+" · Game "+game.gameNumber+" · Final":game.status||"Final")+'</span><a class="glb-score-team" href="team.html?team='+encodeURIComponent(game.away)+'">'+safe(names.get(game.away)||game.away)+'</a><strong class="glb-score-value">'+safe(game.awayScore)+'</strong><a class="glb-score-team" href="team.html?team='+encodeURIComponent(game.home)+'">'+safe(names.get(game.home)||game.home)+'</a><strong class="glb-score-value">'+safe(game.homeScore)+'</strong><a class="glb-score-box" href="box.html?date='+encodeURIComponent(game.date)+'&game='+encodeURIComponent(game.away+"@"+game.home)+'">Box score →</a></article>';
     const track=strip.querySelector(".glb-score-track");
     track.innerHTML=slate.map(g=>card(g,false)).join("")+slate.map(g=>card(g,true)).join("");
     track.style.setProperty("--glb-duration",Math.max(28,slate.length*7)+"s");

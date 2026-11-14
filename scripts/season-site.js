@@ -63,13 +63,14 @@
     const page = document.body.dataset.seasonPage;
     if (!page) return;
     try {
-      const [teams, standings, games, stats, leaders] = await Promise.all([
+      const [teams, standings, games, stats, leaders, postseason, seasonStatus] = await Promise.all([
         fetchJSON('data/teams/teams.json'), fetchJSON('current/standings.json'),
-        fetchJSON('data/season/games.json'), fetchJSON('data/season/player-stats.json'), fetchJSON('current/leaders.json')
+        fetchJSON('data/season/games.json'), fetchJSON('data/season/player-stats.json'), fetchJSON('current/leaders.json'), fetchJSON('data/season/postseason-2026.json'), fetchJSON('data/season/status.json')
       ]);
+      games.push(...postseason.games);
       for (const team of Object.values(teams.divisions).flat()) names.set(team.slug, team.team);
       const seasonYear = standings.as_of?.slice(0, 4) || 'Current';
-      $$('.header-meta').forEach(el => { el.textContent = `${seasonYear} Season`; });
+      $$('.header-meta').forEach(el => { el.textContent = `${seasonYear} · Offseason`; });
       const clubRows = Object.values(standings.divisions).flat();
       const seasonComplete = clubRows.every(row => row.w + row.l >= 162);
       const stretchRun = clubRows.every(row => row.w + row.l >= 120);
@@ -79,7 +80,7 @@
           teamRows(section.querySelector('tbody'), standings.divisions[division]);
         }
         const meta = $('.page-meta');
-        if (meta) meta.replaceChildren(cell('span', 'Regular Season'), cell('span', `As of ${dateText(standings.as_of)}`));
+        if (meta) meta.replaceChildren(cell('span', 'Final regular-season standings'), cell('span', `Through ${dateText(standings.as_of)} · Postseason results recorded separately`));
         const rail = $('.mini-table tbody');
         if (rail) rail.replaceChildren(...Object.entries(standings.divisions).map(([division, rows]) => {
           const tr = document.createElement('tr');
@@ -120,7 +121,7 @@
         const module = $('.modules .card');
         if (module) {
           const title = module.querySelector('.module-title');
-          if (title) title.textContent = 'Latest Results';
+          if (title) title.textContent = 'Final Results';
           const list = module.querySelector('.schedule-list');
           if (list) list.replaceChildren(...games.slice(-3).reverse().map(g => {
             const item = document.createElement('div'); item.className = 'schedule-item';
@@ -176,7 +177,7 @@
               href: 'standings.html', link: 'View Standings'
             },
             {
-              image: 'images/hero/hero-02.png', kicker: 'Latest Results',
+              image: 'images/hero/hero-02.png', kicker: 'Final Results',
               title: 'The latest slate is in',
               deck: lastGame ? `${lastSlate.length} ${lastSlate.length === 1 ? 'game' : 'games'} from ${dateText(lastDate)}. See every final score and box score.` : 'See the latest results across GLB.',
               href: 'scores.html', link: 'See All Scores'
@@ -194,6 +195,14 @@
               href: 'club-spokane-alloys.html', link: 'Visit Spokane'
             }
           ];
+          slides[0] = {
+            image: 'assets/teams/osaka-spirits/images/mumbo-jumbo-stadium-night.webp',
+            kicker: '2026 GLB Champions', title: 'Osaka finishes the job',
+            deck: 'The Spirits beat the Gold in six games to win the GLB Championship Series. The 2026 season is complete. Welcome to the offseason.',
+            href: 'postseason.html', link: 'The championship record'
+          };
+          slides[1] = {image:'images/hero/hero-02.png',kicker:'Offseason · 2027 ahead',title:'The games pause. The world keeps growing.',deck:'Explore the clubs, claim a card and add to the GLB record. The 2027 schedule has not been announced.',href:'contribute.html',link:'Claim & Create'};
+          slides[2].kicker='2026 Final Leaders';slides[2].title='The season in numbers';slides[2].deck='The final regular-season batting and pitching leaders. Postseason results are recorded separately.';
           slides.slice(1).forEach(slide => { const preload = new Image(); preload.src = slide.image; });
           let active = 0;
           let changeTimer;
@@ -256,7 +265,7 @@
               : race.gap <= 6
                 ? `${race.chaser.team} trails ${race.leader.team} by ${race.gap} ${race.gap === 1 ? 'game' : 'games'}`
                 : `${race.leader.team} leads the ${race.division} by ${race.gap} games`;
-          setStory(0, 'Division Race', headline,
+          setStory(0, 'Final Standings', headline,
             `${race.division} · ${race.leader.w}–${race.leader.l} to ${race.chaser.w}–${race.chaser.l}`,
             'standings.html');
         }
@@ -271,6 +280,8 @@
           `${form.row.team} wins ${form.wins} of its last ${form.played}`,
           `${form.row.w}–${form.row.l} this season · See the club`,
           `team.html?team=${encodeURIComponent(form.row.slug)}`);
+        setStory(0,'Championship','Osaka wins the 2026 GLB title','Spirits beat the Gold, 4–2 · October 6','postseason.html');
+        setStory(1,'Offseason','The 2026 season is complete','2027 schedule to be announced · Help build what comes next','contribute.html');
         const homerLeader = leaders.batting?.HR?.[0];
         if (homerLeader) setStory(2, 'Player Watch',
           Number(leaders.batting.HR?.[1]?.value) === Number(homerLeader.value)
@@ -283,7 +294,7 @@
         const sheet = $('.record-sheet');
         $('#season-loading')?.remove();
         $$('.date-group').forEach(el => el.remove());
-        const detail = $('.meta-detail'); if (detail) detail.textContent = `${seasonYear} · Results through ${dateText(standings.as_of)}`;
+        const detail = $('.meta-detail'); if (detail) detail.textContent = `${seasonYear} complete · Offseason · Regular season and postseason results`;
         const controls = document.createElement('div'); controls.className = 'season-controls';
         const select = document.createElement('select'); select.setAttribute('aria-label', 'Select month');
         const months = [...new Set(games.map(g => g.date.slice(0, 7)))];
@@ -367,7 +378,8 @@
         const date = new URLSearchParams(location.search).get('date');
         const matchup = new URLSearchParams(location.search).get('game');
         if (!/^2026-\d\d-\d\d$/.test(date || '') || !/^[a-z0-9-]+@[a-z0-9-]+$/.test(matchup || '')) throw new Error('Invalid box-score link');
-        const g = await fetchJSON(`data/games/${date}/${matchup}.json`);
+        const indexed = games.find(game => game.date === date && `${game.away}@${game.home}` === matchup);
+        const g = await fetchJSON(indexed?.source || `data/games/${date}/${matchup}.json`);
         const [away, home] = matchup.split('@');
         $('#game-title').replaceChildren(teamLink(away, 'team-page-link'), document.createTextNode(' at '), teamLink(home, 'team-page-link'));
         $('#as-of').textContent = `${dateText(date)} · Final · ${g.final.away}–${g.final.home}`;
@@ -390,7 +402,7 @@
         }
         for (const kind of ['batting','pitching']) {
           const container = $(`#${kind}`);
-          if (!g[kind]) { container.textContent = 'Player lines were not recorded for this Opening Day game.'; continue; }
+          if (!g[kind]) { container.textContent = 'Individual player lines were not recorded for this game.'; continue; }
           for (const side of ['away','home']) {
             const heading = document.createElement('h3'); heading.append(teamLink(side === 'away' ? away : home, 'team-page-link'));
             const table=document.createElement('table'); const head=document.createElement('tr');

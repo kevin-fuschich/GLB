@@ -28,13 +28,13 @@
      }else{
        const image=el('img');image.src=s.logo;image.alt=s.name+' logo';image.width=360;image.height=160;image.loading='lazy';image.decoding='async';mark.append(image);
      }
-     const about=el('p',s.about,'sponsor-about'),description=el('p',s.description,'sponsor-description');card.append(mark,el('p','SPONSOR ENTITY','sponsor-kicker'),a,about,description);ownership(card,s,owners.get(s.artifact_id));grid.append(card);
+     const about=el('p',s.about,'sponsor-about');card.append(mark,el('p','SPONSOR ENTITY','sponsor-kicker'),a,about);ownership(card,s,owners.get(s.artifact_id));grid.append(card);
    }host.append(grid);
   }else{
    const s=data.sponsors.find(s=>s.slug===slug);if(!s){status.textContent='That sponsor profile is unavailable.';return;}
    const claim=owners.get(s.artifact_id);document.title=s.name+' | GLB sponsor profile';
    const hero=el('section',undefined,'sponsor-hero'),copy=el('div');
-   copy.append(el('p','GLB SPONSOR ENTITY','sponsor-kicker'),el('h1',s.name),el('p',s.about,'sponsor-deck'),el('p',s.description,'sponsor-placement'));ownership(copy,s,claim);hero.append(copy);
+   copy.append(el('p','GLB SPONSOR ENTITY','sponsor-kicker'),el('h1',s.name),el('p',s.about,'sponsor-deck'));ownership(copy,s,claim);hero.append(copy);
    if(s.image){const image=el('img');image.src=s.image;image.alt=s.name+' brand advertisement';hero.append(image);}host.append(hero);
    const scope=el('section');scope.id='sponsor-profile';scope.append(el('h2','One entity. One claim.'),el('p','This claim covers '+s.name+' as a complete sponsor entity: its brand profile, products, campaigns, advertising and sponsorship identity across GLB. Every placement points back to this same record.'));host.append(scope);
    if(s.website){const website=new URL(s.website);if(website.protocol==='https:'){const a=el('a','Visit '+s.name+' →','sponsor-button');a.href=website.href;a.rel='sponsored noopener';host.append(a);}}

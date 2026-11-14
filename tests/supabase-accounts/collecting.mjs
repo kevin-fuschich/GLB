@@ -1,0 +1,42 @@
+import {PGlite} from '@electric-sql/pglite';
+import {readFile} from 'node:fs/promises';
+import assert from 'node:assert/strict';
+const db=new PGlite();
+await db.exec(`create role anon;create role authenticated;create role service_role bypassrls;create schema auth;
+create table auth.users(id uuid primary key,email text);create table auth.sessions(id uuid primary key,user_id uuid,created_at timestamptz default now());
+create function auth.uid() returns uuid language sql stable as $$select nullif(current_setting('request.jwt.claim.sub',true),'')::uuid$$;
+create function auth.role() returns text language sql stable as $$select nullif(current_setting('request.jwt.claim.role',true),'')$$;grant usage on schema auth to authenticated,anon;`);
+for(const f of ['glb-accounts.sql','glb-collecting.sql','glb-collecting.sql'])await db.exec(await readFile(new URL('../../supabase/'+f,import.meta.url),'utf8'));
+const a='00000000-0000-4000-8000-000000000001',b='00000000-0000-4000-8000-000000000002',sid='00000000-0000-4000-8000-000000000003';
+await db.query(`insert into auth.users values($1::uuid,'a@example.invalid'),($2::uuid,'b@example.invalid')`,[a,b]);
+await db.query("insert into public.glb_profiles values($1,'alpha',now()),($2,'beta',now())",[a,b]);
+await db.query('insert into auth.sessions(id,user_id) values($1,$2)',[sid,a]);
+await db.exec(`insert into public.glb_sets(id,title,season,cards_per_pack) values('test','Test',1999,2);
+insert into public.glb_editions(id,set_id,subject_id,name,variant,quantity,front_image) values('test-base','test','unknown-1999','Unknown player','Base',4,'test.webp');
+insert into glb_private.copies(edition_id,serial) select 'test-base',generate_series(1,4);
+update public.glb_sets set release_at=now() where id='test';`);
+async function as(u,role='authenticated'){await db.exec('reset role');await db.query("select set_config('request.jwt.claim.sub',$1,false),set_config('request.jwt.claims',$2,false)",[u||'',JSON.stringify({session_id:sid})]);await db.exec('set role '+role);}
+async function denied(fn){await assert.rejects(fn);}
+await as(a);await db.query('select public.glb_collect_visit()');await db.query('select public.glb_collect_visit()');
+let packs=(await db.query('select * from public.glb_packs')).rows;assert.equal(packs.length,1);
+await as(b);await denied(()=>db.query('select public.glb_open_pack($1)',[packs[0].id]));
+await as(a);let opened=(await db.query('select public.glb_open_pack($1) as v',[packs[0].id])).rows[0].v;
+assert.equal(opened.length,2);assert.equal(opened[0].edition_id,opened[1].edition_id); // Doubles are distinct copies.
+assert.notEqual(opened[0].copy_id,opened[1].copy_id);
+assert.deepEqual((await db.query('select public.glb_open_pack($1) as v',[packs[0].id])).rows[0].v,opened);
+let id=opened[0].copy_id;let secret=(await db.query('select public.glb_card_secret($1) as v',[id])).rows[0].v;assert.match(secret,/^\d{16}$/);
+await denied(()=>db.query('select * from glb_private.copies'));
+assert.equal((await db.query("select public.glb_request_transfer($1,'beta','bad') as v",[id])).rows[0].v,null);
+const transfer=(await db.query("select public.glb_request_transfer($1,'beta',$2) as v",[id,secret])).rows[0].v;assert.ok(transfer);
+await as(b);assert.equal((await db.query('select public.glb_card_secret($1) as v',[id])).rows[0].v,null);
+await denied(()=>db.query('select public.glb_accept_transfer($1)',[transfer]));
+await db.exec('reset role');await db.query('update auth.sessions set user_id=$1',[b]);
+await as(b);assert.equal((await db.query('select public.glb_accept_transfer($1) as v',[transfer])).rows[0].v,true);
+assert.notEqual((await db.query('select public.glb_card_secret($1) as v',[id])).rows[0].v,secret);
+assert.equal((await db.query('select public.glb_accept_transfer($1) as v',[transfer])).rows[0].v,false);
+await as(a);assert.equal((await db.query('select public.glb_my_album() as v')).rows[0].v.length,1);
+await as(null,'anon');await denied(()=>db.query('select public.glb_my_album()'));
+assert.equal((await db.query('select public.glb_discovery() as v')).rows[0].v[0].discovered,2);
+await db.exec('reset role');await denied(()=>db.query("update public.glb_editions set quantity=1000"));
+await denied(()=>db.query("insert into public.glb_editions values('late','test','late','Late','Gold',1,'test.webp',null,'{}')"));
+console.log('PASS: repeatable setup, finite draws, doubles, idempotent opening, private codes, owner enforcement, transfer acceptance, code rotation, discovery conservation, immutable release.');await db.close();

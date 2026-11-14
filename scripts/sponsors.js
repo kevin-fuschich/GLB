@@ -14,7 +14,7 @@
   data.sponsors.sort((a,b)=>a.name.localeCompare(b.name,'en',{sensitivity:'base'}));
   const owners=new Map(claims.map(c=>[c.artifact_id,c])),slug=new URLSearchParams(location.search).get('sponsor');
   if(!slug){
-   host.append(el('p','GLOBAL LEAGUE BASEBALL','sponsor-kicker'),el('h1','About Our Sponsors'),el('p','Meet the brands in GLB: what they make, what they do and where they appear. Claim an available sponsor and build on its story.','sponsor-deck'));
+   host.append(el('p','GLOBAL LEAGUE BASEBALL','sponsor-kicker'),el('h1','About Our Sponsors'),el('p','Meet the brands in GLB: what they make and what they do. Claim an available sponsor and build on its story.','sponsor-deck'));
    const grid=el('div',undefined,'sponsor-grid');
    for(const s of data.sponsors){
      const card=el('article',undefined,'sponsor-tile'),a=el('a',s.name);a.href=href(s);a.className='sponsor-name';

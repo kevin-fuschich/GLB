@@ -361,7 +361,7 @@
             const bv = Number(b[group]?.[key] ?? (key === 'ERA' || key === 'WHIP' ? Infinity : -Infinity));
             return (key === 'ERA' || key === 'WHIP' ? av-bv : bv-av) || a.name.localeCompare(b.name);
           });
-          $('#stat-body').replaceChildren(...eligible.slice(0,50).map((player, i) => {
+          const rows = eligible.slice(0,50).map((player, i) => {
             const tr = document.createElement('tr');
             const playerCell = document.createElement('td');
             const playerLink = cell('a', player.name);
@@ -370,7 +370,17 @@
             const clubCell = document.createElement('td'); clubCell.append(teamLink(player.team_slug, 'team-page-link'));
             tr.append(cell('td', i+1), playerCell, clubCell,cell('td',player[group][key]));
             return tr;
-          }));
+          });
+          const rest = $('#stat-body-rest');
+          $('#stat-body').replaceChildren(...(rest ? rows.slice(0,10) : rows));
+          const label = select.selectedOptions[0]?.textContent || 'League leaders';
+          if ($('#leaderboardTitle')) $('#leaderboardTitle').textContent = label;
+          if (rest) {
+            rest.replaceChildren(...rows.slice(10));
+            $('#statsContinuation').hidden = rows.length <= 10;
+            $('#continuationCaption').textContent = `${label}: ranks 11–${rows.length}`;
+            $('.stats-sponsors').hidden = rows.length === 0;
+          }
         };
         select.addEventListener('change', render); render();
       }

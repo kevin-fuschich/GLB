@@ -1,0 +1,16 @@
+{
+  "mode": "built-in",
+  "usage": "Compact Stats advertisements after ranks 1–10; mix product and lifestyle photography without literal club sponsorship copy.",
+  "images": [
+    {
+      "brand": "mumbo-jumbo",
+      "path": "assets/ads/mumbo-jumbo/cafe-notebook-v1.webp",
+      "prompt": "Use case: photorealistic-natural. New wide 3:2 lifestyle photograph for fictional MUMBO JUMBO stationery advertising. Reference establishes ONLY brand logo, pen and ivory notebook; remove every baseball/Osaka reference. A thoughtful middle-aged Black woman in casual everyday clothing sits at a neighborhood cafe table, candid three-quarter side view, writing a short note in an ivory dotted journal with a matte black Nano Ink pen with red clicker. A closed pocket notebook on the table has the established stacked heavy black 'MUMBO JUMBO' wordmark and small red ink dot, with no other text. Natural window light, tactile real paper, relaxed concentration, a slight unforced smile, unposed authentic moment, natural hands correctly holding pen. Medium composition with face, hand, journal and branded notebook readable. No looking at camera, no exaggerated laughing, no baseball/stadium/GLB/scorebook, no collage, no slogan/graphic overlays. Modest lived-in cafe, no other readable brands."
+    },
+    {
+      "brand": "tumbao",
+      "path": "assets/ads/tumbao/trail-walker-v1.webp",
+      "prompt": "Use case: photorealistic-natural. New wide 3:2 lifestyle photograph for fictional TUMBAO outdoor-gear advertising. Reference establishes brand garments, rolltop pack, palette, exact TUMBAO closed-O wordmark and angular open-square stitched symbol. A Chilean woman in her 40s with short dark wavy hair, wearing the practical aubergine/glacier-blue shell with yellow pocket and the clay/glacier-blue pack, pauses on a foothill trail, adjusting one backpack strap naturally. Side-on candid waist-up view, face visible with a quietly content expression looking along trail, not posing or looking at camera. Soft cloudy Andean light, weathered cloth texture and reinforced seams, normal real skin, natural anatomy. Small woven TUMBAO label visible on upper sleeve or pack, no giant floating logo. A real walk with functional gear, no HDR or theatrical sky, no stadium/baseball/GLB/club names, no collage, no slogan/graphic overlay."
+    }
+  ]
+}

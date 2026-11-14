@@ -1,7 +1,8 @@
 
 (() => {
  const client=window.GLBAuth?.client,$=id=>document.getElementById(id),make=(tag,text,cls)=>{const n=document.createElement(tag);if(text!==undefined)n.textContent=text;if(cls)n.className=cls;return n;};
- let user=null,handle='',epoch=0;
+ let user=null,handle='',epoch=0,imageRevision=0,preparingAvatar=false,saving=false;
+ const syncSave=()=>{$('saveProfile').disabled=!user||preparingAvatar||saving;};
  const themes=['navy','forest','oxblood','sand'];
  const status=t=>{$('profileStatus').textContent=t;};
  const urlFor=(id,preview=false)=>'profile.html?'+new URLSearchParams({user:id,...(preview?{preview:'1'}:{})});
@@ -28,7 +29,7 @@
  async function rpc(name,args){const r=await client.rpc(name,args);if(r.error)throw r.error;return r.data;}
  function checklist(id,items,selected,label){const root=$(id);root.replaceChildren();for(const item of items){const wrap=make('label',undefined,'feature-option'),check=make('input');check.type='checkbox';check.value=item.key;check.checked=selected.includes(item.key);wrap.append(check,make('span',item.label));root.append(wrap);}if(!items.length)root.append(make('p',label,'profile-help'));}
  async function load(){
-  const ticket=++epoch;user=null;$('editor').hidden=true;$('showcase').hidden=true;$('privatePreview').hidden=true;status('Loading profile…');
+  const ticket=++epoch;user=null;imageRevision++;preparingAvatar=false;syncSave();$('editor').hidden=true;$('showcase').hidden=true;$('privatePreview').hidden=true;status('Loading profile…');
   try{
    if(!client)throw Error('Sign-in unavailable');
    if(!teams.size){const r=await fetch('data/teams/teams.json');if(!r.ok)throw Error();const data=await r.json();for(const t of Object.values(data.divisions).flat())teams.set(t.slug,t.team);}
@@ -57,35 +58,37 @@
    $('memberId').textContent='@'+handle+' · Your permanent User ID';
    $('previewLink').href=urlFor(handle,true);$('publicLink').href=urlFor(handle);$('publicLink').hidden=!s.published;
    $('shareURL').value=s.published?new URL(urlFor(handle),location.href).href:'Save with “Publish my showcase” checked to activate your public link.';
-   $('editor').hidden=false;$('signInLink').hidden=true;status('');
+   $('editor').hidden=false;$('signInLink').hidden=true;syncSave();status('');
   }catch{if(ticket===epoch)status('Your profile could not load. Refresh to try again.');}
  }
  function refreshAvatar(){const root=$('avatarPreview');root.replaceChildren();avatar(root,{avatar:$('avatarData').value,display_name:$('displayName').value,user_id:handle});}
  $('avatarFile').onchange=async event=>{
-  const file=event.target.files[0];if(!file)return;
-  if(!['image/jpeg','image/png','image/webp'].includes(file.type)||file.size>8*1024*1024){status('Choose a JPG, PNG or WebP image under 8 MB.');return;}
+  const file=event.target.files[0];if(!file)return;const imageTicket=++imageRevision;
+  if(!['image/jpeg','image/png','image/webp'].includes(file.type)||file.size>8*1024*1024){preparingAvatar=false;syncSave();event.target.value='';status('Choose a JPG, PNG or WebP image under 8 MB.');return;}
+  preparingAvatar=true;syncSave();status('Preparing your photo…');
   const owner=user?.id,ticket=epoch,objectURL=URL.createObjectURL(file);try{
    const image=new Image();image.src=objectURL;await image.decode();if(image.width*image.height>40000000)throw Error();
    const canvas=document.createElement('canvas');canvas.width=canvas.height=256;const size=Math.min(image.width,image.height);canvas.getContext('2d').drawImage(image,(image.width-size)/2,(image.height-size)/2,size,size,0,0,256,256);
    const avatar=canvas.toDataURL('image/webp',.82);if(!avatar.startsWith('data:image/webp;base64,')||avatar.length>180000)throw Error();
-   if(ticket!==epoch||owner!==user?.id)return;$('avatarData').value=avatar;refreshAvatar();status('Photo prepared. Save your profile to keep it.');
-  }catch{status('That image could not be prepared. Try another photo.');}finally{URL.revokeObjectURL(objectURL);event.target.value='';}
+   if(ticket!==epoch||owner!==user?.id||imageTicket!==imageRevision)return;$('avatarData').value=avatar;refreshAvatar();status('Photo prepared. Save your profile to keep it.');
+  }catch{if(ticket===epoch&&imageTicket===imageRevision)status('That image could not be prepared. Try another photo.');}finally{URL.revokeObjectURL(objectURL);if(imageTicket===imageRevision){preparingAvatar=false;event.target.value='';syncSave();}}
  };
- $('removeAvatar').onclick=()=>{$('avatarData').value='';refreshAvatar();};$('displayName').oninput=refreshAvatar;
+ $('removeAvatar').onclick=()=>{imageRevision++;preparingAvatar=false;$('avatarFile').value='';$('avatarData').value='';refreshAvatar();syncSave();status('Initials selected. Save your profile to keep them.');};$('displayName').oninput=refreshAvatar;
  $('theme').onchange=()=>{$('editor').dataset.theme=$('theme').value;};
  $('customizeForm').onsubmit=async event=>{
-  event.preventDefault();if(!user)return;const owner=user.id,ticket=epoch;
+  event.preventDefault();if(!user||saving)return;if(preparingAvatar){status('Your photo is still being prepared. Save when it is ready.');return;}const owner=user.id,ticket=epoch;
   const cards=chosen('featureCards'),claims=chosen('featureClaims'),notes=chosen('featureNotes');
   if([cards,claims,notes].some(a=>a.length>9)){status('Choose up to nine items in each section.');return;}
-  const button=$('saveProfile');button.disabled=true;status('Saving…');
+  saving=true;syncSave();status('Saving…');
   try{
    const row={owner_id:owner,display_name:$('displayName').value.trim(),bio:$('bio').value.trim(),favorite_club:$('club').value,theme:$('theme').value,avatar:$('avatarData').value,published:$('publish').checked,featured_copies:cards,featured_claims:claims,featured_notes:notes};
-   if(!themes.includes(row.theme))throw Error();const result=await client.from('glb_showcases').upsert(row,{onConflict:'owner_id'});if(result.error)throw result.error;
+   if(!themes.includes(row.theme))throw Error();const result=await client.from('glb_showcases').upsert(row,{onConflict:'owner_id'}).select('owner_id').single();if(result.error)throw result.error;if(result.data?.owner_id!==owner)throw Error('Profile save was not confirmed');
    if(ticket!==epoch||user?.id!==owner)return;
    $('publicLink').hidden=!row.published;$('shareURL').value=row.published?new URL(urlFor(handle),location.href).href:'Your showcase is private.';$('editor').dataset.theme=row.theme;
    status(row.published?'Saved. Your selected showcase is public.':'Saved privately. Preview your showcase whenever you like.');
-  }catch{if(ticket===epoch)status('Your changes could not be saved. Try again.');}finally{button.disabled=false;}
+  }catch{if(ticket===epoch)status('Your changes could not be saved. Try again.');}finally{saving=false;syncSave();}
  };
- if(client)client.auth.onAuthStateChange((event)=>{if(['SIGNED_IN','SIGNED_OUT'].includes(event)){epoch++;user=null;$('editor').hidden=true;$('showcase').hidden=true;setTimeout(load,0);}});
+ if(client)client.auth.onAuthStateChange((event,session)=>{if(event==='SIGNED_IN'&&session?.user?.id===user?.id)return;if(['SIGNED_IN','SIGNED_OUT'].includes(event)){epoch++;user=null;$('editor').hidden=true;$('showcase').hidden=true;setTimeout(load,0);}});
  load();
 })();
+

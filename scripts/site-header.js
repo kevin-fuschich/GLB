@@ -14,11 +14,8 @@
     const track=document.createElement('div');track.className='glb-offseason-track';
     const group=document.createElement('div');group.className='glb-offseason-group';
     const entries=[
-      [state.championName+' · '+state.year+' GLB CHAMPIONS','postseason.html'],
-      ['Championship Series · Osaka defeated the Gold '+state.championshipSeries,'postseason.html'],
-      ['OFFSEASON · The '+state.year+' season is complete','scores.html'],
-      [state.nextSeason+' schedule to be announced','schedule.html'],
-      ['OFFSEASON IS CLAIMING SEASON · Claim a player, mascot, entertainer or DONK artifact','contribute.html']
+      ['2026 GLB CHAMPIONS: Osaka Spirits (Osaka Spirits defeated Triangle Gold, 4-3)','postseason.html'],
+      ['CLAIM ARTIFACTS DURING THE OFFSEASON: Claim a player, mascot, entertainer and more.','contribute.html']
     ];
     for(const [text,path]of entries){const link=document.createElement('a');link.textContent=text;link.href=new URL(path,root);group.append(link);}
     const copy=group.cloneNode(true);copy.setAttribute('aria-hidden','true');copy.querySelectorAll('a').forEach(a=>a.tabIndex=-1);

@@ -142,7 +142,7 @@
       "card_id": "OSA-11",
       "card_front": "assets/images/cards/fieldstock/osa-11-arman-daryan-front.webp",
       "card_back": "assets/images/cards/fieldstock/osa-11-arman-daryan-back.webp",
-      "claim_open": false
+      "claim_open": true
     },
     {
       "name": "Kenjiro Suganuma",

@@ -240,8 +240,8 @@
     });
     return profile;
   }
-  function createCard(player, record, {link=true}={}) {
-    if(!location.pathname.endsWith('/album.html')) return createPlayerProfile(player,record,{link});
+  function createCard(player, record, {link=true,physical=false}={}) {
+    if(!physical && !location.pathname.endsWith('/album.html')) return createPlayerProfile(player,record,{link});
     const card=text('article','','fs-card');
     const button=document.createElement('button');button.type='button';button.className='fs-flipper';
     const inner=text('span','','fs-inner');

@@ -362,37 +362,7 @@ p{line-height:1.58;color:#343a40}
       <div class="card-body"><p id="playerCardClaimGuide" hidden></p><div class="card-display" id="playerCard">Loading card…</div></div>
     </section>
 
-    <section class="card">
-      <div class="card-head">
-        <h2>Contribute to This Record</h2>
-      </div>
-      <div class="card-body">
-        <p>
-          Add a biography, a story or supporting material to this player’s record.
-          The GLB Board reviews submissions and publishes accepted content with your User ID.
-          To claim an open card, use Claim &amp; Craft in the Player Card section above.
-        </p>
 
-        <form class="bio-form" action="https://formspree.io/f/xjgzjlyn" method="POST">
-          <input id="bioRecordTypeField" name="record_type" type="text" readonly>
-          <input id="bioPlayerField" name="person" type="text" readonly>
-          <input id="bioTeamField" name="club" type="text" readonly>
-          <input id="bioCodeField" name="record_code" type="text" readonly>
-
-          <input name="user_id" type="text" placeholder="Your public User ID" required minlength="3" maxlength="24" pattern="[A-Za-z0-9_-]{3,24}">
-          <input name="email" type="email" placeholder="Your email (private)" required>
-
-          <textarea
-            name="suggested_bio"
-            placeholder="Submit biography, background, playing style, notable moments, seasonal updates, or supporting record notes..."
-          ></textarea>
-
-          <button class="bio-submit" type="submit">
-            Submit to the GLB Board
-          </button>
-        </form>
-      </div>
-    </section>
 
   </div>
 
@@ -466,7 +436,7 @@ p{line-height:1.58;color:#343a40}
   </div>
 </footer>
 
-<script src="scripts/glb-records.js?v=1"></script><script src="scripts/player-cards.js?v=profiles-20261114"></script>
+<script src="scripts/glb-records.js?v=1"></script><script src="scripts/player-cards.js?v=player-card-20261114"></script>
 <script src="scripts/artifact-catalog.js?v=20261113-members"></script>
 <script src="scripts/taipei-cards.js?v=profiles-20261114"></script>
 <script>
@@ -760,20 +730,22 @@ async function loadPlayer(){
   const fieldstockTeam=FIELDSTOCK[teamSlug];
   const cardNumber=fieldstockTeam?.cards?.[playerSlug];
   let artifact;
+  let catalog;
   try {
-    const catalog=await GLBArtifacts.load();
+    catalog=await GLBArtifacts.load();
     artifact=catalog.artifacts.find(row=>row.team_slug===teamSlug && row.player_slug===playerSlug);
   } catch(error) { console.warn('Artifact availability unavailable',error); }
   const cardId=artifact?.id || player.card_id || (fieldstockTeam&&cardNumber
     ? fieldstockTeam.prefix.toUpperCase()+'-'+String(cardNumber).padStart(2,'0')
     : teamSlug.toUpperCase().slice(0,3)+'-'+playerSlug.toUpperCase());
+  setText('sideCode',cardId);
+  setText('sideStatus',catalog?.claims?.[cardId]?.user_id ? 'Claimed by '+catalog.claims[cardId].user_id : artifact?.claim_open ? 'Unclaimed · Open' : 'Not open for claims');
   const cardClaimGuide=document.getElementById('playerCardClaimGuide');
-  cardClaimGuide.textContent='Claim a player and help build their story. Players and other artifacts across GLB can be claimed, curated and crafted by you. Look for unclaimed artifacts, click to claim, craft your submission, and send it to the GLB Board for review. Approved contributions appear in the player record with your public User ID. Collectible cards are earned separately in your account album. Select the card to flip it over. ';
-  const explore=document.createElement('a');explore.href='contribute.html';explore.textContent='Explore Claim & Create →';cardClaimGuide.append(explore);
+  cardClaimGuide.textContent='Select the card to flip it over. Claim this player to add your own stories, details and artwork. The GLB Board reviews contributions before they appear with your public User ID.';
   cardClaimGuide.hidden=false;
   const claimPlayer={...player,slug:playerSlug,name:playerName,teamSlug,teamName:team.teamName,
     card_id:cardId,claim_open:artifact?.claim_open===true};
-  cardHost.replaceChildren(GLBPlayerCards.createCard(claimPlayer,record,{link:false}));
+  cardHost.replaceChildren(GLBPlayerCards.createCard(claimPlayer,record,{link:false,physical:true}));
   if(teamSlug==='taipei-neon')cardHost.append(await TaipeiFieldstock.createCardDetails(claimPlayer));
   cardHost.append(await TaipeiFieldstock.createClaimPanel(claimPlayer,{teamSlug,teamName:team.teamName}));
   const body=document.getElementById('seasonStatBody');

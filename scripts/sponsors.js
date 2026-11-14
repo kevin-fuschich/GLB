@@ -25,7 +25,7 @@
    const scope=el('section');scope.id='sponsor-profile';scope.append(el('h2','One entity. One claim.'),el('p','This claim covers '+s.name+' as a complete sponsor entity: its brand profile, products, campaigns, advertising and sponsorship identity across GLB. Every placement points back to this same record.'));host.append(scope);
    if(s.website){const website=new URL(s.website);if(website.protocol==='https:'){const a=el('a','Visit '+s.name+' →','sponsor-button');a.href=website.href;a.rel='sponsored noopener';host.append(a);}}
    const connections=el('section');connections.append(el('h2','In the GLB world'));const list=el('ul');for(const item of s.connections)list.append(el('li',item));const club=el('a',s.club_name+' club record →');club.href='team.html?team='+encodeURIComponent(s.club);connections.append(list,club);host.append(connections);
-   if(claim){const record=el('section');record.append(el('h2','The sponsor record'),el('p',claim.body));const a=el('a','View the accepted claim →');a.href='artifact.html?artifact_id='+encodeURIComponent(s.artifact_id);record.append(a);host.append(record);}
+   if(claim){const record=el('section'),facts=el('ul'),owner=el('li'),member=el('a',claim.user_id);member.href='profile.html?'+new URLSearchParams({user:claim.user_id});owner.append(document.createTextNode('Claimed by (User ID): '),member);facts.append(el('li','Sponsors are claimed as one complete entity across GLB.'),owner);record.append(el('h2',s.name),facts);host.append(record);}
    else host.append(el('p','Claim requests go to the GLB Board for review. Accepted claims carry your permanent User ID.','sponsor-fine'));
   }
   status.textContent='';

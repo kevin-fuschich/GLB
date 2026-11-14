@@ -4,6 +4,12 @@
   if (!header) return;
   const root = new URL('../', document.currentScript.src);
 
+  const footer=document.querySelector('body > footer');
+  if(footer&&!footer.querySelector('[data-glb-sponsors-link]')){
+    const p=document.createElement('p'),link=document.createElement('a');
+    link.href=new URL('sponsors.html',root);link.textContent='About Our Sponsors';link.setAttribute('data-glb-sponsors-link','');
+    link.style.cssText='color:inherit;text-decoration:underline;font:inherit';p.style.margin='8px 0';p.append(link);footer.append(p);
+  }
   const read=async path=>{const r=await fetch(new URL(path,root),{cache:'no-store'});if(!r.ok)throw Error(path);return r.json();};
   Promise.all([read('data/season/status.json').catch(()=>null),read('data/marquee.json').catch(()=>null)]).then(async([state,feed])=>{
     const now=Date.now(),phase=state?.phase;

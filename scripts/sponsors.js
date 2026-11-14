@@ -13,7 +13,7 @@
   if(!response.ok)throw Error();const data=await response.json();if(data.schema!=='glb.sponsors.v1')throw Error();
   const owners=new Map(claims.map(c=>[c.artifact_id,c])),slug=new URLSearchParams(location.search).get('sponsor');
   if(!slug){
-   host.append(el('p','BRANDS IN THE GLB WORLD','sponsor-kicker'),el('h1','Claim the whole idea.'),el('p','Sponsor entities have their own profiles and claims. One claim covers the brand’s GLB story across its products, campaigns and sponsorship placements.','sponsor-deck'));
+   host.append(el('p','GLOBAL LEAGUE BASEBALL','sponsor-kicker'),el('h1','About Our Sponsors'),el('p','Meet the brands in GLB. Explore their profiles and claim an available sponsor to help shape its story.','sponsor-deck'));
    const grid=el('div',undefined,'sponsor-grid');
    for(const s of data.sponsors){const card=el('article',undefined,'sponsor-tile'),a=el('a',s.name);a.href=href(s);card.append(el('p','SPONSOR ENTITY','sponsor-kicker'),a,el('p',s.description));ownership(card,s,owners.get(s.artifact_id));grid.append(card);}host.append(grid);
   }else{

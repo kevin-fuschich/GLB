@@ -7,7 +7,7 @@
   const labels={sponsor:'Entire sponsor entity',broadcaster:'Play-by-play broadcaster',announcer:'In-game announcer',brand:'Brand & business',player:'Player card',mascot:'Mascot',entertainer:'Entertainer',donk_driver:'DONK driver',donk_vehicle:'DONK vehicle',ballpark:'Ballpark',tradition:'Fan tradition',giveaway:'Giveaway'};
   const catalogRequest=GLBArtifacts.load();
   Promise.all([catalogRequest,fetch('data/artifacts/artwork.json').then(r=>r.ok?r.json():{}).catch(()=>({}))]).then(([{artifacts,claims,incomplete},artwork])=>{
-    const open=artifacts.filter(artifact=>artifact.claim_open && !claims[artifact.id]);
+    const open=artifacts.filter(artifact=>artifact.type!=='sponsor' && artifact.claim_open && !claims[artifact.id]);
     const clubs=[...new Map(open.map(artifact=>[artifact.team_slug,artifact.team_name])).entries()];
     for(const [slug,name] of clubs){const option=el('option',name);option.value=slug;teamFilter.append(option);}
     const featured=['TRI-HONEY-BOOKER','TPE-01','OSA-POTARI','TRI-FAIRMONT','MAY-SPIN-CYCLE','SPD-MASCOT','TPE-BENNY','LOU-LANDING','OSA-OKEO'];

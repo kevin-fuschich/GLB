@@ -25,7 +25,7 @@
         "Monterrey stadium naming rights",
         "Tavo Saldaña’s Plymouth Fury III"
       ],
-      "logo": "assets/sponsors/logos/insurance-papi.svg"
+      "logo": "assets/sponsors/logos/insurance-papi-character-v1.webp"
     },
     {
       "slug": "magixo",
@@ -138,7 +138,8 @@
       "logo_source_size": [
         2172,
         724
-      ]
+      ],
+      "logo_shape": "circle"
     },
     {
       "slug": "weejie",

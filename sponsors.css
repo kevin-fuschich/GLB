@@ -3,3 +3,6 @@
 .sponsor-logo>img,.sponsor-logo>svg{display:block;width:100%;height:104px;object-fit:contain;overflow:hidden}
 .sponsor-tile>.sponsor-kicker{margin:0 0 12px}
 .sponsor-description{margin:14px 0 24px}
+
+.sponsor-tile>.sponsor-button{min-height:72px;display:flex;align-items:center;justify-content:center;text-align:center;text-wrap:balance}
+.sponsor-tile>.sponsor-owner{min-height:72px;display:flex;align-items:center;gap:5px;margin-bottom:0}

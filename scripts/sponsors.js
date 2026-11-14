@@ -20,9 +20,9 @@
      const card=el('article',undefined,'sponsor-tile'),a=el('a',s.name);a.href=href(s);a.className='sponsor-name';
      const mark=el('a',undefined,'sponsor-logo');mark.href=href(s);mark.setAttribute('aria-label',s.name+' sponsor profile');
      if(s.logo_crop){
-       const ns='http://www.w3.org/2000/svg',svg=document.createElementNS(ns,'svg'),title=document.createElementNS(ns,'title'),defs=document.createElementNS(ns,'defs'),clip=document.createElementNS(ns,'clipPath'),rect=document.createElementNS(ns,'rect'),group=document.createElementNS(ns,'g'),image=document.createElementNS(ns,'image');
+       const ns='http://www.w3.org/2000/svg',svg=document.createElementNS(ns,'svg'),title=document.createElementNS(ns,'title'),defs=document.createElementNS(ns,'defs'),clip=document.createElementNS(ns,'clipPath'),rect=document.createElementNS(ns,s.logo_shape==='circle'?'circle':'rect'),group=document.createElementNS(ns,'g'),image=document.createElementNS(ns,'image');
        svg.setAttribute('viewBox',s.logo_crop.join(' '));svg.setAttribute('role','img');svg.setAttribute('aria-label',s.name+' logo');title.textContent=s.name+' logo';clip.id='brand-clip-'+s.slug;
-       for(const [i,key]of ['x','y','width','height'].entries())rect.setAttribute(key,String(s.logo_crop[i]));
+       if(s.logo_shape==='circle'){rect.setAttribute('cx',String(s.logo_crop[0]+s.logo_crop[2]/2));rect.setAttribute('cy',String(s.logo_crop[1]+s.logo_crop[3]/2));rect.setAttribute('r',String(Math.min(s.logo_crop[2],s.logo_crop[3])/2));}else for(const [i,key]of ['x','y','width','height'].entries())rect.setAttribute(key,String(s.logo_crop[i]));
        clip.append(rect);defs.append(clip);group.setAttribute('clip-path','url(#'+clip.id+')');
        image.setAttribute('href',s.logo);image.setAttribute('width',String(s.logo_source_size[0]));image.setAttribute('height',String(s.logo_source_size[1]));group.append(image);svg.append(title,defs,group);mark.append(svg);
      }else{

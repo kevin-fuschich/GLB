@@ -1,0 +1,118 @@
+{
+  "schema": "glb.sponsors.v1",
+  "sponsors": [
+    {
+      "slug": "wap-mop-shoppe",
+      "artifact_id": "SPONSOR-WAP-MOP-SHOPPE",
+      "name": "WAP MOP SHOPPE",
+      "club": "vancouver-current",
+      "club_name": "Vancouver Current",
+      "description": "Ordinary cleanliness. Extraordinary curiosity. WAP MOP SHOPPE holds Vancouver’s stadium naming rights and sponsors Ron Draper’s Nova.",
+      "website": "https://wapmopshoppe.com/",
+      "image": "assets/ads/wap-mop-shoppe/field-guide.png",
+      "connections": [
+        "Stadium naming rights",
+        "Ron Draper’s 1974 Chevrolet Nova",
+        "WAP MOP SHOPPE Towel Night"
+      ]
+    },
+    {
+      "slug": "vello",
+      "artifact_id": "SPONSOR-VELLO",
+      "name": "VELLO",
+      "club": "taipei-neon",
+      "club_name": "Taipei Neon",
+      "description": "The shape and sight of sound. An immersive audio brand woven into Taipei’s stadium and DONK presence.",
+      "connections": [
+        "Taipei stadium sound",
+        "Ring Night",
+        "Toi Boi Roi’s audio build"
+      ]
+    },
+    {
+      "slug": "mumbo-jumbo",
+      "artifact_id": "SPONSOR-MUMBO-JUMBO",
+      "name": "MUMBO JUMBO",
+      "club": "osaka-spirits",
+      "club_name": "Osaka Spirits",
+      "description": "Notebooks, pens and nano-ink technology. The stationery brand behind MUMBO JUMBO Stadium.",
+      "connections": [
+        "MUMBO JUMBO Stadium",
+        "Yoshiko Futaba’s G-Class"
+      ]
+    },
+    {
+      "slug": "magixo",
+      "artifact_id": "SPONSOR-MAGIXO",
+      "name": "MAGIXO",
+      "club": "mayaguez-sultans",
+      "club_name": "Mayagüez Sultans",
+      "description": "A laundry and detergent brand connected to Mayagüez’s ballpark and DONK record.",
+      "connections": [
+        "Ballpark sponsorship",
+        "Laundry-bag giveaway",
+        "Victor Lumelo’s Impala"
+      ]
+    },
+    {
+      "slug": "tumbao",
+      "artifact_id": "SPONSOR-TUMBAO",
+      "name": "TUMBAO",
+      "club": "santiago-caballeros",
+      "club_name": "Santiago Caballeros",
+      "description": "An outdoor-gear brand connected to Santiago’s stadium experiences and DONK entry.",
+      "connections": [
+        "Climbing wall",
+        "Blanket Night",
+        "Renato Cifuentes’s Pontiac GTO"
+      ]
+    },
+    {
+      "slug": "big-soft",
+      "artifact_id": "SPONSOR-BIG-SOFT",
+      "name": "BIG SOFT",
+      "club": "louisville-naturals",
+      "club_name": "Louisville Naturals",
+      "description": "The sponsor behind Louisville’s BIG SOFT Landing and Flo Troup’s Cadillac.",
+      "connections": [
+        "BIG SOFT Landing",
+        "Flo Troup’s Cadillac"
+      ]
+    },
+    {
+      "slug": "insurance-papi",
+      "artifact_id": "SPONSOR-INSURANCE-PAPI",
+      "name": "Insurance Papi",
+      "club": "monterrey-cementeros",
+      "club_name": "Monterrey Cementeros",
+      "description": "Monterrey’s stadium naming partner and a presence in the club’s DONK record.",
+      "connections": [
+        "Monterrey stadium naming rights",
+        "Tavo Saldaña’s Plymouth Fury III"
+      ]
+    },
+    {
+      "slug": "weejie",
+      "artifact_id": "SPONSOR-WEEJIE",
+      "name": "WEEJIE",
+      "club": "durham-gold",
+      "club_name": "Triangle Gold",
+      "description": "The naming partner at WEEJIE Park and sponsor of Bobby Boulineau’s Ford Fairmont.",
+      "connections": [
+        "WEEJIE Park",
+        "Bobby Boulineau’s 1980 Ford Fairmont"
+      ]
+    },
+    {
+      "slug": "propellant",
+      "artifact_id": "SPONSOR-PROPELLANT",
+      "name": "PROPELLANT",
+      "club": "albuquerque-aeros",
+      "club_name": "Albuquerque Aeros",
+      "description": "An energy brand in Albuquerque’s sponsorship record.",
+      "connections": [
+        "Albuquerque sponsor advertising"
+      ]
+    }
+  ]
+}

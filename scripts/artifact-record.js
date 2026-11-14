@@ -8,6 +8,10 @@
     const claim=claims[0];if(!claim)throw Error('This artifact does not have an approved claim yet.');
     status.textContent='';document.title=claim.artifact_name+' | GLB record';
     host.append(el('h1',claim.artifact_name));
+    if(claim.artifact_type==='sponsor'){
+      const response=await fetch('data/sponsors.json',{cache:'no-store'});
+      if(response.ok){const sponsor=(await response.json()).sponsors?.find(s=>s.artifact_id===id);if(sponsor){const profile=el('a','Open the complete sponsor profile →','account-action');profile.href='sponsors.html?'+new URLSearchParams({sponsor:sponsor.slug});host.append(profile);}}
+    }
     const original=el('article','');original.append(el('p','Original claim · '+claim.user_id,'record-meta'),el('div',claim.body,'record-body'));host.append(original);
     host.append(el('h2','Collaboration notes'));
     if(!notes.length)host.append(el('p','No approved notes yet.'));

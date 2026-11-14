@@ -1237,6 +1237,105 @@
       "role": "2027 DONK club representative",
       "prompt": "Add a biography, memory or story for Mavis Quill. Preserve the established name and role.",
       "claim_open": true
+    },
+    {
+      "artifact_id": "SPONSOR-WAP-MOP-SHOPPE",
+      "name": "WAP MOP SHOPPE",
+      "type": "sponsor",
+      "team_slug": "league-wide",
+      "team_name": "GLB sponsor entities",
+      "section": "sponsor-profile",
+      "record_path": "sponsors.html?sponsor=wap-mop-shoppe",
+      "prompt": "Claim the complete WAP MOP SHOPPE sponsor entity. Develop its brand story, products, campaigns and sponsorship identity across GLB. All placements share this one entity claim.",
+      "claim_open": true
+    },
+    {
+      "artifact_id": "SPONSOR-VELLO",
+      "name": "VELLO",
+      "type": "sponsor",
+      "team_slug": "league-wide",
+      "team_name": "GLB sponsor entities",
+      "section": "sponsor-profile",
+      "record_path": "sponsors.html?sponsor=vello",
+      "prompt": "Claim the complete VELLO sponsor entity. Develop its brand story, products, campaigns and sponsorship identity across GLB. All placements share this one entity claim.",
+      "claim_open": true
+    },
+    {
+      "artifact_id": "SPONSOR-MUMBO-JUMBO",
+      "name": "MUMBO JUMBO",
+      "type": "sponsor",
+      "team_slug": "league-wide",
+      "team_name": "GLB sponsor entities",
+      "section": "sponsor-profile",
+      "record_path": "sponsors.html?sponsor=mumbo-jumbo",
+      "prompt": "Claim the complete MUMBO JUMBO sponsor entity. Develop its brand story, products, campaigns and sponsorship identity across GLB. All placements share this one entity claim.",
+      "claim_open": true
+    },
+    {
+      "artifact_id": "SPONSOR-MAGIXO",
+      "name": "MAGIXO",
+      "type": "sponsor",
+      "team_slug": "league-wide",
+      "team_name": "GLB sponsor entities",
+      "section": "sponsor-profile",
+      "record_path": "sponsors.html?sponsor=magixo",
+      "prompt": "Claim the complete MAGIXO sponsor entity. Develop its brand story, products, campaigns and sponsorship identity across GLB. All placements share this one entity claim.",
+      "claim_open": true
+    },
+    {
+      "artifact_id": "SPONSOR-TUMBAO",
+      "name": "TUMBAO",
+      "type": "sponsor",
+      "team_slug": "league-wide",
+      "team_name": "GLB sponsor entities",
+      "section": "sponsor-profile",
+      "record_path": "sponsors.html?sponsor=tumbao",
+      "prompt": "Claim the complete TUMBAO sponsor entity. Develop its brand story, products, campaigns and sponsorship identity across GLB. All placements share this one entity claim.",
+      "claim_open": true
+    },
+    {
+      "artifact_id": "SPONSOR-BIG-SOFT",
+      "name": "BIG SOFT",
+      "type": "sponsor",
+      "team_slug": "league-wide",
+      "team_name": "GLB sponsor entities",
+      "section": "sponsor-profile",
+      "record_path": "sponsors.html?sponsor=big-soft",
+      "prompt": "Claim the complete BIG SOFT sponsor entity. Develop its brand story, products, campaigns and sponsorship identity across GLB. All placements share this one entity claim.",
+      "claim_open": true
+    },
+    {
+      "artifact_id": "SPONSOR-INSURANCE-PAPI",
+      "name": "Insurance Papi",
+      "type": "sponsor",
+      "team_slug": "league-wide",
+      "team_name": "GLB sponsor entities",
+      "section": "sponsor-profile",
+      "record_path": "sponsors.html?sponsor=insurance-papi",
+      "prompt": "Claim the complete Insurance Papi sponsor entity. Develop its brand story, products, campaigns and sponsorship identity across GLB. All placements share this one entity claim.",
+      "claim_open": true
+    },
+    {
+      "artifact_id": "SPONSOR-WEEJIE",
+      "name": "WEEJIE",
+      "type": "sponsor",
+      "team_slug": "league-wide",
+      "team_name": "GLB sponsor entities",
+      "section": "sponsor-profile",
+      "record_path": "sponsors.html?sponsor=weejie",
+      "prompt": "Claim the complete WEEJIE sponsor entity. Develop its brand story, products, campaigns and sponsorship identity across GLB. All placements share this one entity claim.",
+      "claim_open": true
+    },
+    {
+      "artifact_id": "SPONSOR-PROPELLANT",
+      "name": "PROPELLANT",
+      "type": "sponsor",
+      "team_slug": "league-wide",
+      "team_name": "GLB sponsor entities",
+      "section": "sponsor-profile",
+      "record_path": "sponsors.html?sponsor=propellant",
+      "prompt": "Claim the complete PROPELLANT sponsor entity. Develop its brand story, products, campaigns and sponsorship identity across GLB. All placements share this one entity claim.",
+      "claim_open": true
     }
   ]
 }

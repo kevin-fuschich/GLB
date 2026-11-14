@@ -1,0 +1,3 @@
+# Sponsor entity claims
+
+A sponsor has one canonical artifact ID and one accepted claim across GLB, regardless of the number of sponsorship placements. Brand profiles, products, campaigns and sponsorship identity belong to that entity record. Placements link to the profile; the profile may link to the sponsor website. Public ownership is read from `glb_claims`, never inferred from a browser setting or a static owner label. Sponsor claims use the existing Board-reviewed claim and receipt process. WAP MOP SHOPPE was assigned to the existing `kusama` account at the user’s explicit direction. Sponsor profiles are listed in `data/sponsors.json` and registered as league-wide sponsor artifacts in the creative artifact catalog.

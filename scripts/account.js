@@ -26,6 +26,7 @@
       notice('');
       if(!profile){$('chooseUserId').hidden=false;return;}
       $('publicId').textContent=profile.user_id;$('accountHome').hidden=false;
+      client.rpc('glb_collect_visit').then(({error})=>{if(ticket===revision && !error && $('collectionSummary'))$('collectionSummary').textContent='Your participation rewards are recorded. Open your album to see your packs.';}).catch(()=>{});
       try{const path=sessionStorage.getItem('glb-contribution-return');if(path){const target=new URL(path,location.origin);if(target.origin===location.origin && target.pathname==='/contribute.html'){$('resumeContribution').href=target.pathname+target.search+target.hash;$('resumeContribution').hidden=false;}}}catch{}
       client.rpc('glb_is_board').then(({data,error})=>{if(ticket===revision)$('boardLink').hidden=!!error || data!==true;}).catch(()=>{});
       const results=await Promise.all([

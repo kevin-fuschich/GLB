@@ -196,7 +196,7 @@
             }
           ];
           slides[0] = {
-            image: 'assets/teams/osaka-spirits/images/mumbo-jumbo-stadium-night.webp',
+            image: 'assets/postseason/2026/osaka-final-out-v1.webp',
             kicker: '2026 GLB Champions', title: 'Osaka finishes the job',
             deck: 'The Spirits beat the Gold in six games to win the GLB Championship Series. The 2026 season is complete. Welcome to the offseason.',
             href: 'postseason.html', link: 'The championship record'

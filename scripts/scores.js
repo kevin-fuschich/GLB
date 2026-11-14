@@ -35,7 +35,7 @@
       for(const side of ['away','home']){
         const slug=g[side],other=side==='away'?'home':'away',winner=final&&g[side+'Score']>g[other+'Score'];
         const row=node('div',undefined,'game-team'+(winner?' winner':'')),badge=node('span',(clubs.get(slug)?.team||slug).split(' ').map(s=>s[0]).join('').slice(0,3),'team-badge');
-        const img=document.createElement('img');img.src=`team-${slug}-logo.png`;img.alt='';img.loading='lazy';img.onerror=()=>img.remove();badge.append(img);
+        const img=document.createElement('img');img.src=`team-${slug}-logo.png`;img.alt='';img.loading='lazy';img.onerror=()=>img.remove();if(slug!=='osaka-spirits')badge.append(img);
         const a=node('a',clubs.get(slug)?.team||slug);a.href='team.html?team='+encodeURIComponent(slug);a.append(node('small',side==='home'?'Home':'Away'));
         row.append(badge,a,node('strong',final?g[side+'Score']:'—','game-score'));card.append(row);
       }

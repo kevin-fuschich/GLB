@@ -88,6 +88,10 @@
       "weight": 188
     },
     "spokane-alloys/andres-mireles": {
+      "dob": "1997-04-09",
+      "birthplace": "San Luis Potosí, Mexico",
+      "height": "6′2″",
+      "weight": 209,
       "field_note": "Collects grocery-store receipts from memorable road wins and labels them by final score."
     },
     "spokane-alloys/wyatt-hollander": {
@@ -790,6 +794,314 @@
       "weight": 200,
       "field_note": "Can recognize the sound of his mother’s sewing machine from another room.",
       "bio": "Anwar Elamin is a right fielder for the Fresno Yield. His story is open to contributions, alongside the official record of his 2026 season."
+    },
+    "osaka-spirits/hiroto-kurobane": {
+      "dob": "1999-01-01",
+      "birthplace": "Kobe, Japan",
+      "height": "6′1″",
+      "weight": 193,
+      "field_note": "Collects small ceramic tea cups but uses the chipped one every morning."
+    },
+    "osaka-spirits/enzo-dalmau": {
+      "dob": "1995-04-14",
+      "birthplace": "Girona, Spain",
+      "height": "6′2″",
+      "weight": 204,
+      "field_note": "Keeps a notebook of phrases that do not translate neatly between languages."
+    },
+    "osaka-spirits/kofi-boateng": {
+      "dob": "2001-07-27",
+      "birthplace": "Takoradi, Ghana",
+      "height": "6′3″",
+      "weight": 215,
+      "field_note": "Learned to cut hair during a long winter and still trims a cousin’s beard."
+    },
+    "osaka-spirits/luka-kovacevic": {
+      "dob": "1997-10-13",
+      "birthplace": "Sarajevo, Bosnia and Herzegovina",
+      "height": "6′4″",
+      "weight": 226,
+      "field_note": "Has a collection of handmade wooden spoons from local markets."
+    },
+    "osaka-spirits/rowan-cahir": {
+      "dob": "2000-03-26",
+      "birthplace": "Waterford, Ireland",
+      "height": "6′5″",
+      "weight": 196,
+      "field_note": "Can identify most of the constellations visible from his childhood backyard."
+    },
+    "osaka-spirits/sandeep-nayar": {
+      "dob": "1998-06-12",
+      "birthplace": "Kochi, India",
+      "height": "6′1″",
+      "weight": 207,
+      "field_note": "Practices calligraphy on discarded envelopes."
+    },
+    "osaka-spirits/mateo-zubillaga": {
+      "dob": "2002-09-25",
+      "birthplace": "Pamplona, Spain",
+      "height": "6′2″",
+      "weight": 218,
+      "field_note": "Collects the paper wrappers from unusual oranges and keeps them pressed in a book."
+    },
+    "osaka-spirits/jae-min-goh": {
+      "dob": "1996-02-11",
+      "birthplace": "Gwangju, South Korea",
+      "height": "6′3″",
+      "weight": 229,
+      "field_note": "Remembers telephone numbers by setting them to short melodies."
+    },
+    "osaka-spirits/marcelino-quispe": {
+      "dob": "1999-05-24",
+      "birthplace": "Arequipa, Peru",
+      "height": "6′1″",
+      "weight": 191,
+      "field_note": "Grows mint in a dented cooking pot on a balcony."
+    },
+    "osaka-spirits/thabo-mkhize": {
+      "dob": "1994-08-10",
+      "birthplace": "Pietermaritzburg, South Africa",
+      "height": "6′2″",
+      "weight": 202,
+      "field_note": "Knows how to repair a screen door so that it closes without a sound."
+    },
+    "osaka-spirits/arman-daryan": {
+      "dob": "2003-01-23",
+      "birthplace": "Yerevan, Armenia",
+      "height": "5′10″",
+      "weight": 213,
+      "field_note": "Carries an old paperback dictionary with several of the definitions corrected in pencil."
+    },
+    "osaka-spirits/kenjiro-suganuma": {
+      "dob": "2000-04-09",
+      "birthplace": "Nagano, Japan",
+      "height": "5′11″",
+      "weight": 224,
+      "field_note": "Folds paper cranes while listening to late-night radio."
+    },
+    "osaka-spirits/dariusz-kwiatkowski": {
+      "dob": "1997-07-22",
+      "birthplace": "Łódź, Poland",
+      "height": "6′0″",
+      "weight": 194,
+      "field_note": "Has a collection of painted wooden birds, each bought from its maker."
+    },
+    "osaka-spirits/nikhil-bhandari": {
+      "dob": "2001-10-08",
+      "birthplace": "Kathmandu, Nepal",
+      "height": "6′1″",
+      "weight": 205,
+      "field_note": "Can name the spices in a family curry by smell but never measures them."
+    },
+    "osaka-spirits/thiago-ramires": {
+      "dob": "2004-03-21",
+      "birthplace": "Campinas, Brazil",
+      "height": "6′2″",
+      "weight": 216,
+      "field_note": "Likes repairing old footballs rather than buying new ones."
+    },
+    "osaka-spirits/yusef-el-badri": {
+      "dob": "1995-06-07",
+      "birthplace": "Alexandria, Egypt",
+      "height": "5′10″",
+      "weight": 186,
+      "field_note": "Always checks the small noticeboards outside public libraries."
+    },
+    "monterrey-cementeros/dariusz-chmiel": {
+      "dob": "1995-09-20",
+      "birthplace": "Gdańsk, Poland",
+      "height": "6′2″",
+      "weight": 205,
+      "field_note": "Learned to make pierogi from handwritten instructions sent in weekly postcards."
+    },
+    "monterrey-cementeros/arjun-bhatnagar": {
+      "dob": "1999-02-06",
+      "birthplace": "Jaipur, India",
+      "height": "6′3″",
+      "weight": 216,
+      "field_note": "Can write his name legibly with either hand."
+    },
+    "monterrey-cementeros/cole-wexler": {
+      "dob": "1997-05-19",
+      "birthplace": "Boise, Idaho",
+      "height": "6′4″",
+      "weight": 227,
+      "field_note": "Keeps a jar of keys whose original locks have been forgotten."
+    },
+    "monterrey-cementeros/niko-kouris": {
+      "dob": "2001-08-05",
+      "birthplace": "Thessaloniki, Greece",
+      "height": "6′5″",
+      "weight": 197,
+      "field_note": "Builds flat-pack furniture for neighbors and refuses payment except in coffee."
+    },
+    "monterrey-cementeros/bashir-el-khatib": {
+      "dob": "1996-01-18",
+      "birthplace": "Beirut, Lebanon",
+      "height": "6′1″",
+      "weight": 208,
+      "field_note": "Reads the local newspaper’s classified ads wherever he stays."
+    },
+    "monterrey-cementeros/rowan-treadwell": {
+      "dob": "2002-04-04",
+      "birthplace": "York, England",
+      "height": "6′2″",
+      "weight": 219,
+      "field_note": "Has drawn the same crooked church steeple every year since childhood."
+    },
+    "monterrey-cementeros/julian-sauri": {
+      "dob": "1998-07-17",
+      "birthplace": "Mérida, Mexico",
+      "height": "6′0″",
+      "weight": 222,
+      "field_note": "Collects recordings of bells from different towns."
+    },
+    "monterrey-cementeros/eamon-kilrea": {
+      "dob": "1994-10-03",
+      "birthplace": "Derry, Northern Ireland",
+      "height": "6′1″",
+      "weight": 192,
+      "field_note": "Can make a small camp stove from a discarded tin."
+    },
+    "monterrey-cementeros/thiago-pereyra": {
+      "dob": "2000-03-16",
+      "birthplace": "Rosario, Argentina",
+      "height": "6′2″",
+      "weight": 203,
+      "field_note": "Likes finding the oldest tree in any public garden."
+    },
+    "monterrey-cementeros/luka-vukovic": {
+      "dob": "1997-06-02",
+      "birthplace": "Podgorica, Montenegro",
+      "height": "5′10″",
+      "weight": 214,
+      "field_note": "Has a scrapbook devoted to unusual handwriting."
+    },
+    "monterrey-cementeros/seiji-fukumori": {
+      "dob": "2001-09-15",
+      "birthplace": "Hiroshima, Japan",
+      "height": "5′11″",
+      "weight": 225,
+      "field_note": "Is learning to make soba noodles without a machine."
+    },
+    "monterrey-cementeros/micah-lunsford": {
+      "dob": "1995-02-01",
+      "birthplace": "Lexington, Kentucky",
+      "height": "6′0″",
+      "weight": 195,
+      "field_note": "Keeps a list of very good benches with very ordinary views."
+    },
+    "vancouver-current/iseul-kang": {
+      "dob": "1999-05-14",
+      "birthplace": "Seoul, South Korea",
+      "height": "6′4″",
+      "weight": 214,
+      "field_note": "Can make dumplings faster than anyone in the family will admit."
+    },
+    "vancouver-current/dane-winslow": {
+      "dob": "1996-08-27",
+      "birthplace": "Victoria, British Columbia",
+      "height": "6′5″",
+      "weight": 225,
+      "field_note": "Restores secondhand board games by making the missing pieces."
+    },
+    "vancouver-current/maksim-zorya": {
+      "dob": "2001-01-13",
+      "birthplace": "Lviv, Ukraine",
+      "height": "6′1″",
+      "weight": 195,
+      "field_note": "Carries a small notebook filled with opening sentences for unwritten stories."
+    },
+    "vancouver-current/raine-talukder": {
+      "dob": "1997-04-26",
+      "birthplace": "Chattogram, Bangladesh",
+      "height": "6′2″",
+      "weight": 206,
+      "field_note": "Has memorized the stops on a train route he has not taken in years."
+    },
+    "vancouver-current/emilio-cordoba": {
+      "dob": "2000-07-12",
+      "birthplace": "Puebla, Mexico",
+      "height": "6′3″",
+      "weight": 217,
+      "field_note": "Knows how to fix the spring in a retractable tape measure."
+    },
+    "vancouver-current/kofi-ansah": {
+      "dob": "1998-10-25",
+      "birthplace": "Cape Coast, Ghana",
+      "height": "6′4″",
+      "weight": 228,
+      "field_note": "Has a collection of kitchen aprons from relatives who worked in restaurants."
+    },
+    "vancouver-current/nico-penfold": {
+      "dob": "2002-03-11",
+      "birthplace": "Wellington, New Zealand",
+      "height": "6′5″",
+      "weight": 198,
+      "field_note": "Can identify a familiar neighborhood by the sound of its morning traffic."
+    },
+    "vancouver-current/yohei-arakida": {
+      "dob": "1995-06-24",
+      "birthplace": "Sapporo, Japan",
+      "height": "6′1″",
+      "weight": 209,
+      "field_note": "Labels homemade preserves with deliberately terrible drawings of the fruit."
+    },
+    "vancouver-current/silas-boudreau": {
+      "dob": "1997-09-10",
+      "birthplace": "Moncton, New Brunswick",
+      "height": "5′11″",
+      "weight": 212,
+      "field_note": "Keeps a photograph of the first snowman built outside the family’s new home."
+    },
+    "vancouver-current/eamon-kerr": {
+      "dob": "1994-02-23",
+      "birthplace": "Limerick, Ireland",
+      "height": "6′0″",
+      "weight": 223,
+      "field_note": "Learned to make a proper wooden picture frame before owning a picture worth framing."
+    },
+    "vancouver-current/soraya-jafari": {
+      "dob": "2000-05-09",
+      "birthplace": "Shiraz, Iran",
+      "height": "6′1″",
+      "weight": 193,
+      "field_note": "Collects single earrings found on walks and keeps them in a drawer."
+    },
+    "vancouver-current/alejo-santillan": {
+      "dob": "2003-08-22",
+      "birthplace": "Cuenca, Ecuador",
+      "height": "6′2″",
+      "weight": 204,
+      "field_note": "Makes a point of learning the baker’s name wherever the club stays."
+    },
+    "vancouver-current/roman-velasco": {
+      "dob": "1998-01-08",
+      "birthplace": "San Diego, California",
+      "height": "5′10″",
+      "weight": 215,
+      "field_note": "Has an unfinished quilt assembled from old shirts."
+    },
+    "vancouver-current/taj-adelman": {
+      "dob": "1999-04-21",
+      "birthplace": "Port of Spain, Trinidad and Tobago",
+      "height": "5′11″",
+      "weight": 185,
+      "field_note": "Reads books about abandoned canals and tries to visit them on days off."
+    },
+    "vancouver-current/marcell-lind": {
+      "dob": "2001-07-07",
+      "birthplace": "Uppsala, Sweden",
+      "height": "6′0″",
+      "weight": 196,
+      "field_note": "Collects small glass animals with one unmistakably wrong feature."
+    },
+    "vancouver-current/oziel-narvaez": {
+      "dob": "1996-10-20",
+      "birthplace": "Managua, Nicaragua",
+      "height": "6′1″",
+      "weight": 207,
+      "field_note": "Has a notebook containing only descriptions of colors seen at sunrise."
     }
   }
 }

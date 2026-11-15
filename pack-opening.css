@@ -21,90 +21,17 @@
 @media(max-width:850px){.pack-reveal-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.preview-stage{gap:32px;grid-template-columns:220px 1fr;padding:26px}.preview-pack{min-height:310px}}
 @media(max-width:540px){.pack-preview{padding:28px 16px 60px}.preview-stage{grid-template-columns:1fr;gap:24px}.preview-pack{width:185px;min-height:250px;justify-self:center;gap:12px}.preview-pack .pack-year{font-size:50px}.preview-pack strong{font-size:23px}.pack-reveal-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.pack-reveal-toolbar{align-items:start}.pack-reveal-toolbar button{flex:none;padding:12px}}
 @media(prefers-reduced-motion:no-preference){.pack-reveal-slot[data-revealed=true]{animation:cardReveal .28s ease-out}@keyframes cardReveal{from{opacity:.4;transform:translateY(8px)}to{opacity:1;transform:none}}}
-.wrapper-dialog{box-sizing:border-box;width:min(560px,calc(100% - 24px));max-height:calc(100dvh - 24px);padding:26px 24px 22px;overflow:auto;border:1px solid #6c7b82;border-radius:10px;background:radial-gradient(ellipse at 50% 45%,#284556,#101f2c 75%);color:#eee6d5;text-align:center;font:14px/1.5 Arial,sans-serif;box-shadow:0 24px 100px #0008}
-.wrapper-dialog::backdrop{background:#07121ce8;backdrop-filter:blur(5px)}.wrapper-dialog h2{font:700 32px/1.1 Georgia,serif;margin:10px 0}.wrapper-dialog>p{margin:9px 0}.wrapper-dialog #wrapperHint{color:#cad5d7}.wrapper-dialog .preview-kicker{color:#dac384;font-size:10px;letter-spacing:.15em}
-.wrapper-scene{position:relative;width:240px;height:330px;margin:35px auto 28px;perspective:900px;isolation:isolate}
-.wrapper-body{position:absolute;inset:30px 0 0;z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:17px;border:1px solid #c2b177;border-bottom:15px solid #a9b7ba;background:repeating-linear-gradient(90deg,#203c50 0 2px,#1c3548 2px 4px);box-shadow:6px 12px 20px #0006;clip-path:polygon(0 0,8% 1%,16% 0,24% 1%,32% 0,40% 1%,48% 0,56% 1%,64% 0,72% 1%,80% 0,88% 1%,96% 0,100% 1%,100% 100%,0 100%);color:#e3c97e;overflow:hidden;transform-origin:50% 100%}
-.wrapper-body strong{font:italic 700 27px Georgia,serif}.wrapper-body>b{font:700 65px/.9 Georgia,serif}.wrapper-body small{font-size:9px;letter-spacing:.14em}.wrapper-body>span:not(.wrapper-glint){font-size:14px;letter-spacing:.1em}.wrapper-glint{position:absolute;inset:0;pointer-events:none;background:linear-gradient(110deg,transparent 10%,#dbe7ec17 25%,transparent 35%,#f4f7ff0d 75%,transparent);transform:translateX(-20%)}
-.wrapper-tear{position:absolute;top:0;left:0;z-index:4;width:100%;height:48px;padding:0;border:1px solid #dae2df;border-radius:0;background:repeating-linear-gradient(90deg,#98a9ad 0 2px,#c1cbcc 2px 4px);color:#162b38;cursor:pointer;transform-origin:100% 50%;touch-action:none;box-shadow:0 3px 5px #0004;clip-path:polygon(0 0,100% 0,100% 90%,96% 100%,92% 90%,88% 100%,84% 90%,80% 100%,76% 90%,72% 100%,68% 90%,64% 100%,60% 90%,56% 100%,52% 90%,48% 100%,44% 90%,40% 100%,36% 90%,32% 100%,28% 90%,24% 100%,20% 90%,16% 100%,12% 90%,8% 100%,4% 90%,0 100%)}
-.wrapper-rip-label{font:bold 10px Arial,sans-serif;letter-spacing:.15em;background:#dce2dcdd;padding:6px 13px}.wrapper-tear:focus-visible{outline:4px solid #a5e3ce;outline-offset:5px;filter:drop-shadow(0 0 5px #a5e3ce)}
-.wrapper-card-stack{position:absolute;inset:44px 14px 10px;z-index:1}.wrapper-card-stack>span{position:absolute;inset:0;background:repeating-linear-gradient(45deg,#1e3548 0 1px,#142b3c 1px 6px);border:8px solid #e6dcc6;box-shadow:2px 5px 9px #0005;display:flex;flex-direction:column;align-items:center;justify-content:space-around;color:#e3c97e}.wrapper-card-stack b{font:italic 700 22px Georgia,serif}.wrapper-card-stack small{font:11px Arial,sans-serif;letter-spacing:.13em}.wrapper-card-stack i{font:700 14px Georgia,serif}
-.wrapper-actions{display:flex;justify-content:center;gap:12px;min-height:44px;flex-wrap:wrap}.wrapper-actions button{font:700 13px Arial,sans-serif;padding:12px 18px;min-height:44px;border:1px solid #a5e3ce;border-radius:5px;background:#a5e3ce;color:#17372e;cursor:pointer}.wrapper-actions .wrapper-skip{background:transparent;color:#c7d4d6;border-color:#687c87}.wrapper-actions button:focus-visible{outline:3px solid #efcf7e;outline-offset:4px}.wrapper-dialog #wrapperStatus{font-size:12px;color:#cbd6d5;min-height:20px;margin:0 0 18px}
-.wrapper-scene.is-torn .wrapper-tear{opacity:0;transform:translate(90px,-65px) rotate(65deg)}.wrapper-scene.is-torn .wrapper-body{opacity:0;transform:translateY(130px) rotate(14deg)}.wrapper-scene.is-torn .wrapper-card-stack{transform:translateY(-10px)}.wrapper-scene.is-torn .wrapper-card-stack>span:nth-child(1){transform:translate(-28px,7px) rotate(-10deg)}.wrapper-scene.is-torn .wrapper-card-stack>span:nth-child(2){transform:translate(-14px,2px) rotate(-5deg)}.wrapper-scene.is-torn .wrapper-card-stack>span:nth-child(3){transform:translate(28px,7px) rotate(10deg)}.wrapper-scene.is-torn .wrapper-card-stack>span:nth-child(4){transform:translate(14px,2px) rotate(5deg)}
-@media(prefers-reduced-motion:no-preference){.wrapper-tear{transition:transform .65s cubic-bezier(.3,0,.6,1),opacity .25s .4s}.wrapper-body{transition:transform .8s .45s ease-in,opacity .4s .85s}.wrapper-glint{animation:foilGlimmer 3s ease-in-out infinite alternate}.wrapper-card-stack{transition:transform .6s .7s}.wrapper-card-stack>span{transition:transform .6s .95s}@keyframes foilGlimmer{to{transform:translateX(35%)}}}
-@media(max-height:720px){.wrapper-dialog{padding:16px}.wrapper-scene{width:195px;height:270px;margin:22px auto}.wrapper-body{gap:12px}.wrapper-body strong{font-size:23px}.wrapper-body>b{font-size:51px}.wrapper-dialog h2{font-size:27px}}
 
-/* Direct manipulation of the sealed seam; no card identity is exposed here. */
-.wrapper-tear{user-select:none;-webkit-user-select:none;cursor:grab}
-.wrapper-scene.is-dragging .wrapper-tear{transition:none;cursor:grabbing;transform:translate(calc(var(--tear-progress,0)*48px),calc(var(--tear-progress,0)*-24px)) rotate(calc(var(--tear-progress,0)*18deg));filter:brightness(calc(1 + var(--tear-progress,0)*.25))}
-.wrapper-scene.is-dragging .wrapper-body{transform:rotate(calc(var(--tear-progress,0)*-2deg))}
-@media(prefers-reduced-motion:reduce){.wrapper-scene.is-dragging .wrapper-tear,.wrapper-scene.is-dragging .wrapper-body{transform:none}.wrapper-scene.is-dragging .wrapper-tear{filter:brightness(calc(1 + var(--tear-progress,0)*.4))}}
-
-/* Photographed foil replaces the schematic wrapper. One full-pack tap target. */
-.preview-pack{background: url('assets/fieldstock/2026-base-pack.webp') center/100% 100% no-repeat;border:0;aspect-ratio:2/3;min-height:0;padding:0;box-shadow:none;transform:rotate(-3deg)}
+/* The approved wrapper is the unopened pack artwork. */
+.preview-pack{background:url('assets/fieldstock/2026-base-pack.webp') center/100% 100% no-repeat;border:0;aspect-ratio:2/3;min-height:0;padding:0;box-shadow:none;transform:rotate(-3deg)}
 .preview-pack>*{visibility:hidden}.preview-pack:before,.preview-pack:after{display:none}
-.wrapper-dialog{background:#06101d;border-color:#2c3948;border-radius:6px}
-.wrapper-scene{width:240px;height:360px;margin:22px auto;perspective:900px}
-.wrapper-body{inset:0;border:0;clip-path:polygon(6% 8%,94% 8%,94% 100%,6% 100%);background:url('assets/fieldstock/2026-base-pack.webp') center/100% 100%;box-shadow:none;gap:0}
-.wrapper-body>*{visibility:hidden}
-.wrapper-tear{inset:0;width:100%;height:100%;border:0;clip-path:none;background:transparent;box-shadow:none;cursor:pointer;touch-action:manipulation;transform-origin:50% 0}
-.wrapper-tear:before{content:'';position:absolute;inset:0;background:url('assets/fieldstock/2026-base-pack.webp') center/100% 100%;clip-path:polygon(0 0,100% 0,100% 9%,0 9%)}
-.wrapper-rip-label{position:absolute;bottom:-10px;left:50%;transform:translateX(-50%);white-space:nowrap;background:#e8d6a0;color:#162333;border:1px solid #ac945a;padding:10px 18px;letter-spacing:.1em}
-.wrapper-card-stack{inset:35px 28px 20px}
-.wrapper-scene.is-torn .wrapper-tear{opacity:0;transform:translate(35px,-60px) rotate(12deg)}
-.wrapper-scene.is-torn .wrapper-body{opacity:0;transform:translateY(150px) rotate(8deg)}
-@media(max-height:720px){.wrapper-scene{width:190px;height:285px;margin:16px auto 24px}}
-@media(max-width:540px){.preview-pack{min-height:0;width:185px}.wrapper-dialog{padding:18px 16px}}
-/* A pack is handled as a stack of actual 2.5 x 3.5 inch cards. */
+@media(max-width:540px){.preview-pack{min-height:0;width:185px}}
+/* Present the existing shared card component without redesigning its print. */
 .pack-table{background:radial-gradient(ellipse at 50% 40%,#244438,#102b25);padding:24px 24px 28px;color:#f1e8d6;text-align:center;border:1px solid #345349;margin-top:24px}
 .pack-table-status{font:700 12px Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase;margin:0 auto 24px!important}
-.pack-table-stage{position:relative;width:min(340px,calc(100% - 20px));margin:0 auto 24px;isolation:isolate}
-.pack-table-stage:before,.pack-table-stage:after{content:'';position:absolute;inset:0 0 40px;background:#e8dcc1;border:1px solid #b5a88d;z-index:-1;box-shadow:2px 4px 9px #0005;transform:translate(7px,3px) rotate(2deg)}
-.pack-table-stage:after{transform:translate(-5px,4px) rotate(-2deg)}
-.pack-table-stage[data-remaining="0"]:before,.pack-table-stage[data-remaining="0"]:after{display:none}
-.pack-table .pack-owned-card .fs-card{max-width:none}
-.pack-table .fs-card:not(.donk-print-card) .fs-flipper{background:none;isolation:auto;box-shadow:2px 8px 18px #0007}
-.pack-table .fs-card:not(.donk-print-card) .fs-inner{inset:0;background:#efe3c8;border:0;perspective:none}
-.pack-table .fs-card:not(.donk-print-card) .fs-face{border:7px solid #efe3c8;background:#efe3c8;box-shadow:none}
-.pack-table .fs-card:not(.donk-print-card) .fs-back{background:#efe3c8;padding:9px}
-.pack-table .fs-card:not(.donk-print-card) .fs-front-brand{padding:8px 6px}
-.pack-table .fs-card:not(.donk-print-card) .fs-name{font-size:6cqw}
-.pack-table .fs-card:not(.donk-print-card) .fs-flip-note{color:#e1d5b6;font-size:10px;margin-top:14px}
+.pack-table-stage{width:min(350px,100%);margin:0 auto 24px}
 .pack-table .pack-edition-label{color:#f1dfb1;font-size:14px;margin:12px auto!important}
-.pack-table .pack-owned-card[data-variant=refractor] .fs-front{border-image:linear-gradient(130deg,#b6f6e8,#dac0f1,#f5ecae,#a4d8ed) 1}
-.pack-table .pack-owned-card[data-variant=gold] .fs-front{border-color:#d6ae4c;background:linear-gradient(120deg,#d3a648,#f1dc95,#c59932)}
-.pack-table .pack-owned-card[data-variant=black] .fs-front{border-color:#222c33;background:#18242c}
 .pack-table-controls{display:flex;justify-content:center;gap:14px;flex-wrap:wrap}
 .pack-table-controls button{background:#ead9ac;color:#142e27;border:1px solid #cdb67b;border-radius:3px;min-width:150px}
 .pack-table .pack-table-note{color:#b9cec3;font-size:11px;margin:18px auto 0}
-@media(max-width:540px){.pack-table{padding:22px 16px}.pack-table-stage{width:min(300px,calc(100% - 16px))}.pack-table-controls{gap:8px}.pack-table-controls button{min-width:0;flex:1;padding:12px 8px;font-size:12px}}
-.pack-table .fs-card .fs-flip-note{display:none}
-.pack-table-stage:before,.pack-table-stage:after{bottom:36px}
-/* Pack print proof: full photograph, quiet foil signature, consistent trim. */
-.pack-table .fs-card:not(.donk-print-card) .fs-inner{background:transparent}
-.pack-table .fs-card:not(.donk-print-card) .fs-front{border:5px solid #f1eadb;background:#f1eadb;position:absolute}
-.pack-table .fs-card:not(.donk-print-card) .fs-front-brand{position:absolute;inset:9px 9px auto;display:flex;justify-content:space-between;order:0;background:none;border:0;padding:0;filter:drop-shadow(0 1px 2px #000b);z-index:3}
-.pack-table .fs-card:not(.donk-print-card) .fs-front-brand .fs-symbol{width:22px!important;height:22px!important}
-.pack-table .fs-card:not(.donk-print-card) .fs-front-brand .fs-wordmark{width:96px!important}
-.pack-table .fs-card:not(.donk-print-card) .fs-photo{border:0;flex:1}
-.pack-table .fs-card:not(.donk-print-card) .fs-photo-image{filter:none;object-position:center 25%}
-.pack-table .fs-card:not(.donk-print-card) .fs-nameplate{background:#122838;color:#faf5e8!important;padding:13px 12px 12px;border-top:2px solid #d2b86e}
-.pack-table .fs-card:not(.donk-print-card) .fs-name{font:700 6.4cqw/1.03 Georgia,serif;letter-spacing:-.025em;font-style:normal}
-.pack-table .fs-card:not(.donk-print-card) .fs-club{font:700 2.8cqw/1.35 Arial,sans-serif;letter-spacing:.07em;color:#e4dbc6!important;margin-top:6px}
-.pack-table .fs-nameplate:after,.pack-table .fs-year{display:none!important}
-.pack-print-run{display:block;flex:none;padding:6px 10px 5px;text-align:right;background:#f1eadb;color:#4d4435;font:700 2.7cqw/1 Arial,sans-serif;letter-spacing:.09em}
-.pack-table .pack-owned-card[data-variant=gold] .fs-front{border-color:#c8a141;background:#c8a141}
-.pack-table .pack-owned-card[data-variant=gold] .pack-print-run{background:linear-gradient(110deg,#b58a2e,#f7e7ae,#caa245);color:#362d1a}
-.pack-table .pack-owned-card[data-variant=black] .fs-front{border-color:#151d24;background:#151d24}
-.pack-table .pack-owned-card[data-variant=black] .pack-print-run{background:#151d24;color:#e9d38b}
-.pack-table .pack-owned-card[data-variant=refractor] .fs-front{border-image:linear-gradient(125deg,#afdcdd,#e7dbf0,#ecf0c5,#a6d7e0) 1}
-.pack-table .pack-owned-card[data-variant=refractor] .pack-print-run{background:linear-gradient(120deg,#b5dddd,#e7d8ea,#f0edc7);color:#273a41}
-.pack-table .pack-owned-card[data-variant=refractor] .fs-front:after{background:linear-gradient(118deg,transparent 20%,#b4e7e52e 39%,#e1bef32b 52%,transparent 70%)!important;mix-blend-mode:screen!important}
-.pack-table .fs-card:not(.donk-print-card) .fs-back{border:5px solid #ece2ca;padding:12px;gap:2.5cqw;background:#f3ecd9!important}
-.pack-table .fs-card:not(.donk-print-card) .fs-back-name{font:700 6.4cqw/1.03 Georgia,serif;letter-spacing:-.025em}
-.pack-table .fs-card:not(.donk-print-card) .fs-back p{font-size:3.2cqw;line-height:1.5}
-.pack-table .fs-card .fs-facts dt{font-size:2.5cqw}.pack-table .fs-card .fs-facts dd{font-size:3cqw}
-.pack-table .fs-card .fs-stats{font-size:2.8cqw}
-.pack-table .fs-card .fs-back h4{font-size:3cqw;letter-spacing:.06em}
-.pack-table .fs-card .fs-back-footer{font-size:2.5cqw}
-.pack-table .fs-card:not(.donk-print-card) .fs-face:after{mix-blend-mode:normal;background:linear-gradient(120deg,#fff1,transparent 38%,#00000003)!important}
+@media(max-width:540px){.pack-table{padding:22px 16px}.pack-table-controls{gap:8px}.pack-table-controls button{min-width:0;flex:1;padding:12px 8px;font-size:12px}}

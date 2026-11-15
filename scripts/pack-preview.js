@@ -2,8 +2,24 @@
 (() => {
  const $=id=>document.getElementById(id),key='glb.pack-preview.v1';let sample=[],opened=false,opening=false,openingTimer=null;
  const remember=()=>{try{sessionStorage.setItem(key,'opened');}catch{}};
+ function printCard(copy){
+  const card=GLBPackReveal.card(copy,copy);
+  const front=card.querySelector('.fs-front');
+  const line=document.createElement('span');line.className='pack-print-run';
+  line.textContent=`2026 · ${copy.variant.toUpperCase()} · ${String(copy.serial).padStart(3,'0')} / ${copy.quantity}`;
+  front.append(line);
+  card.querySelectorAll('img').forEach(img=>{img.loading='eager';});
+  return card;
+ }
+ function preload(data){
+  return Promise.all(data.map(copy=>new Promise((resolve,reject)=>{
+   const img=new Image(),timer=setTimeout(()=>reject(Error('Artwork timed out')),20000);
+   img.onload=()=>{clearTimeout(timer);resolve();};img.onerror=()=>{clearTimeout(timer);reject(Error('Artwork unavailable'));};
+   img.src=copy.front_image;
+  }))).then(()=>data);
+ }
  function show(){
-  GLBPackTable.mount($('sampleCards'),sample,{renderCard:c=>GLBPackReveal.card(c,c),savedMessage:'Sample only · no cards issued.',onComplete:()=>{$('previewComplete').hidden=false;}});
+  GLBPackTable.mount($('sampleCards'),sample,{renderCard:printCard,savedMessage:'Sample only · no cards issued.',onComplete:()=>{$('previewComplete').hidden=false;}});
   $('previewReveal').hidden=false;
  }
  function open(){
@@ -32,7 +48,7 @@
  $('wrapperContinue').onclick=finishWrapper;$('wrapperSkip').onclick=finishWrapper;
  $('wrapperDialog').addEventListener('cancel',event=>{event.preventDefault();finishWrapper();});
  $('openSample').onclick=wrapper;$('replaySample').onclick=wrapper;
- fetch('data/pack-preview.json?v=20261115a').then(r=>{if(!r.ok)throw Error();return r.json();}).then(data=>{
+ fetch('data/pack-preview.json?v=20261115a').then(r=>{if(!r.ok)throw Error();return r.json();}).then(preload).then(data=>{
   if(data.length!==5)throw Error();sample=data;$('openSample').disabled=false;$('openSample').textContent='Open sample pack · 100 credits';$('sampleStatus').textContent='Ready. No sign-in required.';
   let restore=false;try{restore=sessionStorage.getItem(key)==='opened';}catch{}
   if(restore){open();$('sampleStatus').textContent='Your sample was restored. These are the same five cards.';}

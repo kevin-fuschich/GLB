@@ -80,3 +80,31 @@
 @media(max-width:540px){.pack-table{padding:22px 16px}.pack-table-stage{width:min(300px,calc(100% - 16px))}.pack-table-controls{gap:8px}.pack-table-controls button{min-width:0;flex:1;padding:12px 8px;font-size:12px}}
 .pack-table .fs-card .fs-flip-note{display:none}
 .pack-table-stage:before,.pack-table-stage:after{bottom:36px}
+/* Pack print proof: full photograph, quiet foil signature, consistent trim. */
+.pack-table .fs-card:not(.donk-print-card) .fs-inner{background:transparent}
+.pack-table .fs-card:not(.donk-print-card) .fs-front{border:5px solid #f1eadb;background:#f1eadb;position:absolute}
+.pack-table .fs-card:not(.donk-print-card) .fs-front-brand{position:absolute;inset:9px 9px auto;display:flex;justify-content:space-between;order:0;background:none;border:0;padding:0;filter:drop-shadow(0 1px 2px #000b);z-index:3}
+.pack-table .fs-card:not(.donk-print-card) .fs-front-brand .fs-symbol{width:22px!important;height:22px!important}
+.pack-table .fs-card:not(.donk-print-card) .fs-front-brand .fs-wordmark{width:96px!important}
+.pack-table .fs-card:not(.donk-print-card) .fs-photo{border:0;flex:1}
+.pack-table .fs-card:not(.donk-print-card) .fs-photo-image{filter:none;object-position:center 25%}
+.pack-table .fs-card:not(.donk-print-card) .fs-nameplate{background:#122838;color:#faf5e8!important;padding:13px 12px 12px;border-top:2px solid #d2b86e}
+.pack-table .fs-card:not(.donk-print-card) .fs-name{font:700 6.4cqw/1.03 Georgia,serif;letter-spacing:-.025em;font-style:normal}
+.pack-table .fs-card:not(.donk-print-card) .fs-club{font:700 2.8cqw/1.35 Arial,sans-serif;letter-spacing:.07em;color:#e4dbc6!important;margin-top:6px}
+.pack-table .fs-nameplate:after,.pack-table .fs-year{display:none!important}
+.pack-print-run{display:block;flex:none;padding:6px 10px 5px;text-align:right;background:#f1eadb;color:#4d4435;font:700 2.7cqw/1 Arial,sans-serif;letter-spacing:.09em}
+.pack-table .pack-owned-card[data-variant=gold] .fs-front{border-color:#c8a141;background:#c8a141}
+.pack-table .pack-owned-card[data-variant=gold] .pack-print-run{background:linear-gradient(110deg,#b58a2e,#f7e7ae,#caa245);color:#362d1a}
+.pack-table .pack-owned-card[data-variant=black] .fs-front{border-color:#151d24;background:#151d24}
+.pack-table .pack-owned-card[data-variant=black] .pack-print-run{background:#151d24;color:#e9d38b}
+.pack-table .pack-owned-card[data-variant=refractor] .fs-front{border-image:linear-gradient(125deg,#afdcdd,#e7dbf0,#ecf0c5,#a6d7e0) 1}
+.pack-table .pack-owned-card[data-variant=refractor] .pack-print-run{background:linear-gradient(120deg,#b5dddd,#e7d8ea,#f0edc7);color:#273a41}
+.pack-table .pack-owned-card[data-variant=refractor] .fs-front:after{background:linear-gradient(118deg,transparent 20%,#b4e7e52e 39%,#e1bef32b 52%,transparent 70%)!important;mix-blend-mode:screen!important}
+.pack-table .fs-card:not(.donk-print-card) .fs-back{border:5px solid #ece2ca;padding:12px;gap:2.5cqw;background:#f3ecd9!important}
+.pack-table .fs-card:not(.donk-print-card) .fs-back-name{font:700 6.4cqw/1.03 Georgia,serif;letter-spacing:-.025em}
+.pack-table .fs-card:not(.donk-print-card) .fs-back p{font-size:3.2cqw;line-height:1.5}
+.pack-table .fs-card .fs-facts dt{font-size:2.5cqw}.pack-table .fs-card .fs-facts dd{font-size:3cqw}
+.pack-table .fs-card .fs-stats{font-size:2.8cqw}
+.pack-table .fs-card .fs-back h4{font-size:3cqw;letter-spacing:.06em}
+.pack-table .fs-card .fs-back-footer{font-size:2.5cqw}
+.pack-table .fs-card:not(.donk-print-card) .fs-face:after{mix-blend-mode:normal;background:linear-gradient(120deg,#fff1,transparent 38%,#00000003)!important}

@@ -3,7 +3,7 @@
  const $=id=>document.getElementById(id),key='glb.pack-preview.v1';let sample=[],opened=false,opening=false,openingTimer=null;
  const remember=()=>{try{sessionStorage.setItem(key,'opened');}catch{}};
  function show(){
-  GLBPackReveal.mount($('sampleCards'),sample,{renderCard:c=>GLBPackReveal.card(c,c),savedMessage:'Sample only · no cards issued.',onComplete:()=>{$('previewComplete').hidden=false;}});
+  GLBPackTable.mount($('sampleCards'),sample,{renderCard:c=>GLBPackReveal.card(c,c),savedMessage:'Sample only · no cards issued.',onComplete:()=>{$('previewComplete').hidden=false;}});
   $('previewReveal').hidden=false;
  }
  function open(){

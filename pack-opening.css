@@ -55,3 +55,28 @@
 .wrapper-scene.is-torn .wrapper-body{opacity:0;transform:translateY(150px) rotate(8deg)}
 @media(max-height:720px){.wrapper-scene{width:190px;height:285px;margin:16px auto 24px}}
 @media(max-width:540px){.preview-pack{min-height:0;width:185px}.wrapper-dialog{padding:18px 16px}}
+/* A pack is handled as a stack of actual 2.5 x 3.5 inch cards. */
+.pack-table{background:radial-gradient(ellipse at 50% 40%,#244438,#102b25);padding:24px 24px 28px;color:#f1e8d6;text-align:center;border:1px solid #345349;margin-top:24px}
+.pack-table-status{font:700 12px Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase;margin:0 auto 24px!important}
+.pack-table-stage{position:relative;width:min(340px,calc(100% - 20px));margin:0 auto 24px;isolation:isolate}
+.pack-table-stage:before,.pack-table-stage:after{content:'';position:absolute;inset:0 0 40px;background:#e8dcc1;border:1px solid #b5a88d;z-index:-1;box-shadow:2px 4px 9px #0005;transform:translate(7px,3px) rotate(2deg)}
+.pack-table-stage:after{transform:translate(-5px,4px) rotate(-2deg)}
+.pack-table-stage[data-remaining="0"]:before,.pack-table-stage[data-remaining="0"]:after{display:none}
+.pack-table .pack-owned-card .fs-card{max-width:none}
+.pack-table .fs-card:not(.donk-print-card) .fs-flipper{background:none;isolation:auto;box-shadow:2px 8px 18px #0007}
+.pack-table .fs-card:not(.donk-print-card) .fs-inner{inset:0;background:#efe3c8;border:0;perspective:none}
+.pack-table .fs-card:not(.donk-print-card) .fs-face{border:7px solid #efe3c8;background:#efe3c8;box-shadow:none}
+.pack-table .fs-card:not(.donk-print-card) .fs-back{background:#efe3c8;padding:9px}
+.pack-table .fs-card:not(.donk-print-card) .fs-front-brand{padding:8px 6px}
+.pack-table .fs-card:not(.donk-print-card) .fs-name{font-size:6cqw}
+.pack-table .fs-card:not(.donk-print-card) .fs-flip-note{color:#e1d5b6;font-size:10px;margin-top:14px}
+.pack-table .pack-edition-label{color:#f1dfb1;font-size:14px;margin:12px auto!important}
+.pack-table .pack-owned-card[data-variant=refractor] .fs-front{border-image:linear-gradient(130deg,#b6f6e8,#dac0f1,#f5ecae,#a4d8ed) 1}
+.pack-table .pack-owned-card[data-variant=gold] .fs-front{border-color:#d6ae4c;background:linear-gradient(120deg,#d3a648,#f1dc95,#c59932)}
+.pack-table .pack-owned-card[data-variant=black] .fs-front{border-color:#222c33;background:#18242c}
+.pack-table-controls{display:flex;justify-content:center;gap:14px;flex-wrap:wrap}
+.pack-table-controls button{background:#ead9ac;color:#142e27;border:1px solid #cdb67b;border-radius:3px;min-width:150px}
+.pack-table .pack-table-note{color:#b9cec3;font-size:11px;margin:18px auto 0}
+@media(max-width:540px){.pack-table{padding:22px 16px}.pack-table-stage{width:min(300px,calc(100% - 16px))}.pack-table-controls{gap:8px}.pack-table-controls button{min-width:0;flex:1;padding:12px 8px;font-size:12px}}
+.pack-table .fs-card .fs-flip-note{display:none}
+.pack-table-stage:before,.pack-table-stage:after{bottom:36px}

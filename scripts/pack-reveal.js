@@ -26,10 +26,30 @@
   root.replaceChildren(toolbar,grid);sync();
   return {revealAll:()=>copies.forEach((_,i)=>reveal(i)),get revealedCount(){return revealed.size;}};
  }
+ function refractorLight(wrap){
+  const surface=wrap.querySelector('.fs-flipper');
+  if(!surface)return;
+  function light(event){
+   const bounds=surface.getBoundingClientRect();
+   if(!bounds.width||!bounds.height)return;
+   const x=Math.max(0,Math.min(1,(event.clientX-bounds.left)/bounds.width));
+   const y=Math.max(0,Math.min(1,(event.clientY-bounds.top)/bounds.height));
+   wrap.style.setProperty('--foil-x',`${x*100}%`);
+   wrap.style.setProperty('--foil-y',`${y*100}%`);
+   wrap.dataset.foilActive='true';
+  }
+  function release(){delete wrap.dataset.foilActive;}
+  surface.addEventListener('pointermove',light);
+  surface.addEventListener('pointerdown',light);
+  surface.addEventListener('pointerleave',release);
+  surface.addEventListener('pointerup',event=>{if(event.pointerType!=='mouse')release();});
+  surface.addEventListener('pointercancel',release);
+ }
  function card(edition,copy){
   const wrap=node('div',null,'pack-owned-card');wrap.dataset.variant=edition.variant.toLowerCase();
   const player={...edition.facts.player,frozen_artwork:true};
   wrap.append(GLBPlayerCards.createCard(player,edition.facts.record,{link:false,physical:true,frozen:true}));
+  if(wrap.dataset.variant==='refractor')refractorLight(wrap);
   const label=node('p',`${edition.variant} · ${copy.serial}/${edition.quantity}`,'pack-edition-label');
   wrap.append(label);return wrap;
  }

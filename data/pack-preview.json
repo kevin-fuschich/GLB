@@ -109,7 +109,11 @@
       },
       "renderer": "fieldstock-native-v1",
       "release": "2026 Base",
-      "card_number": 1
+      "card_number": 1,
+      "photographic_master": {
+        "front": "assets/fieldstock/proofs/idris-kourouma-base-317-front.webp",
+        "back": "assets/fieldstock/proofs/idris-kourouma-base-317-back.webp"
+      }
     },
     "copy_id": "preview-1",
     "serial": 317
@@ -222,7 +226,11 @@
       },
       "renderer": "fieldstock-native-v1",
       "release": "2026 Base",
-      "card_number": 160
+      "card_number": 160,
+      "photographic_master": {
+        "front": "assets/fieldstock/proofs/kellan-brynden-base-52-front.webp",
+        "back": "assets/fieldstock/proofs/kellan-brynden-base-52-back.webp"
+      }
     },
     "copy_id": "preview-2",
     "serial": 52
@@ -344,7 +352,8 @@
       "card_number": 112,
       "physical_copies": {
         "41": {
-          "front": "assets/fieldstock/proofs/hiroto-kurobane-refractor-41-front.webp"
+          "front": "assets/fieldstock/proofs/hiroto-kurobane-refractor-41-front.webp",
+          "back": "assets/fieldstock/proofs/hiroto-kurobane-refractor-41-back.webp"
         }
       }
     },
@@ -465,7 +474,8 @@
       "card_number": 202,
       "physical_copies": {
         "7": {
-          "front": "assets/fieldstock/proofs/kaito-ueda-gold-7-front.webp"
+          "front": "assets/fieldstock/proofs/kaito-ueda-gold-7-front.webp",
+          "back": "assets/fieldstock/proofs/kaito-ueda-gold-7-back.webp"
         }
       }
     },

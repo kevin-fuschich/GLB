@@ -144,6 +144,7 @@
   // Crop only the photograph out of older printed artwork at display time.
   // Source files and their original card designs remain archival assets.
   function photograph(player) {
+    if(player.skip_photograph)return text('span','','fs-initials');
     const vancouver = !player.frozen_artwork && player.teamSlug === 'vancouver-current' && vancouverPortraits[player.slug];
     if (vancouver?.crop) player={...player,photo_crop:vancouver.crop};
     const recovered = player.frozen_artwork ? null : recoveredPortrait(player, {photoOnly:true});

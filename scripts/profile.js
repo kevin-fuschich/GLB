@@ -18,7 +18,7 @@
   if(data.bio)root.append(make('p',data.bio,'member-bio'));
   const cards=make('section');cards.append(make('h2','Between the covers'),make('p','Selected cards from this collection.'));
   const grid=make('div',undefined,'showcase-cards');
-  for(const c of data.cards){const tile=make('article'),img=make('img');try{img.src=safeImage(c.front_image);}catch{continue;}img.alt=c.name+' · '+c.variant;img.loading='lazy';tile.append(img,make('h3',c.name),make('p',c.variant+' · '+c.serial+'/'+c.quantity));grid.append(tile);}
+  for(const c of data.cards){const tile=make('article'),img=make('img');try{img.src=safeImage(c.front_image);}catch{continue;}img.alt=c.name+' · '+c.variant;img.loading='lazy';const visual=c.back_image?make('button',undefined,'showcase-card-flip'):make('div');if(c.back_image){visual.type='button';let back=false;visual.setAttribute('aria-label','Turn over '+c.name+' · '+c.variant+' · '+c.serial+'/'+c.quantity);visual.onclick=()=>{back=!back;img.src=safeImage(back?c.back_image:c.front_image);img.alt=c.name+' · '+c.variant+' · '+(back?'back':'front');};}visual.append(img);tile.append(visual,make('h3',c.name),make('p',c.variant+' · '+c.serial+'/'+c.quantity));grid.append(tile);}
   cards.append(grid);if(!data.cards.length)cards.append(make('p','No cards featured yet.'));root.append(cards);
   const work=make('section');work.append(make('h2','Added to the record'));
   for(const c of data.claims){const item=make('article',undefined,'showcase-work'),a=make('a',c.artifact_name);a.href='artifact.html?artifact_id='+encodeURIComponent(c.artifact_id);item.append(make('p','ACCEPTED CLAIM','member-kicker'),a,make('p',c.body));work.append(item);}

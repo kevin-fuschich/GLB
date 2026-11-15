@@ -17,3 +17,5 @@ Every edition numbered to 100 or fewer carries a foil-stamped serial on the card
 A photographic proof with a baked-in serial is only valid for that exact copy. `facts.physical_copies` maps serials to their photographed front/back paths. Never reuse a `3/5` photograph for copy `4/5`. The pack, collector book and card inspector use the same mapping. Photographs, player information and stamp numbers must be checked before a print is accepted.
 
 The 2026 player plan has 264 players across 16 clubs and four editions per player: Base /1000, Refractor /100, Gold /25 and Black /5. The 1,056 player editions are draft production records. Planning these rows does not mint cards or approve unfinished artwork. Other universe artifacts remain separately reviewed checklist candidates.
+
+Unnumbered Base photographs can be shared between copies through `facts.photographic_master.front` and `.back`, only for editions above /100. Numbered editions always resolve artwork by exact serial. All five preview cards now have photographic fronts and backs.

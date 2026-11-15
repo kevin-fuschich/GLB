@@ -6,7 +6,7 @@
   return Promise.all(data.map(copy=>new Promise((resolve,reject)=>{
    const img=new Image(),timer=setTimeout(()=>reject(Error('Artwork timed out')),20000);
    img.onload=()=>{clearTimeout(timer);resolve();};img.onerror=()=>{clearTimeout(timer);reject(Error('Artwork unavailable'));};
-   img.src=copy.front_image;
+   img.src=copy.facts?.physical_copies?.[String(copy.serial)]?.front||copy.facts?.photographic_master?.front||copy.front_image;
   }))).then(()=>data);
  }
  function show(){

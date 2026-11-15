@@ -1,0 +1,5855 @@
+{
+  "schema": "glb.card-production.v1",
+  "set": "fieldstock-2026",
+  "release_status": "draft",
+  "edition_plan": [
+    {
+      "name": "Base",
+      "quantity": 1000
+    },
+    {
+      "name": "Refractor",
+      "quantity": 100
+    },
+    {
+      "name": "Gold",
+      "quantity": 25
+    },
+    {
+      "name": "Black",
+      "quantity": 5
+    }
+  ],
+  "players": [
+    {
+      "id": "FS26-0001",
+      "card_number": 1,
+      "subject_key": "player/albuquerque-aeros/idris-kourouma",
+      "subject_name": "Idris Kourouma",
+      "team_slug": "albuquerque-aeros",
+      "team_name": "Albuquerque Aeros",
+      "facts": {
+        "age": 29,
+        "bats": "R",
+        "throws": "R",
+        "position": "SP"
+      },
+      "source_image": "assets/teams/albuquerque-aeros/images/players/albuquerque-idris-kourouma.png",
+      "photo_crop": null
+    },
+    {
+      "id": "FS26-0002",
+      "card_number": 2,
+      "subject_key": "player/albuquerque-aeros/pieter-vanvleuten",
+      "subject_name": "Pieter VanVleuten",
+      "team_slug": "albuquerque-aeros",
+      "team_name": "Albuquerque Aeros",
+      "facts": {
+        "age": 31,
+        "bats": "L",
+        "throws": "L",
+        "position": "SP"
+      },
+      "source_image": "assets/teams/albuquerque-aeros/images/players/albuquerque-pieter-vanvleuten.png",
+      "photo_crop": null
+    },
+    {
+      "id": "FS26-0003",
+      "card_number": 3,
+      "subject_key": "player/albuquerque-aeros/nikhil-jadhav",
+      "subject_name": "Nikhil Jadhav",
+      "team_slug": "albuquerque-aeros",
+      "team_name": "Albuquerque Aeros",
+      "facts": {
+        "age": 26,
+        "bats": "R",
+        "throws": "R",
+        "position": "SP"
+      },
+      "source_image": "assets/teams/albuquerque-aeros/images/players/albuquerque-nikhil-jadhav.png",
+      "photo_crop": null
+    },
+    {
+      "id": "FS26-0004",
+      "card_number": 4,
+      "subject_key": "player/albuquerque-aeros/ronan-kaczmarek",
+      "subject_name": "Ronan Kaczmarek",
+      "team_slug": "albuquerque-aeros",
+      "team_name": "Albuquerque Aeros",
+      "facts": {
+        "age": 24,
+        "bats": "R",
+        "throws": "R",
+        "position": "SP"
+      },
+      "source_image": "assets/teams/albuquerque-aeros/images/players/albuquerque-ronan-kaczmarek.png",
+      "photo_crop": null
+    },
+    {
+      "id": "FS26-0005",
+      "card_number": 5,
+      "subject_key": "player/albuquerque-aeros/satoshi-kurobane",
+      "subject_name": "Satoshi Kurobane",
+      "team_slug": "albuquerque-aeros",
+      "team_name": "Albuquerque Aeros",
+      "facts": {
+        "age": 28,
+        "bats": "R",
+        "throws": "R",
+        "position": "SP"
+      },
+      "source_image": "assets/teams/albuquerque-aeros/images/players/albuquerque-satoshi-kurobane.png",
+      "photo_crop": null
+    },
+    {
+      "id": "FS26-0006",
+      "card_number": 6,
+      "subject_key": "player/albuquerque-aeros/eamon-quirke",
+      "subject_name": "Eamon Quirke",
+      "team_slug": "albuquerque-aeros",
+      "team_name": "Albuquerque Aeros",
+      "facts": {
+        "age": 27,
+        "bats": "R",
+        "throws": "R",
+        "position": "RP"
+      },
+      "source_image": "assets/teams/albuquerque-aeros/images/players/albuquerque-eamon-quirke.png",
+      "photo_crop": null
+    },
+    {
+      "id": "FS26-0007",
+      "card_number": 7,
+      "subject_key": "player/albuquerque-aeros/jae-min-gwak",
+      "subject_name": "Jae-min Gwak",
+      "team_slug": "albuquerque-aeros",
+      "team_name": "Albuquerque Aeros",
+      "facts": {
+        "age": 23,
+        "bats": "L",
+        "throws": "R",
+        "position": "RP"
+      },
+      "source_image": "assets/teams/albuquerque-aeros/images/players/albuquerque-jae-min-gwak.png",
+      "photo_crop": null
+    },
+    {
+      "id": "FS26-0008",
+      "card_number": 8,
+      "subject_key": "player/albuquerque-aeros/lazaro-bracamonte",
+      "subject_name": "Lázaro Bracamonte",
+      "team_slug": "albuquerque-aeros",
+      "team_name": "Albuquerque Aeros",
+      "facts": {
+        "age": 30,
+        "bats": "R",
+        "throws": "R",
+        "position": "RP"
+      },
+      "source_image": "assets/teams/albuquerque-aeros/images/players/albuquerque-lazaro-bracamonte.png",
+      "photo_crop": null
+    },
+    {
+      "id": "FS26-0009",
+      "card_number": 9,
+      "subject_key": "player/albuquerque-aeros/rui-damas",
+      "subject_name": "Rui Damas",
+      "team_slug": "albuquerque-aeros",
+      "team_name": "Albuquerque Aeros",
+      "facts": {
+        "age": 28,
+        "bats": "R",
+        "throws": "R",
+        "position": "C"
+      },
+      "source_image": "assets/teams/albuquerque-aeros/images/players/albuquerque-rui-damas.png",
+      "photo_crop": null
+    },
+    {
+      "id": "FS26-0010",
+      "card_number": 10,
+      "subject_key": "player/albuquerque-aeros/tobias-vandenberg",
+      "subject_name": "Tobias Vandenberg",
+      "team_slug": "albuquerque-aeros",
+      "team_name": "Albuquerque Aeros",
+      "facts": {
+        "age": 32,
+        "bats": "L",
+        "throws": "R",
+        "position": "1B"
+      },
+      "source_image": "assets/teams/albuquerque-aeros/images/players/albuquerque-tobias-vandenberg.png",
+      "photo_crop": null
+    },
+    {
+      "id": "FS26-0011",
+      "card_number": 11,
+      "subject_key": "player/albuquerque-aeros/kofi-agyeman",
+      "subject_name": "Kofi Agyeman",
+      "team_slug": "albuquerque-aeros",
+      "team_name": "Albuquerque Aeros",
+      "facts": {
+        "age": 25,
+        "bats": "S",
+        "throws": "R",
+        "position": "2B"
+      },
+      "source_image": "assets/teams/albuquerque-aeros/images/players/albuquerque-kofi-agyeman.png",
+      "photo_crop": null
+    },
+    {
+      "id": "FS26-0012",
+      "card_number": 12,
+      "subject_key": "player/albuquerque-aeros/iker-zubizarreta",
+      "subject_name": "Iker Zubizarreta",
+      "team_slug": "albuquerque-aeros",
+      "team_name": "Albuquerque Aeros",
+      "facts": {
+        "age": 26,
+        "bats": "R",
+        "throws": "R",
+        "position": "SS"
+      },
+      "source_image": "assets/teams/albuquerque-aeros/images/players/albuquerque-iker-zubizarreta.png",
+      "photo_crop": null
+    },
+    {
+      "id": "FS26-0013",
+      "card_number": 13,
+      "subject_key": "player/albuquerque-aeros/carmine-sforza",
+      "subject_name": "Carmine Sforza",
+      "team_slug": "albuquerque-aeros",
+      "team_name": "Albuquerque Aeros",
+      "facts": {
+        "age": 29,
+        "bats": "R",
+        "throws": "R",
+        "position": "3B"
+      },
+      "source_image": "assets/teams/albuquerque-aeros/images/players/albuquerque-carmine-sforza.pthinnng.png",
+      "photo_crop": null
+    },
+    {
+      "id": "FS26-0014",
+      "card_number": 14,
+      "subject_key": "player/albuquerque-aeros/adama-kouyate",
+      "subject_name": "Adama Kouyaté",
+      "team_slug": "albuquerque-aeros",
+      "team_name": "Albuquerque Aeros",
+      "facts": {
+        "age": 27,
+        "bats": "R",
+        "throws": "R",
+        "position": "CF"
+      },
+      "source_image": "assets/teams/albuquerque-aeros/images/players/albuquerque-adama-kouyate.png",
+      "photo_crop": null
+    },
+    {
+      "id": "FS26-0015",
+      "card_number": 15,
+      "subject_key": "player/albuquerque-aeros/elior-ben-ami",
+      "subject_name": "Elior Ben-Ami",
+      "team_slug": "albuquerque-aeros",
+      "team_name": "Albuquerque Aeros",
+      "facts": {
+        "age": 22,
+        "bats": "L",
+        "throws": "L",
+        "position": "LF"
+      },
+      "source_image": "assets/teams/albuquerque-aeros/images/players/albuquerque-elior-ben-ami.png",
+      "photo_crop": null
+    },
+    {
+      "id": "FS26-0016",
+      "card_number": 16,
+      "subject_key": "player/albuquerque-aeros/paolo-ventresca",
+      "subject_name": "Paolo Ventresca",
+      "team_slug": "albuquerque-aeros",
+      "team_name": "Albuquerque Aeros",
+      "facts": {
+        "age": 31,
+        "bats": "R",
+        "throws": "R",
+        "position": "RF"
+      },
+      "source_image": "assets/teams/albuquerque-aeros/images/players/albuquerque-paolo-ventresca.png",
+      "photo_crop": null
+    },
+    {
+      "id": "FS26-0017",
+      "card_number": 17,
+      "subject_key": "player/birmingham-vulcans/hassan-al-saleh",
+      "subject_name": "Hassan Al-Saleh",
+      "team_slug": "birmingham-vulcans",
+      "team_name": "Birmingham Vulcans",
+      "facts": {
+        "age": 30,
+        "dob": "1996-01-01",
+        "bats": "R",
+        "height": "6′3″",
+        "throws": "R",
+        "weight": 218,
+        "factoid": "Maps the best public chess tables in every road city.",
+        "position": "SP",
+        "birthplace": "Amman, Jordan"
+      },
+      "source_image": "assets/teams/birmingham-vulcans/images/player-atlas.webp",
+      "photo_crop": [
+        0,
+        0,
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "id": "FS26-0018",
+      "card_number": 18,
+      "subject_key": "player/birmingham-vulcans/thierry-boucher",
+      "subject_name": "Thierry Boucher",
+      "team_slug": "birmingham-vulcans",
+      "team_name": "Birmingham Vulcans",
+      "facts": {
+        "age": 27,
+        "dob": "1999-04-02",
+        "bats": "L",
+        "height": "6′2″",
+        "throws": "L",
+        "weight": 202,
+        "factoid": "Repairs old transistor radios between road trips.",
+        "position": "SP",
+        "birthplace": "Québec City, Canada"
+      },
+      "source_image": "assets/teams/birmingham-vulcans/images/player-atlas.webp",
+      "photo_crop": [
+        0.25,
+        0,
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "id": "FS26-0019",
+      "card_number": 19,
+      "subject_key": "player/birmingham-vulcans/jared-whitlock",
+      "subject_name": "Jared Whitlock",
+      "team_slug": "birmingham-vulcans",
+      "team_name": "Birmingham Vulcans",
+      "facts": {
+        "age": 29,
+        "dob": "1997-07-03",
+        "bats": "R",
+        "height": "6′4″",
+        "throws": "R",
+        "weight": 228,
+        "factoid": "Carries a small tin of spare shirt buttons.",
+        "position": "SP",
+        "birthplace": "Tulsa, Oklahoma"
+      },
+      "source_image": "assets/teams/birmingham-vulcans/images/player-atlas.webp",
+      "photo_crop": [
+        0.5,
+        0,
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "id": "FS26-0020",
+      "card_number": 20,
+      "subject_key": "player/birmingham-vulcans/emilio-duarte",
+      "subject_name": "Emilio Duarte",
+      "team_slug": "birmingham-vulcans",
+      "team_name": "Birmingham Vulcans",
+      "facts": {
+        "age": 26,
+        "dob": "2000-10-04",
+        "bats": "R",
+        "height": "6′1″",
+        "throws": "R",
+        "weight": 196,
+        "factoid": "Keeps ticket stubs from minor league parks he has visited.",
+        "position": "SP",
+        "birthplace": "Valencia, Venezuela"
+      },
+      "source_image": "assets/teams/birmingham-vulcans/images/player-atlas.webp",
+      "photo_crop": [
+        0.75,
+        0,
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "id": "FS26-0021",
+      "card_number": 21,
+      "subject_key": "player/birmingham-vulcans/luka-petrovic",
+      "subject_name": "Luka Petrovic",
+      "team_slug": "birmingham-vulcans",
+      "team_name": "Birmingham Vulcans",
+      "facts": {
+        "age": 24,
+        "dob": "2002-02-05",
+        "bats": "L",
+        "height": "6′5″",
+        "throws": "R",
+        "weight": 215,
+        "factoid": "Can identify most trees around the park by their leaves.",
+        "position": "SP",
+        "birthplace": "Novi Sad, Serbia"
+      },
+      "source_image": "assets/teams/birmingham-vulcans/images/player-atlas.webp",
+      "photo_crop": [
+        0,
+        0.25,
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "id": "FS26-0022",
+      "card_number": 22,
+      "subject_key": "player/birmingham-vulcans/micah-torrence",
+      "subject_name": "Micah Torrence",
+      "team_slug": "birmingham-vulcans",
+      "team_name": "Birmingham Vulcans",
+      "facts": {
+        "age": 28,
+        "dob": "1998-05-06",
+        "bats": "R",
+        "height": "6′2″",
+        "throws": "R",
+        "weight": 225,
+        "factoid": "Brings a different homemade hot sauce to each homestand.",
+        "position": "RP",
+        "birthplace": "Birmingham, Alabama"
+      },
+      "source_image": "assets/teams/birmingham-vulcans/images/player-atlas.webp",
+      "photo_crop": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "id": "FS26-0023",
+      "card_number": 23,
+      "subject_key": "player/birmingham-vulcans/antonio-bela",
+      "subject_name": "Antonio Bela",
+      "team_slug": "birmingham-vulcans",
+      "team_name": "Birmingham Vulcans",
+      "facts": {
+        "age": 25,
+        "dob": "2001-08-07",
+        "bats": "L",
+        "height": "6′0″",
+        "throws": "L",
+        "weight": 190,
+        "factoid": "Collects hand-painted ceramic roosters.",
+        "position": "RP",
+        "birthplace": "Porto, Portugal"
+      },
+      "source_image": "assets/teams/birmingham-vulcans/images/player-atlas.webp",
+      "photo_crop": [
+        0.5,
+        0.25,
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "id": "FS26-0024",
+      "card_number": 24,
+      "subject_key": "player/birmingham-vulcans/reese-walker",
+      "subject_name": "Reese Walker",
+      "team_slug": "birmingham-vulcans",
+      "team_name": "Birmingham Vulcans",
+      "facts": {
+        "age": 31,
+        "dob": "1995-11-08",
+        "bats": "R",
+        "height": "6′3″",
+        "throws": "R",
+        "weight": 222,
+        "factoid": "Writes down the best diner pie in each road city.",
+        "position": "RP",
+        "birthplace": "Knoxville, Tennessee"
+      },
+      "source_image": "assets/teams/birmingham-vulcans/images/player-atlas.webp",
+      "photo_crop": [
+        0.75,
+        0.25,
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "id": "FS26-0025",
+      "card_number": 25,
+      "subject_key": "player/birmingham-vulcans/owen-keller",
+      "subject_name": "Owen Keller",
+      "team_slug": "birmingham-vulcans",
+      "team_name": "Birmingham Vulcans",
+      "facts": {
+        "age": 30,
+        "dob": "1996-03-09",
+        "bats": "R",
+        "height": "6′0″",
+        "throws": "R",
+        "weight": 216,
+        "factoid": "Makes wooden birdhouses during the offseason.",
+        "position": "C",
+        "birthplace": "Madison, Wisconsin"
+      },
+      "source_image": "assets/teams/birmingham-vulcans/images/player-atlas.webp",
+      "photo_crop": [
+        0,
+        0.5,
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "id": "FS26-0026",
+      "card_number": 26,
+      "subject_key": "player/birmingham-vulcans/malik-johnson",
+      "subject_name": "Malik Johnson",
+      "team_slug": "birmingham-vulcans",
+      "team_name": "Birmingham Vulcans",
+      "facts": {
+        "age": 27,
+        "dob": "1999-06-10",
+        "bats": "L",
+        "height": "6′4″",
+        "throws": "R",
+        "weight": 238,
+        "factoid": "Keeps a bowling scorebook going back eleven years.",
+        "position": "1B",
+        "birthplace": "Mobile, Alabama"
+      },
+      "source_image": "assets/teams/birmingham-vulcans/images/player-atlas.webp",
+      "photo_crop": [
+        0.25,
+        0.5,
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "id": "FS26-0027",
+      "card_number": 27,
+      "subject_key": "player/birmingham-vulcans/nico-valente",
+      "subject_name": "Nico Valente",
+      "team_slug": "birmingham-vulcans",
+      "team_name": "Birmingham Vulcans",
+      "facts": {
+        "age": 26,
+        "dob": "2000-09-11",
+        "bats": "S",
+        "height": "5′11″",
+        "throws": "R",
+        "weight": 185,
+        "factoid": "Learned to sew so he could repair his own travel bag.",
+        "position": "2B",
+        "birthplace": "Bologna, Italy"
+      },
+      "source_image": "assets/teams/birmingham-vulcans/images/player-atlas.webp",
+      "photo_crop": [
+        0.5,
+        0.5,
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "id": "FS26-0028",
+      "card_number": 28,
+      "subject_key": "player/birmingham-vulcans/julian-santoro",
+      "subject_name": "Julian Santoro",
+      "team_slug": "birmingham-vulcans",
+      "team_name": "Birmingham Vulcans",
+      "facts": {
+        "age": 28,
+        "dob": "1998-01-12",
+        "bats": "R",
+        "height": "6′1″",
+        "throws": "R",
+        "weight": 195,
+        "factoid": "Refuses to skip a museum with a model railway.",
+        "position": "SS",
+        "birthplace": "Newark, New Jersey"
+      },
+      "source_image": "assets/teams/birmingham-vulcans/images/player-atlas.webp",
+      "photo_crop": [
+        0.75,
+        0.5,
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "id": "FS26-0029",
+      "card_number": 29,
+      "subject_key": "player/birmingham-vulcans/caleb-hawkins",
+      "subject_name": "Caleb Hawkins",
+      "team_slug": "birmingham-vulcans",
+      "team_name": "Birmingham Vulcans",
+      "facts": {
+        "age": 29,
+        "dob": "1997-04-13",
+        "bats": "R",
+        "height": "6′2″",
+        "throws": "R",
+        "weight": 214,
+        "factoid": "Maintains a balcony garden of unusually large peppers.",
+        "position": "3B",
+        "birthplace": "Huntsville, Alabama"
+      },
+      "source_image": "assets/teams/birmingham-vulcans/images/player-atlas.webp",
+      "photo_crop": [
+        0,
+        0.75,
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "id": "FS26-0030",
+      "card_number": 30,
+      "subject_key": "player/birmingham-vulcans/isaac-morrow",
+      "subject_name": "Isaac Morrow",
+      "team_slug": "birmingham-vulcans",
+      "team_name": "Birmingham Vulcans",
+      "facts": {
+        "age": 25,
+        "dob": "2001-07-14",
+        "bats": "L",
+        "height": "6′2″",
+        "throws": "L",
+        "weight": 198,
+        "factoid": "Sketches water towers from the team bus.",
+        "position": "CF",
+        "birthplace": "Savannah, Georgia"
+      },
+      "source_image": "assets/teams/birmingham-vulcans/images/player-atlas.webp",
+      "photo_crop": [
+        0.25,
+        0.75,
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "id": "FS26-0031",
+      "card_number": 31,
+      "subject_key": "player/birmingham-vulcans/dante-rios",
+      "subject_name": "Dante Rios",
+      "team_slug": "birmingham-vulcans",
+      "team_name": "Birmingham Vulcans",
+      "facts": {
+        "age": 24,
+        "dob": "2002-10-15",
+        "bats": "R",
+        "height": "6′0″",
+        "throws": "R",
+        "weight": 193,
+        "factoid": "Trades crossword puzzles with the clubhouse attendant.",
+        "position": "LF",
+        "birthplace": "Ponce, Puerto Rico"
+      },
+      "source_image": "assets/teams/birmingham-vulcans/images/player-atlas.webp",
+      "photo_crop": [
+        0.5,
+        0.75,
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "id": "FS26-0032",
+      "card_number": 32,
+      "subject_key": "player/birmingham-vulcans/cole-ramsey",
+      "subject_name": "Cole Ramsey",
+      "team_slug": "birmingham-vulcans",
+      "team_name": "Birmingham Vulcans",
+      "facts": {
+        "age": 32,
+        "dob": "1994-02-16",
+        "bats": "R",
+        "height": "6′3″",
+        "throws": "R",
+        "weight": 220,
+        "factoid": "Has a collection of motel postcards with no messages written on them.",
+        "position": "RF",
+        "birthplace": "Spokane, Washington"
+      },
+      "source_image": "assets/teams/birmingham-vulcans/images/player-atlas.webp",
+      "photo_crop": [
+        0.75,
+        0.75,
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "id": "FS26-0033",
+      "card_number": 33,
+      "subject_key": "player/durham-gold/caleb-rowan",
+      "subject_name": "Caleb Rowan",
+      "team_slug": "durham-gold",
+      "team_name": "Triangle Gold",
+      "facts": {
+        "age": 29,
+        "dob": "1997-05-16",
+        "bats": "R",
+        "height": "6′3″",
+        "throws": "R",
+        "weight": 214,
+        "factoid": "Keeps the ticket from his first game at the Yard tucked inside a scorebook.",
+        "position": "SP",
+        "birthplace": "Greensboro, North Carolina"
+      },
+      "source_image": "assets/teams/triangle-gold/triangle-player-moments.webp",
+      "photo_crop": [
+        0,
+        0,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "FS26-0034",
+      "card_number": 34,
+      "subject_key": "player/durham-gold/antonio-beltran",
+      "subject_name": "Antonio Beltrán",
+      "team_slug": "durham-gold",
+      "team_name": "Triangle Gold",
+      "facts": {
+        "age": 27,
+        "dob": "1999-02-09",
+        "bats": "L",
+        "height": "6′1″",
+        "throws": "L",
+        "weight": 198,
+        "factoid": "His offseason catch partner is the cousin who first taught him to pitch.",
+        "position": "SP",
+        "birthplace": "Hermosillo, Mexico"
+      },
+      "source_image": "assets/images/players/durham-gold/durham-antonio-beltran.jpg",
+      "photo_crop": null
+    },
+    {
+      "id": "FS26-0035",
+      "card_number": 35,
+      "subject_key": "player/durham-gold/isaac-friedel",
+      "subject_name": "Isaac Friedel",
+      "team_slug": "durham-gold",
+      "team_name": "Triangle Gold",
+      "facts": {
+        "age": 31,
+        "dob": "1995-08-24",
+        "bats": "R",
+        "height": "6′4″",
+        "throws": "R",
+        "weight": 229,
+        "factoid": "Repairs the stitching on his own practice gloves.",
+        "position": "SP",
+        "birthplace": "Bremen, Germany"
+      },
+      "source_image": "assets/images/players/durham-gold/durham-isaac-friedel.jpg",
+      "photo_crop": null
+    },
+    {
+      "id": "FS26-0036",
+      "card_number": 36,
+      "subject_key": "player/durham-gold/kenji-nomura",
+      "subject_name": "Kenji Nomura",
+      "team_slug": "durham-gold",
+      "team_name": "Triangle Gold",
+      "facts": {
+        "age": 26,
+        "dob": "2000-06-11",
+        "bats": "R",
+        "height": "5′11″",
+        "throws": "R",
+        "weight": 183,
+        "factoid": "Carries a small travel watercolor set on road trips.",
+        "position": "SP",
+        "birthplace": "Kobe, Japan"
+      },
+      "source_image": "assets/images/players/durham-gold/durham-kenji-nomura.jpg",
+      "photo_crop": null
+    },
+    {
+      "id": "FS26-0037",
+      "card_number": 37,
+      "subject_key": "player/durham-gold/devin-marsh",
+      "subject_name": "Devin Marsh",
+      "team_slug": "durham-gold",
+      "team_name": "Triangle Gold",
+      "facts": {
+        "age": 28,
+        "dob": "1998-04-03",
+        "bats": "R",
+        "height": "6′2″",
+        "throws": "R",
+        "weight": 221,
+        "factoid": "Worked the early shift at a marina before his first professional contract.",
+        "position": "RP",
+        "birthplace": "Norfolk, Virginia"
+      },
+      "source_image": "assets/images/players/durham-gold/durham-devin-marsh.jpg",
+      "photo_crop": null
+    },
+    {
+      "id": "FS26-0038",
+      "card_number": 38,
+      "subject_key": "player/durham-gold/luis-carreno",
+      "subject_name": "Luis Carreño",
+      "team_slug": "durham-gold",
+      "team_name": "Triangle Gold",
+      "facts": {
+        "age": 25,
+        "dob": "2001-09-18",
+        "bats": "L",
+        "height": "6′0″",
+        "throws": "R",
+        "weight": 192,
+        "factoid": "Learned to keep score while listening to games with his aunt.",
+        "position": "RP",
+        "birthplace": "Barquisimeto, Venezuela"
+      },
+      "source_image": "assets/images/players/durham-gold/durham-luis-carreno.jpg",
+      "photo_crop": null
+    },
+    {
+      "id": "FS26-0039",
+      "card_number": 39,
+      "subject_key": "player/durham-gold/noah-pryce",
+      "subject_name": "Noah Pryce",
+      "team_slug": "durham-gold",
+      "team_name": "Triangle Gold",
+      "facts": {
+        "age": 30,
+        "dob": "1996-01-27",
+        "bats": "R",
+        "height": "6′3″",
+        "throws": "R",
+        "weight": 207,
+        "factoid": "Collects secondhand novels from the cities on the schedule.",
+        "position": "RP",
+        "birthplace": "Cardiff, Wales"
+      },
+      "source_image": "assets/images/players/durham-gold/durham-noah-pryce.jpg",
+      "photo_crop": null
+    },
+    {
+      "id": "FS26-0040",
+      "card_number": 40,
+      "subject_key": "player/durham-gold/ethan-bowen",
+      "subject_name": "Ethan Bowen",
+      "team_slug": "durham-gold",
+      "team_name": "Triangle Gold",
+      "facts": {
+        "age": 32,
+        "dob": "1994-07-06",
+        "bats": "R",
+        "height": "6′1″",
+        "throws": "R",
+        "weight": 233,
+        "factoid": "Always checks the stitching on his backup mitt before a road trip.",
+        "position": "C",
+        "birthplace": "Tulsa, Oklahoma"
+      },
+      "source_image": "assets/teams/triangle-gold/triangle-player-moments.webp",
+      "photo_crop": [
+        0.5,
+        0,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "FS26-0041",
+      "card_number": 41,
+      "subject_key": "player/durham-gold/marcelo-ibarra",
+      "subject_name": "Marcelo Ibarra",
+      "team_slug": "durham-gold",
+      "team_name": "Triangle Gold",
+      "facts": {
+        "age": 28,
+        "dob": "1998-03-30",
+        "bats": "L",
+        "height": "6′4″",
+        "throws": "R",
+        "weight": 241,
+        "factoid": "His first regular job was in his family’s upholstery shop.",
+        "position": "1B",
+        "birthplace": "Córdoba, Argentina"
+      },
+      "source_image": "assets/images/players/durham-gold/durham-marcelo-ibarra.jpg",
+      "photo_crop": null
+    },
+    {
+      "id": "FS26-0042",
+      "card_number": 42,
+      "subject_key": "player/durham-gold/joshua-kent",
+      "subject_name": "Joshua Kent",
+      "team_slug": "durham-gold",
+      "team_name": "Triangle Gold",
+      "facts": {
+        "age": 24,
+        "dob": "2002-08-12",
+        "bats": "S",
+        "height": "5′10″",
+        "throws": "R",
+        "weight": 176,
+        "factoid": "Still helps at the youth camp where he learned to turn two.",
+        "position": "2B",
+        "birthplace": "Chapel Hill, North Carolina"
+      },
+      "source_image": "assets/images/players/durham-gold/durham-joshua-kent.jpg",
+      "photo_crop": null
+    },
+    {
+      "id": "FS26-0043",
+      "card_number": 43,
+      "subject_key": "player/durham-gold/omar-salcedo",
+      "subject_name": "Omar Salcedo",
+      "team_slug": "durham-gold",
+      "team_name": "Triangle Gold",
+      "facts": {
+        "age": 27,
+        "dob": "1999-05-22",
+        "bats": "R",
+        "height": "6′0″",
+        "throws": "R",
+        "weight": 188,
+        "factoid": "Carries a battered domino case on long road trips.",
+        "position": "SS",
+        "birthplace": "Santo Domingo, Dominican Republic"
+      },
+      "source_image": "assets/teams/triangle-gold/triangle-player-moments.webp",
+      "photo_crop": [
+        0,
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "FS26-0044",
+      "card_number": 44,
+      "subject_key": "player/durham-gold/tyrell-winston",
+      "subject_name": "Tyrell Winston",
+      "team_slug": "durham-gold",
+      "team_name": "Triangle Gold",
+      "facts": {
+        "age": 29,
+        "dob": "1997-04-15",
+        "bats": "R",
+        "height": "6′2″",
+        "throws": "R",
+        "weight": 216,
+        "factoid": "Tunes old radios with his father during the winter.",
+        "position": "3B",
+        "birthplace": "Augusta, Georgia"
+      },
+      "source_image": "assets/images/players/durham-gold/durham-tyrell-winston.jpg",
+      "photo_crop": null
+    },
+    {
+      "id": "FS26-0045",
+      "card_number": 45,
+      "subject_key": "player/durham-gold/aaron-fletcher",
+      "subject_name": "Aaron Fletcher",
+      "team_slug": "durham-gold",
+      "team_name": "Triangle Gold",
+      "facts": {
+        "age": 26,
+        "dob": "2000-09-04",
+        "bats": "L",
+        "height": "6′1″",
+        "throws": "L",
+        "weight": 194,
+        "factoid": "Was a competitive swimmer before baseball became his main sport.",
+        "position": "CF",
+        "birthplace": "Hamilton, Ontario"
+      },
+      "source_image": "assets/images/players/durham-gold/durham-aaron-fletcher.jpg",
+      "photo_crop": null
+    },
+    {
+      "id": "FS26-0046",
+      "card_number": 46,
+      "subject_key": "player/durham-gold/mateo-rios",
+      "subject_name": "Mateo Ríos",
+      "team_slug": "durham-gold",
+      "team_name": "Triangle Gold",
+      "facts": {
+        "age": 23,
+        "dob": "2003-06-28",
+        "bats": "R",
+        "height": "6′0″",
+        "throws": "R",
+        "weight": 185,
+        "factoid": "His sister keeps the ball from his first professional hit.",
+        "position": "LF",
+        "birthplace": "Ponce, Puerto Rico"
+      },
+      "source_image": "assets/teams/triangle-gold/triangle-player-moments.webp",
+      "photo_crop": [
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "FS26-0047",
+      "card_number": 47,
+      "subject_key": "player/durham-gold/calvin-ross",
+      "subject_name": "Calvin Ross",
+      "team_slug": "durham-gold",
+      "team_name": "Triangle Gold",
+      "facts": {
+        "age": 31,
+        "dob": "1995-02-17",
+        "bats": "R",
+        "height": "6′3″",
+        "throws": "R",
+        "weight": 222,
+        "factoid": "Spends part of each offseason restoring an old aluminum fishing boat.",
+        "position": "RF",
+        "birthplace": "Spokane, Washington"
+      },
+      "source_image": "assets/images/players/durham-gold/durham-calvin-ross.jpg",
+      "photo_crop": null
+    },
+    {
+      "id": "FS26-0048",
+      "card_number": 48,
+      "subject_key": "player/fresno-yield/roman-villasenor",
+      "subject_name": "Román Villaseñor",
+      "team_slug": "fresno-yield",
+      "team_name": "Fresno Yield",
+      "facts": {
+        "age": 29,
+        "bats": "R",
+        "throws": "R",
+        "position": "SP"
+      },
+      "source_image": "assets/teams/fresno-yield/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0,
+        0,
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "id": "FS26-0049",
+      "card_number": 49,
+      "subject_key": "player/fresno-yield/cedric-wainwright",
+      "subject_name": "Cedric Wainwright",
+      "team_slug": "fresno-yield",
+      "team_name": "Fresno Yield",
+      "facts": {
+        "age": 27,
+        "bats": "L",
+        "throws": "L",
+        "position": "SP"
+      },
+      "source_image": "assets/teams/fresno-yield/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0.25,
+        0,
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "id": "FS26-0050",
+      "card_number": 50,
+      "subject_key": "player/fresno-yield/kenji-takamori",
+      "subject_name": "Kenji Takamori",
+      "team_slug": "fresno-yield",
+      "team_name": "Fresno Yield",
+      "facts": {
+        "age": 26,
+        "bats": "R",
+        "throws": "R",
+        "position": "SP"
+      },
+      "source_image": "assets/teams/fresno-yield/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0.5,
+        0,
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "id": "FS26-0051",
+      "card_number": 51,
+      "subject_key": "player/fresno-yield/arinze-nwokoye",
+      "subject_name": "Arinze Nwokoye",
+      "team_slug": "fresno-yield",
+      "team_name": "Fresno Yield",
+      "facts": {
+        "age": 31,
+        "bats": "R",
+        "throws": "R",
+        "position": "SP"
+      },
+      "source_image": "assets/teams/fresno-yield/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0.75,
+        0,
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "id": "FS26-0052",
+      "card_number": 52,
+      "subject_key": "player/fresno-yield/silas-torgersen",
+      "subject_name": "Silas Torgersen",
+      "team_slug": "fresno-yield",
+      "team_name": "Fresno Yield",
+      "facts": {
+        "age": 24,
+        "bats": "L",
+        "throws": "R",
+        "position": "SP"
+      },
+      "source_image": "assets/teams/fresno-yield/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0,
+        0.25,
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "id": "FS26-0053",
+      "card_number": 53,
+      "subject_key": "player/fresno-yield/ibrahim-koroma",
+      "subject_name": "Ibrahim Koroma",
+      "team_slug": "fresno-yield",
+      "team_name": "Fresno Yield",
+      "facts": {
+        "age": 28,
+        "bats": "R",
+        "throws": "R",
+        "position": "RP"
+      },
+      "source_image": "assets/teams/fresno-yield/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "id": "FS26-0054",
+      "card_number": 54,
+      "subject_key": "player/fresno-yield/mateo-azarcon",
+      "subject_name": "Mateo Azarcón",
+      "team_slug": "fresno-yield",
+      "team_name": "Fresno Yield",
+      "facts": {
+        "age": 25,
+        "bats": "R",
+        "throws": "R",
+        "position": "RP"
+      },
+      "source_image": "assets/teams/fresno-yield/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0.5,
+        0.25,
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "id": "FS26-0055",
+      "card_number": 55,
+      "subject_key": "player/fresno-yield/dusan-marevic",
+      "subject_name": "Dušan Marević",
+      "team_slug": "fresno-yield",
+      "team_name": "Fresno Yield",
+      "facts": {
+        "age": 30,
+        "bats": "L",
+        "throws": "L",
+        "position": "RP"
+      },
+      "source_image": "assets/teams/fresno-yield/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0.75,
+        0.25,
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "id": "FS26-0056",
+      "card_number": 56,
+      "subject_key": "player/fresno-yield/luis-eccheri",
+      "subject_name": "Luis Eccheri",
+      "team_slug": "fresno-yield",
+      "team_name": "Fresno Yield",
+      "facts": {
+        "age": 27,
+        "bats": "R",
+        "throws": "R",
+        "position": "C"
+      },
+      "source_image": "assets/teams/fresno-yield/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0,
+        0.5,
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "id": "FS26-0057",
+      "card_number": 57,
+      "subject_key": "player/fresno-yield/jonah-kershaw",
+      "subject_name": "Jonah Kershaw",
+      "team_slug": "fresno-yield",
+      "team_name": "Fresno Yield",
+      "facts": {
+        "age": 32,
+        "bats": "L",
+        "throws": "R",
+        "position": "1B"
+      },
+      "source_image": "assets/teams/fresno-yield/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0.25,
+        0.5,
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "id": "FS26-0058",
+      "card_number": 58,
+      "subject_key": "player/fresno-yield/soren-ahlgren",
+      "subject_name": "Søren Ahlgren",
+      "team_slug": "fresno-yield",
+      "team_name": "Fresno Yield",
+      "facts": {
+        "age": 23,
+        "bats": "S",
+        "throws": "R",
+        "position": "2B"
+      },
+      "source_image": "assets/teams/fresno-yield/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0.5,
+        0.5,
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "id": "FS26-0059",
+      "card_number": 59,
+      "subject_key": "player/fresno-yield/raul-sestayo",
+      "subject_name": "Raúl Sestayo",
+      "team_slug": "fresno-yield",
+      "team_name": "Fresno Yield",
+      "facts": {
+        "age": 26,
+        "bats": "R",
+        "throws": "R",
+        "position": "SS"
+      },
+      "source_image": "assets/teams/fresno-yield/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0.75,
+        0.5,
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "id": "FS26-0060",
+      "card_number": 60,
+      "subject_key": "player/fresno-yield/eamon-kilbride",
+      "subject_name": "Eamon Kilbride",
+      "team_slug": "fresno-yield",
+      "team_name": "Fresno Yield",
+      "facts": {
+        "age": 29,
+        "bats": "R",
+        "throws": "R",
+        "position": "3B"
+      },
+      "source_image": "assets/teams/fresno-yield/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0,
+        0.75,
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "id": "FS26-0061",
+      "card_number": 61,
+      "subject_key": "player/fresno-yield/malachi-quartey",
+      "subject_name": "Malachi Quartey",
+      "team_slug": "fresno-yield",
+      "team_name": "Fresno Yield",
+      "facts": {
+        "age": 25,
+        "bats": "R",
+        "throws": "R",
+        "position": "CF"
+      },
+      "source_image": "assets/teams/fresno-yield/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0.25,
+        0.75,
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "id": "FS26-0062",
+      "card_number": 62,
+      "subject_key": "player/fresno-yield/hiroshi-kawabata",
+      "subject_name": "Hiroshi Kawabata",
+      "team_slug": "fresno-yield",
+      "team_name": "Fresno Yield",
+      "facts": {
+        "age": 28,
+        "bats": "L",
+        "throws": "L",
+        "position": "LF"
+      },
+      "source_image": "assets/teams/fresno-yield/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0.5,
+        0.75,
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "id": "FS26-0063",
+      "card_number": 63,
+      "subject_key": "player/fresno-yield/anwar-elamin",
+      "subject_name": "Anwar Elamin",
+      "team_slug": "fresno-yield",
+      "team_name": "Fresno Yield",
+      "facts": {
+        "age": 31,
+        "bats": "R",
+        "throws": "R",
+        "position": "RF"
+      },
+      "source_image": "assets/teams/fresno-yield/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0.75,
+        0.75,
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "id": "FS26-0064",
+      "card_number": 64,
+      "subject_key": "player/louisville-naturals/gabriel-ionescu",
+      "subject_name": "Gabriel Ionescu",
+      "team_slug": "louisville-naturals",
+      "team_name": "Louisville Naturals",
+      "facts": {
+        "age": 29,
+        "dob": "1997-03-12",
+        "bats": "R",
+        "height": "6′3″",
+        "throws": "R",
+        "weight": 205,
+        "factoid": "Keeps a paper notebook of each opposing lineup.",
+        "position": "SP",
+        "birthplace": "Cluj-Napoca, Romania"
+      },
+      "source_image": "assets/teams/louisville-naturals/images/players/louisville-players-1.webp",
+      "photo_crop": [
+        0,
+        0,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "FS26-0065",
+      "card_number": 65,
+      "subject_key": "player/louisville-naturals/mateo-alvarez",
+      "subject_name": "Mateo Álvarez",
+      "team_slug": "louisville-naturals",
+      "team_name": "Louisville Naturals",
+      "facts": {
+        "age": 27,
+        "dob": "1999-07-21",
+        "bats": "L",
+        "height": "6′2″",
+        "throws": "L",
+        "weight": 212,
+        "factoid": "Learned to repair gloves from his grandfather.",
+        "position": "SP",
+        "birthplace": "Maracaibo, Venezuela"
+      },
+      "source_image": "assets/teams/louisville-naturals/images/players/louisville-players-1.webp",
+      "photo_crop": [
+        0.5,
+        0,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "FS26-0066",
+      "card_number": 66,
+      "subject_key": "player/louisville-naturals/calvin-rhodes",
+      "subject_name": "Calvin Rhodes",
+      "team_slug": "louisville-naturals",
+      "team_name": "Louisville Naturals",
+      "facts": {
+        "age": 31,
+        "dob": "1995-02-06",
+        "bats": "R",
+        "height": "6′4″",
+        "throws": "R",
+        "weight": 238,
+        "factoid": "Plays bass guitar during the offseason.",
+        "position": "SP",
+        "birthplace": "Memphis, Tennessee"
+      },
+      "source_image": "assets/teams/louisville-naturals/images/players/louisville-players-1.webp",
+      "photo_crop": [
+        0,
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "FS26-0067",
+      "card_number": 67,
+      "subject_key": "player/louisville-naturals/santiago-correa",
+      "subject_name": "Santiago Correa",
+      "team_slug": "louisville-naturals",
+      "team_name": "Louisville Naturals",
+      "facts": {
+        "age": 26,
+        "dob": "2000-06-18",
+        "bats": "R",
+        "height": "6′1″",
+        "throws": "R",
+        "weight": 190,
+        "factoid": "Keeps ticket stubs from his first game at every new park.",
+        "position": "SP",
+        "birthplace": "Medellín, Colombia"
+      },
+      "source_image": "assets/teams/louisville-naturals/images/players/louisville-players-1.webp",
+      "photo_crop": [
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "FS26-0068",
+      "card_number": 68,
+      "subject_key": "player/louisville-naturals/darius-okonkwo",
+      "subject_name": "Darius Okonkwo",
+      "team_slug": "louisville-naturals",
+      "team_name": "Louisville Naturals",
+      "facts": {
+        "age": 25,
+        "dob": "2001-04-09",
+        "bats": "R",
+        "height": "6′5″",
+        "throws": "R",
+        "weight": 210,
+        "factoid": "His first baseball glove was borrowed from a school teammate.",
+        "position": "SP",
+        "birthplace": "Enugu, Nigeria"
+      },
+      "source_image": "assets/teams/louisville-naturals/images/players/louisville-players-2.webp",
+      "photo_crop": [
+        0,
+        0,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "FS26-0069",
+      "card_number": 69,
+      "subject_key": "player/louisville-naturals/evan-sutter",
+      "subject_name": "Evan Sutter",
+      "team_slug": "louisville-naturals",
+      "team_name": "Louisville Naturals",
+      "facts": {
+        "age": 28,
+        "dob": "1998-08-14",
+        "bats": "R",
+        "height": "6′0″",
+        "throws": "R",
+        "weight": 220,
+        "factoid": "Still uses the same canvas equipment bag he carried in college.",
+        "position": "RP",
+        "birthplace": "Cedar Rapids, Iowa"
+      },
+      "source_image": "assets/teams/louisville-naturals/images/players/louisville-players-2.webp",
+      "photo_crop": [
+        0.5,
+        0,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "FS26-0070",
+      "card_number": 70,
+      "subject_key": "player/louisville-naturals/luis-delgado",
+      "subject_name": "Luis Delgado",
+      "team_slug": "louisville-naturals",
+      "team_name": "Louisville Naturals",
+      "facts": {
+        "age": 30,
+        "dob": "1996-01-30",
+        "bats": "L",
+        "height": "6′1″",
+        "throws": "L",
+        "weight": 208,
+        "factoid": "Keeps score when he watches games away from the park.",
+        "position": "RP",
+        "birthplace": "San Juan, Puerto Rico"
+      },
+      "source_image": "assets/teams/louisville-naturals/images/players/louisville-players-2.webp",
+      "photo_crop": [
+        0,
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "FS26-0071",
+      "card_number": 71,
+      "subject_key": "player/louisville-naturals/kieran-walsh",
+      "subject_name": "Kieran Walsh",
+      "team_slug": "louisville-naturals",
+      "team_name": "Louisville Naturals",
+      "facts": {
+        "age": 27,
+        "dob": "1999-05-03",
+        "bats": "R",
+        "height": "6′2″",
+        "throws": "R",
+        "weight": 203,
+        "factoid": "Grew up playing cricket before taking up baseball.",
+        "position": "RP",
+        "birthplace": "Cork, Ireland"
+      },
+      "source_image": "assets/teams/louisville-naturals/images/players/louisville-players-2.webp",
+      "photo_crop": [
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "FS26-0072",
+      "card_number": 72,
+      "subject_key": "player/louisville-naturals/noah-bianchi",
+      "subject_name": "Noah Bianchi",
+      "team_slug": "louisville-naturals",
+      "team_name": "Louisville Naturals",
+      "facts": {
+        "age": 29,
+        "dob": "1997-09-22",
+        "bats": "R",
+        "height": "6′0″",
+        "throws": "R",
+        "weight": 225,
+        "factoid": "Writes his own shorthand notes between innings.",
+        "position": "C",
+        "birthplace": "Rosario, Argentina"
+      },
+      "source_image": "assets/teams/louisville-naturals/images/players/louisville-players-3.webp",
+      "photo_crop": [
+        0,
+        0,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "FS26-0073",
+      "card_number": 73,
+      "subject_key": "player/louisville-naturals/mateo-fernandez",
+      "subject_name": "Mateo Fernández",
+      "team_slug": "louisville-naturals",
+      "team_name": "Louisville Naturals",
+      "facts": {
+        "age": 32,
+        "dob": "1994-04-16",
+        "bats": "L",
+        "height": "6′4″",
+        "throws": "R",
+        "weight": 242,
+        "factoid": "Brought a worn first-base mitt from his first professional season.",
+        "position": "1B",
+        "birthplace": "La Romana, Dominican Republic"
+      },
+      "source_image": "assets/teams/louisville-naturals/images/players/louisville-players-3.webp",
+      "photo_crop": [
+        0.5,
+        0,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "FS26-0074",
+      "card_number": 74,
+      "subject_key": "player/louisville-naturals/jalen-brooks",
+      "subject_name": "Jalen Brooks",
+      "team_slug": "louisville-naturals",
+      "team_name": "Louisville Naturals",
+      "facts": {
+        "age": 24,
+        "dob": "2002-07-08",
+        "bats": "S",
+        "height": "5′11″",
+        "throws": "R",
+        "weight": 178,
+        "factoid": "His family keeps his first Little League scorebook.",
+        "position": "2B",
+        "birthplace": "Richmond, Virginia"
+      },
+      "source_image": "assets/teams/louisville-naturals/images/players/louisville-players-3.webp",
+      "photo_crop": [
+        0,
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "FS26-0075",
+      "card_number": 75,
+      "subject_key": "player/louisville-naturals/rafael-costa",
+      "subject_name": "Rafael Costa",
+      "team_slug": "louisville-naturals",
+      "team_name": "Louisville Naturals",
+      "facts": {
+        "age": 26,
+        "dob": "2000-02-27",
+        "bats": "R",
+        "height": "6′0″",
+        "throws": "R",
+        "weight": 185,
+        "factoid": "Learned to speak Spanish through conversations with his teammates.",
+        "position": "SS",
+        "birthplace": "Curitiba, Brazil"
+      },
+      "source_image": "assets/teams/louisville-naturals/images/players/louisville-players-3.webp",
+      "photo_crop": [
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "FS26-0076",
+      "card_number": 76,
+      "subject_key": "player/louisville-naturals/dominic-russo",
+      "subject_name": "Dominic Russo",
+      "team_slug": "louisville-naturals",
+      "team_name": "Louisville Naturals",
+      "facts": {
+        "age": 28,
+        "dob": "1998-06-11",
+        "bats": "R",
+        "height": "6′1″",
+        "throws": "R",
+        "weight": 215,
+        "factoid": "Keeps handwritten scouting cards in his back pocket.",
+        "position": "3B",
+        "birthplace": "Providence, Rhode Island"
+      },
+      "source_image": "assets/teams/louisville-naturals/images/players/louisville-players-4.webp",
+      "photo_crop": [
+        0,
+        0,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "FS26-0077",
+      "card_number": 77,
+      "subject_key": "player/louisville-naturals/andre-wallace",
+      "subject_name": "Andre Wallace",
+      "team_slug": "louisville-naturals",
+      "team_name": "Louisville Naturals",
+      "facts": {
+        "age": 27,
+        "dob": "1999-10-02",
+        "bats": "R",
+        "height": "6′3″",
+        "throws": "R",
+        "weight": 195,
+        "factoid": "Played saxophone in his school band.",
+        "position": "CF",
+        "birthplace": "Norfolk, Virginia"
+      },
+      "source_image": "assets/teams/louisville-naturals/images/players/louisville-players-4.webp",
+      "photo_crop": [
+        0.5,
+        0,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "FS26-0078",
+      "card_number": 78,
+      "subject_key": "player/louisville-naturals/tomas-rivas",
+      "subject_name": "Tomás Rivas",
+      "team_slug": "louisville-naturals",
+      "team_name": "Louisville Naturals",
+      "facts": {
+        "age": 25,
+        "dob": "2001-03-24",
+        "bats": "L",
+        "height": "5′11″",
+        "throws": "L",
+        "weight": 188,
+        "factoid": "Travels with a small photo album from his first youth team.",
+        "position": "LF",
+        "birthplace": "Barquisimeto, Venezuela"
+      },
+      "source_image": "assets/teams/louisville-naturals/images/players/louisville-players-4.webp",
+      "photo_crop": [
+        0,
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "FS26-0079",
+      "card_number": 79,
+      "subject_key": "player/louisville-naturals/blake-harrison",
+      "subject_name": "Blake Harrison",
+      "team_slug": "louisville-naturals",
+      "team_name": "Louisville Naturals",
+      "facts": {
+        "age": 31,
+        "dob": "1995-05-19",
+        "bats": "R",
+        "height": "6′2″",
+        "throws": "R",
+        "weight": 218,
+        "factoid": "Repairs and relaces his practice glove each winter.",
+        "position": "RF",
+        "birthplace": "Spokane, Washington"
+      },
+      "source_image": "assets/teams/louisville-naturals/images/players/louisville-players-4.webp",
+      "photo_crop": [
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "FS26-0080",
+      "card_number": 80,
+      "subject_key": "player/mayaguez-sultans/dario-vukovic",
+      "subject_name": "Dario Vukovic",
+      "team_slug": "mayaguez-sultans",
+      "team_name": "Mayagüez Sultans",
+      "facts": {
+        "age": 29,
+        "dob": "1997-04-19",
+        "bats": "R",
+        "height": "6′5″",
+        "throws": "R",
+        "weight": 186,
+        "position": "SP",
+        "birthplace": "Belgrade, Serbia",
+        "field_note": "Keeps a folded paper scorecard from his first professional start inside his travel bag."
+      },
+      "source_image": "assets/teams/mayaguez-sultans/images/players-01.webp",
+      "photo_crop": [
+        0.00390625,
+        0.0026041666666666665,
+        0.4921875,
+        0.5078125
+      ]
+    },
+    {
+      "id": "FS26-0081",
+      "card_number": 81,
+      "subject_key": "player/mayaguez-sultans/kaito-natsume",
+      "subject_name": "Kaito Natsume",
+      "team_slug": "mayaguez-sultans",
+      "team_name": "Mayagüez Sultans",
+      "facts": {
+        "age": 26,
+        "dob": "2000-08-03",
+        "bats": "R",
+        "height": "5′10″",
+        "throws": "R",
+        "weight": 238,
+        "position": "SP",
+        "birthplace": "Morioka, Japan",
+        "field_note": "Can identify the clubhouse card players by the sound of their chairs moving."
+      },
+      "source_image": "assets/teams/mayaguez-sultans/images/players-01.webp",
+      "photo_crop": [
+        0.50390625,
+        0.0026041666666666665,
+        0.4921875,
+        0.5078125
+      ]
+    },
+    {
+      "id": "FS26-0082",
+      "card_number": 82,
+      "subject_key": "player/mayaguez-sultans/adewale-bamidele",
+      "subject_name": "Adewale Bamidele",
+      "team_slug": "mayaguez-sultans",
+      "team_name": "Mayagüez Sultans",
+      "facts": {
+        "age": 31,
+        "dob": "1995-01-26",
+        "bats": "R",
+        "height": "6′3″",
+        "throws": "R",
+        "weight": 201,
+        "position": "SP",
+        "birthplace": "Ibadan, Nigeria",
+        "field_note": "Uses a different pencil for each month of his pitching notebook."
+      },
+      "source_image": "assets/teams/mayaguez-sultans/images/players-01.webp",
+      "photo_crop": [
+        0.00390625,
+        0.515625,
+        0.4921875,
+        0.4817708333333333
+      ]
+    },
+    {
+      "id": "FS26-0083",
+      "card_number": 83,
+      "subject_key": "player/mayaguez-sultans/lucian-ionescu",
+      "subject_name": "Lucian Ionescu",
+      "team_slug": "mayaguez-sultans",
+      "team_name": "Mayagüez Sultans",
+      "facts": {
+        "age": 27,
+        "dob": "1999-06-14",
+        "bats": "L",
+        "height": "6′4″",
+        "throws": "L",
+        "weight": 185,
+        "position": "SP",
+        "birthplace": "Timișoara, Romania",
+        "field_note": "Checks the wind by watching a loose thread on the bullpen flag."
+      },
+      "source_image": "assets/teams/mayaguez-sultans/images/players-01.webp",
+      "photo_crop": [
+        0.50390625,
+        0.515625,
+        0.4921875,
+        0.4817708333333333
+      ]
+    },
+    {
+      "id": "FS26-0084",
+      "card_number": 84,
+      "subject_key": "player/mayaguez-sultans/ismail-benjeloun",
+      "subject_name": "Ismail Benjeloun",
+      "team_slug": "mayaguez-sultans",
+      "team_name": "Mayagüez Sultans",
+      "facts": {
+        "age": 25,
+        "dob": "2001-03-08",
+        "bats": "R",
+        "height": "6′0″",
+        "throws": "R",
+        "weight": 190,
+        "position": "SP",
+        "birthplace": "Meknès, Morocco",
+        "field_note": "Repairs the torn pockets of his own warmup jackets."
+      },
+      "source_image": "assets/teams/mayaguez-sultans/images/players-02.webp",
+      "photo_crop": [
+        0.00390625,
+        0.0026041666666666665,
+        0.4921875,
+        0.4947916666666667
+      ]
+    },
+    {
+      "id": "FS26-0085",
+      "card_number": 85,
+      "subject_key": "player/mayaguez-sultans/seamus-keary",
+      "subject_name": "Seamus Keary",
+      "team_slug": "mayaguez-sultans",
+      "team_name": "Mayagüez Sultans",
+      "facts": {
+        "age": 28,
+        "dob": "1998-09-21",
+        "bats": "R",
+        "height": "6′2″",
+        "throws": "R",
+        "weight": 178,
+        "position": "RP",
+        "birthplace": "Galway, Ireland",
+        "field_note": "Collects the little paper envelopes used to hold visiting-park meal vouchers."
+      },
+      "source_image": "assets/teams/mayaguez-sultans/images/players-02.webp",
+      "photo_crop": [
+        0.50390625,
+        0.0026041666666666665,
+        0.4921875,
+        0.4947916666666667
+      ]
+    },
+    {
+      "id": "FS26-0086",
+      "card_number": 86,
+      "subject_key": "player/mayaguez-sultans/rafiq-qureshi",
+      "subject_name": "Rafiq Qureshi",
+      "team_slug": "mayaguez-sultans",
+      "team_name": "Mayagüez Sultans",
+      "facts": {
+        "age": 24,
+        "dob": "2002-02-17",
+        "bats": "R",
+        "height": "5′10″",
+        "throws": "R",
+        "weight": 206,
+        "position": "RP",
+        "birthplace": "Multan, Pakistan",
+        "field_note": "His spare sports glasses travel in a case marked with the wrong uniform number."
+      },
+      "source_image": "assets/teams/mayaguez-sultans/images/players-02.webp",
+      "photo_crop": [
+        0.00390625,
+        0.5026041666666666,
+        0.4921875,
+        0.4947916666666667
+      ]
+    },
+    {
+      "id": "FS26-0087",
+      "card_number": 87,
+      "subject_key": "player/mayaguez-sultans/tomasz-wierzbicki",
+      "subject_name": "Tomasz Wierzbicki",
+      "team_slug": "mayaguez-sultans",
+      "team_name": "Mayagüez Sultans",
+      "facts": {
+        "age": 30,
+        "dob": "1996-05-30",
+        "bats": "L",
+        "height": "6′1″",
+        "throws": "R",
+        "weight": 205,
+        "position": "RP",
+        "birthplace": "Katowice, Poland",
+        "field_note": "Counts the stitches across a baseball while waiting for the bullpen phone."
+      },
+      "source_image": "assets/teams/mayaguez-sultans/images/players-02.webp",
+      "photo_crop": [
+        0.50390625,
+        0.5026041666666666,
+        0.4921875,
+        0.4947916666666667
+      ]
+    },
+    {
+      "id": "FS26-0088",
+      "card_number": 88,
+      "subject_key": "player/mayaguez-sultans/tomer-barzilai",
+      "subject_name": "Tomer Barzilai",
+      "team_slug": "mayaguez-sultans",
+      "team_name": "Mayagüez Sultans",
+      "facts": {
+        "age": 29,
+        "dob": "1997-07-12",
+        "bats": "R",
+        "height": "5′10″",
+        "throws": "R",
+        "weight": 220,
+        "position": "C",
+        "birthplace": "Ashdod, Israel",
+        "field_note": "Keeps a small brush for cleaning the dirt from the buckles of his chest protector."
+      },
+      "source_image": "assets/teams/mayaguez-sultans/images/players-03.webp",
+      "photo_crop": [
+        0.00390625,
+        0.0026041666666666665,
+        0.4921875,
+        0.4947916666666667
+      ]
+    },
+    {
+      "id": "FS26-0089",
+      "card_number": 89,
+      "subject_key": "player/mayaguez-sultans/enzo-carvajal",
+      "subject_name": "Enzo Carvajal",
+      "team_slug": "mayaguez-sultans",
+      "team_name": "Mayagüez Sultans",
+      "facts": {
+        "age": 27,
+        "dob": "1999-04-06",
+        "bats": "L",
+        "height": "6′5″",
+        "throws": "R",
+        "weight": 240,
+        "position": "1B",
+        "birthplace": "Maracay, Venezuela",
+        "field_note": "He and Inés disagree about whether a clean uniform counts as lucky."
+      },
+      "source_image": "assets/teams/mayaguez-sultans/images/players-03.webp",
+      "photo_crop": [
+        0.50390625,
+        0.0026041666666666665,
+        0.4921875,
+        0.4947916666666667
+      ]
+    },
+    {
+      "id": "FS26-0090",
+      "card_number": 90,
+      "subject_key": "player/mayaguez-sultans/nils-adebayo",
+      "subject_name": "Nils Adebayo",
+      "team_slug": "mayaguez-sultans",
+      "team_name": "Mayagüez Sultans",
+      "facts": {
+        "age": 23,
+        "dob": "2003-09-02",
+        "bats": "S",
+        "height": "6′1″",
+        "throws": "R",
+        "weight": 175,
+        "position": "2B",
+        "birthplace": "Malmö, Sweden",
+        "field_note": "Draws unfamiliar ballparks from memory on the backs of bus receipts."
+      },
+      "source_image": "assets/teams/mayaguez-sultans/images/players-03.webp",
+      "photo_crop": [
+        0.00390625,
+        0.5026041666666666,
+        0.4921875,
+        0.4947916666666667
+      ]
+    },
+    {
+      "id": "FS26-0091",
+      "card_number": 91,
+      "subject_key": "player/mayaguez-sultans/jae-min-seok",
+      "subject_name": "Jae-min Seok",
+      "team_slug": "mayaguez-sultans",
+      "team_name": "Mayagüez Sultans",
+      "facts": {
+        "age": 26,
+        "dob": "2000-01-24",
+        "bats": "R",
+        "height": "5′10″",
+        "throws": "R",
+        "weight": 181,
+        "position": "SS",
+        "birthplace": "Daejeon, South Korea",
+        "field_note": "Taps his batting-glove straps in the same order before stepping into the box."
+      },
+      "source_image": "assets/teams/mayaguez-sultans/images/players-03.webp",
+      "photo_crop": [
+        0.50390625,
+        0.5026041666666666,
+        0.4921875,
+        0.4947916666666667
+      ]
+    },
+    {
+      "id": "FS26-0092",
+      "card_number": 92,
+      "subject_key": "player/mayaguez-sultans/pavel-hrynko",
+      "subject_name": "Pavel Hrynko",
+      "team_slug": "mayaguez-sultans",
+      "team_name": "Mayagüez Sultans",
+      "facts": {
+        "age": 32,
+        "dob": "1994-08-16",
+        "bats": "R",
+        "height": "6′4″",
+        "throws": "R",
+        "weight": 190,
+        "position": "3B",
+        "birthplace": "Lviv, Ukraine",
+        "field_note": "Writes the names of borrowed bats on a strip of tape inside his locker."
+      },
+      "source_image": "assets/teams/mayaguez-sultans/images/players-04.webp",
+      "photo_crop": [
+        0.00390625,
+        0.0026041666666666665,
+        0.4921875,
+        0.4947916666666667
+      ]
+    },
+    {
+      "id": "FS26-0093",
+      "card_number": 93,
+      "subject_key": "player/mayaguez-sultans/malik-doumbia",
+      "subject_name": "Malik Doumbia",
+      "team_slug": "mayaguez-sultans",
+      "team_name": "Mayagüez Sultans",
+      "facts": {
+        "age": 24,
+        "dob": "2002-06-09",
+        "bats": "L",
+        "height": "5′11″",
+        "throws": "L",
+        "weight": 198,
+        "position": "LF",
+        "birthplace": "Bamako, Mali",
+        "field_note": "Carries the team’s smallest travel chess set and insists all pieces are present."
+      },
+      "source_image": "assets/teams/mayaguez-sultans/images/players-04.webp",
+      "photo_crop": [
+        0.50390625,
+        0.0026041666666666665,
+        0.4921875,
+        0.4947916666666667
+      ]
+    },
+    {
+      "id": "FS26-0094",
+      "card_number": 94,
+      "subject_key": "player/mayaguez-sultans/cesar-iglesiarias",
+      "subject_name": "César Iglesiarias",
+      "team_slug": "mayaguez-sultans",
+      "team_name": "Mayagüez Sultans",
+      "facts": {
+        "age": 28,
+        "dob": "1998-03-27",
+        "bats": "R",
+        "height": "5′10″",
+        "throws": "R",
+        "weight": 193,
+        "position": "CF",
+        "birthplace": "Aguadilla, Puerto Rico",
+        "field_note": "His family can spot his batting helmet by a small patch of missing paint."
+      },
+      "source_image": "assets/teams/mayaguez-sultans/images/players-04.webp",
+      "photo_crop": [
+        0.00390625,
+        0.5026041666666666,
+        0.4921875,
+        0.4947916666666667
+      ]
+    },
+    {
+      "id": "FS26-0095",
+      "card_number": 95,
+      "subject_key": "player/mayaguez-sultans/ari-kasprzyk",
+      "subject_name": "Ari Kasprzyk",
+      "team_slug": "mayaguez-sultans",
+      "team_name": "Mayagüez Sultans",
+      "facts": {
+        "age": 30,
+        "dob": "1996-10-04",
+        "bats": "R",
+        "height": "6′0″",
+        "throws": "R",
+        "weight": 223,
+        "position": "RF",
+        "birthplace": "Milwaukee, Wisconsin, USA",
+        "field_note": "Uses an old laundry bag to separate game cleats from everything else in his suitcase."
+      },
+      "source_image": "assets/teams/mayaguez-sultans/images/players-04.webp",
+      "photo_crop": [
+        0.50390625,
+        0.5026041666666666,
+        0.4921875,
+        0.4947916666666667
+      ]
+    },
+    {
+      "id": "FS26-0096",
+      "card_number": 96,
+      "subject_key": "player/monterrey-cementeros/emilio-zendejas",
+      "subject_name": "Emilio Zendejas",
+      "team_slug": "monterrey-cementeros",
+      "team_name": "Monterrey Cementeros",
+      "facts": {
+        "age": 28,
+        "dob": "1998-02-17",
+        "bats": "R",
+        "height": "6′2″",
+        "throws": "R",
+        "weight": 210,
+        "position": "SP",
+        "birthplace": "Monterrey, Nuevo León, México",
+        "field_note": "Marks every bullpen session in a pocket scorebook; a clean inning earns a small pink square."
+      },
+      "source_image": "assets/images/cards/fieldstock/mty-01-emilio-zendejas-front-photo.webp",
+      "photo_crop": null
+    },
+    {
+      "id": "FS26-0097",
+      "card_number": 97,
+      "subject_key": "player/monterrey-cementeros/masato-yanagisawa",
+      "subject_name": "Masato Yanagisawa",
+      "team_slug": "monterrey-cementeros",
+      "team_name": "Monterrey Cementeros",
+      "facts": {
+        "age": 26,
+        "dob": "2000-01-22",
+        "bats": "R",
+        "height": "6′1″",
+        "throws": "R",
+        "weight": 194,
+        "position": "SP",
+        "birthplace": "Nagoya, Japan",
+        "field_note": "Rehearses his pickoff footwork on the hotel carpet using two rolled-up socks as bases."
+      },
+      "source_image": "assets/images/cards/fieldstock/mty-02-masato-yanagisawa-front-photo.webp",
+      "photo_crop": null
+    },
+    {
+      "id": "FS26-0098",
+      "card_number": 98,
+      "subject_key": "player/monterrey-cementeros/dariusz-chmiel",
+      "subject_name": "Dariusz Chmiel",
+      "team_slug": "monterrey-cementeros",
+      "team_name": "Monterrey Cementeros",
+      "facts": {
+        "age": 31,
+        "bats": "R",
+        "throws": "R",
+        "position": "SP"
+      },
+      "source_image": "assets/teams/monterrey-cementeros/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0,
+        0,
+        0.25,
+        0.3333333333333333
+      ]
+    },
+    {
+      "id": "FS26-0099",
+      "card_number": 99,
+      "subject_key": "player/monterrey-cementeros/arjun-bhatnagar",
+      "subject_name": "Arjun Bhatnagar",
+      "team_slug": "monterrey-cementeros",
+      "team_name": "Monterrey Cementeros",
+      "facts": {
+        "age": 27,
+        "bats": "L",
+        "throws": "L",
+        "position": "SP"
+      },
+      "source_image": "assets/teams/monterrey-cementeros/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0.25,
+        0,
+        0.25,
+        0.3333333333333333
+      ]
+    },
+    {
+      "id": "FS26-0100",
+      "card_number": 100,
+      "subject_key": "player/monterrey-cementeros/cole-wexler",
+      "subject_name": "Cole Wexler",
+      "team_slug": "monterrey-cementeros",
+      "team_name": "Monterrey Cementeros",
+      "facts": {
+        "age": 29,
+        "bats": "R",
+        "throws": "R",
+        "position": "SP"
+      },
+      "source_image": "assets/teams/monterrey-cementeros/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0.5,
+        0,
+        0.25,
+        0.3333333333333333
+      ]
+    },
+    {
+      "id": "FS26-0101",
+      "card_number": 101,
+      "subject_key": "player/monterrey-cementeros/niko-kouris",
+      "subject_name": "Niko Kouris",
+      "team_slug": "monterrey-cementeros",
+      "team_name": "Monterrey Cementeros",
+      "facts": {
+        "age": 25,
+        "bats": "R",
+        "throws": "R",
+        "position": "RP"
+      },
+      "source_image": "assets/teams/monterrey-cementeros/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0.75,
+        0,
+        0.25,
+        0.3333333333333333
+      ]
+    },
+    {
+      "id": "FS26-0102",
+      "card_number": 102,
+      "subject_key": "player/monterrey-cementeros/bashir-el-khatib",
+      "subject_name": "Bashir El-Khatib",
+      "team_slug": "monterrey-cementeros",
+      "team_name": "Monterrey Cementeros",
+      "facts": {
+        "age": 30,
+        "bats": "R",
+        "throws": "R",
+        "position": "RP"
+      },
+      "source_image": "assets/teams/monterrey-cementeros/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0,
+        0.3333333333333333,
+        0.25,
+        0.3333333333333333
+      ]
+    },
+    {
+      "id": "FS26-0103",
+      "card_number": 103,
+      "subject_key": "player/monterrey-cementeros/rowan-treadwell",
+      "subject_name": "Rowan Treadwell",
+      "team_slug": "monterrey-cementeros",
+      "team_name": "Monterrey Cementeros",
+      "facts": {
+        "age": 24,
+        "bats": "L",
+        "throws": "R",
+        "position": "RP"
+      },
+      "source_image": "assets/teams/monterrey-cementeros/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0.25,
+        0.3333333333333333,
+        0.25,
+        0.3333333333333333
+      ]
+    },
+    {
+      "id": "FS26-0104",
+      "card_number": 104,
+      "subject_key": "player/monterrey-cementeros/julian-sauri",
+      "subject_name": "Julián Sauri",
+      "team_slug": "monterrey-cementeros",
+      "team_name": "Monterrey Cementeros",
+      "facts": {
+        "age": 28,
+        "bats": "R",
+        "throws": "R",
+        "position": "C"
+      },
+      "source_image": "assets/teams/monterrey-cementeros/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0.5,
+        0.3333333333333333,
+        0.25,
+        0.3333333333333333
+      ]
+    },
+    {
+      "id": "FS26-0105",
+      "card_number": 105,
+      "subject_key": "player/monterrey-cementeros/eamon-kilrea",
+      "subject_name": "Eamon Kilrea",
+      "team_slug": "monterrey-cementeros",
+      "team_name": "Monterrey Cementeros",
+      "facts": {
+        "age": 32,
+        "bats": "L",
+        "throws": "R",
+        "position": "1B"
+      },
+      "source_image": "assets/teams/monterrey-cementeros/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0.75,
+        0.3333333333333333,
+        0.25,
+        0.3333333333333333
+      ]
+    },
+    {
+      "id": "FS26-0106",
+      "card_number": 106,
+      "subject_key": "player/monterrey-cementeros/thiago-pereyra",
+      "subject_name": "Thiago Pereyra",
+      "team_slug": "monterrey-cementeros",
+      "team_name": "Monterrey Cementeros",
+      "facts": {
+        "age": 26,
+        "bats": "S",
+        "throws": "R",
+        "position": "2B"
+      },
+      "source_image": "assets/teams/monterrey-cementeros/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0,
+        0.6666666666666666,
+        0.25,
+        0.3333333333333333
+      ]
+    },
+    {
+      "id": "FS26-0107",
+      "card_number": 107,
+      "subject_key": "player/monterrey-cementeros/kofi-mensah",
+      "subject_name": "Kofi Mensah",
+      "team_slug": "monterrey-cementeros",
+      "team_name": "Monterrey Cementeros",
+      "facts": {
+        "age": 27,
+        "dob": "1999-04-11",
+        "bats": "R",
+        "height": "6′0″",
+        "throws": "R",
+        "weight": 188,
+        "position": "SS",
+        "birthplace": "Accra, Ghana",
+        "field_note": "Keeps a tally of every double play turned with a different second baseman."
+      },
+      "source_image": "assets/images/cards/fieldstock/mty-12-kofi-mensah-front-photo.webp",
+      "photo_crop": null
+    },
+    {
+      "id": "FS26-0108",
+      "card_number": 108,
+      "subject_key": "player/monterrey-cementeros/luka-vukovic",
+      "subject_name": "Luka Vuković",
+      "team_slug": "monterrey-cementeros",
+      "team_name": "Monterrey Cementeros",
+      "facts": {
+        "age": 29,
+        "bats": "R",
+        "throws": "R",
+        "position": "3B"
+      },
+      "source_image": "assets/teams/monterrey-cementeros/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0.25,
+        0.6666666666666666,
+        0.25,
+        0.3333333333333333
+      ]
+    },
+    {
+      "id": "FS26-0109",
+      "card_number": 109,
+      "subject_key": "player/monterrey-cementeros/seiji-fukumori",
+      "subject_name": "Seiji Fukumori",
+      "team_slug": "monterrey-cementeros",
+      "team_name": "Monterrey Cementeros",
+      "facts": {
+        "age": 25,
+        "bats": "L",
+        "throws": "L",
+        "position": "CF"
+      },
+      "source_image": "assets/teams/monterrey-cementeros/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0.5,
+        0.6666666666666666,
+        0.25,
+        0.3333333333333333
+      ]
+    },
+    {
+      "id": "FS26-0110",
+      "card_number": 110,
+      "subject_key": "player/monterrey-cementeros/andres-cazares",
+      "subject_name": "Andrés Cázares",
+      "team_slug": "monterrey-cementeros",
+      "team_name": "Monterrey Cementeros",
+      "facts": {
+        "age": 23,
+        "dob": "2003-05-06",
+        "bats": "R",
+        "height": "6′1″",
+        "throws": "R",
+        "weight": 195,
+        "position": "LF",
+        "birthplace": "Saltillo, Coahuila, México",
+        "field_note": "Labels batting-practice bats by the outfield gap he is trying to reach that day."
+      },
+      "source_image": "assets/images/cards/fieldstock/mty-15-andres-cazares-front-photo.webp",
+      "photo_crop": null
+    },
+    {
+      "id": "FS26-0111",
+      "card_number": 111,
+      "subject_key": "player/monterrey-cementeros/micah-lunsford",
+      "subject_name": "Micah Lunsford",
+      "team_slug": "monterrey-cementeros",
+      "team_name": "Monterrey Cementeros",
+      "facts": {
+        "age": 31,
+        "bats": "R",
+        "throws": "R",
+        "position": "RF"
+      },
+      "source_image": "assets/teams/monterrey-cementeros/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0.75,
+        0.6666666666666666,
+        0.25,
+        0.3333333333333333
+      ]
+    },
+    {
+      "id": "FS26-0112",
+      "card_number": 112,
+      "subject_key": "player/osaka-spirits/hiroto-kurobane",
+      "subject_name": "Hiroto Kurobane",
+      "team_slug": "osaka-spirits",
+      "team_name": "Osaka Spirits",
+      "facts": {
+        "age": 27,
+        "bats": "R",
+        "throws": "R",
+        "position": "SP"
+      },
+      "source_image": "assets/images/cards/fieldstock/osa-01-hiroto-kurobane-front.webp",
+      "photo_crop": null
+    },
+    {
+      "id": "FS26-0113",
+      "card_number": 113,
+      "subject_key": "player/osaka-spirits/enzo-dalmau",
+      "subject_name": "Enzo Dalmau",
+      "team_slug": "osaka-spirits",
+      "team_name": "Osaka Spirits",
+      "facts": {
+        "age": 31,
+        "bats": "R",
+        "throws": "R",
+        "position": "SP"
+      },
+      "source_image": "assets/images/cards/fieldstock/osa-02-enzo-dalmau-front.webp",
+      "photo_crop": null
+    },
+    {
+      "id": "FS26-0114",
+      "card_number": 114,
+      "subject_key": "player/osaka-spirits/kofi-boateng",
+      "subject_name": "Kofi Boateng",
+      "team_slug": "osaka-spirits",
+      "team_name": "Osaka Spirits",
+      "facts": {
+        "age": 25,
+        "bats": "L",
+        "throws": "L",
+        "position": "SP"
+      },
+      "source_image": "assets/images/cards/fieldstock/osa-03-kofi-boateng-front.webp",
+      "photo_crop": null
+    },
+    {
+      "id": "FS26-0115",
+      "card_number": 115,
+      "subject_key": "player/osaka-spirits/luka-kovacevic",
+      "subject_name": "Luka Kovačević",
+      "team_slug": "osaka-spirits",
+      "team_name": "Osaka Spirits",
+      "facts": {
+        "age": 29,
+        "bats": "R",
+        "throws": "R",
+        "position": "SP"
+      },
+      "source_image": "assets/images/cards/fieldstock/osa-04-luka-kovacevic-front.webp",
+      "photo_crop": null
+    },
+    {
+      "id": "FS26-0116",
+      "card_number": 116,
+      "subject_key": "player/osaka-spirits/rowan-cahir",
+      "subject_name": "Rowan Cahir",
+      "team_slug": "osaka-spirits",
+      "team_name": "Osaka Spirits",
+      "facts": {
+        "age": 26,
+        "bats": "L",
+        "throws": "R",
+        "position": "SP"
+      },
+      "source_image": "assets/images/cards/fieldstock/osa-05-rowan-cahir-front.webp",
+      "photo_crop": null
+    },
+    {
+      "id": "FS26-0117",
+      "card_number": 117,
+      "subject_key": "player/osaka-spirits/sandeep-nayar",
+      "subject_name": "Sandeep Nayar",
+      "team_slug": "osaka-spirits",
+      "team_name": "Osaka Spirits",
+      "facts": {
+        "age": 28,
+        "bats": "R",
+        "throws": "R",
+        "position": "RP"
+      },
+      "source_image": "assets/images/cards/fieldstock/osa-06-sandeep-nayar-front.webp",
+      "photo_crop": null
+    },
+    {
+      "id": "FS26-0118",
+      "card_number": 118,
+      "subject_key": "player/osaka-spirits/mateo-zubillaga",
+      "subject_name": "Mateo Zubillaga",
+      "team_slug": "osaka-spirits",
+      "team_name": "Osaka Spirits",
+      "facts": {
+        "age": 24,
+        "bats": "R",
+        "throws": "R",
+        "position": "RP"
+      },
+      "source_image": "assets/images/cards/fieldstock/osa-07-mateo-zubillaga-front.webp",
+      "photo_crop": null
+    },
+    {
+      "id": "FS26-0119",
+      "card_number": 119,
+      "subject_key": "player/osaka-spirits/jae-min-goh",
+      "subject_name": "Jae-min Goh",
+      "team_slug": "osaka-spirits",
+      "team_name": "Osaka Spirits",
+      "facts": {
+        "age": 30,
+        "bats": "L",
+        "throws": "L",
+        "position": "RP"
+      },
+      "source_image": "assets/images/cards/fieldstock/osa-08-jae-min-goh-front.webp",
+      "photo_crop": null
+    },
+    {
+      "id": "FS26-0120",
+      "card_number": 120,
+      "subject_key": "player/osaka-spirits/marcelino-quispe",
+      "subject_name": "Marcelino Quispe",
+      "team_slug": "osaka-spirits",
+      "team_name": "Osaka Spirits",
+      "facts": {
+        "age": 27,
+        "bats": "R",
+        "throws": "R",
+        "position": "C"
+      },
+      "source_image": "assets/images/cards/fieldstock/osa-09-marcelino-quispe-front.webp",
+      "photo_crop": null
+    },
+    {
+      "id": "FS26-0121",
+      "card_number": 121,
+      "subject_key": "player/osaka-spirits/thabo-mkhize",
+      "subject_name": "Thabo Mkhize",
+      "team_slug": "osaka-spirits",
+      "team_name": "Osaka Spirits",
+      "facts": {
+        "age": 32,
+        "bats": "L",
+        "throws": "R",
+        "position": "1B"
+      },
+      "source_image": "assets/images/cards/fieldstock/osa-10-thabo-mkhize-front.webp",
+      "photo_crop": null
+    },
+    {
+      "id": "FS26-0122",
+      "card_number": 122,
+      "subject_key": "player/osaka-spirits/arman-daryan",
+      "subject_name": "Arman Daryan",
+      "team_slug": "osaka-spirits",
+      "team_name": "Osaka Spirits",
+      "facts": {
+        "age": 23,
+        "bats": "S",
+        "throws": "R",
+        "position": "2B"
+      },
+      "source_image": "assets/images/cards/fieldstock/osa-11-arman-daryan-front.webp",
+      "photo_crop": null
+    },
+    {
+      "id": "FS26-0123",
+      "card_number": 123,
+      "subject_key": "player/osaka-spirits/kenjiro-suganuma",
+      "subject_name": "Kenjiro Suganuma",
+      "team_slug": "osaka-spirits",
+      "team_name": "Osaka Spirits",
+      "facts": {
+        "age": 26,
+        "bats": "R",
+        "throws": "R",
+        "position": "SS"
+      },
+      "source_image": "assets/images/cards/fieldstock/osa-12-kenjiro-suganuma-front.webp",
+      "photo_crop": null
+    },
+    {
+      "id": "FS26-0124",
+      "card_number": 124,
+      "subject_key": "player/osaka-spirits/dariusz-kwiatkowski",
+      "subject_name": "Dariusz Kwiatkowski",
+      "team_slug": "osaka-spirits",
+      "team_name": "Osaka Spirits",
+      "facts": {
+        "age": 29,
+        "bats": "R",
+        "throws": "R",
+        "position": "3B"
+      },
+      "source_image": "assets/images/cards/fieldstock/osa-13-dariusz-kwiatkowski-front.webp",
+      "photo_crop": null
+    },
+    {
+      "id": "FS26-0125",
+      "card_number": 125,
+      "subject_key": "player/osaka-spirits/nikhil-bhandari",
+      "subject_name": "Nikhil Bhandari",
+      "team_slug": "osaka-spirits",
+      "team_name": "Osaka Spirits",
+      "facts": {
+        "age": 25,
+        "bats": "R",
+        "throws": "R",
+        "position": "CF"
+      },
+      "source_image": "assets/images/cards/fieldstock/osa-14-nikhil-bhandari-front.webp",
+      "photo_crop": null
+    },
+    {
+      "id": "FS26-0126",
+      "card_number": 126,
+      "subject_key": "player/osaka-spirits/thiago-ramires",
+      "subject_name": "Thiago Ramires",
+      "team_slug": "osaka-spirits",
+      "team_name": "Osaka Spirits",
+      "facts": {
+        "age": 22,
+        "bats": "L",
+        "throws": "L",
+        "position": "LF"
+      },
+      "source_image": "assets/images/cards/fieldstock/osa-15-thiago-ramires-front.webp",
+      "photo_crop": null
+    },
+    {
+      "id": "FS26-0127",
+      "card_number": 127,
+      "subject_key": "player/osaka-spirits/yusef-el-badri",
+      "subject_name": "Yusef El-Badri",
+      "team_slug": "osaka-spirits",
+      "team_name": "Osaka Spirits",
+      "facts": {
+        "age": 31,
+        "bats": "R",
+        "throws": "R",
+        "position": "RF"
+      },
+      "source_image": "assets/images/cards/fieldstock/osa-16-yusef-el-badri-front.webp",
+      "photo_crop": null
+    },
+    {
+      "id": "FS26-0128",
+      "card_number": 128,
+      "subject_key": "player/san-pedro-cocolos/ivo-korolenko",
+      "subject_name": "Ivo Korolenko",
+      "team_slug": "san-pedro-cocolos",
+      "team_name": "San Pedro Cocolos",
+      "facts": {
+        "age": 29,
+        "dob": "1997-02-11",
+        "bats": "R",
+        "height": "6′3″",
+        "throws": "R",
+        "weight": 214,
+        "position": "SP",
+        "birthplace": "Odesa, Ukraine",
+        "field_note": "Marks the direction of the harbor flags beside each inning in his pitching notebook."
+      },
+      "source_image": "assets/teams/san-pedro-cocolos/images/players-01-v2.webp",
+      "photo_crop": [
+        0,
+        0,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "FS26-0129",
+      "card_number": 129,
+      "subject_key": "player/san-pedro-cocolos/nolan-garrity",
+      "subject_name": "Nolan Garrity",
+      "team_slug": "san-pedro-cocolos",
+      "team_name": "San Pedro Cocolos",
+      "facts": {
+        "age": 27,
+        "dob": "1999-06-19",
+        "bats": "L",
+        "height": "6′1″",
+        "throws": "L",
+        "weight": 226,
+        "position": "SP",
+        "birthplace": "Cork, Ireland",
+        "field_note": "Ties his right cleat twice before every bullpen session."
+      },
+      "source_image": "assets/teams/san-pedro-cocolos/images/players-01-v2.webp",
+      "photo_crop": [
+        0.5,
+        0,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "FS26-0130",
+      "card_number": 130,
+      "subject_key": "player/san-pedro-cocolos/kenji-morishita",
+      "subject_name": "Kenji Morishita",
+      "team_slug": "san-pedro-cocolos",
+      "team_name": "San Pedro Cocolos",
+      "facts": {
+        "age": 25,
+        "dob": "2001-04-08",
+        "bats": "R",
+        "height": "5′11″",
+        "throws": "R",
+        "weight": 184,
+        "position": "SP",
+        "birthplace": "Nagoya, Japan",
+        "field_note": "Carries a small brush for cleaning dirt from the seams of his warmup ball."
+      },
+      "source_image": "assets/teams/san-pedro-cocolos/images/players-01-v2.webp",
+      "photo_crop": [
+        0,
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "FS26-0131",
+      "card_number": 131,
+      "subject_key": "player/san-pedro-cocolos/souleymane-diallo",
+      "subject_name": "Souleymane Diallo",
+      "team_slug": "san-pedro-cocolos",
+      "team_name": "San Pedro Cocolos",
+      "facts": {
+        "age": 30,
+        "dob": "1996-01-24",
+        "bats": "R",
+        "height": "6′5″",
+        "throws": "R",
+        "weight": 202,
+        "position": "SP",
+        "birthplace": "Dakar, Senegal",
+        "field_note": "Counts the outfield light poles during his first walk around a visiting park."
+      },
+      "source_image": "assets/teams/san-pedro-cocolos/images/players-01-v2.webp",
+      "photo_crop": [
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "FS26-0132",
+      "card_number": 132,
+      "subject_key": "player/san-pedro-cocolos/enzo-valera",
+      "subject_name": "Enzo Valera",
+      "team_slug": "san-pedro-cocolos",
+      "team_name": "San Pedro Cocolos",
+      "facts": {
+        "age": 26,
+        "dob": "2000-03-16",
+        "bats": "R",
+        "height": "6′2″",
+        "throws": "R",
+        "weight": 218,
+        "position": "SP",
+        "birthplace": "San Pedro de Macorís, Dominican Republic",
+        "field_note": "His family keeps every home-game ticket from his starts in a biscuit tin."
+      },
+      "source_image": "assets/teams/san-pedro-cocolos/images/players-02-v2.webp",
+      "photo_crop": [
+        0,
+        0,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "FS26-0133",
+      "card_number": 133,
+      "subject_key": "player/san-pedro-cocolos/marek-zielinski",
+      "subject_name": "Marek Zielinski",
+      "team_slug": "san-pedro-cocolos",
+      "team_name": "San Pedro Cocolos",
+      "facts": {
+        "age": 28,
+        "dob": "1998-09-03",
+        "bats": "R",
+        "height": "6′2″",
+        "throws": "R",
+        "weight": 211,
+        "position": "RP",
+        "birthplace": "Łódź, Poland",
+        "field_note": "Keeps the same battered mug at the end of the bullpen bench."
+      },
+      "source_image": "assets/teams/san-pedro-cocolos/images/players-02-v2.webp",
+      "photo_crop": [
+        0.5,
+        0,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "FS26-0134",
+      "card_number": 134,
+      "subject_key": "player/san-pedro-cocolos/teo-arellano",
+      "subject_name": "Teo Arellano",
+      "team_slug": "san-pedro-cocolos",
+      "team_name": "San Pedro Cocolos",
+      "facts": {
+        "age": 24,
+        "dob": "2002-05-12",
+        "bats": "L",
+        "height": "5′10″",
+        "throws": "L",
+        "weight": 198,
+        "position": "RP",
+        "birthplace": "Puebla, Mexico",
+        "field_note": "Draws a tiny chalk line beside his bullpen landing spot, then brushes it away."
+      },
+      "source_image": "assets/teams/san-pedro-cocolos/images/players-02-v2.webp",
+      "photo_crop": [
+        0,
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "FS26-0135",
+      "card_number": 135,
+      "subject_key": "player/san-pedro-cocolos/isaac-rendell",
+      "subject_name": "Isaac Rendell",
+      "team_slug": "san-pedro-cocolos",
+      "team_name": "San Pedro Cocolos",
+      "facts": {
+        "age": 31,
+        "dob": "1995-07-21",
+        "bats": "R",
+        "height": "6′3″",
+        "throws": "R",
+        "weight": 195,
+        "position": "RP",
+        "birthplace": "Bristol, England",
+        "field_note": "Collects the paper lineup cards left behind after road games."
+      },
+      "source_image": "assets/teams/san-pedro-cocolos/images/players-02-v2.webp",
+      "photo_crop": [
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "FS26-0136",
+      "card_number": 136,
+      "subject_key": "player/san-pedro-cocolos/matias-serey",
+      "subject_name": "Matías Serey",
+      "team_slug": "san-pedro-cocolos",
+      "team_name": "San Pedro Cocolos",
+      "facts": {
+        "age": 28,
+        "dob": "1998-04-26",
+        "bats": "R",
+        "height": "5′11″",
+        "throws": "R",
+        "weight": 208,
+        "position": "C",
+        "birthplace": "Valparaíso, Chile",
+        "field_note": "Repairs loose chest-protector straps with red thread so the next repair is easy to find."
+      },
+      "source_image": "assets/teams/san-pedro-cocolos/images/players-03-v2.webp",
+      "photo_crop": [
+        0,
+        0,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "FS26-0137",
+      "card_number": 137,
+      "subject_key": "player/san-pedro-cocolos/caleb-vanhoorn",
+      "subject_name": "Caleb VanHoorn",
+      "team_slug": "san-pedro-cocolos",
+      "team_name": "San Pedro Cocolos",
+      "facts": {
+        "age": 32,
+        "dob": "1994-02-06",
+        "bats": "L",
+        "height": "6′5″",
+        "throws": "R",
+        "weight": 242,
+        "position": "1B",
+        "birthplace": "Rotterdam, Netherlands",
+        "field_note": "Writes the date inside the knob of every new batting-practice bat."
+      },
+      "source_image": "assets/teams/san-pedro-cocolos/images/players-03-v2.webp",
+      "photo_crop": [
+        0.5,
+        0,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "FS26-0138",
+      "card_number": 138,
+      "subject_key": "player/san-pedro-cocolos/omar-benyahia",
+      "subject_name": "Omar Benyahia",
+      "team_slug": "san-pedro-cocolos",
+      "team_name": "San Pedro Cocolos",
+      "facts": {
+        "age": 23,
+        "dob": "2003-08-14",
+        "bats": "S",
+        "height": "5′10″",
+        "throws": "R",
+        "weight": 171,
+        "position": "2B",
+        "birthplace": "Oran, Algeria",
+        "field_note": "Practices double-play feeds against a chalk square on the clubhouse wall."
+      },
+      "source_image": "assets/teams/san-pedro-cocolos/images/players-03-v2.webp",
+      "photo_crop": [
+        0,
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "FS26-0139",
+      "card_number": 139,
+      "subject_key": "player/san-pedro-cocolos/ryo-kawabata",
+      "subject_name": "Ryo Kawabata",
+      "team_slug": "san-pedro-cocolos",
+      "team_name": "San Pedro Cocolos",
+      "facts": {
+        "age": 26,
+        "dob": "2000-06-02",
+        "bats": "R",
+        "height": "5′11″",
+        "throws": "R",
+        "weight": 190,
+        "position": "SS",
+        "birthplace": "Kobe, Japan",
+        "field_note": "Saves one clean scorecard from every extra-inning game he plays."
+      },
+      "source_image": "assets/teams/san-pedro-cocolos/images/players-03-v2.webp",
+      "photo_crop": [
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "FS26-0140",
+      "card_number": 140,
+      "subject_key": "player/san-pedro-cocolos/darius-kofi",
+      "subject_name": "Darius Kofi",
+      "team_slug": "san-pedro-cocolos",
+      "team_name": "San Pedro Cocolos",
+      "facts": {
+        "age": 29,
+        "dob": "1997-03-29",
+        "bats": "R",
+        "height": "6′1″",
+        "throws": "R",
+        "weight": 224,
+        "position": "3B",
+        "birthplace": "Kumasi, Ghana",
+        "field_note": "His bat rack has a hand-lettered reminder to leave room for the catcher’s gear."
+      },
+      "source_image": "assets/teams/san-pedro-cocolos/images/players-04-v2.webp",
+      "photo_crop": [
+        0,
+        0,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "FS26-0141",
+      "card_number": 141,
+      "subject_key": "player/san-pedro-cocolos/miguel-encarnacion",
+      "subject_name": "Miguel Encarnación",
+      "team_slug": "san-pedro-cocolos",
+      "team_name": "San Pedro Cocolos",
+      "facts": {
+        "age": 25,
+        "dob": "2001-10-05",
+        "bats": "R",
+        "height": "6′0″",
+        "throws": "R",
+        "weight": 186,
+        "position": "CF",
+        "birthplace": "La Romana, Dominican Republic",
+        "field_note": "Checks the center-field warning track before taking his first swings."
+      },
+      "source_image": "assets/teams/san-pedro-cocolos/images/players-04-v2.webp",
+      "photo_crop": [
+        0.5,
+        0,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "FS26-0142",
+      "card_number": 142,
+      "subject_key": "player/san-pedro-cocolos/victor-sundqvist",
+      "subject_name": "Victor Sundqvist",
+      "team_slug": "san-pedro-cocolos",
+      "team_name": "San Pedro Cocolos",
+      "facts": {
+        "age": 27,
+        "dob": "1999-01-17",
+        "bats": "L",
+        "height": "6′3″",
+        "throws": "L",
+        "weight": 212,
+        "position": "LF",
+        "birthplace": "Gothenburg, Sweden",
+        "field_note": "Keeps a spare burgundy cap rolled into his road glove bag."
+      },
+      "source_image": "assets/teams/san-pedro-cocolos/images/players-04-v2.webp",
+      "photo_crop": [
+        0,
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "FS26-0143",
+      "card_number": 143,
+      "subject_key": "player/san-pedro-cocolos/naveen-iyer",
+      "subject_name": "Naveen Iyer",
+      "team_slug": "san-pedro-cocolos",
+      "team_name": "San Pedro Cocolos",
+      "facts": {
+        "age": 30,
+        "dob": "1996-08-09",
+        "bats": "R",
+        "height": "6′0″",
+        "throws": "R",
+        "weight": 207,
+        "position": "RF",
+        "birthplace": "Kochi, India",
+        "field_note": "Sketches unfamiliar right-field corners on the backs of his travel itineraries."
+      },
+      "source_image": "assets/teams/san-pedro-cocolos/images/players-04-v2.webp",
+      "photo_crop": [
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "FS26-0144",
+      "card_number": 144,
+      "subject_key": "player/santiago-caballeros/aron-videla",
+      "subject_name": "Arón Videla",
+      "team_slug": "santiago-caballeros",
+      "team_name": "Santiago Caballeros",
+      "facts": {
+        "age": 29,
+        "dob": "1997-02-18",
+        "bats": "R",
+        "height": "6′1″",
+        "throws": "R",
+        "weight": 205,
+        "position": "SP",
+        "birthplace": "Valparaíso, Chile",
+        "field_note": "Turns the ball in his right hand between pitches."
+      },
+      "source_image": "assets/teams/santiago-caballeros/images/players/aron-videla.webp",
+      "photo_crop": [
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "id": "FS26-0145",
+      "card_number": 145,
+      "subject_key": "player/santiago-caballeros/gideon-fairchild",
+      "subject_name": "Gideon Fairchild",
+      "team_slug": "santiago-caballeros",
+      "team_name": "Santiago Caballeros",
+      "facts": {
+        "age": 27,
+        "dob": "1999-03-09",
+        "bats": "L",
+        "height": "6′4″",
+        "throws": "L",
+        "weight": 216,
+        "position": "SP",
+        "birthplace": "Bristol, England",
+        "field_note": "Usually watches the first inning from the end of the bench."
+      },
+      "source_image": "assets/teams/santiago-caballeros/images/players/gideon-fairchild.webp",
+      "photo_crop": [
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "id": "FS26-0146",
+      "card_number": 146,
+      "subject_key": "player/santiago-caballeros/kenji-hoshino",
+      "subject_name": "Kenji Hoshino",
+      "team_slug": "santiago-caballeros",
+      "team_name": "Santiago Caballeros",
+      "facts": {
+        "age": 25,
+        "dob": "2001-01-22",
+        "bats": "R",
+        "height": "5′11″",
+        "throws": "R",
+        "weight": 210,
+        "position": "SP",
+        "birthplace": "Sendai, Japan",
+        "field_note": "Keeps his warm-up throws on a steady count."
+      },
+      "source_image": "assets/teams/santiago-caballeros/images/players/kenji-hoshino.webp",
+      "photo_crop": [
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "id": "FS26-0147",
+      "card_number": 147,
+      "subject_key": "player/santiago-caballeros/samson-ndlovu",
+      "subject_name": "Samson Ndlovu",
+      "team_slug": "santiago-caballeros",
+      "team_name": "Santiago Caballeros",
+      "facts": {
+        "age": 31,
+        "dob": "1995-04-11",
+        "bats": "R",
+        "height": "5′11″",
+        "throws": "R",
+        "weight": 204,
+        "position": "SP",
+        "birthplace": "Bulawayo, Zimbabwe",
+        "field_note": "Smooths the landing spot before the inning starts."
+      },
+      "source_image": "assets/teams/santiago-caballeros/images/players/samson-ndlovu.webp",
+      "photo_crop": [
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "id": "FS26-0148",
+      "card_number": 148,
+      "subject_key": "player/santiago-caballeros/mateo-arancibia",
+      "subject_name": "Mateo Arancibia",
+      "team_slug": "santiago-caballeros",
+      "team_name": "Santiago Caballeros",
+      "facts": {
+        "age": 28,
+        "dob": "1998-02-27",
+        "bats": "R",
+        "height": "6′2″",
+        "throws": "R",
+        "weight": 188,
+        "position": "SP",
+        "birthplace": "Rancagua, Chile",
+        "field_note": "A frequent presence at the dugout rail between innings."
+      },
+      "source_image": "assets/teams/santiago-caballeros/images/players/mateo-arancibia.webp",
+      "photo_crop": [
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "id": "FS26-0149",
+      "card_number": 149,
+      "subject_key": "player/santiago-caballeros/tyrese-warnock",
+      "subject_name": "Tyrese Warnock",
+      "team_slug": "santiago-caballeros",
+      "team_name": "Santiago Caballeros",
+      "facts": {
+        "age": 26,
+        "dob": "2000-05-06",
+        "bats": "R",
+        "height": "6′3″",
+        "throws": "R",
+        "weight": 184,
+        "position": "RP",
+        "birthplace": "Port of Spain, Trinidad and Tobago",
+        "field_note": "Keeps a baseball in hand during the bullpen call."
+      },
+      "source_image": "assets/teams/santiago-caballeros/images/players/tyrese-warnock.webp",
+      "photo_crop": [
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "id": "FS26-0150",
+      "card_number": 150,
+      "subject_key": "player/santiago-caballeros/joaquim-silveira",
+      "subject_name": "Joaquim Silveira",
+      "team_slug": "santiago-caballeros",
+      "team_name": "Santiago Caballeros",
+      "facts": {
+        "age": 30,
+        "dob": "1996-01-15",
+        "bats": "L",
+        "height": "5′10″",
+        "throws": "R",
+        "weight": 194,
+        "position": "RP",
+        "birthplace": "Porto Alegre, Brazil",
+        "field_note": "Takes the dugout steps two at a time."
+      },
+      "source_image": "assets/teams/santiago-caballeros/images/players/joaquim-silveira.webp",
+      "photo_crop": [
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "id": "FS26-0151",
+      "card_number": 151,
+      "subject_key": "player/santiago-caballeros/emin-kocak",
+      "subject_name": "Emin Koçak",
+      "team_slug": "santiago-caballeros",
+      "team_name": "Santiago Caballeros",
+      "facts": {
+        "age": 24,
+        "dob": "2002-03-24",
+        "bats": "R",
+        "height": "6′0″",
+        "throws": "R",
+        "weight": 181,
+        "position": "RP",
+        "birthplace": "İzmir, Türkiye",
+        "field_note": "Wears clear sports glasses under his cap."
+      },
+      "source_image": "assets/teams/santiago-caballeros/images/players/emin-kocak.webp",
+      "photo_crop": [
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "id": "FS26-0152",
+      "card_number": 152,
+      "subject_key": "player/santiago-caballeros/damian-velasquez",
+      "subject_name": "Damián Velásquez",
+      "team_slug": "santiago-caballeros",
+      "team_name": "Santiago Caballeros",
+      "facts": {
+        "age": 28,
+        "dob": "1998-05-19",
+        "bats": "R",
+        "height": "5′10″",
+        "throws": "R",
+        "weight": 190,
+        "position": "C",
+        "birthplace": "Maracay, Venezuela",
+        "field_note": "Lifts his mask between bullpen pitches."
+      },
+      "source_image": "assets/teams/santiago-caballeros/images/players/damian-velasquez.webp",
+      "photo_crop": [
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "id": "FS26-0153",
+      "card_number": 153,
+      "subject_key": "player/santiago-caballeros/noam-finkel",
+      "subject_name": "Noam Finkel",
+      "team_slug": "santiago-caballeros",
+      "team_name": "Santiago Caballeros",
+      "facts": {
+        "age": 32,
+        "dob": "1994-02-08",
+        "bats": "L",
+        "height": "6′3″",
+        "throws": "L",
+        "weight": 198,
+        "position": "1B",
+        "birthplace": "Haifa, Israel",
+        "field_note": "Rests the bat barrel on the dirt while waiting on deck."
+      },
+      "source_image": "assets/teams/santiago-caballeros/images/players/noam-finkel.webp",
+      "photo_crop": [
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "id": "FS26-0154",
+      "card_number": 154,
+      "subject_key": "player/santiago-caballeros/raul-castillo",
+      "subject_name": "Raúl Castillo",
+      "team_slug": "santiago-caballeros",
+      "team_name": "Santiago Caballeros",
+      "facts": {
+        "age": 27,
+        "dob": "1999-04-03",
+        "bats": "S",
+        "height": "5′9″",
+        "throws": "R",
+        "weight": 174,
+        "position": "2B",
+        "birthplace": "Santo Domingo, Dominican Republic",
+        "field_note": "Stretches his shoulders with a bat before stepping in."
+      },
+      "source_image": "assets/teams/santiago-caballeros/images/players/raul-castillo.webp",
+      "photo_crop": [
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "id": "FS26-0155",
+      "card_number": 155,
+      "subject_key": "player/santiago-caballeros/maksim-berezan",
+      "subject_name": "Maksim Berezan",
+      "team_slug": "santiago-caballeros",
+      "team_name": "Santiago Caballeros",
+      "facts": {
+        "age": 23,
+        "dob": "2003-01-29",
+        "bats": "R",
+        "height": "6′0″",
+        "throws": "R",
+        "weight": 178,
+        "position": "SS",
+        "birthplace": "Odesa, Ukraine",
+        "field_note": "Waits near the dugout entrance with his bat upright."
+      },
+      "source_image": "assets/teams/santiago-caballeros/images/players/maksim-berezan.webp",
+      "photo_crop": [
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "id": "FS26-0156",
+      "card_number": 156,
+      "subject_key": "player/santiago-caballeros/eamon-quillan",
+      "subject_name": "Eamon Quillan",
+      "team_slug": "santiago-caballeros",
+      "team_name": "Santiago Caballeros",
+      "facts": {
+        "age": 29,
+        "dob": "1997-03-16",
+        "bats": "R",
+        "height": "6′1″",
+        "throws": "R",
+        "weight": 186,
+        "position": "3B",
+        "birthplace": "Cork, Ireland",
+        "field_note": "Jogs back to the bench with his glove at his waist."
+      },
+      "source_image": "assets/teams/santiago-caballeros/images/players/eamon-quillan.webp",
+      "photo_crop": [
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "id": "FS26-0157",
+      "card_number": 157,
+      "subject_key": "player/santiago-caballeros/kiyoshi-senda",
+      "subject_name": "Kiyoshi Senda",
+      "team_slug": "santiago-caballeros",
+      "team_name": "Santiago Caballeros",
+      "facts": {
+        "age": 26,
+        "dob": "2000-02-12",
+        "bats": "L",
+        "height": "5′11″",
+        "throws": "L",
+        "weight": 202,
+        "position": "LF",
+        "birthplace": "Takamatsu, Japan",
+        "field_note": "Carries his glove low between plays."
+      },
+      "source_image": "assets/teams/santiago-caballeros/images/players/kiyoshi-senda.webp",
+      "photo_crop": [
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "id": "FS26-0158",
+      "card_number": 158,
+      "subject_key": "player/santiago-caballeros/dalton-reyes",
+      "subject_name": "Dalton Reyes",
+      "team_slug": "santiago-caballeros",
+      "team_name": "Santiago Caballeros",
+      "facts": {
+        "age": 25,
+        "dob": "2001-04-23",
+        "bats": "R",
+        "height": "6′2″",
+        "throws": "R",
+        "weight": 185,
+        "position": "CF",
+        "birthplace": "Curaçao",
+        "field_note": "Often sits forward on the bench watching the field."
+      },
+      "source_image": "assets/teams/santiago-caballeros/images/players/dalton-reyes-v2.webp",
+      "photo_crop": [
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "id": "FS26-0159",
+      "card_number": 159,
+      "subject_key": "player/santiago-caballeros/adebayo-oluwaseyi",
+      "subject_name": "Adebayo Oluwaseyi",
+      "team_slug": "santiago-caballeros",
+      "team_name": "Santiago Caballeros",
+      "facts": {
+        "age": 30,
+        "dob": "1996-05-14",
+        "bats": "R",
+        "height": "6′2″",
+        "throws": "R",
+        "weight": 218,
+        "position": "RF",
+        "birthplace": "Abeokuta, Nigeria",
+        "field_note": "Checks his batting-glove straps before leaving the on-deck circle."
+      },
+      "source_image": "assets/teams/santiago-caballeros/images/players/adebayo-oluwaseyi.webp",
+      "photo_crop": [
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "id": "FS26-0160",
+      "card_number": 160,
+      "subject_key": "player/spokane-alloys/kellan-brynden",
+      "subject_name": "Kellan Brynden",
+      "team_slug": "spokane-alloys",
+      "team_name": "Spokane Alloys",
+      "facts": {
+        "age": 29,
+        "dob": "1997-02-18",
+        "bats": "R",
+        "height": "6′3″",
+        "throws": "R",
+        "weight": 212,
+        "position": "SP",
+        "birthplace": "Missoula, Montana",
+        "field_note": "Keeps a small vial of mound dirt from every ballpark where he earns a win. Each is labeled with the final pitch and given to his father after the season."
+      },
+      "source_image": "assets/images/players/spokane-alloys/spokane-kellan-brynden.png",
+      "photo_crop": null
+    },
+    {
+      "id": "FS26-0161",
+      "card_number": 161,
+      "subject_key": "player/spokane-alloys/oskar-svanholm",
+      "subject_name": "Oskar Svanholm",
+      "team_slug": "spokane-alloys",
+      "team_name": "Spokane Alloys",
+      "facts": {
+        "age": 26,
+        "dob": "1999-11-04",
+        "bats": "L",
+        "height": "6′1″",
+        "throws": "L",
+        "weight": 196,
+        "position": "SP",
+        "birthplace": "Malmö, Sweden",
+        "field_note": "Builds small wooden radios during road trips and gives them to clubhouse attendants."
+      },
+      "source_image": "assets/images/players/spokane-alloys/spokane-oskar-svanholm.png",
+      "photo_crop": null
+    },
+    {
+      "id": "FS26-0162",
+      "card_number": 162,
+      "subject_key": "player/spokane-alloys/mateusz-kasprowicz",
+      "subject_name": "Mateusz Kasprowicz",
+      "team_slug": "spokane-alloys",
+      "team_name": "Spokane Alloys",
+      "facts": {
+        "age": 31,
+        "dob": "1995-03-21",
+        "bats": "R",
+        "height": "6′4″",
+        "throws": "R",
+        "weight": 225,
+        "position": "SP",
+        "birthplace": "Gdańsk, Poland",
+        "field_note": "Once finished a rain-delay crossword in ink before the grounds crew removed the tarp."
+      },
+      "source_image": "assets/images/players/spokane-alloys/spokane-mateusz-kasprowicz.png",
+      "photo_crop": null
+    },
+    {
+      "id": "FS26-0163",
+      "card_number": 163,
+      "subject_key": "player/spokane-alloys/diego-alvarez-mora",
+      "subject_name": "Diego Álvarez Mora",
+      "team_slug": "spokane-alloys",
+      "team_name": "Spokane Alloys",
+      "facts": {
+        "age": 27,
+        "dob": "1998-08-09",
+        "bats": "R",
+        "height": "6′2″",
+        "throws": "R",
+        "weight": 205,
+        "position": "SP",
+        "birthplace": "San José, Costa Rica",
+        "field_note": "Calls his mother after every start, but refuses to discuss baseball until she brings it up."
+      },
+      "source_image": "assets/images/players/spokane-alloys/spokane-diego-alvarez-mora.png",
+      "photo_crop": null
+    },
+    {
+      "id": "FS26-0164",
+      "card_number": 164,
+      "subject_key": "player/spokane-alloys/lukas-havel",
+      "subject_name": "Lukas Havel",
+      "team_slug": "spokane-alloys",
+      "team_name": "Spokane Alloys",
+      "facts": {
+        "age": 24,
+        "dob": "2002-05-16",
+        "bats": "L",
+        "height": "6′6″",
+        "throws": "R",
+        "weight": 198,
+        "position": "SP",
+        "birthplace": "Brno, Czechia",
+        "field_note": "Carries one glove from his first professional season and has repaired it eleven times."
+      },
+      "source_image": "assets/images/players/spokane-alloys/spokane-lukas-havel.png",
+      "photo_crop": null
+    },
+    {
+      "id": "FS26-0165",
+      "card_number": 165,
+      "subject_key": "player/spokane-alloys/caleb-reidman",
+      "subject_name": "Caleb Reidman",
+      "team_slug": "spokane-alloys",
+      "team_name": "Spokane Alloys",
+      "facts": {
+        "age": 28,
+        "dob": "1998-01-27",
+        "bats": "R",
+        "height": "6′0″",
+        "throws": "R",
+        "weight": 228,
+        "position": "RP",
+        "birthplace": "Toledo, Ohio",
+        "field_note": "Can identify most Inland Northwest birds by sound and keeps a running list by ballpark."
+      },
+      "source_image": "assets/images/players/spokane-alloys/spokane-caleb-reidman.png",
+      "photo_crop": null
+    },
+    {
+      "id": "FS26-0166",
+      "card_number": 166,
+      "subject_key": "player/spokane-alloys/sergio-ibarra-lugo",
+      "subject_name": "Sergio Ibarra Lugo",
+      "team_slug": "spokane-alloys",
+      "team_name": "Spokane Alloys",
+      "facts": {
+        "age": 25,
+        "dob": "2001-09-12",
+        "bats": "L",
+        "height": "5′11″",
+        "throws": "L",
+        "weight": 214,
+        "position": "RP",
+        "birthplace": "Hermosillo, Mexico",
+        "field_note": "Learned sleight of hand from an uncle and is banned from dealing clubhouse card games."
+      },
+      "source_image": "assets/images/players/spokane-alloys/spokane-sergio-ibarra-lugo.png",
+      "photo_crop": null
+    },
+    {
+      "id": "FS26-0167",
+      "card_number": 167,
+      "subject_key": "player/spokane-alloys/yaw-mensah",
+      "subject_name": "Yaw Mensah",
+      "team_slug": "spokane-alloys",
+      "team_name": "Spokane Alloys",
+      "facts": {
+        "age": 32,
+        "dob": "1994-12-03",
+        "bats": "R",
+        "height": "6′2″",
+        "throws": "R",
+        "weight": 218,
+        "position": "RP",
+        "birthplace": "Accra, Ghana",
+        "field_note": "Orders the same breakfast in every city, then ranks each version in a private spreadsheet."
+      },
+      "source_image": "assets/images/players/spokane-alloys/spokane-yaw-mensah.png",
+      "photo_crop": null
+    },
+    {
+      "id": "FS26-0168",
+      "card_number": 168,
+      "subject_key": "player/spokane-alloys/nikolai-dobrynin",
+      "subject_name": "Nikolai Dobrynin",
+      "team_slug": "spokane-alloys",
+      "team_name": "Spokane Alloys",
+      "facts": {
+        "age": 30,
+        "dob": "1996-06-22",
+        "bats": "R",
+        "height": "6′1″",
+        "throws": "R",
+        "weight": 224,
+        "position": "C",
+        "birthplace": "Novosibirsk, Russia",
+        "field_note": "Restores old catcher’s masks and has never sold one from his collection."
+      },
+      "source_image": "assets/images/players/spokane-alloys/spokane-nikolai-dobrynin.png",
+      "photo_crop": null
+    },
+    {
+      "id": "FS26-0169",
+      "card_number": 169,
+      "subject_key": "player/spokane-alloys/evan-carroll-iv",
+      "subject_name": "Evan Carroll IV",
+      "team_slug": "spokane-alloys",
+      "team_name": "Spokane Alloys",
+      "facts": {
+        "age": 33,
+        "dob": "1993-04-11",
+        "bats": "L",
+        "height": "6′5″",
+        "throws": "R",
+        "weight": 245,
+        "position": "1B",
+        "birthplace": "Lexington, Kentucky",
+        "field_note": "Reads municipal planning documents on flights and remembers unusual zoning disputes."
+      },
+      "source_image": "assets/images/players/spokane-alloys/spokane-evan-carroll-iv.png",
+      "photo_crop": null
+    },
+    {
+      "id": "FS26-0170",
+      "card_number": 170,
+      "subject_key": "player/spokane-alloys/marco-delvecchio",
+      "subject_name": "Marco DelVecchio",
+      "team_slug": "spokane-alloys",
+      "team_name": "Spokane Alloys",
+      "facts": {
+        "age": 27,
+        "dob": "1999-07-29",
+        "bats": "S",
+        "height": "5′9″",
+        "throws": "R",
+        "weight": 178,
+        "position": "2B",
+        "birthplace": "Providence, Rhode Island",
+        "field_note": "Maintains a map of the best public staircases in every GLB city."
+      },
+      "source_image": "assets/images/players/spokane-alloys/spokane-marco-delvecchio.png",
+      "photo_crop": null
+    },
+    {
+      "id": "FS26-0171",
+      "card_number": 171,
+      "subject_key": "player/spokane-alloys/tomasz-kubas",
+      "subject_name": "Tomasz Kubas",
+      "team_slug": "spokane-alloys",
+      "team_name": "Spokane Alloys",
+      "facts": {
+        "age": 24,
+        "dob": "2002-10-06",
+        "bats": "R",
+        "height": "6′1″",
+        "throws": "R",
+        "weight": 188,
+        "position": "SS",
+        "birthplace": "Kraków, Poland",
+        "field_note": "Was briefly the drummer in a wedding band and still carries sticks in his equipment bag."
+      },
+      "source_image": "assets/images/players/spokane-alloys/spokane-tomasz-kubas.png",
+      "photo_crop": null
+    },
+    {
+      "id": "FS26-0172",
+      "card_number": 172,
+      "subject_key": "player/spokane-alloys/andres-mireles",
+      "subject_name": "Andrés Mireles",
+      "team_slug": "spokane-alloys",
+      "team_name": "Spokane Alloys",
+      "facts": {
+        "age": 29,
+        "bats": "R",
+        "throws": "R",
+        "position": "3B",
+        "field_note": "Collects grocery-store receipts from memorable road wins and labels them by final score."
+      },
+      "source_image": "assets/images/players/spokane-alloys/spokane-andres-mireles.png",
+      "photo_crop": null
+    },
+    {
+      "id": "FS26-0173",
+      "card_number": 173,
+      "subject_key": "player/spokane-alloys/wyatt-hollander",
+      "subject_name": "Wyatt Hollander",
+      "team_slug": "spokane-alloys",
+      "team_name": "Spokane Alloys",
+      "facts": {
+        "age": 26,
+        "dob": "2000-03-08",
+        "bats": "R",
+        "height": "6′2″",
+        "throws": "R",
+        "weight": 194,
+        "position": "CF",
+        "birthplace": "Yakima, Washington",
+        "field_note": "Practices photography from the dugout but rarely photographs the field itself."
+      },
+      "source_image": "assets/images/players/spokane-alloys/spokane-wyatt-hollander.png",
+      "photo_crop": null
+    },
+    {
+      "id": "FS26-0174",
+      "card_number": 174,
+      "subject_key": "player/spokane-alloys/luis-quinones",
+      "subject_name": "Luis Quiñones",
+      "team_slug": "spokane-alloys",
+      "team_name": "Spokane Alloys",
+      "facts": {
+        "age": 28,
+        "dob": "1998-09-23",
+        "bats": "L",
+        "height": "6′0″",
+        "throws": "L",
+        "weight": 190,
+        "position": "LF",
+        "birthplace": "San Juan, Puerto Rico",
+        "field_note": "Speaks to his bats in two languages and insists the conversations are strictly professional."
+      },
+      "source_image": "assets/images/players/spokane-alloys/spokane-luis-quinones.png",
+      "photo_crop": null
+    },
+    {
+      "id": "FS26-0175",
+      "card_number": 175,
+      "subject_key": "player/spokane-alloys/pieter-van-wyk",
+      "subject_name": "Pieter van Wyk",
+      "team_slug": "spokane-alloys",
+      "team_name": "Spokane Alloys",
+      "facts": {
+        "age": 30,
+        "dob": "1996-02-02",
+        "bats": "R",
+        "height": "6′3″",
+        "throws": "R",
+        "weight": 208,
+        "position": "RF",
+        "birthplace": "Pretoria, South Africa",
+        "field_note": "Has prepared the same pregame sandwich since age nineteen and cuts it into exact thirds."
+      },
+      "source_image": "assets/images/players/spokane-alloys/spokane-pieter-van-wyk.png",
+      "photo_crop": null
+    },
+    {
+      "id": "FS26-0176",
+      "card_number": 176,
+      "subject_key": "player/spokane-alloys/jonah-sato",
+      "subject_name": "Jonah Sato",
+      "team_slug": "spokane-alloys",
+      "team_name": "Spokane Alloys",
+      "facts": {
+        "age": 26,
+        "dob": "2000-07-14",
+        "bats": "R",
+        "height": "5'10\"",
+        "throws": "R",
+        "weight": 192,
+        "position": "C",
+        "birthplace": "Tacoma, Washington",
+        "field_note": "Keeps a pocket notebook of every foul ball that reaches the first-base camera well."
+      },
+      "source_image": "assets/images/cards/fieldstock/spk-17-jonah-sato-front.webp",
+      "photo_crop": [
+        0.16,
+        0.22,
+        0.68,
+        0.49
+      ]
+    },
+    {
+      "id": "FS26-0177",
+      "card_number": 177,
+      "subject_key": "player/spokane-alloys/rene-bouchard",
+      "subject_name": "René Bouchard",
+      "team_slug": "spokane-alloys",
+      "team_name": "Spokane Alloys",
+      "facts": {
+        "age": 32,
+        "dob": "1994-02-09",
+        "bats": "L",
+        "height": "6'2\"",
+        "throws": "R",
+        "weight": 224,
+        "position": "IF",
+        "birthplace": "Québec City, Québec",
+        "field_note": "Re-laces his first baseman's mitt with the same awl he uses to repair fishing creels."
+      },
+      "source_image": "assets/images/cards/fieldstock/spk-18-rene-bouchard-front.webp",
+      "photo_crop": [
+        0.16,
+        0.22,
+        0.68,
+        0.49
+      ]
+    },
+    {
+      "id": "FS26-0178",
+      "card_number": 178,
+      "subject_key": "player/spokane-alloys/malachi-boone",
+      "subject_name": "Malachi Boone",
+      "team_slug": "spokane-alloys",
+      "team_name": "Spokane Alloys",
+      "facts": {
+        "age": 25,
+        "dob": "2001-05-22",
+        "bats": "S",
+        "height": "5'8\"",
+        "throws": "R",
+        "weight": 176,
+        "position": "IF",
+        "birthplace": "Richmond, Virginia",
+        "field_note": "Can identify every Spokane infield hop by the sound it makes off the dirt."
+      },
+      "source_image": "assets/images/cards/fieldstock/spk-19-malachi-boone-front.webp",
+      "photo_crop": [
+        0.16,
+        0.22,
+        0.68,
+        0.49
+      ]
+    },
+    {
+      "id": "FS26-0179",
+      "card_number": 179,
+      "subject_key": "player/spokane-alloys/dae-hyun-park",
+      "subject_name": "Dae-Hyun Park",
+      "team_slug": "spokane-alloys",
+      "team_name": "Spokane Alloys",
+      "facts": {
+        "age": 23,
+        "dob": "2003-03-18",
+        "bats": "L",
+        "height": "6'0\"",
+        "throws": "R",
+        "weight": 183,
+        "position": "OF",
+        "birthplace": "Busan, South Korea",
+        "field_note": "Marks the warning track depth in shoe lengths at every park before batting practice."
+      },
+      "source_image": "assets/images/cards/fieldstock/spk-20-dae-hyun-park-front.webp",
+      "photo_crop": [
+        0.16,
+        0.22,
+        0.68,
+        0.49
+      ]
+    },
+    {
+      "id": "FS26-0180",
+      "card_number": 180,
+      "subject_key": "player/spokane-alloys/tesfaye-mebrahtu",
+      "subject_name": "Tesfaye Mebrahtu",
+      "team_slug": "spokane-alloys",
+      "team_name": "Spokane Alloys",
+      "facts": {
+        "age": 28,
+        "dob": "1998-08-30",
+        "bats": "R",
+        "height": "6'1\"",
+        "throws": "R",
+        "weight": 188,
+        "position": "OF",
+        "birthplace": "Asmara, Eritrea",
+        "field_note": "Judges fly-ball carry by watching the flags above the right-field light tower."
+      },
+      "source_image": "assets/images/cards/fieldstock/spk-21-tesfaye-mebrahtu-front.webp",
+      "photo_crop": [
+        0.16,
+        0.22,
+        0.68,
+        0.49
+      ]
+    },
+    {
+      "id": "FS26-0181",
+      "card_number": 181,
+      "subject_key": "player/spokane-alloys/benoit-leduc",
+      "subject_name": "Benoît Leduc",
+      "team_slug": "spokane-alloys",
+      "team_name": "Spokane Alloys",
+      "facts": {
+        "age": 29,
+        "dob": "1997-01-11",
+        "bats": "L",
+        "height": "6'3\"",
+        "throws": "L",
+        "weight": 210,
+        "position": "RP",
+        "birthplace": "Trois-Rivières, Québec",
+        "field_note": "Counts bullpen warmup pitches in French and starts over whenever a ball touches the dirt."
+      },
+      "source_image": "assets/images/cards/fieldstock/spk-22-benoit-leduc-front.webp",
+      "photo_crop": [
+        0.16,
+        0.22,
+        0.68,
+        0.49
+      ]
+    },
+    {
+      "id": "FS26-0182",
+      "card_number": 182,
+      "subject_key": "player/spokane-alloys/hamza-qureshi",
+      "subject_name": "Hamza Qureshi",
+      "team_slug": "spokane-alloys",
+      "team_name": "Spokane Alloys",
+      "facts": {
+        "age": 26,
+        "dob": "2000-11-03",
+        "bats": "R",
+        "height": "6'1\"",
+        "throws": "R",
+        "weight": 203,
+        "position": "RP",
+        "birthplace": "Mississauga, Ontario",
+        "field_note": "Keeps the resin bag centered on the rubber between innings, even in an empty bullpen."
+      },
+      "source_image": "assets/images/cards/fieldstock/spk-23-hamza-qureshi-front.webp",
+      "photo_crop": [
+        0.16,
+        0.22,
+        0.68,
+        0.49
+      ]
+    },
+    {
+      "id": "FS26-0183",
+      "card_number": 183,
+      "subject_key": "player/spokane-alloys/ellis-wren",
+      "subject_name": "Ellis Wren",
+      "team_slug": "spokane-alloys",
+      "team_name": "Spokane Alloys",
+      "facts": {
+        "age": 34,
+        "dob": "1992-04-27",
+        "bats": "R",
+        "height": "5'11\"",
+        "throws": "R",
+        "weight": 217,
+        "position": "RP",
+        "birthplace": "Eugene, Oregon",
+        "field_note": "Carries a chipped lineup-card pencil from his first professional save."
+      },
+      "source_image": "assets/images/cards/fieldstock/spk-24-ellis-wren-front.webp",
+      "photo_crop": [
+        0.16,
+        0.22,
+        0.68,
+        0.49
+      ]
+    },
+    {
+      "id": "FS26-0184",
+      "card_number": 184,
+      "subject_key": "player/spokane-alloys/miguel-angel-serrano",
+      "subject_name": "Miguel Ángel Serrano",
+      "team_slug": "spokane-alloys",
+      "team_name": "Spokane Alloys",
+      "facts": {
+        "age": 23,
+        "dob": "2003-06-06",
+        "bats": "L",
+        "height": "6'4\"",
+        "throws": "L",
+        "weight": 195,
+        "position": "RP",
+        "birthplace": "Maracaibo, Venezuela",
+        "field_note": "Taps the bullpen gate twice before entering, a habit that began after a scoreless winter-league month."
+      },
+      "source_image": "assets/images/cards/fieldstock/spk-25-miguel-angel-serrano-front.webp",
+      "photo_crop": [
+        0.16,
+        0.22,
+        0.68,
+        0.49
+      ]
+    },
+    {
+      "id": "FS26-0185",
+      "card_number": 185,
+      "subject_key": "player/spokane-alloys/branislav-vukovic",
+      "subject_name": "Branislav \"Bran\" Vuković",
+      "team_slug": "spokane-alloys",
+      "team_name": "Spokane Alloys",
+      "facts": {
+        "age": 30,
+        "dob": "1996-09-15",
+        "bats": "R",
+        "height": "6'2\"",
+        "throws": "R",
+        "weight": 226,
+        "position": "CL",
+        "birthplace": "Belgrade, Serbia",
+        "field_note": "Folds every completed save sheet into a tiny home plate before filing it away."
+      },
+      "source_image": "assets/images/cards/fieldstock/spk-26-branislav-vukovic-front.webp",
+      "photo_crop": [
+        0.16,
+        0.22,
+        0.68,
+        0.49
+      ]
+    },
+    {
+      "id": "FS26-0186",
+      "card_number": 186,
+      "subject_key": "player/st-paul-frost/caleb-warnock",
+      "subject_name": "Caleb Warnock",
+      "team_slug": "st-paul-frost",
+      "team_name": "St. Paul Frost",
+      "facts": {
+        "age": 29,
+        "bats": "R",
+        "throws": "R",
+        "position": "SP"
+      },
+      "source_image": "assets/teams/st-paul-frost/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0,
+        0,
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "id": "FS26-0187",
+      "card_number": 187,
+      "subject_key": "player/st-paul-frost/miguel-alcazar",
+      "subject_name": "Miguel Alcázar",
+      "team_slug": "st-paul-frost",
+      "team_name": "St. Paul Frost",
+      "facts": {
+        "age": 27,
+        "bats": "L",
+        "throws": "R",
+        "position": "SP"
+      },
+      "source_image": "assets/teams/st-paul-frost/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0.25,
+        0,
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "id": "FS26-0188",
+      "card_number": 188,
+      "subject_key": "player/st-paul-frost/ryan-keswick",
+      "subject_name": "Ryan Keswick",
+      "team_slug": "st-paul-frost",
+      "team_name": "St. Paul Frost",
+      "facts": {
+        "age": 31,
+        "bats": "R",
+        "throws": "R",
+        "position": "SP"
+      },
+      "source_image": "assets/teams/st-paul-frost/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0.5,
+        0,
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "id": "FS26-0189",
+      "card_number": 189,
+      "subject_key": "player/st-paul-frost/tae-ho-choi",
+      "subject_name": "Tae-ho Choi",
+      "team_slug": "st-paul-frost",
+      "team_name": "St. Paul Frost",
+      "facts": {
+        "age": 26,
+        "bats": "R",
+        "throws": "R",
+        "position": "SP"
+      },
+      "source_image": "assets/teams/st-paul-frost/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0.75,
+        0,
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "id": "FS26-0190",
+      "card_number": 190,
+      "subject_key": "player/st-paul-frost/nolan-brix",
+      "subject_name": "Nolan Brix",
+      "team_slug": "st-paul-frost",
+      "team_name": "St. Paul Frost",
+      "facts": {
+        "age": 24,
+        "bats": "L",
+        "throws": "L",
+        "position": "SP"
+      },
+      "source_image": "assets/teams/st-paul-frost/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0,
+        0.25,
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "id": "FS26-0191",
+      "card_number": 191,
+      "subject_key": "player/st-paul-frost/darius-collins",
+      "subject_name": "Darius Collins",
+      "team_slug": "st-paul-frost",
+      "team_name": "St. Paul Frost",
+      "facts": {
+        "age": 28,
+        "bats": "R",
+        "throws": "R",
+        "position": "RP"
+      },
+      "source_image": "assets/teams/st-paul-frost/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "id": "FS26-0192",
+      "card_number": 192,
+      "subject_key": "player/st-paul-frost/antonio-velez",
+      "subject_name": "Antonio Vélez",
+      "team_slug": "st-paul-frost",
+      "team_name": "St. Paul Frost",
+      "facts": {
+        "age": 25,
+        "bats": "L",
+        "throws": "R",
+        "position": "RP"
+      },
+      "source_image": "assets/teams/st-paul-frost/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0.5,
+        0.25,
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "id": "FS26-0193",
+      "card_number": 193,
+      "subject_key": "player/st-paul-frost/lukas-horvat",
+      "subject_name": "Lukáš Horvat",
+      "team_slug": "st-paul-frost",
+      "team_name": "St. Paul Frost",
+      "facts": {
+        "age": 32,
+        "bats": "R",
+        "throws": "R",
+        "position": "RP"
+      },
+      "source_image": "assets/teams/st-paul-frost/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0.75,
+        0.25,
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "id": "FS26-0194",
+      "card_number": 194,
+      "subject_key": "player/st-paul-frost/evan-morrissey",
+      "subject_name": "Evan Morrissey",
+      "team_slug": "st-paul-frost",
+      "team_name": "St. Paul Frost",
+      "facts": {
+        "age": 30,
+        "bats": "R",
+        "throws": "R",
+        "position": "C"
+      },
+      "source_image": "assets/teams/st-paul-frost/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0,
+        0.5,
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "id": "FS26-0195",
+      "card_number": 195,
+      "subject_key": "player/st-paul-frost/javier-lucero",
+      "subject_name": "Javier Lucero",
+      "team_slug": "st-paul-frost",
+      "team_name": "St. Paul Frost",
+      "facts": {
+        "age": 28,
+        "bats": "L",
+        "throws": "R",
+        "position": "1B"
+      },
+      "source_image": "assets/teams/st-paul-frost/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0.25,
+        0.5,
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "id": "FS26-0196",
+      "card_number": 196,
+      "subject_key": "player/st-paul-frost/owen-hartnell",
+      "subject_name": "Owen Hartnell",
+      "team_slug": "st-paul-frost",
+      "team_name": "St. Paul Frost",
+      "facts": {
+        "age": 26,
+        "bats": "R",
+        "throws": "R",
+        "position": "2B"
+      },
+      "source_image": "assets/teams/st-paul-frost/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0.5,
+        0.5,
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "id": "FS26-0197",
+      "card_number": 197,
+      "subject_key": "player/st-paul-frost/masato-kobori",
+      "subject_name": "Masato Kobori",
+      "team_slug": "st-paul-frost",
+      "team_name": "St. Paul Frost",
+      "facts": {
+        "age": 24,
+        "bats": "R",
+        "throws": "R",
+        "position": "SS"
+      },
+      "source_image": "assets/teams/st-paul-frost/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0.75,
+        0.5,
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "id": "FS26-0198",
+      "card_number": 198,
+      "subject_key": "player/st-paul-frost/trevor-yates",
+      "subject_name": "Trevor Yates",
+      "team_slug": "st-paul-frost",
+      "team_name": "St. Paul Frost",
+      "facts": {
+        "age": 31,
+        "bats": "R",
+        "throws": "R",
+        "position": "3B"
+      },
+      "source_image": "assets/teams/st-paul-frost/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0,
+        0.75,
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "id": "FS26-0199",
+      "card_number": 199,
+      "subject_key": "player/st-paul-frost/malik-jefferson",
+      "subject_name": "Malik Jefferson",
+      "team_slug": "st-paul-frost",
+      "team_name": "St. Paul Frost",
+      "facts": {
+        "age": 25,
+        "bats": "R",
+        "throws": "R",
+        "position": "CF"
+      },
+      "source_image": "assets/teams/st-paul-frost/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0.25,
+        0.75,
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "id": "FS26-0200",
+      "card_number": 200,
+      "subject_key": "player/st-paul-frost/rodrigo-fuentes",
+      "subject_name": "Rodrigo Fuentes",
+      "team_slug": "st-paul-frost",
+      "team_name": "St. Paul Frost",
+      "facts": {
+        "age": 29,
+        "bats": "L",
+        "throws": "L",
+        "position": "LF"
+      },
+      "source_image": "assets/teams/st-paul-frost/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0.5,
+        0.75,
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "id": "FS26-0201",
+      "card_number": 201,
+      "subject_key": "player/st-paul-frost/jake-lanier",
+      "subject_name": "Jake Lanier",
+      "team_slug": "st-paul-frost",
+      "team_name": "St. Paul Frost",
+      "facts": {
+        "age": 27,
+        "bats": "R",
+        "throws": "R",
+        "position": "RF"
+      },
+      "source_image": "assets/teams/st-paul-frost/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0.75,
+        0.75,
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "id": "FS26-0202",
+      "card_number": 202,
+      "subject_key": "player/taipei-neon/kaito-ueda",
+      "subject_name": "Kaito Ueda",
+      "team_slug": "taipei-neon",
+      "team_name": "Taipei Neon",
+      "facts": {
+        "age": 25,
+        "dob": "2001-03-18",
+        "bats": "R",
+        "height": "6′0″",
+        "throws": "R",
+        "weight": 182,
+        "factoid": "Marks each park’s warning-track depth in shoe lengths before batting practice.",
+        "position": "CF",
+        "birthplace": "Yokohama, Japan"
+      },
+      "source_image": "assets/teams/taipei-neon/images/players/kaito-ueda.webp",
+      "photo_crop": null
+    },
+    {
+      "id": "FS26-0203",
+      "card_number": 203,
+      "subject_key": "player/taipei-neon/adebayo-olumide",
+      "subject_name": "Adebayo Olumide",
+      "team_slug": "taipei-neon",
+      "team_name": "Taipei Neon",
+      "facts": {
+        "age": 28,
+        "dob": "1998-06-12",
+        "bats": "R",
+        "height": "6′2″",
+        "throws": "R",
+        "weight": 218,
+        "factoid": "Re-laces teammates’ gloves on road trips and labels each repair with the ballpark.",
+        "position": "3B",
+        "birthplace": "Ibadan, Nigeria"
+      },
+      "source_image": "assets/teams/taipei-neon/images/players/adebayo-olumide.webp",
+      "photo_crop": null
+    },
+    {
+      "id": "FS26-0204",
+      "card_number": 204,
+      "subject_key": "player/taipei-neon/han-wei-tseng",
+      "subject_name": "Han-wei Tseng",
+      "team_slug": "taipei-neon",
+      "team_name": "Taipei Neon",
+      "facts": {
+        "age": 23,
+        "dob": "2003-02-04",
+        "bats": "S",
+        "height": "5′9″",
+        "throws": "R",
+        "weight": 168,
+        "factoid": "Keeps a notebook of double-play feeds, drawn from his partner’s point of view.",
+        "position": "2B",
+        "birthplace": "Taichung, Taiwan"
+      },
+      "source_image": "assets/images/cards/fieldstock/tpe-03-han-wei-tseng-front-action-clean.webp",
+      "photo_crop": null
+    },
+    {
+      "id": "FS26-0205",
+      "card_number": 205,
+      "subject_key": "player/taipei-neon/martin-echevarria",
+      "subject_name": "Martín Echevarría",
+      "team_slug": "taipei-neon",
+      "team_name": "Taipei Neon",
+      "facts": {
+        "age": 31,
+        "dob": "1995-04-22",
+        "bats": "L",
+        "height": "6′3″",
+        "throws": "R",
+        "weight": 236,
+        "factoid": "Writes the count inside the brim of his practice cap before each batting session.",
+        "position": "1B",
+        "birthplace": "Ponce, Puerto Rico"
+      },
+      "source_image": "assets/images/cards/fieldstock/tpe-04-martin-echevarria-front-action-clean.webp",
+      "photo_crop": null
+    },
+    {
+      "id": "FS26-0206",
+      "card_number": 206,
+      "subject_key": "player/taipei-neon/dariusz-wierzbik",
+      "subject_name": "Dariusz Wierzbik",
+      "team_slug": "taipei-neon",
+      "team_name": "Taipei Neon",
+      "facts": {
+        "age": 26,
+        "dob": "2000-07-09",
+        "bats": "R",
+        "height": "6′1″",
+        "throws": "R",
+        "weight": 187,
+        "factoid": "Collects broken bat handles and uses them to make replacement fungo knobs.",
+        "position": "SS",
+        "birthplace": "Gdańsk, Poland"
+      },
+      "source_image": "assets/images/cards/fieldstock/tpe-05-dariusz-wierzbik-front-v3-clean.webp",
+      "photo_crop": null
+    },
+    {
+      "id": "FS26-0207",
+      "card_number": 207,
+      "subject_key": "player/taipei-neon/owen-rasmusson",
+      "subject_name": "Owen Rasmusson",
+      "team_slug": "taipei-neon",
+      "team_name": "Taipei Neon",
+      "facts": {
+        "age": 29,
+        "dob": "1997-01-26",
+        "bats": "R",
+        "height": "6′0″",
+        "throws": "R",
+        "weight": 224,
+        "factoid": "Records a one-line scouting note on every umpire’s called third strike.",
+        "position": "C",
+        "birthplace": "Duluth, Minnesota, USA"
+      },
+      "source_image": "assets/images/cards/fieldstock/tpe-06-owen-rasmusson-front-action-clean.webp",
+      "photo_crop": null
+    },
+    {
+      "id": "FS26-0208",
+      "card_number": 208,
+      "subject_key": "player/taipei-neon/eric-lawson",
+      "subject_name": "Eric Lawson",
+      "team_slug": "taipei-neon",
+      "team_name": "Taipei Neon",
+      "facts": {
+        "age": 31,
+        "dob": "1995-08-15",
+        "bats": "L",
+        "height": "6′2″",
+        "throws": "L",
+        "weight": 198,
+        "factoid": "Photographs the outfield light towers at every park before his first game there.",
+        "position": "LF",
+        "birthplace": "Eugene, Oregon, USA"
+      },
+      "source_image": "assets/images/cards/fieldstock/tpe-07-eric-lawson-front-action-clean.webp",
+      "photo_crop": null
+    },
+    {
+      "id": "FS26-0209",
+      "card_number": 209,
+      "subject_key": "player/taipei-neon/jose-ramirez-tpe",
+      "subject_name": "Jose Ramirez",
+      "team_slug": "taipei-neon",
+      "team_name": "Taipei Neon",
+      "facts": {
+        "age": 34,
+        "dob": "1992-07-14",
+        "bats": "R",
+        "height": "5′11″",
+        "throws": "R",
+        "weight": 205,
+        "factoid": "Has used the same pine-tar rag since his first professional home run.",
+        "position": "RF",
+        "birthplace": "Santiago, Dominican Republic"
+      },
+      "source_image": "assets/images/cards/fieldstock/tpe-08-jose-ramirez-tpe-front-v3-clean.webp",
+      "photo_crop": null
+    },
+    {
+      "id": "FS26-0210",
+      "card_number": 210,
+      "subject_key": "player/taipei-neon/david-morales-tpe",
+      "subject_name": "David Morales",
+      "team_slug": "taipei-neon",
+      "team_name": "Taipei Neon",
+      "facts": {
+        "age": 35,
+        "dob": "1990-11-30",
+        "bats": "R",
+        "height": "6′4″",
+        "throws": "R",
+        "weight": 244,
+        "factoid": "Counts batting-practice swings with brass tokens kept in an old rosin tin.",
+        "position": "DH",
+        "birthplace": "Miami, Florida, USA"
+      },
+      "source_image": "assets/images/cards/fieldstock/tpe-09-david-morales-tpe-front-v3-clean.webp",
+      "photo_crop": null
+    },
+    {
+      "id": "FS26-0211",
+      "card_number": 211,
+      "subject_key": "player/taipei-neon/hiroto-kuzumi",
+      "subject_name": "Hiroto Kuzumi",
+      "team_slug": "taipei-neon",
+      "team_name": "Taipei Neon",
+      "facts": {
+        "age": 27,
+        "dob": "1999-05-03",
+        "bats": "R",
+        "height": "6′3″",
+        "throws": "R",
+        "weight": 194,
+        "factoid": "Keeps the ball from every scoreless start and records the temperature on the seam.",
+        "position": "SP",
+        "birthplace": "Kobe, Japan"
+      },
+      "source_image": "assets/images/cards/fieldstock/tpe-10-hiroto-kuzumi-front-action-clean.webp",
+      "photo_crop": null
+    },
+    {
+      "id": "FS26-0212",
+      "card_number": 212,
+      "subject_key": "player/taipei-neon/joaquin-iturriaga",
+      "subject_name": "Joaquín Iturriaga",
+      "team_slug": "taipei-neon",
+      "team_name": "Taipei Neon",
+      "facts": {
+        "age": 29,
+        "dob": "1997-02-19",
+        "bats": "R",
+        "height": "6′2″",
+        "throws": "R",
+        "weight": 209,
+        "factoid": "Carries a folded diagram of his first professional mound in his glove bag.",
+        "position": "SP",
+        "birthplace": "Valparaíso, Chile"
+      },
+      "source_image": "assets/images/cards/fieldstock/tpe-11-joaquin-iturriaga-front-v3-clean.webp",
+      "photo_crop": null
+    },
+    {
+      "id": "FS26-0213",
+      "card_number": 213,
+      "subject_key": "player/taipei-neon/eitan-ben-sasson",
+      "subject_name": "Eitan Ben-Sasson",
+      "team_slug": "taipei-neon",
+      "team_name": "Taipei Neon",
+      "facts": {
+        "age": 26,
+        "dob": "2000-04-28",
+        "bats": "L",
+        "height": "6′1″",
+        "throws": "L",
+        "weight": 193,
+        "factoid": "Writes one sentence about each start on the back of his lineup-card copy.",
+        "position": "SP",
+        "birthplace": "Haifa, Israel"
+      },
+      "source_image": "assets/images/cards/fieldstock/tpe-12-eitan-ben-sasson-front-v3-clean.webp",
+      "photo_crop": null
+    },
+    {
+      "id": "FS26-0214",
+      "card_number": 214,
+      "subject_key": "player/taipei-neon/tsai-ming-hao",
+      "subject_name": "Tsai Ming Hao",
+      "team_slug": "taipei-neon",
+      "team_name": "Taipei Neon",
+      "facts": {
+        "age": 33,
+        "dob": "1993-01-26",
+        "bats": "R",
+        "height": "6′0″",
+        "throws": "R",
+        "weight": 202,
+        "factoid": "Replaces the bullpen’s worn chalk lines himself before his scheduled starts.",
+        "position": "SP",
+        "birthplace": "Tainan, Taiwan"
+      },
+      "source_image": "assets/images/cards/fieldstock/tpe-13-tsai-ming-hao-front-v3-clean.webp",
+      "photo_crop": null
+    },
+    {
+      "id": "FS26-0215",
+      "card_number": 215,
+      "subject_key": "player/taipei-neon/idris-el-amin",
+      "subject_name": "Idris El-Amin",
+      "team_slug": "taipei-neon",
+      "team_name": "Taipei Neon",
+      "facts": {
+        "age": 31,
+        "dob": "1995-09-08",
+        "bats": "L",
+        "height": "6′5″",
+        "throws": "L",
+        "weight": 201,
+        "factoid": "Stores his pitch-grip sketches in the empty sleeves of his card binder.",
+        "position": "RP",
+        "birthplace": "Khartoum, Sudan"
+      },
+      "source_image": "assets/images/cards/fieldstock/tpe-14-idris-el-amin-front-bullpen-clean.webp",
+      "photo_crop": null
+    },
+    {
+      "id": "FS26-0216",
+      "card_number": 216,
+      "subject_key": "player/taipei-neon/miguel-santos-tpe",
+      "subject_name": "Miguel Santos",
+      "team_slug": "taipei-neon",
+      "team_name": "Taipei Neon",
+      "facts": {
+        "age": 35,
+        "dob": "1991-06-08",
+        "bats": "L",
+        "height": "5′10″",
+        "throws": "L",
+        "weight": 191,
+        "factoid": "Taps the bullpen latch once for each out he needs before taking the mound.",
+        "position": "RP",
+        "birthplace": "Lisbon, Portugal"
+      },
+      "source_image": "assets/images/cards/fieldstock/tpe-15-miguel-santos-tpe-front-v3-clean.webp",
+      "photo_crop": null
+    },
+    {
+      "id": "FS26-0217",
+      "card_number": 217,
+      "subject_key": "player/tijuana-tecnicos/rafael-montoya",
+      "subject_name": "Rafael Montoya",
+      "team_slug": "tijuana-tecnicos",
+      "team_name": "Tijuana Tecnicos",
+      "facts": {
+        "age": 27,
+        "dob": "1999-03-12",
+        "bats": "R",
+        "height": "6′3″",
+        "throws": "R",
+        "weight": 212,
+        "position": "SP",
+        "birthplace": "Tijuana, Baja California",
+        "field_note": "Marks the first pitch of every inning in a pocket scorebook after his start."
+      },
+      "source_image": "assets/images/cards/fieldstock/tij-01-rafael-montoya-front-photo.webp",
+      "photo_crop": null
+    },
+    {
+      "id": "FS26-0218",
+      "card_number": 218,
+      "subject_key": "player/tijuana-tecnicos/diego-verdugo",
+      "subject_name": "Diego Verdugo",
+      "team_slug": "tijuana-tecnicos",
+      "team_name": "Tijuana Tecnicos",
+      "facts": {
+        "age": 30,
+        "dob": "1996-02-24",
+        "bats": "L",
+        "height": "6′1″",
+        "throws": "L",
+        "weight": 196,
+        "position": "SP",
+        "birthplace": "Mexicali, Baja California",
+        "field_note": "Labels each pitching grip with a different colored dot on his practice balls."
+      },
+      "source_image": "assets/images/cards/fieldstock/tij-02-diego-verdugo-front-photo.webp",
+      "photo_crop": null
+    },
+    {
+      "id": "FS26-0219",
+      "card_number": 219,
+      "subject_key": "player/tijuana-tecnicos/esteban-arce",
+      "subject_name": "Owen Mercer",
+      "team_slug": "tijuana-tecnicos",
+      "team_name": "Tijuana Tecnicos",
+      "facts": {
+        "age": 25,
+        "dob": "2001-01-29",
+        "bats": "R",
+        "height": "6′2″",
+        "throws": "R",
+        "weight": 202,
+        "position": "SP",
+        "birthplace": "London, Ontario, Canada",
+        "field_note": "Rebuilds the same paper strike-zone chart before every start, even when the old one is clean."
+      },
+      "source_image": "assets/images/cards/fieldstock/tij-03-esteban-arce-front-photo.webp",
+      "photo_crop": null
+    },
+    {
+      "id": "FS26-0220",
+      "card_number": 220,
+      "subject_key": "player/tijuana-tecnicos/tomas-zepeda",
+      "subject_name": "Darius Cole",
+      "team_slug": "tijuana-tecnicos",
+      "team_name": "Tijuana Tecnicos",
+      "facts": {
+        "age": 29,
+        "dob": "1997-06-13",
+        "bats": "R",
+        "height": "6′6″",
+        "throws": "R",
+        "weight": 218,
+        "position": "SP",
+        "birthplace": "Atlanta, Georgia, USA",
+        "field_note": "Counts every warmup pitch under his breath; the catcher knows to wait for number twelve."
+      },
+      "source_image": "assets/images/cards/fieldstock/tij-04-tomas-zepeda-front-photo.webp",
+      "photo_crop": null
+    },
+    {
+      "id": "FS26-0221",
+      "card_number": 221,
+      "subject_key": "player/tijuana-tecnicos/mauricio-cota",
+      "subject_name": "Mauricio Cota",
+      "team_slug": "tijuana-tecnicos",
+      "team_name": "Tijuana Tecnicos",
+      "facts": {
+        "age": 26,
+        "dob": "2000-09-02",
+        "bats": "R",
+        "height": "5′11″",
+        "throws": "R",
+        "weight": 203,
+        "position": "RP",
+        "birthplace": "Mazatlán, Sinaloa",
+        "field_note": "Carries three identical rosin bags and can tell which one belongs in his bullpen jacket."
+      },
+      "source_image": "assets/images/cards/fieldstock/tij-05-mauricio-cota-front-photo.webp",
+      "photo_crop": null
+    },
+    {
+      "id": "FS26-0222",
+      "card_number": 222,
+      "subject_key": "player/tijuana-tecnicos/ivan-lizarraga",
+      "subject_name": "Iván Lizárraga",
+      "team_slug": "tijuana-tecnicos",
+      "team_name": "Tijuana Tecnicos",
+      "facts": {
+        "age": 28,
+        "dob": "1998-04-23",
+        "bats": "L",
+        "height": "6′1″",
+        "throws": "L",
+        "weight": 188,
+        "position": "RP",
+        "birthplace": "Los Mochis, Sinaloa",
+        "field_note": "Writes one word inside his cap after each appearance; nobody has persuaded him to show the list."
+      },
+      "source_image": "assets/images/cards/fieldstock/tij-06-ivan-lizarraga-front-photo.webp",
+      "photo_crop": null
+    },
+    {
+      "id": "FS26-0223",
+      "card_number": 223,
+      "subject_key": "player/tijuana-tecnicos/julian-ochoa",
+      "subject_name": "Julián Ochoa",
+      "team_slug": "tijuana-tecnicos",
+      "team_name": "Tijuana Tecnicos",
+      "facts": {
+        "age": 24,
+        "dob": "2002-06-09",
+        "bats": "R",
+        "height": "6′4″",
+        "throws": "R",
+        "weight": 205,
+        "position": "RP",
+        "birthplace": "Ensenada, Baja California",
+        "field_note": "Times his bullpen warmups with an old kitchen timer taped inside his glove bag."
+      },
+      "source_image": "assets/images/cards/fieldstock/tij-07-julian-ochoa-front-photo.webp",
+      "photo_crop": null
+    },
+    {
+      "id": "FS26-0224",
+      "card_number": 224,
+      "subject_key": "player/tijuana-tecnicos/sergio-hinojosa",
+      "subject_name": "Kenji Takahashi",
+      "team_slug": "tijuana-tecnicos",
+      "team_name": "Tijuana Tecnicos",
+      "facts": {
+        "age": 31,
+        "dob": "1995-01-18",
+        "bats": "R",
+        "height": "5′11″",
+        "throws": "R",
+        "weight": 224,
+        "position": "C",
+        "birthplace": "Yokohama, Japan",
+        "field_note": "Keeps a spare catcher’s thumb guard tucked behind the lineup card."
+      },
+      "source_image": "assets/images/cards/fieldstock/tij-08-sergio-hinojosa-front-photo.webp",
+      "photo_crop": null
+    },
+    {
+      "id": "FS26-0225",
+      "card_number": 225,
+      "subject_key": "player/tijuana-tecnicos/bruno-valdes",
+      "subject_name": "Bruno Valdés",
+      "team_slug": "tijuana-tecnicos",
+      "team_name": "Tijuana Tecnicos",
+      "facts": {
+        "age": 29,
+        "dob": "1997-05-21",
+        "bats": "L",
+        "height": "6′5″",
+        "throws": "R",
+        "weight": 238,
+        "position": "1B",
+        "birthplace": "Culiacán, Sinaloa",
+        "field_note": "Writes the weight of every new first-base mitt on its storage bag."
+      },
+      "source_image": "assets/images/cards/fieldstock/tij-09-bruno-valdes-front-photo.webp",
+      "photo_crop": null
+    },
+    {
+      "id": "FS26-0226",
+      "card_number": 226,
+      "subject_key": "player/tijuana-tecnicos/matias-camarena",
+      "subject_name": "Min-jae Park",
+      "team_slug": "tijuana-tecnicos",
+      "team_name": "Tijuana Tecnicos",
+      "facts": {
+        "age": 25,
+        "dob": "2001-04-07",
+        "bats": "S",
+        "height": "5′10″",
+        "throws": "R",
+        "weight": 178,
+        "position": "2B",
+        "birthplace": "Busan, South Korea",
+        "field_note": "Practices double-play footwork along the seam between two clubhouse floor tiles."
+      },
+      "source_image": "assets/images/cards/fieldstock/tij-10-matias-camarena-front-photo.webp",
+      "photo_crop": null
+    },
+    {
+      "id": "FS26-0227",
+      "card_number": 227,
+      "subject_key": "player/tijuana-tecnicos/nicolas-paredes",
+      "subject_name": "Sipho Maseko",
+      "team_slug": "tijuana-tecnicos",
+      "team_name": "Tijuana Tecnicos",
+      "facts": {
+        "age": 27,
+        "dob": "1999-08-16",
+        "bats": "R",
+        "height": "6′0″",
+        "throws": "R",
+        "weight": 184,
+        "position": "SS",
+        "birthplace": "Durban, South Africa",
+        "field_note": "Draws each visiting infield’s unusual bounces on the back of his scouting sheet."
+      },
+      "source_image": "assets/images/cards/fieldstock/tij-11-nicolas-paredes-front-photo.webp",
+      "photo_crop": null
+    },
+    {
+      "id": "FS26-0228",
+      "card_number": 228,
+      "subject_key": "player/tijuana-tecnicos/adrian-fierro",
+      "subject_name": "Adrián Fierro",
+      "team_slug": "tijuana-tecnicos",
+      "team_name": "Tijuana Tecnicos",
+      "facts": {
+        "age": 28,
+        "dob": "1998-07-19",
+        "bats": "R",
+        "height": "6′2″",
+        "throws": "R",
+        "weight": 221,
+        "position": "3B",
+        "birthplace": "Chihuahua, Chihuahua",
+        "field_note": "Keeps a notebook of the first hard ground ball hit at him in every new park."
+      },
+      "source_image": "assets/images/cards/fieldstock/tij-12-adrian-fierro-front-photo.webp",
+      "photo_crop": null
+    },
+    {
+      "id": "FS26-0229",
+      "card_number": 229,
+      "subject_key": "player/tijuana-tecnicos/emilio-barron",
+      "subject_name": "Emilio Barrón",
+      "team_slug": "tijuana-tecnicos",
+      "team_name": "Tijuana Tecnicos",
+      "facts": {
+        "age": 26,
+        "dob": "2000-02-08",
+        "bats": "L",
+        "height": "6′0″",
+        "throws": "L",
+        "weight": 192,
+        "position": "LF",
+        "birthplace": "Morelia, Michoacán",
+        "field_note": "Marks the handle of his practice bat with a tiny stripe matching the day’s outfield wind."
+      },
+      "source_image": "assets/images/cards/fieldstock/tij-13-emilio-barron-front-photo.webp",
+      "photo_crop": null
+    },
+    {
+      "id": "FS26-0230",
+      "card_number": 230,
+      "subject_key": "player/tijuana-tecnicos/gael-marrufo",
+      "subject_name": "Gael Marrufo",
+      "team_slug": "tijuana-tecnicos",
+      "team_name": "Tijuana Tecnicos",
+      "facts": {
+        "age": 23,
+        "dob": "2003-07-03",
+        "bats": "R",
+        "height": "6′2″",
+        "throws": "R",
+        "weight": 190,
+        "position": "CF",
+        "birthplace": "La Paz, Baja California Sur",
+        "field_note": "Checks the center-field wind with a strip of lime ribbon before batting practice."
+      },
+      "source_image": "assets/images/cards/fieldstock/tij-14-gael-marrufo-front-photo.webp",
+      "photo_crop": null
+    },
+    {
+      "id": "FS26-0231",
+      "card_number": 231,
+      "subject_key": "player/tijuana-tecnicos/cristobal-saucedo",
+      "subject_name": "Renzo Figueroa",
+      "team_slug": "tijuana-tecnicos",
+      "team_name": "Tijuana Tecnicos",
+      "facts": {
+        "age": 30,
+        "dob": "1996-03-04",
+        "bats": "R",
+        "height": "6′3″",
+        "throws": "R",
+        "weight": 210,
+        "position": "RF",
+        "birthplace": "Ponce, Puerto Rico",
+        "field_note": "Practices the right-field wall route once before every home game, even when no ball is in play."
+      },
+      "source_image": "assets/images/cards/fieldstock/tij-15-cristobal-saucedo-front-photo.webp",
+      "photo_crop": null
+    },
+    {
+      "id": "FS26-0232",
+      "card_number": 232,
+      "subject_key": "player/tijuana-tecnicos/hector-belmonte",
+      "subject_name": "Héctor Belmonte",
+      "team_slug": "tijuana-tecnicos",
+      "team_name": "Tijuana Tecnicos",
+      "facts": {
+        "age": 32,
+        "dob": "1994-05-10",
+        "bats": "L",
+        "height": "6′1″",
+        "throws": "R",
+        "weight": 230,
+        "position": "DH",
+        "birthplace": "Monterrey, Nuevo León",
+        "field_note": "Tapes a fresh batting-glove repair before each series and insists the old patch stays underneath."
+      },
+      "source_image": "assets/images/cards/fieldstock/tij-16-hector-belmonte-front-photo.webp",
+      "photo_crop": null
+    },
+    {
+      "id": "FS26-0233",
+      "card_number": 233,
+      "subject_key": "player/toledo-assembly/ion-vasilev",
+      "subject_name": "Ion Vasilev",
+      "team_slug": "toledo-assembly",
+      "team_name": "Toledo Assembly",
+      "facts": {
+        "age": 29,
+        "bats": "R",
+        "throws": "R",
+        "position": "SP"
+      },
+      "source_image": "assets/teams/toledo-assembly/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0,
+        0,
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "id": "FS26-0234",
+      "card_number": 234,
+      "subject_key": "player/toledo-assembly/farid-azeroual",
+      "subject_name": "Farid Azeroual",
+      "team_slug": "toledo-assembly",
+      "team_name": "Toledo Assembly",
+      "facts": {
+        "age": 27,
+        "bats": "R",
+        "throws": "R",
+        "position": "SP"
+      },
+      "source_image": "assets/teams/toledo-assembly/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0.25,
+        0,
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "id": "FS26-0235",
+      "card_number": 235,
+      "subject_key": "player/toledo-assembly/teemu-salonen",
+      "subject_name": "Teemu Salonen",
+      "team_slug": "toledo-assembly",
+      "team_name": "Toledo Assembly",
+      "facts": {
+        "age": 25,
+        "bats": "L",
+        "throws": "L",
+        "position": "SP"
+      },
+      "source_image": "assets/teams/toledo-assembly/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0.5,
+        0,
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "id": "FS26-0236",
+      "card_number": 236,
+      "subject_key": "player/toledo-assembly/zahir-kamara",
+      "subject_name": "Zahir Kamara",
+      "team_slug": "toledo-assembly",
+      "team_name": "Toledo Assembly",
+      "facts": {
+        "age": 31,
+        "bats": "R",
+        "throws": "R",
+        "position": "SP"
+      },
+      "source_image": "assets/teams/toledo-assembly/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0.75,
+        0,
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "id": "FS26-0237",
+      "card_number": 237,
+      "subject_key": "player/toledo-assembly/caius-dobrescu",
+      "subject_name": "Caius Dobrescu",
+      "team_slug": "toledo-assembly",
+      "team_name": "Toledo Assembly",
+      "facts": {
+        "age": 24,
+        "bats": "R",
+        "throws": "R",
+        "position": "SP"
+      },
+      "source_image": "assets/teams/toledo-assembly/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0,
+        0.25,
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "id": "FS26-0238",
+      "card_number": 238,
+      "subject_key": "player/toledo-assembly/renan-vidigal",
+      "subject_name": "Renan Vidigal",
+      "team_slug": "toledo-assembly",
+      "team_name": "Toledo Assembly",
+      "facts": {
+        "age": 28,
+        "bats": "R",
+        "throws": "R",
+        "position": "RP"
+      },
+      "source_image": "assets/teams/toledo-assembly/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "id": "FS26-0239",
+      "card_number": 239,
+      "subject_key": "player/toledo-assembly/blaise-mathurin",
+      "subject_name": "Blaise Mathurin",
+      "team_slug": "toledo-assembly",
+      "team_name": "Toledo Assembly",
+      "facts": {
+        "age": 26,
+        "bats": "L",
+        "throws": "R",
+        "position": "RP"
+      },
+      "source_image": "assets/teams/toledo-assembly/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0.5,
+        0.25,
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "id": "FS26-0240",
+      "card_number": 240,
+      "subject_key": "player/toledo-assembly/jun-seo-kang",
+      "subject_name": "Jun-seo Kang",
+      "team_slug": "toledo-assembly",
+      "team_name": "Toledo Assembly",
+      "facts": {
+        "age": 30,
+        "bats": "R",
+        "throws": "R",
+        "position": "RP"
+      },
+      "source_image": "assets/teams/toledo-assembly/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0.75,
+        0.25,
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "id": "FS26-0241",
+      "card_number": 241,
+      "subject_key": "player/toledo-assembly/omar-nazzal",
+      "subject_name": "Omar Nazzal",
+      "team_slug": "toledo-assembly",
+      "team_name": "Toledo Assembly",
+      "facts": {
+        "age": 29,
+        "bats": "R",
+        "throws": "R",
+        "position": "C"
+      },
+      "source_image": "assets/teams/toledo-assembly/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0,
+        0.5,
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "id": "FS26-0242",
+      "card_number": 242,
+      "subject_key": "player/toledo-assembly/caleb-ardoin",
+      "subject_name": "Caleb Ardoin",
+      "team_slug": "toledo-assembly",
+      "team_name": "Toledo Assembly",
+      "facts": {
+        "age": 32,
+        "bats": "L",
+        "throws": "R",
+        "position": "1B"
+      },
+      "source_image": "assets/teams/toledo-assembly/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0.25,
+        0.5,
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "id": "FS26-0243",
+      "card_number": 243,
+      "subject_key": "player/toledo-assembly/samir-benyahia",
+      "subject_name": "Samir Benyahia",
+      "team_slug": "toledo-assembly",
+      "team_name": "Toledo Assembly",
+      "facts": {
+        "age": 23,
+        "bats": "S",
+        "throws": "R",
+        "position": "2B"
+      },
+      "source_image": "assets/teams/toledo-assembly/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0.5,
+        0.5,
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "id": "FS26-0244",
+      "card_number": 244,
+      "subject_key": "player/toledo-assembly/evan-trelawny",
+      "subject_name": "Evan Trelawny",
+      "team_slug": "toledo-assembly",
+      "team_name": "Toledo Assembly",
+      "facts": {
+        "age": 27,
+        "bats": "R",
+        "throws": "R",
+        "position": "SS"
+      },
+      "source_image": "assets/teams/toledo-assembly/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0.75,
+        0.5,
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "id": "FS26-0245",
+      "card_number": 245,
+      "subject_key": "player/toledo-assembly/kwame-ofori",
+      "subject_name": "Kwame Ofori",
+      "team_slug": "toledo-assembly",
+      "team_name": "Toledo Assembly",
+      "facts": {
+        "age": 28,
+        "bats": "R",
+        "throws": "R",
+        "position": "3B"
+      },
+      "source_image": "assets/teams/toledo-assembly/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0,
+        0.75,
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "id": "FS26-0246",
+      "card_number": 246,
+      "subject_key": "player/toledo-assembly/mateo-acebedo",
+      "subject_name": "Mateo Acebedo",
+      "team_slug": "toledo-assembly",
+      "team_name": "Toledo Assembly",
+      "facts": {
+        "age": 24,
+        "bats": "L",
+        "throws": "L",
+        "position": "LF"
+      },
+      "source_image": "assets/teams/toledo-assembly/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0.25,
+        0.75,
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "id": "FS26-0247",
+      "card_number": 247,
+      "subject_key": "player/toledo-assembly/niko-velkovic",
+      "subject_name": "Niko Velković",
+      "team_slug": "toledo-assembly",
+      "team_name": "Toledo Assembly",
+      "facts": {
+        "age": 26,
+        "bats": "R",
+        "throws": "R",
+        "position": "CF"
+      },
+      "source_image": "assets/teams/toledo-assembly/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0.5,
+        0.75,
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "id": "FS26-0248",
+      "card_number": 248,
+      "subject_key": "player/toledo-assembly/jasper-quade",
+      "subject_name": "Jasper Quade",
+      "team_slug": "toledo-assembly",
+      "team_name": "Toledo Assembly",
+      "facts": {
+        "age": 31,
+        "bats": "R",
+        "throws": "R",
+        "position": "RF"
+      },
+      "source_image": "assets/teams/toledo-assembly/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0.75,
+        0.75,
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "id": "FS26-0249",
+      "card_number": 249,
+      "subject_key": "player/vancouver-current/iseul-kang",
+      "subject_name": "Iseul Kang",
+      "team_slug": "vancouver-current",
+      "team_name": "Vancouver Current",
+      "facts": {
+        "age": 27,
+        "bats": "R",
+        "throws": "R",
+        "position": "SP"
+      },
+      "source_image": "assets/teams/vancouver-current/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0,
+        0,
+        0.25,
+        0.3333333333333333
+      ]
+    },
+    {
+      "id": "FS26-0250",
+      "card_number": 250,
+      "subject_key": "player/vancouver-current/dane-winslow",
+      "subject_name": "Dane Winslow",
+      "team_slug": "vancouver-current",
+      "team_name": "Vancouver Current",
+      "facts": {
+        "age": 30,
+        "bats": "L",
+        "throws": "L",
+        "position": "SP"
+      },
+      "source_image": "assets/teams/vancouver-current/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0.25,
+        0,
+        0.25,
+        0.3333333333333333
+      ]
+    },
+    {
+      "id": "FS26-0251",
+      "card_number": 251,
+      "subject_key": "player/vancouver-current/maksim-zorya",
+      "subject_name": "Maksim Zorya",
+      "team_slug": "vancouver-current",
+      "team_name": "Vancouver Current",
+      "facts": {
+        "age": 25,
+        "bats": "R",
+        "throws": "R",
+        "position": "SP"
+      },
+      "source_image": "assets/teams/vancouver-current/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0.5,
+        0,
+        0.25,
+        0.3333333333333333
+      ]
+    },
+    {
+      "id": "FS26-0252",
+      "card_number": 252,
+      "subject_key": "player/vancouver-current/raine-talukder",
+      "subject_name": "Raine Talukder",
+      "team_slug": "vancouver-current",
+      "team_name": "Vancouver Current",
+      "facts": {
+        "age": 29,
+        "bats": "R",
+        "throws": "L",
+        "position": "SP"
+      },
+      "source_image": "assets/teams/vancouver-current/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0.75,
+        0,
+        0.25,
+        0.3333333333333333
+      ]
+    },
+    {
+      "id": "FS26-0253",
+      "card_number": 253,
+      "subject_key": "player/vancouver-current/emilio-cordoba",
+      "subject_name": "Emilio Córdoba",
+      "team_slug": "vancouver-current",
+      "team_name": "Vancouver Current",
+      "facts": {
+        "age": 26,
+        "bats": "L",
+        "throws": "L",
+        "position": "SP"
+      },
+      "source_image": "assets/teams/vancouver-current/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0,
+        0.3333333333333333,
+        0.25,
+        0.3333333333333333
+      ]
+    },
+    {
+      "id": "FS26-0254",
+      "card_number": 254,
+      "subject_key": "player/vancouver-current/kofi-ansah",
+      "subject_name": "Kofi Ansah",
+      "team_slug": "vancouver-current",
+      "team_name": "Vancouver Current",
+      "facts": {
+        "age": 28,
+        "bats": "R",
+        "throws": "R",
+        "position": "RP"
+      },
+      "source_image": "assets/teams/vancouver-current/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0.25,
+        0.3333333333333333,
+        0.25,
+        0.3333333333333333
+      ]
+    },
+    {
+      "id": "FS26-0255",
+      "card_number": 255,
+      "subject_key": "player/vancouver-current/nico-penfold",
+      "subject_name": "Nico Penfold",
+      "team_slug": "vancouver-current",
+      "team_name": "Vancouver Current",
+      "facts": {
+        "age": 24,
+        "bats": "L",
+        "throws": "R",
+        "position": "RP"
+      },
+      "source_image": "assets/images/players/vancouver-current/nico-penfold-v2.webp",
+      "photo_crop": null
+    },
+    {
+      "id": "FS26-0256",
+      "card_number": 256,
+      "subject_key": "player/vancouver-current/yohei-arakida",
+      "subject_name": "Yohei Arakida",
+      "team_slug": "vancouver-current",
+      "team_name": "Vancouver Current",
+      "facts": {
+        "age": 31,
+        "bats": "R",
+        "throws": "R",
+        "position": "RP"
+      },
+      "source_image": "assets/teams/vancouver-current/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0.5,
+        0.3333333333333333,
+        0.25,
+        0.3333333333333333
+      ]
+    },
+    {
+      "id": "FS26-0257",
+      "card_number": 257,
+      "subject_key": "player/vancouver-current/silas-boudreau",
+      "subject_name": "Silas Boudreau",
+      "team_slug": "vancouver-current",
+      "team_name": "Vancouver Current",
+      "facts": {
+        "age": 29,
+        "bats": "R",
+        "throws": "R",
+        "position": "C"
+      },
+      "source_image": "assets/images/players/vancouver-current/silas-boudreau-v2.webp",
+      "photo_crop": null
+    },
+    {
+      "id": "FS26-0258",
+      "card_number": 258,
+      "subject_key": "player/vancouver-current/eamon-kerr",
+      "subject_name": "Eamon Kerr",
+      "team_slug": "vancouver-current",
+      "team_name": "Vancouver Current",
+      "facts": {
+        "age": 32,
+        "bats": "L",
+        "throws": "R",
+        "position": "1B"
+      },
+      "source_image": "assets/images/players/vancouver-current/eamon-kerr-v2.webp",
+      "photo_crop": null
+    },
+    {
+      "id": "FS26-0259",
+      "card_number": 259,
+      "subject_key": "player/vancouver-current/soraya-jafari",
+      "subject_name": "Soraya Jafari",
+      "team_slug": "vancouver-current",
+      "team_name": "Vancouver Current",
+      "facts": {
+        "age": 26,
+        "bats": "S",
+        "throws": "R",
+        "position": "2B"
+      },
+      "source_image": "assets/teams/vancouver-current/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0.75,
+        0.3333333333333333,
+        0.25,
+        0.3333333333333333
+      ]
+    },
+    {
+      "id": "FS26-0260",
+      "card_number": 260,
+      "subject_key": "player/vancouver-current/alejo-santillan",
+      "subject_name": "Alejo Santillán",
+      "team_slug": "vancouver-current",
+      "team_name": "Vancouver Current",
+      "facts": {
+        "age": 23,
+        "bats": "R",
+        "throws": "R",
+        "position": "SS"
+      },
+      "source_image": "assets/images/players/vancouver-current/alejo-santillan-v2.webp",
+      "photo_crop": null
+    },
+    {
+      "id": "FS26-0261",
+      "card_number": 261,
+      "subject_key": "player/vancouver-current/roman-velasco",
+      "subject_name": "Roman Velasco",
+      "team_slug": "vancouver-current",
+      "team_name": "Vancouver Current",
+      "facts": {
+        "age": 28,
+        "bats": "R",
+        "throws": "R",
+        "position": "3B"
+      },
+      "source_image": "assets/teams/vancouver-current/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0,
+        0.6666666666666666,
+        0.25,
+        0.3333333333333333
+      ]
+    },
+    {
+      "id": "FS26-0262",
+      "card_number": 262,
+      "subject_key": "player/vancouver-current/taj-adelman",
+      "subject_name": "Taj Adelman",
+      "team_slug": "vancouver-current",
+      "team_name": "Vancouver Current",
+      "facts": {
+        "age": 27,
+        "bats": "L",
+        "throws": "L",
+        "position": "LF"
+      },
+      "source_image": "assets/teams/vancouver-current/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0.25,
+        0.6666666666666666,
+        0.25,
+        0.3333333333333333
+      ]
+    },
+    {
+      "id": "FS26-0263",
+      "card_number": 263,
+      "subject_key": "player/vancouver-current/marcell-lind",
+      "subject_name": "Marcell Lind",
+      "team_slug": "vancouver-current",
+      "team_name": "Vancouver Current",
+      "facts": {
+        "age": 25,
+        "bats": "R",
+        "throws": "R",
+        "position": "CF"
+      },
+      "source_image": "assets/teams/vancouver-current/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0.5,
+        0.6666666666666666,
+        0.25,
+        0.3333333333333333
+      ]
+    },
+    {
+      "id": "FS26-0264",
+      "card_number": 264,
+      "subject_key": "player/vancouver-current/oziel-narvaez",
+      "subject_name": "Oziel Narváez",
+      "team_slug": "vancouver-current",
+      "team_name": "Vancouver Current",
+      "facts": {
+        "age": 30,
+        "bats": "R",
+        "throws": "R",
+        "position": "RF"
+      },
+      "source_image": "assets/teams/vancouver-current/images/player-atlas-v2.webp",
+      "photo_crop": [
+        0.75,
+        0.6666666666666666,
+        0.25,
+        0.3333333333333333
+      ]
+    }
+  ]
+}

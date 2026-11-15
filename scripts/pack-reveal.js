@@ -47,9 +47,9 @@
  }
  function card(edition,copy){
   const wrap=node('div',null,'pack-owned-card');wrap.dataset.variant=edition.variant.toLowerCase();
-  const player={...edition.facts.player,frozen_artwork:true};
+  const physical=edition.facts.physical_copies?.[String(copy.serial)]||(edition.quantity>100?edition.facts.photographic_master:null);let physicalFront=false;
+  const player={...edition.facts.player,frozen_artwork:true,skip_photograph:!!physical?.front};
   wrap.append(GLBPlayerCards.createCard(player,edition.facts.record,{link:false,physical:true,frozen:true}));
-  const physical=edition.facts.physical_copies?.[String(copy.serial)];let physicalFront=false;
   if(physical){
    for(const [face,path] of [['.fs-front',physical.front],['.fs-back',physical.back]]){
     if(!path)continue;

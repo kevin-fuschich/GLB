@@ -22,7 +22,7 @@ returns jsonb language sql stable security definer set search_path='' as $$
  select jsonb_build_object(
  'user_id',p.user_id,'display_name',s.display_name,'bio',s.bio,'favorite_club',s.favorite_club,
  'theme',s.theme,'avatar',s.avatar,'published',s.published,
- 'cards',(select coalesce(jsonb_agg(jsonb_build_object('name',e.name,'variant',e.variant,'serial',c.serial,'quantity',e.quantity,'front_image',e.front_image) order by array_position(s.featured_copies,c.id)),'[]'::jsonb)
+ 'cards',(select coalesce(jsonb_agg(jsonb_build_object('name',e.name,'variant',e.variant,'serial',c.serial,'quantity',e.quantity,'front_image',coalesce(e.facts->'physical_copies'->c.serial::text->>'front',case when e.quantity>100 then e.facts->'photographic_master'->>'front' end,e.front_image),'back_image',coalesce(e.facts->'physical_copies'->c.serial::text->>'back',case when e.quantity>100 then e.facts->'photographic_master'->>'back' end,e.back_image),'facts',e.facts) order by array_position(s.featured_copies,c.id)),'[]'::jsonb)
  from glb_private.copies c join public.glb_editions e on e.id=c.edition_id join public.glb_sets st on st.id=e.set_id
  where c.owner_id=s.owner_id and c.id=any(s.featured_copies) and c.opened_at is not null and st.release_at<=now()),
  'claims',(select coalesce(jsonb_agg(jsonb_build_object('artifact_id',c.artifact_id,'artifact_name',c.artifact_name,'body',c.body) order by array_position(s.featured_claims,c.artifact_id)),'[]'::jsonb) from public.glb_claims c where c.owner_id=s.owner_id and c.artifact_id=any(s.featured_claims)),

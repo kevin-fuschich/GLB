@@ -144,9 +144,9 @@
   // Crop only the photograph out of older printed artwork at display time.
   // Source files and their original card designs remain archival assets.
   function photograph(player) {
-    const vancouver = player.teamSlug === 'vancouver-current' && vancouverPortraits[player.slug];
+    const vancouver = !player.frozen_artwork && player.teamSlug === 'vancouver-current' && vancouverPortraits[player.slug];
     if (vancouver?.crop) player={...player,photo_crop:vancouver.crop};
-    const recovered = recoveredPortrait(player, {photoOnly:true});
+    const recovered = player.frozen_artwork ? null : recoveredPortrait(player, {photoOnly:true});
     if (recovered) return recovered;
     const art = cardFront(player);
     const portrait = photoPath(player);
@@ -240,7 +240,7 @@
     });
     return profile;
   }
-  function createCard(player, record, {link=true,physical=true}={}) {
+  function createCard(player, record, {link=true,physical=true,frozen=false}={}) {
     if(!physical && !location.pathname.endsWith('/album.html')) return createPlayerProfile(player,record,{link});
     const card=text('article','','fs-card');
     const button=document.createElement('button');button.type='button';button.className='fs-flipper';
@@ -268,6 +268,7 @@
     button.append(inner);card.append(button,text('p','Select card to flip','fs-flip-note'));
     if(link){const file=text('a','Player file →','fs-file');file.href=`player.html?team=${encodeURIComponent(player.teamSlug)}&player=${encodeURIComponent(player.slug)}`;card.append(file);}
     paint(player,record);
+    if(frozen)return card;
     // Read canonical roster details and one shared season request for all cards on the page.
     const roster=readRoster(player.teamSlug).catch(()=>null);
     seasonRequest ||= loadSeasons().catch(()=>null);
@@ -291,3 +292,4 @@
   function createPhysicalCard(player,options) { return createCard(player,null,options); }
   window.GLBPlayerCards = {loadSeasons,careerFor,createCard,photoPath,recoveredPortrait,cardFront,createPhysicalCard,photograph};
 })();
+

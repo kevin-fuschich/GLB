@@ -49,7 +49,25 @@
   const wrap=node('div',null,'pack-owned-card');wrap.dataset.variant=edition.variant.toLowerCase();
   const player={...edition.facts.player,frozen_artwork:true};
   wrap.append(GLBPlayerCards.createCard(player,edition.facts.record,{link:false,physical:true,frozen:true}));
-  if(wrap.dataset.variant==='refractor')refractorLight(wrap);
+  const physical=edition.facts.physical_copies?.[String(copy.serial)];let physicalFront=false;
+  if(physical){
+   for(const [face,path] of [['.fs-front',physical.front],['.fs-back',physical.back]]){
+    if(!path)continue;
+    const url=new URL(path,location.href);if(url.origin!==location.origin)continue;
+    const target=wrap.querySelector(face);if(!target)continue;
+    const image=node('img',null,'fs-photographed-print');image.src=url.href;image.alt=`${edition.name} · ${edition.variant} · ${copy.serial}/${edition.quantity} · ${face==='.fs-front'?'front':'back'}`;
+    target.replaceChildren(image);target.dataset.photoPrint='true';wrap.dataset.photoPrint='true';if(face==='.fs-front')physicalFront=true;
+   }
+  }
+  if(!physicalFront&&['refractor','black'].includes(wrap.dataset.variant))refractorLight(wrap);
+  if(edition.quantity>0&&edition.quantity<=100){
+   wrap.dataset.numbered='true';
+   const serial=`${copy.serial}/${edition.quantity}`;
+   for(const face of ['.fs-front','.fs-back']){
+    const target=wrap.querySelector(face);
+    if(target&&target.dataset.photoPrint!=='true'){const stamp=node('span',serial,'fs-serial-stamp');stamp.setAttribute('aria-label',`Serial ${copy.serial} of ${edition.quantity}`);target.append(stamp);}
+   }
+  }
   const label=node('p',`${edition.variant} · ${copy.serial}/${edition.quantity}`,'pack-edition-label');
   wrap.append(label);return wrap;
  }

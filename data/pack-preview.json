@@ -12,7 +12,7 @@
       "player": {
         "dob": "1997-03-15",
         "birthplace": "Dakar, Senegal",
-        "height": "6\u20322\u2033",
+        "height": "6′2″",
         "weight": 230,
         "field_note": "Restores secondhand bicycles and gives them away at the end of each winter.",
         "bio": "Idris Kourouma is a starting pitcher for the Albuquerque Aeros. His story is open to contributions, alongside the official record of his 2026 season.",
@@ -128,7 +128,7 @@
         "field_note": "Keeps a small vial of mound dirt from every ballpark where he earns a win. Each is labeled with the final pitch and given to his father after the season.",
         "dob": "1997-02-18",
         "birthplace": "Missoula, Montana",
-        "height": "6\u20323\u2033",
+        "height": "6′3″",
         "weight": 212,
         "name": "Kellan Brynden",
         "slug": "kellan-brynden",
@@ -240,7 +240,7 @@
       "player": {
         "dob": "1999-01-01",
         "birthplace": "Kobe, Japan",
-        "height": "6\u20321\u2033",
+        "height": "6′1″",
         "weight": 193,
         "field_note": "Collects small ceramic tea cups but uses the chipped one every morning.",
         "name": "Hiroto Kurobane",
@@ -341,7 +341,12 @@
       },
       "renderer": "fieldstock-native-v1",
       "release": "2026 Base",
-      "card_number": 112
+      "card_number": 112,
+      "physical_copies": {
+        "41": {
+          "front": "assets/fieldstock/proofs/hiroto-kurobane-refractor-41-front.webp"
+        }
+      }
     },
     "copy_id": "preview-3",
     "serial": 41
@@ -366,10 +371,10 @@
         "photo": "kaito-ueda.jpg",
         "dob": "2001-03-18",
         "birthplace": "Yokohama, Japan",
-        "height": "6\u20320\u2033",
+        "height": "6′0″",
         "weight": 182,
-        "bio": "Marks each park\u2019s warning-track depth in shoe lengths before batting practice.",
-        "factoid": "Marks each park\u2019s warning-track depth in shoe lengths before batting practice.",
+        "bio": "Marks each park’s warning-track depth in shoe lengths before batting practice.",
+        "factoid": "Marks each park’s warning-track depth in shoe lengths before batting practice.",
         "card_id": "FS26-0202",
         "claim_open": true,
         "card_front_alt": "Kaito Ueda in left profile with a bat at the on-deck circle",
@@ -457,7 +462,12 @@
       },
       "renderer": "fieldstock-native-v1",
       "release": "2026 Base",
-      "card_number": 202
+      "card_number": 202,
+      "physical_copies": {
+        "7": {
+          "front": "assets/fieldstock/proofs/kaito-ueda-gold-7-front.webp"
+        }
+      }
     },
     "copy_id": "preview-4",
     "serial": 7
@@ -475,7 +485,7 @@
       "player": {
         "dob": "1999-05-14",
         "birthplace": "Seoul, South Korea",
-        "height": "6\u20324\u2033",
+        "height": "6′4″",
         "weight": 214,
         "field_note": "Can make dumplings faster than anyone in the family will admit.",
         "name": "Iseul Kang",
@@ -575,7 +585,13 @@
       },
       "renderer": "fieldstock-native-v1",
       "release": "2026 Base",
-      "card_number": 249
+      "card_number": 249,
+      "physical_copies": {
+        "3": {
+          "front": "assets/fieldstock/proofs/iseul-kang-black-3-front.webp",
+          "back": "assets/fieldstock/proofs/iseul-kang-black-3-back.webp"
+        }
+      }
     },
     "copy_id": "preview-5",
     "serial": 3

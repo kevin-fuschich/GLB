@@ -58,3 +58,35 @@
  @keyframes refractorLight{from{background-position:10% 25%,center}to{background-position:90% 75%,center}}
 }
 @media(prefers-reduced-motion:reduce){.pack-owned-card[data-variant=refractor] .fs-front::after{animation:none}}
+
+/* Serial stamps are part of the printed object, on every edition /100 or rarer. */
+.pack-owned-card .fs-serial-stamp{display:block;flex:none;align-self:flex-end;position:relative;z-index:7;padding:4px 6px;margin:1px 4px 4px;font:700 3.5cqw/1.1 'Courier New',monospace;letter-spacing:.12em;color:#b7923d;background:linear-gradient(112deg,#886426 0%,#f8e9b6 25%,#bc943f 40%,#fff2c5 52%,#98702b 73%,#e8cd84 100%);background-clip:text;-webkit-background-clip:text;-webkit-text-fill-color:transparent;filter:drop-shadow(0 1px 0 #4f3a1c90)}
+.pack-owned-card[data-numbered=true] .fs-back{padding-bottom:25px!important}
+.pack-owned-card .fs-back>.fs-serial-stamp{position:absolute;bottom:5px;right:7px;margin:0;font-size:3.1cqw}
+/* Black /5: black chrome, platinum foil and a prismatic cut edge. */
+.pack-owned-card[data-variant=black]{--foil-x:50%;--foil-y:50%}
+.pack-owned-card[data-variant=black] .fs-inner{background:linear-gradient(125deg,#05090d,#45505b 22%,#0c1118 38%,#1a2533 65%,#06090e);border:3px solid transparent;border-image:linear-gradient(135deg,#8a9ead,#d4c1e5 18%,#05090d 28%,#98cdd0 48%,#151a23 63%,#d4c9b3 81%,#4e6174) 1}
+.pack-owned-card[data-variant=black] .fs-front{background:linear-gradient(120deg,#080d13,#293440 42%,#090f16 70%)!important;isolation:isolate}
+.pack-owned-card[data-variant=black] .fs-front-brand{background:linear-gradient(110deg,#05090d,#343e49 40%,#0a111a)!important;border-bottom:1px solid #9aadb8!important}
+.pack-owned-card[data-variant=black] .fs-brand img{filter:grayscale(1) brightness(1.7)}
+.pack-owned-card[data-variant=black] .fs-nameplate{background:linear-gradient(115deg,#080d14,#293441 38%,#0a111a)!important;border-top:1px solid #b0bdc7!important;color:#edf4f8!important}
+.pack-owned-card[data-variant=black] .fs-nameplate::after{background:linear-gradient(135deg,transparent 45%,#d2dee7 46% 70%,transparent 71%)}
+.pack-owned-card[data-variant=black] .fs-club,.pack-owned-card[data-variant=black] .fs-year{color:#c0cdd9!important}
+.pack-owned-card[data-variant=black] .fs-photo{border-color:#a8b9c8!important}
+.pack-owned-card[data-variant=black] .fs-front::after{content:'';position:absolute;inset:0;z-index:5;pointer-events:none;background-image:linear-gradient(115deg,transparent 25%,#92abb517 37%,#fff6 45%,#c6a9eb2b 49%,#86c4cd1f 54%,transparent 65%)!important;background-size:280% 100%!important;background-position:var(--foil-x) 50%;mix-blend-mode:screen!important;opacity:.65}
+.pack-owned-card[data-variant=black] .fs-serial-stamp{font-size:4.5cqw;letter-spacing:.16em;background-image:linear-gradient(110deg,#849aaa,#f7fbff 25%,#93aabb 43%,#fff 55%,#8da2b4 78%,#d9e6ef);filter:drop-shadow(0 1px 0 #000);margin-top:4px}
+.pack-owned-card[data-variant=black] .fs-back>.fs-serial-stamp{font-size:3.5cqw;background-image:linear-gradient(110deg,#526775,#9cabb5,#4c606f);filter:none}
+@media(prefers-reduced-motion:no-preference){
+ .pack-owned-card[data-variant=black] .fs-front::after{animation:blackChromeLight 8s ease-in-out infinite alternate}
+ .pack-owned-card[data-variant=black][data-foil-active=true] .fs-front::after{animation:none}
+ @keyframes blackChromeLight{from{background-position:5% 50%}to{background-position:95% 50%}}
+}
+@media(prefers-reduced-motion:reduce){.pack-owned-card[data-variant=black] .fs-front::after{animation:none}}
+
+/* Photographic copy proofs replace printed layers, never another copy's number. */
+.pack-owned-card[data-photo-print=true] .fs-flipper{background:none;isolation:auto}
+.pack-owned-card[data-photo-print=true] .fs-inner{inset:0;border:0;background:transparent}
+.pack-owned-card[data-photo-print=true] .fs-face{border:0;padding:0!important;background:#eee6d1}
+.pack-owned-card .fs-face[data-photo-print=true]::before,.pack-owned-card .fs-face[data-photo-print=true]::after{display:none!important}
+.pack-owned-card .fs-face[data-photo-print=true]{border:0!important;background:none!important}
+.pack-owned-card .fs-photographed-print{display:block;width:100%;height:100%;object-fit:contain}

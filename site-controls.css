@@ -6,7 +6,10 @@ box-sizing:border-box;display:inline-flex;align-items:center;justify-content:cen
 body :is(a.btn,a.button,a.primary-link,a.account-action,a.sponsor-button,.glb-universe-primary,.glb-universe-secondary,.tol-actions a,button.tol-view-all,button.glb-view-all,button.bio-submit,.card-claim-form button,.account-shell button,main button[type="submit"],#previewContribution):hover{background:var(--glb-action-hover)!important;border-color:var(--glb-action-hover)!important;color:var(--glb-action-ink)!important}
 body :is(a.button.light,a.btn.secondary,a.account-action.secondary,.glb-universe-secondary,.tol-actions a:not(:first-child),button.tol-view-all,button.glb-view-all,.account-shell button.secondary,#previewContribution){background:transparent!important;border-color:#78948e!important;color:#173d36!important}
 body :is(a.button.light,a.btn.secondary,a.account-action.secondary,.glb-universe-secondary,.tol-actions a:not(:first-child),button.tol-view-all,button.glb-view-all,.account-shell button.secondary,#previewContribution):hover{background:#e4f5ee!important}
-body :is(.tol-hero,.glb-universe) :is(.tol-actions a:not(:first-child),.glb-universe-secondary){border-color:#b7efda!important;color:#d3f8e9!important}
+body :is(.tol-hero,.glb-universe-invite) :is(.tol-actions a:not(:first-child),.glb-universe-secondary){border-color:#b7efda!important;color:#d3f8e9!important}
 body :is(a.btn,a.button,a.primary-link,a.account-action,a.sponsor-button,.glb-universe-primary,.glb-universe-secondary,.tol-actions a,button.tol-view-all,button.glb-view-all,button.bio-submit,.card-claim-form button,.account-shell button,main button[type="submit"],#previewContribution):focus-visible{outline:3px solid #33866f;outline-offset:3px}
 body :is(.account-shell button,main button[type="submit"],#previewContribution):disabled{opacity:.55;cursor:not-allowed}
 @media(prefers-reduced-motion:reduce){body :is(a.btn,a.button,.account-shell button){transition:none}}
+
+body :is(.tol-hero,.glb-universe-invite) :is(.tol-actions a:not(:first-child),.glb-universe-secondary):hover{background:#e4f5ee!important;color:#0b1e33!important}
+body .glb-universe-primary:hover{transform:none}

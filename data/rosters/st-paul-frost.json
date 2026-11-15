@@ -2,6 +2,12 @@
   "team": "St. Paul Frost",
   "players": [
     {
+      "dob": "1997-05-02",
+      "birthplace": "Minneapolis, Minnesota",
+      "height": "6′3″",
+      "weight": 225,
+      "field_note": "Restores old desk lamps and knows which thrift shops stock replacement shades.",
+      "bio": "Caleb Warnock plays SP for the St. Paul Frost. Restores old desk lamps and knows which thrift shops stock replacement shades.",
       "name": "Caleb Warnock",
       "slug": "caleb-warnock",
       "position": "SP",
@@ -11,13 +17,21 @@
       "photo": "caleb-warnock.jpg",
       "photo_source": "assets/teams/st-paul-frost/images/player-atlas-v2.webp",
       "photo_crop": [
-        0.0,
-        0.0,
+        0,
+        0,
         0.25,
         0.25
-      ]
+      ],
+      "card_id": "STP-01",
+      "claim_open": true
     },
     {
+      "dob": "1999-02-13",
+      "birthplace": "Split, Croatia",
+      "height": "6′4″",
+      "weight": 232,
+      "field_note": "Makes his own hot sauce, naming each batch after a street.",
+      "bio": "Miguel Alcázar plays SP for the St. Paul Frost. Makes his own hot sauce, naming each batch after a street.",
       "name": "Miguel Alcázar",
       "slug": "miguel-alcazar",
       "position": "SP",
@@ -28,12 +42,20 @@
       "photo_source": "assets/teams/st-paul-frost/images/player-atlas-v2.webp",
       "photo_crop": [
         0.25,
-        0.0,
+        0,
         0.25,
         0.25
-      ]
+      ],
+      "card_id": "STP-02",
+      "claim_open": true
     },
     {
+      "dob": "1995-09-24",
+      "birthplace": "Tallinn, Estonia",
+      "height": "6′5″",
+      "weight": 200,
+      "field_note": "Trades sourdough starters with friends but rarely bakes the same loaf twice.",
+      "bio": "Ryan Keswick plays SP for the St. Paul Frost. Trades sourdough starters with friends but rarely bakes the same loaf twice.",
       "name": "Ryan Keswick",
       "slug": "ryan-keswick",
       "position": "SP",
@@ -44,12 +66,20 @@
       "photo_source": "assets/teams/st-paul-frost/images/player-atlas-v2.webp",
       "photo_crop": [
         0.5,
-        0.0,
+        0,
         0.25,
         0.25
-      ]
+      ],
+      "card_id": "STP-03",
+      "claim_open": true
     },
     {
+      "dob": "2000-06-08",
+      "birthplace": "Santo Domingo, Dominican Republic",
+      "height": "6′1″",
+      "weight": 207,
+      "field_note": "Knits scarves with long, deliberately mismatched stripes.",
+      "bio": "Tae-ho Choi plays SP for the St. Paul Frost. Knits scarves with long, deliberately mismatched stripes.",
       "name": "Tae-ho Choi",
       "slug": "tae-ho-choi",
       "position": "SP",
@@ -60,12 +90,20 @@
       "photo_source": "assets/teams/st-paul-frost/images/player-atlas-v2.webp",
       "photo_crop": [
         0.75,
-        0.0,
+        0,
         0.25,
         0.25
-      ]
+      ],
+      "card_id": "STP-04",
+      "claim_open": true
     },
     {
+      "dob": "2002-03-19",
+      "birthplace": "Kingston, Jamaica",
+      "height": "6′2″",
+      "weight": 214,
+      "field_note": "Has a pocket notebook devoted entirely to interesting shop names.",
+      "bio": "Nolan Brix plays SP for the St. Paul Frost. Has a pocket notebook devoted entirely to interesting shop names.",
       "name": "Nolan Brix",
       "slug": "nolan-brix",
       "position": "SP",
@@ -75,13 +113,21 @@
       "photo": "nolan-brix.jpg",
       "photo_source": "assets/teams/st-paul-frost/images/player-atlas-v2.webp",
       "photo_crop": [
-        0.0,
+        0,
         0.25,
         0.25,
         0.25
-      ]
+      ],
+      "card_id": "STP-05",
+      "claim_open": true
     },
     {
+      "dob": "1998-10-03",
+      "birthplace": "Rotterdam, Netherlands",
+      "height": "6′3″",
+      "weight": 221,
+      "field_note": "Organizes an annual neighborhood soup swap.",
+      "bio": "Darius Collins plays RP for the St. Paul Frost. Organizes an annual neighborhood soup swap.",
       "name": "Darius Collins",
       "slug": "darius-collins",
       "position": "RP",
@@ -95,9 +141,17 @@
         0.25,
         0.25,
         0.25
-      ]
+      ],
+      "card_id": "STP-06",
+      "claim_open": true
     },
     {
+      "dob": "2001-07-14",
+      "birthplace": "Valparaíso, Chile",
+      "height": "6′4″",
+      "weight": 228,
+      "field_note": "Can mend a fishing net although he does not enjoy fishing.",
+      "bio": "Antonio Vélez plays RP for the St. Paul Frost. Can mend a fishing net although he does not enjoy fishing.",
       "name": "Antonio Vélez",
       "slug": "antonio-velez",
       "position": "RP",
@@ -111,9 +165,17 @@
         0.25,
         0.25,
         0.25
-      ]
+      ],
+      "card_id": "STP-07",
+      "claim_open": true
     },
     {
+      "dob": "1994-04-25",
+      "birthplace": "Duluth, Minnesota",
+      "height": "6′5″",
+      "weight": 196,
+      "field_note": "Collects old field guides and checks the penciled names inside the covers.",
+      "bio": "Lukáš Horvat plays RP for the St. Paul Frost. Collects old field guides and checks the penciled names inside the covers.",
       "name": "Lukáš Horvat",
       "slug": "lukas-horvat",
       "position": "RP",
@@ -127,9 +189,17 @@
         0.25,
         0.25,
         0.25
-      ]
+      ],
+      "card_id": "STP-08",
+      "claim_open": true
     },
     {
+      "dob": "1996-01-09",
+      "birthplace": "Helsinki, Finland",
+      "height": "5′11″",
+      "weight": 195,
+      "field_note": "Always takes the stairs in museums so he can look out of the landings.",
+      "bio": "Evan Morrissey plays C for the St. Paul Frost. Always takes the stairs in museums so he can look out of the landings.",
       "name": "Evan Morrissey",
       "slug": "evan-morrissey",
       "position": "C",
@@ -139,13 +209,21 @@
       "photo": "evan-morrissey.jpg",
       "photo_source": "assets/teams/st-paul-frost/images/player-atlas-v2.webp",
       "photo_crop": [
-        0.0,
+        0,
         0.5,
         0.25,
         0.25
-      ]
+      ],
+      "card_id": "STP-09",
+      "claim_open": true
     },
     {
+      "dob": "1998-08-20",
+      "birthplace": "Plovdiv, Bulgaria",
+      "height": "6′0″",
+      "weight": 202,
+      "field_note": "Is teaching himself accordion using a borrowed instrument and library books.",
+      "bio": "Javier Lucero plays 1B for the St. Paul Frost. Is teaching himself accordion using a borrowed instrument and library books.",
       "name": "Javier Lucero",
       "slug": "javier-lucero",
       "position": "1B",
@@ -159,9 +237,17 @@
         0.5,
         0.25,
         0.25
-      ]
+      ],
+      "card_id": "STP-10",
+      "claim_open": true
     },
     {
+      "dob": "2000-05-04",
+      "birthplace": "San Juan, Puerto Rico",
+      "height": "6′1″",
+      "weight": 209,
+      "field_note": "Owns three alarm clocks and uses none of them.",
+      "bio": "Owen Hartnell plays 2B for the St. Paul Frost. Owns three alarm clocks and uses none of them.",
       "name": "Owen Hartnell",
       "slug": "owen-hartnell",
       "position": "2B",
@@ -175,9 +261,17 @@
         0.5,
         0.25,
         0.25
-      ]
+      ],
+      "card_id": "STP-11",
+      "claim_open": true
     },
     {
+      "dob": "2002-02-15",
+      "birthplace": "Riga, Latvia",
+      "height": "6′2″",
+      "weight": 216,
+      "field_note": "Grows a different variety of pepper on his windowsill each year.",
+      "bio": "Masato Kobori plays SS for the St. Paul Frost. Grows a different variety of pepper on his windowsill each year.",
       "name": "Masato Kobori",
       "slug": "masato-kobori",
       "position": "SS",
@@ -191,9 +285,17 @@
         0.5,
         0.25,
         0.25
-      ]
+      ],
+      "card_id": "STP-12",
+      "claim_open": true
     },
     {
+      "dob": "1995-09-26",
+      "birthplace": "Port-au-Prince, Haiti",
+      "height": "6′3″",
+      "weight": 223,
+      "field_note": "Keeps a handwritten directory of independent hardware stores.",
+      "bio": "Trevor Yates plays 3B for the St. Paul Frost. Keeps a handwritten directory of independent hardware stores.",
       "name": "Trevor Yates",
       "slug": "trevor-yates",
       "position": "3B",
@@ -203,13 +305,21 @@
       "photo": "trevor-yates.jpg",
       "photo_source": "assets/teams/st-paul-frost/images/player-atlas-v2.webp",
       "photo_crop": [
-        0.0,
+        0,
         0.75,
         0.25,
         0.25
-      ]
+      ],
+      "card_id": "STP-13",
+      "claim_open": true
     },
     {
+      "dob": "2001-06-10",
+      "birthplace": "Winnipeg, Canada",
+      "height": "5′11″",
+      "weight": 191,
+      "field_note": "Photographs the same tree whenever he returns to his childhood neighborhood.",
+      "bio": "Malik Jefferson plays CF for the St. Paul Frost. Photographs the same tree whenever he returns to his childhood neighborhood.",
       "name": "Malik Jefferson",
       "slug": "malik-jefferson",
       "position": "CF",
@@ -223,9 +333,17 @@
         0.75,
         0.25,
         0.25
-      ]
+      ],
+      "card_id": "STP-14",
+      "claim_open": true
     },
     {
+      "dob": "1997-03-21",
+      "birthplace": "Marseille, France",
+      "height": "6′0″",
+      "weight": 198,
+      "field_note": "Learned enough woodworking to make a crooked but much-used dining table.",
+      "bio": "Rodrigo Fuentes plays LF for the St. Paul Frost. Learned enough woodworking to make a crooked but much-used dining table.",
       "name": "Rodrigo Fuentes",
       "slug": "rodrigo-fuentes",
       "position": "LF",
@@ -239,9 +357,17 @@
         0.75,
         0.25,
         0.25
-      ]
+      ],
+      "card_id": "STP-15",
+      "claim_open": true
     },
     {
+      "dob": "1999-10-05",
+      "birthplace": "Dunedin, New Zealand",
+      "height": "6′1″",
+      "weight": 205,
+      "field_note": "Brings a thermos of strong tea to early morning flea markets.",
+      "bio": "Jake Lanier plays RF for the St. Paul Frost. Brings a thermos of strong tea to early morning flea markets.",
       "name": "Jake Lanier",
       "slug": "jake-lanier",
       "position": "RF",
@@ -255,7 +381,9 @@
         0.75,
         0.25,
         0.25
-      ]
+      ],
+      "card_id": "STP-16",
+      "claim_open": true
     }
   ]
 }

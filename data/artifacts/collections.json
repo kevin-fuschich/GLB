@@ -84,6 +84,26 @@
       "team_name": "Birmingham Vulcans",
       "source": "data/rosters/birmingham-vulcans.json",
       "prefix": "BIR"
+    },
+    {
+      "team_slug": "toledo-assembly",
+      "team_name": "Toledo Assembly",
+      "source": "data/rosters/toledo-assembly.json"
+    },
+    {
+      "team_slug": "albuquerque-aeros",
+      "team_name": "Albuquerque Aeros",
+      "source": "data/rosters/albuquerque-aeros.json"
+    },
+    {
+      "team_slug": "st-paul-frost",
+      "team_name": "St. Paul Frost",
+      "source": "data/rosters/st-paul-frost.json"
+    },
+    {
+      "team_slug": "fresno-yield",
+      "team_name": "Fresno Yield",
+      "source": "data/rosters/fresno-yield.json"
     }
   ],
   "creative_source": "data/artifacts/creative-artifacts.json"

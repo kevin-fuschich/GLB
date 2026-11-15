@@ -2,6 +2,12 @@
   "team": "Toledo Assembly",
   "players": [
     {
+      "dob": "1997-01-01",
+      "birthplace": "Sofia, Bulgaria",
+      "height": "6′1″",
+      "weight": 196,
+      "field_note": "Repairs old cassette players and keeps a small box of replacement belts in his travel bag.",
+      "bio": "Ion Vasilev plays SP for the Toledo Assembly. Repairs old cassette players and keeps a small box of replacement belts in his travel bag.",
       "name": "Ion Vasilev",
       "slug": "ion-vasilev",
       "position": "SP",
@@ -11,13 +17,21 @@
       "photo": "ion-vasilev.jpg",
       "photo_source": "assets/teams/toledo-assembly/images/player-atlas-v2.webp",
       "photo_crop": [
-        0.0,
-        0.0,
+        0,
+        0,
         0.25,
         0.25
-      ]
+      ],
+      "card_id": "TOL-01",
+      "claim_open": true
     },
     {
+      "dob": "1999-08-12",
+      "birthplace": "Rabat, Morocco",
+      "height": "6′2″",
+      "weight": 203,
+      "field_note": "Has a handwritten recipe for lentil soup tucked inside every suitcase.",
+      "bio": "Farid Azeroual plays SP for the Toledo Assembly. Has a handwritten recipe for lentil soup tucked inside every suitcase.",
       "name": "Farid Azeroual",
       "slug": "farid-azeroual",
       "position": "SP",
@@ -28,12 +42,20 @@
       "photo_source": "assets/teams/toledo-assembly/images/player-atlas-v2.webp",
       "photo_crop": [
         0.25,
-        0.0,
+        0,
         0.25,
         0.25
-      ]
+      ],
+      "card_id": "TOL-02",
+      "claim_open": true
     },
     {
+      "dob": "2001-05-23",
+      "birthplace": "Turku, Finland",
+      "height": "6′3″",
+      "weight": 210,
+      "field_note": "Learned to sew by shortening his own curtains and now repairs teammates’ jacket linings.",
+      "bio": "Teemu Salonen plays SP for the Toledo Assembly. Learned to sew by shortening his own curtains and now repairs teammates’ jacket linings.",
       "name": "Teemu Salonen",
       "slug": "teemu-salonen",
       "position": "SP",
@@ -44,12 +66,20 @@
       "photo_source": "assets/teams/toledo-assembly/images/player-atlas-v2.webp",
       "photo_crop": [
         0.5,
-        0.0,
+        0,
         0.25,
         0.25
-      ]
+      ],
+      "card_id": "TOL-03",
+      "claim_open": true
     },
     {
+      "dob": "1995-02-07",
+      "birthplace": "Conakry, Guinea",
+      "height": "6′4″",
+      "weight": 217,
+      "field_note": "Collects paperback mysteries with notes from previous owners in the margins.",
+      "bio": "Zahir Kamara plays SP for the Toledo Assembly. Collects paperback mysteries with notes from previous owners in the margins.",
       "name": "Zahir Kamara",
       "slug": "zahir-kamara",
       "position": "SP",
@@ -60,12 +90,20 @@
       "photo_source": "assets/teams/toledo-assembly/images/player-atlas-v2.webp",
       "photo_crop": [
         0.75,
-        0.0,
+        0,
         0.25,
         0.25
-      ]
+      ],
+      "card_id": "TOL-04",
+      "claim_open": true
     },
     {
+      "dob": "2002-09-18",
+      "birthplace": "Timișoara, Romania",
+      "height": "6′5″",
+      "weight": 224,
+      "field_note": "Can fold a fitted sheet neatly and refuses to explain how.",
+      "bio": "Caius Dobrescu plays SP for the Toledo Assembly. Can fold a fitted sheet neatly and refuses to explain how.",
       "name": "Caius Dobrescu",
       "slug": "caius-dobrescu",
       "position": "SP",
@@ -75,13 +113,21 @@
       "photo": "caius-dobrescu.jpg",
       "photo_source": "assets/teams/toledo-assembly/images/player-atlas-v2.webp",
       "photo_crop": [
-        0.0,
+        0,
         0.25,
         0.25,
         0.25
-      ]
+      ],
+      "card_id": "TOL-05",
+      "claim_open": true
     },
     {
+      "dob": "1998-06-02",
+      "birthplace": "Recife, Brazil",
+      "height": "6′1″",
+      "weight": 231,
+      "field_note": "Keeps a sketchbook of unusual bus shelters seen on road trips.",
+      "bio": "Renan Vidigal plays RP for the Toledo Assembly. Keeps a sketchbook of unusual bus shelters seen on road trips.",
       "name": "Renan Vidigal",
       "slug": "renan-vidigal",
       "position": "RP",
@@ -95,9 +141,17 @@
         0.25,
         0.25,
         0.25
-      ]
+      ],
+      "card_id": "TOL-06",
+      "claim_open": true
     },
     {
+      "dob": "2000-03-13",
+      "birthplace": "Cap-Haïtien, Haiti",
+      "height": "6′2″",
+      "weight": 199,
+      "field_note": "Runs a small chess club for clubhouse staff who have never played.",
+      "bio": "Blaise Mathurin plays RP for the Toledo Assembly. Runs a small chess club for clubhouse staff who have never played.",
       "name": "Blaise Mathurin",
       "slug": "blaise-mathurin",
       "position": "RP",
@@ -111,9 +165,17 @@
         0.25,
         0.25,
         0.25
-      ]
+      ],
+      "card_id": "TOL-07",
+      "claim_open": true
     },
     {
+      "dob": "1996-10-24",
+      "birthplace": "Daejeon, South Korea",
+      "height": "6′3″",
+      "weight": 206,
+      "field_note": "Knows the names of every dog on the block where he grew up.",
+      "bio": "Jun-seo Kang plays RP for the Toledo Assembly. Knows the names of every dog on the block where he grew up.",
       "name": "Jun-seo Kang",
       "slug": "jun-seo-kang",
       "position": "RP",
@@ -127,9 +189,17 @@
         0.25,
         0.25,
         0.25
-      ]
+      ],
+      "card_id": "TOL-08",
+      "claim_open": true
     },
     {
+      "dob": "1997-07-08",
+      "birthplace": "Amman, Jordan",
+      "height": "6′2″",
+      "weight": 205,
+      "field_note": "Carries a pocket radio because he likes finding local stations after midnight.",
+      "bio": "Omar Nazzal plays C for the Toledo Assembly. Carries a pocket radio because he likes finding local stations after midnight.",
       "name": "Omar Nazzal",
       "slug": "omar-nazzal",
       "position": "C",
@@ -139,13 +209,21 @@
       "photo": "omar-nazzal.jpg",
       "photo_source": "assets/teams/toledo-assembly/images/player-atlas-v2.webp",
       "photo_crop": [
-        0.0,
+        0,
         0.5,
         0.25,
         0.25
-      ]
+      ],
+      "card_id": "TOL-09",
+      "claim_open": true
     },
     {
+      "dob": "1994-04-19",
+      "birthplace": "Lafayette, Louisiana",
+      "height": "6′3″",
+      "weight": 212,
+      "field_note": "Builds miniature boats from scrap wood during the offseason.",
+      "bio": "Caleb Ardoin plays 1B for the Toledo Assembly. Builds miniature boats from scrap wood during the offseason.",
       "name": "Caleb Ardoin",
       "slug": "caleb-ardoin",
       "position": "1B",
@@ -159,9 +237,17 @@
         0.5,
         0.25,
         0.25
-      ]
+      ],
+      "card_id": "TOL-10",
+      "claim_open": true
     },
     {
+      "dob": "2003-01-03",
+      "birthplace": "Oran, Algeria",
+      "height": "5′11″",
+      "weight": 219,
+      "field_note": "Is restoring his grandfather’s mechanical kitchen timer one spring at a time.",
+      "bio": "Samir Benyahia plays 2B for the Toledo Assembly. Is restoring his grandfather’s mechanical kitchen timer one spring at a time.",
       "name": "Samir Benyahia",
       "slug": "samir-benyahia",
       "position": "2B",
@@ -175,9 +261,17 @@
         0.5,
         0.25,
         0.25
-      ]
+      ],
+      "card_id": "TOL-11",
+      "claim_open": true
     },
     {
+      "dob": "1999-08-14",
+      "birthplace": "Bristol, England",
+      "height": "6′0″",
+      "weight": 226,
+      "field_note": "Labels all his houseplants with the names of former neighbors.",
+      "bio": "Evan Trelawny plays SS for the Toledo Assembly. Labels all his houseplants with the names of former neighbors.",
       "name": "Evan Trelawny",
       "slug": "evan-trelawny",
       "position": "SS",
@@ -191,9 +285,17 @@
         0.5,
         0.25,
         0.25
-      ]
+      ],
+      "card_id": "TOL-12",
+      "claim_open": true
     },
     {
+      "dob": "1998-05-25",
+      "birthplace": "Kumasi, Ghana",
+      "height": "6′1″",
+      "weight": 194,
+      "field_note": "Learnt sign painting from a family friend and still paints birthday banners by hand.",
+      "bio": "Kwame Ofori plays 3B for the Toledo Assembly. Learnt sign painting from a family friend and still paints birthday banners by hand.",
       "name": "Kwame Ofori",
       "slug": "kwame-ofori",
       "position": "3B",
@@ -203,13 +305,21 @@
       "photo": "kwame-ofori.jpg",
       "photo_source": "assets/teams/toledo-assembly/images/player-atlas-v2.webp",
       "photo_crop": [
-        0.0,
+        0,
         0.75,
         0.25,
         0.25
-      ]
+      ],
+      "card_id": "TOL-13",
+      "claim_open": true
     },
     {
+      "dob": "2002-02-09",
+      "birthplace": "Cali, Colombia",
+      "height": "6′2″",
+      "weight": 201,
+      "field_note": "Has never thrown away a postcard, including the ones he sends to himself.",
+      "bio": "Mateo Acebedo plays LF for the Toledo Assembly. Has never thrown away a postcard, including the ones he sends to himself.",
       "name": "Mateo Acebedo",
       "slug": "mateo-acebedo",
       "position": "LF",
@@ -223,9 +333,17 @@
         0.75,
         0.25,
         0.25
-      ]
+      ],
+      "card_id": "TOL-14",
+      "claim_open": true
     },
     {
+      "dob": "2000-09-20",
+      "birthplace": "Novi Sad, Serbia",
+      "height": "6′3″",
+      "weight": 208,
+      "field_note": "Makes elaborate breakfasts but cannot reliably cook rice.",
+      "bio": "Niko Velković plays CF for the Toledo Assembly. Makes elaborate breakfasts but cannot reliably cook rice.",
       "name": "Niko Velković",
       "slug": "niko-velkovic",
       "position": "CF",
@@ -239,9 +357,17 @@
         0.75,
         0.25,
         0.25
-      ]
+      ],
+      "card_id": "TOL-15",
+      "claim_open": true
     },
     {
+      "dob": "1995-06-04",
+      "birthplace": "Tacoma, Washington",
+      "height": "5′11″",
+      "weight": 215,
+      "field_note": "Records the sounds of rain in different cities on a small handheld recorder.",
+      "bio": "Jasper Quade plays RF for the Toledo Assembly. Records the sounds of rain in different cities on a small handheld recorder.",
       "name": "Jasper Quade",
       "slug": "jasper-quade",
       "position": "RF",
@@ -255,7 +381,9 @@
         0.75,
         0.25,
         0.25
-      ]
+      ],
+      "card_id": "TOL-16",
+      "claim_open": true
     }
   ]
 }

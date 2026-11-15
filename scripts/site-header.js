@@ -3,6 +3,9 @@
   const header = document.getElementById('glb-site-header');
   if (!header) return;
   const root = new URL('../', document.currentScript.src);
+  if(!document.getElementById('glb-controls-style')){
+    const controls=document.createElement('link');controls.id='glb-controls-style';controls.rel='stylesheet';controls.href=new URL('site-controls.css?v=20261115',root);document.head.append(controls);
+  }
 
   const footer=document.querySelector('body > footer');
   if(footer&&!footer.querySelector('[data-glb-sponsors-link]')){

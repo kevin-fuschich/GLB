@@ -8,7 +8,7 @@
  }
  function open(){
   if(opened)return;opened=true;remember();
-  $('openSample').disabled=true;$('openSample').textContent='Sample opened';$('sampleBalance').textContent='0';
+  $('openSample').disabled=false;$('openSample').textContent='Open wrapper again';$('sampleBalance').textContent='0';
   $('sampleTitle').textContent='Your sample is ready.';$('sampleStatus').textContent='Five fixed sample cards. Reveal them below.';
   show();$('revealHeading').focus({preventScroll:true});$('previewReveal').scrollIntoView({block:'start',behavior:'instant'});
  }

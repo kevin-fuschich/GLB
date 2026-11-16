@@ -1,0 +1,3472 @@
+[
+  {
+    "id": "albuquerque-aeros/idris-kourouma",
+    "name": "Idris Kourouma",
+    "team_slug": "albuquerque-aeros",
+    "team_name": "Albuquerque Aeros",
+    "position": "SP",
+    "role": "pitcher",
+    "photo": "assets/teams/albuquerque-aeros/images/players/albuquerque-idris-kourouma.png",
+    "photo_crop": null
+  },
+  {
+    "id": "albuquerque-aeros/pieter-vanvleuten",
+    "name": "Pieter VanVleuten",
+    "team_slug": "albuquerque-aeros",
+    "team_name": "Albuquerque Aeros",
+    "position": "SP",
+    "role": "pitcher",
+    "photo": "assets/teams/albuquerque-aeros/images/players/albuquerque-pieter-vanvleuten.png",
+    "photo_crop": null
+  },
+  {
+    "id": "albuquerque-aeros/nikhil-jadhav",
+    "name": "Nikhil Jadhav",
+    "team_slug": "albuquerque-aeros",
+    "team_name": "Albuquerque Aeros",
+    "position": "SP",
+    "role": "pitcher",
+    "photo": "assets/teams/albuquerque-aeros/images/players/albuquerque-nikhil-jadhav.png",
+    "photo_crop": null
+  },
+  {
+    "id": "albuquerque-aeros/ronan-kaczmarek",
+    "name": "Ronan Kaczmarek",
+    "team_slug": "albuquerque-aeros",
+    "team_name": "Albuquerque Aeros",
+    "position": "SP",
+    "role": "pitcher",
+    "photo": "assets/teams/albuquerque-aeros/images/players/albuquerque-ronan-kaczmarek.png",
+    "photo_crop": null
+  },
+  {
+    "id": "albuquerque-aeros/satoshi-kurobane",
+    "name": "Satoshi Kurobane",
+    "team_slug": "albuquerque-aeros",
+    "team_name": "Albuquerque Aeros",
+    "position": "SP",
+    "role": "pitcher",
+    "photo": "assets/teams/albuquerque-aeros/images/players/albuquerque-satoshi-kurobane.png",
+    "photo_crop": null
+  },
+  {
+    "id": "albuquerque-aeros/eamon-quirke",
+    "name": "Eamon Quirke",
+    "team_slug": "albuquerque-aeros",
+    "team_name": "Albuquerque Aeros",
+    "position": "RP",
+    "role": "pitcher",
+    "photo": "assets/teams/albuquerque-aeros/images/players/albuquerque-eamon-quirke.png",
+    "photo_crop": null
+  },
+  {
+    "id": "albuquerque-aeros/jae-min-gwak",
+    "name": "Jae-min Gwak",
+    "team_slug": "albuquerque-aeros",
+    "team_name": "Albuquerque Aeros",
+    "position": "RP",
+    "role": "pitcher",
+    "photo": "assets/teams/albuquerque-aeros/images/players/albuquerque-jae-min-gwak.png",
+    "photo_crop": null
+  },
+  {
+    "id": "albuquerque-aeros/lazaro-bracamonte",
+    "name": "Lázaro Bracamonte",
+    "team_slug": "albuquerque-aeros",
+    "team_name": "Albuquerque Aeros",
+    "position": "RP",
+    "role": "pitcher",
+    "photo": "assets/teams/albuquerque-aeros/images/players/albuquerque-lazaro-bracamonte.png",
+    "photo_crop": null
+  },
+  {
+    "id": "albuquerque-aeros/rui-damas",
+    "name": "Rui Damas",
+    "team_slug": "albuquerque-aeros",
+    "team_name": "Albuquerque Aeros",
+    "position": "C",
+    "role": "batter",
+    "photo": "assets/teams/albuquerque-aeros/images/players/albuquerque-rui-damas.png",
+    "photo_crop": null
+  },
+  {
+    "id": "albuquerque-aeros/tobias-vandenberg",
+    "name": "Tobias Vandenberg",
+    "team_slug": "albuquerque-aeros",
+    "team_name": "Albuquerque Aeros",
+    "position": "1B",
+    "role": "batter",
+    "photo": "assets/teams/albuquerque-aeros/images/players/albuquerque-tobias-vandenberg.png",
+    "photo_crop": null
+  },
+  {
+    "id": "albuquerque-aeros/kofi-agyeman",
+    "name": "Kofi Agyeman",
+    "team_slug": "albuquerque-aeros",
+    "team_name": "Albuquerque Aeros",
+    "position": "2B",
+    "role": "batter",
+    "photo": "assets/teams/albuquerque-aeros/images/players/albuquerque-kofi-agyeman.png",
+    "photo_crop": null
+  },
+  {
+    "id": "albuquerque-aeros/iker-zubizarreta",
+    "name": "Iker Zubizarreta",
+    "team_slug": "albuquerque-aeros",
+    "team_name": "Albuquerque Aeros",
+    "position": "SS",
+    "role": "batter",
+    "photo": "assets/teams/albuquerque-aeros/images/players/albuquerque-iker-zubizarreta.png",
+    "photo_crop": null
+  },
+  {
+    "id": "albuquerque-aeros/carmine-sforza",
+    "name": "Carmine Sforza",
+    "team_slug": "albuquerque-aeros",
+    "team_name": "Albuquerque Aeros",
+    "position": "3B",
+    "role": "batter",
+    "photo": "assets/teams/albuquerque-aeros/images/players/albuquerque-carmine-sforza.pthinnng.png",
+    "photo_crop": null
+  },
+  {
+    "id": "albuquerque-aeros/adama-kouyate",
+    "name": "Adama Kouyaté",
+    "team_slug": "albuquerque-aeros",
+    "team_name": "Albuquerque Aeros",
+    "position": "CF",
+    "role": "batter",
+    "photo": "assets/teams/albuquerque-aeros/images/players/albuquerque-adama-kouyate.png",
+    "photo_crop": null
+  },
+  {
+    "id": "albuquerque-aeros/elior-ben-ami",
+    "name": "Elior Ben-Ami",
+    "team_slug": "albuquerque-aeros",
+    "team_name": "Albuquerque Aeros",
+    "position": "LF",
+    "role": "batter",
+    "photo": "assets/teams/albuquerque-aeros/images/players/albuquerque-elior-ben-ami.png",
+    "photo_crop": null
+  },
+  {
+    "id": "albuquerque-aeros/paolo-ventresca",
+    "name": "Paolo Ventresca",
+    "team_slug": "albuquerque-aeros",
+    "team_name": "Albuquerque Aeros",
+    "position": "RF",
+    "role": "batter",
+    "photo": "assets/teams/albuquerque-aeros/images/players/albuquerque-paolo-ventresca.png",
+    "photo_crop": null
+  },
+  {
+    "id": "birmingham-vulcans/hassan-al-saleh",
+    "name": "Hassan Al-Saleh",
+    "team_slug": "birmingham-vulcans",
+    "team_name": "Birmingham Vulcans",
+    "position": "SP",
+    "role": "pitcher",
+    "photo": "assets/teams/birmingham-vulcans/images/player-atlas.webp",
+    "photo_crop": [
+      0,
+      0,
+      0.25,
+      0.25
+    ]
+  },
+  {
+    "id": "birmingham-vulcans/thierry-boucher",
+    "name": "Thierry Boucher",
+    "team_slug": "birmingham-vulcans",
+    "team_name": "Birmingham Vulcans",
+    "position": "SP",
+    "role": "pitcher",
+    "photo": "assets/teams/birmingham-vulcans/images/player-atlas.webp",
+    "photo_crop": [
+      0.25,
+      0,
+      0.25,
+      0.25
+    ]
+  },
+  {
+    "id": "birmingham-vulcans/jared-whitlock",
+    "name": "Jared Whitlock",
+    "team_slug": "birmingham-vulcans",
+    "team_name": "Birmingham Vulcans",
+    "position": "SP",
+    "role": "pitcher",
+    "photo": "assets/teams/birmingham-vulcans/images/player-atlas.webp",
+    "photo_crop": [
+      0.5,
+      0,
+      0.25,
+      0.25
+    ]
+  },
+  {
+    "id": "birmingham-vulcans/emilio-duarte",
+    "name": "Emilio Duarte",
+    "team_slug": "birmingham-vulcans",
+    "team_name": "Birmingham Vulcans",
+    "position": "SP",
+    "role": "pitcher",
+    "photo": "assets/teams/birmingham-vulcans/images/player-atlas.webp",
+    "photo_crop": [
+      0.75,
+      0,
+      0.25,
+      0.25
+    ]
+  },
+  {
+    "id": "birmingham-vulcans/luka-petrovic",
+    "name": "Luka Petrovic",
+    "team_slug": "birmingham-vulcans",
+    "team_name": "Birmingham Vulcans",
+    "position": "SP",
+    "role": "pitcher",
+    "photo": "assets/teams/birmingham-vulcans/images/player-atlas.webp",
+    "photo_crop": [
+      0,
+      0.25,
+      0.25,
+      0.25
+    ]
+  },
+  {
+    "id": "birmingham-vulcans/micah-torrence",
+    "name": "Micah Torrence",
+    "team_slug": "birmingham-vulcans",
+    "team_name": "Birmingham Vulcans",
+    "position": "RP",
+    "role": "pitcher",
+    "photo": "assets/teams/birmingham-vulcans/images/player-atlas.webp",
+    "photo_crop": [
+      0.25,
+      0.25,
+      0.25,
+      0.25
+    ]
+  },
+  {
+    "id": "birmingham-vulcans/antonio-bela",
+    "name": "Antonio Bela",
+    "team_slug": "birmingham-vulcans",
+    "team_name": "Birmingham Vulcans",
+    "position": "RP",
+    "role": "pitcher",
+    "photo": "assets/teams/birmingham-vulcans/images/player-atlas.webp",
+    "photo_crop": [
+      0.5,
+      0.25,
+      0.25,
+      0.25
+    ]
+  },
+  {
+    "id": "birmingham-vulcans/reese-walker",
+    "name": "Reese Walker",
+    "team_slug": "birmingham-vulcans",
+    "team_name": "Birmingham Vulcans",
+    "position": "RP",
+    "role": "pitcher",
+    "photo": "assets/teams/birmingham-vulcans/images/player-atlas.webp",
+    "photo_crop": [
+      0.75,
+      0.25,
+      0.25,
+      0.25
+    ]
+  },
+  {
+    "id": "birmingham-vulcans/owen-keller",
+    "name": "Owen Keller",
+    "team_slug": "birmingham-vulcans",
+    "team_name": "Birmingham Vulcans",
+    "position": "C",
+    "role": "batter",
+    "photo": "assets/teams/birmingham-vulcans/images/player-atlas.webp",
+    "photo_crop": [
+      0,
+      0.5,
+      0.25,
+      0.25
+    ]
+  },
+  {
+    "id": "birmingham-vulcans/malik-johnson",
+    "name": "Malik Johnson",
+    "team_slug": "birmingham-vulcans",
+    "team_name": "Birmingham Vulcans",
+    "position": "1B",
+    "role": "batter",
+    "photo": "assets/teams/birmingham-vulcans/images/player-atlas.webp",
+    "photo_crop": [
+      0.25,
+      0.5,
+      0.25,
+      0.25
+    ]
+  },
+  {
+    "id": "birmingham-vulcans/nico-valente",
+    "name": "Nico Valente",
+    "team_slug": "birmingham-vulcans",
+    "team_name": "Birmingham Vulcans",
+    "position": "2B",
+    "role": "batter",
+    "photo": "assets/teams/birmingham-vulcans/images/player-atlas.webp",
+    "photo_crop": [
+      0.5,
+      0.5,
+      0.25,
+      0.25
+    ]
+  },
+  {
+    "id": "birmingham-vulcans/julian-santoro",
+    "name": "Julian Santoro",
+    "team_slug": "birmingham-vulcans",
+    "team_name": "Birmingham Vulcans",
+    "position": "SS",
+    "role": "batter",
+    "photo": "assets/teams/birmingham-vulcans/images/player-atlas.webp",
+    "photo_crop": [
+      0.75,
+      0.5,
+      0.25,
+      0.25
+    ]
+  },
+  {
+    "id": "birmingham-vulcans/caleb-hawkins",
+    "name": "Caleb Hawkins",
+    "team_slug": "birmingham-vulcans",
+    "team_name": "Birmingham Vulcans",
+    "position": "3B",
+    "role": "batter",
+    "photo": "assets/teams/birmingham-vulcans/images/player-atlas.webp",
+    "photo_crop": [
+      0,
+      0.75,
+      0.25,
+      0.25
+    ]
+  },
+  {
+    "id": "birmingham-vulcans/isaac-morrow",
+    "name": "Isaac Morrow",
+    "team_slug": "birmingham-vulcans",
+    "team_name": "Birmingham Vulcans",
+    "position": "CF",
+    "role": "batter",
+    "photo": "assets/teams/birmingham-vulcans/images/player-atlas.webp",
+    "photo_crop": [
+      0.25,
+      0.75,
+      0.25,
+      0.25
+    ]
+  },
+  {
+    "id": "birmingham-vulcans/dante-rios",
+    "name": "Dante Rios",
+    "team_slug": "birmingham-vulcans",
+    "team_name": "Birmingham Vulcans",
+    "position": "LF",
+    "role": "batter",
+    "photo": "assets/teams/birmingham-vulcans/images/player-atlas.webp",
+    "photo_crop": [
+      0.5,
+      0.75,
+      0.25,
+      0.25
+    ]
+  },
+  {
+    "id": "birmingham-vulcans/cole-ramsey",
+    "name": "Cole Ramsey",
+    "team_slug": "birmingham-vulcans",
+    "team_name": "Birmingham Vulcans",
+    "position": "RF",
+    "role": "batter",
+    "photo": "assets/teams/birmingham-vulcans/images/player-atlas.webp",
+    "photo_crop": [
+      0.75,
+      0.75,
+      0.25,
+      0.25
+    ]
+  },
+  {
+    "id": "durham-gold/caleb-rowan",
+    "name": "Caleb Rowan",
+    "team_slug": "durham-gold",
+    "team_name": "Triangle Gold",
+    "position": "SP",
+    "role": "pitcher",
+    "photo": "assets/teams/triangle-gold/triangle-player-moments.webp",
+    "photo_crop": [
+      0,
+      0,
+      0.5,
+      0.5
+    ]
+  },
+  {
+    "id": "durham-gold/antonio-beltran",
+    "name": "Antonio Beltrán",
+    "team_slug": "durham-gold",
+    "team_name": "Triangle Gold",
+    "position": "SP",
+    "role": "pitcher",
+    "photo": "assets/images/players/durham-gold/durham-antonio-beltran.jpg",
+    "photo_crop": null
+  },
+  {
+    "id": "durham-gold/isaac-friedel",
+    "name": "Isaac Friedel",
+    "team_slug": "durham-gold",
+    "team_name": "Triangle Gold",
+    "position": "SP",
+    "role": "pitcher",
+    "photo": "assets/images/players/durham-gold/durham-isaac-friedel.jpg",
+    "photo_crop": null
+  },
+  {
+    "id": "durham-gold/kenji-nomura",
+    "name": "Kenji Nomura",
+    "team_slug": "durham-gold",
+    "team_name": "Triangle Gold",
+    "position": "SP",
+    "role": "pitcher",
+    "photo": "assets/images/players/durham-gold/durham-kenji-nomura.jpg",
+    "photo_crop": null
+  },
+  {
+    "id": "durham-gold/devin-marsh",
+    "name": "Devin Marsh",
+    "team_slug": "durham-gold",
+    "team_name": "Triangle Gold",
+    "position": "RP",
+    "role": "pitcher",
+    "photo": "assets/images/players/durham-gold/durham-devin-marsh.jpg",
+    "photo_crop": null
+  },
+  {
+    "id": "durham-gold/luis-carreno",
+    "name": "Luis Carreño",
+    "team_slug": "durham-gold",
+    "team_name": "Triangle Gold",
+    "position": "RP",
+    "role": "pitcher",
+    "photo": "assets/images/players/durham-gold/durham-luis-carreno.jpg",
+    "photo_crop": null
+  },
+  {
+    "id": "durham-gold/noah-pryce",
+    "name": "Noah Pryce",
+    "team_slug": "durham-gold",
+    "team_name": "Triangle Gold",
+    "position": "RP",
+    "role": "pitcher",
+    "photo": "assets/images/players/durham-gold/durham-noah-pryce.jpg",
+    "photo_crop": null
+  },
+  {
+    "id": "durham-gold/ethan-bowen",
+    "name": "Ethan Bowen",
+    "team_slug": "durham-gold",
+    "team_name": "Triangle Gold",
+    "position": "C",
+    "role": "batter",
+    "photo": "assets/teams/triangle-gold/triangle-player-moments.webp",
+    "photo_crop": [
+      0.5,
+      0,
+      0.5,
+      0.5
+    ]
+  },
+  {
+    "id": "durham-gold/marcelo-ibarra",
+    "name": "Marcelo Ibarra",
+    "team_slug": "durham-gold",
+    "team_name": "Triangle Gold",
+    "position": "1B",
+    "role": "batter",
+    "photo": "assets/images/players/durham-gold/durham-marcelo-ibarra.jpg",
+    "photo_crop": null
+  },
+  {
+    "id": "durham-gold/joshua-kent",
+    "name": "Joshua Kent",
+    "team_slug": "durham-gold",
+    "team_name": "Triangle Gold",
+    "position": "2B",
+    "role": "batter",
+    "photo": "assets/images/players/durham-gold/durham-joshua-kent.jpg",
+    "photo_crop": null
+  },
+  {
+    "id": "durham-gold/omar-salcedo",
+    "name": "Omar Salcedo",
+    "team_slug": "durham-gold",
+    "team_name": "Triangle Gold",
+    "position": "SS",
+    "role": "batter",
+    "photo": "assets/teams/triangle-gold/triangle-player-moments.webp",
+    "photo_crop": [
+      0,
+      0.5,
+      0.5,
+      0.5
+    ]
+  },
+  {
+    "id": "durham-gold/tyrell-winston",
+    "name": "Tyrell Winston",
+    "team_slug": "durham-gold",
+    "team_name": "Triangle Gold",
+    "position": "3B",
+    "role": "batter",
+    "photo": "assets/images/players/durham-gold/durham-tyrell-winston.jpg",
+    "photo_crop": null
+  },
+  {
+    "id": "durham-gold/aaron-fletcher",
+    "name": "Aaron Fletcher",
+    "team_slug": "durham-gold",
+    "team_name": "Triangle Gold",
+    "position": "CF",
+    "role": "batter",
+    "photo": "assets/images/players/durham-gold/durham-aaron-fletcher.jpg",
+    "photo_crop": null
+  },
+  {
+    "id": "durham-gold/mateo-rios",
+    "name": "Mateo Ríos",
+    "team_slug": "durham-gold",
+    "team_name": "Triangle Gold",
+    "position": "LF",
+    "role": "batter",
+    "photo": "assets/teams/triangle-gold/triangle-player-moments.webp",
+    "photo_crop": [
+      0.5,
+      0.5,
+      0.5,
+      0.5
+    ]
+  },
+  {
+    "id": "durham-gold/calvin-ross",
+    "name": "Calvin Ross",
+    "team_slug": "durham-gold",
+    "team_name": "Triangle Gold",
+    "position": "RF",
+    "role": "batter",
+    "photo": "assets/images/players/durham-gold/durham-calvin-ross.jpg",
+    "photo_crop": null
+  },
+  {
+    "id": "fresno-yield/roman-villasenor",
+    "name": "Román Villaseñor",
+    "team_slug": "fresno-yield",
+    "team_name": "Fresno Yield",
+    "position": "SP",
+    "role": "pitcher",
+    "photo": "assets/teams/fresno-yield/images/player-atlas-v2.webp",
+    "photo_crop": [
+      0,
+      0,
+      0.25,
+      0.25
+    ]
+  },
+  {
+    "id": "fresno-yield/cedric-wainwright",
+    "name": "Cedric Wainwright",
+    "team_slug": "fresno-yield",
+    "team_name": "Fresno Yield",
+    "position": "SP",
+    "role": "pitcher",
+    "photo": "assets/teams/fresno-yield/images/player-atlas-v2.webp",
+    "photo_crop": [
+      0.25,
+      0,
+      0.25,
+      0.25
+    ]
+  },
+  {
+    "id": "fresno-yield/kenji-takamori",
+    "name": "Kenji Takamori",
+    "team_slug": "fresno-yield",
+    "team_name": "Fresno Yield",
+    "position": "SP",
+    "role": "pitcher",
+    "photo": "assets/teams/fresno-yield/images/player-atlas-v2.webp",
+    "photo_crop": [
+      0.5,
+      0,
+      0.25,
+      0.25
+    ]
+  },
+  {
+    "id": "fresno-yield/arinze-nwokoye",
+    "name": "Arinze Nwokoye",
+    "team_slug": "fresno-yield",
+    "team_name": "Fresno Yield",
+    "position": "SP",
+    "role": "pitcher",
+    "photo": "assets/teams/fresno-yield/images/player-atlas-v2.webp",
+    "photo_crop": [
+      0.75,
+      0,
+      0.25,
+      0.25
+    ]
+  },
+  {
+    "id": "fresno-yield/silas-torgersen",
+    "name": "Silas Torgersen",
+    "team_slug": "fresno-yield",
+    "team_name": "Fresno Yield",
+    "position": "SP",
+    "role": "pitcher",
+    "photo": "assets/teams/fresno-yield/images/player-atlas-v2.webp",
+    "photo_crop": [
+      0,
+      0.25,
+      0.25,
+      0.25
+    ]
+  },
+  {
+    "id": "fresno-yield/ibrahim-koroma",
+    "name": "Ibrahim Koroma",
+    "team_slug": "fresno-yield",
+    "team_name": "Fresno Yield",
+    "position": "RP",
+    "role": "pitcher",
+    "photo": "assets/teams/fresno-yield/images/player-atlas-v2.webp",
+    "photo_crop": [
+      0.25,
+      0.25,
+      0.25,
+      0.25
+    ]
+  },
+  {
+    "id": "fresno-yield/mateo-azarcon",
+    "name": "Mateo Azarcón",
+    "team_slug": "fresno-yield",
+    "team_name": "Fresno Yield",
+    "position": "RP",
+    "role": "pitcher",
+    "photo": "assets/teams/fresno-yield/images/player-atlas-v2.webp",
+    "photo_crop": [
+      0.5,
+      0.25,
+      0.25,
+      0.25
+    ]
+  },
+  {
+    "id": "fresno-yield/dusan-marevic",
+    "name": "Dušan Marević",
+    "team_slug": "fresno-yield",
+    "team_name": "Fresno Yield",
+    "position": "RP",
+    "role": "pitcher",
+    "photo": "assets/teams/fresno-yield/images/player-atlas-v2.webp",
+    "photo_crop": [
+      0.75,
+      0.25,
+      0.25,
+      0.25
+    ]
+  },
+  {
+    "id": "fresno-yield/luis-eccheri",
+    "name": "Luis Eccheri",
+    "team_slug": "fresno-yield",
+    "team_name": "Fresno Yield",
+    "position": "C",
+    "role": "batter",
+    "photo": "assets/teams/fresno-yield/images/player-atlas-v2.webp",
+    "photo_crop": [
+      0,
+      0.5,
+      0.25,
+      0.25
+    ]
+  },
+  {
+    "id": "fresno-yield/jonah-kershaw",
+    "name": "Jonah Kershaw",
+    "team_slug": "fresno-yield",
+    "team_name": "Fresno Yield",
+    "position": "1B",
+    "role": "batter",
+    "photo": "assets/teams/fresno-yield/images/player-atlas-v2.webp",
+    "photo_crop": [
+      0.25,
+      0.5,
+      0.25,
+      0.25
+    ]
+  },
+  {
+    "id": "fresno-yield/soren-ahlgren",
+    "name": "Søren Ahlgren",
+    "team_slug": "fresno-yield",
+    "team_name": "Fresno Yield",
+    "position": "2B",
+    "role": "batter",
+    "photo": "assets/teams/fresno-yield/images/player-atlas-v2.webp",
+    "photo_crop": [
+      0.5,
+      0.5,
+      0.25,
+      0.25
+    ]
+  },
+  {
+    "id": "fresno-yield/raul-sestayo",
+    "name": "Raúl Sestayo",
+    "team_slug": "fresno-yield",
+    "team_name": "Fresno Yield",
+    "position": "SS",
+    "role": "batter",
+    "photo": "assets/teams/fresno-yield/images/player-atlas-v2.webp",
+    "photo_crop": [
+      0.75,
+      0.5,
+      0.25,
+      0.25
+    ]
+  },
+  {
+    "id": "fresno-yield/eamon-kilbride",
+    "name": "Eamon Kilbride",
+    "team_slug": "fresno-yield",
+    "team_name": "Fresno Yield",
+    "position": "3B",
+    "role": "batter",
+    "photo": "assets/teams/fresno-yield/images/player-atlas-v2.webp",
+    "photo_crop": [
+      0,
+      0.75,
+      0.25,
+      0.25
+    ]
+  },
+  {
+    "id": "fresno-yield/malachi-quartey",
+    "name": "Malachi Quartey",
+    "team_slug": "fresno-yield",
+    "team_name": "Fresno Yield",
+    "position": "CF",
+    "role": "batter",
+    "photo": "assets/teams/fresno-yield/images/player-atlas-v2.webp",
+    "photo_crop": [
+      0.25,
+      0.75,
+      0.25,
+      0.25
+    ]
+  },
+  {
+    "id": "fresno-yield/hiroshi-kawabata",
+    "name": "Hiroshi Kawabata",
+    "team_slug": "fresno-yield",
+    "team_name": "Fresno Yield",
+    "position": "LF",
+    "role": "batter",
+    "photo": "assets/teams/fresno-yield/images/player-atlas-v2.webp",
+    "photo_crop": [
+      0.5,
+      0.75,
+      0.25,
+      0.25
+    ]
+  },
+  {
+    "id": "fresno-yield/anwar-elamin",
+    "name": "Anwar Elamin",
+    "team_slug": "fresno-yield",
+    "team_name": "Fresno Yield",
+    "position": "RF",
+    "role": "batter",
+    "photo": "assets/teams/fresno-yield/images/player-atlas-v2.webp",
+    "photo_crop": [
+      0.75,
+      0.75,
+      0.25,
+      0.25
+    ]
+  },
+  {
+    "id": "louisville-naturals/gabriel-ionescu",
+    "name": "Gabriel Ionescu",
+    "team_slug": "louisville-naturals",
+    "team_name": "Louisville Naturals",
+    "position": "SP",
+    "role": "pitcher",
+    "photo": "assets/teams/louisville-naturals/images/players/louisville-players-1.webp",
+    "photo_crop": [
+      0,
+      0,
+      0.5,
+      0.5
+    ]
+  },
+  {
+    "id": "louisville-naturals/mateo-alvarez",
+    "name": "Mateo Álvarez",
+    "team_slug": "louisville-naturals",
+    "team_name": "Louisville Naturals",
+    "position": "SP",
+    "role": "pitcher",
+    "photo": "assets/teams/louisville-naturals/images/players/louisville-players-1.webp",
+    "photo_crop": [
+      0.5,
+      0,
+      0.5,
+      0.5
+    ]
+  },
+  {
+    "id": "louisville-naturals/calvin-rhodes",
+    "name": "Calvin Rhodes",
+    "team_slug": "louisville-naturals",
+    "team_name": "Louisville Naturals",
+    "position": "SP",
+    "role": "pitcher",
+    "photo": "assets/teams/louisville-naturals/images/players/louisville-players-1.webp",
+    "photo_crop": [
+      0,
+      0.5,
+      0.5,
+      0.5
+    ]
+  },
+  {
+    "id": "louisville-naturals/santiago-correa",
+    "name": "Santiago Correa",
+    "team_slug": "louisville-naturals",
+    "team_name": "Louisville Naturals",
+    "position": "SP",
+    "role": "pitcher",
+    "photo": "assets/teams/louisville-naturals/images/players/louisville-players-1.webp",
+    "photo_crop": [
+      0.5,
+      0.5,
+      0.5,
+      0.5
+    ]
+  },
+  {
+    "id": "louisville-naturals/darius-okonkwo",
+    "name": "Darius Okonkwo",
+    "team_slug": "louisville-naturals",
+    "team_name": "Louisville Naturals",
+    "position": "SP",
+    "role": "pitcher",
+    "photo": "assets/teams/louisville-naturals/images/players/louisville-players-2.webp",
+    "photo_crop": [
+      0,
+      0,
+      0.5,
+      0.5
+    ]
+  },
+  {
+    "id": "louisville-naturals/evan-sutter",
+    "name": "Evan Sutter",
+    "team_slug": "louisville-naturals",
+    "team_name": "Louisville Naturals",
+    "position": "RP",
+    "role": "pitcher",
+    "photo": "assets/teams/louisville-naturals/images/players/louisville-players-2.webp",
+    "photo_crop": [
+      0.5,
+      0,
+      0.5,
+      0.5
+    ]
+  },
+  {
+    "id": "louisville-naturals/luis-delgado",
+    "name": "Luis Delgado",
+    "team_slug": "louisville-naturals",
+    "team_name": "Louisville Naturals",
+    "position": "RP",
+    "role": "pitcher",
+    "photo": "assets/teams/louisville-naturals/images/players/louisville-players-2.webp",
+    "photo_crop": [
+      0,
+      0.5,
+      0.5,
+      0.5
+    ]
+  },
+  {
+    "id": "louisville-naturals/kieran-walsh",
+    "name": "Kieran Walsh",
+    "team_slug": "louisville-naturals",
+    "team_name": "Louisville Naturals",
+    "position": "RP",
+    "role": "pitcher",
+    "photo": "assets/teams/louisville-naturals/images/players/louisville-players-2.webp",
+    "photo_crop": [
+      0.5,
+      0.5,
+      0.5,
+      0.5
+    ]
+  },
+  {
+    "id": "louisville-naturals/noah-bianchi",
+    "name": "Noah Bianchi",
+    "team_slug": "louisville-naturals",
+    "team_name": "Louisville Naturals",
+    "position": "C",
+    "role": "batter",
+    "photo": "assets/teams/louisville-naturals/images/players/louisville-players-3.webp",
+    "photo_crop": [
+      0,
+      0,
+      0.5,
+      0.5
+    ]
+  },
+  {
+    "id": "louisville-naturals/mateo-fernandez",
+    "name": "Mateo Fernández",
+    "team_slug": "louisville-naturals",
+    "team_name": "Louisville Naturals",
+    "position": "1B",
+    "role": "batter",
+    "photo": "assets/teams/louisville-naturals/images/players/louisville-players-3.webp",
+    "photo_crop": [
+      0.5,
+      0,
+      0.5,
+      0.5
+    ]
+  },
+  {
+    "id": "louisville-naturals/jalen-brooks",
+    "name": "Jalen Brooks",
+    "team_slug": "louisville-naturals",
+    "team_name": "Louisville Naturals",
+    "position": "2B",
+    "role": "batter",
+    "photo": "assets/teams/louisville-naturals/images/players/louisville-players-3.webp",
+    "photo_crop": [
+      0,
+      0.5,
+      0.5,
+      0.5
+    ]
+  },
+  {
+    "id": "louisville-naturals/rafael-costa",
+    "name": "Rafael Costa",
+    "team_slug": "louisville-naturals",
+    "team_name": "Louisville Naturals",
+    "position": "SS",
+    "role": "batter",
+    "photo": "assets/teams/louisville-naturals/images/players/louisville-players-3.webp",
+    "photo_crop": [
+      0.5,
+      0.5,
+      0.5,
+      0.5
+    ]
+  },
+  {
+    "id": "louisville-naturals/dominic-russo",
+    "name": "Dominic Russo",
+    "team_slug": "louisville-naturals",
+    "team_name": "Louisville Naturals",
+    "position": "3B",
+    "role": "batter",
+    "photo": "assets/teams/louisville-naturals/images/players/louisville-players-4.webp",
+    "photo_crop": [
+      0,
+      0,
+      0.5,
+      0.5
+    ]
+  },
+  {
+    "id": "louisville-naturals/andre-wallace",
+    "name": "Andre Wallace",
+    "team_slug": "louisville-naturals",
+    "team_name": "Louisville Naturals",
+    "position": "CF",
+    "role": "batter",
+    "photo": "assets/teams/louisville-naturals/images/players/louisville-players-4.webp",
+    "photo_crop": [
+      0.5,
+      0,
+      0.5,
+      0.5
+    ]
+  },
+  {
+    "id": "louisville-naturals/tomas-rivas",
+    "name": "Tomás Rivas",
+    "team_slug": "louisville-naturals",
+    "team_name": "Louisville Naturals",
+    "position": "LF",
+    "role": "batter",
+    "photo": "assets/teams/louisville-naturals/images/players/louisville-players-4.webp",
+    "photo_crop": [
+      0,
+      0.5,
+      0.5,
+      0.5
+    ]
+  },
+  {
+    "id": "louisville-naturals/blake-harrison",
+    "name": "Blake Harrison",
+    "team_slug": "louisville-naturals",
+    "team_name": "Louisville Naturals",
+    "position": "RF",
+    "role": "batter",
+    "photo": "assets/teams/louisville-naturals/images/players/louisville-players-4.webp",
+    "photo_crop": [
+      0.5,
+      0.5,
+      0.5,
+      0.5
+    ]
+  },
+  {
+    "id": "mayaguez-sultans/dario-vukovic",
+    "name": "Dario Vukovic",
+    "team_slug": "mayaguez-sultans",
+    "team_name": "Mayagüez Sultans",
+    "position": "SP",
+    "role": "pitcher",
+    "photo": "assets/teams/mayaguez-sultans/images/players-01.webp",
+    "photo_crop": [
+      0.00390625,
+      0.0026041666666666665,
+      0.4921875,
+      0.5078125
+    ]
+  },
+  {
+    "id": "mayaguez-sultans/kaito-natsume",
+    "name": "Kaito Natsume",
+    "team_slug": "mayaguez-sultans",
+    "team_name": "Mayagüez Sultans",
+    "position": "SP",
+    "role": "pitcher",
+    "photo": "assets/teams/mayaguez-sultans/images/players-01.webp",
+    "photo_crop": [
+      0.50390625,
+      0.0026041666666666665,
+      0.4921875,
+      0.5078125
+    ]
+  },
+  {
+    "id": "mayaguez-sultans/adewale-bamidele",
+    "name": "Adewale Bamidele",
+    "team_slug": "mayaguez-sultans",
+    "team_name": "Mayagüez Sultans",
+    "position": "SP",
+    "role": "pitcher",
+    "photo": "assets/teams/mayaguez-sultans/images/players-01.webp",
+    "photo_crop": [
+      0.00390625,
+      0.515625,
+      0.4921875,
+      0.4817708333333333
+    ]
+  },
+  {
+    "id": "mayaguez-sultans/lucian-ionescu",
+    "name": "Lucian Ionescu",
+    "team_slug": "mayaguez-sultans",
+    "team_name": "Mayagüez Sultans",
+    "position": "SP",
+    "role": "pitcher",
+    "photo": "assets/teams/mayaguez-sultans/images/players-01.webp",
+    "photo_crop": [
+      0.50390625,
+      0.515625,
+      0.4921875,
+      0.4817708333333333
+    ]
+  },
+  {
+    "id": "mayaguez-sultans/ismail-benjeloun",
+    "name": "Ismail Benjeloun",
+    "team_slug": "mayaguez-sultans",
+    "team_name": "Mayagüez Sultans",
+    "position": "SP",
+    "role": "pitcher",
+    "photo": "assets/teams/mayaguez-sultans/images/players-02.webp",
+    "photo_crop": [
+      0.00390625,
+      0.0026041666666666665,
+      0.4921875,
+      0.4947916666666667
+    ]
+  },
+  {
+    "id": "mayaguez-sultans/seamus-keary",
+    "name": "Seamus Keary",
+    "team_slug": "mayaguez-sultans",
+    "team_name": "Mayagüez Sultans",
+    "position": "RP",
+    "role": "pitcher",
+    "photo": "assets/teams/mayaguez-sultans/images/players-02.webp",
+    "photo_crop": [
+      0.50390625,
+      0.0026041666666666665,
+      0.4921875,
+      0.4947916666666667
+    ]
+  },
+  {
+    "id": "mayaguez-sultans/rafiq-qureshi",
+    "name": "Rafiq Qureshi",
+    "team_slug": "mayaguez-sultans",
+    "team_name": "Mayagüez Sultans",
+    "position": "RP",
+    "role": "pitcher",
+    "photo": "assets/teams/mayaguez-sultans/images/players-02.webp",
+    "photo_crop": [
+      0.00390625,
+      0.5026041666666666,
+      0.4921875,
+      0.4947916666666667
+    ]
+  },
+  {
+    "id": "mayaguez-sultans/tomasz-wierzbicki",
+    "name": "Tomasz Wierzbicki",
+    "team_slug": "mayaguez-sultans",
+    "team_name": "Mayagüez Sultans",
+    "position": "RP",
+    "role": "pitcher",
+    "photo": "assets/teams/mayaguez-sultans/images/players-02.webp",
+    "photo_crop": [
+      0.50390625,
+      0.5026041666666666,
+      0.4921875,
+      0.4947916666666667
+    ]
+  },
+  {
+    "id": "mayaguez-sultans/tomer-barzilai",
+    "name": "Tomer Barzilai",
+    "team_slug": "mayaguez-sultans",
+    "team_name": "Mayagüez Sultans",
+    "position": "C",
+    "role": "batter",
+    "photo": "assets/teams/mayaguez-sultans/images/players-03.webp",
+    "photo_crop": [
+      0.00390625,
+      0.0026041666666666665,
+      0.4921875,
+      0.4947916666666667
+    ]
+  },
+  {
+    "id": "mayaguez-sultans/enzo-carvajal",
+    "name": "Enzo Carvajal",
+    "team_slug": "mayaguez-sultans",
+    "team_name": "Mayagüez Sultans",
+    "position": "1B",
+    "role": "batter",
+    "photo": "assets/teams/mayaguez-sultans/images/players-03.webp",
+    "photo_crop": [
+      0.50390625,
+      0.0026041666666666665,
+      0.4921875,
+      0.4947916666666667
+    ]
+  },
+  {
+    "id": "mayaguez-sultans/nils-adebayo",
+    "name": "Nils Adebayo",
+    "team_slug": "mayaguez-sultans",
+    "team_name": "Mayagüez Sultans",
+    "position": "2B",
+    "role": "batter",
+    "photo": "assets/teams/mayaguez-sultans/images/players-03.webp",
+    "photo_crop": [
+      0.00390625,
+      0.5026041666666666,
+      0.4921875,
+      0.4947916666666667
+    ]
+  },
+  {
+    "id": "mayaguez-sultans/jae-min-seok",
+    "name": "Jae-min Seok",
+    "team_slug": "mayaguez-sultans",
+    "team_name": "Mayagüez Sultans",
+    "position": "SS",
+    "role": "batter",
+    "photo": "assets/teams/mayaguez-sultans/images/players-03.webp",
+    "photo_crop": [
+      0.50390625,
+      0.5026041666666666,
+      0.4921875,
+      0.4947916666666667
+    ]
+  },
+  {
+    "id": "mayaguez-sultans/pavel-hrynko",
+    "name": "Pavel Hrynko",
+    "team_slug": "mayaguez-sultans",
+    "team_name": "Mayagüez Sultans",
+    "position": "3B",
+    "role": "batter",
+    "photo": "assets/teams/mayaguez-sultans/images/players-04.webp",
+    "photo_crop": [
+      0.00390625,
+      0.0026041666666666665,
+      0.4921875,
+      0.4947916666666667
+    ]
+  },
+  {
+    "id": "mayaguez-sultans/malik-doumbia",
+    "name": "Malik Doumbia",
+    "team_slug": "mayaguez-sultans",
+    "team_name": "Mayagüez Sultans",
+    "position": "LF",
+    "role": "batter",
+    "photo": "assets/teams/mayaguez-sultans/images/players-04.webp",
+    "photo_crop": [
+      0.50390625,
+      0.0026041666666666665,
+      0.4921875,
+      0.4947916666666667
+    ]
+  },
+  {
+    "id": "mayaguez-sultans/cesar-iglesiarias",
+    "name": "César Iglesiarias",
+    "team_slug": "mayaguez-sultans",
+    "team_name": "Mayagüez Sultans",
+    "position": "CF",
+    "role": "batter",
+    "photo": "assets/teams/mayaguez-sultans/images/players-04.webp",
+    "photo_crop": [
+      0.00390625,
+      0.5026041666666666,
+      0.4921875,
+      0.4947916666666667
+    ]
+  },
+  {
+    "id": "mayaguez-sultans/ari-kasprzyk",
+    "name": "Ari Kasprzyk",
+    "team_slug": "mayaguez-sultans",
+    "team_name": "Mayagüez Sultans",
+    "position": "RF",
+    "role": "batter",
+    "photo": "assets/teams/mayaguez-sultans/images/players-04.webp",
+    "photo_crop": [
+      0.50390625,
+      0.5026041666666666,
+      0.4921875,
+      0.4947916666666667
+    ]
+  },
+  {
+    "id": "monterrey-cementeros/emilio-zendejas",
+    "name": "Emilio Zendejas",
+    "team_slug": "monterrey-cementeros",
+    "team_name": "Monterrey Cementeros",
+    "position": "SP",
+    "role": "pitcher",
+    "photo": "assets/images/cards/fieldstock/mty-01-emilio-zendejas-front-photo.webp",
+    "photo_crop": null
+  },
+  {
+    "id": "monterrey-cementeros/masato-yanagisawa",
+    "name": "Masato Yanagisawa",
+    "team_slug": "monterrey-cementeros",
+    "team_name": "Monterrey Cementeros",
+    "position": "SP",
+    "role": "pitcher",
+    "photo": "assets/images/cards/fieldstock/mty-02-masato-yanagisawa-front-photo.webp",
+    "photo_crop": null
+  },
+  {
+    "id": "monterrey-cementeros/dariusz-chmiel",
+    "name": "Dariusz Chmiel",
+    "team_slug": "monterrey-cementeros",
+    "team_name": "Monterrey Cementeros",
+    "position": "SP",
+    "role": "pitcher",
+    "photo": "assets/teams/monterrey-cementeros/images/player-atlas-v2.webp",
+    "photo_crop": [
+      0,
+      0,
+      0.25,
+      0.3333333333333333
+    ]
+  },
+  {
+    "id": "monterrey-cementeros/arjun-bhatnagar",
+    "name": "Arjun Bhatnagar",
+    "team_slug": "monterrey-cementeros",
+    "team_name": "Monterrey Cementeros",
+    "position": "SP",
+    "role": "pitcher",
+    "photo": "assets/teams/monterrey-cementeros/images/player-atlas-v2.webp",
+    "photo_crop": [
+      0.25,
+      0,
+      0.25,
+      0.3333333333333333
+    ]
+  },
+  {
+    "id": "monterrey-cementeros/cole-wexler",
+    "name": "Cole Wexler",
+    "team_slug": "monterrey-cementeros",
+    "team_name": "Monterrey Cementeros",
+    "position": "SP",
+    "role": "pitcher",
+    "photo": "assets/teams/monterrey-cementeros/images/player-atlas-v2.webp",
+    "photo_crop": [
+      0.5,
+      0,
+      0.25,
+      0.3333333333333333
+    ]
+  },
+  {
+    "id": "monterrey-cementeros/niko-kouris",
+    "name": "Niko Kouris",
+    "team_slug": "monterrey-cementeros",
+    "team_name": "Monterrey Cementeros",
+    "position": "RP",
+    "role": "pitcher",
+    "photo": "assets/teams/monterrey-cementeros/images/player-atlas-v2.webp",
+    "photo_crop": [
+      0.75,
+      0,
+      0.25,
+      0.3333333333333333
+    ]
+  },
+  {
+    "id": "monterrey-cementeros/bashir-el-khatib",
+    "name": "Bashir El-Khatib",
+    "team_slug": "monterrey-cementeros",
+    "team_name": "Monterrey Cementeros",
+    "position": "RP",
+    "role": "pitcher",
+    "photo": "assets/teams/monterrey-cementeros/images/player-atlas-v2.webp",
+    "photo_crop": [
+      0,
+      0.3333333333333333,
+      0.25,
+      0.3333333333333333
+    ]
+  },
+  {
+    "id": "monterrey-cementeros/rowan-treadwell",
+    "name": "Rowan Treadwell",
+    "team_slug": "monterrey-cementeros",
+    "team_name": "Monterrey Cementeros",
+    "position": "RP",
+    "role": "pitcher",
+    "photo": "assets/teams/monterrey-cementeros/images/player-atlas-v2.webp",
+    "photo_crop": [
+      0.25,
+      0.3333333333333333,
+      0.25,
+      0.3333333333333333
+    ]
+  },
+  {
+    "id": "monterrey-cementeros/julian-sauri",
+    "name": "Julián Sauri",
+    "team_slug": "monterrey-cementeros",
+    "team_name": "Monterrey Cementeros",
+    "position": "C",
+    "role": "batter",
+    "photo": "assets/teams/monterrey-cementeros/images/player-atlas-v2.webp",
+    "photo_crop": [
+      0.5,
+      0.3333333333333333,
+      0.25,
+      0.3333333333333333
+    ]
+  },
+  {
+    "id": "monterrey-cementeros/eamon-kilrea",
+    "name": "Eamon Kilrea",
+    "team_slug": "monterrey-cementeros",
+    "team_name": "Monterrey Cementeros",
+    "position": "1B",
+    "role": "batter",
+    "photo": "assets/teams/monterrey-cementeros/images/player-atlas-v2.webp",
+    "photo_crop": [
+      0.75,
+      0.3333333333333333,
+      0.25,
+      0.3333333333333333
+    ]
+  },
+  {
+    "id": "monterrey-cementeros/thiago-pereyra",
+    "name": "Thiago Pereyra",
+    "team_slug": "monterrey-cementeros",
+    "team_name": "Monterrey Cementeros",
+    "position": "2B",
+    "role": "batter",
+    "photo": "assets/teams/monterrey-cementeros/images/player-atlas-v2.webp",
+    "photo_crop": [
+      0,
+      0.6666666666666666,
+      0.25,
+      0.3333333333333333
+    ]
+  },
+  {
+    "id": "monterrey-cementeros/kofi-mensah",
+    "name": "Kofi Mensah",
+    "team_slug": "monterrey-cementeros",
+    "team_name": "Monterrey Cementeros",
+    "position": "SS",
+    "role": "batter",
+    "photo": "assets/images/cards/fieldstock/mty-12-kofi-mensah-front-photo.webp",
+    "photo_crop": null
+  },
+  {
+    "id": "monterrey-cementeros/luka-vukovic",
+    "name": "Luka Vuković",
+    "team_slug": "monterrey-cementeros",
+    "team_name": "Monterrey Cementeros",
+    "position": "3B",
+    "role": "batter",
+    "photo": "assets/teams/monterrey-cementeros/images/player-atlas-v2.webp",
+    "photo_crop": [
+      0.25,
+      0.6666666666666666,
+      0.25,
+      0.3333333333333333
+    ]
+  },
+  {
+    "id": "monterrey-cementeros/seiji-fukumori",
+    "name": "Seiji Fukumori",
+    "team_slug": "monterrey-cementeros",
+    "team_name": "Monterrey Cementeros",
+    "position": "CF",
+    "role": "batter",
+    "photo": "assets/teams/monterrey-cementeros/images/player-atlas-v2.webp",
+    "photo_crop": [
+      0.5,
+      0.6666666666666666,
+      0.25,
+      0.3333333333333333
+    ]
+  },
+  {
+    "id": "monterrey-cementeros/andres-cazares",
+    "name": "Andrés Cázares",
+    "team_slug": "monterrey-cementeros",
+    "team_name": "Monterrey Cementeros",
+    "position": "LF",
+    "role": "batter",
+    "photo": "assets/images/cards/fieldstock/mty-15-andres-cazares-front-photo.webp",
+    "photo_crop": null
+  },
+  {
+    "id": "monterrey-cementeros/micah-lunsford",
+    "name": "Micah Lunsford",
+    "team_slug": "monterrey-cementeros",
+    "team_name": "Monterrey Cementeros",
+    "position": "RF",
+    "role": "batter",
+    "photo": "assets/teams/monterrey-cementeros/images/player-atlas-v2.webp",
+    "photo_crop": [
+      0.75,
+      0.6666666666666666,
+      0.25,
+      0.3333333333333333
+    ]
+  },
+  {
+    "id": "osaka-spirits/hiroto-kurobane",
+    "name": "Hiroto Kurobane",
+    "team_slug": "osaka-spirits",
+    "team_name": "Osaka Spirits",
+    "position": "SP",
+    "role": "pitcher",
+    "photo": "assets/images/cards/fieldstock/osa-01-hiroto-kurobane-front.webp",
+    "photo_crop": null
+  },
+  {
+    "id": "osaka-spirits/enzo-dalmau",
+    "name": "Enzo Dalmau",
+    "team_slug": "osaka-spirits",
+    "team_name": "Osaka Spirits",
+    "position": "SP",
+    "role": "pitcher",
+    "photo": "assets/images/cards/fieldstock/osa-02-enzo-dalmau-front.webp",
+    "photo_crop": null
+  },
+  {
+    "id": "osaka-spirits/kofi-boateng",
+    "name": "Kofi Boateng",
+    "team_slug": "osaka-spirits",
+    "team_name": "Osaka Spirits",
+    "position": "SP",
+    "role": "pitcher",
+    "photo": "assets/images/cards/fieldstock/osa-03-kofi-boateng-front.webp",
+    "photo_crop": null
+  },
+  {
+    "id": "osaka-spirits/luka-kovacevic",
+    "name": "Luka Kovačević",
+    "team_slug": "osaka-spirits",
+    "team_name": "Osaka Spirits",
+    "position": "SP",
+    "role": "pitcher",
+    "photo": "assets/images/cards/fieldstock/osa-04-luka-kovacevic-front.webp",
+    "photo_crop": null
+  },
+  {
+    "id": "osaka-spirits/rowan-cahir",
+    "name": "Rowan Cahir",
+    "team_slug": "osaka-spirits",
+    "team_name": "Osaka Spirits",
+    "position": "SP",
+    "role": "pitcher",
+    "photo": "assets/images/cards/fieldstock/osa-05-rowan-cahir-front.webp",
+    "photo_crop": null
+  },
+  {
+    "id": "osaka-spirits/sandeep-nayar",
+    "name": "Sandeep Nayar",
+    "team_slug": "osaka-spirits",
+    "team_name": "Osaka Spirits",
+    "position": "RP",
+    "role": "pitcher",
+    "photo": "assets/images/cards/fieldstock/osa-06-sandeep-nayar-front.webp",
+    "photo_crop": null
+  },
+  {
+    "id": "osaka-spirits/mateo-zubillaga",
+    "name": "Mateo Zubillaga",
+    "team_slug": "osaka-spirits",
+    "team_name": "Osaka Spirits",
+    "position": "RP",
+    "role": "pitcher",
+    "photo": "assets/images/cards/fieldstock/osa-07-mateo-zubillaga-front.webp",
+    "photo_crop": null
+  },
+  {
+    "id": "osaka-spirits/jae-min-goh",
+    "name": "Jae-min Goh",
+    "team_slug": "osaka-spirits",
+    "team_name": "Osaka Spirits",
+    "position": "RP",
+    "role": "pitcher",
+    "photo": "assets/images/cards/fieldstock/osa-08-jae-min-goh-front.webp",
+    "photo_crop": null
+  },
+  {
+    "id": "osaka-spirits/marcelino-quispe",
+    "name": "Marcelino Quispe",
+    "team_slug": "osaka-spirits",
+    "team_name": "Osaka Spirits",
+    "position": "C",
+    "role": "batter",
+    "photo": "assets/images/cards/fieldstock/osa-09-marcelino-quispe-front.webp",
+    "photo_crop": null
+  },
+  {
+    "id": "osaka-spirits/thabo-mkhize",
+    "name": "Thabo Mkhize",
+    "team_slug": "osaka-spirits",
+    "team_name": "Osaka Spirits",
+    "position": "1B",
+    "role": "batter",
+    "photo": "assets/images/cards/fieldstock/osa-10-thabo-mkhize-front.webp",
+    "photo_crop": null
+  },
+  {
+    "id": "osaka-spirits/arman-daryan",
+    "name": "Arman Daryan",
+    "team_slug": "osaka-spirits",
+    "team_name": "Osaka Spirits",
+    "position": "2B",
+    "role": "batter",
+    "photo": "assets/images/cards/fieldstock/osa-11-arman-daryan-front.webp",
+    "photo_crop": null
+  },
+  {
+    "id": "osaka-spirits/kenjiro-suganuma",
+    "name": "Kenjiro Suganuma",
+    "team_slug": "osaka-spirits",
+    "team_name": "Osaka Spirits",
+    "position": "SS",
+    "role": "batter",
+    "photo": "assets/images/cards/fieldstock/osa-12-kenjiro-suganuma-front.webp",
+    "photo_crop": null
+  },
+  {
+    "id": "osaka-spirits/dariusz-kwiatkowski",
+    "name": "Dariusz Kwiatkowski",
+    "team_slug": "osaka-spirits",
+    "team_name": "Osaka Spirits",
+    "position": "3B",
+    "role": "batter",
+    "photo": "assets/images/cards/fieldstock/osa-13-dariusz-kwiatkowski-front.webp",
+    "photo_crop": null
+  },
+  {
+    "id": "osaka-spirits/nikhil-bhandari",
+    "name": "Nikhil Bhandari",
+    "team_slug": "osaka-spirits",
+    "team_name": "Osaka Spirits",
+    "position": "CF",
+    "role": "batter",
+    "photo": "assets/images/cards/fieldstock/osa-14-nikhil-bhandari-front.webp",
+    "photo_crop": null
+  },
+  {
+    "id": "osaka-spirits/thiago-ramires",
+    "name": "Thiago Ramires",
+    "team_slug": "osaka-spirits",
+    "team_name": "Osaka Spirits",
+    "position": "LF",
+    "role": "batter",
+    "photo": "assets/images/cards/fieldstock/osa-15-thiago-ramires-front.webp",
+    "photo_crop": null
+  },
+  {
+    "id": "osaka-spirits/yusef-el-badri",
+    "name": "Yusef El-Badri",
+    "team_slug": "osaka-spirits",
+    "team_name": "Osaka Spirits",
+    "position": "RF",
+    "role": "batter",
+    "photo": "assets/images/cards/fieldstock/osa-16-yusef-el-badri-front.webp",
+    "photo_crop": null
+  },
+  {
+    "id": "san-pedro-cocolos/ivo-korolenko",
+    "name": "Ivo Korolenko",
+    "team_slug": "san-pedro-cocolos",
+    "team_name": "San Pedro Cocolos",
+    "position": "SP",
+    "role": "pitcher",
+    "photo": "assets/teams/san-pedro-cocolos/images/players-01-v2.webp",
+    "photo_crop": [
+      0,
+      0,
+      0.5,
+      0.5
+    ]
+  },
+  {
+    "id": "san-pedro-cocolos/nolan-garrity",
+    "name": "Nolan Garrity",
+    "team_slug": "san-pedro-cocolos",
+    "team_name": "San Pedro Cocolos",
+    "position": "SP",
+    "role": "pitcher",
+    "photo": "assets/teams/san-pedro-cocolos/images/players-01-v2.webp",
+    "photo_crop": [
+      0.5,
+      0,
+      0.5,
+      0.5
+    ]
+  },
+  {
+    "id": "san-pedro-cocolos/kenji-morishita",
+    "name": "Kenji Morishita",
+    "team_slug": "san-pedro-cocolos",
+    "team_name": "San Pedro Cocolos",
+    "position": "SP",
+    "role": "pitcher",
+    "photo": "assets/teams/san-pedro-cocolos/images/players-01-v2.webp",
+    "photo_crop": [
+      0,
+      0.5,
+      0.5,
+      0.5
+    ]
+  },
+  {
+    "id": "san-pedro-cocolos/souleymane-diallo",
+    "name": "Souleymane Diallo",
+    "team_slug": "san-pedro-cocolos",
+    "team_name": "San Pedro Cocolos",
+    "position": "SP",
+    "role": "pitcher",
+    "photo": "assets/teams/san-pedro-cocolos/images/players-01-v2.webp",
+    "photo_crop": [
+      0.5,
+      0.5,
+      0.5,
+      0.5
+    ]
+  },
+  {
+    "id": "san-pedro-cocolos/enzo-valera",
+    "name": "Enzo Valera",
+    "team_slug": "san-pedro-cocolos",
+    "team_name": "San Pedro Cocolos",
+    "position": "SP",
+    "role": "pitcher",
+    "photo": "assets/teams/san-pedro-cocolos/images/players-02-v2.webp",
+    "photo_crop": [
+      0,
+      0,
+      0.5,
+      0.5
+    ]
+  },
+  {
+    "id": "san-pedro-cocolos/marek-zielinski",
+    "name": "Marek Zielinski",
+    "team_slug": "san-pedro-cocolos",
+    "team_name": "San Pedro Cocolos",
+    "position": "RP",
+    "role": "pitcher",
+    "photo": "assets/teams/san-pedro-cocolos/images/players-02-v2.webp",
+    "photo_crop": [
+      0.5,
+      0,
+      0.5,
+      0.5
+    ]
+  },
+  {
+    "id": "san-pedro-cocolos/teo-arellano",
+    "name": "Teo Arellano",
+    "team_slug": "san-pedro-cocolos",
+    "team_name": "San Pedro Cocolos",
+    "position": "RP",
+    "role": "pitcher",
+    "photo": "assets/teams/san-pedro-cocolos/images/players-02-v2.webp",
+    "photo_crop": [
+      0,
+      0.5,
+      0.5,
+      0.5
+    ]
+  },
+  {
+    "id": "san-pedro-cocolos/isaac-rendell",
+    "name": "Isaac Rendell",
+    "team_slug": "san-pedro-cocolos",
+    "team_name": "San Pedro Cocolos",
+    "position": "RP",
+    "role": "pitcher",
+    "photo": "assets/teams/san-pedro-cocolos/images/players-02-v2.webp",
+    "photo_crop": [
+      0.5,
+      0.5,
+      0.5,
+      0.5
+    ]
+  },
+  {
+    "id": "san-pedro-cocolos/matias-serey",
+    "name": "Matías Serey",
+    "team_slug": "san-pedro-cocolos",
+    "team_name": "San Pedro Cocolos",
+    "position": "C",
+    "role": "batter",
+    "photo": "assets/teams/san-pedro-cocolos/images/players-03-v2.webp",
+    "photo_crop": [
+      0,
+      0,
+      0.5,
+      0.5
+    ]
+  },
+  {
+    "id": "san-pedro-cocolos/caleb-vanhoorn",
+    "name": "Caleb VanHoorn",
+    "team_slug": "san-pedro-cocolos",
+    "team_name": "San Pedro Cocolos",
+    "position": "1B",
+    "role": "batter",
+    "photo": "assets/teams/san-pedro-cocolos/images/players-03-v2.webp",
+    "photo_crop": [
+      0.5,
+      0,
+      0.5,
+      0.5
+    ]
+  },
+  {
+    "id": "san-pedro-cocolos/omar-benyahia",
+    "name": "Omar Benyahia",
+    "team_slug": "san-pedro-cocolos",
+    "team_name": "San Pedro Cocolos",
+    "position": "2B",
+    "role": "batter",
+    "photo": "assets/teams/san-pedro-cocolos/images/players-03-v2.webp",
+    "photo_crop": [
+      0,
+      0.5,
+      0.5,
+      0.5
+    ]
+  },
+  {
+    "id": "san-pedro-cocolos/ryo-kawabata",
+    "name": "Ryo Kawabata",
+    "team_slug": "san-pedro-cocolos",
+    "team_name": "San Pedro Cocolos",
+    "position": "SS",
+    "role": "batter",
+    "photo": "assets/teams/san-pedro-cocolos/images/players-03-v2.webp",
+    "photo_crop": [
+      0.5,
+      0.5,
+      0.5,
+      0.5
+    ]
+  },
+  {
+    "id": "san-pedro-cocolos/darius-kofi",
+    "name": "Darius Kofi",
+    "team_slug": "san-pedro-cocolos",
+    "team_name": "San Pedro Cocolos",
+    "position": "3B",
+    "role": "batter",
+    "photo": "assets/teams/san-pedro-cocolos/images/players-04-v2.webp",
+    "photo_crop": [
+      0,
+      0,
+      0.5,
+      0.5
+    ]
+  },
+  {
+    "id": "san-pedro-cocolos/miguel-encarnacion",
+    "name": "Miguel Encarnación",
+    "team_slug": "san-pedro-cocolos",
+    "team_name": "San Pedro Cocolos",
+    "position": "CF",
+    "role": "batter",
+    "photo": "assets/teams/san-pedro-cocolos/images/players-04-v2.webp",
+    "photo_crop": [
+      0.5,
+      0,
+      0.5,
+      0.5
+    ]
+  },
+  {
+    "id": "san-pedro-cocolos/victor-sundqvist",
+    "name": "Victor Sundqvist",
+    "team_slug": "san-pedro-cocolos",
+    "team_name": "San Pedro Cocolos",
+    "position": "LF",
+    "role": "batter",
+    "photo": "assets/teams/san-pedro-cocolos/images/players-04-v2.webp",
+    "photo_crop": [
+      0,
+      0.5,
+      0.5,
+      0.5
+    ]
+  },
+  {
+    "id": "san-pedro-cocolos/naveen-iyer",
+    "name": "Naveen Iyer",
+    "team_slug": "san-pedro-cocolos",
+    "team_name": "San Pedro Cocolos",
+    "position": "RF",
+    "role": "batter",
+    "photo": "assets/teams/san-pedro-cocolos/images/players-04-v2.webp",
+    "photo_crop": [
+      0.5,
+      0.5,
+      0.5,
+      0.5
+    ]
+  },
+  {
+    "id": "santiago-caballeros/aron-videla",
+    "name": "Arón Videla",
+    "team_slug": "santiago-caballeros",
+    "team_name": "Santiago Caballeros",
+    "position": "SP",
+    "role": "pitcher",
+    "photo": "assets/teams/santiago-caballeros/images/players/aron-videla.webp",
+    "photo_crop": [
+      0,
+      0,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "santiago-caballeros/gideon-fairchild",
+    "name": "Gideon Fairchild",
+    "team_slug": "santiago-caballeros",
+    "team_name": "Santiago Caballeros",
+    "position": "SP",
+    "role": "pitcher",
+    "photo": "assets/teams/santiago-caballeros/images/players/gideon-fairchild.webp",
+    "photo_crop": [
+      0,
+      0,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "santiago-caballeros/kenji-hoshino",
+    "name": "Kenji Hoshino",
+    "team_slug": "santiago-caballeros",
+    "team_name": "Santiago Caballeros",
+    "position": "SP",
+    "role": "pitcher",
+    "photo": "assets/teams/santiago-caballeros/images/players/kenji-hoshino.webp",
+    "photo_crop": [
+      0,
+      0,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "santiago-caballeros/samson-ndlovu",
+    "name": "Samson Ndlovu",
+    "team_slug": "santiago-caballeros",
+    "team_name": "Santiago Caballeros",
+    "position": "SP",
+    "role": "pitcher",
+    "photo": "assets/teams/santiago-caballeros/images/players/samson-ndlovu.webp",
+    "photo_crop": [
+      0,
+      0,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "santiago-caballeros/mateo-arancibia",
+    "name": "Mateo Arancibia",
+    "team_slug": "santiago-caballeros",
+    "team_name": "Santiago Caballeros",
+    "position": "SP",
+    "role": "pitcher",
+    "photo": "assets/teams/santiago-caballeros/images/players/mateo-arancibia.webp",
+    "photo_crop": [
+      0,
+      0,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "santiago-caballeros/tyrese-warnock",
+    "name": "Tyrese Warnock",
+    "team_slug": "santiago-caballeros",
+    "team_name": "Santiago Caballeros",
+    "position": "RP",
+    "role": "pitcher",
+    "photo": "assets/teams/santiago-caballeros/images/players/tyrese-warnock.webp",
+    "photo_crop": [
+      0,
+      0,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "santiago-caballeros/joaquim-silveira",
+    "name": "Joaquim Silveira",
+    "team_slug": "santiago-caballeros",
+    "team_name": "Santiago Caballeros",
+    "position": "RP",
+    "role": "pitcher",
+    "photo": "assets/teams/santiago-caballeros/images/players/joaquim-silveira.webp",
+    "photo_crop": [
+      0,
+      0,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "santiago-caballeros/emin-kocak",
+    "name": "Emin Koçak",
+    "team_slug": "santiago-caballeros",
+    "team_name": "Santiago Caballeros",
+    "position": "RP",
+    "role": "pitcher",
+    "photo": "assets/teams/santiago-caballeros/images/players/emin-kocak.webp",
+    "photo_crop": [
+      0,
+      0,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "santiago-caballeros/damian-velasquez",
+    "name": "Damián Velásquez",
+    "team_slug": "santiago-caballeros",
+    "team_name": "Santiago Caballeros",
+    "position": "C",
+    "role": "batter",
+    "photo": "assets/teams/santiago-caballeros/images/players/damian-velasquez.webp",
+    "photo_crop": [
+      0,
+      0,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "santiago-caballeros/noam-finkel",
+    "name": "Noam Finkel",
+    "team_slug": "santiago-caballeros",
+    "team_name": "Santiago Caballeros",
+    "position": "1B",
+    "role": "batter",
+    "photo": "assets/teams/santiago-caballeros/images/players/noam-finkel.webp",
+    "photo_crop": [
+      0,
+      0,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "santiago-caballeros/raul-castillo",
+    "name": "Raúl Castillo",
+    "team_slug": "santiago-caballeros",
+    "team_name": "Santiago Caballeros",
+    "position": "2B",
+    "role": "batter",
+    "photo": "assets/teams/santiago-caballeros/images/players/raul-castillo.webp",
+    "photo_crop": [
+      0,
+      0,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "santiago-caballeros/maksim-berezan",
+    "name": "Maksim Berezan",
+    "team_slug": "santiago-caballeros",
+    "team_name": "Santiago Caballeros",
+    "position": "SS",
+    "role": "batter",
+    "photo": "assets/teams/santiago-caballeros/images/players/maksim-berezan.webp",
+    "photo_crop": [
+      0,
+      0,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "santiago-caballeros/eamon-quillan",
+    "name": "Eamon Quillan",
+    "team_slug": "santiago-caballeros",
+    "team_name": "Santiago Caballeros",
+    "position": "3B",
+    "role": "batter",
+    "photo": "assets/teams/santiago-caballeros/images/players/eamon-quillan.webp",
+    "photo_crop": [
+      0,
+      0,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "santiago-caballeros/kiyoshi-senda",
+    "name": "Kiyoshi Senda",
+    "team_slug": "santiago-caballeros",
+    "team_name": "Santiago Caballeros",
+    "position": "LF",
+    "role": "batter",
+    "photo": "assets/teams/santiago-caballeros/images/players/kiyoshi-senda.webp",
+    "photo_crop": [
+      0,
+      0,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "santiago-caballeros/dalton-reyes",
+    "name": "Dalton Reyes",
+    "team_slug": "santiago-caballeros",
+    "team_name": "Santiago Caballeros",
+    "position": "CF",
+    "role": "batter",
+    "photo": "assets/teams/santiago-caballeros/images/players/dalton-reyes-v2.webp",
+    "photo_crop": [
+      0,
+      0,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "santiago-caballeros/adebayo-oluwaseyi",
+    "name": "Adebayo Oluwaseyi",
+    "team_slug": "santiago-caballeros",
+    "team_name": "Santiago Caballeros",
+    "position": "RF",
+    "role": "batter",
+    "photo": "assets/teams/santiago-caballeros/images/players/adebayo-oluwaseyi.webp",
+    "photo_crop": [
+      0,
+      0,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "spokane-alloys/kellan-brynden",
+    "name": "Kellan Brynden",
+    "team_slug": "spokane-alloys",
+    "team_name": "Spokane Alloys",
+    "position": "SP",
+    "role": "pitcher",
+    "photo": "assets/images/players/spokane-alloys/spokane-kellan-brynden.png",
+    "photo_crop": null
+  },
+  {
+    "id": "spokane-alloys/oskar-svanholm",
+    "name": "Oskar Svanholm",
+    "team_slug": "spokane-alloys",
+    "team_name": "Spokane Alloys",
+    "position": "SP",
+    "role": "pitcher",
+    "photo": "assets/images/players/spokane-alloys/spokane-oskar-svanholm.png",
+    "photo_crop": null
+  },
+  {
+    "id": "spokane-alloys/mateusz-kasprowicz",
+    "name": "Mateusz Kasprowicz",
+    "team_slug": "spokane-alloys",
+    "team_name": "Spokane Alloys",
+    "position": "SP",
+    "role": "pitcher",
+    "photo": "assets/images/players/spokane-alloys/spokane-mateusz-kasprowicz.png",
+    "photo_crop": null
+  },
+  {
+    "id": "spokane-alloys/diego-alvarez-mora",
+    "name": "Diego Álvarez Mora",
+    "team_slug": "spokane-alloys",
+    "team_name": "Spokane Alloys",
+    "position": "SP",
+    "role": "pitcher",
+    "photo": "assets/images/players/spokane-alloys/spokane-diego-alvarez-mora.png",
+    "photo_crop": null
+  },
+  {
+    "id": "spokane-alloys/lukas-havel",
+    "name": "Lukas Havel",
+    "team_slug": "spokane-alloys",
+    "team_name": "Spokane Alloys",
+    "position": "SP",
+    "role": "pitcher",
+    "photo": "assets/images/players/spokane-alloys/spokane-lukas-havel.png",
+    "photo_crop": null
+  },
+  {
+    "id": "spokane-alloys/caleb-reidman",
+    "name": "Caleb Reidman",
+    "team_slug": "spokane-alloys",
+    "team_name": "Spokane Alloys",
+    "position": "RP",
+    "role": "pitcher",
+    "photo": "assets/images/players/spokane-alloys/spokane-caleb-reidman.png",
+    "photo_crop": null
+  },
+  {
+    "id": "spokane-alloys/sergio-ibarra-lugo",
+    "name": "Sergio Ibarra Lugo",
+    "team_slug": "spokane-alloys",
+    "team_name": "Spokane Alloys",
+    "position": "RP",
+    "role": "pitcher",
+    "photo": "assets/images/players/spokane-alloys/spokane-sergio-ibarra-lugo.png",
+    "photo_crop": null
+  },
+  {
+    "id": "spokane-alloys/yaw-mensah",
+    "name": "Yaw Mensah",
+    "team_slug": "spokane-alloys",
+    "team_name": "Spokane Alloys",
+    "position": "RP",
+    "role": "pitcher",
+    "photo": "assets/images/players/spokane-alloys/spokane-yaw-mensah.png",
+    "photo_crop": null
+  },
+  {
+    "id": "spokane-alloys/nikolai-dobrynin",
+    "name": "Nikolai Dobrynin",
+    "team_slug": "spokane-alloys",
+    "team_name": "Spokane Alloys",
+    "position": "C",
+    "role": "batter",
+    "photo": "assets/images/players/spokane-alloys/spokane-nikolai-dobrynin.png",
+    "photo_crop": null
+  },
+  {
+    "id": "spokane-alloys/evan-carroll-iv",
+    "name": "Evan Carroll IV",
+    "team_slug": "spokane-alloys",
+    "team_name": "Spokane Alloys",
+    "position": "1B",
+    "role": "batter",
+    "photo": "assets/images/players/spokane-alloys/spokane-evan-carroll-iv.png",
+    "photo_crop": null
+  },
+  {
+    "id": "spokane-alloys/marco-delvecchio",
+    "name": "Marco DelVecchio",
+    "team_slug": "spokane-alloys",
+    "team_name": "Spokane Alloys",
+    "position": "2B",
+    "role": "batter",
+    "photo": "assets/images/players/spokane-alloys/spokane-marco-delvecchio.png",
+    "photo_crop": null
+  },
+  {
+    "id": "spokane-alloys/tomasz-kubas",
+    "name": "Tomasz Kubas",
+    "team_slug": "spokane-alloys",
+    "team_name": "Spokane Alloys",
+    "position": "SS",
+    "role": "batter",
+    "photo": "assets/images/players/spokane-alloys/spokane-tomasz-kubas.png",
+    "photo_crop": null
+  },
+  {
+    "id": "spokane-alloys/andres-mireles",
+    "name": "Andrés Mireles",
+    "team_slug": "spokane-alloys",
+    "team_name": "Spokane Alloys",
+    "position": "3B",
+    "role": "batter",
+    "photo": "assets/images/players/spokane-alloys/spokane-andres-mireles.png",
+    "photo_crop": null
+  },
+  {
+    "id": "spokane-alloys/wyatt-hollander",
+    "name": "Wyatt Hollander",
+    "team_slug": "spokane-alloys",
+    "team_name": "Spokane Alloys",
+    "position": "CF",
+    "role": "batter",
+    "photo": "assets/images/players/spokane-alloys/spokane-wyatt-hollander.png",
+    "photo_crop": null
+  },
+  {
+    "id": "spokane-alloys/luis-quinones",
+    "name": "Luis Quiñones",
+    "team_slug": "spokane-alloys",
+    "team_name": "Spokane Alloys",
+    "position": "LF",
+    "role": "batter",
+    "photo": "assets/images/players/spokane-alloys/spokane-luis-quinones.png",
+    "photo_crop": null
+  },
+  {
+    "id": "spokane-alloys/pieter-van-wyk",
+    "name": "Pieter van Wyk",
+    "team_slug": "spokane-alloys",
+    "team_name": "Spokane Alloys",
+    "position": "RF",
+    "role": "batter",
+    "photo": "assets/images/players/spokane-alloys/spokane-pieter-van-wyk.png",
+    "photo_crop": null
+  },
+  {
+    "id": "spokane-alloys/jonah-sato",
+    "name": "Jonah Sato",
+    "team_slug": "spokane-alloys",
+    "team_name": "Spokane Alloys",
+    "position": "C",
+    "role": "batter",
+    "photo": "assets/images/cards/fieldstock/spk-17-jonah-sato-front.webp",
+    "photo_crop": [
+      0.16,
+      0.22,
+      0.68,
+      0.49
+    ]
+  },
+  {
+    "id": "spokane-alloys/rene-bouchard",
+    "name": "René Bouchard",
+    "team_slug": "spokane-alloys",
+    "team_name": "Spokane Alloys",
+    "position": "IF",
+    "role": "batter",
+    "photo": "assets/images/cards/fieldstock/spk-18-rene-bouchard-front.webp",
+    "photo_crop": [
+      0.16,
+      0.22,
+      0.68,
+      0.49
+    ]
+  },
+  {
+    "id": "spokane-alloys/malachi-boone",
+    "name": "Malachi Boone",
+    "team_slug": "spokane-alloys",
+    "team_name": "Spokane Alloys",
+    "position": "IF",
+    "role": "batter",
+    "photo": "assets/images/cards/fieldstock/spk-19-malachi-boone-front.webp",
+    "photo_crop": [
+      0.16,
+      0.22,
+      0.68,
+      0.49
+    ]
+  },
+  {
+    "id": "spokane-alloys/dae-hyun-park",
+    "name": "Dae-Hyun Park",
+    "team_slug": "spokane-alloys",
+    "team_name": "Spokane Alloys",
+    "position": "OF",
+    "role": "batter",
+    "photo": "assets/images/cards/fieldstock/spk-20-dae-hyun-park-front.webp",
+    "photo_crop": [
+      0.16,
+      0.22,
+      0.68,
+      0.49
+    ]
+  },
+  {
+    "id": "spokane-alloys/tesfaye-mebrahtu",
+    "name": "Tesfaye Mebrahtu",
+    "team_slug": "spokane-alloys",
+    "team_name": "Spokane Alloys",
+    "position": "OF",
+    "role": "batter",
+    "photo": "assets/images/cards/fieldstock/spk-21-tesfaye-mebrahtu-front.webp",
+    "photo_crop": [
+      0.16,
+      0.22,
+      0.68,
+      0.49
+    ]
+  },
+  {
+    "id": "spokane-alloys/benoit-leduc",
+    "name": "Benoît Leduc",
+    "team_slug": "spokane-alloys",
+    "team_name": "Spokane Alloys",
+    "position": "RP",
+    "role": "pitcher",
+    "photo": "assets/images/cards/fieldstock/spk-22-benoit-leduc-front.webp",
+    "photo_crop": [
+      0.16,
+      0.22,
+      0.68,
+      0.49
+    ]
+  },
+  {
+    "id": "spokane-alloys/hamza-qureshi",
+    "name": "Hamza Qureshi",
+    "team_slug": "spokane-alloys",
+    "team_name": "Spokane Alloys",
+    "position": "RP",
+    "role": "pitcher",
+    "photo": "assets/images/cards/fieldstock/spk-23-hamza-qureshi-front.webp",
+    "photo_crop": [
+      0.16,
+      0.22,
+      0.68,
+      0.49
+    ]
+  },
+  {
+    "id": "spokane-alloys/ellis-wren",
+    "name": "Ellis Wren",
+    "team_slug": "spokane-alloys",
+    "team_name": "Spokane Alloys",
+    "position": "RP",
+    "role": "pitcher",
+    "photo": "assets/images/cards/fieldstock/spk-24-ellis-wren-front.webp",
+    "photo_crop": [
+      0.16,
+      0.22,
+      0.68,
+      0.49
+    ]
+  },
+  {
+    "id": "spokane-alloys/miguel-angel-serrano",
+    "name": "Miguel Ángel Serrano",
+    "team_slug": "spokane-alloys",
+    "team_name": "Spokane Alloys",
+    "position": "RP",
+    "role": "pitcher",
+    "photo": "assets/images/cards/fieldstock/spk-25-miguel-angel-serrano-front.webp",
+    "photo_crop": [
+      0.16,
+      0.22,
+      0.68,
+      0.49
+    ]
+  },
+  {
+    "id": "spokane-alloys/branislav-vukovic",
+    "name": "Branislav \"Bran\" Vuković",
+    "team_slug": "spokane-alloys",
+    "team_name": "Spokane Alloys",
+    "position": "CL",
+    "role": "pitcher",
+    "photo": "assets/images/cards/fieldstock/spk-26-branislav-vukovic-front.webp",
+    "photo_crop": [
+      0.16,
+      0.22,
+      0.68,
+      0.49
+    ]
+  },
+  {
+    "id": "st-paul-frost/caleb-warnock",
+    "name": "Caleb Warnock",
+    "team_slug": "st-paul-frost",
+    "team_name": "St. Paul Frost",
+    "position": "SP",
+    "role": "pitcher",
+    "photo": "assets/teams/st-paul-frost/images/player-atlas-v2.webp",
+    "photo_crop": [
+      0,
+      0,
+      0.25,
+      0.25
+    ]
+  },
+  {
+    "id": "st-paul-frost/miguel-alcazar",
+    "name": "Miguel Alcázar",
+    "team_slug": "st-paul-frost",
+    "team_name": "St. Paul Frost",
+    "position": "SP",
+    "role": "pitcher",
+    "photo": "assets/teams/st-paul-frost/images/player-atlas-v2.webp",
+    "photo_crop": [
+      0.25,
+      0,
+      0.25,
+      0.25
+    ]
+  },
+  {
+    "id": "st-paul-frost/ryan-keswick",
+    "name": "Ryan Keswick",
+    "team_slug": "st-paul-frost",
+    "team_name": "St. Paul Frost",
+    "position": "SP",
+    "role": "pitcher",
+    "photo": "assets/teams/st-paul-frost/images/player-atlas-v2.webp",
+    "photo_crop": [
+      0.5,
+      0,
+      0.25,
+      0.25
+    ]
+  },
+  {
+    "id": "st-paul-frost/tae-ho-choi",
+    "name": "Tae-ho Choi",
+    "team_slug": "st-paul-frost",
+    "team_name": "St. Paul Frost",
+    "position": "SP",
+    "role": "pitcher",
+    "photo": "assets/teams/st-paul-frost/images/player-atlas-v2.webp",
+    "photo_crop": [
+      0.75,
+      0,
+      0.25,
+      0.25
+    ]
+  },
+  {
+    "id": "st-paul-frost/nolan-brix",
+    "name": "Nolan Brix",
+    "team_slug": "st-paul-frost",
+    "team_name": "St. Paul Frost",
+    "position": "SP",
+    "role": "pitcher",
+    "photo": "assets/teams/st-paul-frost/images/player-atlas-v2.webp",
+    "photo_crop": [
+      0,
+      0.25,
+      0.25,
+      0.25
+    ]
+  },
+  {
+    "id": "st-paul-frost/darius-collins",
+    "name": "Darius Collins",
+    "team_slug": "st-paul-frost",
+    "team_name": "St. Paul Frost",
+    "position": "RP",
+    "role": "pitcher",
+    "photo": "assets/teams/st-paul-frost/images/player-atlas-v2.webp",
+    "photo_crop": [
+      0.25,
+      0.25,
+      0.25,
+      0.25
+    ]
+  },
+  {
+    "id": "st-paul-frost/antonio-velez",
+    "name": "Antonio Vélez",
+    "team_slug": "st-paul-frost",
+    "team_name": "St. Paul Frost",
+    "position": "RP",
+    "role": "pitcher",
+    "photo": "assets/teams/st-paul-frost/images/player-atlas-v2.webp",
+    "photo_crop": [
+      0.5,
+      0.25,
+      0.25,
+      0.25
+    ]
+  },
+  {
+    "id": "st-paul-frost/lukas-horvat",
+    "name": "Lukáš Horvat",
+    "team_slug": "st-paul-frost",
+    "team_name": "St. Paul Frost",
+    "position": "RP",
+    "role": "pitcher",
+    "photo": "assets/teams/st-paul-frost/images/player-atlas-v2.webp",
+    "photo_crop": [
+      0.75,
+      0.25,
+      0.25,
+      0.25
+    ]
+  },
+  {
+    "id": "st-paul-frost/evan-morrissey",
+    "name": "Evan Morrissey",
+    "team_slug": "st-paul-frost",
+    "team_name": "St. Paul Frost",
+    "position": "C",
+    "role": "batter",
+    "photo": "assets/teams/st-paul-frost/images/player-atlas-v2.webp",
+    "photo_crop": [
+      0,
+      0.5,
+      0.25,
+      0.25
+    ]
+  },
+  {
+    "id": "st-paul-frost/javier-lucero",
+    "name": "Javier Lucero",
+    "team_slug": "st-paul-frost",
+    "team_name": "St. Paul Frost",
+    "position": "1B",
+    "role": "batter",
+    "photo": "assets/teams/st-paul-frost/images/player-atlas-v2.webp",
+    "photo_crop": [
+      0.25,
+      0.5,
+      0.25,
+      0.25
+    ]
+  },
+  {
+    "id": "st-paul-frost/owen-hartnell",
+    "name": "Owen Hartnell",
+    "team_slug": "st-paul-frost",
+    "team_name": "St. Paul Frost",
+    "position": "2B",
+    "role": "batter",
+    "photo": "assets/teams/st-paul-frost/images/player-atlas-v2.webp",
+    "photo_crop": [
+      0.5,
+      0.5,
+      0.25,
+      0.25
+    ]
+  },
+  {
+    "id": "st-paul-frost/masato-kobori",
+    "name": "Masato Kobori",
+    "team_slug": "st-paul-frost",
+    "team_name": "St. Paul Frost",
+    "position": "SS",
+    "role": "batter",
+    "photo": "assets/teams/st-paul-frost/images/player-atlas-v2.webp",
+    "photo_crop": [
+      0.75,
+      0.5,
+      0.25,
+      0.25
+    ]
+  },
+  {
+    "id": "st-paul-frost/trevor-yates",
+    "name": "Trevor Yates",
+    "team_slug": "st-paul-frost",
+    "team_name": "St. Paul Frost",
+    "position": "3B",
+    "role": "batter",
+    "photo": "assets/teams/st-paul-frost/images/player-atlas-v2.webp",
+    "photo_crop": [
+      0,
+      0.75,
+      0.25,
+      0.25
+    ]
+  },
+  {
+    "id": "st-paul-frost/malik-jefferson",
+    "name": "Malik Jefferson",
+    "team_slug": "st-paul-frost",
+    "team_name": "St. Paul Frost",
+    "position": "CF",
+    "role": "batter",
+    "photo": "assets/teams/st-paul-frost/images/player-atlas-v2.webp",
+    "photo_crop": [
+      0.25,
+      0.75,
+      0.25,
+      0.25
+    ]
+  },
+  {
+    "id": "st-paul-frost/rodrigo-fuentes",
+    "name": "Rodrigo Fuentes",
+    "team_slug": "st-paul-frost",
+    "team_name": "St. Paul Frost",
+    "position": "LF",
+    "role": "batter",
+    "photo": "assets/teams/st-paul-frost/images/player-atlas-v2.webp",
+    "photo_crop": [
+      0.5,
+      0.75,
+      0.25,
+      0.25
+    ]
+  },
+  {
+    "id": "st-paul-frost/jake-lanier",
+    "name": "Jake Lanier",
+    "team_slug": "st-paul-frost",
+    "team_name": "St. Paul Frost",
+    "position": "RF",
+    "role": "batter",
+    "photo": "assets/teams/st-paul-frost/images/player-atlas-v2.webp",
+    "photo_crop": [
+      0.75,
+      0.75,
+      0.25,
+      0.25
+    ]
+  },
+  {
+    "id": "taipei-neon/kaito-ueda",
+    "name": "Kaito Ueda",
+    "team_slug": "taipei-neon",
+    "team_name": "Taipei Neon",
+    "position": "CF",
+    "role": "batter",
+    "photo": "assets/teams/taipei-neon/images/players/kaito-ueda.webp",
+    "photo_crop": null
+  },
+  {
+    "id": "taipei-neon/adebayo-olumide",
+    "name": "Adebayo Olumide",
+    "team_slug": "taipei-neon",
+    "team_name": "Taipei Neon",
+    "position": "3B",
+    "role": "batter",
+    "photo": "assets/teams/taipei-neon/images/players/adebayo-olumide.webp",
+    "photo_crop": null
+  },
+  {
+    "id": "taipei-neon/han-wei-tseng",
+    "name": "Han-wei Tseng",
+    "team_slug": "taipei-neon",
+    "team_name": "Taipei Neon",
+    "position": "2B",
+    "role": "batter",
+    "photo": "assets/images/cards/fieldstock/tpe-03-han-wei-tseng-front-action-clean.webp",
+    "photo_crop": null
+  },
+  {
+    "id": "taipei-neon/martin-echevarria",
+    "name": "Martín Echevarría",
+    "team_slug": "taipei-neon",
+    "team_name": "Taipei Neon",
+    "position": "1B",
+    "role": "batter",
+    "photo": "assets/images/cards/fieldstock/tpe-04-martin-echevarria-front-action-clean.webp",
+    "photo_crop": null
+  },
+  {
+    "id": "taipei-neon/dariusz-wierzbik",
+    "name": "Dariusz Wierzbik",
+    "team_slug": "taipei-neon",
+    "team_name": "Taipei Neon",
+    "position": "SS",
+    "role": "batter",
+    "photo": "assets/images/cards/fieldstock/tpe-05-dariusz-wierzbik-front-v3-clean.webp",
+    "photo_crop": null
+  },
+  {
+    "id": "taipei-neon/owen-rasmusson",
+    "name": "Owen Rasmusson",
+    "team_slug": "taipei-neon",
+    "team_name": "Taipei Neon",
+    "position": "C",
+    "role": "batter",
+    "photo": "assets/images/cards/fieldstock/tpe-06-owen-rasmusson-front-action-clean.webp",
+    "photo_crop": null
+  },
+  {
+    "id": "taipei-neon/eric-lawson",
+    "name": "Eric Lawson",
+    "team_slug": "taipei-neon",
+    "team_name": "Taipei Neon",
+    "position": "LF",
+    "role": "batter",
+    "photo": "assets/images/cards/fieldstock/tpe-07-eric-lawson-front-action-clean.webp",
+    "photo_crop": null
+  },
+  {
+    "id": "taipei-neon/jose-ramirez-tpe",
+    "name": "Jose Ramirez",
+    "team_slug": "taipei-neon",
+    "team_name": "Taipei Neon",
+    "position": "RF",
+    "role": "batter",
+    "photo": "assets/images/cards/fieldstock/tpe-08-jose-ramirez-tpe-front-v3-clean.webp",
+    "photo_crop": null
+  },
+  {
+    "id": "taipei-neon/david-morales-tpe",
+    "name": "David Morales",
+    "team_slug": "taipei-neon",
+    "team_name": "Taipei Neon",
+    "position": "DH",
+    "role": "batter",
+    "photo": "assets/images/cards/fieldstock/tpe-09-david-morales-tpe-front-v3-clean.webp",
+    "photo_crop": null
+  },
+  {
+    "id": "taipei-neon/hiroto-kuzumi",
+    "name": "Hiroto Kuzumi",
+    "team_slug": "taipei-neon",
+    "team_name": "Taipei Neon",
+    "position": "SP",
+    "role": "pitcher",
+    "photo": "assets/images/cards/fieldstock/tpe-10-hiroto-kuzumi-front-action-clean.webp",
+    "photo_crop": null
+  },
+  {
+    "id": "taipei-neon/joaquin-iturriaga",
+    "name": "Joaquín Iturriaga",
+    "team_slug": "taipei-neon",
+    "team_name": "Taipei Neon",
+    "position": "SP",
+    "role": "pitcher",
+    "photo": "assets/images/cards/fieldstock/tpe-11-joaquin-iturriaga-front-v3-clean.webp",
+    "photo_crop": null
+  },
+  {
+    "id": "taipei-neon/eitan-ben-sasson",
+    "name": "Eitan Ben-Sasson",
+    "team_slug": "taipei-neon",
+    "team_name": "Taipei Neon",
+    "position": "SP",
+    "role": "pitcher",
+    "photo": "assets/images/cards/fieldstock/tpe-12-eitan-ben-sasson-front-v3-clean.webp",
+    "photo_crop": null
+  },
+  {
+    "id": "taipei-neon/tsai-ming-hao",
+    "name": "Tsai Ming Hao",
+    "team_slug": "taipei-neon",
+    "team_name": "Taipei Neon",
+    "position": "SP",
+    "role": "pitcher",
+    "photo": "assets/images/cards/fieldstock/tpe-13-tsai-ming-hao-front-v3-clean.webp",
+    "photo_crop": null
+  },
+  {
+    "id": "taipei-neon/idris-el-amin",
+    "name": "Idris El-Amin",
+    "team_slug": "taipei-neon",
+    "team_name": "Taipei Neon",
+    "position": "RP",
+    "role": "pitcher",
+    "photo": "assets/images/cards/fieldstock/tpe-14-idris-el-amin-front-bullpen-clean.webp",
+    "photo_crop": null
+  },
+  {
+    "id": "taipei-neon/miguel-santos-tpe",
+    "name": "Miguel Santos",
+    "team_slug": "taipei-neon",
+    "team_name": "Taipei Neon",
+    "position": "RP",
+    "role": "pitcher",
+    "photo": "assets/images/cards/fieldstock/tpe-15-miguel-santos-tpe-front-v3-clean.webp",
+    "photo_crop": null
+  },
+  {
+    "id": "tijuana-tecnicos/rafael-montoya",
+    "name": "Rafael Montoya",
+    "team_slug": "tijuana-tecnicos",
+    "team_name": "Tijuana Tecnicos",
+    "position": "SP",
+    "role": "pitcher",
+    "photo": "assets/images/cards/fieldstock/tij-01-rafael-montoya-front-photo.webp",
+    "photo_crop": null
+  },
+  {
+    "id": "tijuana-tecnicos/diego-verdugo",
+    "name": "Diego Verdugo",
+    "team_slug": "tijuana-tecnicos",
+    "team_name": "Tijuana Tecnicos",
+    "position": "SP",
+    "role": "pitcher",
+    "photo": "assets/images/cards/fieldstock/tij-02-diego-verdugo-front-photo.webp",
+    "photo_crop": null
+  },
+  {
+    "id": "tijuana-tecnicos/esteban-arce",
+    "name": "Owen Mercer",
+    "team_slug": "tijuana-tecnicos",
+    "team_name": "Tijuana Tecnicos",
+    "position": "SP",
+    "role": "pitcher",
+    "photo": "assets/images/cards/fieldstock/tij-03-esteban-arce-front-photo.webp",
+    "photo_crop": null
+  },
+  {
+    "id": "tijuana-tecnicos/tomas-zepeda",
+    "name": "Darius Cole",
+    "team_slug": "tijuana-tecnicos",
+    "team_name": "Tijuana Tecnicos",
+    "position": "SP",
+    "role": "pitcher",
+    "photo": "assets/images/cards/fieldstock/tij-04-tomas-zepeda-front-photo.webp",
+    "photo_crop": null
+  },
+  {
+    "id": "tijuana-tecnicos/mauricio-cota",
+    "name": "Mauricio Cota",
+    "team_slug": "tijuana-tecnicos",
+    "team_name": "Tijuana Tecnicos",
+    "position": "RP",
+    "role": "pitcher",
+    "photo": "assets/images/cards/fieldstock/tij-05-mauricio-cota-front-photo.webp",
+    "photo_crop": null
+  },
+  {
+    "id": "tijuana-tecnicos/ivan-lizarraga",
+    "name": "Iván Lizárraga",
+    "team_slug": "tijuana-tecnicos",
+    "team_name": "Tijuana Tecnicos",
+    "position": "RP",
+    "role": "pitcher",
+    "photo": "assets/images/cards/fieldstock/tij-06-ivan-lizarraga-front-photo.webp",
+    "photo_crop": null
+  },
+  {
+    "id": "tijuana-tecnicos/julian-ochoa",
+    "name": "Julián Ochoa",
+    "team_slug": "tijuana-tecnicos",
+    "team_name": "Tijuana Tecnicos",
+    "position": "RP",
+    "role": "pitcher",
+    "photo": "assets/images/cards/fieldstock/tij-07-julian-ochoa-front-photo.webp",
+    "photo_crop": null
+  },
+  {
+    "id": "tijuana-tecnicos/sergio-hinojosa",
+    "name": "Kenji Takahashi",
+    "team_slug": "tijuana-tecnicos",
+    "team_name": "Tijuana Tecnicos",
+    "position": "C",
+    "role": "batter",
+    "photo": "assets/images/cards/fieldstock/tij-08-sergio-hinojosa-front-photo.webp",
+    "photo_crop": null
+  },
+  {
+    "id": "tijuana-tecnicos/bruno-valdes",
+    "name": "Bruno Valdés",
+    "team_slug": "tijuana-tecnicos",
+    "team_name": "Tijuana Tecnicos",
+    "position": "1B",
+    "role": "batter",
+    "photo": "assets/images/cards/fieldstock/tij-09-bruno-valdes-front-photo.webp",
+    "photo_crop": null
+  },
+  {
+    "id": "tijuana-tecnicos/matias-camarena",
+    "name": "Min-jae Park",
+    "team_slug": "tijuana-tecnicos",
+    "team_name": "Tijuana Tecnicos",
+    "position": "2B",
+    "role": "batter",
+    "photo": "assets/images/cards/fieldstock/tij-10-matias-camarena-front-photo.webp",
+    "photo_crop": null
+  },
+  {
+    "id": "tijuana-tecnicos/nicolas-paredes",
+    "name": "Sipho Maseko",
+    "team_slug": "tijuana-tecnicos",
+    "team_name": "Tijuana Tecnicos",
+    "position": "SS",
+    "role": "batter",
+    "photo": "assets/images/cards/fieldstock/tij-11-nicolas-paredes-front-photo.webp",
+    "photo_crop": null
+  },
+  {
+    "id": "tijuana-tecnicos/adrian-fierro",
+    "name": "Adrián Fierro",
+    "team_slug": "tijuana-tecnicos",
+    "team_name": "Tijuana Tecnicos",
+    "position": "3B",
+    "role": "batter",
+    "photo": "assets/images/cards/fieldstock/tij-12-adrian-fierro-front-photo.webp",
+    "photo_crop": null
+  },
+  {
+    "id": "tijuana-tecnicos/emilio-barron",
+    "name": "Emilio Barrón",
+    "team_slug": "tijuana-tecnicos",
+    "team_name": "Tijuana Tecnicos",
+    "position": "LF",
+    "role": "batter",
+    "photo": "assets/images/cards/fieldstock/tij-13-emilio-barron-front-photo.webp",
+    "photo_crop": null
+  },
+  {
+    "id": "tijuana-tecnicos/gael-marrufo",
+    "name": "Gael Marrufo",
+    "team_slug": "tijuana-tecnicos",
+    "team_name": "Tijuana Tecnicos",
+    "position": "CF",
+    "role": "batter",
+    "photo": "assets/images/cards/fieldstock/tij-14-gael-marrufo-front-photo.webp",
+    "photo_crop": null
+  },
+  {
+    "id": "tijuana-tecnicos/cristobal-saucedo",
+    "name": "Renzo Figueroa",
+    "team_slug": "tijuana-tecnicos",
+    "team_name": "Tijuana Tecnicos",
+    "position": "RF",
+    "role": "batter",
+    "photo": "assets/images/cards/fieldstock/tij-15-cristobal-saucedo-front-photo.webp",
+    "photo_crop": null
+  },
+  {
+    "id": "tijuana-tecnicos/hector-belmonte",
+    "name": "Héctor Belmonte",
+    "team_slug": "tijuana-tecnicos",
+    "team_name": "Tijuana Tecnicos",
+    "position": "DH",
+    "role": "batter",
+    "photo": "assets/images/cards/fieldstock/tij-16-hector-belmonte-front-photo.webp",
+    "photo_crop": null
+  },
+  {
+    "id": "toledo-assembly/ion-vasilev",
+    "name": "Ion Vasilev",
+    "team_slug": "toledo-assembly",
+    "team_name": "Toledo Assembly",
+    "position": "SP",
+    "role": "pitcher",
+    "photo": "assets/teams/toledo-assembly/images/player-atlas-v2.webp",
+    "photo_crop": [
+      0,
+      0,
+      0.25,
+      0.25
+    ]
+  },
+  {
+    "id": "toledo-assembly/farid-azeroual",
+    "name": "Farid Azeroual",
+    "team_slug": "toledo-assembly",
+    "team_name": "Toledo Assembly",
+    "position": "SP",
+    "role": "pitcher",
+    "photo": "assets/teams/toledo-assembly/images/player-atlas-v2.webp",
+    "photo_crop": [
+      0.25,
+      0,
+      0.25,
+      0.25
+    ]
+  },
+  {
+    "id": "toledo-assembly/teemu-salonen",
+    "name": "Teemu Salonen",
+    "team_slug": "toledo-assembly",
+    "team_name": "Toledo Assembly",
+    "position": "SP",
+    "role": "pitcher",
+    "photo": "assets/teams/toledo-assembly/images/player-atlas-v2.webp",
+    "photo_crop": [
+      0.5,
+      0,
+      0.25,
+      0.25
+    ]
+  },
+  {
+    "id": "toledo-assembly/zahir-kamara",
+    "name": "Zahir Kamara",
+    "team_slug": "toledo-assembly",
+    "team_name": "Toledo Assembly",
+    "position": "SP",
+    "role": "pitcher",
+    "photo": "assets/teams/toledo-assembly/images/player-atlas-v2.webp",
+    "photo_crop": [
+      0.75,
+      0,
+      0.25,
+      0.25
+    ]
+  },
+  {
+    "id": "toledo-assembly/caius-dobrescu",
+    "name": "Caius Dobrescu",
+    "team_slug": "toledo-assembly",
+    "team_name": "Toledo Assembly",
+    "position": "SP",
+    "role": "pitcher",
+    "photo": "assets/teams/toledo-assembly/images/player-atlas-v2.webp",
+    "photo_crop": [
+      0,
+      0.25,
+      0.25,
+      0.25
+    ]
+  },
+  {
+    "id": "toledo-assembly/renan-vidigal",
+    "name": "Renan Vidigal",
+    "team_slug": "toledo-assembly",
+    "team_name": "Toledo Assembly",
+    "position": "RP",
+    "role": "pitcher",
+    "photo": "assets/teams/toledo-assembly/images/player-atlas-v2.webp",
+    "photo_crop": [
+      0.25,
+      0.25,
+      0.25,
+      0.25
+    ]
+  },
+  {
+    "id": "toledo-assembly/blaise-mathurin",
+    "name": "Blaise Mathurin",
+    "team_slug": "toledo-assembly",
+    "team_name": "Toledo Assembly",
+    "position": "RP",
+    "role": "pitcher",
+    "photo": "assets/teams/toledo-assembly/images/player-atlas-v2.webp",
+    "photo_crop": [
+      0.5,
+      0.25,
+      0.25,
+      0.25
+    ]
+  },
+  {
+    "id": "toledo-assembly/jun-seo-kang",
+    "name": "Jun-seo Kang",
+    "team_slug": "toledo-assembly",
+    "team_name": "Toledo Assembly",
+    "position": "RP",
+    "role": "pitcher",
+    "photo": "assets/teams/toledo-assembly/images/player-atlas-v2.webp",
+    "photo_crop": [
+      0.75,
+      0.25,
+      0.25,
+      0.25
+    ]
+  },
+  {
+    "id": "toledo-assembly/omar-nazzal",
+    "name": "Omar Nazzal",
+    "team_slug": "toledo-assembly",
+    "team_name": "Toledo Assembly",
+    "position": "C",
+    "role": "batter",
+    "photo": "assets/teams/toledo-assembly/images/player-atlas-v2.webp",
+    "photo_crop": [
+      0,
+      0.5,
+      0.25,
+      0.25
+    ]
+  },
+  {
+    "id": "toledo-assembly/caleb-ardoin",
+    "name": "Caleb Ardoin",
+    "team_slug": "toledo-assembly",
+    "team_name": "Toledo Assembly",
+    "position": "1B",
+    "role": "batter",
+    "photo": "assets/teams/toledo-assembly/images/player-atlas-v2.webp",
+    "photo_crop": [
+      0.25,
+      0.5,
+      0.25,
+      0.25
+    ]
+  },
+  {
+    "id": "toledo-assembly/samir-benyahia",
+    "name": "Samir Benyahia",
+    "team_slug": "toledo-assembly",
+    "team_name": "Toledo Assembly",
+    "position": "2B",
+    "role": "batter",
+    "photo": "assets/teams/toledo-assembly/images/player-atlas-v2.webp",
+    "photo_crop": [
+      0.5,
+      0.5,
+      0.25,
+      0.25
+    ]
+  },
+  {
+    "id": "toledo-assembly/evan-trelawny",
+    "name": "Evan Trelawny",
+    "team_slug": "toledo-assembly",
+    "team_name": "Toledo Assembly",
+    "position": "SS",
+    "role": "batter",
+    "photo": "assets/teams/toledo-assembly/images/player-atlas-v2.webp",
+    "photo_crop": [
+      0.75,
+      0.5,
+      0.25,
+      0.25
+    ]
+  },
+  {
+    "id": "toledo-assembly/kwame-ofori",
+    "name": "Kwame Ofori",
+    "team_slug": "toledo-assembly",
+    "team_name": "Toledo Assembly",
+    "position": "3B",
+    "role": "batter",
+    "photo": "assets/teams/toledo-assembly/images/player-atlas-v2.webp",
+    "photo_crop": [
+      0,
+      0.75,
+      0.25,
+      0.25
+    ]
+  },
+  {
+    "id": "toledo-assembly/mateo-acebedo",
+    "name": "Mateo Acebedo",
+    "team_slug": "toledo-assembly",
+    "team_name": "Toledo Assembly",
+    "position": "LF",
+    "role": "batter",
+    "photo": "assets/teams/toledo-assembly/images/player-atlas-v2.webp",
+    "photo_crop": [
+      0.25,
+      0.75,
+      0.25,
+      0.25
+    ]
+  },
+  {
+    "id": "toledo-assembly/niko-velkovic",
+    "name": "Niko Velković",
+    "team_slug": "toledo-assembly",
+    "team_name": "Toledo Assembly",
+    "position": "CF",
+    "role": "batter",
+    "photo": "assets/teams/toledo-assembly/images/player-atlas-v2.webp",
+    "photo_crop": [
+      0.5,
+      0.75,
+      0.25,
+      0.25
+    ]
+  },
+  {
+    "id": "toledo-assembly/jasper-quade",
+    "name": "Jasper Quade",
+    "team_slug": "toledo-assembly",
+    "team_name": "Toledo Assembly",
+    "position": "RF",
+    "role": "batter",
+    "photo": "assets/teams/toledo-assembly/images/player-atlas-v2.webp",
+    "photo_crop": [
+      0.75,
+      0.75,
+      0.25,
+      0.25
+    ]
+  },
+  {
+    "id": "vancouver-current/iseul-kang",
+    "name": "Iseul Kang",
+    "team_slug": "vancouver-current",
+    "team_name": "Vancouver Current",
+    "position": "SP",
+    "role": "pitcher",
+    "photo": "assets/teams/vancouver-current/images/player-atlas-v2.webp",
+    "photo_crop": [
+      0,
+      0,
+      0.25,
+      0.3333333333333333
+    ]
+  },
+  {
+    "id": "vancouver-current/dane-winslow",
+    "name": "Dane Winslow",
+    "team_slug": "vancouver-current",
+    "team_name": "Vancouver Current",
+    "position": "SP",
+    "role": "pitcher",
+    "photo": "assets/teams/vancouver-current/images/player-atlas-v2.webp",
+    "photo_crop": [
+      0.25,
+      0,
+      0.25,
+      0.3333333333333333
+    ]
+  },
+  {
+    "id": "vancouver-current/maksim-zorya",
+    "name": "Maksim Zorya",
+    "team_slug": "vancouver-current",
+    "team_name": "Vancouver Current",
+    "position": "SP",
+    "role": "pitcher",
+    "photo": "assets/teams/vancouver-current/images/player-atlas-v2.webp",
+    "photo_crop": [
+      0.5,
+      0,
+      0.25,
+      0.3333333333333333
+    ]
+  },
+  {
+    "id": "vancouver-current/raine-talukder",
+    "name": "Raine Talukder",
+    "team_slug": "vancouver-current",
+    "team_name": "Vancouver Current",
+    "position": "SP",
+    "role": "pitcher",
+    "photo": "assets/teams/vancouver-current/images/player-atlas-v2.webp",
+    "photo_crop": [
+      0.75,
+      0,
+      0.25,
+      0.3333333333333333
+    ]
+  },
+  {
+    "id": "vancouver-current/emilio-cordoba",
+    "name": "Emilio Córdoba",
+    "team_slug": "vancouver-current",
+    "team_name": "Vancouver Current",
+    "position": "SP",
+    "role": "pitcher",
+    "photo": "assets/teams/vancouver-current/images/player-atlas-v2.webp",
+    "photo_crop": [
+      0,
+      0.3333333333333333,
+      0.25,
+      0.3333333333333333
+    ]
+  },
+  {
+    "id": "vancouver-current/kofi-ansah",
+    "name": "Kofi Ansah",
+    "team_slug": "vancouver-current",
+    "team_name": "Vancouver Current",
+    "position": "RP",
+    "role": "pitcher",
+    "photo": "assets/teams/vancouver-current/images/player-atlas-v2.webp",
+    "photo_crop": [
+      0.25,
+      0.3333333333333333,
+      0.25,
+      0.3333333333333333
+    ]
+  },
+  {
+    "id": "vancouver-current/nico-penfold",
+    "name": "Nico Penfold",
+    "team_slug": "vancouver-current",
+    "team_name": "Vancouver Current",
+    "position": "RP",
+    "role": "pitcher",
+    "photo": "assets/images/players/vancouver-current/nico-penfold-v2.webp",
+    "photo_crop": null
+  },
+  {
+    "id": "vancouver-current/yohei-arakida",
+    "name": "Yohei Arakida",
+    "team_slug": "vancouver-current",
+    "team_name": "Vancouver Current",
+    "position": "RP",
+    "role": "pitcher",
+    "photo": "assets/teams/vancouver-current/images/player-atlas-v2.webp",
+    "photo_crop": [
+      0.5,
+      0.3333333333333333,
+      0.25,
+      0.3333333333333333
+    ]
+  },
+  {
+    "id": "vancouver-current/silas-boudreau",
+    "name": "Silas Boudreau",
+    "team_slug": "vancouver-current",
+    "team_name": "Vancouver Current",
+    "position": "C",
+    "role": "batter",
+    "photo": "assets/images/players/vancouver-current/silas-boudreau-v2.webp",
+    "photo_crop": null
+  },
+  {
+    "id": "vancouver-current/eamon-kerr",
+    "name": "Eamon Kerr",
+    "team_slug": "vancouver-current",
+    "team_name": "Vancouver Current",
+    "position": "1B",
+    "role": "batter",
+    "photo": "assets/images/players/vancouver-current/eamon-kerr-v2.webp",
+    "photo_crop": null
+  },
+  {
+    "id": "vancouver-current/soraya-jafari",
+    "name": "Soraya Jafari",
+    "team_slug": "vancouver-current",
+    "team_name": "Vancouver Current",
+    "position": "2B",
+    "role": "batter",
+    "photo": "assets/teams/vancouver-current/images/player-atlas-v2.webp",
+    "photo_crop": [
+      0.75,
+      0.3333333333333333,
+      0.25,
+      0.3333333333333333
+    ]
+  },
+  {
+    "id": "vancouver-current/alejo-santillan",
+    "name": "Alejo Santillán",
+    "team_slug": "vancouver-current",
+    "team_name": "Vancouver Current",
+    "position": "SS",
+    "role": "batter",
+    "photo": "assets/images/players/vancouver-current/alejo-santillan-v2.webp",
+    "photo_crop": null
+  },
+  {
+    "id": "vancouver-current/roman-velasco",
+    "name": "Roman Velasco",
+    "team_slug": "vancouver-current",
+    "team_name": "Vancouver Current",
+    "position": "3B",
+    "role": "batter",
+    "photo": "assets/teams/vancouver-current/images/player-atlas-v2.webp",
+    "photo_crop": [
+      0,
+      0.6666666666666666,
+      0.25,
+      0.3333333333333333
+    ]
+  },
+  {
+    "id": "vancouver-current/taj-adelman",
+    "name": "Taj Adelman",
+    "team_slug": "vancouver-current",
+    "team_name": "Vancouver Current",
+    "position": "LF",
+    "role": "batter",
+    "photo": "assets/teams/vancouver-current/images/player-atlas-v2.webp",
+    "photo_crop": [
+      0.25,
+      0.6666666666666666,
+      0.25,
+      0.3333333333333333
+    ]
+  },
+  {
+    "id": "vancouver-current/marcell-lind",
+    "name": "Marcell Lind",
+    "team_slug": "vancouver-current",
+    "team_name": "Vancouver Current",
+    "position": "CF",
+    "role": "batter",
+    "photo": "assets/teams/vancouver-current/images/player-atlas-v2.webp",
+    "photo_crop": [
+      0.5,
+      0.6666666666666666,
+      0.25,
+      0.3333333333333333
+    ]
+  },
+  {
+    "id": "vancouver-current/oziel-narvaez",
+    "name": "Oziel Narváez",
+    "team_slug": "vancouver-current",
+    "team_name": "Vancouver Current",
+    "position": "RF",
+    "role": "batter",
+    "photo": "assets/teams/vancouver-current/images/player-atlas-v2.webp",
+    "photo_crop": [
+      0.75,
+      0.6666666666666666,
+      0.25,
+      0.3333333333333333
+    ]
+  }
+]

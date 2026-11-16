@@ -24,3 +24,9 @@ The earlier private replay tables and RPCs are retained for existing records, bu
 ## Verification
 
 `node --test tests/weekly-fantasy.test.cjs` checks role composition and official result conversion. `tests/weekly-fantasy.sql` uses rolled-back database fixtures to check ownership, one entry per account, pre-lock privacy, edit deadlines, score imports, tied winners, incomplete-week protection and duplicate pack claims. No test users, tournaments or packs survive.
+
+## Winners and the weekly archive
+
+Confirmed weeks show every first-place winner above their final leaderboard, including the public User ID, four-player lineup, final points and earned/collected pack status. Past weeks remain in a dedicated archive; its week cards list winners and link to the full final standings. Weeks awaiting confirmation show provisional status without naming winners. The latest completed week opens by default when no tournament is active. A `?week=weekly-YYYY-MM-DD` URL opens that week's record directly.
+
+The public catalog exposes only winner User IDs and final points; private owner IDs and emails are never included. Ties and archived public metadata are covered by the transaction-only SQL checks.

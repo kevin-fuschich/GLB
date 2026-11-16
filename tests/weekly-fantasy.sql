@@ -47,6 +47,9 @@ do $$begin
  if public.glb_weekly_settle(current_setting('glb.test.wid'))<>2 or public.glb_weekly_settle(current_setting('glb.test.wid'))<>2 then raise exception 'Tied winners or settlement retry failed';end if;
 end$$;
 reset role;
+set local role anon;
+do $$declare item jsonb;begin select x into item from jsonb_array_elements(public.glb_weekly_catalog())x where x->>'id'=current_setting('glb.test.wid');if jsonb_array_length(item->'winners')<>2 or (item->'winners'->0->>'points')::integer<>16 then raise exception 'Public archive lost tied winners or final scores';end if;if item::text like '%@example.invalid%' or item::text like '%'||current_setting('glb.test.wa')||'%'then raise exception 'Archive exposed private identity';end if;end$$;
+reset role;
 insert into public.glb_sets(id,title,season,cards_per_pack)values(current_setting('glb.test.wset'),'Rollback-only reward pack',2026,1);
 insert into public.glb_editions(id,set_id,subject_id,name,variant,quantity,front_image,back_image)values(current_setting('glb.test.wset')||'-base',current_setting('glb.test.wset'),'weeklyfixture','Weekly fixture','Base',2,'front.webp','back.webp');
 insert into glb_private.copies(edition_id,serial)values(current_setting('glb.test.wset')||'-base',1),(current_setting('glb.test.wset')||'-base',2);
@@ -56,4 +59,4 @@ do $$declare a uuid;b uuid;begin a:=public.glb_weekly_claim(current_setting('glb
 reset role;
 do $$begin if(select count(*)from public.glb_packs where owner_id=current_setting('glb.test.wa')::uuid and reward_key='weekly-winner:'||current_setting('glb.test.wid'))<>1 then raise exception 'Pack entitlement issued more than once';end if;end$$;
 rollback;
-select 'PASS: four-slot eligibility, one entry per person, lock enforcement, public standings, pre-lock pick privacy, server scoring, import retries, incomplete-week protection, ties and one-time pack claims. Fixtures rolled back.'as result;
+select 'PASS: four-slot eligibility, one entry per person, lock enforcement, public standings, pre-lock pick privacy, server scoring, import retries, incomplete-week protection, ties, public winner archives and one-time pack claims. Fixtures rolled back.'as result;

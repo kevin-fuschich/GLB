@@ -29,7 +29,8 @@ revoke all on glb_private.weekly_tournaments,glb_private.weekly_entries,glb_priv
 create index weekly_owner on glb_private.weekly_entries(owner_id);
 
 create function glb_private.weekly_catalog() returns jsonb language sql stable security definer set search_path='' as $$
- select coalesce(jsonb_agg(jsonb_build_object('id',id,'title',title,'week_start',week_start,'lock_at',lock_at,'ends_at',ends_at,'settled_at',settled_at) order by week_start desc),'[]') from glb_private.weekly_tournaments where opens_at<=now();
+ select coalesce(jsonb_agg(jsonb_build_object('id',w.id,'title',w.title,'week_start',w.week_start,'lock_at',w.lock_at,'ends_at',w.ends_at,'settled_at',w.settled_at,
+ 'winners',case when w.settled_at is not null then (select coalesce(jsonb_agg(jsonb_build_object('user_id',p.user_id,'points',e.points)order by p.user_id),'[]')from glb_private.weekly_rewards r join glb_private.weekly_entries e on e.tournament_id=r.tournament_id and e.owner_id=r.owner_id join public.glb_profiles p on p.id=r.owner_id where r.tournament_id=w.id)else '[]'::jsonb end)order by w.week_start desc),'[]')from glb_private.weekly_tournaments w where w.opens_at<=now();
 $$;
 create function glb_private.weekly_view(p_week text) returns jsonb language sql stable security definer set search_path='' as $$
  select jsonb_build_object('id',w.id,'title',w.title,'week_start',w.week_start,'lock_at',w.lock_at,'ends_at',w.ends_at,'settled_at',w.settled_at,'updated_at',w.updated_at,'server_now',now(),'pool',w.pool,'games',w.games,

@@ -38,8 +38,21 @@
   $('roundGames').replaceChildren(...round.games.map(g=>{const a=el('a',g.away+' at '+g.home+' →');a.href='box.html?'+new URLSearchParams({date:round.game_date,game:g.game_id.slice(round.game_date.length+1)});return a;}));
  }
  function render(){if(!round)return;drawLineup();drawPool();drawResults();}
+ const linkedPlayer=params.get('player');
+ let linkedRound, linkedName, linkedMissing=false;
+ async function findPlayerRound(){
+  if(!linkedPlayer)return;
+  for(const meta of rounds){
+   const response=await fetch('data/fantasy/'+meta.game_date+'.json');
+   if(!response.ok)throw Error('This replay round could not load.');
+   const data=await response.json();
+   const player=data.pool.find(p=>p.id===linkedPlayer);
+   if(player){linkedRound=data;linkedName=player.name;$('roundSelect').value=meta.id;return;}
+  }
+  linkedMissing=true;
+ }
  async function loadRound(){const ticket=++roundEpoch,meta=rounds.find(r=>r.id===$('roundSelect').value);if(!meta)return;
-  try{status('Opening '+formatDate(meta.game_date)+'…');const response=await fetch('data/fantasy/'+meta.game_date+'.json');if(!response.ok)throw Error('This replay round could not load.');const data=await response.json();if(ticket!==roundEpoch)return;round=data;ids=[];revealed=false;page=0;
+  try{status('Opening '+formatDate(meta.game_date)+'…');let data=linkedRound;if(data?.id!==meta.id){const response=await fetch('data/fantasy/'+meta.game_date+'.json');if(!response.ok)throw Error('This replay round could not load.');data=await response.json();}if(ticket!==roundEpoch)return;round=data;ids=[];revealed=false;page=0;
    let saved;try{saved=JSON.parse(localStorage.getItem('glb.nightshift.v1.'+round.id)||'null');}catch{}
    const fromLink=params.get('round')===round.id&&params.has('lineup')?params.get('lineup').split(',').slice(0,5):null;const selected=fromLink||saved?.ids||[];ids=[...new Set(Array.isArray(selected)?selected:[])].filter(id=>round.pool.some(p=>p.id===id)).slice(0,5);revealed=!!saved?.revealed&&!fromLink&&choice().valid;
    const entry=league?.my_entries?.find(e=>e.round_id===round.id);if(entry&&!fromLink){ids=entry.lineup;revealed=true;}
@@ -67,5 +80,5 @@
  $('createLeagueForm').onsubmit=async event=>{event.preventDefault();const button=event.target.querySelector('button');button.disabled=true;try{const id=await rpc('glb_fantasy_create',{p_name:$('leagueName').value});await loadLeagues(id);status('Your private replay league is ready. Share its invitation link with your friends.');}catch(error){status(error.message);}finally{button.disabled=false;}};
  $('joinLeagueForm').onsubmit=async event=>{event.preventDefault();const button=event.target.querySelector('button');button.disabled=true;try{const id=await rpc('glb_fantasy_join',{p_code:$('leagueCode').value.trim().toUpperCase()});if(!id)throw Error('That invitation was not found, or too many invitations were tried. Check the code and try again in a few minutes.');await loadLeagues(id);status('You joined the league. Build your five and save the lineup to compare practice scores.');}catch(error){status(error.message);}finally{button.disabled=false;}};
  if(client)client.auth.onAuthStateChange(event=>{if(event==='SIGNED_OUT'){authEpoch++;signedIn=false;league=null;leagueEpoch++;$('fantasyLeagueRoom').hidden=true;$('fantasyStandings').replaceChildren();$('fantasyInvite').value='';$('fantasyLeague').replaceChildren(new Option('Solo practice',''));if(round)drawLineup();$('fantasyAuthStatus').textContent='Sign in to use a private league.';}});
- (async()=>{try{const response=await fetch('data/fantasy/rounds.json');if(!response.ok)throw Error('The replay room could not load.');rounds=await response.json();$('roundSelect').replaceChildren(...rounds.map(r=>new Option(formatDate(r.game_date),r.id)));if(rounds.some(r=>r.id===params.get('round')))$('roundSelect').value=params.get('round');$('roundSelect').disabled=false;if(params.get('join')){$('leagueCode').value=params.get('join').slice(0,12);$('leagueTools').hidden=false;}await Promise.all([loadRound(),loadLeagues()]);}catch(error){status(error.message);}})();
+ (async()=>{try{const response=await fetch('data/fantasy/rounds.json');if(!response.ok)throw Error('The replay room could not load.');rounds=await response.json();$('roundSelect').replaceChildren(...rounds.map(r=>new Option(formatDate(r.game_date),r.id)));if(rounds.some(r=>r.id===params.get('round')))$('roundSelect').value=params.get('round');$('roundSelect').disabled=false;if(params.get('join')){$('leagueCode').value=params.get('join').slice(0,12);$('leagueTools').hidden=false;}await findPlayerRound();if(linkedName)$('playerSearch').value=linkedName;await Promise.all([loadRound(),loadLeagues()]);if(linkedMissing&&round)status('This player has no recorded appearance in the available replays. Choose another player below.');}catch(error){status(error.message);}})();
 })();

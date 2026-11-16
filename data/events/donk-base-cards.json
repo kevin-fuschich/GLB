@@ -1,6 +1,7 @@
 {
   "schema": "glb.donk-base-cards.v1",
-  "title": "DONK base set",
+  "title": "DONK Drivers",
+  "set_id": "fieldstock-2026",
   "cards": [
     {
       "card_id": "DB-001",

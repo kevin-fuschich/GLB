@@ -13,7 +13,10 @@
     ]);
     const rosters = new Map();
     let discovery, ledgerFailed = false, revision = 0;
+    const subset = byId('subset');
+    let archiveCards = [];
     function updateDiscovery() {
+      if (subset.value !== 'Baseball') return;
       const id = subject.value + '-' + edition.value.toLowerCase();
       const row = discovery?.find(item => item.edition_id === id);
       byId('discovery').textContent = row ? row.discovered + ' discovered / ' + row.quantity :
@@ -21,6 +24,25 @@
     }
     async function draw() {
       const ticket = ++revision;
+      if (subset.value !== 'Baseball') {
+        const entry = archiveCards.find(item => item.id === subject.value);
+        if (!entry) return;
+        const url = new URL(location.href);
+        url.searchParams.set('card', entry.id);
+        url.searchParams.delete('edition');
+        history.replaceState(null, '', url);
+        byId('print').replaceChildren(FieldstockSubsets.card(entry));
+        byId('name').textContent = entry.name;
+        byId('number').textContent = entry.id;
+        byId('clubLine').textContent = entry.subset;
+        byId('fieldNote').textContent = '';
+        byId('discovery').textContent = 'Awaiting release';
+        byId('status').textContent = 'FIELDSTOCK 2026';
+        byId('profileLink').href = entry.archiveLink;
+        byId('profileLink').textContent = 'Visit the DONK archive →';
+        return;
+      }
+      byId('profileLink').textContent = 'Read or contribute to the player record →';
       const card = plan.players.find(item => item.id === subject.value);
       const variant = plan.edition_plan.find(item => item.name === edition.value);
       const slug = card.subject_key.split('/').pop();
@@ -72,7 +94,31 @@
     club.onchange = () => populatePlayers();
     subject.onchange = edition.onchange = draw;
     byId('catalog').hidden = false;
-    populatePlayers(first.id);
+    async function chooseSubset(preferred) {
+      const baseball = subset.value === 'Baseball';
+      club.parentElement.hidden = edition.parentElement.hidden = !baseball;
+      byId('replayLink').hidden = !baseball;
+      byId('subjectLabel').textContent = baseball ? 'Player' : 'Card';
+      if (baseball) { populatePlayers(preferred); return; }
+      const ticket = ++revision;
+      byId('print').replaceChildren();
+      subject.replaceChildren();
+      byId('status').textContent = 'Loading subset…';
+      try {
+        archiveCards = await FieldstockSubsets.catalog();
+        if (ticket !== revision) return;
+        const rows = archiveCards.filter(item => item.subset === subset.value);
+        subject.replaceChildren(...rows.map(item => new Option(item.id + " · " + item.name, item.id)));
+        if (rows.some(item => item.id === preferred)) subject.value = preferred;
+        draw();
+      } catch {
+        if (ticket === revision) byId('status').textContent = 'The subset could not load. Refresh to retry.';
+      }
+    }
+    subset.onchange = () => chooseSubset();
+    if (/^DB-/.test(query.get('card'))) subset.value = 'DONK Drivers';
+    if (/^D26-/.test(query.get('card'))) subset.value = 'Road to Tijuana';
+    chooseSubset(query.get('card') || first.id);
     try {
       const result = await window.GLBAuth.client.rpc('glb_discovery');
       if (result.error || !Array.isArray(result.data)) throw Error();

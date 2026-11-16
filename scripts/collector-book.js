@@ -7,10 +7,11 @@
  const rpc=async(name,args)=>{if(!client)throw Error('Sign in to use your collection.');const r=await client.rpc(name,args);if(r.error)throw Error(r.error.message);return r.data;};
  function safeImage(path){const u=new URL(path,location.href);if(u.origin!==location.origin||!['http:','https:'].includes(u.protocol))throw Error('Artwork unavailable');return u.href;}
  function edition(copy){return copy.edition||copy;}
- function title(copy){const e=edition(copy);return `${e.name} · ${e.variant} · ${copy.serial}/${e.quantity}`;}
+ function title(copy){const e=edition(copy);if(e.subset)return [e.name,e.subset,e.id].join(' · ');return `${e.name} · ${e.variant} · ${copy.serial}/${e.quantity}`;}
  function cardView(copy,inspect=false){
   const e=edition(copy);let root;
-  if(e.facts?.player&&window.GLBPackReveal){root=GLBPackReveal.card(e,copy);}
+  if(e.print){root=FieldstockSubsets.card(e);}
+  else if(e.facts?.player&&window.GLBPackReveal){root=GLBPackReveal.card(e,copy);}
   else{root=el('div',undefined,'book-sample-card');const button=el('button'),img=el('img');button.type='button';let back=false;
    try{img.src=safeImage(e.facts?.physical_copies?.[String(copy.serial)]?.front||(e.quantity>100?e.facts?.photographic_master?.front:null)||e.front_image);}catch{img.alt='Card artwork unavailable';}
    img.alt=title(copy);button.setAttribute('aria-label','Turn over '+title(copy));
@@ -21,12 +22,12 @@
  }
  function draw(){
   const q=$('bookSearch').value.trim().toLocaleLowerCase(),variant=$('bookVariant').value;
-  const filtered=cards.filter(c=>{const e=edition(c);return(!q||`${e.name} ${e.variant} ${e.facts?.player?.teamName||''}`.toLocaleLowerCase().includes(q))&&(!variant||e.variant===variant)&&(!$('tradeOnly').checked||c.available);});
+  const filtered=cards.filter(c=>{const e=edition(c);return(!$('bookSubset').value||(e.subset||'Baseball')===$('bookSubset').value)&&(!q||`${e.name} ${e.variant} ${e.facts?.player?.teamName||''}`.toLocaleLowerCase().includes(q))&&(!variant||e.variant===variant)&&(!$('tradeOnly').checked||c.available);});
   const max=Math.max(1,Math.ceil(filtered.length/9));page=Math.min(page,max-1);$('bookPrevious').disabled=page===0;$('bookNext').disabled=page+1>=max;$('bookPageLabel').textContent=`Page ${page+1} of ${max}`;
   $('bookSummary').textContent=`${filtered.length} ${sample?'sample ':''}card${filtered.length===1?'':'s'} · Select a card to inspect its front and back.`;
   $('bookCount').textContent=`${cards.length} ${sample?'sample ':''}cards`;$('bookEditionCount').textContent=`${new Set(cards.map(c=>edition(c).id||edition(c).edition_id)).size} editions`;$('bookTradeCount').textContent=`${cards.filter(c=>c.available).length} for trade`;
   const pockets=[];for(let i=0;i<9;i++){const c=filtered[page*9+i],pocket=el('article',undefined,'book-pocket');
-   if(c){pocket.append(cardView(c,true),el('p',edition(c).name,'book-pocket-name'),el('p',`${edition(c).variant} · ${c.serial}/${edition(c).quantity}`,'book-pocket-caption'));if(c.available)pocket.append(el('span','Available for trade','book-available'));}
+   if(c){pocket.append(cardView(c,true),el('p',edition(c).name,'book-pocket-name'),el('p',edition(c).subset || `${edition(c).variant} · ${c.serial}/${edition(c).quantity}`,'book-pocket-caption'));if(c.available)pocket.append(el('span','Available for trade','book-available'));}
    else{pocket.classList.add('empty');pocket.append(el('span',filtered.length?'Open pocket':'No cards here yet'));}pockets.push(pocket);
   }$('bookPockets').replaceChildren(...pockets);$('bookPages').hidden=false;
  }
@@ -88,7 +89,7 @@
  }
  async function load(){const ticket=++epoch;owner=false;cards=[];page=0;close();$('bookSettings').hidden=true;$('bookOffers').hidden=true;$('bookPacks').hidden=true;$('bookShop').hidden=true;$('bookWelcome').hidden=true;$('bookPages').hidden=true;status('Finding your book…');
   try{
-   if(sample){const r=await fetch('data/pack-preview.json?v=20261115-photo2');if(!r.ok)throw Error('The sample book could not load.');const data=await r.json();if(ticket!==epoch)return;cards=data.map((e,i)=>({copy_id:'sample-'+i,serial:e.serial,edition:e,available:i===2||i===4,wanted:''}));$('sampleNotice').hidden=false;cover({theme:'forest'});draw();status('Sample book · no real cards, ownership or trades.');const selected=cards.find(c=>c.copy_id===params.get('copy'));if(selected)detail(selected);return;}
+   if(sample){const r=await fetch('data/pack-preview.json?v=20261115-photo2');if(!r.ok)throw Error('The sample book could not load.');const data=await FieldstockSubsets.mixedSample(await r.json());if(ticket!==epoch)return;cards=data.map((e,i)=>({copy_id:'sample-'+i,serial:e.serial,edition:e,available:i===2||i===4,wanted:''}));$('sampleNotice').hidden=false;cover({theme:'forest'});draw();status('Sample book · no real cards, ownership or trades.');const selected=cards.find(c=>c.copy_id===params.get('copy'));if(selected)detail(selected);return;}
    if(publicUser){if(!/^[a-z0-9_]{3,24}$/.test(publicUser))throw Error('This collector’s book is unavailable.');const book=await rpc('glb_collector_book',{p_user:publicUser});if(ticket!==epoch)return;if(!book)throw Error('This book is private or has not been published.');cards=book.cards.map(c=>({...c,edition:{...c,id:c.edition_id}}));cover(book);$('pagesHeading').textContent='The collection';draw();status('Public collector’s book · availability is checked again before any trade.');const selected=cards.find(c=>c.copy_id===params.get('copy'));if(selected)detail(selected);return;}
    if(!client)throw Error('Sign in to open your collector’s book.');const {data:{user},error}=await client.auth.getUser();if(error)throw error;if(ticket!==epoch)return;
    if(!user){status('Sign in to collect, display and trade your cards.');const link=el('a',' Sign in →');link.href='account.html';$('bookStatus').append(link);$('bookWelcome').hidden=false;return;}
@@ -98,7 +99,7 @@
   }catch(error){if(ticket===epoch)status(error.message||'Your book could not load. Please refresh.');}
  }
  $('saveBookVisibility').onclick=async()=>{if(!owner||!profile)return;const button=$('saveBookVisibility');button.disabled=true;try{const data={book_published:$('publishBook').checked};const r=showcaseExists?await client.from('glb_showcases').update(data).eq('owner_id',profile.id):await client.from('glb_showcases').insert({owner_id:profile.id,...data});if(r.error)throw r.error;showcaseExists=true;$('bookShare').hidden=!data.book_published;status(data.book_published?'Your collector’s book is public. Share its link to display your collection and trade listings.':'Your book is private. Your cards remain in your collection.');}catch(error){status(error.message);}finally{button.disabled=false;}};
- $('bookPrevious').onclick=()=>{page--;draw();$('pagesHeading').scrollIntoView({block:'start'});};$('bookNext').onclick=()=>{page++;draw();$('pagesHeading').scrollIntoView({block:'start'});};for(const id of ['bookSearch','bookVariant','tradeOnly'])$(id).addEventListener(id==='bookSearch'?'input':'change',()=>{page=0;draw();});$('closeBookCard').onclick=close;$('bookCardDialog').addEventListener('close',()=>{$('bookCardImage').replaceChildren();$('bookCardActions').replaceChildren();});
+ $('bookPrevious').onclick=()=>{page--;draw();$('pagesHeading').scrollIntoView({block:'start'});};$('bookNext').onclick=()=>{page++;draw();$('pagesHeading').scrollIntoView({block:'start'});};for(const id of ['bookSearch','bookSubset','bookVariant','tradeOnly'])$(id).addEventListener(id==='bookSearch'?'input':'change',()=>{page=0;draw();});$('closeBookCard').onclick=close;$('bookCardDialog').addEventListener('close',()=>{$('bookCardImage').replaceChildren();$('bookCardActions').replaceChildren();});
  if(client&&!sample&&!publicUser)client.auth.onAuthStateChange((event)=>{if(event==='SIGNED_OUT'){epoch++;owner=false;cards=[];close();$('bookPages').hidden=true;$('bookSettings').hidden=true;$('bookOffers').hidden=true;$('bookPacks').hidden=true;$('bookShop').hidden=true;status('Sign in to open your collector’s book.');}});
  load();
 })();

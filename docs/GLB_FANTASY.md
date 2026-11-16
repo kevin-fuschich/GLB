@@ -1,6 +1,6 @@
 # GLB Fantasy: weekly tournament
 
-Four picks per account per week: two pitchers (SP/RP/CL), one infielder (C/1B/2B/3B/SS/IF) and one outfielder (LF/CF/RF/OF). DH-only players are excluded. No budget and no club quota. The role pool is frozen when the Board publishes a week.
+Four picks per account per week: one pitcher (SP/RP/CL) and three position players in any mix of infielders (C/1B/2B/3B/SS/IF) and outfielders (LF/CF/RF/OF). DH-only players are excluded. No budget and no club quota. The role pool is frozen when the Board publishes a week.
 
 Each tournament covers Monday through Sunday, New York time. Entries lock Monday at 00:00; the server rejects edits at or after that instant. Only the public User ID and score appear before lock; lineups become public after lock. Registration explicitly explains this public display. Draft picks saved on a device are not an entry. There is one public leaderboard per week, with fresh points each week.
 
@@ -30,3 +30,7 @@ The earlier private replay tables and RPCs are retained for existing records, bu
 Confirmed weeks show every first-place winner above their final leaderboard, including the public User ID, four-player lineup, final points and earned/collected pack status. Past weeks remain in a dedicated archive; its week cards list winners and link to the full final standings. Weeks awaiting confirmation show provisional status without naming winners. The latest completed week opens by default when no tournament is active. A `?week=weekly-YYYY-MM-DD` URL opens that week's record directly.
 
 The public catalog exposes only winner User IDs and final points; private owner IDs and emails are never included. Ties and archived public metadata are covered by the transaction-only SQL checks.
+
+## One-pitcher balance check (November 16, 2026)
+
+`node tools/check-fantasy-balance.cjs` checks the official regular-season index and its player box scores with the same scoring functions used by the importer. It excludes weeks without a complete calendar span or player lines. Across 26 complete weeks, including zero-appearance weeks, the 77 starting pitchers averaged 27.5 points per player-week and the 133 eligible position players averaged 17.7. Three position players therefore contribute about 53 points on average, compared with 27.5 from one starting pitcher (about 34% of the combined mean). A fixed-seed sample of 1,000 distinct three-player groups per week produced a combined median of 52. This is a historical baseline, not a prediction of optimized entries; relief pitchers remain eligible. No point weights changed with the roster update.

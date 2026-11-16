@@ -8,10 +8,10 @@ insert into glb_private.board_members(user_id)values(current_setting('glb.test.w
 select set_config('request.jwt.claim.sub',current_setting('glb.test.wa'),true),set_config('request.jwt.claims',jsonb_build_object('sub',current_setting('glb.test.wa'),'session_id',current_setting('glb.test.ws'),'role','authenticated')::text,true);
 set local role authenticated;
 do $$declare wid text;v jsonb;begin
- wid:=public.glb_weekly_publish(current_setting('glb.test.wdate')::date,'Rollback weekly', '[{"id":"p1","name":"P1","role":"pitcher"},{"id":"p2","name":"P2","role":"pitcher"},{"id":"p3","name":"P3","role":"pitcher"},{"id":"i1","name":"I1","role":"infield"},{"id":"o1","name":"O1","role":"outfield"}]',jsonb_build_array(jsonb_build_object('id','g1','date',current_setting('glb.test.wdate')),jsonb_build_object('id','g2','date',current_setting('glb.test.wdate'))));perform set_config('glb.test.wid',wid,true);
- perform public.glb_weekly_enter(wid,array['p1','p2','i1','o1']);perform public.glb_weekly_enter(wid,array['p1','p2','i1','o1']);
+ wid:=public.glb_weekly_publish(current_setting('glb.test.wdate')::date,'Rollback weekly', '[{"id":"p1","name":"P1","role":"pitcher"},{"id":"p2","name":"P2","role":"pitcher"},{"id":"p3","name":"P3","role":"pitcher"},{"id":"i1","name":"I1","role":"infield"},{"id":"o1","name":"O1","role":"outfield"},{"id":"i2","name":"I2","role":"infield"}]',jsonb_build_array(jsonb_build_object('id','g1','date',current_setting('glb.test.wdate')),jsonb_build_object('id','g2','date',current_setting('glb.test.wdate'))));perform set_config('glb.test.wid',wid,true);
+ perform public.glb_weekly_enter(wid,array['p1','i1','i2','o1']);perform public.glb_weekly_enter(wid,array['p1','i1','i2','o1']);
  v:=public.glb_weekly_view(wid);if jsonb_array_length(v->'leaderboard')<>1 then raise exception 'Repeated entry created another team';end if;
- begin perform public.glb_weekly_enter(wid,array['p1','p2','p3','o1']);raise exception 'Bad positions accepted';exception when raise_exception then if sqlerrm<>'Pick two pitchers, one infielder and one outfielder'then raise;end if;end;
+ begin perform public.glb_weekly_enter(wid,array['p1','p2','p3','o1']);raise exception 'Bad positions accepted';exception when raise_exception then if sqlerrm<>'Pick one pitcher and three position players'then raise;end if;end;
  begin perform public.glb_weekly_enter(wid,array['p1','p1','i1','o1']);raise exception 'Duplicate picks accepted';exception when raise_exception then if sqlerrm<>'Pick four different players'then raise;end if;end;
  begin perform 1 from glb_private.weekly_entries;raise exception 'Private entry table exposed';exception when insufficient_privilege then null;end;
 end$$;
@@ -23,18 +23,18 @@ reset role;
 update auth.sessions set user_id=current_setting('glb.test.wb')::uuid where id=current_setting('glb.test.ws')::uuid;
 select set_config('request.jwt.claim.sub',current_setting('glb.test.wb'),true),set_config('request.jwt.claims',jsonb_build_object('sub',current_setting('glb.test.wb'),'session_id',current_setting('glb.test.ws'),'role','authenticated')::text,true);
 set local role authenticated;
-select public.glb_weekly_enter(current_setting('glb.test.wid'),array['p1','p2','i1','o1']);
+select public.glb_weekly_enter(current_setting('glb.test.wid'),array['p1','i1','i2','o1']);
 do $$begin begin perform public.glb_weekly_settle(current_setting('glb.test.wid'));raise exception 'Nonboard finalized';exception when raise_exception then if sqlerrm<>'Board access required'then raise;end if;end;end$$;
 reset role;
 update glb_private.weekly_tournaments set opens_at=now()-interval '2 days',lock_at=now()-interval '1 day',ends_at=now()+interval '1 day',games='[{"id":"g1","date":"2026-01-05"},{"id":"g2","date":"2026-01-05"}]' where id=current_setting('glb.test.wid');
 set local role authenticated;
-do $$begin begin perform public.glb_weekly_enter(current_setting('glb.test.wid'),array['p1','p2','i1','o1']);raise exception 'Late entry accepted';exception when raise_exception then if sqlerrm<>'Entries for this week are closed'then raise;end if;end;end$$;
+do $$begin begin perform public.glb_weekly_enter(current_setting('glb.test.wid'),array['p1','i1','i2','o1']);raise exception 'Late entry accepted';exception when raise_exception then if sqlerrm<>'Entries for this week are closed'then raise;end if;end;end$$;
 reset role;
 update auth.sessions set user_id=current_setting('glb.test.wa')::uuid where id=current_setting('glb.test.ws')::uuid;
 select set_config('request.jwt.claim.sub',current_setting('glb.test.wa'),true),set_config('request.jwt.claims',jsonb_build_object('sub',current_setting('glb.test.wa'),'session_id',current_setting('glb.test.ws'),'role','authenticated')::text,true);
 set local role authenticated;
-do $$declare v jsonb;r jsonb:='[{"id":"g1","status":"final","source":"data/games/2026-01-05/a@b.json","players":[{"id":"p1","line":{"IP_outs":6,"K":2,"ER":1,"W":1}},{"id":"p2","line":{"IP_outs":3,"K":1,"ER":4}},{"id":"i1","line":{"H":1,"R":1,"RBI":2}},{"id":"o1","line":{"H":2,"BB":1,"SB":1}}]}]';begin
- perform public.glb_weekly_import(current_setting('glb.test.wid'),r);perform public.glb_weekly_import(current_setting('glb.test.wid'),r);v:=public.glb_weekly_view(current_setting('glb.test.wid'));if(v->'leaderboard'->0->>'points')::integer<>16 or (v->>'games_recorded')::integer<>1 then raise exception 'Imported results doubled or formula incorrect';end if;
+do $$declare v jsonb;r jsonb:='[{"id":"g1","status":"final","source":"data/games/2026-01-05/a@b.json","players":[{"id":"p1","line":{"IP_outs":6,"K":2,"ER":1,"W":1}},{"id":"p2","line":{"IP_outs":3,"K":1,"ER":4}},{"id":"i1","line":{"H":1,"R":1,"RBI":2}},{"id":"i2","line":{"H":1,"RBI":1}},{"id":"o1","line":{"H":2,"BB":1,"SB":1}}]}]';begin
+ perform public.glb_weekly_import(current_setting('glb.test.wid'),r);perform public.glb_weekly_import(current_setting('glb.test.wid'),r);v:=public.glb_weekly_view(current_setting('glb.test.wid'));if(v->'leaderboard'->0->>'points')::integer<>22 or (v->>'games_recorded')::integer<>1 then raise exception 'Imported results doubled or formula incorrect';end if;
  if jsonb_array_length(v->'leaderboard'->0->'lineup')<>4 then raise exception 'Locked teams not public';end if;
  begin perform public.glb_weekly_settle(current_setting('glb.test.wid'));raise exception 'Early settlement accepted';exception when raise_exception then if sqlerrm<>'This week is still running'then raise;end if;end;
 end$$;
@@ -48,7 +48,7 @@ do $$begin
 end$$;
 reset role;
 set local role anon;
-do $$declare item jsonb;begin select x into item from jsonb_array_elements(public.glb_weekly_catalog())x where x->>'id'=current_setting('glb.test.wid');if jsonb_array_length(item->'winners')<>2 or (item->'winners'->0->>'points')::integer<>16 then raise exception 'Public archive lost tied winners or final scores';end if;if item::text like '%@example.invalid%' or item::text like '%'||current_setting('glb.test.wa')||'%'then raise exception 'Archive exposed private identity';end if;end$$;
+do $$declare item jsonb;begin select x into item from jsonb_array_elements(public.glb_weekly_catalog())x where x->>'id'=current_setting('glb.test.wid');if jsonb_array_length(item->'winners')<>2 or (item->'winners'->0->>'points')::integer<>22 then raise exception 'Public archive lost tied winners or final scores';end if;if item::text like '%@example.invalid%' or item::text like '%'||current_setting('glb.test.wa')||'%'then raise exception 'Archive exposed private identity';end if;end$$;
 reset role;
 insert into public.glb_sets(id,title,season,cards_per_pack)values(current_setting('glb.test.wset'),'Rollback-only reward pack',2026,1);
 insert into public.glb_editions(id,set_id,subject_id,name,variant,quantity,front_image,back_image)values(current_setting('glb.test.wset')||'-base',current_setting('glb.test.wset'),'weeklyfixture','Weekly fixture','Base',2,'front.webp','back.webp');

@@ -52,7 +52,7 @@ begin
  if not found or now()<w.opens_at or now()>=w.lock_at or w.settled_at is not null then raise exception 'Entries for this week are closed';end if;
  if p_players is null or cardinality(p_players)<>4 or (select count(distinct x)from unnest(p_players)x)<>4 then raise exception 'Pick four different players';end if;
  select count(*),count(*)filter(where x->>'role'='pitcher'),count(*)filter(where x->>'role'='infield'),count(*)filter(where x->>'role'='outfield') into n,p,i,o from jsonb_array_elements(w.pool)x where x->>'id'=any(p_players);
- if n<>4 or p<>2 or i<>1 or o<>1 then raise exception 'Pick two pitchers, one infielder and one outfielder';end if;
+ if n<>4 or p<>1 or i+o<>3 then raise exception 'Pick one pitcher and three position players';end if;
  insert into glb_private.weekly_entries(tournament_id,owner_id,lineup)values(w.id,auth.uid(),p_players)on conflict(tournament_id,owner_id)do update set lineup=excluded.lineup,updated_at=now();
 end;$$;
 create function glb_private.weekly_publish(p_week date,p_title text,p_pool jsonb,p_games jsonb) returns text language plpgsql security definer set search_path='' as $$
@@ -62,7 +62,7 @@ begin
  if extract(isodow from p_week)<>1 or start_time<=now() then raise exception 'Choose a future Monday';end if;
  if jsonb_typeof(p_pool)<>'array' or jsonb_array_length(p_pool)<4 or jsonb_array_length(p_pool)>500 then raise exception 'Invalid player pool';end if;
  if exists(select 1 from jsonb_array_elements(p_pool)x where x->>'id' is null or x->>'role' not in('pitcher','infield','outfield') or x->>'role' is null or x->>'name' is null)or (select count(distinct x->>'id')from jsonb_array_elements(p_pool)x)<>jsonb_array_length(p_pool)then raise exception 'Invalid or repeated player';end if;
- if (select count(*)from jsonb_array_elements(p_pool)x where x->>'role'='pitcher')<2 or not exists(select 1 from jsonb_array_elements(p_pool)x where x->>'role'='infield')or not exists(select 1 from jsonb_array_elements(p_pool)x where x->>'role'='outfield')then raise exception 'Player pool needs all four slots';end if;
+ if not exists(select 1 from jsonb_array_elements(p_pool)x where x->>'role'='pitcher') or (select count(*)from jsonb_array_elements(p_pool)x where x->>'role' in('infield','outfield'))<3 then raise exception 'Player pool needs all four slots';end if;
  if jsonb_typeof(p_games)<>'array' or jsonb_array_length(p_games)not between 1 and 200 or exists(select 1 from jsonb_array_elements(p_games)g where (g->>'date')::date<p_week or (g->>'date')::date>=p_week+7 or g->>'id' is null or g->>'date' is null) or (select count(distinct g->>'id')from jsonb_array_elements(p_games)g)<>jsonb_array_length(p_games)then raise exception 'Use unique scheduled games from this week';end if;
  insert into glb_private.weekly_tournaments(id,week_start,title,lock_at,ends_at,pool,games)values(wid,p_week,p_title,start_time,(p_week+7)::timestamp at time zone 'America/New_York',p_pool,p_games);return wid;
 end;$$;

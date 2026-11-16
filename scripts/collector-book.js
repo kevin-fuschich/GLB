@@ -42,7 +42,7 @@
   $('bookCardTitle').textContent=edition(copy).name;$('bookCardImage').replaceChildren(cardView(copy));$('bookCardInfo').textContent=title(copy);$('bookCardFeedback').textContent='';const actions=$('bookCardActions');actions.replaceChildren();
   const player=edition(copy).facts?.player;if(player?.teamSlug&&player?.slug){const link=el('a','Meet the player and add to the record →');link.href='player.html?'+new URLSearchParams({team:player.teamSlug,player:player.slug});actions.append(link);
    if(player.card_id){const checklist=el('a','Compare this player’s editions →');checklist.href='set-checklist.html?'+new URLSearchParams({card:player.card_id,edition:edition(copy).variant});actions.append(checklist);}
-   const replay=el('a','Find this player in The Night Shift →');replay.href='fantasy.html?'+new URLSearchParams({player:player.teamSlug+'/'+player.slug});actions.append(replay);
+   const replay=el('a','Pick this player in GLB Fantasy →');replay.href='fantasy.html?'+new URLSearchParams({player:player.teamSlug+'/'+player.slug});actions.append(replay);
   }
   if(sample){actions.append(el('p','This is a sample copy. Trade listings and offers are available in your own book.','book-inline-status'));}
   else if(owner){

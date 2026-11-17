@@ -15,15 +15,16 @@
       "throws": "R",
       "age": 29,
       "photo": "ion-vasilev.jpg",
-      "photo_source": "assets/teams/toledo-assembly/images/player-atlas-v2.webp",
+      "photo_source": "assets/images/cards/fieldstock/toledo-assembly-game-photos.svg",
       "photo_crop": [
         0,
         0,
         0.25,
-        0.25
+        1
       ],
       "card_id": "TOL-01",
-      "claim_open": true
+      "claim_open": true,
+      "card_front_alt": "Ion Vasilev lifting his knee on the mound"
     },
     {
       "dob": "1999-08-12",
@@ -87,15 +88,16 @@
       "throws": "R",
       "age": 31,
       "photo": "zahir-kamara.jpg",
-      "photo_source": "assets/teams/toledo-assembly/images/player-atlas-v2.webp",
+      "photo_source": "assets/images/cards/fieldstock/toledo-assembly-game-photos.svg",
       "photo_crop": [
-        0.75,
+        0.25,
         0,
         0.25,
-        0.25
+        1
       ],
       "card_id": "TOL-04",
-      "claim_open": true
+      "claim_open": true,
+      "card_front_alt": "Zahir Kamara coming out of the dugout"
     },
     {
       "dob": "2002-09-18",
@@ -207,15 +209,16 @@
       "throws": "R",
       "age": 29,
       "photo": "omar-nazzal.jpg",
-      "photo_source": "assets/teams/toledo-assembly/images/player-atlas-v2.webp",
+      "photo_source": "assets/images/cards/fieldstock/toledo-assembly-game-photos.svg",
       "photo_crop": [
-        0,
         0.5,
+        0,
         0.25,
-        0.25
+        1
       ],
       "card_id": "TOL-09",
-      "claim_open": true
+      "claim_open": true,
+      "card_front_alt": "Omar Nazzal receiving a pitch"
     },
     {
       "dob": "1994-04-19",
@@ -303,15 +306,16 @@
       "throws": "R",
       "age": 28,
       "photo": "kwame-ofori.jpg",
-      "photo_source": "assets/teams/toledo-assembly/images/player-atlas-v2.webp",
+      "photo_source": "assets/images/cards/fieldstock/toledo-assembly-game-photos.svg",
       "photo_crop": [
-        0,
         0.75,
+        0,
         0.25,
-        0.25
+        1
       ],
       "card_id": "TOL-13",
-      "claim_open": true
+      "claim_open": true,
+      "card_front_alt": "Kwame Ofori fielding a ground ball"
     },
     {
       "dob": "2002-02-09",

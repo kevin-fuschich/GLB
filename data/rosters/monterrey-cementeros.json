@@ -2,6 +2,11 @@
   "team": "Monterrey Cementeros",
   "players": [
     {
+      "dob": "1998-02-17",
+      "birthplace": "Monterrey, Nuevo León, México",
+      "height": "6′2″",
+      "weight": 210,
+      "field_note": "Marks every bullpen session in a pocket scorebook; a clean inning earns a small pink square.",
       "name": "Emilio Zendejas",
       "slug": "emilio-zendejas",
       "position": "SP",
@@ -9,16 +14,17 @@
       "throws": "R",
       "age": 28,
       "photo": "emilio-zendejas.jpg",
-      "dob": "1998-02-17",
-      "birthplace": "Monterrey, Nuevo León, México",
-      "height": "6′2″",
-      "weight": 210,
-      "field_note": "Marks every bullpen session in a pocket scorebook; a clean inning earns a small pink square.",
       "bio": "Emilio Zendejas plays SP for the Monterrey Cementeros. Marks every bullpen session in a pocket scorebook; a clean inning earns a small pink square.",
       "card_front": "assets/images/cards/fieldstock/mty-01-emilio-zendejas-front-photo.webp",
-      "card_back": "assets/images/cards/fieldstock/mty-01-emilio-zendejas-back-photo.webp"
+      "card_back": "assets/images/cards/fieldstock/mty-01-emilio-zendejas-back-photo.webp",
+      "card_id": "MTY-01"
     },
     {
+      "dob": "2000-01-22",
+      "birthplace": "Nagoya, Japan",
+      "height": "6′1″",
+      "weight": 194,
+      "field_note": "Rehearses his pickoff footwork on the hotel carpet using two rolled-up socks as bases.",
       "name": "Masato Yanagisawa",
       "slug": "masato-yanagisawa",
       "position": "SP",
@@ -26,16 +32,17 @@
       "throws": "R",
       "age": 26,
       "photo": "masato-yanagisawa.jpg",
-      "dob": "2000-01-22",
-      "birthplace": "Nagoya, Japan",
-      "height": "6′1″",
-      "weight": 194,
-      "field_note": "Rehearses his pickoff footwork on the hotel carpet using two rolled-up socks as bases.",
       "bio": "Masato Yanagisawa plays SP for the Monterrey Cementeros. Rehearses his pickoff footwork on the hotel carpet using two rolled-up socks as bases.",
       "card_front": "assets/images/cards/fieldstock/mty-02-masato-yanagisawa-front-photo.webp",
-      "card_back": "assets/images/cards/fieldstock/mty-02-masato-yanagisawa-back-photo.webp"
+      "card_back": "assets/images/cards/fieldstock/mty-02-masato-yanagisawa-back-photo.webp",
+      "card_id": "MTY-02"
     },
     {
+      "dob": "1995-09-20",
+      "birthplace": "Gdańsk, Poland",
+      "height": "6′2″",
+      "weight": 205,
+      "field_note": "Learned to make pierogi from handwritten instructions sent in weekly postcards.",
       "name": "Dariusz Chmiel",
       "slug": "dariusz-chmiel",
       "position": "SP",
@@ -45,13 +52,19 @@
       "photo": "dariusz-chmiel.jpg",
       "photo_source": "assets/teams/monterrey-cementeros/images/player-atlas-v2.webp",
       "photo_crop": [
-        0.0,
-        0.0,
+        0,
+        0,
         0.25,
         0.3333333333333333
-      ]
+      ],
+      "card_id": "MTY-03"
     },
     {
+      "dob": "1999-02-06",
+      "birthplace": "Jaipur, India",
+      "height": "6′3″",
+      "weight": 216,
+      "field_note": "Can write his name legibly with either hand.",
       "name": "Arjun Bhatnagar",
       "slug": "arjun-bhatnagar",
       "position": "SP",
@@ -62,12 +75,18 @@
       "photo_source": "assets/teams/monterrey-cementeros/images/player-atlas-v2.webp",
       "photo_crop": [
         0.25,
-        0.0,
+        0,
         0.25,
         0.3333333333333333
-      ]
+      ],
+      "card_id": "MTY-04"
     },
     {
+      "dob": "1997-05-19",
+      "birthplace": "Boise, Idaho",
+      "height": "6′4″",
+      "weight": 227,
+      "field_note": "Keeps a jar of keys whose original locks have been forgotten.",
       "name": "Cole Wexler",
       "slug": "cole-wexler",
       "position": "SP",
@@ -78,12 +97,18 @@
       "photo_source": "assets/teams/monterrey-cementeros/images/player-atlas-v2.webp",
       "photo_crop": [
         0.5,
-        0.0,
+        0,
         0.25,
         0.3333333333333333
-      ]
+      ],
+      "card_id": "MTY-05"
     },
     {
+      "dob": "2001-08-05",
+      "birthplace": "Thessaloniki, Greece",
+      "height": "6′5″",
+      "weight": 197,
+      "field_note": "Builds flat-pack furniture for neighbors and refuses payment except in coffee.",
       "name": "Niko Kouris",
       "slug": "niko-kouris",
       "position": "RP",
@@ -94,12 +119,18 @@
       "photo_source": "assets/teams/monterrey-cementeros/images/player-atlas-v2.webp",
       "photo_crop": [
         0.75,
-        0.0,
+        0,
         0.25,
         0.3333333333333333
-      ]
+      ],
+      "card_id": "MTY-06"
     },
     {
+      "dob": "1996-01-18",
+      "birthplace": "Beirut, Lebanon",
+      "height": "6′1″",
+      "weight": 208,
+      "field_note": "Reads the local newspaper’s classified ads wherever he stays.",
       "name": "Bashir El-Khatib",
       "slug": "bashir-el-khatib",
       "position": "RP",
@@ -109,13 +140,19 @@
       "photo": "bashir-el-khatib.jpg",
       "photo_source": "assets/teams/monterrey-cementeros/images/player-atlas-v2.webp",
       "photo_crop": [
-        0.0,
+        0,
         0.3333333333333333,
         0.25,
         0.3333333333333333
-      ]
+      ],
+      "card_id": "MTY-07"
     },
     {
+      "dob": "2002-04-04",
+      "birthplace": "York, England",
+      "height": "6′2″",
+      "weight": 219,
+      "field_note": "Has drawn the same crooked church steeple every year since childhood.",
       "name": "Rowan Treadwell",
       "slug": "rowan-treadwell",
       "position": "RP",
@@ -129,9 +166,15 @@
         0.3333333333333333,
         0.25,
         0.3333333333333333
-      ]
+      ],
+      "card_id": "MTY-08"
     },
     {
+      "dob": "1998-07-17",
+      "birthplace": "Mérida, Mexico",
+      "height": "6′0″",
+      "weight": 222,
+      "field_note": "Collects recordings of bells from different towns.",
       "name": "Julián Sauri",
       "slug": "julian-sauri",
       "position": "C",
@@ -145,9 +188,15 @@
         0.3333333333333333,
         0.25,
         0.3333333333333333
-      ]
+      ],
+      "card_id": "MTY-09"
     },
     {
+      "dob": "1994-10-03",
+      "birthplace": "Derry, Northern Ireland",
+      "height": "6′1″",
+      "weight": 192,
+      "field_note": "Can make a small camp stove from a discarded tin.",
       "name": "Eamon Kilrea",
       "slug": "eamon-kilrea",
       "position": "1B",
@@ -161,9 +210,15 @@
         0.3333333333333333,
         0.25,
         0.3333333333333333
-      ]
+      ],
+      "card_id": "MTY-10"
     },
     {
+      "dob": "2000-03-16",
+      "birthplace": "Rosario, Argentina",
+      "height": "6′2″",
+      "weight": 203,
+      "field_note": "Likes finding the oldest tree in any public garden.",
       "name": "Thiago Pereyra",
       "slug": "thiago-pereyra",
       "position": "2B",
@@ -173,13 +228,19 @@
       "photo": "thiago-pereyra.jpg",
       "photo_source": "assets/teams/monterrey-cementeros/images/player-atlas-v2.webp",
       "photo_crop": [
-        0.0,
+        0,
         0.6666666666666666,
         0.25,
         0.3333333333333333
-      ]
+      ],
+      "card_id": "MTY-11"
     },
     {
+      "dob": "1999-04-11",
+      "birthplace": "Accra, Ghana",
+      "height": "6′0″",
+      "weight": 188,
+      "field_note": "Keeps a tally of every double play turned with a different second baseman.",
       "name": "Kofi Mensah",
       "slug": "kofi-mensah",
       "position": "SS",
@@ -187,16 +248,17 @@
       "throws": "R",
       "age": 27,
       "photo": "kofi-mensah.jpg",
-      "dob": "1999-04-11",
-      "birthplace": "Accra, Ghana",
-      "height": "6′0″",
-      "weight": 188,
-      "field_note": "Keeps a tally of every double play turned with a different second baseman.",
       "bio": "Kofi Mensah plays SS for the Monterrey Cementeros. Keeps a tally of every double play turned with a different second baseman.",
       "card_front": "assets/images/cards/fieldstock/mty-12-kofi-mensah-front-photo.webp",
-      "card_back": "assets/images/cards/fieldstock/mty-12-kofi-mensah-back-photo.webp"
+      "card_back": "assets/images/cards/fieldstock/mty-12-kofi-mensah-back-photo.webp",
+      "card_id": "MTY-12"
     },
     {
+      "dob": "1997-06-02",
+      "birthplace": "Podgorica, Montenegro",
+      "height": "5′10″",
+      "weight": 214,
+      "field_note": "Has a scrapbook devoted to unusual handwriting.",
       "name": "Luka Vuković",
       "slug": "luka-vukovic",
       "position": "3B",
@@ -210,9 +272,15 @@
         0.6666666666666666,
         0.25,
         0.3333333333333333
-      ]
+      ],
+      "card_id": "MTY-13"
     },
     {
+      "dob": "2001-09-15",
+      "birthplace": "Hiroshima, Japan",
+      "height": "5′11″",
+      "weight": 225,
+      "field_note": "Is learning to make soba noodles without a machine.",
       "name": "Seiji Fukumori",
       "slug": "seiji-fukumori",
       "position": "CF",
@@ -226,9 +294,15 @@
         0.6666666666666666,
         0.25,
         0.3333333333333333
-      ]
+      ],
+      "card_id": "MTY-14"
     },
     {
+      "dob": "2003-05-06",
+      "birthplace": "Saltillo, Coahuila, México",
+      "height": "6′1″",
+      "weight": 195,
+      "field_note": "Labels batting-practice bats by the outfield gap he is trying to reach that day.",
       "name": "Andrés Cázares",
       "slug": "andres-cazares",
       "position": "LF",
@@ -236,16 +310,17 @@
       "throws": "R",
       "age": 23,
       "photo": "andres-cazares.jpg",
-      "dob": "2003-05-06",
-      "birthplace": "Saltillo, Coahuila, México",
-      "height": "6′1″",
-      "weight": 195,
-      "field_note": "Labels batting-practice bats by the outfield gap he is trying to reach that day.",
       "bio": "Andrés Cázares plays LF for the Monterrey Cementeros. Labels batting-practice bats by the outfield gap he is trying to reach that day.",
       "card_front": "assets/images/cards/fieldstock/mty-15-andres-cazares-front-photo.webp",
-      "card_back": "assets/images/cards/fieldstock/mty-15-andres-cazares-back-photo.webp"
+      "card_back": "assets/images/cards/fieldstock/mty-15-andres-cazares-back-photo.webp",
+      "card_id": "MTY-15"
     },
     {
+      "dob": "1995-02-01",
+      "birthplace": "Lexington, Kentucky",
+      "height": "6′0″",
+      "weight": 195,
+      "field_note": "Keeps a list of very good benches with very ordinary views.",
       "name": "Micah Lunsford",
       "slug": "micah-lunsford",
       "position": "RF",
@@ -259,7 +334,8 @@
         0.6666666666666666,
         0.25,
         0.3333333333333333
-      ]
+      ],
+      "card_id": "MTY-16"
     }
   ]
 }

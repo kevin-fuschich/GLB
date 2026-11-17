@@ -15,15 +15,16 @@
       "throws": "R",
       "age": 29,
       "photo": "caleb-warnock.jpg",
-      "photo_source": "assets/teams/st-paul-frost/images/player-atlas-v2.webp",
+      "photo_source": "assets/images/cards/fieldstock/st-paul-frost-game-photos.svg",
       "photo_crop": [
         0,
         0,
         0.25,
-        0.25
+        1
       ],
       "card_id": "STP-01",
-      "claim_open": true
+      "claim_open": true,
+      "card_front_alt": "Caleb Warnock wiping down a baseball"
     },
     {
       "dob": "1999-02-13",
@@ -87,15 +88,16 @@
       "throws": "R",
       "age": 26,
       "photo": "tae-ho-choi.jpg",
-      "photo_source": "assets/teams/st-paul-frost/images/player-atlas-v2.webp",
+      "photo_source": "assets/images/cards/fieldstock/st-paul-frost-game-photos.svg",
       "photo_crop": [
-        0.75,
+        0.25,
         0,
         0.25,
-        0.25
+        1
       ],
       "card_id": "STP-04",
-      "claim_open": true
+      "claim_open": true,
+      "card_front_alt": "Tae-ho Choi pitching in the bullpen"
     },
     {
       "dob": "2002-03-19",
@@ -279,15 +281,16 @@
       "throws": "R",
       "age": 24,
       "photo": "masato-kobori.jpg",
-      "photo_source": "assets/teams/st-paul-frost/images/player-atlas-v2.webp",
+      "photo_source": "assets/images/cards/fieldstock/st-paul-frost-game-photos.svg",
       "photo_crop": [
-        0.75,
         0.5,
+        0,
         0.25,
-        0.25
+        1
       ],
       "card_id": "STP-12",
-      "claim_open": true
+      "claim_open": true,
+      "card_front_alt": "Masato Kobori setting his feet for a throw"
     },
     {
       "dob": "1995-09-26",
@@ -327,15 +330,16 @@
       "throws": "R",
       "age": 25,
       "photo": "malik-jefferson.jpg",
-      "photo_source": "assets/teams/st-paul-frost/images/player-atlas-v2.webp",
+      "photo_source": "assets/images/cards/fieldstock/st-paul-frost-game-photos.svg",
       "photo_crop": [
-        0.25,
         0.75,
+        0,
         0.25,
-        0.25
+        1
       ],
       "card_id": "STP-14",
-      "claim_open": true
+      "claim_open": true,
+      "card_front_alt": "Malik Jefferson choosing a bat"
     },
     {
       "dob": "1997-03-21",

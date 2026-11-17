@@ -53,7 +53,7 @@
     const featured = ['hassan-al-saleh','owen-keller','nico-valente','isaac-morrow'];
     const players = featured.map(slug => roster.players.find(player => player.slug === slug))
       .concat(roster.players.filter(player => !featured.includes(player.slug)));
-    const entries = await Promise.all(players.map(async player => {
+    const entries = players.map(player => {
       const article = document.createElement('article');
       article.className = 'tpe-card-entry';
       article.id = 'card-' + player.card_id.toLowerCase();
@@ -85,9 +85,15 @@
         const paragraph = document.createElement('p'); paragraph.textContent = copy;
         details.append(paragraph);
       }
-      article.append(details, await TaipeiFieldstock.createClaimPanel(player,{teamSlug:'birmingham-vulcans',teamName:roster.team}));
+      article.append(details);
+      const claimStatus = document.createElement('p');
+      claimStatus.textContent = 'Checking claim availability…';
+      article.append(claimStatus);
+      TaipeiFieldstock.createClaimPanel(player,{teamSlug:'birmingham-vulcans',teamName:roster.team})
+        .then(panel => claimStatus.replaceWith(panel))
+        .catch(() => { claimStatus.textContent = 'Claim availability could not load. Please refresh.'; });
       return article;
-    }));
+    });
     host.replaceChildren(...entries);
     const toggle=document.createElement('button');toggle.type='button';toggle.className='collection-toggle';toggle.setAttribute('aria-controls','birminghamCards');
     let expanded=false;

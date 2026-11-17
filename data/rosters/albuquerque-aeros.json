@@ -16,7 +16,15 @@
       "age": 29,
       "photo": "idris-kourouma.jpg",
       "card_id": "ABQ-01",
-      "claim_open": true
+      "claim_open": true,
+      "photo_source": "assets/images/cards/fieldstock/abq-2026-action.png",
+      "photo_crop": [
+        0.001594896331738437,
+        0.001594896331738437,
+        0.33014354066985646,
+        0.33014354066985646
+      ],
+      "card_front_alt": "Idris Kourouma at the top of his windup"
     },
     {
       "dob": "1995-10-26",
@@ -50,7 +58,15 @@
       "age": 26,
       "photo": "nikhil-jadhav.jpg",
       "card_id": "ABQ-03",
-      "claim_open": true
+      "claim_open": true,
+      "photo_source": "assets/images/cards/fieldstock/abq-2026-action.png",
+      "photo_crop": [
+        0.3349282296650718,
+        0.001594896331738437,
+        0.33014354066985646,
+        0.33014354066985646
+      ],
+      "card_front_alt": "Nikhil Jadhav working a baseball between his hands in the dugout"
     },
     {
       "dob": "2002-04-21",
@@ -84,7 +100,15 @@
       "age": 28,
       "photo": "satoshi-kurobane.jpg",
       "card_id": "ABQ-05",
-      "claim_open": true
+      "claim_open": true,
+      "photo_source": "assets/images/cards/fieldstock/abq-2026-action.png",
+      "photo_crop": [
+        0.6682615629984051,
+        0.001594896331738437,
+        0.33014354066985646,
+        0.33014354066985646
+      ],
+      "card_front_alt": "Satoshi Kurobane walking off the mound at dusk"
     },
     {
       "dob": "1999-08-16",
@@ -118,7 +142,15 @@
       "age": 23,
       "photo": "jae-min-gwak.jpg",
       "card_id": "ABQ-07",
-      "claim_open": true
+      "claim_open": true,
+      "photo_source": "assets/images/cards/fieldstock/abq-2026-action.png",
+      "photo_crop": [
+        0.001594896331738437,
+        0.3349282296650718,
+        0.33014354066985646,
+        0.33014354066985646
+      ],
+      "card_front_alt": "Jae-min Gwak jogging along the bullpen track"
     },
     {
       "dob": "1996-02-11",
@@ -152,7 +184,15 @@
       "age": 28,
       "photo": "rui-damas.jpg",
       "card_id": "ABQ-09",
-      "claim_open": true
+      "claim_open": true,
+      "photo_source": "assets/images/cards/fieldstock/abq-2026-action.png",
+      "photo_crop": [
+        0.3349282296650718,
+        0.3349282296650718,
+        0.33014354066985646,
+        0.33014354066985646
+      ],
+      "card_front_alt": "Rui Damas receiving in a crouch"
     },
     {
       "dob": "1994-06-06",
@@ -169,7 +209,15 @@
       "age": 32,
       "photo": "tobias-vandenberg.jpg",
       "card_id": "ABQ-10",
-      "claim_open": true
+      "claim_open": true,
+      "photo_source": "assets/images/cards/fieldstock/abq-2026-action.png",
+      "photo_crop": [
+        0.6682615629984051,
+        0.3349282296650718,
+        0.33014354066985646,
+        0.33014354066985646
+      ],
+      "card_front_alt": "Tobias Vandenberg stretching for a throw at first base"
     },
     {
       "dob": "2001-03-17",
@@ -186,7 +234,15 @@
       "age": 25,
       "photo": "kofi-agyeman.jpg",
       "card_id": "ABQ-11",
-      "claim_open": true
+      "claim_open": true,
+      "photo_source": "assets/images/cards/fieldstock/abq-2026-action.png",
+      "photo_crop": [
+        0.001594896331738437,
+        0.6682615629984051,
+        0.33014354066985646,
+        0.33014354066985646
+      ],
+      "card_front_alt": "Kofi Agyeman fielding a ground ball"
     },
     {
       "dob": "2000-10-01",
@@ -237,7 +293,15 @@
       "age": 27,
       "photo": "adama-kouyate.jpg",
       "card_id": "ABQ-14",
-      "claim_open": true
+      "claim_open": true,
+      "photo_source": "assets/images/cards/fieldstock/abq-2026-action.png",
+      "photo_crop": [
+        0.3349282296650718,
+        0.6682615629984051,
+        0.33014354066985646,
+        0.33014354066985646
+      ],
+      "card_front_alt": "Adama Kouyaté tracking a deep fly over his shoulder"
     },
     {
       "dob": "2004-01-07",
@@ -271,7 +335,15 @@
       "age": 31,
       "photo": "paolo-ventresca.jpg",
       "card_id": "ABQ-16",
-      "claim_open": true
+      "claim_open": true,
+      "photo_source": "assets/images/cards/fieldstock/abq-2026-action.png",
+      "photo_crop": [
+        0.6682615629984051,
+        0.6682615629984051,
+        0.33014354066985646,
+        0.33014354066985646
+      ],
+      "card_front_alt": "Paolo Ventresca waiting in the on-deck circle"
     }
   ]
 }

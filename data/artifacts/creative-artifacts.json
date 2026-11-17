@@ -1336,6 +1336,166 @@
       "record_path": "sponsors.html?sponsor=propellant",
       "prompt": "Claim the complete PROPELLANT sponsor entity. Develop its brand story, products, campaigns and sponsorship identity across GLB. All placements share this one entity claim.",
       "claim_open": true
+    },
+    {
+      "artifact_id": "TOL-PARK",
+      "name": "The Glassworks",
+      "type": "ballpark",
+      "team_slug": "toledo-assembly",
+      "team_name": "Toledo Assembly",
+      "section": "glassworks",
+      "prompt": "Describe a seat or a sightline at The Glassworks that a first-time visitor might miss.",
+      "claim_open": true
+    },
+    {
+      "artifact_id": "TOL-MASCOT",
+      "name": "Gauge",
+      "type": "mascot",
+      "team_slug": "toledo-assembly",
+      "team_name": "Toledo Assembly",
+      "section": "mascot",
+      "prompt": "Tell the story of an encounter with Gauge at a game.",
+      "claim_open": true
+    },
+    {
+      "artifact_id": "TOL-STANDS",
+      "name": "The River Rail",
+      "type": "tradition",
+      "team_slug": "toledo-assembly",
+      "team_name": "Toledo Assembly",
+      "section": "river-rail",
+      "prompt": "Share a game-night memory from The River Rail.",
+      "claim_open": true
+    },
+    {
+      "artifact_id": "TOL-RITUAL",
+      "name": "The Pocket Scoreboard",
+      "type": "tradition",
+      "team_slug": "toledo-assembly",
+      "team_name": "Toledo Assembly",
+      "section": "tradition",
+      "prompt": "Tell the story of one night when The Pocket Scoreboard took an unexpected turn.",
+      "claim_open": true
+    },
+    {
+      "artifact_id": "STP-PARK",
+      "name": "Rimefield Park",
+      "type": "ballpark",
+      "team_slug": "st-paul-frost",
+      "team_name": "St. Paul Frost",
+      "section": "ballpark",
+      "prompt": "Describe a seat or a sightline at Rimefield Park that a first-time visitor might miss.",
+      "claim_open": true
+    },
+    {
+      "artifact_id": "STP-MASCOT",
+      "name": "Rime",
+      "type": "mascot",
+      "team_slug": "st-paul-frost",
+      "team_name": "St. Paul Frost",
+      "section": "mascot",
+      "prompt": "Tell the story of an encounter with Rime at a game.",
+      "claim_open": true
+    },
+    {
+      "artifact_id": "STP-STANDS",
+      "name": "The Ice Rail",
+      "type": "tradition",
+      "team_slug": "st-paul-frost",
+      "team_name": "St. Paul Frost",
+      "section": "fans",
+      "prompt": "Share a game-night memory from The Ice Rail.",
+      "claim_open": true
+    },
+    {
+      "artifact_id": "STP-RITUAL",
+      "name": "The Full Count",
+      "type": "tradition",
+      "team_slug": "st-paul-frost",
+      "team_name": "St. Paul Frost",
+      "section": "tradition",
+      "prompt": "Tell the story of one night when The Full Count took an unexpected turn.",
+      "claim_open": true
+    },
+    {
+      "artifact_id": "FRE-PARK",
+      "name": "The Corn Cathedral",
+      "type": "ballpark",
+      "team_slug": "fresno-yield",
+      "team_name": "Fresno Yield",
+      "section": "ballpark",
+      "prompt": "Describe a seat or a sightline at The Corn Cathedral that a first-time visitor might miss.",
+      "claim_open": true
+    },
+    {
+      "artifact_id": "FRE-MASCOT",
+      "name": "The Husk",
+      "type": "mascot",
+      "team_slug": "fresno-yield",
+      "team_name": "Fresno Yield",
+      "section": "mascot",
+      "prompt": "Tell the story of an encounter with The Husk at a game.",
+      "claim_open": true
+    },
+    {
+      "artifact_id": "FRE-STANDS",
+      "name": "The Picnic Hills",
+      "type": "tradition",
+      "team_slug": "fresno-yield",
+      "team_name": "Fresno Yield",
+      "section": "fans",
+      "prompt": "Share a game-night memory from The Picnic Hills.",
+      "claim_open": true
+    },
+    {
+      "artifact_id": "FRE-RITUAL",
+      "name": "The Blanket Roll",
+      "type": "tradition",
+      "team_slug": "fresno-yield",
+      "team_name": "Fresno Yield",
+      "section": "tradition",
+      "prompt": "Tell the story of one night when The Blanket Roll took an unexpected turn.",
+      "claim_open": true
+    },
+    {
+      "artifact_id": "ABQ-PARK",
+      "name": "Propellant Park",
+      "type": "ballpark",
+      "team_slug": "albuquerque-aeros",
+      "team_name": "Albuquerque Aeros",
+      "section": "ballpark",
+      "prompt": "Describe a seat or a sightline at Propellant Park that a first-time visitor might miss.",
+      "claim_open": true
+    },
+    {
+      "artifact_id": "ABQ-MASCOT",
+      "name": "Tether",
+      "type": "mascot",
+      "team_slug": "albuquerque-aeros",
+      "team_name": "Albuquerque Aeros",
+      "section": "mascot",
+      "prompt": "Tell the story of an encounter with Tether at a game.",
+      "claim_open": true
+    },
+    {
+      "artifact_id": "ABQ-STANDS",
+      "name": "The Stands",
+      "type": "tradition",
+      "team_slug": "albuquerque-aeros",
+      "team_name": "Albuquerque Aeros",
+      "section": "fans",
+      "prompt": "Share a game-night memory from The Stands.",
+      "claim_open": true
+    },
+    {
+      "artifact_id": "ABQ-RITUAL",
+      "name": "The Countdown",
+      "type": "tradition",
+      "team_slug": "albuquerque-aeros",
+      "team_name": "Albuquerque Aeros",
+      "section": "tradition",
+      "prompt": "Tell the story of one night when The Countdown took an unexpected turn.",
+      "claim_open": true
     }
   ]
 }

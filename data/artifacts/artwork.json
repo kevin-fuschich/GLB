@@ -462,5 +462,69 @@
   "DONK-OMAR-AZUL": {
     "src": "assets/events/road-to-tijuana/san-pedro-omar-azul.webp",
     "alt": "Omar Azul · 2026 DONK Championship"
+  },
+  "TOL-PARK": {
+    "src": "club-toledo-assembly-stadium.png",
+    "alt": "The Glassworks ballpark"
+  },
+  "TOL-MASCOT": {
+    "src": "club-toledo-assembly-mascot.png",
+    "alt": "Toledo’s mascot at The Glassworks"
+  },
+  "TOL-STANDS": {
+    "src": "club-toledo-assembly-fans.png",
+    "alt": "The River Rail crowd at The Glassworks"
+  },
+  "TOL-RITUAL": {
+    "src": "club-toledo-assembly-fans.png",
+    "alt": "Fans at The Glassworks"
+  },
+  "STP-PARK": {
+    "src": "club-st-paul-frost-stadium.png",
+    "alt": "Rimefield Park"
+  },
+  "STP-MASCOT": {
+    "src": "club-st-paul-frost-mascot.png",
+    "alt": "Rime"
+  },
+  "STP-STANDS": {
+    "src": "club-st-paul-frost-fans.png",
+    "alt": "The Ice Rail"
+  },
+  "STP-RITUAL": {
+    "src": "club-st-paul-frost-fans.png",
+    "alt": "Fans at Rimefield Park"
+  },
+  "FRE-PARK": {
+    "src": "club-fresno-yield-stadium.png",
+    "alt": "The Corn Cathedral"
+  },
+  "FRE-MASCOT": {
+    "src": "club-fresno-yield-mascot.png",
+    "alt": "The Husk"
+  },
+  "FRE-STANDS": {
+    "src": "club-fresno-yield-fans.png",
+    "alt": "The Picnic Hills"
+  },
+  "FRE-RITUAL": {
+    "src": "club-fresno-yield-fans.png",
+    "alt": "Fans at The Corn Cathedral"
+  },
+  "ABQ-PARK": {
+    "src": "club-albuquerque-aeros-park.png",
+    "alt": "Propellant Park"
+  },
+  "ABQ-MASCOT": {
+    "src": "club-albuquerque-aeros-mascot.png",
+    "alt": "The park’s familiar face"
+  },
+  "ABQ-STANDS": {
+    "src": "club-albuquerque-aeros-fans.png",
+    "alt": "The stands"
+  },
+  "ABQ-RITUAL": {
+    "src": "club-albuquerque-aeros-fans.png",
+    "alt": "Fans at Propellant Park"
   }
 }

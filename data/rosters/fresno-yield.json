@@ -63,15 +63,16 @@
       "throws": "R",
       "age": 26,
       "photo": "kenji-takamori.jpg",
-      "photo_source": "assets/teams/fresno-yield/images/player-atlas-v2.webp",
+      "photo_source": "assets/images/cards/fieldstock/fresno-yield-game-photos.svg",
       "photo_crop": [
-        0.5,
+        0,
         0,
         0.25,
-        0.25
+        1
       ],
       "card_id": "FRE-03",
-      "claim_open": true
+      "claim_open": true,
+      "card_front_alt": "Kenji Takamori looking in for the sign"
     },
     {
       "dob": "1995-08-22",
@@ -135,15 +136,16 @@
       "throws": "R",
       "age": 28,
       "photo": "ibrahim-koroma.jpg",
-      "photo_source": "assets/teams/fresno-yield/images/player-atlas-v2.webp",
+      "photo_source": "assets/images/cards/fieldstock/fresno-yield-game-photos.svg",
       "photo_crop": [
         0.25,
+        0,
         0.25,
-        0.25,
-        0.25
+        1
       ],
       "card_id": "FRE-06",
-      "claim_open": true
+      "claim_open": true,
+      "card_front_alt": "Ibrahim Koroma jogging in from the bullpen"
     },
     {
       "dob": "2001-09-01",
@@ -231,15 +233,16 @@
       "throws": "R",
       "age": 32,
       "photo": "jonah-kershaw.jpg",
-      "photo_source": "assets/teams/fresno-yield/images/player-atlas-v2.webp",
+      "photo_source": "assets/images/cards/fieldstock/fresno-yield-game-photos.svg",
       "photo_crop": [
-        0.25,
         0.5,
+        0,
         0.25,
-        0.25
+        1
       ],
       "card_id": "FRE-10",
-      "claim_open": true
+      "claim_open": true,
+      "card_front_alt": "Jonah Kershaw stretching for a throw at first"
     },
     {
       "dob": "2003-07-18",
@@ -327,15 +330,16 @@
       "throws": "R",
       "age": 25,
       "photo": "malachi-quartey.jpg",
-      "photo_source": "assets/teams/fresno-yield/images/player-atlas-v2.webp",
+      "photo_source": "assets/images/cards/fieldstock/fresno-yield-game-photos.svg",
       "photo_crop": [
-        0.25,
         0.75,
+        0,
         0.25,
-        0.25
+        1
       ],
       "card_id": "FRE-14",
-      "claim_open": true
+      "claim_open": true,
+      "card_front_alt": "Malachi Quartey tracking a fly near the wall"
     },
     {
       "dob": "1998-05-08",

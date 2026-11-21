@@ -471,8 +471,8 @@
     }
   .team-card { display:flex; gap:18px; align-items:center; min-height:94px; padding:12px 18px; border-radius:4px; }
     .team-name { margin:0; font-size:1.2rem; }
-    .team-mark { width:68px;height:68px;object-fit:cover;border-radius:4px;flex:none; }
-    .triangle-mark { display:grid;place-items:center;flex:none;width:68px;height:68px;background:#172c3b;color:#e7c579;font:italic 800 29px Georgia,serif;border-radius:4px; }
+    .team-mark { width:68px;height:68px;object-fit:contain;flex:none; }
+    .triangle-mark { display:grid;place-items:center;flex:none;width:68px;height:68px;color:#806321;font:italic 800 29px Georgia,serif; }
     </style>
 <link rel="stylesheet" href="site-header.css?v=20261112">
 <script defer src="scripts/site-header.js?v=20261120-collection"></script>
@@ -590,7 +590,7 @@
 
       return `
         <a class="team-card" href="${slug === 'durham-gold' ? 'team-triangle-gold.html' : slug === 'tijuana-tecnicos' ? 'team-tijuana-tecnicos.html' : 'team.html?team=' + encodeURIComponent(slug)}">
-          ${slug === 'durham-gold' ? '<span class="triangle-mark" aria-hidden="true">TG</span>' : `<img class="team-mark" src="assets/team-marks/${encodeURIComponent(slug)}.webp" alt="" width="84" height="84" loading="lazy">`}
+          ${slug === 'durham-gold' ? '<span class="triangle-mark" aria-hidden="true">TG</span>' : `<img class="team-mark" src="assets/team-marks/${encodeURIComponent(slug)}.webp?v=transparent" alt="" width="84" height="84" loading="lazy">`}
           <h3 class="team-name">${name}</h3>
         </a>
       `;

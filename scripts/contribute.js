@@ -31,7 +31,7 @@
         else {media.classList.add('artifact-art-fallback');media.textContent=labels[artifact.type]||'GLB';}
         card.append(media);
         card.append(el('small',artifact.team_name+' · '+artifact.id),el('h3',artifact.name),el('p',labels[artifact.type] || 'Creative artifact'));
-        const link=el('a','Claim & craft →');link.href=artifact.href;link.setAttribute('aria-label','Claim and craft '+artifact.name);
+        const link=el('a','Claim & Create →');link.href=artifact.href;link.setAttribute('aria-label','Claim and craft '+artifact.name);
         const prompt=el('div');prompt.className='artifact-prompt';prompt.append(el('small','What could you add?'),el('p',artifact.prompt || 'A defining moment, a personal detail or a story from beyond the game. Build on the existing record.'));card.append(prompt);
         card.append(link);
         if(artifact.record_href){const record=el('a','View the existing record');record.href=artifact.record_href;record.className='artifact-record-link';card.append(record);}
@@ -95,7 +95,7 @@
     document.getElementById('artifact').value=selected.name;
     document.getElementById('artifact').readOnly=true;document.getElementById('club').disabled=true;document.getElementById('type').disabled=true;
     document.getElementById('ideaPitchText').hidden=true;document.getElementById('pitchTips').hidden=true;
-    document.getElementById('contribution-title').textContent=(noteMode?'Add a note: ':'Claim & craft: ')+selected.name;
+    document.getElementById('contribution-title').textContent=(noteMode?'Add a note: ':'Claim & Create: ')+selected.name;
     selection.textContent=noteMode?'The original claim stays credited to '+approved.user_id+'. Your note needs its own Board approval.':selected.id+' · '+(selected.prompt || 'Add something of your own.');
     if(selected.prompt)form.elements.contribution.placeholder=selected.prompt;
     selectionReady=true;

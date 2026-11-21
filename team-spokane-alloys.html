@@ -1310,12 +1310,12 @@ text-transform:uppercase;
 .ogwa-hero details[open] :is(.team-location,.team-kicker){display:none}
 .ogwa-hero details[open] .team-title{font-size:22px;letter-spacing:normal;margin:0}
 .ogwa-hero details[open] .ogwa-watch{margin:0}
-@supports(animation-timeline:view()){
- @media(prefers-reduced-motion:no-preference) and (min-width:700px){
-  .ogwa-hero {view-timeline-name:--ogwa-view}
-  .ogwa-aerial {animation:ogwa-drift linear both;animation-timeline:--ogwa-view;animation-range:exit 0% exit 100%}
-  @keyframes ogwa-drift {from{transform:scale(1.07) translateY(-2%)}to{transform:scale(1.07) translateY(3%)}}
- }
+@media (prefers-reduced-motion: no-preference) {
+  .ogwa-hero {overflow:hidden}
+  .ogwa-hero .ogwa-aerial {
+    top:-10%;height:120%;
+    transform:translate3d(0,var(--ogwa-offset,0px),0);
+  }
 }
 </style><link rel="stylesheet" href="team-films.css?v=1"></head>
 
@@ -2324,5 +2324,29 @@ const mobileMenu=document.getElementById("mobileMenu");
 
 <script src="scripts/glb-ticker.js?v=20261114-offseason"></script>
 <script src="scripts/participation.js?v=voice-label"></script>
-<script src="scripts/compact-clubs.js?v=profiles-20261114"></script><script src="scripts/team-films.js?v=1"></script></body>
+<script src="scripts/compact-clubs.js?v=profiles-20261114"></script><script src="scripts/team-films.js?v=1"></script><script>
+(() => {
+  const film = document.getElementById('ogwa-flyover');
+  const hero = film.closest('.ogwa-hero');
+  const motion = window.matchMedia('(prefers-reduced-motion: no-preference)');
+  let frame = 0;
+  function paint() {
+    frame = 0;
+    if (!motion.matches || film.open) return;
+    const rect = hero.getBoundingClientRect();
+    if (!rect.height || rect.bottom <= 0 || rect.top >= window.innerHeight) return;
+    const offset = Math.max(-rect.height * .1, Math.min(rect.height * .1, -rect.top * .24));
+    hero.style.setProperty('--ogwa-offset', offset.toFixed(2) + 'px');
+  }
+  function schedule() {
+    if (!frame && motion.matches && !film.open) frame = requestAnimationFrame(paint);
+  }
+  window.addEventListener('scroll', schedule, {passive:true});
+  window.addEventListener('resize', schedule);
+  film.addEventListener('toggle', schedule);
+  motion.addEventListener('change', schedule);
+  schedule();
+})();
+</script>
+</body>
 </html>

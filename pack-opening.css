@@ -90,3 +90,20 @@
 .pack-owned-card .fs-face[data-photo-print=true]::before,.pack-owned-card .fs-face[data-photo-print=true]::after{display:none!important}
 .pack-owned-card .fs-face[data-photo-print=true]{border:0!important;background:none!important}
 .pack-owned-card .fs-photographed-print{display:block;width:100%;height:100%;object-fit:contain}
+
+.pack-preview h1,.pack-preview h2 {font-family:Arial,Helvetica,sans-serif;letter-spacing:-.04em}
+.pack-preview h1 {padding-bottom:20px;border-bottom:3px solid #142333}
+.pack-footer {padding:24px max(24px,calc((100vw - 1112px)/2));background:#0b1e33;color:white;display:flex;flex-wrap:wrap;gap:20px;font:14px/1.5 Arial,sans-serif}
+.pack-footer a {color:inherit}
+
+/* Leave a tabletop margin around the print, including the photographed proofs. */
+.pack-owned-card .fs-card,.subset-print .fs-card {
+  padding:clamp(10px,4%,20px);
+  background:#bdb4a9 url('assets/fieldstock/physical-card-stock.webp') left center / 2300% 115% no-repeat;
+}
+.pack-owned-card .fs-flipper,.subset-print .fs-flipper {
+  rotate:-2deg;
+  filter:drop-shadow(1px 2px 0 #695e51) drop-shadow(2px 4px 3px #42372852);
+}
+.pack-owned-card[data-photo-print=true] .fs-inner {box-shadow:none}
+.pack-owned-card .fs-flip-note,.subset-print .fs-flip-note {color:#273238}

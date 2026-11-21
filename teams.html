@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Teams | Global League Baseball</title>
-  <meta name="description" content="Browse all clubs in Global League Baseball by division." />
+  <meta name="description" content="Browse all teams in Global League Baseball by division." />
 
   <style>
     :root{
@@ -469,9 +469,13 @@
         gap:6px;
       }
     }
-  </style>
+  .team-card { display:flex; gap:18px; align-items:center; min-height:94px; padding:12px 18px; border-radius:4px; }
+    .team-name { margin:0; font-size:1.2rem; }
+    .team-mark { width:68px;height:68px;object-fit:cover;border-radius:4px;flex:none; }
+    .triangle-mark { display:grid;place-items:center;flex:none;width:68px;height:68px;background:#172c3b;color:#e7c579;font:italic 800 29px Georgia,serif;border-radius:4px; }
+    </style>
 <link rel="stylesheet" href="site-header.css?v=20261112">
-<script defer src="scripts/site-header.js?v=20261114-offseason"></script>
+<script defer src="scripts/site-header.js?v=20261120-collection"></script>
 </head>
 <body>
 
@@ -490,11 +494,8 @@
 
       <section class="hero" aria-label="Teams overview">
         <div class="hero-inner">
-          <div class="eyebrow">Clubs</div>
-          <h1 class="page-title">All Teams</h1>
-          <p class="page-deck">
-            Browse every club in Global League Baseball by division. Select a team to view its dedicated page, including roster, staff, and club details.
-          </p>
+          <h1 class="page-title">Teams</h1>
+          <p class="page-deck">Explore the rosters, ballparks and people behind GLB’s 16 teams.</p>
           <div class="division-nav">
             <a class="division-jump" href="#pacific">Pacific Division</a>
             <a class="division-jump" href="#americas">Americas Division</a>
@@ -506,11 +507,10 @@
         <div class="division-header">
           <div>
             <h2 class="division-title" id="pacificTitle">Pacific Division</h2>
-            <div class="division-sub">Clubs across the Pacific circuit.</div>
           </div>
         </div>
         <div class="team-grid" id="pacificGrid">
-          <div class="empty-state">Loading Pacific Division clubs…</div>
+          <div class="empty-state">Loading Pacific Division teams…</div>
         </div>
       </section>
 
@@ -518,11 +518,10 @@
         <div class="division-header">
           <div>
             <h2 class="division-title" id="americasTitle">Americas Division</h2>
-            <div class="division-sub">Clubs across the Americas circuit.</div>
           </div>
         </div>
         <div class="team-grid" id="americasGrid">
-          <div class="empty-state">Loading Americas Division clubs…</div>
+          <div class="empty-state">Loading Americas Division teams…</div>
         </div>
       </section>
 
@@ -537,7 +536,7 @@
         <div class="footer-tag">Global League Baseball</div>
         <p class="footer-desc">
           Official league site providing scores, standings, schedules,
-          club information, and league bulletins.
+          team information, and league bulletins.
         </p>
       </div>
 
@@ -550,8 +549,7 @@
       </div>
 
       <div class="footer-col">
-        <h4>Clubs</h4>
-        <a href="teams.html">Teams</a>
+        <h4>Directory</h4>
         <a href="stadiums.html">Stadiums</a>
         <a href="rosters.html">Rosters</a>
       </div>
@@ -568,7 +566,6 @@
     <div class="footer-bottom">
       <div class="container footer-bottom-inner">
         <span>© 2026 Global League Baseball</span>
-        <span>16 Active Clubs</span>
         <span>Official League Record</span>
       </div>
     </div>
@@ -586,20 +583,15 @@
       return res.json();
     }
 
-    function makeTeamCard(team, divisionName) {
-      const name = team.name || team.team || 'Unnamed Club';
+    function makeTeamCard(team) {
+      const name = team.name || team.team || 'Unnamed team';
       const slug = team.slug || '';
-      const abbrev = team.abbrev || team.abbr || '—';
+
 
       return `
         <a class="team-card" href="${slug === 'durham-gold' ? 'team-triangle-gold.html' : slug === 'tijuana-tecnicos' ? 'team-tijuana-tecnicos.html' : 'team.html?team=' + encodeURIComponent(slug)}">
-          <span class="team-label">${divisionName}</span>
+          ${slug === 'durham-gold' ? '<span class="triangle-mark" aria-hidden="true">TG</span>' : `<img class="team-mark" src="assets/team-marks/${encodeURIComponent(slug)}.webp" alt="" width="84" height="84" loading="lazy">`}
           <h3 class="team-name">${name}</h3>
-          <p class="team-meta">
-            Club code: ${abbrev}<br>
-            View roster, coaches, and club details.
-          </p>
-          <span class="team-arrow">Open Team Page →</span>
         </a>
       `;
     }
@@ -608,11 +600,11 @@
       const target = document.getElementById(targetId);
 
       if (!teams || !teams.length) {
-        target.innerHTML = `<div class="empty-state">No clubs found for the ${divisionName}.</div>`;
+        target.innerHTML = `<div class="empty-state">No teams found for the ${divisionName}.</div>`;
         return;
       }
 
-      target.innerHTML = teams.map(team => makeTeamCard(team, divisionName)).join('');
+      target.innerHTML = teams.map(team => makeTeamCard(team)).join('');
     }
 
     (async function init() {
@@ -632,6 +624,7 @@
     })();
   </script>
 
-<script src="scripts/glb-ticker.js?v=20261114-offseason"></script>\n<script src="scripts/participation.js?v=20261113-members"></script>
+<script src="scripts/glb-ticker.js?v=20261114-offseason"></script>
+<script src="scripts/participation.js?v=20261113-members"></script>
 </body>
 </html>

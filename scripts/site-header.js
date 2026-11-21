@@ -44,7 +44,7 @@
     meta.id = 'glb-quick-bar-meta';
     const collectedLink = document.createElement('a');
     collectedLink.href = new URL('book.html', root);
-    collectedLink.textContent = '0/264 collected';
+    collectedLink.textContent = 'Collector’s book';
     const dot = document.createElement('span');
     dot.textContent = '·';
     dot.setAttribute('aria-hidden', 'true');
@@ -59,7 +59,7 @@
 
     const openPacksBtn = document.createElement('a');
     openPacksBtn.className = 'glb-qb-packs';
-    openPacksBtn.href = new URL('book.html#bookPacks', root);
+    openPacksBtn.href = new URL('book.html#open-packs', root);
     openPacksBtn.textContent = 'Open Packs';
 
     const claimArtifactsBtn = document.createElement('a');
@@ -112,7 +112,7 @@
           .then((rows) => {
             if (Array.isArray(rows)) {
               const unique = new Set(rows.map((c) => c.edition_id || c.card_id)).size;
-              collectedLink.textContent = unique + '/264 collected';
+              collectedLink.textContent = unique + (unique === 1 ? ' edition collected' : ' editions collected');
             }
           })
           .catch(() => {});

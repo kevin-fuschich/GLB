@@ -49,7 +49,7 @@
       else {
         const link=document.createElement('a');
         link.href='contribute.html?team='+encodeURIComponent(artifact.team_slug)+'&type='+encodeURIComponent(artifact.type)+'&artifact='+encodeURIComponent(artifact.name)+'&artifact_id='+encodeURIComponent(artifact.artifact_id)+'#contribute';
-        link.textContent='Claim & Create '+artifact.name+' →';p.append(link);
+        link.textContent='Claim & Create: '+artifact.name+' →';p.append(link);
       }
       const body=section.querySelector('.card-body')||section;
       if(section.classList.contains('glb-voice-claim')) section.replaceChildren(p);

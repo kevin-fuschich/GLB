@@ -1,0 +1,18 @@
+@media (prefers-reduced-motion: no-preference) {
+  [data-team-depth] { overflow: hidden; }
+  [data-team-depth="background"]::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: inherit;
+    pointer-events: none;
+  }
+  .team-hero[data-team-depth] > img,
+  .tol-hero[data-team-depth] > img,
+  .team-hero[data-team-depth] .ogwa-aerial,
+  .team-hero[data-team-depth="background"]::before {
+    top: -25%;
+    height: 150%;
+    transform: translate3d(0, var(--team-depth-offset, 0px), 0);
+  }
+}

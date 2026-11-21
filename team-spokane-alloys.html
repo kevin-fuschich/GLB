@@ -1310,14 +1310,7 @@ text-transform:uppercase;
 .ogwa-hero details[open] :is(.team-location,.team-kicker){display:none}
 .ogwa-hero details[open] .team-title{font-size:22px;letter-spacing:normal;margin:0}
 .ogwa-hero details[open] .ogwa-watch{margin:0}
-@media (prefers-reduced-motion: no-preference) {
-  .ogwa-hero {overflow:hidden}
-  .ogwa-hero .ogwa-aerial {
-    top:-25%;height:150%;
-    transform:translate3d(0,var(--ogwa-offset,0px),0);
-  }
-}
-</style><link rel="stylesheet" href="team-films.css?v=1"></head>
+</style><link rel="stylesheet" href="team-films.css?v=1"><link rel="stylesheet" href="team-depth.css"><script defer src="scripts/team-depth.js"></script></head>
 
 <body data-season-page="team">
 
@@ -1334,7 +1327,7 @@ text-transform:uppercase;
 <main class="page">
 <div class="container">
 
-<section class="team-hero ogwa-hero" aria-labelledby="spokane-title">
+<section class="team-hero ogwa-hero" aria-labelledby="spokane-title" data-team-depth="image">
 <details id="ogwa-flyover"><summary aria-label="OGWA Stadium flyover"><img class="ogwa-aerial" src="assets/teams/spokane-alloys/stadium/ogwa-poster.webp" width="910" height="512" alt="OGWA Stadium lit up beside the Spokane River at dusk" fetchpriority="high">
 <div class="team-hero-inner">
 <div class="team-kicker">Americas Division</div>
@@ -2324,30 +2317,6 @@ const mobileMenu=document.getElementById("mobileMenu");
 
 <script src="scripts/glb-ticker.js?v=20261114-offseason"></script>
 <script src="scripts/participation.js?v=voice-label"></script>
-<script src="scripts/compact-clubs.js?v=profiles-20261114"></script><script src="scripts/team-films.js?v=1"></script><script>
-(() => {
-  const film = document.getElementById('ogwa-flyover');
-  const hero = film.closest('.ogwa-hero');
-  const motion = window.matchMedia('(prefers-reduced-motion: no-preference)');
-  let frame = 0;
-  function paint() {
-    frame = 0;
-    if (!motion.matches || film.open) return;
-    const rect = hero.getBoundingClientRect();
-    if (!rect.height || rect.bottom <= 0 || rect.top >= window.innerHeight) return;
-    const progress = Math.min(1, Math.max(0, (180 - rect.top) / (rect.height + 120)));
-    const offset = (progress - .5) * rect.height * .48;
-    hero.style.setProperty('--ogwa-offset', offset.toFixed(2) + 'px');
-  }
-  function schedule() {
-    if (!frame && motion.matches && !film.open) frame = requestAnimationFrame(paint);
-  }
-  window.addEventListener('scroll', schedule, {passive:true});
-  window.addEventListener('resize', schedule);
-  film.addEventListener('toggle', schedule);
-  motion.addEventListener('change', schedule);
-  schedule();
-})();
-</script>
+<script src="scripts/compact-clubs.js?v=profiles-20261114"></script><script src="scripts/team-films.js?v=1"></script>
 </body>
 </html>

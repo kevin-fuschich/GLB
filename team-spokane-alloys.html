@@ -1297,7 +1297,26 @@ text-transform:uppercase;
 <link rel="stylesheet" href="taipei-cards.css?v=fieldstock-2026-1">
 <link rel="stylesheet" href="compact-clubs.css?v=1"><link rel="stylesheet" href="site-header.css?v=20261112">
 <script defer src="scripts/site-header.js?v=20261114-offseason"></script>
-<style>.spokane-club-facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 28px}.spokane-about h3{font-size:15px;margin:22px 0 10px}.spokane-about .note-block{margin-top:20px}.spokane-about .card-body>p:last-child a{font-size:13px;font-weight:700}@media(max-width:600px){.spokane-club-facts{grid-template-columns:1fr}}</style></head>
+<style>.spokane-club-facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 28px}.spokane-about h3{font-size:15px;margin:22px 0 10px}.spokane-about .note-block{margin-top:20px}.spokane-about .card-body>p:last-child a{font-size:13px;font-weight:700}@media(max-width:600px){.spokane-club-facts{grid-template-columns:1fr}}</style><style>
+.team-hero.ogwa-hero {isolation:isolate;background:#102233;border-radius:6px}
+.ogwa-aerial {position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 52%;z-index:-2}
+.ogwa-hero::after {content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(0deg,#071625e6,transparent 78%),linear-gradient(90deg,#07162569,transparent 70%);pointer-events:none}
+.ogwa-hero .team-hero-inner {align-items:flex-start}
+.ogwa-watch {display:inline-flex;align-items:center;gap:12px;margin-top:18px;padding:11px 16px;min-height:44px;border-radius:4px;background:#b7efda;color:#0b1e33;font:700 14px/1.45 Arial,sans-serif;text-decoration:none}
+.ogwa-watch:hover {background:#d3f8e9}.ogwa-runtime {padding-left:10px;border-left:1px solid #789c90;font-variant-numeric:tabular-nums}
+#ogwa-screen {width:min(940px,94vw,calc((90dvh - 56px)*1.7778));max-height:94dvh;padding:0;border:0;background:#0b1e33;color:white;border-radius:5px}
+#ogwa-screen::backdrop {background:#04101cef}
+.ogwa-film-bar {display:flex;align-items:center;justify-content:space-between;padding:4px 12px 4px 18px}
+.ogwa-film-bar h2 {margin:0;font:700 16px Arial,sans-serif}.ogwa-film-bar button {border:0;padding:10px 12px;min-height:44px;background:transparent;color:white;font:700 14px Arial,sans-serif;cursor:pointer}
+#ogwa-film {display:block;width:100%;aspect-ratio:910/512}
+@supports(animation-timeline:view()){
+ @media(prefers-reduced-motion:no-preference) and (min-width:700px){
+  .ogwa-hero {view-timeline-name:--ogwa-view}
+  .ogwa-aerial {animation:ogwa-drift linear both;animation-timeline:--ogwa-view;animation-range:exit 0% exit 100%}
+  @keyframes ogwa-drift {from{transform:scale(1.07) translateY(-2%)}to{transform:scale(1.07) translateY(3%)}}
+ }
+}
+</style></head>
 
 <body data-season-page="team">
 
@@ -1314,25 +1333,19 @@ text-transform:uppercase;
 <main class="page">
 <div class="container">
 
-<section class="team-hero">
+<section class="team-hero ogwa-hero" aria-labelledby="spokane-title">
+<img class="ogwa-aerial" src="assets/teams/spokane-alloys/stadium/ogwa-poster.webp" width="910" height="512" alt="OGWA Stadium lit up beside the Spokane River at dusk" fetchpriority="high">
 <div class="team-hero-inner">
-
 <div class="team-kicker">Americas Division</div>
-
-<h1 class="team-title">Spokane Alloys</h1>
-
-<p class="team-location">
-Spokane, Washington · OGWA Stadium · Club code SPO
-</p>
-
-<div class="team-actions">
-<span class="team-tag">Americas Division</span>
-<span class="team-tag">OGWA Stadium</span>
-<span class="team-tag">FIELDSTOCK</span>
-</div>
-
+<h1 class="team-title" id="spokane-title">Spokane Alloys</h1>
+<p class="team-location">OGWA Stadium · River District · Spokane, Washington</p>
+<a class="ogwa-watch" id="ogwa-watch" href="assets/teams/spokane-alloys/stadium/ogwa-flyover.mp4"><span aria-hidden="true">▶</span> Watch the flyover <span class="ogwa-runtime">0:10</span></a>
 </div>
 </section>
+<dialog id="ogwa-screen" aria-labelledby="ogwa-film-title">
+<div class="ogwa-film-bar"><h2 id="ogwa-film-title">OGWA Stadium</h2><form method="dialog"><button autofocus>Close</button></form></div>
+<video id="ogwa-film" controls playsinline preload="none" poster="assets/teams/spokane-alloys/stadium/ogwa-poster.webp" aria-label="Flyover of OGWA Stadium at dusk, from the river to fireworks over the field"></video>
+</dialog>
 
 <nav class="jump-nav" aria-label="Spokane page sections">
 <a href="#overview">Overview</a>
@@ -2313,5 +2326,20 @@ const mobileMenu=document.getElementById("mobileMenu");
 
 <script src="scripts/glb-ticker.js?v=20261114-offseason"></script>
 <script src="scripts/participation.js?v=20261113-members"></script>
-<script src="scripts/compact-clubs.js?v=profiles-20261114"></script></body>
+<script src="scripts/compact-clubs.js?v=profiles-20261114"></script><script>
+(() => {
+  const link = document.getElementById('ogwa-watch');
+  const screen = document.getElementById('ogwa-screen');
+  const film = document.getElementById('ogwa-film');
+  if (!screen.showModal) return;
+  link.addEventListener('click', event => {
+    if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+    event.preventDefault();
+    screen.showModal();
+    if (!film.src) film.src = link.href;
+    film.play().catch(() => { /* Native controls allow manual playback. */ });
+  });
+  screen.addEventListener('close', () => { film.pause(); film.currentTime = 0; link.focus({preventScroll:true}); });
+})();
+</script></body>
 </html>

@@ -1,4 +1,4 @@
 .glb-film-tile>summary {cursor:pointer}
-.glb-film-tile[open]>summary .glb-tile-image,.glb-film-tile[open]>summary .ogwa-aerial {display:none}
+.glb-film-tile[open]>summary .glb-tile-image,.glb-film-tile[open]>summary .ogwa-aerial {display:none !important}
 .glb-film-tile[open]>summary {min-height:0;height:auto}
 .glb-film-tile video[data-glb-film] {display:block;width:100%;height:auto;aspect-ratio:910/512;background:#0b1e33}

@@ -4,22 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>GLB Official Schedule</title>
+<link rel="stylesheet" href="scores.css?v=20261114-photo">
 <style>
-    :root { --ink-navy:#0b1e33; --meta-grey:#576576; --line-grey:#dce2e8; --font-serif:Georgia,"Times New Roman",serif; --font-sans:Arial,Helvetica,sans-serif; }
-    * { box-sizing:border-box; }
-    body { margin:0; padding:0; display:block; background:#f2f5f7; color:var(--ink-navy); font:16px/1.5 var(--font-sans); -webkit-font-smoothing:antialiased; }
-    .record-sheet { width:calc(100% - 48px); max-width:1000px; margin:36px auto 56px; padding:32px 40px; background:#fff; border:1px solid var(--line-grey); border-top:4px solid var(--ink-navy); border-radius:0 0 10px 10px; box-shadow:0 5px 24px #0b1e3308; }
-    .record-sheet > header { display:flex; align-items:center; justify-content:space-between; gap:20px; margin:0 0 26px; padding:0 0 22px; border-bottom:1px solid var(--line-grey); }
-    .meta-block { min-width:0; }
-    .page-title { margin:0 0 6px; font:700 clamp(26px,4vw,36px)/1.15 var(--font-serif); }
-    .meta-detail { color:var(--meta-grey); font-size:14px; }
-    .stamp-logo { display:flex; align-items:center; gap:9px; flex-shrink:0; color:var(--ink-navy); }
-    .stamp-logo strong { font:800 28px/1 Arial,Helvetica,sans-serif; letter-spacing:1px; }
-    .stamp-logo small { font:700 9px/1.35 Arial,Helvetica,sans-serif; letter-spacing:1px; text-transform:uppercase; }
-    .record-sheet .season-controls { margin-bottom:24px; }
-    .record-sheet select { max-width:100%; min-height:44px; padding:10px 36px 10px 12px; border:1px solid #bfc9d4; border-radius:6px; background:#fff; color:var(--ink-navy); font:inherit; }
+    .record-sheet { --ink-navy:#142333; --meta-grey:#52616b; }
+    .record-sheet .score-controls { justify-content:flex-start; align-items:flex-end; }
+    .score-controls label { display:grid; gap:6px; font-size:14px; font-weight:bold; }
+    .score-controls :is(select,input,button) { min-height:44px; padding:8px 12px; background:white; color:#142333; border:1px solid #cbd2d5; border-radius:3px; }
     .date-group { margin-bottom:28px; }
-    .date-header { margin:0; padding:0 0 10px; border-bottom:2px solid var(--ink-navy); font:700 18px/1.4 var(--font-serif); }
+    .date-header { margin:0; padding:12px 0; border-bottom:2px solid #142333; font-size:1.4rem; letter-spacing:-.025em; }
+    .date-group table { background:white; }
     .record-sheet table { width:100%; border-collapse:collapse; table-layout:fixed; font-size:14px; }
     .record-sheet td { padding:14px 8px; border-bottom:1px solid #e9edf1; vertical-align:middle; color:var(--ink-navy); }
     .record-sheet .col-time { width:64px; color:var(--meta-grey); font-size:12px; }
@@ -28,25 +21,15 @@
     .record-sheet .col-link { width:50px; text-align:right; }
     .record-sheet .col-team-away { text-align:right; }
     .record-sheet .team-page-link { color:var(--ink-navy); text-decoration:none; font-weight:600; overflow-wrap:anywhere; }
-    .record-sheet .box-link { display:inline-block; padding:8px 0; color:#245978; text-decoration:none; font-size:12px; }
+    .record-sheet .schedule-box { display:inline-block; padding:8px 0; color:#245978; text-decoration:none; font-size:12px; }
     .record-sheet a:hover { text-decoration:underline; }
-    .record-sheet a:focus-visible,.record-sheet select:focus-visible { outline:3px solid #3f9e83; outline-offset:3px; }
-    .record-sheet footer { margin-top:36px; padding-top:18px; border-top:1px solid var(--line-grey); color:var(--meta-grey); font-size:12px; }
+
     @media(max-width:600px) {
-        .record-sheet { width:calc(100% - 24px); margin:24px auto 36px; padding:22px 16px; }
-        .record-sheet > header { gap:12px; }
-        .stamp-logo { gap:7px; }
-        .stamp-logo strong { font-size:26px; }
-        .stamp-logo small { font-size:7px; letter-spacing:.7px; }
-        .meta-detail { font-size:12px; }
-        .date-header { font-size:16px; }
-        .record-sheet table { font-size:12px; line-height:1.45; }
-        .record-sheet td { padding:12px 4px; }
-        .record-sheet .col-time { width:38px; font-size:10px; }
-        .record-sheet .col-at { width:18px; font-size:10px; }
-        .record-sheet .col-result { width:42px; }
-        .record-sheet .col-link { width:34px; }
-        .record-sheet .box-link { font-size:11px; }
+      .record-sheet td { padding:12px 3px; }
+      .record-sheet .col-time { width:34px; }
+      .record-sheet .col-at { width:16px; }
+      .record-sheet .col-result { width:40px; }
+      .record-sheet .col-link { width:30px; }
     }
 </style>
 <link rel="stylesheet" href="site-header.css?v=20261112">
@@ -63,25 +46,120 @@
   <nav id="mobileMenu" aria-label="Mobile navigation" hidden><a href="index.html">Home</a><a href="scores.html">Scores</a><a href="standings.html">Standings</a><a href="schedule.html" aria-current="page">Schedule</a><a href="teams.html">Teams</a><a href="stats.html">Stats</a><a href="events/donk_championship.html">DONK</a><a href="how-it-works.html">How it works</a><a href="account.html">Account</a><a href="contribute.html" class="glb-header-claim">Claim &amp; Create</a></nav>
 </header>
 
-<main class="record-sheet">
-
-    <header>
-        <div class="meta-block">
-            <h1 class="page-title">Official Schedule</h1>
-            <div class="meta-detail">2026 · Official Games</div>
-        </div>
-        <span class="stamp-logo" role="img" aria-label="Global League Baseball"><strong>GLB</strong><small>Global League<br>Baseball</small></span>
-    </header>
-    <p id="season-loading">Loading official schedule…</p>
-
-
-    <footer>
-        Final scores from the official GLB game ledger.
-    </footer>
-
+<main class="scores-page record-sheet">
+  <header class="scores-title"><div><p class="eyebrow">Global League Baseball · 2026</p><h1>Official Schedule</h1></div></header>
+  <p>Regular season and postseason results</p>
+  <section class="score-controls" aria-label="Browse the schedule">
+    <label>Month<select id="schedule-month" disabled></select></label>
+    <label>Game date<input type="date" id="schedule-date" disabled></label>
+    <button type="button" id="full-month" hidden>Show full month</button>
+  </section>
+  <p id="season-loading">Loading official schedule…</p>
+  <p id="schedule-status" role="status"></p>
 </main>
 
-  <script src="scripts/season-site.js?v=20261114-offseason"></script>
+  <script>
+/* Browser views of the canonical, derived GLB season JSON. */
+(() => {
+  const $ = selector => document.querySelector(selector);
+  const fetchJSON = async file => {
+    const response = await fetch(file, { cache: 'no-store' });
+    if (!response.ok) throw new Error(`${file}: HTTP ${response.status}`);
+    return response.json();
+  };
+  const dateText = date => new Date(`${date}T12:00:00Z`).toLocaleDateString('en-US', {
+    month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC'
+  });
+  const names = new Map();
+  const label = slug => names.get(slug) || slug;
+  const teamLink = (slug, className) => {
+    const a = cell('a', label(slug), className);
+    a.href = `team.html?team=${encodeURIComponent(slug)}`;
+    return a;
+  };
+  const boxLink = game => `box.html?date=${encodeURIComponent(game.date)}&game=${encodeURIComponent(`${game.away}@${game.home}`)}`;
+  const cell = (tag, value, className) => {
+    const el = document.createElement(tag);
+    el.textContent = String(value ?? '—');
+    if (className) el.className = className;
+    return el;
+  };
+  async function load() {
+    const [teams, games, postseason] = await Promise.all([
+      fetchJSON('data/teams/teams.json'), fetchJSON('data/season/games.json'), fetchJSON('data/season/postseason-2026.json')
+    ]);
+    games.push(...postseason.games);
+    for (const team of Object.values(teams.divisions).flat()) names.set(team.slug, team.team);
+    const sheet = $('.record-sheet');
+    $('#season-loading')?.remove();
+    const select = $('#schedule-month');
+    const picker = $('#schedule-date');
+    const reset = $('#full-month');
+    const status = $('#schedule-status');
+    const dates = games.map(game => game.date).sort();
+    if (!dates.length) { status.textContent = 'No games scheduled.'; return; }
+    picker.min = dates[0];
+    picker.max = dates.at(-1);
+    picker.disabled = select.disabled = false;
+    const months = [...new Set(games.map(g => g.date.slice(0, 7)))].sort();
+    for (const month of months) { const option = document.createElement('option'); option.value = month; option.textContent = new Date(`${month}-01T12:00:00Z`).toLocaleDateString('en-US', {month:'long', year:'numeric', timeZone:'UTC'}); select.append(option); }
+    select.value = months.at(-1);
+    const list = document.createElement('div');
+    function renderMonth() {
+      list.replaceChildren();
+      const byDate = new Map();
+      for (const game of games.filter(g => picker.value ? g.date === picker.value : g.date.startsWith(select.value))) {
+        if (!byDate.has(game.date)) byDate.set(game.date, []);
+        byDate.get(game.date).push(game);
+      }
+      reset.hidden = !picker.value;
+      const count = [...byDate.values()].reduce((total, slate) => total + slate.length, 0);
+      const period = picker.value ? dateText(picker.value) : select.selectedOptions[0].text;
+      status.textContent = (count ? count + (count === 1 ? ' game' : ' games') : 'No games scheduled') + ' · ' + period;
+      for (const date of [...byDate.keys()].sort()) {
+        const slate = byDate.get(date);
+        const group = document.createElement('div'); group.className = 'date-group';
+        group.append(cell('h2', dateText(date), 'date-header'));
+        const table = document.createElement('table');
+        const tbody = document.createElement('tbody');
+        for (const game of slate) {
+          const tr = document.createElement('tr');
+          const linkTd = document.createElement('td'); linkTd.className = 'col-link';
+          const a = cell('a', 'Box', 'schedule-box'); a.href = boxLink(game); linkTd.append(a);
+          const awayTd = document.createElement('td'); awayTd.className = 'col-team col-team-away'; awayTd.append(teamLink(game.away, 'team-page-link'));
+          const homeTd = document.createElement('td'); homeTd.className = 'col-team'; homeTd.append(teamLink(game.home, 'team-page-link'));
+          tr.append(cell('td', 'Final', 'col-time'), awayTd,
+            cell('td', '@', 'col-at'), homeTd,
+            cell('td', `${game.awayScore}–${game.homeScore}`, 'col-result'), linkTd);
+          tbody.append(tr);
+        }
+        table.append(tbody); group.append(table); list.append(group);
+      }
+    }
+    function showMonth() { picker.value = ''; renderMonth(); }
+    select.addEventListener('change', showMonth);
+    reset.addEventListener('click', () => { showMonth(); picker.focus(); });
+    picker.addEventListener('change', () => {
+      if (!picker.validity.valid) { picker.reportValidity(); return; }
+      if (picker.value) {
+        const month = picker.value.slice(0, 7);
+        if (![...select.options].some(option => option.value === month)) {
+          const option = new Option(new Date(month + '-01T12:00:00Z').toLocaleDateString('en-US', {month:'long',year:'numeric',timeZone:'UTC'}), month);
+          select.add(option, [...select.options].find(existing => existing.value > month) || null);
+        }
+        select.value = month;
+      }
+      renderMonth();
+    });
+    sheet.append(list);
+    renderMonth();
+  }
+  load().catch(() => {
+    $('#season-loading')?.remove();
+    $('#schedule-status').textContent = 'The schedule could not be loaded. Refresh to try again.';
+  });
+})();
+</script>
 <script src="scripts/glb-ticker.js?v=20261114-offseason"></script>
 <script src="scripts/participation.js?v=20261113-members"></script>
 </body>

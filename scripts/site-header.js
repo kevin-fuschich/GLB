@@ -10,7 +10,7 @@
     const controls = document.createElement('link');
     controls.id = 'glb-controls-style';
     controls.rel = 'stylesheet';
-    controls.href = new URL('site-controls.css?v=20261115', root);
+    controls.href = new URL('site-controls.css?v=20261121-claims', root);
     document.head.append(controls);
   }
 

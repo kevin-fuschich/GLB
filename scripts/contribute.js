@@ -31,10 +31,11 @@
         else {media.classList.add('artifact-art-fallback');media.textContent=labels[artifact.type]||'GLB';}
         card.append(media);
         card.append(el('small',artifact.team_name+' · '+artifact.id),el('h3',artifact.name),el('p',labels[artifact.type] || 'Creative artifact'));
-        const link=el('a','Claim & Create →');link.href=artifact.href;link.setAttribute('aria-label','Claim and craft '+artifact.name);
+        const link=el('a','Claim now');link.className='glb-claim-now';link.href='contribute.html?'+new URLSearchParams({artifact_id:artifact.id,team:artifact.team_slug,type:artifact.type,artifact:artifact.name})+'#contribute';link.setAttribute('aria-label','Claim now: '+artifact.name);
         const prompt=el('div');prompt.className='artifact-prompt';prompt.append(el('small','What could you add?'),el('p',artifact.prompt || 'A defining moment, a personal detail or a story from beyond the game. Build on the existing record.'));card.append(prompt);
         card.append(link);
-        if(artifact.record_href){const record=el('a','View the existing record');record.href=artifact.record_href;record.className='artifact-record-link';card.append(record);}
+        const recordHref=artifact.record_href || (artifact.type==='player' ? artifact.href : null);
+        if(recordHref){const record=el('a','View the existing record');record.href=recordHref;record.className='artifact-record-link';card.append(record);}
         return card;
       }));
       if(!visible.length)host.append(el('p','No open artifacts match these filters. Try another club or artifact type.'));

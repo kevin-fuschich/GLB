@@ -21,7 +21,7 @@
           action.textContent=claim.collaboration_open?'Add a collaboration note →':'View driver record →';
           action.href=claim.collaboration_open?'../contribute.html?artifact_id='+encodeURIComponent(id)+'&mode=collaboration#contribute':'../artifact.html?artifact_id='+encodeURIComponent(id);
         }else if(artifact?.claim_open){
-          status.textContent='Open for a claim · Board review required';action.textContent='Claim & craft '+artifact.name+' →';action.href=claimHref(id);
+          status.textContent='Open for a claim · Board review required';action.textContent='Claim now';action.classList.add('glb-claim-now');action.setAttribute('aria-label','Claim now: '+artifact.name);action.href=claimHref(id);
         }else{status.textContent='This driver is not open for a claim.';action.textContent='Explore Claim & Create →';action.href='../contribute.html';}
       }
     }catch{

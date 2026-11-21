@@ -42,7 +42,7 @@
     }
     if(!player.claim_open){state.textContent='Claims opening soon';return panel;}
     state.textContent='Unclaimed · Open for your contribution';
-    const link=create('a','Claim & craft this player →');
+    const link=create('a','Claim now','glb-claim-now');link.setAttribute('aria-label','Claim now: '+player.name);
     link.href='contribute.html?'+new URLSearchParams({artifact_id:id,team:teamSlug,type:'player',artifact:player.name})+'#contribute';
     panel.append(link,create('p','Sign in to submit with your public User ID. Track Board review and approved claims in your account.','tpe-claim-note'));
     return panel;

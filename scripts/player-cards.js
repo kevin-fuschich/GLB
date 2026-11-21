@@ -216,6 +216,22 @@
     const footer=text('div','','fs-back-footer');footer.append(text('span','GLB'),text('span','◆'),text('span','FIELDSTOCK 2026'));
     back.append(report,note,footer);return back;
   }
+  let playerAvailability;
+  function addRosterClaim(host, player) {
+    if (!/^\/(?:team|club)(?:-|\.html)/.test(location.pathname)) return;
+    playerAvailability ||= (window.GLBArtifacts ? Promise.resolve() : import('./artifact-catalog.js'))
+      .then(() => window.GLBArtifacts.load())
+      .then(({artifacts,claims}) => new Map(artifacts.filter(a => a.type === 'player' && a.claim_open && !claims[a.id])
+        .map(a => [a.team_slug+'/'+a.player_slug,a]))).catch(() => new Map());
+    playerAvailability.then(open => {
+      const item=open.get(player.teamSlug+'/'+player.slug);
+      if (!item) return;
+      const badge=text('a','Claim now','glb-claim-now');
+      badge.setAttribute('aria-label','Claim now: '+item.name);
+      badge.href='contribute.html?'+new URLSearchParams({artifact_id:item.id,team:item.team_slug,type:'player',artifact:item.name})+'#contribute';
+      host.append(badge);
+    });
+  }
   let publicClaimsRequest;
   function createPlayerProfile(player,record,{link=true}={}) {
     const profile=text('article','','glb-player-profile');
@@ -229,6 +245,7 @@
       if(stats)content.append(seasonTable(data,stats));
       if(link){const file=text('a','Full player record →');file.href=`player.html?team=${encodeURIComponent(data.teamSlug)}&player=${encodeURIComponent(data.slug)}`;content.append(file);}
       profile.replaceChildren(photo,content);
+      if(link)addRosterClaim(content,data);
     };
     paint(player,record);
     seasonRequest ||= loadSeasons().catch(()=>null);
@@ -270,6 +287,7 @@
     if(link){const file=text('a','Player file →','fs-file');file.href=`player.html?team=${encodeURIComponent(player.teamSlug)}&player=${encodeURIComponent(player.slug)}`;card.append(file);}
     paint(player,record);
     if(frozen)return card;
+    if(link)addRosterClaim(card,player);
     // Read canonical roster details and one shared season request for all cards on the page.
     const roster=readRoster(player.teamSlug).catch(()=>null);
     seasonRequest ||= loadSeasons().catch(()=>null);

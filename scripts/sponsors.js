@@ -6,7 +6,7 @@
  function claimLink(s){return 'contribute.html?'+new URLSearchParams({team:'league-wide',type:'sponsor',artifact:s.name,artifact_id:s.artifact_id})+'#contribute';}
  function ownership(root,s,claim){
    if(claim){const p=el('p',undefined,'sponsor-owner'),member=el('a',claim.user_id);member.href='profile.html?'+new URLSearchParams({user:claim.user_id});p.append(document.createTextNode('Claimed by '),member);root.append(p);}
-   else {const a=el('a','Claim the entire '+s.name+' entity →','sponsor-button');a.href=claimLink(s);root.append(a);}
+   else {const a=el('a','Claim now','glb-claim-now');a.setAttribute('aria-label','Claim now: '+s.name);a.href=claimLink(s);root.append(a);}
  }
  (async()=>{
   const [response,claims]=await Promise.all([fetch('data/sponsors.json',{cache:'no-store'}),GLBRecords.read('glb_claims',{select:'artifact_id,user_id,body',artifact_type:'eq.sponsor'})]);

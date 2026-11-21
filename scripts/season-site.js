@@ -349,7 +349,7 @@
         $('#as-of').textContent = `Results through ${dateText(standings.as_of)}`;
       }
       if (page === 'stats') {
-        $('#as-of').textContent = `${stats.length} players with recorded stats · through ${dateText(standings.as_of)}`;
+        $('#as-of').textContent = `Top 20 · Through ${dateText(standings.as_of)}`;
         const select = $('#category');
         const categories = [['batting','HR','Home runs'],['batting','RBI','RBI'],['batting','AVG','Batting average'],['batting','OPS','OPS'],['batting','H','Hits'],['batting','SB','Stolen bases'],['pitching','W','Wins'],['pitching','K','Strikeouts'],['pitching','ERA','ERA'],['pitching','WHIP','WHIP'],['pitching','SV','Saves']];
         for (const [group, key, title] of categories) { const option = document.createElement('option'); option.value = `${group}.${key}`; option.textContent = title; select.append(option); }
@@ -361,7 +361,7 @@
             const bv = Number(b[group]?.[key] ?? (key === 'ERA' || key === 'WHIP' ? Infinity : -Infinity));
             return (key === 'ERA' || key === 'WHIP' ? av-bv : bv-av) || a.name.localeCompare(b.name);
           });
-          const rows = eligible.slice(0,50).map((player, i) => {
+          const rows = eligible.slice(0,20).map((player, i) => {
             const tr = document.createElement('tr');
             const playerCell = document.createElement('td');
             const playerLink = cell('a', player.name);
@@ -371,16 +371,10 @@
             tr.append(cell('td', i+1), playerCell, clubCell,cell('td',player[group][key]));
             return tr;
           });
-          const rest = $('#stat-body-rest');
-          $('#stat-body').replaceChildren(...(rest ? rows.slice(0,10) : rows));
-          const label = select.selectedOptions[0]?.textContent || 'League leaders';
-          if ($('#leaderboardTitle')) $('#leaderboardTitle').textContent = label;
-          if (rest) {
-            rest.replaceChildren(...rows.slice(10));
-            $('#statsContinuation').hidden = rows.length <= 10;
-            $('#continuationCaption').textContent = `${label}: ranks 11–${rows.length}`;
-            $('.stats-sponsors').hidden = rows.length === 0;
-          }
+          $('#stat-body').replaceChildren(...rows);
+          $('#leaderboardTitle').textContent = select.selectedOptions[0].textContent;
+          $('#stat-value').textContent = key;
+          $('.stats-sponsors').hidden = rows.length === 0;
         };
         select.addEventListener('change', render); render();
       }

@@ -69,3 +69,6 @@ body[data-season-page="stats"]{background:#f1f5f5;color:#10263a;font-family:Aria
 .stats-gameplay-hero img{display:block;width:100%;height:auto;object-fit:cover;object-position:center}
 .stats-gameplay-hero figcaption{position:absolute;left:0;right:0;bottom:0;padding:32px 22px 14px;background:linear-gradient(transparent,rgba(7,20,27,.75));color:#fff;font:600 11px/1.4 Arial,sans-serif;letter-spacing:.04em}
 @media(max-width:700px){.stats-gameplay-hero img{height:auto;min-height:0}.stats-gameplay-hero figcaption{padding:28px 16px 12px;font-size:10px}}
+
+.stats-leaderboard tbody td{padding-block:8px}
+.stats-board-heading h1{font-family:Arial,Helvetica,sans-serif}

@@ -36,6 +36,7 @@
    const hero=el('section',undefined,'sponsor-hero'),copy=el('div');
    copy.append(el('p','GLB SPONSOR ENTITY','sponsor-kicker'),el('h1',s.name),el('p',s.about,'sponsor-deck'));ownership(copy,s,claim);hero.append(copy);
    if(s.image){const image=el('img');image.src=s.image;image.alt=s.name+' brand advertisement';hero.append(image);}host.append(hero);
+   if(s.slug==='magixo') host.append(document.getElementById('magixo-spin-cycle').content.cloneNode(true));
    const scope=el('section');scope.id='sponsor-profile';scope.append(el('h2','One entity. One claim.'),el('p','This claim covers '+s.name+' as a complete sponsor entity: its brand profile, products, campaigns, advertising and sponsorship identity across GLB. Every placement points back to this same record.'));host.append(scope);
    if(s.website){const website=new URL(s.website);if(website.protocol==='https:'){const a=el('a','Visit '+s.name+' →','sponsor-button');a.href=website.href;a.rel='sponsored noopener';host.append(a);}}
    if(claim){const record=el('section'),facts=el('ul'),owner=el('li'),member=el('a',claim.user_id);member.href='profile.html?'+new URLSearchParams({user:claim.user_id});owner.append(document.createTextNode('Claimed by (User ID): '),member);facts.append(el('li','Sponsors are claimed as one complete entity across GLB.'),owner);record.append(el('h2',s.name),facts);host.append(record);}

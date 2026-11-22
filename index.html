@@ -721,6 +721,15 @@
     }
   </style>
   <script defer src="scripts/team-depth.js?v=home-1"></script>
+<style>
+    .glb-bulletin {margin:20px 0 12px; border-block:1px solid #678481; color:#fff}
+    .glb-bulletin h3 {margin:0; padding:7px 10px; background:#b1f4de; color:#092e2d; font:750 12px/1.3 var(--font-sans); text-transform:uppercase; letter-spacing:.12em}
+    .glb-bulletin ul {list-style:none; padding:0; margin:0}
+    .glb-bulletin li + li {border-top:1px solid #426067}
+    .glb-bulletin a {display:grid; gap:3px; padding:9px 10px; color:inherit; text-decoration:none}
+    .glb-bulletin a span {color:#b1f4de; font-size:13px}
+    .glb-bulletin a:hover span,.glb-bulletin a:focus-visible span {text-decoration:underline}
+  </style>
 </head>
 <body data-season-page="home">
 
@@ -746,12 +755,15 @@
         <div class="claim-copy">
           <div class="glb-eyebrow"><span class="claim-spark" aria-hidden="true"></span> A living world. Built together.</div>
           <h2 id="create-title">It starts with baseball.<br>We build this world <em>together.</em></h2>
-          <p id="roster-invitation">Vancouver has an open roster spot. Who would you put on the card?</p>
-          <div class="glb-universe-actions">
-            <a class="glb-universe-primary" id="roster-invitation-link" href="contribute.html?artifact_id=MYS-1-vancouver-current-player#contribute">Create a player <span aria-hidden="true">→</span></a>
-            <a class="glb-universe-secondary" href="how-it-works.html">How it works <span aria-hidden="true">→</span></a>
-          </div>
-          <div class="claim-note">Your imagination. A place in the record.</div>
+          <aside class="glb-bulletin" aria-labelledby="bulletin-title">
+            <h3 id="bulletin-title">GLB bulletin</h3>
+            <ul>
+              <li><a id="roster-invitation-link" href="contribute.html?artifact_id=MYS-1-vancouver-current-player#contribute"><strong id="roster-invitation">Vancouver has an open roster spot</strong><span>Create a player →</span></a></li>
+              <li><a data-bulletin-id="SPD-MASCOT" href="contribute.html?artifact_id=SPD-MASCOT#contribute"><strong>Bolo’s cap rescue in San Pedro</strong><span>Tell the mascot’s story →</span></a></li>
+              <li><a data-bulletin-id="LOU-FLO" href="contribute.html?artifact_id=LOU-FLO#contribute"><strong>Flo Troup drives Louisville’s BIG SOFT Cadillac</strong><span>Write her DONK driver bio →</span></a></li>
+            </ul>
+          </aside>
+          <a class="glb-universe-secondary" href="how-it-works.html">How it works →</a>
         </div>
         <div class="claim-world" aria-label="Explore the people and places of GLB">
           <a class="claim-window claim-window-park" href="team-taipei-neon.html" aria-label="Explore Taipei Neon">
@@ -933,12 +945,21 @@
     const link = document.getElementById('roster-invitation-link');
     if (player) {
       const club = player.team_slug === 'vancouver-current' ? 'Vancouver' : 'The ' + player.team_name;
-      copy.textContent = club + (club === 'Vancouver' ? ' has' : ' have') + ' an open roster spot. Who would you put on the card?';
+      copy.textContent = club + (club === 'Vancouver' ? ' has' : ' have') + ' an open roster spot';
       link.href = 'contribute.html?artifact_id=' + encodeURIComponent(player.id) + '#contribute';
     } else {
-      copy.textContent = 'Explore the people, places and traditions you can help create across GLB.';
+      copy.textContent = 'Explore open GLB cards';
       link.href = 'contribute.html#open-artifacts';
-      link.firstChild.textContent = 'Explore open cards ';
+      link.querySelector('span').textContent = 'Find a claim →';
+    }
+  }).catch(() => {});
+  GLBRecords.claims().then(claims => {
+    for (const link of document.querySelectorAll('[data-bulletin-id]')) {
+      const id = link.dataset.bulletinId;
+      if (claims.some(claim => claim.artifact_id === id)) {
+        link.href = GLBRecords.href(id);
+        link.querySelector('span').textContent = 'Read the approved story →';
+      }
     }
   }).catch(() => {});
 </script>

@@ -10,3 +10,5 @@
 .sponsor-about{margin:14px 0 24px;font-size:15px;line-height:1.65}
 .sponsor-description{margin:0 0 24px;font-size:13px;line-height:1.6;color:#596975}
 .sponsor-placement{font-size:14px;line-height:1.7;color:#ddd7c9}
+
+@media (min-width:651px){.sponsor-film video{max-width:calc((100% - 24px)/2)}}

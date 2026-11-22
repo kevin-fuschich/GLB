@@ -759,7 +759,7 @@
             <h3 id="bulletin-title">GLB bulletin</h3>
             <ul>
               <li><a id="roster-invitation-link" href="contribute.html?artifact_id=MYS-1-vancouver-current-player#contribute"><strong id="roster-invitation">Vancouver has an open roster spot</strong><span>Create a player →</span></a></li>
-              <li><a data-bulletin-id="SPD-MASCOT" href="contribute.html?artifact_id=SPD-MASCOT#contribute"><strong>Bolo’s cap rescue in San Pedro</strong><span>Tell the mascot’s story →</span></a></li>
+              <li><a data-bulletin-id="SPD-MASCOT" href="contribute.html?artifact_id=SPD-MASCOT#contribute"><strong>Bolo, San Pedro’s harbor mascot</strong><span>Write a mascot bio →</span></a></li>
               <li><a data-bulletin-id="LOU-FLO" href="contribute.html?artifact_id=LOU-FLO#contribute"><strong>Flo Troup drives Louisville’s BIG SOFT Cadillac</strong><span>Write her DONK driver bio →</span></a></li>
             </ul>
           </aside>
@@ -982,7 +982,7 @@
       const items = [];
       if (player) items.push(entry(player.id, player.team_slug === 'vancouver-current' ? 'Vancouver has an open roster spot' : 'Open roster spot · '+player.team_name, 'Create a player'));
       for (const [type, first, title, action] of [
-        ['mascot','SPD-MASCOT','Bolo’s cap rescue in San Pedro','Tell the mascot’s story'],
+        ['mascot','SPD-MASCOT','Bolo, San Pedro’s harbor mascot','Write a mascot bio'],
         ['donk_driver','LOU-FLO','Flo Troup drives Louisville’s BIG SOFT Cadillac','Write the driver’s bio']
       ]) {
         const open = artifacts.filter(row => row.type === type && !taken.has(row.artifact_id));

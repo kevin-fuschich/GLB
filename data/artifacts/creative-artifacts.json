@@ -1,6 +1,7 @@
 {
   "schema": "glb.creative-artifacts.v1",
   "artifacts": [
+    {"artifact_id":"TPE-RING-WALK","name":"VELLO Ring Walk","type":"attraction","team_slug":"taipei-neon","team_name":"Taipei Neon","section":"ring-walk","prompt":"Invent a light cue or fan ritual for the VELLO Ring Walk. What sets it off, and what do the fans under the rings do?","claim_open":true},
     {
       "artifact_id": "OSA-OKEO",
       "name": "Okeo Okeo",

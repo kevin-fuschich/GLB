@@ -44,7 +44,7 @@
 <section id="open-artifacts" aria-labelledby="open-title">
 <div class="eyebrow">Find your place in GLB</div><h2 id="open-title">Open artifacts</h2>
 <p>Choose an artifact below to open its claim form. A submission goes to the GLB Board for review; the artifact stays open until a claim is accepted.</p>
-<div class="filters"><label for="artifactClub">Club<select id="artifactClub"><option value="">All clubs</option></select></label><label for="artifactKind">Artifact type<select id="artifactKind"><option value="">All open artifacts</option><option value="player">Player cards</option><option value="mascot">Mascots</option><option value="entertainer">Entertainers</option><option value="donk_driver">DONK drivers</option><option value="donk_vehicle">DONK vehicles</option><option value="ballpark">Ballparks</option><option value="tradition">Fan traditions</option><option value="giveaway">Giveaways</option><option value="brand">Brands &amp; businesses</option><option value="broadcaster">Broadcasters</option><option value="announcer">In-game announcers</option></select></label></div>
+<div class="filters"><label for="artifactClub">Club<select id="artifactClub"><option value="">All clubs</option></select></label><label for="artifactKind">Artifact type<select id="artifactKind"><option value="">All open artifacts</option><option value="player">Player cards</option><option value="mascot">Mascots</option><option value="entertainer">Entertainers</option><option value="donk_driver">DONK drivers</option><option value="donk_vehicle">DONK vehicles</option><option value="attraction">Fan attractions</option><option value="ballpark">Ballparks</option><option value="tradition">Fan traditions</option><option value="giveaway">Giveaways</option><option value="brand">Brands &amp; businesses</option><option value="broadcaster">Broadcasters</option><option value="announcer">In-game announcers</option></select></label></div>
 <p id="artifactStatus" role="status" aria-live="polite">Checking open artifacts…</p><div id="openArtifacts" class="artifact-grid"></div>
 <noscript><p>Enable JavaScript to browse current availability, or visit <a href="teams.html">a club page</a> and look for its open cards and artifacts.</p></noscript>
 </section>
@@ -57,7 +57,7 @@
 <form novalidate id="contributionForm" action="https://formspree.io/f/mzezpeap" method="POST">
 <input type="hidden" name="artifact_id" value=""><input type="hidden" name="submission_type" value="GLB contribution"><input type="hidden" name="_subject" value="GLB Board · Creative contribution"><input type="hidden" name="review_body" value="GLB Board">
 <label>Club<select name="club" id="club" required><option value="">Choose a club</option><option value="league-wide">League-wide / Not sure yet</option></select></label>
-<label>Artifact type<select name="artifact_type" id="type" required><option value="">Choose an artifact</option><option value="player">Player card</option><option value="mascot">Mascot</option><option value="ballpark">Ballpark</option><option value="entertainer">Entertainer</option><option value="donk_driver">DONK driver</option><option value="donk_vehicle">DONK vehicle</option><option value="donk">Other DONK story</option><option value="giveaway">Giveaway</option><option value="sponsor">Entire sponsor entity</option><option value="brand">Brand or business</option><option value="broadcaster">Play-by-play broadcaster</option><option value="announcer">In-game announcer</option><option value="tradition">Fan tradition</option><option value="other">Another artifact or story</option></select></label>
+<label>Artifact type<select name="artifact_type" id="type" required><option value="">Choose an artifact</option><option value="player">Player card</option><option value="mascot">Mascot</option><option value="attraction">Fan attraction</option><option value="ballpark">Ballpark</option><option value="entertainer">Entertainer</option><option value="donk_driver">DONK driver</option><option value="donk_vehicle">DONK vehicle</option><option value="donk">Other DONK story</option><option value="giveaway">Giveaway</option><option value="sponsor">Entire sponsor entity</option><option value="brand">Brand or business</option><option value="broadcaster">Play-by-play broadcaster</option><option value="announcer">In-game announcer</option><option value="tradition">Fan tradition</option><option value="other">Another artifact or story</option></select></label>
 <label>Artifact name or idea title<input name="artifact" id="artifact" placeholder="An existing artifact, or a name for your new idea" required maxlength="160"></label>
 <label>Your public User ID<input name="user_id" readonly placeholder="Sign in to use your public User ID"></label>
 <label>Email (private)<input type="email" name="email" readonly placeholder="From your signed-in account"></label>
@@ -76,7 +76,7 @@
 <script src="vendor/supabase-2.119.0.js"></script>
 <script src="scripts/glb-auth.js?v=1"></script>
 <script src="scripts/glb-records.js?v=1"></script>
-<script src="scripts/contribute.js?v=mysteries-1"></script>
+<script src="scripts/contribute.js?v=fan-attractions"></script>
 <script src="scripts/glb-ticker.js?v=20261114-offseason"></script>
 <script src="scripts/participation.js?v=20261113-members"></script>
 <script src="scripts/contribution-preview.js?v=20261110"></script>

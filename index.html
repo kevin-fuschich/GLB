@@ -764,9 +764,9 @@
           <aside class="glb-bulletin" aria-labelledby="bulletin-title">
             <h3 id="bulletin-title">Help wanted</h3>
             <ul>
-              <li><a id="roster-invitation-link" href="contribute.html?artifact_id=MYS-1-vancouver-current-player#contribute"><strong id="roster-invitation">Vancouver has an open roster spot</strong><span>Create a player →</span></a></li>
-              <li><a data-bulletin-id="SPD-MASCOT" href="contribute.html?artifact_id=SPD-MASCOT#contribute"><strong>Bolo, San Pedro’s harbor mascot · Needs a bio</strong><span>Write a mascot bio →</span></a></li>
-              <li><a data-bulletin-id="LOU-FLO" href="contribute.html?artifact_id=LOU-FLO#contribute"><strong>Flo Troup, Louisville’s DONK driver · Needs a bio</strong><span>Write her DONK driver bio →</span></a></li>
+              <li><a id="roster-invitation-link" href="contribute.html?artifact_id=MYS-1-vancouver-current-player#contribute"><strong id="roster-invitation">Vancouver Current</strong><span>Create a player for the open roster spot →</span></a></li>
+              <li><a data-bulletin-id="SPD-MASCOT" href="contribute.html?artifact_id=SPD-MASCOT#contribute"><strong>San Pedro Cocolos</strong><span>Write a mascot bio for Bolo →</span></a></li>
+              <li><a data-bulletin-id="LOU-FLO" href="contribute.html?artifact_id=LOU-FLO#contribute"><strong>Louisville Naturals</strong><span>Write a DONK driver bio for Flo Troup →</span></a></li>
             </ul>
           </aside>
           <a class="glb-universe-secondary" href="how-it-works.html">How it works →</a>
@@ -992,14 +992,14 @@
       const players = slots.filter(row => row.type === 'player' && ['newcomers','open'].includes(row.state));
       const player = players.find(row => row.team_slug === 'vancouver-current') || players[0];
       const items = [];
-      if (player) items.push(entry(player.id, player.team_slug === 'vancouver-current' ? 'Vancouver has an open roster spot' : 'Open roster spot · '+player.team_name, 'Create a player'));
-      for (const [type, first, title, action] of [
-        ['mascot','SPD-MASCOT','Bolo, San Pedro’s harbor mascot · Needs a bio','Write a mascot bio'],
-        ['donk_driver','LOU-FLO','Flo Troup, Louisville’s DONK driver · Needs a bio','Write the driver’s bio']
+      if (player) items.push(entry(player.id, player.team_name, 'Create a player for the open roster spot'));
+      for (const [type, first, action] of [
+        ['mascot','SPD-MASCOT','Write a mascot bio for '],
+        ['donk_driver','LOU-FLO','Write a DONK driver bio for ']
       ]) {
         const open = artifacts.filter(row => row.type === type && !taken.has(row.artifact_id));
         const pick = open.find(row => row.artifact_id === first) || open[0];
-        if (pick) items.push(entry(pick.artifact_id, pick.artifact_id === first ? title : pick.name+' · '+pick.team_name+' · Needs a bio', action));
+        if (pick) items.push(entry(pick.artifact_id, pick.team_name, action + pick.name));
       }
       if (!items.length) status.textContent = 'All featured openings have been claimed.';
       const signature = items.map(item => item.firstChild.href).join('|') || 'empty';

@@ -78,7 +78,11 @@
     client.auth.getSession().then(({data,error})=>{if(error)throw error;return syncIdentity(data.session?.user || null);}).catch(()=>{accountStatus.textContent='Sign-in could not load. Refresh to try again.';});
   }else accountStatus.textContent='Sign-in could not load. Refresh to try again.';
   document.getElementById('collaborationChoice').hidden=!artifactId || noteMode;
-  if(artifactId)Promise.all([catalogRequest,GLBRecords.claims()]).then(([{artifacts,claims},live])=>{
+  const mystery=artifactId?.startsWith('MYS-') && !noteMode;
+  const selectedCatalog=mystery ? GLBRecords.read('rpc/glb_mysteries',{}).then(rows=>({
+    claims:{},artifacts:rows.map(s=>({...s,name:'Mystery '+(s.type==='donk'?'DONK entry':s.type),claim_open:['newcomers','open'].includes(s.state)}))
+  })) : catalogRequest;
+  if(artifactId)Promise.all([selectedCatalog,GLBRecords.claims()]).then(([{artifacts,claims},live])=>{
     const approved=live.find(row=>row.artifact_id===artifactId);
     const artifact=artifacts.find(row=>row.id===artifactId);
     if(noteMode){
@@ -93,12 +97,17 @@
     const club=document.getElementById('club');
     if(![...club.options].some(option=>option.value===selected.team_slug)){const option=el('option',selected.team_name || 'DONK circuit');option.value=selected.team_slug;club.append(option);}
     club.value=selected.team_slug;document.getElementById('type').value=selected.type;
-    document.getElementById('artifact').value=selected.name;
-    document.getElementById('artifact').readOnly=true;document.getElementById('club').disabled=true;document.getElementById('type').disabled=true;
+    if(!mystery)document.getElementById('artifact').value=selected.name;
+    document.getElementById('artifact').readOnly=!mystery;document.getElementById('club').disabled=true;document.getElementById('type').disabled=true;
     document.getElementById('ideaPitchText').hidden=true;document.getElementById('pitchTips').hidden=true;
     document.getElementById('contribution-title').textContent=(noteMode?'Add a note: ':'Claim & Create: ')+selected.name;
     selection.textContent=noteMode?'The original claim stays credited to '+approved.user_id+'. Your note needs its own Board approval.':selected.id+' · '+(selected.prompt || 'Add something of your own.');
     if(selected.prompt)form.elements.contribution.placeholder=selected.prompt;
+    if(mystery){
+      document.getElementById('contribution-title').textContent='Create a '+selected.name.slice(8);
+      form.elements.artifact.placeholder='Name your creation';
+      selection.textContent=selected.team_name+' · Round '+selected.round_no+'. '+selected.prompt+(selected.state==='newcomers'?' First seven days open to first-time mystery creators.':'');
+    }
     selectionReady=true;
   }).catch(error=>{selection.textContent=error.message || 'Availability could not be verified. Refresh to try again.';button.disabled=true;});
   // Approved originals and their notes have a public record, separate from private receipts.
@@ -120,7 +129,7 @@
       if(sessionError || sessionData.session?.user.id!==submitter.id)throw Error('Your sign-in has changed. Refresh before submitting.');
       const {data,error}=await client.rpc('glb_submit',{
         p_kind:noteMode?'note':selected?'claim':'pitch',p_artifact_id:selected?.id || '',
-        p_artifact_name:selected?.name || form.elements.artifact.value.trim(),
+        p_artifact_name:mystery ? form.elements.artifact.value.trim() : selected?.name || form.elements.artifact.value.trim(),
         p_club_slug:selected?.team_slug || form.elements.club.value,
         p_artifact_type:selected?.type || form.elements.artifact_type.value,
         p_body:form.elements.contribution.value.trim(),p_supporting_link:form.elements.supporting_link.value.trim(),
@@ -133,12 +142,12 @@
       const accountLink=el('a','Track it in My submissions →');accountLink.href='account.html';response.append(accountLink);
       button.textContent='Submitted for Board review';
       // Notification is best-effort; the database receipt above is authoritative.
-      const notification=new FormData(form);notification.set('user_id',submitter.user_id);notification.set('email',submitter.email || '');notification.set('club',selected?.team_slug || form.elements.club.value);notification.set('artifact_type',selected?.type || form.elements.artifact_type.value);notification.set('artifact',selected?.name || form.elements.artifact.value);notification.set('glb_submission_id',data);
+      const notification=new FormData(form);notification.set('user_id',submitter.user_id);notification.set('email',submitter.email || '');notification.set('club',selected?.team_slug || form.elements.club.value);notification.set('artifact_type',selected?.type || form.elements.artifact_type.value);notification.set('artifact',mystery ? form.elements.artifact.value : selected?.name || form.elements.artifact.value);notification.set('glb_submission_id',data);
       fetch(form.action,{method:'POST',body:notification,headers:{Accept:'application/json'}}).catch(()=>{});
     }catch(error){
       button.disabled=false;button.textContent='Submit to the GLB Board';
       const message=String(error.message || '');
-      response.textContent=error.code==='23505'?'You already have a pending claim for this artifact. Check My submissions.':/already claimed|closed to collaboration|Please wait|Daily contribution limit|sign-in has changed/.test(message)?message:'Your submission could not be saved. Your draft is still here. Please try again.';
+      response.textContent=mystery && error.code==='23505'?'This opening is under review, or you already have a pending mystery or a creation this round. Check My submissions.':error.code==='23505'?'You already have a pending claim for this artifact. Check My submissions.':/Mystery openings|Mystery round|already claimed|closed to collaboration|Please wait|Daily contribution limit|sign-in has changed/.test(message)?message:'Your submission could not be saved. Your draft is still here. Please try again.';
     }
   });
 })();

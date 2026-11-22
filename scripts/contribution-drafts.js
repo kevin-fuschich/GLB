@@ -5,7 +5,7 @@
   if(!form||!controls)return;
   const id=new URLSearchParams(location.search).get('artifact_id')||'new-idea';
   const key='glb-contribution-draft-v1:'+id+(new URLSearchParams(location.search).get('mode')==='collaboration'?':note':'');
-  const fields=id==='new-idea'?['club','artifact_type','artifact','contribution','supporting_link']:['contribution','supporting_link'];
+  const fields=id==='new-idea'?['club','artifact_type','artifact','contribution','supporting_link']:id.startsWith('MYS-')&&!key.endsWith(':note')?['artifact','contribution','supporting_link']:['contribution','supporting_link'];
   const make=(tag,text)=>{const n=document.createElement(tag);n.textContent=text;return n;};
   const message=make('p','Drafts save on this device. Email is not saved.');message.setAttribute('role','status');message.setAttribute('aria-live','polite');
   const actions=document.createElement('div');actions.className='draft-controls-actions';

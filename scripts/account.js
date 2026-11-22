@@ -31,7 +31,7 @@
       client.rpc('glb_is_board').then(({data,error})=>{if(ticket===revision)$('boardLink').hidden=!!error || data!==true;}).catch(()=>{});
       const results=await Promise.all([
         client.from('glb_claims').select('artifact_id,artifact_name,body,collaboration_open,approved_at,submission_id').eq('owner_id',user.id).order('approved_at',{ascending:false}),
-        client.from('glb_submissions').select('id,kind,artifact_name,status,created_at').eq('owner_id',user.id).order('created_at',{ascending:false}),
+        client.from('glb_submissions').select('id,kind,artifact_id,artifact_name,status,created_at').eq('owner_id',user.id).order('created_at',{ascending:false}),
         client.from('glb_claim_receipts').select('submission_id,claim_code').eq('owner_id',user.id)
       ]);
       if(ticket!==revision)return;
@@ -59,7 +59,20 @@
       }));
       if(!results[0].data.length)$('myClaims').append(node('p','Your accepted claims will appear here.','fine'));
       $('mySubmissions').replaceChildren(...results[1].data.map(row=>{
-        const item=node('article',null,'record-item');item.append(node('h4',row.artifact_name),node('p',(row.kind==='note'?'Collaboration note':row.kind==='pitch'?'Idea':'Claim')+' · '+row.status,'record-meta'));return item;
+        const item=node('article',null,'record-item');item.append(node('h4',row.artifact_name),node('p',(row.kind==='note'?'Collaboration note':row.kind==='pitch'?'Idea':'Claim')+' · '+row.status,'record-meta'));
+        if(row.kind==='claim' && row.status==='pending' && row.artifact_id?.startsWith('MYS-')){
+          const withdraw=node('button','Withdraw creation');
+          withdraw.type='button';
+          withdraw.onclick=async()=>{
+            if(!window.confirm('Withdraw this submission and reopen the mystery card?'))return;
+            withdraw.disabled=true;
+            const {error}=await client.rpc('glb_withdraw_mystery',{p_id:row.id});
+            if(error){notice('Withdrawal could not be completed. Refresh to check its review status.',true);withdraw.disabled=false;return;}
+            await render(currentUser);
+          };
+          item.append(withdraw);
+        }
+        return item;
       }));
       if(!results[1].data.length)$('mySubmissions').append(node('p','No account-linked submissions yet.','fine'));
     }catch{if(ticket===revision)notice('Your account could not be loaded. Refresh to try again.',true);}

@@ -1,0 +1,58 @@
+(() => {
+  const hub = document.getElementById('mysteries');
+  const team = document.body.dataset.mysteryTeam;
+  const labels = {player:'player',donk:'DONK entry',mascot:'mascot',sponsor:'sponsor',tradition:'fan tradition',giveaway:'giveaway'};
+  const sections = {donk:'donk',mascot:'mascot',sponsor:'stadium',tradition:'traditions',giveaway:'giveaway'};
+  const make = (tag, text, cls) => {
+    const node = document.createElement(tag);
+    node.textContent = text;
+    if (cls) node.className = cls;
+    return node;
+  };
+  function card(slot) {
+    const item = make('article','','mystery-card');
+    const revealed = slot.state === 'revealed';
+    const label = labels[slot.type];
+    const mark = make('span',revealed ? slot.creation_name.slice(0,1) : '?','mystery-mark');
+    mark.setAttribute('aria-hidden','true');
+    item.append(mark,make('small','FIELDSTOCK · Round '+slot.round_no),make('h3',revealed ? slot.creation_name : 'Mystery '+label));
+    item.append(make('p',revealed ? 'Created by '+slot.creator : slot.prompt));
+    if (['pending','upcoming'].includes(slot.state)) {
+      item.append(make('strong',slot.state==='pending' ? 'In Board review' : 'Opens in round '+slot.round_no));
+    } else {
+      const link = make('a',revealed ? 'View record' : 'Create a '+label);
+      link.href = revealed ? GLBRecords.href(slot.id) : 'contribute.html?artifact_id='+encodeURIComponent(slot.id)+'#contribute';
+      item.append(link);
+    }
+    return item;
+  }
+  const roster = document.querySelector('section#cards,section#players,section#roster,details#roster');
+  async function load() {
+    const rows = await GLBRecords.read('rpc/glb_mysteries',{});
+    if (hub) {
+      const select = hub.querySelector('select');
+      const grid = hub.querySelector('.mystery-grid');
+      for (const [slug,name] of new Map(rows.map(s=>[s.team_slug,s.team_name]))) select.add(new Option(name,slug));
+      function render() {
+        grid.replaceChildren(...rows.filter(s=>s.team_slug===select.value).map(card));
+      }
+      select.addEventListener('change',render);
+      render();
+      return;
+    }
+    for (const slot of rows.filter(s=>s.team_slug===team)) {
+      const section = slot.type==='player' ? roster : document.getElementById(sections[slot.type]);
+      if (!section) continue;
+      let grid = section.querySelector('.mystery-grid');
+      if (!grid) {
+        grid = make('div','','mystery-grid');
+        (section.querySelector('.glb-fold-body') || section).append(grid);
+      }
+      grid.append(card(slot));
+    }
+  }
+  load().catch(()=>{
+    const host = hub || roster;
+    if(host) host.append(make('p','Mystery cards could not load. Refresh to try again.'));
+  });
+})();

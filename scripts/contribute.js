@@ -5,6 +5,9 @@
   const typeFilter=document.getElementById('artifactKind');
   const el=(tag,text)=>{const node=document.createElement(tag);if(text)node.textContent=text;return node;};
   const labels={sponsor:'Entire sponsor entity',broadcaster:'Play-by-play broadcaster',announcer:'In-game announcer',brand:'Brand & business',player:'Player card',mascot:'Mascot',entertainer:'Entertainer',donk_driver:'DONK driver',donk_vehicle:'DONK vehicle',attraction:'Fan attraction',ballpark:'Ballpark',tradition:'Fan tradition',giveaway:'Giveaway'};
+  const needs = artifact => artifact.id==='TPE-RING-WALK'
+    ? ['Needs a fan ritual','Write the ritual']
+    : ['Needs a bio','Write the bio'];
   const catalogRequest=GLBArtifacts.load();
   Promise.all([catalogRequest,fetch('data/artifacts/artwork.json').then(r=>r.ok?r.json():{}).catch(()=>({}))]).then(([{artifacts,claims,incomplete},artwork])=>{
     const open=artifacts.filter(artifact=>artifact.type!=='sponsor' && artifact.claim_open && !claims[artifact.id]);
@@ -30,9 +33,9 @@
         if(art){const img=el('img');img.src=art.src;img.alt=art.alt;img.loading='lazy';img.width=640;img.height=400;img.addEventListener('error',()=>{img.remove();media.classList.add('artifact-art-fallback');media.textContent=labels[artifact.type]||'GLB';},{once:true});media.append(img);}
         else {media.classList.add('artifact-art-fallback');media.textContent=labels[artifact.type]||'GLB';}
         card.append(media);
-        card.append(el('small',artifact.team_name+' · '+artifact.id),el('h3',artifact.name),el('p',labels[artifact.type] || 'Creative artifact'));
-        const link=el('a','Claim now');link.className='glb-claim-now';link.href='contribute.html?'+new URLSearchParams({artifact_id:artifact.id,team:artifact.team_slug,type:artifact.type,artifact:artifact.name})+'#contribute';link.setAttribute('aria-label','Claim now: '+artifact.name);
-        const prompt=el('div');prompt.className='artifact-prompt';prompt.append(el('small','What could you add?'),el('p',artifact.prompt || 'A defining moment, a personal detail or a story from beyond the game. Build on the existing record.'));card.append(prompt);
+        card.append(el('small',artifact.team_name+' · '+artifact.id),el('h3',artifact.name),el('strong',needs(artifact)[0]));
+        const link=el('a',needs(artifact)[1]);link.className='glb-claim-now';link.href='contribute.html?'+new URLSearchParams({artifact_id:artifact.id,team:artifact.team_slug,type:artifact.type,artifact:artifact.name})+'#contribute';link.setAttribute('aria-label',needs(artifact)[1]+' for '+artifact.name);
+        const prompt=el('div');prompt.className='artifact-prompt';prompt.append(el('small',labels[artifact.type] || 'Artifact'),el('p',artifact.prompt || 'A defining moment, a personal detail or a story from beyond the game. Build on the existing record.'));card.append(prompt);
         card.append(link);
         const recordHref=artifact.record_href || (artifact.type==='player' ? artifact.href : null);
         if(recordHref){const record=el('a','View the existing record');record.href=recordHref;record.className='artifact-record-link';card.append(record);}
@@ -101,7 +104,7 @@
     document.getElementById('artifact').readOnly=!mystery;document.getElementById('club').disabled=true;document.getElementById('type').disabled=true;
     document.getElementById('ideaPitchText').hidden=true;document.getElementById('pitchTips').hidden=true;
     document.getElementById('contribution-title').textContent=(noteMode?'Add a note: ':'Claim & Create: ')+selected.name;
-    selection.textContent=noteMode?'The original claim stays credited to '+approved.user_id+'. Your note needs its own Board approval.':selected.id+' · '+(selected.prompt || 'Add something of your own.');
+    selection.textContent=noteMode?'The original claim stays credited to '+approved.user_id+'. Your note needs its own Board approval.':needs(selected)[0]+' · '+(selected.prompt || 'Add something of your own.');
     if(selected.prompt)form.elements.contribution.placeholder=selected.prompt;
     if(mystery){
       document.getElementById('contribution-title').textContent='Create a '+selected.name.slice(8);

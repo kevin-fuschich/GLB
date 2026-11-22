@@ -746,9 +746,9 @@
         <div class="claim-copy">
           <div class="glb-eyebrow"><span class="claim-spark" aria-hidden="true"></span> A living world. Built together.</div>
           <h2 id="create-title">It starts with baseball.<br>We build this world <em>together.</em></h2>
-          <p>Claim a player, a character or a corner of the park. Create what happens next. Help shape the GLB universe.</p>
+          <p id="roster-invitation">Vancouver has an open roster spot. Who would you put on the card?</p>
           <div class="glb-universe-actions">
-            <a class="glb-universe-primary" href="contribute.html#open-artifacts">Find your first claim <span aria-hidden="true">→</span></a>
+            <a class="glb-universe-primary" id="roster-invitation-link" href="contribute.html?artifact_id=MYS-1-vancouver-current-player#contribute">Create a player <span aria-hidden="true">→</span></a>
             <a class="glb-universe-secondary" href="how-it-works.html">How it works <span aria-hidden="true">→</span></a>
           </div>
           <div class="claim-note">Your imagination. A place in the record.</div>
@@ -924,5 +924,23 @@
 
   <script src="scripts/season-site.js?v=20261114-showcase"></script>
 <script src="scripts/glb-ticker.js?v=20261114-offseason"></script>\n<script src="scripts/participation.js?v=20261113-members"></script>
+<script src="scripts/glb-records.js?v=1"></script>
+<script>
+  GLBRecords.read('rpc/glb_mysteries', {}).then(slots => {
+    const openPlayers = slots.filter(slot => slot.type === 'player' && ['open', 'newcomers'].includes(slot.state));
+    const player = openPlayers.find(slot => slot.team_slug === 'vancouver-current') || openPlayers[0];
+    const copy = document.getElementById('roster-invitation');
+    const link = document.getElementById('roster-invitation-link');
+    if (player) {
+      const club = player.team_slug === 'vancouver-current' ? 'Vancouver' : 'The ' + player.team_name;
+      copy.textContent = club + (club === 'Vancouver' ? ' has' : ' have') + ' an open roster spot. Who would you put on the card?';
+      link.href = 'contribute.html?artifact_id=' + encodeURIComponent(player.id) + '#contribute';
+    } else {
+      copy.textContent = 'Explore the people, places and traditions you can help create across GLB.';
+      link.href = 'contribute.html#open-artifacts';
+      link.firstChild.textContent = 'Explore open cards ';
+    }
+  }).catch(() => {});
+</script>
 </body>
 </html>

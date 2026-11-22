@@ -938,30 +938,78 @@
 <script src="scripts/glb-ticker.js?v=20261114-offseason"></script>\n<script src="scripts/participation.js?v=20261113-members"></script>
 <script src="scripts/glb-records.js?v=1"></script>
 <script>
-  GLBRecords.read('rpc/glb_mysteries', {}).then(slots => {
-    const openPlayers = slots.filter(slot => slot.type === 'player' && ['open', 'newcomers'].includes(slot.state));
-    const player = openPlayers.find(slot => slot.team_slug === 'vancouver-current') || openPlayers[0];
-    const copy = document.getElementById('roster-invitation');
-    const link = document.getElementById('roster-invitation-link');
-    if (player) {
-      const club = player.team_slug === 'vancouver-current' ? 'Vancouver' : 'The ' + player.team_name;
-      copy.textContent = club + (club === 'Vancouver' ? ' has' : ' have') + ' an open roster spot';
-      link.href = 'contribute.html?artifact_id=' + encodeURIComponent(player.id) + '#contribute';
-    } else {
-      copy.textContent = 'Explore open GLB cards';
-      link.href = 'contribute.html#open-artifacts';
-      link.querySelector('span').textContent = 'Find a claim →';
-    }
-  }).catch(() => {});
-  GLBRecords.claims().then(claims => {
-    for (const link of document.querySelectorAll('[data-bulletin-id]')) {
-      const id = link.dataset.bulletinId;
-      if (claims.some(claim => claim.artifact_id === id)) {
-        link.href = GLBRecords.href(id);
-        link.querySelector('span').textContent = 'Read the approved story →';
+(() => {
+  const list = document.querySelector('.glb-bulletin ul');
+  const status = document.createElement('li');
+  status.textContent = 'Checking open items…';
+  list.replaceChildren(status);
+  let busy = false;
+  let registry;
+  async function loadRegistry() {
+    const read = async path => {
+      const response = await fetch(path, {cache:'no-cache'});
+      if (!response.ok) throw Error('Registry unavailable');
+      return response.json();
+    };
+    const [creative, approved] = await Promise.all([
+      read('data/artifacts/creative-artifacts.json'), read('data/cards/approved-claims.json')
+    ]);
+    return creative.artifacts.filter(row => row.claim_open && !approved.claims?.[row.artifact_id]);
+  }
+  function entry(id, title, action) {
+    const item = document.createElement('li');
+    const link = document.createElement('a');
+    link.href = 'contribute.html?artifact_id=' + encodeURIComponent(id) + '#contribute';
+    const heading = document.createElement('strong');
+    heading.textContent = title;
+    const label = document.createElement('span');
+    label.textContent = action + ' →';
+    link.append(heading, label);
+    item.append(link);
+    return item;
+  }
+  async function refresh() {
+    if (busy || document.hidden) return;
+    busy = true;
+    try {
+      registry ||= loadRegistry().catch(error => { registry = null; throw error; });
+      const [artifacts, claims, slots] = await Promise.all([
+        registry, GLBRecords.read('glb_claims', {select:'artifact_id'}), GLBRecords.read('rpc/glb_mysteries', {})
+      ]);
+      const taken = new Set(claims.map(row => row.artifact_id));
+      const players = slots.filter(row => row.type === 'player' && ['newcomers','open'].includes(row.state));
+      const player = players.find(row => row.team_slug === 'vancouver-current') || players[0];
+      const items = [];
+      if (player) items.push(entry(player.id, player.team_slug === 'vancouver-current' ? 'Vancouver has an open roster spot' : 'Open roster spot · '+player.team_name, 'Create a player'));
+      for (const [type, first, title, action] of [
+        ['mascot','SPD-MASCOT','Bolo’s cap rescue in San Pedro','Tell the mascot’s story'],
+        ['donk_driver','LOU-FLO','Flo Troup drives Louisville’s BIG SOFT Cadillac','Write the driver’s bio']
+      ]) {
+        const open = artifacts.filter(row => row.type === type && !taken.has(row.artifact_id));
+        const pick = open.find(row => row.artifact_id === first) || open[0];
+        if (pick) items.push(entry(pick.artifact_id, pick.artifact_id === first ? title : pick.name+' · '+pick.team_name, action));
       }
-    }
-  }).catch(() => {});
+      if (!items.length) status.textContent = 'All featured openings have been claimed.';
+      const signature = items.map(item => item.firstChild.href).join('|') || 'empty';
+      if (list.dataset.selection !== signature) {
+        list.replaceChildren(...(items.length ? items : [status]));
+        list.dataset.selection = signature;
+      }
+    } catch {
+      status.textContent = 'Open the claim board to check current openings.';
+      const link = document.createElement('a');
+      link.href = 'contribute.html#open-artifacts';
+      link.textContent = 'Browse Claim & Create →';
+      status.append(link);
+      list.replaceChildren(status);
+      delete list.dataset.selection;
+    } finally { busy = false; }
+  }
+  refresh();
+  window.addEventListener('pageshow', refresh);
+  document.addEventListener('visibilitychange', refresh);
+  window.setInterval(refresh, 60000);
+})();
 </script>
 </body>
 </html>

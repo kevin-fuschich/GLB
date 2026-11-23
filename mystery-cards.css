@@ -1,4 +1,34 @@
 .mystery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,205px),1fr));gap:16px;padding:16px}
 .mystery-card{box-sizing:border-box;max-width:340px;width:100%;padding:18px;background:#f6f3eb;border:1px solid #c9bea4;text-align:left;color:#182737;display:flex;flex-direction:column;align-items:flex-start;gap:9px}
-.mystery-card .mystery-mark{display:grid;place-items:center;width:100%;height:100px;background:#152e3b;color:#d9c48a;font:italic 72px/1 Georgia,serif}
+.mystery-card .mystery-mark {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-rows: 1fr auto 1fr;
+  justify-items: center;
+  align-items: center;
+  align-self: center;
+  width: min(100%, 145px);
+  height: auto;
+  aspect-ratio: 5 / 7;
+  margin: 2px 0 10px;
+  padding: 12px;
+  background: repeating-linear-gradient(0deg, transparent 0 3px, #ffffff05 3px 4px), #21333b;
+  color: #cfb783;
+  border: 5px solid #ece6d7;
+  outline: 1px solid #b7b1a3;
+  box-shadow: inset 0 0 0 1px #a99369, 1px 3px 5px #19252b24;
+  font: normal 42px/1 Georgia, serif;
+}
+.mystery-mark::before {
+  content: "FIELDSTOCK";
+  align-self: start;
+  font: 700 9px/1.4 system-ui, sans-serif;
+  letter-spacing: .16em;
+}
+.mystery-mark::after {
+  content: "";
+  align-self: end;
+  width: 32px;
+  border-bottom: 3px double #a99369;
+}
 .mystery-card small{font:700 10px/1.4 system-ui;letter-spacing:.12em;color:#615438}.mystery-card h3,.mystery-card p{margin:0}.mystery-card p{font:15px/1.45 system-ui;color:#354352}.mystery-card a,.mystery-card strong{margin-top:auto;font:bold 14px/1.5 system-ui;color:#123d55}

@@ -107,3 +107,20 @@
 }
 .pack-owned-card[data-photo-print=true] .fs-inner {box-shadow:none}
 .pack-owned-card .fs-flip-note,.subset-print .fs-flip-note {color:#273238}
+
+.pack-table-stage { position:relative }
+.pack-table-controls button {cursor:pointer;font:700 14px system-ui;padding:12px 18px}
+.pack-table-controls button:disabled {opacity:.55;cursor:default}
+#ownedReveal {scroll-margin-top:6rem}
+@media (prefers-reduced-motion:no-preference) {
+ .pack-table-stage::before,.pack-table-stage::after {
+  content:"";position:absolute;inset:0;z-index:8;pointer-events:none;
+  background:url('assets/fieldstock/2026-base-pack.webp') center / contain no-repeat;
+  animation:pack-peel .85s ease-in both;
+ }
+ .pack-table-stage::before {clip-path:polygon(0 0,100% 0,100% 18%,65% 22%,32% 18%,0 23%);--tear:-24%}
+ .pack-table-stage::after {clip-path:polygon(0 23%,32% 18%,65% 22%,100% 18%,100% 100%,0 100%);--tear:32%}
+ @keyframes pack-peel {0%,20%{opacity:1;transform:none}100%{opacity:0;transform:translateY(var(--tear)) rotate(5deg);visibility:hidden}}
+ .pack-table-stage>* {animation:deal-card .25s ease-out both}
+ @keyframes deal-card {from{opacity:.1;transform:translateY(8px)}to{opacity:1;transform:none}}
+}

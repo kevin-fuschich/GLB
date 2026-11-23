@@ -83,12 +83,35 @@
   }
   if(!releasedSets.length)root.append(el('p','FIELDSTOCK 2026 has not been released. Your credits carry forward to release.'));$('bookShop').hidden=false;
  }
+ async function openOwnedPack(pack, button){
+  button.disabled=true;
+  const ticket=epoch;
+  try{
+   const issued=await rpc('glb_open_pack',{p_pack:pack.id});
+   if(ticket!==epoch)return;
+   await load();
+   if(!owner||epoch!==ticket+1)return;
+   const byId=new Map(cards.map(copy=>[copy.copy_id,copy]));
+   const opened=issued.map(copy=>byId.get(copy.copy_id));
+   if(!opened.length||opened.some(copy=>!copy)){
+    status('Pack opened. Check your collector’s book for the saved copies.');
+    return;
+   }
+   const root=$('ownedReveal');
+   root.hidden=false;
+   GLBPackTable.mount(root,opened,{renderCard:copy=>cardView(copy),savedMessage:'Saved to your collector’s book.',onComplete:()=>{
+    const link=el('a','View my collector’s book →');link.href='#bookPages';root.append(link);
+   }});
+   root.focus();
+   root.scrollIntoView({block:'start'});
+  }catch(error){status(error.message);button.disabled=false;}
+ }
  async function packs(){
   const ticket=epoch;const r=await client.from('glb_packs').select('id,set_id,earned_for,opened_at').is('opened_at',null).order('earned_at');if(ticket!==epoch||!owner)return;if(r.error)throw r.error;const root=$('packShelf');root.replaceChildren();
-  for(const p of r.data){const tile=el('article',undefined,'book-pack'),img=el('img'),button=el('button','Open pack');img.src='assets/fieldstock/2026-base-pack.webp';img.alt='FIELDSTOCK 2026 unopened pack';button.type='button';button.onclick=async()=>{button.disabled=true;try{await rpc('glb_open_pack',{p_pack:p.id});await load();status('Pack opened. Its cards are now in your book.');$('bookPages').scrollIntoView({block:'start'});}catch(error){status(error.message);button.disabled=false;}};tile.append(img,el('small',p.earned_for),button);root.append(tile);}
+  for(const p of r.data){const tile=el('article',undefined,'book-pack'),img=el('img'),button=el('button','Open pack');img.src='assets/fieldstock/2026-base-pack.webp';img.alt='FIELDSTOCK 2026 unopened pack';button.type='button';button.onclick=()=>openOwnedPack(p,button);tile.append(img,el('small',p.earned_for),button);root.append(tile);}
   if(!r.data.length)root.append(el('p','No unopened packs right now.'));$('bookPacks').hidden=false;
  }
- async function load(){const ticket=++epoch;owner=false;cards=[];page=0;close();$('bookSettings').hidden=true;$('bookOffers').hidden=true;$('bookPacks').hidden=true;$('bookShop').hidden=true;$('bookWelcome').hidden=true;$('bookPages').hidden=true;$('open-packs').hidden=sample||!!publicUser;$('packGuest').hidden=true;status('Finding your book…');
+ async function load(){$('ownedReveal').hidden=true;const ticket=++epoch;owner=false;cards=[];page=0;close();$('bookSettings').hidden=true;$('bookOffers').hidden=true;$('bookPacks').hidden=true;$('bookShop').hidden=true;$('bookWelcome').hidden=true;$('bookPages').hidden=true;$('open-packs').hidden=sample||!!publicUser;$('packGuest').hidden=true;status('Finding your book…');
   try{
    if(sample){const r=await fetch('data/pack-preview.json?v=20261115-photo2');if(!r.ok)throw Error('The sample book could not load.');const data=await FieldstockSubsets.mixedSample(await r.json());if(ticket!==epoch)return;cards=data.map((e,i)=>({copy_id:'sample-'+i,serial:e.serial,edition:e,available:i===2||i===4,wanted:''}));$('sampleNotice').hidden=false;cover({theme:'forest'});draw();status('Sample book · no real cards, ownership or trades.');const selected=cards.find(c=>c.copy_id===params.get('copy'));if(selected)detail(selected);return;}
    if(publicUser){if(!/^[a-z0-9_]{3,24}$/.test(publicUser))throw Error('This collector’s book is unavailable.');const book=await rpc('glb_collector_book',{p_user:publicUser});if(ticket!==epoch)return;if(!book)throw Error('This book is private or has not been published.');cards=book.cards.map(c=>({...c,edition:{...c,id:c.edition_id}}));cover(book);$('pagesHeading').textContent='The collection';draw();status('Public collector’s book · availability is checked again before any trade.');const selected=cards.find(c=>c.copy_id===params.get('copy'));if(selected)detail(selected);return;}

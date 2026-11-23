@@ -14,6 +14,17 @@
     const revealed = slot.state === 'revealed';
     const label = labels[slot.type];
     const mark = make('span',revealed ? slot.creation_name.slice(0,1) : '?','mystery-mark');
+    if (!revealed) {
+      const glyph = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+      glyph.setAttribute('viewBox', '0 0 24 32');
+      glyph.setAttribute('width', '30');
+      glyph.setAttribute('height', '40');
+      const ink = document.createElementNS(glyph.namespaceURI, 'path');
+      ink.setAttribute('fill', 'currentColor');
+      ink.setAttribute('d', 'M2 5 6 1h12l4 4v9l-7 6v3H9v-6l7-6V7H8v4H2z M9 26h6v6H9z');
+      glyph.append(ink);
+      mark.replaceChildren(glyph);
+    }
     mark.setAttribute('aria-hidden','true');
     item.append(mark,make('small','FIELDSTOCK · Round '+slot.round_no),make('h3',revealed ? slot.creation_name : 'Mystery '+label));
     item.append(make('p',revealed ? 'Created by '+slot.creator : slot.prompt));

@@ -1,8 +1,8 @@
 (() => {
   const hub = document.getElementById('mysteries');
   const team = document.body.dataset.mysteryTeam;
-  const labels = {player:'player',donk:'DONK entry',mascot:'mascot',sponsor:'sponsor',tradition:'fan tradition',giveaway:'giveaway'};
-  const sections = {donk:'donk',mascot:'mascot',sponsor:'stadium',tradition:'traditions',giveaway:'giveaway'};
+  const labels = {player:'player',donk:'DONK entry',donk_driver:'DONK driver',mascot:'mascot',sponsor:'sponsor',tradition:'fan tradition',giveaway:'giveaway'};
+  const sections = {donk:'donk',donk_driver:'donk',mascot:'mascot',sponsor:'stadium',tradition:'traditions',giveaway:'giveaway'};
   const make = (tag, text, cls) => {
     const node = document.createElement(tag);
     node.textContent = text;
@@ -26,12 +26,12 @@
       mark.replaceChildren(glyph);
     }
     mark.setAttribute('aria-hidden','true');
-    item.append(mark,make('small','FIELDSTOCK · Round '+slot.round_no),make('h3',revealed ? slot.creation_name : 'Mystery '+label));
+    item.append(mark,make('small','FIELDSTOCK · Round '+slot.round_no),make('h3',revealed ? slot.creation_name : slot.type==='donk_driver' ? slot.team_name+' driver' : 'Mystery '+label));
     item.append(make('p',revealed ? 'Created by '+slot.creator : slot.prompt));
     if (['pending','upcoming'].includes(slot.state)) {
       item.append(make('strong',slot.state==='pending' ? 'In Board review' : 'Opens in round '+slot.round_no));
     } else {
-      const link = make('a',revealed ? 'View record' : 'Create a '+label);
+      const link = make('a',revealed ? 'View record' : slot.type==='donk_driver' ? 'Create the driver and car' : 'Create a '+label);
       link.href = revealed ? GLBRecords.href(slot.id) : 'contribute.html?artifact_id='+encodeURIComponent(slot.id)+'#contribute';
       item.append(link);
     }

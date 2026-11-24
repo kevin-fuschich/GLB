@@ -26,7 +26,7 @@
       mark.replaceChildren(glyph);
     }
     mark.setAttribute('aria-hidden','true');
-    item.append(mark,make('small','FIELDSTOCK · Round '+slot.round_no),make('h3',revealed ? slot.creation_name : slot.type==='donk_driver' ? slot.team_name+' driver' : 'Mystery '+label));
+    item.append(mark,make('small','FIELDSTOCK · Round '+slot.round_no),make('h3',revealed ? slot.creation_name : slot.type==='donk_driver' ? 'Mystery DONK driver' : 'Mystery '+label));
     item.append(make('p',revealed ? 'Created by '+slot.creator : slot.prompt));
     if (['pending','upcoming'].includes(slot.state)) {
       item.append(make('strong',slot.state==='pending' ? 'In Board review' : 'Opens in round '+slot.round_no));
@@ -59,7 +59,9 @@
         grid = make('div','','mystery-grid');
         (section.querySelector('.glb-fold-body') || section).append(grid);
       }
-      grid.append(card(slot));
+      const preview = grid.querySelector('[data-slot-id="'+CSS.escape(slot.id)+'"]');
+      if (preview) preview.replaceWith(card(slot));
+      else grid.append(card(slot));
     }
   }
   load().catch(()=>{

@@ -19,3 +19,6 @@ body #glb-site-header{display:block;position:sticky;top:0;z-index:1000;width:100
 #glb-site-header :is(a,button):focus-visible{outline:3px solid #9fe5cf;outline-offset:3px}
 @media(max-width:1250px){#glb-site-header .glb-header-nav{display:none}#glb-site-header #navToggle{display:flex}#glb-site-header #mobileMenu:not([hidden]){display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:5px}#glb-site-header .glb-header-bar{min-height:72px}}
 @media(max-width:480px){#glb-site-header .glb-header-bar{padding:0 18px;gap:12px}#glb-site-header #mobileMenu{padding:12px 18px 18px}#glb-site-header .glb-header-mark{font-size:26px}}
+
+/* The linked GLB wordmark is the home destination on both menu layouts. */
+#glb-site-header nav a:is([href="index.html"], [href$="/index.html"]) { display: none; }

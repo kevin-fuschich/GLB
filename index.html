@@ -777,6 +777,8 @@
           <aside class="glb-bulletin" aria-labelledby="bulletin-title">
             <h3 id="bulletin-title">Help wanted</h3>
             <ul>
+              <li><a href="team-st-paul-frost.html#donk"><strong>St. Paul Frost</strong><span>Create the DONK driver and car →</span></a></li>
+              <li><a href="team-toledo-assembly.html#donk"><strong>Toledo Assembly</strong><span>Create the DONK driver and car →</span></a></li>
               <li><a id="roster-invitation-link" href="contribute.html?artifact_id=MYS-1-vancouver-current-player#contribute"><strong id="roster-invitation">Vancouver Current</strong><span>Create a player for the open roster spot →</span></a></li>
               <li><a data-bulletin-id="SPD-MASCOT" href="contribute.html?artifact_id=SPD-MASCOT#contribute"><strong>San Pedro Cocolos</strong><span>Write a mascot bio for Bolo →</span></a></li>
               <li><a data-bulletin-id="LOU-FLO" href="contribute.html?artifact_id=LOU-FLO#contribute"><strong>Louisville Naturals</strong><span>Write a DONK driver bio for Flo Troup →</span></a></li>
@@ -967,7 +969,7 @@
   const list = document.querySelector('.glb-bulletin ul');
   const status = document.createElement('li');
   status.textContent = 'Checking open items…';
-  list.replaceChildren(status);
+  const initialItems = [...list.children];
   let busy = false;
   let registry;
   async function loadRegistry() {
@@ -1004,7 +1006,10 @@
       const taken = new Set(claims.map(row => row.artifact_id));
       const players = slots.filter(row => row.type === 'player' && ['newcomers','open'].includes(row.state));
       const player = players.find(row => row.team_slug === 'vancouver-current') || players[0];
-      const items = [];
+      const items = slots
+        .filter(slot => slot.type === 'donk_driver' && ['st-paul-frost','toledo-assembly'].includes(slot.team_slug) && ['newcomers','open'].includes(slot.state))
+        .sort((a,b) => a.team_name.localeCompare(b.team_name))
+        .map(slot => entry(slot.id, slot.team_name, 'Create the DONK driver and car'));
       if (player) items.push(entry(player.id, player.team_name, 'Create a player for the open roster spot'));
       for (const [type, first, action] of [
         ['mascot','SPD-MASCOT','Write a mascot bio for '],
@@ -1026,8 +1031,7 @@
       link.href = 'contribute.html#open-artifacts';
       link.textContent = 'Browse Claim & Create →';
       status.append(link);
-      list.replaceChildren(status);
-      delete list.dataset.selection;
+      if (!list.dataset.selection) list.replaceChildren(...initialItems, status);
     } finally { busy = false; }
   }
   refresh();

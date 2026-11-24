@@ -83,7 +83,7 @@
   document.getElementById('collaborationChoice').hidden=!artifactId || noteMode;
   const mystery=artifactId?.startsWith('MYS-') && !noteMode;
   const selectedCatalog=mystery ? GLBRecords.read('rpc/glb_mysteries',{}).then(rows=>({
-    claims:{},artifacts:rows.map(s=>({...s,name:'Mystery '+(s.type==='donk'?'DONK entry':s.type),claim_open:['newcomers','open'].includes(s.state)}))
+    claims:{},artifacts:rows.map(s=>({...s,name:'Mystery '+(s.type==='donk'?'DONK entry':s.type==='donk_driver'?'DONK driver':s.type),claim_open:['newcomers','open'].includes(s.state)}))
   })) : catalogRequest;
   if(artifactId)Promise.all([selectedCatalog,GLBRecords.claims()]).then(([{artifacts,claims},live])=>{
     const approved=live.find(row=>row.artifact_id===artifactId);
@@ -109,6 +109,12 @@
     if(mystery){
       document.getElementById('contribution-title').textContent='Create a '+selected.name.slice(8);
       form.elements.artifact.placeholder='Name your creation';
+      if(selected.type==='donk_driver'){
+        document.getElementById('contribution-title').textContent='Create the '+selected.team_name+' DONK driver';
+        form.elements.artifact.closest('label').firstChild.textContent='Driver name';
+        form.elements.artifact.placeholder='Name your driver';
+        form.elements.contribution.closest('label').firstChild.textContent='Car, style and driver bio';
+      }
       selection.textContent=selected.team_name+' · Round '+selected.round_no+'. '+selected.prompt+(selected.state==='newcomers'?' First seven days open to first-time mystery creators.':'');
     }
     selectionReady=true;

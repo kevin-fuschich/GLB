@@ -83,7 +83,7 @@
   document.getElementById('collaborationChoice').hidden=!artifactId || noteMode;
   const mystery=artifactId?.startsWith('MYS-') && !noteMode;
   const selectedCatalog=mystery ? GLBRecords.read('rpc/glb_mysteries',{}).then(rows=>({
-    claims:{},artifacts:rows.map(s=>({...s,name:'Mystery '+(s.type==='donk'?'DONK entry':s.type==='donk_driver'?'DONK driver':s.type),claim_open:['newcomers','open'].includes(s.state)}))
+    claims:{},artifacts:rows.map(s=>({...s,name:(s.type==='donk'?'DONK entry':s.type==='donk_driver'?'DONK driver':s.type),claim_open:['newcomers','open'].includes(s.state)}))
   })) : catalogRequest;
   if(artifactId)Promise.all([selectedCatalog,GLBRecords.claims()]).then(([{artifacts,claims},live])=>{
     const approved=live.find(row=>row.artifact_id===artifactId);
@@ -107,7 +107,7 @@
     selection.textContent=noteMode?'The original claim stays credited to '+approved.user_id+'. Your note needs its own Board approval.':needs(selected)[0]+' · '+(selected.prompt || 'Add something of your own.');
     if(selected.prompt)form.elements.contribution.placeholder=selected.prompt;
     if(mystery){
-      document.getElementById('contribution-title').textContent='Create a '+selected.name.slice(8);
+      document.getElementById('contribution-title').textContent='Create a '+selected.name;
       form.elements.artifact.placeholder='Name your creation';
       if(selected.type==='donk_driver'){
         document.getElementById('contribution-title').textContent='Create the '+selected.team_name+' DONK driver';
@@ -115,7 +115,7 @@
         form.elements.artifact.placeholder='Name your driver';
         form.elements.contribution.closest('label').firstChild.textContent='Car, style and driver bio';
       }
-      selection.textContent=selected.team_name+' · Round '+selected.round_no+'. '+selected.prompt+(selected.state==='newcomers'?' First seven days open to first-time mystery creators.':'');
+      selection.textContent=selected.team_name+' · Round '+selected.round_no+'. '+selected.prompt+(selected.state==='newcomers'?' First seven days open to first-time creators.':'');
     }
     selectionReady=true;
   }).catch(error=>{selection.textContent=error.message || 'Availability could not be verified. Refresh to try again.';button.disabled=true;});
@@ -156,7 +156,7 @@
     }catch(error){
       button.disabled=false;button.textContent='Submit to the GLB Board';
       const message=String(error.message || '');
-      response.textContent=mystery && error.code==='23505'?'This opening is under review, or you already have a pending mystery or a creation this round. Check My submissions.':error.code==='23505'?'You already have a pending claim for this artifact. Check My submissions.':/Mystery openings|Mystery round|already claimed|closed to collaboration|Please wait|Daily contribution limit|sign-in has changed/.test(message)?message:'Your submission could not be saved. Your draft is still here. Please try again.';
+      response.textContent=mystery && error.code==='23505'?'This opening is under review, or you already have a card in review or an approved creation this round. Check My submissions.':error.code==='23505'?'You already have a pending claim for this artifact. Check My submissions.':/Mystery openings|Mystery round|already claimed|closed to collaboration|Please wait|Daily contribution limit|sign-in has changed/.test(message)?message.replace(/mystery openings/gi,'Card openings').replace(/mystery round/gi,'Creation round').replace(/mystery creators/gi,'creators'):'Your submission could not be saved. Your draft is still here. Please try again.';
     }
   });
 })();

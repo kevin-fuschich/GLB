@@ -26,7 +26,7 @@
       mark.replaceChildren(glyph);
     }
     mark.setAttribute('aria-hidden','true');
-    item.append(mark,make('small','FIELDSTOCK · Round '+slot.round_no),make('h3',revealed ? slot.creation_name : slot.type==='donk_driver' ? 'Who’s driving for '+slot.team_name.replace(/ (Frost|Assembly)$/, '')+'?' : 'Mystery '+label));
+    item.append(mark,make('small','FIELDSTOCK · Round '+slot.round_no),make('h3',revealed ? slot.creation_name : slot.type==='donk_driver' ? 'Who’s driving for '+slot.team_name.replace(/ (Frost|Assembly)$/, '')+'?' : 'Create a '+label));
     item.append(make('p',revealed ? 'Created by '+slot.creator : slot.prompt));
     if (['pending','upcoming'].includes(slot.state)) {
       item.append(make('strong',slot.state==='pending' ? 'In Board review' : 'Opens in round '+slot.round_no));
@@ -70,6 +70,6 @@
   }
   load().catch(()=>{
     const host = hub || roster;
-    if(host) host.append(make('p','Mystery cards could not load. Refresh to try again.'));
+    if(host) host.append(make('p','Open cards could not load. Refresh to try again.'));
   });
 })();

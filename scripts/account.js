@@ -64,7 +64,7 @@
           const withdraw=node('button','Withdraw creation');
           withdraw.type='button';
           withdraw.onclick=async()=>{
-            if(!window.confirm('Withdraw this submission and reopen the mystery card?'))return;
+            if(!window.confirm('Withdraw this submission and reopen this card for another creator?'))return;
             withdraw.disabled=true;
             const {error}=await client.rpc('glb_withdraw_mystery',{p_id:row.id});
             if(error){notice('Withdrawal could not be completed. Refresh to check its review status.',true);withdraw.disabled=false;return;}

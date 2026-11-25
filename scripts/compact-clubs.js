@@ -35,7 +35,7 @@
   let scheduled=false;
   function enhanceLists(){
     scheduled=false;
-    for(const list of root.querySelectorAll('.tpe-card-grid,.player-card-grid,.tij-card-grid,#mtyCards,.mty-roster,div.roster')){
+    for(const list of root.querySelectorAll('.mty-roster,div.roster')){
       if(list.closest('.glb-park-gallery')||list.children.length<=4)continue;
       let entries=[...list.children].filter(e=>e.matches('.tpe-card-entry,.fs-card,.mty-player,.player,article'));
       if(entries.length<=4)continue;

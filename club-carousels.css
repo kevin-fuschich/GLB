@@ -1,0 +1,15 @@
+/* Shared collection layout for club-specific page templates. */
+html body main .club-carousel, html body .club-carousel.club-carousel {
+  display:grid!important; grid-template-columns:repeat(var(--club-columns,1),minmax(0,1fr))!important;
+  gap:16px!important; align-items:start; min-width:0; width:100%; box-sizing:border-box;
+}
+.club-carousel > :not([data-slide-away]) { min-width:0; grid-column:auto!important; }
+html body .club-carousel > [data-slide-away],
+html body :is(.tol-view-all,.collection-toggle,#viewAllCards)[aria-controls]:has(~ .club-carousel),
+html body .club-carousel ~ :is(.tol-view-all,.collection-toggle,#viewAllCards),
+html body :is(#viewAllCards,[aria-controls="birminghamCards"].collection-toggle) { display:none!important; }
+.club-carousel-controls { display:flex; justify-content:flex-end; align-items:center; flex-wrap:wrap; gap:12px; margin:10px 0; font:600 14px/1.3 Arial,sans-serif; }
+.club-carousel-controls button { padding:8px 13px; min-height:40px; color:#142b40; background:#fff; border:1px solid #9aa8b3; border-radius:3px; cursor:pointer; font:inherit; }
+.club-carousel-controls button:disabled { opacity:.45; cursor:default; }
+.club-carousel-controls span { font-variant-numeric:tabular-nums; }
+.club-carousel-controls button:focus-visible { outline:3px solid #527287; outline-offset:2px; }

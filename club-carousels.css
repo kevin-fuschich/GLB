@@ -20,3 +20,15 @@ html body :is(#viewAllCards,[aria-controls="birminghamCards"].collection-toggle)
 @media (min-width:720px) {
   .club-carousel.tol-places > article:has(> img) { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); align-items:center; }
 }
+
+/* Show the edge of the next slide and keep the arrows outside interactive artwork. */
+.club-carousel-frame {display:grid;grid-template-columns:36px minmax(0,1fr) 36px;gap:6px;align-items:start;min-width:0;max-width:100%}
+.club-carousel-frame .club-carousel-controls {display:contents}
+.club-carousel-frame .club-carousel-controls span {grid-row:2;grid-column:2;text-align:center;font:600 13px/1.5 Arial,sans-serif;font-variant-numeric:tabular-nums}
+.club-carousel-frame .club-carousel-controls button {grid-row:1;align-self:start;margin-top:clamp(48px,9vw,110px);border-radius:50%;min-height:36px;width:36px;height:36px;padding:0;background:#142b40;color:#fff;font:28px/1 Arial,sans-serif}
+.club-carousel-controls button:first-child {grid-column:1}
+.club-carousel-controls button:last-child {grid-column:3}
+html body .club-carousel.club-scroll-track {grid-column:2;grid-row:1;display:flex!important;align-items:flex-start;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;scrollbar-width:thin;padding:4px 0 8px!important;margin:0!important;gap:12px!important}
+html body .club-scroll-track > * {box-sizing:border-box;scroll-snap-align:start;flex:0 0 calc((100% - clamp(32px,5vw,68px) + 12px) / var(--club-columns) - 12px);max-width:none;min-width:0}
+.club-carousel-frame ~ :is(.tol-view-all,.collection-toggle,#viewAllCards){display:none!important}
+@media(max-width:500px){.club-carousel-frame{grid-template-columns:30px minmax(0,1fr) 30px;gap:3px}.club-carousel-frame .club-carousel-controls button{width:30px;height:36px;border-radius:4px}}

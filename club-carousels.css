@@ -32,3 +32,8 @@ html body .club-carousel.club-scroll-track {grid-column:2;grid-row:1;display:fle
 html body .club-scroll-track > * {box-sizing:border-box;scroll-snap-align:start;flex:0 0 calc((100% - clamp(32px,5vw,68px) + 12px) / var(--club-columns) - 12px);max-width:none;min-width:0}
 .club-carousel-frame ~ :is(.tol-view-all,.collection-toggle,#viewAllCards){display:none!important}
 @media(max-width:500px){.club-carousel-frame{grid-template-columns:30px minmax(0,1fr) 30px;gap:3px}.club-carousel-frame .club-carousel-controls button{width:30px;height:36px;border-radius:4px}}
+
+.club-season-record{grid-column:1/-1;clear:both;margin:20px 0;padding:14px 18px;border-block:1px solid #cbd4db}
+.club-season-record>summary{cursor:pointer;font-weight:700}
+.glb-park-tile[open]>summary>.glb-tile-image{display:none!important}
+.glb-park-tile[open]>section>.card-header>.card-title{display:none}

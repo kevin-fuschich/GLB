@@ -99,6 +99,34 @@
       if(!collections.has(list)) enhance(list,list.matches(parkSelector));
     });
   }
+  // Keep season tables available as one disclosure after the club features.
+  const main = document.querySelector('main');
+  const records = [...main.querySelectorAll('section, details.santiago-record')].filter(section=>{
+    if(section.closest('#around-park') || section.querySelector(cardSelector)) return false;
+    const heading = section.querySelector('h2, summary')?.textContent.trim();
+    return /^(?:season snapshot|2026 season|team leaders|active roster|recent results|latest result)$/i.test(heading);
+  }).filter((section,_,all)=>!all.some(other=>other!==section && other.contains(section)));
+  if(records.length){
+    const record=document.createElement('details');
+    record.className='club-season-record';
+    record.id='season-record';
+    const summary=document.createElement('summary');
+    summary.textContent='Season record';
+    record.append(summary,...records);
+    const park=document.getElementById('around-park');
+    if(park) park.after(record); else main.append(record);
+    function revealRecord() {
+      let target;
+      try { target=document.getElementById(decodeURIComponent(location.hash.slice(1))); } catch { return; }
+      if(target && record.contains(target)){
+        record.open=true;
+        for(let node=target;node!==record;node=node.parentElement) if(node.tagName==='DETAILS') node.open=true;
+        requestAnimationFrame(()=>target.scrollIntoView({block:'start'}));
+      }
+    }
+    revealRecord();
+    window.addEventListener('hashchange',revealRecord);
+  }
   scan();
   const observer=new MutationObserver(scan);
   observer.observe(document.querySelector('main') || document.body,{childList:true,subtree:true});

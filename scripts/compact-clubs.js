@@ -7,7 +7,7 @@
   if(!root)return;
   const sections=[...root.querySelectorAll('section')].filter(e=>!e.parentElement.closest('section'));
   const gallery=make('section','glb-park-gallery');gallery.id='around-park';
-  gallery.append(make('h2','','Around the park'),make('p','glb-gallery-intro','Open a place, person or artifact to explore its record and contribute.'));
+  gallery.append(make('h2','','Around the park'));
   const grid=make('div','glb-park-grid');gallery.append(grid);
   for(const section of sections){
     const heading=section.querySelector('h2');if(!heading||section.matches('.team-hero,.team-closer'))continue;

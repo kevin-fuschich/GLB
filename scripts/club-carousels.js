@@ -21,7 +21,7 @@
     function button(label, direction) {
       const node = document.createElement('button');
       node.type = 'button';
-      node.textContent = label;
+      node.textContent = direction < 0 ? '‹' : '›';
       node.setAttribute('aria-label',label+' · '+title);
       node.setAttribute('aria-controls',list.id);
       node.onclick = () => move(direction);
@@ -29,58 +29,65 @@
     }
     const previous = button('Previous',-1), next = button('Next',1);
     controls.append(previous,status,next);
-    list.before(controls);
-    let first = 0, count = 1;
-    function paint() {
+    const frame = document.createElement('div');
+    frame.className = 'club-carousel-frame';
+    list.before(frame);
+    frame.append(controls,list);
+    list.classList.add('club-scroll-track');
+    list.tabIndex = 0;
+    let count = 1;
+    function update() {
       const items = slides();
-      count = park ? 1 : Math.min(3, Math.max(1, Math.floor((list.clientWidth+16)/245)));
-      first = Math.max(0,Math.min(first,items.length-1));
-      first -= first % count;
-      list.style.setProperty('--club-columns',String(count));
-      items.forEach((item,i) => {
-        item.hidden = false;
-        const off = i < first || i >= first+count;
-        if (off && !item.hasAttribute('data-slide-away')) {
-          item.querySelectorAll('video,audio').forEach(media => media.pause());
-        }
-        item.toggleAttribute('data-slide-away',off);
+      if (!items.length) return;
+      const edge = list.getBoundingClientRect().left + list.clientLeft;
+      const visible = items.filter(item=>{
+        const rect=item.getBoundingClientRect();
+        return rect.left+rect.width/2 >= edge && rect.left+rect.width/2 <= edge+list.clientWidth;
       });
-      const last = Math.min(first+count,items.length);
-      const range = (count===1 || first+1===last ? String(first+1) : (first+1)+'–'+last)+' of '+items.length;
-      if(status.textContent !== range) status.textContent = range;
-      previous.disabled = first === 0;
-      next.disabled = last === items.length;
+      if (visible.length) {
+        const start=items.indexOf(visible[0])+1, end=items.indexOf(visible.at(-1))+1;
+        const range=(start===end ? start : start+'–'+end)+' of '+items.length;
+        if(status.textContent!==range) status.textContent=range;
+      }
+      previous.disabled=list.scrollLeft<=2;
+      next.disabled=list.scrollLeft+list.clientWidth>=list.scrollWidth-2;
+    }
+    function paint() {
+      const items=slides();
+      count=park ? 1 : Math.min(3,Math.max(1,Math.floor((list.clientWidth-40)/225)));
+      list.style.setProperty('--club-columns',String(count));
+      items.forEach(item=>{item.hidden=false;});
+      update();
     }
     function move(direction) {
-      const index = first + direction*count;
-      if (index < 0 || index >= list.children.length) return;
-      first = index;
-      paint();
+      const items=slides();
+      if (!items.length) return;
+      const step=items.length>1 ? items[1].getBoundingClientRect().left-items[0].getBoundingClientRect().left : list.clientWidth;
+      list.scrollBy({left:direction*count*step,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});
     }
-    let touch;
-    list.addEventListener('touchstart',event=>{
-      touch = event.touches.length===1 && !event.target.closest('video, audio, input, textarea, select') ? event.touches[0] : null;
-    },{passive:true});
-    list.addEventListener('touchcancel',()=>{touch=null;});
-    list.addEventListener('touchend',event=>{
-      if (!touch) return;
-      const dx = event.changedTouches[0].clientX-touch.clientX, dy = event.changedTouches[0].clientY-touch.clientY;
-      touch=null;
-      if (Math.abs(dx)>65 && Math.abs(dx)>2*Math.abs(dy)) move(dx<0?1:-1);
-    },{passive:true});
+    list.addEventListener('scroll',update,{passive:true});
+    list.addEventListener('keydown',event=>{
+      if(event.target!==list || !['ArrowLeft','ArrowRight'].includes(event.key)) return;
+      event.preventDefault();
+      move(event.key==='ArrowLeft'?-1:1);
+    });
+    const videos=new IntersectionObserver(entries=>{
+      for(const entry of entries) if(!entry.isIntersecting) entry.target.pause();
+    },{root:list});
+    function watchMedia(){list.querySelectorAll('video,audio').forEach(media=>videos.observe(media));}
+    watchMedia();
     function reveal() {
       let id;
       try { id=decodeURIComponent(location.hash.slice(1)); } catch { return; }
       const target=document.getElementById(id);
       const index=target ? slides().findIndex(item=>item===target || item.contains(target)) : -1;
       if(index<0) return;
-      first=index;
-      paint();
+
       for(let node=target;node && node!==list;node=node.parentElement) if(node.tagName==='DETAILS') node.open=true;
-      requestAnimationFrame(()=>target.scrollIntoView({block:'nearest'}));
+      requestAnimationFrame(()=>target.scrollIntoView({block:'nearest',inline:'nearest'}));
     }
     collections.set(list,true);
-    new MutationObserver(()=>{paint();reveal();}).observe(list,{childList:true});
+    new MutationObserver(()=>{paint();watchMedia();reveal();}).observe(list,{childList:true});
     let width=list.clientWidth;
     new ResizeObserver(()=>{if(list.clientWidth!==width){width=list.clientWidth;paint();}}).observe(list);
     window.addEventListener('hashchange',reveal);

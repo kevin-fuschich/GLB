@@ -5,7 +5,6 @@ html body main .club-carousel, html body .club-carousel.club-carousel {
 }
 .club-carousel > :not([data-slide-away]) { min-width:0; grid-column:auto!important; }
 html body .club-carousel > [data-slide-away],
-html body :is(.tol-view-all,.collection-toggle,#viewAllCards)[aria-controls]:has(~ .club-carousel),
 html body .club-carousel ~ :is(.tol-view-all,.collection-toggle,#viewAllCards),
 html body :is(#viewAllCards,[aria-controls="birminghamCards"].collection-toggle) { display:none!important; }
 .club-carousel-controls { display:flex; justify-content:flex-end; align-items:center; flex-wrap:wrap; gap:12px; margin:10px 0; font:600 14px/1.3 Arial,sans-serif; }
@@ -13,3 +12,11 @@ html body :is(#viewAllCards,[aria-controls="birminghamCards"].collection-toggle)
 .club-carousel-controls button:disabled { opacity:.45; cursor:default; }
 .club-carousel-controls span { font-variant-numeric:tabular-nums; }
 .club-carousel-controls button:focus-visible { outline:3px solid #527287; outline-offset:2px; }
+
+.club-carousel.tol-places > article > img,
+.club-carousel :is(.glb-park-tile,.santiago-park-tile):not([open]) > summary > img {
+  max-height:clamp(175px,32vw,310px); width:100%; object-fit:cover;
+}
+@media (min-width:720px) {
+  .club-carousel.tol-places > article:has(> img) { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); align-items:center; }
+}

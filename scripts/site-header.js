@@ -34,8 +34,11 @@
       '#glb-quick-bar-actions a{display:inline-flex;align-items:center;gap:6px;padding:6px 12px;border-radius:4px;font:700 12px/1.2 Arial,Helvetica,sans-serif;text-decoration:none;white-space:nowrap;flex-shrink:0}',
       '#glb-quick-bar-actions a.glb-qb-packs{background:#b7efda;color:#0b1e33;font-weight:800}',
       '#glb-quick-bar-actions a.glb-qb-packs:hover{background:#d3f8e9}',
-      '#glb-quick-bar-actions a.glb-qb-sec{background:rgba(255,255,255,.1);color:#fff;border:1px solid rgba(255,255,255,.26)}',
-      '#glb-quick-bar-actions a.glb-qb-sec:hover{background:rgba(255,255,255,.2)}',
+      '#glb-quick-bar-actions a.glb-qb-artifacts{background:#ead39a;color:#102438}',
+      '#glb-quick-bar-actions a.glb-qb-artifacts:hover{background:#f5e4b6}',
+      '#glb-quick-bar-actions a.glb-qb-lineup{background:#acc8de;color:#102438}',
+      '#glb-quick-bar-actions a.glb-qb-lineup:hover{background:#c5dcee}',
+      '#glb-quick-bar-actions a:focus-visible{outline:2px solid white;outline-offset:-3px}',
       '@media(max-width:480px){#glb-quick-bar-inner{padding:7px 18px}}',
     ].join('');
     document.head.append(qStyle);
@@ -68,12 +71,12 @@
     openPacksBtn.textContent = 'Open Packs';
 
     const viewArtifactsBtn = document.createElement('a');
-    viewArtifactsBtn.className = 'glb-qb-sec';
+    viewArtifactsBtn.className = 'glb-qb-artifacts';
     viewArtifactsBtn.href = new URL('contribute.html#open-artifacts', root);
     viewArtifactsBtn.textContent = 'View artifacts';
 
     const buildLineupBtn = document.createElement('a');
-    buildLineupBtn.className = 'glb-qb-sec';
+    buildLineupBtn.className = 'glb-qb-lineup';
     buildLineupBtn.href = new URL('fantasy.html', root);
     buildLineupBtn.textContent = 'Build Lineup';
 

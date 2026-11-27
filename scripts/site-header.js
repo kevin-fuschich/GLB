@@ -67,17 +67,17 @@
     openPacksBtn.href = new URL('book.html#open-packs', root);
     openPacksBtn.textContent = 'Open Packs';
 
-    const claimArtifactsBtn = document.createElement('a');
-    claimArtifactsBtn.className = 'glb-qb-sec';
-    claimArtifactsBtn.href = new URL('contribute.html', root);
-    claimArtifactsBtn.textContent = 'Claim Artifacts';
+    const viewArtifactsBtn = document.createElement('a');
+    viewArtifactsBtn.className = 'glb-qb-sec';
+    viewArtifactsBtn.href = new URL('contribute.html#open-artifacts', root);
+    viewArtifactsBtn.textContent = 'View artifacts';
 
     const buildLineupBtn = document.createElement('a');
     buildLineupBtn.className = 'glb-qb-sec';
     buildLineupBtn.href = new URL('fantasy.html', root);
     buildLineupBtn.textContent = 'Build Lineup';
 
-    actions.append(openPacksBtn, claimArtifactsBtn, buildLineupBtn);
+    actions.append(openPacksBtn, viewArtifactsBtn, buildLineupBtn);
     inner.append(meta, actions);
     bar.append(inner);
 
@@ -260,14 +260,6 @@
         );
       };
       bar.append(viewport);
-      const invitation = entries.find(entry => entry.id === 'offseason-claims');
-      if (invitation) {
-        const requests = document.createElement('a');
-        requests.href = new URL('contribute.html#open-artifacts', root);
-        requests.className = 'glb-marquee-requests';
-        requests.textContent = 'Open artifacts';
-        bar.append(requests);
-      }
       bar.append(pause);
       header.insertAdjacentElement('afterend', bar);
     })

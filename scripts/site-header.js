@@ -3,6 +3,11 @@
   const header = document.getElementById('glb-site-header');
   if (!header) return;
   const root = new URL('../', document.currentScript.src);
+  for (const link of header.querySelectorAll('nav a[href$="schedule.html"]')) {
+    link.href = new URL('contribute.html#open-artifacts', root);
+    link.textContent = 'Artifacts';
+    link.removeAttribute('aria-current');
+  }
   const SUPABASE_URL = 'https://uyjncyvlumakuqtfuicc.supabase.co';
   const SUPABASE_KEY = 'sb_publishable_VjJqbpi9zo2143JF1qq91A_0mAfJuUy';
 
@@ -260,7 +265,7 @@
         const requests = document.createElement('a');
         requests.href = new URL('contribute.html#open-artifacts', root);
         requests.className = 'glb-marquee-requests';
-        requests.textContent = 'Open requests';
+        requests.textContent = 'Open artifacts';
         bar.append(requests);
       }
       bar.append(pause);

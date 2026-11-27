@@ -755,6 +755,10 @@
 <style>
 .claim-world .artifact-sticky{grid-column:1/-1;justify-self:end;display:block;position:relative;margin:2px 5px 0;padding:13px 18px 14px;background:linear-gradient(#f1d878 0 8px,#ffe997 8px,#fff1ab);box-shadow:1px 3px 4px #48381966;transform:rotate(-2deg);color:#29291d;font:italic 17px/1.25 Georgia,serif;text-decoration:none}
 .artifact-sticky strong{font:700 15px/1.2 system-ui;letter-spacing:.04em;border-bottom:2px solid #934c34}
+</style><style>
+.claim-world .claim-window-label small{margin:3px 0 4px;font-size:12px}
+.claim-world .board-action{display:inline-block;padding:5px 0;font:700 13px/1.25 system-ui;color:inherit;text-decoration:underline;text-underline-offset:3px}
+.claim-world .claim-window:hover{transform:none}
 </style></head>
 <body data-season-page="home">
 
@@ -788,18 +792,18 @@
           <a class="glb-universe-primary" href="contribute.html#open-artifacts">Browse all artifacts →</a>
         </div>
         <div class="claim-world" aria-label="Explore the people and places of GLB">
-          <a class="claim-window claim-window-park" href="team-taipei-neon.html" aria-label="Explore Taipei Neon">
+          <article class="claim-window claim-window-park">
             <img src="assets/teams/taipei-neon/images/stadium.webp" alt="The illuminated Taipei Neon ballpark" width="1536" height="1024">
-            <span class="claim-window-label"><small>Taipei Neon</small>Taipei after dark <span aria-hidden="true">→</span></span>
-          </a>
-          <a class="claim-window claim-window-player" href="team-triangle-gold.html#cards" aria-label="Explore Triangle Gold player cards">
+            <div class="claim-window-label">Taipei Neon<small>VELLO Stadium</small><a class="board-action" href="contribute.html?team=taipei-neon&amp;type=ballpark&amp;artifact=VELLO+Stadium+atmosphere#contribute">Create the atmosphere</a></div>
+          </article>
+          <article class="claim-window claim-window-player">
             <img src="assets/teams/triangle-gold/mateo-rios-board.svg" alt="Mateo Ríos wearing the gold bull on his Triangle Gold jersey and cap" width="768" height="1024">
-            <span class="claim-window-label"><small>Triangle Gold</small>Mateo Ríos <span aria-hidden="true">→</span></span>
-          </a>
-          <a class="claim-window claim-window-honey" href="team-triangle-gold.html#entertainment" aria-label="Meet Honey Booker">
+            <div class="claim-window-label">Mateo Ríos<small>Triangle Gold</small><a class="board-action" href="contribute.html?artifact_id=TRI-14#contribute">Write the bio</a></div>
+          </article>
+          <article class="claim-window claim-window-honey">
             <img src="assets/teams/triangle-gold/honey-booker-stage.webp" alt="Honey Booker performing on stage with his bass" width="1672" height="941">
-            <span class="claim-window-label"><small>Live at the ballpark</small>Honey Booker <span aria-hidden="true">→</span></span>
-          </a>
+            <div class="claim-window-label">Honey Booker<small>Live at WEEJIE Park</small><a class="board-action" href="contribute.html?artifact_id=TRI-HONEY-BOOKER&amp;mode=collaboration#contribute">Write the story</a></div>
+          </article>
           <a class="artifact-sticky" href="contribute.html#open-artifacts">check out <strong>ARTIFACTS</strong> section</a>
         </div>
       </section>

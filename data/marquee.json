@@ -16,7 +16,7 @@
       "id": "offseason-claims",
       "kind": "invitation",
       "text": "CLAIM ARTIFACTS DURING THE OFFSEASON: Claim a player, mascot, entertainer and more.",
-      "href": "contribute.html",
+      "href": "contribute.html#open-artifacts",
       "active": true,
       "phases": [
         "offseason"

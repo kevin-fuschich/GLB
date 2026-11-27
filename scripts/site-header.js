@@ -202,7 +202,7 @@
 
       const style = document.createElement('style');
       style.textContent =
-        '.scores-strip,.glb-score-strip{display:none!important}.glb-marquee{display:flex;align-items:center;background:#102438;color:#fff;overflow:hidden;font:12px/1.6 Arial,sans-serif}.glb-marquee-window{flex:1;overflow:hidden;min-width:0}.glb-marquee-track{display:flex;width:max-content;animation:glbMarquee var(--glb-duration,42s) linear infinite}.glb-marquee-group{display:flex;align-items:center;gap:38px;padding:12px 19px;min-width:100vw;white-space:nowrap}.glb-marquee a{color:#ead39a;text-decoration:none}.glb-marquee a:hover{text-decoration:underline}.glb-marquee button{flex:none;margin:0 12px;padding:5px 9px;background:transparent;border:1px solid #7d8b98;color:#fff;font:inherit;cursor:pointer}.glb-marquee:hover .glb-marquee-track,.glb-marquee:focus-within .glb-marquee-track,.glb-marquee.is-paused .glb-marquee-track{animation-play-state:paused}@keyframes glbMarquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}@media(prefers-reduced-motion:reduce){.glb-marquee-track{animation:none}.glb-marquee-window{overflow-x:auto}.glb-marquee-group[aria-hidden]{display:none}.glb-marquee button{display:none}}';
+        '.scores-strip,.glb-score-strip{display:none!important}.glb-marquee{display:flex;align-items:center;background:#102438;color:#fff;overflow:hidden;font:12px/1.6 Arial,sans-serif}.glb-marquee-window{flex:1;overflow:hidden;min-width:0}.glb-marquee-track{display:flex;width:max-content;animation:glbMarquee var(--glb-duration,42s) linear infinite}.glb-marquee-group{display:flex;align-items:center;gap:38px;padding:12px 19px;min-width:100vw;white-space:nowrap}.glb-marquee a{color:#ead39a;text-decoration:none}.glb-marquee a:hover{text-decoration:underline}.glb-marquee a.glb-marquee-requests{flex:none;display:inline-flex;align-items:center;min-height:32px;margin:4px 6px;padding:0 12px;border-radius:4px;background:#ead39a;color:#102438;font-weight:750}.glb-marquee-requests:focus-visible{outline:2px solid white;outline-offset:2px}.glb-marquee button{flex:none;margin:0 12px;padding:5px 9px;background:transparent;border:1px solid #7d8b98;color:#fff;font:inherit;cursor:pointer}.glb-marquee:hover .glb-marquee-track,.glb-marquee:focus-within .glb-marquee-track,.glb-marquee.is-paused .glb-marquee-track{animation-play-state:paused}@keyframes glbMarquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}@media(prefers-reduced-motion:reduce){.glb-marquee-track{animation:none}.glb-marquee-window{overflow-x:auto}.glb-marquee-group[aria-hidden]{display:none}.glb-marquee button{display:none}}';
       document.head.append(style);
 
       const bar = document.createElement('aside');
@@ -254,7 +254,16 @@
           (paused ? 'Resume' : 'Pause') + ' scrolling league news'
         );
       };
-      bar.append(viewport, pause);
+      bar.append(viewport);
+      const invitation = entries.find(entry => entry.id === 'offseason-claims');
+      if (invitation) {
+        const requests = document.createElement('a');
+        requests.href = new URL('contribute.html#open-artifacts', root);
+        requests.className = 'glb-marquee-requests';
+        requests.textContent = 'Open requests';
+        bar.append(requests);
+      }
+      bar.append(pause);
       header.insertAdjacentElement('afterend', bar);
     })
     .catch(() => {});

@@ -712,7 +712,7 @@
     .glb-bulletin .request-guide a{display:inline;padding:0;text-decoration:underline}
     .glb-bulletin li>a{display:flex;align-items:baseline;justify-content:space-between;gap:10px;min-height:44px;box-sizing:border-box}
     .glb-bulletin li>a small{white-space:nowrap;font:12px/1.5 Arial,sans-serif;color:#505b60}
-  </style>
+  .request-new.request-new:not([hidden]){display:inline-block;margin-inline-start:.45em;padding:.15em .42em;vertical-align:.12em;border-radius:3px;background:#ffe39a;color:#462d09;font:800 10px/1.25 Arial,sans-serif;letter-spacing:.04em}.request-new[hidden]{display:none!important}</style>
   <link rel="stylesheet" href="participation.css?v=20261107-claim-create">
   <link rel="stylesheet" href="home-claim.css?v=20261110-1">
 <link rel="stylesheet" href="site-header.css?v=20261112">
@@ -781,7 +781,7 @@
           <aside class="glb-bulletin" aria-labelledby="bulletin-title">
             <h3 id="bulletin-title">Open requests</h3>
             <p class="request-guide">Choose a request to claim and create. <a href="how-it-works.html">How it works</a></p>
-            <ul><li id="board-position"><a href="contribute.html?position=fan-experience#contribute"><span><strong>GLB Board</strong> · Board position</span><small aria-label="Apply for this seat">Apply →</small></a></li><li>Checking availability…</li></ul>
+            <ul><li id="board-position"><a href="contribute.html?position=fan-experience#contribute"><span><strong>GLB Board</strong> · Board position<span class="request-new" data-request-date-id="board-position" hidden>NEW!</span></span><small aria-label="Apply for this seat">Apply →</small></a></li><li>Checking availability…</li></ul>
           </aside>
           <a class="glb-universe-primary" href="contribute.html#open-artifacts">Browse all requests →</a>
         </div>
@@ -962,7 +962,7 @@
 
   <script src="scripts/season-site.js?v=20261114-showcase"></script>
 <script src="scripts/glb-ticker.js?v=20261114-offseason"></script>\n<script src="scripts/participation.js?v=20261113-members"></script>
-<script src="scripts/open-requests.js?v=1"></script>
+<script src="scripts/open-requests.js?v=new-badge"></script>
 <script src="scripts/glb-records.js?v=1"></script>
 <script>
 (() => {
@@ -992,6 +992,7 @@
     const club = document.createElement('strong');
     club.textContent = row.team_name;
     copy.append(club, ' · ' + GLBRequests.title(row));
+    copy.append(GLBRequests.badge(row.id));
     link.append(copy);
     const age = GLBRequests.age(row.id);
     if (age) { const date = document.createElement('small'); date.textContent = age; link.append(date); }

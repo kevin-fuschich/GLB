@@ -35,6 +35,7 @@
         const link=el('a');link.className='request-row';
         link.href='contribute.html?'+new URLSearchParams({artifact_id:artifact.id,team:artifact.team_slug,type:artifact.type,artifact:artifact.name || ''})+'#contribute';
         const copy=el('span');copy.append(el('strong',artifact.team_name),' · '+GLBRequests.title(artifact));
+        copy.append(GLBRequests.badge(artifact.id));
         link.append(copy);
         const age=GLBRequests.age(artifact.id);
         if(age)link.append(el('small',age));

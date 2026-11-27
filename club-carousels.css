@@ -37,3 +37,53 @@ html body .club-scroll-track > * {box-sizing:border-box;scroll-snap-align:start;
 .club-season-record>summary{cursor:pointer;font-weight:700}
 .glb-park-tile[open]>summary>.glb-tile-image{display:none!important}
 .glb-park-tile[open]>section>.card-header>.card-title{display:none}
+
+
+/* Shared team page, from the club hero through the season record. */
+html body main.club-standard {
+  box-sizing:border-box; width:min(100%,1180px); max-width:none; margin:0 auto;
+  padding:clamp(12px,2.5vw,30px) clamp(12px,3vw,36px) 40px;
+}
+main.club-standard > .club-shell {max-width:none; width:100%; padding:0}
+main.club-standard .club-shell, main.club-standard.club-shell {display:block}
+.club-standard [data-team-depth] {border-radius:8px; overflow:hidden}
+.club-standard .club-shell > .club-sections, .club-standard.club-shell > .club-sections {
+  display:flex; flex-wrap:wrap; gap:0 1.2rem; align-items:center; position:static;
+  padding:.25rem 0; margin:0 0 1.25rem; border:0; border-bottom:1px solid #b5bdc3;
+  border-radius:0; background:transparent; box-shadow:none;
+}
+.club-standard .club-sections a {
+  display:inline-flex; align-items:center; min-height:44px; padding:0 .15rem;
+  font:650 .95rem/1.25 Arial,sans-serif; color:inherit; text-decoration:underline;
+  text-decoration-color:transparent; text-underline-offset:.25em;
+}
+.club-standard .club-sections a:is(:hover,:focus-visible) {text-decoration-color:currentColor}
+html body main.club-standard .club-collection {
+  display:block; box-sizing:border-box; width:100%; max-width:none; min-width:0;
+  padding:0; margin:0 0 clamp(20px,3vw,36px); background:transparent;
+  color:inherit; border:0; border-radius:0; box-shadow:none; scroll-margin-top:5rem;
+}
+.club-standard .club-collection > :is(h2,.card-header h2),
+.club-standard .club-collection > .card-header h2 {
+  font:700 clamp(1.45rem,2.4vw,2rem)/1.15 Georgia,serif; letter-spacing:normal;
+  text-transform:none; color:inherit; margin:0 0 .65rem;
+}
+.club-standard .club-season-record {margin:0 0 20px; padding:12px 2px; scroll-margin-top:5rem}
+.club-standard .club-season-record > summary {font:650 1rem/1.5 Arial,sans-serif}
+.club-standard .club-collection .club-carousel-frame {gap:6px}
+.club-standard .club-carousel-frame .club-carousel-controls button {height:42px;min-height:42px;width:100%;border-radius:5px}
+@media(max-width:540px){
+  .club-standard .club-shell > .club-sections,.club-standard.club-shell > .club-sections {gap:0 .85rem}
+  .club-standard .club-sections a{font-size:.875rem}
+}
+.club-standard .club-collection :is(.section-heading,.santiago-section-heading) h2 {
+  font:700 clamp(1.45rem,2.4vw,2rem)/1.15 Georgia,serif; margin:0 0 .65rem;
+  letter-spacing:normal; text-transform:none;
+}
+.club-standard .club-collection > .card-body {padding-inline:0}
+.club-standard [data-team-depth] h1 {
+  font-size:clamp(2.1rem,5.4vw,4.2rem); line-height:1.03; margin-block:.25em;
+}
+.club-standard .club-collection a:focus-visible,.club-standard .club-sections a:focus-visible {
+  outline:2px solid currentColor; outline-offset:3px;
+}

@@ -104,6 +104,7 @@
   const records = [...main.querySelectorAll('section, details.santiago-record')].filter(section=>{
     if(section.closest('#around-park') || section.querySelector(cardSelector)) return false;
     const heading = section.querySelector('h2, summary')?.textContent.trim();
+    if(section.matches('details.santiago-record, #season, #leaders, #results, #latest-result, #overview, #roster')) return true;
     return /^(?:season snapshot|2026 season|team leaders|active roster|recent results|latest result)$/i.test(heading);
   }).filter((section,_,all)=>!all.some(other=>other!==section && other.contains(section)));
   if(records.length){
@@ -126,6 +127,47 @@
     }
     revealRecord();
     window.addEventListener('hashchange',revealRecord);
+  }
+  // Keep club artwork, media controls and claim targets attached to their original nodes.
+  const hero = main.querySelector('[data-team-depth]');
+  const cards = main.querySelector(cardSelector)?.closest('section');
+  const park = main.querySelector('#around-park');
+  const record = main.querySelector('.club-season-record');
+  const slug = location.pathname.match(/team-([a-z-]+)\.html$/)?.[1];
+  if (hero && cards && park && record && slug) {
+    const shell = hero.parentElement;
+    main.classList.add('club-standard');
+    shell.classList.add('club-shell');
+    const nav = shell.querySelector(':scope > nav') || document.createElement('nav');
+    nav.className = 'club-sections';
+    nav.setAttribute('aria-label', 'Team sections');
+    const sections = [
+      ['Player cards', '#' + cards.id],
+      ['Around the park', '#around-park'],
+      ['Season record', '#season-record'],
+      ['Open claims', 'contribute.html?club=' + encodeURIComponent(slug) + '#open-artifacts']
+    ];
+    nav.replaceChildren(...sections.map(([label, href]) => {
+      const link = document.createElement('a');
+      link.href = href;
+      link.textContent = label;
+      return link;
+    }));
+    hero.after(nav);
+    nav.after(cards);
+    cards.after(park);
+    park.after(record);
+    for (const section of [cards, park]) section.classList.add('club-collection');
+    const cardHeading = cards.querySelector('h2');
+    if (cardHeading) cardHeading.textContent = 'Player cards';
+    for (const link of cards.querySelectorAll('a[href="contribute.html#open-artifacts"]')) {
+      link.href = sections[3][1];
+    }
+    const driver = shell.querySelector(':scope > #donk');
+    const places = park.querySelector('.tol-places');
+    if (driver && places) places.append(driver);
+
+    hero.querySelector('.tol-actions')?.remove();
   }
   scan();
   const observer=new MutationObserver(scan);

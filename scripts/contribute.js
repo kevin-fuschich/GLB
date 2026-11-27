@@ -13,6 +13,14 @@
     const open=artifacts.filter(artifact=>artifact.type!=='sponsor' && artifact.claim_open && !claims[artifact.id]);
     const clubs=[...new Map(open.map(artifact=>[artifact.team_slug,artifact.team_name])).entries()];
     for(const [slug,name] of clubs){const option=el('option',name);option.value=slug;teamFilter.append(option);}
+    const requestedClub = new URLSearchParams(location.search).get('club');
+    if (requestedClub && artifacts.some(row => row.team_slug === requestedClub)) {
+      if (!clubs.some(([slug]) => slug === requestedClub)) {
+        const club = artifacts.find(row => row.team_slug === requestedClub);
+        teamFilter.add(new Option(club.team_name, requestedClub));
+      }
+      teamFilter.value = requestedClub;
+    }
     const featured=['TRI-HONEY-BOOKER','TPE-01','OSA-POTARI','TRI-FAIRMONT','MAY-SPIN-CYCLE','SPD-MASCOT','TPE-BENNY','LOU-LANDING','OSA-OKEO'];
     const ordered=[...open].sort((a,b)=>{
       const rank=a=>featured.includes(a.id)?featured.indexOf(a.id):100+(artwork[a.id]?0:1);

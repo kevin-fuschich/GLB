@@ -1,6 +1,7 @@
 {
   "schema": "glb.creative-artifacts.v1",
   "artifacts": [
+    {"artifact_id":"TOL-FAN-EXPERIENCE","name":"Hertz Donuts Park fan experience","type":"attraction","team_slug":"toledo-assembly","team_name":"Toledo Assembly","section":"park-experience","prompt":"Name a feature at Hertz Donuts Park. Where is it, and what do fans get to do there?","claim_open":true},
     {"artifact_id":"TPE-RING-WALK","name":"VELLO Ring Walk","type":"attraction","team_slug":"taipei-neon","team_name":"Taipei Neon","section":"ring-walk","prompt":"Invent a light cue or fan ritual for the VELLO Ring Walk. What sets it off, and what do the fans under the rings do?","claim_open":true},
     {
       "artifact_id": "OSA-OKEO",
@@ -1340,23 +1341,23 @@
     },
     {
       "artifact_id": "TOL-PARK",
-      "name": "The Glassworks",
+      "name": "Hertz Donuts Park",
       "type": "ballpark",
       "team_slug": "toledo-assembly",
       "team_name": "Toledo Assembly",
       "section": "glassworks",
-      "prompt": "Describe a seat or a sightline at The Glassworks that a first-time visitor might miss.",
+      "prompt": "Describe a seat or a sightline at Hertz Donuts Park that a first-time visitor might miss.",
       "claim_open": true
     },
     {
       "artifact_id": "TOL-MASCOT",
-      "name": "Gauge",
+      "name": "Larry the Lightning Bug",
       "type": "mascot",
       "team_slug": "toledo-assembly",
       "team_name": "Toledo Assembly",
       "section": "mascot",
-      "prompt": "Tell the story of an encounter with Gauge at a game.",
-      "claim_open": true
+      "prompt": "Toledo Assembly mascot.",
+      "claim_open": false
     },
     {
       "artifact_id": "TOL-STANDS",

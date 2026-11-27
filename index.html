@@ -815,7 +815,7 @@
           <aside class="glb-bulletin" aria-labelledby="bulletin-title">
             <h3 id="bulletin-title">Open artifacts</h3>
             <p class="request-guide">Choose a request to claim and create. <a href="how-it-works.html">How it works</a></p>
-            <ul><li id="board-position"><a href="contribute.html?position=fan-experience#contribute"><span><strong>GLB Board</strong> · Board position<span class="request-new" data-request-date-id="board-position" hidden>NEW!</span></span><small>No due date</small></a></li><li>Checking availability…</li></ul>
+            <ul><li id="board-position"><a href="contribute.html?position=fan-experience#contribute"><span><strong>GLB Board</strong> · Board position<span class="request-new" data-request-date-id="board-position" hidden>NEW!</span></span><small>Due <time datetime="2027-01-21">Thu, Jan 21, 2027</time></small></a></li><li>Checking availability…</li></ul>
           </aside>
           <a class="glb-universe-primary" href="contribute.html#open-artifacts">Fulfill a request</a>
         </div>
@@ -1010,6 +1010,15 @@
     ]);
     return creative.artifacts.filter(row => row.claim_open && !approved.claims?.[row.artifact_id]);
   }
+  // Fixed submission dates for the featured requests, in homepage display order.
+  const featuredDeadlines = {
+    'MYS-1-st-paul-frost-donk-driver': '2026-12-31',
+    'MYS-1-toledo-assembly-donk-driver': '2026-12-31',
+    'TOL-FAN-EXPERIENCE': '2027-01-07',
+    'MYS-1-vancouver-current-player': '2027-01-14',
+    'SPD-MASCOT': '2027-01-28',
+    'LOU-FLO': '2027-02-04'
+  };
   function entry(row) {
     const item = document.createElement('li');
     const link = document.createElement('a');
@@ -1021,9 +1030,13 @@
     copy.append(GLBRequests.badge(row.id));
     link.append(copy);
     const deadline = document.createElement('small');
-    const due = row.due_date ? new Date(row.due_date) : null;
+    const dueDate = featuredDeadlines[row.id] || row.due_date;
+    const due = dueDate ? new Date(dueDate) : null;
+    if (due && Number.isFinite(due.getTime())) {
+      due.setUTCDate(due.getUTCDate() + (4 - due.getUTCDay() + 7) % 7);
+    }
     deadline.textContent = due && Number.isFinite(due.getTime())
-      ? 'Due ' + due.toLocaleDateString('en-US', {month:'short',day:'numeric',year:'numeric',timeZone:'UTC'})
+      ? 'Due ' + due.toLocaleDateString('en-US', {weekday:'short',month:'short',day:'numeric',year:'numeric',timeZone:'UTC'})
       : 'No due date';
     link.append(deadline);
     item.append(link);
@@ -1040,7 +1053,7 @@
       const taken = new Set(claims.map(row => row.artifact_id));
       const openSlots = slots.filter(row => GLBRequests.available(row) && !taken.has(row.id));
       const open = [...openSlots, ...artifacts.map(row => ({...row,id:row.artifact_id}))].filter(row => !taken.has(row.id));
-      const preferred = ['MYS-1-st-paul-frost-donk-driver','TOL-FAN-EXPERIENCE','MYS-1-vancouver-current-player','SPD-MASCOT','MYS-1-toledo-assembly-donk-driver','LOU-FLO'];
+      const preferred = Object.keys(featuredDeadlines);
       const featured = preferred.map(id => open.find(row => row.id === id)).filter(Boolean);
       const items = [...featured, ...open.filter(row => !preferred.includes(row.id))].slice(0,6).map(entry);
       if (!items.length) status.textContent = 'All featured openings have been claimed.';

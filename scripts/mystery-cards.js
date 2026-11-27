@@ -13,8 +13,14 @@
     const item = make('article','','mystery-card');
     const revealed = slot.state === 'revealed';
     const label = labels[slot.type];
-    const mark = make('span',revealed ? slot.creation_name.slice(0,1) : '?','mystery-mark');
-    if (!revealed) {
+    let mark = make('span',revealed ? slot.creation_name.slice(0,1) : '?','mystery-mark');
+    if (!revealed && slot.type === 'donk_driver') {
+      mark = make('img','','driver-art');
+      mark.src = 'assets/donk/open-driver.svg';
+      mark.alt = '';
+      mark.width = 900;
+      mark.height = 600;
+    } else if (!revealed) {
       const glyph = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
       glyph.setAttribute('viewBox', '0 0 24 32');
       glyph.setAttribute('width', '30');
@@ -31,7 +37,7 @@
     if (['pending','upcoming'].includes(slot.state)) {
       item.append(make('strong',slot.state==='pending' ? 'In Board review' : 'Opens in round '+slot.round_no));
     } else {
-      const link = make('a',revealed ? 'View record' : slot.type==='donk_driver' ? 'Create the driver and car' : 'Create a '+label);
+      const link = make('a',revealed ? 'View record' : slot.type==='donk_driver' ? 'Create driver' : 'Create a '+label);
       link.href = revealed ? GLBRecords.href(slot.id) : 'contribute.html?artifact_id='+encodeURIComponent(slot.id)+'#contribute';
       item.append(link);
     }

@@ -32,3 +32,5 @@
   border-bottom: 3px double #a99369;
 }
 .mystery-card small{font:700 10px/1.4 system-ui;letter-spacing:.12em;color:#615438}.mystery-card h3,.mystery-card p{margin:0}.mystery-card p{font:15px/1.45 system-ui;color:#354352}.mystery-card a,.mystery-card strong{margin-top:auto;font:bold 14px/1.5 system-ui;color:#123d55}
+
+.driver-art{display:block;width:100%;height:auto}.mystery-card .driver-art~a{background:#173e40;color:white;padding:9px 16px;text-decoration:none;border-radius:3px}

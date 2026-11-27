@@ -222,7 +222,9 @@
             clearTimeout(changeTimer);
             heroMedia.classList.add('hero-changing');
             changeTimer = setTimeout(() => {
-              heroMedia.style.backgroundImage = `linear-gradient(to top, rgba(0,0,0,0.65), rgba(0,0,0,0.12)), url("${slide.image}")`;
+              const photo = heroMedia.querySelector('.featured-photo');
+              if (photo) photo.src = slide.image;
+              else heroMedia.style.backgroundImage = 'url("' + slide.image + '")';
               heroKicker.textContent = slide.kicker;
               heroTitle.textContent = slide.title;
               heroCopy.textContent = slide.deck;

@@ -3,7 +3,8 @@
   const form=document.getElementById('contributionForm');
   const controls=document.getElementById('draftControls');
   if(!form||!controls)return;
-  const id=new URLSearchParams(location.search).get('artifact_id')||'new-idea';
+  const params=new URLSearchParams(location.search);
+  const id=params.get('artifact_id')||(params.get('position')==='fan-experience'?'board-application-fan-experience':'new-idea');
   const key='glb-contribution-draft-v1:'+id+(new URLSearchParams(location.search).get('mode')==='collaboration'?':note':'');
   const fields=id==='new-idea'?['club','artifact_type','artifact','contribution','supporting_link']:id.startsWith('MYS-')&&!key.endsWith(':note')?['artifact','contribution','supporting_link']:['contribution','supporting_link'];
   const make=(tag,text)=>{const n=document.createElement(tag);n.textContent=text;return n;};

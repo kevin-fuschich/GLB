@@ -59,14 +59,30 @@
   for(const [key,id] of [['team','club'],['club','club'],['type','type'],['artifact','artifact']])if(params.has(key))document.getElementById(id).value=params.get(key)==='triangle-gold'?'durham-gold':params.get(key);
   const form=document.getElementById('contributionForm');
   const artifactId=params.get('artifact_id');
+  const application=!artifactId && params.get('position')==='fan-experience';
   const selection=document.getElementById('selectedArtifact');
   const client=window.GLBAuth?.client;
   let identity=null,accountRevision=0,selectionReady=!artifactId,selected=null;
-  const noteMode=params.get('mode')==='collaboration';
+  const noteMode=!application && params.get('mode')==='collaboration';
   const accountStatus=document.getElementById('contributionAccount');
   const signIn=document.getElementById('contributionSignIn');
   const response=document.getElementById('contributionResponse');
   const button=form.querySelector('button[type="submit"]');
+  if(application){
+    document.getElementById('contribution-title').textContent='Apply for a GLB Board position';
+    selection.textContent='Fan experience representative · Bring the fan’s perspective to the Board and propose ideas for attractions, traditions and game-day experiences across GLB.';
+    for(const id of ['ideaPitchText','pitchTips','previewContribution'])document.getElementById(id).hidden=true;
+    form.elements.club.value='league-wide';
+    form.elements.artifact_type.add(new Option('Board application','board_application',true,true));
+    form.elements.artifact.value='Board application · Fan experience representative';
+    for(const field of ['club','artifact_type','artifact'])form.elements[field].closest('label').hidden=true;
+    form.elements.submission_type.value='board_application';
+    form.elements.contribution.closest('label').firstChild.textContent='What would you bring to GLB, and what’s one idea you’d champion as a Board member?';
+    form.elements.contribution.placeholder='Tell the Board about your idea.';
+    form.elements.editorial_acknowledgment.nextElementSibling.textContent='I understand the GLB Board will review my application.';
+    form.querySelector('button[type="submit"] + small').textContent='You can track your application in My submissions.';
+    button.textContent='Submit application';
+  }
   const resumePath=location.pathname+location.search+'#contribute';
   signIn.addEventListener('click',()=>{try{sessionStorage.setItem('glb-contribution-return',resumePath);}catch{}});
   async function syncIdentity(user){
@@ -158,10 +174,11 @@
       const accountLink=el('a','Track it in My submissions →');accountLink.href='account.html';response.append(accountLink);
       button.textContent='Submitted for Board review';
       // Notification is best-effort; the database receipt above is authoritative.
+      if(application)return;
       const notification=new FormData(form);notification.set('user_id',submitter.user_id);notification.set('email',submitter.email || '');notification.set('club',selected?.team_slug || form.elements.club.value);notification.set('artifact_type',selected?.type || form.elements.artifact_type.value);notification.set('artifact',mystery ? form.elements.artifact.value : selected?.name || form.elements.artifact.value);notification.set('glb_submission_id',data);
       fetch(form.action,{method:'POST',body:notification,headers:{Accept:'application/json'}}).catch(()=>{});
     }catch(error){
-      button.disabled=false;button.textContent='Submit to the GLB Board';
+      button.disabled=false;button.textContent=application?'Submit application':'Submit to the GLB Board';
       const message=String(error.message || '');
       response.textContent=mystery && error.code==='23505'?'This opening is under review, or you already have a card in review or an approved creation this round. Check My submissions.':error.code==='23505'?'You already have a pending claim for this artifact. Check My submissions.':/Mystery openings|Mystery round|already claimed|closed to collaboration|Please wait|Daily contribution limit|sign-in has changed/.test(message)?message.replace(/mystery openings/gi,'Card openings').replace(/mystery round/gi,'Creation round').replace(/mystery creators/gi,'creators'):'Your submission could not be saved. Your draft is still here. Please try again.';
     }

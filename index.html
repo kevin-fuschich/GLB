@@ -781,7 +781,7 @@
           <aside class="glb-bulletin" aria-labelledby="bulletin-title">
             <h3 id="bulletin-title">Open requests</h3>
             <p class="request-guide">Choose a request to claim and create. <a href="how-it-works.html">How it works</a></p>
-            <ul><li>Checking availability…</li></ul>
+            <ul><li id="board-position"><a href="contribute.html?position=fan-experience#contribute"><span><strong>GLB Board</strong> · Board position</span><small aria-label="Apply for this seat">Apply →</small></a></li><li>Checking availability…</li></ul>
           </aside>
           <a class="glb-universe-primary" href="contribute.html#open-artifacts">Browse all requests →</a>
         </div>
@@ -967,6 +967,7 @@
 <script>
 (() => {
   const list = document.querySelector('.glb-bulletin ul');
+  const boardPosition = document.getElementById('board-position');
   const status = document.createElement('li');
   status.textContent = 'Checking open items…';
 
@@ -1014,7 +1015,7 @@
       if (!items.length) status.textContent = 'All featured openings have been claimed.';
       const signature = items.map(item => item.firstChild.href + item.textContent).join('|') || 'empty';
       if (list.dataset.selection !== signature) {
-        list.replaceChildren(...(items.length ? items : [status]));
+        list.replaceChildren(boardPosition, ...items);
         list.dataset.selection = signature;
       }
     } catch {
@@ -1023,7 +1024,7 @@
       link.href = 'contribute.html#open-artifacts';
       link.textContent = 'Browse requests →';
       status.append(link);
-      list.replaceChildren(status); delete list.dataset.selection;
+      list.replaceChildren(boardPosition, status); delete list.dataset.selection;
     } finally { busy = false; }
   }
   refresh();

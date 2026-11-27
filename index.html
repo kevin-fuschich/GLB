@@ -718,10 +718,7 @@
 <link rel="stylesheet" href="site-header.css?v=20261112">
 <script defer src="scripts/site-header.js?v=artifacts-nav"></script>
   <style>
-    @media (prefers-reduced-motion: no-preference) {
-      .hero-media { overflow:hidden; isolation:isolate; }
-      .hero-media::before { content:""; position:absolute; z-index:-1; inset:-25% 0; background:inherit; background-size:cover; background-position:center; transform:translateY(var(--team-depth-offset, 0px)); }
-    }
+
   </style>
   <script defer src="scripts/team-depth.js?v=home-1"></script>
 <style>
@@ -785,6 +782,11 @@
 .print-mateo{left:61.2%;top:58.7%;transform:rotate(7deg)}
 .print-honey{left:21.3%;top:94.8%;transform:rotate(-6deg)}
 .handwritten-note{position:absolute;left:60%;top:66%;width:29%;height:27%;transform:rotate(5deg)}
+</style><style>
+.hero-card .hero-media{min-height:0;background:#0b1e33}
+.hero-card .hero-media::before{display:none}
+.hero-card .featured-photo{width:100%;height:auto;aspect-ratio:3/2;object-fit:contain;display:block;background:#0b1e33}
+.hero-card .hero-content{position:static;background:#0b1e33}
 </style></head>
 <body data-season-page="home">
 
@@ -813,12 +815,12 @@
           <aside class="glb-bulletin" aria-labelledby="bulletin-title">
             <h3 id="bulletin-title">Open artifacts</h3>
             <p class="request-guide">Choose a request to claim and create. <a href="how-it-works.html">How it works</a></p>
-            <ul><li id="board-position"><a href="contribute.html?position=fan-experience#contribute"><span><strong>GLB Board</strong> · Board position<span class="request-new" data-request-date-id="board-position" hidden>NEW!</span></span><small aria-label="Apply for this seat">Apply →</small></a></li><li>Checking availability…</li></ul>
+            <ul><li id="board-position"><a href="contribute.html?position=fan-experience#contribute"><span><strong>GLB Board</strong> · Board position<span class="request-new" data-request-date-id="board-position" hidden>NEW!</span></span><small>No due date</small></a></li><li>Checking availability…</li></ul>
           </aside>
           <a class="glb-universe-primary" href="contribute.html#open-artifacts">Fulfill a request</a>
         </div>
         <div class="clubhouse-board">
-          <img src="assets/images/clubhouse-request-board.svg" width="1100" height="1100" alt="Pinned cards for VELLO Stadium – After dark, Mateo Ríos of Triangle Gold, and Honey Booker live at WEEJIE Park.">
+          <img src="assets/images/clubhouse-request-board.svg?v=clean-cards" width="1100" height="1100" alt="Pinned cards for VELLO Stadium – After dark, Mateo Ríos of Triangle Gold, and Honey Booker live at WEEJIE Park.">
           <a class="print-link print-taipei" href="contribute.html?team=taipei-neon&amp;type=ballpark&amp;artifact=VELLO+Stadium+atmosphere#contribute">Create the atmosphere</a>
           <a class="print-link print-mateo" href="contribute.html?artifact_id=TRI-14#contribute">Write the bio</a>
           <a class="print-link print-honey" href="contribute.html?artifact_id=TRI-HONEY-BOOKER&amp;mode=collaboration#contribute">Write the story</a>
@@ -828,7 +830,7 @@
       <div class="main-grid">
 
         <section class="card hero-card" aria-label="Featured story">
-          <div class="hero-media" data-team-depth>
+          <div class="hero-media"><img class="featured-photo" src="assets/postseason/2026/osaka-final-out-v1.webp" alt="">
             <div class="hero-content">
               <div class="hero-kicker">On the Diamond</div>
               <h1 class="hero-title">Global League Baseball</h1>
@@ -984,7 +986,7 @@
 
   </script>
 
-  <script src="scripts/season-site.js?v=20261114-showcase"></script>
+  <script src="scripts/season-site.js?v=full-photo"></script>
 <script src="scripts/glb-ticker.js?v=20261114-offseason"></script>\n<script src="scripts/participation.js?v=20261113-members"></script>
 <script src="scripts/open-requests.js?v=new-badge"></script>
 <script src="scripts/glb-records.js?v=1"></script>
@@ -1018,8 +1020,12 @@
     copy.append(club, ' · ' + GLBRequests.title(row));
     copy.append(GLBRequests.badge(row.id));
     link.append(copy);
-    const age = GLBRequests.age(row.id);
-    if (age) { const date = document.createElement('small'); date.textContent = age; link.append(date); }
+    const deadline = document.createElement('small');
+    const due = row.due_date ? new Date(row.due_date) : null;
+    deadline.textContent = due && Number.isFinite(due.getTime())
+      ? 'Due ' + due.toLocaleDateString('en-US', {month:'short',day:'numeric',year:'numeric',timeZone:'UTC'})
+      : 'No due date';
+    link.append(deadline);
     item.append(link);
     return item;
   }

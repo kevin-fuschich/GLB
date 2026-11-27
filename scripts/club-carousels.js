@@ -145,7 +145,7 @@
       ['Player cards', '#' + cards.id],
       ['Around the park', '#around-park'],
       ['Season record', '#season-record'],
-      ['Open claims', 'contribute.html?club=' + encodeURIComponent(slug) + '#open-artifacts']
+      ['Open requests', 'contribute.html?club=' + encodeURIComponent(slug) + '#open-artifacts']
     ];
     nav.replaceChildren(...sections.map(([label, href]) => {
       const link = document.createElement('a');

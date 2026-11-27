@@ -4,55 +4,54 @@
   const teamFilter=document.getElementById('artifactClub');
   const typeFilter=document.getElementById('artifactKind');
   const el=(tag,text)=>{const node=document.createElement(tag);if(text)node.textContent=text;return node;};
-  const labels={sponsor:'Entire sponsor entity',broadcaster:'Play-by-play broadcaster',announcer:'In-game announcer',brand:'Brand & business',player:'Player card',mascot:'Mascot',entertainer:'Entertainer',donk_driver:'DONK driver',donk_vehicle:'DONK vehicle',attraction:'Fan attraction',ballpark:'Ballpark',tradition:'Fan tradition',giveaway:'Giveaway'};
-  const needs = artifact => artifact.id==='TPE-RING-WALK'
-    ? ['Needs a fan ritual','Write the ritual']
-    : ['Needs a bio','Write the bio'];
   const catalogRequest=GLBArtifacts.load();
-  Promise.all([catalogRequest,fetch('data/artifacts/artwork.json').then(r=>r.ok?r.json():{}).catch(()=>({}))]).then(([{artifacts,claims,incomplete},artwork])=>{
-    const open=artifacts.filter(artifact=>artifact.type!=='sponsor' && artifact.claim_open && !claims[artifact.id]);
+  Promise.all([catalogRequest, GLBRecords.read('rpc/glb_mysteries',{}).catch(()=>null)]).then(([{artifacts,claims,incomplete},slots])=>{
+    const open = [...(slots || []).filter(GLBRequests.available), ...artifacts.filter(artifact=>artifact.type!=='sponsor' && artifact.claim_open && !claims[artifact.id])];
     const clubs=[...new Map(open.map(artifact=>[artifact.team_slug,artifact.team_name])).entries()];
     for(const [slug,name] of clubs){const option=el('option',name);option.value=slug;teamFilter.append(option);}
     const requestedClub = new URLSearchParams(location.search).get('club');
-    if (requestedClub && artifacts.some(row => row.team_slug === requestedClub)) {
+    if (requestedClub && [...artifacts,...open].some(row => row.team_slug === requestedClub)) {
       if (!clubs.some(([slug]) => slug === requestedClub)) {
         const club = artifacts.find(row => row.team_slug === requestedClub);
         teamFilter.add(new Option(club.team_name, requestedClub));
       }
       teamFilter.value = requestedClub;
     }
-    const featured=['TRI-HONEY-BOOKER','TPE-01','OSA-POTARI','TRI-FAIRMONT','MAY-SPIN-CYCLE','SPD-MASCOT','TPE-BENNY','LOU-LANDING','OSA-OKEO'];
+    const featured=['MYS-1-st-paul-frost-donk-driver','TOL-FAN-EXPERIENCE','MYS-1-vancouver-current-player','TRI-HONEY-BOOKER','TPE-01','OSA-POTARI','TRI-FAIRMONT','MAY-SPIN-CYCLE','SPD-MASCOT','TPE-BENNY','LOU-LANDING','OSA-OKEO'];
     const ordered=[...open].sort((a,b)=>{
-      const rank=a=>featured.includes(a.id)?featured.indexOf(a.id):100+(artwork[a.id]?0:1);
+      const rank=a=>featured.includes(a.id)?featured.indexOf(a.id):featured.length;
       return rank(a)-rank(b);
     });
     let limit=9;
-    const more=el('button','Explore more artifacts');more.type='button';more.className='artifact-more';host.after(more);
+    const more=el('button','Show more requests');more.type='button';more.className='artifact-more';host.after(more);
     more.addEventListener('click',()=>{limit+=9;render();});
     function render(){
       const matches=ordered.filter(artifact=>(!teamFilter.value||artifact.team_slug===teamFilter.value)&&(!typeFilter.value||artifact.type===typeFilter.value));
       const visible=matches.slice(0,limit);
       more.hidden=visible.length>=matches.length;
-      status.textContent='Showing '+visible.length+' of '+matches.length+' open artifacts'+(incomplete?' · Some collections could not load. Refresh to check the rest.':' · Find something that sparks an idea.');
+      status.textContent='Showing '+visible.length+' of '+matches.length+' open requests'+((incomplete || !slots)?' · Some collections could not load. Refresh to check the rest.':'');
       host.replaceChildren(...visible.map(artifact=>{
         const card=el('article');card.className='artifact-tile';
-        const art=artwork[artifact.id];
-        const media=el('div');media.className='artifact-art'+(artifact.type==='player'?' artifact-art-player':'');
-        if(art){const img=el('img');img.src=art.src;img.alt=art.alt;img.loading='lazy';img.width=640;img.height=400;img.addEventListener('error',()=>{img.remove();media.classList.add('artifact-art-fallback');media.textContent=labels[artifact.type]||'GLB';},{once:true});media.append(img);}
-        else {media.classList.add('artifact-art-fallback');media.textContent=labels[artifact.type]||'GLB';}
-        card.append(media);
-        card.append(el('small',artifact.team_name+' · '+artifact.id),el('h3',artifact.name),el('strong',needs(artifact)[0]));
-        const link=el('a',needs(artifact)[1]);link.className='glb-claim-now';link.href='contribute.html?'+new URLSearchParams({artifact_id:artifact.id,team:artifact.team_slug,type:artifact.type,artifact:artifact.name})+'#contribute';link.setAttribute('aria-label',needs(artifact)[1]+' for '+artifact.name);
-        const prompt=el('div');prompt.className='artifact-prompt';prompt.append(el('small',labels[artifact.type] || 'Artifact'),el('p',artifact.prompt || 'A defining moment, a personal detail or a story from beyond the game. Build on the existing record.'));card.append(prompt);
+        const link=el('a');link.className='request-row';
+        link.href='contribute.html?'+new URLSearchParams({artifact_id:artifact.id,team:artifact.team_slug,type:artifact.type,artifact:artifact.name || ''})+'#contribute';
+        const copy=el('span');copy.append(el('strong',artifact.team_name),' · '+GLBRequests.title(artifact));
+        link.append(copy);
+        const age=GLBRequests.age(artifact.id);
+        if(age)link.append(el('small',age));
         card.append(link);
         const recordHref=artifact.record_href || (artifact.type==='player' ? artifact.href : null);
-        if(recordHref){const record=el('a','View the existing record');record.href=recordHref;record.className='artifact-record-link';card.append(record);}
+        if(recordHref || artifact.prompt){
+          const details=el('details');details.append(el('summary','Details'));
+          if(artifact.prompt)details.append(el('p',artifact.prompt));
+          if(recordHref){const record=el('a','View existing record');record.href=recordHref;details.append(record);}
+          card.append(details);
+        }
         return card;
       }));
-      if(!visible.length)host.append(el('p','No open artifacts match these filters. Try another club or artifact type.'));
+      if(!visible.length)host.append(el('p','No open requests match these filters. Try another club or artifact type.'));
     }
     const reset=()=>{limit=9;render();};teamFilter.addEventListener('change',reset);typeFilter.addEventListener('change',reset);render();
-  }).catch(()=>{status.textContent='Open artifacts could not load. Please refresh, or visit a club’s cards to check availability.';});
+  }).catch(()=>{status.textContent='Open requests could not load. Please refresh, or visit a club’s cards to check availability.';});
   const clubs=['Albuquerque Aeros','Birmingham Vulcans','Triangle Gold','Fresno Yield','Louisville Naturals','Mayagüez Sultans','Monterrey Cementeros','Osaka Spirits','San Pedro Cocolos','Santiago Caballeros','Spokane Alloys','St. Paul Frost','Taipei Neon','Tijuana Técnicos','Toledo Assembly','Vancouver Current'];
   const select=document.getElementById('club');
   for(const name of clubs){const option=el('option',name);option.value=name==='Triangle Gold'?'durham-gold':name.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');select.append(option);}
@@ -112,7 +111,7 @@
     document.getElementById('artifact').readOnly=!mystery;document.getElementById('club').disabled=true;document.getElementById('type').disabled=true;
     document.getElementById('ideaPitchText').hidden=true;document.getElementById('pitchTips').hidden=true;
     document.getElementById('contribution-title').textContent=(noteMode?'Add a note: ':'Claim & Create: ')+selected.name;
-    selection.textContent=noteMode?'The original claim stays credited to '+approved.user_id+'. Your note needs its own Board approval.':needs(selected)[0]+' · '+(selected.prompt || 'Add something of your own.');
+    selection.textContent=noteMode?'The original claim stays credited to '+approved.user_id+'. Your note needs its own Board approval.':GLBRequests.title(selected)+' · '+(selected.prompt || 'Add something of your own.');
     if(selected.prompt)form.elements.contribution.placeholder=selected.prompt;
     if(mystery){
       document.getElementById('contribution-title').textContent='Create a '+selected.name;

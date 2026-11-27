@@ -708,6 +708,10 @@
         gap:6px;
       }
     }
+    .glb-bulletin .request-guide{margin:8px 0;font:14px/1.4 Arial,sans-serif}
+    .glb-bulletin .request-guide a{display:inline;padding:0;text-decoration:underline}
+    .glb-bulletin li>a{display:flex;align-items:baseline;justify-content:space-between;gap:10px;min-height:44px;box-sizing:border-box}
+    .glb-bulletin li>a small{white-space:nowrap;font:12px/1.5 Arial,sans-serif;color:#505b60}
   </style>
   <link rel="stylesheet" href="participation.css?v=20261107-claim-create">
   <link rel="stylesheet" href="home-claim.css?v=20261110-1">
@@ -772,19 +776,14 @@
     <div class="container">
       <section class="glb-participation glb-universe-invite" data-team-depth aria-labelledby="create-title">
         <div class="claim-copy">
-          <div class="glb-eyebrow"><span class="claim-spark" aria-hidden="true"></span> A living world. Built together.</div>
-          <h2 id="create-title">We create this world <em>together.</em></h2>
+          
+          <h2 id="create-title">Pick a request.</h2>
           <aside class="glb-bulletin" aria-labelledby="bulletin-title">
-            <h3 id="bulletin-title">Open claims</h3>
-            <ul>
-              <li><a href="team-st-paul-frost.html#donk"><strong>St. Paul Frost</strong><span>Create the DONK driver and car →</span></a></li>
-              <li><a href="team-toledo-assembly.html#donk"><strong>Toledo Assembly</strong><span>Create the DONK driver and car →</span></a></li>
-              <li><a id="roster-invitation-link" href="contribute.html?artifact_id=MYS-1-vancouver-current-player#contribute"><strong id="roster-invitation">Vancouver Current</strong><span>Create a player for the open roster spot →</span></a></li>
-              <li><a data-bulletin-id="SPD-MASCOT" href="contribute.html?artifact_id=SPD-MASCOT#contribute"><strong>San Pedro Cocolos</strong><span>Write a mascot bio for Bolo →</span></a></li>
-              <li><a data-bulletin-id="LOU-FLO" href="contribute.html?artifact_id=LOU-FLO#contribute"><strong>Louisville Naturals</strong><span>Write a DONK driver bio for Flo Troup →</span></a></li>
-            </ul>
+            <h3 id="bulletin-title">Open requests</h3>
+            <p class="request-guide">Choose a request to claim and create. <a href="how-it-works.html">How it works</a></p>
+            <ul><li>Checking availability…</li></ul>
           </aside>
-          <a class="glb-universe-primary" href="how-it-works.html">How it works →</a>
+          <a class="glb-universe-primary" href="contribute.html#open-artifacts">Browse all requests →</a>
         </div>
         <div class="claim-world" aria-label="Explore the people and places of GLB">
           <a class="claim-window claim-window-park" href="team-taipei-neon.html" aria-label="Explore Taipei Neon">
@@ -902,7 +901,7 @@
       <section id="about-glb" aria-labelledby="about-glb-title">
         <h2 id="about-glb-title">What would you create?</h2>
         <p>Pick up a story someone else has started, or build something all your own.</p>
-        <a href="contribute.html#open-artifacts">Explore open claims →</a>
+        <a href="contribute.html#open-artifacts">Browse open requests →</a>
       </section>
     </div>
   </main>
@@ -963,13 +962,14 @@
 
   <script src="scripts/season-site.js?v=20261114-showcase"></script>
 <script src="scripts/glb-ticker.js?v=20261114-offseason"></script>\n<script src="scripts/participation.js?v=20261113-members"></script>
+<script src="scripts/open-requests.js?v=1"></script>
 <script src="scripts/glb-records.js?v=1"></script>
 <script>
 (() => {
   const list = document.querySelector('.glb-bulletin ul');
   const status = document.createElement('li');
   status.textContent = 'Checking open items…';
-  const initialItems = [...list.children];
+
   let busy = false;
   let registry;
   async function loadRegistry() {
@@ -983,15 +983,17 @@
     ]);
     return creative.artifacts.filter(row => row.claim_open && !approved.claims?.[row.artifact_id]);
   }
-  function entry(id, title, action) {
+  function entry(row) {
     const item = document.createElement('li');
     const link = document.createElement('a');
-    link.href = 'contribute.html?artifact_id=' + encodeURIComponent(id) + '#contribute';
-    const heading = document.createElement('strong');
-    heading.textContent = title;
-    const label = document.createElement('span');
-    label.textContent = action + ' →';
-    link.append(heading, label);
+    link.href = 'contribute.html?artifact_id=' + encodeURIComponent(row.id) + '#contribute';
+    const copy = document.createElement('span');
+    const club = document.createElement('strong');
+    club.textContent = row.team_name;
+    copy.append(club, ' · ' + GLBRequests.title(row));
+    link.append(copy);
+    const age = GLBRequests.age(row.id);
+    if (age) { const date = document.createElement('small'); date.textContent = age; link.append(date); }
     item.append(link);
     return item;
   }
@@ -1004,34 +1006,24 @@
         registry, GLBRecords.read('glb_claims', {select:'artifact_id'}), GLBRecords.read('rpc/glb_mysteries', {})
       ]);
       const taken = new Set(claims.map(row => row.artifact_id));
-      const players = slots.filter(row => row.type === 'player' && ['newcomers','open'].includes(row.state));
-      const player = players.find(row => row.team_slug === 'vancouver-current') || players[0];
-      const items = slots
-        .filter(slot => slot.type === 'donk_driver' && ['st-paul-frost','toledo-assembly'].includes(slot.team_slug) && ['newcomers','open'].includes(slot.state))
-        .sort((a,b) => a.team_name.localeCompare(b.team_name))
-        .map(slot => entry(slot.id, slot.team_name, 'Create the DONK driver and car'));
-      if (player) items.push(entry(player.id, player.team_name, 'Create a player for the open roster spot'));
-      for (const [type, first, action] of [
-        ['mascot','SPD-MASCOT','Write a mascot bio for '],
-        ['donk_driver','LOU-FLO','Write a DONK driver bio for ']
-      ]) {
-        const open = artifacts.filter(row => row.type === type && !taken.has(row.artifact_id));
-        const pick = open.find(row => row.artifact_id === first) || open[0];
-        if (pick) items.push(entry(pick.artifact_id, pick.team_name, action + pick.name));
-      }
+      const openSlots = slots.filter(row => GLBRequests.available(row) && !taken.has(row.id));
+      const open = [...openSlots, ...artifacts.map(row => ({...row,id:row.artifact_id}))].filter(row => !taken.has(row.id));
+      const preferred = ['MYS-1-st-paul-frost-donk-driver','TOL-FAN-EXPERIENCE','MYS-1-vancouver-current-player','SPD-MASCOT','MYS-1-toledo-assembly-donk-driver','LOU-FLO'];
+      const featured = preferred.map(id => open.find(row => row.id === id)).filter(Boolean);
+      const items = [...featured, ...open.filter(row => !preferred.includes(row.id))].slice(0,6).map(entry);
       if (!items.length) status.textContent = 'All featured openings have been claimed.';
-      const signature = items.map(item => item.firstChild.href).join('|') || 'empty';
+      const signature = items.map(item => item.firstChild.href + item.textContent).join('|') || 'empty';
       if (list.dataset.selection !== signature) {
         list.replaceChildren(...(items.length ? items : [status]));
         list.dataset.selection = signature;
       }
     } catch {
-      status.textContent = 'Open the claim board to check current openings.';
+      status.textContent = 'Check the request board for current availability. ';
       const link = document.createElement('a');
       link.href = 'contribute.html#open-artifacts';
-      link.textContent = 'Browse Claim & Create →';
+      link.textContent = 'Browse requests →';
       status.append(link);
-      if (!list.dataset.selection) list.replaceChildren(...initialItems, status);
+      list.replaceChildren(status); delete list.dataset.selection;
     } finally { busy = false; }
   }
   refresh();

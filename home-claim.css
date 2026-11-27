@@ -37,18 +37,18 @@
 /* Prints on the homepage request board. */
 .claim-world {
   display:grid; grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);
-  grid-template-rows:1fr 1fr; gap:14px; height:clamp(350px,35vw,440px);
+  grid-template-rows:auto auto; align-content:center; gap:16px; height:auto;
   padding:22px; box-sizing:border-box; border:5px solid #75553b;
   background-color:#ba956f;
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='150' height='150'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.74' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Cpath fill='%235f3821' opacity='.45' filter='url(%23g)' d='M0 0h150v150H0z'/%3E%3C/svg%3E");
   box-shadow:inset 0 2px 6px #543d3355;
 }
 .claim-world .claim-window {
-  position:relative; inset:auto; min-width:0; width:auto; height:auto; border:5px solid #fff9ed;
-  border-radius:1px; background:#fff9ed; display:grid; grid-template-rows:minmax(0,1fr) auto;
+  position:relative; inset:auto; min-width:0; width:100%; height:auto; box-sizing:border-box; border:5px solid #fff9ed;
+  border-radius:1px; background:#fff9ed; display:flex; flex-direction:column;
   box-shadow:1px 4px 5px #37251966; text-decoration:none;
 }
-.claim-world .claim-window img {display:block;min-height:0;scale:1;translate:none}
+.claim-world .claim-window img {display:block;width:100%;height:auto;aspect-ratio:2.1;object-fit:cover;scale:1;translate:none}
 .claim-world .claim-window::after {display:none}
 .claim-world .claim-window::before {
   content:""; position:absolute; z-index:2; top:1px; left:48%; width:11px; height:11px;
@@ -57,9 +57,15 @@
 }
 .claim-window-park {grid-area:1/1;transform:rotate(-2deg)}
 .claim-window-honey {grid-area:2/1;transform:rotate(1.5deg)}
-.claim-window-player {grid-area:1/2/3/3;align-self:center;aspect-ratio:3/5;transform:rotate(3deg)}
-.claim-world .claim-window-label {position:static;padding:5px 2px 1px;color:#242c31;font:700 13px/1.2 Georgia,serif}
-.claim-world .claim-window-label small {color:#4c514c;font:600 9px/1.25 system-ui;margin-bottom:2px}
+.claim-window-player {grid-area:1/2/3/3;align-self:center;aspect-ratio:auto;transform:rotate(3deg)}
+.claim-world .claim-window-label {
+  position:static; display:block; padding:8px 6px; background:#fff9ed;
+  color:#202a30; font:700 clamp(16px,1.4vw,21px)/1.15 Georgia,serif;
+}
+.claim-world .claim-window-label small {display:block;margin-bottom:3px;color:#445058;font:650 11px/1.3 system-ui}
+.claim-world .claim-window-player img {aspect-ratio:3/4}
+.claim-world .claim-window-player .claim-window-label {border-top:3px solid #bf984f;background:#172d40;color:#fff}
+.claim-world .claim-window-player small {color:#f1d393}
 .claim-world a:focus-visible {z-index:5;outline:3px solid #123c50;outline-offset:2px}
-@media(max-width:850px){.claim-world{padding:14px;gap:10px}.claim-world .claim-window-label{font-size:12px}}
-@media(max-width:650px){.claim-world{margin:0;height:345px}}
+@media(max-width:950px){.glb-participation.glb-universe-invite{grid-template-columns:1fr}.claim-world{width:100%;max-width:660px;height:auto;margin:0 auto}}
+@media(max-width:520px){.claim-world{padding:14px;gap:12px;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr)}.claim-world .claim-window-label{padding:6px 3px}.claim-world .claim-window-label>span{display:none}}

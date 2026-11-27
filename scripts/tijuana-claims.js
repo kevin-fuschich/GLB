@@ -12,9 +12,10 @@
       const title=document.createElement('h3');title.textContent=artifact.name;
       const serial=document.createElement('small');serial.textContent=id;
       const status=document.createElement('p');status.textContent=claim?'Claimed by '+claim.user_id:artifact.claimable?'Unclaimed · Open for your contribution':'Opening soon';
+      if(!claim && artifact.claimable){status.textContent='Artifact open';status.className='glb-open-flag';}
       entry.append(title,serial,status);
       if(claim || artifact.claimable){const link=document.createElement('a');link.textContent=claim?'View public record →':'Claim now';if(!claim){link.className='glb-claim-now';link.setAttribute('aria-label','Claim now: '+artifact.name);}link.href=claim?'artifact.html?artifact_id='+encodeURIComponent(id):'contribute.html?'+new URLSearchParams({artifact_id:id,team:'tijuana-tecnicos',type:artifact.type || 'player',artifact:artifact.name})+'#contribute';entry.append(link);
-        for(const other of document.querySelectorAll('[data-claim-link]'))if(other.dataset.claimLink===id){other.href=link.href;other.textContent=link.textContent;if(!claim){other.classList.add('glb-claim-now');other.setAttribute('aria-label',link.getAttribute('aria-label'));}}
+        for(const other of document.querySelectorAll('[data-claim-link]'))if(other.dataset.claimLink===id){other.href=link.href;other.textContent=link.textContent;if(!claim){const flag=status.cloneNode(true);other.before(flag);other.classList.add('glb-claim-now');other.setAttribute('aria-label',link.getAttribute('aria-label'));}}
       }
       host.append(entry);
     }

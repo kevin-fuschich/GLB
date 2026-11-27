@@ -1346,9 +1346,9 @@ text-transform:uppercase;
 .mty-claim{padding:16px 0;border-top:1px solid #dcc8ce}.mty-claim h3{margin:0 0 8px;font-size:17px}.mty-claim button{padding:10px 14px;background:#6b294c;color:#fff;border:0;border-radius:5px;font:inherit;cursor:pointer}.mty-claim button:disabled{opacity:.65;cursor:default}.mty-claim form{display:grid;gap:10px;margin-top:12px}.mty-claim form[hidden]{display:none}.mty-claim label{display:grid;gap:4px;font-size:13px}.mty-claim input,.mty-claim textarea{width:100%;min-width:0;padding:9px;border:1px solid #ba9fac;border-radius:4px;font:inherit}.mty-claim textarea{min-height:90px}.mty-claim-status{font-size:13px;line-height:1.5;margin-top:8px}.mty-claim small{display:block;margin:8px 0;color:#6b294c}
 
 .mty-card-preview{min-width:0}.mty-claim-link{display:inline-block;margin-top:12px;padding:9px 12px;border:1px solid #6b294c;border-radius:4px;color:#6b294c;font-size:12px;font-weight:750;text-decoration:none}.mty-claim-link:hover{background:#f5e8ed}.mty-claim-link--pending{border-color:#c6b5bd;color:#75656d}.mty-ground-photo{margin:24px 0 0}.mty-ground-photo img{display:block;width:100%;height:auto;border-radius:8px}.mty-ground-photo figcaption{margin-top:8px;font-size:12px;color:#75656d}@media(max-width:480px){.mty-card-previews{gap:12px!important}.mty-claim-link{font-size:11px;padding:8px}}
-</style><link rel="stylesheet" href="tijuana-cards.css?v=20261011-physical-flips"><link rel="stylesheet" href="player-cards.css?v=profiles-20261114">
+</style><link rel="stylesheet" href="tijuana-cards.css?v=20261011-physical-flips"><link rel="stylesheet" href="player-cards.css?v=card-actions">
 <link rel="stylesheet" href="compact-clubs.css?v=1"><link rel="stylesheet" href="site-header.css?v=20261112">
-<script defer src="scripts/site-header.js?v=20261114-offseason"></script>
+<script defer src="scripts/site-header.js?v=card-actions"></script>
 <style>
 .mty-mascot-photo video{display:block;width:100%;height:auto;aspect-ratio:910/512;background:#0b1e33;border-radius:10px}
 .mty-mascot-photo [hidden]{display:none!important}
@@ -1406,7 +1406,7 @@ text-transform:uppercase;
 </div>
 </div>
 
-</footer><script src="scripts/glb-records.js?v=1"></script><script src="scripts/player-cards.js?v=profiles-20261114"></script><script>
+</footer><script src="scripts/glb-records.js?v=1"></script><script src="scripts/player-cards.js?v=card-actions"></script><script>
 const slug='monterrey-cementeros';
 const get=async p=>{const r=await fetch(p,{cache:'no-store'});if(!r.ok)throw Error(p+': '+r.status);return r.json()};
 const text=(tag,value,cls)=>{const e=document.createElement(tag);e.textContent=String(value??'—');if(cls)e.className=cls;return e};
@@ -1425,7 +1425,7 @@ const text=(tag,value,cls)=>{const e=document.createElement(tag);e.textContent=S
  }
  get('data/season/player-stats.json').then(rows=>{for(const p of roster.players){const row=rows.find(r=>r.team_slug===slug&&r.player===p.slug);const pitcher=['SP','RP','CL'].includes(p.position);for(const [label,value]of pitcher?[['IP',row?.pitching?.IP],['K',row?.pitching?.K],['ERA',row?.pitching?.ERA]]:[['AVG',row?.batting?.AVG],['HR',row?.batting?.HR],['RBI',row?.batting?.RBI]]){const item=document.createElement('div');item.append(text('b',value),text('span',label));document.getElementById('line-'+p.slug).append(item)}}}).catch(console.warn);
  }catch(e){document.getElementById('mtyCards').textContent='Cards could not load. Please refresh.';console.warn(e)}
- const claimsScript=document.createElement('script');claimsScript.src='scripts/monterrey-claims.js?v=20261113-members';document.body.append(claimsScript);
+ const claimsScript=document.createElement('script');claimsScript.src='scripts/monterrey-claims.js?v=card-actions';document.body.append(claimsScript);
  try{
  const [registry,standings,games]=await Promise.all([get('data/teams/teams.json'),get('current/standings.json'),get('data/season/games.json')]);
  const teams=Object.entries(registry.divisions).flatMap(([division,teams])=>teams.map(t=>({...t,division})));const club=teams.find(t=>t.slug===slug);if(club){document.getElementById('division').textContent=club.division+' Division';document.getElementById('fileDivision').textContent=club.division;}
@@ -1437,6 +1437,6 @@ const text=(tag,value,cls)=>{const e=document.createElement(tag);e.textContent=S
  }catch(e){document.getElementById('recentGames').textContent='Season results could not load. Please refresh.';console.warn(e)}
 })();
 const navToggle=document.getElementById('navToggle'),mobileMenu=document.getElementById('mobileMenu');
-</script><script src="scripts/glb-ticker.js?v=20261114-offseason"></script><script src="scripts/participation.js?v=20261113-members"></script>
+</script><script src="scripts/glb-ticker.js?v=20261114-offseason"></script><script src="scripts/participation.js?v=card-actions"></script>
 <script src="scripts/compact-clubs.js?v=club-collections"></script><script src="scripts/team-films.js?v=1"></script><script src="scripts/mystery-cards.js"></script><script src="scripts/club-carousels.js?v=open-requests"></script></body></html>
 

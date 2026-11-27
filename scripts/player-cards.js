@@ -226,10 +226,12 @@
     playerAvailability.then(open => {
       const item=open.get(player.teamSlug+'/'+player.slug);
       if (!item) return;
-      const badge=text('a','Claim now','glb-claim-now');
-      badge.setAttribute('aria-label','Claim now: '+item.name);
-      badge.href='contribute.html?'+new URLSearchParams({artifact_id:item.id,team:item.team_slug,type:'player',artifact:item.name})+'#contribute';
-      host.append(badge);
+      const action=text('a','Claim now','glb-claim-now');
+      action.setAttribute('aria-label','Claim now: '+item.name);
+      action.href='contribute.html?'+new URLSearchParams({artifact_id:item.id,team:item.team_slug,type:'player',artifact:item.name})+'#contribute';
+      const controls=text('div','','glb-card-claim');
+      controls.append(text('span','Artifact open','glb-open-flag'),action);
+      host.append(controls);
     });
   }
   let publicClaimsRequest;
@@ -283,7 +285,8 @@
       front.append(photo,mark,plate);inner.replaceChildren(front,reverse(data,stats,code));update();
     };
     button.addEventListener('click',()=>{flipped=!flipped;update();});
-    button.append(inner);card.append(button,text('p','Select card to flip','fs-flip-note'));
+    const cue=text('span','Flip','fs-flip-cue');cue.setAttribute('aria-hidden','true');
+    button.append(inner,cue);card.append(button);
     if(link){const file=text('a','Player file →','fs-file');file.href=`player.html?team=${encodeURIComponent(player.teamSlug)}&player=${encodeURIComponent(player.slug)}`;card.append(file);}
     paint(player,record);
     if(frozen)return card;

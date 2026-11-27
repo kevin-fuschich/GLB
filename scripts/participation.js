@@ -49,7 +49,8 @@
       else {
         const link=document.createElement('a');
         link.href='contribute.html?team='+encodeURIComponent(artifact.team_slug)+'&type='+encodeURIComponent(artifact.type)+'&artifact='+encodeURIComponent(artifact.name)+'&artifact_id='+encodeURIComponent(artifact.artifact_id)+'#contribute';
-        link.textContent='Claim & Create: '+artifact.name;const badge=document.createElement('span');badge.className='glb-claim-now';badge.textContent='Claim now';link.prepend(badge,' ');p.append(link);
+        link.textContent='Claim now';link.className='glb-claim-now';link.setAttribute('aria-label','Claim now: '+artifact.name);
+        const flag=document.createElement('span');flag.className='glb-open-flag';flag.textContent='Artifact open';p.append(flag,' ',link);
       }
       const body=section.querySelector('.card-body')||section;
       if(section.classList.contains('glb-voice-claim')) section.replaceChildren(p);
